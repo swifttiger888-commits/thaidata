@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant Delivery Profit Calculator — Don't Lose Money on Every Order | ThaiData</title>
+    <meta name="description" content="See exactly how much you profit (or lose) on every delivery order. Compare Deliveroo, Uber Eats, and Just Eat side by side. Calculate the markup you need to match dine-in profit.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools/delivery-profit-calculator">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Delivery Profit Calculator — Stop Losing Money on Every Order">
+    <meta property="og:description" content="Input your dish price and food cost. See your real profit on Deliveroo, Uber Eats, and Just Eat. Find the markup you need.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --amber: #F59E0B; --red: #EF4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.4rem; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px 80px; }
+        header { text-align: center; margin-bottom: 36px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        header p { color: var(--ink4); font-size: 1rem; }
+
+        .layout { display: grid; grid-template-columns: 300px 1fr; gap: 30px; }
+        @media (max-width: 750px) { .layout { grid-template-columns: 1fr; } }
+
+        .controls { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 26px; height: fit-content; }
+        .controls h3 { font-family: 'Instrument Serif', serif; font-size: 1.2rem; margin-bottom: 20px; }
+        .input-group { margin-bottom: 18px; }
+        .input-group label { display: block; font-size: 0.8rem; color: var(--ink4); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .input-group input { width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 10px; color: white; font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; }
+        .input-group input:focus { border-color: var(--c2); }
+        .input-group .unit { position: relative; }
+        .input-group .unit::after { content: '£'; position: absolute; left: 12px; top: 34px; color: var(--ink3); }
+        .input-group .unit input { padding-left: 28px; }
+
+        .results { }
+        .platform-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+        @media (max-width: 600px) { .platform-cards { grid-template-columns: 1fr; } }
+        .plat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 22px; text-align: center; }
+        .plat-card .plat-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+        .plat-card .plat-commission { font-size: 0.75rem; color: var(--ink3); margin-bottom: 14px; }
+        .plat-card .plat-profit { font-family: 'Instrument Serif', serif; font-size: 2rem; margin-bottom: 4px; }
+        .plat-card .plat-profit.good { color: var(--c2); }
+        .plat-card .plat-profit.warn { color: var(--amber); }
+        .plat-card .plat-profit.bad { color: var(--red); }
+        .plat-card .plat-label { font-size: 0.75rem; color: var(--ink4); }
+        .plat-card .plat-revenue { font-size: 0.8rem; color: var(--ink4); margin-top: 8px; }
+
+        .dinein-card { background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.2); border-radius: 14px; padding: 18px 22px; text-align: center; margin-bottom: 20px; }
+        .dinein-card .di-profit { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); }
+        .dinein-card .di-label { font-size: 0.8rem; color: var(--ink4); }
+
+        .markup-box { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 20px 24px; margin-top: 16px; }
+        .markup-box h4 { font-size: 0.9rem; color: var(--amber); margin-bottom: 8px; }
+        .markup-box p { color: var(--ink4); font-size: 0.85rem; }
+
+        .shout { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2); border-radius: 14px; padding: 20px 24px; margin-top: 16px; }
+        .shout p { color: var(--red); font-weight: 600; font-size: 0.9rem; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav><div class="nav-bar">
+        <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        <a href="../guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
+    </div></nav>
+
+    <div class="container">
+        <header>
+            <div class="badge"><i class="fas fa-calculator"></i> Profit Calculator</div>
+            <h1>Delivery <em>Profit</em> Calculator</h1>
+            <p>Input your dish price and food cost. See exactly how much you profit on Deliveroo, Uber Eats, and Just Eat. Most restaurants lose money on delivery without realising it.</p>
+        </header>
+
+        <div class="layout">
+            <div class="controls">
+                <h3>Your Dish</h3>
+                <div class="input-group unit">
+                    <label>Dine-in menu price</label>
+                    <input type="number" id="priceInput" value="13.50" step="0.50" min="5" oninput="calc()">
+                </div>
+                <div class="input-group">
+                    <label>Food cost %</label>
+                    <input type="number" id="costInput" value="28" min="10" max="60" oninput="calc()">
+                </div>
+                <div class="input-group">
+                    <label>Delivery price markup</label>
+                    <input type="number" id="markupInput" value="15" min="0" max="50" oninput="calc()">
+                    <div class="desc" style="font-size:0.7rem;color:var(--ink3);margin-top:4px;">% you add to delivery menu price</div>
+                </div>
+                <p style="font-size:0.75rem;color:var(--ink4);margin-top:16px;">Platform commissions: Deliveroo 32%, Uber Eats 30%, Just Eat 14%. VAT at 20% on all.</p>
+            </div>
+
+            <div class="results">
+                <div class="dinein-card">
+                    <div class="di-label">Dine-in Profit Per Dish</div>
+                    <div class="di-profit" id="dineinProfit">—</div>
+                </div>
+
+                <div class="platform-cards">
+                    <div class="plat-card">
+                        <div class="plat-name">Deliveroo</div>
+                        <div class="plat-commission">32% commission</div>
+                        <div class="plat-profit" id="rooProfit">—</div>
+                        <div class="plat-label">profit per order</div>
+                        <div class="plat-revenue" id="rooRevenue"></div>
+                    </div>
+                    <div class="plat-card">
+                        <div class="plat-name">Uber Eats</div>
+                        <div class="plat-commission">30% commission</div>
+                        <div class="plat-profit" id="uberProfit">—</div>
+                        <div class="plat-label">profit per order</div>
+                        <div class="plat-revenue" id="uberRevenue"></div>
+                    </div>
+                    <div class="plat-card">
+                        <div class="plat-name">Just Eat</div>
+                        <div class="plat-commission">14% commission</div>
+                        <div class="plat-profit" id="jeProfit">—</div>
+                        <div class="plat-label">profit per order</div>
+                        <div class="plat-revenue" id="jeRevenue"></div>
+                    </div>
+                </div>
+
+                <div class="markup-box" id="markupAdvice"></div>
+                <div class="shout" id="lossWarning" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 ThaiData.uk · Commission rates verified June 2026 · <a href="../thai-restaurant-delivery-commissions-uk.html">Full Delivery Guide</a></p></footer>
+
+<script>
+function calc() {
+    const dineInPrice = parseFloat(document.getElementById('priceInput').value) || 13.50;
+    const foodCostPct = parseFloat(document.getElementById('costInput').value) / 100 || 0.28;
+    const markupPct = parseFloat(document.getElementById('markupInput').value) / 100 || 0.15;
+
+    const foodCost = dineInPrice * foodCostPct;
+    const dineInProfit = dineInPrice - foodCost;
+
+    // Delivery price = dine-in + markup
+    const deliveryPrice = dineInPrice * (1 + markupPct);
+    const deliveryPriceWithVat = deliveryPrice * 1.20; // customer sees this
+
+    const platforms = [
+        { name: 'Deliveroo', commission: 0.32, el: 'roo' },
+        { name: 'Uber Eats', commission: 0.30, el: 'uber' },
+        { name: 'Just Eat', commission: 0.14, el: 'je' },
+    ];
+
+    document.getElementById('dineinProfit').textContent = '£' + dineInProfit.toFixed(2);
+
+    let anyLoss = false;
+    platforms.forEach(p => {
+        const commissionAmount = deliveryPrice * p.commission;
+        const yourRevenue = deliveryPrice - commissionAmount;
+        const profit = yourRevenue - foodCost;
+
+        const profEl = document.getElementById(p.el + 'Profit');
+        const revEl = document.getElementById(p.el + 'Revenue');
+
+        profEl.textContent = '£' + profit.toFixed(2);
+        revEl.textContent = 'You receive £' + yourRevenue.toFixed(2) + ' (customer pays £' + deliveryPriceWithVat.toFixed(2) + ')';
+
+        profEl.className = 'plat-profit';
+        if (profit >= dineInProfit * 0.9) profEl.classList.add('good');
+        else if (profit >= foodCost) profEl.classList.add('warn');
+        else { profEl.classList.add('bad'); anyLoss = true; }
+    });
+
+    // Markup advice
+    const rooCommission = deliveryPrice * 0.32;
+    const rooProfit = (deliveryPrice - rooCommission) - foodCost;
+    const markupNeededRoo = rooProfit < dineInProfit ? 
+        Math.ceil(((dineInProfit + foodCost) / (1 - 0.32) / dineInPrice - 1) * 100) : 0;
+    const markupNeededUber = Math.ceil(((dineInProfit + foodCost) / (1 - 0.30) / dineInPrice - 1) * 100);
+
+    let advice = '';
+    if (markupNeededRoo > markupPct * 100) {
+        advice = `<h4><i class="fas fa-exclamation-triangle"></i> To match dine-in profit on Deliveroo, you'd need a <strong>${markupNeededRoo}%</strong> delivery markup (currently ${Math.round(markupPct*100)}%)</h4>`;
+        advice += `<p>At your current ${Math.round(markupPct*100)}% markup, you're making <strong>£${(rooProfit - dineInProfit).toFixed(2)} less</strong> per dish on Deliveroo vs dine-in.</p>`;
+    } else {
+        advice = `<h4><i class="fas fa-check-circle" style="color:var(--c2);"></i> Your ${Math.round(markupPct*100)}% markup covers the commission</h4>`;
+        advice += `<p>You're making comparable profit on delivery vs dine-in. Just Eat is your best platform at 14% — use our <a href="../thai-restaurant-delivery-commissions-uk.html" style="color:var(--c2);">delivery guide</a> to optimise further.</p>`;
+    }
+
+    document.getElementById('markupAdvice').innerHTML = advice;
+
+    // Loss warning
+    const lossEl = document.getElementById('lossWarning');
+    if (anyLoss) {
+        lossEl.style.display = 'block';
+        lossEl.innerHTML = `<p><i class="fas fa-skull"></i> You're <strong>losing money</strong> on at least one platform. At current markup, your profit doesn't cover food cost. Either increase your delivery price or consider dropping that platform.</p>`;
+    } else {
+        lossEl.style.display = 'none';
+    }
+}
+
+calc();
+</script>
+</body>
+</html>
