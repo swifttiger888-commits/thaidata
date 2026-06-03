@@ -243,19 +243,19 @@ function recalc() {
         const total = scores.gap * gapW + scores.pop * popW + scores.comp * compW + 
                       scores.hyg * hygW + scores.budget * budgetW;
         const totalWeight = gapW + popW + compW + hygW + budgetW;
-        return { ...c, scores, total: totalWeight > 0 ? Math.round(total / totalWeight) : 50 };
+        return { ...c, scores, score: totalWeight > 0 ? Math.round(total / totalWeight) : 50 };
     });
 
-    scored.sort((a,b) => b.total - a.total);
+    scored.sort((a,b) => b.score - a.score);
 
     const top5 = scored.slice(0, 8);
-    const maxScore = top5[0].total;
+    const maxScore = top5[0].score;
 
     let html = '';
     top5.forEach((c, i) => {
         const topClass = i < 3 ? ' top' : '';
         const rankClass = i === 0 ? ' gold' : '';
-        const barColor = c.total >= 75 ? 'var(--c2)' : c.total >= 55 ? '#F59E0B' : '#64748B';
+        const barColor = c.score >= 75 ? 'var(--c2)' : c.score >= 55 ? '#F59E0B' : '#64748B';
         
         html += `<div class="result-card${topClass}">
             <div class="rank-num${rankClass}">${i+1}</div>
@@ -269,8 +269,8 @@ function recalc() {
                 </div>
             </div>
             <div class="score-bar-wrap">
-                <div class="score-bar-bg"><div class="score-bar-fill" style="width:${c.total}%;background:${barColor};"></div></div>
-                <div class="score-num">${c.total}/100</div>
+                <div class="score-bar-bg"><div class="score-bar-fill" style="width:${c.score}%;background:${barColor};"></div></div>
+                <div class="score-num">${c.score}/100</div>
             </div>
         </div>`;
     });
