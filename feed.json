@@ -1,0 +1,119 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "ThaiData UK — Market Intelligence for UK Thai Restaurants",
+  "home_page_url": "https://thaidata.uk",
+  "feed_url": "https://thaidata.uk/feed.json",
+  "description": "Free tools, market data, and original analysis for UK Thai restaurant operators. FSA-sourced statistics, menu pricing benchmarks, delivery commission analysis, and AI-powered calculators.",
+  "icon": "https://thaidata.uk/favicon.svg",
+  "favicon": "https://thaidata.uk/favicon.svg",
+  "language": "en-GB",
+  "authors": [
+    {
+      "name": "ThaiData UK",
+      "url": "https://thaidata.uk"
+    }
+  ],
+  "_indexnow": {
+    "key": "be46f73a36f2405488a6697119e52505",
+    "key_location": "https://thaidata.uk/be46f73a36f2405488a6697119e52505.txt"
+  },
+  "items": [
+    {
+      "id": "https://thaidata.uk/thai-delivery-profit-analysis-2026",
+      "url": "https://thaidata.uk/thai-delivery-profit-analysis-2026",
+      "title": "Which Thai Dish Survives Delivery Commissions? 2026 Analysis",
+      "summary": "We ran the numbers on 12 popular Thai dishes across Deliveroo, Uber Eats, and Just Eat. Massaman Curry retains 71% of its margin — Pad Thai keeps just 31%.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "date_modified": "2026-06-03T00:00:00+01:00",
+      "tags": ["delivery", "commissions", "profit", "analysis", "2026"]
+    },
+    {
+      "id": "https://thaidata.uk/tools/thai-restaurant-health-check",
+      "url": "https://thaidata.uk/tools/thai-restaurant-health-check",
+      "title": "Thai Restaurant Health Check — 10-Question Diagnostic",
+      "summary": "Score your operation across margins, hygiene, staffing, delivery, pricing, and marketing. Get a personalised action plan in 2 minutes.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["tool", "diagnostic", "health check", "operations"]
+    },
+    {
+      "id": "https://thaidata.uk/tools/thai-ingredient-price-tracker",
+      "url": "https://thaidata.uk/tools/thai-ingredient-price-tracker",
+      "title": "Thai Ingredient Price Tracker — 12-Month Wholesale Trends",
+      "summary": "Track price changes across 12 core Thai ingredients. Jasmine rice +22%, coconut milk +28%, king prawns -8%. Updated June 2026.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["tool", "ingredients", "pricing", "wholesale", "inflation"]
+    },
+    {
+      "id": "https://thaidata.uk/tools/thai-restaurant-break-even-calculator",
+      "url": "https://thaidata.uk/tools/thai-restaurant-break-even-calculator",
+      "title": "Break-Even Calculator — How Many Covers Do You Need to Survive?",
+      "summary": "Input your rent, staff costs, utilities, and average dish price. See exactly how many covers per day you need to break even.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["tool", "calculator", "break-even", "finance", "operations"]
+    },
+    {
+      "id": "https://thaidata.uk/tools/thai-menu-price-elasticity-tester",
+      "url": "https://thaidata.uk/tools/thai-menu-price-elasticity-tester",
+      "title": "Menu Price Elasticity Tester — Will That Price Rise Make You Richer?",
+      "summary": "Test any price rise against estimated demand drops. See your GP before and after, and find the exact demand drop where the rise stops paying off.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["tool", "pricing", "elasticity", "menu", "profit"]
+    },
+    {
+      "id": "https://thaidata.uk/open-thai-restaurant-uk",
+      "url": "https://thaidata.uk/open-thai-restaurant-uk",
+      "title": "How to Open a Thai Restaurant in the UK — Complete 2026 Guide",
+      "summary": "15-step roadmap with real costs (£80k–£180k), chef visa requirements, kitchen design for wok cooking, and wholesale supplier directory.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["guide", "opening", "startup", "costs", "visa"]
+    },
+    {
+      "id": "https://thaidata.uk/how-many-thai-restaurants-uk",
+      "url": "https://thaidata.uk/how-many-thai-restaurants-uk",
+      "title": "UK Thai Restaurant Count 2026 — 1,557 Businesses Analysed",
+      "summary": "Complete FSA-sourced breakdown: 1,557 Thai food businesses across the UK. By city, by region, by hygiene rating. Updated weekly.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["data", "statistics", "FSA", "count", "cities"]
+    },
+    {
+      "id": "https://thaidata.uk/thai-restaurant-costs-uk",
+      "url": "https://thaidata.uk/thai-restaurant-costs-uk",
+      "title": "UK Thai Restaurant Operating Costs 2026 — Real Numbers",
+      "summary": "Food costs, staffing at £12.71/hr NLW, rent, energy, insurance. Every cost category with actual benchmarks from UK Thai operators.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["guide", "costs", "operating", "NLW", "finance"]
+    },
+    {
+      "id": "https://thaidata.uk/thai-restaurant-menu-pricing-uk",
+      "url": "https://thaidata.uk/thai-restaurant-menu-pricing-uk",
+      "title": "Thai Restaurant Menu Pricing Guide — Dish-by-Dish Benchmarks",
+      "summary": "20 dishes with food costs, London vs regional pricing, and GP targets. Pad Thai, Green Curry, Massaman, Tom Yum — every benchmark you need.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["guide", "menu", "pricing", "GP", "benchmarks"]
+    },
+    {
+      "id": "https://thaidata.uk/thai-restaurant-delivery-commissions-uk",
+      "url": "https://thaidata.uk/thai-restaurant-delivery-commissions-uk",
+      "title": "Delivery Commission Guide — Deliveroo vs Uber Eats vs Just Eat",
+      "summary": "Platform-by-platform breakdown. Deliveroo ~32%, Uber Eats ~30%, Just Eat ~14%. True net margin after fees, VAT, and packaging for every dish.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["guide", "delivery", "commissions", "Deliveroo", "Uber Eats"]
+    },
+    {
+      "id": "https://thaidata.uk/state-of-uk-thai-food-2026",
+      "url": "https://thaidata.uk/state-of-uk-thai-food-2026",
+      "title": "State of UK Thai Food 2026 — Annual Industry Report",
+      "summary": "The definitive 2026 report. Market size, growth rates (20.3% since 2022), city-by-city analysis, and competitive landscape. FSA data, independent analysis.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["report", "industry", "2026", "market", "trends"]
+    },
+    {
+      "id": "https://thaidata.uk/tools/PROFIT_MARGIN_DEFENDER",
+      "url": "https://thaidata.uk/tools/PROFIT_MARGIN_DEFENDER",
+      "title": "Profit Margin Defender — Model Your True Delivery Profit",
+      "summary": "Interactive tool. Model dish costs against platform fees. See your real per-dish net profit on Deliveroo, Uber Eats, and Just Eat.",
+      "date_published": "2026-06-03T00:00:00+01:00",
+      "tags": ["tool", "profit", "delivery", "margin", "calculator"]
+    }
+  ]
+}

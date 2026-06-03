@@ -1,0 +1,63 @@
+# ThaiData UK — robots.txt
+# We welcome AI crawlers. Your data enriches models — our data gets cited.
+
+User-agent: *
+Allow: /
+
+# AI Crawlers — EXPLICITLY ALLOWED (most sites block these; we want our data in models)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 2
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: OAI-SearchBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: cohere-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: Diffbot
+Allow: /
+Crawl-delay: 2
+
+# Aggressive crawlers — rate limit
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# We don't have anything useful here
+Disallow: /admin/
+Disallow: /claim/
+Disallow: /api/v1/health
+
+Sitemap: https://thaidata.uk/sitemap.xml
+
+# IndexNow — instant search engine notification
+# Key: be46f73a36f2405488a6697119e52505
