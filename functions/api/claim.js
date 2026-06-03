@@ -137,52 +137,49 @@ export async function onRequestGet(context) {
   }
 }
 
-// --- Email notification via MailChannels (free for Cloudflare Workers) ---
+// --- Telegram notification (instant alerts to admin) ---
 
 async function sendAdminNotification(env, claim) {
-  const adminEmail = env.ADMIN_EMAIL || env.ADMIN_EMAIL_FALLBACK;
-  if (!adminEmail) {
-    console.log('No ADMIN_EMAIL set — skipping notification');
+  const botToken = env.TELEGRAM_BOT_TOKEN;
+  const chatId = env.TELEGRAM_CHAT_ID;
+
+  if (!botToken || !chatId) {
+    console.log('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID — skipping notification');
     return;
   }
 
-  const claimUrl = `https://thaidata.uk/admin/`;
   const businessType = claim.business_type === 'takeaway' ? 'Takeaway' : 'Restaurant';
-  const phoneLine = claim.claimer_phone ? `\nPhone: ${claim.claimer_phone}` : '';
+  const phoneLine = claim.claimer_phone ? `\n📞 ${claim.claimer_phone}` : '';
   const role = claim.claimer_role === 'owner' ? 'Owner' : claim.claimer_role === 'manager' ? 'Manager' : claim.claimer_role === 'head_chef' ? 'Head Chef' : 'Staff';
 
+  const text = `🔔 *New Claim Submitted* #${claim.id}\n\n` +
+    `*${claim.restaurant_name}*\n` +
+    `📍 ${claim.city}  ·  ${businessType}\n\n` +
+    `👤 ${claim.claimer_name} (${role})\n` +
+    `✉️ ${claim.claimer_email}${phoneLine}\n\n` +
+    `[Review now →](https://thaidata.uk/admin/)`;
+
   try {
-    const res = await fetch('https://api.mailchannels.net/tx/v1/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        personalizations: [{
-          to: [{ email: adminEmail }],
-        }],
-        from: {
-          email: 'claims@thaidata.uk',
-          name: 'ThaiData Claims',
-        },
-        subject: `🔔 New Claim: ${claim.restaurant_name} (${claim.city})`,
-        content: [{
-          type: 'text/plain',
-          value: `New claim submitted on ThaiData.uk\n\n` +
-            `${claim.restaurant_name} — ${claim.city}\n` +
-            `${businessType} | Claim #${claim.id}\n\n` +
-            `Claimer: ${claim.claimer_name} (${role})\n` +
-            `Email: ${claim.claimer_email}${phoneLine}\n\n` +
-            `Review now: ${claimUrl}\n\n` +
-            `— ThaiData UK`,
-        }],
-      }),
-    });
+    const res = await fetch(
+      `https://api.telegram.org/bot${botToken}/sendMessage`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text,
+          parse_mode: 'Markdown',
+          disable_web_page_preview: true,
+        }),
+      }
+    );
 
     if (!res.ok) {
-      console.error(`MailChannels error: ${res.status} — ${await res.text()}`);
+      console.error(`Telegram API error: ${res.status} — ${await res.text()}`);
     } else {
-      console.log(`Notification sent to ${adminEmail} for claim #${claim.id}`);
+      console.log(`Telegram notification sent for claim #${claim.id}`);
     }
   } catch (err) {
-    console.error('Notification send failed:', err.message);
+    console.error('Telegram notification failed:', err.message);
   }
 }
