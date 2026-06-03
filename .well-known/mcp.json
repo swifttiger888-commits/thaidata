@@ -1,0 +1,21 @@
+{
+  "name": "ThaiData UK MCP Server",
+  "description": "Model Context Protocol server providing UK Thai restaurant business intelligence. Query city-level statistics, market overview, opening costs, delivery rates, visa information, and competitive rankings.",
+  "protocol": "mcp",
+  "endpoint": "https://thaidata.uk/mcp",
+  "version": "1.0.0",
+  "tools": [
+    { "name": "get_city_stats", "description": "Get detailed Thai restaurant statistics for a specific UK city" },
+    { "name": "get_uk_overview", "description": "Get overall UK Thai restaurant market statistics" },
+    { "name": "compare_cities", "description": "Compare Thai restaurant statistics between two UK cities" },
+    { "name": "get_opening_costs", "description": "Get estimated cost breakdown for opening a Thai restaurant" },
+    { "name": "get_delivery_rates", "description": "Get delivery platform commission rates" },
+    { "name": "get_visa_info", "description": "Get Skilled Worker visa costs and requirements for Thai chefs" },
+    { "name": "rank_cities", "description": "Rank UK cities by restaurant count, hygiene, or density" },
+    { "name": "get_market_health", "description": "Get market health assessment: competition, costs, opportunities, risks" }
+  ],
+  "website": "https://thaidata.uk",
+  "contact": "hello@thaidata.uk",
+  "data_sources": ["FSA FHRS", "ONS", "HMRC", "UKHospitality"],
+  "last_updated": "2026-06-03"
+}

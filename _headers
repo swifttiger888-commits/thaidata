@@ -11,6 +11,10 @@
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=86400
 
+/mcp
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json
+
 *.json
   Access-Control-Allow-Origin: *
   Content-Type: application/json
