@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Menu Price Elasticity Tester | ThaiData</title>
+    <meta name="description" content="If you raise your Pad Thai by £1.50, will you make more or less money? Test price changes against demand drops. Free, no signup.">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-menu-price-elasticity-tester">
+    <meta property="og:type" content="article"><meta property="og:title" content="Menu Price Elasticity Tester"><meta property="og:description" content="Test any price rise against demand drops. See exactly where you break even.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root{--c1:#0A7A6F;--c2:#10B981;--dark:#0C1220;--ink2:#334155;--ink3:#64748B;--ink4:#94A3B8;--line:rgba(255,255,255,0.1);--bg:#0C1220}
+        *{box-sizing:border-box;margin:0;padding:0}img,svg,video{max-width:100%;height:auto}
+        body{font-family:'Inter',system-ui,sans-serif;color:white;background:var(--bg);line-height:1.6;overflow-x:hidden}
+        nav{background:var(--dark);border-bottom:1px solid var(--line);height:72px;display:flex;align-items:center}
+        .nav-bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%}
+        .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.3rem;color:white;text-decoration:none}
+        .logo i{color:var(--c2);font-size:1.4rem}
+        .container{max-width:1000px;margin:0 auto;padding:40px 20px 80px}
+        header{text-align:center;margin-bottom:32px}
+        h1{font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:400;line-height:1.15;margin-bottom:12px}
+        h1 em{font-style:italic;color:var(--c2)}
+        .layout{display:grid;grid-template-columns:380px 1fr;gap:30px}@media(max-width:800px){.layout{grid-template-columns:1fr}}
+        .controls{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:16px;padding:24px}
+        .field{margin-bottom:16px}.field label{display:flex;justify-content:space-between;font-size:0.82rem;color:var(--ink4);margin-bottom:6px}
+        .field label span:last-child{color:var(--c2);font-weight:600}
+        .field input[type=range]{width:100%}
+        .field .val-row{display:flex;justify-content:space-between;font-size:0.75rem;color:var(--ink4)}
+        .results h2{font-family:'Instrument Serif',serif;font-size:1.5rem;margin-bottom:16px}
+        .rc{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:10px}
+        .rc.big{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.03)}
+        .rc.good .rval{color:var(--c2)}.rc.bad .rval{color:#EF4444}
+        .rlbl{font-size:0.75rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px}
+        .rval{font-family:'Instrument Serif',serif;font-size:2rem;line-height:1.1}
+        .rsub{font-size:0.82rem;color:var(--ink4);margin-top:4px}
+        .verdict{padding:24px;border-radius:14px;margin-top:16px;text-align:center}
+        .verdict.good{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25)}
+        .verdict.bad{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25)}
+        .verdict h3{font-size:1.2rem;margin-bottom:6px}.verdict.good h3{color:var(--c2)}.verdict.bad h3{color:#EF4444}
+        .verdict p{font-size:0.9rem;color:var(--ink4)}
+        footer{text-align:center;padding:40px 0;border-top:1px solid var(--line);color:var(--ink4);font-size:0.85rem;margin-top:40px}
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Thai Menu Price Elasticity Tester","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://thaidata.uk/tools/thai-menu-price-elasticity-tester","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script>
+</head>
+<body>
+    <nav><div class="nav-bar"><a href="../index.html" class="logo"><i class="fas fa-pepper-hot"></i>ThaiData.uk</a><a href="../#tools" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">&larr; Tools</a></div></nav>
+    <div class="container">
+        <header><h1>Menu Price <em>Elasticity Tester</em></h1><p style="color:var(--ink4);">Will that price rise make you richer — or just drive customers away?</p></header>
+        <div class="layout">
+            <div class="controls">
+                <div class="field"><label>Current Price (£)</label><input type="number" id="curPrice" value="12.95" step="0.50" oninput="calc()" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;color:white;font-family:inherit;font-size:0.95rem"></div>
+                <div class="field"><label>Daily Orders at Current Price</label><input type="number" id="curOrders" value="25" oninput="calc()" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;color:white;font-family:inherit;font-size:0.95rem"></div>
+                <div class="field"><label>Food Cost Per Dish (£)</label><input type="number" id="foodCost" value="3.20" step="0.10" oninput="calc()" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;color:white;font-family:inherit;font-size:0.95rem"></div>
+                <div class="field"><label>New Price (£) <span id="newPriceVal">£14.95</span></label><input type="range" id="newPrice" min="6" max="24" step="0.05" value="14.95" oninput="calc()"></div>
+                <div class="field"><label>Estimated Demand Drop <span id="dropVal">10%</span></label><input type="range" id="dropPct" min="0" max="60" value="10" oninput="calc()"></div>
+            </div>
+            <div class="results" id="results"></div>
+        </div>
+    </div>
+    <footer><p>&copy; 2026 ThaiData UK</p></footer>
+    <script>
+    function calc(){
+        const cp=parseFloat(document.getElementById('curPrice').value)||0;
+        const co=parseInt(document.getElementById('curOrders').value)||0;
+        const fc=parseFloat(document.getElementById('foodCost').value)||0;
+        const np=parseFloat(document.getElementById('newPrice').value)||0;
+        const dp=parseInt(document.getElementById('dropPct').value)||0;
+        document.getElementById('newPriceVal').textContent='£'+np.toFixed(2);
+        document.getElementById('dropVal').textContent=dp+'%';
+        const oldDailyRev=cp*co;
+        const oldDailyGP=(cp-fc)*co;
+        const newOrders=Math.round(co*(1-dp/100));
+        const newDailyRev=np*newOrders;
+        const newDailyGP=(np-fc)*newOrders;
+        const revDiff=newDailyRev-oldDailyRev;
+        const gpDiff=newDailyGP-oldDailyGP;
+        const revChange=oldDailyRev>0?((revDiff/oldDailyRev)*100).toFixed(1):0;
+        const breakevenDrop=cp>0?(1-(cp-fc)/(np-fc))*100:0;
+        const verdict=gpDiff>=0?'good':'bad';
+        document.getElementById('results').innerHTML=`
+            <div class="rc ${verdict} big"><div class="rlbl">Daily GP Change</div><div class="rval">${gpDiff>=0?'+':''}£${gpDiff.toFixed(0)}</div><div class="rsub">${gpDiff>=0?'You\'re better off':'You\'re worse off'} at the new price with ${dp}% fewer orders</div></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                <div class="rc"><div class="rlbl">Old Daily Revenue</div><div class="rval" style="font-size:1.4rem">£${oldDailyRev.toFixed(0)}</div><div class="rsub">${co} orders at £${cp.toFixed(2)}</div></div>
+                <div class="rc"><div class="rlbl">New Daily Revenue</div><div class="rval" style="font-size:1.4rem">£${newDailyRev.toFixed(0)}</div><div class="rsub">${newOrders} orders at £${np.toFixed(2)}</div></div>
+                <div class="rc"><div class="rlbl">Old Daily GP</div><div class="rval" style="font-size:1.4rem">£${oldDailyGP.toFixed(0)}</div><div class="rsub">GP per dish: £${(cp-fc).toFixed(2)}</div></div>
+                <div class="rc"><div class="rlbl">New Daily GP</div><div class="rval" style="font-size:1.4rem">£${newDailyGP.toFixed(0)}</div><div class="rsub">GP per dish: £${(np-fc).toFixed(2)}</div></div>
+            </div>
+            <div class="verdict ${verdict}"><h3>${verdict==='good'?'✅ Price rise works at this demand drop':'❌ Price rise loses money at this demand drop'}</h3>
+            <p>You can absorb up to <strong>${breakevenDrop.toFixed(1)}% demand drop</strong> before the price rise stops paying off. At ${dp}%, you're ${verdict==='good'?'in profit':'in the red'}.</p></div>`;
+    }
+    calc();
+    </script>
+</body>
+</html>

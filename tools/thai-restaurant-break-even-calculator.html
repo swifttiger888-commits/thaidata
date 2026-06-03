@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Thai Restaurant Break-Even Calculator | ThaiData</title>
+    <meta name="description" content="How many covers do you need to break even? Input your rent, staff, food costs — see your daily target instantly. Free, no signup.">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-restaurant-break-even-calculator">
+    <meta property="og:type" content="article"><meta property="og:title" content="Thai Restaurant Break-Even Calculator"><meta property="og:description" content="Calculate exactly how many covers per day you need to survive.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root{--c1:#0A7A6F;--c2:#10B981;--dark:#0C1220;--ink2:#334155;--ink3:#64748B;--ink4:#94A3B8;--line:rgba(255,255,255,0.1);--bg:#0C1220}
+        *{box-sizing:border-box;margin:0;padding:0}img,svg,video{max-width:100%;height:auto}
+        body{font-family:'Inter',system-ui,sans-serif;color:white;background:var(--bg);line-height:1.6;overflow-x:hidden}
+        nav{background:var(--dark);border-bottom:1px solid var(--line);height:72px;display:flex;align-items:center}
+        .nav-bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%}
+        .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.3rem;color:white;text-decoration:none}
+        .logo i{color:var(--c2);font-size:1.4rem}
+        .container{max-width:1000px;margin:0 auto;padding:40px 20px 80px}
+        header{text-align:center;margin-bottom:32px}
+        h1{font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:400;line-height:1.15;margin-bottom:12px}
+        h1 em{font-style:italic;color:var(--c2)}
+        .layout{display:grid;grid-template-columns:380px 1fr;gap:30px}@media(max-width:800px){.layout{grid-template-columns:1fr}}
+        .controls{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:16px;padding:24px}
+        .field{margin-bottom:18px}.field label{display:block;font-size:0.82rem;color:var(--ink4);margin-bottom:6px}
+        .field input{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;color:white;font-family:inherit;font-size:0.95rem}
+        .field input:focus{outline:none;border-color:var(--c2)}
+        .results h2{font-family:'Instrument Serif',serif;font-size:1.5rem;margin-bottom:16px}
+        .result-card{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:10px}
+        .result-card.big{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.03)}
+        .rc-label{font-size:0.75rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px}
+        .rc-value{font-family:'Instrument Serif',serif;font-size:2.4rem;color:var(--c2);line-height:1}
+        .rc-sub{font-size:0.82rem;color:var(--ink4);margin-top:6px}
+        .breakdown{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+        .bd-item{background:rgba(255,255,255,0.02);border-radius:8px;padding:14px;text-align:center}
+        .bd-val{font-size:1.2rem;font-weight:700;color:white}.bd-label{font-size:0.72rem;color:var(--ink4);margin-top:4px}
+        footer{text-align:center;padding:40px 0;border-top:1px solid var(--line);color:var(--ink4);font-size:0.85rem;margin-top:40px}
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Thai Restaurant Break-Even Calculator","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://thaidata.uk/tools/thai-restaurant-break-even-calculator","description":"Calculate daily covers needed to break even. Free tool for UK Thai restaurant operators.","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script>
+</head>
+<body>
+    <nav><div class="nav-bar"><a href="../index.html" class="logo"><i class="fas fa-pepper-hot"></i>ThaiData.uk</a><a href="../#tools" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">&larr; Tools</a></div></nav>
+    <div class="container">
+        <header><h1>Break-Even <em>Calculator</em></h1><p style="color:var(--ink4);">How many covers do you need per day just to survive?</p></header>
+        <div class="layout">
+            <div class="controls">
+                <div class="field"><label>Monthly Rent (£)</label><input type="number" id="rent" value="3500" oninput="calc()"></div>
+                <div class="field"><label>Monthly Staff Costs (£)</label><input type="number" id="staff" value="12000" oninput="calc()"></div>
+                <div class="field"><label>Monthly Utilities (£)</label><input type="number" id="utils" value="1800" oninput="calc()"></div>
+                <div class="field"><label>Other Monthly Costs (£)</label><input type="number" id="other" value="2500" oninput="calc()"></div>
+                <div class="field"><label>Average Dish Price (£)</label><input type="number" id="price" value="13.50" step="0.50" oninput="calc()"></div>
+                <div class="field"><label>Food Cost %</label><input type="number" id="foodpct" value="28" oninput="calc()"></div>
+            </div>
+            <div class="results" id="results"><p style="color:var(--ink4)">Enter your numbers to see the break-even</p></div>
+        </div>
+    </div>
+    <footer><p>&copy; 2026 ThaiData UK</p></footer>
+    <script>
+    function calc(){
+        const rent=parseFloat(document.getElementById('rent').value)||0;
+        const staff=parseFloat(document.getElementById('staff').value)||0;
+        const utils=parseFloat(document.getElementById('utils').value)||0;
+        const other=parseFloat(document.getElementById('other').value)||0;
+        const price=parseFloat(document.getElementById('price').value)||0;
+        const fp=parseFloat(document.getElementById('foodpct').value)||0;
+        const monthly=rent+staff+utils+other;
+        const gpPerDish=price*(1-fp/100);
+        const coversMonth=gpPerDish>0?Math.ceil(monthly/gpPerDish):0;
+        const coversDay=Math.ceil(coversMonth/26);
+        const weeklyRev=(coversDay*price*6).toFixed(0);
+        const annualRev=(coversDay*price*312).toFixed(0);
+        const gpPct=(100-fp).toFixed(0);
+        document.getElementById('results').innerHTML=`
+            <div class="result-card big"><div class="rc-label">Daily Covers Needed (6-day week)</div><div class="rc-value">${coversDay}</div><div class="rc-sub">${coversMonth} covers/month · £${monthly.toLocaleString()} monthly overhead</div></div>
+            <div class="breakdown"><div class="bd-item"><div class="bd-val">£${(coversDay*price).toFixed(0)}</div><div class="bd-label">Daily Revenue Target</div></div>
+            <div class="bd-item"><div class="bd-val">£${weeklyRev}</div><div class="bd-label">Weekly Revenue Target</div></div>
+            <div class="bd-item"><div class="bd-val">£${gpPerDish.toFixed(2)}</div><div class="bd-label">GP Per Dish (${gpPct}%)</div></div>
+            <div class="bd-item"><div class="bd-val">£${(annualRev/1000).toFixed(0)}k</div><div class="bd-label">Annual Revenue Target</div></div></div>
+            <div class="result-card" style="margin-top:10px"><div class="rc-label">Monthly Cost Breakdown</div>
+            <div class="breakdown"><div class="bd-item"><div class="bd-val">${((rent/monthly)*100).toFixed(0)}%</div><div class="bd-label">Rent</div></div>
+            <div class="bd-item"><div class="bd-val">${((staff/monthly)*100).toFixed(0)}%</div><div class="bd-label">Staff</div></div>
+            <div class="bd-item"><div class="bd-val">${((utils/monthly)*100).toFixed(0)}%</div><div class="bd-label">Utilities</div></div>
+            <div class="bd-item"><div class="bd-val">${((other/monthly)*100).toFixed(0)}%</div><div class="bd-label">Other</div></div></div></div>`;
+    }
+    calc();
+    </script>
+</body>
+</html>

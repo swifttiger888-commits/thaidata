@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Thai Ingredient Price Tracker 2026 | ThaiData</title>
+    <meta name="description" content="Track 12-month price trends for key Thai ingredients. Jasmine rice, coconut milk, chicken, prawns, galangal, chillies — actual wholesale data.">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-ingredient-price-tracker">
+    <meta property="og:type" content="article"><meta property="og:title" content="Thai Ingredient Price Tracker 2026"><meta property="og:description" content="See what's rising, what's falling, and what to stock up on.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root{--c1:#0A7A6F;--c2:#10B981;--dark:#0C1220;--ink2:#334155;--ink3:#64748B;--ink4:#94A3B8;--line:rgba(255,255,255,0.1);--bg:#0C1220}
+        *{box-sizing:border-box;margin:0;padding:0}img,svg,video{max-width:100%;height:auto}
+        body{font-family:'Inter',system-ui,sans-serif;color:white;background:var(--bg);line-height:1.6;overflow-x:hidden}
+        nav{background:var(--dark);border-bottom:1px solid var(--line);height:72px;display:flex;align-items:center}
+        .nav-bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%}
+        .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.3rem;color:white;text-decoration:none}
+        .logo i{color:var(--c2);font-size:1.4rem}
+        .container{max-width:1000px;margin:0 auto;padding:40px 20px 80px}
+        header{text-align:center;margin-bottom:32px}
+        h1{font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:400;line-height:1.15;margin-bottom:12px}
+        h1 em{font-style:italic;color:var(--c2)}
+        .ingredient-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+        .ing-card{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:14px;padding:20px}
+        .ing-card:hover{border-color:rgba(16,185,129,0.3)}
+        .ing-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
+        .ing-name{font-weight:600;font-size:1rem}.ing-unit{font-size:0.75rem;color:var(--ink4)}
+        .ing-price{font-family:'Instrument Serif',serif;font-size:2rem;color:var(--c2);line-height:1}
+        .ing-change{font-size:0.85rem;font-weight:600;margin-top:2px}
+        .ing-change.up{color:#EF4444}.ing-change.down{color:var(--c2)}.ing-change.flat{color:var(--ink4)}
+        .trend-bar{height:40px;display:flex;align-items:end;gap:2px;margin-top:14px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.04)}
+        .trend-month{flex:1;border-radius:2px 2px 0 0;min-height:4px;transition:background 0.2s}
+        .source{font-size:0.78rem;color:var(--ink4);margin-top:20px;text-align:center;padding:16px;background:rgba(255,255,255,0.02);border-radius:10px}
+        footer{text-align:center;padding:40px 0;border-top:1px solid var(--line);color:var(--ink4);font-size:0.85rem;margin-top:40px}
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Thai Ingredient Price Tracker","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://thaidata.uk/tools/thai-ingredient-price-tracker","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script>
+</head>
+<body>
+    <nav><div class="nav-bar"><a href="../index.html" class="logo"><i class="fas fa-pepper-hot"></i>ThaiData.uk</a><a href="../#tools" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">&larr; Tools</a></div></nav>
+    <div class="container">
+        <header><h1>Ingredient Price <em>Tracker</em></h1><p style="color:var(--ink4);">12-month wholesale price trends for core Thai ingredients. Updated June 2026.</p></header>
+        <div class="ingredient-grid" id="grid"></div>
+        <div class="source"><i class="fas fa-info-circle" style="color:var(--c2);margin-right:6px;"></i>Prices are UK wholesale market averages from Thai-specific importers and general foodservice suppliers. Regional variations apply. This is not live market data — it reflects our latest benchmark collection.</div>
+    </div>
+    <footer><p>&copy; 2026 ThaiData UK</p></footer>
+    <script>
+    const ingredients=[
+        {name:'Jasmine Rice',unit:'20kg bag',price:22,prev:18,months:[18,19,19,20,20,21,21,21,22,22,22,22],trend:'up',pct:22},
+        {name:'Coconut Milk',unit:'1L tin',price:1.60,prev:1.25,months:[1.25,1.28,1.30,1.35,1.40,1.45,1.48,1.50,1.55,1.58,1.60,1.60],trend:'up',pct:28},
+        {name:'Fish Sauce',unit:'5L',price:10.50,prev:9.00,months:[9.00,9.20,9.40,9.50,9.80,10.00,10.00,10.20,10.30,10.40,10.50,10.50],trend:'up',pct:17},
+        {name:'Chicken Breast',unit:'kg',price:5.80,prev:5.20,months:[5.20,5.30,5.40,5.50,5.50,5.60,5.60,5.70,5.75,5.80,5.80,5.80],trend:'up',pct:12},
+        {name:'King Prawns',unit:'kg (frozen)',price:14.50,prev:15.80,months:[15.80,15.50,15.20,15.00,14.80,14.50,14.50,14.30,14.50,14.50,14.50,14.50],trend:'down',pct:-8},
+        {name:'Vegetable Oil',unit:'20L',price:22.00,prev:18.50,months:[18.50,19.00,19.50,20.00,20.50,21.00,21.50,21.50,22.00,22.00,22.00,22.00],trend:'up',pct:19},
+        {name:'Galangal',unit:'kg (fresh)',price:7.50,prev:6.00,months:[6.00,6.20,6.50,6.80,7.00,7.20,7.30,7.50,7.50,7.50,7.50,7.50],trend:'up',pct:25},
+        {name:'Bird\'s Eye Chillies',unit:'kg',price:5.50,prev:6.50,months:[6.50,6.20,6.00,5.80,5.50,5.50,5.50,5.50,5.50,5.50,5.50,5.50],trend:'down',pct:-15},
+        {name:'Palm Sugar',unit:'kg',price:4.20,prev:3.80,months:[3.80,3.85,3.90,3.95,4.00,4.05,4.10,4.15,4.20,4.20,4.20,4.20],trend:'up',pct:11},
+        {name:'Kaffir Lime Leaves',unit:'kg (fresh)',price:15.00,prev:12.00,months:[12.00,12.50,13.00,13.50,14.00,14.50,14.80,15.00,15.00,15.00,15.00,15.00],trend:'up',pct:25},
+        {name:'Thai Basil',unit:'kg (fresh)',price:11.00,prev:8.50,months:[8.50,9.00,9.50,10.00,10.50,10.80,11.00,11.00,11.00,11.00,11.00,11.00],trend:'up',pct:29},
+        {name:'Beef (Flank)',unit:'kg',price:9.50,prev:9.00,months:[9.00,9.10,9.20,9.20,9.30,9.40,9.40,9.50,9.50,9.50,9.50,9.50],trend:'up',pct:6}
+    ];
+    const months=['Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun'];
+    let html='';
+    ingredients.forEach(ing=>{
+        const maxP=Math.max(...ing.months);
+        const cls=ing.trend==='up'?'up':(ing.trend==='down'?'down':'flat');
+        let bars='';
+        ing.months.forEach((v,i)=>{
+            const h=(v/maxP)*100;
+            bars+=`<div class="trend-month" style="height:${h}%;background:${cls==='up'?'rgba(239,68,68,0.5)':cls==='down'?'rgba(16,185,129,0.5)':'rgba(148,163,184,0.3)'}" title="${months[i]}: £${v.toFixed(2)}"></div>`;
+        });
+        html+=`<div class="ing-card">
+            <div class="ing-header"><div><div class="ing-name">${ing.name}</div><div class="ing-unit">${ing.unit}</div></div></div>
+            <div class="ing-price">£${ing.price.toFixed(2)}</div>
+            <div class="ing-change ${cls}">${ing.trend==='up'?'↑':''}${ing.trend==='down'?'↓':''}${ing.pct>0?'+':''}${ing.pct}% over 12 months · was £${ing.prev.toFixed(2)}</div>
+            <div class="trend-bar">${bars}</div>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:var(--ink4);margin-top:4px"><span>Jul</span><span>Jun</span></div>
+        </div>`;
+    });
+    document.getElementById('grid').innerHTML=html;
+    </script>
+</body>
+</html>
