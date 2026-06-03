@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant Staffing Calculator — How Many Staff Do You Need? | ThaiData</title>
+    <meta name="description" content="Calculate exactly how many chefs, kitchen staff, and front-of-house you need for your Thai restaurant. Based on cover count, service style, and 2026 wage rates.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-restaurant-staffing-calculator">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Thai Restaurant Staffing Calculator — How Many Staff Do You Need?">
+    <meta property="og:description" content="Interactive tool: input your covers and service style, get exact staffing numbers and weekly wage costs at 2026 NLW rates.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.4rem; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px 80px; }
+        header { text-align: center; margin-bottom: 36px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        header p { color: var(--ink4); font-size: 1rem; }
+
+        .layout { display: grid; grid-template-columns: 340px 1fr; gap: 30px; }
+        @media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
+
+        .controls { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 26px; height: fit-content; }
+        .controls h3 { font-family: 'Instrument Serif', serif; font-size: 1.2rem; margin-bottom: 20px; }
+        .input-group { margin-bottom: 18px; }
+        .input-group label { display: block; font-size: 0.8rem; color: var(--ink4); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .input-group input, .input-group select { width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 10px; color: white; font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; }
+        .input-group input:focus, .input-group select:focus { border-color: var(--c2); }
+        .input-group select { appearance: none; cursor: pointer; }
+        .input-group select option { background: var(--dark); color: white; }
+
+        .results { }
+        .results h3 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; margin-bottom: 20px; }
+
+        .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+        @media (max-width: 500px) { .stat-row { grid-template-columns: 1fr; } }
+        .stat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 20px; text-align: center; }
+        .stat-card .stat-num { font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: var(--c2); }
+        .stat-card .stat-label { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+
+        .staff-section { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; margin-bottom: 14px; }
+        .staff-section h4 { font-size: 0.9rem; color: var(--c2); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .staff-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .staff-row:last-child { border-bottom: none; }
+        .staff-role { font-size: 0.9rem; }
+        .staff-count { font-weight: 700; color: var(--c2); }
+        .staff-cost { color: var(--ink4); font-size: 0.8rem; }
+
+        .total-bar { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.2); border-radius: 14px; padding: 20px 24px; margin-top: 20px; }
+        .total-bar .big-number { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); }
+        .total-bar .label { color: var(--ink4); font-size: 0.8rem; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 60px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav><div class="nav-bar">
+        <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        <a href="../guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
+    </div></nav>
+
+    <div class="container">
+        <header>
+            <div class="badge"><i class="fas fa-users"></i> Staffing Calculator</div>
+            <h1>How Many Staff Does<br>a Thai Restaurant <em>Actually Need?</em></h1>
+            <p>Input your covers, service style, and hours. Get exact staffing requirements and the real weekly wage bill at April 2026 rates. No guesswork.</p>
+        </header>
+
+        <div class="layout">
+            <div class="controls">
+                <h3>Your Restaurant</h3>
+                
+                <div class="input-group">
+                    <label>Number of covers (seats)</label>
+                    <input type="number" id="coversInput" value="45" min="10" max="200" oninput="calc()">
+                </div>
+
+                <div class="input-group">
+                    <label>Service style</label>
+                    <select id="styleInput" onchange="calc()">
+                        <option value="casual">Casual / mid-range</option>
+                        <option value="premium">Premium / fine dining</option>
+                        <option value="takeaway">Takeaway / delivery only</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Days open per week</label>
+                    <select id="daysInput" onchange="calc()">
+                        <option value="7">7 days</option>
+                        <option value="6">6 days (closed Mon)</option>
+                        <option value="5">5 days (Tue–Sat)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Lunch service?</label>
+                    <select id="lunchInput" onchange="calc()">
+                        <option value="yes">Yes — lunch + dinner</option>
+                        <option value="no">Dinner only</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Delivery / takeaway?</label>
+                    <select id="deliveryInput" onchange="calc()">
+                        <option value="none">No — dine-in only</option>
+                        <option value="some">Some — alongside dine-in</option>
+                        <option value="heavy">Heavy — 30%+ of orders</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results">
+                <h3>Recommended <em>Staffing</em></h3>
+                <div class="stat-row">
+                    <div class="stat-card"><div class="stat-num" id="totalStaff">—</div><div class="stat-label">Total Staff</div></div>
+                    <div class="stat-card"><div class="stat-num" id="kitchenStaff">—</div><div class="stat-label">Kitchen</div></div>
+                    <div class="stat-card"><div class="stat-num" id="fohStaff">—</div><div class="stat-label">Front of House</div></div>
+                </div>
+
+                <div class="staff-section">
+                    <h4><i class="fas fa-fire"></i> Kitchen Team</h4>
+                    <div id="kitchenList"></div>
+                </div>
+
+                <div class="staff-section">
+                    <h4><i class="fas fa-user-tie"></i> Front of House</h4>
+                    <div id="fohList"></div>
+                </div>
+
+                <div class="total-bar">
+                    <div class="big-number" id="weeklyWage">—</div>
+                    <div class="label">Estimated total weekly wage bill (incl. NI & pension)</div>
+                </div>
+                <div class="total-bar" style="margin-top: 10px; background: rgba(245,158,11,0.04); border-color: rgba(245,158,11,0.15);">
+                    <div class="big-number" id="annualWage" style="color:#F59E0B;">—</div>
+                    <div class="label">Annual wage bill (52 weeks)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 ThaiData.uk · Rates at April 2026 NLW (£12.71/hr) · <a href="../nlw-report.html">NLW Report</a></p></footer>
+
+<script>
+// April 2026 rates
+const NLW = 12.71;        // 21+
+const YOUNG = 10.85;      // 18-20
+const APPRENTICE = 8.00;  // 16-17 / apprentice
+const NI_RATE = 0.15;
+const PENSION_RATE = 0.03;
+const EMPLOYER_MULT = 1.18; // NI + pension on top of gross
+
+// Salary bands (annual, gross)
+const SALARIES = {
+    headChef: 38000,
+    sousChef: 30000,
+    cdp: 27000,       // Chef de Partie
+    commis: NLW * 40 * 52,
+    kp: NLW * 38 * 52,  // Kitchen porter
+    manager: 32000,
+    supervisor: 26000,
+    waiter: NLW * 35 * 52,
+    bartender: NLW * 35 * 52,
+    runner: NLW * 30 * 52,
+};
+
+function calc() {
+    const covers = parseInt(document.getElementById('coversInput').value) || 45;
+    const style = document.getElementById('styleInput').value;
+    const days = parseInt(document.getElementById('daysInput').value);
+    const lunch = document.getElementById('lunchInput').value === 'yes';
+    const delivery = document.getElementById('deliveryInput').value;
+
+    let kitchen = [];
+    let foh = [];
+
+    if (style === 'takeaway') {
+        // Takeaway-only model
+        kitchen = [
+            { role: 'Head Chef / Lead Cook', count: 1, salary: SALARIES.headChef * 0.8 },
+            { role: 'Line Cook / Prep Chef', count: Math.ceil(covers / 40), salary: SALARIES.commis },
+            { role: 'Kitchen Porter', count: 1, salary: SALARIES.kp },
+        ];
+        if (delivery === 'heavy') {
+            kitchen.push({ role: 'Packer / Expediter', count: Math.ceil(covers / 50), salary: NLW * 30 * 52 });
+        }
+        foh = [
+            { role: 'Counter / Phone Staff', count: Math.max(1, Math.ceil(covers / 50)), salary: NLW * 35 * 52 },
+        ];
+    } else if (style === 'premium') {
+        // Fine dining — higher staff ratios
+        const chefs = Math.max(3, Math.ceil(covers / 12));
+        kitchen = [
+            { role: 'Head Chef', count: 1, salary: SALARIES.headChef * 1.15 },
+            { role: 'Sous Chef', count: 1, salary: SALARIES.sousChef * 1.1 },
+            { role: 'Chef de Partie', count: Math.max(1, Math.ceil(covers / 25)), salary: SALARIES.cdp * 1.05 },
+            { role: 'Commis Chef', count: Math.max(1, Math.ceil(covers / 20)), salary: SALARIES.commis },
+            { role: 'Kitchen Porter', count: Math.max(1, Math.ceil(covers / 40)), salary: SALARIES.kp },
+        ];
+        const waiters = Math.max(2, Math.ceil(covers / 10));
+        foh = [
+            { role: 'Restaurant Manager', count: 1, salary: SALARIES.manager * 1.1 },
+            { role: 'Supervisor / Head Waiter', count: Math.max(1, Math.ceil(covers / 40)), salary: SALARIES.supervisor },
+            { role: 'Waiter / Waitress', count: waiters, salary: SALARIES.waiter },
+            { role: 'Bartender', count: Math.max(1, Math.ceil(covers / 60)), salary: SALARIES.bartender },
+            { role: 'Food Runner', count: Math.max(1, Math.ceil(covers / 30)), salary: SALARIES.runner },
+        ];
+    } else {
+        // Casual — standard ratios
+        const chefs = Math.max(2, Math.ceil(covers / 18));
+        kitchen = [
+            { role: 'Head Chef', count: 1, salary: SALARIES.headChef },
+            { role: 'Sous Chef', count: covers >= 50 ? 1 : 0, salary: SALARIES.sousChef },
+            { role: 'Chef de Partie / Line Cook', count: Math.max(1, Math.ceil(covers / 30)), salary: SALARIES.cdp },
+            { role: 'Kitchen Porter', count: Math.max(1, Math.ceil(covers / 50)), salary: SALARIES.kp },
+        ];
+        if (delivery !== 'none') {
+            kitchen.push({ role: 'Delivery Packer (shared)', count: delivery === 'heavy' ? Math.ceil(covers / 40) : 1, salary: NLW * 25 * 52 });
+        }
+        const waiters = Math.max(1, Math.ceil(covers / 15));
+        foh = [
+            { role: 'Manager / Owner-Operator', count: 1, salary: SALARIES.manager },
+            { role: 'Waiter / Waitress', count: waiters, salary: SALARIES.waiter },
+            { role: 'Bartender / Runner', count: Math.max(1, Math.ceil(covers / 50)), salary: SALARIES.bartender },
+        ];
+    }
+
+    // Filter zero-count roles
+    kitchen = kitchen.filter(r => r.count > 0);
+    foh = foh.filter(r => r.count > 0);
+
+    // Adjust for days open
+    const dayFactor = days / 7;
+    const lunchBonus = lunch ? 1.25 : 1.0;
+
+    // Counts
+    const totalKitchen = kitchen.reduce((s,r) => s + r.count, 0);
+    const totalFoh = foh.reduce((s,r) => s + r.count, 0);
+    const totalAll = totalKitchen + totalFoh;
+
+    document.getElementById('totalStaff').textContent = totalAll;
+    document.getElementById('kitchenStaff').textContent = totalKitchen;
+    document.getElementById('fohStaff').textContent = totalFoh;
+
+    // Render lists
+    let khtml = '';
+    let fhtml = '';
+    let totalWeekly = 0;
+
+    kitchen.forEach(r => {
+        const weeklyPerPerson = r.salary / 52;
+        const weeklyRole = weeklyPerPerson * r.count * dayFactor * lunchBonus;
+        totalWeekly += weeklyRole;
+        khtml += `<div class="staff-row">
+            <span class="staff-role">${r.role} ${r.count > 1 ? '×'+r.count : ''}</span>
+            <span class="staff-count">${r.count}</span>
+            <span class="staff-cost">~£${Math.round(weeklyPerPerson).toLocaleString()}/wk each</span>
+        </div>`;
+    });
+
+    foh.forEach(r => {
+        const weeklyPerPerson = r.salary / 52;
+        const weeklyRole = weeklyPerPerson * r.count * dayFactor * lunchBonus;
+        totalWeekly += weeklyRole;
+        fhtml += `<div class="staff-row">
+            <span class="staff-role">${r.role} ${r.count > 1 ? '×'+r.count : ''}</span>
+            <span class="staff-count">${r.count}</span>
+            <span class="staff-cost">~£${Math.round(weeklyPerPerson).toLocaleString()}/wk each</span>
+        </div>`;
+    });
+
+    document.getElementById('kitchenList').innerHTML = khtml;
+    document.getElementById('fohList').innerHTML = fhtml;
+    document.getElementById('weeklyWage').textContent = '£' + Math.round(totalWeekly).toLocaleString();
+    document.getElementById('annualWage').textContent = '£' + Math.round(totalWeekly * 52).toLocaleString();
+}
+
+// Initial
+calc();
+</script>
+</body>
+</html>
