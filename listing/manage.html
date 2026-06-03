@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Listing | ThaiData UK</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        section { padding: 20px 0; }
+
+        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
+        .card h2 { font-family: 'Instrument Serif', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 16px; }
+        .card h2 em { font-style: italic; color: var(--c2); }
+        .card label { display: block; color: var(--ink3); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; margin-top: 14px; }
+        .card label:first-of-type { margin-top: 0; }
+        .card input, .card select, .card textarea {
+            width: 100%; padding: 11px 14px; background: rgba(255,255,255,0.04);
+            border: 1px solid var(--line); border-radius: 10px; color: white;
+            font-size: 0.9rem; font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        .card input:focus, .card select:focus, .card textarea:focus { outline: none; border-color: var(--c2); }
+        .card textarea { min-height: 80px; resize: vertical; }
+        .card .hint { color: var(--ink4); font-size: 0.75rem; margin-top: 4px; }
+
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        @media (max-width: 500px) { .row { grid-template-columns: 1fr; } }
+
+        .checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+        .checkbox-pill { padding: 8px 14px; border: 1px solid var(--line); border-radius: 20px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; user-select: none; }
+        .checkbox-pill:hover { border-color: var(--ink4); }
+        .checkbox-pill.selected { border-color: var(--c2); background: rgba(16,185,129,0.15); color: var(--c2); }
+
+        .btn { display: inline-block; background: var(--c2); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.2s; }
+        .btn:hover { background: var(--c1); }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-secondary { background: transparent; border: 1px solid var(--line); }
+        .btn-secondary:hover { border-color: var(--c2); background: transparent; }
+
+        .toast { position: fixed; top: 20px; right: 20px; padding: 14px 22px; border-radius: 12px; font-weight: 600; z-index: 1000; animation: slideIn 0.3s ease; }
+        .toast-success { background: #064e3b; color: var(--c2); border: 1px solid rgba(16,185,129,0.3); }
+        .toast-error { background: #450a0a; color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+        .spinner { width: 20px; height: 20px; border: 2px solid var(--line); border-top-color: var(--c2); border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .preview-badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; background: rgba(16,185,129,0.12); color: var(--c2); margin-bottom: 12px; }
+        .changes-saved { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15); border-radius: 8px; padding: 10px 16px; color: var(--c2); font-size: 0.85rem; margin-top: 16px; display: none; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: white; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        </div>
+    </nav>
+
+    <div class="wrap">
+        <!-- Token entry / management -->
+        <div class="card" id="entry-screen">
+            <h2>Manage Your <em>Listing</em></h2>
+            <p style="color:var(--ink4);margin-bottom:20px;">You should have received a magic link via email. Paste the link or token below to edit your listing.</p>
+            <label>Token or Magic Link</label>
+            <input type="text" id="token-input" placeholder="Paste your full magic link or just the token...">
+            <button class="btn" style="margin-top:12px;" onclick="loadListing()">Access My Listing</button>
+
+            <hr style="border-color:var(--line);margin:24px 0;">
+            <p style="color:var(--ink4);font-size:0.85rem;">Don't have a token? <a href="../claim/" style="color:var(--c2);">Claim your restaurant first</a>, then request a magic link.</p>
+            <p style="color:var(--ink4);font-size:0.85rem;">Want to request a new magic link?</p>
+            <label>Restaurant Name</label>
+            <input type="text" id="request-name" placeholder="Your restaurant name">
+            <label>City</label>
+            <input type="text" id="request-city" placeholder="City">
+            <label>Email (used in claim)</label>
+            <input type="email" id="request-email" placeholder="you@restaurant.com">
+            <button class="btn btn-secondary" style="margin-top:12px;" onclick="requestMagicLink()">Send Magic Link</button>
+        </div>
+
+        <!-- Edit form -->
+        <div id="edit-screen" style="display:none;">
+            <div class="preview-badge"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Editing: <strong id="edit-name"></strong></div>
+
+            <div class="card">
+                <h2>About Your <em>Restaurant</em></h2>
+                <label>Description</label>
+                <textarea id="edit-description" placeholder="Tell customers about your restaurant — cuisine, atmosphere, story..."></textarea>
+                <p class="hint">Keep it under 300 characters for best display.</p>
+
+                <label>Cuisine Specialty</label>
+                <input type="text" id="edit-specialty" placeholder="e.g. Isaan, Southern Thai, Royal Thai, Street Food">
+            </div>
+
+            <div class="card">
+                <h2>Contact <em>Details</em></h2>
+                <div class="row">
+                    <div><label>Phone</label><input type="tel" id="edit-phone" placeholder="e.g. 0113 123 4567"></div>
+                    <div><label>Email</label><input type="email" id="edit-email" placeholder="e.g. eat@restaurant.com"></div>
+                </div>
+                <label>Website</label>
+                <input type="url" id="edit-website" placeholder="https://yourrestaurant.com">
+                <label>Address</label>
+                <input type="text" id="edit-address" placeholder="Full street address">
+                <label>Postcode</label>
+                <input type="text" id="edit-postcode" placeholder="e.g. LS1 4DY">
+            </div>
+
+            <div class="card">
+                <h2>Social <em>Media</em></h2>
+                <div class="row">
+                    <div><label>Instagram</label><input type="text" id="edit-instagram" placeholder="@yourhandle"></div>
+                    <div><label>Facebook</label><input type="text" id="edit-facebook" placeholder="Facebook page URL"></div>
+                </div>
+                <label>X / Twitter</label>
+                <input type="text" id="edit-twitter" placeholder="@yourhandle">
+            </div>
+
+            <div class="card">
+                <h2>Opening <em>Hours</em></h2>
+                <textarea id="edit-hours" placeholder="e.g. Mon-Thu: 12:00-22:00, Fri-Sat: 12:00-23:00, Sun: 12:00-21:00"></textarea>
+            </div>
+
+            <div class="card">
+                <h2>Details</h2>
+                <label>Price Range</label>
+                <select id="edit-price">
+                    <option value="">Select...</option>
+                    <option value="£">£ — Budget (£10-20pp)</option>
+                    <option value="££">££ — Moderate (£20-40pp)</option>
+                    <option value="£££">£££ — Premium (£40+pp)</option>
+                </select>
+
+                <label>Features</label>
+                <div class="checkbox-group" id="features-group">
+                    <span class="checkbox-pill" data-feature="BYOB">BYOB</span>
+                    <span class="checkbox-pill" data-feature="Delivery">Delivery</span>
+                    <span class="checkbox-pill" data-feature="Takeaway">Takeaway</span>
+                    <span class="checkbox-pill" data-feature="Outdoor Seating">Outdoor Seating</span>
+                    <span class="checkbox-pill" data-feature="Vegan Options">Vegan Options</span>
+                    <span class="checkbox-pill" data-feature="Gluten-Free Options">Gluten-Free</span>
+                    <span class="checkbox-pill" data-feature="Private Dining">Private Dining</span>
+                    <span class="checkbox-pill" data-feature="Licensed Bar">Licensed Bar</span>
+                    <span class="checkbox-pill" data-feature="Live Music">Live Music</span>
+                    <span class="checkbox-pill" data-feature="Parking">Parking</span>
+                    <span class="checkbox-pill" data-feature="Wheelchair Access">Wheelchair Access</span>
+                    <span class="checkbox-pill" data-feature="WiFi">WiFi</span>
+                    <span class="checkbox-pill" data-feature="Dog Friendly">Dog Friendly</span>
+                </div>
+            </div>
+
+            <div class="changes-saved" id="saved-banner"><i class="fas fa-check-circle"></i> Changes saved!</div>
+            <button class="btn" id="save-btn" onclick="saveListing()" style="margin-top:12px;width:100%;">Save Changes</button>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <footer>
+        <p>&copy; 2026 ThaiData.uk · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></p>
+    </footer>
+
+    <script>
+    let authToken = null;
+    let selectedFeatures = [];
+
+    // Init feature pills
+    document.querySelectorAll('.checkbox-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+            pill.classList.toggle('selected');
+            updateFeaturesArray();
+        });
+    });
+
+    function updateFeaturesArray() {
+        selectedFeatures = Array.from(document.querySelectorAll('.checkbox-pill.selected')).map(p => p.dataset.feature);
+    }
+
+    // Extract token from URL or input
+    function getToken() {
+        // Check URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlToken = urlParams.get('token');
+        if (urlToken) {
+            document.getElementById('token-input').value = urlToken;
+            return urlToken;
+        }
+
+        // From input
+        const input = document.getElementById('token-input').value.trim();
+        if (!input) return null;
+
+        // If it's a full URL, extract token param
+        try {
+            const u = new URL(input);
+            const t = u.searchParams.get('token');
+            if (t) return t;
+        } catch (e) {
+            // Not a URL, treat as raw token
+        }
+        return input;
+    }
+
+    // Toast
+    function toast(msg, type = 'success') {
+        const el = document.createElement('div');
+        el.className = `toast toast-${type}`;
+        el.textContent = msg;
+        document.getElementById('toast-container').appendChild(el);
+        setTimeout(() => el.remove(), 4000);
+    }
+
+    // Load listing with token
+    async function loadListing() {
+        const token = getToken();
+        if (!token) { toast('Please enter a token or magic link', 'error'); return; }
+
+        authToken = token;
+
+        try {
+            // Fetch the listing using the token (token-based auth, no query params needed)
+            const res = await fetch('/api/listing', {
+                headers: { 'Authorization': `Bearer ${token}` },
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                toast(data.error || 'Invalid or expired token', 'error');
+                authToken = null;
+                return;
+            }
+
+            const data = await res.json();
+            if (!data.listings || data.listings.length === 0) {
+                toast('No listing found', 'error');
+                return;
+            }
+
+            const listing = data.listings[0];
+            populateForm(listing);
+
+            document.getElementById('entry-screen').style.display = 'none';
+            document.getElementById('edit-screen').style.display = 'block';
+            document.getElementById('edit-name').textContent = listing.restaurant_name;
+            toast('Listing loaded ✓');
+
+        } catch (err) {
+            toast('Error loading listing. Check your token.', 'error');
+            authToken = null;
+        }
+    }
+
+    function populateForm(l) {
+        document.getElementById('edit-description').value = l.description || '';
+        document.getElementById('edit-specialty').value = l.cuisine_specialty || '';
+        document.getElementById('edit-phone').value = l.phone || '';
+        document.getElementById('edit-email').value = l.email || '';
+        document.getElementById('edit-website').value = l.website || '';
+        document.getElementById('edit-address').value = l.address || '';
+        document.getElementById('edit-postcode').value = l.postcode || '';
+        document.getElementById('edit-instagram').value = l.social_instagram || '';
+        document.getElementById('edit-facebook').value = l.social_facebook || '';
+        document.getElementById('edit-twitter').value = l.social_twitter || '';
+        document.getElementById('edit-hours').value = l.opening_hours || '';
+        document.getElementById('edit-price').value = l.price_range || '';
+
+        // Features
+        const features = l.features || [];
+        document.querySelectorAll('.checkbox-pill').forEach(pill => {
+            pill.classList.toggle('selected', features.includes(pill.dataset.feature));
+        });
+        updateFeaturesArray();
+    }
+
+    // Save listing
+    async function saveListing() {
+        if (!authToken) { toast('No active session', 'error'); return; }
+
+        const btn = document.getElementById('save-btn');
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span> Saving...';
+
+        const payload = {
+            description: document.getElementById('edit-description').value.trim() || null,
+            cuisine_specialty: document.getElementById('edit-specialty').value.trim() || null,
+            phone: document.getElementById('edit-phone').value.trim() || null,
+            email: document.getElementById('edit-email').value.trim() || null,
+            website: document.getElementById('edit-website').value.trim() || null,
+            address: document.getElementById('edit-address').value.trim() || null,
+            postcode: document.getElementById('edit-postcode').value.trim() || null,
+            social_instagram: document.getElementById('edit-instagram').value.trim() || null,
+            social_facebook: document.getElementById('edit-facebook').value.trim() || null,
+            social_twitter: document.getElementById('edit-twitter').value.trim() || null,
+            opening_hours: document.getElementById('edit-hours').value.trim() || null,
+            price_range: document.getElementById('edit-price').value || null,
+            features: selectedFeatures.length > 0 ? selectedFeatures : null,
+        };
+
+        // Remove null values
+        Object.keys(payload).forEach(k => {
+            if (payload[k] === null) delete payload[k];
+        });
+
+        try {
+            const res = await fetch('/api/listing', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${authToken}`,
+                },
+                body: JSON.stringify(payload),
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                document.getElementById('saved-banner').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('saved-banner').style.display = 'none';
+                }, 3000);
+                toast('Listing updated! ✓<br><small>Token is now used. Request a new magic link to edit again.</small>');
+            } else {
+                toast(data.error || 'Error saving', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        }
+
+        btn.disabled = false;
+        btn.textContent = 'Save Changes';
+    }
+
+    // Request magic link
+    async function requestMagicLink() {
+        const name = document.getElementById('request-name').value.trim();
+        const city = document.getElementById('request-city').value.trim();
+        const email = document.getElementById('request-email').value.trim();
+
+        if (!name || !city || !email) { toast('Fill in all three fields', 'error'); return; }
+
+        try {
+            const res = await fetch('/api/listing', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ restaurant_name: name, city, email }),
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                toast('Magic link generated! Check the link below.');
+                document.getElementById('token-input').value = data.magic_link;
+            } else {
+                toast(data.error || 'No approved claim found', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        }
+    }
+
+    // Auto-load from URL token
+    if (window.location.search.includes('token=')) {
+        loadListing();
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Claim Review | ThaiData UK</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .header { padding: 40px 0 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .header h1 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; }
+        .header h1 em { font-style: italic; color: var(--c2); }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 4px; margin-bottom: 24px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 4px; width: fit-content; }
+        .tab { padding: 8px 18px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: none; background: transparent; color: var(--ink4); transition: all 0.15s; }
+        .tab.active { background: var(--c2); color: white; }
+        .tab:hover:not(.active) { color: white; }
+
+        /* Table */
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 12px 16px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink4); border-bottom: 1px solid var(--line); }
+        td { padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        tr:hover td { background: rgba(255,255,255,0.01); }
+
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; }
+        .badge-pending { background: rgba(245,158,11,0.12); color: var(--gold); }
+        .badge-approved { background: rgba(16,185,129,0.12); color: var(--c2); }
+        .badge-rejected { background: rgba(239,68,68,0.12); color: var(--red); }
+
+        .btn { display: inline-block; padding: 8px 18px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; border: none; cursor: pointer; transition: all 0.15s; }
+        .btn-approve { background: var(--c2); color: white; }
+        .btn-approve:hover { background: var(--c1); }
+        .btn-reject { background: transparent; color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+        .btn-reject:hover { background: rgba(239,68,68,0.1); }
+        .btn-sm { padding: 6px 12px; font-size: 0.75rem; }
+
+        /* Login */
+        .login-box { max-width: 400px; margin: 80px auto; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 40px 32px; text-align: center; }
+        .login-box h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; margin-bottom: 8px; }
+        .login-box input { width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 10px; color: white; font-size: 0.95rem; margin: 12px 0; text-align: center; }
+        .login-box input:focus { outline: none; border-color: var(--c2); }
+
+        /* Details modal */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; display: none; align-items: center; justify-content: center; }
+        .modal-overlay.show { display: flex; }
+        .modal { background: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 32px; max-width: 560px; width: 90%; max-height: 80vh; overflow-y: auto; }
+        .modal h3 { font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 16px; }
+        .modal .detail-row { margin-bottom: 12px; }
+        .modal .detail-row .dl { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .modal .detail-row .dv { font-size: 0.95rem; margin-top: 2px; }
+
+        /* Toast */
+        .toast { position: fixed; top: 20px; right: 20px; padding: 14px 22px; border-radius: 12px; font-weight: 600; z-index: 1000; animation: slideIn 0.3s ease; }
+        .toast-success { background: #064e3b; color: var(--c2); border: 1px solid rgba(16,185,129,0.3); }
+        .toast-error { background: #450a0a; color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+        .spinner { width: 20px; height: 20px; border: 2px solid var(--line); border-top-color: var(--c2); border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .empty { text-align: center; padding: 60px 20px; color: var(--ink4); }
+        .empty i { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <span style="color:var(--ink4);font-size:0.85rem;">Admin Panel</span>
+        </div>
+    </nav>
+
+    <div class="wrap">
+        <!-- Login screen -->
+        <div class="login-box" id="login-screen">
+            <h2>Admin <em>Access</em></h2>
+            <p style="color:var(--ink4);margin-bottom:16px;">Enter your admin password to review claims.</p>
+            <input type="password" id="password-input" placeholder="Admin password" onkeydown="if(event.key==='Enter')login()">
+            <button class="btn btn-approve" onclick="login()" style="width:100%;margin-top:8px;">Login</button>
+            <p id="login-error" style="color:var(--red);font-size:0.85rem;margin-top:8px;display:none;"></p>
+        </div>
+
+        <!-- Main admin panel -->
+        <div id="admin-panel" style="display:none;">
+            <div class="header">
+                <h1>Claim <em>Review</em></h1>
+                <button class="btn btn-reject" onclick="logout()">Logout</button>
+            </div>
+
+            <div class="tabs">
+                <button class="tab active" onclick="loadClaims('pending')">Pending</button>
+                <button class="tab" onclick="loadClaims('approved')">Approved</button>
+                <button class="tab" onclick="loadClaims('rejected')">Rejected</button>
+            </div>
+
+            <div id="claims-container">
+                <div class="empty"><span class="spinner"></span><br>Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail modal -->
+    <div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+        <div class="modal" id="modal-content"></div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <footer>
+        <p>&copy; 2026 ThaiData.uk · <a href="../about.html">About</a> · <a href="../privacy.html">Privacy</a></p>
+    </footer>
+
+    <script>
+    let sessionToken = localStorage.getItem('thaidata_admin_token');
+    let currentTab = 'pending';
+
+    // On load
+    if (sessionToken) {
+        checkSession();
+    }
+
+    // Toast
+    function toast(msg, type = 'success') {
+        const el = document.createElement('div');
+        el.className = `toast toast-${type}`;
+        el.textContent = msg;
+        document.getElementById('toast-container').appendChild(el);
+        setTimeout(() => el.remove(), 4000);
+    }
+
+    // Login
+    async function login() {
+        const password = document.getElementById('password-input').value;
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                sessionToken = data.token;
+                localStorage.setItem('thaidata_admin_token', sessionToken);
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('admin-panel').style.display = 'block';
+                document.getElementById('login-error').style.display = 'none';
+                loadClaims('pending');
+            } else {
+                document.getElementById('login-error').textContent = data.error || 'Invalid password';
+                document.getElementById('login-error').style.display = 'block';
+            }
+        } catch (err) {
+            document.getElementById('login-error').textContent = 'Connection error';
+            document.getElementById('login-error').style.display = 'block';
+        }
+    }
+
+    function logout() {
+        localStorage.removeItem('thaidata_admin_token');
+        sessionToken = null;
+        document.getElementById('login-screen').style.display = 'block';
+        document.getElementById('admin-panel').style.display = 'none';
+    }
+
+    async function checkSession() {
+        // Test token by trying to fetch
+        const res = await fetch('/api/admin', {
+            headers: { 'Authorization': `Bearer ${sessionToken}` },
+        });
+        if (res.ok) {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('admin-panel').style.display = 'block';
+            loadClaims('pending');
+        } else {
+            localStorage.removeItem('thaidata_admin_token');
+            sessionToken = null;
+        }
+    }
+
+    // Load claims
+    async function loadClaims(status) {
+        currentTab = status;
+        document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.textContent.toLowerCase().includes(status)));
+        const container = document.getElementById('claims-container');
+        container.innerHTML = '<div class="empty"><span class="spinner"></span><br>Loading...</div>';
+
+        try {
+            const res = await fetch(`/api/admin?status=${status}&limit=100`, {
+                headers: { 'Authorization': `Bearer ${sessionToken}` },
+            });
+            const data = await res.json();
+
+            if (!data.claims || data.claims.length === 0) {
+                container.innerHTML = `<div class="empty"><i class="fas fa-inbox"></i>No ${status} claims</div>`;
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Restaurant</th>
+                            <th>City</th>
+                            <th>Claimer</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${data.claims.map(c => `
+                            <tr>
+                                <td><strong>${c.restaurant_name}</strong></td>
+                                <td>${c.city}</td>
+                                <td>${c.claimer_name}<br><span style="color:var(--ink4);font-size:0.75rem;">${c.claimer_email}</span></td>
+                                <td style="font-size:0.8rem;">${new Date(c.created_at).toLocaleDateString('en-GB')}</td>
+                                <td><span class="badge badge-${c.claim_status}">${c.claim_status}</span></td>
+                                <td>
+                                    <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;" onclick="viewDetail(${c.id})" title="View details"><i class="fas fa-eye"></i></button>
+                                    ${c.claim_status === 'pending' ? `
+                                        <button class="btn btn-sm btn-approve" onclick="approveClaim(${c.id})" title="Approve">✓</button>
+                                        <button class="btn btn-sm btn-reject" onclick="rejectClaim(${c.id})" title="Reject">✕</button>
+                                    ` : ''}
+                                </td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+                </div>
+            `;
+        } catch (err) {
+            container.innerHTML = '<div class="empty" style="color:var(--red);">Error loading claims. Check your session.</div>';
+        }
+    }
+
+    // View claim detail
+    async function viewDetail(claimId) {
+        try {
+            // We'll fetch all and find — simple approach
+            const res = await fetch(`/api/admin?status=all&limit=200`, {
+                headers: { 'Authorization': `Bearer ${sessionToken}` },
+            });
+            const data = await res.json();
+            const claim = data.claims.find(c => c.id === claimId);
+
+            if (!claim) { toast('Claim not found', 'error'); return; }
+
+            document.getElementById('modal-content').innerHTML = `
+                <h3>Claim <em>Details</em></h3>
+                <div class="detail-row"><div class="dl">Restaurant</div><div class="dv">${claim.restaurant_name}</div></div>
+                <div class="detail-row"><div class="dl">City</div><div class="dv">${claim.city}</div></div>
+                <div class="detail-row"><div class="dl">FSA ID</div><div class="dv">${claim.fsa_id || '—'}</div></div>
+                <div class="detail-row"><div class="dl">Business Type</div><div class="dv">${claim.business_type}</div></div>
+                <hr style="border-color:var(--line);margin:16px 0;">
+                <div class="detail-row"><div class="dl">Claimer Name</div><div class="dv">${claim.claimer_name}</div></div>
+                <div class="detail-row"><div class="dl">Email</div><div class="dv">${claim.claimer_email}</div></div>
+                <div class="detail-row"><div class="dl">Phone</div><div class="dv">${claim.claimer_phone || '—'}</div></div>
+                <div class="detail-row"><div class="dl">Role</div><div class="dv">${claim.claimer_role}</div></div>
+                <div class="detail-row"><div class="dl">Verification Notes</div><div class="dv">${claim.verification_notes || 'None provided'}</div></div>
+                <hr style="border-color:var(--line);margin:16px 0;">
+                <div class="detail-row"><div class="dl">Status</div><div class="dv"><span class="badge badge-${claim.claim_status}">${claim.claim_status}</span></div></div>
+                <div class="detail-row"><div class="dl">Submitted</div><div class="dv">${new Date(claim.created_at).toLocaleString('en-GB')}</div></div>
+                ${claim.reviewed_at ? `<div class="detail-row"><div class="dl">Reviewed</div><div class="dv">${new Date(claim.reviewed_at).toLocaleString('en-GB')}</div></div>` : ''}
+                ${claim.admin_notes ? `<div class="detail-row"><div class="dl">Admin Notes</div><div class="dv">${claim.admin_notes}</div></div>` : ''}
+                <div style="margin-top:20px;display:flex;gap:10px;">
+                    ${claim.claim_status === 'pending' ? `
+                        <button class="btn btn-approve" onclick="approveClaim(${claim.id});closeModal();">Approve</button>
+                        <button class="btn btn-reject" onclick="rejectClaim(${claim.id});closeModal();">Reject</button>
+                    ` : ''}
+                    <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;" onclick="closeModal()">Close</button>
+                </div>
+            `;
+            document.getElementById('modal-overlay').classList.add('show');
+        } catch (err) {
+            toast('Error loading details', 'error');
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('modal-overlay').classList.remove('show');
+    }
+
+    // Approve
+    async function approveClaim(claimId) {
+        if (!confirm('Approve this claim? A listing will be created.')) return;
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${sessionToken}`,
+                },
+                body: JSON.stringify({ claim_id: claimId, action: 'approved' }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Claim approved ✓');
+                loadClaims(currentTab);
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        }
+    }
+
+    // Reject
+    async function rejectClaim(claimId) {
+        const notes = prompt('Reason for rejection (optional):');
+        if (notes === null) return; // cancelled
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${sessionToken}`,
+                },
+                body: JSON.stringify({ claim_id: claimId, action: 'rejected', admin_notes: notes || null }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Claim rejected');
+                loadClaims(currentTab);
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        }
+    }
+    </script>
+</body>
+</html>
