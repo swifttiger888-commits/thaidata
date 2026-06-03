@@ -39,11 +39,11 @@
     },
     {
       "name": "search_restaurants",
-      "description": "Search individual Thai restaurants by city, type, or hygiene rating"
+      "description": "Search Thai restaurants by city, type, rating, or FSA detail scores (hygiene/structural/management)"
     },
     {
       "name": "find_nearby",
-      "description": "Find Thai restaurants near a UK postcode with distance sorting"
+      "description": "Find Thai restaurants near a postcode with distance, rating, and detail score filters"
     }
   ],
   "website": "https://thaidata.uk",

@@ -108,6 +108,9 @@ const TOOLS = [
         city: { type: "string", description: "UK city name to search in" },
         type: { type: "string", enum: ["restaurant", "takeaway", "all"], description: "Filter by business type", default: "all" },
         min_rating: { type: "number", description: "Minimum hygiene rating (1-5). E.g. 4 returns only 4+ star rated." },
+        max_hygiene_score: { type: "number", description: "Filter by FSA Hygiene score (0-25, lower=better). 0=perfect food handling." },
+        max_structural_score: { type: "number", description: "Filter by FSA Structural score (0-25, lower=better). 0=perfect premises." },
+        max_management_score: { type: "number", description: "Filter by FSA Management score (0-25, lower=better). 0=perfect systems/records." },
         limit: { type: "number", description: "Maximum results to return (default: 10, max: 50)", default: 10 }
       },
       required: ["city"]
@@ -122,6 +125,9 @@ const TOOLS = [
         postcode: { type: "string", description: "UK postcode to search near (e.g. 'LS1 4AG', 'SW1A 1AA', 'M1 1AE')" },
         radius: { type: "number", description: "Search radius in miles (default: 3, max: 25)", default: 3 },
         min_rating: { type: "number", description: "Minimum hygiene rating 1-5 (optional)" },
+        max_hygiene_score: { type: "number", description: "FSA Hygiene score filter (0-25, 0=perfect)" },
+        max_structural_score: { type: "number", description: "FSA Structural score filter (0-25, 0=perfect)" },
+        max_management_score: { type: "number", description: "FSA Management score filter (0-25, 0=perfect)" },
         type: { type: "string", enum: ["restaurant", "takeaway", "all"], description: "Filter by type", default: "all" },
         limit: { type: "number", description: "Max results (default: 10, max: 25)", default: 10 }
       },
@@ -260,6 +266,29 @@ async function searchRestaurants(params) {
     });
   }
   
+  // Filter by FSA detail scores (lower is better, 0 = perfect)
+  if (params.max_hygiene_score !== undefined) {
+    const max = parseInt(params.max_hygiene_score);
+    results = results.filter(r => {
+      const s = parseInt(r.hygiene_score);
+      return !isNaN(s) && s <= max;
+    });
+  }
+  if (params.max_structural_score !== undefined) {
+    const max = parseInt(params.max_structural_score);
+    results = results.filter(r => {
+      const s = parseInt(r.structural_score);
+      return !isNaN(s) && s <= max;
+    });
+  }
+  if (params.max_management_score !== undefined) {
+    const max = parseInt(params.max_management_score);
+    results = results.filter(r => {
+      const s = parseInt(r.management_score);
+      return !isNaN(s) && s <= max;
+    });
+  }
+  
   // Sort by rating (highest first), then name
   results.sort((a, b) => {
     const ra = parseInt(a.hygiene_rating) || 0;
@@ -286,7 +315,12 @@ async function searchRestaurants(params) {
       type: r.type,
       city: r.city,
       postcode: r.postcode,
-      hygiene_rating: r.hygiene_rating + '★',
+      hygiene_rating: r.hygiene_rating + '/5',
+      detail_scores: {
+        hygiene_food_handling: r.hygiene_score != null ? r.hygiene_score + '/25 (lower=better)' : 'N/A',
+        structural_cleanliness: r.structural_score != null ? r.structural_score + '/25 (lower=better)' : 'N/A',
+        management_confidence: r.management_score != null ? r.management_score + '/25 (lower=better)' : 'N/A'
+      },
       last_inspected: r.rating_date,
       address: r.address
     })),
@@ -354,6 +388,29 @@ async function findNearby(params) {
     });
   }
   
+  // Filter by FSA detail scores
+  if (params.max_hygiene_score !== undefined) {
+    const max = parseInt(params.max_hygiene_score);
+    results = results.filter(r => {
+      const s = parseInt(r.hygiene_score);
+      return !isNaN(s) && s <= max;
+    });
+  }
+  if (params.max_structural_score !== undefined) {
+    const max = parseInt(params.max_structural_score);
+    results = results.filter(r => {
+      const s = parseInt(r.structural_score);
+      return !isNaN(s) && s <= max;
+    });
+  }
+  if (params.max_management_score !== undefined) {
+    const max = parseInt(params.max_management_score);
+    results = results.filter(r => {
+      const s = parseInt(r.management_score);
+      return !isNaN(s) && s <= max;
+    });
+  }
+  
   // Step 6: Sort by distance, then rating
   results.sort((a, b) => {
     if (a.distance_miles !== b.distance_miles) return a.distance_miles - b.distance_miles;
@@ -379,7 +436,12 @@ async function findNearby(params) {
       name: r.name,
       type: r.type,
       distance: r.distance_miles + ' mi',
-      hygiene_rating: r.hygiene_rating + '★',
+      hygiene_rating: r.hygiene_rating + '/5',
+      detail_scores: {
+        hygiene_food_handling: r.hygiene_score != null ? r.hygiene_score + '/25 (lower=better)' : 'N/A',
+        structural_cleanliness: r.structural_score != null ? r.structural_score + '/25 (lower=better)' : 'N/A',
+        management_confidence: r.management_score != null ? r.management_score + '/25 (lower=better)' : 'N/A'
+      },
       postcode: r.postcode,
       city: r.city,
       address: r.address,

@@ -44,6 +44,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Loy Krathong](https://thaidata.uk/loy-krathong-uk.html): Festival of Lights. UK celebrations, locations, dates.
 
 ## Data
+- [Hugging Face Dataset](https://huggingface.co/datasets/thaidata/uk-thai-restaurants): Full dataset — 1,594 restaurants, 253 cities, geocoded. Free to use (ODbL).
 - [API](https://thaidata.uk/api/v1/): Machine-readable JSON endpoint for UK Thai restaurant statistics.
 - [MCP Server](https://thaidata.uk/mcp): Model Context Protocol endpoint — AI agents can query ThaiData directly as a tool. 8 query functions.
 - [Site Map](https://thaidata.uk/sitemap-page): Full HTML site map of all pages.
