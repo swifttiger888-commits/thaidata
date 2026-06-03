@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Should I Open a Thai Restaurant? — City Opportunity Scorer | ThaiData</title>
+    <meta name="description" content="Interactive tool: score every UK city for Thai restaurant potential. Adjust competition tolerance, budget, and priorities. See which city is your best bet.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools/where-to-open-thai-restaurant-uk">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Where Should I Open a Thai Restaurant? City Opportunity Scorer">
+    <meta property="og:description" content="Plug in your priorities — budget, competition tolerance, target market — and see which UK city scores highest for your Thai restaurant.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.4rem; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px; }
+        header { margin-bottom: 32px; text-align: center; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        header p { color: var(--ink4); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+        .layout { display: grid; grid-template-columns: 360px 1fr; gap: 30px; margin-top: 30px; }
+        @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+        .controls { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 28px; height: fit-content; }
+        .controls h3 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; margin-bottom: 24px; }
+        .slider-group { margin-bottom: 22px; }
+        .slider-group label { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 8px; }
+        .slider-group label span:first-child { color: var(--ink4); }
+        .slider-group label span:last-child { color: var(--c2); font-weight: 600; }
+        input[type="range"] { width: 100%; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; appearance: none; outline: none; }
+        input[type="range"]::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--c2); cursor: pointer; border: 2px solid white; }
+        .desc { font-size: 0.75rem; color: var(--ink3); margin-top: 4px; }
+
+        .results { }
+        .results h3 { font-family: 'Instrument Serif', serif; font-size: 1.4rem; margin-bottom: 16px; }
+        .result-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 20px 24px; margin-bottom: 10px; display: flex; align-items: center; gap: 16px; transition: border-color 0.2s; }
+        .result-card:hover { border-color: var(--c2); }
+        .result-card.top { border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.03); }
+        .rank-num { font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: var(--c2); min-width: 40px; text-align: center; }
+        .rank-num.gold { color: #F59E0B; }
+        .rank-info { flex: 1; }
+        .rank-name { font-weight: 600; font-size: 1.05rem; margin-bottom: 2px; }
+        .rank-stats { color: var(--ink4); font-size: 0.8rem; }
+        .rank-stats strong { color: white; }
+        .score-bar-wrap { width: 120px; }
+        .score-bar-bg { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+        .score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s; }
+        .score-num { font-size: 0.8rem; color: var(--ink4); text-align: center; margin-top: 4px; }
+
+        .explain-box { background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.12); border-radius: 14px; padding: 20px 24px; margin-top: 24px; }
+        .explain-box h4 { color: var(--c2); font-size: 0.9rem; margin-bottom: 8px; }
+        .explain-box p { color: var(--ink4); font-size: 0.85rem; line-height: 1.6; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav><div class="nav-bar">
+        <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        <a href="../guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Guides</a>
+    </div></nav>
+
+    <div class="container">
+        <header>
+            <div class="badge"><i class="fas fa-map-pin"></i> Interactive Tool</div>
+            <h1>Where Should I Open<br>a <em>Thai Restaurant?</em></h1>
+            <p>Adjust the sliders to match your priorities. Each UK city gets scored on market gap, population, competition, and costs. Find your best opening city.</p>
+        </header>
+
+        <div class="layout">
+            <div class="controls">
+                <h3>Your Priorities</h3>
+                
+                <div class="slider-group">
+                    <label><span>Market gap importance</span><span id="gapVal">70%</span></label>
+                    <input type="range" id="gapSlider" min="0" max="100" value="70" oninput="recalc()">
+                    <div class="desc">Fewer existing Thai restaurants = bigger gap = higher score</div>
+                </div>
+
+                <div class="slider-group">
+                    <label><span>Population size importance</span><span id="popVal">50%</span></label>
+                    <input type="range" id="popSlider" min="0" max="100" value="50" oninput="recalc()">
+                    <div class="desc">Bigger population = more potential customers</div>
+                </div>
+
+                <div class="slider-group">
+                    <label><span>Low competition tolerance</span><span id="compVal">60%</span></label>
+                    <input type="range" id="compSlider" min="0" max="100" value="60" oninput="recalc()">
+                    <div class="desc">Prefer cities with fewer established Thai restaurants</div>
+                </div>
+
+                <div class="slider-group">
+                    <label><span>Hygiene quality importance</span><span id="hygVal">30%</span></label>
+                    <input type="range" id="hygSlider" min="0" max="100" value="30" oninput="recalc()">
+                    <div class="desc">Higher existing ratings = better dining culture. Lower = easier to stand out.</div>
+                </div>
+
+                <div class="slider-group">
+                    <label><span>Budget sensitivity</span><span id="budgetVal">50%</span></label>
+                    <input type="range" id="budgetSlider" min="0" max="100" value="50" oninput="recalc()">
+                    <div class="desc">Higher = prefer cheaper cities (London/Edinburgh penalised)</div>
+                </div>
+            </div>
+
+            <div class="results">
+                <h3>Top Cities for <em>You</em></h3>
+                <div id="resultsList"></div>
+                
+                <div class="explain-box" id="topExplain" style="display:none;">
+                    <h4><i class="fas fa-lightbulb"></i> Why <span id="topCityName">this city</span>?</h4>
+                    <p id="topCityReason"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 ThaiData.uk · Data from FSA · <a href="../thai-restaurants-city-breakdown-uk.html">City Breakdown</a></p></footer>
+
+<script>
+// City data — loaded from FSA
+const CITIES = [
+    {"name":"London","pop":8970000,"total":411,"restaurants":323,"takeaways":88,"rating":4.1,"per100k":4.6},
+    {"name":"Leeds","pop":812000,"total":34,"restaurants":27,"takeaways":7,"rating":4.4,"per100k":4.2},
+    {"name":"Manchester","pop":568000,"total":28,"restaurants":24,"takeaways":4,"rating":4.1,"per100k":4.9},
+    {"name":"Edinburgh","pop":548000,"total":24,"restaurants":15,"takeaways":9,"rating":4.2,"per100k":4.4},
+    {"name":"Bristol","pop":483000,"total":19,"restaurants":15,"takeaways":4,"rating":4.6,"per100k":3.9},
+    {"name":"Birmingham","pop":1166000,"total":17,"restaurants":15,"takeaways":2,"rating":4.4,"per100k":1.5},
+    {"name":"Bradford","pop":547000,"total":15,"restaurants":10,"takeaways":5,"rating":3.8,"per100k":2.7},
+    {"name":"Leicester","pop":374000,"total":15,"restaurants":10,"takeaways":5,"rating":4.5,"per100k":4.0},
+    {"name":"Bournemouth","pop":401000,"total":14,"restaurants":11,"takeaways":3,"rating":4.7,"per100k":3.5},
+    {"name":"Swansea","pop":247000,"total":14,"restaurants":12,"takeaways":2,"rating":4.0,"per100k":5.7},
+    {"name":"Brighton","pop":277000,"total":13,"restaurants":12,"takeaways":1,"rating":4.8,"per100k":4.7},
+    {"name":"Sheffield","pop":584000,"total":13,"restaurants":12,"takeaways":1,"rating":4.6,"per100k":2.2},
+    {"name":"Huddersfield","pop":437000,"total":13,"restaurants":10,"takeaways":3,"rating":3.2,"per100k":3.0},
+    {"name":"Newcastle","pop":307000,"total":11,"restaurants":9,"takeaways":2,"rating":4.1,"per100k":3.6},
+    {"name":"York","pop":211000,"total":10,"restaurants":8,"takeaways":2,"rating":4.6,"per100k":4.7},
+    {"name":"Bath","pop":196000,"total":10,"restaurants":9,"takeaways":1,"rating":4.1,"per100k":5.1},
+    {"name":"Bolton","pop":300000,"total":10,"restaurants":5,"takeaways":5,"rating":3.6,"per100k":3.3},
+    {"name":"Norwich","pop":148000,"total":8,"restaurants":6,"takeaways":2,"rating":4.5,"per100k":5.4},
+    {"name":"Glasgow","pop":635000,"total":8,"restaurants":5,"takeaways":3,"rating":5.0,"per100k":1.3},
+    {"name":"Liverpool","pop":500000,"total":7,"restaurants":7,"takeaways":0,"rating":4.0,"per100k":1.4},
+    {"name":"Cardiff","pop":372000,"total":7,"restaurants":7,"takeaways":0,"rating":4.3,"per100k":1.9},
+    {"name":"Blackpool","pop":142000,"total":7,"restaurants":3,"takeaways":4,"rating":4.4,"per100k":4.9},
+    {"name":"Belfast","pop":345000,"total":7,"restaurants":6,"takeaways":1,"rating":3.6,"per100k":2.0},
+    {"name":"Coventry","pop":370000,"total":6,"restaurants":1,"takeaways":5,"rating":4.7,"per100k":1.6},
+    {"name":"Sunderland","pop":278000,"total":6,"restaurants":3,"takeaways":3,"rating":3.5,"per100k":2.2},
+    {"name":"Milton Keynes","pop":292000,"total":6,"restaurants":4,"takeaways":2,"rating":4.7,"per100k":2.1},
+    {"name":"Luton","pop":228000,"total":6,"restaurants":3,"takeaways":3,"rating":3.8,"per100k":2.6},
+    {"name":"Warrington","pop":212000,"total":6,"restaurants":5,"takeaways":1,"rating":3.5,"per100k":2.8},
+    {"name":"Stockport","pop":295000,"total":6,"restaurants":2,"takeaways":4,"rating":4.7,"per100k":2.0},
+    {"name":"Oldham","pop":243000,"total":6,"restaurants":3,"takeaways":3,"rating":4.3,"per100k":2.5},
+    {"name":"Wigan","pop":333000,"total":6,"restaurants":4,"takeaways":2,"rating":4.7,"per100k":1.8},
+    {"name":"Chelmsford","pop":184000,"total":6,"restaurants":5,"takeaways":1,"rating":4.8,"per100k":3.3},
+    {"name":"Portsmouth","pop":208000,"total":5,"restaurants":5,"takeaways":0,"rating":4.4,"per100k":2.4},
+    {"name":"Cheltenham","pop":120000,"total":5,"restaurants":5,"takeaways":0,"rating":5.0,"per100k":4.2},
+    {"name":"Slough","pop":164000,"total":5,"restaurants":5,"takeaways":0,"rating":3.8,"per100k":3.0}
+];
+
+// UK averages for normalization
+const AVG_PER_100K = 3.0;
+const MAX_POP = 8970000;
+const MIN_POP = 50000;
+
+// Rent cost multipliers (London=1.0, regional city=0.4, small town=0.25)
+function rentMultiplier(pop) {
+    if (pop > 5000000) return 1.0;
+    if (pop > 1000000) return 0.65;
+    if (pop > 500000) return 0.45;
+    if (pop > 200000) return 0.35;
+    return 0.25;
+}
+
+function calcGapScore(city) {
+    // Higher score = larger market gap (fewer Thai per capita)
+    // Inverse of per100k relative to avg
+    if (city.per100k <= 0) return 100;
+    const ratio = AVG_PER_100K / city.per100k;
+    return Math.min(100, Math.round(ratio * 50));
+}
+
+function calcPopScore(city) {
+    return Math.round((city.pop / MAX_POP) * 100);
+}
+
+function calcCompScore(city) {
+    // Higher = less competition (fewer total Thai restaurants)
+    return Math.max(0, Math.round((1 - city.total / 411) * 100));
+}
+
+function calcHygScore(city) {
+    // Higher existing hygiene = better area. But low hygiene = easier to beat.
+    return Math.round((city.rating / 5.0) * 100);
+}
+
+function calcBudgetScore(city) {
+    // Higher = cheaper to operate (lower rent multiplier)
+    const rent = rentMultiplier(city.pop);
+    return Math.round((1 - rent) * 100);
+}
+
+function recalc() {
+    const gapW = parseInt(document.getElementById('gapSlider').value) / 100;
+    const popW = parseInt(document.getElementById('popSlider').value) / 100;
+    const compW = parseInt(document.getElementById('compSlider').value) / 100;
+    const hygW = parseInt(document.getElementById('hygSlider').value) / 100;
+    const budgetW = parseInt(document.getElementById('budgetSlider').value) / 100;
+
+    document.getElementById('gapVal').textContent = Math.round(gapW*100) + '%';
+    document.getElementById('popVal').textContent = Math.round(popW*100) + '%';
+    document.getElementById('compVal').textContent = Math.round(compW*100) + '%';
+    document.getElementById('hygVal').textContent = Math.round(hygW*100) + '%';
+    document.getElementById('budgetVal').textContent = Math.round(budgetW*100) + '%';
+
+    const scored = CITIES.map(c => {
+        const scores = {
+            gap: calcGapScore(c),
+            pop: calcPopScore(c),
+            comp: calcCompScore(c),
+            hyg: calcHygScore(c),
+            budget: calcBudgetScore(c)
+        };
+        const total = scores.gap * gapW + scores.pop * popW + scores.comp * compW + 
+                      scores.hyg * hygW + scores.budget * budgetW;
+        const totalWeight = gapW + popW + compW + hygW + budgetW;
+        return { ...c, scores, total: totalWeight > 0 ? Math.round(total / totalWeight) : 50 };
+    });
+
+    scored.sort((a,b) => b.total - a.total);
+
+    const top5 = scored.slice(0, 8);
+    const maxScore = top5[0].total;
+
+    let html = '';
+    top5.forEach((c, i) => {
+        const topClass = i < 3 ? ' top' : '';
+        const rankClass = i === 0 ? ' gold' : '';
+        const barColor = c.total >= 75 ? 'var(--c2)' : c.total >= 55 ? '#F59E0B' : '#64748B';
+        
+        html += `<div class="result-card${topClass}">
+            <div class="rank-num${rankClass}">${i+1}</div>
+            <div class="rank-info">
+                <div class="rank-name">${c.name}</div>
+                <div class="rank-stats">
+                    Pop: <strong>${(c.pop/1000).toFixed(0)}k</strong> · 
+                    Thai: <strong>${c.total}</strong> · 
+                    /100k: <strong>${c.per100k}</strong> · 
+                    ★${c.rating}
+                </div>
+            </div>
+            <div class="score-bar-wrap">
+                <div class="score-bar-bg"><div class="score-bar-fill" style="width:${c.total}%;background:${barColor};"></div></div>
+                <div class="score-num">${c.total}/100</div>
+            </div>
+        </div>`;
+    });
+
+    document.getElementById('resultsList').innerHTML = html;
+    
+    // Explain the top pick
+    const top = top5[0];
+    document.getElementById('topExplain').style.display = 'block';
+    document.getElementById('topCityName').textContent = top.name;
+    
+    let reasons = [];
+    if (top.per100k <= 2.5) reasons.push(`significant market gap — only ${top.per100k} Thai businesses per 100k people (UK avg: ${AVG_PER_100K})`);
+    if (top.pop >= 400000) reasons.push(`large population of ${(top.pop/1000).toFixed(0)}k to draw from`);
+    if (top.total <= 10) reasons.push(`only ${top.total} existing competitors — room for a quality entrant`);
+    if (top.rating <= 4.0) reasons.push(`existing restaurants average ★${top.rating} — a well-run kitchen could quickly become the best-rated in the city`);
+    if (top.pop < 300000 && top.per100k <= 3) reasons.push(`smaller city with low competition — lower rent and easier to become "the" Thai place`);
+    if (reasons.length === 0) reasons.push(`balanced market — good population with moderate competition`);
+    
+    document.getElementById('topCityReason').textContent = reasons.join('. ') + '.';
+}
+
+// Initial run
+recalc();
+</script>
+</body>
+</html>

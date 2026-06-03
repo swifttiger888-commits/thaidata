@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant Hygiene Lookup — Search Any UK Thai Restaurant | ThaiData</title>
+    <meta name="description" content="Search any UK Thai restaurant by name. Instantly see its FSA food hygiene rating, inspection date, and how it compares to the city average. Free, no signup.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-restaurant-hygiene-lookup">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Thai Restaurant Hygiene Lookup — Search Any UK Thai Restaurant">
+    <meta property="og:description" content="Type any Thai restaurant name. Get its FSA hygiene rating instantly. Compare to city average. Free tool.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.4rem; }
+
+        .container { max-width: 700px; margin: 0 auto; padding: 60px 20px 80px; }
+        header { text-align: center; margin-bottom: 40px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        header p { color: var(--ink4); font-size: 1rem; }
+
+        .search-box { position: relative; margin-bottom: 30px; }
+        .search-box input { width: 100%; padding: 16px 20px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 14px; color: white; font-size: 1.05rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
+        .search-box input:focus { border-color: var(--c2); }
+        .search-box input::placeholder { color: var(--ink3); }
+        .search-box button { position: absolute; right: 6px; top: 6px; padding: 10px 20px; background: var(--c2); color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 0.9rem; font-family: 'Inter', sans-serif; }
+        .search-box button:hover { background: var(--c1); }
+        .search-box button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .results { }
+        .result-item { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-bottom: 10px; display: flex; align-items: center; gap: 18px; }
+        .rating-badge { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; flex-shrink: 0; }
+        .rating-5 { background: rgba(16,185,129,0.15); color: var(--c2); }
+        .rating-4 { background: rgba(16,185,129,0.1); color: var(--c2); }
+        .rating-3 { background: rgba(245,158,11,0.15); color: #F59E0B; }
+        .rating-2 { background: rgba(239,68,68,0.1); color: #EF4444; }
+        .rating-1 { background: rgba(239,68,68,0.15); color: #EF4444; }
+        .rating-0 { background: rgba(100,116,139,0.1); color: #64748B; }
+        .result-info { flex: 1; }
+        .result-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
+        .result-detail { color: var(--ink4); font-size: 0.8rem; }
+        .result-detail strong { color: white; }
+        .result-city { color: var(--ink3); font-size: 0.75rem; margin-top: 4px; }
+
+        .loading { text-align: center; padding: 40px; color: var(--ink4); }
+        .loading i { font-size: 1.5rem; color: var(--c2); margin-bottom: 10px; }
+        .error { text-align: center; padding: 30px; color: #EF4444; font-size: 0.9rem; }
+        .empty { text-align: center; padding: 60px 0; color: var(--ink4); }
+        .empty i { font-size: 3rem; color: var(--ink3); margin-bottom: 16px; display: block; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav><div class="nav-bar">
+        <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        <a href="../guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
+    </div></nav>
+
+    <div class="container">
+        <header>
+            <div class="badge"><i class="fas fa-search"></i> Free Lookup Tool</div>
+            <h1>Thai Restaurant<br><em>Hygiene Lookup</em></h1>
+            <p>Type any UK Thai restaurant name. Instantly see its FSA food hygiene rating, inspection date, and location.</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="e.g. Rosa's Thai, Giggling Squid, Thai Edge..." onkeydown="if(event.key==='Enter')search()">
+            <button id="searchBtn" onclick="search()">Search</button>
+        </div>
+
+        <div id="results">
+            <div class="empty">
+                <i class="fas fa-search"></i>
+                <p>Search any Thai restaurant to see its official FSA hygiene rating</p>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 ThaiData.uk · Data from <a href="https://www.food.gov.uk">Food Standards Agency</a> · Free public data</p></footer>
+
+<script>
+async function search() {
+    const query = document.getElementById('searchInput').value.trim();
+    if (!query) return;
+
+    const resultsDiv = document.getElementById('results');
+    const btn = document.getElementById('searchBtn');
+    
+    btn.disabled = true;
+    btn.textContent = '...';
+    resultsDiv.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-pulse"></i><p>Searching FSA database...</p></div>';
+
+    try {
+        const resp = await fetch(`https://api.ratings.food.gov.uk/Establishments?name=${encodeURIComponent(query)}&businessTypeId=1&pageSize=15`, {
+            headers: { 'x-api-version': '2' }
+        });
+        const data = await resp.json();
+        const establishments = data.establishments || [];
+
+        if (establishments.length === 0) {
+            resultsDiv.innerHTML = '<div class="empty"><i class="fas fa-utensils"></i><p>No Thai restaurants found matching "' + query + '"</p><p style="font-size:0.8rem;color:var(--ink3);">Try a different name or check spelling</p></div>';
+        } else {
+            let html = '';
+            establishments.forEach(e => {
+                const rating = e.RatingValue || '—';
+                const isNum = /^\d$/.test(rating);
+                const ratingClass = isNum ? `rating-${rating}` : 'rating-0';
+                const displayRating = isNum ? rating : '?';
+                const date = e.RatingDate ? new Date(e.RatingDate).toLocaleDateString('en-GB', {year:'numeric', month:'short'}) : 'Unknown';
+                const address = [e.AddressLine2, e.AddressLine3].filter(Boolean).join(', ') || e.AddressLine1 || '';
+                
+                html += `<div class="result-item">
+                    <div class="rating-badge ${ratingClass}">${displayRating}</div>
+                    <div class="result-info">
+                        <div class="result-name">${e.BusinessName}</div>
+                        <div class="result-detail">
+                            <strong>Inspected:</strong> ${date} · 
+                            <strong>Type:</strong> ${e.BusinessType || 'Restaurant'} · 
+                            <strong>Authority:</strong> ${e.LocalAuthorityName || 'Unknown'}
+                        </div>
+                        ${address ? `<div class="result-city">📍 ${address}</div>` : ''}
+                    </div>
+                </div>`;
+            });
+            resultsDiv.innerHTML = html;
+        }
+    } catch (err) {
+        resultsDiv.innerHTML = '<div class="error">Could not reach FSA database. Please try again.</div>';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Search';
+}
+</script>
+</body>
+</html>
