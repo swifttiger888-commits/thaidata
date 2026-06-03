@@ -1,0 +1,61 @@
+{
+  "name": "ThaiData UK",
+  "description": "Business intelligence and cost defense tools for UK Thai restaurant operators",
+  "url": "https://thaidata.uk",
+  "last_updated": "2026-06-03",
+  "data_sources": ["FSA FHRS", "FSA FHIS", "ONS", "HMRC", "UKHospitality"],
+  "statistics": {
+    "total_uk_thai_businesses": 1557,
+    "total_full_service_restaurants": 965,
+    "total_quick_service_takeaways": 592,
+    "uk_average_hygiene_rating": 4.1,
+    "uk_average_per_100k_density": 2.6,
+    "hygiene_rating_5_percentage": 50.4,
+    "estimated_uk_market_size_gbp": "£2.1B",
+    "growth_rate_2022_2025_pct": 20.3,
+    "national_living_wage_april_2026": 12.71,
+    "national_living_wage_18_20_april_2026": 10.85,
+    "national_living_wage_apprentice_april_2026": 8.00,
+    "average_delivery_commission_uber_eats_pct": 30,
+    "average_delivery_commission_deliveroo_pct": 32,
+    "average_delivery_commission_just_eat_pct": 14,
+    "average_delivery_markup_pct": 22,
+    "typical_startup_cost_gbp": {"min": 80000, "max": 180000},
+    "chef_visa_first_year_cost_gbp": {"min": 8000, "max": 15000},
+    "chef_visa_min_salary_gbp": 38700,
+    "chef_visa_processing_weeks": {"min": 12, "max": 24},
+    "opening_timeline_weeks": {"realistic": {"min": 22, "max": 30}, "best_case": {"min": 14, "max": 18}, "worst_case": 36}
+  },
+  "top_cities": [
+    {"name": "London", "total": 411, "dine_in": 323, "takeaway": 88, "rating": 4.1, "per_100k": 4.6, "population": 8970000},
+    {"name": "Leeds", "total": 34, "dine_in": 27, "takeaway": 7, "rating": 4.4, "per_100k": 4.2, "population": 812000},
+    {"name": "Manchester", "total": 28, "dine_in": 24, "takeaway": 4, "rating": 4.1, "per_100k": 4.9, "population": 568000},
+    {"name": "Edinburgh", "total": 24, "dine_in": 15, "takeaway": 9, "rating": 4.2, "per_100k": 4.4, "population": 548000},
+    {"name": "Bristol", "total": 19, "dine_in": 15, "takeaway": 4, "rating": 4.6, "per_100k": 3.9, "population": 483000},
+    {"name": "Birmingham", "total": 17, "dine_in": 15, "takeaway": 2, "rating": 4.4, "per_100k": 1.5, "population": 1166000},
+    {"name": "Bradford", "total": 15, "dine_in": 10, "takeaway": 5, "rating": 3.8, "per_100k": 2.7, "population": 547000},
+    {"name": "Leicester", "total": 15, "dine_in": 10, "takeaway": 5, "rating": 4.5, "per_100k": 4.0, "population": 374000},
+    {"name": "Bournemouth", "total": 14, "dine_in": 11, "takeaway": 3, "rating": 4.7, "per_100k": 3.5, "population": 401000},
+    {"name": "Swansea", "total": 14, "dine_in": 12, "takeaway": 2, "rating": 4.0, "per_100k": 5.7, "population": 247000},
+    {"name": "Brighton", "total": 13, "dine_in": 12, "takeaway": 1, "rating": 4.8, "per_100k": 4.7, "population": 277000},
+    {"name": "Sheffield", "total": 13, "dine_in": 12, "takeaway": 1, "rating": 4.6, "per_100k": 2.2, "population": 584000},
+    {"name": "Glasgow", "total": 8, "dine_in": 5, "takeaway": 3, "rating": 5.0, "per_100k": 1.3, "population": 635000}
+  ],
+  "key_dates_2026": {
+    "nlw_rise_effective": "2026-04-01",
+    "employment_allowance": 10500,
+    "employer_ni_threshold": 5000,
+    "employer_ni_rate_pct": 15.0,
+    "skilled_worker_visa_min_salary": 38700
+  },
+  "endpoints": {
+    "homepage": "https://thaidata.uk/",
+    "tools": "https://thaidata.uk/#tools",
+    "guides": "https://thaidata.uk/guides",
+    "cities_index": "https://thaidata.uk/thai-restaurants-city-breakdown-uk",
+    "api": "https://thaidata.uk/api/v1/",
+    "sitemap": "https://thaidata.uk/sitemap.xml",
+    "llms_txt": "https://thaidata.uk/llms.txt",
+    "llms_full_txt": "https://thaidata.uk/llms-full.txt"
+  }
+}

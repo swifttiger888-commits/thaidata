@@ -1,0 +1,49 @@
+# ThaiData UK
+> Business intelligence and cost defense tools for UK Thai restaurant operators. Market data, wage calculators, menu pricing benchmarks, and chef visa guidance — all free, no signup.
+
+UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, and HMRC. Updated June 2026.
+
+## Tools
+- [NLW Impact Calculator](https://thaidata.uk/): Calculate your April 2026 minimum wage cost increase in 60 seconds. Models all age tiers (21+, 18–20, apprentice) with NI and Employment Allowance.
+- [Profit Margin Defender](https://thaidata.uk/tools/PROFIT_MARGIN_DEFENDER.html): Model delivery platform fees (Uber Eats 30%, Deliveroo 32%, Just Eat 14%) against your dish costs. See true per-dish net profit.
+- [Chef Visa Assistant](https://thaidata.uk/tools/VISA_ASSISTANT.html): Check 2026 Skilled Worker visa eligibility for sponsoring a Thai chef. Factors the £38,700 salary threshold and sponsorship costs.
+- [Wholesale Benchmarker](https://thaidata.uk/tools/WHOLESALE_BENCHMARKER.html): Compare your ingredient costs against regional UK averages for rice, oil, proteins, and Thai-specific ingredients.
+- [Resilience Dashboard](https://thaidata.uk/tools/RESILIENCE_DASHBOARD.html): Predictive stress-testing for restaurant survival through NLW increases and cost pressure modeling.
+- [City Opportunity Scorer](https://thaidata.uk/tools/where-to-open-thai-restaurant-uk.html): Score every UK city for Thai restaurant potential. Adjust for competition tolerance, budget, and market gap.
+- [Hygiene Lookup](https://thaidata.uk/tools/thai-restaurant-hygiene-lookup.html): Search any UK Thai restaurant's FSA hygiene rating. Free, instant.
+- [NAP Trust Checker](https://thaidata.uk/tools/NAP_CHECKER.html): Verify your restaurant's Name, Address, Phone consistency across Google, Yelp, and 50+ directories for AI search visibility.
+- [Staffing Calculator](https://thaidata.uk/tools/thai-restaurant-staffing-calculator.html): Model headcount requirements and staff costs for different restaurant sizes.
+
+## Core Guides
+- [How to Open a Thai Restaurant in the UK](https://thaidata.uk/open-thai-restaurant-uk.html): Complete 15-step roadmap. Real costs (£80k–£180k), chef visa requirements, kitchen design for wok cooking, supplier directory.
+- [UK Thai Restaurant Count](https://thaidata.uk/how-many-thai-restaurants-uk.html): 1,557 FSA-registered Thai businesses. Full regional and city breakdown. Dine-in vs takeaway splits. Updated monthly.
+- [Menu Pricing Guide](https://thaidata.uk/thai-restaurant-menu-pricing-uk.html): 20-dish benchmark with food costs, London vs regional pricing, and GP targets for every major Thai dish.
+- [Operating Costs](https://thaidata.uk/thai-restaurant-costs-uk.html): Real numbers on food costs, staffing (NLW 2026), rent, energy, and hidden expenses for UK Thai restaurants.
+- [Delivery Commissions](https://thaidata.uk/thai-restaurant-delivery-commissions-uk.html): Platform-by-platform breakdown of Deliveroo, Uber Eats, and Just Eat fees. True margin after commission, VAT, and packaging.
+- [Wholesale Suppliers](https://thaidata.uk/thai-wholesale-suppliers-uk.html): Complete directory of UK Thai-specific wholesalers. Regional coverage, minimum orders, specialty items.
+
+## Industry Reports
+- [State of UK Thai Food 2026](https://thaidata.uk/state-of-uk-thai-food-2026.html): Definitive annual report. Market size, trends, growth rates, and competitive landscape.
+- [The 2026 Chef Visa Cliff](https://thaidata.uk/analysis/chef-visa-cliff.html): Analysis of the Skilled Worker visa impact on Thai restaurant staffing. Why sponsorship routes are narrowing.
+- [Revenue Benchmarks](https://thaidata.uk/thai-restaurant-revenue-benchmarks-uk.html): Real revenue and profit numbers from UK Thai restaurants. By size, location, and business model.
+- [Food Trends 2026](https://thaidata.uk/thai-food-trends-uk-2026.html): What UK diners want. Regional cuisine trends, pricing sensitivity, and delivery vs dine-in shifts.
+
+## City Data
+- [London](https://thaidata.uk/cities/london.html): 411 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
+- [Leeds](https://thaidata.uk/cities/leeds.html): 34 Thai businesses, ★4.4 avg rating, 4.2/100k density.
+- [Manchester](https://thaidata.uk/cities/manchester.html): 28 Thai businesses, ★4.1 avg rating, 4.9/100k density.
+- [Edinburgh](https://thaidata.uk/cities/edinburgh.html): 24 Thai businesses, ★4.2 avg rating, 4.4/100k density.
+- [Bristol](https://thaidata.uk/cities/bristol.html): 19 Thai businesses, ★4.6 avg rating.
+- [Birmingham](https://thaidata.uk/cities/birmingham.html): 17 Thai businesses, ★4.4 avg rating, 1.5/100k (underserved).
+- [All 15 cities](https://thaidata.uk/thai-restaurants-city-breakdown-uk.html): Full city-by-city comparison table with 78 UK cities analyzed.
+- [City Scorer Tool](https://thaidata.uk/tools/where-to-open-thai-restaurant-uk.html): Interactive tool. Weight population, competition, costs. Find your best city.
+
+## Events
+- [Festival Calendar](https://thaidata.uk/thai-festivals-uk.html): Complete UK Thai events calendar. Songkran, Loy Krathong, food festivals, temple celebrations.
+- [Songkran 2026](https://thaidata.uk/songkran-uk.html): Thai New Year events across the UK. Dates, venues, traditions.
+- [Loy Krathong](https://thaidata.uk/loy-krathong-uk.html): Festival of Lights. UK celebrations, locations, dates.
+
+## Data
+- [API](https://thaidata.uk/api/v1/): Machine-readable JSON endpoint for UK Thai restaurant statistics.
+- [Site Map](https://thaidata.uk/sitemap-page): Full HTML site map of all pages.
+- [About](https://thaidata.uk/about): About ThaiData UK. Data methodology and sources.

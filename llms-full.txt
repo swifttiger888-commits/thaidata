@@ -1,0 +1,1282 @@
+# ThaiData UK — Full Content for LLM Ingestion
+> Last updated: June 2026
+> This file provides substantive data from ThaiData.uk pages for LLM context.
+> For navigation, see https://thaidata.uk/llms.txt
+
+---
+
+## UK Thai Restaurant Count 2026
+Source: https://thaidata.uk/how-many-thai-restaurants-uk
+
+Data-Driven Research · June 2026
+ How Many Thai Restaurants
+Are in the UK?
+
+ We pulled every registered Thai restaurant from the FSA hygiene database. Here's the first complete count — broken down by every region, city, and chain.
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 1,557
+ FSA-Registered Thai Businesses
+(UK-wide, inspected)
+ 
+ 
+ 1,172
+ Dine-in Restaurants
+(England, Wales, NI only)
+ 
+ 
+ 411
+ In London
+(26.4% of UK total)
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ Key Findings
+
+ 
+ 1 in 4 Thai restaurants in the UK is in London — 411 out of 1,557
+
+ Giggling Squid is the largest named chain with 48 locations, followed by Rosa's Thai Cafe (32)
+
+ 50.4% of Thai restaurants hold a 5-star hygiene rating — far above the national average across all cuisines
+
+ Leeds (34) and Manchester (28) lead outside London
+
+ London has 411 Thai businesses across 32 boroughs — more than the next 10 cities combined
+
+ Scotland's 71 Thai businesses are now fully tracked via the FHIS scheme — Edinburgh leads with 24, Glasgow has 8
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ By Region
+
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 South East
+ 240
+ 21.1% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 London
+ 221
+ 19.4% · But 282 restaurants when grouping all boroughs
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 North West
+ 137
+ 12.0% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 South West
+ 101
+ 8.9% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Yorkshire
+ 89
+ 7.8% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 East of England
+ 87
+ 7.6% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 West Midlands
+ 61
+ 5.4% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 East Midlands
+ 55
+ 4.8% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland
+ 46*
+ 4.0% · *Separate scheme; real total ~120
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales
+ 44
+ 3.9% of UK Thai restaurants
+ 
+ 
+ 
+ 🏴󠁧󠁢󠁥󠁮󠁧󠁿 North East
+ 25
+ 2.2% of UK Thai restaurants
+ 
+ 
+ 
+ Northern Ireland
+ 7
+ 0.6% of UK Thai restaurants
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Top Cities for Thai Food
+
+ 
+ 
+ 
+ #City / AreaRestaurants
+ 
+ 
+ 1London411
+ 2Leeds34
+ 3Manchester28
+ 4Edinburgh24
+ 5Bristol19
+ 6Birmingham17
+ 7Bradford15
+ 7Leicester15
+ 9Bournemouth14
+ 9Swansea14
+ 
+ 
+ 
+ 
+ 
+ Full City Breakdown: 30 UK Cities Compared →
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Thai Restaurants Are Cleaner Than You Think
+
+ Hygiene ratings from the Food Standards Agency show Thai cuisine punches well above the UK average.
+
+ 
+ 
+ ★★★★★
+ 573
+ 5 Stars (50.4%)
+ 
+ 
+ ★★★★
+ 229
+ 4 Stars (20.1%)
+ 
+ 
+ ★★★
+ 144
+ 3 Stars (12.7%)
+ 
+ 
+ ★★
+ 37
+ 2 Stars (3.3%)
+ 
+ 
+ ★
+ 25
+ 1 Star (2.2%)
+ 
+ 
+ 0
+ 6
+ 0 Stars (0.5%)
+ 
+ 
+ 
+ 70.5% of Thai restaurants score 4 or 5 stars. For context, across all UK food businesses the 5-star rate is approximately 74% — Thai restaurants are competitive with the national standard. Only 6 restaurants (0.5%) scored 0 — likely closed or recently reopened under new management.
+ 
+ 
+ 
+
+ 
+ 
+ 
+ The Biggest Thai Chains
+
+ We matched restaurant names across multiple locations to identify chains. Here's who dominates:
+
+ 
+ 
+ 
+ #ChainLocations
+ 
+ 
+ 1Rosa's Thai Cafe20
+ 2Cha Cha Chai18
+ 3Thai Orchid10
+ 4Thai Square9
+ 4Chai Green9
+ 6Thai Kitchen8
+ 7Thai House7
+ 8Thai Express5
+ 
+ 
+ 
+ 
+ Note: Chain detection is name-based only. Rosa's Thai Cafe has 37+ UK locations according to their own website — the discrepancy likely means some newer locations haven't had their first FSA inspection yet, or they operate some delivery-only kitchens not registered as restaurants.
+ 
+ 
+ 
+
+ 
+ 
+ 
+ How We Counted Them
+
+ 
+ 📋 Where does the data come from? ▼
+ All data is sourced from the Food Standards Agency (FSA) API, which maintains the Food Hygiene Rating Scheme (FHRS). Every UK food establishment must register with their local authority and undergo hygiene inspections. We queried the database for all establishments with "Thai" in their business name, filtered to business type "Restaurant/Cafe/Canteen" (BusinessTypeID=1). The data was extracted on 3 June 2026.
+ 
+ 
+ 🏴󠁧󠁢󠁳󠁣󠁴󠁿 What about Scotland? ▼
+ Scotland operates a separate Food Hygiene Information Scheme (FHIS). As of June 2026, we now have full Scottish data — 71 Thai businesses across 22 council areas. Edinburgh leads with 24, Glasgow has 8. This data is included in all our city breakdowns.
+ 
+ 
+ 🔍 Won't this miss Thai restaurants that don't have 'Thai' in their name? ▼
+ Yes — a small number. Restaurants like "Banana Tree", "Patara", or "Busaba" serve Thai food but don't have "Thai" in their registered business name. We estimate this affects fewer than 30-40 restaurants UK-wide. Conversely, a handful of non-Thai businesses with "Thai" in their name (e.g., "Thairapy" massage) may be included. We're refining the dataset with manual review.
+ 
+ 
+ 📊 How does this compare to other cuisines? ▼
+ For context: the UK has approximately 12,000 Indian restaurants, 8,000 Italian restaurants, and 7,500 Chinese restaurants. Thai cuisine at ~1,250 makes it a significant but not dominant player — roughly comparable to Turkish or Japanese restaurants in the UK.
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Running a Thai restaurant?
+
+ Use our free tools to benchmark your costs, check your margins, and plan for the 2026 NLW.
+
+ Try the Free Tools
+
+---
+
+## How to Open a Thai Restaurant in the UK
+Source: https://thaidata.uk/open-thai-restaurant-uk
+
+Complete Guide · 2026 Edition
+ How to Open a Thai Restaurant
+in the UK
+
+ Real costs, real numbers, real steps. Everything the generic "how to open a restaurant" guides leave out — specifically for Thai cuisine operators.
+
+ 
+ 
+
+ 
+ 
+ 
+ What It Actually Costs
+
+ Based on 2026 figures. Ranges depend on location, size, and whether you're taking over an existing restaurant or starting from an empty unit.
+
+ 
+ 
+ £80k–£180k
+ Total startup (leasehold, 40–60 covers)
+ 
+ 
+ £15k–£35k
+ Kitchen fit-out (wok stations, extraction, refrigeration)
+ 
+ 
+ £8k–£20k
+ Front-of-house (furniture, decor, POS, tableware)
+ 
+ 
+ £3k–£8k
+ Legal & licensing (premises licence, solicitor, planning)
+ 
+ 
+ £5k–£10k
+ Pre-opening (staff training, marketing, soft launch)
+ 
+ 
+ £5k–£15k
+ Initial stock (dry goods, fresh, bar)
+ 
+ 
+ £8k–£18k
+ Chef visa sponsorship (if recruiting from Thailand)
+ 
+ 
+ 3–6 months
+ Working capital buffer (rent, wages, suppliers)
+ 
+ 
+ 
+ Saving money: Taking over a former restaurant with a working extraction system and commercial kitchen can cut startup costs by £20k–£40k. The single biggest cost variable is whether the unit already has a commercial extraction canopy — installing one from scratch in a new unit runs £15k–£25k alone.
+ 
+ 
+ 
+
+ 
+ 
+ 
+ The 15-Step Roadmap
+
+ 
+ 1. Research your locationUse our UK Thai restaurant count data to see how many competitors are in your target city. London has 282 — Manchester has 26. Less competition ≠ less demand.
+
+ 2. Write a business planBanks and landlords want to see: target market, competitor analysis, 3-year P&L projection, and — critically — how you'll handle the NLW rises. Our calculators give you the numbers lenders actually care about.
+
+ 3. Secure fundingOptions: personal savings, bank loan (need 2 years of accounts — tough for first-timers), Start Up Loans (£500–£25k at 6% fixed), angel investors, or Thai community investment circles.
+
+ 4. Find and secure a unitLook for A3/A5 use class (now Sui Generis under the new system). Check: extraction already installed? Gas supply adequate? (Thai cooking needs serious BTU). Negotiate a rent-free period (3–6 months is standard for fitting out).
+
+ 5. Premises licenceIf you're serving alcohol or open past 11pm, you need a premises licence from the local council. Apply early — it takes 28 days minimum and objections from neighbours can delay.
+
+ 6. Food business registrationRegister with your local authority's environmental health department at least 28 days before opening. Free, mandatory, and you'll get your first hygiene inspection within months of opening.
+
+ 7. Design your kitchenThai cooking needs: 2–3 high-output wok burners, a stock pot burner, commercial rice cooker, deep fryer, salamander grill, walk-in fridge. Don't cheap out on extraction — it's the first thing EHO inspects.
+
+ 8. Recruit your chefThe hardest step. Use our Chef Visa Assistant to check if you can sponsor a Thai chef. The Skilled Worker visa minimum salary is £38,700/year or the going rate — whichever is higher. Budget 3–6 months for visa processing.
+
+ 9. Build your menuUse our Menu Pricing Guide for dish-by-dish benchmarks. Start with 20–25 dishes, not 60. A tight menu = fresher food, faster service, lower wastage, and higher GP.
+
+ 10. Source your suppliersKey accounts: Thai-specific wholesaler (for authentic ingredients — galangal, kaffir lime, Thai basil, fish sauce), general foodservice (meat, veg, dairy), drinks supplier, and a backup for each. Use our Wholesale Benchmarker.
+
+ 11. Set up your business structureLimited company (most common — protects personal assets), register for VAT if turnover exceeds £90k (or voluntarily to reclaim VAT on fit-out costs), employers' liability insurance (mandatory), public liability, and buildings/contents.
+
+ 12. Hire front-of-house staffAt £12.71/hr from April 2026, a full-time FOH staff member costs ~£26,500/year including NI. Our NLW Calculator models your exact staffing cost. Budget for 2–3 FOH staff for a 40-cover restaurant.
+
+ 13. Get your tech stack rightEPOS system (Toast, Lightspeed, or Square for smaller operations), card machine, online booking (OpenTable or Resy), website (essential — 70% of diners check the menu online before visiting), and delivery platform integration if you're offering takeaway.
+
+ 14. Soft launchRun 2–3 weeks at 50% capacity with invited guests, friends, and family. Offer 30–50% off in exchange for honest feedback. Fix everything before the public launch. This is where you discover your rice cooker is too small and the wok station layout is backwards.
+
+ 15. Go live and market aggressivelyGoogle Business Profile (critical for local search), Instagram (Thai food is highly visual — post daily), local food bloggers (invite them during soft launch), and TripAdvisor (respond to every review, good or bad). Budget £500–£1,000/month for the first 6 months.
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ What Makes Thai Restaurants Different
+
+ 
+ 🔥 The Wok Station Problem
+
+ Thai cooking runs on high-BTU wok burners. A standard commercial kitch
+
+---
+
+## UK Thai Restaurant Operating Costs
+Source: https://thaidata.uk/thai-restaurant-costs-uk
+
+Cost Intelligence · 2026
+ UK Thai Restaurant
+Operating Costs
+
+ Every line item in a Thai restaurant P&L. Real 2026 numbers for a typical 40-cover independent restaurant — from food costs to the hidden expenses that catch first-time operators off guard.
+
+ 
+ 
+
+ 
+ 
+ 
+ The P&L at a Glance
+
+ Typical 40-cover Thai restaurant, £12,000/week turnover (modest for London, solid for regional). Location: Midlands city. Staff: 1 head chef, 2 kitchen assistants, 2 FOH, 1 KP (part-time).
+
+ 
+ 
+ 
+ Cost CategoryWeekly (£)Monthly (£)Annual (£)% of Revenue
+ 
+ 
+ Food & drink costs£3,300£14,300£171,60027.5%
+ Staff wages (incl. NI, pension)£4,200£18,200£218,40035.0%
+ Rent£1,150£5,000£60,0009.6%
+ Energy (gas + electric)£460£2,000£24,0003.8%
+ Business rates£230£1,000£12,0001.9%
+ Insurance£115£500£6,0001.0%
+ Delivery commissions£350£1,520£18,2402.9%
+ Marketing£150£650£7,8001.3%
+ Consumables & maintenance£200£870£10,4401.7%
+ Licensing & professional fees£80£350£4,2000.7%
+ Bank & card charges£100£435£5,2200.8%
+ TOTAL COSTS£10,335£44,825£537,90086.1%
+ NET PROFIT (before tax)£1,665£7,215£86,58013.9%
+ 
+ 
+ 
+ How to read this: 13.9% net is solid for UK hospitality — the industry average is 8–12%. Thai restaurants can achieve this because of inherently high GP on curries and stir-fries. But this model assumes tight cost control — a 3% food cost overspend wipes out £20k of that profit.
+ 
+ 
+
+ 
+ 
+ 
+ Food Costs — The Biggest Lever
+
+ Food cost is the single largest controllable expense. A 27.5% food cost is achievable for Thai cuisine — well below the 30–35% common in Italian or British restaurants — because Thai curries, stir-fries, and rice dishes have inherently high GP margins.
+
+ 
+ 
+ 🥘
+ Target food cost: 27–30%
+ £3,300/week
+ Based on £12,000 weekly revenue. Includes all ingredients, beverages, and consumable kitchen supplies. If you're above 30%, check: are you over-portioning protein? Are you buying retail instead of wholesale? Run our Wholesale Benchmarker to compare your prices.
+ 
+ 
+ Where Thai restaurants leak food cost
+
+The top three: (1) over-portioning protein — adding 20g extra chicken per portion costs £100/week. (2) Buying coconut milk at retail (£2.50/tin) rather than wholesale (£1.35/tin) — £50/week. (3) Wastage on fresh herbs not used within 3 days — order twice weekly, not once. Tighten these three and you'll find 3–5% margin immediately.
+
+ 
+ 
+
+ 
+ 
+ 
+ Staff Costs — The April 2026 Impact
+
+ Labour is now the largest cost line for most Thai restaurants. The April 2026 NLW rise to £12.71/hr pushed staffing from ~32% to ~35% of revenue for a typical operator.
+
+ 
+ 
+ 👥
+ Target staff cost: 32–36%
+ £4,200/week
+ Includes gross wages, employer NI (15% above £9,100/year), and workplace pension (3%). Does NOT include chef visa sponsorship costs — those are capital expenditure, not operating. Run the NLW Calculator →
+ 
+ 
+ 
+ 
+ RoleHours/wkRateWeekly CostAnnual Cost
+ 
+ Head Chef48£16.00/hr£768£39,936
+ Kitchen Asst 140£12.71/hr£508£26,437
+ Kitchen Asst 235£12.71/hr£445£23,132
+ FOH Manager40£13.50/hr£540£28,080
+ FOH Staff30£12.71/hr£381£19,826
+ KP (part-time)20£12.71/hr£254£13,218
+ NI + Pension——£1,304£67,771
+ TOTAL213 hrs£4,200£218,400
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Rent — What You Should Pay
+
+ Rent varies more than any other cost. The rule of thumb: rent should not exceed 10% of revenue. A £12,000/week restaurant can afford £5,000/month.
+
+ 
+ 
+ 
+ Location TypeMonthly RentSq Ft (approx)Rate/sq ftNotes
+ 
+ London zone 1–2£6,000–£12,000800–1,200£75–100/yrPremium. Only viable at £15k+/week revenue.
+ London zone 3–4£3,500–£6,0001,000–1,500£35–50/yrSweet spot for London independents.
+ Major city centre£3,000–£5,5001,200–1,800£25–35/yrManchester, Birmingham, Leeds, Bristol.
+ Large town / suburb£1,800–£3,5001,500–2,500£12–20/yrBest margin. More space, lower rent.
+ Small town / rural£1,200–£2,5001,500–3,000£8–15/yrLowest rent but need strong reputation to pull customers.
+ 
+ 
+ 
+ Negotiation tip
+
+Ask for a turnover rent clause — base rent + 5–8% of revenue above an agreed threshold. This protects you in slow months and rewards the landlord when you're busy. Also: always negotiate a 3–6 month rent-free period for fit-out. If the unit has been empty for 6+ months, push for 6 months.
+
+ 
+ 
+
+ 
+ 
+ 
+ Hidden Costs First-Timers Miss
+
+ 
+ 
+ ⚡
+ Energy — Thai cooking burns gas
+ £24,000/year
+ Wok cooking at high BTU consumes 30–40% more gas than standard European cooking. Budget £2,000/month for a 40-cover restaurant. Get a smart meter and monitor daily — a poorly maintained wok burner wastes £50–80/month in excess gas.
+ 
+
+ 
+ 🛡️
+ Insurance — not optional, not cheap
+ £6,000/year
+ Employers' liability (mandatory, £10M cover), public liability (£5M), buildings & contents, business interruption, and — critically for Thai restaurants — deep fat frying cover. Standard policies may exclude wok cooking. Check your policy explicitly covers commercial wok operations.
+ 
+
+ 
+ 💳
+ Card processing fees
+ £5,220/year
+ At 1.75% average blended rate on £300k card turnover. Negotiate your rate — independ
+
+---
+
+## State of UK Thai Food 2026
+Source: https://thaidata.uk/state-of-uk-thai-food-2026
+
+Annual Industry Report
+ State of UK Thai Food
+2026
+
+ The most comprehensive analysis of Thai cuisine across the United Kingdom. 1,557 restaurants. 78 cities. One definitive report.
+
+ 
+ June 2026
+ FSA/FHIS Data
+ 8 min read
+ 
+ 
+
+ 
+ 
+ 
+ 1,557
+ Thai Businesses UK-Wide
+ 
+ 
+ 78
+ Cities With Thai Food
+ 
+ 
+ ★4.3
+ Average Hygiene Rating
+ 
+ 
+ 26.4%
+ London's Share of Total
+ 
+ 
+
+ 
+ 
+ In this report
+
+ 1. How big is the UK Thai food market?
+ 2. Which cities have the most Thai restaurants?
+ 3. Where are the underserved markets?
+ 4. How clean are UK Thai restaurants?
+ 5. The delivery platform economics
+ 6. What does a Thai meal cost in 2026?
+ 7. 2026 outlook: minimum wage, margins, and migration
+ 8. Methodology & data sources
+ 
+
+ 
+ 
+ 1. How Big Is the UK Thai Food Market?
+
+ As of June 2026, there are 1,557 Thai food businesses registered with the Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS for Scotland). This covers dine-in restaurants, takeaways, and mobile vendors — any establishment classified under Thai cuisine by their local authority.
+
+ 
+ 
+ 📊 Key figure: 1,557 businesses across 78 UK cities. London alone accounts for 411 (26.4%). The average city has 6.4 Thai businesses per 100,000 residents. The national average hygiene rating is ★4.3 out of 5.
+
+ 
+ 
+ The split between dine-in and takeaway varies significantly by city. Nationally, approximately 79% are dine-in restaurants and 21% are takeaways, though London skews more toward takeaway (21.4%) compared to cities like Sheffield (97% dine-in).
+
+ 
+
+ 
+ 
+ 2. Which Cities Have the Most Thai Restaurants?
+
+ London dominates — but the rest of the top 10 tells a more interesting story about immigrant communities, student populations, and tourism patterns.
+
+ 
+ 
+ #CityBusinessesPer 100kHygieneDensity
+ 
+ 1London4114.6★4.1
+ 2Leeds344.2★4.4
+ 3Manchester284.9★4.1
+ 4Edinburgh244.4★4.2
+ 5Bristol193.9★4.6
+ 6Birmingham171.5★4.4
+ 7Brighton134.7★4.2
+ 8Sheffield122.1★4.0
+ 9Leicester102.8★4.4
+ 10Bournemouth94.6★4.0
+ 
+ 
+ 
+
+ The drop-off after London is stark: the capital has 12× more Thai businesses than second-place Leeds. For context, London has 8.8× Leeds' population — meaning Thai food is actually slightly more concentrated in London relative to population than the raw numbers suggest.
+
+ 
+
+ 
+ 
+ 3. Where Are the Underserved Markets?
+
+ Per-capita density is the metric that matters for operators looking to expand. The UK average is 2.6 Thai businesses per 100,000 residents. Cities above this line are more competitive; cities below it represent opportunity.
+
+ 
+ 🔍 Biggest gaps (high population, low Thai density): Birmingham (1.5/100k — 1.1M people but only 17 Thai businesses), Sheffield (2.1/100k), Cardiff, Coventry, and Hull all have large populations with disproportionately few Thai options.
+
+ 
+
+ Manchester leads the density rankings at 4.9/100k, followed closely by Brighton (4.7) and London (4.6). These are the most competitive markets — but also the ones with proven demand.
+
+ Use our free City Opportunity Scorer to weight population, competition, and costs for any UK city.
+
+ 
+
+ 
+ 
+ 4. How Clean Are UK Thai Restaurants?
+
+ The national average hygiene rating for Thai establishments is ★4.3 out of 5 — slightly above the UK restaurant industry average. The highest-rated cities are Bristol (★4.6), Leeds (★4.4), and Leicester (★4.4).
+
+ 
+ 
+ 🏆 Highest Hygiene
+
+ Bristol ★4.6
+Leeds ★4.4
+Leicester ★4.4
+Birmingham ★4.4
+
+ 
+ 
+ ⚠️ Room to Improve
+
+ Sheffield ★4.0
+Bournemouth ★4.0
+London ★4.1
+Manchester ★4.1
+
+ 
+ 
+
+ Use our Hygiene Rating Lookup to check any Thai restaurant's latest FSA rating, and the Competitor Radar to see which restaurants recently gained or lost stars.
+
+ 
+
+ 
+ 
+ 5. The Delivery Platform Economics
+
+ Delivery platforms take a significant cut of every order. Based on our analysis of Just Eat, Deliveroo, and Uber Eats commission structures for independent restaurants:
+
+ 
+ 
+ PlatformCommissionOn a £30 orderOn a £50 order
+ 
+ Just Eat14% + £0.50Platform gets £4.70Platform gets £7.50
+ Deliveroo25-30%Platform gets £7.50-£9.00Platform gets £12.50-£15.00
+ Uber Eats25-30%Platform gets £7.50-£9.00Platform gets £12.50-£15.00
+ 
+ 
+ 
+
+ The average Thai menu price is 22% higher on delivery platforms than dine-in, as restaurants pass some commission costs to customers. But with food costs typically at 28-35% and labour at 30-35%, the remaining margin after platform fees is thin.
+
+ Use our free Delivery Profit Calculator to model your exact net earnings per platform.
+
+ 
+
+ 
+ 
+ 6. What Does a Thai Meal Cost in 2026?
+
+ Based on our Menu Price Index tracking 75 items across 5 cities, here's what UK diners are paying:
+
+ 
+ 
+ DishDine-in AvgDelivery AvgMarkup
+ 
+ Pad Thai (chicken)£12.50£14.95+20%
+ Green Curry (chicken)£13.00£15.90+22%
+ Tom Yum Goong£6.95£8.50+22%
+ Massaman Curry£13.95£16.90+21%
+ Thai Fish Cakes£7.50£9.25+23%
+ Jasmine Rice (portion)£3.50£4.20+20%
+ 
+ 
+ 
+
+ London prices run approximately 15% above the national average. The gap between London and northern cities is widest 
+
+---
+
+## Thai Restaurant Menu Pricing Guide
+Source: https://thaidata.uk/thai-restaurant-menu-pricing-uk
+
+Menu Engineering · 2026 Data
+ Thai Restaurant Menu Pricing
+in the UK
+
+ Dish-by-dish benchmarks: what to charge for every Thai staple, how London compares to the regions, and the margin strategy used by profitable operators.
+
+ 
+ 
+
+ 
+ 
+ 
+ Dish-by-Dish Pricing Benchmarks
+
+ Prices surveyed from 100+ UK Thai restaurants in Q1 2026. Food costs are wholesale averages for an independent operator (not chain-buying rates).
+
+ 
+ 
+ 
+ 
+ Dish
+ Food Cost
+ London Price
+ Regional Price
+ GP Target
+ Strategy
+ 
+ 
+ 
+ 
+ Pad Thai (chicken)ผัดไทย
+ £2.80
+ £13.50–£15.50
+ £11.95–£13.95
+ ~80%
+ Star dish — keep high
+ 
+ 
+ Pad Thai (prawn)ผัดไทยกุ้ง
+ £3.80
+ £15.50–£17.50
+ £13.95–£15.95
+ ~78%
+ Premium version of star
+ 
+ 
+ Green Curry (chicken)แกงเขียวหวาน
+ £3.20
+ £15.50–£19.50
+ £11.99–£13.00
+ ~83%
+ Highest GP on the menu
+ 
+ 
+ Red Curry (prawn)แกงแดง
+ £3.40
+ £17.50–£19.00
+ £13.50–£15.50
+ ~81%
+ Prestige pricing works
+ 
+ 
+ Massaman Curryแกงมัสมั่น
+ £3.50
+ £16.00–£18.50
+ £12.50–£14.50
+ ~79%
+ Slow-cooked = premium perception
+ 
+ 
+ Tom Yum (prawn)ต้มยำกุ้ง
+ £2.90
+ £8.50–£11.00
+ £6.95–£9.50
+ ~72%
+ Starter portion — upsell to large
+ 
+ 
+ Tom Kha Gaiต้มข่าไก่
+ £2.50
+ £8.00–£10.50
+ £6.50–£8.50
+ ~76%
+ High margin, push as special
+ 
+ 
+ Spring Rolls (4pc)เปาะเปี๊ยะทอด
+ £0.90
+ £6.50–£8.00
+ £5.50–£7.00
+ ~86%
+ Highest GP starter — push it
+ 
+ 
+ Fish Cakes (4pc)ทอดมันปลา
+ £1.50
+ £8.00–£9.50
+ £6.95–£8.50
+ ~82%
+ Excellent margin starter
+ 
+ 
+ Papaya Saladส้มตำ
+ £1.20
+ £9.50–£12.00
+ £7.50–£9.50
+ ~87%
+ Best GP on entire menu!
+ 
+ 
+ Pad Kra Paoผัดกระเพรา
+ £2.40
+ £12.50–£14.50
+ £10.50–£12.50
+ ~81%
+ Rising popularity — promote
+ 
+ 
+ Pad See Ewผัดซีอิ๊ว
+ £2.60
+ £12.50–£15.00
+ £10.50–£12.95
+ ~80%
+ Noodle dishes all perform
+ 
+ 
+ Drunken Noodlesผัดขี้เมา
+ £2.70
+ £13.00–£15.50
+ £10.95–£13.00
+ ~80%
+ Strong GP, cult favourite
+ 
+ 
+ Sweet & Sour (chicken)ผัดเปรี้ยวหวาน
+ £2.60
+ £13.00–£15.00
+ £10.50–£12.50
+ ~80%
+ Safe choice for cautious diners
+ 
+ 
+ Cashew Stir Fryผัดเม็ดมะม่วง
+ £3.00
+ £14.00–£16.00
+ £11.50–£13.50
+ ~79%
+ Cashews drive up food cost
+ 
+ 
+ Jasmine Rice (portion)ข้าวหอมมะลิ
+ £0.25
+ £3.50–£4.50
+ £2.95–£3.95
+ ~93%
+ Pure profit — never include free
+ 
+ 
+ Coconut Riceข้าวมะพร้าว
+ £0.45
+ £4.50–£5.50
+ £3.50–£4.50
+ ~91%
+ Premium rice upsell
+ 
+ 
+ Sticky Riceข้าวเหนียว
+ £0.30
+ £4.00–£5.00
+ £3.00–£4.00
+ ~92%
+ Authenticity signal — charge for it
+ 
+ 
+ Mango Sticky Riceข้าวเหนียวมะม่วง
+ £2.00
+ £8.50–£10.50
+ £6.50–£8.00
+ ~80%
+ Iconic — charge what it's worth
+ 
+ 
+ Thai Iced Teaชาเย็น
+ £0.40
+ £4.50–£5.50
+ £3.50–£4.50
+ ~91%
+ Drinks are your margin engine
+ 
+ 
+ 
+ 
+ 
+ Methodology: Prices collected from menu websites, delivery platforms, and in-person visits to Thai restaurants across 12 UK cities (Q1 2026). Food costs based on wholesale price data from 4 major UK suppliers averaged across independent-order quantities (not chain-buying rates). GP = gross profit before labour, rent, and overheads. Actual GP varies by portion size, wastage, and supplier negotiation.
+ 
+ 
+ 
+
+ 
+ 
+ 
+ What the Data Actually Says
+
+ 
+ 🥇 Papaya salad is your highest-margin item (87% GP)
+
+ Shredded green papaya costs pennies. With a £9.50–£12.00 price tag in London, it delivers the best return per plate on the entire menu. Yet most operators bury it in the salad section. Move it to a featured position.
+
+ 
+ 
+ ☕ Drinks + sides = silent profit engine
+
+ Jasmine rice at £0.25 cost selling for £3.95 = 93% GP. Thai iced tea at £0.40 selling for £5.50 = 91% GP. If you're including rice with mains, you're leaving ~£2–3 per cover on the table. Every table of 4 = £8–12 of pure profit you're giving away.
+
+ 
+ 
+ 📉 The London premium is real, but shrinking
+
+ London Thai restaurants charge 15–25% more on mains than regional ones. But the gap is narrowing — delivery apps have made regional diners comfortable with £14–15 main courses post-pandemic. If you're pricing below £12 for a curry outside London, you're likely undercharging.
+
+ 
+ 
+ 🍜 Noodle dishes are the sweet spot
+
+ Pad Thai, Pad See Ew, and Drunken Noodles all deliver 78–81% GP while being what customers actually order most. A £2.80 food cost Pad Thai at £14.50 in London is £11.70 contribution margin — the workhorse of profitable Thai menus.
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 5 Rules for Pricing Your Thai Menu
+
+ 
+ 
+ 1
+ Never include rice with a main
+ It's a £3–4 line item at 93% margin. Bundle it into a "set meal" if you must, but keep the price visible. Customers don't object — they expect to pay for rice at Thai restaurants.
+ 
+ 
+ 2
+ Anchor high, sell medium
+ Have one £22+ "premium" dish (lobster pad thai, whole sea bass) you don't expect to sell much of. Everything else looks reasonable next to it. Restaurant menu psychology 101.
+ 
+ 
+ 3
+ Chicken curries are your GP backbone
+ Chicken thigh is cheap, curry sauce scales easily, and customers accept £14–17 for a chicken curry in 2026. Prawn versions look premium but squeeze margins — price them £2–3 higher to compensate.
+ 
+ 
+ 4
+ Track your actual food costs monthly
+ Wholesale prices move. Coconut milk spiked 18% in 2025. Thai jasmine rice varies 
+
+---
+
+## Delivery Commission Guide
+Source: https://thaidata.uk/thai-restaurant-delivery-commissions-uk
+
+Margin Intelligence · 2026
+ Thai Restaurant
+Delivery Commissions
+
+ What Deliveroo, Just Eat, and Uber Eats actually cost your Thai restaurant — per dish, per order, per year. And how to build a delivery menu that makes money instead of losing it.
+
+ 
+ 
+
+ 
+ 
+ 
+ What Each Platform Charges
+
+ Standard commission rates for independent restaurants (June 2026). Chains negotiate better rates — these are what most Thai operators actually pay.
+
+ 
+ 
+ 
+ PlatformCommissionMarketing add-onEffective ratePayment terms
+ 
+ 
+ Deliveroo25–30%+5–7% for promoted placement30–37%Weekly (Tuesdays)
+ Just Eat14–20%+5% for boosted visibility14–25%Weekly
+ Uber Eats25–30%+5–10% for ads30–40%Weekly (Mondays)
+ 
+ 
+ 
+ Note: Just Eat offers a lower-commission "Self-Delivery" option (14%) where you use your own drivers. If you already have delivery drivers for phone orders, this is the most profitable platform choice by a significant margin.
+ 
+ 
+
+ 
+ 
+ 
+ What Your Pad Thai Actually Earns
+
+ The brutal maths. A £14.50 Pad Thai on Deliveroo with marketing turned on:
+
+ 
+ 
+ 
+ Dine-InJust Eat (14%)Deliveroo (30%)Uber Eats (30%)
+ 
+ 
+ Menu price£14.50£14.50£14.50£14.50
+ VAT (20%)-£2.42-£2.42-£2.42-£2.42
+ Platform commission—-£2.03-£4.35-£4.35
+ Food cost-£2.80-£2.80-£2.80-£2.80
+ Packaging—-£0.40-£0.40-£0.40
+ Your margin£9.28£6.85£4.53£4.53
+ Margin %64%47%31%31%
+ 
+ 
+ 
+ 
+ The delivery margin trap
+
+ Your Pad Thai earns £4.53 on Deliveroo vs £9.28 dine-in. That's a 51% profit reduction — before accounting for labour, rent, and energy. If more than 40% of your orders come through delivery platforms, you need to either raise delivery prices or reduce your platform dependency. Run the full Profit Margin Defender →
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ Platform-by-Platform Breakdown
+
+ 
+ 
+ Deliveroo
+ 25–30% commission
+ Market share: Strong in London and major cities. Weaker in rural areas.
+
+ Best for: Premium positioning. Deliveroo customers spend more per order (£23 avg) and are less price-sensitive.
+
+ Worst for: Margin. The base 30% rate + marketing add-ons can push effective rates to 37%.
+
+ Thai-specific: Deliveroo's "Editions" dark kitchens are saturated with Thai concepts in London. You're competing with delivery-only brands that have lower overheads.
+
+ Negotiation tip: If you do £2,000+/week on Deliveroo, ask your account manager for a rate review. Chains like Rosa's Thai negotiate 20–22%. Independents with volume can push for 25%.
+ 
+
+ 
+ Just Eat
+ 14–20% commission
+ Market share: Largest UK platform by restaurant numbers. Broadest geographic coverage.
+
+ Best for: The 14% self-delivery rate. If you have drivers, Just Eat becomes genuinely profitable.
+
+ Worst for: Lower average order value (£18). More price-sensitive customers.
+
+ Thai-specific: Just Eat has the most Thai restaurant listings of any platform — meaning more competition. Your menu photography and dish descriptions matter more here.
+
+ Key strategy: List on Just Eat with the 14% self-delivery rate and use your own drivers. Use the savings to offer a 10% discount vs Deliveroo pricing — you'll still earn more per order.
+ 
+
+ 
+ Uber Eats
+ 25–30% commission
+ Market share: Growing fast. Strong in cities, expanding in suburbs.
+
+ Best for: Discovery. Uber Eats' algorithm promotes new restaurants aggressively in the first 4 weeks — good for launch.
+
+ Worst for: Add-on costs. Uber's advertising platform is aggressive — easy to accidentally spend £200/week on promoted listings that don't convert.
+
+ Thai-specific: Uber Eats users search by cuisine type heavily. Make sure your restaurant is tagged as "Thai" not "Asian" or "Other."
+
+ Warning: Uber Eats' default advertising settings enrol new restaurants automatically. Check your ad spend weekly or you'll find £150/month disappearing into promotions you didn't knowingly activate.
+ 
+ 
+ 
+
+ 
+ 
+ 
+ How to Build a Profitable Delivery Menu
+
+ 
+ 
+ 1
+ Separate delivery menu from dine-in
+ Your delivery menu should be 20–25% more expensive than your dine-in menu. Customers accept this — they're paying for convenience. A separate printed menu also lets you remove dishes that don't travel well (crispy fish, tempura).
+ 
+ 
+ 2
+ Push high-GP dishes
+ Feature curries (83% GP), stir-fries (80% GP), and rice dishes on your delivery menu. De-prioritise or remove low-margin items. The delivery customer isn't comparing your menu to the dine-in version — they're comparing to other delivery options.
+ 
+ 
+ 3
+ Bundles beat singles
+ "Pad Thai + Spring Rolls + Drink = £18.50" bundles increase average order value by 30–40%. The platform takes the same commission percentage, but your fixed costs (packaging, driver wait time) are spread across a larger order.
+ 
+ 
+ 4
+ Self-deliver on Just Eat
+ If you have even one driver for phone orders, list on Just Eat with the 14% self-delivery rate instead of 20% marketplace. On 100 orders/week at £20 average, that saves £120/week — £6,240/year. Use Deliveroo and Uber Eats for discovery, Just Eat for profit.
+ 
+ 
+ 5
+ Turn off marketing after 8 weeks
+ Platforms push promoted listings
+
+---
+
+## Wholesale Supplier Directory
+Source: https://thaidata.uk/thai-wholesale-suppliers-uk
+
+Supplier Intelligence · 2026
+ UK Thai Restaurant
+Wholesale Suppliers
+
+ 28 verified suppliers — nationwide depots, regional specialists, fresh importers, and online wholesalers. Plus real ingredient price benchmarks so you know if you're overpaying.
+
+ 
+ 
+
+ 
+ 
+ 
+ Ingredient Price Benchmarks
+
+ Wholesale case prices for the 6 ingredients Thai restaurants buy most. Prices are trade-account estimates (June 2026) — use these to check if your supplier is competitive.
+
+ 
+ 
+ 
+ IngredientTypical Pack SizeWholesale PricePer UnitNotes
+ 
+ 
+ Coconut Milk (Aroy-D)24 × 400ml£30–£35/case£1.25–£1.46/tinAroy-D is the industry standard. Chaokoh & Mae Ploy alternatives similar pricing.
+ Jasmine Rice (Hom Mali)25kg bag£22–£32/bag£0.88–£1.28/kgPrice fluctuates seasonally. New crop arrives Dec–Jan, cheapest then.
+ Fish Sauce (Squid Brand)12 × 725ml£18–£25/case£1.50–£2.08/bottleTiparos & Megachef premium brands cost 20–30% more.
+ Red Curry Paste (Mae Ploy)12 × 1kg tub£38–£45/case£3.17–£3.75/kgOne 1kg tub makes ~25 portions. Mae Ploy is the restaurant workhorse.
+ Thai Sweet Basil (fresh)Per kg, imported£8–£15/kg—Highly seasonal. Price spikes in UK winter. Order twice weekly.
+ Galangal (fresh)Per kg, imported£6–£12/kg—Frozen galangal is £3–5/kg — acceptable for soups, not salads.
+ 
+ 
+ 
+ How to use this: Multiply the per-unit cost by your weekly usage, then compare against your current invoice. A £2 difference on a case of coconut milk across 10 cases/week = £1,040/year. These small differences compound.
+ 
+ 
+
+ 
+ 
+ 
+ 1. Nationwide Wholesalers
+
+ Large foodservice distributors with depots across the UK. Best for dry goods, frozen, and non-specialist ingredients. For Thai-specific fresh produce, pair with a specialist importer.
+
+ 
+ Booker Wholesale
+ 170+ depots nationwide
+ UK's largest cash & carry. Stocks core Thai ingredients (coconut milk, jasmine rice, fish sauce) alongside full foodservice range. Owned by Bestway since 2024. Trade card required — free for registered businesses.
+ Nationwide
+ 
+ 
+ Bidfood UK
+ National delivery network
+ Dedicated "World Foods" range with a Thai cuisine section. Delivers to restaurants nationwide. Good for operators who want a single-supplier relationship. Minimum order varies by region.
+ Nationwide
+ 
+ 
+ Brakes UK
+ 40+ depots, national delivery
+ Sysco-owned. "Foods of the World" range includes Thai essentials. Strong on frozen and ambient. Not the cheapest but reliable next-day delivery and consistent stock. Good backup supplier.
+ Nationwide
+ 
+ 
+ JJ Foodservice
+ 11 branches + national delivery
+ Acquired Gatelands Supplies in 2024, significantly expanding their Asian product range. Now carries 300+ Asian lines. Strong on fish, seafood, and frozen. Competitive on bulk rice orders.
+ Nationwide
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 2. Regional & Oriental Specialists
+
+ The backbone of Thai restaurant supply. These are the suppliers that carry what the nationals don't — fresh Thai herbs, specific curry paste brands, authentic fish sauce, and imported equipment.
+
+ 
+ Wing Yip
+ London, Birmingham, Manchester, Croydon
+ The UK's leading Oriental grocer since the 1970s. 4 superstores with 4,500+ product lines. The go-to for Thai operators in London and the Midlands. Huge fresh produce section. Trade accounts available. Online ordering.
+ Regional
+ 
+ 
+ Hoo Hing
+ 7 superstores (London, Birmingham, Milton Keynes, Park Royal, Leyton, Enfield, Mitcham)
+ Oriental food specialist since 1968. Excellent Thai section. Online wholesale ordering available. Often marginally cheaper than Wing Yip on bulk dry goods.
+ Regional
+ 
+ 
+ Lung Wah Chong
+ Oxford (est. 38+ years), ships nationwide
+ Family-run institution. Dedicated Thai section with weekly fresh imports. Known for carrying hard-to-find items (fresh kaffir lime, Thai aubergines, holy basil). Supplies many independent Thai restaurants across southern England. Call for trade account.
+ RegionalThai Specialist
+ 
+ 
+ Sing Kee Foods
+ Leeds (4 distribution hubs nationally)
+ Northern powerhouse for Asian foodservice supply. Strong Thai range. Competitive wholesale pricing. Covers Yorkshire, North West, and North East from Leeds hub.
+ Regional
+ 
+ 
+ JK Foods UK
+ Nottingham (est. 1976), nationwide delivery
+ East Asian import and distribution specialist. Supplies restaurants and other wholesalers. Strong on ambient and frozen Thai products. Good for operators in the East Midlands.
+ Regional
+ 
+ 
+ Chuanglee Ltd
+ London SE7 (est. 1989)
+ Family-run importer with 3,000+ product lines. Exclusive UK distributor for Nittaya Thai products. Own farm in Thailand — direct sourcing on key ingredients. Supplies many London Thai restaurants.
+ RegionalThai Specialist
+ 
+ 
+ Talard Thai Food Service
+ Bournemouth
+ Dedicated Thai wholesale specialist serving the south coast. Smaller operation but deeply knowledgeable. Worth the relationship if you're in Dorset/Hampshire.
+ RegionalThai Specialist
+ 
+ 
+ Tradewinds Oriental
+ Scunthorpe (est. 1984), ships UK-wide
+ Family-run for 40+ years. Wholesale + retail. Published prices online — one 
+
+---
+
