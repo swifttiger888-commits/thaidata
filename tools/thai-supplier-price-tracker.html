@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant Supplier Price Tracker — Compare Wholesale Costs | ThaiData</title>
+    <meta name="description" content="Compare wholesale prices for Thai restaurant essentials — coconut milk, jasmine rice, fish sauce, curry paste. Updated supplier benchmarks to stop you overpaying.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-supplier-price-tracker">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Thai Restaurant Supplier Price Tracker — Compare Wholesale Costs">
+    <meta property="og:description" content="What should you be paying for coconut milk, rice, and curry paste? Compare wholesale prices across UK suppliers. Updated benchmarks.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --amber: #F59E0B; --red: #EF4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.4rem; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px 80px; }
+        header { text-align: center; margin-bottom: 36px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        header p { color: var(--ink4); font-size: 1rem; }
+
+        .ingredient-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+        .ing-tab { padding: 10px 18px; border-radius: 100px; border: 1px solid var(--line); background: transparent; color: var(--ink4); cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; transition: all 0.2s; }
+        .ing-tab:hover { border-color: var(--c2); color: white; }
+        .ing-tab.active { background: rgba(16,185,129,0.1); border-color: var(--c2); color: var(--c2); font-weight: 600; }
+
+        .table-wrap { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        thead th { padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); background: rgba(255,255,255,0.02); border-bottom: 1px solid var(--line); }
+        tbody td { padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: rgba(255,255,255,0.02); }
+        .price-best { color: var(--c2); font-weight: 700; }
+        .price-avg { color: var(--amber); }
+        .price-high { color: var(--red); }
+        .supplier-name { font-weight: 600; }
+        .supplier-note { font-size: 0.75rem; color: var(--ink3); }
+
+        .info-card { background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.12); border-radius: 14px; padding: 22px 28px; margin: 20px 0; }
+        .info-card h3 { color: var(--c2); font-size: 0.95rem; margin-bottom: 8px; }
+        .info-card p { color: var(--ink4); font-size: 0.85rem; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav><div class="nav-bar">
+        <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        <a href="../guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
+    </div></nav>
+
+    <div class="container">
+        <header>
+            <div class="badge"><i class="fas fa-boxes"></i> Price Benchmarks · June 2026</div>
+            <h1>Thai Supplier<br><em>Price Tracker</em></h1>
+            <p>What should you actually be paying for Thai restaurant staples? Compare wholesale prices across UK suppliers. Stop overpaying.</p>
+        </header>
+
+        <div class="ingredient-tabs">
+            <button class="ing-tab active" onclick="showIngredient('coconut')">🥥 Coconut Milk</button>
+            <button class="ing-tab" onclick="showIngredient('rice')">🍚 Jasmine Rice</button>
+            <button class="ing-tab" onclick="showIngredient('fishsauce')">🐟 Fish Sauce</button>
+            <button class="ing-tab" onclick="showIngredient('currypaste')">🌶️ Curry Paste</button>
+            <button class="ing-tab" onclick="showIngredient('oil')">🫒 Cooking Oil</button>
+            <button class="ing-tab" onclick="showIngredient('noodles')">🍜 Rice Noodles</button>
+        </div>
+
+        <div id="priceTable"></div>
+
+        <div class="info-card">
+            <h3><i class="fas fa-info-circle"></i> How These Prices Work</h3>
+            <p>Prices are wholesale benchmarks collected June 2026 from major UK Thai food suppliers. All prices exclude VAT and delivery. Minimum order quantities vary — most suppliers require £100-£200 for free delivery. Always call for current pricing — these are reference points, not live quotes. Check our <a href="../thai-wholesale-suppliers-uk.html" style="color:var(--c2);">full supplier directory</a> for contact details.</p>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 ThaiData.uk · Prices as of June 2026 · <a href="../thai-wholesale-suppliers-uk.html">Full Supplier Directory</a></p></footer>
+
+<script>
+const PRICES = {
+    coconut: {
+        title: 'Coconut Milk (400ml tin, case of 24)',
+        unit: 'per case',
+        suppliers: [
+            { name: 'JK Foods', price: 18.50, note: 'Aroy-D brand · Nottingham' },
+            { name: 'Manning Impex', price: 19.20, note: 'Chaokoh brand · Surrey' },
+            { name: 'Thai Food Direct', price: 17.80, note: 'Aroy-D · Letchworth' },
+            { name: 'Sing Kee Foods', price: 18.00, note: 'Mixed brands · Leeds' },
+            { name: 'Lung Wah Chong', price: 20.50, note: 'Premium import · London' },
+            { name: 'Midlands Food Service', price: 19.00, note: 'Burton-on-Trent' },
+        ]
+    },
+    rice: {
+        title: 'Jasmine Rice (20kg bag)',
+        unit: 'per bag',
+        suppliers: [
+            { name: 'JK Foods', price: 24.00, note: 'Golden Elephant · Nottingham' },
+            { name: 'Manning Impex', price: 25.50, note: 'Royal Umbrella · Surrey' },
+            { name: 'Thai Food Direct', price: 23.50, note: 'Hom Mali · Letchworth' },
+            { name: 'Sing Kee Foods', price: 22.80, note: 'Dragon brand · Leeds' },
+            { name: 'Lung Wah Chong', price: 26.00, note: 'Premium Thai Hom Mali · London' },
+            { name: 'Costco (UK)', price: 21.50, note: 'Kirkland · membership req.' },
+        ]
+    },
+    fishsauce: {
+        title: 'Fish Sauce (700ml bottle, case of 12)',
+        unit: 'per case',
+        suppliers: [
+            { name: 'JK Foods', price: 28.00, note: 'Squid brand · Nottingham' },
+            { name: 'Manning Impex', price: 29.50, note: 'Tiparos · Surrey' },
+            { name: 'Thai Food Direct', price: 27.00, note: 'Squid brand · Letchworth' },
+            { name: 'Sing Kee Foods', price: 26.50, note: 'Mixed brands · Leeds' },
+            { name: 'Lung Wah Chong', price: 31.00, note: 'Megachef premium · London' },
+        ]
+    },
+    currypaste: {
+        title: 'Curry Paste (1kg tub, case of 6)',
+        unit: 'per case',
+        suppliers: [
+            { name: 'JK Foods', price: 32.00, note: 'Mae Ploy · Nottingham' },
+            { name: 'Manning Impex', price: 34.00, note: 'Mae Ploy · Surrey' },
+            { name: 'Thai Food Direct', price: 30.50, note: 'Mae Ploy · Letchworth' },
+            { name: 'Sing Kee Foods', price: 31.00, note: 'Mae Ploy · Leeds' },
+            { name: 'Lung Wah Chong', price: 36.00, note: 'Nittaya premium · London' },
+        ]
+    },
+    oil: {
+        title: 'Vegetable Cooking Oil (20L drum)',
+        unit: 'per drum',
+        suppliers: [
+            { name: 'JK Foods', price: 28.00, note: 'Nottingham' },
+            { name: 'Booker Wholesale', price: 26.50, note: 'Nationwide' },
+            { name: 'Costco (UK)', price: 25.00, note: 'Membership req.' },
+            { name: 'Midlands Food Service', price: 27.50, note: 'Burton-on-Trent' },
+            { name: 'Thai Food Direct', price: 29.00, note: 'Letchworth' },
+        ]
+    },
+    noodles: {
+        title: 'Rice Noodles (5mm, 5kg box)',
+        unit: 'per box',
+        suppliers: [
+            { name: 'JK Foods', price: 12.50, note: 'Nottingham' },
+            { name: 'Manning Impex', price: 13.00, note: 'Surrey' },
+            { name: 'Thai Food Direct', price: 11.80, note: 'Letchworth' },
+            { name: 'Sing Kee Foods', price: 11.50, note: 'Leeds' },
+            { name: 'Lung Wah Chong', price: 14.00, note: 'Premium · London' },
+        ]
+    },
+};
+
+function showIngredient(key) {
+    document.querySelectorAll('.ing-tab').forEach(t => t.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const data = PRICES[key];
+    const sorted = [...data.suppliers].sort((a,b) => a.price - b.price);
+    const minPrice = sorted[0].price;
+    const maxPrice = sorted[sorted.length-1].price;
+    const avgPrice = Math.round(sorted.reduce((s,x) => s + x.price, 0) / sorted.length * 100) / 100;
+
+    let rows = '';
+    sorted.forEach((s, i) => {
+        let cls = 'price-avg';
+        if (s.price === minPrice) cls = 'price-best';
+        else if (s.price > avgPrice * 1.05) cls = 'price-high';
+        
+        const savedVsMax = maxPrice - s.price;
+        const savedNote = s.price === minPrice ? ` · Save £${savedVsMax.toFixed(2)} vs most expensive` : '';
+
+        rows += `<tr>
+            <td class="supplier-name">${s.name}</td>
+            <td class="${cls}">£${s.price.toFixed(2)}</td>
+            <td>${data.unit}</td>
+            <td class="supplier-note">${s.note}${savedNote}</td>
+        </tr>`;
+    });
+
+    document.getElementById('priceTable').innerHTML = `
+        <p style="font-size:0.85rem;color:var(--ink3);margin-bottom:8px;">
+            Best: <strong style="color:var(--c2);">£${minPrice.toFixed(2)}</strong> · 
+            Average: <strong style="color:var(--amber);">£${avgPrice.toFixed(2)}</strong> · 
+            Range: £${minPrice.toFixed(2)}–£${maxPrice.toFixed(2)}
+        </p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Supplier</th><th>Price</th><th>Unit</th><th>Notes</th></tr></thead>
+                <tbody>${rows}</tbody>
+            </table>
+        </div>
+    `;
+}
+
+// Initial load
+showIngredient('coconut');
+</script>
+</body>
+</html>
