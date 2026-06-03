@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Guides for UK Thai Restaurant Owners | ThaiData</title>
+    <meta name="description" content="Free guides for UK Thai restaurant operators. Opening a restaurant, menu pricing, staffing costs, chef visas, festival calendar, and UK Thai restaurant data.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/guides">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thaidata.uk/guides">
+    <meta property="og:title" content="Free Guides for UK Thai Restaurant Owners | ThaiData">
+    <meta property="og:description" content="Everything you need to run a profitable Thai restaurant in the UK. Free guides, data, and tools.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --purple: #A78BFA;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--c2); }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 20px 0 40px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 20px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+
+        /* Category labels */
+        .cat-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; padding: 6px 0; }
+        .cat-label.start { color: var(--c2); }
+        .cat-label.money { color: var(--gold); }
+        .cat-label.staff { color: var(--purple); }
+        .cat-label.events { color: #F472B6; }
+
+        /* Guide Cards */
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 30px; }
+        .guide-card { 
+            background: rgba(255,255,255,0.02); 
+            border: 1px solid var(--line); 
+            border-radius: 16px; 
+            padding: 28px; 
+            text-decoration: none; 
+            color: white; 
+            display: block;
+            transition: border-color 0.2s, transform 0.15s; 
+        }
+        .guide-card:hover { border-color: var(--c2); transform: translateY(-2px); }
+        .guide-card .gc-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+        .guide-card .gc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; }
+        .guide-card .gc-desc { color: var(--ink4); font-size: 0.85rem; line-height: 1.6; }
+        .guide-card .gc-tag { display: inline-block; font-size: 0.68rem; padding: 3px 10px; border-radius: 20px; font-weight: 600; margin-top: 12px; }
+        .tag-guide { background: rgba(16,185,129,0.12); color: var(--c2); }
+        .tag-data { background: rgba(245,158,11,0.12); color: var(--gold); }
+        .tag-tool { background: rgba(139,92,246,0.12); color: var(--purple); }
+
+        /* Featured */
+        .featured-card {
+            background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(16,185,129,0.02));
+            border: 1px solid rgba(16,185,129,0.25);
+            border-radius: 20px;
+            padding: 36px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: border-color 0.2s;
+        }
+        .featured-card:hover { border-color: var(--c2); }
+        .featured-card .fc-icon { font-size: 3rem; flex-shrink: 0; }
+        .featured-card .fc-content h3 { font-weight: 700; font-size: 1.2rem; margin-bottom: 6px; }
+        .featured-card .fc-content p { color: var(--ink4); font-size: 0.9rem; margin-bottom: 10px; }
+        .featured-card .fc-content .fc-link { color: var(--c2); font-weight: 600; font-size: 0.9rem; }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2rem; }
+            .guide-grid { grid-template-columns: 1fr; }
+            .featured-card { flex-direction: column; text-align: center; }
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk
+            </a>
+            <div class="nav-links">
+                <a href="index.html#tools">Tools</a>
+                <a href="guides.html" class="active">Guides</a>
+                <a href="thai-festivals-uk.html">Festivals</a>
+                <a href="index.html#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">Free Resources</div>
+            <h1>Everything You Need to Run a<br><em>Profitable</em> Thai Restaurant</h1>
+            <p>Free guides, real data, and practical tools. No paywalls. No signup. Just the information most operators wish they'd had when they started.</p>
+        </div>
+    </div>
+
+    <!-- STARTING OUT -->
+    <div class="section">
+        <div class="wrap">
+            <div class="cat-label start">📖 Starting Out</div>
+            
+            <a href="open-thai-restaurant-uk.html" class="featured-card">
+                <div class="fc-icon">🇹🇭</div>
+                <div class="fc-content">
+                    <h3>How to Open a Thai Restaurant in the UK</h3>
+                    <p>The complete 15-step roadmap. Real startup costs (£80k–£180k), chef visa reality, supplier chains, licensing, and the Thai-specific challenges generic guides miss.</p>
+                    <span class="fc-link">Read the full guide →</span>
+                </div>
+            </a>
+
+            <div class="guide-grid">
+                <a href="how-many-thai-restaurants-uk.html" class="guide-card">
+                    <span class="gc-icon">📊</span>
+                    <div class="gc-title">How Many Thai Restaurants Are in the UK?</div>
+                    <div class="gc-desc">1,250+ restaurants, broken down by region, city, and chain. FSA-sourced data with hygiene ratings. Use it to scout your competition.</div>
+                    <span class="gc-tag tag-data">Data</span>
+                </a>
+                <a href="tools/NAP_CHECKER.html" class="guide-card">
+                    <span class="gc-icon">📍</span>
+                    <div class="gc-title">NAP Trust Checker</div>
+                    <div class="gc-desc">Is your restaurant's Name, Address, and Phone consistent across directories? Inconsistent NAP kills your Google ranking. Check in 60 seconds.</div>
+                    <span class="gc-tag tag-tool">Tool</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- COSTS & MARGINS -->
+    <div class="section">
+        <div class="wrap">
+            <div class="cat-label money">💰 Costs & Margins</div>
+            
+            <div class="guide-grid">
+                <a href="thai-restaurant-menu-pricing-uk.html" class="guide-card">
+                    <span class="gc-icon">🍜</span>
+                    <div class="gc-title">Thai Menu Pricing Guide</div>
+                    <div class="gc-desc">Dish-by-dish benchmarks. What to charge for Pad Thai, Green Curry, Tom Yum — London vs regional. GP targets for every item. The pricing strategy most operators miss.</div>
+                    <span class="gc-tag tag-guide">Guide</span>
+                </a>
+                <a href="nlw-report.html" class="guide-card">
+                    <span class="gc-icon">💷</span>
+                    <div class="gc-title">NLW 2026 Impact Report</div>
+                    <div class="gc-desc">What the April 2026 National Living Wage rise actually costs your restaurant. Staffing models, NI calculations, and the £10.5k Allowance explained.</div>
+                    <span class="gc-tag tag-data">Calculator</span>
+                </a>
+                <a href="tools/PROFIT_MARGIN_DEFENDER.html" class="guide-card">
+                    <span class="gc-icon">🛡️</span>
+                    <div class="gc-title">Profit Margin Defender</div>
+                    <div class="gc-desc">See how delivery commissions eat your margins. Compare dine-in vs Deliveroo vs Just Eat profitability per dish. Stop losing money on every delivery order.</div>
+                    <span class="gc-tag tag-tool">Tool</span>
+                </a>
+                <a href="tools/WHOLESALE_BENCHMARKER.html" class="guide-card">
+                    <span class="gc-icon">📦</span>
+                    <div class="gc-title">Wholesale Price Benchmarker</div>
+                    <div class="gc-desc">Compare your supplier prices against regional averages. Rice, coconut milk, fish sauce, curry paste — are you overpaying?</div>
+                    <span class="gc-tag tag-tool">Tool</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STAFFING & VISAS -->
+    <div class="section">
+        <div class="wrap">
+            <div class="cat-label staff">👥 Staffing & Visas</div>
+            
+            <div class="guide-grid">
+                <a href="tools/VISA_ASSISTANT.html" class="guide-card">
+                    <span class="gc-icon">🛂</span>
+                    <div class="gc-title">Chef Visa Assistant</div>
+                    <div class="gc-desc">Check if you can sponsor a Thai chef under the 2026 salary thresholds. SOC codes, going rates, and the real cost of sponsorship — all calculated instantly.</div>
+                    <span class="gc-tag tag-tool">Tool</span>
+                </a>
+                <a href="analysis/chef-visa-cliff.html" class="guide-card">
+                    <span class="gc-icon">📉</span>
+                    <div class="gc-title">The 2026 Chef Visa Cliff</div>
+                    <div class="gc-desc">Why Thai chef recruitment is about to get harder — and what the £38,700 threshold means for independent restaurants. Timelines, costs, and alternatives.</div>
+                    <span class="gc-tag tag-guide">Analysis</span>
+                </a>
+                <a href="tools/RESILIENCE_DASHBOARD.html" class="guide-card">
+                    <span class="gc-icon">📈</span>
+                    <div class="gc-title">2026 Resilience Dashboard</div>
+                    <div class="gc-desc">Stress-test your restaurant against predicted NLW hikes and inflation. Model survival scenarios before they become reality.</div>
+                    <span class="gc-tag tag-tool">Tool</span>
+                </a>
+                <a href="analysis/ai-survival-guide.html" class="guide-card">
+                    <span class="gc-icon">🤖</span>
+                    <div class="gc-title">AI Survival Guide for Thai Restaurants</div>
+                    <div class="gc-desc">How AI is changing restaurant operations — from menu optimization to staffing forecasts. What matters, what's hype.</div>
+                    <span class="gc-tag tag-guide">Analysis</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVENTS & CULTURE -->
+    <div class="section">
+        <div class="wrap">
+            <div class="cat-label events">🎉 Events & Culture</div>
+            
+            <div class="guide-grid">
+                <a href="thai-festivals-uk.html" class="guide-card">
+                    <span class="gc-icon">📅</span>
+                    <div class="gc-title">Thai Festival Calendar 2026</div>
+                    <div class="gc-desc">Every Thai cultural event across the UK. Temple celebrations, food festivals, embassy events — filter by city or date. 10 temples, 25+ events.</div>
+                    <span class="gc-tag tag-guide">Calendar</span>
+                </a>
+                <a href="songkran-uk.html" class="guide-card">
+                    <span class="gc-icon">💦</span>
+                    <div class="gc-title">Songkran UK 2026</div>
+                    <div class="gc-desc">Where to celebrate Thai New Year across the UK. Temple water ceremonies, restaurant promotions, and what to expect at your first Songkran.</div>
+                    <span class="gc-tag tag-guide">Guide</span>
+                </a>
+                <a href="loy-krathong-uk.html" class="guide-card">
+                    <span class="gc-icon">🏮</span>
+                    <div class="gc-title">Loy Krathong UK 2026</div>
+                    <div class="gc-desc">Thailand's festival of lights in the UK. Float your krathong at temple lakes, watch lantern displays. Includes krathong-making guide.</div>
+                    <span class="gc-tag tag-guide">Guide</span>
+                </a>
+                <a href="index.html#tools" class="guide-card">
+                    <span class="gc-icon">🧮</span>
+                    <div class="gc-title">All Free Tools</div>
+                    <div class="gc-desc">Wage calculator, dish price AI, stress tester, NAP checker — every free tool on thaidata.uk in one place.</div>
+                    <span class="gc-tag tag-tool">Tools</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">Tools</a> · 
+                <a href="guides.html">Guides</a> · 
+                <a href="thai-festivals-uk.html">Festivals</a> · 
+                <a href="about.html">About</a> · 
+                <a href="privacy.html">Privacy</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK. Free resources for UK Thai restaurant operators.</p>
+        </div>
+    </footer>
+</body>
+</html>
