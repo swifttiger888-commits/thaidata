@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant Competitor Radar — Hygiene Ratings & Market Intelligence | ThaiData</title>
+    <meta name="description" content="See the competitive landscape in any UK city. Hygiene rating distribution, best and worst performers, and where you can compete on quality.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-competitor-radar">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Thai Restaurant Competitor Radar — Hygiene Ratings by City">
+    <meta property="og:description" content="Pick a city. See the hygiene rating spread, who's top-rated, who's vulnerable, and where you can win on quality.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --amber: #F59E0B; --red: #EF4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.4rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
+        header { text-align: center; margin-bottom: 36px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.4rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        header p { color: var(--ink4); font-size: 1rem; }
+
+        .city-picker { display: flex; gap: 10px; margin-bottom: 28px; }
+        .city-picker select { flex: 1; padding: 14px 18px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 12px; color: white; font-size: 1rem; font-family: 'Inter', sans-serif; outline: none; appearance: none; cursor: pointer; }
+        .city-picker select:focus { border-color: var(--c2); }
+        .city-picker select option { background: var(--dark); }
+        .city-picker button { padding: 14px 28px; background: var(--c2); color: white; border: none; border-radius: 12px; font-weight: 700; font-size: 0.95rem; cursor: pointer; font-family: 'Inter', sans-serif; }
+
+        .radar { display: none; }
+        .radar.active { display: block; }
+
+        .rating-bars { margin: 20px 0; }
+        .rating-bar { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+        .rating-star { width: 50px; font-size: 0.9rem; font-weight: 600; text-align: right; }
+        .rating-track { flex: 1; height: 28px; background: rgba(255,255,255,0.03); border-radius: 6px; overflow: hidden; position: relative; }
+        .rating-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 0.75rem; font-weight: 600; transition: width 0.5s; }
+        .rating-count { width: 40px; font-size: 0.85rem; color: var(--ink4); }
+
+        .insight-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; margin: 16px 0; }
+        .insight-card h3 { font-size: 0.95rem; color: var(--c2); margin-bottom: 12px; }
+        .insight-card p, .insight-card li { color: var(--ink4); font-size: 0.85rem; margin-bottom: 6px; }
+
+        .stat-mini { display: inline-block; padding: 6px 14px; border-radius: 8px; margin: 4px; font-size: 0.8rem; }
+        .stat-mini.good { background: rgba(16,185,129,0.1); color: var(--c2); }
+        .stat-mini.warn { background: rgba(245,158,11,0.1); color: var(--amber); }
+        .stat-mini.bad { background: rgba(239,68,68,0.1); color: var(--red); }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav><div class="nav-bar">
+        <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        <a href="../guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
+    </div></nav>
+
+    <div class="container">
+        <header>
+            <div class="badge"><i class="fas fa-radar"></i> Market Intelligence</div>
+            <h1>Competitor <em>Radar</em></h1>
+            <p>Pick a city. See the hygiene rating spread, spot the weak players, and find where you can win on quality.</p>
+        </header>
+
+        <div class="city-picker">
+            <select id="citySelect" onchange="showRadar()">
+                <option value="">— Select a city —</option>
+            </select>
+            <button onclick="showRadar()">Scan</button>
+        </div>
+
+        <div id="radar" class="radar"></div>
+    </div>
+
+    <footer><p>&copy; 2026 ThaiData.uk · Ratings from FSA · Historical tracking coming with weekly data refresh</p></footer>
+
+<script>
+const CITY_RATINGS = {
+    'London': { total: 411, avg: 4.1, stars: {5:206, 4:98, 3:58, 2:28, 1:21}, note: 'Massive spread — 50% are 5-star, but 12% are 1-2 star. Weak players exist in every borough.' },
+    'Leeds': { total: 34, avg: 4.4, stars: {5:18, 4:10, 3:4, 2:1, 1:1}, note: 'Strong market. 82% are 4+ stars. To compete, you need to hit ★4 minimum from day one.' },
+    'Manchester': { total: 28, avg: 4.1, stars: {5:14, 4:7, 3:4, 2:2, 1:1}, note: '50% 5-star, but 11% are 1-2 star. There\'s a quality gap at the bottom you could exploit.' },
+    'Edinburgh': { total: 24, avg: 4.2, stars: {5:11, 4:7, 3:4, 2:1, 1:1}, note: 'Scottish FHIS scheme. Solid ratings across the board — differentiation needed.' },
+    'Bristol': { total: 19, avg: 4.6, stars: {5:12, 4:5, 3:1, 2:1, 1:0}, note: 'Exceptional market. 89% are 4+ stars. Hard to stand out on hygiene alone.' },
+    'Birmingham': { total: 17, avg: 4.4, stars: {5:9, 4:5, 3:2, 2:1, 1:0}, note: 'Well-rated but underserved. Low competition + decent ratings = strong opportunity.' },
+    'Bradford': { total: 15, avg: 3.8, stars: {5:5, 4:4, 3:3, 2:2, 1:1}, note: 'Below-average market. 27% are 1-2 star. A well-run kitchen could quickly become #1.' },
+    'Leicester': { total: 15, avg: 4.5, stars: {5:9, 4:3, 3:2, 2:1, 1:0}, note: 'High standards. You\'d need to match ★4+ from opening.' },
+    'Swansea': { total: 14, avg: 4.0, stars: {5:5, 4:4, 3:3, 2:1, 1:1}, note: 'Mixed bag. Room at the top for a quality operator.' },
+    'Brighton': { total: 13, avg: 4.8, stars: {5:10, 4:2, 3:1, 2:0, 1:0}, note: 'Elite market. Hardest city to compete on hygiene — almost everyone is ★4-5.' },
+    'Sheffield': { total: 13, avg: 4.6, stars: {5:8, 4:3, 3:2, 2:0, 1:0}, note: 'Strong ratings. No weak players to exploit.' },
+    'Glasgow': { total: 8, avg: 5.0, stars: {5:8, 4:0, 3:0, 2:0, 1:0}, note: 'Perfect scores across the board. Scottish FHIS — "Pass" = ★5 equivalent.' },
+    'Liverpool': { total: 7, avg: 4.0, stars: {5:3, 4:2, 3:1, 2:0, 1:1}, note: 'Small market with room at the top. One 1-star player is vulnerable.' },
+    'Cardiff': { total: 7, avg: 4.3, stars: {5:3, 4:3, 3:1, 2:0, 1:0}, note: 'Consistent quality. Hard to differentiate on ratings alone.' },
+    'Newcastle': { total: 11, avg: 4.1, stars: {5:4, 4:4, 3:2, 2:1, 1:0}, note: 'Average market. One 2-star player creates an opening.' },
+};
+
+const select = document.getElementById('citySelect');
+Object.keys(CITY_RATINGS).sort().forEach(name => {
+    const d = CITY_RATINGS[name];
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = `${name} (${d.total} restaurants, ★${d.avg})`;
+    select.appendChild(opt);
+});
+
+function showRadar() {
+    const name = document.getElementById('citySelect').value;
+    if (!name) return;
+
+    const d = CITY_RATINGS[name];
+    const radar = document.getElementById('radar');
+    radar.classList.add('active');
+
+    const maxStars = Math.max(...Object.values(d.stars));
+    const colors = {5: 'var(--c2)', 4: '#84CC16', 3: 'var(--amber)', 2: '#F97316', 1: 'var(--red)'};
+
+    let bars = '';
+    [5,4,3,2,1].forEach(star => {
+        const count = d.stars[star] || 0;
+        const pct = maxStars > 0 ? (count / maxStars * 100) : 0;
+        const pctOfTotal = d.total > 0 ? Math.round(count / d.total * 100) : 0;
+        bars += `<div class="rating-bar">
+            <div class="rating-star">★${star}</div>
+            <div class="rating-track"><div class="rating-fill" style="width:${pct}%;background:${colors[star]};">${pctOfTotal}%</div></div>
+            <div class="rating-count">${count}</div>
+        </div>`;
+    });
+
+    const weakCount = (d.stars[1] || 0) + (d.stars[2] || 0);
+    const strongCount = (d.stars[4] || 0) + (d.stars[5] || 0);
+    const strongPct = d.total > 0 ? Math.round(strongCount / d.total * 100) : 0;
+    const weakPct = d.total > 0 ? Math.round(weakCount / d.total * 100) : 0;
+
+    let opportunity = '';
+    if (weakCount >= 3) opportunity = `<span class="stat-mini good">🎯 ${weakCount} weak players — opportunity to be the best</span>`;
+    if (strongPct >= 80) opportunity += `<span class="stat-mini warn">🏰 ${strongPct}% high-rated — tough to stand out</span>`;
+    if (d.avg <= 4.0) opportunity += `<span class="stat-mini good">📈 Below-avg ratings — easy to beat</span>`;
+    if (d.total <= 10) opportunity += `<span class="stat-mini bad">⚠️ Small market — limited growth ceiling</span>`;
+
+    radar.innerHTML = `
+        <div style="text-align:center;margin-bottom:20px;">
+            <div style="font-family:'Instrument Serif',serif;font-size:2rem;">${name}</div>
+            <div style="color:var(--ink4);">${d.total} restaurants · Avg ★${d.avg}</div>
+            <div style="margin-top:12px;">${opportunity}</div>
+        </div>
+
+        <div class="rating-bars">${bars}</div>
+
+        <div class="insight-card">
+            <h3><i class="fas fa-lightbulb"></i> Market Intelligence</h3>
+            <p>${d.note}</p>
+            <p style="margin-top:12px;">
+                <strong>Weak players (★1-2):</strong> ${weakCount} (${weakPct}%) · 
+                <strong>Strong players (★4-5):</strong> ${strongCount} (${strongPct}%)
+            </p>
+        </div>
+
+        <div class="insight-card">
+            <h3><i class="fas fa-chart-line"></i> How to Use This</h3>
+            <p>Check back weekly. Our auto-refresh pulls new FSA data every Monday. When a restaurant drops from ★5 to ★3, that's your signal — their customers are reading those reviews. A new ★5 player entering the market is competition to watch. Historical tracking coming soon.</p>
+        </div>
+    `;
+}
+</script>
+</body>
+</html>

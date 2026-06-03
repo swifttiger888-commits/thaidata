@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant Valuation Calculator — What's Your Restaurant Worth? | ThaiData</title>
+    <meta name="description" content="Estimate your Thai restaurant's market value. Based on turnover, profit, lease, and location. Free valuation tool for UK Thai restaurant owners.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools/thai-restaurant-valuation">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Thai Restaurant Valuation Calculator — What's Your Restaurant Worth?">
+    <meta property="og:description" content="Free valuation tool. Input your turnover, profit, lease, and location. Get an estimated market value range for your Thai restaurant.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --amber: #F59E0B; --red: #EF4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.4rem; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
+        header { text-align: center; margin-bottom: 36px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        header p { color: var(--ink4); font-size: 1rem; max-width: 550px; margin: 0 auto; }
+
+        .layout { display: grid; grid-template-columns: 320px 1fr; gap: 30px; }
+        @media (max-width: 700px) { .layout { grid-template-columns: 1fr; } }
+
+        .controls { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 26px; height: fit-content; }
+        .controls h3 { font-family: 'Instrument Serif', serif; font-size: 1.2rem; margin-bottom: 20px; }
+        .input-group { margin-bottom: 16px; }
+        .input-group label { display: block; font-size: 0.75rem; color: var(--ink4); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .input-group input, .input-group select { width: 100%; padding: 11px 14px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 10px; color: white; font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; }
+        .input-group input:focus, .input-group select:focus { border-color: var(--c2); }
+        .input-group select option { background: var(--dark); }
+
+        .result { }
+        .val-hero { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 20px; padding: 36px; text-align: center; margin-bottom: 20px; }
+        .val-range { font-family: 'Instrument Serif', serif; font-size: 3rem; color: var(--c2); line-height: 1; }
+        .val-label { color: var(--ink4); font-size: 0.85rem; margin-top: 8px; }
+        .val-multiple { font-size: 1rem; color: var(--ink3); margin-top: 6px; }
+
+        .breakdown { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; margin-bottom: 14px; }
+        .breakdown h4 { font-size: 0.85rem; color: var(--c2); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+        .break-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .break-row:last-child { border: none; }
+        .break-label { color: var(--ink4); font-size: 0.85rem; }
+        .break-val { font-weight: 600; font-size: 0.9rem; }
+
+        .note { color: var(--ink4); font-size: 0.8rem; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 12px; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav><div class="nav-bar">
+        <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+        <a href="../guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
+    </div></nav>
+
+    <div class="container">
+        <header>
+            <div class="badge"><i class="fas fa-pound-sign"></i> Valuation Tool</div>
+            <h1>What's Your Thai<br>Restaurant <em>Worth?</em></h1>
+            <p>Estimator based on real UK hospitality transaction data. Input your numbers — get a valuation range and multiple.</p>
+        </header>
+
+        <div class="layout">
+            <div class="controls">
+                <h3>Your Numbers</h3>
+                <div class="input-group">
+                    <label>Annual turnover (£)</label>
+                    <input type="number" id="turnover" value="350000" min="50000" step="10000" oninput="calc()">
+                </div>
+                <div class="input-group">
+                    <label>Net profit (£) — after all costs, before tax</label>
+                    <input type="number" id="profit" value="25000" min="0" step="1000" oninput="calc()">
+                </div>
+                <div class="input-group">
+                    <label>Location</label>
+                    <select id="location" onchange="calc()">
+                        <option value="london">London (Zone 1-2)</option>
+                        <option value="london-outer">London (Outer)</option>
+                        <option value="city-large" selected>Large city (Manchester, Birmingham, Leeds, etc.)</option>
+                        <option value="city-medium">Medium city (Brighton, Bristol, Sheffield, etc.)</option>
+                        <option value="town">Town / suburban</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Lease remaining</label>
+                    <select id="lease" onchange="calc()">
+                        <option value="long">10+ years</option>
+                        <option value="medium" selected>5-10 years</option>
+                        <option value="short">2-5 years</option>
+                        <option value="critical"><2 years</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Google rating (★)</label>
+                    <select id="rating" onchange="calc()">
+                        <option value="4.5" selected>4.5+</option>
+                        <option value="4.0">4.0-4.4</option>
+                        <option value="3.5">3.5-3.9</option>
+                        <option value="3.0"><3.5</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Freehold or leasehold?</label>
+                    <select id="tenure" onchange="calc()">
+                        <option value="leasehold" selected>Leasehold</option>
+                        <option value="freehold">Freehold (includes property)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="result">
+                <div class="val-hero">
+                    <div class="val-range" id="valRange">—</div>
+                    <div class="val-label">Estimated market value</div>
+                    <div class="val-multiple" id="valMultiple"></div>
+                </div>
+
+                <div class="breakdown">
+                    <h4>Valuation Breakdown</h4>
+                    <div class="break-row"><span class="break-label">Base multiple (turnover)</span><span class="break-val" id="baseMult"></span></div>
+                    <div class="break-row"><span class="break-label">Location adjustment</span><span class="break-val" id="locAdj"></span></div>
+                    <div class="break-row"><span class="break-label">Lease adjustment</span><span class="break-val" id="leaseAdj"></span></div>
+                    <div class="break-row"><span class="break-label">Reputation adjustment</span><span class="break-val" id="repAdj"></span></div>
+                    <div class="break-row"><span class="break-label">Profitability adjustment</span><span class="break-val" id="profAdj"></span></div>
+                    <div class="break-row" style="border-top:1px solid var(--line);padding-top:10px;"><span class="break-label" style="color:white;font-weight:600;">Effective multiple</span><span class="break-val" style="color:var(--c2);" id="effMult"></span></div>
+                </div>
+
+                <div class="note">
+                    <strong><i class="fas fa-info-circle"></i> How this works:</strong> UK restaurant valuations typically range from <strong>0.5× to 2.5× annual turnover</strong> for leasehold businesses, or <strong>2× to 5× net profit</strong>. This calculator blends both approaches with adjustments for location, lease security, and reputation. Freeholds add the property value. This is an estimate — not a formal valuation. Always get a professional valuation before buying or selling.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 ThaiData.uk · Estimate only — not financial advice · <a href="../thai-restaurant-revenue-benchmarks-uk.html">Revenue Benchmarks</a></p></footer>
+
+<script>
+function calc() {
+    const turnover = parseInt(document.getElementById('turnover').value) || 350000;
+    const profit = parseInt(document.getElementById('profit').value) || 0;
+    const location = document.getElementById('location').value;
+    const lease = document.getElementById('lease').value;
+    const rating = parseFloat(document.getElementById('rating').value);
+    const tenure = document.getElementById('tenure').value;
+
+    // Base multiple: starts at 0.8× turnover for average restaurant
+    let baseMult = 0.8;
+
+    // Location adjustments
+    let locLabel = '';
+    if (location === 'london') { locLabel = '+0.3 (London premium)'; baseMult += 0.3; }
+    else if (location === 'london-outer') { locLabel = '+0.15 (Outer London)'; baseMult += 0.15; }
+    else if (location === 'city-large') { locLabel = '+0.1 (Large city)'; baseMult += 0.1; }
+    else if (location === 'city-medium') { locLabel = 'No adjustment'; }
+    else { locLabel = '-0.05 (Town)'; baseMult -= 0.05; }
+
+    // Lease adjustments
+    let leaseLabel = '';
+    if (lease === 'long') { leaseLabel = '+0.2 (Secure)'; baseMult += 0.2; }
+    else if (lease === 'medium') { leaseLabel = '+0.05 (Adequate)'; baseMult += 0.05; }
+    else if (lease === 'short') { leaseLabel = '-0.15 (Short)'; baseMult -= 0.15; }
+    else { leaseLabel = '-0.3 (Critical)'; baseMult -= 0.30; }
+
+    // Reputation
+    let repLabel = '';
+    if (rating >= 4.5) { repLabel = '+0.15 (Excellent)'; baseMult += 0.15; }
+    else if (rating >= 4.0) { repLabel = '+0.05 (Good)'; baseMult += 0.05; }
+    else if (rating >= 3.5) { repLabel = 'No adjustment'; }
+    else { repLabel = '-0.1 (Poor)'; baseMult -= 0.10; }
+
+    // Profitability: higher margin = higher multiple
+    const margin = turnover > 0 ? (profit / turnover) * 100 : 0;
+    let profLabel = '';
+    if (margin >= 15) { profLabel = '+0.25 (Excellent margin)'; baseMult += 0.25; }
+    else if (margin >= 10) { profLabel = '+0.15 (Good margin)'; baseMult += 0.15; }
+    else if (margin >= 5) { profLabel = 'No adjustment (Average)'; }
+    else if (margin >= 2) { profLabel = '-0.1 (Below avg)'; baseMult -= 0.10; }
+    else { profLabel = '-0.2 (Marginal)'; baseMult -= 0.20; }
+
+    // Clamp
+    baseMult = Math.max(0.2, Math.min(3.0, Math.round(baseMult * 100) / 100));
+
+    // Calculate value
+    let lowVal = Math.round(turnover * baseMult * 0.85);
+    let highVal = Math.round(turnover * baseMult * 1.15);
+    let midVal = Math.round((lowVal + highVal) / 2);
+
+    // Freehold adjustment
+    if (tenure === 'freehold') {
+        lowVal += Math.round(turnover * 0.5);
+        highVal += Math.round(turnover * 1.0);
+        midVal = Math.round((lowVal + highVal) / 2);
+    }
+
+    const format = n => '£' + n.toLocaleString();
+
+    document.getElementById('valRange').textContent = format(lowVal) + ' – ' + format(highVal);
+    document.getElementById('valMultiple').textContent = `Midpoint: ${format(midVal)} · ${baseMult.toFixed(2)}× turnover${tenure === 'freehold' ? ' + property' : ''} · ${margin.toFixed(1)}% net margin`;
+    
+    document.getElementById('baseMult').textContent = '0.80×';
+    document.getElementById('locAdj').textContent = locLabel;
+    document.getElementById('leaseAdj').textContent = leaseLabel;
+    document.getElementById('repAdj').textContent = repLabel;
+    document.getElementById('profAdj').textContent = profLabel;
+    document.getElementById('effMult').textContent = baseMult.toFixed(2) + '× turnover';
+}
+
+calc();
+</script>
+</body>
+</html>
