@@ -40,6 +40,10 @@
     {
       "name": "search_restaurants",
       "description": "Search individual Thai restaurants by city, type, or hygiene rating"
+    },
+    {
+      "name": "find_nearby",
+      "description": "Find Thai restaurants near a UK postcode with distance sorting"
     }
   ],
   "website": "https://thaidata.uk",

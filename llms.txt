@@ -48,3 +48,4 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [MCP Server](https://thaidata.uk/mcp): Model Context Protocol endpoint — AI agents can query ThaiData directly as a tool. 8 query functions.
 - [Site Map](https://thaidata.uk/sitemap-page): Full HTML site map of all pages.
 - [About](https://thaidata.uk/about): About ThaiData UK. Data methodology and sources.
+- [Data Quality](https://thaidata.uk/data-quality): Full methodology, source attribution, update schedule, and trust signals.

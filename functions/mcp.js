@@ -114,6 +114,21 @@ const TOOLS = [
     }
   },
   {
+    name: "find_nearby",
+    description: "Find Thai restaurants near a UK postcode. Geocodes the postcode, calculates driving distances, and returns the best-rated restaurants within your radius. Perfect for 'find Thai near me' queries.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        postcode: { type: "string", description: "UK postcode to search near (e.g. 'LS1 4AG', 'SW1A 1AA', 'M1 1AE')" },
+        radius: { type: "number", description: "Search radius in miles (default: 3, max: 25)", default: 3 },
+        min_rating: { type: "number", description: "Minimum hygiene rating 1-5 (optional)" },
+        type: { type: "string", enum: ["restaurant", "takeaway", "all"], description: "Filter by type", default: "all" },
+        limit: { type: "number", description: "Max results (default: 10, max: 25)", default: 10 }
+      },
+      required: ["postcode"]
+    }
+  },
+  {
     name: "get_uk_overview",
     description: "Get overall UK Thai restaurant market statistics: total businesses, market size, growth rate, average hygiene, and national wage data.",
     inputSchema: { type: "object", properties: {} }
@@ -178,6 +193,7 @@ async function handleTool(name, args) {
   switch (name) {
     case "get_city_stats": return getCityStats(args);
     case "search_restaurants": return searchRestaurants(args);
+    case "find_nearby": return findNearby(args);
     case "get_uk_overview": return getUKOverview(args);
     case "compare_cities": return compareCities(args);
     case "rank_cities": return rankCities(args);
@@ -275,6 +291,101 @@ async function searchRestaurants(params) {
       address: r.address
     })),
     summary: `${results.length} restaurants found. Top result: ${sliced[0]?.name} (${sliced[0]?.hygiene_rating}★) in ${sliced[0]?.city}.`
+  };
+}
+
+// ── Haversine distance (miles) ──────────────────────────────────────
+function toRad(deg) { return deg * Math.PI / 180; }
+
+function haversineMiles(lat1, lng1, lat2, lng2) {
+  const R = 3959; // Earth radius in miles
+  const dLat = toRad(lat2 - lat1);
+  const dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+            Math.sin(dLng/2) * Math.sin(dLng/2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+// ── find_nearby tool ────────────────────────────────────────────────
+async function findNearby(params) {
+  const postcode = (params.postcode || '').trim();
+  if (!postcode) return { error: "Postcode is required. E.g. 'LS1 4AG'" };
+  
+  const radius = Math.min(params.radius || 3, 25);
+  const limit = Math.min(params.limit || 10, 25);
+  
+  // Step 1: Geocode the input postcode
+  let originLat, originLng;
+  try {
+    const geoResp = await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(postcode)}`);
+    const geoData = await geoResp.json();
+    if (!geoData.result) {
+      return { error: `Could not find postcode '${postcode}'. Check the format (e.g. 'LS1 4AG').` };
+    }
+    originLat = geoData.result.latitude;
+    originLng = geoData.result.longitude;
+  } catch (e) {
+    return { error: `Geocoding failed for '${postcode}'. Try a different postcode.` };
+  }
+  
+  // Step 2: Load restaurants with coordinates
+  const data = await getRestaurants();
+  let results = (data.restaurants || []).filter(r => r.latitude && r.longitude);
+  
+  // Step 3: Calculate distances
+  results = results.map(r => {
+    const miles = haversineMiles(originLat, originLng, r.latitude, r.longitude);
+    return { ...r, distance_miles: Math.round(miles * 10) / 10 };
+  });
+  
+  // Step 4: Filter by radius
+  results = results.filter(r => r.distance_miles <= radius);
+  
+  // Step 5: Apply optional filters
+  if (params.type && params.type !== 'all') {
+    results = results.filter(r => r.type === params.type);
+  }
+  if (params.min_rating) {
+    const min = parseInt(params.min_rating);
+    results = results.filter(r => {
+      const rating = parseInt(r.hygiene_rating);
+      return rating >= min;
+    });
+  }
+  
+  // Step 6: Sort by distance, then rating
+  results.sort((a, b) => {
+    if (a.distance_miles !== b.distance_miles) return a.distance_miles - b.distance_miles;
+    return (parseInt(b.hygiene_rating) || 0) - (parseInt(a.hygiene_rating) || 0);
+  });
+  
+  const total = results.length;
+  const sliced = results.slice(0, limit);
+  
+  if (sliced.length === 0) {
+    return {
+      search: { postcode, radius_miles: radius },
+      results: [],
+      message: `No Thai restaurants found within ${radius} miles of ${postcode}. Try increasing the radius.`
+    };
+  }
+  
+  return {
+    search: { postcode, radius_miles: radius, origin: `${originLat}, ${originLng}` },
+    total_within_radius: total,
+    showing: sliced.length,
+    restaurants: sliced.map(r => ({
+      name: r.name,
+      type: r.type,
+      distance: r.distance_miles + ' mi',
+      hygiene_rating: r.hygiene_rating + '★',
+      postcode: r.postcode,
+      city: r.city,
+      address: r.address,
+      last_inspected: r.rating_date
+    })),
+    summary: `${total} Thai restaurants within ${radius} miles of ${postcode}. Closest: ${sliced[0]?.name} (${sliced[0]?.distance_miles} mi, ${sliced[0]?.hygiene_rating}★).`
   };
 }
 

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6RYQZX5QX');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Quality & Methodology — ThaiData UK</title>
+  <meta name="description" content="How ThaiData UK sources, verifies, and updates its UK Thai restaurant data. Food Standards Agency, ONS, HMRC, and industry sources. Updated weekly." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thaidata.uk/data-quality" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Data Quality & Methodology",
+    "description": "How ThaiData UK sources, verifies, and updates its UK Thai restaurant statistics.",
+    "url": "https://thaidata.uk/data-quality",
+    "datePublished": "2026-06-03",
+    "dateModified": "2026-06-03",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ThaiData UK",
+      "url": "https://thaidata.uk"
+    },
+    "mainEntity": {
+      "@type": "Dataset",
+      "name": "UK Thai Restaurant Data",
+      "description": "Comprehensive database of 1,594 UK Thai restaurants across 253 cities from FSA FHRS/FHIS",
+      "url": "https://thaidata.uk/api/v1/data.json",
+      "temporalCoverage": "2026-06-03",
+      "spatialCoverage": "United Kingdom",
+      "creator": { "@type": "Organization", "name": "ThaiData UK" }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where does ThaiData UK get its restaurant data?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All restaurant counts and hygiene ratings come directly from the Food Standards Agency (FSA) — the UK government body responsible for food safety. We pull fresh data weekly from both the FHRS (England/Wales/NI) and FHIS (Scotland) schemes. Population data comes from the Office for National Statistics (ONS) 2024 mid-year estimates. Market size estimates are sourced from HMRC business counts and UKHospitality industry reports." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often is the data updated?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Restaurant counts and hygiene ratings are refreshed every Monday at 9am UTC via an automated pipeline that queries the FSA API directly. Significant changes (5+ businesses nationally) trigger an automatic rebuild of affected pages. Population data is updated annually when ONS releases new estimates. Delivery commission rates are reviewed quarterly." }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is the Thai restaurant count?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Extremely. We query the FSA API for every registered food business matching 'Thai' across all business types (Restaurant/Cafe and Takeaway) and both rating schemes (FHRS + FHIS). We also search for major Thai restaurant chains by name to catch businesses that don't include 'Thai' in their registered name. The result is a 1,594-restaurant database covering 253 cities and towns — the most comprehensive public dataset of UK Thai restaurants available." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you track restaurant closures?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each weekly refresh compares the new FSA data against the previous snapshot. Restaurants that disappear from the FSA register are removed from our counts. We track net change per city and nationally. A historical trend analysis is planned for future release." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thaidata.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Data Quality & Methodology", "item": "https://thaidata.uk/data-quality" }
+    ]
+  }
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{overflow-x:hidden}
+    body{font-family:'Inter',system-ui,sans-serif;color:#0F172A;background:#FAFAF9;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img,svg,video{max-width:100%;height:auto}
+    a{color:#0A7A6F;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:800px;margin:0 auto;padding:0 32px}
+    nav{background:#0C1220;padding:0 32px}
+    .nav-bar{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;color:white;letter-spacing:-0.02em;text-decoration:none}
+    .logo-icon{color:#10B981;font-size:1.25rem}
+    .nav-home{font-size:0.84rem;color:rgba(255,255,255,0.6)}
+    .nav-home:hover{color:white;text-decoration:none}
+    main{padding:64px 0 80px}
+    .eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0A7A6F;margin-bottom:12px}
+    h1{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:400;line-height:1.15;letter-spacing:-0.02em;margin-bottom:24px;color:#0F172A}
+    h2{font-size:1.2rem;font-weight:700;margin:40px 0 12px;color:#0F172A}
+    h3{font-size:0.95rem;font-weight:700;margin:24px 0 8px;color:#334155}
+    p{color:#334155;margin-bottom:16px;font-size:1.02rem}
+    .card{background:#F3F4F6;border:1px solid #E5E7EB;border-radius:12px;padding:24px 28px;margin:32px 0}
+    .data-list{list-style:none;padding:0}
+    .data-list li{padding:8px 0;border-bottom:1px solid #E5E7EB;font-size:0.95rem;color:#334155}
+    .data-list li:last-child{border-bottom:none}
+    .data-list li::before{content:'→ ';color:#0A7A6F;font-weight:600}
+    .badge{display:inline-block;background:#D1FAE5;color:#065F56;padding:3px 10px;border-radius:6px;font-size:0.78rem;font-weight:600;margin-right:6px}
+    .badge-official{background:#DBEAFE;color:#1E40AF}
+    .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:24px 0}
+    .stat-card{background:white;border:1px solid #E5E7EB;border-radius:10px;padding:20px;text-align:center}
+    .stat-value{font-family:'Instrument Serif',serif;font-size:2rem;color:#0A7A6F;line-height:1.1}
+    .stat-label{font-size:0.78rem;color:#64748B;margin-top:4px;text-transform:uppercase;letter-spacing:0.05em}
+    footer{background:#0C1220;color:rgba(255,255,255,0.4);text-align:center;padding:24px;font-size:0.82rem}
+    footer a{color:rgba(255,255,255,0.6)}
+    .speakable{display:none}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+      <a href="index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+      <a href="index.html" class="nav-home">← Back to tools</a>
+    </div>
+  </nav>
+  <main>
+    <div class="wrap">
+      <div class="eyebrow">Trust & Transparency</div>
+      <h1>Data Quality &amp; Methodology</h1>
+      <p>Every number on ThaiData UK is sourced, timestamped, and verifiable. This page documents exactly where our data comes from, how often it's refreshed, and why you can trust it — whether you're a restaurant operator, investor, journalist, or AI model.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-value">1,594</div><div class="stat-label">Restaurants tracked</div></div>
+        <div class="stat-card"><div class="stat-value">253</div><div class="stat-label">Cities & towns</div></div>
+        <div class="stat-card"><div class="stat-value">Weekly</div><div class="stat-label">Data refresh</div></div>
+        <div class="stat-card"><div class="stat-value">4</div><div class="stat-label">Govt sources</div></div>
+      </div>
+
+      <h2>Data Sources</h2>
+      <p>All core statistics are sourced from official UK government datasets. No web scraping, no user-submitted content, no guesswork.</p>
+
+      <div class="card">
+        <h3 style="margin-top:0"><span class="badge badge-official">GOV.UK</span> Food Standards Agency — FHRS &amp; FHIS</h3>
+        <p style="font-size:0.95rem">The FSA maintains a live register of every food business in the UK, including hygiene ratings, business type classification, and inspection dates. We query both rating schemes:</p>
+        <ul class="data-list">
+          <li><strong>FHRS</strong> (Food Hygiene Rating Scheme) — England, Wales, and Northern Ireland. Ratings 0–5.</li>
+          <li><strong>FHIS</strong> (Food Hygiene Information Scheme) — Scotland. Ratings Pass / Improvement Required.</li>
+        </ul>
+        <p style="font-size:0.88rem;margin-top:12px;margin-bottom:0;color:#64748B">API: <a href="https://api.ratings.food.gov.uk" target="_blank" rel="noopener">api.ratings.food.gov.uk</a> · Data as of: 3 June 2026 · License: Open Government Licence v3.0</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0"><span class="badge badge-official">GOV.UK</span> Office for National Statistics — Population Estimates</h3>
+        <p style="font-size:0.95rem">City and town population figures are sourced from the ONS 2024 mid-year population estimates. These are the official UK population statistics used by government for funding allocation and policy planning.</p>
+        <p style="font-size:0.88rem;margin-bottom:0;color:#64748B">Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates" target="_blank" rel="noopener">ONS Population Estimates</a> · Updated: Annually (next: mid-2025)</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0"><span class="badge badge-official">GOV.UK</span> HMRC — Business Counts</h3>
+        <p style="font-size:0.95rem">UK market size estimates and business counts by sector use HMRC data on registered food service businesses, cross-referenced with UKHospitality industry reports.</p>
+        <p style="font-size:0.88rem;margin-bottom:0;color:#64748B">Market size estimate: £2.1B (2026) · Growth rate: 20.3% (2022–2025)</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0"><span class="badge badge-official">GOV.UK</span> National Living Wage — HM Government</h3>
+        <p style="font-size:0.95rem">Wage rates used in our calculators reflect the official April 2026 NLW rates as published by HM Government: £12.71/hr (21+), £10.85/hr (18–20), £8.00/hr (apprentice).</p>
+        <p style="font-size:0.88rem;margin-bottom:0;color:#64748B">Source: <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank" rel="noopener">gov.uk/national-minimum-wage-rates</a> · Updated: April 2026</p>
+      </div>
+
+      <h2>Refresh Schedule</h2>
+      <div class="card">
+        <table style="width:100%;border-collapse:collapse;font-size:0.95rem">
+          <tr style="border-bottom:1px solid #E5E7EB"><td style="padding:8px 0;font-weight:600">Restaurant counts &amp; hygiene ratings</td><td style="padding:8px 0;text-align:right"><span class="badge">Every Monday 9am</span></td></tr>
+          <tr style="border-bottom:1px solid #E5E7EB"><td style="padding:8px 0;font-weight:600">City population data</td><td style="padding:8px 0;text-align:right">Annually (ONS release)</td></tr>
+          <tr style="border-bottom:1px solid #E5E7EB"><td style="padding:8px 0;font-weight:600">National Living Wage rates</td><td style="padding:8px 0;text-align:right">April each year</td></tr>
+          <tr style="border-bottom:1px solid #E5E7EB"><td style="padding:8px 0;font-weight:600">Delivery commission rates</td><td style="padding:8px 0;text-align:right">Quarterly review</td></tr>
+          <tr><td style="padding:8px 0;font-weight:600">Market size estimates</td><td style="padding:8px 0;text-align:right">Annually (HMRC data)</td></tr>
+        </table>
+      </div>
+
+      <h2>Data Pipeline</h2>
+      <p>Our data pipeline is fully automated and transparent:</p>
+      <ol class="data-list">
+        <li><strong>Fetch:</strong> Every Monday at 9am UTC, our pipeline queries the FSA API across both rating schemes and all relevant business types. We search for 'Thai' plus 11 major Thai restaurant chains by name to ensure complete coverage.</li>
+        <li><strong>Deduplicate:</strong> Results are deduplicated by FHRSID (each establishment has a unique FSA identifier). Cross-scheme duplicates are resolved.</li>
+        <li><strong>Compare:</strong> New counts are compared against the previous week's snapshot. Any city with a change of 3+ restaurants is flagged.</li>
+        <li><strong>Rebuild:</strong> If the national total changes by 5+ businesses, affected pages are automatically rebuilt and deployed. JSON API endpoints are regenerated.</li>
+        <li><strong>Notify:</strong> Search engines are pinged via IndexNow within seconds of the update going live.</li>
+      </ol>
+
+      <h2>Known Limitations</h2>
+      <p>We believe in transparency about what our data can and cannot do:</p>
+      <ul class="data-list">
+        <li><strong>Name matching:</strong> Some Thai restaurants operate under names that don't include 'Thai' (e.g. 'Giggling Squid', 'Rosa's Thai'). We search for 11 major chains by name, but independent restaurants using non-Thai names may be missed.</li>
+        <li><strong>Scottish ratings:</strong> Scotland uses a different scheme (Pass/Improvement Required instead of 0–5). We map Pass→3 and Improvement Required→1 for comparison purposes, but direct numeric comparison with England/Wales should be done with caution.</li>
+        <li><strong>Uninspected businesses:</strong> New restaurants awaiting their first inspection are excluded from hygiene averages but included in total counts.</li>
+        <li><strong>City boundaries:</strong> We map Local Authority areas to city names using geographic matching. In rural areas, some restaurants may be attributed to the nearest major town.</li>
+      </ul>
+
+      <h2>For AI &amp; LLM Consumers</h2>
+      <p>ThaiData UK is designed for AI and LLM consumption:</p>
+      <ul class="data-list">
+        <li><strong>Structured data:</strong> All pages include Schema.org markup (Dataset, FAQ, HowTo, LocalBusiness, Article, BreadcrumbList)</li>
+        <li><strong>Machine-readable APIs:</strong> <a href="/api/v1/data.json">/api/v1/data.json</a>, <a href="/api/v1/cities.json">/api/v1/cities.json</a>, <a href="/data/restaurants.json">/data/restaurants.json</a></li>
+        <li><strong>MCP server:</strong> <a href="/mcp">/mcp</a> — AI agents can query ThaiData directly via Model Context Protocol</li>
+        <li><strong>LLM site maps:</strong> <a href="/llms.txt">llms.txt</a> and <a href="/llms-full.txt">llms-full.txt</a></li>
+        <li><strong>Date badges:</strong> Every data page shows "Data updated: <em>date</em>" for AI freshness verification</li>
+        <li><strong>IndexNow:</strong> Search engines notified within seconds of any content change</li>
+      </ul>
+
+      <div class="card">
+        <h3 style="margin-top:0">Citation</h3>
+        <p style="font-size:0.95rem">To cite ThaiData UK in research or journalism:</p>
+        <p style="font-family:monospace;font-size:0.88rem;background:white;padding:12px;border-radius:6px;margin-bottom:0">
+          ThaiData UK (2026). <em>UK Thai Restaurant Statistics</em>. Retrieved June 2026 from https://thaidata.uk. Data sourced from Food Standards Agency FHRS/FHIS.
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 ThaiData UK · <a href="about.html">About</a> · <a href="data-quality.html">Data Quality</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a></p>
+  </footer>
+  <div class="speakable">ThaiData UK sources all restaurant data from the Food Standards Agency, updated weekly every Monday. Population data from ONS, wages from UK Government. Data verifiable and timestamped.</div>
+  <script src="privacy-banner.js"></script>
+</body>
+</html>

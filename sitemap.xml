@@ -265,6 +265,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/data-quality</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/thai-delivery-profit-analysis-2026</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
