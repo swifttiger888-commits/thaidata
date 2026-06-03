@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <title>ThaiData API v1 — Free UK Thai Restaurant Data</title>
+    <meta name="description" content="Free JSON API for UK Thai restaurant data. City-level stats, FSA-sourced. No API key needed.">
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #e0e0e0; background: #0C1220; }
+        code { background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #10B981; }
+        pre { background: #0a0a14; color: #10B981; padding: 16px; border-radius: 8px; overflow-x: auto; border: 1px solid rgba(255,255,255,0.1); }
+        h1, h2 { color: #10B981; }
+        a { color: #10B981; }
+        .endpoint { background: rgba(16,185,129,0.05); border-left: 4px solid #10B981; padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.06); text-align: left; color: #94A3B8; }
+        th { background: rgba(255,255,255,0.03); font-size: 0.85em; text-transform: uppercase; color: #64748B; }
+        td:first-child { color: #10B981; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>ThaiData API v1</h1>
+    <p>Free, open JSON API for UK Thai restaurant market data. No authentication. No rate limits. No API key.</p>
+    
+    <div class="endpoint">
+        <strong>GET</strong> <code>/api/v1/cities.json</code>
+        <p>Returns city-level Thai restaurant data for 35 UK cities — counts, densities, and hygiene ratings.</p>
+    </div>
+
+    <h2>Response Fields</h2>
+    <table>
+        <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        <tr><td>name</td><td>string</td><td>City name</td></tr>
+        <tr><td>population</td><td>integer</td><td>ONS mid-2024 population estimate</td></tr>
+        <tr><td>total_thai_businesses</td><td>integer</td><td>FSA-registered Thai restaurants + takeaways</td></tr>
+        <tr><td>restaurants</td><td>integer</td><td>Dine-in restaurant count</td></tr>
+        <tr><td>takeaways</td><td>integer</td><td>Takeaway count</td></tr>
+        <tr><td>per_100k</td><td>float</td><td>Thai businesses per 100,000 residents</td></tr>
+        <tr><td>avg_hygiene_rating</td><td>float</td><td>Average FSA hygiene score (1.0–5.0)</td></tr>
+    </table>
+
+    <h2>Try It</h2>
+    <pre>curl https://thaidata.uk/api/v1/cities.json</pre>
+    <p><a href="cities.json">→ View the JSON directly</a></p>
+
+    <h2>Usage</h2>
+    <p>Free for any purpose — commercial, research, journalism. Attribution to ThaiData.uk appreciated but not required. All data sourced from the <a href="https://www.food.gov.uk">Food Standards Agency</a> — the official UK government food hygiene register. Updated weekly.</p>
+    
+    <p style="margin-top: 40px;"><a href="/">← Back to ThaiData.uk</a></p>
+</body>
+</html>
