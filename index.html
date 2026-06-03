@@ -397,9 +397,60 @@
       border-radius: 10px
     }
 
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      line-height: 1
+    }
+
+    .hamburger:hover {
+      color: var(--c2)
+    }
+
     @media(max-width:768px) {
+      .hamburger {
+        display: block
+      }
+
+      .nav-r {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(12, 18, 32, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 16px 32px 24px;
+        gap: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08)
+      }
+
+      .nav-r.open {
+        display: flex
+      }
+
       .nav-r .nav-link {
-        display: none
+        display: block;
+        padding: 12px 0;
+        font-size: 0.95rem;
+        border-bottom: 1px solid rgba(255,255,255,0.06)
+      }
+
+      .nav-r .nav-link:last-of-type {
+        border-bottom: none
+      }
+
+      .nav-r .btn-ghost {
+        margin-top: 8px;
+        text-align: center;
+        justify-content: center
       }
     }
 
@@ -2011,6 +2062,7 @@
         <a href="index.html#faq" class="nav-link">FAQ</a>
         <a href="index.html#waitlist" class="btn btn-ghost">Get free report</a>
       </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
     </div>
   </nav>
 
@@ -2739,6 +2791,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
   <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.querySelector('.nav-r').classList.toggle('open');
+    }
+
     // Exit Intent Logic
     let exitTriggered = false;
     document.addEventListener('mouseleave', function(e) {
