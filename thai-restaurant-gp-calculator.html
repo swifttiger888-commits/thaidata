@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant GP Calculator — How to Work Out Gross Profit on Every Dish | ThaiData</title>
+    <meta name="description" content="How to calculate GP on Thai dishes. Real worked examples for Pad Thai, Green Curry, Tom Yum. Includes VAT trap, delivery GP, and the menu engineering matrix most operators miss.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/thai-restaurant-gp-calculator">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/thai-restaurant-gp-calculator">
+    <meta property="og:title" content="Thai Restaurant GP Calculator — Work Out Gross Profit on Every Dish">
+    <meta property="og:description" content="Step-by-step GP calculation with real Thai dish examples. Food cost, VAT, delivery commission — every number explained.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+
+        .formula-box { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.25); border-radius: 14px; padding: 24px 28px; margin: 20px 0; text-align: center; }
+        .formula-box .formula { font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: var(--c2); margin-bottom: 8px; }
+        .formula-box .formula-desc { color: var(--ink4); font-size: 0.82rem; }
+
+        .calc-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; overflow-x: auto; margin: 16px 0; }
+        .calc-table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        .calc-table thead th { padding: 12px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); }
+        .calc-table tbody td { padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 0.88rem; }
+        .calc-table .val-hi { color: var(--c2); font-weight: 700; }
+        .calc-table .val-lo { color: var(--red); font-weight: 700; }
+        .calc-table .result-row td { font-weight: 700; color: white; border-top: 2px solid var(--line); font-size: 0.95rem; }
+
+        .insight-box { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .insight-box h3 { color: var(--c2); font-size: 0.9rem; margin: 0 0 6px; }
+        .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+        .insight-box.warn { background: rgba(239,68,68,0.05); border-color: rgba(239,68,68,0.2); }
+        .insight-box.warn h3 { color: var(--red); }
+
+        .strategy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin: 20px 0; }
+        .strat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+        .strat-card .s-icon { font-size: 1.4rem; color: var(--c2); margin-bottom: 8px; }
+        .strat-card .s-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+        .strat-card .s-desc { color: var(--ink4); font-size: 0.82rem; line-height: 1.6; }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) { .header-section h1 { font-size: 2rem; } .strategy-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Guides</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">Practical Skills</div>
+            <h1>How to Calculate <em>GP</em><br>on Thai Dishes</h1>
+            <p>The formula every Thai restaurant operator needs. Real worked examples — Pad Thai, Green Curry, Tom Yum — plus the VAT trap and delivery GP that catches most people out.</p>
+        </div>
+    </div>
+
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>The <em>Formula</em></h2>
+            <div class="formula-box">
+                <div class="formula">GP% = (Selling Price − Food Cost) ÷ Selling Price × 100</div>
+                <div class="formula-desc">GP in pounds = Selling Price − Food Cost</div>
+            </div>
+            <p>That's it. But there are three traps that make this harder than it looks: VAT, delivery commissions, and hidden food costs. Let's work through real examples.</p>
+        </div>
+    </div>
+
+    <!-- Worked Examples -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Worked <em>Example 1</em>: Pad Thai (Dine-In)</h2>
+            <div class="calc-table-wrapper">
+                <table class="calc-table">
+                    <thead><tr><th>Step</th><th>Calculation</th><th>Amount</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Menu price</strong> (incl. VAT)</td><td>What the customer pays</td><td class="val-hi">£14.50</td></tr>
+                        <tr><td>VAT (20%)</td><td>£14.50 ÷ 1.2 = £12.08 (net) — so VAT is £14.50 − £12.08</td><td class="val-lo">−£2.42</td></tr>
+                        <tr><td><strong>Net selling price</strong></td><td>This is your actual revenue</td><td>£12.08</td></tr>
+                        <tr><td>Food cost</td><td>Rice noodles £0.40 + chicken £0.90 + egg £0.20 + veg £0.30 + sauce £0.50 + garnish £0.50</td><td class="val-lo">−£2.80</td></tr>
+                        <tr class="result-row"><td><strong>Gross Profit</strong></td><td>£12.08 − £2.80</td><td class="val-hi">£9.28</td></tr>
+                        <tr class="result-row"><td><strong>GP%</strong></td><td>£9.28 ÷ £12.08 × 100</td><td class="val-hi">76.8%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box"><h3><i class="fas fa-exclamation-triangle"></i> The VAT trap</h3><p>Many operators calculate GP on the menu price including VAT. That's wrong — VAT isn't your money, it's HMRC's. Always calculate GP on the <strong>net</strong> price (menu price ÷ 1.2). A £14.50 curry has a net price of £12.08 — calculate your GP on £12.08, not £14.50. Using the gross number makes your GP look worse than it is.</p></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrap">
+            <h2>Worked <em>Example 2</em>: Same Pad Thai — On Deliveroo</h2>
+            <div class="calc-table-wrapper">
+                <table class="calc-table">
+                    <thead><tr><th>Step</th><th>Calculation</th><th>Amount</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Menu price</strong> (incl. VAT)</td><td>Delivery price — should be 20–25% higher than dine-in</td><td class="val-hi">£17.50</td></tr>
+                        <tr><td>VAT (20%)</td><td>£17.50 ÷ 1.2 = £14.58 net</td><td class="val-lo">−£2.92</td></tr>
+                        <tr><td><strong>Net selling price</strong></td><td></td><td>£14.58</td></tr>
+                        <tr><td>Deliveroo commission (30%)</td><td>30% of £17.50 gross (most platforms charge on gross)</td><td class="val-lo">−£5.25</td></tr>
+                        <tr><td>Food cost</td><td>Same ingredients</td><td class="val-lo">−£2.80</td></tr>
+                        <tr><td>Packaging</td><td>Container £0.35 + bag £0.10 + chopsticks £0.05</td><td class="val-lo">−£0.50</td></tr>
+                        <tr class="result-row"><td><strong>Gross Profit</strong></td><td>£14.58 − £5.25 − £2.80 − £0.50</td><td class="val-lo">£6.03</td></tr>
+                        <tr class="result-row"><td><strong>GP%</strong></td><td>£6.03 ÷ £14.58 × 100</td><td class="val-lo">41.4%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box warn"><h3><i class="fas fa-exclamation-triangle"></i> Delivery GP is half of dine-in GP</h3><p>Same dish: <strong>76.8% GP dine-in vs 41.4% GP on Deliveroo</strong>. That's why you need a separate delivery menu with higher prices. At £14.50 (dine-in price) on Deliveroo, this Pad Thai would earn just £3.03 profit — a 20.8% GP. That's below survival level. <a href="thai-restaurant-delivery-commissions-uk.html" style="color:var(--red);">See the full delivery commissions breakdown →</a></p></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrap">
+            <h2>Worked <em>Example 3</em>: Green Curry (Dine-In)</h2>
+            <div class="calc-table-wrapper">
+                <table class="calc-table">
+                    <thead><tr><th>Step</th><th>Calculation</th><th>Amount</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Menu price</strong> (incl. VAT)</td><td>Mid-range, regional pricing</td><td class="val-hi">£13.95</td></tr>
+                        <tr><td>VAT (20%)</td><td></td><td class="val-lo">−£2.33</td></tr>
+                        <tr><td><strong>Net selling price</strong></td><td></td><td>£11.63</td></tr>
+                        <tr><td>Food cost</td><td>Coconut milk £0.65 + chicken thigh £0.80 + curry paste £0.35 + veg £0.40 + Thai basil £0.25 + rice £0.25</td><td class="val-lo">−£2.70</td></tr>
+                        <tr class="result-row"><td><strong>Gross Profit</strong></td><td></td><td class="val-hi">£8.93</td></tr>
+                        <tr class="result-row"><td><strong>GP%</strong></td><td></td><td class="val-hi">76.8%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrap">
+            <h2>The <em>Menu Engineering</em> Matrix</h2>
+            <p>GP% alone is misleading. A high-GP% dish that nobody orders is dead weight. A lower-GP% bestseller might be your most profitable item overall. Menu engineering plots popularity against profitability.</p>
+            <div class="strategy-grid">
+                <div class="strat-card" style="border-color:var(--c2);">
+                    <div class="s-icon"><i class="fas fa-star"></i></div>
+                    <div class="s-title">⭐ Stars — High GP, High Sales</div>
+                    <div class="s-desc">Pad Thai, Green Curry, Massaman. Push these. Feature them on delivery apps. Never remove them. These pay your rent.</div>
+                </div>
+                <div class="strat-card" style="border-color:var(--gold);">
+                    <div class="s-icon"><i class="fas fa-horse-head"></i></div>
+                    <div class="s-title">🐴 Plow Horses — Low GP, High Sales</div>
+                    <div class="s-desc">Popular but low margin. Try raising the price, reducing portion size, or swapping an expensive ingredient for a cheaper one. Don't remove — they bring customers in.</div>
+                </div>
+                <div class="strat-card">
+                    <div class="s-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <div class="s-title">🧩 Puzzles — High GP, Low Sales</div>
+                    <div class="s-desc">Papaya salad, larb. Great margins but customers don't know to order them. Move these to a featured position on the menu. Train FOH to recommend them.</div>
+                </div>
+                <div class="strat-card" style="border-color:var(--red);">
+                    <div class="s-icon"><i class="fas fa-trash"></i></div>
+                    <div class="s-title">🐶 Dogs — Low GP, Low Sales</div>
+                    <div class="s-desc">Low margin AND nobody orders them. Remove from the menu. Every dish on your menu should earn its place. Be ruthless — a 60-dish menu hides the dogs. A 25-dish menu has nowhere to hide.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">Tools</a> · 
+                <a href="guides.html">Guides</a> · 
+                <a href="tools/PROFIT_MARGIN_DEFENDER.html">Profit Defender</a> · 
+                <a href="thai-restaurant-menu-pricing-uk.html">Menu Pricing</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK. GP calculations always use net (ex-VAT) prices. VAT rates correct as of June 2026.</p>
+        </div>
+    </footer>
+</body>
+</html>
