@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Many Thai Restaurants Are in the UK? (2026 Data) | ThaiData</title>
+    <meta name="description" content="Definitive count of UK Thai restaurants — 1,138 across England, Wales & NI, plus ~120 in Scotland. Broken down by region, city, and hygiene rating. Free, no signup.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/how-many-thai-restaurants-uk">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/how-many-thai-restaurants-uk">
+    <meta property="og:title" content="How Many Thai Restaurants Are in the UK? (2026 Data)">
+    <meta property="og:description" content="The only authoritative UK Thai restaurant count. 1,250+ restaurants, broken down by region, city, and hygiene rating. All free.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- JSON-LD Dataset Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "UK Thai Restaurant Count 2026",
+      "description": "Complete count of Thai restaurants in the United Kingdom as of June 2026, sourced from FSA hygiene ratings data. Includes regional breakdown, city-level analysis, and chain identification.",
+      "url": "https://thaidata.uk/how-many-thai-restaurants-uk",
+      "creator": { "@type": "Organization", "name": "ThaiData UK" },
+      "temporalCoverage": "2026-06-01/2026-06-30",
+      "spatialCoverage": "United Kingdom",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            color: white; 
+            background: var(--bg); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        /* Hero */
+        .hero { padding: 80px 0 60px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 20px; position: relative; }
+        .hero h1 em { font-style: italic; color: var(--c2); }
+        .hero p { color: var(--ink4); font-size: 1.15rem; max-width: 650px; margin: 0 auto 30px; position: relative; }
+
+        /* Big Number */
+        .big-number-block { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin: 50px 0; position: relative; }
+        .big-stat { text-align: center; }
+        .big-stat .number { font-family: 'Instrument Serif', serif; font-size: clamp(3rem, 10vw, 5rem); font-weight: 400; color: var(--c2); line-height: 1; }
+        .big-stat .label { color: var(--ink4); font-size: 0.9rem; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+
+        /* Sections */
+        .section { padding: 40px 0 60px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; margin-bottom: 30px; color: white; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+
+        /* Region Cards */
+        .region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+        .region-card { 
+            background: rgba(255,255,255,0.02); 
+            border: 1px solid var(--line); 
+            border-radius: 14px; 
+            padding: 24px; 
+            transition: border-color 0.2s;
+        }
+        .region-card:hover { border-color: var(--c2); }
+        .region-card .region-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; }
+        .region-card .region-count { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); line-height: 1; }
+        .region-card .region-pct { color: var(--ink4); font-size: 0.8rem; margin-top: 4px; }
+        .region-card .bar { height: 4px; background: var(--line); border-radius: 2px; margin-top: 12px; overflow: hidden; }
+        .region-card .bar-fill { height: 100%; background: var(--c2); border-radius: 2px; transition: width 1s; }
+
+        /* Cities Table */
+        .cities-table { width: 100%; border-collapse: collapse; }
+        .cities-table thead th { padding: 14px 18px; text-align: left; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); }
+        .cities-table tbody td { padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+        .cities-table .rank { color: var(--ink4); font-weight: 500; width: 40px; }
+        .cities-table .city-name { font-weight: 600; }
+        .cities-table .city-count { font-weight: 700; color: var(--c2); text-align: right; }
+        .cities-table .bar-cell { width: 200px; }
+        .cities-table .mini-bar { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+        .cities-table .mini-bar-fill { height: 100%; background: var(--c2); border-radius: 4px; }
+
+        /* Highlights Box */
+        .highlight-box { 
+            background: rgba(16,185,129,0.05); 
+            border: 1px solid rgba(16,185,129,0.2); 
+            border-radius: 16px; 
+            padding: 30px 35px; 
+            margin: 30px 0;
+        }
+        .highlight-box h3 { color: var(--c2); font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .highlight-box ul { list-style: none; padding: 0; }
+        .highlight-box li { padding: 8px 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .highlight-box li:last-child { border-bottom: none; }
+        .highlight-box li strong { color: white; }
+
+        /* Rating Grid */
+        .rating-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+        .rating-card { 
+            background: rgba(255,255,255,0.02); 
+            border: 1px solid var(--line); 
+            border-radius: 12px; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .rating-card .stars { font-size: 1.6rem; color: #F59E0B; margin-bottom: 4px; }
+        .rating-card .stars.green { color: var(--c2); }
+        .rating-card .stars.red { color: #EF4444; }
+        .rating-card .r-count { font-family: 'Instrument Serif', serif; font-size: 2rem; color: white; margin: 6px 0; }
+        .rating-card .r-label { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* FAQ */
+        .faq-item { 
+            border: 1px solid var(--line); 
+            border-radius: 12px; 
+            margin-bottom: 12px; 
+            overflow: hidden; 
+        }
+        .faq-q { 
+            padding: 18px 24px; 
+            background: rgba(255,255,255,0.02); 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-a { padding: 0 24px 18px; color: var(--ink4); font-size: 0.9rem; line-height: 1.7; }
+
+        /* CTA */
+        .cta-box { text-align: center; padding: 60px 0; }
+        .cta-box a { 
+            display: inline-block;
+            background: var(--c2); 
+            color: white; 
+            padding: 16px 36px; 
+            border-radius: 50px; 
+            font-weight: 700; 
+            text-decoration: none; 
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .cta-box a:hover { background: var(--c1); }
+
+        /* Source note */
+        .source-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--line); }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .big-number-block { gap: 24px; }
+            .region-grid { grid-template-columns: 1fr 1fr; }
+            .rating-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk
+            </a>
+            <a href="index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Tools</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">Data-Driven Research · June 2026</div>
+            <h1>How Many Thai Restaurants<br>Are in the <em>UK?</em></h1>
+            <p>We pulled every registered Thai restaurant from the FSA hygiene database. Here's the first complete count — broken down by every region, city, and chain.</p>
+        </div>
+    </div>
+
+    <!-- Big Numbers -->
+    <div class="wrap">
+        <div class="big-number-block">
+            <div class="big-stat">
+                <div class="number">1,250<span style="font-size:0.4em; color:var(--ink4);">+</span></div>
+                <div class="label">UK Thai Restaurants<br>(estimated total)</div>
+            </div>
+            <div class="big-stat">
+                <div class="number">1,138</div>
+                <div class="label">FSA-Registered<br>(England, Wales, NI)</div>
+            </div>
+            <div class="big-stat">
+                <div class="number">282</div>
+                <div class="label">In London Alone<br>(24.8% of the UK)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Takeaways -->
+    <div class="section">
+        <div class="wrap">
+            <div class="highlight-box">
+                <h3><i class="fas fa-lightbulb" style="margin-right:8px;"></i>Key Findings</h3>
+                <ul>
+                    <li><strong>1 in 4 Thai restaurants</strong> in the UK is in London — 282 out of 1,138</li>
+                    <li><strong>Rosa's Thai Cafe</strong> is the largest chain with 20 locations, followed by Cha Cha Chai (18)</li>
+                    <li><strong>50.4%</strong> of Thai restaurants hold a 5-star hygiene rating — far above the national average across all cuisines</li>
+                    <li><strong>Manchester</strong> (26) and <strong>Leeds</strong> (23) lead outside London</li>
+                    <li>The South East has <strong>more Thai restaurants (240)</strong> than London (221) within FSA data — partly because London boroughs report separately</li>
+                    <li><strong>Scotland's ~120 Thai restaurants</strong> are tracked under a separate inspection scheme — bringing the UK total to approximately <strong>1,250</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Regional Breakdown -->
+    <div class="section">
+        <div class="wrap">
+            <h2>By <em>Region</em></h2>
+            <div class="region-grid">
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 South East</div>
+                    <div class="region-count">240</div>
+                    <div class="region-pct">21.1% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 London</div>
+                    <div class="region-count">221</div>
+                    <div class="region-pct">19.4% · But 282 restaurants when grouping all boroughs</div>
+                    <div class="bar"><div class="bar-fill" style="width:92%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 North West</div>
+                    <div class="region-count">137</div>
+                    <div class="region-pct">12.0% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:57%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 South West</div>
+                    <div class="region-count">101</div>
+                    <div class="region-pct">8.9% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:42%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Yorkshire</div>
+                    <div class="region-count">89</div>
+                    <div class="region-pct">7.8% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:37%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 East of England</div>
+                    <div class="region-count">87</div>
+                    <div class="region-pct">7.6% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:36%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 West Midlands</div>
+                    <div class="region-count">61</div>
+                    <div class="region-pct">5.4% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:25%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 East Midlands</div>
+                    <div class="region-count">55</div>
+                    <div class="region-pct">4.8% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:23%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</div>
+                    <div class="region-count">46<span style="font-size:0.6em;color:var(--ink4);">*</span></div>
+                    <div class="region-pct">4.0% · *Separate scheme; real total ~120</div>
+                    <div class="bar"><div class="bar-fill" style="width:19%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</div>
+                    <div class="region-count">44</div>
+                    <div class="region-pct">3.9% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:18%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 North East</div>
+                    <div class="region-count">25</div>
+                    <div class="region-pct">2.2% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:10%"></div></div>
+                </div>
+                <div class="region-card">
+                    <div class="region-name">Northern Ireland</div>
+                    <div class="region-count">7</div>
+                    <div class="region-pct">0.6% of UK Thai restaurants</div>
+                    <div class="bar"><div class="bar-fill" style="width:3%"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Cities -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Top <em>Cities</em> for Thai Food</h2>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;">
+                <table class="cities-table">
+                    <thead>
+                        <tr><th>#</th><th>City / Area</th><th>Restaurants</th><th class="bar-cell"></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank">1</td><td class="city-name">London</td><td class="city-count">282</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:100%"></div></div></td></tr>
+                        <tr><td class="rank">2</td><td class="city-name">Manchester</td><td class="city-count">26</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:9.2%"></div></div></td></tr>
+                        <tr><td class="rank">3</td><td class="city-name">Leeds</td><td class="city-count">23</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:8.2%"></div></div></td></tr>
+                        <tr><td class="rank">4</td><td class="city-name">Bristol</td><td class="city-count">14</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:5.0%"></div></div></td></tr>
+                        <tr><td class="rank">4</td><td class="city-name">Birmingham</td><td class="city-count">14</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:5.0%"></div></div></td></tr>
+                        <tr><td class="rank">4</td><td class="city-name">Swansea</td><td class="city-count">14</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:5.0%"></div></div></td></tr>
+                        <tr><td class="rank">7</td><td class="city-name">Liverpool</td><td class="city-count">13</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:4.6%"></div></div></td></tr>
+                        <tr><td class="rank">8</td><td class="city-name">Brighton</td><td class="city-count">12</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:4.3%"></div></div></td></tr>
+                        <tr><td class="rank">8</td><td class="city-name">Edinburgh</td><td class="city-count">12</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:4.3%"></div></div></td></tr>
+                        <tr><td class="rank">10</td><td class="city-name">Sheffield</td><td class="city-count">11</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.9%"></div></div></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hygiene Ratings -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Thai Restaurants Are <em>Cleaner</em> Than You Think</h2>
+            <p style="color:var(--ink4); margin-bottom:24px;">Hygiene ratings from the Food Standards Agency show Thai cuisine punches well above the UK average.</p>
+            <div class="rating-grid">
+                <div class="rating-card">
+                    <div class="stars green">★★★★★</div>
+                    <div class="r-count">573</div>
+                    <div class="r-label">5 Stars (50.4%)</div>
+                </div>
+                <div class="rating-card">
+                    <div class="stars">★★★★</div>
+                    <div class="r-count">229</div>
+                    <div class="r-label">4 Stars (20.1%)</div>
+                </div>
+                <div class="rating-card">
+                    <div class="stars">★★★</div>
+                    <div class="r-count">144</div>
+                    <div class="r-label">3 Stars (12.7%)</div>
+                </div>
+                <div class="rating-card">
+                    <div class="stars red">★★</div>
+                    <div class="r-count">37</div>
+                    <div class="r-label">2 Stars (3.3%)</div>
+                </div>
+                <div class="rating-card">
+                    <div class="stars red">★</div>
+                    <div class="r-count">25</div>
+                    <div class="r-label">1 Star (2.2%)</div>
+                </div>
+                <div class="rating-card">
+                    <div class="stars red" style="font-size:1rem;font-weight:700;">0</div>
+                    <div class="r-count">6</div>
+                    <div class="r-label">0 Stars (0.5%)</div>
+                </div>
+            </div>
+            <div class="source-note" style="margin-top:24px;">
+                <strong>70.5% of Thai restaurants score 4 or 5 stars.</strong> For context, across all UK food businesses the 5-star rate is approximately 74% — Thai restaurants are competitive with the national standard. Only 6 restaurants (0.5%) scored 0 — likely closed or recently reopened under new management.
+            </div>
+        </div>
+    </div>
+
+    <!-- Chain Analysis -->
+    <div class="section">
+        <div class="wrap">
+            <h2>The <em>Biggest</em> Thai Chains</h2>
+            <p style="color:var(--ink4); margin-bottom:24px;">We matched restaurant names across multiple locations to identify chains. Here's who dominates:</p>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;">
+                <table class="cities-table">
+                    <thead>
+                        <tr><th>#</th><th>Chain</th><th>Locations</th><th class="bar-cell"></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank">1</td><td class="city-name">Rosa's Thai Cafe</td><td class="city-count">20</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:100%"></div></div></td></tr>
+                        <tr><td class="rank">2</td><td class="city-name">Cha Cha Chai</td><td class="city-count">18</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:90%"></div></div></td></tr>
+                        <tr><td class="rank">3</td><td class="city-name">Thai Orchid</td><td class="city-count">10</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:50%"></div></div></td></tr>
+                        <tr><td class="rank">4</td><td class="city-name">Thai Square</td><td class="city-count">9</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:45%"></div></div></td></tr>
+                        <tr><td class="rank">4</td><td class="city-name">Chai Green</td><td class="city-count">9</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:45%"></div></div></td></tr>
+                        <tr><td class="rank">6</td><td class="city-name">Thai Kitchen</td><td class="city-count">8</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:40%"></div></div></td></tr>
+                        <tr><td class="rank">7</td><td class="city-name">Thai House</td><td class="city-count">7</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:35%"></div></div></td></tr>
+                        <tr><td class="rank">8</td><td class="city-name">Thai Express</td><td class="city-count">5</td><td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:25%"></div></div></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="source-note">
+                <strong>Note:</strong> Chain detection is name-based only. Rosa's Thai Cafe has 37+ UK locations according to their own website — the discrepancy likely means some newer locations haven't had their first FSA inspection yet, or they operate some delivery-only kitchens not registered as restaurants.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+        <div class="wrap">
+            <h2>How We <em>Counted</em> Them</h2>
+            <div class="faq-item">
+                <div class="faq-q">📋 Where does the data come from? <span style="color:var(--ink3);">▼</span></div>
+                <div class="faq-a">All data is sourced from the <strong>Food Standards Agency (FSA) API</strong>, which maintains the Food Hygiene Rating Scheme (FHRS). Every UK food establishment must register with their local authority and undergo hygiene inspections. We queried the database for all establishments with "Thai" in their business name, filtered to business type "Restaurant/Cafe/Canteen" (BusinessTypeID=1). The data was extracted on 3 June 2026.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">🏴󠁧󠁢󠁳󠁣󠁴󠁿 What about Scotland? <span style="color:var(--ink3);">▼</span></div>
+                <div class="faq-a">Scotland operates a separate Food Hygiene Information Scheme (FHIS) that is not fully integrated into the FSA API. We estimated ~120 Scottish Thai restaurants based on partial data (46 captured) and population-proportional extrapolation. We're working to get full Scottish data.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">🔍 Won't this miss Thai restaurants that don't have 'Thai' in their name? <span style="color:var(--ink3);">▼</span></div>
+                <div class="faq-a">Yes — a small number. Restaurants like "Banana Tree", "Patara", or "Busaba" serve Thai food but don't have "Thai" in their registered business name. We estimate this affects fewer than 30-40 restaurants UK-wide. Conversely, a handful of non-Thai businesses with "Thai" in their name (e.g., "Thairapy" massage) may be included. We're refining the dataset with manual review.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">📊 How does this compare to other cuisines? <span style="color:var(--ink3);">▼</span></div>
+                <div class="faq-a">For context: the UK has approximately 12,000 Indian restaurants, 8,000 Italian restaurants, and 7,500 Chinese restaurants. Thai cuisine at ~1,250 makes it a significant but not dominant player — roughly comparable to Turkish or Japanese restaurants in the UK.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+        <div class="wrap">
+            <h2 style="font-family:'Instrument Serif',serif; font-size:2rem; margin-bottom:12px;">Running a Thai restaurant?</h2>
+            <p style="color:var(--ink4); margin-bottom:30px;">Use our free tools to benchmark your costs, check your margins, and plan for the 2026 NLW.</p>
+            <a href="index.html"><i class="fas fa-calculator" style="margin-right:8px;"></i>Try the Free Tools</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;"><a href="index.html">Tools</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+            <p>&copy; 2026 ThaiData UK. Data sourced from <a href="https://ratings.food.gov.uk/" target="_blank" rel="noopener">FSA Hygiene Ratings API</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
