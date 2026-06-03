@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Menu Schema Generator for Thai Restaurants | ThaiData.uk</title>
+    <meta name="description" content="Generate JSON-LD Menu Schema for your Thai restaurant. Make your dishes visible to Google Gemini, ChatGPT, and Perplexity.">
+    <link rel="canonical" href="https://thaidata.uk/tools/MENU_SCHEMA_GENERATOR.html">
+    
+    <!-- JSON-LD Entity Schema for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Thai Menu Schema Generator",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "description": "Interactive utility to generate JSON-LD structured data for restaurant menus, optimizing visibility for AI search agents and Google Knowledge Panels.",
+      "featureList": "Instant JSON-LD generation, Menu sectioning, Schema.org Menu compliance, AI-readable dish indexing",
+      "softwareRequirements": "HTML5 Browser",
+      "softwareVersion": "2026.1",
+      "targetCountry": "GB"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            color: white; 
+            background: var(--bg); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .section { padding: 80px 0; }
+        .header { text-align: center; margin-bottom: 50px; }
+        .header h1 { 
+            font-family: 'Instrument Serif', serif; 
+            font-size: clamp(2.5rem, 8vw, 4rem); 
+            font-weight: 400; 
+            line-height: 1.1; 
+            margin-bottom: 20px; 
+            background: linear-gradient(to right, var(--c2), white); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            color: transparent; 
+        }
+        .header h1 em { font-style: italic; color: var(--c2); }
+        .header p { color: var(--ink4); font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+
+        .tool-wrapper { 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(10px);
+            border-radius: 20px; 
+            border: 1px solid var(--line); 
+            overflow: hidden; 
+            display: flex; 
+            min-height: 600px; 
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5); 
+        }
+        .tool-sidebar { width: 40%; border-right: 1px solid var(--line); padding: 40px; background: rgba(255, 255, 255, 0.01); }
+        .tool-main { width: 60%; padding: 40px; position: relative; }
+
+        .label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--c2); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .input-group { margin-bottom: 24px; }
+        .input-text { width: 100%; padding: 14px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: 8px; color: white; font-size: 1rem; }
+        .input-text:focus { outline: none; border-color: var(--c2); background: rgba(0,0,0,0.4); }
+        .textarea { width: 100%; height: 250px; padding: 16px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: 12px; color: white; font-family: inherit; font-size: 0.95rem; resize: none; }
+        .textarea:focus { outline: none; border-color: var(--c2); background: rgba(0,0,0,0.4); }
+
+        .btn-magic { width: 100%; padding: 16px; background: linear-gradient(90deg, var(--c1), var(--c2)); color: white; border: none; border-radius: 9px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s; font-size: 1rem; }
+        .btn-magic:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3); }
+
+        .output-container { background: #011627; border-radius: 12px; height: 100%; padding: 0; position: relative; display: flex; flex-direction: column; overflow: hidden; }
+        .output-header { padding: 12px 20px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; border-radius: 12px 12px 0 0; }
+        .code-area { flex: 1; padding: 20px; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; color: #82AAFF; overflow-y: auto; white-space: pre-wrap; line-height: 1.5; }
+        .btn-copy { padding: 8px 16px; background: var(--c2); color: var(--dark); border: none; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: 0.2s; }
+        .btn-copy:hover { transform: scale(1.05); }
+
+        .hint { margin-top: 20px; font-size: 0.85rem; color: var(--ink4); line-height: 1.5; display: flex; gap: 12px; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); }
+        .hint i { color: var(--c2); font-size: 1.1rem; }
+
+        @media (max-width: 900px) {
+            .tool-wrapper { flex-direction: column; }
+            .tool-sidebar, .tool-main { width: 100%; border-right: none; }
+            .tool-sidebar { border-bottom: 1px solid var(--line); }
+            .header h1 { font-size: 2.5rem; }
+        }
+
+        /* Success Pulse */
+        .pulse-success { animation: pulse 1s ease-out; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="../index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="wrap">
+            <div class="header">
+                <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--c2); margin-bottom:12px;">Neural Discovery Accelerator</div>
+                <h1>Menu <em>Schema</em> Generator</h1>
+                <p>Don't let AI bots ignore your best dishes. Convert your menu text into valid JSON-LD code in 10 seconds. Copy, paste, and get indexed.</p>
+            </div>
+
+            <div class="tool-wrapper">
+                <div class="tool-sidebar">
+                    <div class="input-group">
+                        <label class="label">Restaurant Name</label>
+                        <input type="text" class="input-text" id="resName" placeholder="e.g. Lime & Chilli London">
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Paste Your Menu Here</label>
+                        <p style="font-size:0.85rem; color:var(--ink4); margin-bottom:10px;">Paste dish names and prices. One per line works best.</p>
+                        <textarea class="textarea" id="menuInput" placeholder="Pad Thai - £13.50&#10;Green Curry - £14.95&#10;Massaman Beef - £18.00"></textarea>
+                    </div>
+                    <button class="btn-magic" onclick="generateSchema()" id="genBtn">
+                        <i class="fas fa-magic"></i> Generate AI Code
+                    </button>
+                    
+                    <div class="hint">
+                        <i class="fas fa-info-circle"></i>
+                        <div>This tool creates a "Menu" type structured data object that Google Gemini and ChatGPT use to display your prices in search results.</div>
+                    </div>
+                </div>
+
+                <div class="tool-main">
+                    <div class="output-container" id="outputWrapper">
+                        <div class="output-header">
+                            <span style="font-size:0.75rem; font-weight:700; color:var(--ink4); text-transform:uppercase;">JSON-LD Output</span>
+                            <button class="btn-copy" onclick="copyCode()" id="copyBtn">Copy Code</button>
+                        </div>
+                        <div class="code-area" id="schemaOutput">// Your AI-ready code will appear here...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; background: rgba(255,255,255,0.03); padding: 40px; border-radius: 16px; border: 1px solid var(--line);">
+                <h3 style="font-family:'Instrument Serif', serif; font-size:2rem; margin-bottom:20px; color:var(--c2);">How to install this code?</h3>
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:30px;">
+                    <div>
+                        <div style="font-weight:800; color:var(--c2); margin-bottom:10px;">STEP 1</div>
+                        <p style="font-size:0.9rem; color:var(--ink4);">Generate your menu code using the tool above. Make sure your prices are accurate.</p>
+                    </div>
+                    <div>
+                        <div style="font-weight:800; color:var(--c2); margin-bottom:10px;">STEP 2</div>
+                        <p style="font-size:0.9rem; color:var(--ink4);">Paste the code into the <code>&lt;head&gt;</code> section of your website's homepage or menu page.</p>
+                    </div>
+                    <div>
+                        <div style="font-weight:800; color:var(--c2); margin-bottom:10px;">STEP 3</div>
+                        <p style="font-size:0.9rem; color:var(--ink4);">Wait 2-5 days. AI search bots will crawl the code and start showing your menu in their neural responses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function generateSchema() {
+            const resName = document.getElementById('resName').value || "Our Thai Restaurant";
+            const text = document.getElementById('menuInput').value.trim();
+            if (!text) { alert("Please paste some menu items first!"); return; }
+
+            const btn = document.getElementById('genBtn');
+            const output = document.getElementById('schemaOutput');
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Neural Parsing...';
+            output.innerHTML = '<span style="color:var(--c2)">[MATCHING NEURAL PATTERNS...]</span>';
+            
+            setTimeout(() => {
+                const lines = text.split('\n');
+                const menuItems = [];
+
+                lines.forEach(line => {
+                    if (!line.trim()) return;
+                    
+                    const priceMatch = line.match(/(\d+\.?\d*)/);
+                    const nameMatch = line.split(/[£\-\d]/)[0].trim();
+                    
+                    if (nameMatch) {
+                        menuItems.push({
+                            "@type": "MenuItem",
+                            "name": nameMatch,
+                            "offers": {
+                                "@type": "Offer",
+                                "price": priceMatch ? priceMatch[0] : "0.00",
+                                "priceCurrency": "GBP"
+                            }
+                        });
+                    }
+                });
+
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "Menu",
+                    "name": resName + " Menu",
+                    "mainEntityOfPage": window.location.href,
+                    "hasMenuSection": [
+                        {
+                            "@type": "MenuSection",
+                            "name": "Main Menu",
+                            "hasMenuItem": menuItems
+                        }
+                    ]
+                };
+
+                output.textContent = JSON.stringify(schema, null, 4);
+                btn.innerHTML = '<i class="fas fa-magic"></i> Generate AI Code';
+                btn.disabled = false;
+                document.getElementById('outputWrapper').classList.add('pulse-success');
+                setTimeout(() => document.getElementById('outputWrapper').classList.remove('pulse-success'), 1000);
+            }, 1200);
+        }
+
+        function copyCode() {
+            const code = document.getElementById('schemaOutput').textContent;
+            navigator.clipboard.writeText('<script type="application/ld+json">\n' + code + '\n<\/script>').then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = "Copied!";
+                btn.style.background = "#ffffff";
+                setTimeout(() => {
+                    btn.textContent = "Copy Code";
+                    btn.style.background = "#10B981";
+                }, 2000);
+            });
+        }
+    </script>
+    <script src="../privacy-banner.js" defer></script>
+</body>
+</html>

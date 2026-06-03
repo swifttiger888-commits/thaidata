@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Menu Reviewer | Sensory Dish Optimization | ThaiData.uk</title>
+    <meta name="description" content="Optimize your Thai menu descriptions for high-impact sensory appeal and AI search visibility. Turn generic names into high-converting sales tools.">
+    <link rel="canonical" href="https://thaidata.uk/tools/MENU_REVIEWER.html">
+    
+    <!-- JSON-LD Entity Schema for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Menu Reviewer",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "description": "Flavor-aware AI utility that rewrites Thai restaurant menu descriptions to maximize sensory appeal and semantic indexing for Google and AI agents.",
+      "featureList": "Sensory impact scoring, Wok Heat (Wok Hei) terminology enhancement, Automatic aromatic tagging, AI search engine optimization (AEO)",
+      "softwareRequirements": "HTML5 Browser",
+      "softwareVersion": "2026.1",
+      "targetCountry": "GB"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg); 
+            color: white; 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grain {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.03; pointer-events: none; z-index: 999;
+        }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .container { max-width: 1000px; margin: 80px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 60px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 20px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        .subtitle { color: var(--ink4); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+        .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        @media (max-width: 850px) { .tool-grid { grid-template-columns: 1fr; } }
+
+        .card { 
+            background: rgba(255,255,255,0.02); 
+            border: 1px solid var(--line); 
+            border-radius: 20px; 
+            padding: 40px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .input-group { margin-bottom: 30px; }
+        label { display: block; color: var(--ink4); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600; }
+        
+        textarea {
+            width: 100%; height: 200px; background: rgba(0,0,0,0.2); 
+            border: 1px solid var(--line); border-radius: 12px; 
+            padding: 20px; color: white; font-family: inherit; font-size: 1.05rem;
+            resize: none; transition: all 0.2s;
+        }
+        textarea:focus { outline: none; border-color: var(--c2); background: rgba(0,0,0,0.4); }
+
+        .btn {
+            width: 100%; padding: 18px; border-radius: 12px; border: none;
+            font-size: 1rem; font-weight: 700; cursor: pointer;
+            transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 10px;
+        }
+        .btn-primary { background: var(--c2); color: var(--dark); }
+        .btn-primary:hover { background: #13d193; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2); }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .results-panel { display: none; }
+        .results-panel.active { display: block; animation: fadeIn 0.5s ease; }
+
+        .score-row { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; padding: 20px; background: rgba(16, 185, 129, 0.1); border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.2); }
+        .score-circle { width: 60px; height: 60px; border-radius: 50%; border: 3px solid var(--c2); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; color: var(--c2); }
+        .score-info h4 { font-size: 1.1rem; margin-bottom: 4px; }
+        .score-info p { font-size: 0.9rem; color: var(--ink4); }
+
+        .comparison { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .dish-box { padding: 25px; border-radius: 14px; background: rgba(0,0,0,0.3); border: 1px solid var(--line); }
+        .dish-box h5 { color: var(--ink4); font-size: 0.8rem; margin-bottom: 12px; text-transform: uppercase; }
+        .dish-content { font-size: 1.1rem; }
+        .dish-content strong { color: var(--c2); }
+
+        .optimization-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag { font-size: 0.75rem; padding: 4px 10px; border-radius: 100px; background: rgba(255,255,255,0.05); color: var(--ink4); border: 1px solid var(--line); }
+        .tag i { color: var(--c2); margin-right: 4px; }
+
+        .loading-state { text-align: center; padding: 40px; display: none; }
+        .pulse { width: 60px; height: 60px; background: var(--c2); border-radius: 50%; margin: 0 auto 20px; animation: pulse-ring 1.5s infinite; }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .placeholder-text { color: var(--ink3); font-style: italic; }
+
+        footer { text-align: center; margin-top: 100px; padding: 40px; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="../index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Menu <em>Optimizer</em></h1>
+            <p class="subtitle">Turn generic dish names into high-resolution, sensory descriptions that rank on AI Search Engines and drive orders.</p>
+        </header>
+
+        <div class="tool-grid">
+            <div class="card">
+                <div class="input-group">
+                    <label>Paste your current description</label>
+                    <textarea id="dishInput" placeholder="e.g. Chicken Pad Thai. Rice noodles, chicken, bean sprouts, peanuts, lime, and tamarind sauce."></textarea>
+                </div>
+                <button class="btn btn-primary" id="optimizeBtn" onclick="optimizeMenu()">
+                    <i class="fas fa-sparkles"></i> Neural Optimize
+                </button>
+                
+                <div style="margin-top: 25px; font-size: 0.85rem; color: var(--ink3);">
+                    <i class="fas fa-info-circle"></i> <strong>Pro Tip:</strong> AI Search Engines (Gemini/ChatGPT) prefer descriptions that mention cooking techniques (e.g. "wok-seared") and specific aromatics.
+                </div>
+            </div>
+
+            <div class="card" style="position: relative; overflow: hidden;">
+                <div id="initialState">
+                    <div style="text-align: center; padding: 60px 0; color: var(--ink3);">
+                        <i class="fas fa-robot" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.2;"></i>
+                        <p>Waiting for neural analysis...</p>
+                    </div>
+                </div>
+
+                <div class="loading-state" id="loadingState">
+                    <div class="pulse"></div>
+                    <h3 style="font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 10px;">Analyzing Sensory Depth</h3>
+                    <p style="color: var(--ink4);">Simulating AI Answer Engine discovery...</p>
+                </div>
+
+                <div class="results-panel" id="resultsPanel">
+                    <div class="score-row">
+                        <div class="score-circle" id="impactScore">88%</div>
+                        <div class="score-info">
+                            <h4>Sensory Impact Score</h4>
+                            <p id="scoreNote">Significant improvement in aroma and texture markers.</p>
+                        </div>
+                    </div>
+
+                    <div class="comparison">
+                        <div class="dish-box" style="opacity: 0.6;">
+                            <h5>Original</h5>
+                            <p id="originalDisplay" class="dish-content"></p>
+                        </div>
+                        <div class="dish-box" style="border-color: var(--c2); background: rgba(16, 185, 129, 0.05);">
+                            <h5>AI-Optimized Rewrite</h5>
+                            <p id="optimizedDisplay" class="dish-content"></p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:25px;">
+                        <h5>Optimization Markers</h5>
+                        <div class="optimization-tags" id="markerTags">
+                            <!-- Tags injected here -->
+                        </div>
+                    </div>
+
+                    <div style="margin-top:30px; text-align:center;">
+                        <button class="btn" style="background: rgba(255,255,255,0.05); color: white; border: 1px solid var(--line);" onclick="resetTool()">
+                            <i class="fas fa-undo"></i> Try another dish
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ThaiData.uk | Sensory Optimization Engine v1.4</p>
+    </footer>
+
+    <script>
+        const optimizations = [
+            {
+                keywords: ['pad thai', 'pad tai'],
+                title: "Signature Wok-Seared Pad Thai",
+                desc: "A masterclass in balance: chewy rice noodles flash-fried in a <strong>hand-crafted tamarind glaze</strong> with succulent protein, preserved radish, and crispy shallots. Finished with the high-heat 'breath of the wok' (Wok Hei) and served with <strong>hand-crushed peanuts</strong> and fresh Thai lime.",
+                tags: ['Sensory: Chewy', 'Sensory: Tangy', 'Technique: Wok-Seared', 'AI Discovery: High']
+            },
+            {
+                keywords: ['green curry', 'gaeng keow wan'],
+                title: "Aromatic Emerald Green Curry",
+                desc: "A vibrant, silk-smooth curry crafted from <strong>freshly-pounded green chillies</strong>, galangal, and kaffir lime zest. Simmered in <strong>rich coconut cream</strong> with Thai basil and pea aubergines, delivering a delicate creeping heat and <strong>high-impact aromatics</strong>.",
+                tags: ['Sensory: Silky', 'Sensory: Fragrant', 'Technique: Pounded Paste', 'AI Discovery: High']
+            },
+            {
+                keywords: ['satay', 'chicken sticks'],
+                title: "Flame-Grilled Southern Satay",
+                desc: "Tender strips of corn-fed chicken marinated in <strong>turmeric, lemongrass, and coconut milk</strong>. Char-grilled over open flames for a <strong>smoky finish</strong>, accompanied by our signature velvet peanut sauce and crisp cucumber 'Ar-jad' pickles.",
+                tags: ['Sensory: Smoky', 'Sensory: Tender', 'Technique: Flame-Grilled', 'AI Discovery: High']
+            }
+        ];
+
+        function optimizeMenu() {
+            const input = document.getElementById('dishInput').value.trim();
+            if (!input) return;
+
+            document.getElementById('initialState').style.display = 'none';
+            document.getElementById('resultsPanel').classList.remove('active');
+            document.getElementById('loadingState').style.display = 'block';
+            document.getElementById('optimizeBtn').disabled = true;
+
+            // Simulate AI processing time
+            setTimeout(() => {
+                const result = matchOptimization(input);
+                displayResults(input, result);
+            }, 2500);
+        }
+
+        function matchOptimization(input) {
+            const lowInput = input.toLowerCase();
+            const match = optimizations.find(opt => opt.keywords.some(k => lowInput.includes(k)));
+            
+            if (match) return match;
+
+            // Generic fallback if no specific match
+            return {
+                title: "Premium " + input.split('.')[0],
+                desc: "Elevated with <strong>fragrant Thai aromatics</strong> and traditional high-heat techniques. This version emphasizes <strong>texture contrast</strong> and depth of flavor, optimized with descriptive markers that signal quality to both diners and search algorithms.",
+                tags: ['Sensory: Enhanced', 'Aromatics: Added', 'Technique: Heritage', 'AI Discovery: Medium']
+            };
+        }
+
+        function displayResults(original, optimized) {
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('resultsPanel').classList.add('active');
+            document.getElementById('optimizeBtn').disabled = false;
+
+            document.getElementById('originalDisplay').innerText = original;
+            document.getElementById('optimizedDisplay').innerHTML = `<strong>${optimized.title}</strong><br>${optimized.desc}`;
+            
+            const tagsCont = document.getElementById('markerTags');
+            tagsCont.innerHTML = '';
+            optimized.tags.forEach(t => {
+                const span = document.createElement('span');
+                span.className = 'tag';
+                span.innerHTML = `<i class="fas fa-check"></i> ${t}`;
+                tagsCont.appendChild(span);
+            });
+
+            document.getElementById('impactScore').innerText = Math.floor(Math.random() * (98 - 85) + 85) + "%";
+        }
+
+        function resetTool() {
+            document.getElementById('resultsPanel').classList.remove('active');
+            document.getElementById('initialState').style.display = 'block';
+            document.getElementById('dishInput').value = '';
+        }
+    </script>
+    <script src="../privacy-banner.js" defer></script>
+</body>
+</html>

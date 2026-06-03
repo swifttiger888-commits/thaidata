@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 2026 Chef Visa Cliff: Why UK Thai Restaurants Can No Longer Sponsor Speciality Chefs | ThaiData UK</title>
+    <meta name="description" content="A deep-dive analysis into the UK's new chef visa rules for 2026. Learn about the £41,700 salary threshold and RQF Level 6 requirements.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The 2026 Chef Visa Cliff: Survival Guide for Thai Restaurants">
+    <meta property="og:description" content="The ability to sponsor specialist chefs is being blocked. Here is your complete analysis and survival guide.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/analysis/chef-visa-cliff.html">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --emerald: var(--c2);
+            --navy: var(--bg);
+            --ivory: #FAFAF9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            background-color: var(--navy); color: var(--ivory); 
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .hero { margin-bottom: 60px; padding: 80px 0 0; }
+        .eyebrow { display: block; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; color: var(--c2); letter-spacing: 0.15em; margin-bottom: 16px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 24px; }
+        h1 em { font-style: italic; color: var(--c2); }
+
+        .lead { font-size: 1.25rem; color: var(--ink4); font-weight: 400; margin-bottom: 40px; border-left: 4px solid var(--c2); padding-left: 24px; line-height: 1.6; }
+
+        article section { margin-bottom: 40px; }
+        h2 { font-family: 'Instrument Serif', serif; font-size: 2.22rem; margin-bottom: 20px; margin-top: 40px; font-weight: 400; color: white; }
+        h3 { font-size: 1.35rem; margin-bottom: 15px; margin-top: 30px; font-weight: 700; color: white; }
+        p { margin-bottom: 24px; color: var(--ink4); }
+
+        .highlight-box { 
+            background: rgba(255,255,255,0.02); 
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--line); 
+            border-radius: 20px; padding: 32px; 
+            margin-bottom: 40px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+        }
+
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+        .stat-card { background: rgba(0,0,0,0.3); padding: 25px; border-radius: 14px; text-align: center; border: 1px solid var(--line); }
+        .stat-val { display: block; font-size: 2.2rem; font-weight: 800; color: var(--c2); margin-bottom: 4px; }
+        .stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--ink4); letter-spacing: 1px; }
+
+        ul, ol { margin-bottom: 24px; padding-left: 24px; color: var(--ink4); }
+        li { margin-bottom: 12px; }
+
+        .cta-box { 
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(0,0,0,0.4));
+            border: 1px solid var(--line);
+            padding: 50px; border-radius: 24px; text-align: center; margin: 60px 0; 
+            box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+        }
+        .cta-box h3 { font-family: 'Instrument Serif', serif; font-size: 2.2rem; margin-top: 0; color: white; }
+        .cta-box p { color: var(--ink4); margin-bottom: 25px; }
+
+        .btn { 
+            display: inline-flex; align-items: center; gap: 12px; background: var(--c2); color: var(--dark); 
+            padding: 16px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; 
+            transition: all 0.2s; 
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2); }
+
+        footer { padding: 80px 0; border-top: 1px solid var(--line); text-align: center; color: var(--ink4); font-size: 0.9rem; }
+
+        .faq-section { 
+            background: rgba(255,255,255,0.01); 
+            padding: 40px; border-radius: 20px; border: 1px solid var(--line); 
+        }
+        .faq-item { margin-bottom: 30px; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-weight: 700; font-size: 1.15rem; margin-bottom: 12px; color: white; }
+        .faq-a { color: var(--ink4); }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .stat-grid { grid-template-columns: 1fr; }
+            .cta-box { padding: 30px 20px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I still sponsor a Thai chef in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For new hires from overseas after July 22, 2025, it becomes extremely difficult. The chef must be hired into a role that can be justified as meeting RQF Level 6 (degree-level skill) and be paid a salary of at least £41,700. For most specialist chef roles in typical restaurants, this combination is commercially and practically unviable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the exact new chef visa salary threshold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The new salary threshold for sponsoring a chef is £41,700 per year. This is the specific 'going rate' for chef occupations (SOC 5434). This is separate from the general Skilled Worker threshold of £38,700, and you must meet the higher of the two figures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My current chef is on a Skilled Worker visa. Are they safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Staff already on a Skilled Worker visa before the rules change are generally protected by 'transitional arrangements.' They should be able to extend their visa and apply for settlement (Indefinite Leave to Lower) under the old rules, provided their job stays the same. It is critical to verify their specific circumstances and plan extensions early."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does RQF Level 6 mean for a chef?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RQF Level 6 is officially equivalent to a Bachelor's degree. In practice for immigration, it means the job must involve high-level strategic planning, complex problem-solving, and significant autonomous decision-making—typically the realm of an Executive Chef or very senior Head Chef shaping multiple outlets, not a specialist preparing specific dishes."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="../index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 40px;">
+
+        <section class="hero">
+            <span class="eyebrow">Sector Intelligence Report</span>
+            <h1>The 2026 Chef Visa Cliff: Why UK Thai Restaurants Can No Longer Sponsor Speciality Chefs</h1>
+            <div class="lead">
+                For UK Thai restaurant owners, a seismic shift in immigration policy has just redefined your future. The ability to sponsor the specialist chefs who are the lifeblood of authentic Thai cuisine is being effectively blocked.
+            </div>
+        </section>
+
+        <article>
+            <section>
+                <h2>The "July 22 Surprise": A Policy Shock to the System</h2>
+                <p>On July 22, 2024, the UK government announced changes to the Skilled Worker visa route that sent shockwaves through the hospitality sector. While some details were anticipated, the specific impact on chef roles was a brutal surprise.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>The critical takeaway:</strong> As of <strong>July 22, 2025</strong>, the transitional, lower salary arrangements will end. More devastatingly, the standard salary threshold for a Skilled Worker visa has risen, and the "going rate" for chefs has been set at a staggering <strong>£41,700</strong>.</p>
+                    <div class="stat-grid">
+                        <div class="stat-card">
+                            <span class="stat-val">£41,700</span>
+                            <span class="stat-label">Min Salary for Chefs</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-val">RQF 6</span>
+                            <span class="stat-label">Required Skill Level</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>This means from that date, any new Skilled Worker visa application for a chef—including Specialist Chefs, Sous Chefs, and Development Chefs crucial to Thai kitchens—must meet this new dual threshold. The door is swinging shut.</p>
+            </section>
+
+            <section>
+                <h2>The Skill Level Jump: RQF 3-5 vs RQF 6</h2>
+                <p>This is where confusion turns to paralysis for restaurant owners. The <strong>"RQF Level"</strong> (Regulated Qualifications Framework) is a UK system that ranks job skill levels.</p>
+                <ul>
+                    <li><strong>The Old Rule:</strong> Chef roles were classified at <strong>RQF Level 3</strong> (A-Level equivalent). It was manageable to sponsor.</li>
+                    <li><strong>The New Rule:</strong> The minimum skill level for a Skilled Worker visa was raised to <strong>RQF Level 6</strong> (Bachelor's degree equivalent).</li>
+                </ul>
+                <p>Standard chef roles (RQF 3-5) no longer meet the immigration requirement. The only exception is a very senior "Executive Chef" or "Head Chef" role—and you must pay them at least £41,700.</p>
+            </section>
+
+            <div class="cta-box">
+                <h3>Is your chef eligible?</h3>
+                <p>Don't guess with your business. Use our real-time eligibility checker to model costs and compliance.</p>
+                <a href="../tools/VISA_ASSISTANT.html" class="btn"><i class="fas fa-passport"></i> Launch Chef Visa Assistant</a>
+            </div>
+
+            <section>
+                <h2>3 Survival Strategies for Thai Owners</h2>
+                <p>Panic is not a strategy. Action is.</p>
+                
+                <h3>1. Audit Your Existing Talent Pool</h3>
+                <p>Immediately review the visa status of every chef you employ. Anyone on a visa granted *before* the changes may have a path to settlement under transitional rules. Secure these staff first.</p>
+
+                <h3>2. Radical Rethink of Recruitment</h3>
+                <p>Focus on attracting chefs already within the UK or with pre-settled status. Develop structured apprenticeship programs to cultivate niche skills locally.</p>
+
+                <h3>3. Model Your Future with Data</h3>
+                <p>You need to know exactly how these rules apply to your specific business structure. Generic advice will not suffice.</p>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-q">Can I still sponsor a Thai chef in 2026?</div>
+                    <div class="faq-a">For new hires from overseas after July 2025, it becomes extremely difficult. The role must be justified at RQF Level 6 and pay at least £41,700. For most small restaurants, this is commercially unviable.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What is the exact new salary threshold?</div>
+                    <div class="faq-a">It is £41,700 per year for chefs (SOC 5434). You must meet this higher figure even if the general Skilled Worker threshold is lower.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">My current chef is on a visa. Are they safe?</div>
+                    <div class="faq-a">Staff already on a Skilled Worker visa before the changes are generally protected by transitional arrangements. Plan extensions early to be safe.</div>
+                </div>
+            </section>
+        </article>
+
+    <footer>
+        <div class="container">
+            <a href="../index.html" class="footer-logo">
+                <i class="fas fa-pepper-hot"></i>
+                <span>ThaiData.uk</span>
+            </a>
+            <p style="margin-bottom: 20px;">Specialized digital intelligence for the UK Thai hospitality sector.</p>
+            
+            <div class="footer-links" style="display:flex; justify-content:center; gap:30px; margin-bottom: 20px;">
+                <a href="../tools/VISA_ASSISTANT.html" style="color:var(--ink4); text-decoration:none;">Visa Assistant</a>
+                <a href="../about.html" style="color:var(--ink4); text-decoration:none;">About</a>
+                <a href="../privacy.html" style="color:var(--ink4); text-decoration:none;">Privacy</a>
+                <a href="../terms.html" style="color:var(--ink4); text-decoration:none;">Terms</a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 ThaiData.uk. All rights reserved.</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

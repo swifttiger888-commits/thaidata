@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Restaurant Profit Calculator: Delivery Fees vs. NI Allowance</title>
+    <meta name="description" content="See your true 2026 net profit. Model Just Eat/Deliveroo/Uber Eats fees against the latest National Insurance and £10,500 Employment Allowance. Make data-driven platform decisions.">
+    <link rel="canonical" href="https://thaidata.uk/tools/PROFIT_MARGIN_DEFENDER.html">
+
+    <!-- JSON-LD Entity Schema for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Profit Margin Defender 2026",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "description": "Dynamic calculator for UK Thai restaurants to model the net profit impact of third-party delivery platform fees against 2026 National Insurance contributions and Employment Allowance.",
+      "featureList": "Multi-platform fee calculator (Just Eat, Deliveroo, Uber Eats), 2026 National Insurance impact simulator, Employment Allowance (£10,500) optimizer, Break-even analysis by dish, Net profit projection dashboard",
+      "softwareRequirements": "HTML5 Browser",
+      "softwareVersion": "2026.1",
+      "countryOfAssembly": "United Kingdom",
+      "processorRequirements": "Calculates net profit after all platform fees and employment taxes for 2026",
+      "memoryRequirements": "Stores current and projected UK tax and allowance rates",
+      "countriesSupported": "GB"
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        :root {
+            --primary: #10B981;
+            --primary-dark: #059669;
+            --secondary: #0F172A;
+            --text-primary: #FAFAF9;
+            --text-secondary: #94A3B8;
+            --border: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --shadow: rgba(0, 0, 0, 0.4);
+            --warning: #F59E0B;
+            --success: #10B981;
+            --danger: #EF4444;
+            --dark-bg: #0f172a;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .logo i {
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 900px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 16px var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 i {
+            color: var(--primary);
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .input-group select, 
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            appearance: none;
+        }
+        
+        .input-group select:focus, 
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        
+        .input-group input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+        
+        .input-group input[type="number"]::-webkit-inner-spin-button,
+        .input-group input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        .cost-breakdown {
+            background-color: rgba(30, 41, 59, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .cost-item:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            color: var(--success);
+        }
+        
+        .calculate-btn {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .calculate-btn:hover {
+            background: linear-gradient(to right, var(--primary-dark), #1e40af);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .results {
+            display: none;
+        }
+        
+        .results.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .profit-display {
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(30, 41, 59, 0.8);
+        }
+        
+        .profit-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .profit-percentage {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .profit-good {
+            color: var(--success);
+        }
+        
+        .profit-warning {
+            color: var(--warning);
+        }
+        
+        .profit-danger {
+            color: var(--danger);
+        }
+        
+        .comparison-chart {
+            margin-top: 30px;
+        }
+        
+        .chart-container {
+            height: 120px;
+            background-color: rgba(30, 41, 59, 0.7);
+            border-radius: 8px;
+            margin-top: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-bar {
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            font-weight: 600;
+            transition: width 1.5s ease-out;
+        }
+        
+        .chart-bar.industry {
+            background-color: rgba(59, 130, 246, 0.3);
+            color: #93c5fd;
+        }
+        
+        .chart-bar.your-margin {
+            background-color: rgba(16, 185, 129, 0.3);
+            color: #a7f3d0;
+        }
+        
+        .chart-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .shock-factor {
+            text-align: center;
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .shock-factor h3 {
+            color: var(--danger);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .shock-factor p {
+            color: var(--text-secondary);
+        }
+        
+        .preset-dishes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .dish-preset {
+            background-color: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .dish-preset:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .dish-preset.active {
+            border-color: var(--primary);
+            background-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        .dish-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .dish-cost {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .disclaimer {
+            background-color: rgba(30, 41, 59, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .benchmark-note {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            color: var(--warning);
+        }
+        
+        @media (max-width: 600px) {
+            .dashboard {
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .preset-dishes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav style="background: #0C1220; border-bottom: 1px solid rgba(255,255,255,0.1); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100;">
+        <div class="nav-bar" style="width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px;">
+            <a href="../index.html" style="display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none;">
+                <i class="fas fa-pepper-hot" style="color: #10B981;"></i>ThaiData.uk
+            </a>
+            <a href="../index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 40px;">
+        <header>
+            <div class="logo" style="display:flex; align-items:center; gap:20px; margin-bottom: 30px;">
+                <i class="fas fa-chart-line" style="font-size: 3rem; color: #10B981;"></i>
+                <div>
+                    <h1 style="font-family:'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight:400; line-height:1.2;">Profit Margin <em>Defender</em></h1>
+                    <p class="subtitle">NI & Platform Fee Simulation (2026 Projections)</p>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="dashboard">
+                <!-- Input Section -->
+                <div class="card">
+                    <h2><i class="fas fa-utensils"></i> Dish Configuration</h2>
+                    
+                    <div class="input-group">
+                        <label for="dishSelect">Select a Dish Preset</label>
+                        <select id="dishSelect">
+                            <option value="custom">Custom Dish</option>
+                            <option value="chicken-satay">Chicken Satay (£1.85)</option>
+                            <option value="spring-rolls">Spring Rolls (£0.95)</option>
+                            <option value="green-curry">Thai Green Curry (Chicken) (£3.20)</option>
+                            <option value="massaman-curry">Massaman Curry (Beef) (£4.20)</option>
+                            <option value="pad-thai-chicken">Pad Thai (Chicken) (£2.80)</option>
+                            <option value="pad-thai-prawn">Pad Thai (King Prawn) (£3.40)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="preset-dishes">
+                        <div class="dish-preset" data-dish="chicken-satay" data-cost="1.85">
+                            <div class="dish-name">Chicken Satay</div>
+                            <div class="dish-cost">£1.85 plate cost</div>
+                        </div>
+                        <div class="dish-preset" data-dish="spring-rolls" data-cost="0.95">
+                            <div class="dish-name">Spring Rolls</div>
+                            <div class="dish-cost">£0.95 plate cost</div>
+                        </div>
+                        <div class="dish-preset" data-dish="green-curry" data-cost="3.20">
+                            <div class="dish-name">Green Curry</div>
+                            <div class="dish-cost">£3.20 plate cost</div>
+                        </div>
+                        <div class="dish-preset" data-dish="massaman-curry" data-cost="4.20">
+                            <div class="dish-name">Massaman Curry</div>
+                            <div class="dish-cost">£4.20 plate cost</div>
+                        </div>
+                        <div class="dish-preset" data-dish="pad-thai-chicken" data-cost="2.80">
+                            <div class="dish-name">Pad Thai (Chicken)</div>
+                            <div class="dish-cost">£2.80 plate cost</div>
+                        </div>
+                        <div class="dish-preset" data-dish="pad-thai-prawn" data-cost="3.40">
+                            <div class="dish-name">Pad Thai (King Prawn)</div>
+                            <div class="dish-cost">£3.40 plate cost</div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="ingredientCost">Ingredient Cost (£)</label>
+                        <input type="number" id="ingredientCost" step="0.01" min="0" value="3.20">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="menuPrice">Menu Price (£)</label>
+                        <input type="number" id="menuPrice" step="0.01" min="0" value="12.50">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="packagingCost">Packaging Cost (£)</label>
+                        <input type="number" id="packagingCost" step="0.01" min="0" value="0.50">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="laborCost">Est. Labor Cost per Dish (£)</label>
+                        <input type="number" id="laborCost" step="0.01" min="0" value="2.50">
+                        <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:5px;">
+                            <i class="fas fa-info-circle"></i> Avg Thai restaurant: £2.20 - £3.50
+                        </div>
+                    </div>
+                    
+                    <button class="calculate-btn" id="calculateBtn">
+                        <i class="fas fa-calculator"></i> Calculate Profit Margin
+                    </button>
+                    
+                    <div class="benchmark-note">
+                        <i class="fas fa-info-circle"></i>
+                        <div>Industry benchmark: 4.2% net margin (UKHospitality 2024)</div>
+                    </div>
+                </div>
+                
+                <!-- Results Section -->
+                <div class="card">
+                    <h2><i class="fas fa-chart-bar"></i> Margin Analysis</h2>
+                    
+                    <div class="results" id="results">
+                        <div class="profit-display">
+                            <div class="profit-amount" id="profitAmount">£2.83</div>
+                            <div class="profit-percentage" id="profitPercentage">22.6%</div>
+                            <div>Net Profit Per Dish</div>
+                        </div>
+                        
+                        <h3>Cost Breakdown</h3>
+                        <div class="cost-breakdown">
+                            <div class="cost-item">
+                                <span>Menu Price</span>
+                                <span id="menuPriceDisplay">£12.50</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>VAT (20%)</span>
+                                <span id="vatAmount">£2.08</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Platform Commission (30%)</span>
+                                <span id="commissionAmount">£3.75</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Ingredient Cost</span>
+                                <span id="ingredientCostDisplay">£3.20</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Packaging Cost</span>
+                                <span id="packagingCostDisplay">£0.50</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Labor + NI (Net)</span>
+                                <span id="laborNetDisplay">£2.50</span>
+                            </div>
+                            <div class="cost-item">
+                                <span>Net Profit</span>
+                                <span id="netProfitDisplay">£2.83</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-chart">
+                            <h3>Margin Comparison</h3>
+                            <div class="chart-container">
+                                <div class="chart-bar industry" id="industryBar" style="width: 4.2%">Industry Avg: 4.2%</div>
+                                <div class="chart-bar your-margin" id="yourBar" style="width: 22.6%">Your Margin: 22.6%</div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>0%</span>
+                                <span>25%</span>
+                                <span>50%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="shock-factor" id="shockFactor">
+                            <h3><i class="fas fa-bolt"></i> Shock Factor</h3>
+                            <p id="shockText">Your profit margin is <strong>5.4x higher</strong> than the industry average! You're defending your margins effectively.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="noResults" style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
+                        <i class="fas fa-calculator fa-3x" style="margin-bottom: 15px; opacity: 0.5;"></i>
+                        <h3>Enter Your Dish Details</h3>
+                        <p>Configure your dish on the left and click "Calculate Profit Margin" to see your analysis.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclaimer">
+                <p><strong>Note:</strong> This tool assumes 20% VAT (1/6 of menu price) and 30% delivery platform commission as standard rates in the UK. Packaging cost defaults to £0.50 but can be adjusted. Industry benchmark of 4.2% net margin is based on UKHospitality 2024 data.</p>
+            </div>
+        </main>
+        
+        <div class="card" style="margin-top: 40px;">
+            <h2 class="card-title"><i class="fas fa-question-circle"></i> Restaurant Profitability FAQ — 2026 Strategy</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left;">
+                <div>
+                    <h2 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 5px;">How much does Just Eat really cost in 2026?</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Beyond the headline commission (typically 14-30%), 2026 operators must factor in the rising cost of labor used to prep delivery orders, which is now benchmarked against the £12.71 NLW.</p>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 5px;">Does the £10,500 Employment Allowance cover your delivery platform fees?</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">The EA offsets Employer National Insurance, not platform fees. However, by using the EA to lower your tax burden, you can effectively "fund" the commission gap on your delivery platforms.</p>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 5px;">2026 National Insurance Change: Impact on Kitchen Staff Costs</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">With the NI threshold dropping to £5,000 and the rate likely at 15%, the secondary cost of prepping a £30 delivery order has increased by approximately 2.1% since 2024.</p>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 5px;">Which delivery platform is most profitable for Thai takeaway?</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Our defender models individual dish margins. Due to the high weight of rice and liquid in Thai cuisine, platforms with fixed delivery radii (like Deliveroo) often outperform those with flat-fee logistics for heavier orders.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 ThaiData.uk &middot; Principal Architect Tool &middot; v2.0.26</p>
+            <p style="font-size: 0.8rem; margin-top: 5px;">Data projections based on official HMRC 2026 guidance.</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM elements
+            const dishSelect = document.getElementById('dishSelect');
+            const ingredientCostInput = document.getElementById('ingredientCost');
+            const menuPriceInput = document.getElementById('menuPrice');
+            const packagingCostInput = document.getElementById('packagingCost');
+            const calculateBtn = document.getElementById('calculateBtn');
+            const resultsSection = document.getElementById('results');
+            const noResultsSection = document.getElementById('noResults');
+            const dishPresets = document.querySelectorAll('.dish-preset');
+            
+            // Result display elements
+            const profitAmount = document.getElementById('profitAmount');
+            const profitPercentage = document.getElementById('profitPercentage');
+            const menuPriceDisplay = document.getElementById('menuPriceDisplay');
+            const vatAmount = document.getElementById('vatAmount');
+            const commissionAmount = document.getElementById('commissionAmount');
+            const ingredientCostDisplay = document.getElementById('ingredientCostDisplay');
+            const packagingCostDisplay = document.getElementById('packagingCostDisplay');
+            const netProfitDisplay = document.getElementById('netProfitDisplay');
+            const industryBar = document.getElementById('industryBar');
+            const yourBar = document.getElementById('yourBar');
+            const shockFactor = document.getElementById('shockFactor');
+            const shockText = document.getElementById('shockText');
+            
+            // Dish presets data
+            const dishData = {
+                'chicken-satay': { name: 'Chicken Satay', cost: 1.85 },
+                'spring-rolls': { name: 'Spring Rolls', cost: 0.95 },
+                'green-curry': { name: 'Thai Green Curry (Chicken)', cost: 3.20 },
+                'massaman-curry': { name: 'Massaman Curry (Beef)', cost: 4.20 },
+                'pad-thai-chicken': { name: 'Pad Thai (Chicken)', cost: 2.80 },
+                'pad-thai-prawn': { name: 'Pad Thai (King Prawn)', cost: 3.40 }
+            };
+            
+            // Industry benchmark
+            const INDUSTRY_BENCHMARK = 4.2; // 4.2%
+            
+            // Event listeners
+            dishSelect.addEventListener('change', function() {
+                const selectedDish = this.value;
+                
+                // Reset all dish preset highlights
+                dishPresets.forEach(preset => preset.classList.remove('active'));
+                
+                if (selectedDish !== 'custom') {
+                    // Set the ingredient cost based on selected dish
+                    ingredientCostInput.value = dishData[selectedDish].cost;
+                    
+                    // Highlight the selected dish preset
+                    document.querySelector(`.dish-preset[data-dish="${selectedDish}"]`).classList.add('active');
+                }
+            });
+            
+            // Dish preset click handlers
+            dishPresets.forEach(preset => {
+                preset.addEventListener('click', function() {
+                    const dishId = this.getAttribute('data-dish');
+                    const dishCost = this.getAttribute('data-cost');
+                    
+                    // Set the dropdown
+                    dishSelect.value = dishId;
+                    
+                    // Set the ingredient cost
+                    ingredientCostInput.value = dishCost;
+                    
+                    // Update active state
+                    dishPresets.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Calculate button handler
+            calculateBtn.addEventListener('click', calculateProfit);
+            
+            // Also calculate when inputs change (for real-time updates)
+            [ingredientCostInput, menuPriceInput, packagingCostInput].forEach(input => {
+                input.addEventListener('input', calculateProfit);
+            });
+            
+            // Initial calculation on page load
+            calculateProfit();
+            
+            // Main calculation function
+            function calculateProfit() {
+                // Get input values
+                const ingredientCost = parseFloat(ingredientCostInput.value) || 0;
+                const menuPrice = parseFloat(menuPriceInput.value) || 0;
+                const packagingCost = parseFloat(packagingCostInput.value) || 0;
+                const laborCostBase = parseFloat(document.getElementById('laborCost').value) || 0;
+                
+                // 2026 logic: Factor in NI (15%) but also the £10,500 Allowance offset
+                // For a per-dish tool, we assume a small per-dish NI hit that is partially 
+                // absorbed by the business-wide allowance.
+                const estNiHit = Math.max(0, (laborCostBase * 0.15) - 0.20); // Assumes allowance covers first 20p of NI per dish
+                const laborNet = laborCostBase + estNiHit;
+                
+                // Validate inputs
+                if (menuPrice <= 0) {
+                    // Show the "no results" section
+                    resultsSection.classList.remove('show');
+                    noResultsSection.style.display = 'block';
+                    return;
+                }
+                
+                // Calculate VAT (20% included in price, so 1/6 of menu price)
+                const vat = menuPrice / 6;
+                
+                // Calculate commission (30% of menu price)
+                const commission = menuPrice * 0.30;
+                
+                // Calculate net profit
+                const netProfit = menuPrice - vat - commission - ingredientCost - packagingCost - laborNet;
+                
+                // Calculate profit percentage
+                const profitPercent = (netProfit / menuPrice) * 100;
+                
+                // Update UI with results
+                updateResults(
+                    menuPrice, 
+                    vat, 
+                    commission, 
+                    ingredientCost, 
+                    packagingCost, 
+                    laborNet,
+                    netProfit, 
+                    profitPercent
+                );
+                
+                // Show results section
+                resultsSection.classList.add('show');
+                noResultsSection.style.display = 'none';
+            }
+            
+            function updateResults(menuPrice, vat, commission, ingredientCost, packagingCost, netProfit, profitPercent) {
+                // Format currency values
+                const formatCurrency = (value) => `£${value.toFixed(2)}`;
+                const formatPercent = (value) => `${value.toFixed(1)}%`;
+                
+                // Update profit displays
+                profitAmount.textContent = formatCurrency(netProfit);
+                profitPercentage.textContent = formatPercent(profitPercent);
+                
+                // Color code the profit percentage
+                if (profitPercent >= 15) {
+                    profitPercentage.className = 'profit-percentage profit-good';
+                } else if (profitPercent >= 5) {
+                    profitPercentage.className = 'profit-percentage profit-warning';
+                } else {
+                    profitPercentage.className = 'profit-percentage profit-danger';
+                }
+                
+                // Update cost breakdown
+                menuPriceDisplay.textContent = formatCurrency(menuPrice);
+                vatAmount.textContent = formatCurrency(vat);
+                commissionAmount.textContent = formatCurrency(commission);
+                ingredientCostDisplay.textContent = formatCurrency(ingredientCost);
+                packagingCostDisplay.textContent = formatCurrency(packagingCost);
+                document.getElementById('laborNetDisplay').textContent = formatCurrency(laborNet);
+                netProfitDisplay.textContent = formatCurrency(netProfit);
+                
+                // Update comparison chart
+                const industryWidth = Math.min(INDUSTRY_BENCHMARK, 50);
+                const yourWidth = Math.min(profitPercent, 50);
+                
+                industryBar.style.width = `${industryWidth}%`;
+                industryBar.textContent = `Industry Avg: ${INDUSTRY_BENCHMARK}%`;
+                
+                yourBar.style.width = `${yourWidth}%`;
+                yourBar.textContent = `Your Margin: ${profitPercent.toFixed(1)}%`;
+                
+                // Update shock factor
+                updateShockFactor(profitPercent);
+            }
+            
+            function updateShockFactor(profitPercent) {
+                const ratio = profitPercent / INDUSTRY_BENCHMARK;
+                
+                let shockMessage = '';
+                let shockColor = 'warning';
+                
+                if (profitPercent < INDUSTRY_BENCHMARK) {
+                    shockMessage = `Your profit margin is <strong>${(100 - (profitPercent/INDUSTRY_BENCHMARK)*100).toFixed(1)}% lower</strong> than the industry average! You're at risk of unsustainable operations.`;
+                    shockColor = 'danger';
+                } else if (ratio < 1.5) {
+                    shockMessage = `Your profit margin is <strong>${ratio.toFixed(1)}x</strong> the industry average. You're performing slightly better than most.`;
+                    shockColor = 'warning';
+                } else if (ratio < 3) {
+                    shockMessage = `Your profit margin is <strong>${ratio.toFixed(1)}x higher</strong> than the industry average! You're defending your margins well.`;
+                    shockColor = 'success';
+                } else {
+                    shockMessage = `Your profit margin is <strong>${ratio.toFixed(1)}x higher</strong> than the industry average! You're a margin defense champion!`;
+                    shockColor = 'success';
+                }
+                
+                shockText.innerHTML = shockMessage;
+                
+                // Update shock factor styling
+                shockFactor.style.backgroundColor = shockColor === 'danger' 
+                    ? 'rgba(239, 68, 68, 0.1)' 
+                    : shockColor === 'warning' 
+                    ? 'rgba(245, 158, 11, 0.1)' 
+                    : 'rgba(16, 185, 129, 0.1)';
+                    
+                shockFactor.style.borderColor = shockColor === 'danger' 
+                    ? 'rgba(239, 68, 68, 0.3)' 
+                    : shockColor === 'warning' 
+                    ? 'rgba(245, 158, 11, 0.3)' 
+                    : 'rgba(16, 185, 129, 0.3)';
+                    
+                const shockIcon = shockFactor.querySelector('i');
+                shockIcon.className = shockColor === 'danger' 
+                    ? 'fas fa-exclamation-triangle' 
+                    : shockColor === 'warning' 
+                    ? 'fas fa-exclamation-circle' 
+                    : 'fas fa-check-circle';
+                    
+                shockFactor.querySelector('h3').style.color = shockColor === 'danger' 
+                    ? 'var(--danger)' 
+                    : shockColor === 'warning' 
+                    ? 'var(--warning)' 
+                    : 'var(--success)';
+            }
+        });
+    </script>
+</body>
+</html>

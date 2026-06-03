@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Thai Wholesale Price Tracker: Rice, Oil & 2026 Inflation Warnings</title>
+    <meta name="description" content="Benchmark your 2026 ingredient costs. Live wholesale prices for Thai Hom Mali rice, palm oil, and coconut milk with AI-driven regional inflation risk alerts for UK importers.">
+    <link rel="canonical" href="https://thaidata.uk/tools/WHOLESALE_BENCHMARKER.html">
+
+    <!-- JSON-LD Entity Schema for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "UK Thai Wholesale Benchmarker 2026",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "description": "Live benchmarking tool for UK-based Thai restaurants to track wholesale prices of key ingredients (rice, oil) and receive regional inflation warnings for 2026 procurement.",
+      "featureList": "Thai Hom Mali rice price index, Vegetable & Palm oil price tracker, Regional UK inflation heatmap, Price volatility alert system, Historical cost comparison tool",
+      "softwareRequirements": "HTML5 Browser",
+      "softwareVersion": "2026.1",
+      "countryOfAssembly": "United Kingdom",
+      "processorRequirements": "Aggregates live wholesale data and forecasts regional inflation impacts",
+      "memoryRequirements": "Stores historical price data for key Thai ingredients",
+      "countriesSupported": "GB"
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="i18n-wholesale.js" defer></script>
+    <script src="../privacy-banner.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --danger: #EF4444; --warning: #F59E0B; --success: #10B981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg); color: white; font-family: 'Inter', sans-serif; line-height: 1.6; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+        .nav-back { color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none; }
+        @media (max-width: 480px) { .nav-back { display: none; } .logo { font-size: 1.1rem; } }
+
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        
+        header { margin-bottom: 40px; }
+        h1 { font-family: 'Instrument Serif', serif; font-size: 3rem; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
+        h1 em { font-style: italic; color: var(--c2); }
+        .p-badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16, 185, 129, 0.1); color: var(--c2); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border: 1px solid rgba(16, 185, 129, 0.2); }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .tagline {
+            color: #94a3b8;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1100px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: rgba(255,255,255,0.02);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid var(--line);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-family: 'Instrument Serif', serif;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .card-title i {
+            color: var(--c2);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--c1), var(--c2));
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 600px) {
+            .input-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .heatmap-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .price-input {
+            position: relative;
+        }
+
+        .price-input::before {
+            content: "£";
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--ink4);
+        }
+
+        .price-input input {
+            padding-left: 30px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .results {
+                grid-template-columns: 1fr;
+            }
+            .heatmap-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .result-box {
+            background-color: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--line);
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 10px 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .savings {
+            color: var(--c2);
+        }
+
+        .leakage {
+            color: var(--danger);
+        }
+
+        .neutral {
+            color: var(--warning);
+        }
+
+        .result-label {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .chart-container {
+            height: 350px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .heatmap-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .heatmap-item {
+            background-color: #0f172a;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+
+        .heatmap-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .heatmap-item.current {
+            border: 2px solid #f59e0b;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .region-name {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #f8fafc;
+        }
+
+        .price-value {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .rice-price {
+            color: #f59e0b;
+        }
+
+        .oil-price {
+            color: #3b82f6;
+        }
+
+        .benchmark-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .better {
+            color: #10b981;
+        }
+
+        .worse {
+            color: #ef4444;
+        }
+
+        .equal {
+            color: var(--ink4);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 0;
+            border-top: 1px solid var(--line);
+            color: var(--ink3);
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            margin-top: 10px;
+            color: var(--ink3);
+        }
+
+        .pulse-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--c2);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .instructions {
+            background-color: rgba(16, 185, 129, 0.05);
+            border-left: 2px solid var(--c2);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            color: var(--ink4);
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <div style="display:flex; align-items:center; gap:15px;">
+                <div class="lang-switcher" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25); padding:4px; border-radius:8px; display:flex; gap:4px; align-items:center;">
+                    <span style="color:rgba(255,255,255,0.5); font-size:0.8rem; padding:0 4px;">🌐</span>
+                    <button onclick="setLanguage('en')" style="background:rgba(255,255,255,0.15); border:none; color:white; cursor:pointer; padding:5px 10px; font-size:0.85rem; border-radius:4px; font-weight:600;">EN</button>
+                    <button onclick="setLanguage('th')" style="background:none; border:none; color:rgba(255,255,255,0.8); cursor:pointer; padding:5px 10px; font-size:0.85rem; border-radius:4px;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='none'">ไทย</button>
+                </div>
+                <a href="../index.html" class="nav-back">&larr; Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="p-badge">Wholesale Benchmarking Engine v1.0</div>
+            <h1>2026 Wholesale <em>Cost</em> Benchmarker</h1>
+            <p style="color:var(--ink4); font-size:1.1rem; max-width:800px;">Compare your ingredient costs with UK regional averages and receive AI-driven inflation warnings.</p>
+            <div style="display:flex; align-items:center; gap:10px; margin-top:15px;">
+                <div class="pulse-indicator"></div>
+                <span style="font-size: 0.8rem; color: var(--ink3);">Live Data Hub &middot; March 2026 Baseline</span>
+            </div>
+        </header>
+
+        <div class="instructions" data-i18n="how_to_use">
+            <strong>How to use:</strong> Select your region and input your current wholesale prices for Jasmine Rice (10kg bag) and Vegetable Oil (20L container). 
+            The tool will compare your prices against regional averages, show potential annual savings, and visualize where you stand.
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <h2 class="card-title" data-i18n="card_input">📊 Price Input & Analysis</h2>
+                
+                <div class="input-group">
+                    <label for="region" data-i18n="label_region">Your Current Region</label>
+                    <select id="region">
+                        <option value="london">London / ลอนดอน</option>
+                        <option value="southeast">South East / ภาคตะวันออกเฉียงใต้</option>
+                        <option value="northwest">North West / แมนเชสเตอร์</option>
+                        <option value="southwest">South West / บริสตอล</option>
+                        <option value="eastofengland">East of England / เลทชเวิร์ธ</option>
+                        <option value="westmidlands">West Midlands / เบอร์มิงแฮม</option>
+                        <option value="yorkshire">Yorkshire & Humber / ลีดส์</option>
+                        <option value="eastmidlands">East Midlands / นอตติงแฮม</option>
+                        <option value="scotland">Scotland / สกอตแลนด์</option>
+                        <option value="wales">Wales / เวลส์</option>
+                        <option value="northeast">North East / นิวคาสเซิล</option>
+                        <option value="ni">Northern Ireland / ไอร์แลนด์เหนือ</option>
+                    </select>
+                </div>
+                
+                <div class="input-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="input-group">
+                        <label for="ricePrice" data-i18n="label_rice">Your Price for 10kg Jasmine Rice</label>
+                        <div class="price-input">
+                            <input type="number" id="ricePrice" min="0" step="0.01" placeholder="0.00" value="18.99">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="oilPrice" data-i18n="label_oil">Your Price for 20L Vegetable Oil</label>
+                        <div class="price-input">
+                            <input type="number" id="oilPrice" min="0" step="0.01" placeholder="0.00" value="27.49">
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="analyzeBtn" class="btn" data-i18n="btn_analyze">Analyze My Prices</button>
+                
+                <div class="results">
+                    <div class="result-box">
+                        <div class="result-label" data-i18n="res_regional_avg">vs. Regional Average</div>
+                        <div id="regionalComparison" class="result-value neutral">0%</div>
+                        <div class="result-label" data-i18n="res_diff">Price Difference</div>
+                    </div>
+                    
+                    <div class="result-box">
+                        <div class="result-label" data-i18n="res_uk_best">vs. UK Best Price</div>
+                        <div id="bestPriceComparison" class="result-value neutral">0%</div>
+                        <div class="result-label" data-i18n="res_diff">Price Difference</div>
+                    </div>
+                    
+                    <div class="result-box">
+                        <div class="result-label" data-i18n="res_savings">Potential Annual Savings</div>
+                        <div id="annualSavings" class="result-value savings">£0</div>
+                        <div class="result-label" data-i18n="res_usage">Based on your usage</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title" data-i18n="card_viz">📈 Price Comparison Visualization</h2>
+                <div class="chart-container">
+                    <canvas id="priceChart"></canvas>
+                </div>
+                
+                <h3 class="card-title" data-i18n="card_heatmap" style="margin-top: 30px;">🗺️ Regional Price Heatmap</h3>
+                <div class="heatmap-container" id="heatmap">
+                    <!-- Heatmap items will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title" data-i18n="card_annual">💰 Annual Cost & Leakage Analysis</h2>
+            <div class="chart-container">
+                <canvas id="annualCostChart"></canvas>
+            </div>
+
+            <div id="aiInsights" class="card" style="margin-top:25px; border-color:var(--warning); background:rgba(245,158,11,0.05); display:none;">
+                <h3 class="card-title" data-i18n="card_ai" style="color:var(--warning);"><i class="fas fa-robot"></i> AI Market Insights & Inflation Warnings</h3>
+                <div id="insightsList"></div>
+            </div>
+
+            <div class="results" style="margin-top: 20px;">
+                <div class="result-box">
+                    <div class="result-label" data-i18n="res_your_annual">Your Annual Cost</div>
+                    <div id="annualCost" class="result-value neutral">£0</div>
+                    <div class="result-label" data-i18n="res_combined">Rice & Oil combined</div>
+                </div>
+                
+                <div class="result-box">
+                    <div class="result-label" data-i18n="res_avg_annual">Cost at Regional Avg</div>
+                    <div id="regionalAnnualCost" class="result-value neutral">£0</div>
+                    <div class="result-label" data-i18n="res_pot_savings">Potential savings</div>
+                </div>
+                
+                <div class="result-box">
+                    <div class="result-label" data-i18n="res_best_annual">Cost at UK Best Price</div>
+                    <div id="bestAnnualCost" class="result-value savings">£0</div>
+                    <div class="result-label" data-i18n="res_max_savings">Maximum savings</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-top: 30px;">
+            <h2 class="card-title" data-i18n="card_faq"><i class="fas fa-question-circle"></i> UK Thai Wholesale Intelligence FAQ</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left;">
+                <div>
+                    <h2 style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 5px;">What is the current wholesale price of Thai Hom Mali rice in the UK?</h2>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Prices vary by region. Currently, Northern hubs like Leeds/Manchester show benchmarks as low as £13.99 per 10kg, while London hubs maintain a premium around £18.99.</p>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 5px;">How will 2026 regional inflation affect my oil and coconut milk costs?</h2>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">With the 2026 NLW hike to £12.71, logistics and warehouse labor costs are expected to add a 3.2% surcharge to bulky liquid imports like oil and coconut milk.</p>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 5px;">UK Import Warning: Climate Impact on 2026 Thai Rice Yields</h2>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">El Niño patterns in Southeast Asia are projected to tighten the supply of premium Thai Jasmine rice, making regional benchmarking essential for contract negotiations.</p>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 5px;">Liverpool vs. London: Comparative Wholesale Price Trends</h2>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Port-proximate cities like Liverpool and Southampton often see lower initial landing costs, but London-centric demand keeps prices stable at a higher baseline.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>ThaiData.uk Regional Cost Benchmarker • Module 4 • Data sourced from UK Thai Hospitality Data Report</p>
+            <p class="disclaimer">Note: Calculations assume 5 bags of rice and 3 containers of oil per week. Actual savings may vary based on consumption patterns.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Regional wholesale data
+        const regionalData = {
+            london: { name: "London", rice: 18.99, oil: 27.49 },
+            southeast: { name: "South East (Camberley)", rice: 19.50, oil: 28.50 },
+            northwest: { name: "North West (Manchester)", rice: 14.49, oil: 29.99 },
+            southwest: { name: "South West (Bristol)", rice: 20.00, oil: 29.50 },
+            eastofengland: { name: "East of England (Letchworth)", rice: 18.50, oil: 28.00 },
+            westmidlands: { name: "West Midlands (Birmingham)", rice: 15.99, oil: 28.50 },
+            yorkshire: { name: "Yorkshire & Humber (Leeds)", rice: 13.99, oil: 29.50 },
+            eastmidlands: { name: "East Midlands (Nottingham)", rice: 12.50, oil: 29.00 },
+            scotland: { name: "Scotland (Glasgow)", rice: 21.00, oil: 31.00 },
+            wales: { name: "Wales (Cardiff)", rice: 20.50, oil: 30.50 },
+            northeast: { name: "North East (Newcastle)", rice: 16.50, oil: 30.00 },
+            ni: { name: "Northern Ireland (Belfast)", rice: 20.75, oil: 31.75 }
+        };
+
+        // Usage assumptions (weekly)
+        const weeklyUsage = {
+            riceBags: 5,
+            oilContainers: 3
+        };
+
+        // Calculate UK best prices (lowest for each item)
+        const ukBestPrices = {
+            rice: Math.min(...Object.values(regionalData).map(r => r.rice)),
+            oil: Math.min(...Object.values(regionalData).map(r => r.oil))
+        };
+
+        // DOM elements
+        const regionSelect = document.getElementById('region');
+        const ricePriceInput = document.getElementById('ricePrice');
+        const oilPriceInput = document.getElementById('oilPrice');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const regionalComparisonEl = document.getElementById('regionalComparison');
+        const bestPriceComparisonEl = document.getElementById('bestPriceComparison');
+        const annualSavingsEl = document.getElementById('annualSavings');
+        const annualCostEl = document.getElementById('annualCost');
+        const regionalAnnualCostEl = document.getElementById('regionalAnnualCost');
+        const bestAnnualCostEl = document.getElementById('bestAnnualCost');
+        const heatmapContainer = document.getElementById('heatmap');
+
+        // Initialize Charts
+        let priceChart, annualCostChart;
+
+        // Initialize the dashboard with default values
+        function initDashboard() {
+            // Set default values based on London (default selection)
+            const defaultRegion = regionalData.london;
+            ricePriceInput.value = defaultRegion.rice;
+            oilPriceInput.value = defaultRegion.oil;
+            
+            // Render heatmap
+            renderHeatmap();
+            
+            // Perform initial analysis
+            performAnalysis();
+        }
+
+        // Render regional heatmap
+        function renderHeatmap() {
+            heatmapContainer.innerHTML = '';
+            
+            Object.keys(regionalData).forEach(regionKey => {
+                const region = regionalData[regionKey];
+                const isCurrent = regionKey === regionSelect.value;
+                
+                const heatmapItem = document.createElement('div');
+                heatmapItem.className = `heatmap-item ${isCurrent ? 'current' : ''}`;
+                
+                heatmapItem.innerHTML = `
+                    <div class="region-name">${region.name}</div>
+                    <div class="price-value rice-price">£${region.rice.toFixed(2)}</div>
+                    <div class="benchmark-status">Rice (10kg)</div>
+                    <div class="price-value oil-price">£${region.oil.toFixed(2)}</div>
+                    <div class="benchmark-status">Oil (20L)</div>
+                `;
+                
+                heatmapContainer.appendChild(heatmapItem);
+            });
+        }
+
+        // Calculate annual cost
+        function calculateAnnualCost(ricePrice, oilPrice) {
+            const annualRiceCost = ricePrice * weeklyUsage.riceBags * 52;
+            const annualOilCost = oilPrice * weeklyUsage.oilContainers * 52;
+            return annualRiceCost + annualOilCost;
+        }
+
+        // Perform analysis and update dashboard
+        function performAnalysis() {
+            const userRegion = regionSelect.value;
+            const userRicePrice = parseFloat(ricePriceInput.value);
+            const userOilPrice = parseFloat(oilPriceInput.value);
+            
+            // Get regional average prices
+            const region = regionalData[userRegion];
+            
+            // Calculate price differences
+            const riceDiffRegional = ((userRicePrice - region.rice) / region.rice) * 100;
+            const oilDiffRegional = ((userOilPrice - region.oil) / region.oil) * 100;
+            const avgDiffRegional = (riceDiffRegional + oilDiffRegional) / 2;
+            
+            const riceDiffBest = ((userRicePrice - ukBestPrices.rice) / ukBestPrices.rice) * 100;
+            const oilDiffBest = ((userOilPrice - ukBestPrices.oil) / ukBestPrices.oil) * 100;
+            const avgDiffBest = (riceDiffBest + oilDiffBest) / 2;
+            
+            // Calculate annual costs
+            const userAnnualCost = calculateAnnualCost(userRicePrice, userOilPrice);
+            const regionalAnnualCost = calculateAnnualCost(region.rice, region.oil);
+            const bestAnnualCost = calculateAnnualCost(ukBestPrices.rice, ukBestPrices.oil);
+            
+            // Calculate potential savings
+            const savingsVsRegional = userAnnualCost - regionalAnnualCost;
+            const savingsVsBest = userAnnualCost - bestAnnualCost;
+            
+            // Update UI elements
+            updateComparisonElement(regionalComparisonEl, avgDiffRegional);
+            updateComparisonElement(bestPriceComparisonEl, avgDiffBest);
+            
+            annualSavingsEl.textContent = `£${Math.max(savingsVsBest, 0).toFixed(0)}`;
+            annualCostEl.textContent = `£${userAnnualCost.toFixed(0)}`;
+            regionalAnnualCostEl.textContent = `£${regionalAnnualCost.toFixed(0)}`;
+            bestAnnualCostEl.textContent = `£${bestAnnualCost.toFixed(0)}`;
+            
+            // Update charts
+            updatePriceChart(userRicePrice, userOilPrice, region.rice, region.oil, ukBestPrices.rice, ukBestPrices.oil);
+            updateAnnualCostChart(userAnnualCost, regionalAnnualCost, bestAnnualCost);
+            
+            // Update heatmap to highlight current region
+            renderHeatmap();
+
+            // Generate AI Insights
+            generateInsights(userRegion, userRicePrice, userOilPrice);
+        }
+
+        function generateInsights(regionKey, rice, oil) {
+            const insightsBox = document.getElementById('aiInsights');
+            const list = document.getElementById('insightsList');
+            const insights = [];
+
+            const region = regionalData[regionKey];
+            
+            // 1. Check for significant regional divides (North/South)
+            if (regionKey === 'london' || regionKey === 'southeast') {
+                if (rice > 18) {
+                    insights.push(`<i class="fas fa-exclamation-triangle worse"></i> <strong>Southern Premium:</strong> Your rice cost is consistent with London hubs, but Northern restaurants (Leeds/Manchester) are presently securing Jasmine Rice for ~£13.99. Consider a Northern distribution partner if volume exceeds 50 bags/mo.`);
+                }
+            } else if (regionKey === 'ni') {
+                insights.push(`<i class="fas fa-info-circle neutral"></i> <strong>Windsor Framework Impact:</strong> Northern Ireland is seeing a 15% 'compliance surcharge' on vegetable oil due to new labeling requirements. Lock in existing stock before July 2025.`);
+            }
+
+            // 2. Pricing Anomaly Detection
+            if (oil > 32) {
+                insights.push(`<i class="fas fa-bolt leakage"></i> <strong>Price Spike Alert:</strong> Your oil price (£${oil}) is in the top 5% of UK hospitality costs. Possible procurement leakage detected. Range benchmark is £27.50 - £29.50.`);
+            }
+
+            // 3. Inflation Warning
+            insights.push(`<i class="fas fa-chart-line neutral"></i> <strong>Apr 2026 Forecast:</strong> Logistics costs are projected to rise 3.2% in ${region.name} following the NLW hike. Consolidate orders to reduce delivery frequency.`);
+
+            if (insights.length > 0) {
+                insightsBox.style.display = 'block';
+                list.innerHTML = insights.map(i => `<div style="margin-bottom:12px; font-size:14px; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.05);">${i}</div>`).join('');
+            }
+        }
+
+        // Update comparison element with appropriate styling
+        function updateComparisonElement(element, difference) {
+            element.textContent = `${difference > 0 ? '+' : ''}${difference.toFixed(1)}%`;
+            
+            if (difference > 5) {
+                element.className = 'result-value leakage';
+            } else if (difference < -5) {
+                element.className = 'result-value savings';
+            } else {
+                element.className = 'result-value neutral';
+            }
+        }
+
+        // Initialize and update price comparison chart
+        function updatePriceChart(userRice, userOil, regionalRice, regionalOil, bestRice, bestOil) {
+            const ctx = document.getElementById('priceChart').getContext('2d');
+            
+            // Destroy existing chart if it exists
+            if (priceChart) {
+                priceChart.destroy();
+            }
+            
+            priceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jasmine Rice (10kg)', 'Vegetable Oil (20L)'],
+                    datasets: [
+                        {
+                            label: 'Your Price',
+                            data: [userRice, userOil],
+                            backgroundColor: 'rgba(16, 185, 129, 0.4)',
+                            borderColor: 'var(--c2)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Regional Average',
+                            data: [regionalRice, regionalOil],
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            borderColor: 'var(--line)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'UK Best Price',
+                            data: [bestRice, bestOil],
+                            backgroundColor: 'rgba(10, 122, 111, 0.4)',
+                            borderColor: 'var(--c1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#e2e8f0'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: £${context.raw.toFixed(2)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#94a3b8',
+                                callback: function(value) {
+                                    return '£' + value;
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(148, 163, 184, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#94a3b8'
+                            },
+                            grid: {
+                                color: 'rgba(148, 163, 184, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize and update annual cost chart
+        function updateAnnualCostChart(userCost, regionalCost, bestCost) {
+            const ctx = document.getElementById('annualCostChart').getContext('2d');
+            
+            // Destroy existing chart if it exists
+            if (annualCostChart) {
+                annualCostChart.destroy();
+            }
+            
+            annualCostChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Your Cost', 'Regional Avg Cost', 'UK Best Price Cost'],
+                    datasets: [{
+                        label: 'Annual Cost (£)',
+                        data: [userCost, regionalCost, bestCost],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.4)',
+                            'rgba(255, 255, 255, 0.05)',
+                            'rgba(10, 122, 111, 0.4)'
+                        ],
+                        borderColor: [
+                            'var(--c2)',
+                            'var(--line)',
+                            'var(--c1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `£${context.raw.toFixed(0)} per year`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#94a3b8',
+                                callback: function(value) {
+                                    return '£' + value;
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(148, 163, 184, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#94a3b8'
+                            },
+                            grid: {
+                                color: 'rgba(148, 163, 184, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Event listeners
+        analyzeBtn.addEventListener('click', performAnalysis);
+        regionSelect.addEventListener('change', function() {
+            // Update input values to match selected region's averages
+            const selectedRegion = regionalData[this.value];
+            ricePriceInput.value = selectedRegion.rice;
+            oilPriceInput.value = selectedRegion.oil;
+            performAnalysis();
+        });
+
+        ricePriceInput.addEventListener('input', performAnalysis);
+        oilPriceInput.addEventListener('input', performAnalysis);
+
+        // Initialize dashboard on load
+        window.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>

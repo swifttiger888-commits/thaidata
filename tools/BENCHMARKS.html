@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Dish Benchmarks 2026 | Food Costs & Margins UK | ThaiData.uk</title>
+    <meta name="description" content="Reference benchmarking data for UK Thai restaurant operators. Compare food costs and menu pricing across 20+ core dishes.">
+    <link rel="canonical" href="https://thaidata.uk/tools/BENCHMARKS.html">
+    
+    <!-- JSON-LD Dataset Schema for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "UK Thai Restaurant Dish Benchmarks 2026",
+      "description": "Comprehensive dataset of wholesale food costs and menu pricing for Thai cuisine in the UK, covering Pad Thai, Green Curry, and other staples.",
+      "url": "https://thaidata.uk/tools/BENCHMARKS.html",
+      "creator": {
+        "@type": "Organization",
+        "name": "ThaiData.uk"
+      },
+      "temporalCoverage": "2026-01-01/2026-03-31",
+      "spatialCoverage": "United Kingdom",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            color: white; 
+            background: var(--bg); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 20px; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+        .data-section { padding: 40px 0 80px; }
+
+        .data-table-wrapper { 
+            background: rgba(255,255,255,0.02); 
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--line); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+        }
+        .data-table { width: 100%; border-collapse: collapse; min-width: 800px; }
+        .data-table thead th { 
+            padding: 18px 20px; 
+            text-align: left; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            letter-spacing: 1px; 
+            text-transform: uppercase; 
+            color: var(--ink4); 
+            border-bottom: 1px solid var(--line); 
+            background: rgba(255,255,255,0.03); 
+        }
+        .data-table tbody td { padding: 18px 20px; border-bottom: 1px solid var(--line); font-size: 1rem; color: rgba(255,255,255,0.8); }
+        .data-table tbody tr:last-child td { border-bottom: none; }
+        .data-table .dish-name { font-weight: 600; color: white; display: block; }
+        .data-table .dish-thai { font-size: 0.85rem; color: var(--c2); display: block; margin-top: 4px; }
+        .data-table .price-range { font-weight: 700; color: var(--c2); }
+        .data-table .margin-hi { color: var(--c2); font-weight: 700; }
+        .data-table .margin-mid { color: #F59E0B; font-weight: 700; }
+        
+        .data-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--line); }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2.2rem; }
+            .data-table-wrapper { border-radius: 0; border-left: none; border-right: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk
+            </a>
+            <a href="../index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Tools</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:12px;">Q1 2026 Reference</div>
+            <h1>The Thai Dish <em>Benchmark Database</em></h1>
+            <p>We surveyed UK wholesale costs and menu prices across 100+ locations to help you identify where your margins are leaking.</p>
+        </div>
+    </div>
+
+    <div class="data-section">
+        <div class="wrap">
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Dish & Thai Name</th>
+                            <th>Avg. Food Cost</th>
+                            <th>London Pricing</th>
+                            <th>Regional UK Pricing</th>
+                            <th>Raw GP Target</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="dish-name">Pad Thai</span><span class="dish-thai">ผัดไทย</span></td>
+                            <td>&pound;2.80</td>
+                            <td class="price-range">&pound;13.50&ndash;&pound;15.50</td>
+                            <td>&pound;11.95&ndash;&pound;13.95</td>
+                            <td class="margin-hi">~80%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Green Curry (chicken)</span><span class="dish-thai">แกงเขียวหวาน</span></td>
+                            <td>&pound;3.20</td>
+                            <td class="price-range">&pound;15.50&ndash;&pound;19.50</td>
+                            <td>&pound;11.99&ndash;&pound;13.00</td>
+                            <td class="margin-hi">~83%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Red Curry (prawn)</span><span class="dish-thai">แกงแดง</span></td>
+                            <td>&pound;3.40</td>
+                            <td class="price-range">&pound;17.50&ndash;&pound;19.00</td>
+                            <td>&pound;12.99&ndash;&pound;15.95</td>
+                            <td class="margin-hi">~82%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Massaman Curry (beef)</span><span class="dish-thai">มัสมั่น</span></td>
+                            <td>&pound;4.20</td>
+                            <td class="price-range">&pound;15.99&ndash;&pound;23.50</td>
+                            <td>&pound;14.80&ndash;&pound;18.50</td>
+                            <td class="margin-hi">~79%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Lamb Shank Massaman</span><span class="dish-thai">แกงมัสมั่นขาแกะ</span></td>
+                            <td>&pound;7.50</td>
+                            <td class="price-range">&pound;21.00&ndash;&pound;29.95</td>
+                            <td>&pound;18.95&ndash;&pound;23.75</td>
+                            <td class="margin-mid">~70%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Tom Yum Soup (prawn)</span><span class="dish-thai">ต้มยำกุ้ง</span></td>
+                            <td>&pound;3.50</td>
+                            <td class="price-range">&pound;12.50&ndash;&pound;15.50</td>
+                            <td>&pound;9.95&ndash;&pound;12.50</td>
+                            <td class="margin-hi">~77%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Som Tum (papaya salad)</span><span class="dish-thai">ส้มตำ</span></td>
+                            <td>&pound;2.10</td>
+                            <td class="price-range">&pound;11.50&ndash;&pound;14.00</td>
+                            <td>&pound;9.95&ndash;&pound;12.95</td>
+                            <td class="margin-hi">~84%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Pad See Ew</span><span class="dish-thai">ผัดซีอิ๊ว</span></td>
+                            <td>&pound;2.50</td>
+                            <td class="price-range">&pound;13.00&ndash;&pound;15.95</td>
+                            <td>&pound;11.50&ndash;&pound;13.50</td>
+                            <td class="margin-hi">~81%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Drunken Noodles</span><span class="dish-thai">ผัดขี้เมา</span></td>
+                            <td>&pound;2.65</td>
+                            <td class="price-range">&pound;13.00&ndash;&pound;17.95</td>
+                            <td>&pound;11.95&ndash;&pound;14.50</td>
+                            <td class="margin-hi">~82%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Chicken Satay (starter)</span><span class="dish-thai">ไก่สะเต๊ะ</span></td>
+                            <td>&pound;1.65</td>
+                            <td class="price-range">&pound;9.00&ndash;&pound;11.50</td>
+                            <td>&pound;6.49&ndash;&pound;9.60</td>
+                            <td class="margin-hi">~83%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Thai Fish Cakes</span><span class="dish-thai">ทอดมันปลา</span></td>
+                            <td>&pound;2.00</td>
+                            <td class="price-range">&pound;9.50&ndash;&pound;11.50</td>
+                            <td>&pound;8.50&ndash;&pound;10.40</td>
+                            <td class="margin-hi">~82%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Chilli &amp; Lime Sea Bass</span><span class="dish-thai">ปลากะพง</span></td>
+                            <td>&pound;4.50</td>
+                            <td class="price-range">&pound;17.95&ndash;&pound;19.50</td>
+                            <td>&pound;15.95&ndash;&pound;17.95</td>
+                            <td class="margin-hi">~75%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Weeping Tiger (sirloin)</span><span class="dish-thai">เสือร้องไห้</span></td>
+                            <td>&pound;6.20</td>
+                            <td class="price-range">&pound;21.95&ndash;&pound;22.95</td>
+                            <td>&pound;18.95&ndash;&pound;21.00</td>
+                            <td class="margin-mid">~72%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Tamarind Duck</span><span class="dish-thai">เป็ดผัดมะขาม</span></td>
+                            <td>&pound;6.00</td>
+                            <td class="price-range">&pound;20.50&ndash;&pound;26.95</td>
+                            <td>&pound;18.95&ndash;&pound;23.75</td>
+                            <td class="margin-hi">~77%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Mango Sticky Rice</span><span class="dish-thai">ข้าวเหนียวมะม่วง</span></td>
+                            <td>&pound;2.95</td>
+                            <td class="price-range">&pound;7.50&ndash;&pound;8.95</td>
+                            <td>&pound;6.95&ndash;&pound;7.95</td>
+                            <td class="margin-mid">~62%</td>
+                        </tr>
+                        <tr>
+                            <td><span class="dish-name">Banana Fritters</span><span class="dish-thai">กล้วยทอด</span></td>
+                            <td>&pound;0.85</td>
+                            <td class="price-range">&pound;6.50&ndash;&pound;7.95</td>
+                            <td>&pound;5.95&ndash;&pound;6.95</td>
+                            <td class="margin-hi">~88%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="data-note">
+                <strong>Methodology:</strong> Food costs based on wholesale prices from RaanThai, JK Foods, Longdan, and Thai Food Direct (Q1 2026). 
+                Menu prices surveyed from Giggling Squid, Busaba, Thai Square, Patara, Rosa's Thai, and regional independents. 
+                Raw GP margin = (menu price &minus; food cost) &divide; menu price. Does not include labour, VAT, platform fees, or overheads.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ThaiData UK</p>
+        <a href="../index.html">Tools</a>
+        <a href="../about.html">About</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+    </footer>
+    <script src="../privacy-banner.js" defer></script>
+</body>
+</html>

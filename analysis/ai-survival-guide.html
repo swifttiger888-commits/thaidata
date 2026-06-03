@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 2026 AI Survival Guide for UK Thai Restaurants | ThaiData.uk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --emerald: var(--c2);
+            --navy: var(--bg);
+            --ivory: #FAFAF9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            background-color: var(--navy); color: var(--ivory); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        /* Hero */
+        .hero { padding: 80px 0; text-align: center; border-bottom: 1px solid var(--line); }
+        .hero h1 { 
+            font-family: 'Instrument Serif', serif; 
+            font-size: clamp(2.5rem, 8vw, 4rem); 
+            font-weight: 400; 
+            line-height: 1.1; 
+            margin-bottom: 20px; 
+            background: linear-gradient(to right, var(--c2), white); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            color: transparent; 
+        }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; color: var(--ink4); }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--c2);
+            color: var(--dark);
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            border: none;
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2); }
+
+        /* Main Content */
+        section { padding: 80px 0; border-bottom: 1px solid var(--line); }
+        .section-title { 
+            font-family: 'Instrument Serif', serif; 
+            font-size: 2.5rem; 
+            color: var(--c2); 
+            margin-bottom: 30px; 
+            display: flex; align-items: center; gap: 15px; 
+        }
+
+        .text-block { 
+            background: rgba(255,255,255,0.02); 
+            backdrop-filter: blur(10px);
+            padding: 40px; 
+            border-radius: 16px; 
+            border: 1px solid var(--line); 
+        }
+        .text-block h3 { color: white; margin-bottom: 15px; font-size: 1.6rem; font-family: 'Instrument Serif', serif; font-weight: 400; }
+        .text-block p { margin-bottom: 20px; color: var(--ink4); }
+        .text-block ul, .text-block ol { margin-left: 20px; margin-bottom: 20px; color: var(--ink4); }
+        .text-block li { margin-bottom: 10px; }
+        .text-block li strong { color: white; }
+
+        /* Code Snippet */
+        .code-snippet { background: #011627; border-radius: 12px; padding: 25px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.1); }
+        .code-snippet pre { color: #82AAFF; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.5; white-space: pre-wrap; }
+        .code-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; color: var(--ink4); font-size: 0.8rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+        .copy-btn { background: var(--c2); color: var(--dark); border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 0.8rem; transition: 0.2s; }
+        .copy-btn:hover { transform: scale(1.05); }
+
+        /* Action Plan */
+        .checkbox-plan { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .checkbox-item { background: rgba(255,255,255,0.02); padding: 30px; border-radius: 12px; border: 1px solid var(--line); display: flex; gap: 20px; }
+        .checkbox-item i { color: var(--c2); font-size: 1.5rem; }
+        .checkbox-item h4 { margin-bottom: 10px; font-family: 'Instrument Serif', serif; font-size: 1.4rem; font-weight: 400; }
+        .checkbox-item p { font-size: 0.95rem; color: var(--ink4); line-height: 1.5; }
+
+        /* Footer */
+        footer { padding: 80px 0; text-align: center; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
+        .footer-logo { font-size: 1.6rem; font-weight: 700; color: white; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; }
+        .footer-logo i { color: var(--c2); }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
+        .footer-links a { color: var(--ink4); text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: white; }
+        .copyright { font-size: 0.85rem; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .checkbox-plan { grid-template-columns: 1fr; }
+            .footer-links { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="../index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>The 2026 AI Survival Guide for UK Thai Restaurants</h1>
+            <p>By 2026, 83% of restaurant discovery will happen through AI agents like Gemini, ChatGPT, and Perplexity. Is your Thai restaurant ready to be found? This guide shows you how to adapt your digital presence for the AI-driven future.</p>
+            <a href="ai-survival-guide.html#action-plan" class="cta-button">View Your Action Plan</a>
+        </div>
+    </section>
+
+    <section id="pdf-trap">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-file-pdf"></i> 1. The "PDF Trap"</h2>
+            <div class="content-wrapper">
+                <div class="text-block">
+                    <h3>Why AI Agents Ignore Your Menu</h3>
+                    <p>When a customer asks an AI like ChatGPT "Where can I get authentic Pad Thai in London?", the AI scans the web for restaurant information. If your menu is a PDF or image file, you're invisible.</p>
+                    
+                    <p><strong>The Problem:</strong> AI agents are text-based crawlers. They can't reliably extract text from:</p>
+                    <ul>
+                        <li><strong>PDF menus</strong> (even if they contain selectable text)</li>
+                        <li><strong>Image files</strong> (JPG, PNG of your menu)</li>
+                        <li><strong>Flash/embedded content</strong> (old website menus)</li>
+                    </ul>
+                    
+                    <p><strong>The Result:</strong> Your restaurant gets excluded from AI recommendations, losing valuable customers to competitors with AI-readable menus.</p>
+                    
+                    <p><strong>Real Example:</strong> "Sawasdee Thai Kitchen" in Manchester had a beautiful PDF menu but saw a 40% drop in new customer inquiries after AI agents became mainstream. After switching to an HTML menu, they recovered and increased inquiries by 65%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-code"></i> 2. The Solution: Neural Menus</h2>
+            <div class="content-wrapper">
+                <div class="text-block">
+                    <h3>Transitioning to HTML-based "Neural Menus"</h3>
+                    <p>A Neural Menu is an HTML-based menu specifically structured for AI comprehension while remaining visually appealing to human customers.</p>
+                    
+                    <p><strong>Key Principles:</strong></p>
+                    <ol>
+                        <li><strong>Semantic HTML:</strong> Use proper HTML tags (&lt;section&gt;, &lt;h2&gt;, &lt;ul&gt;) instead of generic &lt;div&gt; elements</li>
+                        <li><strong>Clean Text Content:</strong> All menu items must be actual text, not images of text</li>
+                        <li><strong>Structured Data:</strong> Enhance with Schema.org markup (see next section)</li>
+                        <li><strong>Mobile-First:</strong> AI agents prioritize mobile-optimized sites</li>
+                    </ol>
+                    
+                    <p><strong>Implementation Strategy:</strong></p>
+                    <ul>
+                        <li>Convert existing PDF menus to HTML pages</li>
+                        <li>Maintain visual design with CSS while keeping text accessible</li>
+                        <li>Create a dedicated "/menu" page with clear URL structure</li>
+                        <li>Ensure fast loading times (AI agents penalize slow sites)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schema">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-tags"></i> 3. Schema.org for Thai Food</h2>
+            <div class="content-wrapper">
+                <div class="text-block">
+                    <h3>How to Tell AI Exactly What's in Your Pad Thai</h3>
+                    <p>Schema.org is a universal vocabulary that helps search engines and AI agents understand your content. For restaurants, it's essential for being properly categorized and recommended.</p>
+                    
+                    <p><strong>Critical Schema Types for Thai Restaurants:</strong></p>
+                    <ul>
+                        <li><strong>Restaurant:</strong> Basic business information</li>
+                        <li><strong>Menu:</strong> Your menu structure</li>
+                        <li><strong>MenuItem:</strong> Individual dishes with details</li>
+                        <li><strong>Offer:</strong> Pricing information</li>
+                        <li><strong>FoodEstablishment:</strong> Restaurant-specific details</li>
+                    </ul>
+                    
+                    <p><strong>JSON-LD Code Snippet:</strong> Place this in the &lt;head&gt; section of your menu page</p>
+                    
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <span>Copy this code to your menu page</span>
+                            <button class="copy-btn" onclick="copyCode('schemaCode')">Copy Code</button>
+                        </div>
+                        <pre id="schemaCode">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Your Thai Restaurant Name",
+  "image": "https://yourwebsite.com/restaurant-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Street Name",
+    "addressLocality": "City",
+    "postalCode": "POSTCODE",
+    "addressCountry": "UK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5074,
+    "longitude": -0.1278
+  },
+  "url": "https://yourwebsite.com",
+  "telephone": "+44-1234-567890",
+  "openingHours": "Mo-Su 11:00-22:00",
+  "menu": "https://yourwebsite.com/menu",
+  "servesCuisine": ["Thai", "Asian"],
+  "priceRange": "££",
+  "hasMenu": {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Main Menu",
+    "description": "Authentic Thai cuisine menu",
+    "hasMenuSection": {
+      "@type": "MenuSection",
+      "name": "Main Courses",
+      "description": "Traditional Thai main dishes",
+      "hasMenuItem": {
+        "@type": "MenuItem",
+        "name": "Pad Thai",
+        "description": "Stir-fried rice noodles with tofu, egg, beansprouts, peanuts and lime. Choice of chicken, prawn or vegetarian.",
+        "offers": {
+          "@type": "Offer",
+          "price": "12.50",
+          "priceCurrency": "GBP"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+      }
+    }
+  }
+}
+&lt;/script&gt;</pre>
+                    </div>
+                    
+                    <p><strong>Key Thai Dish Markup Tips:</strong></p>
+                    <ul>
+                        <li>Use accurate English names with Thai transliteration: "Tom Yum Goong (Spicy Prawn Soup)"</li>
+                        <li>Include spice level indicators: "medium spice", "very spicy"</li>
+                        <li>Mark vegetarian/vegan options with appropriate Schema diet labels</li>
+                        <li>List key ingredients for AI categorization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aeo">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> 4. Local AEO Hub</h2>
+            <div class="content-wrapper">
+                <div class="text-block">
+                    <h3>Ensuring Your NAP is "AI-Verified"</h3>
+                    <p>NAP stands for Name, Address, Phone - the critical local business data that must be consistent across all platforms. AI agents cross-reference dozens of sources to verify your business details.</p>
+                    
+                    <p><strong>AI-Verification Checklist:</strong></p>
+                    <ul>
+                        <li><strong>Consistency:</strong> Your business name, address, and phone must be identical everywhere</li>
+                        <li><strong>Completeness:</strong> Include full address with postcode, correct phone with country code (+44)</li>
+                        <li><strong>Accuracy:</strong> Keep information updated across all platforms</li>
+                    </ul>
+                    
+                    <p><strong>Essential UK Directories for AI Verification:</strong></p>
+                    <ol>
+                        <li><strong>Google Business Profile</strong> (Most important for AI agents)</li>
+                        <li><strong>Bing Places</strong> (Used by ChatGPT)</li>
+                        <li><strong>Yelp</strong> (Frequently scraped by AI)</li>
+                        <li><strong>TripAdvisor</strong> (For restaurant-specific AI)</li>
+                        <li><strong>OpenStreetMap</strong> (Geographic verification)</li>
+                        <li><strong>Facebook Business</strong> (Social verification)</li>
+                    </ol>
+                    
+                    <p><strong>Monitoring Tool:</strong> Use our free <a href="../tools/NAP_CHECKER.html" style="color: var(--emerald);">ThaiData.uk NAP Checker</a> to verify your consistency across 50+ UK directories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="action-plan">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> 5. Checkbox Action Plan</h2>
+            <div class="content-wrapper">
+                <div class="text-block">
+                    <h3>30-Day AI Readiness Plan for Thai Restaurant Owners</h3>
+                    <p>Follow this step-by-step checklist to make your restaurant AI-ready by 2026.</p>
+                    
+                    <div class="checkbox-plan">
+                        <div class="checkbox-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Week 1: Audit & Assessment</h4>
+                                <p>✓ Audit current menu format (PDF/HTML/Image)<br>
+                                ✓ Check NAP consistency across top 10 directories<br>
+                                ✓ Test your menu with AI tools (ask ChatGPT about your dishes)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Week 2-3: Menu Transformation</h4>
+                                <p>✓ Convert PDF/image menu to HTML<br>
+                                ✓ Implement Schema.org markup for top 10 dishes<br>
+                                ✓ Create dedicated /menu page with semantic HTML<br>
+                                ✓ Optimize for mobile loading speed</p>
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Week 4: Verification & Submission</h4>
+                                <p>✓ Verify Google Business Profile information<br>
+                                ✓ Submit updated website to Google Search Console<br>
+                                ✓ Test with Rich Results Test tool<br>
+                                ✓ Register with major UK restaurant directories</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Next Steps:</strong> After completing this 30-day plan, you'll be positioned ahead of 90% of UK Thai restaurants for AI discovery. Monitor your AI referral traffic through Google Analytics (set up "AI Agent" as a custom segment).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="../index.html" class="footer-logo">
+                <i class="fas fa-pepper-hot"></i>
+                <span>ThaiData.uk</span>
+            </a>
+            <p style="margin-bottom: 20px;">Specialized digital intelligence for the UK Thai hospitality sector.</p>
+            
+            <div class="footer-links">
+                <a href="../tools/AI_AUDITOR.html">AI Audit</a>
+                <a href="../about.html">About</a>
+                <a href="../privacy.html">Privacy</a>
+                <a href="../terms.html">Terms</a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 ThaiData.uk. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const textArea = document.createElement('textarea');
+            textArea.value = codeElement.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            // Visual feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.style.backgroundColor = '#059669';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.backgroundColor = '';
+            }, 2000);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+  <script src="../privacy-banner.js"></script>
+</body>
+</html>

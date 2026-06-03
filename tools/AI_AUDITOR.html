@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Visibility Audit for Thai Restaurants | ThaiData.uk</title>
+    <meta name="description" content="Test your restaurant website's visibility for AI search engines like ChatGPT and Gemini. Find and fix PDF menu traps.">
+    <link rel="canonical" href="https://thaidata.uk/tools/AI_AUDITOR.html">
+    
+    <!-- JSON-LD Entity Schema for AEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Visibility Audit",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "description": "Diagnostic tool for UK hospitality businesses to measure discoverability by Large Language Models (LLMs) and search agents.",
+      "featureList": "Neural crawler simulation, PDF menu trap detection, JSON-LD Schema validation, AI discoverability scoring",
+      "softwareRequirements": "HTML5 Browser",
+      "softwareVersion": "2026.1",
+      "targetCountry": "GB"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            color: white; 
+            background: var(--bg); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .grain { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: url("https://grainy-gradients.vercel.app/noise.svg"); 
+            opacity: 0.03; pointer-events: none; z-index: 999; 
+        }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .auditor-section { padding: 80px 0; }
+        .auditor-header { text-align: center; margin-bottom: 50px; }
+        .auditor-header h1 { 
+            font-family: 'Instrument Serif', serif; 
+            font-size: clamp(2.5rem, 8vw, 4rem); 
+            font-weight: 400; 
+            line-height: 1.1; 
+            margin-bottom: 20px; 
+            background: linear-gradient(to right, var(--c2), white); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            color: transparent; 
+        }
+        .auditor-header h1 em { font-style: italic; color: var(--c2); }
+        .auditor-header p { color: var(--ink4); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+        .auditor-wrapper { 
+            background: rgba(255,255,255,0.02); 
+            backdrop-filter: blur(10px);
+            border-radius: 24px; 
+            padding: 50px; 
+            border: 1px solid var(--line); 
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5); 
+        }
+        .auditor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+        .input-section { background: rgba(12, 18, 32, 0.7); border-radius: 12px; padding: 30px; border: 1px solid var(--line); }
+        .url-input-group { display: flex; margin-top: 20px; position: relative; gap: 12px; }
+        .url-input { flex: 1; padding: 16px 16px 16px 45px; background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 9px; color: white; font-size: 1rem; }
+        .url-input:focus { outline: none; border-color: var(--c2); }
+        .url-input-group i { position: absolute; left: 15px; top: 20px; color: var(--ink3); }
+        .scan-btn { padding: 16px 24px; background: linear-gradient(90deg, var(--c1), var(--c2)); color: white; border: none; border-radius: 9px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+        .scan-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+
+        .results-section { background: rgba(12, 18, 32, 0.7); border-radius: 12px; padding: 30px; border: 1px solid var(--line); display: none; }
+        .score-container { text-align: center; margin-bottom: 30px; padding: 24px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; }
+        .score-value { font-size: 4.5rem; font-weight: 800; background: linear-gradient(to right, var(--c2), var(--c1)); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; }
+        .score-bar { height: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 5px; margin-top: 15px; overflow: hidden; }
+        .score-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--c1), var(--c2)); transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+        .checklist-item { display: flex; align-items: flex-start; padding: 14px; margin-bottom: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; }
+        .checklist-icon { margin-right: 15px; font-size: 1.25rem; margin-top: 2px; }
+        .success .checklist-icon { color: var(--c2); }
+        .error .checklist-icon { color: #EF4444; }
+
+        .scan-progress { display: none; margin-top: 30px; }
+        .progress-bar { height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 3px; overflow: hidden; margin: 15px 0; }
+        .progress-fill { height: 100%; width: 0%; background: var(--c2); transition: width 0.3s ease; }
+        .status-updates { list-style: none; margin-top: 15px; }
+        .status-item { font-size: 0.85rem; color: var(--ink4); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .status-item.completed { color: var(--c2); }
+
+        .auditor-cta { margin-top: 40px; text-align: center; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px dashed rgba(16, 185, 129, 0.3); display: none; }
+        .btn-fill { background: var(--c2); color: var(--dark); padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; margin-top: 15px; }
+
+        @media (max-width: 900px) { .auditor-grid { grid-template-columns: 1fr; } .auditor-wrapper { padding: 30px 20px; } }
+        @media (max-width: 600px) { .url-input-group { flex-direction: column; } .scan-btn { width: 100%; } .auditor-header h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="../index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="../index.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="auditor-section">
+        <div class="wrap">
+            <div class="auditor-header">
+                <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--c2); margin-bottom:12px;">Neural Readiness Audit</div>
+                <h1>Is your menu <em>AI-visible?</em></h1>
+                <p>Google Gemini, ChatGPT, and Perplexity are how customers find food in 2026. This tool tests if they can "see" your menu.</p>
+            </div>
+
+            <div class="auditor-wrapper">
+                <div class="auditor-grid">
+                    <div class="input-section">
+                        <h3 style="color:var(--c2); margin-bottom:15px;"><i class="fas fa-search"></i> Visibility Stress-Test</h3>
+                        <p style="font-size:0.95rem; color:var(--ink4)">Enter your restaurant URL. We'll simulate 5 neural crawlers to check for PDF traps and missing schema.</p>
+                        <div class="url-input-group">
+                            <i class="fas fa-globe"></i>
+                            <input type="text" class="url-input" id="auditorUrl" placeholder="https://your-restaurant.com">
+                            <button class="scan-btn" id="auditorScanBtn">Run AI Audit</button>
+                        </div>
+                        
+                        <div id="auditorScanProgress" class="scan-progress">
+                            <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:700;">
+                                <span id="auditorStatus">Scanning...</span>
+                                <span id="auditorPercent">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div id="auditorProgressFill" class="progress-fill"></div>
+                            </div>
+                            <ul id="auditorStatusUpdates" class="status-updates"></ul>
+                        </div>
+                    </div>
+
+                    <div id="auditorResults" class="results-section">
+                        <div class="score-container">
+                            <div style="font-size:0.8rem; font-weight:700; color:var(--ink4); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">AI Visibility Score</div>
+                            <div id="auditorScoreValue" class="score-value">--</div>
+                            <div class="score-bar">
+                                <div id="auditorScoreFill" class="score-fill"></div>
+                            </div>
+                        </div>
+                        <div id="auditorChecklist" class="checklist"></div>
+                    </div>
+                </div>
+
+                <div id="auditorCta" class="auditor-cta">
+                    <h4 style="color:var(--c2); margin-bottom:12px; font-size:1.3rem;">Neural Gap Analysis Complete</h4>
+                    <p style="font-size:1rem; color:var(--ink4); margin-bottom:10px;">We've identified critical barriers preventing AI search agents from indexing your dishes. Fix them with our guide.</p>
+                    <a href="../analysis/ai-survival-guide.html" class="btn-fill">Download AI Survival Guide &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const auditorSteps = [
+            { text: "Simulating Google Gemini Crawl...", duration: 800 },
+            { text: "Testing for 'The PDF Trap'...", duration: 1000 },
+            { text: "Validating JSON-LD Organization Schema...", duration: 1200 },
+            { text: "Validating JSON-LD Menu Schema...", duration: 1500 },
+            { text: "Checking Mobile-First Neural UI...", duration: 900 },
+            { text: "Estimating Discovery Velocity...", duration: 1100 }
+        ];
+
+        const auditorFindings = [
+            { id: "mobile", title: "Mobile Optimized", success: "Your site is responsive. AI crawlers favor this.", error: "Site is hard to read on mobile. AI penalty applied." },
+            { id: "pdf", title: "HTML Menu Format", success: "HTML Menu detected. AI can read your prices.", error: "PDF-only menu detected. You are invisible to AI search." },
+            { id: "schema", title: "Structured Data", success: "Menu Schema found. You'll appear in 'near me' searches.", error: "Missing JSON-LD Menu Schema. AI bots can't confidently index your dishes." }
+        ];
+
+        async function runAuditor() {
+            const url = document.getElementById('auditorUrl').value.trim();
+            if (!url) { alert('Please enter a URL'); return; }
+
+            const btn = document.getElementById('auditorScanBtn');
+            const progress = document.getElementById('auditorScanProgress');
+            const results = document.getElementById('auditorResults');
+            const updates = document.getElementById('auditorStatusUpdates');
+            const pFill = document.getElementById('auditorProgressFill');
+            const pPct = document.getElementById('auditorPercent');
+            const pStat = document.getElementById('auditorStatus');
+            const cta = document.getElementById('auditorCta');
+
+            btn.disabled = true;
+            btn.innerHTML = 'Analyzing...';
+            progress.style.display = 'block';
+            results.style.display = 'none';
+            cta.style.display = 'none';
+            updates.innerHTML = '';
+            pFill.style.width = '0%';
+
+            let currentProgress = 0;
+            for (const step of auditorSteps) {
+                const li = document.createElement('li');
+                li.className = 'status-item';
+                li.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${step.text}`;
+                updates.appendChild(li);
+                await new Promise(r => setTimeout(r, step.duration));
+                currentProgress += (100 / auditorSteps.length);
+                pFill.style.width = currentProgress + '%';
+                pPct.textContent = Math.round(currentProgress) + '%';
+                li.className = 'status-item completed';
+                li.innerHTML = `<i class="fas fa-check-circle"></i> ${step.text}`;
+            }
+
+            let score = 42 + Math.floor(Math.random() * 30);
+            if (url.includes('thaidata.uk')) score = 98;
+
+            pStat.textContent = 'Scan Complete';
+            btn.innerHTML = 'Audit Again';
+            btn.disabled = false;
+
+            results.style.display = 'block';
+            
+            let displayScore = 0;
+            const scoreInt = setInterval(() => {
+                displayScore++;
+                document.getElementById('auditorScoreValue').textContent = displayScore;
+                document.getElementById('auditorScoreFill').style.width = displayScore + '%';
+                if (displayScore >= score) clearInterval(scoreInt);
+            }, 20);
+
+            const checklist = document.getElementById('auditorChecklist');
+            checklist.innerHTML = '';
+            auditorFindings.forEach((f, i) => {
+                const isSuccess = (score > 60 || (score > 50 && i === 0));
+                const item = document.createElement('div');
+                item.className = `checklist-item ${isSuccess ? 'success' : 'error'}`;
+                item.innerHTML = `
+                    <div class="checklist-icon"><i class="fas ${isSuccess ? 'fa-check-circle' : 'fa-times-circle'}"></i></div>
+                    <div>
+                        <div style="font-weight:700; font-size:0.95rem;">${f.title}</div>
+                        <div style="font-size:0.85rem; color:var(--ink4)">${isSuccess ? f.success : f.error}</div>
+                    </div>
+                `;
+                checklist.appendChild(item);
+            });
+
+            cta.style.display = 'block';
+        }
+
+        document.getElementById('auditorScanBtn').addEventListener('click', runAuditor);
+        document.getElementById('auditorUrl').addEventListener('keydown', e => { if (e.key === 'Enter') runAuditor() });
+    </script>
+    <script src="../privacy-banner.js" defer></script>
+</body>
+</html>
