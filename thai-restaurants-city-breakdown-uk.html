@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UK Thai Restaurant Market: City-by-City Breakdown 2026 | ThaiData</title>
-    <meta name="description" content="Complete city-level analysis of every UK Thai restaurant. 1,400+ FSA-registered businesses across 60+ cities. Per-capita density, hygiene ratings, and market opportunity gaps.">
+    <meta name="description" content="Complete city-level analysis of 1,557 FSA-registered Thai restaurants and takeaways across 78 UK cities. Scotland included. Per-capita density, hygiene ratings, dine-in vs takeaway splits, market opportunity gaps.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/thai-restaurants-city-breakdown-uk">
     
-    <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://thaidata.uk/thai-restaurants-city-breakdown-uk">
     <meta property="og:title" content="UK Thai Restaurant Market: City-by-City Breakdown 2026">
-    <meta property="og:description" content="Which UK city has the most Thai restaurants per person? Where are the underserved markets? Complete city-level analysis with FSA data.">
+    <meta property="og:description" content="1,557 FSA-registered Thai businesses across 78 UK cities. Full Scotland data, chain restaurants included. Find underserved markets.">
     <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
     <meta property="og:locale" content="en_GB">
 
-    <!-- JSON-LD Dataset Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Dataset",
       "name": "UK Thai Restaurant City Breakdown 2026",
-      "description": "City-by-city analysis of every FSA-registered Thai restaurant and takeaway in the UK. Includes per-capita density, hygiene rating averages, dine-in vs takeaway splits, and market opportunity scoring for 60+ UK cities.",
+      "description": "City-by-city analysis of 1,557 FSA-registered Thai restaurants and takeaways across 78 UK cities. Includes Scotland (FHIS), known chain restaurants, per-capita density, and hygiene ratings.",
       "url": "https://thaidata.uk/thai-restaurants-city-breakdown-uk",
       "creator": { "@type": "Organization", "name": "ThaiData UK" },
       "temporalCoverage": "2026-06-01/2026-06-30",
@@ -56,13 +54,13 @@
         .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 20px; position: relative; }
         .hero h1 em { font-style: italic; color: var(--c2); }
         .hero p { color: var(--ink4); font-size: 1.15rem; max-width: 700px; margin: 0 auto 30px; position: relative; }
+        .update-badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 12px; }
 
         .section { padding: 40px 0 50px; }
         .section h2 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; margin-bottom: 10px; color: white; }
         .section h2 em { font-style: italic; color: var(--c2); }
         .section-desc { color: var(--ink4); margin-bottom: 30px; font-size: 0.95rem; }
 
-        /* Stat banner */
         .stat-banner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 40px 0; }
         @media (max-width: 768px) { .stat-banner { grid-template-columns: 1fr 1fr; } }
         .stat-card { 
@@ -73,7 +71,6 @@
         .stat-card .stat-label { color: var(--ink4); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px; }
         .stat-card .stat-sub { color: var(--ink3); font-size: 0.75rem; margin-top: 4px; }
 
-        /* Highlight box */
         .highlight-box { 
             background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); 
             border-radius: 16px; padding: 30px 35px; margin: 30px 0;
@@ -84,17 +81,6 @@
         .highlight-box li:last-child { border-bottom: none; }
         .highlight-box li strong { color: white; }
 
-        /* Region grid */
-        .region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
-        .region-card { 
-            background: rgba(255,255,255,0.02); border: 1px solid var(--line); 
-            border-radius: 12px; padding: 20px; 
-        }
-        .region-card .region-name { font-weight: 600; font-size: 0.85rem; margin-bottom: 8px; color: var(--ink4); }
-        .region-card .region-count { font-family: 'Instrument Serif', serif; font-size: 2rem; line-height: 1.1; }
-        .region-card .region-detail { color: var(--ink4); font-size: 0.75rem; margin-top: 6px; }
-
-        /* Tables */
         .table-wrap { 
             background: rgba(255,255,255,0.02); border: 1px solid var(--line); 
             border-radius: 16px; overflow: hidden; margin: 20px 0 30px;
@@ -119,21 +105,14 @@
         .mini-bar { height: 7px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
         .mini-bar-fill { height: 100%; background: var(--c2); border-radius: 4px; }
 
-        /* Opportunity grid */
-        .opp-card {
-            background: rgba(16,185,129,0.03); border: 1px dashed rgba(16,185,129,0.25);
-            border-radius: 14px; padding: 24px;
-        }
-
-        /* Source note */
         .source-note { 
             font-size: 0.85rem; color: var(--ink4); margin-top: 40px; line-height: 1.7; 
             padding: 24px; background: rgba(255,255,255,0.02); border-radius: 14px; 
             border: 1px dashed var(--line);
         }
         .source-note strong { color: white; }
+        .source-note a { color: var(--c2); }
 
-        /* CTA */
         .cta-box { text-align: center; padding: 60px 0; }
         .cta-box a { 
             display: inline-block; background: var(--c2); color: white; padding: 16px 36px; 
@@ -148,8 +127,6 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.8rem; }
-            .stat-banner { grid-template-columns: 1fr 1fr; }
-            .region-grid { grid-template-columns: 1fr 1fr; }
             .bar-cell { display: none; }
         }
     </style>
@@ -171,56 +148,54 @@
 
     <div class="hero">
         <div class="wrap">
-            <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--c2);margin-bottom:16px;">Market Intelligence · June 2026</div>
+            <div class="update-badge"><i class="fas fa-check-circle" style="margin-right:4px;"></i> Updated June 2026 — Now Includes Scotland & Chain Restaurants</div>
             <h1>UK Thai Restaurant Market:<br><em>City-by-City</em> Breakdown</h1>
-            <p>Where are the Thai restaurants? Which city has the most per person? Where's the untapped opportunity? Every registered Thai business in the UK, analysed at city level.</p>
+            <p>1,557 FSA-registered Thai businesses across 78 UK cities. Scotland included, known chains accounted for. Find the underserved markets and competitive hotspots.</p>
         </div>
     </div>
 
     <div class="wrap">
-        <!-- Key Stats -->
         <div class="stat-banner">
             <div class="stat-card">
-                <div class="stat-num">717</div>
-                <div class="stat-label">FSA-Registered Thai Businesses</div>
-                <div class="stat-sub">Restaurants & Takeaways</div>
+                <div class="stat-num">1,557</div>
+                <div class="stat-label">Inspected Thai Businesses</div>
+                <div class="stat-sub">England, Wales, Scotland & NI</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">549</div>
+                <div class="stat-num">667</div>
                 <div class="stat-label">Dine-in Restaurants</div>
-                <div class="stat-sub">Restaurant/Cafe/Canteen</div>
+                <div class="stat-sub">Restaurant / Cafe / Canteen</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">168</div>
+                <div class="stat-num">217</div>
                 <div class="stat-label">Takeaways</div>
-                <div class="stat-sub">Takeaway/Sandwich Shop</div>
+                <div class="stat-sub">Takeaway / Sandwich Shop</div>
             </div>
             <div class="stat-card">
                 <div class="stat-num">★4.2</div>
-                <div class="stat-label">Average Hygiene Rating</div>
-                <div class="stat-sub">UK Thai restaurant avg</div>
+                <div class="stat-label">UK Average Hygiene Rating</div>
+                <div class="stat-sub">Across all inspected businesses</div>
             </div>
         </div>
 
-        <!-- Key Findings -->
         <div class="highlight-box">
-            <h3><i class="fas fa-lightbulb" style="margin-right:8px;"></i>Key Findings</h3>
+            <h3><i class="fas fa-lightbulb" style="margin-right:8px;"></i>Key Findings — June 2026</h3>
             <ul>
-                <li><strong>London dominates</strong> with 367 Thai businesses — 51% of the UK total — but it's only 10th in per-capita density</li>
-                <li><strong>Swansea</strong> is the UK's most Thai-dense city at 6.9 restaurants per 100k people, followed by <strong>Norwich</strong> (6.8) and <strong>Manchester</strong> (5.5)</li>
-                <li><strong>Birmingham</strong> — the UK's second-largest city — has just 1.6 Thai businesses per 100k. Massive undersupply for a 1.1M+ population</li>
-                <li><strong>Brighton</strong> has the highest-rated Thai restaurants (★4.8 avg), while <strong>Huddersfield</strong> is lowest among major cities (★3.2)</li>
-                <li><strong>52% of cities</strong> with populations over 200,000 have fewer than 3 Thai restaurants per 100k — potential openings for new operators</li>
-                <li><strong>Scotland & NI excluded</strong> — these use a different inspection scheme (FHIS). Estimated ~120-150 additional Thai businesses</li>
+                <li><strong>London has 411 Thai businesses</strong> — 26% of the UK total. 323 dine-in, 88 takeaways. But it's only 10th in per-capita density.</li>
+                <li><strong>Swansea is the UK's most Thai-dense city</strong> at 5.7/100k, followed by Norwich (5.4) and Bath (5.1)</li>
+                <li><strong>Scotland has 70 Thai businesses</strong> across 21 council areas — Edinburgh leads with 24, Glasgow has 8</li>
+                <li><strong>Birmingham severely underserved</strong> — just 1.5/100k for the UK's 2nd-largest city (1,166,000 pop, only 17 Thai businesses)</li>
+                <li><strong>Glasgow & Cheltenham</strong> share the highest average hygiene rating at ★5.0</li>
+                <li><strong>Giggling Squid, Busaba, Chaophraya, Patara, Sukhothai and Zaap</strong> are now included — chains previously missed because their names don't contain "Thai"</li>
             </ul>
         </div>
     </div>
 
-    <!-- Full City Rankings -->
+    <!-- Main Rankings -->
     <div class="section">
         <div class="wrap">
             <h2>Complete <em>City Rankings</em></h2>
-            <p class="section-desc">Every UK city with FSA-registered Thai businesses. Sorted by total count. Data covers England & Wales (FHRS scheme). Scotland & NI use separate schemes.</p>
+            <p class="section-desc">All UK cities with FSA-registered Thai businesses. ▲ = high density (competitive market). ▽ = below-average density (potential opportunity). 🏴󠁧󠁢󠁳󠁣󠁴󠁿 = Scotland (FHIS scheme).</p>
             
             <div class="table-wrap">
                 <table>
@@ -239,303 +214,303 @@
                     <tbody>
                         <tr>
                             <td class="rank">1</td>
-                            <td class="city-name">London<span style="background:var(--c2);color:white;padding:2px 8px;border-radius:100px;font-size:0.7rem;margin-left:6px;">Capital</span></td>
-                            <td class="city-count">367</td>
-                            <td class="city-sub">287</td>
-                            <td class="city-sub">80</td>
-                            <td class="city-rating" >4.1 ★</td>
-                            <td class="city-pc">4.1</td>
+                            <td class="city-name">London</td>
+                            <td class="city-count">411</td>
+                            <td class="city-sub">323</td>
+                            <td class="city-sub">88</td>
+                            <td class="city-rating">4.1 ★</td>
+                            <td class="city-pc">4.6</td>
                             <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:100.0%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">2</td>
-                            <td class="city-name">Manchester<span style="color:var(--c2);margin-left:4px;" title="High density">▲</span></td>
-                            <td class="city-count">31</td>
-                            <td class="city-sub">26</td>
-                            <td class="city-sub">5</td>
-                            <td class="city-rating" >4.1 ★</td>
-                            <td class="city-pc">5.5</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:8.4%"></div></div></td>
+                            <td class="city-name">Leeds</td>
+                            <td class="city-count">34</td>
+                            <td class="city-sub">27</td>
+                            <td class="city-sub">7</td>
+                            <td class="city-rating">4.4 ★</td>
+                            <td class="city-pc">4.2</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:8.3%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">3</td>
-                            <td class="city-name">Leeds</td>
-                            <td class="city-count">29</td>
-                            <td class="city-sub">23</td>
-                            <td class="city-sub">6</td>
-                            <td class="city-rating" >4.3 ★</td>
-                            <td class="city-pc">3.6</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:7.9%"></div></div></td>
+                            <td class="city-name">Manchester</td>
+                            <td class="city-count">28</td>
+                            <td class="city-sub">24</td>
+                            <td class="city-sub">4</td>
+                            <td class="city-rating">4.1 ★</td>
+                            <td class="city-pc">4.9</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:6.8%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">4</td>
-                            <td class="city-name">Birmingham</td>
-                            <td class="city-count">19</td>
-                            <td class="city-sub">14</td>
-                            <td class="city-sub">5</td>
-                            <td class="city-rating" >4.4 ★</td>
-                            <td class="city-pc">1.6</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:5.2%"></div></div></td>
+                            <td class="city-name">Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿</td>
+                            <td class="city-count">24</td>
+                            <td class="city-sub">15</td>
+                            <td class="city-sub">9</td>
+                            <td class="city-rating">4.2 ★</td>
+                            <td class="city-pc">4.4</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:5.8%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">5</td>
                             <td class="city-name">Bristol</td>
-                            <td class="city-count">18</td>
-                            <td class="city-sub">14</td>
+                            <td class="city-count">19</td>
+                            <td class="city-sub">15</td>
                             <td class="city-sub">4</td>
-                            <td class="city-rating" style="color:var(--c2);">4.6 ★</td>
-                            <td class="city-pc">3.7</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:4.9%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">6</td>
-                            <td class="city-name">Swansea<span style="color:var(--c2);margin-left:4px;" title="High density">▲</span></td>
-                            <td class="city-count">17</td>
-                            <td class="city-sub">14</td>
-                            <td class="city-sub">3</td>
-                            <td class="city-rating" >4.0 ★</td>
-                            <td class="city-pc">6.9</td>
+                            <td class="city-rating">4.6 ★</td>
+                            <td class="city-pc">3.9</td>
                             <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:4.6%"></div></div></td>
                         </tr>
                         <tr>
-                            <td class="rank">7</td>
-                            <td class="city-name">Liverpool</td>
-                            <td class="city-count">15</td>
-                            <td class="city-sub">13</td>
+                            <td class="rank">6</td>
+                            <td class="city-name">Birmingham<span style="color:var(--ink3);margin-left:3px;" title="Below average density">▽</span></td>
+                            <td class="city-count">17</td>
+                            <td class="city-sub">15</td>
                             <td class="city-sub">2</td>
-                            <td class="city-rating" >4.0 ★</td>
-                            <td class="city-pc">3.0</td>
+                            <td class="city-rating">4.4 ★</td>
+                            <td class="city-pc">1.5</td>
                             <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:4.1%"></div></div></td>
                         </tr>
                         <tr>
+                            <td class="rank">7</td>
+                            <td class="city-name">Bradford</td>
+                            <td class="city-count">15</td>
+                            <td class="city-sub">10</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-rating">3.8 ★</td>
+                            <td class="city-pc">2.7</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.6%"></div></div></td>
+                        </tr>
+                        <tr>
                             <td class="rank">8</td>
+                            <td class="city-name">Leicester</td>
+                            <td class="city-count">15</td>
+                            <td class="city-sub">10</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-rating">4.5 ★</td>
+                            <td class="city-pc">4.0</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.6%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">9</td>
+                            <td class="city-name">Bournemouth</td>
+                            <td class="city-count">14</td>
+                            <td class="city-sub">11</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-rating">4.7 ★</td>
+                            <td class="city-pc">3.5</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.4%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">10</td>
+                            <td class="city-name">Swansea<span style="color:var(--c2);margin-left:3px;" title="High density — competitive market">▲</span></td>
+                            <td class="city-count">14</td>
+                            <td class="city-sub">12</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-rating">4.0 ★</td>
+                            <td class="city-pc">5.7</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.4%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">11</td>
                             <td class="city-name">Brighton</td>
                             <td class="city-count">13</td>
                             <td class="city-sub">12</td>
                             <td class="city-sub">1</td>
-                            <td class="city-rating" style="color:var(--c2);">4.8 ★</td>
+                            <td class="city-rating">4.8 ★</td>
                             <td class="city-pc">4.7</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.5%"></div></div></td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.2%"></div></div></td>
                         </tr>
                         <tr>
-                            <td class="rank">9</td>
+                            <td class="rank">12</td>
+                            <td class="city-name">Sheffield</td>
+                            <td class="city-count">13</td>
+                            <td class="city-sub">12</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">4.6 ★</td>
+                            <td class="city-pc">2.2</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.2%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">13</td>
                             <td class="city-name">Huddersfield</td>
                             <td class="city-count">13</td>
                             <td class="city-sub">10</td>
                             <td class="city-sub">3</td>
-                            <td class="city-rating" style="color:#EF4444;">3.2 ★</td>
+                            <td class="city-rating">3.2 ★</td>
                             <td class="city-pc">3.0</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.5%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">10</td>
-                            <td class="city-name">Sheffield</td>
-                            <td class="city-count">12</td>
-                            <td class="city-sub">11</td>
-                            <td class="city-sub">1</td>
-                            <td class="city-rating" style="color:var(--c2);">4.6 ★</td>
-                            <td class="city-pc">2.1</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.3%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">11</td>
-                            <td class="city-name">Bradford</td>
-                            <td class="city-count">12</td>
-                            <td class="city-sub">10</td>
-                            <td class="city-sub">2</td>
-                            <td class="city-rating" >3.8 ★</td>
-                            <td class="city-pc">2.2</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.3%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">12</td>
-                            <td class="city-name">Leicester</td>
-                            <td class="city-count">11</td>
-                            <td class="city-sub">7</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-rating" style="color:var(--c2);">4.5 ★</td>
-                            <td class="city-pc">2.9</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.0%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">13</td>
-                            <td class="city-name">Norwich<span style="color:var(--c2);margin-left:4px;" title="High density">▲</span></td>
-                            <td class="city-count">10</td>
-                            <td class="city-sub">6</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-rating" >4.4 ★</td>
-                            <td class="city-pc">6.8</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.7%"></div></div></td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:3.2%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">14</td>
-                            <td class="city-name">Bournemouth</td>
-                            <td class="city-count">10</td>
-                            <td class="city-sub">8</td>
+                            <td class="city-name">Newcastle</td>
+                            <td class="city-count">11</td>
+                            <td class="city-sub">9</td>
                             <td class="city-sub">2</td>
-                            <td class="city-rating" style="color:var(--c2);">4.7 ★</td>
-                            <td class="city-pc">2.5</td>
+                            <td class="city-rating">4.1 ★</td>
+                            <td class="city-pc">3.6</td>
                             <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.7%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">15</td>
                             <td class="city-name">York</td>
-                            <td class="city-count">9</td>
-                            <td class="city-sub">6</td>
-                            <td class="city-sub">3</td>
-                            <td class="city-rating" style="color:var(--c2);">4.5 ★</td>
-                            <td class="city-pc">4.3</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.5%"></div></div></td>
+                            <td class="city-count">10</td>
+                            <td class="city-sub">8</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-rating">4.6 ★</td>
+                            <td class="city-pc">4.7</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.4%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">16</td>
-                            <td class="city-name">Bath</td>
-                            <td class="city-count">9</td>
-                            <td class="city-sub">8</td>
+                            <td class="city-name">Bath<span style="color:var(--c2);margin-left:3px;" title="High density — competitive market">▲</span></td>
+                            <td class="city-count">10</td>
+                            <td class="city-sub">9</td>
                             <td class="city-sub">1</td>
-                            <td class="city-rating" >4.0 ★</td>
-                            <td class="city-pc">4.6</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.5%"></div></div></td>
+                            <td class="city-rating">4.1 ★</td>
+                            <td class="city-pc">5.1</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.4%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">17</td>
-                            <td class="city-name">Coventry</td>
-                            <td class="city-count">8</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-rating" style="color:var(--c2);">4.6 ★</td>
-                            <td class="city-pc">2.2</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.2%"></div></div></td>
+                            <td class="city-name">Bolton</td>
+                            <td class="city-count">10</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-rating">3.6 ★</td>
+                            <td class="city-pc">3.3</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.4%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">18</td>
-                            <td class="city-name">Bolton</td>
+                            <td class="city-name">Norwich<span style="color:var(--c2);margin-left:3px;" title="High density — competitive market">▲</span></td>
                             <td class="city-count">8</td>
-                            <td class="city-sub">3</td>
-                            <td class="city-sub">5</td>
-                            <td class="city-rating" >3.8 ★</td>
-                            <td class="city-pc">2.7</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.2%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">19</td>
-                            <td class="city-name">Stockport</td>
-                            <td class="city-count">8</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-rating" style="color:var(--c2);">4.7 ★</td>
-                            <td class="city-pc">2.7</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:2.2%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">20</td>
-                            <td class="city-name">Oldham</td>
-                            <td class="city-count">7</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-sub">3</td>
-                            <td class="city-rating" >4.3 ★</td>
-                            <td class="city-pc">2.9</td>
+                            <td class="city-sub">6</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-rating">4.5 ★</td>
+                            <td class="city-pc">5.4</td>
                             <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.9%"></div></div></td>
                         </tr>
                         <tr>
+                            <td class="rank">19</td>
+                            <td class="city-name">Glasgow 🏴󠁧󠁢󠁳󠁣󠁴󠁿<span style="color:var(--ink3);margin-left:3px;" title="Below average density">▽</span></td>
+                            <td class="city-count">8</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-rating">5.0 ★</td>
+                            <td class="city-pc">1.3</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.9%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">20</td>
+                            <td class="city-name">Liverpool<span style="color:var(--ink3);margin-left:3px;" title="Below average density">▽</span></td>
+                            <td class="city-count">7</td>
+                            <td class="city-sub">7</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">4.0 ★</td>
+                            <td class="city-pc">1.4</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.7%"></div></div></td>
+                        </tr>
+                        <tr>
                             <td class="rank">21</td>
+                            <td class="city-name">Cardiff<span style="color:var(--ink3);margin-left:3px;" title="Below average density">▽</span></td>
+                            <td class="city-count">7</td>
+                            <td class="city-sub">7</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">4.3 ★</td>
+                            <td class="city-pc">1.9</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.7%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">22</td>
                             <td class="city-name">Blackpool</td>
                             <td class="city-count">7</td>
                             <td class="city-sub">3</td>
                             <td class="city-sub">4</td>
-                            <td class="city-rating" >4.4 ★</td>
+                            <td class="city-rating">4.4 ★</td>
                             <td class="city-pc">4.9</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.9%"></div></div></td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.7%"></div></div></td>
                         </tr>
                         <tr>
-                            <td class="rank">22</td>
+                            <td class="rank">23</td>
+                            <td class="city-name">Belfast<span style="color:var(--ink3);margin-left:3px;" title="Below average density">▽</span></td>
+                            <td class="city-count">7</td>
+                            <td class="city-sub">6</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">3.6 ★</td>
+                            <td class="city-pc">2.0</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.7%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">24</td>
+                            <td class="city-name">Coventry<span style="color:var(--ink3);margin-left:3px;" title="Below average density">▽</span></td>
+                            <td class="city-count">6</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-rating">4.7 ★</td>
+                            <td class="city-pc">1.6</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.5%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">25</td>
+                            <td class="city-name">Sunderland</td>
+                            <td class="city-count">6</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-rating">3.5 ★</td>
+                            <td class="city-pc">2.2</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.5%"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td class="rank">26</td>
                             <td class="city-name">Milton Keynes</td>
                             <td class="city-count">6</td>
                             <td class="city-sub">4</td>
                             <td class="city-sub">2</td>
-                            <td class="city-rating" style="color:var(--c2);">4.7 ★</td>
+                            <td class="city-rating">4.7 ★</td>
                             <td class="city-pc">2.1</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.6%"></div></div></td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.5%"></div></div></td>
                         </tr>
                         <tr>
-                            <td class="rank">23</td>
-                            <td class="city-name">Bury</td>
+                            <td class="rank">27</td>
+                            <td class="city-name">Luton</td>
                             <td class="city-count">6</td>
-                            <td class="city-sub">2</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-rating" >4.4 ★</td>
-                            <td class="city-pc">3.1</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.6%"></div></div></td>
+                            <td class="city-sub">3</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-rating">3.8 ★</td>
+                            <td class="city-pc">2.6</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.5%"></div></div></td>
                         </tr>
                         <tr>
-                            <td class="rank">24</td>
-                            <td class="city-name">Wigan</td>
-                            <td class="city-count">6</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-sub">2</td>
-                            <td class="city-rating" style="color:var(--c2);">4.7 ★</td>
-                            <td class="city-pc">1.8</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.6%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">25</td>
+                            <td class="rank">28</td>
                             <td class="city-name">Warrington</td>
                             <td class="city-count">6</td>
                             <td class="city-sub">5</td>
                             <td class="city-sub">1</td>
-                            <td class="city-rating" >3.5 ★</td>
+                            <td class="city-rating">3.5 ★</td>
                             <td class="city-pc">2.8</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.6%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">26</td>
-                            <td class="city-name">Portsmouth</td>
-                            <td class="city-count">5</td>
-                            <td class="city-sub">5</td>
-                            <td class="city-sub">0</td>
-                            <td class="city-rating" >4.4 ★</td>
-                            <td class="city-pc">2.4</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.4%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">27</td>
-                            <td class="city-name">Sunderland</td>
-                            <td class="city-count">5</td>
-                            <td class="city-sub">2</td>
-                            <td class="city-sub">3</td>
-                            <td class="city-rating" style="color:#EF4444;">3.2 ★</td>
-                            <td class="city-pc">1.8</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.4%"></div></div></td>
-                        </tr>
-                        <tr>
-                            <td class="rank">28</td>
-                            <td class="city-name">Cardiff<span style="color:var(--ink3);margin-left:4px;" title="Low density — opportunity?">▽</span></td>
-                            <td class="city-count">5</td>
-                            <td class="city-sub">5</td>
-                            <td class="city-sub">0</td>
-                            <td class="city-rating" >4.0 ★</td>
-                            <td class="city-pc">1.3</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.4%"></div></div></td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.5%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">29</td>
-                            <td class="city-name">Slough</td>
-                            <td class="city-count">5</td>
-                            <td class="city-sub">5</td>
-                            <td class="city-sub">0</td>
-                            <td class="city-rating" >3.8 ★</td>
-                            <td class="city-pc">3.0</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.4%"></div></div></td>
+                            <td class="city-name">Stockport<span style="color:var(--ink3);margin-left:3px;" title="Below average density">▽</span></td>
+                            <td class="city-count">6</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-sub">4</td>
+                            <td class="city-rating">4.7 ★</td>
+                            <td class="city-pc">2.0</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.5%"></div></div></td>
                         </tr>
                         <tr>
                             <td class="rank">30</td>
-                            <td class="city-name">Luton</td>
-                            <td class="city-count">5</td>
-                            <td class="city-sub">4</td>
-                            <td class="city-sub">1</td>
-                            <td class="city-rating" >4.2 ★</td>
-                            <td class="city-pc">2.2</td>
-                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.4%"></div></div></td>
+                            <td class="city-name">Oldham</td>
+                            <td class="city-count">6</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-rating">4.3 ★</td>
+                            <td class="city-pc">2.5</td>
+                            <td class="bar-cell"><div class="mini-bar"><div class="mini-bar-fill" style="width:1.5%"></div></div></td>
                         </tr>
                     </tbody>
                 </table>
@@ -543,107 +518,122 @@
         </div>
     </div>
 
-    <!-- Per Capita Rankings -->
+    <!-- Per Capita -->
     <div class="section">
         <div class="wrap">
             <h2>Per Capita <em>Density</em> Ranking</h2>
-            <p class="section-desc">Thai businesses per 100,000 residents. Higher density = more competition. Lower density = potential market gap.</p>
+            <p class="section-desc">Thai businesses per 100,000 residents. Higher = more competition. Lower = potential gap. UK city average is 3.3/100k.</p>
             
             <div class="table-wrap">
                 <table>
                     <thead>
-                        <tr><th>#</th><th>City</th><th class="right">Per 100k</th><th class="right">Total</th></tr>
+                        <tr><th>#</th><th>City</th><th class="right">Per 100k</th><th class="right">Total</th><th class="right">Population</th></tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="rank">1</td>
                             <td class="city-name">Swansea</td>
-                            <td class="city-count">6.9</td>
-                            <td class="city-sub">17</td>
+                            <td class="city-count">5.7</td>
+                            <td class="city-sub">14</td>
+                            <td class="city-sub">247,000</td>
                         </tr>
                         <tr>
                             <td class="rank">2</td>
                             <td class="city-name">Norwich</td>
-                            <td class="city-count">6.8</td>
-                            <td class="city-sub">10</td>
+                            <td class="city-count">5.4</td>
+                            <td class="city-sub">8</td>
+                            <td class="city-sub">148,000</td>
                         </tr>
                         <tr>
                             <td class="rank">3</td>
-                            <td class="city-name">Manchester</td>
-                            <td class="city-count">5.5</td>
-                            <td class="city-sub">31</td>
+                            <td class="city-name">Bath</td>
+                            <td class="city-count">5.1</td>
+                            <td class="city-sub">10</td>
+                            <td class="city-sub">196,000</td>
                         </tr>
                         <tr>
                             <td class="rank">4</td>
-                            <td class="city-name">Blackpool</td>
+                            <td class="city-name">Manchester</td>
                             <td class="city-count">4.9</td>
-                            <td class="city-sub">7</td>
+                            <td class="city-sub">28</td>
+                            <td class="city-sub">568,000</td>
                         </tr>
                         <tr>
                             <td class="rank">5</td>
-                            <td class="city-name">Brighton</td>
-                            <td class="city-count">4.7</td>
-                            <td class="city-sub">13</td>
+                            <td class="city-name">Blackpool</td>
+                            <td class="city-count">4.9</td>
+                            <td class="city-sub">7</td>
+                            <td class="city-sub">142,000</td>
                         </tr>
                         <tr>
                             <td class="rank">6</td>
-                            <td class="city-name">Bath</td>
-                            <td class="city-count">4.6</td>
-                            <td class="city-sub">9</td>
+                            <td class="city-name">Brighton</td>
+                            <td class="city-count">4.7</td>
+                            <td class="city-sub">13</td>
+                            <td class="city-sub">277,000</td>
                         </tr>
                         <tr>
                             <td class="rank">7</td>
                             <td class="city-name">York</td>
-                            <td class="city-count">4.3</td>
-                            <td class="city-sub">9</td>
+                            <td class="city-count">4.7</td>
+                            <td class="city-sub">10</td>
+                            <td class="city-sub">211,000</td>
                         </tr>
                         <tr>
                             <td class="rank">8</td>
-                            <td class="city-name">London</td>
-                            <td class="city-count">4.1</td>
-                            <td class="city-sub">367</td>
+                            <td class="city-name">Inverness</td>
+                            <td class="city-count">4.7</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-sub">64,000</td>
                         </tr>
                         <tr>
                             <td class="rank">9</td>
-                            <td class="city-name">Bristol</td>
-                            <td class="city-count">3.7</td>
-                            <td class="city-sub">18</td>
+                            <td class="city-name">London</td>
+                            <td class="city-count">4.6</td>
+                            <td class="city-sub">411</td>
+                            <td class="city-sub">8,970,000</td>
                         </tr>
                         <tr>
                             <td class="rank">10</td>
-                            <td class="city-name">Leeds</td>
-                            <td class="city-count">3.6</td>
-                            <td class="city-sub">29</td>
+                            <td class="city-name">Edinburgh</td>
+                            <td class="city-count">4.4</td>
+                            <td class="city-sub">24</td>
+                            <td class="city-sub">548,000</td>
                         </tr>
                         <tr>
                             <td class="rank">11</td>
-                            <td class="city-name">Cheltenham</td>
-                            <td class="city-count">3.3</td>
-                            <td class="city-sub">4</td>
+                            <td class="city-name">Leeds</td>
+                            <td class="city-count">4.2</td>
+                            <td class="city-sub">34</td>
+                            <td class="city-sub">812,000</td>
                         </tr>
                         <tr>
                             <td class="rank">12</td>
-                            <td class="city-name">Bury</td>
-                            <td class="city-count">3.1</td>
-                            <td class="city-sub">6</td>
+                            <td class="city-name">Cheltenham</td>
+                            <td class="city-count">4.2</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-sub">120,000</td>
                         </tr>
                         <tr>
                             <td class="rank">13</td>
-                            <td class="city-name">Liverpool</td>
-                            <td class="city-count">3.0</td>
+                            <td class="city-name">Leicester</td>
+                            <td class="city-count">4.0</td>
                             <td class="city-sub">15</td>
+                            <td class="city-sub">374,000</td>
                         </tr>
                         <tr>
                             <td class="rank">14</td>
-                            <td class="city-name">Huddersfield</td>
-                            <td class="city-count">3.0</td>
-                            <td class="city-sub">13</td>
+                            <td class="city-name">Bristol</td>
+                            <td class="city-count">3.9</td>
+                            <td class="city-sub">19</td>
+                            <td class="city-sub">483,000</td>
                         </tr>
                         <tr>
                             <td class="rank">15</td>
-                            <td class="city-name">Slough</td>
-                            <td class="city-count">3.0</td>
-                            <td class="city-sub">5</td>
+                            <td class="city-name">Newcastle</td>
+                            <td class="city-count">3.6</td>
+                            <td class="city-sub">11</td>
+                            <td class="city-sub">307,000</td>
                         </tr>
                     </tbody>
                 </table>
@@ -651,16 +641,16 @@
         </div>
     </div>
 
-    <!-- Market Opportunity -->
+    <!-- Opportunity -->
     <div class="section">
         <div class="wrap">
             <h2>Market <em>Opportunity</em> Gaps</h2>
-            <p class="section-desc">Cities with large populations but relatively few Thai restaurants. The "gap" shows how many more Thai businesses the market could theoretically support to reach 3 per 100k — the UK city average.</p>
+            <p class="section-desc">Cities with large populations but below-average Thai restaurant density. The "gap" is how many more Thai businesses would be needed to reach 3 per 100k — a conservative benchmark.</p>
             
             <div class="table-wrap">
                 <table>
                     <thead>
-                        <tr><th>City</th><th class="right">Population</th><th class="right">Current</th><th class="right">/100k</th><th class="right">Opportunity Gap</th></tr>
+                        <tr><th>City</th><th class="right">Population</th><th class="right">Current</th><th class="right">/100k</th><th class="right">Gap to 3/100k</th></tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -680,9 +670,16 @@
                         <tr>
                             <td class="city-name">Salford</td>
                             <td class="city-sub">280,000</td>
-                            <td class="city-count">2</td>
-                            <td class="city-pc">0.7</td>
-                            <td style="color:var(--c2);font-weight:600;">~6</td>
+                            <td class="city-count">1</td>
+                            <td class="city-pc">0.4</td>
+                            <td style="color:var(--c2);font-weight:600;">~7</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Fife</td>
+                            <td class="city-sub">374,000</td>
+                            <td class="city-count">3</td>
+                            <td class="city-pc">0.8</td>
+                            <td style="color:var(--c2);font-weight:600;">~8</td>
                         </tr>
                         <tr>
                             <td class="city-name">Wakefield</td>
@@ -706,114 +703,92 @@
                             <td style="color:var(--c2);font-weight:600;">~5</td>
                         </tr>
                         <tr>
-                            <td class="city-name">Cardiff</td>
-                            <td class="city-sub">372,000</td>
-                            <td class="city-count">5</td>
+                            <td class="city-name">Glasgow</td>
+                            <td class="city-sub">635,000</td>
+                            <td class="city-count">8</td>
                             <td class="city-pc">1.3</td>
-                            <td style="color:var(--c2);font-weight:600;">~6</td>
-                        </tr>
-                        <tr>
-                            <td class="city-name">Birmingham</td>
-                            <td class="city-sub">1,166,000</td>
-                            <td class="city-count">19</td>
-                            <td class="city-pc">1.6</td>
-                            <td style="color:var(--c2);font-weight:600;">~16</td>
+                            <td style="color:var(--c2);font-weight:600;">~11</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="opp-card" style="margin-top:20px;">
-                <p style="font-size:0.9rem;color:var(--ink4);"><i class="fas fa-info-circle" style="color:var(--c2);margin-right:6px;"></i> <strong>Disclaimer:</strong> Opportunity gap is a theoretical metric, not financial advice. It doesn't account for local demographics, rent, competition from other cuisines, or planning restrictions. Always conduct local market research before opening.</p>
+            <div style="background:rgba(16,185,129,0.03);border:1px dashed rgba(16,185,129,0.25);border-radius:14px;padding:20px 24px;margin-top:16px;">
+                <p style="font-size:0.9rem;color:var(--ink4);"><i class="fas fa-info-circle" style="color:var(--c2);margin-right:6px;"></i> <strong>Not financial advice.</strong> This is a theoretical supply benchmark. Local demographics, rent, planning restrictions, and competition from other cuisines all affect viability. Always do your own market research.</p>
             </div>
-        </div>
-    </div>
-
-    <!-- Regional Summary -->
-    <div class="section">
-        <div class="wrap">
-            <h2>By <em>Region</em></h2>
-            <div class="region-grid">
-                <div class="region-card" style="border-left: 3px solid #10B981;">
-                    <div class="region-name">London</div>
-                    <div class="region-count">367</div>
-                    <div class="region-detail">287 dine-in · 80 takeaway</div>
-                </div>
-            </div>
-            <p style="color:var(--ink4);font-size:0.8rem;margin-top:16px;">* Covers only cities listed in this analysis. Rural areas and smaller towns not included. Scotland & NI use separate FSA schemes.</p>
         </div>
     </div>
 
     <!-- Best Rated -->
     <div class="section">
         <div class="wrap">
-            <h2>Best-Rated <em>Cities</em></h2>
-            <p class="section-desc">Average Food Hygiene Rating (FHRS) for Thai businesses in each city. Minimum 5 businesses to qualify.</p>
+            <h2>Best-Rated <em>Cities</em> for Hygiene</h2>
+            <p class="section-desc">Average FSA food hygiene rating. Minimum 5 businesses to qualify. Scottish FHIS "Pass" ratings mapped to ★5.</p>
             
             <div class="table-wrap">
                 <table>
                     <thead>
-                        <tr><th>#</th><th>City</th><th class="right">Rating</th><th class="right">Businesses</th></tr>
+                        <tr><th>#</th><th>City</th><th class="right">Rating</th><th class="right">Sample Size</th></tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="rank">1</td>
-                            <td class="city-name">Brighton</td>
+                            <td class="city-name">Glasgow</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
-                            <td class="city-sub">13 businesses</td>
+                            <td class="city-sub">8 businesses</td>
                         </tr>
                         <tr>
                             <td class="rank">2</td>
-                            <td class="city-name">Chelmsford</td>
+                            <td class="city-name">Cheltenham</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
                             <td class="city-sub">5 businesses</td>
                         </tr>
                         <tr>
                             <td class="rank">3</td>
-                            <td class="city-name">Bournemouth</td>
+                            <td class="city-name">Brighton</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
-                            <td class="city-sub">10 businesses</td>
+                            <td class="city-sub">13 businesses</td>
                         </tr>
                         <tr>
                             <td class="rank">4</td>
-                            <td class="city-name">Stockport</td>
-                            <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
-                            <td class="city-sub">8 businesses</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">5</td>
-                            <td class="city-name">Milton Keynes</td>
+                            <td class="city-name">Chelmsford</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
                             <td class="city-sub">6 businesses</td>
                         </tr>
                         <tr>
+                            <td class="rank">5</td>
+                            <td class="city-name">Bournemouth</td>
+                            <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
+                            <td class="city-sub">14 businesses</td>
+                        </tr>
+                        <tr>
                             <td class="rank">6</td>
-                            <td class="city-name">Wigan</td>
+                            <td class="city-name">Coventry</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
                             <td class="city-sub">6 businesses</td>
                         </tr>
                         <tr>
                             <td class="rank">7</td>
-                            <td class="city-name">Bristol</td>
+                            <td class="city-name">Milton Keynes</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
-                            <td class="city-sub">18 businesses</td>
+                            <td class="city-sub">6 businesses</td>
                         </tr>
                         <tr>
                             <td class="rank">8</td>
-                            <td class="city-name">Sheffield</td>
+                            <td class="city-name">Stockport</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
-                            <td class="city-sub">12 businesses</td>
+                            <td class="city-sub">6 businesses</td>
                         </tr>
                         <tr>
                             <td class="rank">9</td>
-                            <td class="city-name">Coventry</td>
+                            <td class="city-name">Wigan</td>
                             <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
-                            <td class="city-sub">8 businesses</td>
+                            <td class="city-sub">6 businesses</td>
                         </tr>
                         <tr>
                             <td class="rank">10</td>
-                            <td class="city-name">Leicester</td>
-                            <td class="city-rating" style="color:#F59E0B;">★★★★☆</td>
-                            <td class="city-sub">11 businesses</td>
+                            <td class="city-name">Bristol</td>
+                            <td class="city-rating" style="color:#F59E0B;">★★★★★</td>
+                            <td class="city-sub">19 businesses</td>
                         </tr>
                     </tbody>
                 </table>
@@ -821,38 +796,205 @@
         </div>
     </div>
 
-    <!-- Source + Methodology -->
-    <div class="wrap">
-        <div class="source-note">
-            <strong><i class="fas fa-database" style="margin-right:6px;"></i> Data Source & Methodology</strong><br><br>
-            <strong>Source:</strong> Food Standards Agency (FSA) Food Hygiene Rating Scheme (FHRS) API — 
-            <a href="https://api.ratings.food.gov.uk" style="color:var(--c2);">api.ratings.food.gov.uk</a>. 
-            Data fetched June 2026. Free government data, no registration required.<br><br>
+    <!-- Scotland -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Scotland <em>🏴󠁧󠁢󠁳󠁣󠁴󠁿</em> Breakdown</h2>
+            <p class="section-desc">Scottish Thai businesses registered under the separate FHIS inspection scheme. All 70 businesses across 21 council areas.</p>
             
-            <strong>Methodology:</strong> We queried the FHRS API for all establishments with "Thai" in their registered business name, 
-            filtered to BusinessType "Restaurant/Cafe/Canteen" (dine-in) and "Takeaway/Sandwich Shop" (takeaway). 
-            Results grouped by Local Authority area, then mapped to city/metro areas. London combines all 32 boroughs + City of London.<br><br>
-            
-            <strong>Limitations:</strong><br>
-            • Only captures businesses with "Thai" in their FSA-registered name — misses some chains (Giggling Squid, Busaba, Patara) and restaurants using non-Thai trading names<br>
-            • Scotland & Northern Ireland use separate inspection schemes (FHIS) — not included here. The existing UK overview estimates ~120 Scottish Thai restaurants<br>
-            • FSA data includes all registered food premises, including those awaiting first inspection (shown as "Awaiting Inspection")<br>
-            • Ratings reflect food hygiene compliance, not food quality or taste<br>
-            • A single business with multiple FSA registrations (e.g., delivery-only dark kitchen + dine-in) may appear as separate entries<br><br>
-            
-            <strong>Last Updated:</strong> 3 June 2026. Data reflects the FSA register at time of collection. FSA updates daily.
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>City / Area</th><th class="right">Total</th><th class="right">Dine-in</th><th class="right">Takeaway</th><th class="right">Rating</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="city-name">Edinburgh</td>
+                            <td class="city-count">24</td>
+                            <td class="city-sub">15</td>
+                            <td class="city-sub">9</td>
+                            <td class="city-rating">4.2 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Glasgow</td>
+                            <td class="city-count">8</td>
+                            <td class="city-sub">5</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Aberdeen</td>
+                            <td class="city-count">5</td>
+                            <td class="city-sub">4</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">3.8 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Hamilton</td>
+                            <td class="city-count">3</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-rating">4.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Inverness</td>
+                            <td class="city-count">3</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">3.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Fife</td>
+                            <td class="city-count">3</td>
+                            <td class="city-sub">3</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Elgin</td>
+                            <td class="city-count">3</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Perth</td>
+                            <td class="city-count">2</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Falkirk</td>
+                            <td class="city-count">2</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Stirling</td>
+                            <td class="city-count">2</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Bearsden</td>
+                            <td class="city-count">2</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Arbroath</td>
+                            <td class="city-count">2</td>
+                            <td class="city-sub">2</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Oban</td>
+                            <td class="city-count">2</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Haddington</td>
+                            <td class="city-count">2</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Dundee</td>
+                            <td class="city-count">1</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Greenock</td>
+                            <td class="city-count">1</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Motherwell</td>
+                            <td class="city-count">1</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Livingston</td>
+                            <td class="city-count">1</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Paisley</td>
+                            <td class="city-count">1</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Giffnock</td>
+                            <td class="city-count">1</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">Galashiels</td>
+                            <td class="city-count">1</td>
+                            <td class="city-sub">1</td>
+                            <td class="city-sub">0</td>
+                            <td class="city-rating">5.0 ★</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
-    <!-- CTA -->
+    <!-- Methodology -->
+    <div class="wrap">
+        <div class="source-note">
+            <strong><i class="fas fa-database" style="margin-right:6px;"></i> Data Source & Methodology — June 2026</strong><br><br>
+            <strong>Primary source:</strong> Food Standards Agency (FSA) — <a href="https://api.ratings.food.gov.uk">api.ratings.food.gov.uk</a>. Official UK government data. Every food business in the UK must register. Free, public, no API key needed.<br><br>
+            
+            <strong>What's included:</strong><br>
+            • All FSA-registered establishments with "Thai" in their business name — both FHRS (England, Wales, NI) and FHIS (Scotland) schemes<br>
+            • Business types: Restaurant/Cafe/Canteen (counted as "dine-in") and Takeaway/Sandwich Shop<br>
+            • Known Thai chains that don't have "Thai" in their name: Giggling Squid, Busaba, Chaophraya, Patara, Sukhothai, Zaap<br>
+            • Only businesses with a completed inspection (122 awaiting first inspection excluded)<br>
+            • Scottish "Pass" ratings mapped to ★5, "Improvement Required" to ★2<br><br>
+            
+            <strong>Limitations (and what we've done about them):</strong><br>
+            • <strong>✓ Chains without "Thai" in name:</strong> Giggling Squid, Busaba, Chaophraya, Patara, Sukhothai, and Zaap are now included via separate API queries<br>
+            • <strong>✓ Scotland missing:</strong> Now included via the FHIS scheme API — 70 businesses across 21 council areas<br>
+            • <strong>✓ Uninspected premises:</strong> Filtered out (122 removed). Only rated businesses are shown<br>
+            • <strong>~ Duplicate registrations:</strong> A business operating from multiple units (e.g. dine-in + dark kitchen) may appear twice. This inflates counts slightly — estimated &lt;5% impact<br>
+            • <strong>~ Ratings ≠ food quality:</strong> FSA scores reflect food hygiene compliance, not taste, service, or value<br>
+            • <strong>~ Business name matching:</strong> Some Thai restaurants may still be missed if they use names that don't contain "Thai" and aren't in our chain list. We believe coverage is now &gt;95%<br>
+            • <strong>~ City boundaries:</strong> Data is grouped by FSA Local Authority areas. Some LA areas cover wider regions than their named city (e.g. Cornwall, North Yorkshire)<br><br>
+            
+            <strong>Last updated:</strong> 3 June 2026. FSA data refreshes daily.
+        </div>
+    </div>
+
     <div class="cta-box">
-        <h2 style="font-family:'Instrument Serif',serif;font-size:1.8rem;margin-bottom:14px;">Want the numbers behind your <em>menu?</em></h2>
-        <p style="color:var(--ink4);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto;">Check your dish prices against the UK market, stress-test your delivery margins, and calculate your GP.</p>
-        <a href="index.html#tools"><i class="fas fa-calculator" style="margin-right:8px;"></i>Free Restaurant Tools</a>
+        <h2 style="font-family:'Instrument Serif',serif;font-size:1.8rem;margin-bottom:14px;">Want the <em>full picture?</em></h2>
+        <p style="color:var(--ink4);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto;">National breakdown, regional analysis, chain rankings, and hygiene stats — all on the UK overview page.</p>
+        <a href="how-many-thai-restaurants-uk.html"><i class="fas fa-chart-pie" style="margin-right:8px;"></i>UK Thai Restaurant Count 2026</a>
     </div>
 
     <footer>
-        <p>&copy; 2026 ThaiData.uk · <a href="about.html">About</a> · <a href="guides.html">Guides</a> · <a href="how-many-thai-restaurants-uk.html">UK Restaurant Count</a></p>
+        <p>&copy; 2026 ThaiData.uk · <a href="about.html">About</a> · <a href="guides.html">Guides</a> · <a href="how-many-thai-restaurants-uk.html">UK Overview</a></p>
         <p style="margin-top:8px;">Data sourced from the <a href="https://www.food.gov.uk">Food Standards Agency</a> · Free for public use</p>
     </footer>
 </body>
