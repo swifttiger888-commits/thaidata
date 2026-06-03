@@ -39,12 +39,18 @@
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto
+    }
         body { 
             font-family: 'Inter', system-ui, sans-serif; 
             background-color: var(--dark-navy); color: var(--ivory); 
             line-height: 1.6; min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-        }
+            -webkit-font-smoothing: antialiased;;
+      overflow-x: hidden
+    }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }

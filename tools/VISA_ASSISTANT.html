@@ -51,14 +51,20 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
         }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto
+    }
         
         body {
             background-color: var(--primary-dark);
             color: var(--text-primary);
             line-height: 1.6;
             padding: 20px;
-            min-height: 100vh;
-        }
+            min-height: 100vh;;
+      overflow-x: hidden
+    }
         
         .container {
             max-width: 1000px;

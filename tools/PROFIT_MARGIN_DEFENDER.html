@@ -34,6 +34,11 @@
             box-sizing: border-box;
             font-family: 'Inter', sans-serif;
         }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto
+    }
         
         :root {
             --primary: #10B981;
@@ -55,8 +60,9 @@
             color: var(--text-primary);
             line-height: 1.6;
             padding: 20px;
-            min-height: 100vh;
-        }
+            min-height: 100vh;;
+      overflow-x: hidden
+    }
         
         .container {
             max-width: 1200px;
