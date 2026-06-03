@@ -3,43 +3,190 @@
   "description": "Business intelligence and cost defense tools for UK Thai restaurant operators",
   "url": "https://thaidata.uk",
   "last_updated": "2026-06-03",
-  "data_sources": ["FSA FHRS", "FSA FHIS", "ONS", "HMRC", "UKHospitality"],
+  "data_sources": [
+    "FSA FHRS",
+    "FSA FHIS",
+    "ONS",
+    "HMRC",
+    "UKHospitality"
+  ],
   "statistics": {
-    "total_uk_thai_businesses": 1557,
-    "total_full_service_restaurants": 965,
-    "total_quick_service_takeaways": 592,
+    "total_uk_thai_businesses": 1594,
+    "total_full_service_restaurants": 1238,
+    "total_quick_service_takeaways": 356,
     "uk_average_hygiene_rating": 4.1,
     "uk_average_per_100k_density": 2.6,
     "hygiene_rating_5_percentage": 50.4,
-    "estimated_uk_market_size_gbp": "£2.1B",
+    "estimated_uk_market_size_gbp": "\u00a32.1B",
     "growth_rate_2022_2025_pct": 20.3,
     "national_living_wage_april_2026": 12.71,
     "national_living_wage_18_20_april_2026": 10.85,
-    "national_living_wage_apprentice_april_2026": 8.00,
+    "national_living_wage_apprentice_april_2026": 8.0,
     "average_delivery_commission_uber_eats_pct": 30,
     "average_delivery_commission_deliveroo_pct": 32,
     "average_delivery_commission_just_eat_pct": 14,
     "average_delivery_markup_pct": 22,
-    "typical_startup_cost_gbp": {"min": 80000, "max": 180000},
-    "chef_visa_first_year_cost_gbp": {"min": 8000, "max": 15000},
+    "typical_startup_cost_gbp": {
+      "min": 80000,
+      "max": 180000
+    },
+    "chef_visa_first_year_cost_gbp": {
+      "min": 8000,
+      "max": 15000
+    },
     "chef_visa_min_salary_gbp": 38700,
-    "chef_visa_processing_weeks": {"min": 12, "max": 24},
-    "opening_timeline_weeks": {"realistic": {"min": 22, "max": 30}, "best_case": {"min": 14, "max": 18}, "worst_case": 36}
+    "chef_visa_processing_weeks": {
+      "min": 12,
+      "max": 24
+    },
+    "opening_timeline_weeks": {
+      "realistic": {
+        "min": 22,
+        "max": 30
+      },
+      "best_case": {
+        "min": 14,
+        "max": 18
+      },
+      "worst_case": 36
+    }
   },
   "top_cities": [
-    {"name": "London", "total": 411, "dine_in": 323, "takeaway": 88, "rating": 4.1, "per_100k": 4.6, "population": 8970000},
-    {"name": "Leeds", "total": 34, "dine_in": 27, "takeaway": 7, "rating": 4.4, "per_100k": 4.2, "population": 812000},
-    {"name": "Manchester", "total": 28, "dine_in": 24, "takeaway": 4, "rating": 4.1, "per_100k": 4.9, "population": 568000},
-    {"name": "Edinburgh", "total": 24, "dine_in": 15, "takeaway": 9, "rating": 4.2, "per_100k": 4.4, "population": 548000},
-    {"name": "Bristol", "total": 19, "dine_in": 15, "takeaway": 4, "rating": 4.6, "per_100k": 3.9, "population": 483000},
-    {"name": "Birmingham", "total": 17, "dine_in": 15, "takeaway": 2, "rating": 4.4, "per_100k": 1.5, "population": 1166000},
-    {"name": "Bradford", "total": 15, "dine_in": 10, "takeaway": 5, "rating": 3.8, "per_100k": 2.7, "population": 547000},
-    {"name": "Leicester", "total": 15, "dine_in": 10, "takeaway": 5, "rating": 4.5, "per_100k": 4.0, "population": 374000},
-    {"name": "Bournemouth", "total": 14, "dine_in": 11, "takeaway": 3, "rating": 4.7, "per_100k": 3.5, "population": 401000},
-    {"name": "Swansea", "total": 14, "dine_in": 12, "takeaway": 2, "rating": 4.0, "per_100k": 5.7, "population": 247000},
-    {"name": "Brighton", "total": 13, "dine_in": 12, "takeaway": 1, "rating": 4.8, "per_100k": 4.7, "population": 277000},
-    {"name": "Sheffield", "total": 13, "dine_in": 12, "takeaway": 1, "rating": 4.6, "per_100k": 2.2, "population": 584000},
-    {"name": "Glasgow", "total": 8, "dine_in": 5, "takeaway": 3, "rating": 5.0, "per_100k": 1.3, "population": 635000}
+    {
+      "name": "London",
+      "population": 8970000,
+      "total_thai_businesses": 401,
+      "restaurants": 312,
+      "takeaways": 89,
+      "per_100k": 4.5,
+      "avg_hygiene_rating": 4.1
+    },
+    {
+      "name": "Leeds",
+      "population": 812000,
+      "total_thai_businesses": 34,
+      "restaurants": 27,
+      "takeaways": 7,
+      "per_100k": 4.2,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Manchester",
+      "population": 568000,
+      "total_thai_businesses": 29,
+      "restaurants": 25,
+      "takeaways": 4,
+      "per_100k": 5.1,
+      "avg_hygiene_rating": 4.2
+    },
+    {
+      "name": "Bournemouth",
+      "population": 401000,
+      "total_thai_businesses": 25,
+      "restaurants": 19,
+      "takeaways": 6,
+      "per_100k": 6.2,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "York",
+      "population": 211000,
+      "total_thai_businesses": 24,
+      "restaurants": 21,
+      "takeaways": 3,
+      "per_100k": 11.4,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Edinburgh",
+      "population": 548000,
+      "total_thai_businesses": 24,
+      "restaurants": 15,
+      "takeaways": 9,
+      "per_100k": 4.4,
+      "avg_hygiene_rating": 2.5
+    },
+    {
+      "name": "Bristol",
+      "population": 483000,
+      "total_thai_businesses": 19,
+      "restaurants": 15,
+      "takeaways": 4,
+      "per_100k": 3.9,
+      "avg_hygiene_rating": 4.6
+    },
+    {
+      "name": "Birmingham",
+      "population": 1166000,
+      "total_thai_businesses": 18,
+      "restaurants": 16,
+      "takeaways": 2,
+      "per_100k": 1.5,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Milton Keynes",
+      "population": 292000,
+      "total_thai_businesses": 18,
+      "restaurants": 16,
+      "takeaways": 2,
+      "per_100k": 6.2,
+      "avg_hygiene_rating": 4.6
+    },
+    {
+      "name": "Leicester",
+      "population": 374000,
+      "total_thai_businesses": 17,
+      "restaurants": 11,
+      "takeaways": 6,
+      "per_100k": 4.5,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Other UK",
+      "population": null,
+      "total_thai_businesses": 16,
+      "restaurants": 15,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Cornwall",
+      "population": 575000,
+      "total_thai_businesses": 16,
+      "restaurants": 11,
+      "takeaways": 5,
+      "per_100k": 2.8,
+      "avg_hygiene_rating": 4.9
+    },
+    {
+      "name": "Bradford",
+      "population": 547000,
+      "total_thai_businesses": 15,
+      "restaurants": 10,
+      "takeaways": 5,
+      "per_100k": 2.7,
+      "avg_hygiene_rating": 3.8
+    },
+    {
+      "name": "Oxford",
+      "population": 164000,
+      "total_thai_businesses": 15,
+      "restaurants": 13,
+      "takeaways": 2,
+      "per_100k": 9.1,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Swansea",
+      "population": 247000,
+      "total_thai_businesses": 15,
+      "restaurants": 13,
+      "takeaways": 2,
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 3.9
+    }
   ],
   "key_dates_2026": {
     "nlw_rise_effective": "2026-04-01",

@@ -1,18 +1,17 @@
 {
   "name": "ThaiData UK \u2014 Thai Restaurant Data API",
-  "version": "1.0",
-  "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
-  "attribution": "Data from ThaiData.uk / Food Standards Agency",
+  "version": "2.0",
   "updated": "2026-06-03",
-  "total_uk": 1557,
+  "total_uk": 1594,
+  "cities_tracked": 253,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 411,
-      "restaurants": 323,
-      "takeaways": 88,
-      "per_100k": 4.6,
+      "total_thai_businesses": 401,
+      "restaurants": 312,
+      "takeaways": 89,
+      "per_100k": 4.5,
       "avg_hygiene_rating": 4.1
     },
     {
@@ -27,11 +26,29 @@
     {
       "name": "Manchester",
       "population": 568000,
-      "total_thai_businesses": 28,
-      "restaurants": 24,
+      "total_thai_businesses": 29,
+      "restaurants": 25,
       "takeaways": 4,
-      "per_100k": 4.9,
-      "avg_hygiene_rating": 4.1
+      "per_100k": 5.1,
+      "avg_hygiene_rating": 4.2
+    },
+    {
+      "name": "Bournemouth",
+      "population": 401000,
+      "total_thai_businesses": 25,
+      "restaurants": 19,
+      "takeaways": 6,
+      "per_100k": 6.2,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "York",
+      "population": 211000,
+      "total_thai_businesses": 24,
+      "restaurants": 21,
+      "takeaways": 3,
+      "per_100k": 11.4,
+      "avg_hygiene_rating": 4.3
     },
     {
       "name": "Edinburgh",
@@ -40,7 +57,7 @@
       "restaurants": 15,
       "takeaways": 9,
       "per_100k": 4.4,
-      "avg_hygiene_rating": 4.2
+      "avg_hygiene_rating": 2.5
     },
     {
       "name": "Bristol",
@@ -54,11 +71,47 @@
     {
       "name": "Birmingham",
       "population": 1166000,
-      "total_thai_businesses": 17,
-      "restaurants": 15,
+      "total_thai_businesses": 18,
+      "restaurants": 16,
       "takeaways": 2,
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Milton Keynes",
+      "population": 292000,
+      "total_thai_businesses": 18,
+      "restaurants": 16,
+      "takeaways": 2,
+      "per_100k": 6.2,
+      "avg_hygiene_rating": 4.6
+    },
+    {
+      "name": "Leicester",
+      "population": 374000,
+      "total_thai_businesses": 17,
+      "restaurants": 11,
+      "takeaways": 6,
+      "per_100k": 4.5,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Other UK",
+      "population": null,
+      "total_thai_businesses": 16,
+      "restaurants": 15,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Cornwall",
+      "population": 575000,
+      "total_thai_businesses": 16,
+      "restaurants": 11,
+      "takeaways": 5,
+      "per_100k": 2.8,
+      "avg_hygiene_rating": 4.9
     },
     {
       "name": "Bradford",
@@ -70,31 +123,40 @@
       "avg_hygiene_rating": 3.8
     },
     {
-      "name": "Leicester",
-      "population": 374000,
+      "name": "Oxford",
+      "population": 164000,
       "total_thai_businesses": 15,
-      "restaurants": 10,
-      "takeaways": 5,
-      "per_100k": 4.0,
-      "avg_hygiene_rating": 4.5
-    },
-    {
-      "name": "Bournemouth",
-      "population": 401000,
-      "total_thai_businesses": 14,
-      "restaurants": 11,
-      "takeaways": 3,
-      "per_100k": 3.5,
+      "restaurants": 13,
+      "takeaways": 2,
+      "per_100k": 9.1,
       "avg_hygiene_rating": 4.7
     },
     {
       "name": "Swansea",
       "population": 247000,
-      "total_thai_businesses": 14,
-      "restaurants": 12,
+      "total_thai_businesses": 15,
+      "restaurants": 13,
       "takeaways": 2,
-      "per_100k": 5.7,
-      "avg_hygiene_rating": 4.0
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 3.9
+    },
+    {
+      "name": "Richmond upon Thames",
+      "population": 200000,
+      "total_thai_businesses": 14,
+      "restaurants": 14,
+      "takeaways": 0,
+      "per_100k": 7.0,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Sheffield",
+      "population": 584000,
+      "total_thai_businesses": 14,
+      "restaurants": 13,
+      "takeaways": 1,
+      "per_100k": 2.4,
+      "avg_hygiene_rating": 4.6
     },
     {
       "name": "Brighton",
@@ -106,13 +168,13 @@
       "avg_hygiene_rating": 4.8
     },
     {
-      "name": "Sheffield",
-      "population": 584000,
+      "name": "Newcastle",
+      "population": 307000,
       "total_thai_businesses": 13,
-      "restaurants": 12,
-      "takeaways": 1,
-      "per_100k": 2.2,
-      "avg_hygiene_rating": 4.6
+      "restaurants": 10,
+      "takeaways": 3,
+      "per_100k": 4.2,
+      "avg_hygiene_rating": 4.2
     },
     {
       "name": "Huddersfield",
@@ -124,31 +186,58 @@
       "avg_hygiene_rating": 3.2
     },
     {
-      "name": "Newcastle",
-      "population": 307000,
-      "total_thai_businesses": 11,
-      "restaurants": 9,
-      "takeaways": 2,
-      "per_100k": 3.6,
-      "avg_hygiene_rating": 4.1
-    },
-    {
-      "name": "York",
-      "population": 211000,
-      "total_thai_businesses": 10,
-      "restaurants": 8,
-      "takeaways": 2,
-      "per_100k": 4.7,
-      "avg_hygiene_rating": 4.6
+      "name": "Watford",
+      "population": 103000,
+      "total_thai_businesses": 13,
+      "restaurants": 10,
+      "takeaways": 3,
+      "per_100k": 12.6,
+      "avg_hygiene_rating": 4.2
     },
     {
       "name": "Bath",
       "population": 196000,
+      "total_thai_businesses": 12,
+      "restaurants": 11,
+      "takeaways": 1,
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 4.2
+    },
+    {
+      "name": "Swindon",
+      "population": 236000,
+      "total_thai_businesses": 12,
+      "restaurants": 11,
+      "takeaways": 1,
+      "per_100k": 5.1,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Lake District",
+      "population": 42000,
+      "total_thai_businesses": 12,
+      "restaurants": 10,
+      "takeaways": 2,
+      "per_100k": 28.6,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Shrewsbury",
+      "population": 77000,
+      "total_thai_businesses": 11,
+      "restaurants": 9,
+      "takeaways": 2,
+      "per_100k": 14.3,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Windsor and Maidenhead",
+      "population": 158000,
       "total_thai_businesses": 10,
       "restaurants": 9,
       "takeaways": 1,
-      "per_100k": 5.1,
-      "avg_hygiene_rating": 4.1
+      "per_100k": 6.3,
+      "avg_hygiene_rating": 4.6
     },
     {
       "name": "Bolton",
@@ -157,6 +246,78 @@
       "restaurants": 5,
       "takeaways": 5,
       "per_100k": 3.3,
+      "avg_hygiene_rating": 3.6
+    },
+    {
+      "name": "Torquay",
+      "population": 66000,
+      "total_thai_businesses": 9,
+      "restaurants": 5,
+      "takeaways": 4,
+      "per_100k": 13.6,
+      "avg_hygiene_rating": 4.9
+    },
+    {
+      "name": "Cardiff",
+      "population": 372000,
+      "total_thai_businesses": 9,
+      "restaurants": 9,
+      "takeaways": 0,
+      "per_100k": 2.4,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Herefordshire",
+      "population": 195000,
+      "total_thai_businesses": 9,
+      "restaurants": 8,
+      "takeaways": 1,
+      "per_100k": 4.6,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Exeter",
+      "population": 135000,
+      "total_thai_businesses": 9,
+      "restaurants": 8,
+      "takeaways": 1,
+      "per_100k": 6.7,
+      "avg_hygiene_rating": 3.7
+    },
+    {
+      "name": "Taunton",
+      "population": 70000,
+      "total_thai_businesses": 9,
+      "restaurants": 6,
+      "takeaways": 3,
+      "per_100k": 12.9,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Stoke-on-Trent",
+      "population": 260000,
+      "total_thai_businesses": 9,
+      "restaurants": 8,
+      "takeaways": 1,
+      "per_100k": 3.5,
+      "avg_hygiene_rating": 3.8
+    },
+    {
+      "name": "Glasgow",
+      "population": 635000,
+      "total_thai_businesses": 9,
+      "restaurants": 6,
+      "takeaways": 3,
+      "per_100k": 1.4,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Central Bedfordshire",
+      "population": 300000,
+      "total_thai_businesses": 8,
+      "restaurants": 8,
+      "takeaways": 0,
+      "per_100k": 2.7,
       "avg_hygiene_rating": 3.6
     },
     {
@@ -169,13 +330,94 @@
       "avg_hygiene_rating": 4.5
     },
     {
-      "name": "Glasgow",
-      "population": 635000,
+      "name": "Cheltenham",
+      "population": 120000,
       "total_thai_businesses": 8,
-      "restaurants": 5,
-      "takeaways": 3,
-      "per_100k": 1.3,
+      "restaurants": 8,
+      "takeaways": 0,
+      "per_100k": 6.7,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Cheshire West and Chester",
+      "population": 357000,
+      "total_thai_businesses": 8,
+      "restaurants": 6,
+      "takeaways": 2,
+      "per_100k": 2.2,
+      "avg_hygiene_rating": 4.6
+    },
+    {
+      "name": "Margate",
+      "population": 64000,
+      "total_thai_businesses": 8,
+      "restaurants": 7,
+      "takeaways": 1,
+      "per_100k": 12.5,
       "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Wirral",
+      "population": null,
+      "total_thai_businesses": 8,
+      "restaurants": 8,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.1
+    },
+    {
+      "name": "Derby",
+      "population": 260000,
+      "total_thai_businesses": 8,
+      "restaurants": 6,
+      "takeaways": 2,
+      "per_100k": 3.1,
+      "avg_hygiene_rating": 3.6
+    },
+    {
+      "name": "Nottingham",
+      "population": 328000,
+      "total_thai_businesses": 8,
+      "restaurants": 7,
+      "takeaways": 1,
+      "per_100k": 2.4,
+      "avg_hygiene_rating": 4.9
+    },
+    {
+      "name": "Clacton on Sea",
+      "population": null,
+      "total_thai_businesses": 7,
+      "restaurants": 5,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Trafford",
+      "population": null,
+      "total_thai_businesses": 7,
+      "restaurants": 6,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.6
+    },
+    {
+      "name": "Warrington",
+      "population": 212000,
+      "total_thai_businesses": 7,
+      "restaurants": 6,
+      "takeaways": 1,
+      "per_100k": 3.3,
+      "avg_hygiene_rating": 3.6
+    },
+    {
+      "name": "Kingston upon Thames",
+      "population": 180000,
+      "total_thai_businesses": 7,
+      "restaurants": 7,
+      "takeaways": 0,
+      "per_100k": 3.9,
+      "avg_hygiene_rating": 4.6
     },
     {
       "name": "Liverpool",
@@ -187,15 +429,6 @@
       "avg_hygiene_rating": 4.0
     },
     {
-      "name": "Cardiff",
-      "population": 372000,
-      "total_thai_businesses": 7,
-      "restaurants": 7,
-      "takeaways": 0,
-      "per_100k": 1.9,
-      "avg_hygiene_rating": 4.3
-    },
-    {
       "name": "Blackpool",
       "population": 142000,
       "total_thai_businesses": 7,
@@ -203,6 +436,15 @@
       "takeaways": 4,
       "per_100k": 4.9,
       "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Durham",
+      "population": 51000,
+      "total_thai_businesses": 7,
+      "restaurants": 6,
+      "takeaways": 1,
+      "per_100k": 13.7,
+      "avg_hygiene_rating": 4.7
     },
     {
       "name": "Belfast",
@@ -214,58 +456,49 @@
       "avg_hygiene_rating": 3.6
     },
     {
-      "name": "Coventry",
-      "population": 370000,
-      "total_thai_businesses": 6,
-      "restaurants": 1,
-      "takeaways": 5,
-      "per_100k": 1.6,
-      "avg_hygiene_rating": 4.7
-    },
-    {
-      "name": "Sunderland",
-      "population": 278000,
-      "total_thai_businesses": 6,
-      "restaurants": 3,
-      "takeaways": 3,
-      "per_100k": 2.2,
-      "avg_hygiene_rating": 3.5
-    },
-    {
-      "name": "Milton Keynes",
-      "population": 292000,
-      "total_thai_businesses": 6,
-      "restaurants": 4,
-      "takeaways": 2,
-      "per_100k": 2.1,
-      "avg_hygiene_rating": 4.7
-    },
-    {
-      "name": "Luton",
-      "population": 228000,
-      "total_thai_businesses": 6,
-      "restaurants": 3,
-      "takeaways": 3,
-      "per_100k": 2.6,
-      "avg_hygiene_rating": 3.8
-    },
-    {
-      "name": "Warrington",
-      "population": 212000,
-      "total_thai_businesses": 6,
-      "restaurants": 5,
+      "name": "Maidstone",
+      "population": 120000,
+      "total_thai_businesses": 7,
+      "restaurants": 6,
       "takeaways": 1,
-      "per_100k": 2.8,
-      "avg_hygiene_rating": 3.5
+      "per_100k": 5.8,
+      "avg_hygiene_rating": 3.3
     },
     {
-      "name": "Stockport",
-      "population": 295000,
-      "total_thai_businesses": 6,
-      "restaurants": 2,
+      "name": "St Albans City",
+      "population": null,
+      "total_thai_businesses": 7,
+      "restaurants": 7,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.4
+    },
+    {
+      "name": "Calderdale",
+      "population": null,
+      "total_thai_businesses": 7,
+      "restaurants": 3,
       "takeaways": 4,
-      "per_100k": 2.0,
-      "avg_hygiene_rating": 4.7
+      "per_100k": null,
+      "avg_hygiene_rating": 4.6
+    },
+    {
+      "name": "Southend",
+      "population": null,
+      "total_thai_businesses": 7,
+      "restaurants": 7,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.7
+    },
+    {
+      "name": "New Forest",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
     },
     {
       "name": "Oldham",
@@ -277,13 +510,58 @@
       "avg_hygiene_rating": 4.3
     },
     {
-      "name": "Wigan",
-      "population": 333000,
+      "name": "Coventry",
+      "population": 370000,
+      "total_thai_businesses": 6,
+      "restaurants": 1,
+      "takeaways": 5,
+      "per_100k": 1.6,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Portsmouth",
+      "population": 208000,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": 2.9,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Wyre",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 5,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.2
+    },
+    {
+      "name": "Plymouth",
+      "population": 265000,
       "total_thai_businesses": 6,
       "restaurants": 4,
       "takeaways": 2,
-      "per_100k": 1.8,
+      "per_100k": 2.3,
       "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Cambridge",
+      "population": 146000,
+      "total_thai_businesses": 6,
+      "restaurants": 5,
+      "takeaways": 1,
+      "per_100k": 4.1,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Wealden",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 5,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
     },
     {
       "name": "Chelmsford",
@@ -295,22 +573,139 @@
       "avg_hygiene_rating": 4.8
     },
     {
-      "name": "Portsmouth",
-      "population": 208000,
-      "total_thai_businesses": 5,
-      "restaurants": 5,
-      "takeaways": 0,
-      "per_100k": 2.4,
-      "avg_hygiene_rating": 4.4
+      "name": "Luton",
+      "population": 228000,
+      "total_thai_businesses": 6,
+      "restaurants": 3,
+      "takeaways": 3,
+      "per_100k": 2.6,
+      "avg_hygiene_rating": 3.8
     },
     {
-      "name": "Cheltenham",
-      "population": 120000,
+      "name": "Wigan",
+      "population": 333000,
+      "total_thai_businesses": 6,
+      "restaurants": 4,
+      "takeaways": 2,
+      "per_100k": 1.8,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Bury",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 3,
+      "takeaways": 3,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Southampton",
+      "population": 256000,
+      "total_thai_businesses": 6,
+      "restaurants": 4,
+      "takeaways": 2,
+      "per_100k": 2.3,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Stockport",
+      "population": 295000,
+      "total_thai_businesses": 6,
+      "restaurants": 2,
+      "takeaways": 4,
+      "per_100k": 2.0,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Isle of Wight",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.7
+    },
+    {
+      "name": "Sunderland",
+      "population": 278000,
+      "total_thai_businesses": 6,
+      "restaurants": 3,
+      "takeaways": 3,
+      "per_100k": 2.2,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Aberdeen",
+      "population": 202000,
+      "total_thai_businesses": 6,
+      "restaurants": 5,
+      "takeaways": 1,
+      "per_100k": 3.0,
+      "avg_hygiene_rating": 2.3
+    },
+    {
+      "name": "Mole Valley",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 4,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Teignbridge",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 3,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Waverley",
+      "population": null,
       "total_thai_businesses": 5,
       "restaurants": 5,
       "takeaways": 0,
-      "per_100k": 4.2,
-      "avg_hygiene_rating": 5.0
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Sefton",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 4,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Preston",
+      "population": 150000,
+      "total_thai_businesses": 5,
+      "restaurants": 3,
+      "takeaways": 2,
+      "per_100k": 3.3,
+      "avg_hygiene_rating": 3.6
+    },
+    {
+      "name": "Canterbury",
+      "population": 64000,
+      "total_thai_businesses": 5,
+      "restaurants": 3,
+      "takeaways": 2,
+      "per_100k": 7.8,
+      "avg_hygiene_rating": 3.6
+    },
+    {
+      "name": "Guildford",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 4,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
     },
     {
       "name": "Slough",
@@ -320,6 +715,1572 @@
       "takeaways": 0,
       "per_100k": 3.0,
       "avg_hygiene_rating": 3.8
+    },
+    {
+      "name": "Neath Port Talbot",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 1,
+      "takeaways": 4,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.8
+    },
+    {
+      "name": "Tameside",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 3,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.4
+    },
+    {
+      "name": "Burnley",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 3,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Powys",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.2
+    },
+    {
+      "name": "Tandridge",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Weston-super-Mare",
+      "population": 83000,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": 4.8,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Reading",
+      "population": 175000,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": 2.3,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Gwynedd",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Warwick",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Eastbourne",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Hull",
+      "population": 266000,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": 1.5,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "North East Lincolnshire",
+      "population": 160000,
+      "total_thai_businesses": 4,
+      "restaurants": 2,
+      "takeaways": 2,
+      "per_100k": 2.5,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Cumberland",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Broxtowe",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.8
+    },
+    {
+      "name": "East Riding of Yorkshire",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Dudley",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Dacorum",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Mid Sussex",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Colchester",
+      "population": 195000,
+      "total_thai_businesses": 4,
+      "restaurants": 2,
+      "takeaways": 2,
+      "per_100k": 2.1,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Runnymede",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Vale of White Horse",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Gravesham",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Fylde",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "West Suffolk",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Spelthorne",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.2
+    },
+    {
+      "name": "High Peak",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "East Suffolk",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 2,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8
+    },
+    {
+      "name": "Stevenage",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 2,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Wakefield",
+      "population": 345000,
+      "total_thai_businesses": 4,
+      "restaurants": 2,
+      "takeaways": 2,
+      "per_100k": 1.2,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Horsham",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Fermanagh and Omagh",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 0,
+      "takeaways": 4,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.2
+    },
+    {
+      "name": "Darlington",
+      "population": 108000,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": 2.8,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Wrexham",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Uttlesford",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Erewash",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Rugby",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "North Northamptonshire",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Rother",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Reigate and Banstead",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Lancaster",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Worthing",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.7
+    },
+    {
+      "name": "Basildon",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Wychavon",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "North Kesteven",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Tunbridge Wells",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.7
+    },
+    {
+      "name": "Great Yarmouth",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.7
+    },
+    {
+      "name": "Wokingham",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Cotswold",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Folkestone and Hythe",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Nuneaton and Bedworth",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Forest of Dean",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 1,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Stockton On Tees",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Wolverhampton",
+      "population": 263000,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": 1.1,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Barnsley",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Hertsmere",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "West Northamptonshire",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.7
+    },
+    {
+      "name": "Rotherham",
+      "population": 265000,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": 1.1,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Bedford",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Redcar and Cleveland",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Gloucester",
+      "population": 132000,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": 2.3,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Worcester",
+      "population": 105000,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": 2.9,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Epsom and Ewell",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "West Lancashire",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 2.3
+    },
+    {
+      "name": "Rushmoor",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Sandwell",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Blackburn",
+      "population": 150000,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": 2.0,
+      "avg_hygiene_rating": 3.3
+    },
+    {
+      "name": "Bridgend",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 1,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3
+    },
+    {
+      "name": "Middlesbrough",
+      "population": 148000,
+      "total_thai_businesses": 3,
+      "restaurants": 1,
+      "takeaways": 2,
+      "per_100k": 2.0,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Cheshire East",
+      "population": 390000,
+      "total_thai_businesses": 3,
+      "restaurants": 0,
+      "takeaways": 3,
+      "per_100k": 0.8,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Armagh City, Banbridge and Craigavon",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 1,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.7
+    },
+    {
+      "name": "Highland",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 1.7
+    },
+    {
+      "name": "Moray",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 2,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Fife",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "South Lanarkshire",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 0,
+      "takeaways": 3,
+      "per_100k": null,
+      "avg_hygiene_rating": 2.3
+    },
+    {
+      "name": "Winchester City",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Harborough",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Bromsgrove",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Derry City and Strabane",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Ashford",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Braintree",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Vale of Glamorgan",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Thurrock",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Blaby",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Cherwell",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Hartlepool",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Medway",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Conwy",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Pendle",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Three Rivers",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Charnwood",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Swale",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "King's Lynn and West Norfolk",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Welwyn Hatfield",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Stratford upon Avon",
+      "population": 30000,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": 6.7,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Dartford",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Hastings",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Lichfield",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Broadland",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Rhondda Cynon Taf",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Newark and Sherwood",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "West Berkshire",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5
+    },
+    {
+      "name": "Salford",
+      "population": 260000,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": 0.8,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "East Lindsey",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Stafford",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Carmarthenshire",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "North Lincolnshire",
+      "population": 170000,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": 1.2,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Hinckley and Bosworth",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Hart",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Bracknell Forest",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Hyndburn",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Walsall",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Ceredigion",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Antrim and Newtownabbey",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 0,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5
+    },
+    {
+      "name": "Arun",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 0,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Brentwood",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Sevenoaks",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Castle Point",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 0,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Gateshead",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Stirling",
+      "population": 49000,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": 4.1,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Angus",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Falkirk",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "East Lothian",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Argyll and Bute",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Perth",
+      "population": 51000,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": 3.9,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "East Dunbartonshire",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Rushcliffe",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Chesterfield",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Flintshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Bassetlaw",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Telford",
+      "population": 160000,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": 0.6,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Huntingdonshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Ipswich",
+      "population": 150000,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": 0.7,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Dover",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Tonbridge and Malling",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Lewes",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Boston",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "St Helens",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Lincoln",
+      "population": 104000,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": 1.0,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Fenland",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Fareham",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Crawley",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Maldon",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Mid Suffolk",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Anglesey",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Epping Forest",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Test Valley",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Mansfield",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Melton",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Doncaster",
+      "population": 310000,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": 0.3,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Woking",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Mid and East Antrim",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Pembrokeshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Babergh",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Eastleigh",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Torridge",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "Wyre Forest",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 1.0
+    },
+    {
+      "name": "Lisburn and Castlereagh City",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Newry, Mourne and Down",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Rossendale",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "South Tyneside",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Dundee",
+      "population": 152000,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": 0.7,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "North Ayrshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Scottish Borders",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "West Lothian",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "North Lanarkshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Renfrewshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Chichester",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Adur",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "North Tyneside",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Rochdale",
+      "population": 227000,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": 0.4,
+      "avg_hygiene_rating": 5.0
+    },
+    {
+      "name": "Knowsley",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "South Hams",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0
+    },
+    {
+      "name": "East Renfrewshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
+    },
+    {
+      "name": "Inverclyde",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.0
     }
   ]
 }
