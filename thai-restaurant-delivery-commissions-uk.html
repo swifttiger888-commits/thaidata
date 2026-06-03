@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Restaurant Delivery Commissions UK — Deliveroo, Just Eat, Uber Eats Compared | ThaiData</title>
+    <meta name="description" content="How much Deliveroo, Just Eat & Uber Eats really cost Thai restaurants. Commission breakdown, real profit per dish after fees, and how to build a delivery menu that actually makes money.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/thai-restaurant-delivery-commissions-uk">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/thai-restaurant-delivery-commissions-uk">
+    <meta property="og:title" content="Thai Restaurant Delivery Commissions UK — Deliveroo, Just Eat, Uber Eats Compared">
+    <meta property="og:description" content="Real numbers: what each platform charges, what your Pad Thai actually earns after commission, and how to build a profitable delivery menu.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(239,68,68,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--red); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
+        .section h2 em { font-style: italic; color: var(--red); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+
+        .data-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; min-width: 750px; }
+        .data-table thead th { padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+        .data-table tbody td { padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        .data-table .hi { color: var(--c2); font-weight: 700; }
+        .data-table .lo { color: var(--red); font-weight: 700; }
+
+        .platform-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin: 16px 0; }
+        .platform-card .p-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+        .platform-card .p-rate { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--red); line-height: 1; margin-bottom: 8px; }
+        .platform-card .p-desc { color: var(--ink4); font-size: 0.85rem; line-height: 1.7; }
+
+        .insight-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .insight-box h3 { color: var(--red); font-size: 0.9rem; margin: 0 0 6px; }
+        .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+
+        .strategy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin: 20px 0; }
+        .strat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+        .strat-card .strat-num { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); line-height: 1; margin-bottom: 6px; }
+        .strat-card .strat-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
+        .strat-card .strat-desc { color: var(--ink4); font-size: 0.82rem; line-height: 1.6; }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2rem; }
+            .strategy-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Guides</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--red); margin-bottom:16px;">Margin Intelligence · 2026</div>
+            <h1>Thai Restaurant<br><em>Delivery Commissions</em></h1>
+            <p>What Deliveroo, Just Eat, and Uber Eats actually cost your Thai restaurant — per dish, per order, per year. And how to build a delivery menu that makes money instead of losing it.</p>
+        </div>
+    </div>
+
+    <!-- Commission Table -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>What Each <em>Platform</em> Charges</h2>
+            <p>Standard commission rates for independent restaurants (June 2026). Chains negotiate better rates — these are what most Thai operators actually pay.</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Platform</th><th>Commission</th><th>Marketing add-on</th><th>Effective rate</th><th>Payment terms</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Deliveroo</strong></td><td class="lo">25–30%</td><td>+5–7% for promoted placement</td><td class="lo">30–37%</td><td>Weekly (Tuesdays)</td></tr>
+                        <tr><td><strong>Just Eat</strong></td><td class="lo">14–20%</td><td>+5% for boosted visibility</td><td class="lo">14–25%</td><td>Weekly</td></tr>
+                        <tr><td><strong>Uber Eats</strong></td><td class="lo">25–30%</td><td>+5–10% for ads</td><td class="lo">30–40%</td><td>Weekly (Mondays)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="source-note"><strong>Note:</strong> Just Eat offers a lower-commission "Self-Delivery" option (14%) where you use your own drivers. If you already have delivery drivers for phone orders, this is the most profitable platform choice by a significant margin.</div>
+        </div>
+    </div>
+
+    <!-- Per-Dish Reality -->
+    <div class="section">
+        <div class="wrap">
+            <h2>What Your <em>Pad Thai</em> Actually Earns</h2>
+            <p>The brutal maths. A £14.50 Pad Thai on Deliveroo with marketing turned on:</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th></th><th>Dine-In</th><th>Just Eat (14%)</th><th>Deliveroo (30%)</th><th>Uber Eats (30%)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Menu price</strong></td><td class="hi">£14.50</td><td>£14.50</td><td>£14.50</td><td>£14.50</td></tr>
+                        <tr><td>VAT (20%)</td><td>-£2.42</td><td>-£2.42</td><td>-£2.42</td><td>-£2.42</td></tr>
+                        <tr><td>Platform commission</td><td>—</td><td class="lo">-£2.03</td><td class="lo">-£4.35</td><td class="lo">-£4.35</td></tr>
+                        <tr><td>Food cost</td><td>-£2.80</td><td>-£2.80</td><td>-£2.80</td><td>-£2.80</td></tr>
+                        <tr><td>Packaging</td><td>—</td><td>-£0.40</td><td>-£0.40</td><td>-£0.40</td></tr>
+                        <tr style="border-top:2px solid var(--line);"><td><strong>Your margin</strong></td><td class="hi">£9.28</td><td>£6.85</td><td class="lo">£4.53</td><td class="lo">£4.53</td></tr>
+                        <tr><td><strong>Margin %</strong></td><td class="hi">64%</td><td>47%</td><td class="lo">31%</td><td class="lo">31%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box" style="margin-top:20px;">
+                <h3><i class="fas fa-exclamation-triangle"></i> The delivery margin trap</h3>
+                <p>Your Pad Thai earns <strong>£4.53 on Deliveroo vs £9.28 dine-in</strong>. That's a 51% profit reduction — before accounting for labour, rent, and energy. If more than 40% of your orders come through delivery platforms, you need to either raise delivery prices or reduce your platform dependency. <a href="tools/PROFIT_MARGIN_DEFENDER.html" style="color:var(--red);">Run the full Profit Margin Defender →</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Profiles -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Platform-by-<em>Platform</em> Breakdown</h2>
+            
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-motorcycle" style="color:#00CCBC;"></i> Deliveroo</div>
+                <div class="p-rate">25–30% commission</div>
+                <div class="p-desc"><strong>Market share:</strong> Strong in London and major cities. Weaker in rural areas.<br>
+                <strong>Best for:</strong> Premium positioning. Deliveroo customers spend more per order (£23 avg) and are less price-sensitive.<br>
+                <strong>Worst for:</strong> Margin. The base 30% rate + marketing add-ons can push effective rates to 37%.<br>
+                <strong>Thai-specific:</strong> Deliveroo's "Editions" dark kitchens are saturated with Thai concepts in London. You're competing with delivery-only brands that have lower overheads.<br>
+                <strong>Negotiation tip:</strong> If you do £2,000+/week on Deliveroo, ask your account manager for a rate review. Chains like Rosa's Thai negotiate 20–22%. Independents with volume can push for 25%.</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-utensils" style="color:#FF8000;"></i> Just Eat</div>
+                <div class="p-rate">14–20% commission</div>
+                <div class="p-desc"><strong>Market share:</strong> Largest UK platform by restaurant numbers. Broadest geographic coverage.<br>
+                <strong>Best for:</strong> The 14% self-delivery rate. If you have drivers, Just Eat becomes genuinely profitable.<br>
+                <strong>Worst for:</strong> Lower average order value (£18). More price-sensitive customers.<br>
+                <strong>Thai-specific:</strong> Just Eat has the most Thai restaurant listings of any platform — meaning more competition. Your menu photography and dish descriptions matter more here.<br>
+                <strong>Key strategy:</strong> List on Just Eat with the 14% self-delivery rate and use your own drivers. Use the savings to offer a 10% discount vs Deliveroo pricing — you'll still earn more per order.</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-car" style="color:#000000; background:white; border-radius:4px; padding:2px 6px; font-size:0.8rem;"></i> Uber Eats</div>
+                <div class="p-rate">25–30% commission</div>
+                <div class="p-desc"><strong>Market share:</strong> Growing fast. Strong in cities, expanding in suburbs.<br>
+                <strong>Best for:</strong> Discovery. Uber Eats' algorithm promotes new restaurants aggressively in the first 4 weeks — good for launch.<br>
+                <strong>Worst for:</strong> Add-on costs. Uber's advertising platform is aggressive — easy to accidentally spend £200/week on promoted listings that don't convert.<br>
+                <strong>Thai-specific:</strong> Uber Eats users search by cuisine type heavily. Make sure your restaurant is tagged as "Thai" not "Asian" or "Other."<br>
+                <strong>Warning:</strong> Uber Eats' default advertising settings enrol new restaurants automatically. Check your ad spend weekly or you'll find £150/month disappearing into promotions you didn't knowingly activate.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy -->
+    <div class="section">
+        <div class="wrap">
+            <h2>How to Build a <em>Profitable</em> Delivery Menu</h2>
+            <div class="strategy-grid">
+                <div class="strat-card">
+                    <div class="strat-num">1</div>
+                    <div class="strat-title">Separate delivery menu from dine-in</div>
+                    <div class="strat-desc">Your delivery menu should be 20–25% more expensive than your dine-in menu. Customers accept this — they're paying for convenience. A separate printed menu also lets you remove dishes that don't travel well (crispy fish, tempura).</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">2</div>
+                    <div class="strat-title">Push high-GP dishes</div>
+                    <div class="strat-desc">Feature curries (83% GP), stir-fries (80% GP), and rice dishes on your delivery menu. De-prioritise or remove low-margin items. The delivery customer isn't comparing your menu to the dine-in version — they're comparing to other delivery options.</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">3</div>
+                    <div class="strat-title">Bundles beat singles</div>
+                    <div class="strat-desc">"Pad Thai + Spring Rolls + Drink = £18.50" bundles increase average order value by 30–40%. The platform takes the same commission percentage, but your fixed costs (packaging, driver wait time) are spread across a larger order.</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">4</div>
+                    <div class="strat-title">Self-deliver on Just Eat</div>
+                    <div class="strat-desc">If you have even one driver for phone orders, list on Just Eat with the 14% self-delivery rate instead of 20% marketplace. On 100 orders/week at £20 average, that saves £120/week — £6,240/year. Use Deliveroo and Uber Eats for discovery, Just Eat for profit.</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">5</div>
+                    <div class="strat-title">Turn off marketing after 8 weeks</div>
+                    <div class="strat-desc">Platforms push promoted listings hard. Use them for the first 8 weeks to build review volume, then turn them off. Your organic ranking is driven by review count and order volume — not ad spend. Most Thai restaurants overpay for marketing by £100–300/month.</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">6</div>
+                    <div class="strat-title">Charge for packaging</div>
+                    <div class="strat-desc">Add £0.50–£1.00 to every delivery item to cover packaging costs. Thai food needs quality containers (curries leak, crispy items steam). A £0.40 container + £0.10 bag costs you £0.50 — charge £1.00. Nobody notices £1 on a £16 curry.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">Tools</a> · 
+                <a href="guides.html">Guides</a> · 
+                <a href="tools/PROFIT_MARGIN_DEFENDER.html">Profit Defender</a> · 
+                <a href="thai-restaurant-menu-pricing-uk.html">Menu Pricing</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK. Commission rates based on publicly listed standard rates for independent restaurants. Your actual rate may vary.</p>
+        </div>
+    </footer>
+</body>
+</html>

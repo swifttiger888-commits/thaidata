@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Thai Restaurant Operating Costs 2026 — Food, Labour, Rent & Hidden Expenses | ThaiData</title>
+    <meta name="description" content="Real operating costs for UK Thai restaurants. Food costs, staffing (NLW 2026), rent by region, energy, insurance, delivery commissions — every line item, no fluff.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/thai-restaurant-costs-uk">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/thai-restaurant-costs-uk">
+    <meta property="og:title" content="UK Thai Restaurant Operating Costs 2026 — The Complete Breakdown">
+    <meta property="og:description" content="Real numbers for UK Thai restaurant operators. Every cost line item — food, staff, rent, energy, insurance, licensing, delivery commissions.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { color: var(--c2); font-size: 1.5rem; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+
+        .data-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow-x: auto; margin: 20px 0; }
+        .data-table { width: 100%; border-collapse: collapse; min-width: 650px; }
+        .data-table thead th { padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+        .data-table tbody td { padding: 13px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        .data-table .cost-hi { color: var(--c2); font-weight: 700; }
+        .data-table .cost-warn { color: var(--gold); font-weight: 700; }
+        .total-row td { font-weight: 700; color: white; border-top: 2px solid var(--line); font-size: 0.95rem; }
+
+        .cost-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 14px 0; }
+        .cost-card .cc-icon { font-size: 1.5rem; margin-bottom: 10px; }
+        .cost-card .cc-title { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+        .cost-card .cc-amount { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--c2); line-height: 1; margin-bottom: 4px; }
+        .cost-card .cc-desc { color: var(--ink4); font-size: 0.82rem; line-height: 1.6; }
+
+        .insight-box { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .insight-box h3 { color: var(--c2); font-size: 0.9rem; margin: 0 0 6px; }
+        .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
+            <a href="guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Guides</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">Cost Intelligence · 2026</div>
+            <h1>UK Thai Restaurant<br><em>Operating Costs</em></h1>
+            <p>Every line item in a Thai restaurant P&L. Real 2026 numbers for a typical 40-cover independent restaurant — from food costs to the hidden expenses that catch first-time operators off guard.</p>
+        </div>
+    </div>
+
+    <!-- The Big Picture -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>The <em>P&L</em> at a Glance</h2>
+            <p>Typical 40-cover Thai restaurant, £12,000/week turnover (modest for London, solid for regional). Location: Midlands city. Staff: 1 head chef, 2 kitchen assistants, 2 FOH, 1 KP (part-time).</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Cost Category</th><th>Weekly (£)</th><th>Monthly (£)</th><th>Annual (£)</th><th>% of Revenue</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Food & drink costs</strong></td><td>£3,300</td><td>£14,300</td><td>£171,600</td><td class="cost-warn">27.5%</td></tr>
+                        <tr><td><strong>Staff wages (incl. NI, pension)</strong></td><td>£4,200</td><td>£18,200</td><td>£218,400</td><td class="cost-warn">35.0%</td></tr>
+                        <tr><td><strong>Rent</strong></td><td>£1,150</td><td>£5,000</td><td>£60,000</td><td>9.6%</td></tr>
+                        <tr><td><strong>Energy (gas + electric)</strong></td><td>£460</td><td>£2,000</td><td>£24,000</td><td>3.8%</td></tr>
+                        <tr><td><strong>Business rates</strong></td><td>£230</td><td>£1,000</td><td>£12,000</td><td>1.9%</td></tr>
+                        <tr><td><strong>Insurance</strong></td><td>£115</td><td>£500</td><td>£6,000</td><td>1.0%</td></tr>
+                        <tr><td><strong>Delivery commissions</strong></td><td>£350</td><td>£1,520</td><td>£18,240</td><td>2.9%</td></tr>
+                        <tr><td><strong>Marketing</strong></td><td>£150</td><td>£650</td><td>£7,800</td><td>1.3%</td></tr>
+                        <tr><td><strong>Consumables & maintenance</strong></td><td>£200</td><td>£870</td><td>£10,440</td><td>1.7%</td></tr>
+                        <tr><td><strong>Licensing & professional fees</strong></td><td>£80</td><td>£350</td><td>£4,200</td><td>0.7%</td></tr>
+                        <tr><td><strong>Bank & card charges</strong></td><td>£100</td><td>£435</td><td>£5,220</td><td>0.8%</td></tr>
+                        <tr class="total-row"><td><strong>TOTAL COSTS</strong></td><td><strong>£10,335</strong></td><td><strong>£44,825</strong></td><td><strong>£537,900</strong></td><td><strong>86.1%</strong></td></tr>
+                        <tr style="background:rgba(16,185,129,0.05);"><td><strong>NET PROFIT (before tax)</strong></td><td class="cost-hi"><strong>£1,665</strong></td><td class="cost-hi"><strong>£7,215</strong></td><td class="cost-hi"><strong>£86,580</strong></td><td class="cost-hi"><strong>13.9%</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="source-note"><strong>How to read this:</strong> 13.9% net is solid for UK hospitality — the industry average is 8–12%. Thai restaurants can achieve this because of inherently high GP on curries and stir-fries. But this model assumes tight cost control — a 3% food cost overspend wipes out £20k of that profit.</div>
+        </div>
+    </div>
+
+    <!-- Food Costs Deep Dive -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>Food Costs</em> — The Biggest Lever</h2>
+            <p>Food cost is the single largest controllable expense. A 27.5% food cost is achievable for Thai cuisine — well below the 30–35% common in Italian or British restaurants — because Thai curries, stir-fries, and rice dishes have inherently high GP margins.</p>
+            
+            <div class="cost-card">
+                <div class="cc-icon">🥘</div>
+                <div class="cc-title">Target food cost: 27–30%</div>
+                <div class="cc-amount">£3,300/week</div>
+                <div class="cc-desc">Based on £12,000 weekly revenue. Includes all ingredients, beverages, and consumable kitchen supplies. If you're above 30%, check: are you over-portioning protein? Are you buying retail instead of wholesale? Run our <a href="tools/WHOLESALE_BENCHMARKER.html" style="color:var(--c2);">Wholesale Benchmarker</a> to compare your prices.</div>
+            </div>
+            
+            <div class="insight-box"><h3><i class="fas fa-lightbulb"></i> Where Thai restaurants leak food cost</h3><p>The top three: (1) over-portioning protein — adding 20g extra chicken per portion costs £100/week. (2) Buying coconut milk at retail (£2.50/tin) rather than wholesale (£1.35/tin) — £50/week. (3) Wastage on fresh herbs not used within 3 days — order twice weekly, not once. Tighten these three and you'll find 3–5% margin immediately.</p></div>
+        </div>
+    </div>
+
+    <!-- Staff Costs -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>Staff Costs</em> — The April 2026 Impact</h2>
+            <p>Labour is now the largest cost line for most Thai restaurants. The April 2026 NLW rise to £12.71/hr pushed staffing from ~32% to ~35% of revenue for a typical operator.</p>
+            
+            <div class="cost-card">
+                <div class="cc-icon">👥</div>
+                <div class="cc-title">Target staff cost: 32–36%</div>
+                <div class="cc-amount">£4,200/week</div>
+                <div class="cc-desc">Includes gross wages, employer NI (15% above £9,100/year), and workplace pension (3%). Does NOT include chef visa sponsorship costs — those are capital expenditure, not operating. <a href="nlw-report.html" style="color:var(--c2);">Run the NLW Calculator →</a></div>
+            </div>
+            
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead><tr><th>Role</th><th>Hours/wk</th><th>Rate</th><th>Weekly Cost</th><th>Annual Cost</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Head Chef</strong></td><td>48</td><td>£16.00/hr</td><td class="cost-hi">£768</td><td>£39,936</td></tr>
+                        <tr><td><strong>Kitchen Asst 1</strong></td><td>40</td><td>£12.71/hr</td><td>£508</td><td>£26,437</td></tr>
+                        <tr><td><strong>Kitchen Asst 2</strong></td><td>35</td><td>£12.71/hr</td><td>£445</td><td>£23,132</td></tr>
+                        <tr><td><strong>FOH Manager</strong></td><td>40</td><td>£13.50/hr</td><td>£540</td><td>£28,080</td></tr>
+                        <tr><td><strong>FOH Staff</strong></td><td>30</td><td>£12.71/hr</td><td>£381</td><td>£19,826</td></tr>
+                        <tr><td><strong>KP (part-time)</strong></td><td>20</td><td>£12.71/hr</td><td>£254</td><td>£13,218</td></tr>
+                        <tr><td><strong>NI + Pension</strong></td><td>—</td><td>—</td><td class="cost-warn">£1,304</td><td>£67,771</td></tr>
+                        <tr class="total-row"><td><strong>TOTAL</strong></td><td>213 hrs</td><td></td><td><strong>£4,200</strong></td><td><strong>£218,400</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rent -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>Rent</em> — What You Should Pay</h2>
+            <p>Rent varies more than any other cost. The rule of thumb: rent should not exceed 10% of revenue. A £12,000/week restaurant can afford £5,000/month.</p>
+            
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead><tr><th>Location Type</th><th>Monthly Rent</th><th>Sq Ft (approx)</th><th>Rate/sq ft</th><th>Notes</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>London zone 1–2</strong></td><td class="cost-warn">£6,000–£12,000</td><td>800–1,200</td><td>£75–100/yr</td><td>Premium. Only viable at £15k+/week revenue.</td></tr>
+                        <tr><td><strong>London zone 3–4</strong></td><td>£3,500–£6,000</td><td>1,000–1,500</td><td>£35–50/yr</td><td>Sweet spot for London independents.</td></tr>
+                        <tr><td><strong>Major city centre</strong></td><td>£3,000–£5,500</td><td>1,200–1,800</td><td>£25–35/yr</td><td>Manchester, Birmingham, Leeds, Bristol.</td></tr>
+                        <tr><td><strong>Large town / suburb</strong></td><td class="cost-hi">£1,800–£3,500</td><td>1,500–2,500</td><td>£12–20/yr</td><td>Best margin. More space, lower rent.</td></tr>
+                        <tr><td><strong>Small town / rural</strong></td><td class="cost-hi">£1,200–£2,500</td><td>1,500–3,000</td><td>£8–15/yr</td><td>Lowest rent but need strong reputation to pull customers.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box"><h3><i class="fas fa-handshake"></i> Negotiation tip</h3><p>Ask for a turnover rent clause — base rent + 5–8% of revenue above an agreed threshold. This protects you in slow months and rewards the landlord when you're busy. Also: always negotiate a 3–6 month rent-free period for fit-out. If the unit has been empty for 6+ months, push for 6 months.</p></div>
+        </div>
+    </div>
+
+    <!-- Hidden Costs -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>Hidden Costs</em> First-Timers Miss</h2>
+            
+            <div class="cost-card">
+                <div class="cc-icon">⚡</div>
+                <div class="cc-title">Energy — Thai cooking burns gas</div>
+                <div class="cc-amount">£24,000/year</div>
+                <div class="cc-desc">Wok cooking at high BTU consumes 30–40% more gas than standard European cooking. Budget £2,000/month for a 40-cover restaurant. Get a smart meter and monitor daily — a poorly maintained wok burner wastes £50–80/month in excess gas.</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">🛡️</div>
+                <div class="cc-title">Insurance — not optional, not cheap</div>
+                <div class="cc-amount">£6,000/year</div>
+                <div class="cc-desc">Employers' liability (mandatory, £10M cover), public liability (£5M), buildings & contents, business interruption, and — critically for Thai restaurants — <strong>deep fat frying cover</strong>. Standard policies may exclude wok cooking. Check your policy explicitly covers commercial wok operations.</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">💳</div>
+                <div class="cc-title">Card processing fees</div>
+                <div class="cc-amount">£5,220/year</div>
+                <div class="cc-desc">At 1.75% average blended rate on £300k card turnover. Negotiate your rate — independent restaurants should pay 1.2–1.8%, not 2%+. SumUp and Square are simpler but more expensive at higher volumes. Switch to a proper merchant account above £150k/year card turnover.</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">🗑️</div>
+                <div class="cc-title">Waste disposal</div>
+                <div class="cc-amount">£2,500–£4,000/year</div>
+                <div class="cc-desc">Commercial food waste collection is mandatory. Thai restaurants produce more food waste than average (fresh prep, high turnover). Factor in used cooking oil collection — most companies collect free and sometimes pay you for it. Don't pay for oil disposal.</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">🎵</div>
+                <div class="cc-title">Music licence (PPL/PRS)</div>
+                <div class="cc-amount">£400–£800/year</div>
+                <div class="cc-desc">If you play any recorded music — even a radio in the kitchen — you need both PPL and PRS licences. Fines for non-compliance start at £1,000. Not optional.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">Tools</a> · 
+                <a href="guides.html">Guides</a> · 
+                <a href="nlw-report.html">NLW Calculator</a> · 
+                <a href="thai-restaurant-menu-pricing-uk.html">Menu Pricing</a> · 
+                <a href="thai-wholesale-suppliers-uk.html">Suppliers</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK. Figures are estimates for a typical 40-cover independent Thai restaurant. Your actual costs will vary by location, size, and business model.</p>
+        </div>
+    </footer>
+</body>
+</html>
