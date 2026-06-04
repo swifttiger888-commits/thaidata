@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiData Admin</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, sans-serif; background: #0C1220; color: white; padding: 40px 20px; }
+        .wrap { max-width: 700px; margin: 0 auto; }
+        h1 { font-size: 1.5rem; margin-bottom: 24px; }
+        .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+        input, select, button { width: 100%; padding: 12px; margin: 8px 0; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: white; font-size: 0.95rem; }
+        button { background: #10B981; border: none; cursor: pointer; font-weight: 600; }
+        button:hover { background: #059669; }
+        button.danger { background: #EF4444; }
+        button.danger:hover { background: #DC2626; }
+        .claim { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .claim-info { flex: 1; }
+        .claim-name { font-weight: 600; }
+        .claim-meta { font-size: 0.8rem; color: #94A3B8; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+        .badge-pending { background: rgba(245,158,11,0.15); color: #F59E0B; }
+        .badge-approved { background: rgba(16,185,129,0.15); color: #10B981; }
+        .actions { display: flex; gap: 8px; flex-shrink: 0; }
+        .actions button { width: auto; padding: 6px 14px; font-size: 0.8rem; }
+        .toast { position: fixed; top: 20px; right: 20px; padding: 12px 20px; border-radius: 10px; font-weight: 600; z-index: 1000; }
+        .toast-success { background: #064e3b; color: #10B981; }
+        .toast-error { background: #450a0a; color: #EF4444; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>ThaiData Admin</h1>
+
+        <!-- Login -->
+        <div class="card" id="login-card">
+            <label>Admin Password</label>
+            <input type="password" id="password" placeholder="Enter admin password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- Panel (hidden until login) -->
+        <div id="panel" class="hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                <select id="status-filter" onchange="loadClaims()" style="width:auto;">
+                    <option value="pending">Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+                <button onclick="logout()" style="width:auto;background:transparent;border:1px solid rgba(255,255,255,0.2);">Logout</button>
+            </div>
+            <div id="claims-list"></div>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script>
+    let sessionToken = null;
+
+    function toast(msg, type = 'success') {
+        const el = document.createElement('div');
+        el.className = `toast toast-${type}`;
+        el.textContent = msg;
+        document.getElementById('toast-container').appendChild(el);
+        setTimeout(() => el.remove(), 3000);
+    }
+
+    async function login() {
+        const pw = document.getElementById('password').value;
+        try {
+            const res = await fetch('/api/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password: pw }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                sessionToken = data.token;
+                document.getElementById('login-card').classList.add('hidden');
+                document.getElementById('panel').classList.remove('hidden');
+                loadClaims();
+            } else {
+                toast(data.error || 'Invalid password', 'error');
+            }
+        } catch (e) {
+            toast('Network error', 'error');
+        }
+    }
+
+    function logout() {
+        sessionToken = null;
+        document.getElementById('login-card').classList.remove('hidden');
+        document.getElementById('panel').classList.add('hidden');
+    }
+
+    async function loadClaims() {
+        const status = document.getElementById('status-filter').value;
+        try {
+            const res = await fetch(`/api/admin?status=${status}`, {
+                headers: { 'Authorization': `Bearer ${sessionToken}` },
+            });
+            const data = await res.json();
+            const list = document.getElementById('claims-list');
+            if (!data.claims || data.claims.length === 0) {
+                list.innerHTML = '<p style="color:#94A3B8;">No claims found.</p>';
+                return;
+            }
+            list.innerHTML = data.claims.map(c => `
+                <div class="claim">
+                    <div class="claim-info">
+                        <div class="claim-name">${c.restaurant_name}</div>
+                        <div class="claim-meta">${c.city} · ${c.claimer_email} · ${new Date(c.created_at).toLocaleDateString()}</div>
+                        <span class="badge badge-${c.claim_status}">${c.claim_status}</span>
+                    </div>
+                    <div class="actions">
+                        ${c.claim_status === 'pending' ? `<button onclick="approveClaim(${c.id})" style="background:#10B981;">Approve</button><button onclick="rejectClaim(${c.id})" class="danger">Reject</button>` : ''}
+                        <button onclick="deleteClaim(${c.id}, '${c.restaurant_name}')" class="danger">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        } catch (e) {
+            toast('Error loading claims', 'error');
+        }
+    }
+
+    async function approveClaim(id) {
+        await actionClaim(id, 'approved');
+    }
+
+    async function rejectClaim(id) {
+        await actionClaim(id, 'rejected');
+    }
+
+    async function actionClaim(id, action) {
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${sessionToken}`,
+                },
+                body: JSON.stringify({ claim_id: id, action }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast(`Claim ${action}!`);
+                loadClaims();
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (e) {
+            toast('Network error', 'error');
+        }
+    }
+
+    async function deleteClaim(id, name) {
+        if (!confirm(`Delete claim #${id} for "${name}"? This removes the listing and all photos.`)) return;
+        try {
+            const res = await fetch(`/api/admin?claim_id=${id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${sessionToken}` },
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Deleted!');
+                loadClaims();
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (e) {
+            toast('Network error', 'error');
+        }
+    }
+    </script>
+</body>
+</html>
