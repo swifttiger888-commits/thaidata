@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th-TH">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เครื่องคำนวณ GP ร้านอาหารไทย — คำนวณกำไรขั้นต้น</title>
-    <meta name="description" content="วิธีคำนวณ GP (กำไรขั้นต้น) อาหารไทย ตัวอย่างจริง ผัดไทย แกงเขียวหวาน ต้มยำ พร้อมกับดัก VAT และ GP การส่งอาหารที่เจ้าของร้านส่วนใหญ่มองข้าม">
+    <title>เครื่องคิดเลข GP ร้านอาหารไทย — วิธีคำนวณกำไรขั้นต้น | ThaiData</title>
+    <meta name="description" content="วิธีคำนวณ GP สำหรับเมนูอาหารไทย ตัวอย่างคำนวณจริงสำหรับผัดไทย แกงเขียวหวาน ต้มยำ รวมถึงกับดัก VAT, GP เดลิเวอรี่ และการจัดการเมนู">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/thai-restaurant-gp-calculator">
-
+    
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://thaidata.uk/thai-restaurant-gp-calculator">
-    <meta property="og:title" content="เครื่องคำนวณ GP ร้านอาหารไทย — คำนวณกำไรขั้นต้นทุกจาน">
-    <meta property="og:description" content="คำนวณ GP แบบขั้นตอนพร้อมตัวอย่างอาหารไทยจริง ต้นทุนวัตถุดิบ VAT ค่าคอมมิชชั่นการส่งอาหาร — อธิบายทุกตัวเลข">
+    <meta property="og:title" content="เครื่องคิดเลข GP ร้านอาหารไทย — คำนวณกำไรขั้นต้นทุกเมนู">
+    <meta property="og:description" content="การคำนวณ GP ทีละขั้นตอนพร้อมตัวอย่างอาหารไทยจริง ต้นทุนอาหาร, VAT, ค่าคอมมิชชั่นเดลิเวอรี่ — ทุกตัวเลขอธิบายอย่างละเอียด">
     <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
     <meta property="og:locale" content="th_TH">
 
@@ -79,7 +79,7 @@
 
         @media (max-width: 768px) { .header-section h1 { font-size: 2rem; } .strategy-grid { grid-template-columns: 1fr; } }
     </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"คู่มือ","item":"https://thaidata.uk/guides"},{"@type":"ListItem","position":3,"name":"เครื่องคำนวณ GP ร้านอาหารไทย — คำนวณกำไรขั้นต้น"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"คู่มือ","item":"https://thaidata.uk/guides"},{"@type":"ListItem","position":3,"name":"เครื่องคิดเลข GP ร้านอาหารไทย — วิธีคำนวณกำไรขั้นต้น"}]}</script>
 
     <script type="application/ld+json">
 {
@@ -88,42 +88,42 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "คำนวณ GP (กำไรขั้นต้น) อาหารไทยอย่างไร?",
+            "name": "วิธีคำนวณกำไรขั้นต้น (GP) สำหรับอาหารไทยทำอย่างไร?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "GP = (ราคาขาย − ต้นทุนวัตถุดิบ) ÷ ราคาขาย × 100 ตัวอย่าง: แกงเขียวหวานราคา £12.50 ต้นทุนวัตถุดิบ £3.20 จะได้ GP = (12.50 − 3.20) ÷ 12.50 × 100 = 74.4% เป้าหมายควรอยู่ที่ 65–75% สำหรับอาหารทานที่ร้าน อย่าลืมรวมต้นทุนเครื่องตกแต่ง น้ำมัน และเครื่องปรุงในต้นทุนวัตถุดิบ — สิ่งเหล่านี้เพิ่มอีก 3–5%"
+                "text": "GP = (ราคาขาย − ต้นทุนอาหาร) ÷ ราคาขาย × 100 ตัวอย่าง: แกงเขียวหวานราคา £12.50 ต้นทุนอาหาร £3.20 ได้ GP = (12.50 − 3.20) ÷ 12.50 × 100 = 74.4% เป้าหมายของคุณควรอยู่ที่ 65–75% สำหรับอาหารทานในร้าน อย่าลืมรวมเครื่องเคียง น้ำมัน และเครื่องปรุงรสในต้นทุนอาหาร — สิ่งเหล่านี้เพิ่ม 3–5%"
             }
         },
         {
             "@type": "Question",
-            "name": "GP margin ต่างจากกำไรสุทธิอย่างไร?",
+            "name": "GP margin กับกำไรสุทธิต่างกันอย่างไร?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "กำไรขั้นต้น (Gross Profit) คือ (รายได้ − ต้นทุนวัตถุดิบ) เท่านั้น กำไรสุทธิ (Net Profit) หักค่าใช้จ่ายทั้งหมด: ค่าแรง ค่าเช่า พลังงาน ประกัน การตลาด ค่าคอมมิชชั่นการส่งอาหาร และการผ่อนชำระ เมนูที่มี GP 70% อาจให้กำไรสุทธิ 4–8% หลังหักค่าใช้จ่ายทั้งหมด ค่าเฉลี่ยกำไรสุทธิของอุตสาหกรรมร้านอาหารไทยในสหราชอาณาจักรอยู่ที่ 4.2% (UKHospitality 2024)"
+                "text": "กำไรขั้นต้นคือ (รายได้ − ต้นทุนอาหาร) เท่านั้น กำไรสุทธิหักต้นทุนทั้งหมด: ค่าแรง ค่าเช่า พลังงาน ประกันภัย การตลาด ค่าคอมมิชชั่นเดลิเวอรี่ และการชำระเงินกู้ อาหารที่มี GP 70% อาจให้กำไรสุทธิ 4–8% หลังจากหักค่าใช้จ่ายทั้งหมด อัตรากำไรสุทธิเฉลี่ยของอุตสาหกรรมร้านอาหารไทยในสหราชอาณาจักรอยู่ที่ 4.2% (UKHospitality 2024)"
             }
         },
         {
             "@type": "Question",
-            "name": "กำหนดราคาเมนูอาหารไทยใหม่อย่างไร?",
+            "name": "จะตั้งราคาอาหารไทยจานใหม่อย่างไร?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "คิดย้อนกลับ: 1) คำนวณต้นทุนวัตถุดิบรวมทั้งเครื่องตกแต่ง น้ำมัน เศษเหลือ (เพิ่มบัฟเฟอร์ 5%) 2) กำหนดเป้าหมาย GP (65–75%) 3) ราคาขาย = ต้นทุนวัตถุดิบ ÷ (1 − GP%) ตัวอย่าง: ต้นทุน £3.50 เป้าหมาย GP 70% → ราคา = 3.50 ÷ 0.30 = £11.67 (ปัดเป็น £11.95) 4) เปรียบเทียบกับคู่แข่งในพื้นที่ — ปรับ ±10%"
+                "text": "คิดย้อนกลับ: 1) คำนวณต้นทุนอาหารทั้งหมดรวมเครื่องเคียง น้ำมัน ของเสีย (บวกเผื่อ 5%) 2) ตั้งเป้าหมาย GP (65–75%) 3) ราคา = ต้นทุนอาหาร ÷ (1 − GP%) ตัวอย่าง: ต้นทุนอาหาร £3.50 เป้าหมาย GP 70% → ราคา = 3.50 ÷ 0.30 = £11.67 (ปัดเป็น £11.95) 4) ตรวจสอบเทียบกับคู่แข่งในพื้นที่ — ปรับ ±10%"
             }
         },
         {
             "@type": "Question",
-            "name": "ควรตั้งเป้าหมาย GP เท่าไรสำหรับเมนูการส่งอาหาร?",
+            "name": "ควรตั้งเป้าหมาย GP เท่าไหร่สำหรับเมนูเดลิเวอรี่?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "ควรตั้งเป้า GP 75%+ บนราคาเมนูการส่งอาหาร (ก่อนหักค่าคอมมิชชั่นแพลตฟอร์ม) เพื่อให้ได้ GP ที่แท้จริง 40%+ หลังแพลตฟอร์มหักค่าคอมมิชชั่น 14–32% ตัวอย่าง: หากแกงเขียวหวานทานที่ร้าน £12.50 (GP 70%) ราคาเมนูการส่งอาหารควรเป็น £14.95 (GP 75%) จะได้กำไรสุทธิประมาณ £3.50 หลังหักค่าคอมมิชชั่น 30%"
+                "text": "ตั้งเป้า GP 75% ขึ้นไปสำหรับราคาเมนูเดลิเวอรี่ (ก่อนหักค่าคอมมิชชั่นแพลตฟอร์ม) เพื่อให้แน่ใจว่าคุณยังได้ GP ที่มีประสิทธิภาพ 40%+ หลังจากแพลตฟอร์มหักค่าธรรมเนียม 14–32% ตัวอย่าง: ถ้าแกงเขียวหวานทานในร้าน £12.50 (GP 70%) ราคาเมนูเดลิเวอรี่ควรเป็น £14.95 (GP 75%) ได้กำไรสุทธิประมาณ £3.50 หลังจากหักค่าคอมมิชชั่น 30%"
             }
         },
         {
             "@type": "Question",
-            "name": "ทำไม GP ของฉันจึงต่ำกว่าที่คาด?",
+            "name": "ทำไม GP margin ของฉันถึงต่ำกว่าที่คาดไว้?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "สาเหตุที่พบบ่อย: 1) ไม่รวมต้นทุนเครื่องตกแต่ง น้ำมัน เนย เครื่องปรุง (เพิ่ม 3–5%) 2) ส่วนผสมเกินสัดส่วน — พ่อครัวใส่โปรตีนเกินโดยไม่ปรับราคา 3) ของเสีย — เศษที่ตัดทิ้ง วัตถุดิบเสียหาย อาหารที่ลูกค้าส่งคืน 4) อาหารพนักงานไม่ได้บันทึก 5) ราคาวัตถุดิบจากซัพพลายเออร์เพิ่มขึ้นแต่ไม่ได้ปรับราคาเมนู ติดตาม GP จริงเทียบกับ GP ทฤษฎีรายเดือน — หากช่องว่างเกิน 3% แสดงว่ามีปัญหา"
+                "text": "สาเหตุทั่วไป: 1) ไม่ได้รวมเครื่องเคียง น้ำมัน เนย เครื่องปรุงรส (เพิ่ม 3–5%) 2) ปริมาณเกิน — พ่อครัวใส่โปรตีนเพิ่มโดยไม่ปรับราคา 3) ของเสีย — เศษตัดแต่ง วัตถุดิบเสีย อาหารที่ส่งคืน 4) อาหารพนักงานที่ไม่ได้บันทึก 5) การขึ้นราคาจากซัพพลายเออร์ที่ไม่ได้สะท้อนในราคาเมนู ติดตาม GP จริงเทียบกับตามทฤษฎีทุกเดือน — ช่องว่างเกิน 3% ส่งสัญญาณว่ามีปัญหา"
             }
         }
     ]
@@ -134,89 +134,84 @@
     <div class="grain"></div>
     <nav>
         <div class="nav-bar">
-            <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a>
-            <div class="lang-switch" style="display:flex;gap:8px;font-size:0.75rem;">
-                <a href="/ar/" style="color:rgba(255,255,255,0.4);text-decoration:none;">AR</a>
-                <a href="/th/" style="color:rgba(255,255,255,0.4);text-decoration:none;">TH</a>
-                <a href="/zh/" style="color:rgba(255,255,255,0.4);text-decoration:none;">ZH</a>
-            </div>
-            <a href="/guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; คู่มือ</a>
+            <a href="index.html" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a>
+            <a href="guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; คู่มือ</a>
         </div>
     </nav>
 
     <div class="header-section">
         <div class="wrap">
-            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">ทักษะปฏิบัติ</div>
-            <h1>วิธีคำนวณ <em>GP</em><br>อาหารไทย</h1>
-            <p>สูตรที่เจ้าของร้านอาหารไทยทุกร้านต้องรู้ ตัวอย่างคำนวณจริง — ผัดไทย แกงเขียวหวาน ต้มยำ — พร้อมกับดัก VAT และ GP การส่งอาหารที่เจ้าของร้านส่วนใหญ่มองข้าม</p>
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">ทักษะการปฏิบัติ</div>
+            <h1>วิธีคำนวณ <em>GP</em><br>สำหรับอาหารไทย</h1>
+            <p>สูตรที่ผู้ประกอบการร้านอาหารไทยทุกคนต้องรู้ ตัวอย่างคำนวณจริง — ผัดไทย แกงเขียวหวาน ต้มยำ — พร้อมกับดัก VAT และ GP เดลิเวอรี่ที่หลายคนพลาด</p>
         </div>
     </div>
 
     <div class="section" style="padding-top:0;">
         <div class="wrap">
-            <h2><em>สูตร</em></h2>
+            <h2><em>สูตร</em>คำนวณ</h2>
             <div class="formula-box">
-                <div class="formula">GP% = (ราคาขาย − ต้นทุนวัตถุดิบ) ÷ ราคาขาย × 100</div>
-                <div class="formula-desc">GP เป็นราปอนด์ = ราคาขาย − ต้นทุนวัตถุดิบ</div>
+                <div class="formula">GP% = (ราคาขาย − ต้นทุนอาหาร) ÷ ราคาขาย × 100</div>
+                <div class="formula-desc">GP ในหน่วยปอนด์ = ราคาขาย − ต้นทุนอาหาร</div>
             </div>
-            <p>เท่านี้เอง แต่มีกับดักสามประการที่ทำให้เรื่องนี้ยากกว่าที่เห็น: VAT (ภาษีมูลค่าเพิ่ม) ค่าคอมมิชชั่นการส่งอาหาร และต้นทุนวัตถุดิบที่ซ่อนอยู่ มาดูตัวอย่างจริงกัน</p>
+            <p>เท่านี้เอง แต่มีกับดักสามอย่างที่ทำให้ยากกว่าที่คิด: VAT, ค่าคอมมิชชั่นเดลิเวอรี่ และต้นทุนอาหารแฝง มาดูตัวอย่างจริงกัน</p>
         </div>
     </div>
 
-    <!-- ตัวอย่างการคำนวณ -->
+    <!-- Worked Examples -->
     <div class="section">
         <div class="wrap">
-            <h2><em>ตัวอย่างที่ 1</em>: ผัดไทย (ทานที่ร้าน)</h2>
+            <h2>ตัวอย่างคำนวณ <em>1</em>: ผัดไทย (ทานในร้าน)</h2>
             <div class="calc-table-wrapper">
                 <table class="calc-table">
-                    <thead><tr><th>ขั้นตอน</th><th>การคำนวณ</th><th>จำนวน</th></tr></thead>
+                    <thead><tr><th>ขั้นตอน</th><th>การคำนวณ</th><th>จำนวนเงิน</th></tr></thead>
                     <tbody>
-                        <tr><td><strong>ราคาเมนู</strong> (รวม VAT)</td><td>จำนวนที่ลูกค้าจ่าย</td><td class="val-hi">£14.50</td></tr>
-                        <tr><td>VAT (20%)</td><td>£14.50 ÷ 1.2 = £12.08 (สุทธิ) — ดังนั้น VAT = £14.50 − £12.08</td><td class="val-lo">−£2.42</td></tr>
-                        <tr><td><strong>ราคาขายสุทธิ</strong></td><td>นี่คือรายได้ที่แท้จริงของคุณ</td><td>£12.08</td></tr>
-                        <tr><td>ต้นทุนวัตถุดิบ</td><td>เส้นจันท์ £0.40 + ไก่ £0.90 + ไข่ £0.20 + ผัก £0.30 + ซอส £0.50 + เครื่องตกแต่ง £0.50</td><td class="val-lo">−£2.80</td></tr>
+                        <tr><td><strong>ราคาเมนู</strong> (รวม VAT)</td><td>ที่ลูกค้าจ่าย</td><td class="val-hi">£14.50</td></tr>
+                        <tr><td>VAT (20%)</td><td>£14.50 ÷ 1.2 = £12.08 (สุทธิ) — ดังนั้น VAT คือ £14.50 − £12.08</td><td class="val-lo">−£2.42</td></tr>
+                        <tr><td><strong>ราคาขายสุทธิ</strong></td><td>นี่คือรายได้จริงของคุณ</td><td>£12.08</td></tr>
+                        <tr><td>ต้นทุนอาหาร</td><td>เส้นก๋วยเตี๋ยว £0.40 + ไก่ £0.90 + ไข่ £0.20 + ผัก £0.30 + ซอส £0.50 + เครื่องเคียง £0.50</td><td class="val-lo">−£2.80</td></tr>
                         <tr class="result-row"><td><strong>กำไรขั้นต้น</strong></td><td>£12.08 − £2.80</td><td class="val-hi">£9.28</td></tr>
                         <tr class="result-row"><td><strong>GP%</strong></td><td>£9.28 ÷ £12.08 × 100</td><td class="val-hi">76.8%</td></tr>
                     </tbody>
                 </table>
             </div>
-            <div class="insight-box"><h3><i class="fas fa-exclamation-triangle"></i> กับดัก VAT</h3><p>เจ้าของร้านหลายรายคำนวณ GP บนราคาเมนูรวม VAT นั่นผิด — VAT ไม่ใช่เงินของคุณ เป็นเงินของ HMRC ควรคำนวณ GP บนราคา<strong>สุทธิ</strong>เสมอ (ราคาเมนู ÷ 1.2) แกง £14.50 มีราคาสุทธิ £12.08 — คำนวณ GP บน £12.08 ไม่ใช่ £14.50 การใช้ตัวเลขรวมจะทำให้ GP ดูแย่กว่าความเป็นจริง</p></div>
+            <div class="insight-box"><h3><i class="fas fa-exclamation-triangle"></i> กับดัก VAT</h3><p>ผู้ประกอบการหลายคนคำนวณ GP จากราคาเมนูที่รวม VAT ซึ่งผิด — VAT ไม่ใช่เงินของคุณ แต่เป็นของ HMRC คำนวณ GP จากราคา<strong>สุทธิ</strong>เสมอ (ราคาเมนู ÷ 1.2) แกงราคา £14.50 มีราคาสุทธิ £12.08 — คำนวณ GP จาก £12.08 ไม่ใช่ £14.50 การใช้ราคารวม VAT จะทำให้ GP ของคุณดูแย่กว่าความเป็นจริง</p></div>
         </div>
     </div>
 
     <div class="section">
         <div class="wrap">
-            <h2><em>ตัวอย่างที่ 2</em>: ผัดไทยเหมือนกัน — บน Deliveroo</h2>
+            <h2>ตัวอย่างคำนวณ <em>2</em>: ผัดไทยจานเดียวกัน — บน Deliveroo</h2>
             <div class="calc-table-wrapper">
                 <table class="calc-table">
-                    <thead><tr><th>ขั้นตอน</th><th>การคำนวณ</th><th>จำนวน</th></tr></thead>
+                    <thead><tr><th>ขั้นตอน</th><th>การคำนวณ</th><th>จำนวนเงิน</th></tr></thead>
                     <tbody>
-                        <tr><td><strong>ราคาเมนู</strong> (รวม VAT)</td><td>ราคาส่งอาหาร — ควรสูงกว่าทานที่ร้าน 20–25%</td><td class="val-hi">£17.50</td></tr>
+                        <tr><td><strong>ราคาเมนู</strong> (รวม VAT)</td><td>ราคาเดลิเวอรี่ — ควรสูงกว่าทานในร้าน 20–25%</td><td class="val-hi">£17.50</td></tr>
                         <tr><td>VAT (20%)</td><td>£17.50 ÷ 1.2 = £14.58 สุทธิ</td><td class="val-lo">−£2.92</td></tr>
                         <tr><td><strong>ราคาขายสุทธิ</strong></td><td></td><td>£14.58</td></tr>
-                        <tr><td>ค่าคอมมิชชั่น Deliveroo (30%)</td><td>30% ของ £17.50 รวม (แพลตฟอร์มส่วนใหญ่คิดจากราคารวม)</td><td class="val-lo">−£5.25</td></tr>
-                        <tr><td>ต้นทุนวัตถุดิบ</td><td>วัตถุดิบเหมือนกัน</td><td class="val-lo">−£2.80</td></tr>
+                        <tr><td>ค่าคอมมิชชั่น Deliveroo (30%)</td><td>30% ของ £17.50 รวม VAT (แพลตฟอร์มส่วนใหญ่คิดจากราคารวม)</td><td class="val-lo">−£5.25</td></tr>
+                        <tr><td>ต้นทุนอาหาร</td><td>ส่วนผสมเดียวกัน</td><td class="val-lo">−£2.80</td></tr>
                         <tr><td>บรรจุภัณฑ์</td><td>กล่อง £0.35 + ถุง £0.10 + ตะเกียบ £0.05</td><td class="val-lo">−£0.50</td></tr>
                         <tr class="result-row"><td><strong>กำไรขั้นต้น</strong></td><td>£14.58 − £5.25 − £2.80 − £0.50</td><td class="val-lo">£6.03</td></tr>
                         <tr class="result-row"><td><strong>GP%</strong></td><td>£6.03 ÷ £14.58 × 100</td><td class="val-lo">41.4%</td></tr>
                     </tbody>
                 </table>
             </div>
-            <div class="insight-box warn"><h3><i class="fas fa-exclamation-triangle"></i> GP การส่งอาหารเท่ากับครึ่งหนึ่งของทานที่ร้าน</h3><p>เมนูเดียวกัน: <strong>GP ทานที่ร้าน 76.8% เทียบกับ GP บน Deliveroo 41.4%</strong> นั่นเป็นเหตุผลที่คุณต้องมีเมนูส่งอาหารแยกต่างหากด้วยราคาที่สูงกว่า หากใช้ราคา £14.50 (ราคาทานที่ร้าน) บน Deliveroo ผัดไทยจานนี้จะทำกำไรเพียง £3.03 — GP 20.8% ซึ่งต่ำกว่าระดับที่อยู่รอดได้ <a href="/thai-restaurant-delivery" style="color:var(--red);">ดูรายละเอียดค่าคอมมิชชั่นการส่งอาหารทั้งหมด →</a></p></div>
+            <div class="insight-box warn"><h3><i class="fas fa-exclamation-triangle"></i> GP เดลิเวอรี่เหลือครึ่งหนึ่งของ GP ทานในร้าน</h3><p>อาหารจานเดียวกัน: <strong>GP 76.8% ทานในร้าน เทียบกับ 41.4% บน Deliveroo</strong> นี่คือเหตุผลที่คุณต้องมีเมนูเดลิเวอรี่แยกต่างหากพร้อมราคาที่สูงกว่า ถ้าใช้ราคา £14.50 (ราคาทานในร้าน) บน Deliveroo ผัดไทยจานนี้จะได้กำไรเพียง £3.03 — GP แค่ 20.8% ต่ำกว่าระดับที่อยู่รอดได้ <a href="thai-restaurant-delivery-commissions-uk.html" style="color:var(--red);">ดูรายละเอียดค่าคอมมิชชั่นเดลิเวอรี่ทั้งหมด →</a></p></div>
         </div>
     </div>
 
     <div class="section">
         <div class="wrap">
-            <h2><em>ตัวอย่างที่ 3</em>: แกงเขียวหวาน (ทานที่ร้าน)</h2>
+            <h2>ตัวอย่างคำนวณ <em>3</em>: แกงเขียวหวาน (ทานในร้าน)</h2>
             <div class="calc-table-wrapper">
                 <table class="calc-table">
-                    <thead><tr><th>ขั้นตอน</th><th>การคำนวณ</th><th>จำนวน</th></tr></thead>
+                    <thead><tr><th>ขั้นตอน</th><th>การคำนวณ</th><th>จำนวนเงิน</th></tr></thead>
                     <tbody>
-                        <tr><td><strong>ราคาเมนู</strong> (รวม VAT)</td><td>ระดับกลาง ราคาตามภูมิภาค</td><td class="val-hi">£13.95</td></tr>
+                        <tr><td><strong>ราคาเมนู</strong> (รวม VAT)</td><td>ราคาระดับกลาง ตามราคาภูมิภาค</td><td class="val-hi">£13.95</td></tr>
                         <tr><td>VAT (20%)</td><td></td><td class="val-lo">−£2.33</td></tr>
                         <tr><td><strong>ราคาขายสุทธิ</strong></td><td></td><td>£11.63</td></tr>
-                        <tr><td>ต้นทุนวัตถุดิบ</td><td>กะทิ £0.65 + น่องไก่ £0.80 + พริกแกง £0.35 + ผัก £0.40 + โหระพา £0.25 + ข้าว £0.25</td><td class="val-lo">−£2.70</td></tr>
+                        <tr><td>ต้นทุนอาหาร</td><td>กะทิ £0.65 + เนื้อไก่ £0.80 + น้ำพริกแกง £0.35 + ผัก £0.40 + โหระพา £0.25 + ข้าว £0.25</td><td class="val-lo">−£2.70</td></tr>
                         <tr class="result-row"><td><strong>กำไรขั้นต้น</strong></td><td></td><td class="val-hi">£8.93</td></tr>
                         <tr class="result-row"><td><strong>GP%</strong></td><td></td><td class="val-hi">76.8%</td></tr>
                     </tbody>
@@ -227,28 +222,28 @@
 
     <div class="section">
         <div class="wrap">
-            <h2><em>เมทริกซ์การจัดการเมนู</em> (Menu Engineering)</h2>
-            <p>GP% อย่างเดียวทำให้เข้าใจผิดได้ เมนูที่มี GP% สูงแต่ไม่มีคนสั่งก็เป็นภาระ เมนูขายดีที่มี GP% ต่ำกว่าอาจเป็นรายการที่ทำกำไรมากที่สุดโดยรวม การจัดการเมนู (Menu Engineering) วางความนิยมเทียบกับความสามารถทำกำไร</p>
+            <h2>เมทริกซ์ <em>การจัดการเมนู</em></h2>
+            <p>GP% เพียงอย่างเดียวทำให้เข้าใจผิดได้ อาหารที่มี GP% สูงแต่ไม่มีใครสั่งคือภาระ อาหารขายดีที่มี GP% ต่ำอาจเป็นรายการที่ทำกำไรมากที่สุดโดยรวม การจัดการเมนูคือการวางแผนระหว่างความนิยมกับความสามารถในการทำกำไร</p>
             <div class="strategy-grid">
                 <div class="strat-card" style="border-color:var(--c2);">
                     <div class="s-icon"><i class="fas fa-star"></i></div>
-                    <div class="s-title">⭐ Stars — GP สูง ยอดขายสูง</div>
-                    <div class="s-desc">ผัดไทย แกงเขียวหวาน มัสมั่น ผลักดันเมนูเหล่านี้ จัดให้เด่นบนแอปส่งอาหาร อย่าถอดออกเด็ดขาด เมนูเหล่านี้จ่ายค่าเช่าร้านให้คุณ</div>
+                    <div class="s-title">⭐ ดาวเด่น — GP สูง, ยอดขายสูง</div>
+                    <div class="s-desc">ผัดไทย แกงเขียวหวาน มัสมั่น ผลักดันเมนูเหล่านี้ นำเสนอในแอปเดลิเวอรี่ อย่าเอาออกจากเมนูเด็ดขาด เมนูเหล่านี้คือรายได้หลักของคุณ</div>
                 </div>
                 <div class="strat-card" style="border-color:var(--gold);">
                     <div class="s-icon"><i class="fas fa-horse-head"></i></div>
-                    <div class="s-title">🐴 Plow Horses — GP ต่ำ ยอดขายสูง</div>
-                    <div class="s-desc">ขายดีแต่มาร์จิ้นต่ำ ลองปรับราคาขึ้น ลดขนาดส่วน หรือเปลี่ยนวัตถุดิบแพงเป็นตัวเลือกที่ถูกกว่า อย่าถอดออก — เมนูเหล่านี้ดึงลูกค้าเข้าร้าน</div>
+                    <div class="s-title">🐴 ม้าลาก — GP ต่ำ, ยอดขายสูง</div>
+                    <div class="s-desc">เป็นที่นิยมแต่กำไรต่ำ ลองขึ้นราคา ลดปริมาณ หรือเปลี่ยนวัตถุดิบราคาแพงเป็นถูกกว่า อย่าถอดออก — มันดึงลูกค้าเข้าร้าน</div>
                 </div>
                 <div class="strat-card">
                     <div class="s-icon"><i class="fas fa-puzzle-piece"></i></div>
-                    <div class="s-title">🧩 Puzzles — GP สูง ยอดขายต่ำ</div>
-                    <div class="s-desc">ส้มตำ ลาบ มาร์จิ้นดีแต่ลูกค้าไม่รู้จะสั่ง ย้ายเมนูเหล่านี้ไปไว้ตำแหน่งเด่นบนเมนู ฝึกพนักงาน FOH แนะนำเมนูเหล่านี้</div>
+                    <div class="s-title">🧩 ปริศนา — GP สูง, ยอดขายต่ำ</div>
+                    <div class="s-desc">ส้มตำ ลาบ กำไรดีแต่ลูกค้าไม่รู้ว่าควรสั่ง ย้ายเมนูเหล่านี้ไปตำแหน่งเด่น ฝึกพนักงานเสิร์ฟให้แนะนำ</div>
                 </div>
                 <div class="strat-card" style="border-color:var(--red);">
                     <div class="s-icon"><i class="fas fa-trash"></i></div>
-                    <div class="s-title">🐶 Dogs — GP ต่ำ ยอดขายต่ำ</div>
-                    <div class="s-desc">มาร์จิ้นต่ำ และไม่มีคนสั่ง ถอดออกจากเมนู ทุกจานบนเมนูต้องสร้างรายได้ อย่าใจอ่อน — เมนู 60 จานซ่อน Dogs ได้ เมนู 25 จานไม่มีที่ซ่อน</div>
+                    <div class="s-title">🐶 หมาวัด — GP ต่ำ, ยอดขายต่ำ</div>
+                    <div class="s-desc">กำไรต่ำและไม่มีใครสั่ง ถอดออกจากเมนู ทุกรายการในเมนูต้องคู่ควรกับที่อยู่ของมัน ต้องเด็ดขาด — เมนู 60 รายการซ่อนหมาวัดได้ เมนู 25 รายการไม่มีที่ซ่อน</div>
                 </div>
             </div>
         </div>
@@ -257,12 +252,12 @@
     <footer>
         <div class="wrap">
             <p style="margin-bottom:10px;">
-                <a href="/">เครื่องมือ</a> ·
-                <a href="/guides.html">คู่มือ</a> ·
-                <a href="/tools/PROFIT_MARGIN_DEFENDER.html">Profit Defender</a> ·
-                <a href="/thai-restaurant-menu-pricing">การตั้งราคาเมนู</a>
+                <a href="index.html">เครื่องมือ</a> · 
+                <a href="guides.html">คู่มือ</a> · 
+                <a href="tools/PROFIT_MARGIN_DEFENDER.html">ตัวป้องกันกำไร</a> · 
+                <a href="thai-restaurant-menu-pricing-uk.html">การตั้งราคาเมนู</a>
             </p>
-            <p>&copy; 2026 ThaiData UK. การคำนวณ GP ใช้ราคาสุทธิ (ไม่รวม VAT) เสมอ อัตรา VAT ถูกต้อง ณ เดือนมิถุนายน 2026</p>
+            <p>&copy; 2026 ThaiData UK. การคำนวณ GP ใช้ราคาสุทธิ (ไม่รวม VAT) เสมอ อัตรา VAT ถูกต้อง ณ มิถุนายน 2026</p>
         </div>
     </footer>
 </body>
