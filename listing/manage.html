@@ -118,6 +118,19 @@
             </div>
 
             <div class="card">
+                <h2>Photos</h2>
+                <p class="hint">Add photos of your restaurant — interior, dishes, exterior. Max 5MB each, JPEG/PNG/WebP.</p>
+                <div id="photos-preview" style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;"></div>
+                <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+                    <input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp,image/avif" multiple style="flex:1;min-width:200px;color:var(--ink4);">
+                    <button class="btn btn-secondary" id="upload-btn" onclick="uploadPhotos()" style="white-space:nowrap;">
+                        <i class="fas fa-upload"></i> Upload
+                    </button>
+                </div>
+                <div id="upload-status" style="margin-top:8px;font-size:0.82rem;color:var(--ink4);"></div>
+            </div>
+
+            <div class="card">
                 <h2>Contact <em>Details</em></h2>
                 <div class="row">
                     <div><label>Phone</label><input type="tel" id="edit-phone" placeholder="e.g. 0113 123 4567"></div>
@@ -295,6 +308,9 @@
             pill.classList.toggle('selected', features.includes(pill.dataset.feature));
         });
         updateFeaturesArray();
+
+        // Photos preview
+        renderPhotoPreviews(l.photos || []);
     }
 
     // Save listing
@@ -381,6 +397,84 @@
         } catch (err) {
             toast('Network error', 'error');
         }
+    }
+
+    // --- Photo upload ---
+    let currentPhotos = [];
+
+    function renderPhotoPreviews(photos) {
+        currentPhotos = photos || [];
+        const container = document.getElementById('photos-preview');
+        if (!container) return;
+        container.innerHTML = currentPhotos.map((url, i) => 
+            '<div style="position:relative;width:100px;height:100px;border-radius:8px;overflow:hidden;border:1px solid var(--line);flex-shrink:0;">' +
+            '<img src="' + url + '" alt="Photo ' + (i+1) + '" style="width:100%;height:100%;object-fit:cover;" loading="lazy">' +
+            '<button onclick="removePhoto(' + i + ')" style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border:none;border-radius:50%;width:22px;height:22px;cursor:pointer;font-size:12px;line-height:22px;text-align:center;">×</button>' +
+            '</div>'
+        ).join('');
+    }
+
+    function removePhoto(index) {
+        if (!authToken) { toast('Session expired', 'error'); return; }
+        currentPhotos.splice(index, 1);
+        // Save updated photos list
+        fetch('/api/listing', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + authToken,
+            },
+            body: JSON.stringify({ photos: currentPhotos }),
+        }).then(r => r.json()).then(data => {
+            if (data.success) {
+                renderPhotoPreviews(currentPhotos);
+                toast('Photo removed');
+            }
+        });
+    }
+
+    async function uploadPhotos() {
+        if (!authToken) { toast('Session expired', 'error'); return; }
+        const input = document.getElementById('photo-input');
+        const files = input.files;
+        if (!files || files.length === 0) { toast('Select photos first', 'error'); return; }
+
+        const btn = document.getElementById('upload-btn');
+        const status = document.getElementById('upload-status');
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span> Uploading...';
+        status.textContent = 'Uploading ' + files.length + ' photo(s)...';
+
+        try {
+            const formData = new FormData();
+            for (const f of files) {
+                formData.append('photos', f);
+            }
+
+            const res = await fetch('/api/upload', {
+                method: 'POST',
+                headers: { 'Authorization': 'Bearer ' + authToken },
+                body: formData,
+            });
+
+            const data = await res.json();
+            if (res.ok && data.success) {
+                currentPhotos = currentPhotos.concat(data.uploaded);
+                renderPhotoPreviews(currentPhotos);
+                status.textContent = 'Uploaded ' + data.uploaded.length + ' photo(s). Total: ' + currentPhotos.length;
+                input.value = '';
+                toast('Photos uploaded!');
+            } else {
+                status.textContent = data.error || 'Upload failed';
+                toast(data.error || 'Upload failed', 'error');
+            }
+        } catch (err) {
+            status.textContent = 'Upload failed';
+            toast('Network error', 'error');
+        }
+
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-upload"></i> Upload';
     }
 
     // Auto-load from URL token
