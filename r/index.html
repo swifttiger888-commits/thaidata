@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Thai Restaurant Directory — 1,594 Listings | ThaiData</title>
+    <meta name="description" content="Browse 1,594 Thai restaurants across 253 UK cities. Complete with FSA hygiene ratings, addresses, and maps. Claim your free listing.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/r/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thaidata.uk/r/">
+    <meta property="og:title" content="UK Thai Restaurant Directory | ThaiData">
+    <meta property="og:description" content="1,594 Thai restaurants across 253 UK cities. FSA hygiene ratings, maps, free listings.">
+    <meta property="og:locale" content="en_GB">
+    <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 720px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; position: relative; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { height: 32px; width: auto; }
+        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--ink4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .nav-links a:hover { color: white; }
+        @media(max-width:768px) { .hamburger { display: block; } .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px 20px; gap: 14px; } .nav-links.open { display: flex; } }
+        .hero { padding: 60px 0 40px; text-align: center; }
+        .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 em { font-style: italic; color: var(--c2); }
+        .hero .sub { color: var(--ink4); font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+        .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 30px 0; }
+        @media (max-width: 500px) { .stat-row { grid-template-columns: 1fr 1fr; } }
+        .stat { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; text-align: center; }
+        .stat .num { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--c2); line-height: 1.2; }
+        .stat .lbl { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; }
+        .cta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 30px 0; }
+        @media (max-width: 500px) { .cta-row { grid-template-columns: 1fr; } }
+        .cta-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 32px; text-align: center; text-decoration: none; transition: border-color 0.2s; }
+        .cta-card:hover { border-color: var(--c2); }
+        .cta-card .icon { font-size: 2rem; color: var(--c2); margin-bottom: 16px; }
+        .cta-card h2 { font-family: 'Instrument Serif', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 8px; color: white; }
+        .cta-card p { color: var(--ink4); font-size: 0.9rem; }
+        .cta-card .arrow { color: var(--c2); font-weight: 600; font-size: 0.9rem; margin-top: 12px; display: inline-block; }
+        footer { text-align: center; padding: 30px 0 50px; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.8rem; margin-top: 40px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+        footer a:hover { color: white; }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="/index.html" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/guides.html">Guides</a>
+                <a href="/claim/">Claim Listing</a>
+            </div>
+        </div>
+    </nav>
+    <div class="wrap">
+        <div class="hero">
+            <h1>UK Thai <em>Restaurant</em> Directory</h1>
+            <p class="sub">Every Thai restaurant in the UK — 1,594 listings with FSA hygiene ratings, addresses, and inspection scores.</p>
+        </div>
+        <div class="stat-row">
+            <div class="stat"><div class="num">1,594</div><div class="lbl">Restaurants</div></div>
+            <div class="stat"><div class="num">253</div><div class="lbl">Cities & Towns</div></div>
+            <div class="stat"><div class="num">56.7%</div><div class="lbl">FSA 5★ Rated</div></div>
+        </div>
+        <div class="cta-row">
+            <a href="/thai-restaurants-city-breakdown-uk.html" class="cta-card">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h2>Browse by City</h2>
+                <p>Find Thai restaurants near you. Every city broken down with ratings, types, and market data.</p>
+                <span class="arrow">Browse Cities →</span>
+            </a>
+            <a href="/claim/" class="cta-card">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+                <h2>Claim Your Listing</h2>
+                <p>Own a Thai restaurant? Add photos, menus, and opening hours. Free for all UK Thai restaurants.</p>
+                <span class="arrow">Claim Now →</span>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>Data sourced from the <a href="https://ratings.food.gov.uk" target="_blank" rel="noopener">Food Standards Agency</a>. Last updated June 2026.</p>
+        <p style="margin-top:6px;"><a href="/data-quality">Data Quality</a> · <a href="/sitemap.xml">Sitemap</a></p>
+    </footer>
+    <script>function toggleMenu(){document.querySelector('.nav-links').classList.toggle('open');}</script>
+</body>
+</html>
