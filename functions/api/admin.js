@@ -273,7 +273,7 @@ export async function onRequestPut(context) {
               const ratingMap = { '5': 'top-rated', '4': 'highly regarded', '3': 'well-established', '2': 'popular', '1': 'local' };
               const ratingWord = ratingMap[rating] || 'local';
               const stars = rating === '5' ? 'five' : rating === '4' ? 'four' : rating === '3' ? 'three' : rating === '2' ? 'two' : 'one';
-              const shortAddr = addrParts[0] || city;
+              const shortAddr = address || addrParts[0] || city;
 
               // Hygiene insight
               let hygieneInsight = '';
@@ -295,7 +295,7 @@ export async function onRequestPut(context) {
               if (seed === 0) {
                 desc = `${claim.restaurant_name} is a ${ratingWord} Thai ${typeLabel} on ${shortAddr} in ${claim.city}${ratingTail}${hygieneInsight} The menu features authentic Thai dishes crafted with traditional recipes and fresh ingredients. Whether you're stopping by for a quick lunch or a relaxed evening meal, expect the warm hospitality and bold, aromatic flavours that have made Thai cuisine a favourite across the UK.`;
               } else if (seed === 1) {
-                desc = `Located on ${shortAddr}, ${claim.restaurant_name} brings the vibrant tastes of Thailand to ${claim.city}${ratingTail}${hygieneInsight} From fragrant curries to sizzling stir-fries, every dish is prepared with care using time-honoured techniques and quality produce. The welcoming atmosphere and attentive service make it a go-to for ${typeLabel === 'takeaway' ? 'takeaway Thai food' : 'dining in'} in the area.`;
+                desc = `Located on ${shortAddr}, ${claim.restaurant_name} brings the vibrant tastes of Thailand to ${claim.city}${ratingTail}${hygieneInsight} From fragrant curries to sizzling stir-fries, every dish is prepared with care using time-honoured techniques and quality produce. The welcoming atmosphere and attentive service make it a favourite for ${typeLabel === 'takeaway' ? 'takeaway Thai food' : 'a meal out'} in the area.`;
               } else if (seed === 2) {
                 desc = `${claim.restaurant_name} serves authentic Thai cuisine from its ${typeLabel === 'takeaway' ? 'kitchen' : 'restaurant'} on ${shortAddr}, ${claim.city}${ratingTail}${hygieneInsight} Known for generous portions and consistent quality, it has built a loyal following among locals who appreciate genuine Thai cooking. The menu covers all the classics — from pad thai and green curry to som tam and tom yum — all made fresh to order.`;
               } else {
