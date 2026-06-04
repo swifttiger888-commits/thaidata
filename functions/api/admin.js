@@ -370,3 +370,62 @@ export async function onRequestPut(context) {
     });
   }
 }
+
+// DELETE /api/admin — delete a claim and its listing
+export async function onRequestDelete(context) {
+  const { request, env } = context;
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json',
+  };
+
+  try {
+    // Auth check
+    const auth = request.headers.get('Authorization');
+    if (!auth || !auth.startsWith('Bearer ')) {
+      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+        status: 401, headers: corsHeaders,
+      });
+    }
+
+    const token = auth.slice(7);
+    const session = await env.DB.prepare(
+      "SELECT id FROM admin_sessions WHERE token = ? AND expires_at > datetime('now')"
+    ).bind(token).first();
+
+    if (!session) {
+      return new Response(JSON.stringify({ error: 'Session expired or invalid' }), {
+        status: 403, headers: corsHeaders,
+      });
+    }
+
+    const url = new URL(request.url);
+    const claimId = url.searchParams.get('claim_id');
+
+    if (!claimId) {
+      return new Response(JSON.stringify({ error: 'claim_id required' }), {
+        status: 400, headers: corsHeaders,
+      });
+    }
+
+    // Delete listing if exists
+    await env.DB.prepare('DELETE FROM listings WHERE claim_id = ?').bind(claimId).run();
+    // Delete auth tokens for this listing
+    await env.DB.prepare('DELETE FROM auth_tokens WHERE listing_id NOT IN (SELECT id FROM listings)').run();
+    // Delete the claim
+    await env.DB.prepare('DELETE FROM claims WHERE id = ?').bind(claimId).run();
+
+    return new Response(JSON.stringify({
+      success: true,
+      message: `Claim ${claimId} and associated listing deleted.`,
+    }), {
+      status: 200, headers: corsHeaders,
+    });
+
+  } catch (err) {
+    console.error('Admin delete error:', err);
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500, headers: corsHeaders,
+    });
+  }
+}
