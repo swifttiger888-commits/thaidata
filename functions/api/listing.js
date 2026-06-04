@@ -375,6 +375,7 @@ export async function onRequestPost(context) {
     return new Response(JSON.stringify({
       success: true,
       message: 'Magic link sent! Check your email.',
+      magic_link: magicLink,
     }), {
       status: 200,
       headers: corsHeaders,
