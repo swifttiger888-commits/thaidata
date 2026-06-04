@@ -47,7 +47,7 @@ async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink
   }
 }
 
-const ADMIN_PASSWORD = typeof ADMIN_PASSWORD !== 'undefined' ? ADMIN_PASSWORD : null;
+// ADMIN_PASSWORD is read from env.ADMIN_PASSWORD at runtime
 
 function requireAdmin(request, env) {
   const auth = request.headers.get('Authorization');
