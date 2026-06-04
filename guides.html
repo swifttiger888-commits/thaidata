@@ -22,6 +22,7 @@
             --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --purple: #A78BFA;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { overflow-x: hidden; }
 
     img, svg, video {
       max-width: 100%;
@@ -34,12 +35,24 @@
         .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; position: relative; }
         .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
         .logo-icon { height: 36px; width: auto; display: inline-block; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: var(--c2); }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+            line-height: 1;
+        }
+        .hamburger:hover { color: var(--c2); }
 
         .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
         .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
@@ -104,11 +117,29 @@
         footer a:hover { color: white; }
 
         @media (max-width: 768px) {
+            .header-section { overflow: hidden; }
+            .header-section::before { width: 300px; height: 300px; }
             .header-section h1 { font-size: 2rem; }
             .guide-grid { grid-template-columns: 1fr; }
             .featured-card { flex-direction: column; text-align: center; }
-            .nav-links { gap: 12px; }
-            .nav-links a { font-size: 0.8rem; }
+            .hamburger { display: block; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(12, 18, 32, 0.97);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                flex-direction: column;
+                padding: 16px 32px 24px;
+                gap: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { display: block; padding: 12px 0; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .nav-links a:last-child { border-bottom: none; }
         }
     </style>
 </head>
@@ -127,6 +158,7 @@
                 <a href="thai-festivals-uk.html">Festivals</a>
                 <a href="index.html#faq">FAQ</a>
             </div>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
         </div>
     </nav>
 
@@ -410,5 +442,10 @@
             <p>&copy; 2026 ThaiData UK. Free resources for UK Thai restaurant operators.</p>
         </div>
     </footer>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
 </body>
 </html>
