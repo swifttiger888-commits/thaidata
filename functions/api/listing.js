@@ -29,28 +29,12 @@ async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink
       body: JSON.stringify({
         from: 'ThaiData UK <noreply@thaidata.uk>',
         to: [email],
-        subject: `🔑 Your magic link for ${restaurant_name}`,
-        html: `<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"></head>
-<body style="font-family: system-ui, sans-serif; max-width: 560px; margin: 0 auto; padding: 24px; color: #1a1a1a;">
-  <div style="text-align: center; margin-bottom: 24px;">
-    <h1 style="color: #10B981; margin: 0;">ThaiData UK</h1>
-    <p style="color: #6b7280;">Restaurant Directory</p>
-  </div>
-  <div style="background: #10B981; color: white; padding: 32px 24px; border-radius: 8px; text-align: center; margin-bottom: 24px;">
-    <h2 style="margin: 0 0 8px;">Manage Your Listing</h2>
-    <p style="margin: 0; opacity: 0.9;">${restaurant_name} — ${city}</p>
-  </div>
-  <p>Click the button below to edit your restaurant listing. This link is valid for <strong>1 hour</strong> and can be used once.</p>
-  <div style="text-align: center; margin: 32px 0;">
-    <a href="${magicLink}" style="background: #10B981; color: white; padding: 14px 40px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: 600; display: inline-block;">Edit My Listing →</a>
-  </div>
-  <p style="color: #6b7280; font-size: 14px;">If you didn't request this, you can safely ignore this email.</p>
-  <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0;">
-  <p style="color: #9ca3af; font-size: 12px; text-align: center;">ThaiData UK · The UK's Thai restaurant directory</p>
-</body>
-</html>`,
+        template_id: 'e76c7d46-1df9-4ae6-8676-468fac259df6',
+        variables: {
+          restaurant_name,
+          city,
+          magicLink,
+        },
       }),
     });
 
