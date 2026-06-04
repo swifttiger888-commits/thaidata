@@ -67,7 +67,9 @@
         @keyframes spin { to { transform: rotate(360deg); } }
 
         .preview-badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; background: rgba(16,185,129,0.12); color: var(--c2); margin-bottom: 12px; }
-        .changes-saved { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.15); border-radius: 8px; padding: 10px 16px; color: var(--c2); font-size: 0.85rem; margin-top: 16px; display: none; }
+        .changes-saved { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); border-radius: 12px; padding: 20px 24px; color: var(--c2); font-size: 0.95rem; margin-top: 16px; display: none; text-align: center; }
+        .changes-saved strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
+        .changes-saved a { color: var(--c2); font-weight: 600; }
 
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
         footer a { color: var(--ink4); text-decoration: none; margin: 0 10px; }
@@ -187,7 +189,7 @@
                 </div>
             </div>
 
-            <div class="changes-saved" id="saved-banner"><i class="fas fa-check-circle"></i> Changes saved!</div>
+            <div class="changes-saved" id="saved-banner"><strong><i class="fas fa-check-circle"></i> Changes Saved!</strong>Your listing has been updated.<br><a href="#" id="view-listing-link">View your public listing →</a></div>
             <button class="btn" id="save-btn" onclick="saveListing()" style="margin-top:12px;width:100%;">Save Changes</button>
         </div>
     </div>
@@ -280,6 +282,11 @@
             document.getElementById('entry-screen').style.display = 'none';
             document.getElementById('edit-screen').style.display = 'block';
             document.getElementById('edit-name').textContent = listing.restaurant_name;
+            
+            // Set view listing link
+            var viewLink = document.getElementById('view-listing-link');
+            if (viewLink) viewLink.href = '/r/' + listing.city.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/' + listing.restaurant_name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/';
+            
             toast('Listing loaded ✓');
 
         } catch (err) {
@@ -355,13 +362,18 @@
             const data = await res.json();
 
             if (res.ok) {
+                // Show prominent success banner
                 document.getElementById('saved-banner').style.display = 'block';
-                setTimeout(() => {
-                    document.getElementById('saved-banner').style.display = 'none';
-                }, 3000);
-                toast('Listing updated! ✓<br><small>Token is now used. Request a new magic link to edit again.</small>');
+                document.getElementById('save-btn').style.display = 'none';
+                // Disable all inputs
+                document.querySelectorAll('#edit-screen input, #edit-screen textarea, #edit-screen select').forEach(el => el.disabled = true);
+                document.getElementById('upload-btn') && (document.getElementById('upload-btn').style.display = 'none');
+                document.getElementById('photo-input') && (document.getElementById('photo-input').style.display = 'none');
+                toast('Listing updated! ✓<br><small>Token used. Request a new magic link to edit again.</small>');
             } else {
                 toast(data.error || 'Error saving', 'error');
+                btn.disabled = false;
+                btn.textContent = 'Save Changes';
             }
         } catch (err) {
             toast('Network error', 'error');
