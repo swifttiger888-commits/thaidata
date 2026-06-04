@@ -1035,8 +1035,8 @@
 
     <script>
         // -- Restaurant data for enrichment check --
-                const RESTAURANT_NAME = 'Korat Thai';
-                const RESTAURANT_CITY = 'London';
+                const RESTAURANT_NAME = 'My Thai';
+                const RESTAURANT_CITY = 'Leeds';
 
         // -- Check if this restaurant has a claimed listing --
         (async function enrichListing() {
@@ -1087,7 +1087,7 @@
                         hoursDiv.style.display = 'block';
                         var hoursContent = document.getElementById('claimed-hours-content');
                         if (hoursContent) {
-                            hoursContent.innerHTML = listing.opening_hours.replace(/\\n/g, '<br>');
+                            hoursContent.innerHTML = listing.opening_hours.split('\n').join('<br>');
                         }
                     }
                 }
@@ -1132,7 +1132,7 @@
 
                 // Contact details
                 var contactHtml = [];
-                if (listing.website) contactHtml.push('<div><i class="fas fa-globe" style="color:var(--green);width:20px;margin-right:8px;"></i> <a href="' + listing.website + '" target="_blank" rel="noopener" style="color:var(--green);text-decoration:none;">' + listing.website.replace(/^https?:\\/\\//, '') + '</a></div>');
+                if (listing.website) contactHtml.push('<div><i class="fas fa-globe" style="color:var(--green);width:20px;margin-right:8px;"></i> <a href="' + listing.website + '" target="_blank" rel="noopener" style="color:var(--green);text-decoration:none;">' + listing.website.replace('https://', '').replace('http://', '') + '</a></div>');
                 if (listing.phone) contactHtml.push('<div><i class="fas fa-phone" style="color:var(--green);width:20px;margin-right:8px;"></i> ' + listing.phone + '</div>');
                 if (listing.email) contactHtml.push('<div><i class="fas fa-envelope" style="color:var(--green);width:20px;margin-right:8px;"></i> <a href="mailto:' + listing.email + '" style="color:var(--green);text-decoration:none;">' + listing.email + '</a></div>');
                 if (contactHtml.length > 0) {
