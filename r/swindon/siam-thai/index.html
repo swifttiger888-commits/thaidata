@@ -918,8 +918,27 @@
                 </div>
             </div>
 
-            <!-- === CLAIMED CONTENT === -->
-                                                
+            <!-- === CLAIMED CONTENT (hidden until owner claims listing) === -->
+            <div id="claimed-description" class="card animate-in" style="display:none;">
+                <h2 class="card-title">About <em>This Restaurant</em></h2>
+                <div class="claimed-description-text" style="color:var(--ink-secondary);font-size:0.95rem;line-height:1.7;"></div>
+            </div>
+
+            <div id="claimed-photos" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Photo <em>Gallery</em></h2>
+                <div id="claimed-photos-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-top:16px;"></div>
+            </div>
+
+            <div id="claimed-hours" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Opening <em>Hours</em></h2>
+                <div id="claimed-hours-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.8;"></div>
+            </div>
+
+            <div id="claimed-amenities" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Amenities <em>&amp; Features</em></h2>
+                <div id="claimed-features-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;"></div>
+            </div>
+
         </div>
 
         <!-- ============ SIDEBAR ============ -->
@@ -931,6 +950,18 @@
                 <p>Claim your free listing to add photos, menus, opening hours, and attract more customers.</p>
                                 <a href="/claim/" class="btn">
                     Claim This Listing <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Claimed badge (shown when claimed) -->
+            <div id="claimed-badge" class="card" style="display:none;background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(10,122,111,0.04));border:1px solid rgba(16,185,129,0.2);text-align:center;">
+                <div style="font-size:2.5rem;color:var(--green);margin-bottom:8px;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 style="color:var(--green-dark);margin:0 0 4px;">Claimed &#10003;</h3>
+                <p style="color:var(--ink-secondary);font-size:0.85rem;margin:0;">This listing is managed by the restaurant owner.</p>
+                <a href="/listing/manage" id="manage-listing-link" style="display:inline-block;margin-top:12px;color:var(--green);font-size:0.85rem;text-decoration:none;">
+                    <i class="fas fa-edit"></i> Manage Listing
                 </a>
             </div>
 
@@ -957,7 +988,22 @@
                 </ul>
             </div>
 
-                        
+            <!-- === CLAIMED SIDEBAR CONTENT (hidden until claimed) === -->
+            <div id="claimed-price-range" class="card animate-in delay-4" style="display:none;">
+                <h2 class="card-title" style="font-size:1.15rem;">Price <em>Range</em></h2>
+                <div id="claimed-price-value" style="font-size:1.5rem;color:var(--ink);font-weight:600;text-align:center;padding:8px 0;"></div>
+            </div>
+
+            <div id="claimed-social" class="card animate-in delay-4" style="display:none;">
+                <h2 class="card-title" style="font-size:1.15rem;">Follow <em>Us</em></h2>
+                <div id="claimed-social-links" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;"></div>
+            </div>
+
+            <div id="claimed-contact" class="card animate-in delay-4" style="display:none;">
+                <h2 class="card-title" style="font-size:1.15rem;">Contact <em>Details</em></h2>
+                <div id="claimed-contact-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.8;"></div>
+            </div>
+
         </aside>
     </div>
 
@@ -988,6 +1034,121 @@
     </footer>
 
     <script>
+        // -- Restaurant data for enrichment check --
+                const RESTAURANT_NAME = 'Siam Thai';
+                const RESTAURANT_CITY = 'Swindon';
+
+        // -- Check if this restaurant has a claimed listing --
+        (async function enrichListing() {
+            try {
+                const res = await fetch('/api/listing?restaurant=' + encodeURIComponent(RESTAURANT_NAME) + '&city=' + encodeURIComponent(RESTAURANT_CITY));
+                if (!res.ok) return;
+                const data = await res.json();
+                if (!data.listings || data.listings.length === 0) return;
+
+                const listing = data.listings[0];
+
+                // Hide claim CTA, show claimed badge
+                var claimCard = document.querySelector('.claim-card');
+                if (claimCard) claimCard.style.display = 'none';
+                var badge = document.getElementById('claimed-badge');
+                if (badge) badge.style.display = 'block';
+
+                // --- Populate claimed content sections ---
+
+                // Description
+                if (listing.description) {
+                    var descDiv = document.getElementById('claimed-description');
+                    if (descDiv) {
+                        descDiv.style.display = 'block';
+                        var descText = descDiv.querySelector('.claimed-description-text');
+                        if (descText) descText.textContent = listing.description;
+                    }
+                }
+
+                // Photos
+                if (listing.photos && listing.photos.length > 0) {
+                    var photosDiv = document.getElementById('claimed-photos');
+                    if (photosDiv) {
+                        photosDiv.style.display = 'block';
+                        var grid = document.getElementById('claimed-photos-grid');
+                        if (grid) {
+                            grid.innerHTML = listing.photos.map(function(url) {
+                                return '<a href="' + url + '" target="_blank" rel="noopener"><img src="' + url + '" alt="Restaurant photo" style="width:100%;height:140px;object-fit:cover;border-radius:8px;border:1px solid var(--border-light);" loading="lazy"></a>';
+                            }).join('');
+                        }
+                    }
+                }
+
+                // Hours
+                if (listing.opening_hours) {
+                    var hoursDiv = document.getElementById('claimed-hours');
+                    if (hoursDiv) {
+                        hoursDiv.style.display = 'block';
+                        var hoursContent = document.getElementById('claimed-hours-content');
+                        if (hoursContent) {
+                            hoursContent.innerHTML = listing.opening_hours.replace(/\\n/g, '<br>');
+                        }
+                    }
+                }
+
+                // Amenities / Features
+                if (listing.features && listing.features.length > 0) {
+                    var amenitiesDiv = document.getElementById('claimed-amenities');
+                    if (amenitiesDiv) {
+                        amenitiesDiv.style.display = 'block';
+                        var featList = document.getElementById('claimed-features-list');
+                        if (featList) {
+                            featList.innerHTML = listing.features.map(function(f) {
+                                return '<span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(--green-light);color:var(--green-dark);border-radius:20px;font-size:0.82rem;font-weight:500;"><i class="fas fa-check" style="font-size:0.7rem;"></i> ' + f + '</span>';
+                            }).join('');
+                        }
+                    }
+                }
+
+                // Price range
+                if (listing.price_range) {
+                    var priceDiv = document.getElementById('claimed-price-range');
+                    if (priceDiv) {
+                        priceDiv.style.display = 'block';
+                        var priceVal = document.getElementById('claimed-price-value');
+                        if (priceVal) priceVal.textContent = listing.price_range;
+                    }
+                }
+
+                // Social links
+                var socialHtml = [];
+                if (listing.social_instagram) socialHtml.push('<a href="' + listing.social_instagram + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--border-light);color:var(--ink);border-radius:8px;text-decoration:none;font-size:0.85rem;"><i class="fab fa-instagram"></i> Instagram</a>');
+                if (listing.social_facebook) socialHtml.push('<a href="' + listing.social_facebook + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--border-light);color:var(--ink);border-radius:8px;text-decoration:none;font-size:0.85rem;"><i class="fab fa-facebook"></i> Facebook</a>');
+                if (listing.social_twitter) socialHtml.push('<a href="' + listing.social_twitter + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--border-light);color:var(--ink);border-radius:8px;text-decoration:none;font-size:0.85rem;"><i class="fab fa-twitter"></i> X</a>');
+                if (socialHtml.length > 0) {
+                    var socialDiv = document.getElementById('claimed-social');
+                    if (socialDiv) {
+                        socialDiv.style.display = 'block';
+                        var socialLinks = document.getElementById('claimed-social-links');
+                        if (socialLinks) socialLinks.innerHTML = socialHtml.join('');
+                    }
+                }
+
+                // Contact details
+                var contactHtml = [];
+                if (listing.website) contactHtml.push('<div><i class="fas fa-globe" style="color:var(--green);width:20px;margin-right:8px;"></i> <a href="' + listing.website + '" target="_blank" rel="noopener" style="color:var(--green);text-decoration:none;">' + listing.website.replace(/^https?:\\/\\//, '') + '</a></div>');
+                if (listing.phone) contactHtml.push('<div><i class="fas fa-phone" style="color:var(--green);width:20px;margin-right:8px;"></i> ' + listing.phone + '</div>');
+                if (listing.email) contactHtml.push('<div><i class="fas fa-envelope" style="color:var(--green);width:20px;margin-right:8px;"></i> <a href="mailto:' + listing.email + '" style="color:var(--green);text-decoration:none;">' + listing.email + '</a></div>');
+                if (contactHtml.length > 0) {
+                    var contactDiv = document.getElementById('claimed-contact');
+                    if (contactDiv) {
+                        contactDiv.style.display = 'block';
+                        var contactContent = document.getElementById('claimed-contact-content');
+                        if (contactContent) contactContent.innerHTML = contactHtml.join('');
+                    }
+                }
+
+            } catch (e) {
+                // Silently fail
+            }
+        })();
+
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('open');
         }
