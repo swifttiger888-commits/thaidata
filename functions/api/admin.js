@@ -59,9 +59,7 @@ function requireAdmin(request, env) {
   }
 
   const password = auth.slice(7);
-  // Accept env password OR temporary reset password
-  const tempPassword = 'thaidata-reset-2026';
-  if (password !== env.ADMIN_PASSWORD && password !== tempPassword) {
+  if (password !== env.ADMIN_PASSWORD) {
     return new Response(JSON.stringify({ error: 'Invalid credentials' }), {
       status: 403,
       headers: { 'Content-Type': 'application/json' },
@@ -83,7 +81,7 @@ export async function onRequestPost(context) {
     const body = await request.json();
     const { password } = body;
 
-    if (!password || (password !== env.ADMIN_PASSWORD && password !== 'thaidata-reset-2026')) {
+    if (!password || password !== env.ADMIN_PASSWORD) {
       return new Response(JSON.stringify({ error: 'Invalid password' }), {
         status: 403,
         headers: corsHeaders,
