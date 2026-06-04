@@ -254,6 +254,11 @@ export async function onRequestPut(context) {
             );
             if (fsaRes.ok) {
               const fsa = await fsaRes.json();
+              // FSA returns { Message: "No establishment found..." } for bad IDs
+              if (!fsa || fsa.Message || !fsa.BusinessName) {
+                console.log(`FSA returned no data for fsa_id ${claim.fsa_id} — skipping pre-fill`);
+                return;
+              }
               const addrParts = [fsa.AddressLine1, fsa.AddressLine2, fsa.AddressLine3].filter(Boolean);
               const address = addrParts.join(', ');
               const postcode = fsa.PostCode || '';
