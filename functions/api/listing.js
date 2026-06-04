@@ -19,6 +19,102 @@ async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink
     return;
   }
 
+  const html = `<html lang="en">
+  <head> </head>
+  <body style="margin:0;padding:0;background-color:#f5f5f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;padding:40px 0;">
+      <tr>
+        <td align="center">
+          <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
+            <tr>
+              <td style="padding:40px 40px 0;text-align:center;">
+                <img src="https://thaidata.uk/static/logo-email.png" width="200" height="80" alt="ThaiData UK" style="display:block;border:0;outline:none;">
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:32px 40px 0;">
+                <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#10B981,#059669);border-radius:12px;">
+                  <tr>
+                    <td style="padding:36px 32px;text-align:center;">
+                      <h1 style="margin:0 0 8px;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:-0.3px;">
+                        Manage Your Listing
+                      </h1>
+                      <p style="margin:0;color:rgba(255,255,255,0.85);font-size:15px;line-height:1.5;">
+                        ${restaurant_name}<br />
+                        <span style="font-size:13px;opacity:0.8;">${city}</span>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:32px 40px;">
+                <table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:10px;border:1px solid #e8e8dc;">
+                  <tr>
+                    <td style="padding:32px;">
+                      <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">
+                        You're one click away from editing your restaurant listing on ThaiData UK — the UK's
+                        fastest-growing Thai restaurant directory.
+                      </p>
+
+                      <p style="margin:0 0 24px;color:#555;font-size:14px;line-height:1.6;">What you can update:</p>
+
+                      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+                        <tr>
+                          <td style="padding:6px 0;color:#444;font-size:14px;vertical-align:top;width:24px;">✓</td>
+                          <td style="padding:6px 0;color:#444;font-size:14px;">
+                            Photos, description &amp; cuisine specialities
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding:6px 0;color:#444;font-size:14px;vertical-align:top;">✓</td>
+                          <td style="padding:6px 0;color:#444;font-size:14px;">
+                            Opening hours, website &amp; social links
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding:6px 0;color:#444;font-size:14px;vertical-align:top;">✓</td>
+                          <td style="padding:6px 0;color:#444;font-size:14px;">Contact details &amp; price range</td>
+                        </tr>
+                      </table>
+
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center">
+                            <a href="${magicLink}" style="display:inline-block;background:#10B981;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;letter-spacing:-0.2px;">Edit My Listing →</a>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <p style="margin:24px 0 0;color:#999;font-size:12px;line-height:1.5;text-align:center;">
+                        This link expires in 1 hour and can only be used once.<br />
+                        If you didn't request this, you can safely ignore this email.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:0 40px 32px;text-align:center;">
+                <p style="margin:0;color:#aaa;font-size:11px;line-height:1.6;">
+                  ThaiData UK · The UK's Thai restaurant directory<br />
+                  <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+`;
+
   try {
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -29,12 +125,8 @@ async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink
       body: JSON.stringify({
         from: 'ThaiData UK <noreply@thaidata.uk>',
         to: [email],
-        template_id: 'e76c7d46-1df9-4ae6-8676-468fac259df6',
-        variables: {
-          restaurant_name,
-          city,
-          magicLink,
-        },
+        subject: `🔑 Your magic link for ${restaurant_name}`,
+        html,
       }),
     });
 
