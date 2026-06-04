@@ -12,10 +12,16 @@ export async function onRequestDelete(context) {
   try {
     const claimId = 9;
     
+    // Get the listing ID for this claim first
+    const listing = await env.DB.prepare('SELECT id FROM listings WHERE claim_id = ?').bind(claimId).first();
+    const listingId = listing ? listing.id : null;
+    
+    // Delete auth tokens first (FK constraint)
+    if (listingId) {
+      await env.DB.prepare('DELETE FROM auth_tokens WHERE listing_id = ?').bind(listingId).run();
+    }
     // Delete listing
     await env.DB.prepare('DELETE FROM listings WHERE claim_id = ?').bind(claimId).run();
-    // Delete orphaned auth tokens
-    await env.DB.prepare('DELETE FROM auth_tokens WHERE listing_id NOT IN (SELECT id FROM listings)').run();
     // Delete claim
     await env.DB.prepare('DELETE FROM claims WHERE id = ?').bind(claimId).run();
 
