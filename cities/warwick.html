@@ -209,6 +209,13 @@
         <p>&copy; 2026 ThaiData.uk &middot; <a href="../about.html">About</a> &middot; <a href="../guides.html">Guides</a> &middot; <a href="https://www.food.gov.uk">FSA Data</a></p>
     </footer>
     <script>
+    // -- Safe DOM helper --
+    function htmlEscape(str) {
+        var d = document.createElement('div');
+        d.appendChild(document.createTextNode(str));
+        return d.innerHTML;
+    }
+
     // Load verified listings for this city
     (async () => {
         try {
@@ -217,25 +224,94 @@
             if (data.listings && data.listings.length > 0) {
                 document.getElementById('verified-listings').style.display = 'block';
                 const grid = document.getElementById('verified-grid');
-                grid.innerHTML = data.listings.map(l => `
-                    <div style="background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.12);border-radius:10px;padding:16px;">
-                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                            <span style="font-weight:700;font-size:0.95rem;">${l.restaurant_name}</span>
-                            <span style="font-size:0.68rem;padding:2px 6px;border-radius:10px;background:rgba(16,185,129,0.15);color:var(--c2);">Claimed ✓</span>
-                        </div>
-                        ${l.description ? `<p style="color:var(--ink4);font-size:0.82rem;line-height:1.5;">${l.description}</p>` : ''}
-                        <div style="margin-top:8px;font-size:0.8rem;display:flex;flex-wrap:wrap;gap:6px;">
-                            ${l.website ? `<a href="${l.website}" target="_blank" style="color:var(--c2);text-decoration:none;"><i class="fas fa-globe"></i> Website</a>` : ''}
-                            ${l.phone ? `<span style="color:var(--ink4);"><i class="fas fa-phone"></i> ${l.phone}</span>` : ''}
-                        </div>
-                        ${(l.features && l.features.length > 0) ? `<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:4px;">${l.features.map(f => `<span style="font-size:0.68rem;padding:2px 8px;border:1px solid var(--line);border-radius:10px;color:var(--ink4);">${f}</span>`).join('')}</div>` : ''}
-                    </div>
-                `).join('');
+                grid.textContent = '';
+                data.listings.forEach(function(l) {
+                    var card = document.createElement('div');
+                    card.style.cssText = 'background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.12);border-radius:10px;padding:16px;';
+
+                    var headerDiv = document.createElement('div');
+                    headerDiv.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:8px;';
+
+                    var nameSpan = document.createElement('span');
+                    nameSpan.style.cssText = 'font-weight:700;font-size:0.95rem;';
+                    nameSpan.textContent = l.restaurant_name;
+                    headerDiv.appendChild(nameSpan);
+
+                    var badgeSpan = document.createElement('span');
+                    badgeSpan.style.cssText = 'font-size:0.68rem;padding:2px 6px;border-radius:10px;background:rgba(16,185,129,0.15);color:var(--c2);';
+                    badgeSpan.textContent = 'Claimed \u2713';
+                    headerDiv.appendChild(badgeSpan);
+
+                    card.appendChild(headerDiv);
+
+                    if (l.description) {
+                        var descP = document.createElement('p');
+                        descP.style.cssText = 'color:var(--ink4);font-size:0.82rem;line-height:1.5;';
+                        descP.textContent = l.description;
+                        card.appendChild(descP);
+                    }
+
+                    var linksDiv = document.createElement('div');
+                    linksDiv.style.cssText = 'margin-top:8px;font-size:0.8rem;display:flex;flex-wrap:wrap;gap:6px;';
+
+                    if (l.website) {
+                        var webA = document.createElement('a');
+                        webA.href = l.website;
+                        webA.target = '_blank';
+                        webA.style.cssText = 'color:var(--c2);text-decoration:none;';
+                        webA.innerHTML = '<i class="fas fa-globe"></i> Website';
+                        linksDiv.appendChild(webA);
+                    }
+                    if (l.phone) {
+                        var phoneSpan = document.createElement('span');
+                        phoneSpan.style.cssText = 'color:var(--ink4);';
+                        phoneSpan.innerHTML = '<i class="fas fa-phone"></i> ' + htmlEscape(l.phone);
+                        linksDiv.appendChild(phoneSpan);
+                    }
+                    card.appendChild(linksDiv);
+
+                    if (l.features && l.features.length > 0) {
+                        var featDiv = document.createElement('div');
+                        featDiv.style.cssText = 'margin-top:8px;display:flex;flex-wrap:wrap;gap:4px;';
+                        l.features.forEach(function(f) {
+                            var fspan = document.createElement('span');
+                            fspan.style.cssText = 'font-size:0.68rem;padding:2px 8px;border:1px solid var(--line);border-radius:10px;color:var(--ink4);';
+                            fspan.textContent = f;
+                            featDiv.appendChild(fspan);
+                        });
+                        card.appendChild(featDiv);
+                    }
+
+                    grid.appendChild(card);
+                });
             }
+
+            // -- Load claimed restaurant names for badge injection --
+            var claimedRes = await fetch('/api/claimed?city=Warwick');
+            var claimedData = await claimedRes.json();
+            if (claimedData.claimed && claimedData.claimed.length > 0) {
+                var claimedNames = {};
+                claimedData.claimed.forEach(function(c) { claimedNames[c.name.toLowerCase()] = true; });
+
+                // Find restaurant links in the Browse Restaurants section and add badges
+                var links = document.querySelectorAll('a[href*="/r/' + 'Warwick'.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/"]');
+                links.forEach(function(link) {
+                    var nameSpan = link.querySelector('span');
+                    if (nameSpan && claimedNames[nameSpan.textContent.trim().toLowerCase()]) {
+                        var badge = document.createElement('span');
+                        badge.style.cssText = 'font-size:0.62rem;padding:1px 6px;border-radius:8px;background:rgba(16,185,129,0.2);color:#10B981;margin-left:6px;font-weight:600;white-space:nowrap;';
+                        badge.textContent = 'Claimed \u2713';
+                        nameSpan.appendChild(badge);
+                    }
+                });
+            }
+
         } catch (e) {
-            // Silently fail
+            console.error('City page error:', e.message);
         }
     })();
     </script>
+
+
 </body>
 </html>
