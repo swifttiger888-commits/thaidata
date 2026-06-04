@@ -1,12 +1,76 @@
 // ThaiData UK — /api/listing
 // Get and update enhanced restaurant listings
 
+// --- Crypto helper ---
+async function sha256(text) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hash))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+// --- Resend email sender ---
+async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink }) {
+  const apiKey = env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error('Missing RESEND_API_KEY — cannot send magic link email');
+    return;
+  }
+
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'ThaiData UK <noreply@thaidata.uk>',
+        to: [email],
+        subject: `🔑 Your magic link for ${restaurant_name}`,
+        html: `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="font-family: system-ui, sans-serif; max-width: 560px; margin: 0 auto; padding: 24px; color: #1a1a1a;">
+  <div style="text-align: center; margin-bottom: 24px;">
+    <h1 style="color: #10B981; margin: 0;">ThaiData UK</h1>
+    <p style="color: #6b7280;">Restaurant Directory</p>
+  </div>
+  <div style="background: #10B981; color: white; padding: 32px 24px; border-radius: 8px; text-align: center; margin-bottom: 24px;">
+    <h2 style="margin: 0 0 8px;">Manage Your Listing</h2>
+    <p style="margin: 0; opacity: 0.9;">${restaurant_name} — ${city}</p>
+  </div>
+  <p>Click the button below to edit your restaurant listing. This link is valid for <strong>1 hour</strong> and can be used once.</p>
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="${magicLink}" style="background: #10B981; color: white; padding: 14px 40px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: 600; display: inline-block;">Edit My Listing →</a>
+  </div>
+  <p style="color: #6b7280; font-size: 14px;">If you didn't request this, you can safely ignore this email.</p>
+  <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0;">
+  <p style="color: #9ca3af; font-size: 12px; text-align: center;">ThaiData UK · The UK's Thai restaurant directory</p>
+</body>
+</html>`,
+      }),
+    });
+
+    if (!res.ok) {
+      const errBody = await res.text();
+      console.error(`Resend API error ${res.status}: ${errBody}`);
+    } else {
+      console.log(`Magic link email sent to ${email} for ${restaurant_name}`);
+    }
+  } catch (err) {
+    console.error('Resend send failed:', err.message);
+  }
+}
+
 // GET /api/listing — get enhanced listing(s)
 // Supports:
 //   ?restaurant=X&city=Y  — specific listing
 //   ?fsa_id=X             — by FSA ID
 //   ?city=X               — all listings in a city
-//   Authorization: Bearer <token>  — get listing by auth token (owner view)
+//   Authorization: Bearer ***  — get listing by auth token (owner view)
 export async function onRequestGet(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -20,7 +84,8 @@ export async function onRequestGet(context) {
 
     // Token-based auth: return listing for the authenticated owner
     if (auth && auth.startsWith('Bearer ')) {
-      const tokenHash = auth.slice(7);
+      const rawToken = auth.slice(7);
+      const tokenHash = await sha256(rawToken);
       const tokenRecord = await env.DB.prepare(
         "SELECT listing_id FROM auth_tokens WHERE token_hash = ? AND expires_at > datetime('now') AND used = 0"
       ).bind(tokenHash).first();
@@ -114,7 +179,8 @@ export async function onRequestPut(context) {
       });
     }
 
-    const tokenHash = auth.slice(7);
+    const rawToken = auth.slice(7);
+    const tokenHash = await sha256(rawToken);
     const tokenRecord = await env.DB.prepare(
       "SELECT listing_id, expires_at, used FROM auth_tokens WHERE token_hash = ? AND expires_at > datetime('now') AND used = 0"
     ).bind(tokenHash).first();
@@ -185,7 +251,7 @@ export async function onRequestPut(context) {
   }
 }
 
-// POST /api/listing/request-link — request a magic link to edit listing
+// POST /api/listing — request a magic link to edit listing
 export async function onRequestPost(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -216,24 +282,27 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Generate token
+    // Generate token — raw for magic link, SHA-256 hash for DB storage
     const token = crypto.randomUUID();
-    const tokenHash = token; // In production, hash this. For now, use directly.
+    const tokenHash = await sha256(token);
     const expiresAt = new Date(Date.now() + 60 * 60 * 1000).toISOString(); // 1 hour
 
     await env.DB.prepare(
       'INSERT INTO auth_tokens (listing_id, token_hash, expires_at) VALUES (?, ?, ?)'
     ).bind(claim.listing_id, tokenHash, expiresAt).run();
 
-    // In production: send email via MailChannels or similar
-    // For now, return the link in the response
-    const magicLink = `https://thaidata.uk/listing/manage?token=${tokenHash}`;
+    // Send magic link email via Resend (fire-and-forget)
+    const magicLink = `https://thaidata.uk/listing/manage?token=${token}`;
+    context.waitUntil(sendMagicLinkEmail(env, {
+      email: claim.claimer_email,
+      restaurant_name,
+      city,
+      magicLink,
+    }));
 
     return new Response(JSON.stringify({
       success: true,
-      message: 'Magic link generated. Check your email (or use the link below in development).',
-      magic_link: magicLink,
-      expires: expiresAt,
+      message: 'Magic link sent! Check your email.',
     }), {
       status: 200,
       headers: corsHeaders,
