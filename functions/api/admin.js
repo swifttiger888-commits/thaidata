@@ -244,6 +244,34 @@ export async function onRequestPut(context) {
         listingId = result.meta.last_row_id;
       }
 
+      // Pre-fill with FSA data (address, postcode, description) for SEO/AEO
+      if (claim.fsa_id) {
+        context.waitUntil((async () => {
+          try {
+            const fsaRes = await fetch(
+              `https://api.ratings.food.gov.uk/Establishments/${claim.fsa_id}`,
+              { headers: { 'x-api-version': '2', 'Accept': 'application/json' } }
+            );
+            if (fsaRes.ok) {
+              const fsa = await fsaRes.json();
+              const addrParts = [fsa.AddressLine1, fsa.AddressLine2, fsa.AddressLine3].filter(Boolean);
+              const address = addrParts.join(', ');
+              const postcode = fsa.PostCode || '';
+              const rating = fsa.RatingValue || '';
+              const isTakeaway = (fsa.BusinessType || '').toLowerCase().includes('takeaway');
+              const typeLabel = isTakeaway ? 'takeaway' : 'restaurant';
+              const desc = `${claim.restaurant_name} is a ${rating}-star rated Thai ${typeLabel} in ${claim.city}. The owner can customise this description with their story, cuisine specialities, and what makes ${claim.restaurant_name} special.`;
+
+              await env.DB.prepare(
+                `UPDATE listings SET address = ?, postcode = ?, description = ?, updated_at = datetime('now') WHERE id = ?`
+              ).bind(address, postcode, desc, listingId).run();
+            }
+          } catch (e) {
+            console.error(`FSA pre-fill error for listing ${listingId}: ${e.message}`);
+          }
+        })());
+      }
+
       // Update claim status
       await env.DB.prepare(
         "UPDATE claims SET claim_status = 'approved', reviewed_at = datetime('now'), admin_notes = ? WHERE id = ?"
