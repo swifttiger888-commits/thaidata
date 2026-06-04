@@ -1935,11 +1935,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/chains/cha-cha-chai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/chains/chai-green/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1956,11 +1951,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/chains/i-chai-express/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/chains/itsu/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2056,11 +2046,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/chains/thaikhun/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/chains/wagamama/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
