@@ -265,7 +265,45 @@ export async function onRequestPut(context) {
               const rating = fsa.RatingValue || '';
               const isTakeaway = (fsa.BusinessType || '').toLowerCase().includes('takeaway');
               const typeLabel = isTakeaway ? 'takeaway' : 'restaurant';
-              const desc = `${claim.restaurant_name} is a ${rating}-star rated Thai ${typeLabel} in ${claim.city}. The owner can customise this description with their story, cuisine specialities, and what makes ${claim.restaurant_name} special.`;
+              const hygieneScore = fsa.scores ? fsa.scores.Hygiene : null;
+              const structuralScore = fsa.scores ? fsa.scores.Structural : null;
+              const managementScore = fsa.scores ? fsa.scores.ConfidenceInManagement : null;
+
+              // --- Generate rich, varied description ---
+              const ratingMap = { '5': 'top-rated', '4': 'highly regarded', '3': 'well-established', '2': 'popular', '1': 'local' };
+              const ratingWord = ratingMap[rating] || 'local';
+              const stars = rating === '5' ? 'five' : rating === '4' ? 'four' : rating === '3' ? 'three' : rating === '2' ? 'two' : 'one';
+              const shortAddr = addrParts[0] || city;
+
+              // Hygiene insight
+              let hygieneInsight = '';
+              if (hygieneScore !== null && hygieneScore !== undefined) {
+                if (hygieneScore <= 5) hygieneInsight = ` Backed by an excellent FSA hygiene score of ${hygieneScore}/25 (lower is better), diners can eat with confidence.`;
+                else if (hygieneScore <= 10) hygieneInsight = ` With a strong FSA hygiene score of ${hygieneScore}/25, cleanliness is clearly a priority here.`;
+                else if (hygieneScore <= 15) hygieneInsight = ` Holding a satisfactory FSA hygiene score of ${hygieneScore}/25.`;
+              }
+
+              // Rating tail
+              let ratingTail = '';
+              if (rating === '5') ratingTail = ` — earning a perfect ${stars}-star food hygiene rating from the Food Standards Agency.`;
+              else if (rating === '4') ratingTail = ` — holding a strong ${stars}-star food hygiene rating.`;
+              else if (rating >= '1') ratingTail = ` — rated ${stars}-star by the Food Standards Agency.`;
+
+              // Multiple templates for variety (seeded by restaurant name + city)
+              const seed = (claim.restaurant_name.length + claim.city.length) % 4;
+              let desc;
+              if (seed === 0) {
+                desc = `${claim.restaurant_name} is a ${ratingWord} Thai ${typeLabel} on ${shortAddr} in ${claim.city}${ratingTail}${hygieneInsight} The menu features authentic Thai dishes crafted with traditional recipes and fresh ingredients. Whether you're stopping by for a quick lunch or a relaxed evening meal, expect the warm hospitality and bold, aromatic flavours that have made Thai cuisine a favourite across the UK.`;
+              } else if (seed === 1) {
+                desc = `Located on ${shortAddr}, ${claim.restaurant_name} brings the vibrant tastes of Thailand to ${claim.city}${ratingTail}${hygieneInsight} From fragrant curries to sizzling stir-fries, every dish is prepared with care using time-honoured techniques and quality produce. The welcoming atmosphere and attentive service make it a go-to for ${typeLabel === 'takeaway' ? 'takeaway Thai food' : 'dining in'} in the area.`;
+              } else if (seed === 2) {
+                desc = `${claim.restaurant_name} serves authentic Thai cuisine from its ${typeLabel === 'takeaway' ? 'kitchen' : 'restaurant'} on ${shortAddr}, ${claim.city}${ratingTail}${hygieneInsight} Known for generous portions and consistent quality, it has built a loyal following among locals who appreciate genuine Thai cooking. The menu covers all the classics — from pad thai and green curry to som tam and tom yum — all made fresh to order.`;
+              } else {
+                desc = `For authentic Thai food in ${claim.city}, ${claim.restaurant_name} on ${shortAddr} delivers${ratingTail}${hygieneInsight} The kitchen takes pride in sourcing quality ingredients and staying true to traditional recipes passed down through generations. Expect balanced flavours, fresh herbs, and the perfect blend of sweet, sour, salty, and spicy that defines great Thai cooking.`;
+              }
+
+              // Append customisation hint
+              desc += ` [The owner can edit this description to add their story, signature dishes, and what makes ${claim.restaurant_name} unique.]`;
 
               await env.DB.prepare(
                 `UPDATE listings SET address = ?, postcode = ?, description = ?, updated_at = datetime('now') WHERE id = ?`
