@@ -1,8 +1,20 @@
+# ThaiData UK — Security Headers & Cache Rules
+
+# Static files: security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# API data files
 /api/v1/*
   Access-Control-Allow-Origin: *
   Content-Type: application/json
   Cache-Control: public, max-age=3600
 
+# Feed
 /feed.json
   Link: <https://pubsubhubbub.appspot.com/>; rel="hub"
   Link: <https://thaidata.uk/feed.json>; rel="self"

@@ -70,6 +70,7 @@ function requireAdmin(request, env) {
 }
 
 // POST /api/admin/login — simple password auth, returns session token
+// Rate-limited: 5 attempts per 15 minutes per IP
 export async function onRequestPost(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -77,16 +78,60 @@ export async function onRequestPost(context) {
     'Content-Type': 'application/json',
   };
 
+  // Get real client IP (Cloudflare provides this header)
+  const clientIp = request.headers.get('CF-Connecting-IP') || 'unknown';
+
+  // Ensure rate limit table exists
+  await env.DB.prepare(
+    `CREATE TABLE IF NOT EXISTS login_attempts (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      ip TEXT NOT NULL,
+      attempted_at TEXT NOT NULL DEFAULT (datetime('now'))
+    )`
+  ).run();
+
+  // Clean old entries (older than 15 minutes)
+  await env.DB.prepare(
+    "DELETE FROM login_attempts WHERE attempted_at < datetime('now', '-15 minutes')"
+  ).run();
+
+  // Count recent attempts from this IP
+  const recentAttempts = await env.DB.prepare(
+    "SELECT COUNT(*) as count FROM login_attempts WHERE ip = ? AND attempted_at > datetime('now', '-15 minutes')"
+  ).bind(clientIp).first();
+
+  const attemptCount = recentAttempts ? recentAttempts.count : 0;
+
+  // Rate limit: 5 attempts per 15 minutes
+  if (attemptCount >= 5) {
+    return new Response(JSON.stringify({
+      error: 'Too many login attempts. Please wait 15 minutes before trying again.',
+    }), {
+      status: 429,
+      headers: corsHeaders,
+    });
+  }
+
   try {
     const body = await request.json();
     const { password } = body;
 
     if (!password || password !== env.ADMIN_PASSWORD) {
+      // Record failed attempt
+      await env.DB.prepare(
+        'INSERT INTO login_attempts (ip) VALUES (?)'
+      ).bind(clientIp).run();
+
       return new Response(JSON.stringify({ error: 'Invalid password' }), {
         status: 403,
         headers: corsHeaders,
       });
     }
+
+    // Successful login — clear previous attempts for this IP
+    await env.DB.prepare(
+      'DELETE FROM login_attempts WHERE ip = ?'
+    ).bind(clientIp).run();
 
     // Create session token
     const token = crypto.randomUUID();

@@ -61,12 +61,19 @@
     <script>
     let sessionToken = null;
 
-    function toast(msg, type = 'success') {
+    function htmlEscape(str) {
+        var d = document.createElement('div');
+        d.appendChild(document.createTextNode(str));
+        return d.innerHTML;
+    }
+
+    function toast(msg, type) {
+        if (type === undefined) type = 'success';
         const el = document.createElement('div');
-        el.className = `toast toast-${type}`;
+        el.className = 'toast toast-' + type;
         el.textContent = msg;
         document.getElementById('toast-container').appendChild(el);
-        setTimeout(() => el.remove(), 3000);
+        setTimeout(function() { el.remove(); }, 3000);
     }
 
     async function login() {
@@ -100,28 +107,84 @@
     async function loadClaims() {
         const status = document.getElementById('status-filter').value;
         try {
-            const res = await fetch(`/api/admin?status=${status}`, {
-                headers: { 'Authorization': `Bearer ${sessionToken}` },
+            const res = await fetch('/api/admin?status=' + encodeURIComponent(status), {
+                headers: { 'Authorization': 'Bearer ' + sessionToken },
             });
             const data = await res.json();
             const list = document.getElementById('claims-list');
+            list.textContent = '';
+
             if (!data.claims || data.claims.length === 0) {
-                list.innerHTML = '<p style="color:#94A3B8;">No claims found.</p>';
+                var emptyMsg = document.createElement('p');
+                emptyMsg.style.color = '#94A3B8';
+                emptyMsg.textContent = 'No claims found.';
+                list.appendChild(emptyMsg);
                 return;
             }
-            list.innerHTML = data.claims.map(c => `
-                <div class="claim">
-                    <div class="claim-info">
-                        <div class="claim-name">${c.restaurant_name}</div>
-                        <div class="claim-meta">${c.city} · ${c.claimer_email} · ${new Date(c.created_at).toLocaleDateString()}</div>
-                        <span class="badge badge-${c.claim_status}">${c.claim_status}</span>
-                    </div>
-                    <div class="actions">
-                        ${c.claim_status === 'pending' ? `<button onclick="approveClaim(${c.id})" style="background:#10B981;">Approve</button><button onclick="rejectClaim(${c.id})" class="danger">Reject</button>` : ''}
-                        <button onclick="deleteClaim(${c.id}, '${c.restaurant_name}')" class="danger">Delete</button>
-                    </div>
-                </div>
-            `).join('');
+
+            for (var ci = 0; ci < data.claims.length; ci++) {
+                var c = data.claims[ci];
+                var claimRow = document.createElement('div');
+                claimRow.className = 'claim';
+
+                var infoDiv = document.createElement('div');
+                infoDiv.className = 'claim-info';
+
+                var nameDiv = document.createElement('div');
+                nameDiv.className = 'claim-name';
+                nameDiv.textContent = c.restaurant_name;
+                infoDiv.appendChild(nameDiv);
+
+                var metaDiv = document.createElement('div');
+                metaDiv.className = 'claim-meta';
+                var dateStr = c.created_at ? new Date(c.created_at).toLocaleDateString() : '';
+                metaDiv.textContent = c.city + ' \u00b7 ' + c.claimer_email + ' \u00b7 ' + dateStr;
+                infoDiv.appendChild(metaDiv);
+
+                var badgeSpan = document.createElement('span');
+                badgeSpan.className = 'badge badge-' + c.claim_status;
+                badgeSpan.textContent = c.claim_status;
+                infoDiv.appendChild(badgeSpan);
+
+                claimRow.appendChild(infoDiv);
+
+                var actionsDiv = document.createElement('div');
+                actionsDiv.className = 'actions';
+
+                if (c.claim_status === 'pending') {
+                    var approveBtn = document.createElement('button');
+                    approveBtn.style.background = '#10B981';
+                    approveBtn.textContent = 'Approve';
+                    approveBtn.addEventListener('click', (function(id) {
+                        return function() { approveClaim(id); };
+                    })(c.id));
+                    actionsDiv.appendChild(approveBtn);
+
+                    var rejectBtn = document.createElement('button');
+                    rejectBtn.className = 'danger';
+                    rejectBtn.textContent = 'Reject';
+                    rejectBtn.addEventListener('click', (function(id) {
+                        return function() { rejectClaim(id); };
+                    })(c.id));
+                    actionsDiv.appendChild(rejectBtn);
+                }
+
+                var deleteBtn = document.createElement('button');
+                deleteBtn.className = 'danger';
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.setAttribute('data-claim-id', c.id);
+                deleteBtn.setAttribute('data-name', c.restaurant_name);
+                deleteBtn.addEventListener('click', function(e) {
+                    var btn = e.currentTarget;
+                    var id = parseInt(btn.getAttribute('data-claim-id'));
+                    var name = btn.getAttribute('data-name');
+                    deleteClaim(id, name);
+                });
+                actionsDiv.appendChild(deleteBtn);
+
+                claimRow.appendChild(actionsDiv);
+                list.appendChild(claimRow);
+            }
         } catch (e) {
             toast('Error loading claims', 'error');
         }
@@ -141,13 +204,13 @@
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${sessionToken}`,
+                    'Authorization': 'Bearer ' + sessionToken,
                 },
-                body: JSON.stringify({ claim_id: id, action }),
+                body: JSON.stringify({ claim_id: id, action: action }),
             });
             const data = await res.json();
             if (res.ok) {
-                toast(`Claim ${action}!`);
+                toast('Claim ' + action + '!');
                 loadClaims();
             } else {
                 toast(data.error || 'Error', 'error');
@@ -158,11 +221,11 @@
     }
 
     async function deleteClaim(id, name) {
-        if (!confirm(`Delete claim #${id} for "${name}"? This removes the listing and all photos.`)) return;
+        if (!confirm('Delete claim #' + id + ' for "' + name + '"? This removes the listing and all photos.')) return;
         try {
-            const res = await fetch(`/api/admin?claim_id=${id}`, {
+            const res = await fetch('/api/admin?claim_id=' + id, {
                 method: 'DELETE',
-                headers: { 'Authorization': `Bearer ${sessionToken}` },
+                headers: { 'Authorization': 'Bearer ' + sessionToken },
             });
             const data = await res.json();
             if (res.ok) {

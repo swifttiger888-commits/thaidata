@@ -1034,9 +1034,33 @@
     </footer>
 
     <script>
-        // -- Restaurant data for enrichment check --
+                        // -- Restaurant data for enrichment check --
                 const RESTAURANT_NAME = 'Thai Bowl';
                 const RESTAURANT_CITY = 'Bassetlaw';
+
+        // -- Safe DOM helpers --
+        function htmlEscape(str) {
+            var d = document.createElement('div');
+            d.appendChild(document.createTextNode(str));
+            return d.innerHTML;
+        }
+
+        function createLink(href, label, iconClass, extraStyle) {
+            var a = document.createElement('a');
+            a.href = href || '#';
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.style.cssText = extraStyle || 'display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--border-light);color:var(--ink);border-radius:8px;text-decoration:none;font-size:0.85rem;';
+            if (iconClass) {
+                var i = document.createElement('i');
+                i.className = iconClass;
+                a.appendChild(i);
+                a.appendChild(document.createTextNode(' ' + label));
+            } else {
+                a.textContent = label;
+            }
+            return a;
+        }
 
         // -- Check if this restaurant has a claimed listing --
         (function enrichListing() {
@@ -1075,9 +1099,20 @@
                         photosDiv.style.display = 'block';
                         var grid = document.getElementById('claimed-photos-grid');
                         if (grid) {
-                            grid.innerHTML = listing.photos.map(function(url) {
-                                return '<a href="' + url + '" target="_blank" rel="noopener"><img src="' + url + '" alt="Restaurant photo" style="width:100%;height:140px;object-fit:cover;border-radius:8px;border:1px solid var(--border-light);" loading="lazy"></a>';
-                            }).join('');
+                            grid.textContent = '';
+                            listing.photos.forEach(function(url) {
+                                var a = document.createElement('a');
+                                a.href = htmlEscape(url);
+                                a.target = '_blank';
+                                a.rel = 'noopener';
+                                var img = document.createElement('img');
+                                img.src = htmlEscape(url);
+                                img.alt = 'Restaurant photo';
+                                img.style.cssText = 'width:100%;height:140px;object-fit:cover;border-radius:8px;border:1px solid var(--border-light);';
+                                img.loading = 'lazy';
+                                a.appendChild(img);
+                                grid.appendChild(a);
+                            });
                         }
                     }
                 }
@@ -1089,7 +1124,12 @@
                         hoursDiv.style.display = 'block';
                         var hoursContent = document.getElementById('claimed-hours-content');
                         if (hoursContent) {
-                            hoursContent.innerHTML = listing.opening_hours.split('\n').join('<br>');
+                            hoursContent.textContent = '';
+                            var lines = listing.opening_hours.split('\n');
+                            for (var hi = 0; hi < lines.length; hi++) {
+                                if (hi > 0) hoursContent.appendChild(document.createElement('br'));
+                                hoursContent.appendChild(document.createTextNode(lines[hi]));
+                            }
                         }
                     }
                 }
@@ -1101,9 +1141,17 @@
                         amenitiesDiv.style.display = 'block';
                         var featList = document.getElementById('claimed-features-list');
                         if (featList) {
-                            featList.innerHTML = listing.features.map(function(f) {
-                                return '<span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(--green-light);color:var(--green-dark);border-radius:20px;font-size:0.82rem;font-weight:500;"><i class="fas fa-check" style="font-size:0.7rem;"></i> ' + f + '</span>';
-                            }).join('');
+                            featList.textContent = '';
+                            listing.features.forEach(function(f) {
+                                var span = document.createElement('span');
+                                span.style.cssText = 'display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:var(--green-light);color:var(--green-dark);border-radius:20px;font-size:0.82rem;font-weight:500;';
+                                var i = document.createElement('i');
+                                i.className = 'fas fa-check';
+                                i.style.cssText = 'font-size:0.7rem;';
+                                span.appendChild(i);
+                                span.appendChild(document.createTextNode(' ' + f));
+                                featList.appendChild(span);
+                            });
                         }
                     }
                 }
@@ -1119,31 +1167,78 @@
                 }
 
                 // Social links
-                var socialHtml = [];
-                if (listing.social_instagram) socialHtml.push('<a href="' + listing.social_instagram + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--border-light);color:var(--ink);border-radius:8px;text-decoration:none;font-size:0.85rem;"><i class="fab fa-instagram"></i> Instagram</a>');
-                if (listing.social_facebook) socialHtml.push('<a href="' + listing.social_facebook + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--border-light);color:var(--ink);border-radius:8px;text-decoration:none;font-size:0.85rem;"><i class="fab fa-facebook"></i> Facebook</a>');
-                if (listing.social_twitter) socialHtml.push('<a href="' + listing.social_twitter + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--border-light);color:var(--ink);border-radius:8px;text-decoration:none;font-size:0.85rem;"><i class="fab fa-twitter"></i> X</a>');
-                if (socialHtml.length > 0) {
-                    var socialDiv = document.getElementById('claimed-social');
-                    if (socialDiv) {
-                        socialDiv.style.display = 'block';
-                        var socialLinks = document.getElementById('claimed-social-links');
-                        if (socialLinks) socialLinks.innerHTML = socialHtml.join('');
-                    }
+                var socialContainer = document.getElementById('claimed-social-links');
+                var socialDiv = document.getElementById('claimed-social');
+                var hasSocial = false;
+                if (socialContainer) socialContainer.textContent = '';
+
+                if (listing.social_instagram) {
+                    hasSocial = true;
+                    var a = createLink(listing.social_instagram, 'Instagram', 'fab fa-instagram');
+                    socialContainer.appendChild(a);
+                }
+                if (listing.social_facebook) {
+                    hasSocial = true;
+                    var a = createLink(listing.social_facebook, 'Facebook', 'fab fa-facebook');
+                    socialContainer.appendChild(a);
+                }
+                if (listing.social_twitter) {
+                    hasSocial = true;
+                    var a = createLink(listing.social_twitter, 'X', 'fab fa-twitter');
+                    socialContainer.appendChild(a);
+                }
+                if (hasSocial && socialDiv) {
+                    socialDiv.style.display = 'block';
                 }
 
                 // Contact details
-                var contactHtml = [];
-                if (listing.website) contactHtml.push('<div><i class="fas fa-globe" style="color:var(--green);width:20px;margin-right:8px;"></i> <a href="' + listing.website + '" target="_blank" rel="noopener" style="color:var(--green);text-decoration:none;">' + listing.website.replace('https://', '').replace('http://', '') + '</a></div>');
-                if (listing.phone) contactHtml.push('<div><i class="fas fa-phone" style="color:var(--green);width:20px;margin-right:8px;"></i> ' + listing.phone + '</div>');
-                if (listing.email) contactHtml.push('<div><i class="fas fa-envelope" style="color:var(--green);width:20px;margin-right:8px;"></i> <a href="mailto:' + listing.email + '" style="color:var(--green);text-decoration:none;">' + listing.email + '</a></div>');
-                if (contactHtml.length > 0) {
-                    var contactDiv = document.getElementById('claimed-contact');
-                    if (contactDiv) {
-                        contactDiv.style.display = 'block';
-                        var contactContent = document.getElementById('claimed-contact-content');
-                        if (contactContent) contactContent.innerHTML = contactHtml.join('');
-                    }
+                var contactContent = document.getElementById('claimed-contact-content');
+                var contactDiv = document.getElementById('claimed-contact');
+                var hasContact = false;
+                if (contactContent) contactContent.textContent = '';
+
+                if (listing.website) {
+                    hasContact = true;
+                    var div = document.createElement('div');
+                    var i = document.createElement('i');
+                    i.className = 'fas fa-globe';
+                    i.style.cssText = 'color:var(--green);width:20px;margin-right:8px;';
+                    div.appendChild(i);
+                    var a = document.createElement('a');
+                    a.href = htmlEscape(listing.website);
+                    a.target = '_blank';
+                    a.rel = 'noopener';
+                    a.style.cssText = 'color:var(--green);text-decoration:none;';
+                    a.textContent = listing.website.replace('https://', '').replace('http://', '');
+                    div.appendChild(a);
+                    contactContent.appendChild(div);
+                }
+                if (listing.phone) {
+                    hasContact = true;
+                    var div = document.createElement('div');
+                    var i = document.createElement('i');
+                    i.className = 'fas fa-phone';
+                    i.style.cssText = 'color:var(--green);width:20px;margin-right:8px;';
+                    div.appendChild(i);
+                    div.appendChild(document.createTextNode(' ' + listing.phone));
+                    contactContent.appendChild(div);
+                }
+                if (listing.email) {
+                    hasContact = true;
+                    var div = document.createElement('div');
+                    var i = document.createElement('i');
+                    i.className = 'fas fa-envelope';
+                    i.style.cssText = 'color:var(--green);width:20px;margin-right:8px;';
+                    div.appendChild(i);
+                    var a = document.createElement('a');
+                    a.href = 'mailto:' + listing.email;
+                    a.style.cssText = 'color:var(--green);text-decoration:none;';
+                    a.textContent = listing.email;
+                    div.appendChild(a);
+                    contactContent.appendChild(div);
+                }
+                if (hasContact && contactDiv) {
+                    contactDiv.style.display = 'block';
                 }
 
             } catch (e) {
@@ -1151,6 +1246,8 @@
             }
             }); // close DOMContentLoaded
         })();
+
+
 
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('open');

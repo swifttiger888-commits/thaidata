@@ -52,9 +52,14 @@ Crawl-delay: 10
 User-agent: SemrushBot
 Crawl-delay: 10
 
-# We don't have anything useful here
+# Admin and management pages — block from indexing
+Disallow: /admin
 Disallow: /admin/
+Disallow: /admin.html
+Disallow: /listing/
+Disallow: /listing/manage
 Disallow: /claim/
+Disallow: /claim
 Disallow: /api/v1/health
 
 Sitemap: https://thaidata.uk/sitemap.xml
