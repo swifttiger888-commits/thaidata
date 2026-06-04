@@ -1014,14 +1014,16 @@
                 const RESTAURANT_CITY = 'Leeds';
 
         // -- Check if this restaurant has a claimed listing --
-        (async function enrichListing() {
+        (function enrichListing() {
+            document.addEventListener('DOMContentLoaded', async function() {
             try {
                 const res = await fetch('/api/listing?restaurant=' + encodeURIComponent(RESTAURANT_NAME) + '&city=' + encodeURIComponent(RESTAURANT_CITY));
-                if (!res.ok) return;
+                if (!res.ok) { console.warn('Enrichment: API not ok', res.status); return; }
                 const data = await res.json();
-                if (!data.listings || data.listings.length === 0) return;
+                if (!data.listings || data.listings.length === 0) { console.log('Enrichment: no listing found'); return; }
 
                 const listing = data.listings[0];
+                console.log('Enrichment: listing loaded', listing.restaurant_name, 'photos:', listing.photos ? listing.photos.length : 0);
 
                 // Hide claim CTA, show claimed badge
                 var claimCard = document.querySelector('.claim-card');
@@ -1120,8 +1122,9 @@
                 }
 
             } catch (e) {
-                // Silently fail
+                console.error('Enrichment error:', e.message);
             }
+            }); // close DOMContentLoaded
         })();
 
         function toggleMenu() {
