@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英国泰餐厅外卖平台佣金对比 — Deliveroo、Just Eat、Uber Eats</title>
+    <meta name="description" content="Deliveroo、Just Eat和Uber Eats对泰餐厅的真实成本。佣金明细、每道菜扣除费用后的实际利润，以及如何打造真正赚钱的外卖菜单。">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/thai-restaurant-delivery-commissions-uk">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/thai-restaurant-delivery-commissions-uk">
+    <meta property="og:title" content="英国泰餐厅外卖平台佣金对比 — Deliveroo、Just Eat、Uber Eats">
+    <meta property="og:description" content="真实数据：各平台收费、您的Pad Thai扣除佣金后的实际收入，以及如何打造盈利的外卖菜单。">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="zh_CN">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto
+    }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; display: inline-block; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(239,68,68,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--red); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
+        .section h2 em { font-style: italic; color: var(--red); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+
+        .data-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; min-width: 750px; }
+        .data-table thead th { padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+        .data-table tbody td { padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        .data-table .hi { color: var(--c2); font-weight: 700; }
+        .data-table .lo { color: var(--red); font-weight: 700; }
+
+        .platform-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin: 16px 0; }
+        .platform-card .p-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+        .platform-card .p-rate { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--red); line-height: 1; margin-bottom: 8px; }
+        .platform-card .p-desc { color: var(--ink4); font-size: 0.85rem; line-height: 1.7; }
+
+        .insight-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .insight-box h3 { color: var(--red); font-size: 0.9rem; margin: 0 0 6px; }
+        .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+
+        .strategy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin: 20px 0; }
+        .strat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+        .strat-card .strat-num { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); line-height: 1; margin-bottom: 6px; }
+        .strat-card .strat-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
+        .strat-card .strat-desc { color: var(--ink4); font-size: 0.82rem; line-height: 1.6; }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2rem; }
+            .strategy-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"指南","item":"https://thaidata.uk/guides"},{"@type":"ListItem","position":3,"name":"英国泰餐厅外卖平台佣金对比 — Deliveroo、Just Eat、Uber Eats"}]}</script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Deliveroo向泰餐厅收取多少佣金？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Deliveroo对每笔订单收取约32%的佣金。以一份£13.50的Pad Thai为例，Deliveroo拿走£4.32。加上20%增值税和包装成本后，餐厅实际收到约£7.30 —— 这还未扣除食材成本。扣除所有成本后，您的实际利润可能降至每份£2.10–£2.60。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Uber Eats向英国餐厅收取多少费用？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Uber Eats收取约30%的佣金。他们提供\\"Lite\\"级别（约25%），餐厅自行配送；以及\\"Full\\"级别（约30%），由Uber配送司机送餐。Lite级别可节省5%，但需要您自备配送人员 —— 需考虑£12.71/小时的国民生活工资成本。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "与Deliveroo和Uber Eats相比，Just Eat收取多少费用？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Just Eat收取约14%的佣金 —— 明显低于Deliveroo（32%）和Uber Eats（30%）。以£13.50的订单为例，Just Eat仅收取£1.89，而Deliveroo收取£4.32。然而，Just Eat的客户群偏向传统外卖用户，而非高端餐厅配送，全服务泰餐厅的订单量可能较低。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "通过外卖平台销售的泰餐菜品真实利润是多少？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "举例：一份£13.95的青咖喱在Deliveroo上销售。佣金（32%）：£4.46。增值税（20%）：£2.79。包装：£0.50。餐厅净收：£6.20。食材成本（25%）：£3.49。人工：£2.50。实际利润：£0.21。许多经营者在外卖业务上不知不觉中亏损。使用我们的利润捍卫工具（Profit Margin Defender）查看您的真实数据。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "我应该将泰餐厅上线外卖平台吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "应该，但要使用比堂食价格高15–25%的独立外卖菜单。外卖平台提供曝光度 —— 60%以上的顾客通过App发现新餐厅。然而，永远不要让外卖成为您的主要渠道。最佳比例是外卖收入占总收入的15–25%。超过30%，您的堂食毛利将开始补贴外卖亏损。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "citation": [
+        {
+            "@type": "CreativeWork",
+            "name": "Deliveroo",
+            "url": "https://restaurants.deliveroo.com/",
+            "description": "Deliveroo英国餐厅合作伙伴佣金费率（约32%）"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "Uber Eats",
+            "url": "https://www.ubereats.com/gb",
+            "description": "Uber Eats英国餐厅合作伙伴费用（约30%全服务）"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "Just Eat",
+            "url": "https://www.just-eat.co.uk/",
+            "description": "Just Eat英国佣金费率（约14%）"
+        }
+    ],
+    "creditText": "数据来源于英国政府机构及行业组织。详见各引用来源的方法说明。"
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+            ".header-section h1",
+            ".key-stat",
+            ".commission-table td"
+        ]
+    }
+}
+    </script>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" height="36"></a>
+            <div class="lang-switch" style="display:flex;gap:8px;font-size:0.75rem;">
+                <a href="/ar/" style="color:rgba(255,255,255,0.4);text-decoration:none;">AR</a>
+                <a href="/th/" style="color:rgba(255,255,255,0.4);text-decoration:none;">TH</a>
+                <a href="/zh/" style="color:rgba(255,255,255,0.4);text-decoration:none;">ZH</a>
+            </div>
+            <a href="/guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; 指南</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--red); margin-bottom:16px;">利润情报 · 2026</div>
+            <h1>泰餐厅<br><em>外卖平台佣金</em></h1>
+            <p>Deliveroo、Just Eat和Uber Eats对您的泰餐厅的真实成本 —— 按每道菜、每单、每年计算。以及如何打造赚钱而非亏损的外卖菜单。</p>
+        </div>
+    </div>
+
+    <!-- Commission Table -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>各<em>平台</em>收费标准</h2>
+            <p>独立餐厅标准佣金费率（2026年6月）。连锁餐厅可协商更优惠费率 —— 以下为大多数泰餐经营者实际支付的费率。</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>平台</th><th>佣金</th><th>营销附加费</th><th>实际费率</th><th>付款周期</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Deliveroo</strong></td><td class="lo">25–30%</td><td>+5–7% 推广位</td><td class="lo">30–37%</td><td>每周（周二）</td></tr>
+                        <tr><td><strong>Just Eat</strong></td><td class="lo">14–20%</td><td>+5% 提升曝光</td><td class="lo">14–25%</td><td>每周</td></tr>
+                        <tr><td><strong>Uber Eats</strong></td><td class="lo">25–30%</td><td>+5–10% 广告费</td><td class="lo">30–40%</td><td>每周（周一）</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="source-note"><strong>提示：</strong>Just Eat提供低佣金的"自配送"选项（14%），由您使用自己的骑手配送。如果您已有电话订单的配送骑手，这是目前利润最丰厚的平台选择，优势显著。</div>
+        </div>
+    </div>
+
+    <!-- Per-Dish Reality -->
+    <div class="section">
+        <div class="wrap">
+            <h2>您的<em>Pad Thai</em>实际赚多少</h2>
+            <p>残酷的数字。一份£14.50的Pad Thai在Deliveroo上开启营销推广后：</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th></th><th>堂食</th><th>Just Eat (14%)</th><th>Deliveroo (30%)</th><th>Uber Eats (30%)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>菜单价格</strong></td><td class="hi">£14.50</td><td>£14.50</td><td>£14.50</td><td>£14.50</td></tr>
+                        <tr><td>增值税 (20%)</td><td>-£2.42</td><td>-£2.42</td><td>-£2.42</td><td>-£2.42</td></tr>
+                        <tr><td>平台佣金</td><td>—</td><td class="lo">-£2.03</td><td class="lo">-£4.35</td><td class="lo">-£4.35</td></tr>
+                        <tr><td>食材成本</td><td>-£2.80</td><td>-£2.80</td><td>-£2.80</td><td>-£2.80</td></tr>
+                        <tr><td>包装费</td><td>—</td><td>-£0.40</td><td>-£0.40</td><td>-£0.40</td></tr>
+                        <tr style="border-top:2px solid var(--line);"><td><strong>您的利润</strong></td><td class="hi">£9.28</td><td>£6.85</td><td class="lo">£4.53</td><td class="lo">£4.53</td></tr>
+                        <tr><td><strong>利润率</strong></td><td class="hi">64%</td><td>47%</td><td class="lo">31%</td><td class="lo">31%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box" style="margin-top:20px;">
+                <h3><i class="fas fa-exclamation-triangle"></i> 外卖利润陷阱</h3>
+                <p>您的Pad Thai在Deliveroo上仅赚<strong>£4.53，而堂食为£9.28</strong>。利润缩减了51% —— 这还未计算人工、租金和能源成本。如果超过40%的订单来自外卖平台，您需要提高外卖定价或降低对平台的依赖。<a href="tools/PROFIT_MARGIN_DEFENDER.html" style="color:var(--red);">运行完整的利润捍卫工具 →</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Profiles -->
+    <div class="section">
+        <div class="wrap">
+            <h2>逐<em>平台</em>详细分析</h2>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-motorcycle" style="color:#00CCBC;"></i> Deliveroo</div>
+                <div class="p-rate">25–30% 佣金</div>
+                <div class="p-desc"><strong>市场份额：</strong>在伦敦及主要城市表现强劲。农村地区较弱。<br>
+                <strong>最适合：</strong>高端定位。Deliveroo顾客每单消费更高（平均£23），对价格敏感度较低。<br>
+                <strong>最不适合：</strong>利润空间。30%基础费率 + 营销附加费可将实际费率推高至37%。<br>
+                <strong>泰餐专项：</strong>Deliveroo的"Editions"幽灵厨房在伦敦已被泰餐概念饱和。您正在与运营成本更低的外卖专属品牌竞争。<br>
+                <strong>议价技巧：</strong>如果您在Deliveroo上周营业额达£2,000以上，可向客户经理申请费率复核。像Rosa's Thai这样的连锁可谈到20–22%。有规模的独立餐厅可争取25%。</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-utensils" style="color:#FF8000;"></i> Just Eat</div>
+                <div class="p-rate">14–20% 佣金</div>
+                <div class="p-desc"><strong>市场份额：</strong>英国餐厅数量最多的平台。地理覆盖范围最广。<br>
+                <strong>最适合：</strong>14%自配送费率。如果您有自己的骑手，Just Eat真的能带来盈利。<br>
+                <strong>最不适合：</strong>较低的客单价（£18）。顾客对价格更敏感。<br>
+                <strong>泰餐专项：</strong>Just Eat的泰餐厅 listings 数量超过任何其他平台 —— 意味着竞争更激烈。您的菜单照片和菜品描述在这里尤为重要。<br>
+                <strong>核心策略：</strong>以14%自配送费率上线Just Eat，使用自有骑手配送。利用节省的成本提供比Deliveroo定价低10%的折扣 —— 您每单仍然赚得更多。</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-car" style="color:#000000; background:white; border-radius:4px; padding:2px 6px; font-size:0.8rem;"></i> Uber Eats</div>
+                <div class="p-rate">25–30% 佣金</div>
+                <div class="p-desc"><strong>市场份额：</strong>增长迅速。在城市表现强劲，正向郊区扩张。<br>
+                <strong>最适合：</strong>曝光获客。Uber Eats的算法在开业前4周会积极推广新餐厅 —— 适合开业期使用。<br>
+                <strong>最不适合：</strong>附加费用。Uber的广告平台推广力度大 —— 一不小心就可能每周在无效推广上花费£200。<br>
+                <strong>泰餐专项：</strong>Uber Eats用户高度按菜系类型搜索。确保您的餐厅被标记为"Thai（泰餐）"而非"Asian（亚洲菜）"或"Other（其他）"。<br>
+                <strong>警告：</strong>Uber Eats的默认广告设置会自动为新餐厅注册推广。每周检查您的广告支出，否则您会发现每月£150在不知不觉中流入了您未主动激活的推广活动。</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy -->
+    <div class="section">
+        <div class="wrap">
+            <h2>如何打造<em>盈利的</em>外卖菜单</h2>
+            <div class="strategy-grid">
+                <div class="strat-card">
+                    <div class="strat-num">1</div>
+                    <div class="strat-title">外卖菜单与堂食分开</div>
+                    <div class="strat-desc">您的外卖菜单应比堂食菜单贵20–25%。顾客接受这一点 —— 他们正在为便利性付费。独立的外卖菜单还能让您移除不适合外送的菜品（如脆皮鱼、天妇罗）。</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">2</div>
+                    <div class="strat-title">主推高毛利菜品</div>
+                    <div class="strat-desc">在外卖菜单上主打咖喱（83%毛利）、炒菜（80%毛利）和米饭类菜品。降低优先级或移除低毛利菜品。外卖顾客不是在拿您的菜单和堂食版对比 —— 他们是在和其他外卖选项对比。</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">3</div>
+                    <div class="strat-title">套餐比单点更优</div>
+                    <div class="strat-desc">"Pad Thai + 春卷 + 饮品 = £18.50"套餐可将客单价提升30–40%。平台收取相同比例的佣金，但您的固定成本（包装、等餐时间）被分摊到了更大的订单上。</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">4</div>
+                    <div class="strat-title">在Just Eat上选择自配送</div>
+                    <div class="strat-desc">即使您只有一位电话订单的配送骑手，也以14%自配送费率上线Just Eat，而非20%的市场配送费率。按每周100单、平均£20计算，每周可节省£120 —— 每年£6,240。用Deliveroo和Uber Eats获客，用Just Eat盈利。</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">5</div>
+                    <div class="strat-title">8周后关闭营销推广</div>
+                    <div class="strat-desc">平台大力推销推广位。在开业前8周使用推广以积累评论量，然后关闭。您的自然排名由评论数量和订单量驱动 —— 而非广告支出。大多数泰餐厅每月在营销上多付£100–300。</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">6</div>
+                    <div class="strat-title">收取包装费</div>
+                    <div class="strat-desc">为每份外卖菜品增加£0.50–£1.00以覆盖包装成本。泰餐需要优质容器（咖喱会漏、脆皮菜品会受潮）。£0.40的容器 + £0.10的袋子共£0.50的成本 —— 收取£1.00。在£16的咖喱上，没人会注意到£1。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">工具</a> ·
+                <a href="/guides.html">指南</a> ·
+                <a href="tools/PROFIT_MARGIN_DEFENDER.html">利润捍卫</a> ·
+                <a href="thai-restaurant-menu-pricing-uk.html">菜单定价</a> ·
+                <a href="thai-delivery-profit-analysis-2026.html">外卖利润分析</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK. 佣金费率基于独立餐厅公开列出的标准费率。您的实际费率可能有所不同。</p>
+        </div>
+    </footer>
+</body>
+</html>

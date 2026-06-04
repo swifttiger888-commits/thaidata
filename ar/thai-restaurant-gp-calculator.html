@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة الربح الإجمالي — مطعم تايلاندي</title>
+    <meta name="description" content="كيفية حساب هامش الربح الإجمالي على الأطباق التايلاندية. أمثلة عملية حقيقية لطبق Pad Thai وGreen Curry وTom Yum. يشمل فخ ضريبة القيمة المضافة وهامش ربح التوصيل.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/thai-restaurant-gp-calculator">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/thai-restaurant-gp-calculator">
+    <meta property="og:title" content="حاسبة هامش الربح الإجمالي — احسب الربح على كل طبق">
+    <meta property="og:description" content="حساب هامش الربح الإجمالي خطوة بخطوة مع أمثلة على أطباق تايلاندية حقيقية. تكلفة الطعام وضريبة القيمة المضافة وعمولة التوصيل — كل رقم موضح.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="ar">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto
+    }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; right: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; display: inline-block; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; right: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+
+        .formula-box { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.25); border-radius: 14px; padding: 24px 28px; margin: 20px 0; text-align: center; }
+        .formula-box .formula { font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: var(--c2); margin-bottom: 8px; }
+        .formula-box .formula-desc { color: var(--ink4); font-size: 0.82rem; }
+
+        .calc-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; overflow-x: auto; margin: 16px 0; }
+        .calc-table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        .calc-table thead th { padding: 12px 16px; text-align: right; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); }
+        .calc-table tbody td { padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 0.88rem; }
+        .calc-table .val-hi { color: var(--c2); font-weight: 700; }
+        .calc-table .val-lo { color: var(--red); font-weight: 700; }
+        .calc-table .result-row td { font-weight: 700; color: white; border-top: 2px solid var(--line); font-size: 0.95rem; }
+
+        .insight-box { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .insight-box h3 { color: var(--c2); font-size: 0.9rem; margin: 0 0 6px; }
+        .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+        .insight-box.warn { background: rgba(239,68,68,0.05); border-color: rgba(239,68,68,0.2); }
+        .insight-box.warn h3 { color: var(--red); }
+
+        .strategy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin: 20px 0; }
+        .strat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+        .strat-card .s-icon { font-size: 1.4rem; color: var(--c2); margin-bottom: 8px; }
+        .strat-card .s-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+        .strat-card .s-desc { color: var(--ink4); font-size: 0.82rem; line-height: 1.6; }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        /* RTL Adjustments */
+        [dir="rtl"] .calc-table thead th { text-align: right; }
+        [dir="rtl"] .calc-table tbody td { text-align: right; }
+        [dir="rtl"] .nav-bar { flex-direction: row-reverse; }
+        [dir="rtl"] .logo { flex-direction: row-reverse; }
+        [dir="rtl"] .insight-box h3 { display: flex; align-items: center; gap: 8px; }
+
+        @media (max-width: 768px) { .header-section h1 { font-size: 2rem; } .strategy-grid { grid-template-columns: 1fr; } }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"الأدلة","item":"https://thaidata.uk/guides"},{"@type":"ListItem","position":3,"name":"حاسبة هامش الربح الإجمالي للمطاعم التايلاندية"}]}</script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "كيف أحسب الربح الإجمالي على طبق تايلاندي؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GP = (سعر المنيو − تكلفة الطعام) ÷ سعر المنيو × 100. مثال: طبق Green Curry بسعر £12.50 مع تكلفة طعام £3.20 له GP = (12.50 − 3.20) ÷ 12.50 × 100 = 74.4%. يجب أن يكون هدفك 65–75% لأطباق تناول الطعام بالمطعم. لا تنسَ تضمين الزينة والزيت والتوابل في تكلفة الطعام — فتضيف 3–5%."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ما الفرق بين هامش الربح الإجمالي والربح الصافي؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "الربح الإجمالي هو (الإيرادات − تكلفة الطعام) فقط. الربح الصافي يخصم جميع التكاليف: العمالة، والإيجار، والطاقة، والتأمين، والتسويق، وعمولات التوصيل، وأقساط القروض. طبق بـ 70% GP يمكن أن يحقق ربحاً صافياً بنسبة 4–8% بعد جميع التكاليف العامة. متوسط هامش الربح الصافي لصناعة المطاعم التايلاندية في المملكة المتحدة هو 4.2% (UKHospitality 2024)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "كيف أحدد سعر طبق تايلاندي جديد؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "اعمل بشكل عكسي: 1) احسب إجمالي تكلفة الطعام بما في ذلك الزينة والزيت والهدر (أضف 5% احتياطي). 2) حدد هدف GP (65–75%). 3) السعر = تكلفة الطعام ÷ (1 − GP%). مثال: تكلفة الطعام £3.50، هدف 70% GP → السعر = 3.50 ÷ 0.30 = £11.67 (قرب إلى £11.95). 4) تحقق من المنافسين المحليين — اضبط ±10%."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ما هدف GP الذي يجب أن أستهدفه لأطباق التوصيل؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "استهدف 75%+ GP في قائمة توصيلك (قبل عمولة المنصة). هذا يضمن تحقيق 40%+ GP فعلي بعد أن تأخذ المنصة نسبتها 14–32%. مثال: إذا كان طبق Green Curry بالمطعم £12.50 (70% GP)، فيجب أن يكون سعر قائمة التوصيل £14.95 (75% GP)، مما يحقق حوالي £3.50 ربح صافي بعد عمولة 30%."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "لماذا هامش ربحي الإجمالي أقل من المتوقع؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "الأسباب الشائعة: 1) عدم احتساب الزينة والزيت والزبدة والتوابل (تضيف 3–5%). 2) زيادة الحصص — الطباخون يضيفون بروتيناً إضافياً دون تعديل السعر. 3) الهدر — الفضلات، المخزون الفاسد، الأطباق المرتجعة. 4) وجبات الموظفين غير مسجلة. 5) زيادة أسعار الموردين غير م reflected في أسعار المنيو. تتبع GP الفعلي مقابل النظري شهرياً — فجوة تزيد عن 3% تشير إلى مشكلة."
+            }
+        }
+    ]
+}
+    </script>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" height="36"></a>
+            <div class="lang-switch" style="display:flex;gap:8px;font-size:0.75rem;">
+                <a href="/ar/" style="color:rgba(255,255,255,0.4);text-decoration:none;">AR</a>
+                <a href="/th/" style="color:rgba(255,255,255,0.4);text-decoration:none;">TH</a>
+                <a href="/zh/" style="color:rgba(255,255,255,0.4);text-decoration:none;">ZH</a>
+            </div>
+            <a href="/guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">الأدلة &larr;</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">مهارات عملية</div>
+            <h1>كيفية حساب <em>هامش الربح الإجمالي</em><br>على الأطباق التايلاندية</h1>
+            <p>الصيغة التي يحتاجها كل مشغل مطعم تايلاندي. أمثلة عملية حقيقية — Pad Thai وGreen Curry وTom Yum — بالإضافة إلى فخ ضريبة القيمة المضافة وهامش ربح التوصيل الذي يوقع معظم الناس فيه.</p>
+        </div>
+    </div>
+
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>المعادلة <em>الأساسية</em></h2>
+            <div class="formula-box">
+                <div class="formula">GP% = (سعر البيع − تكلفة الطعام) ÷ سعر البيع × 100</div>
+                <div class="formula-desc">الربح الإجمالي بالجنيه الإسترليني = سعر البيع − تكلفة الطعام</div>
+            </div>
+            <p>هذا كل شيء. لكن هناك ثلاثة فخاخ تجعل هذا أصعب مما يبدو: ضريبة القيمة المضافة، وعمولات التوصيل، وتكاليف الطعام الخفية. لنمضي في أمثلة حقيقية.</p>
+        </div>
+    </div>
+
+    <!-- Worked Examples -->
+    <div class="section">
+        <div class="wrap">
+            <h2>مثال <em>عملي 1</em>: Pad Thai (تناول بالمطعم)</h2>
+            <div class="calc-table-wrapper">
+                <table class="calc-table">
+                    <thead><tr><th>الخطوة</th><th>الحساب</th><th>المبلغ</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>سعر المنيو</strong> (شامل ضريبة القيمة المضافة)</td><td>ما يدفعه العميل</td><td class="val-hi">£14.50</td></tr>
+                        <tr><td>ضريبة القيمة المضافة (20%)</td><td>£14.50 ÷ 1.2 = £12.08 (صافي) — إذن ضريبة القيمة المضافة هي £14.50 − £12.08</td><td class="val-lo">−£2.42</td></tr>
+                        <tr><td><strong>سعر البيع الصافي</strong></td><td>هذا إيرادك الفعلي</td><td>£12.08</td></tr>
+                        <tr><td>تكلفة الطعام</td><td>شعيرية الأرز £0.40 + دجاج £0.90 + بيض £0.20 + خضروات £0.30 + صلصة £0.50 + زينة £0.50</td><td class="val-lo">−£2.80</td></tr>
+                        <tr class="result-row"><td><strong>الربح الإجمالي</strong></td><td>£12.08 − £2.80</td><td class="val-hi">£9.28</td></tr>
+                        <tr class="result-row"><td><strong>GP%</strong></td><td>£9.28 ÷ £12.08 × 100</td><td class="val-hi">76.8%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box"><h3><i class="fas fa-exclamation-triangle"></i> فخ ضريبة القيمة المضافة</h3><p>كثير من المشغلين يحسبون الربح الإجمالي على سعر المنيو شامل ضريبة القيمة المضافة. هذا خطأ — ضريبة القيمة المضافة ليست مالك، إنها لـ HMRC. احسب الربح الإجمالي دائماً على السعر <strong>الصافي</strong> (سعر المنيو ÷ 1.2). طبق بـ £14.50 له سعر صافي £12.08 — احسب GP على £12.08، لا £14.50. استخدام الرقم الإجمالي يجعل GP يبدو أسوأ مما هو عليه.</p></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrap">
+            <h2>مثال <em>عملي 2</em>: نفس طبق Pad Thai — على Deliveroo</h2>
+            <div class="calc-table-wrapper">
+                <table class="calc-table">
+                    <thead><tr><th>الخطوة</th><th>الحساب</th><th>المبلغ</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>سعر المنيو</strong> (شامل ضريبة القيمة المضافة)</td><td>سعر التوصيل — يجب أن يكون أعلى بنسبة 20–25% من تناول الطعام بالمطعم</td><td class="val-hi">£17.50</td></tr>
+                        <tr><td>ضريبة القيمة المضافة (20%)</td><td>£17.50 ÷ 1.2 = £14.58 صافي</td><td class="val-lo">−£2.92</td></tr>
+                        <tr><td><strong>سعر البيع الصافي</strong></td><td></td><td>£14.58</td></tr>
+                        <tr><td>عمولة Deliveroo (30%)</td><td>30% من £17.50 إجمالي (معظم المنصات تحسب على الإجمالي)</td><td class="val-lo">−£5.25</td></tr>
+                        <tr><td>تكلفة الطعام</td><td>نفس المكونات</td><td class="val-lo">−£2.80</td></tr>
+                        <tr><td>التغليف</td><td>حاوية £0.35 + كيس £0.10 + عيدان £0.05</td><td class="val-lo">−£0.50</td></tr>
+                        <tr class="result-row"><td><strong>الربح الإجمالي</strong></td><td>£14.58 − £5.25 − £2.80 − £0.50</td><td class="val-lo">£6.03</td></tr>
+                        <tr class="result-row"><td><strong>GP%</strong></td><td>£6.03 ÷ £14.58 × 100</td><td class="val-lo">41.4%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box warn"><h3><i class="fas fa-exclamation-triangle"></i> ربح التوصيل نصف ربح تناول الطعام بالمطعم</h3><p>نفس الطبق: <strong>76.8% GP بالمطعم مقابل 41.4% GP على Deliveroo</strong>. لهذا السبب تحتاج قائمة توصيل منفصلة بأسعار أعلى. بسعر £14.50 (سعر المطعم) على Deliveroo، سيحقق هذا طبق Pad Thai ربحاً صافياً £3.03 فقط — وهو 20.8% GP. هذا أقل من مستوى البقاء. <a href="thai-restaurant-delivery-commissions-uk.html" style="color:var(--red);">شاهد تفصيل عمولات التوصيل الكامل ←</a></p></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrap">
+            <h2>مثال <em>عملي 3</em>: Green Curry (تناول بالمطعم)</h2>
+            <div class="calc-table-wrapper">
+                <table class="calc-table">
+                    <thead><tr><th>الخطوة</th><th>الحساب</th><th>المبلغ</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>سعر المنيو</strong> (شامل ضريبة القيمة المضافة)</td><td>متوسط التسعير الإقليمي</td><td class="val-hi">£13.95</td></tr>
+                        <tr><td>ضريبة القيمة المضافة (20%)</td><td></td><td class="val-lo">−£2.33</td></tr>
+                        <tr><td><strong>سعر البيع الصافي</strong></td><td></td><td>£11.63</td></tr>
+                        <tr><td>تكلفة الطعام</td><td>حليب جوز الهند £0.65 + فخذ دجاج £0.80 + معجون كاري £0.35 + خضروات £0.40 + ريحان تايلاندي £0.25 + أرز £0.25</td><td class="val-lo">−£2.70</td></tr>
+                        <tr class="result-row"><td><strong>الربح الإجمالي</strong></td><td></td><td class="val-hi">£8.93</td></tr>
+                        <tr class="result-row"><td><strong>GP%</strong></td><td></td><td class="val-hi">76.8%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrap">
+            <h2>مصفوفة <em>هندسة المنيو</em></h2>
+            <p>نسبة GP% وحدها مضللة. طبق بنسبة GP% عالية لا يطلبه أحد هو حمل ميت. طبق أكثر مبيعاً بنسبة GP% أقل قد يكون العنصر الأكثر ربحاً بشكل عام. هندسة المنيو ترسم الشعبية مقابل الربحية.</p>
+            <div class="strategy-grid">
+                <div class="strat-card" style="border-color:var(--c2);">
+                    <div class="s-icon"><i class="fas fa-star"></i></div>
+                    <div class="s-title">⭐ النجوم — GP عالي، مبيعات عالية</div>
+                    <div class="s-desc">Pad Thai وGreen Curry وMassaman. قدم هذه بقوة. اعرضها على تطبيقات التوصيل. لا تحذفها أبداً. هذه تدفع إيجارك.</div>
+                </div>
+                <div class="strat-card" style="border-color:var(--gold);">
+                    <div class="s-icon"><i class="fas fa-horse-head"></i></div>
+                    <div class="s-title">🐴 خيول المحراث — GP منخفض، مبيعات عالية</div>
+                    <div class="s-desc">شعبية لكن هامش ربح منخفض. جرب رفع السعر، أو تقليل حجم الحصة، أو استبدال مكون باهظ بواحد أرخص. لا تحذف — فهي تجذب العملاء.</div>
+                </div>
+                <div class="strat-card">
+                    <div class="s-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <div class="s-title">🧩 الألغاز — GP عالي، مبيعات منخفضة</div>
+                    <div class="s-desc">سلطة البابايا وlarb. هوامش ربح عظيمة لكن العملاء لا يعرفون أن يطلبوها. انقلها إلى موضع مميز في المنيو. درّب موظفي FOH على التوصية بها.</div>
+                </div>
+                <div class="strat-card" style="border-color:var(--red);">
+                    <div class="s-icon"><i class="fas fa-trash"></i></div>
+                    <div class="s-title">🐶 الكلاب — GP منخفض، مبيعات منخفضة</div>
+                    <div class="s-desc">هامش ربح منخفض ولا أحد يطلبها. احذفها من المنيو. كل طبق في منيوك يجب أن يستحق مكانه. كن حاسماً — قائمة مكونة من 60 طبقاً تخفي الكلاب. قائمة مكونة من 25 طبقاً لا يوجد فيها مكان للاختباء.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">الأدوات</a> ·
+                <a href="/guides.html">الأدلة</a> ·
+                <a href="tools/PROFIT_MARGIN_DEFENDER.html">حامي الأرباح</a> ·
+                <a href="thai-restaurant-menu-pricing-uk.html">تسعير المنيو</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK. حسابات الربح الإجمالي تستخدم دائماً الأسعار الصافية (باستثناء ضريبة القيمة المضافة). معدلات ضريبة القيمة المضافة صحيحة اعتباراً من يونيو 2026.</p>
+        </div>
+    </footer>
+</body>
+</html>

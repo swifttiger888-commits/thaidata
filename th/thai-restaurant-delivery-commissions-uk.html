@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค่าคอมมิชชั่นเดลิเวอรี่ร้านอาหารไทยในสหราชอาณาจักร</title>
+    <meta name="description" content="Deliveroo, Just Eat และ Uber Eats คิดค่าใช้จ่ายร้านอาหารไทยเท่าไร รายละเอียดค่าคอมมิชชั่น กำไรจริงต่อจาน และวิธีสร้างเมนูเดลิเวอรี่ที่ทำกำไรได้">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/thai-restaurant-delivery-commissions-uk">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/thai-restaurant-delivery-commissions-uk">
+    <meta property="og:title" content="ค่าคอมมิชชั่นเดลิเวอรี่ร้านอาหารไทยในสหราชอาณาจักร — เปรียบเทียบ Deliveroo, Just Eat, Uber Eats">
+    <meta property="og:description" content="ตัวเลขจริง: แต่ละแพลตฟอร์มคิดค่าธรรมเนียมเท่าไร ผัดไทยจานหนึ่งทำกำไรได้เท่าไรหักค่าคอมมิชชั่นแล้ว และวิธีสร้างเมนูเดลิเวอรี่ที่ทำกำไรได้จริง">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="th_TH">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto
+    }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; display: inline-block; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(239,68,68,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--red); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
+        .section h2 em { font-style: italic; color: var(--red); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+
+        .data-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; min-width: 750px; }
+        .data-table thead th { padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+        .data-table tbody td { padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        .data-table .hi { color: var(--c2); font-weight: 700; }
+        .data-table .lo { color: var(--red); font-weight: 700; }
+
+        .platform-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin: 16px 0; }
+        .platform-card .p-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+        .platform-card .p-rate { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--red); line-height: 1; margin-bottom: 8px; }
+        .platform-card .p-desc { color: var(--ink4); font-size: 0.85rem; line-height: 1.7; }
+
+        .insight-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .insight-box h3 { color: var(--red); font-size: 0.9rem; margin: 0 0 6px; }
+        .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+
+        .strategy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin: 20px 0; }
+        .strat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+        .strat-card .strat-num { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); line-height: 1; margin-bottom: 6px; }
+        .strat-card .strat-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
+        .strat-card .strat-desc { color: var(--ink4); font-size: 0.82rem; line-height: 1.6; }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2rem; }
+            .strategy-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าหลัก","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"คู่มือ","item":"https://thaidata.uk/guides"},{"@type":"ListItem","position":3,"name":"ค่าคอมมิชชั่นเดลิเวอรี่ร้านอาหารไทยในสหราชอาณาจักร — Deliveroo, Just Eat, Uber Eats"}]}</script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Deliveroo คิดค่าธรรมเนียมร้านอาหารไทยเท่าไร?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Deliveroo คิดค่าคอมมิชชั่นประมาณ 32% ต่อออร์เดอร์ สำหรับผัดไทย £13.50 Deliveroo หัก £4.32 หลังหัก VAT 20% และค่าบรรจุภัณฑ์แล้ว ร้านได้รับประมาณ £7.30 — ก่อนหักต้นทุนวัตถุดิบ กำไรที่ได้จริงต่อจานเหลือประมาณ £2.10–£2.60"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Uber Eats คิดค่าธรรมเนียมร้านอาหารในสหราชอาณาจักรเท่าไร?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Uber Eats คิดค่าคอมมิชชั่นประมาณ 30% มีระดับ 'Lite' (~25%) ที่ร้านจัดส่งเอง และระดับ 'Full' (~30%) พร้อมคนขับของ Uber Eats การเลือกระดับ Lite ประหยัดได้ 5% แต่ต้องมีพนักงานส่งของเอง — พิจารณาค่าแรงขั้นต่ำ £12.71/ชั่วโมง"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Just Eat คิดค่าธรรมเนียมเท่าไร เมื่อเทียบกับ Deliveroo และ Uber Eats?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Just Eat คิดค่าคอมมิชชั่นประมาณ 14% — ต่ำกว่า Deliveroo (32%) และ Uber Eats (30%) อย่างมาก สำหรับออร์เดอร์ £13.50 Just Eat หัก £1.89 เทียบกับ £4.32 ของ Deliveroo อย่างไรก็ตาม ลูกค้า Just Eat มักเน้น takeaway ทั่วไปมากกว่าเดลิเวอรี่ร้านอาหารระดับพรีเมียม และปริมาณออร์เดอร์อาจต่ำกว่าสำหรับร้านอาหารไทยแบบเต็มรูปแบบ"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "กำไรจริงของอาหารไทยที่ขายผ่านแพลตฟอร์มเดลิเวอรี่เป็นเท่าไร?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ตัวอย่าง: แกงเขียวหวาน £13.95 บน Deliveroo ค่าคอมมิชชั่น (32%): £4.46 VAT (20%): £2.79 บรรจุภัณฑ์: £0.50 รายได้สุทธิ: £6.20 ต้นทุนวัตถุดิบ (25%): £3.49 ค่าแรง: £2.50 กำไรจริง: £0.21 ผู้ประกอบการหลายรายขาดทุนจากเดลิเวอรี่โดยไม่รู้ตัว ใช้เครื่องมือ Profit Margin Defender ของเราเพื่อดูตัวเลขจริงของคุณ"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ควรลงร้านอาหารไทยบนแพลตฟอร์มเดลิเวอรี่หรือไม่?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ควรลง แต่ต้องมีเมนูเดลิเวอรี่แยกต่างหาก ราคาสูงกว่าทานในร้าน 15–25% แพลตฟอร์มเดลิเวอรี่ช่วยให้ลูกค้าค้นพบร้าน — ลูกค้ามากกว่า 60% พบร้านอาหารใหม่ผ่านแอป อย่างไรก็ตาม ไม่ควรทำเดลิเวอรี่เป็นช่องทางหลัก สัดส่วนที่เหมาะสมคือ 15–25% ของรายได้ หากเกิน 30% กำไรจากทานในร้านจะต้องมาชดเชยการขาดทุนจากเดลิเวอรี่"
+            }
+        }
+    ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "citation": [
+        {
+            "@type": "CreativeWork",
+            "name": "Deliveroo",
+            "url": "https://restaurants.deliveroo.com/",
+            "description": "อัตราค่าคอมมิชชั่นพาร์ทเนอร์ร้านอาหาร Deliveroo UK (ประมาณ 32%)"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "Uber Eats",
+            "url": "https://www.ubereats.com/gb",
+            "description": "ค่าธรรมเนียมพาร์ทเนอร์ร้านอาหาร Uber Eats UK (ประมาณ 30% แบบเต็มบริการ)"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "Just Eat",
+            "url": "https://www.just-eat.co.uk/",
+            "description": "อัตราค่าคอมมิชชั่น Just Eat UK (ประมาณ 14%)"
+        }
+    ],
+    "creditText": "ข้อมูลจากหน่วยงานราชการและองค์กรอุตสาหกรรมสหราชอาณาจักร ดูรายละเอียดแหล่งที่มาแต่ละรายการสำหรับวิธีการรวบรวมข้อมูล"
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+            ".header-section h1",
+            ".key-stat",
+            ".commission-table td"
+        ]
+    }
+}
+    </script>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" height="36"></a>
+            <div class="lang-switch" style="display:flex;gap:8px;font-size:0.75rem;">
+                <a href="/ar/" style="color:rgba(255,255,255,0.4);text-decoration:none;">AR</a>
+                <a href="/th/" style="color:rgba(255,255,255,0.4);text-decoration:none;">TH</a>
+                <a href="/zh/" style="color:rgba(255,255,255,0.4);text-decoration:none;">ZH</a>
+            </div>
+            <a href="/guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; คู่มือ</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--red); margin-bottom:16px;">ข้อมูลเชิงวิเคราะห์กำไร · 2026</div>
+            <h1>ค่าคอมมิชชั่น<br><em>เดลิเวอรี่ร้านอาหารไทย</em></h1>
+            <p>Deliveroo, Just Eat และ Uber Eats คิดค่าใช้จ่ายร้านอาหารไทยของคุณเท่าไร — ต่อจาน ต่อออร์เดอร์ ต่อปี และวิธีสร้างเมนูเดลิเวอรี่ที่ทำกำไรแทนที่จะขาดทุน</p>
+        </div>
+    </div>
+
+    <!-- Commission Table -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>ค่าธรรมเนียมของ<br><em>แต่ละแพลตฟอร์ม</em></h2>
+            <p>อัตราค่าคอมมิชชั่นมาตรฐานสำหรับร้านอาหารอิสระ (มิถุนายน 2026) ร้านเชนต่อรองอัตราที่ดีกว่า — ส่วนนี้เป็นอัตราที่ผู้ประกอบการร้านอาหารไทยส่วนใหญ่จ่ายจริง</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>แพลตฟอร์ม</th><th>ค่าคอมมิชชั่น</th><th>ค่าโฆษณาเพิ่มเติม</th><th>อัตราที่จ่ายจริง</th><th>เงื่อนไขการจ่ายเงิน</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Deliveroo</strong></td><td class="lo">25–30%</td><td>+5–7% สำหรับโฆษณาโปรโมต</td><td class="lo">30–37%</td><td>รายสัปดาห์ (วันอังคาร)</td></tr>
+                        <tr><td><strong>Just Eat</strong></td><td class="lo">14–20%</td><td>+5% สำหรับการมองเห็นสูงขึ้น</td><td class="lo">14–25%</td><td>รายสัปดาห์</td></tr>
+                        <tr><td><strong>Uber Eats</strong></td><td class="lo">25–30%</td><td>+5–10% สำหรับโฆษณา</td><td class="lo">30–40%</td><td>รายสัปดาห์ (วันจันทร์)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="source-note"><strong>หมายเหตุ:</strong> Just Eat มีตัวเลือก "Self-Delivery" (จัดส่งเอง) ค่าคอมมิชชั่นต่ำ (14%) ที่คุณใช้คนขับของตัวเอง หากคุณมีคนขับส่งอาหารอยู่แล้วสำหรับออร์เดอร์ทางโทรศัพท์ นี่คือตัวเลือกแพลตฟอร์มที่ทำกำไรได้มากที่สุด</div>
+        </div>
+    </div>
+
+    <!-- Per-Dish Reality -->
+    <div class="section">
+        <div class="wrap">
+            <h2>ผัดไทยจานหนึ่ง<br><em>ทำกำไรได้เท่าไร</em></h2>
+            <p>ตัวเลขที่ไม่อ้อมค้อม ผัดไทย £14.50 บน Deliveroo เปิดโฆษณา:</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th></th><th>ทานในร้าน</th><th>Just Eat (14%)</th><th>Deliveroo (30%)</th><th>Uber Eats (30%)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>ราคาเมนู</strong></td><td class="hi">£14.50</td><td>£14.50</td><td>£14.50</td><td>£14.50</td></tr>
+                        <tr><td>VAT (20%)</td><td>-£2.42</td><td>-£2.42</td><td>-£2.42</td><td>-£2.42</td></tr>
+                        <tr><td>ค่าคอมมิชชั่นแพลตฟอร์ม</td><td>—</td><td class="lo">-£2.03</td><td class="lo">-£4.35</td><td class="lo">-£4.35</td></tr>
+                        <tr><td>ต้นทุนวัตถุดิบ</td><td>-£2.80</td><td>-£2.80</td><td>-£2.80</td><td>-£2.80</td></tr>
+                        <tr><td>บรรจุภัณฑ์</td><td>—</td><td>-£0.40</td><td>-£0.40</td><td>-£0.40</td></tr>
+                        <tr style="border-top:2px solid var(--line);"><td><strong>กำไรของคุณ</strong></td><td class="hi">£9.28</td><td>£6.85</td><td class="lo">£4.53</td><td class="lo">£4.53</td></tr>
+                        <tr><td><strong>กำไร %</strong></td><td class="hi">64%</td><td>47%</td><td class="lo">31%</td><td class="lo">31%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box" style="margin-top:20px;">
+                <h3><i class="fas fa-exclamation-triangle"></i> กับดักกำไรเดลิเวอรี่</h3>
+                <p>ผัดไทยของคุณทำกำไรได้ <strong>£4.53 บน Deliveroo เทียบกับ £9.28 ทานในร้าน</strong> นั่นคือกำไรลดลง 51% — ก่อนหักค่าแรง ค่าเช่าที่ และค่าพลังงาน หากออร์เดอร์มากกว่า 40% มาจากแพลตฟอร์มเดลิเวอรี่ คุณต้องปรับขึ้นราคาเดลิเวอรี่หรือลดการพึ่งพาแพลตฟอร์ม <a href="tools/PROFIT_MARGIN_DEFENDER.html" style="color:var(--red);">ใช้เครื่องมือ Profit Margin Defender →</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Profiles -->
+    <div class="section">
+        <div class="wrap">
+            <h2>วิเคราะห์ราย<br><em>แพลตฟอร์ม</em></h2>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-motorcycle" style="color:#00CCBC;"></i> Deliveroo</div>
+                <div class="p-rate">ค่าคอมมิชชั่น 25–30%</div>
+                <div class="p-desc"><strong>ส่วนแบ่งตลาด:</strong> แข็งแกร่งในลอนดอนและเมืองใหญ่ อ่อนแอในชนบท<br>
+                <strong>เหมาะที่สุดสำหรับ:</strong> การวางตำแหน่งระดับพรีเมียม ลูกค้า Deliveroo ใช้จ่ายต่อออร์เดอร์สูง (£23 เฉลี่ย) และไม่ค่อย sensitive ต่อราคา<br>
+                <strong>ด้อยที่สุดสำหรับ:</strong> กำไร อัตราฐาน 30% + ค่าโฆษณาเพิ่มเติม อาจดันอัตราที่จ่ายจริงเป็น 37%<br>
+                <strong>เฉพาะร้านไทย:</strong> ครัวลับ (Editions) ของ Deliveroo ในลอนดอนมีร้านอาหารไทยอิ่มตัวแล้ว คุณต้องแข่งกับแบรนด์ delivery-only ที่ต้นทุนต่ำกว่า<br>
+                <strong>เคล็ดลับต่อรอง:</strong> หากยอดขาย £2,000+/สัปดาห์ บน Deliveroo ขอพบ account manager เพื่อทบทวนอัตรา เชนอย่าง Rosa's Thai ต่อรองได้ 20–22% ร้านอิสระที่มียอดสูงดันได้ถึง 25%</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-utensils" style="color:#FF8000;"></i> Just Eat</div>
+                <div class="p-rate">ค่าคอมมิชชั่น 14–20%</div>
+                <div class="p-desc"><strong>ส่วนแบ่งตลาด:</strong> แพลตฟอร์มที่มีร้านอาหารมากที่สุดในสหราชอาณาจักร ครอบคลุมพื้นที่กว้างที่สุด<br>
+                <strong>เหมาะที่สุดสำหรับ:</strong> อัตรา self-delivery 14% หากคุณมีคนขับ Just Eat จะทำกำไรได้จริง<br>
+                <strong>ด้อยที่สุดสำหรับ:</strong> มูลค่าออร์เดอร์เฉลี่ยต่ำ (£18) ลูกค้า sensitive ต่อราคามากกว่า<br>
+                <strong>เฉพาะร้านไทย:</strong> Just Eat มีร้านอาหารไทยมากที่สุดในทุกแพลตฟอร์ม — หมายความว่ามีคู่แข่งมาก รูปภาพเมนูและคำอธิบายอาหารมีความสำคัญมาก<br>
+                <strong>กลยุทธ์สำคัญ:</strong> ลงทะเบียน Just Eat ด้วยอัตรา self-delivery 14% และใช้คนขับของตัวเอง ใช้ส่วนต่างที่ประหยัดได้ลดราคา 10% จากราคา Deliveroo — คุณยังทำกำไรได้มากกว่าต่อออร์เดอร์</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="p-name"><i class="fas fa-car" style="color:#000000; background:white; border-radius:4px; padding:2px 6px; font-size:0.8rem;"></i> Uber Eats</div>
+                <div class="p-rate">ค่าคอมมิชชั่น 25–30%</div>
+                <div class="p-desc"><strong>ส่วนแบ่งตลาด:</strong> เติบโตเร็ว แข็งแกร่งในเมือง ขยายตัวในชานเมือง<br>
+                <strong>เหมาะที่สุดสำหรับ:</strong> การค้นพบร้านใหม่ อัลกอริทึม Uber Eats โปรโมตร้านใหม่อย่างดุเดือดในสัปดาห์แรก 4 สัปดาห์ — เหมาะสำหรับเปิดตัว<br>
+                <strong>ด้อยที่สุดสำหรับ:</strong> ค่าใช้จ่ายเพิ่มเติม แพลตฟอร์มโฆษณาของ Uber ดุดัน — ง่ายที่จะใช้ไป £200/สัปดาห์ กับโฆษณาที่ไม่ convert<br>
+                <strong>เฉพาะร้านไทย:</strong> ผู้ใช้ Uber Eats ค้นหาตามประเภทอาหารอย่างหนัก ตรวจสอบให้แน่ใจว่าร้านของคุณถูก tag ว่า "Thai" ไม่ใช่ "Asian" หรือ "Other"<br>
+                <strong>คำเตือน:</strong> การตั้งค่าโฆษณาเริ่มต้นของ Uber Eats ลงทะเบียนร้านใหม่โดยอัตโนมัติ ตรวจสอบค่าโฆษณารายสัปดาห์ มิฉะนั้นคุณจะพบว่ามี £150/เดือนหายไปกับโปรโมชั่นที่คุณไม่ได้เปิดใช้โดยเจตนา</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy -->
+    <div class="section">
+        <div class="wrap">
+            <h2>วิธีสร้างเมนู<br><em>เดลิเวอรี่ที่ทำกำไร</em></h2>
+            <div class="strategy-grid">
+                <div class="strat-card">
+                    <div class="strat-num">1</div>
+                    <div class="strat-title">แยกเมนูเดลิเวอรี่จากทานในร้าน</div>
+                    <div class="strat-desc">เมนูเดลิเวอรี่ควรแพงกว่าเมนูทานในร้าน 20–25% ลูกค้ายอมรับได้ — พวกเขาจ่ายเพื่อความสะดวก เมนูแยกยังช่วยให้คุณเอาอาหารที่ไม่เหมาะกับการขนส่งออก (ปลากรอบ เทมปุระ)</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">2</div>
+                    <div class="strat-title">ผลักดันเมนูกำไรสูง</div>
+                    <div class="strat-desc">นำเสนอแกง (กำไร 83%) ผัด (กำไร 80%) และข้าวบนเมนูเดลิเวอรี่ ลดความสำคัญหรือเอาเมนูกำไรต่ำออก ลูกค้าเดลิเวอรี่ไม่ได้เปรียบเทียบกับเมนูในร้าน — พวกเขาเปรียบเทียบกับตัวเลือกเดลิเวอรี่อื่น</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">3</div>
+                    <div class="strat-title">เซ็ตเมนูดีกว่าจานเดี่ยว</div>
+                    <div class="strat-desc">เซ็ต "ผัดไทย + ปอเปี๊ยะ + เครื่องดื่ม = £18.50" เพิ่มมูลค่าออร์เดอร์เฉลี่ย 30–40% แพลตฟอร์มหักค่าคอมมิชชั่นเป็นเปอร์เซ็นต์เท่าเดิม แต่ต้นทุนคงที่ (บรรจุภัณฑ์ เวลารอคนขับ) กระจายบนออร์เดอร์ที่ใหญ่ขึ้น</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">4</div>
+                    <div class="strat-title">จัดส่งเองบน Just Eat</div>
+                    <div class="strat-desc">หากคุณมีคนขับสักคนสำหรับออร์เดอร์โทรศัพท์ ลงทะเบียน Just Eat ด้วยอัตรา self-delivery 14% แทน marketplace 20% ที่ 100 ออร์เดอร์/สัปดาห์ เฉลี่ย £20 ประหยัดได้ £120/สัปดาห์ — £6,240/ปี ใช้ Deliveroo และ Uber Eats สำหรับการค้นพบ Just Eat สำหรับกำไร</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">5</div>
+                    <div class="strat-title">ปิดโฆษณาหลัง 8 สัปดาห์</div>
+                    <div class="strat-desc">แพลตฟอร์มดันโฆษณาโปรโมตอย่างหนัก ใช้ในสัปดาห์แรก 8 สัปดาห์เพื่อสะสมรีวิว แล้วปิด อันดับ organic ขึ้นกับจำนวนรีวิวและยอดออร์เดอร์ — ไม่ใช่ค่าโฆษณา ร้านอาหารไทยส่วนใหญ่จ่ายโฆษณาเกิน £100–300/เดือน</div>
+                </div>
+                <div class="strat-card">
+                    <div class="strat-num">6</div>
+                    <div class="strat-title">คิดค่าบรรจุภัณฑ์</div>
+                    <div class="strat-desc">บวก £0.50–£1.00 ต่อรายการเดลิเวอรี่เพื่อค่าบรรจุภัณฑ์ อาหารไทยต้องการภาชนะคุณภาพ (แกงรั่ว ของกรอบอับไอน้ำ) กล่อง £0.40 + ถุง £0.10 ต้นทุน £0.50 — คิด £1.00 ไม่มีใครสังเกต £1 บนแกง £16</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">เครื่องมือ</a> ·
+                <a href="/guides.html">คู่มือ</a> ·
+                <a href="tools/PROFIT_MARGIN_DEFENDER.html">Profit Defender</a> ·
+                <a href="thai-restaurant-menu-pricing-uk.html">การตั้งราคาเมนู</a> ·
+                <a href="thai-delivery-profit-analysis-2026.html">วิเคราะห์กำไรเดลิเวอรี่</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK อัตราค่าคอมมิชชั่นจากอัตรามาตรฐานที่เผยแพร่ต่อสาธารณะสำหรับร้านอาหารอิสระ อัตราจริงของคุณอาจแตกต่างกัน</p>
+        </div>
+    </footer>
+</body>
+</html>

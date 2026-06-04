@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英国泰餐厅运营成本真实数据 2026 | ThaiData</title>
+    <meta name="description" content="英国泰餐厅真实运营成本。食材成本、员工工资（NLW 2026）、各地区租金、能源、保险、外卖平台佣金——每项明细，干货无水分。">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/thai-restaurant-costs-uk">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thaidata.uk/thai-restaurant-costs-uk">
+    <meta property="og:title" content="英国泰餐厅运营成本 2026 — 完整拆解">
+    <meta property="og:description" content="英国泰餐厅经营者真实数据。每项成本明细——食材、员工、租金、能源、保险、执照、外卖佣金。">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="zh_CN">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto
+    }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; display: inline-block; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+
+        .data-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow-x: auto; margin: 20px 0; }
+        .data-table { width: 100%; border-collapse: collapse; min-width: 650px; }
+        .data-table thead th { padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+        .data-table tbody td { padding: 13px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        .data-table .cost-hi { color: var(--c2); font-weight: 700; }
+        .data-table .cost-warn { color: var(--gold); font-weight: 700; }
+        .total-row td { font-weight: 700; color: white; border-top: 2px solid var(--line); font-size: 0.95rem; }
+
+        .cost-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 14px 0; }
+        .cost-card .cc-icon { font-size: 1.5rem; margin-bottom: 10px; }
+        .cost-card .cc-title { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+        .cost-card .cc-amount { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--c2); line-height: 1; margin-bottom: 4px; }
+        .cost-card .cc-desc { color: var(--ink4); font-size: 0.82rem; line-height: 1.6; }
+
+        .insight-box { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .insight-box h3 { color: var(--c2); font-size: 0.9rem; margin: 0 0 6px; }
+        .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"指南","item":"https://thaidata.uk/guides"},{"@type":"ListItem","position":3,"name":"英国泰餐厅运营成本真实数据"}]}</script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "英国泰餐厅的主要运营成本有哪些？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "主要成本包括：食材和原料（占收入的25–35%），员工工资含2026年4月起£12.71/小时的国家生活工资（占30–35%），租金和营业税（占8–15%），能源和公用事业（占5–8%），外卖平台佣金（占14–32%），保险和执照（占2–3%），以及营销（占2–5%）。一家典型的40座位泰餐厅每月运营成本约为£25,000–£45,000，具体取决于所在地区。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "国家生活工资上涨对泰餐厅的成本影响是多少？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "从2026年4月起，国家生活工资（NLW）将从£12.21上涨至£12.71/小时。对于一家有6名21岁以上全职员工的小型餐厅，仅工资成本每年就会增加约£6,240。一个8人混合年龄团队每年可能额外面临£7,400–£9,800的成本。18–20岁员工时薪上涨8.5%至£10.85/小时，学徒时薪上涨6%至£8.00/小时。使用我们的免费NLW计算器可以精确测算您的实际影响。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "经营泰餐厅厨房的能源成本是多少？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "泰式烹饪因高功率炒锅火力持续使用而消耗大量燃气。一家典型泰餐厅每月燃气费用约为£800–£1,600，电费约为£400–£800。综合能源成本占收入的5–8%——高于大多数菜系。升级后的排烟系统每月还会增加£50–£100的电费。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "泰餐厅的营业税是多少？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "营业税因地点和应税价值而异。位于地区城市的中小型餐厅（100–150平方米）每年可能需支付£6,000–£12,000。伦敦地区每年可能高达£15,000–£30,000以上。酒店业减免计划可以降低此项费用——请咨询当地市政厅。许多经营者对营业税的预算会低估20–30%。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "泰餐厅需要购买哪些保险？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "必备保险：雇主责任险（法定要求，约£500–£1,200/年），公众责任险（£500万保额，£150–£500/年），房屋及财产险（£800–£2,000/年），以及营业中断险。另外建议考虑：库存损坏险（对进口特色食材至关重要）、设备故障险和法律费用险。年度保险总费用：£1,500–£4,000。"
+            }
+        }
+    ]
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "citation": [
+        {
+            "@type": "CreativeWork",
+            "name": "英国税务海关总署（HMRC）",
+            "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+            "description": "英国国家生活工资标准、国民保险门槛、就业津贴"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "UKHospitality",
+            "url": "https://www.ukhospitality.org.uk/",
+            "description": "英国酒店业净利润率基准（2024年平均4.2%）"
+        }
+    ],
+    "creditText": "数据来源于英国政府机构和行业协会。请参阅各项引用来源了解方法论。"
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+            ".header-section h1",
+            ".cost-amount",
+            ".key-stat"
+        ]
+    }
+}
+    </script>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" height="36"></a>
+            <div class="lang-switch" style="display:flex;gap:8px;font-size:0.75rem;">
+                <a href="/ar/" style="color:rgba(255,255,255,0.4);text-decoration:none;">AR</a>
+                <a href="/th/" style="color:rgba(255,255,255,0.4);text-decoration:none;">TH</a>
+                <a href="/zh/" style="color:rgba(255,255,255,0.4);text-decoration:none;">ZH</a>
+            </div>
+            <a href="/guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; 指南</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">成本情报 · 2026</div>
+            <h1>英国泰餐厅<br><em>运营成本</em></h1>
+            <p>泰餐厅损益表的每一项明细。基于2026年真实数据，以一家典型的40座位独立餐厅为例——从食材成本到让初次经营者措手不及的隐性支出。</p>
+        </div>
+    </div>
+
+    <!-- 总览 -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>损益表 <em>一目了然</em></h2>
+            <p>典型40座位泰餐厅，周营业额£12,000（在伦敦属中等水平，在地区城市表现良好）。地点：英格兰中部城市。员工配置：1名主厨、2名厨房助理、2名前厅服务员、1名洗碗工（兼职）。</p>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>成本类别</th><th>每周 (£)</th><th>每月 (£)</th><th>每年 (£)</th><th>占收入比例</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>食材及饮品成本</strong></td><td>£3,300</td><td>£14,300</td><td>£171,600</td><td class="cost-warn">27.5%</td></tr>
+                        <tr><td><strong>员工工资（含NI、养老金）</strong></td><td>£4,200</td><td>£18,200</td><td>£218,400</td><td class="cost-warn">35.0%</td></tr>
+                        <tr><td><strong>租金</strong></td><td>£1,150</td><td>£5,000</td><td>£60,000</td><td>9.6%</td></tr>
+                        <tr><td><strong>能源（燃气+电力）</strong></td><td>£460</td><td>£2,000</td><td>£24,000</td><td>3.8%</td></tr>
+                        <tr><td><strong>营业税</strong></td><td>£230</td><td>£1,000</td><td>£12,000</td><td>1.9%</td></tr>
+                        <tr><td><strong>保险</strong></td><td>£115</td><td>£500</td><td>£6,000</td><td>1.0%</td></tr>
+                        <tr><td><strong>外卖平台佣金</strong></td><td>£350</td><td>£1,520</td><td>£18,240</td><td>2.9%</td></tr>
+                        <tr><td><strong>营销推广</strong></td><td>£150</td><td>£650</td><td>£7,800</td><td>1.3%</td></tr>
+                        <tr><td><strong>耗材及维护</strong></td><td>£200</td><td>£870</td><td>£10,440</td><td>1.7%</td></tr>
+                        <tr><td><strong>执照及专业服务费</strong></td><td>£80</td><td>£350</td><td>£4,200</td><td>0.7%</td></tr>
+                        <tr><td><strong>银行及刷卡手续费</strong></td><td>£100</td><td>£435</td><td>£5,220</td><td>0.8%</td></tr>
+                        <tr class="total-row"><td><strong>总成本</strong></td><td><strong>£10,335</strong></td><td><strong>£44,825</strong></td><td><strong>£537,900</strong></td><td><strong>86.1%</strong></td></tr>
+                        <tr style="background:rgba(16,185,129,0.05);"><td><strong>净利润（税前）</strong></td><td class="cost-hi"><strong>£1,665</strong></td><td class="cost-hi"><strong>£7,215</strong></td><td class="cost-hi"><strong>£86,580</strong></td><td class="cost-hi"><strong>13.9%</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="source-note"><strong>如何解读：</strong>13.9%的净利润在英国酒店餐饮业属于良好水平——行业平均为8–12%。泰餐厅之所以能达到这一水平，是因为咖喱和炒菜类菜品本身具有较高的毛利润。但这一模型假设成本控制严格——食材成本超支3%就会侵蚀£20,000的利润。</div>
+        </div>
+    </div>
+
+    <!-- 食材成本深度解析 -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>食材成本</em> —— 最大的杠杆</h2>
+            <p>食材成本是最大的一项可控支出。对于泰餐来说，27.5%的食材成本是可以实现的——远低于意大利餐或英式餐厅常见的30–35%——因为泰式咖喱、炒菜和米饭类菜品本身具有较高的毛利润空间。</p>
+
+            <div class="cost-card">
+                <div class="cc-icon">🥘</div>
+                <div class="cc-title">目标食材成本：27–30%</div>
+                <div class="cc-amount">£3,300/周</div>
+                <div class="cc-desc">基于每周£12,000的营业额。包含所有原料、饮品和厨房消耗品。如果您的成本超过30%，请检查：是否蛋白质分量过大？是否在零售渠道而非批发渠道采购？使用我们的<a href="tools/WHOLESALE_BENCHMARKER.html" style="color:var(--c2);">批发价格基准工具</a>来对比您的采购价格。</div>
+            </div>
+
+            <div class="insight-box"><h3><i class="fas fa-lightbulb"></i> 泰餐厅食材成本的三大漏洞</h3><p>排名前三的问题：（1）蛋白质分量过大——每份多放20克鸡肉，每周成本增加£100。（2）以零售价（£2.50/罐）而非批发价（£1.35/罐）购买椰浆——每周多支出£50。（3）新鲜香草3天内未使用造成的浪费——改为每周订购两次，而非一次。控制好这三项，您可以立即获得3–5%的利润空间提升。</p></div>
+        </div>
+    </div>
+
+    <!-- 员工成本 -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>员工成本</em> —— 2026年4月政策影响</h2>
+            <p>劳动力成本现在已成为大多数泰餐厅最大的支出项目。2026年4月国家生活工资上涨至£12.71/小时，使得典型经营者的员工成本从收入的约32%上升到约35%。</p>
+
+            <div class="cost-card">
+                <div class="cc-icon">👥</div>
+                <div class="cc-title">目标员工成本：32–36%</div>
+                <div class="cc-amount">£4,200/周</div>
+                <div class="cc-desc">包含总工资、雇主国民保险（年收入超过£9,100部分的15%）和职场养老金（3%）。不包含厨师签证担保费用——那些属于资本支出，不属于运营成本。<a href="nlw-report.html" style="color:var(--c2);">运行 NLW 计算器 →</a></div>
+            </div>
+
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead><tr><th>职位</th><th>每周工时</th><th>时薪</th><th>每周成本</th><th>每年成本</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>主厨</strong></td><td>48</td><td>£16.00/小时</td><td class="cost-hi">£768</td><td>£39,936</td></tr>
+                        <tr><td><strong>厨房助理 1</strong></td><td>40</td><td>£12.71/小时</td><td>£508</td><td>£26,437</td></tr>
+                        <tr><td><strong>厨房助理 2</strong></td><td>35</td><td>£12.71/小时</td><td>£445</td><td>£23,132</td></tr>
+                        <tr><td><strong>前厅经理</strong></td><td>40</td><td>£13.50/小时</td><td>£540</td><td>£28,080</td></tr>
+                        <tr><td><strong>前厅服务员</strong></td><td>30</td><td>£12.71/小时</td><td>£381</td><td>£19,826</td></tr>
+                        <tr><td><strong>洗碗工（兼职）</strong></td><td>20</td><td>£12.71/小时</td><td>£254</td><td>£13,218</td></tr>
+                        <tr><td><strong>国民保险 + 养老金</strong></td><td>—</td><td>—</td><td class="cost-warn">£1,304</td><td>£67,771</td></tr>
+                        <tr class="total-row"><td><strong>合计</strong></td><td>213 小时</td><td></td><td><strong>£4,200</strong></td><td><strong>£218,400</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 租金 -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>租金</em> —— 合理价格参考</h2>
+            <p>租金的波动幅度超过其他任何成本。经验法则：租金不应超过收入的10%。一家周营业额£12,000的餐厅，每月可承受£5,000的租金。</p>
+
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead><tr><th>地点类型</th><th>月租金</th><th>面积（约）</th><th>每平方英尺单价</th><th>备注</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>伦敦1–2区</strong></td><td class="cost-warn">£6,000–£12,000</td><td>800–1,200</td><td>£75–100/年</td><td>高端地段。仅当周营业额达£15k以上时可行。</td></tr>
+                        <tr><td><strong>伦敦3–4区</strong></td><td>£3,500–£6,000</td><td>1,000–1,500</td><td>£35–50/年</td><td>伦敦独立餐厅的甜蜜点。</td></tr>
+                        <tr><td><strong>主要城市中心</strong></td><td>£3,000–£5,500</td><td>1,200–1,800</td><td>£25–35/年</td><td>曼彻斯特、伯明翰、利兹、布里斯托。</td></tr>
+                        <tr><td><strong>大型城镇/郊区</strong></td><td class="cost-hi">£1,800–£3,500</td><td>1,500–2,500</td><td>£12–20/年</td><td>利润空间最佳。面积大，租金低。</td></tr>
+                        <tr><td><strong>小型城镇/乡村</strong></td><td class="cost-hi">£1,200–£2,500</td><td>1,500–3,000</td><td>£8–15/年</td><td>租金最低，但需要良好口碑吸引顾客。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight-box"><h3><i class="fas fa-handshake"></i> 谈判技巧</h3><p>要求加入营业额租金条款——基础租金 + 超过约定门槛部分的5–8%营业额。这样在淡季可以保护您，在旺季也能让房东受益。另外：务必协商3–6个月的免租装修期。如果该单元已空置6个月以上，力争6个月免租期。</p></div>
+        </div>
+    </div>
+
+    <!-- 隐性成本 -->
+    <div class="section">
+        <div class="wrap">
+            <h2><em>隐性成本</em> —— 新手容易忽视</h2>
+
+            <div class="cost-card">
+                <div class="cc-icon">⚡</div>
+                <div class="cc-title">能源——泰式烹饪耗气量大</div>
+                <div class="cc-amount">£24,000/年</div>
+                <div class="cc-desc">高功率炒锅烹饪的燃气消耗比标准欧式烹饪多30–40%。一家40座餐厅每月预算约£2,000。安装智能电表并每日监控——一个维护不善的炒炉灶每月会浪费£50–80的燃气。</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">🛡️</div>
+                <div class="cc-title">保险——不是可选项，也不便宜</div>
+                <div class="cc-amount">£6,000/年</div>
+                <div class="cc-desc">雇主责任险（法定要求，£1,000万保额）、公众责任险（£500万保额）、房屋及财产险、营业中断险，以及对泰餐厅尤为重要的<strong>深度油炸保险</strong>。标准保单可能将炒锅烹饪排除在外。请确认您的保单明确涵盖商用炒锅运营。</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">💳</div>
+                <div class="cc-title">刷卡手续费</div>
+                <div class="cc-amount">£5,220/年</div>
+                <div class="cc-desc">按£300,000年刷卡额1.75%的平均综合费率计算。积极协商费率——独立餐厅应支付1.2–1.8%，而非2%以上。SumUp和Square操作更简单但高交易额时更贵。年刷卡额超过£150,000时，建议切换到正规商业银行商户账户。</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">🗑️</div>
+                <div class="cc-title">垃圾处理</div>
+                <div class="cc-amount">£2,500–£4,000/年</div>
+                <div class="cc-desc">商业食物垃圾收集是强制性的。泰餐厅产生的食物垃圾高于平均水平（新鲜备料、高翻台率）。考虑废食用油收集——大多数公司免费收集，有时还会付钱给您。不要为废油处理付费。</div>
+            </div>
+
+            <div class="cost-card">
+                <div class="cc-icon">🎵</div>
+                <div class="cc-title">音乐执照（PPL/PRS）</div>
+                <div class="cc-amount">£400–£800/年</div>
+                <div class="cc-desc">如果您播放任何录音音乐——即使是厨房里的收音机——您也需要同时持有PPL和PRS执照。违规罚款从£1,000起。这不是可选项。</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="index.html">工具</a> ·
+                <a href="/guides.html">指南</a> ·
+                <a href="nlw-report.html">NLW 计算器</a> ·
+                <a href="thai-restaurant-menu-pricing-uk.html">菜单定价</a> ·
+                <a href="thai-wholesale-suppliers-uk.html">供应商</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK。数据基于一家典型40座位独立泰餐厅的估算。您的实际成本会因地点、规模和经营模式而有所不同。</p>
+        </div>
+    </footer>
+</body>
+</html>

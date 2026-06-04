@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>วิธีเปิดร้านอาหารไทยในสหราชอาณาจักร | ThaiData</title>
+<meta name="description" content="คู่มือฉบับสมบูรณ์สำหรับการเปิดร้านอาหารไทยในสหราชอาณาจักร รวมต้นทุนจริง ขั้นตอนจริง และเครื่องมือวางแผนธุรกิจสำหรับผู้ประกอบการอาหารไทย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--c1:#0A7A6F;--c2:#10B981;--dark:#0C1220;--ink:#0F172A;--ink2:#334155;--ink3:#64748B;--ink4:#94A3B8;--line:#E5E7EB;--bg:#FAFAF9;--bg2:#F3F4F6}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--dark);color:#CBD5E1;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:0 32px}
+a{color:var(--c2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Navigation */
+.nav{border-bottom:1px solid rgba(255,255,255,0.06);padding:18px 0}
+.nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-weight:700;color:#fff;font-size:1.1rem;display:flex;align-items:center;gap:8px}
+.nav-logo svg{width:22px;height:22px;flex-shrink:0}
+.nav-link{color:var(--ink4);font-size:0.9rem;font-weight:500}
+.nav-link:hover{color:#fff}
+
+/* Hero */
+.hero{padding:72px 0 56px;text-align:center}
+.hero-overline{color:var(--c2);font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px}
+.hero h1{color:#fff;font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.2;margin-bottom:16px}
+.hero h1 em{color:var(--c2);font-style:italic}
+.hero-subtitle{color:var(--ink4);font-size:1.05rem;max-width:640px;margin:0 auto;line-height:1.65}
+
+/* Section headers */
+.section-header{margin-bottom:28px}
+.section-header h2{color:#fff;font-family:'Instrument Serif',serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:400;line-height:1.25}
+.section-header h2 em{color:var(--c2);font-style:italic}
+.section-header p{color:var(--ink4);margin-top:8px;font-size:0.92rem}
+
+/* Sections */
+section{padding:56px 0}
+
+/* Cost grid */
+.cost-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+.cost-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:22px;text-align:center;transition:all 0.2s}
+.cost-card:hover{background:rgba(255,255,255,0.05)}
+.cost-card .amount{color:var(--c2);font-family:'Instrument Serif',serif;font-size:1.55rem;font-weight:400;margin-bottom:6px}
+.cost-card .label{color:var(--ink4);font-size:0.82rem;line-height:1.45}
+
+/* Tip box */
+.tip-box{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.12);border-radius:12px;padding:20px 24px;margin-top:28px}
+.tip-box p{color:var(--ink4);font-size:0.88rem;line-height:1.6}
+.tip-box strong{color:var(--c2)}
+
+/* Roadmap */
+.roadmap-list{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.roadmap-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:18px 22px;display:flex;gap:14px;align-items:flex-start;transition:all 0.2s}
+.roadmap-item:hover{background:rgba(255,255,255,0.05)}
+.roadmap-number{width:28px;height:28px;border-radius:50%;background:var(--c1);color:#fff;font-size:0.8rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.roadmap-content h3{color:#fff;font-size:0.92rem;font-weight:600;margin-bottom:5px}
+.roadmap-content p{color:var(--ink4);font-size:0.86rem;line-height:1.55}
+.roadmap-content a{color:var(--c2);text-decoration:underline}
+
+/* Differentiators */
+.differentiator{margin-bottom:32px}
+.differentiator:last-child{margin-bottom:0}
+.differentiator-icon{font-size:1.4rem;margin-bottom:8px;display:block}
+.differentiator h3{color:#fff;font-size:1rem;font-weight:600;margin-bottom:8px}
+.differentiator p{color:var(--ink4);font-size:0.88rem;line-height:1.65}
+.differentiator p strong{color:#E2E8F0}
+.differentiator .visa-cost{color:var(--c2);font-family:'Instrument Serif',serif;font-size:1.3rem;display:block;margin:8px 0}
+.differentiator .visa-link{display:inline-block;margin-top:8px}
+
+/* Tools section */
+.tools-grid{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.tool-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:16px 22px;display:flex;align-items:center;gap:14px;transition:all 0.2s}
+.tool-card:hover{background:rgba(255,255,255,0.05)}
+.tool-icon{font-size:1.5rem;width:36px;text-align:center;flex-shrink:0}
+.tool-info h4{color:#fff;font-size:0.92rem;font-weight:600;margin-bottom:3px}
+.tool-info p{color:var(--ink4);font-size:0.82rem;line-height:1.45}
+
+/* Truth box */
+.truth-box{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.12);border-radius:12px;padding:22px 24px;margin-top:40px}
+.truth-box h4{color:#FBBF24;font-size:0.9rem;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.truth-box p{color:var(--ink4);font-size:0.88rem;line-height:1.7}
+
+/* Footer */
+.footer{border-top:1px solid rgba(255,255,255,0.06);padding:32px 0;text-align:center}
+.footer-links{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.footer-links a{color:var(--ink4);font-size:0.85rem}
+.footer-links span{color:var(--ink3);font-size:0.85rem}
+.footer p{color:var(--ink3);font-size:0.82rem}
+
+/* Responsive */
+@media(max-width:640px){.container{padding:0 20px}section{padding:40px 0}.hero{padding:52px 0 40px}.cost-grid{grid-template-columns:1fr}.roadmap-item{padding:14px 16px}.tool-card{padding:14px 16px}}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--c2)"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><path d="M9 8h.01"/><path d="M15 8h.01"/></svg>
+      ThaiData.uk
+    </a>
+    <a href="/guides" class="nav-link">← คู่มือ</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-overline">คู่มือฉบับสมบูรณ์ · ฉบับปี 2026</p>
+    <h1>วิธีเปิด<br><em>ร้านอาหารไทย</em><br>ในสหราชอาณาจักร</h1>
+    <p class="hero-subtitle">ต้นทุนจริง ตัวเลขจริง ขั้นตอนจริง ทุกอย่างที่คู่มือ "วิธีเปิดร้านอาหาร" ทั่วไปมักละเลย — เฉพาะสำหรับผู้ประกอบการอาหารไทย</p>
+  </div>
+</section>
+
+<!-- What It Actually Costs -->
+<section id="costs">
+  <div class="container">
+    <div class="section-header">
+      <h2>สิ่งที่<em>แท้จริง</em>ต้องใช้เงินเท่าไร</h2>
+      <p>อ้างอิงตัวเลขปี 2026 ช่วงราคาขึ้นอยู่กับสถานที่ ขนาดร้าน และการรับช่วงร้านเดิมหรือเริ่มต้นจากศูนย์</p>
+    </div>
+
+    <div class="cost-grid">
+      <div class="cost-card">
+        <div class="amount">£80k–£180k</div>
+        <div class="label">ต้นทุนเริ่มต้นทั้งหมด (leasehold, 40–60 ที่นั่ง)</div>
+      </div>
+      <div class="cost-card">
+        <div class="amount">£15k–£35k</div>
+        <div class="label">ติดตั้งครัว (เตาเว็ก ระบบดูดควัน ตู้เย็น)</div>
+      </div>
+      <div class="cost-card">
+        <div class="amount">£8k–£20k</div>
+        <div class="label">พื้นที่หน้าร้าน (เฟอร์นิเจอร์ ตกแต่ง POS ภาชนะ)</div>
+      </div>
+      <div class="cost-card">
+        <div class="amount">£3k–£8k</div>
+        <div class="label">กฎหมายและใบอนุญาต ( premises licence ทนายความ ผังเมือง)</div>
+      </div>
+      <div class="cost-card">
+        <div class="amount">£5k–£10k</div>
+        <div class="label">ก่อนเปิดร้าน (อบรมพนักงาน การตลาด soft launch)</div>
+      </div>
+      <div class="cost-card">
+        <div class="amount">£5k–£15k</div>
+        <div class="label">สต็อกเริ่มต้น (ของแห้ง ของสด บาร์)</div>
+      </div>
+      <div class="cost-card">
+        <div class="amount">£8k–£18k</div>
+        <div class="label">วีซ่าสponsorshipเชฟ (กรณีรับสมัครจากประเทศไทย)</div>
+      </div>
+      <div class="cost-card">
+        <div class="amount">3–6 เดือน</div>
+        <div class="label">เงินทุนหมุนเวียน (ค่าเช่า ค่าจ้าง ซัพพลายเออร์)</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <p><strong>ประหยัดเงิน:</strong> การรับช่วงร้านอาหารเดิมที่มีระบบดูดควันและครัวพาณิชย์พร้อมใช้งาน สามารถลดต้นทุนเริ่มต้นได้ £20k–£40k ปัจจัยต้นทุนที่มีความแปรผันสูงที่สุดคือหน่วยการค้าดังกล่าวมี canopy ดูดควันแบบพาณิชย์ติดตั้งแล้วหรือไม่ — การติดตั้งใหม่ตั้งแต่เริ่มต้นมีค่าใช้จ่าย £15k–£25k เพียงอย่างเดียว</p>
+    </div>
+  </div>
+</section>
+
+<!-- The 15-Step Roadmap -->
+<section id="roadmap">
+  <div class="container">
+    <div class="section-header">
+      <h2>แผนการดำเนินงาน<em>15 ขั้นตอน</em></h2>
+    </div>
+
+    <div class="roadmap-list">
+      <div class="roadmap-item">
+        <span class="roadmap-number">1</span>
+        <div class="roadmap-content">
+          <h3>ศึกษาทำเลที่ตั้ง</h3>
+          <p>ใช้<a href="/uk-thai-count">ข้อมูลจำนวนร้านอาหารไทยในสหราชอาณาจักร</a>ของเราเพื่อดูจำนวนคู่แข่งในเมืองเป้าหมาย ลอนดอนมี 282 ร้าน — แมนเชสเตอร์มี 26 ร้าน คู่แข่งน้อย ≠ ความต้องการน้อย</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">2</span>
+        <div class="roadmap-content">
+          <h3>เขียนแผนธุรกิจ</h3>
+          <p>ธนาคารและเจ้าของอาคารต้องการเห็น: กลุ่มเป้าหมาย การวิเคราะห์คู่แข่ง การคาดการณ์กำไรขาดทุน 3 ปี และ — สำคัญยิ่ง — วิธีที่คุณจะรับมือกับการขึ้นค่าแรง NLW เครื่องมือคำนวณของเราให้ตัวเลขที่ผู้ให้กู้ต้องการจริงๆ</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">3</span>
+        <div class="roadmap-content">
+          <h3>จัดหาเงินทุน</h3>
+          <p>ตัวเลือก: เงินออมส่วนตัว เงินกู้ธนาคาร (ต้องการบัญชี 2 ปี — ยากสำหรับมือใหม่) Start Up Loans (£500–£25k ดอกเบี้ยคงที่ 6%) นักลงทุน angel หรือวงการลงทุนในชุมชนไทย</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">4</span>
+        <div class="roadmap-content">
+          <h3>หาและปิดดีลสถานที่</h3>
+          <p>มองหา use class A3/A5 (ปัจจุบันเป็น Sui Generis ภายใต้ระบบใหม่) ตรวจสอบ: ระบบดูดควันติดตั้งแล้ว? แก๊สเพียงพอ? (การทำอาหารไทยต้องใช้ BTU สูง) ต่อรองช่วงฟรีค่าเช่า (3–6 เดือนเป็นสถานะมาตรฐานสำหรับตกแต่งร้าน)</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">5</span>
+        <div class="roadmap-content">
+          <h3>ใบอนุญาตสถานที่ (Premises Licence)</h3>
+          <p>หากคุณจำหน่ายเครื่องดื่มแอลกอฮอล์หรือเปิดเกิน 23.00 น. คุณต้องมีใบอนุญาตสถานที่จากสภาท้องถิ่น ยื่นเร็ว — ใช้เวลาอย่างน้อย 28 วัน และการคัดค้านจากเพื่อนบ้านอาจทำให้ล่าช้า</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">6</span>
+        <div class="roadmap-content">
+          <h3>จดทะเบียนธุรกิจอาหาร</h3>
+          <p>จดทะเบียนกับหน่วยงานสาธารณสุขสิ่งแวดล้อมของสภาท้องถิ่นอย่างน้อย 28 วันก่อนเปิดร้าน ฟรี บังคับ และคุณจะได้รับการตรวจสอบสุขอนามัยครั้งแรกภายในไม่กี่เดือนหลังเปิดร้าน</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">7</span>
+        <div class="roadmap-content">
+          <h3>ออกแบบครัว</h3>
+          <p>การทำอาหารไทยต้องการ: เตาเว็กกำลังสูง 2–3 หัว เตาต้มน้ำซุ้ง เตาหุงข้าวพาณิชย์ หม้อทอด เตาย่างซาลามานเดอร์ ตู้เย็น walk-in อย่าประหยัดเรื่องระบบดูดควัน — นี่คือสิ่งแรกที่เจ้าหน้าที่ EHO ตรวจสอบ</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">8</span>
+        <div class="roadmap-content">
+          <h3>รับสมัครเชฟ</h3>
+          <p>ขั้นตอนที่ยากที่สุด ใช้<a href="/chef-visa">เครื่องมือช่วยเหลือวีซ่าเชฟ</a>ของเราเพื่อตรวจสอบว่าคุณสามารถ sponsorship เชฟไทยได้หรือไม่ ค่าแรงขั้นต่ำวีซ่า Skilled Worker คือ £38,700/ปี หรืออัตราตลาด — อย่างใดอย่างหนึ่งที่สูงกว่า งบประมาณ 3–6 เดือนสำหรับการดำเนินการวีซ่า</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">9</span>
+        <div class="roadmap-content">
+          <h3>สร้างเมนู</h3>
+          <p>ใช้<a href="/menu-pricing">คู่มือกำหนดราคาเมนู</a>ของเราสำหรับมาตรฐานราคาแยกต่อจาน เริ่มต้น 20–25 เมนู ไม่ใช่ 60 เมนู เมนูที่กระชับ = อาหารสดกว่า บริการเร็วกว่า ของเสียน้อยกว่า และ GP สูงกว่า</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">10</span>
+        <div class="roadmap-content">
+          <h3>หาซัพพลายเออร์</h3>
+          <p>บัญชีหลัก: ผู้ค้าส่งเฉพาะอาหารไทย (สำหรับวัตถุดิบแท้ๆ — ข่า ใบมะกรูด โหระพาไทย น้ำปลา) ฟู้ดเซอร์วิสทั่วไป (เนื้อสัตว์ ผัก นม) ผู้จำหน่ายเครื่องดื่ม และซัพพลายเออร์สำรองสำหรับแต่ละราย ใช้<a href="/wholesale-benchmark">เครื่องมือเปรียบเทียบราคาขายส่ง</a>ของเรา</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">11</span>
+        <div class="roadmap-content">
+          <h3>จัดตั้งโครงสร้างธุรกิจ</h3>
+          <p>บริษัทจำกัด (พบบ่อยที่สุด — ป้องกันทรัพย์สินส่วนตัว) จดทะเบียน VAT หากยอดขายเกิน £90k (หรือสมัครใจเพื่อขอคืน VAT จากค่าตกแต่งร้าน) ประกันนายจ้าง (บังคับ) ประกันความรับผิดต่อบุคคลภายนอก และประกันอาคาร/ทรัพย์สิน</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">12</span>
+        <div class="roadmap-content">
+          <h3>จ้างพนักงานหน้าร้าน</h3>
+          <p>ที่อัตรา £12.71/ชม. ตั้งแต่เมษายน 2026 พนักงานหน้าร้านเต็มเวลามีต้นทุน ~£26,500/ปี รวม NI <a href="/nlw-calculator">เครื่องมือคำนวณ NLW</a>ของเราคำนวณต้นทุนพนักงานที่แน่นอนของคุณ งบประมาณพนักงานหน้าร้าน 2–3 คนสำหรับร้าน 40 ที่นั่ง</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">13</span>
+        <div class="roadmap-content">
+          <h3>ติดตั้งระบบเทคโนโลยี</h3>
+          <p>ระบบ EPOS (Toast, Lightspeed หรือ Square สำหรับร้านขนาดเล็ก) เครื่องรูดบัตร ระบบจองออนไลน์ (OpenTable หรือ Resy) เว็บไซต์ (จำเป็น — 70% ของลูกค้าตรวจสอบเมนูออนไลน์ก่อนมาเยือน) และการเชื่อมต่อแพลตฟอร์มเดลิเวอรี่หากคุณมีบริการ takeaway</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">14</span>
+        <div class="roadmap-content">
+          <h3>Soft launch</h3>
+          <p>ดำเนินการ 2–3 สัปดาห์ที่ความจุ 50% กับแขกที่ได้รับเชิญ เพื่อน และครอบครัว ให้ส่วนลด 30–50% แลกกับความคิดเห็นที่ซื่อสัตย์ แก้ไขทุกอย่างก่อนเปิดตัวอย่างเป็นทางการ นี่คือช่วงเวลาที่คุณจะค้นพบว่าหม้อหุงข้าวเล็กเกินไปและเค้าโครงสถานีเว็กกลับด้าน</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-number">15</span>
+        <div class="roadmap-content">
+          <h3>เปิดตัวและตลาดอย่างเข้มข้น</h3>
+          <p>Google Business Profile (สำคัญสำหรับการค้นหาในพื้นที่) Instagram (อาหารไทยมีความน่าสนใจทางสายตาสูง — โพสต์ทุกวัน) บล็อกเกอร์อาหารท้องถิ่น (เชิญในช่วง soft launch) และ TripAdvisor (ตอบทุกรีวิว ดีหรือแย่) งบประมาณ £500–£1,000/เดือนสำหรับ 6 เดือนแรก</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What Makes Thai Restaurants Different -->
+<section id="different">
+  <div class="container">
+    <div class="section-header">
+      <h2>สิ่งที่ทำให้ร้านอาหารไทย<em>แตกต่าง</em></h2>
+    </div>
+
+    <div class="differentiator">
+      <span class="differentiator-icon">🔥</span>
+      <h3>ปัญหาสถานีเว็ก (Wok Station)</h3>
+      <p>การทำอาหารไทยต้องใช้เตาเว็กกำลังสูง (high-BTU) ระบบแก๊สครัวพาณิชย์มาตรฐานอาจไม่เพียงพอ — คุณอาจต้องอัปเกรดท่อแก๊ส (งบประมาณ £2k–£5k) ระบบดูดควันต้องรองรับควัน ไอน้ำมัน และควันพริกจำนวนมาก นี่ไม่ใช่เตาพิซซ่าหรือเตาย่าง — เป็นการผัดด้วยความร้อนสูงอย่างต่อเนื่อง เจ้าของอาคารหลายรายไม่เข้าใจเรื่องนี้ ต่อรองค่าโครงสร้างแก๊สลงใน lease ของคุณ</p>
+    </div>
+
+    <div class="differentiator">
+      <span class="differentiator-icon">🌿</span>
+      <h3>ห่วงโซ่อุปทานวัตถุดิบ</h3>
+      <p>ไม่เหมือนอาหารอิตาลีหรือฝรั่งเศส วัตถุดิบหลักของอาหารไทย (ข่า ใบมะกรูด โหระพาไทย พริกขี้หนู กะปิ) ไม่สามารถหาได้จากซัพพลายเออร์ฟู้ดเซอร์วิสมาตรฐาน คุณต้องการผู้นำเข้าเฉพาะอาหารไทย — และคุณต้องการซัพพลายเออร์สำรอง ผู้เล่นหลัก: <strong>Lung Wah Chong</strong> (ลอนดอน ก่อตั้ง 1987 จัดส่งทั่วประเทศ) <strong>Thai Food Online</strong> <strong>Star Imports</strong> และผู้ค้าส่งเอเชียระดับภูมิภาคใน Birmingham, Manchester และ Glasgow ยอดสั่งซื้อขั้นต่ำ ความพร้อมของสินค้าตามฤดูกาล และความล่าช้านำเข้าเป็นเรื่องจริง — สต็อกของแห้งอย่างน้อย 2 สัปดาห์</p>
+    </div>
+
+    <div class="differentiator">
+      <span class="differentiator-icon">👨‍🍳</span>
+      <h3>ความจริงเรื่องวีซ่าเชฟ</h3>
+      <p>นี่คือข้อจำกัดที่ใหญ่ที่สุดสำหรับร้านอาหารไทยในสหราชอาณาจักร วีซ่า Skilled Worker สำหรับเชฟไทยต้องการ: ใบอนุญาต sponsor (£536–£1,476 ขึ้นอยู่กับขนาดธุรกิจ) Certificate of Sponsorship (£239) Immigration Skills Charge (£364–£1,000/ปี) และค่าแรงขั้นต่ำ (£38,700 หรืออัตราตลาด) ต้นทุนปีแรกรวม: <span class="visa-cost">£8,000–£15,000</span> ก่อนค่าแรงเชฟ และการดำเนินการใช้เวลา 3–6 เดือน <a href="/chef-visa" class="visa-link">เรียกใช้เครื่องมือช่วยเหลือวีซ่าของเรา →</a></p>
+    </div>
+
+    <div class="differentiator">
+      <span class="differentiator-icon">📋</span>
+      <h3>ความคาดหวังเรื่องคะแนนสุขอนามัย</h3>
+      <p>ร้านอาหารไทยทำคะแนนการตรวจสอบ FSA ได้ดี — 50.4% ได้คะแนน 5 พื้นที่ตรวจสอบหลักสำหรับครัวไทย: ความสะอาดสถานีเว็ก (คราบน้ำมันคือปัญหาอันดับ 1) การจัดการข้าว (ข้าวสุกต้องทำให้เย็นภายใน 90 นาทีและเก็บที่อุณหภูมิต่ำกว่า 8°C) และการเก็บอาหารทะเล คะแนน 3 หรือต่ำกว่าจะทำให้คุณเสียลูกค้า — นักทานอาหารตรวจสอบคะแนน</p>
+    </div>
+  </div>
+</section>
+
+<!-- Free Tools for Planning -->
+<section id="tools">
+  <div class="container">
+    <div class="section-header">
+      <h2>เครื่องมือ<em>ฟรี</em>สำหรับการวางแผน</h2>
+      <p>ทุกเครื่องมือบน thaidata.uk สร้างมาเพื่อตอบคำถามที่คุณจะเผชิญขณะเปิดร้านหรือดำเนินธุรกิจร้านอาหาร</p>
+    </div>
+
+    <div class="tools-grid">
+      <a href="/nlw-calculator" class="tool-card">
+        <span class="tool-icon">💰</span>
+        <div class="tool-info">
+          <h4>เครื่องมือคำนวณผลกระทบ NLW</h4>
+          <p>คำนวณต้นทุนพนักงานภายใต้อัตราเดือนเมษายน 2026 — ก่อนคุณเซ็นสัญญาเช่า</p>
+        </div>
+      </a>
+      <a href="/chef-visa" class="tool-card">
+        <span class="tool-icon">🛂</span>
+        <div class="tool-info">
+          <h4>เครื่องมือช่วยเหลือวีซ่าเชฟ</h4>
+          <p>ตรวจสอบว่าคุณสามารถ sponsorship เชฟไทยภายใต้เกณฑ์เงินเดือนปี 2026 ได้หรือไม่</p>
+        </div>
+      </a>
+      <a href="/profit-margin" class="tool-card">
+        <span class="tool-icon">📊</span>
+        <div class="tool-info">
+          <h4>เครื่องมือป้องกันกำไร</h4>
+          <p>ดูว่าค่าคอมมิชชั่นเดลิเวอรี่กัดกินกำไรของคุณอย่างไร — และจะตัดตรงไหนได้</p>
+        </div>
+      </a>
+      <a href="/wholesale-benchmark" class="tool-card">
+        <span class="tool-icon">📦</span>
+        <div class="tool-info">
+          <h4>เครื่องมือเปรียบเทียบราคาขายส่ง</h4>
+          <p>เปรียบเทียบต้นทุนวัตถุดิบของคุณกับค่าเฉลี่ยระดับภูมิภาค</p>
+        </div>
+      </a>
+      <a href="/menu-pricing" class="tool-card">
+        <span class="tool-icon">🍜</span>
+        <div class="tool-info">
+          <h4>คู่มือกำหนดราคาเมนู</h4>
+          <p>มาตรฐานราคาแยกต่อจาน — ลอนดอน vs ภูมิภาค เป้าหมาย GP สำหรับทุกรายการ</p>
+        </div>
+      </a>
+      <a href="/uk-thai-count" class="tool-card">
+        <span class="tool-icon">🗺️</span>
+        <div class="tool-info">
+          <h4>จำนวนร้านอาหารไทยในสหราชอาณาจักร</h4>
+          <p>ดูว่ามีร้านอาหารไทยกี่ร้านดำเนินการในเมืองเป้าหมายของคุณ</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="truth-box">
+      <h4>⚡ ความจริงที่คู่มือส่วนใหญ่ไม่บอกคุณ</h4>
+      <p>ร้านอาหารไทยมี margin GP สูงกว่าส่วนใหญ่ (75–85% สำหรับแกงและผัด) แต่เผชิญแรงกดดันด้านต้นทุนที่ไม่เหมือนใคร: ค่าวีซ่าเชฟ (£8k–£15k ล่วงหน้า) ความเปราะบางของห่วงโซ่อุปทานวัตถุดิบ (ความล่าช้านำเข้าสำหรับรายการเฉพาะไทย) และต้นทุนพลังงานสูง (การทำอาหารด้วยเว็กใช้แก๊สมาก) ร้านอาหารที่จะอยู่รอดในช่วง 2026–2028 คือร้านที่: (1) กำหนดราคาเมนูด้วยข้อมูลจริง ไม่ใช่การเดาสุ่ม (2) ได้เชฟไทยก่อนที่กฎวีซ่าจะเข้มงวดขึ้น และ (3) สร้างเมนูเดลิเวอรี่ที่ทำกำไรได้จริง ทุกอย่างนอกเหนือจากนี้เป็นรอง</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/tools">เครื่องมือ</a>
+      <span>·</span>
+      <a href="/uk-thai-count">จำนวนร้านไทยใน UK</a>
+      <span>·</span>
+      <a href="/menu-pricing">ราคาเมนู</a>
+      <span>·</span>
+      <a href="/about">เกี่ยวกับเรา</a>
+      <span>·</span>
+      <a href="/privacy">ความเป็นส่วนตัว</a>
+    </div>
+    <p>© 2026 ThaiData UK คู่มือนี้มีจุดประสงค์เพื่อให้ข้อมูลเท่านั้น — โปรดปรึกษาทนายความสำหรับข้อกำหนดทางกฎหมายและนักบัญชีสำหรับการวางแผนทางการเงิน</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "วิธีเปิดร้านอาหารไทยในสหราชอาณาจักร",
+  "description": "คู่มือฉบับสมบูรณ์สำหรับการเปิดร้านอาหารไทยในสหราชอาณาจักร รวมต้นทุนจริง ขั้นตอนจริง และเครื่องมือวางแผนธุรกิจสำหรับผู้ประกอบการอาหารไทย",
+  "image": "https://thaidata.uk/images/open-thai-restaurant-uk.jpg",
+  "totalTime": "P6M",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "GBP",
+    "value": "80000-180000"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "เงินทุนเริ่มต้น £80k–£180k"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "ใบอนุญาต premises licence"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "ใบอนุญาต sponsor (สำหรับวีซ่าเชฟ)"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "แผนธุรกิจ"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "ระบบ EPOS"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "ระบบดูดควันแบบพาณิชย์"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "ศึกษาทำเลที่ตั้ง",
+      "text": "ใช้ข้อมูลจำนวนร้านอาหารไทยในสหราชอาณาจักรเพื่อดูจำนวนคู่แข่งในเมืองเป้าหมาย"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "เขียนแผนธุรกิจ",
+      "text": "จัดทำแผนธุรกิจที่ครอบคลุมกลุ่มเป้าหมาย การวิเคราะห์คู่แข่ง และการคาดการณ์กำไรขาดทุน 3 ปี"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "จัดหาเงินทุน",
+      "text": "สำรวจตัวเลือกการเงิน: เงินออมส่วนตัว เงินกู้ธนาคาร Start Up Loans หรือนักลงทุน angel"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "หาและปิดดีลสถานที่",
+      "text": "มองหาสถานที่ use class A3/A5 พร้อมระบบดูดควันและแก๊สที่เพียงพอ"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "ขอใบอนุญาตสถานที่",
+      "text": "ยื่นขอ premises licence จากสภาท้องถิ่นอย่างน้อย 28 วันก่อนเปิด"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "จดทะเบียนธุรกิจอาหาร",
+      "text": "จดทะเบียนกับหน่วยงานสาธารณสุขสิ่งแวดล้อมของสภาท้องถิ่น"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "ออกแบบครัว",
+      "text": "ติดตั้งเตาเว็ก ระบบดูดควัน และอุปกรณ์ครัวพาณิชย์ที่จำเป็น"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 8,
+      "name": "รับสมัครเชฟ",
+      "text": "พิจารณา sponsoring เชฟไทยผ่านวีซ่า Skilled Worker หากจำเป็น"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 9,
+      "name": "สร้างเมนู",
+      "text": "พัฒนาเมนูที่กระชับ 20–25 รายการ มุ่งเน้นคุณภาพและความสด"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 10,
+      "name": "หาซัพพลายเออร์",
+      "text": "จัดหาผู้ค้าส่งเฉพาะอาหารไทยและซัพพลายเออร์ฟู้ดเซอร์วิสทั่วไป"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 11,
+      "name": "จัดตั้งโครงสร้างธุรกิจ",
+      "text": "จดทะเบียนบริษัทจำกัด จดทะเบียน VAT และทำประกันที่จำเป็น"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 12,
+      "name": "จ้างพนักงานหน้าร้าน",
+      "text": "รับสมัครและฝึกอบรมพนักงานหน้าร้านตามอัตรา NLW ปัจจุบัน"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 13,
+      "name": "ติดตั้งระบบเทคโนโลยี",
+      "text": "ติดตั้งระบบ EPOS เครื่องรูดบัตร และระบบจองออนไลน์"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 14,
+      "name": "Soft launch",
+      "text": "เปิดทดลองด้วยความจุ 50% เพื่อรวบรวมความคิดเห็นและปรับปรุง"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 15,
+      "name": "เปิดตัวและตลาดอย่างเข้มข้น",
+      "text": "เปิดตัวอย่างเป็นทางการและดำเนินการตลาดผ่านช่องทางดิจิทัล"
+    }
+  ]
+}
+</script>
+</body>
+</html>
