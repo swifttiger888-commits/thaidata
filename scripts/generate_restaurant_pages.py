@@ -327,12 +327,12 @@ def generate_page(r):
 
     # ---- JS variables for enrichment script ----
     html = html.replace(
-        "// DYNAMIC: restaurant_js_name\n        const RESTAURANT_NAME = 'My Thai';",
-        f"        const RESTAURANT_NAME = '{name}';"
+        "                const RESTAURANT_NAME = 'My Thai';",
+        f"                const RESTAURANT_NAME = '{name}';"
     )
     html = html.replace(
-        "// DYNAMIC: restaurant_js_city\n        const RESTAURANT_CITY = 'Leeds';",
-        f"        const RESTAURANT_CITY = '{city}';"
+        "                const RESTAURANT_CITY = 'Leeds';",
+        f"                const RESTAURANT_CITY = '{city}';"
     )
 
     # ---- Clean up remaining DYNAMIC markers (claimed content, not shown yet) ----
