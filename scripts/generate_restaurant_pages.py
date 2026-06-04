@@ -325,6 +325,16 @@ def generate_page(r):
         '                <a href="/claim/" class="btn">'
     )
 
+    # ---- JS variables for enrichment script ----
+    html = html.replace(
+        "// DYNAMIC: restaurant_js_name\n        const RESTAURANT_NAME = 'My Thai';",
+        f"        const RESTAURANT_NAME = '{name}';"
+    )
+    html = html.replace(
+        "// DYNAMIC: restaurant_js_city\n        const RESTAURANT_CITY = 'Leeds';",
+        f"        const RESTAURANT_CITY = '{city}';"
+    )
+
     # ---- Clean up remaining DYNAMIC markers (claimed content, not shown yet) ----
     # These are commented out HTML blocks — leave them as-is (they're hidden)
     # Just remove the marker comments for cleanliness
