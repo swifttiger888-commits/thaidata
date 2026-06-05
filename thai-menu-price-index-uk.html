@@ -15,6 +15,12 @@
     <meta property="og:description" content="Real menu prices for Pad Thai, Green Curry, Tom Yum across UK cities. See the dine-in vs delivery markup — and which restaurants hide commission in the price.">
     <meta property="og:locale" content="en_GB">
 
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@thaidatauk">
+    <meta name="twitter:title" content="UK Thai Menu Price Index 2026: Dine-in vs Delivery">
+    <meta name="twitter:description" content="Real menu prices for Pad Thai, Green Curry, Tom Yum across 5 UK cities. Average delivery markup: +21.9%. See the hidden commission cost.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
@@ -54,6 +60,8 @@
         .highlight-box ul { list-style: none; padding: 0; }
         .highlight-box li { padding: 8px 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .highlight-box li:last-child { border-bottom: none; }
+        .highlight-box p { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 10px; }
+        .highlight-box p:last-child { margin-bottom: 0; }
 
         .table-wrap { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin: 20px 0; }
         table { width: 100%; border-collapse: collapse; }
@@ -67,7 +75,19 @@
         .city-rating { text-align: right; font-weight: 600; }
         .city-pc { text-align: right; color: var(--ink3); font-size: 0.8rem; }
 
+        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
+        .card h3 { color: var(--c2); font-size: 1rem; margin-bottom: 12px; }
+        .card p { color: var(--ink4); font-size: 0.9rem; line-height: 1.7; margin-bottom: 10px; }
+        .card p:last-child { margin-bottom: 0; }
+        .card p strong { color: rgba(255,255,255,0.85); }
+
+        .faq-section { margin-top: 40px; }
+        .faq-item { border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+        .faq-q { padding: 18px 22px; background: rgba(255,255,255,0.02); cursor: pointer; font-weight: 600; font-size: 0.95rem; display: flex; justify-content: space-between; align-items: center; }
+        .faq-a { padding: 0 22px 18px; color: var(--ink4); font-size: 0.9rem; line-height: 1.7; }
+
         .source-note { font-size: 0.85rem; color: var(--ink4); margin-top: 40px; line-height: 1.7; padding: 24px; background: rgba(255,255,255,0.02); border-radius: 14px; border: 1px dashed var(--line); }
+        .source-note strong { color: rgba(255,255,255,0.85); }
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; }
         footer a { color: var(--ink4); text-decoration: none; }
         footer a:hover { color: white; }
@@ -89,6 +109,32 @@
   {"@type":"Question","name":"What are the risks for Thai restaurants that don't mark up delivery prices?","acceptedAnswer":{"@type":"Answer","text":"Restaurants that don't mark up delivery prices are effectively losing money on every delivery order after accounting for food costs. Without the markup, the high platform commissions (up to 32%) eat directly into margins, making delivery orders unprofitable."}},
   {"@type":"Question","name":"What is the difference between transparent pricing and delivery markup strategies?","acceptedAnswer":{"@type":"Answer","text":"Transparent operators keep dine-in and delivery prices the same and factor the commission into their overall menu pricing strategy. In contrast, many restaurants mark up delivery prices 10-25% specifically to cover platform commissions, but this markup is rarely disclosed to customers."}}
 ]}
+</script>
+
+<!-- Dataset Schema: UK Thai Menu Price Index 2026 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "UK Thai Menu Price Index 2026",
+  "description": "Dine-in vs delivery menu prices for 5 staple Thai dishes (Pad Thai, Green Curry, Massaman Curry, Tom Yum, Spring Rolls) across 5 UK cities (London, Birmingham, Manchester, Leeds, Bristol). 75 dish-price pairs collected on 2026-06-03. Average delivery markup: +21.9%.",
+  "url": "https://thaidata.uk/thai-menu-price-index-uk",
+  "creator": { "@type": "Organization", "name": "ThaiData UK", "url": "https://thaidata.uk" },
+  "datePublished": "2026-06-03",
+  "temporalCoverage": "2026-06-03/2026-06-03",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "United Kingdom",
+    "containsPlace": ["London", "Birmingham", "Manchester", "Leeds", "Bristol"]
+  },
+  "variableMeasured": [
+    { "@type": "PropertyValue", "name": "Dine-in price", "unitText": "GBP" },
+    { "@type": "PropertyValue", "name": "Delivery price", "unitText": "GBP" },
+    { "@type": "PropertyValue", "name": "Markup percentage", "unitText": "Percent" }
+  ],
+  "measurementTechnique": "Manual collection from restaurant websites and delivery platform spot-checks",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
 </script>
 </head>
 <body>
@@ -225,6 +271,114 @@
         </div>
     </div>
 
+    <!-- Methodology -->
+    <div class="section">
+        <div class="wrap">
+            <h2>How We Collected the <em>Data</em></h2>
+            <p class="section-desc">Behind the numbers: our methodology, sample sizes, and data sources.</p>
+
+            <div class="card">
+                <h3><i class="fas fa-clipboard-list"></i> Collection Method</h3>
+                <p>All prices were collected on <strong>3 June 2026</strong> from a combination of official restaurant websites, Google Business Profile menus, and delivery platform spot-checks. Dine-in prices were taken from restaurant-owned channels — official websites or verified Google Business Profiles — to ensure we captured the base menu price, not a platform-inflated version. Delivery prices were manually verified across <strong>Deliveroo, Uber Eats, and Just Eat</strong> for the same dish at the same restaurant on the same day. Delivery fees and service charges were excluded from our price capture — we recorded only the menu item price as listed on the platform.</p>
+                <p>Delivery platforms actively block automated scraping, so every delivery price was verified through manual browsing. Where a platform listed a different portion size or a "delivery exclusive" variant, we used the closest matching standard portion and noted any differences.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-chart-bar"></i> Sample Size & Coverage</h3>
+                <p>We surveyed <strong>75 dish-price pairs</strong> across <strong>5 cities</strong>: London, Birmingham, Manchester, Leeds, and Bristol. For each city, we sampled <strong>3 restaurants</strong> and collected dine-in and delivery prices for <strong>5 staple dishes</strong> (Pad Thai, Green Curry, Massaman Curry, Tom Yum, Spring Rolls) — totalling 15 data points per city. If a restaurant did not offer a particular dish, we excluded that pair rather than estimating.</p>
+                <p>The 5 cities were chosen to represent different regions and market conditions: London (capital city, highest rent and wage base), Birmingham (midlands, large population), Manchester (north-west, strong food scene), Leeds (Yorkshire, growing Thai sector), and Bristol (south-west, higher-than-average cost of living).</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-info-circle"></i> Limitations</h3>
+                <p>Prices are <strong>snapshots</strong> — they change frequently, especially on delivery platforms where surge pricing and promotional discounts can shift the effective price. Premium, regional, or large-portion variants were not captured. Our sample covers 5 cities and 5 dishes — this is a directional benchmark, not a comprehensive census. London prices reflect Zone 1-2; outer London typically runs 10-15% lower. Regional city prices are city-centre averages.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Regional Variation -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Why London <em>Costs More</em></h2>
+            <p class="section-desc">London's lower markup percentage hides a much higher absolute price gap.</p>
+
+            <div class="highlight-box">
+                <p>London's average dine-in price of <strong>£12.08</strong> is 14% higher than the next most expensive city (Manchester at £10.88) and 15% above the non-London average of £10.50. Yet London's <em>markup percentage</em> (+20.9%) is the <strong>lowest</strong> among the 5 cities surveyed. This is not contradictory — it reflects a different pricing strategy.</p>
+                <p>London operators factor platform commissions (30-32%) into their base dine-in prices rather than adding a visible surcharge on delivery. A London Pad Thai at £13.45 dine-in and £16.00 delivery (+19.0%) carries a similar absolute surcharge (£2.55) to Leeds (£10.95 → £13.50, +23.3%). But the London diner pays £2.50 more at the table before delivery is even considered.</p>
+                <p>The practical implication: London customers absorb the commission cost whether they dine in or order delivery — it is baked into the menu price. In regional cities, the surcharge is more visible as a separate markup, which may influence ordering behaviour.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delivery Markup Breakdown -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Delivery Markup <em>Breakdown</em></h2>
+            <p class="section-desc">What drives the +21.9% average markup — and where the money goes.</p>
+
+            <div class="card">
+                <h3><i class="fas fa-percent"></i> Where Your Markup Goes</h3>
+                <p>On a typical £13.50 Pad Thai ordered via Deliveroo at a 32% commission rate, the restaurant receives approximately <strong>£9.18 before VAT</strong>. After ingredient cost (~22% or £2.97), the restaurant keeps roughly <strong>£6.21</strong>. That £6.21 must cover rent, wages, gas, electricity, insurance, and everything else — leaving a net profit of typically 4-6% on the full order value. Without the delivery markup, the restaurant would operate at a loss on every delivery order.</p>
+                <p>Here is how the markup breaks down by platform:</p>
+                <ul style="color:var(--ink4);font-size:0.9rem;list-style:disc;padding-left:20px;margin-top:10px;">
+                    <li><strong>Deliveroo:</strong> 32% commission → a £15.00 delivery item nets ~£10.20 to the restaurant before VAT</li>
+                    <li><strong>Uber Eats:</strong> 30% commission → a £15.00 delivery item nets ~£10.50 to the restaurant before VAT</li>
+                    <li><strong>Just Eat:</strong> 14% commission + £0.50 per order → a £15.00 delivery item nets ~£12.40 to the restaurant before VAT</li>
+                </ul>
+                <p style="margin-top:10px;">The difference between platforms explains why some restaurants incentivise direct orders or Just Eat over Deliveroo/Uber Eats — the margin difference is substantial.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tips for Pricing Dishes -->
+    <div class="section">
+        <div class="wrap">
+            <h2>Pricing Tips Based on <em>Food Cost</em></h2>
+            <p class="section-desc">How to set menu prices that protect your margins across both channels.</p>
+
+            <div class="card">
+                <h3><i class="fas fa-calculator"></i> Setting Dine-in Prices</h3>
+                <p>A healthy gross profit margin for Thai food is <strong>65-75%</strong> (food cost at 25-35% of selling price). Pad Thai with a raw food cost of £2.80 should be priced at a minimum of <strong>£11.20</strong> for a 75% GP, or up to <strong>£14.00</strong> for 80% GP. Most UK Thai restaurants in our survey priced Pad Thai at £10.95-£14.50, suggesting food cost percentages in the 20-28% range — healthy by industry standards.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-truck"></i> Setting Delivery Prices</h3>
+                <p>If a dish costs 30% in food cost and the platform takes 32%, your combined cost of goods sold + platform fee is <strong>62%</strong> — leaving only 38% to cover everything else. To maintain a 65% gross profit <em>after</em> platform fees, the delivery price needs to be approximately <strong>40-50% higher</strong> than the equivalent dine-in price. Most restaurants in our survey applied a 10-25% markup, which partially — but not fully — covers this gap.</p>
+                <p>Our recommendation: calculate your target net margin first, then work backwards through platform fees and food cost to determine the correct delivery price. If the resulting price seems too high for your market, consider removing that dish from delivery platforms entirely, or switching to a lower-commission platform like Just Eat (14%) for your core menu items.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+        <div class="wrap">
+            <h2>FAQ: Menu <em>Pricing</em></h2>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-q">Why is the delivery markup higher for starters than mains? <span style="color:var(--ink3);">▼</span></div>
+                    <div class="faq-a">Spring Rolls carry the highest markup (+23.9%) because they have the lowest absolute price point (£6.45 dine-in). The platform commission is percentage-based (30-32%), so the same percentage fee on a lower-priced item represents a larger relative burden. Restaurants must raise the price proportionally more on cheap items to maintain the same absolute margin.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Should I remove low-margin dishes from delivery platforms entirely? <span style="color:var(--ink3);">▼</span></div>
+                    <div class="faq-a">Yes — if a dish has a food cost above 35% and is on a platform charging 30%+ commission, you may be losing money on every delivery order of that dish. Consider: (1) removing it from delivery menus, (2) making it a "dine-in exclusive", or (3) reformulating the recipe to lower food cost. Many savvy operators use a shorter, higher-margin delivery menu rather than listing their full dine-in offering.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How often should I update my delivery prices? <span style="color:var(--ink3);">▼</span></div>
+                    <div class="faq-a">At minimum, review delivery prices quarterly — or whenever a platform changes its commission structure. Ingredient costs for Thai restaurants are volatile (imported lemongrass, galangal, coconut milk) and should also trigger a price review. A good rule: if your food cost percentage moves more than 3 percentage points, reprice immediately.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Is it legal to charge different prices for dine-in and delivery? <span style="color:var(--ink3);">▼</span></div>
+                    <div class="faq-a">Yes — UK consumer law does not require restaurants to charge the same price across channels. However, the <strong>Consumer Protection from Unfair Trading Regulations 2008</strong> requires that pricing is not misleading. If your delivery price is significantly higher than your dine-in price, clearly stating that prices vary by channel is good practice and reduces the risk of negative reviews from surprised customers.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What is the best pricing strategy for a new Thai restaurant opening in 2026? <span style="color:var(--ink3);">▼</span></div>
+                    <div class="faq-a">Start with a single, unified menu price (dine-in = delivery) priced to absorb platform commissions into your overall margin. This avoids the "hidden markup" problem and builds trust. As you learn your local market and which channels drive volume, you can introduce channel-specific pricing. New restaurants that mark up delivery from day one risk poor reviews on platforms — diners compare prices across apps and notice discrepancies.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="wrap">
         <div class="source-note">
             <strong><i class="fas fa-clipboard-list"></i> Methodology & Limitations</strong><br><br>
@@ -239,5 +393,25 @@
     </div>
 
     <footer><p>&copy; 2026 ThaiData.uk · <a href="about.html">About</a> · <a href="guides.html">Guides</a></p></footer>
+
+    <script>
+    // FAQ toggle
+    document.querySelectorAll('.faq-q').forEach(function(q) {
+        q.addEventListener('click', function() {
+            var a = this.nextElementSibling;
+            var icon = this.querySelector('span');
+            if (a.style.display === 'block') {
+                a.style.display = 'none';
+                if (icon) icon.textContent = '▼';
+            } else {
+                a.style.display = 'block';
+                if (icon) icon.textContent = '▲';
+            }
+        });
+    });
+    // Open first FAQ by default
+    var firstA = document.querySelector('.faq-a');
+    if (firstA) firstA.style.display = 'block';
+    </script>
 </body>
 </html>
