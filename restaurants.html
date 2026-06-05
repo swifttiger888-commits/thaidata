@@ -72,6 +72,71 @@
         .alpha-note i { font-size: 1.2rem; }
         @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 20px; gap: 16px; } .nav-links.open { display: flex; } .hamburger { display: block; } .city-grid { grid-template-columns: 1fr; } .stat-row { flex-direction: column; align-items: center; } }
     </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ThaiData UK",
+  "url": "https://thaidata.uk",
+  "logo": "https://thaidata.uk/logo-horizontal.svg",
+  "foundingDate": "2025",
+  "description": "Business Intelligence and cost defense tools for the UK Thai hospitality sector."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ThaiData UK",
+  "url": "https://thaidata.uk",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://thaidata.uk/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thaidata.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Restaurants",
+      "item": "https://thaidata.uk/restaurants"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "UK Thai Restaurant Directory",
+  "description": "Complete directory of 1,594 UK Thai restaurants across 253 cities with FSA hygiene ratings, contact details, and verified claims.",
+  "url": "https://thaidata.uk/restaurants",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://thaidata.uk"
+  }
+}
+</script>
+
 </head>
 <body>
 <div class="grain"></div>

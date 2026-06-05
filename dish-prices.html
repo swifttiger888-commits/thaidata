@@ -66,6 +66,71 @@
         footer a:hover { color: var(--c2); }
         @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 20px; gap: 16px; } .nav-links.open { display: flex; } .hamburger { display: block; } .price-table { font-size: 0.85rem; } .price-table th, .price-table td { padding: 8px 10px; } }
     </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ThaiData UK",
+  "url": "https://thaidata.uk",
+  "logo": "https://thaidata.uk/logo-horizontal.svg",
+  "foundingDate": "2025",
+  "description": "Business Intelligence and cost defense tools for the UK Thai hospitality sector."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ThaiData UK",
+  "url": "https://thaidata.uk",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://thaidata.uk/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thaidata.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Dish Prices",
+      "item": "https://thaidata.uk/dish-prices"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Thai Dish Price Checker UK",
+  "description": "See what Thai dishes cost across UK cities. Dine-in vs delivery prices for Pad Thai, Green Curry, Tom Yum, and more. Updated with 2026 data.",
+  "url": "https://thaidata.uk/dish-prices",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://thaidata.uk"
+  }
+}
+</script>
+
 </head>
 <body>
 <div class="grain"></div>
