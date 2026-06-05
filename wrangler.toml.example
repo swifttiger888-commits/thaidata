@@ -1,0 +1,28 @@
+# ThaiData UK — Cloudflare Pages Configuration
+# Copy to wrangler.toml and fill in your values
+#
+# Production config is deployed via git push → Cloudflare Pages auto-build.
+# The wrangler.toml in the repo root is the live production config.
+# This example file documents the expected structure.
+
+name = "thaidata-uk"
+compatibility_date = "2026-06-01"
+
+# D1 Database binding (create via: wrangler d1 create thaidata-db)
+[[d1_databases]]
+binding = "DB"
+database_name = "thaidata-db"
+database_id = "your-d1-database-id-here"
+
+# Environment variables (set in Cloudflare Dashboard or .env for local dev)
+# Required:
+#   ADMIN_PASSWORD       — password for /admin panel
+#   MAGIC_LINK_SECRET    — 64+ char random key for claim token signing
+#   RESEND_API_KEY       — Resend.com API key (starts with re_)
+#   SITE_URL             — https://thaidata.uk
+#
+[vars]
+SITE_URL = "https://thaidata.uk"
+ADMIN_PASSWORD = "your-admin-password"
+MAGIC_LINK_SECRET = "your-64-char-secret"
+RESEND_API_KEY = "re_your-api-key"

@@ -1,0 +1,7 @@
+# ThaiData UK — Python Dependencies
+# The data pipeline and page generators use Python 3.x stdlib only.
+# No external packages required for current scripts.
+#
+# If you add external deps in the future, list them here, e.g.:
+# requests>=2.31.0
+# pydantic>=2.0.0
