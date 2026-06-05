@@ -25,7 +25,8 @@ MAX_DATA_AGE_DAYS = 8  # cron runs weekly, allow 1 day grace
 def check_uptime() -> str | None:
     """Return error string if site is down, None if OK."""
     try:
-        req = urllib.request.Request(SITE_URL, method="HEAD")
+        req = urllib.request.Request(SITE_URL, method="HEAD",
+            headers={"User-Agent": "Mozilla/5.0 (compatible; ThaiDataHealth/1.0)"})
         with urllib.request.urlopen(req, timeout=15) as resp:
             if resp.status != 200:
                 return f"Site returned HTTP {resp.status}"
