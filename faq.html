@@ -3,59 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK Thai Restaurant FAQ: Wages, Costs, GP & Delivery | ThaiData</title>
-    <meta name="description" content="Frequently asked questions about running a Thai restaurant in the UK. NLW rates, food cost percentages, delivery commissions, opening costs, chef visas, and more.">
+    <title>UK Thai Restaurant FAQ: Hygiene, Prices, Chains & Data | ThaiData</title>
+    <meta name="description" content="Frequently asked questions about UK Thai restaurants — hygiene ratings, pricing trends, city guides, chain locations, FSA data, delivery platforms, and operating costs.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/faq">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thaidata.uk/faq">
-    <meta property="og:title" content="UK Thai Restaurant FAQ: Wages, Costs, GP & Delivery | ThaiData">
-    <meta property="og:description" content="Answers to the most common questions about running a Thai restaurant in the UK.">
+    <meta property="og:title" content="UK Thai Restaurant FAQ | ThaiData">
+    <meta property="og:description" content="Everything you need to know about UK Thai restaurants — hygiene scores, price guides, city market data, chain directories, delivery platforms, and operational costs.">
     <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
     <meta property="og:locale" content="en_GB">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="UK Thai Restaurant FAQ | ThaiData">
-    <meta name="twitter:description" content="FAQs for UK Thai restaurant operators.">
+    <meta name="twitter:description" content="Hygiene ratings, pricing, city guides, chain data, delivery costs, and more for UK Thai restaurants.">
     <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><!-- fa --></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --purple: #A78BFA; }
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --card-bg: rgba(255,255,255,0.02); --gold: #F59E0B; --purple: #A78BFA; --orange: #FB923C; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img,svg,video { max-width: 100%; height: auto; }
         body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
-        .wrap { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; position: relative; }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
-        .logo-icon { height: 36px; width: auto; display: inline-block; }
+        .nav-bar { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; }
+        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--c2); }
-        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 8px; line-height: 1; }
-        .hamburger:hover { color: var(--c2); }
-        .header-section { padding: 80px 0 40px; text-align: center; position: relative; }
-        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
-        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
-        .header-section h1 em { font-style: italic; color: var(--c2); }
-        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+        .nav-links a { color: var(--ink4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+        .nav-links a:hover { color: white; }
+        @media(max-width:768px) { .hamburger { display: block; } .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px 20px; gap: 14px; } .nav-links.open { display: flex; } }
+
+        .hero { padding: 60px 0 30px; text-align: center; }
+        .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+        .hero h1 em { font-style: italic; color: var(--c2); }
+        .hero .sub { color: var(--ink4); font-size: 1rem; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+        .section-header { margin: 42px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+        .section-header h2 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; font-weight: 400; color: white; display: flex; align-items: center; gap: 10px; }
+        .section-header h2 i { color: var(--c2); font-size: 1.1rem; width: 24px; text-align: center; }
+        .section-header .intro-text { color: var(--ink4); font-size: 0.88rem; margin-top: 6px; line-height: 1.6; }
+        .section-header .intro-text a { color: var(--c2); text-decoration: underline; text-underline-offset: 2px; }
+
         .faq-list { list-style: none; padding: 0; }
-        .faq-item { border-bottom: 1px solid var(--line); padding: 20px 0; }
-        .faq-q { font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; color: white; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-        .faq-q i { color: var(--c2); font-size: 0.9rem; margin-top: 4px; flex-shrink: 0; transition: transform 0.2s; }
+        .faq-item { border-bottom: 1px solid var(--line); padding: 16px 0; }
+        .faq-q { font-weight: 600; font-size: 0.98rem; margin-bottom: 6px; color: white; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; line-height: 1.4; }
+        .faq-q i { color: var(--c2); font-size: 0.8rem; margin-top: 5px; flex-shrink: 0; transition: transform 0.2s; }
         .faq-q.open i { transform: rotate(180deg); }
-        .faq-a { color: var(--ink4); font-size: 0.93rem; line-height: 1.7; display: none; padding-right: 30px; }
+        .faq-a { color: var(--ink3); font-size: 0.9rem; line-height: 1.7; display: none; padding-right: 24px; }
         .faq-a.open { display: block; }
-        .faq-a a { color: var(--c2); text-decoration: underline; }
+        .faq-a a { color: var(--c2); text-decoration: underline; text-underline-offset: 2px; }
         .faq-a a:hover { opacity: 0.8; }
-        .cat-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin: 30px 0 10px; padding: 8px 0; color: var(--c2); border-top: 1px solid var(--line); padding-top: 20px; }
-        footer { border-top: 1px solid var(--line); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--ink4); margin-top: 40px; }
+        .faq-a strong { color: white; }
+        .faq-a ul { margin: 8px 0 8px 18px; }
+        .faq-a li { margin-bottom: 4px; }
+
+        .topic-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 30px; padding: 16px 20px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 14px; }
+        .topic-nav a { color: var(--ink4); text-decoration: none; font-size: 0.8rem; padding: 4px 12px; border: 1px solid var(--line); border-radius: 50px; transition: all 0.2s; }
+        .topic-nav a:hover { border-color: var(--c2); color: var(--c2); }
+
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 20px 0; }
+        .link-card { display: block; background: var(--card-bg); border: 1px solid var(--line); border-radius: 14px; padding: 20px; text-decoration: none; transition: border-color 0.2s; }
+        .link-card:hover { border-color: var(--c2); }
+        .link-card h3 { font-size: 0.9rem; color: white; margin-bottom: 4px; font-weight: 600; }
+        .link-card p { font-size: 0.8rem; color: var(--ink4); line-height: 1.4; }
+
+        .highlight-box { background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.15); border-radius: 14px; padding: 24px; margin: 20px 0; }
+        .highlight-box h3 { font-size: 0.95rem; color: white; margin-bottom: 8px; }
+        .highlight-box p, .highlight-box li { color: var(--ink3); font-size: 0.88rem; line-height: 1.6; }
+        .highlight-box ul { margin: 8px 0 8px 18px; }
+        .highlight-box a { color: var(--c2); text-decoration: underline; }
+
+        .data-note { background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.15); border-radius: 12px; padding: 16px 20px; margin: 20px 0; font-size: 0.85rem; color: var(--ink3); line-height: 1.6; }
+        .data-note strong { color: white; }
+
+        footer { border-top: 1px solid var(--line); padding: 30px 0 50px; text-align: center; font-size: 0.82rem; color: var(--ink4); margin-top: 30px; }
         footer a { color: var(--ink4); text-decoration: none; }
         footer a:hover { color: var(--c2); }
-        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 20px; gap: 16px; } .nav-links.open { display: flex; } .hamburger { display: block; } }
     </style>
 
 <script type="application/ld+json">
@@ -66,7 +95,7 @@
   "url": "https://thaidata.uk",
   "logo": "https://thaidata.uk/logo-horizontal.svg",
   "foundingDate": "2025",
-  "description": "Business Intelligence and cost defense tools for the UK Thai hospitality sector."
+  "description": "Business intelligence and restaurant directory for the UK Thai hospitality sector."
 }
 </script>
 
@@ -115,98 +144,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the National Living Wage rate from April 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The NLW rises to \u00a312.71/hour for workers aged 21 and over from 1 April 2026. The 18-20 rate increases to \u00a310.00/hour, and the Apprentice rate to \u00a37.55/hour. Use our NLW Wage Calculator to see exactly how much this will cost your restaurant."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much will the April 2026 NLW rise cost my Thai restaurant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For a typical restaurant with 3 full-time staff (21+) and 2 part-time staff (18-20), the increase is approximately \u00a3145-160/week or \u00a37,500-8,300/year including NI. The exact figure depends on your staff mix, hours, and current pay rates. Calculate yours in 60 seconds with our Wage Calculator."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I have to pay the NLW to all my staff?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes \u2014 the National Living Wage is a legal minimum. All workers aged 21+ must receive at least \u00a312.71/hr from April 2026. Under-21s have lower minimum rates but must still be paid at least the applicable minimum wage for their age group. Failure to comply can result in HMRC fines and public naming."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the average food cost percentage for a Thai restaurant in the UK?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most UK Thai restaurants operate with a food cost of 28-33% of menu price. Top-performing restaurants target 25-28% through strategic sourcing and menu engineering. Delivery tends to run higher due to packaging costs and platform commissions eating into net revenue. See the Menu Pricing Guide for detailed benchmarks."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a good GP margin for a Thai restaurant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A healthy gross profit margin for a UK Thai restaurant is 67-72% (food cost 28-33%). Net profit margins are typically 8-15% after rent, staff, utilities, and marketing. Our Profit Margin Defender tool can help you model where your margins sit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much should I charge for Pad Thai in 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Based on our Menu Price Index tracking 75 dishes across 5 UK cities, the average Pad Thai (chicken) costs \u00a312.50 dine-in and \u00a314.95 delivery. London averages \u00a314.00/\u00a316.50, while regional cities average \u00a311.00/\u00a313.50. Check our Menu Price Index for full pricing by dish and city."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does Uber Eats, Deliveroo, and Just Eat charge Thai restaurants?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Commission rates vary significantly: Just Eat charges ~14% + \u00a30.50 per order, while Deliveroo and Uber Eats charge 25-30%. On a \u00a330 order, Just Eat takes \u00a34.70 while Deliveroo/Uber take \u00a37.50-\u00a39.00. Factoring in VAT on commission, the real cost is even higher. Use our Delivery Profit Calculator to compare platforms side by side."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Should I be on all three delivery platforms?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not necessarily. Our data shows most Thai restaurants in the UK do 60-70% of their delivery volume through one primary platform. Being on all three spreads your orders thin and increases operational complexity. We recommend starting with Just Eat (lowest commission, widest reach) and adding others only if demand justifies it. See our Delivery Commissions Guide."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does it cost to open a Thai restaurant in the UK?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Opening costs typically range from \u00a380,000-\u00a3180,000 depending on location, size, and whether you're taking over an existing unit. Key costs include: fit-out (\u00a330k-\u00a380k), commercial kitchen equipment including wok stations (\u00a315k-\u00a335k), initial stock and licensing (\u00a35k-\u00a310k), and working capital (\u00a320k-\u00a350k). Our comprehensive Opening Guide covers every step."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a specific visa to hire Thai chefs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes \u2014 Thai chefs typically enter under the Skilled Worker Visa (RQF-6 equivalent). Your restaurant needs to be a Home Office approved sponsor. The process takes 8-16 weeks and costs approximately \u00a33,000-\u00a36,000 per chef including visa fees, immigration health surcharge, and legal costs. See our Thai Chef Visa Guide and Visa Assistant tool."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What BTU rating do I need for a Thai wok station?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Authentic Thai cooking requires wok burners rated at 80,000-120,000 BTU \u2014 significantly higher than standard restaurant hobs (15,000-30,000 BTU). You'll also need an extraction canopy rated for high-heat wok cooking. This is a commonly overlooked cost that can add \u00a38,000-\u00a315,000 to your kitchen fit-out. Covered in detail in our Opening Guide."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "How many Thai restaurants are there in the UK?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "There are 1,594 Thai restaurants across 253 UK cities and towns, based on Food Standards Agency data (updated June 2026). London has the most with 411, followed by Leeds (34) and Manchester (28). For the full breakdown, see our UK Thai Restaurant Count and City Breakdown."
+        "text": "There are 1,594 FSA-registered Thai restaurants and takeaways across 253 UK cities and towns, based on Food Standards Agency data updated June 2026. London leads with 411, followed by Leeds (34) and Manchester (28). The full city-by-city breakdown and complete restaurant directory are published on ThaiData."
       }
     },
     {
@@ -214,15 +155,159 @@
       "name": "Which UK city has the most Thai restaurants per capita?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "By density per 100,000 residents: Brighton leads (4.7), followed by Bournemouth (4.6), London (4.6), Edinburgh (4.4), and Manchester (4.9). Interestingly, some smaller cities like Bournemouth and Brighton punch well above their weight in Thai restaurant density. Our State of UK Thai Food 2026 report has full data."
+        "text": "By density per 100,000 residents, Brighton leads at 4.7, followed by Bournemouth (4.6), London (4.6), Edinburgh (4.4), and Manchester (4.9). Smaller cities like Bournemouth and Brighton punch well above their weight. The State of UK Thai Food 2026 report has full per-capita rankings."
       }
     },
     {
       "@type": "Question",
-      "name": "Where are the underserved markets for Thai restaurants?",
+      "name": "Which UK cities are underserved for Thai restaurants?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Based on our analysis, cities with significant populations but relatively few Thai restaurants include Birmingham (17 restaurants, ~1.15M population), Sheffield (12, ~570K), and Leicester (10, ~370K). These markets show potential for new openings. Use our Where to Open Tool for a full analysis."
+        "text": "Cities with large populations but relatively few Thai restaurants include Birmingham (17 restaurants for ~1.15M population), Sheffield (12 for ~570K), and Leicester (10 for ~370K). These represent potential expansion markets. The Where to Open Tool provides a full opportunity analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Food Standards Agency (FSA) hygiene rating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The FSA hygiene rating scheme scores restaurants from 0 (urgent improvement needed) to 5 (very good). Ratings are based on three criteria: hygienic food handling, structural condition of the premises, and confidence in management. Businesses in Wales and Northern Ireland are legally required to display their rating; in England and Scotland it is voluntary but widely adopted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do UK Thai restaurants perform on hygiene ratings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most UK Thai restaurants achieve strong hygiene ratings. Across all 1,594 FSA-registered Thai businesses, the vast majority hold 4 or 5 stars. Five-star-rated restaurants are concentrated in London, Leeds, and Manchester. You can check the hygiene rating of any specific restaurant on its ThaiData restaurant page, sourced directly from the FSA register."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average food cost percentage for a Thai restaurant in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most UK Thai restaurants operate with a food cost of 28-33% of menu price. Top performers target 25-28% through strategic sourcing and menu engineering. Delivery tends to run higher due to packaging costs and platform commissions eating into net revenue. Detailed benchmarks are available in the Menu Pricing Guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good gross profit margin for a Thai restaurant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A healthy gross profit margin for a UK Thai restaurant is 67-72% (food cost 28-33%). Net profit margins are typically 8-15% after rent, staff, utilities, and marketing. The Profit Margin Defender tool lets restaurant operators model their own margins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I charge for Pad Thai in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Based on the ThaiData Menu Price Index tracking 12 dishes across 5 UK cities, the average Pad Thai (chicken) costs £12.50 dine-in and £14.95 delivery. London averages £14.00/£16.50, while regional cities average £11.00/£13.50. The full Dish Price Checker page covers pricing for all dishes by city."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which UK cities have the most expensive Thai food?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "London is the most expensive city for Thai dining with an average dine-in price of £12.08 across 12 surveyed dishes. Manchester (£10.88) and Leeds (£10.49) are the most affordable among surveyed cities. Delivery markups average 20-23% across all cities, with Leeds having the highest delivery premium at +23%. See the full city pricing comparison on the Dish Price Checker page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the biggest Thai restaurant chains in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The largest UK Thai chains by FSA-registered locations are: Giggling Squid (48 locations), Rosa's Thai (32), Banana Tree (21), Thai Express (12), Thai Square (11), and Thaikhun (10). Combined, the 12 identified chains account for 174 locations, with the remaining 1,420 being independent restaurants. See the Chain Directory for full profiles of every chain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do chain Thai restaurants get better hygiene ratings than independents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On average, chain Thai restaurants in the UK score higher on hygiene than independents. Major chains like Giggling Squid (48 out of 48 rated 5-star), Rosa's Thai (30 of 32 five-star), and Banana Tree (18 of 21 five-star) achieve consistently excellent ratings. Independents show a wider spread, with more variation between 3-star and 5-star results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do delivery platforms charge Thai restaurants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Commission rates vary significantly: Just Eat charges approximately 14% + £0.50 per order, while Deliveroo and Uber Eats charge 25-30%. On a £30 order, Just Eat takes about £4.70 while Deliveroo and Uber Eats take £7.50 to £9.00. The Delivery Profit Calculator allows direct comparison between platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should my Thai restaurant be on all three delivery platforms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Most Thai restaurants in the UK do 60-70% of their delivery volume through a single primary platform. Being on all three spreads orders thin and increases operational complexity. Starting with Just Eat (lowest commission, widest reach) and adding others only when demand justifies it is a common recommended approach. The Delivery Commissions Guide covers platform strategy in depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical dine-in vs takeaway split for UK Thai restaurants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Among the 1,594 FSA-registered Thai businesses, approximately 53% are dine-in restaurants and 47% are takeaway-only. In London the split leans heavily toward dine-in (71% dine-in, 29% takeaway), reflecting the capital's dining-out culture. Regional cities show a more balanced mix. The City-by-City Breakdown includes type split data for every UK city."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do takeaway-only Thai restaurants have different hygiene challenges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Takeaway-only establishments can face different hygiene considerations than dine-in restaurants. They may operate from smaller premises with less space for food separation, and inspection volumes are higher. However, many Thai takeaways achieve excellent ratings. The best approach is to check the specific hygiene rating on the restaurant's ThaiData page, sourced directly from the FSA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ThaiData source its restaurant data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ThaiData sources all restaurant listings from the UK Food Standards Agency's Food Hygiene Rating Scheme (FHRS) for England, Wales, and Northern Ireland, and the Food Hygiene Information Scheme (FHIS) for Scotland. Restaurant names, addresses, hygiene scores, and inspection dates are pulled directly from these official public registers. Data is refreshed weekly via the FSA API."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often is ThaiData restaurant data updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The restaurant database is refreshed weekly from the Food Standards Agency API. Each restaurant page shows its last inspection date and the date of the most recent data update. The FSA data itself is updated as local authorities conduct inspections, so there is usually a lag between an inspection and it appearing on ThaiData."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How reliable is ThaiData restaurant information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Restaurant names, addresses, and hygiene scores come directly from the FSA public register, making them highly reliable for FSA-registered businesses. However, ThaiData does not independently verify whether a business is actively trading, and some restaurants may operate under different trading names. The Data Quality page provides full detail on limitations and known issues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to open a Thai restaurant in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Opening costs typically range from £80,000 to £180,000 depending on location, size, and whether you are taking over an existing unit. Key costs include: fit-out (£30k-£80k), commercial kitchen equipment including wok stations (£15k-£35k), initial stock and licensing (£5k-£10k), and working capital (£20k-£50k). The comprehensive Opening Guide covers every step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a specific visa to hire Thai chefs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thai chefs typically enter the UK under the Skilled Worker Visa (RQF-6 equivalent). Your restaurant must be a Home Office approved sponsor. The process takes 8-16 weeks and costs approximately £3,000-£6,000 per chef including visa fees, immigration health surcharge, and legal costs. The Thai Chef Visa Guide and Visa Assistant tool cover the sponsorship process in detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the NLW rate from April 2026 and how does it affect Thai restaurants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The National Living Wage rises to £12.71/hour for workers aged 21+ from 1 April 2026. The 18-20 rate goes to £10.00/hour, and the Apprentice rate to £7.55/hour. For a typical Thai restaurant with 3 full-time and 2 part-time staff, this represents an increase of approximately £145-160/week or £7,500-8,300/year including NI. The NLW Wage Calculator on the homepage models your exact cost."
       }
     }
   ]
@@ -234,190 +319,414 @@
 <div class="grain"></div>
 <nav>
     <div class="nav-bar">
-        <a href="index.html" class="logo"><img src="favicon.svg" alt="ThaiData" class="logo-icon"> ThaiData</a>
+        <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="100" height="36"> ThaiData</a>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
         <div class="nav-links">
-            <a href="guides.html">Guides</a>
-            <a href="tools.html">Tools</a>
-            <a href="restaurants.html">Restaurants</a>
-            <a href="claim/index.html">Claim Listing</a>
-            <a href="thai-festivals-uk.html">Festivals</a>
-            <a href="glossary.html">Glossary</a>
+            <a href="/guides.html">Guides</a>
+            <a href="/thai-restaurants-city-breakdown-uk">Cities</a>
+            <a href="/r/">Restaurants</a>
+            <a href="/chains/">Chains</a>
+            <a href="/dish-prices">Pricing</a>
+            <a href="/faq" style="color:white;">FAQ</a>
         </div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </div>
 </nav>
 
-<section class="header-section">
-    <div class="wrap">
-        <h1>Frequently asked <em>questions</em></h1>
-        <p>Everything UK Thai restaurant operators ask us — wages, food costs, delivery platforms, chef visas, and more.</p>
-    </div>
-</section>
-
 <div class="wrap">
 
-<div class="cat-label"><i class="fas fa-money-bill-wave"></i> WAGES & NATIONAL LIVING WAGE</div>
-<ul class="faq-list">
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            What is the National Living Wage rate from April 2026?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            The NLW rises to <strong>£12.71/hour</strong> for workers aged 21 and over from 1 April 2026. The 18-20 rate increases to £10.00/hour, and the Apprentice rate to £7.55/hour. Use our <a href="index.html">NLW Wage Calculator</a> to see exactly how much this will cost your restaurant.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            How much will the April 2026 NLW rise cost my Thai restaurant?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            For a typical restaurant with 3 full-time staff (21+) and 2 part-time staff (18-20), the increase is approximately <strong>£145-160/week</strong> or <strong>£7,500-8,300/year</strong> including NI. The exact figure depends on your staff mix, hours, and current pay rates. Calculate yours in 60 seconds with our <a href="index.html">Wage Calculator</a>.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            Do I have to pay the NLW to all my staff?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Yes — the National Living Wage is a legal minimum. All workers aged 21+ must receive at least £12.71/hr from April 2026. Under-21s have lower minimum rates but must still be paid at least the applicable minimum wage for their age group. Failure to comply can result in HMRC fines and public naming.
-        </div>
-    </li>
-</ul>
+    <div class="hero">
+        <h1>UK Thai Restaurant <em>FAQ</em></h1>
+        <p class="sub">Answers to the most common questions about UK Thai restaurants — how many there are, where they are, what they charge, who runs them, and how the data works.</p>
+    </div>
 
-<div class="cat-label"><i class="fas fa-utensils"></i> FOOD COSTS & MARGINS</div>
-<ul class="faq-list">
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            What is the average food cost percentage for a Thai restaurant in the UK?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Most UK Thai restaurants operate with a food cost of <strong>28-33%</strong> of menu price. Top-performing restaurants target 25-28% through strategic sourcing and menu engineering. Delivery tends to run higher due to packaging costs and platform commissions eating into net revenue. See the <a href="thai-restaurant-menu-pricing-uk.html">Menu Pricing Guide</a> for detailed benchmarks.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            What is a good GP margin for a Thai restaurant?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            A healthy gross profit margin for a UK Thai restaurant is <strong>67-72%</strong> (food cost 28-33%). Net profit margins are typically 8-15% after rent, staff, utilities, and marketing. Our <a href="tools/PROFIT_MARGIN_DEFENDER.html">Profit Margin Defender</a> tool can help you model where your margins sit.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            How much should I charge for Pad Thai in 2026?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Based on our Menu Price Index tracking 75 dishes across 5 UK cities, the average Pad Thai (chicken) costs <strong>£12.50 dine-in</strong> and <strong>£14.95 delivery</strong>. London averages £14.00/£16.50, while regional cities average £11.00/£13.50. Check our <a href="thai-menu-price-index-uk.html">Menu Price Index</a> for full pricing by dish and city.
-        </div>
-    </li>
-</ul>
+    <!-- Quick topic nav -->
+    <div class="topic-nav">
+        <a href="#cities">City Guides</a>
+        <a href="#hygiene">Hygiene &amp; FSA</a>
+        <a href="#pricing">Pricing &amp; Margins</a>
+        <a href="#chains">Chains &amp; Brands</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#dine-takeaway">Dine-in / Takeaway</a>
+        <a href="#data">Data &amp; Methodology</a>
+        <a href="#opening">Opening &amp; Operating</a>
+    </div>
 
-<div class="cat-label"><i class="fas fa-motorcycle"></i> DELIVERY PLATFORMS</div>
-<ul class="faq-list">
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            How much does Uber Eats, Deliveroo, and Just Eat charge Thai restaurants?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Commission rates vary significantly: <strong>Just Eat</strong> charges ~14% + £0.50 per order, while <strong>Deliveroo</strong> and <strong>Uber Eats</strong> charge <strong>25-30%</strong>. On a £30 order, Just Eat takes £4.70 while Deliveroo/Uber take £7.50-£9.00. Factoring in VAT on commission, the real cost is even higher. Use our <a href="tools/delivery-profit-calculator.html">Delivery Profit Calculator</a> to compare platforms side by side.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            Should I be on all three delivery platforms?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Not necessarily. Our data shows most Thai restaurants in the UK do 60-70% of their delivery volume through one primary platform. Being on all three spreads your orders thin and increases operational complexity. We recommend starting with Just Eat (lowest commission, widest reach) and adding others only if demand justifies it. See our <a href="thai-restaurant-delivery-commissions-uk.html">Delivery Commissions Guide</a>.
-        </div>
-    </li>
-</ul>
+    <!-- ====== SECTION 1: CITY GUIDES ====== -->
+    <div class="section-header" id="cities">
+        <h2><i class="fas fa-map-marker-alt"></i> City Guides &amp; Market Data</h2>
+        <div class="intro-text">Where Thai restaurants are concentrated, which cities have the most dining options, and where there is room for growth. Start with our <a href="/thai-restaurants-city-breakdown-uk">full city-by-city breakdown</a> or browse <a href="/r/">every restaurant on the directory</a>.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                How many Thai restaurants are there in the UK?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                There are <strong>1,594 FSA-registered Thai restaurants and takeaways</strong> across 253 UK cities and towns, based on Food Standards Agency data updated June 2026. London leads with <strong>411</strong>, followed by <strong>Leeds</strong> (34) and <strong>Manchester</strong> (28).<br><br>
+                See the <a href="/how-many-thai-restaurants-uk.html">full restaurant count</a> for historical trends, or browse the <a href="/thai-restaurants-city-breakdown-uk">city-by-city breakdown</a> for every local market. For individual listings, use the <a href="/r/">restaurant directory</a>.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Which UK city has the most Thai restaurants per capita?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                By density per 100,000 residents: <strong>Brighton</strong> leads at <strong>4.7</strong>, followed by Bournemouth (4.6), London (4.6), Edinburgh (4.4), and Manchester (4.9). Smaller cities like Bournemouth and Brighton punch well above their weight in Thai restaurant density.<br><br>
+                The <a href="/state-of-uk-thai-food-2026.html">State of UK Thai Food 2026</a> report has full per-capita rankings and density analysis across all 253 cities.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Which UK cities are underserved for Thai restaurants?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Cities with large populations but relatively few Thai restaurants include <strong>Birmingham</strong> (17 restaurants for ~1.15M population), <strong>Sheffield</strong> (12 for ~570K), and <strong>Leicester</strong> (10 for ~370K). These markets show <strong>potential for new openings</strong>.<br><br>
+                Use the <a href="/tools/where-to-open-thai-restaurant-uk.html">Where to Open Tool</a> for a full opportunity analysis. You can also explore specific city guides: <a href="/Thai-restaurants-birmingham-uk">Birmingham</a>, <a href="/Thai-restaurants-leeds-uk">Leeds</a>, <a href="/Thai-restaurants-manchester-uk">Manchester</a>, <a href="/Thai-restaurants-bristol-uk">Bristol</a>, and <a href="/Thai-restaurants-edinburgh-uk">Edinburgh</a>.
+            </div>
+        </li>
+    </ul>
 
-<div class="cat-label"><i class="fas fa-store"></i> OPENING A THAI RESTAURANT</div>
-<ul class="faq-list">
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            How much does it cost to open a Thai restaurant in the UK?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Opening costs typically range from <strong>£80,000-£180,000</strong> depending on location, size, and whether you're taking over an existing unit. Key costs include: fit-out (£30k-£80k), commercial kitchen equipment including wok stations (£15k-£35k), initial stock and licensing (£5k-£10k), and working capital (£20k-£50k). Our comprehensive <a href="open-thai-restaurant-uk.html">Opening Guide</a> covers every step.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            Do I need a specific visa to hire Thai chefs?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Yes — Thai chefs typically enter under the <strong>Skilled Worker Visa</strong> (RQF-6 equivalent). Your restaurant needs to be a Home Office approved sponsor. The process takes 8-16 weeks and costs approximately £3,000-£6,000 per chef including visa fees, immigration health surcharge, and legal costs. See our <a href="thai-chef-visa-uk.html">Thai Chef Visa Guide</a> and <a href="tools/VISA_ASSISTANT.html">Visa Assistant</a> tool.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            What BTU rating do I need for a Thai wok station?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Authentic Thai cooking requires wok burners rated at <strong>80,000-120,000 BTU</strong> — significantly higher than standard restaurant hobs (15,000-30,000 BTU). You'll also need an extraction canopy rated for high-heat wok cooking. This is a commonly overlooked cost that can add £8,000-£15,000 to your kitchen fit-out. Covered in detail in our <a href="open-thai-restaurant-uk.html">Opening Guide</a>.
-        </div>
-    </li>
-</ul>
+    <!-- ====== SECTION 2: HYGIENE ====== -->
+    <div class="section-header" id="hygiene">
+        <h2><i class="fas fa-shield-alt"></i> Hygiene Ratings &amp; FSA Data</h2>
+        <div class="intro-text">What Food Standards Agency hygiene scores mean, how Thai restaurants are rated, and why it matters. Every hygiene score on ThaiData comes directly from the <a href="https://ratings.food.gov.uk" target="_blank" rel="noopener">FSA public register</a>.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                What is a Food Standards Agency (FSA) hygiene rating?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                The FSA hygiene rating scheme scores restaurants from <strong>0</strong> (urgent improvement needed) to <strong>5</strong> (very good). Ratings are based on three criteria: hygienic food handling (preparation, cooking, storage), structural condition of the premises (cleanliness, layout, facilities), and <strong>confidence in management</strong> (track record, documented procedures).<br><br>
+                Businesses in Wales and Northern Ireland are legally required to display their rating; in England and Scotland it is voluntary but the vast majority of Thai restaurants participate.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                How are UK Thai restaurants rated for hygiene overall?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Most UK Thai restaurants achieve strong hygiene ratings. Across all 1,594 FSA-registered Thai businesses, the majority hold <strong>4 or 5 stars</strong>. Five-star-rated restaurants are concentrated in <strong>London</strong>, <strong>Leeds</strong>, and <strong>Manchester</strong>.<br><br>
+                You can check the hygiene rating of any specific restaurant on its <a href="/r/">restaurant page</a>, sourced directly from the FSA register. Each listing shows the overall score, inspection date, and breakdown scores for hygiene, structural, and management criteria.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Why should restaurant operators care about hygiene scores?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Hygiene ratings are <strong>publicly visible</strong> on the FSA website, Google Business Profiles, and delivery platforms like Just Eat and Uber Eats. A low score can directly impact customer trust and order volume. For operators, maintaining a 5-star rating means:<br>
+                <ul>
+                    <li><strong>Better visibility</strong> on delivery platforms that filter by rating</li>
+                    <li><strong>Customer confidence</strong> — 72% of UK diners check hygiene ratings before ordering</li>
+                    <li><strong>Fewer inspections</strong> — consistently high-rated businesses may receive fewer re-inspections</li>
+                </ul>
+                The <a href="/data-quality">Data Quality</a> page details how scores map between England/Wales/Scotland systems.
+            </div>
+        </li>
+    </ul>
 
-<div class="cat-label"><i class="fas fa-chart-bar"></i> MARKET DATA</div>
-<ul class="faq-list">
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            How many Thai restaurants are there in the UK?
-            <i class="fas fa-chevron-down"></i>
+    <!-- ====== SECTION 3: PRICING ====== -->
+    <div class="section-header" id="pricing">
+        <h2><i class="fas fa-pound-sign"></i> Menu Pricing &amp; Profitability</h2>
+        <div class="intro-text">What dishes cost, how margins work, and how prices compare across UK cities. Data from the ThaiData <a href="/dish-prices">Dish Price Checker</a> and <a href="/thai-menu-price-index-uk.html">Menu Price Index</a>.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                What is the average food cost percentage for a Thai restaurant in the UK?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Most UK Thai restaurants operate with a food cost of <strong>28-33%</strong> of menu price. Top-performing restaurants target 25-28% through strategic sourcing and <strong>menu engineering</strong>. Delivery tends to run higher due to packaging costs and platform commissions eating into net revenue.<br><br>
+                See the <a href="/thai-restaurant-menu-pricing-uk.html">Menu Pricing Guide</a> for detailed benchmarks, and the <a href="/thai-restaurant-revenue-benchmarks-uk.html">Revenue Benchmarks</a> page for industry comparisons.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                What is a good gross profit margin for a Thai restaurant?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                A healthy gross profit margin for a UK Thai restaurant is <strong>67-72%</strong> (equivalent to 28-33% food cost). Net profit margins are typically <strong>8-15%</strong> after rent, staff, utilities, and marketing.<br><br>
+                The <a href="/tools/PROFIT_MARGIN_DEFENDER.html">Profit Margin Defender</a> tool lets you model your own margins. For detailed cost breakdowns, see the <a href="/thai-restaurant-costs-uk.html">Thai Restaurant Costs</a> guide and <a href="/thai-restaurant-gp-calculator.html">GP Calculator</a>.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                How much should I charge for Pad Thai in 2026?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Based on our Menu Price Index tracking 12 dishes across 5 UK cities: the average Pad Thai (chicken) costs <strong>£12.50 dine-in</strong> and <strong>£14.95 delivery</strong>. London averages £14.00/£16.50, while regional cities average £11.00/£13.50.<br><br>
+                See the <a href="/dish-prices">Dish Price Checker</a> for full pricing on all 12 dishes. The <a href="/thai-menu-price-index-uk.html">Menu Price Index report</a> covers methodology and city-by-city comparisons.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Which UK cities have the most and least expensive Thai food?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                <strong>London</strong> is the most expensive city for Thai dining, with an average dine-in price of <strong>£12.08</strong> across 12 surveyed dishes. <strong>Leeds</strong> (£10.49) and <strong>Bristol</strong> (£10.51) are the most affordable among surveyed cities.<br><br>
+                Delivery markups average <strong>20-23%</strong> across all cities, with Leeds having the highest delivery premium at +23%. The full <a href="/dish-prices">city pricing comparison table</a> breaks this down.
+            </div>
+        </li>
+    </ul>
+
+    <!-- ====== SECTION 4: CHAINS ====== -->
+    <div class="section-header" id="chains">
+        <h2><i class="fas fa-store"></i> Chains &amp; Brands</h2>
+        <div class="intro-text">The major Thai restaurant groups operating in the UK, how many locations they have, and how they compare. Browse the full <a href="/chains/">Chain Directory</a> for 12 verified chains with city presence maps and hygiene profiles.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                What are the biggest Thai restaurant chains in the UK?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                The largest UK Thai chains by FSA-registered locations are:<br>
+                <ul>
+                    <li><strong>Giggling Squid</strong> — 48 locations (all 5-star hygiene)</li>
+                    <li><strong>Rosa's Thai</strong> — 32 locations (30 five-star)</li>
+                    <li><strong>Banana Tree</strong> — 21 locations (18 five-star)</li>
+                    <li><strong>Thai Express</strong> — 12 locations (7 five-star)</li>
+                    <li><strong>Thai Square</strong> — 11 locations (5 five-star)</li>
+                    <li><strong>Thaikhun</strong> — 10 locations (6 five-star)</li>
+                </ul>
+                Combined, these <strong>12 identified chains</strong> account for <strong>174 locations</strong>, with the remaining <strong>1,420</strong> being independent restaurants.<br><br>
+                See the <a href="/chains/">Chain Directory</a> for full profiles including city presence maps, hygiene breakdowns, and sample restaurant links.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Do chain Thai restaurants get better hygiene ratings than independents?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                On average, chain Thai restaurants score <strong>higher and more consistently</strong> on hygiene than independents. Major chains maintain excellent records — Giggling Squid is 48 for 48 on 5-star ratings, and Rosa's Thai has 30 out of 32 at 5-star.<br><br>
+                <strong>Independents</strong> show a wider spread, with more variation between 3-star and 5-star results. However, many independent Thai restaurants achieve and maintain 5-star ratings. You can check any restaurant's score on its <a href="/r/">individual listing page</a>.
+            </div>
+        </li>
+    </ul>
+
+    <!-- ====== SECTION 5: DELIVERY ====== -->
+    <div class="section-header" id="delivery">
+        <h2><i class="fas fa-motorcycle"></i> Delivery Platforms</h2>
+        <div class="intro-text">What delivery platforms charge, which ones to use, and how to stay profitable. The <a href="/thai-restaurant-delivery-commissions-uk.html">Delivery Commissions Guide</a> covers platform strategy and the <a href="/tools/delivery-profit-calculator.html">Delivery Profit Calculator</a> models real costs.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                How much do delivery platforms charge Thai restaurants?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Commission rates vary significantly by platform: <strong>Just Eat</strong> charges approximately <strong>14% + £0.50</strong> per order, while <strong>Deliveroo</strong> and <strong>Uber Eats</strong> charge <strong>25-30%</strong>. On a £30 order, Just Eat takes about £4.70 while Deliveroo and Uber Eats take £7.50 to £9.00. Factoring in VAT on commission, the real cost is even higher.<br><br>
+                Use the <a href="/tools/delivery-profit-calculator.html">Delivery Profit Calculator</a> to compare platforms side by side. The <a href="/thai-delivery-profit-analysis-2026.html">Delivery Profit Analysis</a> report has more data.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Should my Thai restaurant be on all three delivery platforms?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Not necessarily. Our data shows most Thai restaurants do <strong>60-70% of delivery volume</strong> through one primary platform. Being on all three spreads orders thin and increases operational complexity. A common approach is starting with <strong>Just Eat</strong> (lowest commission, widest reach) and adding others only if demand justifies it.<br><br>
+                The <a href="/thai-restaurant-delivery-commissions-uk.html">Delivery Commissions Guide</a> covers platform strategy and commission negotiation in detail.
+            </div>
+        </li>
+    </ul>
+
+    <!-- ====== SECTION 6: DINE-IN / TAKEAWAY ====== -->
+    <div class="section-header" id="dine-takeaway">
+        <h2><i class="fas fa-utensil-spoon"></i> Dine-in vs Takeaway</h2>
+        <div class="intro-text">How the UK Thai restaurant market splits between eat-in and takeaway, and what it means for operators and diners. Browse <a href="/r/">restaurants by type</a> or check the <a href="/thai-restaurants-city-breakdown-uk">city breakdown</a> for local splits.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                What is the typical dine-in vs takeaway split for UK Thai restaurants?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Among the 1,594 FSA-registered Thai businesses, approximately <strong>53% are dine-in restaurants</strong> and <strong>47% are takeaway-only</strong>. This split varies significantly by region:<br>
+                <ul>
+                    <li><strong>London:</strong> 71% dine-in, 29% takeaway — the capital skews heavily toward sit-down dining</li>
+                    <li><strong>Regional cities:</strong> roughly balanced, with some cities like Leeds and Manchester having more even splits</li>
+                    <li><strong>Smaller towns:</strong> tend toward takeaway-only operations</li>
+                </ul>
+                The <a href="/thai-restaurants-city-breakdown-uk">City-by-City Breakdown</a> includes type-split data for every UK city with Thai restaurants.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Should I offer both dine-in and takeaway?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Many successful Thai restaurants operate a <strong>hybrid model</strong> — dine-in for evening meals and takeaway/delivery for lunch and late orders. Key considerations include:<br>
+                <ul>
+                    <li><strong>Kitchen capacity:</strong> a single kitchen can handle both, but ticket management matters during peak hours</li>
+                    <li><strong>Menu pricing:</strong> most restaurants charge 20-23% more on delivery to offset platform commissions</li>
+                    <li><strong>Space requirements:</strong> takeaway-only operations need less front-of-house space, reducing rent costs</li>
+                </ul>
+                See <a href="/thai-restaurant-costs-uk.html">Thai Restaurant Costs</a> for a full comparison of operating models.
+            </div>
+        </li>
+    </ul>
+
+    <!-- ====== SECTION 7: DATA ====== -->
+    <div class="section-header" id="data">
+        <h2><i class="fas fa-database"></i> Data Sourcing &amp; Methodology</h2>
+        <div class="intro-text">Where ThaiData gets its restaurant information, how often it is updated, and what limitations apply. See the <a href="/data-quality">Data Quality</a> page for a full transparency report.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Where does ThaiData get its restaurant data?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                ThaiData sources all restaurant listings from the UK <strong>Food Standards Agency</strong> — specifically the Food Hygiene Rating Scheme (FHRS) for England, Wales, and Northern Ireland, and the Food Hygiene Information Scheme (FHIS) for Scotland. Restaurant names, addresses, hygiene scores, and inspection dates are pulled directly from these official public registers via the <a href="https://api.ratings.food.gov.uk/help" target="_blank" rel="noopener">FSA API</a>.<br><br>
+                We identify Thai restaurants by searching for Thai-related keywords in business names and filtering by cuisine type where available. The <a href="/data-quality">Data Quality</a> page explains the methodology in full.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                How often is the restaurant data updated?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                The restaurant database is refreshed <strong>weekly</strong> from the Food Standards Agency API. Each restaurant page shows its <strong>last inspection date</strong> and the date of the most recent ThaiData update. The FSA data itself is updated as local authorities conduct inspections, so there is usually a lag of several weeks between an inspection and it appearing on ThaiData.<br><br>
+                Current data: <strong>June 2026</strong>. Chain location counts are based on FSA register name matching and may not reflect a chain's full estate.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                How reliable is the information on ThaiData?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Restaurant names, addresses, and hygiene scores come <strong>directly from the FSA public register</strong>, making them highly reliable for FSA-registered businesses. However, ThaiData does not independently verify:<br>
+                <ul>
+                    <li>Whether a business is actively trading (closures and openings happen between FSA updates)</li>
+                    <li>Whether a restaurant primarily serves Thai food (we use name-based detection)</li>
+                    <li>Operating hours, menu prices, or contact details (these come from restaurant websites when available)</li>
+                </ul>
+                The <a href="/data-quality">Data Quality</a> page provides full detail on limitations and known issues.
+            </div>
+        </li>
+    </ul>
+
+    <!-- ====== SECTION 8: OPENING ====== -->
+    <div class="section-header" id="opening">
+        <h2><i class="fas fa-building"></i> Opening &amp; Operating</h2>
+        <div class="intro-text">Practical information for starting and running a Thai restaurant in the UK. The <a href="/open-thai-restaurant-uk.html">Opening Guide</a> covers everything from business plans to kitchen fit-out.</div>
+    </div>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                How much does it cost to open a Thai restaurant in the UK?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Opening costs typically range from <strong>£80,000 to £180,000</strong> depending on location, size, and whether you are taking over an existing unit. Key cost categories:<br>
+                <ul>
+                    <li><strong>Fit-out:</strong> £30k-£80k (seating, decor, signage)</li>
+                    <li><strong>Commercial kitchen:</strong> £15k-£35k including wok stations and extraction</li>
+                    <li><strong>Initial stock &amp; licensing:</strong> £5k-£10k</li>
+                    <li><strong>Working capital:</strong> £20k-£50k (3-6 months runway)</li>
+                </ul>
+                The <a href="/open-thai-restaurant-uk.html">Opening Guide</a> covers every step from business plan templates to supplier lists. See also the <a href="/open-thai-restaurant-timeline-uk.html">Opening Timeline</a> for typical milestones.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                Do I need a specific visa to hire Thai chefs?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Thai chefs typically enter the UK under the <strong>Skilled Worker Visa</strong> (RQF-6 equivalent). Your restaurant must be a <strong>Home Office approved sponsor</strong>. The process takes 8-16 weeks and costs approximately <strong>£3,000-£6,000 per chef</strong> including visa fees, immigration health surcharge, and legal costs.<br><br>
+                See the <a href="/thai-chef-visa-uk.html">Thai Chef Visa Guide</a> for a step-by-step sponsorship walkthrough, and the <a href="/tools/VISA_ASSISTANT.html">Visa Assistant</a> tool to estimate costs.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                What BTU rating do I need for a Thai wok station?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                Authentic Thai cooking requires wok burners rated at <strong>80,000-120,000 BTU</strong> — significantly higher than standard restaurant hobs (15,000-30,000 BTU). You will also need an <strong>extraction canopy</strong> rated for high-heat wok cooking. This is a commonly overlooked cost that can add <strong>£8,000-£15,000</strong> to your kitchen fit-out.<br><br>
+                Covered in detail in the <a href="/open-thai-restaurant-uk.html">Opening Guide</a>, along with <a href="/thai-wholesale-suppliers-uk.html">wholesale supplier recommendations</a> for kitchen equipment.
+            </div>
+        </li>
+        <li class="faq-item">
+            <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+                What is the NLW rate from April 2026 and how does it affect Thai restaurants?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+                The National Living Wage rises to <strong>£12.71/hour</strong> for workers aged 21+ from 1 April 2026. The 18-20 rate goes to £10.00/hour, and the Apprentice rate to £7.55/hour. For a typical Thai restaurant with 3 full-time and 2 part-time staff, this represents an increase of approximately <strong>£145-160/week</strong> or <strong>£7,500-8,300/year</strong> including NI.<br><br>
+                Use the <a href="/">NLW Wage Calculator on the homepage</a> to model your exact cost. The <a href="/nlw-report.html">NLW Impact Report</a> has industry-wide analysis.
+            </div>
+        </li>
+    </ul>
+
+    <!-- Related hubs -->
+    <div class="highlight-box" style="margin-top:40px;">
+        <h3>Explore the full ThaiData hub network</h3>
+        <p>These pages connect to form a complete directory of UK Thai restaurants, chains, pricing, and market data.</p>
+        <div class="link-grid" style="margin-top:14px;">
+            <a href="/thai-restaurants-city-breakdown-uk" class="link-card">
+                <h3>City Breakdown</h3>
+                <p>All 253 UK cities ranked by restaurant count, per-capita density, and hygiene</p>
+            </a>
+            <a href="/r/" class="link-card">
+                <h3>Restaurant Directory</h3>
+                <p>1,594 individual Thai restaurant pages with hygiene scores</p>
+            </a>
+            <a href="/chains/" class="link-card">
+                <h3>Chain Directory</h3>
+                <p>12 major chains with location counts and city presence</p>
+            </a>
+            <a href="/dish-prices" class="link-card">
+                <h3>Dish Price Checker</h3>
+                <p>Dine-in and delivery prices for 12 popular dishes</p>
+            </a>
+            <a href="/guides.html" class="link-card">
+                <h3>Guides</h3>
+                <p>Operating guides, market reports, and cost analysis</p>
+            </a>
+            <a href="/tools.html" class="link-card">
+                <h3>Tools</h3>
+                <p>Calculators for wages, delivery profit, margins, and more</p>
+            </a>
         </div>
-        <div class="faq-a">
-            There are <strong>1,594 Thai restaurants</strong> across 253 UK cities and towns, based on Food Standards Agency data (updated June 2026). London has the most with 411, followed by Leeds (34) and Manchester (28). For the full breakdown, see our <a href="how-many-thai-restaurants-uk.html">UK Thai Restaurant Count</a> and <a href="thai-restaurants-city-breakdown-uk.html">City Breakdown</a>.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            Which UK city has the most Thai restaurants per capita?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            By density per 100,000 residents: <strong>Brighton</strong> leads (4.7), followed by Bournemouth (4.6), London (4.6), Edinburgh (4.4), and Manchester (4.9). Interestingly, some smaller cities like Bournemouth and Brighton punch well above their weight in Thai restaurant density. Our <a href="state-of-uk-thai-food-2026.html">State of UK Thai Food 2026</a> report has full data.
-        </div>
-    </li>
-    <li class="faq-item">
-        <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-            Where are the underserved markets for Thai restaurants?
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-a">
-            Based on our analysis, cities with significant populations but relatively few Thai restaurants include <strong>Birmingham</strong> (17 restaurants, ~1.15M population), <strong>Sheffield</strong> (12, ~570K), and <strong>Leicester</strong> (10, ~370K). These markets show potential for new openings. Use our <a href="tools/where-to-open-thai-restaurant-uk.html">Where to Open Tool</a> for a full analysis.
-        </div>
-    </li>
-</ul>
+    </div>
 
 </div>
 
 <footer>
     <div class="wrap">
-        <p style="margin-bottom:10px;">
-            <a href="index.html">Tools</a> ·
-            <a href="guides.html">Guides</a> ·
-            <a href="thai-festivals-uk.html">Festivals</a> ·
-            <a href="about.html">About</a> ·
-            <a href="privacy.html">Privacy</a>
+        <p>Data sourced from the <a href="https://ratings.food.gov.uk" target="_blank" rel="noopener">Food Standards Agency</a> FHRS/FHIS. Updated June 2026.</p>
+        <p style="margin-top:6px;">
+            <a href="/data-quality">Data Quality</a> &middot;
+            <a href="/sitemap.xml">Sitemap</a> &middot;
+            <a href="/privacy.html">Privacy</a>
         </p>
-        <p>&copy; 2026 ThaiData UK. Free resources for UK Thai restaurant operators.</p>
     </div>
 </footer>
+
 <script>
-    function toggleMenu() {
+    function toggleMenu(){
         document.querySelector('.nav-links').classList.toggle('open');
     }
 </script>
