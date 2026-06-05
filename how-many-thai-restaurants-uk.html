@@ -200,6 +200,21 @@
         }
         .cta-box a:hover { background: var(--c1); }
 
+        /* Hygiene distribution bars */
+        .hygiene-bars { margin: 20px 0; }
+        .hygiene-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .hygiene-row:last-child { margin-bottom: 0; }
+        .hygiene-stars { min-width: 36px; font-size: 0.8rem; text-align: right; }
+        .hygiene-track { flex: 1; height: 24px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; }
+        .hygiene-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding: 0 8px; font-size: 0.7rem; font-weight: 700; color: white; }
+        .hygiene-fill.s5 { background: linear-gradient(90deg, rgba(16,185,129,0.5), var(--c2)); }
+        .hygiene-fill.s4 { background: linear-gradient(90deg, rgba(132,204,22,0.5), #84CC16); }
+        .hygiene-fill.s3 { background: linear-gradient(90deg, rgba(250,204,21,0.5), #FACC15); color: #1a1a2e; }
+        .hygiene-fill.s2 { background: linear-gradient(90deg, rgba(251,146,60,0.5), #FB923C); }
+        .hygiene-fill.s1 { background: linear-gradient(90deg, rgba(239,68,68,0.5), #EF4444); }
+        .hygiene-fill.s0 { background: linear-gradient(90deg, rgba(239,68,68,0.5), #DC2626); }
+        .hygiene-pct { min-width: 60px; font-size: 0.78rem; color: var(--ink4); text-align: right; font-weight: 600; }
+
         /* Source note */
         .source-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--line); }
 
@@ -505,6 +520,38 @@
                     <div class="stars red" style="font-size:1rem;font-weight:700;">0</div>
                     <div class="r-count">6</div>
                     <div class="r-label">0 Stars (0.4%)</div>
+                </div>
+            </div>
+            <div class="hygiene-bars">
+                <div class="hygiene-row">
+                    <div class="hygiene-stars" style="color:var(--c2);">★★★★★</div>
+                    <div class="hygiene-track"><div class="hygiene-fill s5" style="width:56.7%">56.7%</div></div>
+                    <div class="hygiene-pct" style="color:var(--c2);">5-star</div>
+                </div>
+                <div class="hygiene-row">
+                    <div class="hygiene-stars" style="color:#84CC16;">★★★★</div>
+                    <div class="hygiene-track"><div class="hygiene-fill s4" style="width:20.1%">20.1%</div></div>
+                    <div class="hygiene-pct">4-star</div>
+                </div>
+                <div class="hygiene-row">
+                    <div class="hygiene-stars" style="color:#FACC15;">★★★</div>
+                    <div class="hygiene-track"><div class="hygiene-fill s3" style="width:12.7%">12.7%</div></div>
+                    <div class="hygiene-pct">3-star</div>
+                </div>
+                <div class="hygiene-row">
+                    <div class="hygiene-stars" style="color:#FB923C;">★★</div>
+                    <div class="hygiene-track"><div class="hygiene-fill s2" style="width:3.3%">3.3%</div></div>
+                    <div class="hygiene-pct">2-star</div>
+                </div>
+                <div class="hygiene-row">
+                    <div class="hygiene-stars" style="color:var(--red);">★</div>
+                    <div class="hygiene-track"><div class="hygiene-fill s1" style="width:2.2%">2.2%</div></div>
+                    <div class="hygiene-pct">1-star</div>
+                </div>
+                <div class="hygiene-row">
+                    <div class="hygiene-stars" style="color:#DC2626;">0</div>
+                    <div class="hygiene-track"><div class="hygiene-fill s0" style="width:0.4%">0.4%</div></div>
+                    <div class="hygiene-pct">0-star</div>
                 </div>
             </div>
             <div class="source-note" style="margin-top:24px;">
