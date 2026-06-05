@@ -1,0 +1,1802 @@
+openapi: "3.0.3"
+info:
+  title: ThaiData UK API
+  description: |
+    REST API for ThaiData UK — the UK's Thai restaurant directory.
+
+    Built on Cloudflare Pages Functions with D1 database and Cloudflare Images.
+    All endpoints return JSON and set `Access-Control-Allow-Origin: *`.
+  version: "1.0.0"
+  contact:
+    name: ThaiData UK
+    url: "https://thaidata.uk"
+servers:
+  - url: "https://thaidata.uk"
+    description: Production server
+paths:
+  # ──────────────────────────────────────────────
+  # SEARCH
+  # ──────────────────────────────────────────────
+  /api/search:
+    get:
+      summary: Search Thai restaurants
+      description: |
+        Proxies the FSA ratings API to search for Thai restaurants in the UK.
+        Results are filtered to Thai cuisine keywords and optional city matching.
+        Cached for 1 hour (Cache-Control: public, max-age=3600).
+      operationId: searchRestaurants
+      tags:
+        - Search
+      parameters:
+        - name: q
+          in: query
+          description: Search query (restaurant name, min 2 characters)
+          required: true
+          schema:
+            type: string
+            minLength: 2
+          example: "Siam"
+        - name: city
+          in: query
+          description: City name to filter results by address matching
+          required: false
+          schema:
+            type: string
+          example: "Leeds"
+        - name: limit
+          in: query
+          description: Maximum number of results to return (default 20)
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 20
+          example: 10
+      responses:
+        "200":
+          description: Successful search response
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - results
+                  - count
+                  - query
+                properties:
+                  results:
+                    type: array
+                    description: List of matching Thai restaurant results from FSA API
+                    items:
+                      $ref: "#/components/schemas/SearchResult"
+                  count:
+                    type: integer
+                    description: Number of results returned
+                    example: 5
+                  query:
+                    type: string
+                    description: Original search query
+                    example: "Siam"
+        "400":
+          description: Invalid or missing query parameter
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Search query must be at least 2 characters"
+        "500":
+          description: FSA API request failed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Search failed"
+                  results:
+                    type: array
+                    items: {}
+      x-cors: "*"
+      x-cache: "public, max-age=3600"
+
+  # ──────────────────────────────────────────────
+  # LISTING
+  # ──────────────────────────────────────────────
+  /api/listing:
+    get:
+      summary: Get enhanced listing(s)
+      description: |
+        Retrieve enhanced restaurant listings from the D1 database.
+
+        **Query modes (mutually exclusive):**
+        - `restaurant` + `city` — find a specific listing by name and city
+        - `fsa_id` — find listing by FSA establishment ID
+        - `city` — get all listings in a city
+        - `Authorization: Bearer <token>` — get the listing owned by the magic link token
+
+        JSON fields (`features`, `photos`) are automatically parsed from their stored JSON strings.
+      operationId: getListing
+      tags:
+        - Listing
+      parameters:
+        - name: restaurant
+          in: query
+          description: Restaurant name (must be used with `city`)
+          required: false
+          schema:
+            type: string
+          example: "Siam Garden"
+        - name: city
+          in: query
+          description: City name
+          required: false
+          schema:
+            type: string
+          example: "Leeds"
+        - name: fsa_id
+          in: query
+          description: FSA establishment ID
+          required: false
+          schema:
+            type: string
+          example: "123456"
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: List of enhanced listings
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - listings
+                  - count
+                properties:
+                  listings:
+                    type: array
+                    description: Enhanced listing records from the D1 database
+                    items:
+                      $ref: "#/components/schemas/Listing"
+                  count:
+                    type: integer
+                    description: Number of listings returned
+                    example: 1
+        "400":
+          description: Missing or invalid query parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Provide restaurant+city, fsa_id, city, or auth token"
+        "403":
+          description: Invalid or expired Bearer token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid or expired token"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+    put:
+      summary: Update enhanced listing
+      description: |
+        Update an enhanced restaurant listing. Requires a valid magic link token
+        in the Authorization header (Bearer). Only fields provided are updated.
+        The token is marked as used after a successful update.
+      operationId: updateListing
+      tags:
+        - Listing
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                  description: Rich text description of the restaurant
+                  example: "Authentic Thai cuisine in the heart of Leeds..."
+                cuisine_specialty:
+                  type: string
+                  description: Cuisine speciality description
+                  example: "Northern Thai, Isaan, and classic curries"
+                website:
+                  type: string
+                  format: uri
+                  description: Restaurant website URL
+                  example: "https://siamgardenleeds.co.uk"
+                phone:
+                  type: string
+                  description: Restaurant phone number
+                  example: "+44 113 123 4567"
+                email:
+                  type: string
+                  format: email
+                  description: Restaurant contact email
+                  example: "info@siamgardenleeds.co.uk"
+                social_instagram:
+                  type: string
+                  description: Instagram handle or URL
+                  example: "@siamgardenleeds"
+                social_facebook:
+                  type: string
+                  description: Facebook page URL or handle
+                  example: "SiamGardenLeeds"
+                social_twitter:
+                  type: string
+                  description: Twitter/X handle
+                  example: "@SiamGardenLeeds"
+                address:
+                  type: string
+                  description: Full street address
+                  example: "123 Main Street, Leeds"
+                postcode:
+                  type: string
+                  description: UK postcode
+                  example: "LS1 4AG"
+                opening_hours:
+                  type: string
+                  description: Opening hours (free text or structured format)
+                  example: "Mon-Sat 12:00-22:00, Sun 13:00-21:00"
+                price_range:
+                  type: string
+                  description: Price range indicator
+                  example: "££"
+                  enum:
+                    - "£"
+                    - "££"
+                    - "£££"
+                    - "££££"
+                features:
+                  type: array
+                  description: List of feature strings (e.g. "vegetarian options", "halal")
+                  items:
+                    type: string
+                  example:
+                    - "Vegetarian options"
+                    - "Gluten-free options"
+                    - "Free Wi-Fi"
+                photos:
+                  type: array
+                  description: Array of photo URLs (Cloudflare Images delivery URLs)
+                  items:
+                    type: string
+                    format: uri
+                  example:
+                    - "https://imagedelivery.net/0mC63s07iTD25-GQ6n3_8A/abc123/public"
+      responses:
+        "200":
+          description: Listing updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - success
+                  - message
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: "Listing updated successfully. Get a new magic link to edit again."
+        "400":
+          description: No valid fields provided in request body
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "No valid fields to update"
+        "401":
+          description: Missing Authorization header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Unauthorized. Use your magic link to get a token."
+        "403":
+          description: Invalid or expired token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid or expired token. Request a new magic link."
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+    post:
+      summary: Request magic link
+      description: |
+        Request a magic link email to edit a restaurant listing.
+        Requires an approved claim for the given restaurant + email combination.
+        A one-time token is generated, stored in the database, and emailed to the owner.
+      operationId: requestMagicLink
+      tags:
+        - Listing
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - restaurant_name
+                - city
+                - email
+              properties:
+                restaurant_name:
+                  type: string
+                  description: Name of the restaurant to edit
+                  example: "Siam Garden"
+                city:
+                  type: string
+                  description: City of the restaurant
+                  example: "Leeds"
+                email:
+                  type: string
+                  format: email
+                  description: Email address used during claim approval
+                  example: "owner@siamgardenleeds.co.uk"
+      responses:
+        "200":
+          description: Magic link generated and emailed
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - success
+                  - message
+                  - magic_link
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: "Magic link sent! Check your email."
+                  magic_link:
+                    type: string
+                    format: uri
+                    description: The one-time magic link URL (also sent via email)
+                    example: "https://thaidata.uk/listing/manage?token=abc-123-def"
+        "400":
+          description: Missing required fields
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "restaurant_name, city, and email required"
+        "404":
+          description: No approved claim found for this restaurant and email combination
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "No approved claim found for this restaurant and email combination"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+  # ──────────────────────────────────────────────
+  # CLAIM
+  # ──────────────────────────────────────────────
+  /api/claim:
+    post:
+      summary: Submit restaurant claim
+      description: |
+        Submit a claim request for a Thai restaurant listing.
+        Requires restaurant identity and claimer contact details.
+        Validates email format, checks for existing approved or pending claims,
+        and sends an admin notification (Telegram) on success.
+      operationId: submitClaim
+      tags:
+        - Claim
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - restaurant_name
+                - city
+                - claimer_name
+                - claimer_email
+              properties:
+                restaurant_name:
+                  type: string
+                  description: Name of the restaurant being claimed
+                  example: "Siam Garden"
+                city:
+                  type: string
+                  description: City where the restaurant is located
+                  example: "Leeds"
+                fsa_id:
+                  type: string
+                  description: FSA establishment ID (optional)
+                  example: "123456"
+                business_type:
+                  type: string
+                  description: Type of business
+                  default: "restaurant"
+                  enum:
+                    - "restaurant"
+                    - "takeaway"
+                  example: "restaurant"
+                claimer_name:
+                  type: string
+                  description: Full name of the person submitting the claim
+                  example: "John Smith"
+                claimer_email:
+                  type: string
+                  format: email
+                  description: Email address of the claimer
+                  example: "john@example.com"
+                claimer_phone:
+                  type: string
+                  description: Phone number (optional)
+                  example: "+44 7700 900000"
+                claimer_role:
+                  type: string
+                  description: Role of the claimer at the restaurant
+                  default: "owner"
+                  enum:
+                    - "owner"
+                    - "manager"
+                    - "head_chef"
+                    - "staff"
+                  example: "owner"
+                verification_notes:
+                  type: string
+                  description: Additional notes supporting the claim (optional)
+                  example: "I am the registered owner at Companies House"
+      responses:
+        "201":
+          description: Claim submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - success
+                  - message
+                  - id
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: "Claim submitted successfully. We will review and get back to you within 48 hours."
+                  id:
+                    type: integer
+                    description: Auto-generated claim ID
+                    example: 42
+        "200":
+          description: Duplicate pending claim found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "You already have a pending claim for this restaurant"
+                  status:
+                    type: string
+                    example: "duplicate"
+                  id:
+                    type: integer
+                    example: 42
+        "400":
+          description: Missing required fields or invalid email
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Missing required fields: restaurant_name, city, claimer_name, claimer_email"
+        "409":
+          description: Restaurant already claimed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "This restaurant has already been claimed"
+                  status:
+                    type: string
+                    example: "already_claimed"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+    get:
+      summary: Get claims by email
+      description: |
+        Look up claim status by email address. Optionally filter by restaurant + city.
+        Returns the most recent 10 claims for the given email.
+      operationId: getClaimsByEmail
+      tags:
+        - Claim
+      parameters:
+        - name: email
+          in: query
+          description: Email address used when submitting the claim
+          required: true
+          schema:
+            type: string
+            format: email
+          example: "john@example.com"
+        - name: restaurant
+          in: query
+          description: Restaurant name to filter by (optional, requires `city`)
+          required: false
+          schema:
+            type: string
+          example: "Siam Garden"
+        - name: city
+          in: query
+          description: City to filter by (optional, requires `restaurant`)
+          required: false
+          schema:
+            type: string
+          example: "Leeds"
+      responses:
+        "200":
+          description: Claims found for the email
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - claims
+                properties:
+                  claims:
+                    type: array
+                    description: List of claims matching the query
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          description: Claim ID
+                          example: 42
+                        restaurant_name:
+                          type: string
+                          description: Restaurant name
+                          example: "Siam Garden"
+                        city:
+                          type: string
+                          description: City
+                          example: "Leeds"
+                        claim_status:
+                          type: string
+                          description: Current status of the claim
+                          enum:
+                            - pending
+                            - approved
+                            - rejected
+                          example: "pending"
+                        created_at:
+                          type: string
+                          format: date-time
+                          description: Timestamp when the claim was created
+                          example: "2026-06-01T12:00:00Z"
+                        reviewed_at:
+                          type: string
+                          format: date-time
+                          nullable: true
+                          description: Timestamp when the claim was reviewed (null if pending)
+                          example: "2026-06-02T14:30:00Z"
+        "400":
+          description: Missing email parameter
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Email parameter required"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+  # ──────────────────────────────────────────────
+  # ADMIN
+  # ──────────────────────────────────────────────
+  /api/admin:
+    post:
+      summary: Admin login
+      description: |
+        Authenticate as an admin with a password.
+        Rate-limited to 5 attempts per 15 minutes per IP address.
+        Returns a session token valid for 24 hours.
+      operationId: adminLogin
+      tags:
+        - Admin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - password
+              properties:
+                password:
+                  type: string
+                  description: Admin password
+                  example: "my-secret-password"
+      responses:
+        "200":
+          description: Login successful, session token returned
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - token
+                  - expires
+                properties:
+                  token:
+                    type: string
+                    description: Admin session token (UUID)
+                    example: "550e8400-e29b-41d4-a716-446655440000"
+                  expires:
+                    type: string
+                    format: date-time
+                    description: Token expiry timestamp (24 hours from login)
+                    example: "2026-06-06T12:00:00.000Z"
+        "403":
+          description: Invalid password
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid password"
+        "429":
+          description: Too many login attempts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Too many login attempts. Please wait 15 minutes before trying again."
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+    get:
+      summary: List claims (admin)
+      description: |
+        List restaurant claims with optional status and city filtering.
+        Requires a valid admin session token in the Authorization header.
+      operationId: adminListClaims
+      tags:
+        - Admin
+      security:
+        - AdminSessionAuth: []
+      parameters:
+        - name: status
+          in: query
+          description: Filter by claim status
+          required: false
+          schema:
+            type: string
+            default: "pending"
+            enum:
+              - pending
+              - approved
+              - rejected
+          example: "pending"
+        - name: city
+          in: query
+          description: Filter by city (optional)
+          required: false
+          schema:
+            type: string
+          example: "Leeds"
+        - name: limit
+          in: query
+          description: Maximum number of claims to return
+          required: false
+          schema:
+            type: integer
+            default: 50
+            minimum: 1
+            maximum: 200
+          example: 20
+      responses:
+        "200":
+          description: List of claims
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - claims
+                  - count
+                properties:
+                  claims:
+                    type: array
+                    description: Claim records sorted by creation date (newest first)
+                    items:
+                      $ref: "#/components/schemas/Claim"
+                  count:
+                    type: integer
+                    description: Number of claims returned
+                    example: 5
+        "401":
+          description: Missing Authorization header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Unauthorized"
+        "403":
+          description: Session expired or invalid token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Session expired or invalid"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+    put:
+      summary: Approve or reject claim (admin)
+      description: |
+        Approve or reject a restaurant claim. On approval:
+        - A new listing record is created (or existing one updated)
+        - FSA data is pre-filled for SEO
+        - A magic link is auto-generated and emailed to the claimer
+        Requires a valid admin session token.
+      operationId: adminReviewClaim
+      tags:
+        - Admin
+      security:
+        - AdminSessionAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - claim_id
+                - action
+              properties:
+                claim_id:
+                  type: integer
+                  description: ID of the claim to review
+                  example: 42
+                action:
+                  type: string
+                  description: Action to take on the claim
+                  enum:
+                    - approved
+                    - rejected
+                  example: "approved"
+                admin_notes:
+                  type: string
+                  description: Optional admin notes for the decision
+                  example: "Verified via Companies House registration"
+      responses:
+        "200":
+          description: Claim reviewed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - success
+                  - message
+                  - claim_id
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: "Claim approved. Magic link emailed to owner."
+                  claim_id:
+                    type: integer
+                    example: 42
+        "400":
+          description: Missing required fields
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "claim_id and action (approved|rejected) required"
+        "401":
+          description: Missing Authorization header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Unauthorized"
+        "403":
+          description: Session expired or invalid token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Session expired or invalid"
+        "404":
+          description: Claim not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Claim not found"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+    delete:
+      summary: Delete claim and listing (admin)
+      description: |
+        Delete a claim record and its associated listing.
+        Orphaned auth tokens are cleaned up automatically.
+        Requires a valid admin session token.
+      operationId: adminDeleteClaim
+      tags:
+        - Admin
+      security:
+        - AdminSessionAuth: []
+      parameters:
+        - name: claim_id
+          in: query
+          description: ID of the claim to delete
+          required: true
+          schema:
+            type: integer
+          example: 42
+      responses:
+        "200":
+          description: Claim and listing deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - success
+                  - message
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: "Claim 42 and associated listing deleted."
+        "400":
+          description: Missing claim_id parameter
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "claim_id required"
+        "401":
+          description: Missing Authorization header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Unauthorized"
+        "403":
+          description: Session expired or invalid token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Session expired or invalid"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-cors: "*"
+
+  # ──────────────────────────────────────────────
+  # DIAGNOSTICS
+  # ──────────────────────────────────────────────
+  /api/diag:
+    get:
+      summary: Diagnostics
+      description: |
+        Health check endpoint. Returns the configuration status of all
+        environment variables (redacted) and a Telegram connectivity test.
+      operationId: getDiagnostics
+      tags:
+        - Diagnostics
+      responses:
+        "200":
+          description: Environment variable status report
+          content:
+            application/json:
+              schema:
+                type: object
+                description: |
+                  Object with env var keys mapped to their status strings.
+                  Values reveal whether each variable is SET or MISSING.
+                  Telegram test result is included if both bot token and chat ID are configured.
+                properties:
+                  ADMIN_PASSWORD:
+                    type: string
+                    example: "SET (length 12)"
+                  TELEGRAM_BOT_TOKEN:
+                    type: string
+                    example: "SET (length 45)"
+                  TELEGRAM_CHAT_ID:
+                    type: string
+                    example: "SET: -123456789"
+                  ADMIN_EMAIL:
+                    type: string
+                    example: "SET: admin@example.com"
+                  RESEND_API_KEY:
+                    type: string
+                    example: "SET (length 32)"
+                  telegram_test:
+                    type: string
+                    description: Result of Telegram sendMessage diagnostic
+                    example: "OK"
+              example:
+                ADMIN_PASSWORD: "SET (length 12)"
+                TELEGRAM_BOT_TOKEN: "SET (length 45)"
+                TELEGRAM_CHAT_ID: "SET: -123456789"
+                ADMIN_EMAIL: "SET: admin@example.com"
+                RESEND_API_KEY: "SET (length 32)"
+                telegram_test: "OK"
+      x-cors: "*"
+
+  # ──────────────────────────────────────────────
+  # CLAIMED LISTINGS
+  # ──────────────────────────────────────────────
+  /api/claimed:
+    get:
+      summary: Get claimed listings
+      description: |
+        Returns a flat list of all approved claimed restaurant names and cities.
+        Used by city pages to display "Claimed" badges.
+        Cached for 5 minutes (Cache-Control: public, max-age=300).
+      operationId: getClaimedListings
+      tags:
+        - Claimed
+      parameters:
+        - name: city
+          in: query
+          description: Optional city filter
+          required: false
+          schema:
+            type: string
+          example: "Leeds"
+      responses:
+        "200":
+          description: List of claimed restaurants
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - count
+                  - claimed
+                properties:
+                  count:
+                    type: integer
+                    description: Number of claimed restaurants returned
+                    example: 15
+                  claimed:
+                    type: array
+                    description: Claimed restaurant name + city pairs
+                    items:
+                      type: object
+                      required:
+                        - name
+                        - city
+                      properties:
+                        name:
+                          type: string
+                          description: Restaurant name
+                          example: "Siam Garden"
+                        city:
+                          type: string
+                          description: City
+                          example: "Leeds"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+                  claimed:
+                    type: array
+                    items: {}
+                  count:
+                    type: integer
+                    example: 0
+      x-cors: "*"
+      x-cache: "public, max-age=300"
+
+  # ──────────────────────────────────────────────
+  # UPLOAD
+  # ──────────────────────────────────────────────
+  /api/upload:
+    post:
+      summary: Upload photos
+      description: |
+        Upload restaurant photos to Cloudflare Images.
+        Requires a valid magic link token in the Authorization header.
+        Accepts JPEG, PNG, and WebP files up to 10MB each.
+        Photos are appended to the listing's existing photo array.
+      operationId: uploadPhotos
+      tags:
+        - Upload
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - photos
+              properties:
+                photos:
+                  type: array
+                  description: Photo files to upload (JPEG, PNG, or WebP, max 10MB each)
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        "200":
+          description: Photos uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - success
+                  - uploaded
+                  - total
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  uploaded:
+                    type: array
+                    description: URLs of successfully uploaded photos
+                    items:
+                      type: string
+                      format: uri
+                      example: "https://imagedelivery.net/0mC63s07iTD25-GQ6n3_8A/abc123/public"
+                    example:
+                      - "https://imagedelivery.net/0mC63s07iTD25-GQ6n3_8A/abc123/public"
+                      - "https://imagedelivery.net/0mC63s07iTD25-GQ6n3_8A/def456/public"
+                  total:
+                    type: integer
+                    description: Total number of photos now associated with the listing
+                    example: 5
+        "400":
+          description: |
+            Validation error — no photos provided, wrong content type,
+            invalid file format, or file too large
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "No photos provided"
+        "401":
+          description: Missing Authorization header
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Unauthorized"
+        "403":
+          description: Invalid or expired magic link token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid or expired token"
+        "500":
+          description: Upload failed or photo storage not configured
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Photo storage not configured. Add CF_IMAGES_API_TOKEN in Cloudflare Dashboard."
+      x-cors: "*"
+
+  # ──────────────────────────────────────────────
+  # MCP (Model Context Protocol) — JSON-RPC 2.0
+  # ──────────────────────────────────────────────
+  /mcp:
+    get:
+      summary: MCP server info
+      description: |
+        Returns metadata about the ThaiData UK MCP server, including
+        available tools, version, protocol info, and usage examples.
+      operationId: mcpServerInfo
+      tags:
+        - MCP
+      responses:
+        "200":
+          description: Server information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: "ThaiData UK MCP Server v2.0"
+                  protocol:
+                    type: string
+                    example: "Model Context Protocol (MCP) — JSON-RPC 2.0"
+                  endpoint:
+                    type: string
+                    example: "https://thaidata.uk/mcp"
+                  version:
+                    type: string
+                    example: "2.0.0"
+                  tools:
+                    type: integer
+                    example: 10
+                  tools_list:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        description:
+                          type: string
+                  data_sources:
+                    type: array
+                    items:
+                      type: string
+                  documentation:
+                    type: string
+                    example: "https://modelcontextprotocol.io"
+                  example:
+                    type: string
+                  new_in_v2:
+                    type: string
+      x-cors: "*"
+
+    post:
+      summary: MCP JSON-RPC endpoint
+      description: |
+        Model Context Protocol (MCP) endpoint using JSON-RPC 2.0.
+        Supports the following JSON-RPC methods:
+
+        | Method | Description |
+        |--------|-------------|
+        | `initialize` | Server handshake — returns capabilities and protocol version |
+        | `ping` | Health check |
+        | `tools/list` | List all available MCP tools with their input schemas |
+        | `tools/call` | Execute an MCP tool by name with arguments |
+
+        **Available tools (for `tools/call`):**
+
+        | Tool | Description |
+        |------|-------------|
+        | `get_city_stats` | Get detailed Thai restaurant statistics for any UK city |
+        | `search_restaurants` | Search individual Thai restaurants by city, type, or rating |
+        | `find_nearby` | Find Thai restaurants near a UK postcode |
+        | `get_uk_overview` | Get overall UK Thai restaurant market statistics |
+        | `compare_cities` | Compare Thai restaurant stats between two cities |
+        | `rank_cities` | Rank UK cities by Thai restaurant count, rating, or density |
+        | `get_opening_costs` | Get estimated cost breakdown for opening a Thai restaurant |
+        | `get_delivery_rates` | Get delivery platform commission rates |
+        | `get_visa_info` | Get Skilled Worker visa info for hiring Thai chefs |
+        | `get_market_health` | Get comprehensive market health assessment |
+
+        CORS preflight at OPTIONS /mcp (204 No Content).
+      operationId: mcpJsonRpc
+      tags:
+        - MCP
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/McpRequest"
+      responses:
+        "200":
+          description: JSON-RPC 2.0 response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/McpResponse"
+        "202":
+          description: Accepted (for notifications like `notifications/initialized`)
+        "204":
+          description: No Content (for notifications without id)
+      x-cors: "*"
+
+    options:
+      summary: MCP CORS preflight
+      description: CORS preflight for the MCP endpoint
+      operationId: mcpCorsPreflight
+      tags:
+        - MCP
+      responses:
+        "204":
+          description: CORS preflight accepted
+      x-cors: "*"
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: UUID
+      description: |
+        Magic link token (UUID) for listing ownership verification.
+        Obtained by POST /api/listing or automatically emailed on claim approval.
+        Used by: GET /api/listing (token mode), PUT /api/listing, POST /api/upload.
+    AdminSessionAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: UUID
+      description: |
+        Admin session token (UUID). Obtained by POST /api/admin with the admin password.
+        Valid for 24 hours. Used by: GET, PUT, DELETE /api/admin.
+
+  schemas:
+    # ── Search Result ────────────────────────────
+    SearchResult:
+      type: object
+      description: A single Thai restaurant result from the FSA API search proxy
+      properties:
+        id:
+          type: integer
+          description: FSA FHRS ID
+          example: 123456
+        name:
+          type: string
+          description: Business name
+          example: "Siam Garden"
+        address:
+          type: string
+          description: Full street address (comma-separated address lines)
+          example: "123 Main Street, Leeds, West Yorkshire"
+        postcode:
+          type: string
+          description: Postcode
+          example: "LS1 4AG"
+        rating:
+          type: string
+          description: FSA hygiene rating value (1-5 or "Exempt")
+          example: "5"
+        rating_date:
+          type: string
+          format: date
+          description: Date of last FSA inspection
+          example: "2026-03-15"
+        hygiene_score:
+          type: integer
+          nullable: true
+          description: "FSA Hygiene score (0-25, lower is better)"
+          example: 5
+        structural_score:
+          type: integer
+          nullable: true
+          description: "FSA Structural score (0-25, lower is better)"
+          example: 10
+        management_score:
+          type: integer
+          nullable: true
+          description: "FSA Confidence in Management score (0-25, lower is better)"
+          example: 5
+        business_type:
+          type: string
+          description: FSA BusinessType description
+          example: "Restaurant/Cafe/Canteen"
+        local_authority:
+          type: string
+          description: Local authority name
+          example: "Leeds City Council"
+        city:
+          type: string
+          description: Detected city from address
+          example: "Leeds"
+        url:
+          type: string
+          format: uri
+          description: Link to the FSA ratings page
+          example: "https://ratings.food.gov.uk/business/123456"
+      required:
+        - id
+        - name
+        - rating
+        - url
+
+    # ── Listing ──────────────────────────────────
+    Listing:
+      type: object
+      description: Enhanced restaurant listing from the D1 database
+      properties:
+        id:
+          type: integer
+          description: Auto-generated listing ID
+          example: 1
+        claim_id:
+          type: integer
+          nullable: true
+          description: FK to the approved claim
+          example: 42
+        restaurant_name:
+          type: string
+          description: Restaurant name
+          example: "Siam Garden"
+        city:
+          type: string
+          description: City
+          example: "Leeds"
+        fsa_id:
+          type: string
+          nullable: true
+          description: FSA establishment ID
+          example: "123456"
+        description:
+          type: string
+          nullable: true
+          description: Rich text description
+          example: "Authentic Thai cuisine in the heart of Leeds..."
+        cuisine_specialty:
+          type: string
+          nullable: true
+          description: Cuisine speciality
+          example: "Northern Thai, Isaan"
+        address:
+          type: string
+          nullable: true
+          description: Street address
+          example: "123 Main Street, Leeds"
+        postcode:
+          type: string
+          nullable: true
+          description: UK postcode
+          example: "LS1 4AG"
+        website:
+          type: string
+          format: uri
+          nullable: true
+          description: Restaurant website URL
+          example: "https://siamgardenleeds.co.uk"
+        phone:
+          type: string
+          nullable: true
+          description: Phone number
+          example: "+44 113 123 4567"
+        email:
+          type: string
+          format: email
+          nullable: true
+          description: Contact email
+          example: "info@siamgardenleeds.co.uk"
+        social_instagram:
+          type: string
+          nullable: true
+          description: Instagram handle
+          example: "@siamgardenleeds"
+        social_facebook:
+          type: string
+          nullable: true
+          description: Facebook page
+          example: "SiamGardenLeeds"
+        social_twitter:
+          type: string
+          nullable: true
+          description: Twitter/X handle
+          example: "@SiamGardenLeeds"
+        opening_hours:
+          type: string
+          nullable: true
+          description: Opening hours
+          example: "Mon-Sat 12:00-22:00, Sun 13:00-21:00"
+        price_range:
+          type: string
+          nullable: true
+          description: Price range
+          example: "££"
+        features:
+          type: array
+          nullable: true
+          description: List of restaurant features
+          items:
+            type: string
+          example:
+            - "Vegetarian options"
+            - "Free Wi-Fi"
+        photos:
+          type: array
+          nullable: true
+          description: Array of Cloudflare Images delivery URLs
+          items:
+            type: string
+            format: uri
+          example:
+            - "https://imagedelivery.net/0mC63s07iTD25-GQ6n3_8A/abc123/public"
+        claimed_at:
+          type: string
+          format: date-time
+          nullable: true
+          description: Timestamp when the listing was claimed
+          example: "2026-06-01T12:00:00Z"
+        created_at:
+          type: string
+          format: date-time
+          nullable: true
+          description: Timestamp when the listing was created
+          example: "2026-06-01T12:00:00Z"
+        updated_at:
+          type: string
+          format: date-time
+          nullable: true
+          description: Timestamp when the listing was last updated
+          example: "2026-06-05T10:30:00Z"
+
+    # ── Claim ────────────────────────────────────
+    Claim:
+      type: object
+      description: A restaurant claim record from the D1 database
+      properties:
+        id:
+          type: integer
+          description: Auto-generated claim ID
+          example: 42
+        restaurant_name:
+          type: string
+          description: Name of the restaurant being claimed
+          example: "Siam Garden"
+        city:
+          type: string
+          description: City of the restaurant
+          example: "Leeds"
+        fsa_id:
+          type: string
+          nullable: true
+          description: FSA establishment ID
+          example: "123456"
+        business_type:
+          type: string
+          description: Type of business
+          example: "restaurant"
+        claimer_name:
+          type: string
+          description: Full name of the person claiming
+          example: "John Smith"
+        claimer_email:
+          type: string
+          format: email
+          description: Email of the person claiming
+          example: "john@example.com"
+        claimer_phone:
+          type: string
+          nullable: true
+          description: Phone number of the person claiming
+          example: "+44 7700 900000"
+        claimer_role:
+          type: string
+          description: Role at the restaurant
+          example: "owner"
+        verification_notes:
+          type: string
+          nullable: true
+          description: Additional notes for verification
+          example: "I am the registered owner at Companies House"
+        claim_status:
+          type: string
+          description: Current status of the claim
+          enum:
+            - pending
+            - approved
+            - rejected
+          example: "pending"
+        admin_notes:
+          type: string
+          nullable: true
+          description: Notes from admin review
+          example: "Verified via Companies House"
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the claim was created
+          example: "2026-06-01T12:00:00Z"
+        reviewed_at:
+          type: string
+          format: date-time
+          nullable: true
+          description: Timestamp when the claim was reviewed
+          example: "2026-06-02T14:30:00Z"
+
+    # ── MCP ──────────────────────────────────────
+    McpRequest:
+      type: object
+      description: |
+        JSON-RPC 2.0 request body for the MCP endpoint.
+        The `method` field selects the operation.
+      required:
+        - jsonrpc
+        - method
+      properties:
+        jsonrpc:
+          type: string
+          description: JSON-RPC protocol version
+          enum:
+            - "2.0"
+          example: "2.0"
+        id:
+          description: |
+            Request identifier. Omitted or null for notifications.
+            Present for regular requests (echoed in response).
+          oneOf:
+            - type: string
+            - type: integer
+          nullable: true
+          example: 1
+        method:
+          type: string
+          description: |
+            JSON-RPC method name. Supported values:
+            - `initialize` — server handshake
+            - `ping` — health check
+            - `tools/list` — list available tools
+            - `tools/call` — execute a tool
+          enum:
+            - initialize
+            - ping
+            - tools/list
+            - tools/call
+            - notifications/initialized
+          example: "tools/call"
+        params:
+          oneOf:
+            - $ref: "#/components/schemas/McpToolCallParams"
+            - type: object
+          description: |
+            Parameters for the method. For `tools/call`, must contain
+            `name` (tool name) and `arguments` (tool-specific params).
+      example:
+        jsonrpc: "2.0"
+        id: 1
+        method: "tools/call"
+        params:
+          name: "get_city_stats"
+          arguments:
+            city: "Leeds"
+
+    McpToolCallParams:
+      type: object
+      description: Parameters for a `tools/call` request
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Name of the tool to execute
+          enum:
+            - get_city_stats
+            - search_restaurants
+            - find_nearby
+            - get_uk_overview
+            - compare_cities
+            - rank_cities
+            - get_opening_costs
+            - get_delivery_rates
+            - get_visa_info
+            - get_market_health
+          example: "get_city_stats"
+        arguments:
+          type: object
+          description: Tool-specific arguments (varies by tool)
+          example:
+            city: "Leeds"
+
+    McpResponse:
+      type: object
+      description: |
+        JSON-RPC 2.0 response. For errors, the `error` field is present instead of `result`.
+      required:
+        - jsonrpc
+        - id
+      properties:
+        jsonrpc:
+          type: string
+          enum:
+            - "2.0"
+          example: "2.0"
+        id:
+          oneOf:
+            - type: string
+            - type: integer
+          nullable: true
+          description: Echoes the request ID (null for parse errors)
+          example: 1
+        result:
+          type: object
+          description: |
+            Successful response result. For `tools/call`, contains:
+            - `content`: array of content items (each with `type` and `text`)
+            - `isError`: boolean flag for tool-level errors
+          example:
+            content:
+              - type: "text"
+                text: "{\n  \"city\": \"Leeds\",\n  \"population\": 812000,\n  \"thai_restaurants\": { ... }\n}"
+        error:
+          type: object
+          description: Error object (present only on errors)
+          properties:
+            code:
+              type: integer
+              description: JSON-RPC error code
+              example: -32601
+            message:
+              type: string
+              description: Human-readable error message
+              example: "Method not found: 'unknown_method'"

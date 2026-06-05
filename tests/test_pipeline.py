@@ -16,80 +16,8 @@ REPO = Path(__file__).resolve().parent.parent
 # Add scripts to path so we can import pipeline functions
 sys.path.insert(0, str(REPO / 'scripts'))
 
-# Import pipeline functions (they're top-level functions, not a module)
-# We duplicate the critical ones here for testing, since the script
-# is designed to be run, not imported.
-
-# ── LA→City mapping (extracted from fetch_all_thai_data.py) ──────────
-
-LA_TO_CITY = {
-    'Westminster': 'London', 'Camden': 'London', 'Tower Hamlets': 'London',
-    'Kensington and Chelsea': 'London', 'Hammersmith and Fulham': 'London',
-    'Wandsworth': 'London', 'Islington': 'London', 'Lambeth': 'London',
-    'Southwark': 'London', 'Hackney': 'London', 'Haringey': 'London',
-    'Brent': 'London', 'Ealing': 'London', 'Barnet': 'London',
-    'Hounslow': 'London', 'Newham': 'London', 'Croydon': 'London',
-    'Bromley': 'London', 'Enfield': 'London', 'Lewisham': 'London',
-    'Richmond upon Thames': 'London', 'Hillingdon': 'London',
-    'Waltham Forest': 'London', 'Redbridge': 'London', 'Greenwich': 'London',
-    'Merton': 'London', 'Harrow': 'London', 'Kingston upon Thames': 'London',
-    'Bexley': 'London', 'Sutton': 'London', 'Barking and Dagenham': 'London',
-    'Havering': 'London', 'City of London': 'London',
-    'Edinburgh (City of)': 'Edinburgh',
-    'Glasgow City': 'Glasgow',
-    'Brighton and Hove': 'Brighton',
-    'Bournemouth, Christchurch and Poole': 'Bournemouth',
-    'Kingston upon Hull': 'Hull',
-    'Newcastle upon Tyne': 'Newcastle',
-    'Bath and North East Somerset': 'Bath',
-    'Blackburn with Darwen': 'Blackburn',
-    'Southend-on-Sea': 'Southend',
-    'Telford and Wrekin': 'Telford',
-    'Halton': 'Warrington',
-    'Kirklees': 'Huddersfield',
-    'Dundee City': 'Dundee',
-    'Aberdeen City': 'Aberdeen',
-    'Perth and Kinross': 'Perth',
-    'Stoke-on-Trent': 'Stoke-on-Trent',
-    'Wolverhampton': 'Wolverhampton',
-    'Belfast': 'Belfast',
-}
-
-# Also include all non-London cities that pass through directly
-DIRECT_CITIES = {
-    'Manchester', 'Birmingham', 'Leeds', 'Bristol', 'Liverpool',
-    'Sheffield', 'Cardiff', 'Leicester', 'Bradford', 'Coventry',
-    'Nottingham', 'Plymouth', 'Derby', 'Southampton', 'Portsmouth',
-    'Swansea', 'Norwich', 'Oxford', 'Cambridge', 'York',
-    'Cheltenham', 'Chelmsford', 'Sunderland', 'Milton Keynes',
-    'Luton', 'Warrington', 'Slough', 'Reading', 'Blackpool',
-    'Bolton', 'Stockport', 'Oldham', 'Wigan', 'Northampton',
-    'Swindon', 'Peterborough', 'Exeter', 'Gloucester', 'Worcester',
-    'Lincoln', 'Canterbury', 'Colchester', 'Ipswich', 'Preston',
-    'Blackburn', 'Doncaster', 'Wakefield', 'Rotherham', 'Telford',
-    'Middlesbrough', 'Darlington', 'Inverness', 'Perth', 'Stirling',
-    'Dundee', 'Aberdeen', 'Glasgow', 'Edinburgh',
-}
-
-
-def map_la_to_city(local_authority: str) -> str:
-    """Match the exact logic from fetch_all_thai_data.py."""
-    if local_authority in LA_TO_CITY:
-        return LA_TO_CITY[local_authority]
-    # Try direct match
-    if local_authority in DIRECT_CITIES or local_authority in LA_TO_CITY.values():
-        return local_authority
-    # Try suffix stripping
-    for suffix in [' City', ' District', ' Borough', ' County', ' (B)', ' City Council']:
-        if local_authority.endswith(suffix):
-            stripped = local_authority[:-len(suffix)].strip()
-            if stripped in DIRECT_CITIES or stripped in LA_TO_CITY:
-                return LA_TO_CITY.get(stripped, stripped)
-    # Substring match
-    for city in sorted(DIRECT_CITIES, key=len, reverse=True):
-        if city.lower() in local_authority.lower():
-            return city
-    return local_authority
+from city_mapper import LA_TO_CITY, CITY_POPULATIONS, map_la_to_city, get_population
+from fsa_client import count_by_la
 
 
 def parse_fsa_establishment(e: dict) -> dict | None:
@@ -329,6 +257,212 @@ class TestDataIntegrity(unittest.TestCase):
         if self.data:
             stat_total = self.data.get('statistics', {}).get('total_uk_thai_businesses', 0)
             self.assertEqual(stat_total, self.restaurants.get('total', 0))
+
+
+# ═════════════════════════════════════════════════════════════════════
+# NEW: city_mapper edge cases
+# ═════════════════════════════════════════════════════════════════════
+
+class TestCityMapperEdgeCases(unittest.TestCase):
+    """Test edge cases for city_mapper functions (map_la_to_city, get_population)."""
+
+    # ── map_la_to_city edge cases ────────────────────────────────────
+
+    def test_empty_string(self) -> None:
+        """map_la_to_city with empty string returns empty string."""
+        self.assertEqual(map_la_to_city(''), '')
+
+    def test_none_input(self) -> None:
+        """map_la_to_city with None raises AttributeError (current behaviour)."""
+        with self.assertRaises(AttributeError):
+            map_la_to_city(None)
+
+    # ── get_population edge cases ───────────────────────────────────
+
+    def test_get_population_known_city(self) -> None:
+        """get_population with known city returns correct population value."""
+        self.assertEqual(get_population('London'), 8_970_000)
+        self.assertEqual(get_population('Manchester'), 568_000)
+        self.assertEqual(get_population('Edinburgh'), 548_000)
+        self.assertEqual(get_population('Leeds'), 812_000)
+
+    def test_get_population_unknown_city(self) -> None:
+        """get_population with unknown city returns None."""
+        self.assertIsNone(get_population('Narnia'))
+        self.assertIsNone(get_population('Atlantis'))
+        self.assertIsNone(get_population(''))
+
+    def test_get_population_suffixed_city(self) -> None:
+        """get_population strips common suffixes like ' City', ' District', etc."""
+        self.assertEqual(get_population('Manchester City'), 568_000)
+        self.assertEqual(get_population('Glasgow City'), 635_000)
+        self.assertEqual(get_population('Dundee City'), 152_000)
+        self.assertEqual(get_population('Aberdeen City'), 202_000)
+        self.assertEqual(get_population('Leeds District'), 812_000)
+
+
+# ═════════════════════════════════════════════════════════════════════
+# NEW: FSA client (count_by_la) tests
+# ═════════════════════════════════════════════════════════════════════
+
+class TestFsaClient(unittest.TestCase):
+    """Test the fsa_client.count_by_la function with various inputs."""
+
+    def test_count_by_la_empty(self) -> None:
+        """count_by_la with empty list returns empty dict."""
+        self.assertEqual(count_by_la([]), {})
+
+    def test_count_by_la_mixed_types(self) -> None:
+        """count_by_la correctly separates restaurants and takeaways."""
+        establishments = [
+            {'LocalAuthorityName': 'Westminster', 'BusinessType': 'Restaurant/Cafe/Canteen', 'RatingValue': '5'},
+            {'LocalAuthorityName': 'Westminster', 'BusinessType': 'Takeaway', 'RatingValue': '4'},
+            {'LocalAuthorityName': 'Camden', 'BusinessType': 'Restaurant/Cafe/Canteen', 'RatingValue': '3'},
+            {'LocalAuthorityName': 'Westminster', 'BusinessType': 'Restaurant/Cafe/Canteen', 'RatingValue': '4'},
+        ]
+        result = count_by_la(establishments)
+        self.assertEqual(result, {
+            'Westminster': {'total': 3, 'restaurants': 2, 'takeaways': 1},
+            'Camden': {'total': 1, 'restaurants': 1, 'takeaways': 0},
+        })
+
+    def test_count_by_la_skips_awaiting_inspection(self) -> None:
+        """count_by_la skips establishments awaiting inspection."""
+        establishments = [
+            {'LocalAuthorityName': 'Westminster', 'BusinessType': 'Restaurant/Cafe/Canteen', 'RatingValue': '5'},
+            {'LocalAuthorityName': 'Westminster', 'BusinessType': 'Takeaway', 'RatingValue': 'Awaiting Inspection'},
+            {'LocalAuthorityName': 'Camden', 'BusinessType': 'Restaurant/Cafe/Canteen', 'RatingValue': 'AwaitingInspection'},
+        ]
+        result = count_by_la(establishments)
+        self.assertEqual(result, {
+            'Westminster': {'total': 1, 'restaurants': 1, 'takeaways': 0},
+        })
+
+    def test_count_by_la_skips_empty_rating(self) -> None:
+        """count_by_la skips establishments with empty or None rating."""
+        establishments = [
+            {'LocalAuthorityName': 'Westminster', 'BusinessType': 'Restaurant/Cafe/Canteen', 'RatingValue': '5'},
+            {'LocalAuthorityName': 'Westminster', 'BusinessType': 'Takeaway', 'RatingValue': ''},
+            {'LocalAuthorityName': 'Camden', 'BusinessType': 'Takeaway', 'RatingValue': None},
+        ]
+        result = count_by_la(establishments)
+        self.assertEqual(result, {
+            'Westminster': {'total': 1, 'restaurants': 1, 'takeaways': 0},
+        })
+
+
+# ═════════════════════════════════════════════════════════════════════
+# NEW: Additional data integrity edge cases
+# ═════════════════════════════════════════════════════════════════════
+
+class TestDataIntegrityEdgeCases(unittest.TestCase):
+    """Additional data integrity checks beyond the basic tests."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.restaurants_path = REPO / 'data' / 'restaurants.json'
+        cls.cities_path = REPO / 'api' / 'v1' / 'cities.json'
+        cls.data_path = REPO / 'api' / 'v1' / 'data.json'
+        with open(cls.restaurants_path) as f:
+            cls.restaurants = json.load(f)
+        with open(cls.cities_path) as f:
+            cls.cities = json.load(f)
+        cls.data = {}
+        if cls.data_path.exists():
+            with open(cls.data_path) as f:
+                cls.data = json.load(f)
+
+    def test_rating_date_valid_iso_format(self) -> None:
+        """Every restaurant with a rating_date should have valid ISO 8601 format."""
+        import re
+        iso_pattern = re.compile(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$')
+        for r in self.restaurants['restaurants']:
+            rd = r.get('rating_date', '')
+            if rd:  # only check non-empty dates
+                self.assertTrue(
+                    bool(iso_pattern.match(rd)),
+                    f"id={r['id']}: rating_date '{rd}' is not valid ISO 8601"
+                )
+
+    def test_postcode_non_empty_80_percent(self) -> None:
+        """At least 80% of restaurant records should have a non-empty postcode."""
+        total = len(self.restaurants['restaurants'])
+        empty_pc = sum(1 for r in self.restaurants['restaurants'] if not r.get('postcode', '').strip())
+        non_empty_pct = (total - empty_pc) / total * 100
+        self.assertGreaterEqual(
+            non_empty_pct, 80.0,
+            f"Only {non_empty_pct:.1f}% of records have non-empty postcodes "
+            f"({total - empty_pc}/{total})"
+        )
+
+    def test_all_cities_appear_in_cities_json(self) -> None:
+        """Every restaurant city value should exist in cities.json (no orphan values)."""
+        known_cities = set(c['name'] for c in self.cities['cities'])
+        restaurant_cities = set(r['city'] for r in self.restaurants['restaurants'])
+        orphans = restaurant_cities - known_cities
+        self.assertEqual(
+            len(orphans), 0,
+            f"Orphan city values not in cities.json: {sorted(orphans)}"
+        )
+
+    def test_per_100k_calculation_correct(self) -> None:
+        """per_100k in cities.json should match (total / population * 100000) rounded to 1dp."""
+        for city in self.cities['cities']:
+            total = city['total_thai_businesses']
+            pop = city['population']
+            if pop is None or pop == 0:
+                self.assertIsNone(city['per_100k'],
+                                  f"City '{city['name']}': per_100k should be None when population is None/0")
+                continue
+            expected = round(total / pop * 100_000, 1)
+            self.assertAlmostEqual(
+                city['per_100k'], expected, places=1,
+                msg=f"City '{city['name']}': per_100k={city['per_100k']}, expected≈{expected}"
+            )
+
+    def test_restaurant_name_not_empty(self) -> None:
+        """Every restaurant record must have a non-empty name."""
+        for r in self.restaurants['restaurants']:
+            name = r.get('name', '')
+            self.assertTrue(
+                name and name.strip(),
+                f"Restaurant id={r['id']} has empty name"
+            )
+
+
+# ═════════════════════════════════════════════════════════════════════
+# NEW: Cross-file consistency tests
+# ═════════════════════════════════════════════════════════════════════
+
+class TestCrossFileConsistency(unittest.TestCase):
+    """Verify consistency between city_mapper data structures."""
+
+    def test_map_la_to_city_matches_la_to_city_keys(self) -> None:
+        """For every key in LA_TO_CITY, map_la_to_city should return the mapped value."""
+        for la, expected_city in LA_TO_CITY.items():
+            with self.subTest(la=la):
+                actual = map_la_to_city(la)
+                self.assertEqual(
+                    actual, expected_city,
+                    f"map_la_to_city({la!r}) returned {actual!r}, expected {expected_city!r}"
+                )
+
+    def test_la_to_city_values_in_populations(self) -> None:
+        """Every LA_TO_CITY value should have a corresponding entry in CITY_POPULATIONS
+        (except known backward-compat aliases like 'Kirklees' which resolves via
+        a separate LA→city mapping)."""
+        # 'Kirklees' is a backward-compat LA name that maps to 'Huddersfield';
+        # it appears as a value only because the reverse mapping 'Huddersfield' -> 'Kirklees'
+        # exists.  It is not a population-tracked city.
+        known_backward_compat = {'Kirklees'}
+        for la, city in LA_TO_CITY.items():
+            if city in known_backward_compat:
+                continue
+            with self.subTest(la=la, city=city):
+                self.assertIsNotNone(
+                    get_population(city),
+                    f"City '{city}' (from LA '{la}') not found in CITY_POPULATIONS"
+                )
 
 
 if __name__ == '__main__':

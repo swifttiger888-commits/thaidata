@@ -4,61 +4,14 @@ Weekly FSA data refresh for ThaiData.uk
 Pulls fresh data, detects changes, rebuilds affected pages, pushes to git.
 Designed to run as a cron job or manually.
 """
-import json, time, urllib.request, urllib.parse, os, subprocess
-from collections import defaultdict
+import json, time, os, subprocess
 from datetime import datetime
-from typing import Any
+
+from fsa_client import fetch_all, count_by_la
 
 REPO_DIR = '/tmp/thaidata-repo'
 DATA_FILE = '/tmp/thai_fsa_latest.json'
 CHANGE_LOG = '/tmp/thai_fsa_changes.txt'
-
-def fetch_all(name: str, business_type_id: str, scheme_key: str) -> list[dict[str, Any]]:
-    """Fetch all establishments matching criteria from FSA API."""
-    all_ests = []
-    page = 1
-    page_size = 500
-    encoded = urllib.parse.quote(name)
-    while True:
-        url = (f'https://api.ratings.food.gov.uk/Establishments'
-               f'?name={encoded}&businessTypeId={business_type_id}'
-               f'&schemeTypeKey={scheme_key}'
-               f'&pageNumber={page}&pageSize={page_size}')
-        try:
-            req = urllib.request.Request(url, headers={'x-api-version': '2', 'accept': 'application/json'})
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                data = json.loads(resp.read())
-        except Exception as e:
-            print(f"  ERROR: {e}")
-            break
-        ests = data.get('establishments', [])
-        if not ests:
-            break
-        all_ests.extend(ests)
-        if len(ests) < page_size:
-            break
-        page += 1
-        time.sleep(0.15)
-    return all_ests
-
-def count_by_la(establishments: list[dict[str, Any]]) -> dict[str, dict[str, int]]:
-    """Group establishments by LocalAuthority, return counts."""
-    by_la = defaultdict(lambda: {'total': 0, 'restaurants': 0, 'takeaways': 0})
-    for e in establishments:
-        la = e.get('LocalAuthorityName', 'Unknown')
-        btype = e.get('BusinessType', '')
-        rating = e.get('RatingValue', '')
-        
-        # Skip uninspected
-        if rating in ('Awaiting Inspection', 'AwaitingInspection', '', None):
-            continue
-        
-        by_la[la]['total'] += 1
-        if 'Takeaway' in btype:
-            by_la[la]['takeaways'] += 1
-        else:
-            by_la[la]['restaurants'] += 1
-    return dict(by_la)
 
 def main() -> None:
     changes = []
