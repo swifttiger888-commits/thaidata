@@ -5,3 +5,4 @@
 # If you add external deps in the future, list them here, e.g.:
 # requests>=2.31.0
 # pydantic>=2.0.0
+pytest>=8.0.0
