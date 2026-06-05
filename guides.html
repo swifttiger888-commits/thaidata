@@ -17,6 +17,47 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thaidata.uk/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://thaidata.uk/guides"}
+        ]
+    }
+    </script>
+
+    <!-- Schema: CollectionPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Free Guides for UK Thai Restaurant Owners",
+        "description": "Free guides for UK Thai restaurant operators. Opening a restaurant, menu pricing, staffing costs, chef visas, festival calendar, and UK Thai restaurant data.",
+        "url": "https://thaidata.uk/guides",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "ThaiData UK",
+            "url": "https://thaidata.uk"
+        }
+    }
+    </script>
+
+    <!-- Schema: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ThaiData UK",
+        "url": "https://thaidata.uk",
+        "description": "Business Intelligence and cost defense tools for the UK Thai hospitality sector.",
+        "sameAs": ["https://twitter.com/thaidatauk"]
+    }
+    </script>
+
     <style>
         :root {
             --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --purple: #A78BFA;
@@ -151,11 +192,13 @@
                 <img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="100" height="36">
             </a>
             <div class="nav-links">
-                <a href="index.html#tools">Tools</a>
+                <a href="tools.html">Tools</a>
                 <a href="guides.html" class="active">Guides</a>
+                <a href="restaurants.html">Restaurants</a>
                 <a href="claim/index.html" style="color:var(--c2);">Claim Listing</a>
+                <a href="dish-prices.html">Dish prices</a>
                 <a href="thai-festivals-uk.html">Festivals</a>
-                <a href="index.html#faq">FAQ</a>
+                <a href="faq.html">FAQ</a>
             </div>
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
         </div>

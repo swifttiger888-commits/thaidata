@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Tools for UK Thai Restaurants | Wage, Dish & Profit Calculators | ThaiData</title>
+    <meta name="description" content="Free interactive tools for UK Thai restaurant owners. NLW wage calculator, dish price checker, profit margin defender, visa assistant, wholesale benchmarker, and more.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/tools">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thaidata.uk/tools">
+    <meta property="og:title" content="Free Tools for UK Thai Restaurants | ThaiData">
+    <meta property="og:description" content="Free interactive tools for UK Thai restaurant operators. Calculators, checkers, and analysis tools to protect your margins.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Tools for UK Thai Restaurants | ThaiData">
+    <meta name="twitter:description" content="Free interactive tools for UK Thai restaurant operators.">
+    <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --purple: #A78BFA; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        img,svg,video { max-width: 100%; height: auto; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; position: relative; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; display: inline-block; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--c2); }
+        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 8px; line-height: 1; }
+        .hamburger:hover { color: var(--c2); }
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+        .section { padding: 20px 0 40px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 20px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 30px; }
+        .tool-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px; text-decoration: none; color: white; display: block; transition: border-color 0.2s, transform 0.15s; }
+        .tool-card:hover { border-color: var(--c2); transform: translateY(-2px); }
+        .tc-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+        .tc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; }
+        .tc-desc { color: var(--ink4); font-size: 0.85rem; line-height: 1.6; }
+        .tc-tag { display: inline-block; font-size: 0.68rem; padding: 3px 10px; border-radius: 20px; font-weight: 600; margin-top: 12px; }
+        .tag-wage { background: rgba(16,185,129,0.12); color: var(--c2); }
+        .tag-profit { background: rgba(245,158,11,0.12); color: var(--gold); }
+        .tag-visa { background: rgba(167,139,250,0.12); color: var(--purple); }
+        .tag-data { background: rgba(59,130,246,0.12); color: #60A5FA; }
+        .tag-market { background: rgba(244,114,182,0.12); color: #F472B6; }
+        .tag-supplier { background: rgba(251,146,60,0.12); color: #FB923C; }
+        .cat-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; padding: 6px 0; }
+        .cat-label.calculators { color: var(--c2); }
+        .cat-label.analysis { color: var(--gold); }
+        .cat-label.strategy { color: var(--purple); }
+        .feature-card { background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(16,185,129,0.02)); border: 1px solid rgba(16,185,129,0.25); border-radius: 20px; padding: 36px; margin-bottom: 30px; }
+        .feature-card h3 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 8px; }
+        .feature-card p { color: var(--ink4); font-size: 0.9rem; margin-bottom: 16px; }
+        .btn { display: inline-block; background: var(--c2); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.85; }
+        footer { border-top: 1px solid var(--line); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--ink4); }
+        footer a { color: var(--ink4); text-decoration: none; }
+        footer a:hover { color: var(--c2); }
+        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 20px; gap: 16px; } .nav-links.open { display: flex; } .hamburger { display: block; } .tool-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="grain"></div>
+<nav>
+    <div class="nav-bar">
+        <a href="index.html" class="logo"><img src="favicon.svg" alt="ThaiData" class="logo-icon"> ThaiData</a>
+        <div class="nav-links">
+            <a href="guides.html">Guides</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="claim/index.html">Claim Listing</a>
+            <a href="/dish-prices">Dish prices</a>
+            <a href="thai-festivals-uk.html">Festivals</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+
+<section class="header-section">
+    <div class="wrap">
+        <h1>Free tools for <em>UK Thai restaurants</em></h1>
+        <p>Interactive calculators, checkers, and analysis tools built specifically for Thai restaurant operators. All free — no signup needed.</p>
+    </div>
+</section>
+
+<div class="wrap">
+
+    <div class="section">
+        <div class="cat-label calculators"><i class="fas fa-calculator"></i> WAGE & COST CALCULATORS</div>
+        <div class="tool-grid">
+            <a href="index.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-money-bill-wave"></i></span>
+                <div class="tc-title">NLW Wage Calculator</div>
+                <div class="tc-desc">Calculate your April 2026 minimum wage increase. Enter staff numbers, hours, and rates to see your exact cost impact including NI.</div>
+                <span class="tc-tag tag-wage">Featured</span>
+            </a>
+            <a href="tools/thai-restaurant-break-even-calculator.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-chart-line"></i></span>
+                <div class="tc-title">Break-Even Calculator</div>
+                <div class="tc-desc">Work out your monthly break-even point based on fixed costs, variable costs, and average covers per day.</div>
+                <span class="tc-tag tag-profit">Profit</span>
+            </a>
+            <a href="tools/thai-restaurant-valuation.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-pound-sign"></i></span>
+                <div class="tc-title">Restaurant Valuation Tool</div>
+                <div class="tc-desc">Get a rough valuation for your Thai restaurant based on turnover, profit, location, and equipment value.</div>
+                <span class="tc-tag tag-profit">Valuation</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="cat-label analysis"><i class="fas fa-chart-bar"></i> PROFIT & MARGIN ANALYSIS</div>
+        <div class="tool-grid">
+            <a href="tools/PROFIT_MARGIN_DEFENDER.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-shield-alt"></i></span>
+                <div class="tc-title">Profit Margin Defender</div>
+                <div class="tc-desc">Stress-test your margins under NLW increases, ingredient inflation, and delivery commission changes. See what breaks and when.</div>
+                <span class="tc-tag tag-profit">Advanced</span>
+            </a>
+            <a href="tools/RESILIENCE_DASHBOARD.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-tachometer-alt"></i></span>
+                <div class="tc-title">2026 Resilience Dashboard</div>
+                <div class="tc-desc">Full financial health check for your Thai restaurant. Dashboard showing your position across wage, margin, menu, and market dimensions.</div>
+                <span class="tc-tag tag-profit">Dashboard</span>
+            </a>
+            <a href="tools/delivery-profit-calculator.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-motorcycle"></i></span>
+                <div class="tc-title">Delivery Profit Calculator</div>
+                <div class="tc-desc">Compare Just Eat, Deliveroo, and Uber Eats commissions. See what each order actually costs you after fees and VAT.</div>
+                <span class="tc-tag tag-profit">Delivery</span>
+            </a>
+            <a href="tools/BENCHMARKS.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-trophy"></i></span>
+                <div class="tc-title">Industry Benchmarks</div>
+                <div class="tc-desc">Compare your performance against UK Thai restaurant averages. Food cost %, GP margin, covers per day, and more.</div>
+                <span class="tc-tag tag-data">Data</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="cat-label strategy"><i class="fas fa-passport"></i> VISA, MENU & MARKETING</div>
+        <div class="tool-grid">
+            <a href="tools/VISA_ASSISTANT.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-passport"></i></span>
+                <div class="tc-title">Chef Visa Assistant</div>
+                <div class="tc-desc">Check RQF-6 sponsorship eligibility, timeline, and costs for hiring Thai chefs. Updated for 2026 immigration rules.</div>
+                <span class="tc-tag tag-visa">Visa</span>
+            </a>
+            <a href="tools/MENU_REVIEWER.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-utensils"></i></span>
+                <div class="tc-title">AI Menu Reviewer</div>
+                <div class="tc-desc">Upload your menu — get AI feedback on pricing, descriptions, positioning, and profitability comparisons.</div>
+                <span class="tc-tag tag-wage">Menu</span>
+            </a>
+            <a href="tools/MENU_SCHEMA_GENERATOR.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-code"></i></span>
+                <div class="tc-title">Menu Schema Generator</div>
+                <div class="tc-desc">Generate JSON-LD structured data for your menu items. Boost visibility in AI overviews and Google search.</div>
+                <span class="tc-tag tag-visa">AEO</span>
+            </a>
+            <a href="tools/thai-restaurant-staffing-calculator.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-users"></i></span>
+                <div class="tc-title">Staffing Calculator</div>
+                <div class="tc-desc">Model front and back of house staffing levels for any shift pattern. Factor in NI, tips, and tronc.</div>
+                <span class="tc-tag tag-wage">Staff</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="cat-label calculators"><i class="fas fa-search"></i> RESEARCH & INTELLIGENCE</div>
+        <div class="tool-grid">
+            <a href="tools/WHOLESALE_BENCHMARKER.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-truck"></i></span>
+                <div class="tc-title">Wholesale Benchmarker</div>
+                <div class="tc-desc">Compare wholesale ingredient prices across UK suppliers. See where you're overpaying for rice, coconut milk, spices, and more.</div>
+                <span class="tc-tag tag-supplier">Supplier</span>
+            </a>
+            <a href="tools/thai-ingredient-price-tracker.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-chart-simple"></i></span>
+                <div class="tc-title">Ingredient Price Tracker</div>
+                <div class="tc-desc">Track key Thai ingredient price trends over time. See which ingredients are rising and plan your menu pricing around it.</div>
+                <span class="tc-tag tag-supplier">Costs</span>
+            </a>
+            <a href="tools/thai-supplier-price-tracker.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-store"></i></span>
+                <div class="tc-title">Supplier Price Tracker</div>
+                <div class="tc-desc">Compare prices across Makro, Booker, Bidfood, and specialist Thai wholesalers for common ingredients.</div>
+                <span class="tc-tag tag-supplier">Suppliers</span>
+            </a>
+            <a href="tools/thai-restaurant-hygiene-lookup.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-clipboard-check"></i></span>
+                <div class="tc-title">Hygiene Rating Lookup</div>
+                <div class="tc-desc">Check any restaurant's FSA hygiene rating. Quick lookup by name, postcode, or city.</div>
+                <span class="tc-tag tag-data">FSA</span>
+            </a>
+            <a href="tools/thai-competitor-radar.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-radar"></i></span>
+                <div class="tc-title">Competitor Radar</div>
+                <div class="tc-desc">See who's opening near you, their pricing, ratings, and menu positioning. Stay ahead of local competition.</div>
+                <span class="tc-tag tag-market">Market</span>
+            </a>
+            <a href="tools/thai-restaurant-market-report.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-file-alt"></i></span>
+                <div class="tc-title">Market Report Generator</div>
+                <div class="tc-desc">Generate a custom market report for your city. See density, average ratings, hygiene scores, and pricing trends.</div>
+                <span class="tc-tag tag-data">Reports</span>
+            </a>
+            <a href="tools/thai-menu-price-elasticity-tester.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-sliders-h"></i></span>
+                <div class="tc-title">Price Elasticity Tester</div>
+                <div class="tc-desc">Test how price changes affect your volume and revenue. Find the optimal price point for each dish.</div>
+                <span class="tc-tag tag-profit">Pricing</span>
+            </a>
+            <a href="tools/thai-restaurant-health-check.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-heartbeat"></i></span>
+                <div class="tc-title">Restaurant Health Check</div>
+                <div class="tc-desc">Quick self-assessment across 8 dimensions — margins, staff, menu, marketing, compliance, and more.</div>
+                <span class="tc-tag tag-profit">Health</span>
+            </a>
+            <a href="tools/NAP_CHECKER.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-map-pin"></i></span>
+                <div class="tc-title">NAP Trust Checker</div>
+                <div class="tc-desc">Check your restaurant's Name, Address, Phone consistency across Google, Yell, Just Eat, and other platforms.</div>
+                <span class="tc-tag tag-market">Local SEO</span>
+            </a>
+            <a href="tools/where-to-open-thai-restaurant-uk.html" class="tool-card">
+                <span class="tc-icon"><i class="fas fa-city"></i></span>
+                <div class="tc-title">Where to Open Tool</div>
+                <div class="tc-desc">Data-driven recommendations on which UK cities have underserved Thai restaurant markets. Based on FSA density data.</div>
+                <span class="tc-tag tag-data">Location</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="feature-card">
+            <h3>Need a personalised action plan?</h3>
+            <p>Get a custom 2026 profit survival report for your restaurant. Includes NLW exposure, dish re-pricing recommendations, and margin protection strategies.</p>
+            <a href="index.html" class="btn">Get your free report &rarr;</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="wrap">
+        <p style="margin-bottom:10px;">
+            <a href="index.html">Tools</a> ·
+            <a href="guides.html">Guides</a> ·
+            <a href="thai-festivals-uk.html">Festivals</a> ·
+            <a href="about.html">About</a> ·
+            <a href="privacy.html">Privacy</a>
+        </p>
+        <p>&copy; 2026 ThaiData UK. Free resources for UK Thai restaurant operators.</p>
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>

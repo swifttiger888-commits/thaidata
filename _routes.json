@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "description": "ThaiData.uk — prevents SPA fallback for non-existent paths. Routes with actual .html files are served directly by CF Pages; unmatched paths in 'exclude' return 404 instead of serving homepage.",
+  "include": ["/*"],
+  "exclude": [
+    "/admin*",
+    "/claim/*",
+    "/r/*/edit*"
+  ]
+}

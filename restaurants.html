@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Thai Restaurant Directory: 1,594+ Listings by City | ThaiData</title>
+    <meta name="description" content="Complete directory of UK Thai restaurants. 1,594 listings across 253 cities with FSA hygiene ratings, contact details, and verified claims. Search by city or postcode.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/restaurants">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thaidata.uk/restaurants">
+    <meta property="og:title" content="UK Thai Restaurant Directory: 1,594+ Listings by City | ThaiData">
+    <meta property="og:description" content="Find UK Thai restaurants by city. Complete directory with FSA hygiene ratings, contact details, and more.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UK Thai Restaurant Directory: 1,594+ Listings by City | ThaiData">
+    <meta name="twitter:description" content="Complete directory of UK Thai restaurants by city with hygiene ratings.">
+    <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --purple: #A78BFA; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        img,svg,video { max-width: 100%; height: auto; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; position: relative; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; display: inline-block; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--c2); }
+        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 8px; line-height: 1; }
+        .hamburger:hover { color: var(--c2); }
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+        .section { padding: 20px 0 40px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 20px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+        .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-bottom: 30px; }
+        .city-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 20px; text-decoration: none; color: white; display: block; transition: border-color 0.2s, transform 0.15s; }
+        .city-card:hover { border-color: var(--c2); transform: translateY(-2px); }
+        .city-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
+        .city-count { color: var(--ink4); font-size: 0.85rem; }
+        .city-hygiene { display: inline-block; font-size: 0.75rem; margin-top: 8px; color: var(--gold); }
+        .cat-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; padding: 6px 0; color: var(--c2); }
+        .feature-card { background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(16,185,129,0.02)); border: 1px solid rgba(16,185,129,0.25); border-radius: 20px; padding: 36px; margin-bottom: 30px; text-align: center; }
+        .feature-card h3 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 8px; }
+        .feature-card p { color: var(--ink4); font-size: 0.9rem; margin-bottom: 16px; }
+        .btn { display: inline-block; background: var(--c2); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.85; }
+        .stat-row { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin: 30px 0; }
+        .stat-box { text-align: center; padding: 20px 30px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; min-width: 160px; }
+        .stat-num { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); font-weight: 400; }
+        .stat-label { font-size: 0.8rem; color: var(--ink4); margin-top: 4px; }
+        .search-box { max-width: 500px; margin: 0 auto 30px; display: flex; gap: 8px; }
+        .search-box input { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--line); background: rgba(255,255,255,0.04); color: white; font-size: 0.95rem; }
+        .search-box input::placeholder { color: var(--ink4); }
+        .search-box button { padding: 12px 20px; border-radius: 8px; border: none; background: var(--c2); color: white; font-weight: 600; cursor: pointer; }
+        footer { border-top: 1px solid var(--line); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--ink4); }
+        footer a { color: var(--ink4); text-decoration: none; }
+        footer a:hover { color: var(--c2); }
+        .alpha-note { display: flex; align-items: center; gap: 10px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; font-size: 0.9rem; color: var(--gold); }
+        .alpha-note i { font-size: 1.2rem; }
+        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 20px; gap: 16px; } .nav-links.open { display: flex; } .hamburger { display: block; } .city-grid { grid-template-columns: 1fr; } .stat-row { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+<div class="grain"></div>
+<nav>
+    <div class="nav-bar">
+        <a href="index.html" class="logo"><img src="favicon.svg" alt="ThaiData" class="logo-icon"> ThaiData</a>
+        <div class="nav-links">
+            <a href="guides.html">Guides</a>
+            <a href="tools.html">Tools</a>
+            <a href="claim/index.html">Claim Listing</a>
+            <a href="/dish-prices">Dish prices</a>
+            <a href="thai-festivals-uk.html">Festivals</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+
+<section class="header-section">
+    <div class="wrap">
+        <h1>UK Thai restaurant <em>directory</em></h1>
+        <p>1,594 Thai restaurants across 253 UK cities and towns. All data sourced from the Food Standards Agency. Find restaurants near you.</p>
+    </div>
+</section>
+
+<div class="wrap">
+
+    <div class="stat-row">
+        <div class="stat-box">
+            <div class="stat-num">1,594</div>
+            <div class="stat-label">Thai Restaurants</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">253</div>
+            <div class="stat-label">Cities & Towns</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">4.2</div>
+            <div class="stat-label">Avg Hygiene Rating</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">82</div>
+            <div class="stat-label">Cities with 5+</div>
+        </div>
+    </div>
+
+    <div class="alpha-note">
+        <i class="fas fa-info-circle"></i>
+        <span>City pages are live and searchable. Browse the directory below to see restaurants in your city. This is a growing directory — new listings added weekly.</span>
+    </div>
+
+    <div class="section">
+        <div class="cat-label"><i class="fas fa-city"></i> BROWSE BY CITY</div>
+        <div class="city-grid">
+            <a href="r/london" class="city-card">
+                <div class="city-name">London</div>
+                <div class="city-count">411 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.1</div>
+            </a>
+            <a href="r/leeds" class="city-card">
+                <div class="city-name">Leeds</div>
+                <div class="city-count">34 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.4</div>
+            </a>
+            <a href="r/manchester" class="city-card">
+                <div class="city-name">Manchester</div>
+                <div class="city-count">28 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.1</div>
+            </a>
+            <a href="r/edinburgh" class="city-card">
+                <div class="city-name">Edinburgh</div>
+                <div class="city-count">24 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.2</div>
+            </a>
+            <a href="r/bristol" class="city-card">
+                <div class="city-name">Bristol</div>
+                <div class="city-count">19 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.6</div>
+            </a>
+            <a href="r/birmingham" class="city-card">
+                <div class="city-name">Birmingham</div>
+                <div class="city-count">17 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.4</div>
+            </a>
+            <a href="r/brighton" class="city-card">
+                <div class="city-name">Brighton</div>
+                <div class="city-count">13 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.2</div>
+            </a>
+            <a href="r/sheffield" class="city-card">
+                <div class="city-name">Sheffield</div>
+                <div class="city-count">12 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.0</div>
+            </a>
+            <a href="r/leicester" class="city-card">
+                <div class="city-name">Leicester</div>
+                <div class="city-count">10 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.4</div>
+            </a>
+            <a href="r/bournemouth" class="city-card">
+                <div class="city-name">Bournemouth</div>
+                <div class="city-count">9 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.6</div>
+            </a>
+            <a href="r/glasgow" class="city-card">
+                <div class="city-name">Glasgow</div>
+                <div class="city-count">9 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.2</div>
+            </a>
+            <a href="r/oxford" class="city-card">
+                <div class="city-name">Oxford</div>
+                <div class="city-count">8 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.0</div>
+            </a>
+            <a href="r/cambridge" class="city-card">
+                <div class="city-name">Cambridge</div>
+                <div class="city-count">8 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.5</div>
+            </a>
+            <a href="r/nottingham" class="city-card">
+                <div class="city-name">Nottingham</div>
+                <div class="city-count">7 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.6</div>
+            </a>
+            <a href="r/cardiff" class="city-card">
+                <div class="city-name">Cardiff</div>
+                <div class="city-count">7 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.9</div>
+            </a>
+            <a href="r/portsmouth" class="city-card">
+                <div class="city-name">Portsmouth</div>
+                <div class="city-count">7 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.7</div>
+            </a>
+            <a href="r/reading" class="city-card">
+                <div class="city-name">Reading</div>
+                <div class="city-count">7 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.3</div>
+            </a>
+            <a href="r/belfast" class="city-card">
+                <div class="city-name">Belfast</div>
+                <div class="city-count">6 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.5</div>
+            </a>
+            <a href="r/newcastle-upon-tyne" class="city-card">
+                <div class="city-name">Newcastle</div>
+                <div class="city-count">6 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.2</div>
+            </a>
+            <a href="r/coventry" class="city-card">
+                <div class="city-name">Coventry</div>
+                <div class="city-count">6 restaurants</div>
+                <div class="city-hygiene"><i class="fas fa-star"></i> Avg ★4.3</div>
+            </a>
+            <a href="thai-restaurants-city-breakdown-uk.html" class="city-card" style="border-color: rgba(16,185,129,0.3);">
+                <div class="city-name" style="color: var(--c2);">View all 253 cities <i class="fas fa-arrow-right"></i></div>
+                <div class="city-count">Full breakdown with data tables</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="feature-card">
+            <h3>Own a Thai restaurant in the UK?</h3>
+            <p>Claim your free listing to add photos, menus, opening hours, and direct contact details. Get found by customers searching for Thai food near them.</p>
+            <a href="claim/index.html" class="btn">Claim your listing &rarr;</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="wrap">
+        <p style="margin-bottom:10px;">
+            <a href="index.html">Tools</a> ·
+            <a href="guides.html">Guides</a> ·
+            <a href="thai-festivals-uk.html">Festivals</a> ·
+            <a href="about.html">About</a> ·
+            <a href="privacy.html">Privacy</a>
+        </p>
+        <p>&copy; 2026 ThaiData UK. Free resources for UK Thai restaurant operators.</p>
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>

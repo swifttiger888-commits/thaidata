@@ -1,12 +1,27 @@
 # ThaiData UK — Security Headers & Cache Rules
 
-# Static files: security headers
+# Static files: security headers + browser caching
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Versioned static assets: long cache
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
+*.webp
+  Cache-Control: public, max-age=31536000, immutable
+*.png
+  Cache-Control: public, max-age=31536000, immutable
+*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+*.css
+  Cache-Control: public, max-age=31536000, immutable
 
 # API data files
 /api/v1/*

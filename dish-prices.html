@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Dish Price Checker UK: Pad Thai, Curry & More | ThaiData</title>
+    <meta name="description" content="See what Thai dishes cost across the UK. Pad Thai, green curry, tom yum, massaman, and more. Dine-in vs delivery prices by city. Updated with 2026 data.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/dish-prices">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thaidata.uk/dish-prices">
+    <meta property="og:title" content="Thai Dish Price Checker UK: Pad Thai, Curry & More | ThaiData">
+    <meta property="og:description" content="Compare Thai dish prices across UK cities. Dine-in vs delivery pricing for 20+ dishes.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thai Dish Price Checker UK | ThaiData">
+    <meta name="twitter:description" content="Compare Thai dish prices across UK cities.">
+    <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --purple: #A78BFA; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        img,svg,video { max-width: 100%; height: auto; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; position: relative; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo-icon { height: 36px; width: auto; display: inline-block; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--c2); }
+        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 8px; line-height: 1; }
+        .hamburger:hover { color: var(--c2); }
+        .header-section { padding: 80px 0 40px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+        .section { padding: 20px 0 30px; }
+        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 16px; }
+        .section h2 em { font-style: italic; color: var(--c2); }
+        .price-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+        .price-table th { text-align: left; padding: 10px 14px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink4); border-bottom: 1px solid var(--line); font-weight: 600; }
+        .price-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.93rem; }
+        .price-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .price-table .dish { font-weight: 600; }
+        .price-table .dine-in { color: var(--c2); font-weight: 600; }
+        .price-table .delivery { color: var(--gold); font-weight: 600; }
+        .price-table .markup { color: var(--ink4); }
+        .highlight-box { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 28px; margin-bottom: 30px; }
+        .highlight-box h3 { font-family: 'Instrument Serif', serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 8px; }
+        .highlight-box p { color: var(--ink4); font-size: 0.9rem; }
+        .btn { display: inline-block; background: var(--c2); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; margin-top: 12px; }
+        .btn:hover { opacity: 0.85; }
+        .btn-outline { display: inline-block; border: 1px solid var(--c2); color: var(--c2); padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; margin-top: 12px; margin-left: 8px; }
+        .btn-outline:hover { background: rgba(16,185,129,0.1); }
+        .note { color: var(--ink4); font-size: 0.8rem; margin-top: 8px; font-style: italic; }
+        footer { border-top: 1px solid var(--line); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--ink4); margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; }
+        footer a:hover { color: var(--c2); }
+        @media (max-width: 768px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 20px; gap: 16px; } .nav-links.open { display: flex; } .hamburger { display: block; } .price-table { font-size: 0.85rem; } .price-table th, .price-table td { padding: 8px 10px; } }
+    </style>
+</head>
+<body>
+<div class="grain"></div>
+<nav>
+    <div class="nav-bar">
+        <a href="index.html" class="logo"><img src="favicon.svg" alt="ThaiData" class="logo-icon"> ThaiData</a>
+        <div class="nav-links">
+            <a href="guides.html">Guides</a>
+            <a href="tools.html">Tools</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="claim/index.html">Claim Listing</a>
+            <a href="thai-festivals-uk.html">Festivals</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+
+<section class="header-section">
+    <div class="wrap">
+        <h1>Thai dish price <em>checker</em></h1>
+        <p>See what popular Thai dishes cost across UK cities. Dine-in vs delivery prices, updated with 2026 data.</p>
+    </div>
+</section>
+
+<div class="wrap">
+
+    <div class="highlight-box">
+        <h3>How much should you charge?</h3>
+        <p>Based on our Menu Price Index tracking 75 dishes across 5 major UK cities. Prices include both dine-in and delivery averages. Delivery markups average 20-23% across all dishes.</p>
+        <a href="thai-menu-price-index-uk.html" class="btn">View full Menu Price Index &rarr;</a>
+        <a href="thai-restaurant-menu-pricing-uk.html" class="btn-outline">Menu Pricing Guide &rarr;</a>
+    </div>
+
+    <div class="section">
+        <h2>National average prices <em>(2026)</em></h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>DISH</th>
+                    <th>DINE-IN AVG</th>
+                    <th>DELIVERY AVG</th>
+                    <th>MARKUP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="dish">Pad Thai (chicken)</td>
+                    <td class="dine-in">£12.50</td>
+                    <td class="delivery">£14.95</td>
+                    <td class="markup">+20%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Green Curry (chicken)</td>
+                    <td class="dine-in">£13.00</td>
+                    <td class="delivery">£15.90</td>
+                    <td class="markup">+22%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Tom Yum Goong</td>
+                    <td class="dine-in">£6.95</td>
+                    <td class="delivery">£8.50</td>
+                    <td class="markup">+22%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Massaman Curry</td>
+                    <td class="dine-in">£13.95</td>
+                    <td class="delivery">£16.90</td>
+                    <td class="markup">+21%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Thai Fish Cakes (starter)</td>
+                    <td class="dine-in">£7.50</td>
+                    <td class="delivery">£9.25</td>
+                    <td class="markup">+23%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Spring Rolls (vegetable)</td>
+                    <td class="dine-in">£5.95</td>
+                    <td class="delivery">£7.25</td>
+                    <td class="markup">+22%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Red Curry (beef)</td>
+                    <td class="dine-in">£13.50</td>
+                    <td class="delivery">£16.50</td>
+                    <td class="markup">+22%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Pad See Ew</td>
+                    <td class="dine-in">£11.50</td>
+                    <td class="delivery">£14.00</td>
+                    <td class="markup">+22%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Tom Kha Gai</td>
+                    <td class="dine-in">£7.25</td>
+                    <td class="delivery">£8.95</td>
+                    <td class="markup">+23%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Jasmine Rice (portion)</td>
+                    <td class="dine-in">£3.50</td>
+                    <td class="delivery">£4.20</td>
+                    <td class="markup">+20%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Sticky Rice (portion)</td>
+                    <td class="dine-in">£3.80</td>
+                    <td class="delivery">£4.50</td>
+                    <td class="markup">+18%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Pad Kra Pao (chicken)</td>
+                    <td class="dine-in">£11.95</td>
+                    <td class="delivery">£14.50</td>
+                    <td class="markup">+21%</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note">Based on data from our <a href="thai-menu-price-index-uk.html" style="color: var(--c2);">UK Thai Menu Price Index 2026</a>. Prices are national averages across London, Manchester, Leeds, Birmingham, and Brighton.</p>
+    </div>
+
+    <div class="section">
+        <h2>City price <em>comparison</em></h2>
+        <p style="color: var(--ink4); margin-bottom: 16px;">London commands a premium — typically £1.50-£3.00 more per dish than regional cities. Delivery markups are consistent across regions at 20-23%.</p>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>CITY</th>
+                    <th>PAD THAI (DINE-IN)</th>
+                    <th>GREEN CURRY</th>
+                    <th>AVG MARKUP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="dish">London</td>
+                    <td class="dine-in">£14.00</td>
+                    <td class="dine-in">£14.50</td>
+                    <td class="markup">+22%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Manchester</td>
+                    <td class="dine-in">£11.50</td>
+                    <td class="dine-in">£12.00</td>
+                    <td class="markup">+21%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Leeds</td>
+                    <td class="dine-in">£11.00</td>
+                    <td class="dine-in">£11.50</td>
+                    <td class="markup">+22%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Birmingham</td>
+                    <td class="dine-in">£10.50</td>
+                    <td class="dine-in">£11.00</td>
+                    <td class="markup">+21%</td>
+                </tr>
+                <tr>
+                    <td class="dish">Brighton</td>
+                    <td class="dine-in">£12.00</td>
+                    <td class="dine-in">£12.50</td>
+                    <td class="markup">+23%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="highlight-box">
+            <h3>Need to price your menu?</h3>
+            <p>Calculate your ideal dish prices based on food cost targets, competitor benchmarks, and delivery platform commission structures. Our tools do the maths so you don't have to.</p>
+            <a href="tools/MENU_REVIEWER.html" class="btn">AI Menu Reviewer &rarr;</a>
+            <a href="thai-restaurant-menu-pricing-uk.html" class="btn-outline">Pricing Guide &rarr;</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="wrap">
+        <p style="margin-bottom:10px;">
+            <a href="index.html">Tools</a> ·
+            <a href="guides.html">Guides</a> ·
+            <a href="thai-festivals-uk.html">Festivals</a> ·
+            <a href="about.html">About</a> ·
+            <a href="privacy.html">Privacy</a>
+        </p>
+        <p>&copy; 2026 ThaiData UK. Free resources for UK Thai restaurant operators.</p>
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>
