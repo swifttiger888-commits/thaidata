@@ -345,8 +345,15 @@ def build_market_snapshot_html(city: str, stats: dict[str, Any]) -> str:
         '  <h2>Market <em>Snapshot</em></h2>\n'
         f'  <p>There {("is" if businesses == 1 else "are")} <strong>{businesses}</strong> '
         f'FSA-registered Thai {pop_word} in <strong>{city}</strong>. '
-        f'Average hygiene rating: ★{stats["avg_rating"]}/5. '
+        f'Average hygiene rating: \u2605{stats["avg_rating"]}/5. '
         f'{stats["dine_in"]} dine-in, {stats["takeaway"]} takeaway.</p>\n'
+        f'  <p style="margin-top:10px;font-size:0.88rem;">\n'
+        f'    <a href="/dish-prices" style="color:var(--c2);">Compare dish prices</a>'
+        f' &middot; '
+        f'<a href="/chains/" style="color:var(--c2);">Explore chain profiles</a>'
+        f' &middot; '
+        f'<a href="/thai-restaurants-city-breakdown-uk" style="color:var(--c2);">View all cities</a>\n'
+        f'  </p>\n'
         '</div>'
     )
 
@@ -395,6 +402,10 @@ def build_chain_presence_html(city: str, chains: list[str], count: int) -> str:
         f'  <p>Major Thai chains in {city}: <strong>{chain_list}</strong>.</p>\n'
         f'  <p style="color:var(--ink3);">The remaining {independent} '
         f'{"business is" if independent == 1 else "businesses are"} independent.</p>\n'
+        f'  <p style="margin-top:10px;"><a href="/chains/" '
+        f'style="color:var(--c2);text-decoration:underline;text-underline-offset:2px;">'
+        f'View the complete UK Thai chain directory</a> &mdash; '
+        f'location counts, city presence, and hygiene profiles for 12 major chains.</p>\n'
         '</div>'
     )
 
@@ -441,6 +452,10 @@ def build_faq_html(schemas: list[dict[str, Any]]) -> str:
         '<div class="card">\n'
         '  <h2>Frequently Asked <em>Questions</em></h2>\n'
         f'{items}'
+        f'  <p style="margin-top:12px;"><a href="/faq" '
+        f'style="color:var(--c2);text-decoration:underline;text-underline-offset:2px;">'
+        f'More UK Thai restaurant FAQs</a> &mdash; '
+        f'hygiene ratings, pricing guides, delivery platforms, and data methodology.</p>\n'
         '</div>'
     )
 
