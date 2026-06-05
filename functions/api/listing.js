@@ -2,6 +2,11 @@
 // Get and update enhanced restaurant listings
 
 // --- Crypto helper ---
+/**
+ * Computes SHA-256 hex digest of a string
+ * @param {string} text - Text to hash (e.g. auth token)
+ * @returns {Promise<string>} Hex-encoded SHA-256 hash
+ */
 async function sha256(text) {
   const encoder = new TextEncoder();
   const data = encoder.encode(text);
@@ -12,6 +17,17 @@ async function sha256(text) {
 }
 
 // --- Resend email sender ---
+/**
+ * Sends a magic-link email via Resend API to a restaurant owner
+ * @param {object} env - Cloudflare Workers environment bindings
+ * @param {string} env.RESEND_API_KEY - Resend API key for sending emails
+ * @param {object} options - Email parameters
+ * @param {string} options.email - Recipient email address
+ * @param {string} options.restaurant_name - Name of the restaurant
+ * @param {string} options.city - City of the restaurant
+ * @param {string} options.magicLink - One-time magic link URL
+ * @returns {Promise<void>}
+ */
 async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink }) {
   const apiKey = env.RESEND_API_KEY;
   if (!apiKey) {
@@ -137,12 +153,15 @@ async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink
   }
 }
 
-// GET /api/listing — get enhanced listing(s)
-// Supports:
-//   ?restaurant=X&city=Y  — specific listing
-//   ?fsa_id=X             — by FSA ID
-//   ?city=X               — all listings in a city
-//   Authorization: Bearer ***  — get listing by auth token (owner view)
+/**
+ * Handles GET /api/listing — get enhanced listing(s)
+ * Supports: ?restaurant=X&city=Y, ?fsa_id=X, ?city=X, or Authorization: Bearer token
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request
+ * @param {object} context.env - Environment bindings with DB (D1Database)
+ * @returns {Promise<Response>} JSON response with listing(s) or error
+ * @throws {Error} When database query fails (caught internally)
+ */
 export async function onRequestGet(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -233,7 +252,14 @@ export async function onRequestGet(context) {
   }
 }
 
-// PUT /api/listing — update enhanced listing (owner only, via magic link token)
+/**
+ * Handles PUT /api/listing — update enhanced listing (owner only, via magic link token)
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with Authorization: Bearer token and JSON body
+ * @param {object} context.env - Environment bindings with DB (D1Database)
+ * @returns {Promise<Response>} JSON response indicating success or error
+ * @throws {Error} When database operation fails (caught internally)
+ */
 export async function onRequestPut(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -323,7 +349,15 @@ export async function onRequestPut(context) {
   }
 }
 
-// POST /api/listing — request a magic link to edit listing
+/**
+ * Handles POST /api/listing — request a magic link to edit listing
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with JSON body {restaurant_name, city, email}
+ * @param {object} context.env - Environment bindings with DB (D1Database) and RESEND_API_KEY
+ * @param {Function} context.waitUntil - Extends request lifecycle for background tasks
+ * @returns {Promise<Response>} JSON response with magic link or error
+ * @throws {Error} When database operation or email send fails (caught internally)
+ */
 export async function onRequestPost(context) {
   const { request, env } = context;
   const corsHeaders = {

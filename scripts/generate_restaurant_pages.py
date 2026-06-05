@@ -5,6 +5,7 @@ using the Kimi-designed template v2 (cream bg, green hero, 2-col layout).
 """
 import json, os, re, sys
 from datetime import datetime
+from typing import Any
 
 REPO = '/tmp/thaidata-repo'
 OUT_DIR = os.path.join(REPO, 'r')
@@ -13,13 +14,13 @@ OUT_DIR = os.path.join(REPO, 'r')
 with open(os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html')) as f:
     TEMPLATE = f.read()
 
-def slugify(s):
+def slugify(s: str) -> str:
     s = s.lower().strip()
     s = re.sub(r'[^\w\s-]', '', s)
     s = re.sub(r'[-\s]+', '-', s)
     return s.strip('-')
 
-def format_date(datestr):
+def format_date(datestr: str) -> str:
     if not datestr: return 'Unknown'
     try:
         dt = datetime.fromisoformat(datestr.replace('Z', '+00:00'))
@@ -27,16 +28,16 @@ def format_date(datestr):
     except:
         return datestr[:7] if len(datestr) >= 7 else datestr
 
-def rating_class(rating):
+def rating_class(rating: str) -> str:
     return {'5': 'r5', '4': 'r4', '3': 'r3', '2': 'r2', '1': 'r1'}.get(rating, 'r3')
 
-def rating_label(rating):
+def rating_label(rating: str) -> str:
     return {'5': 'Very Good', '4': 'Good', '3': 'Generally Satisfactory', '2': 'Improvement Necessary', '1': 'Major Improvement Necessary'}.get(rating, 'Rated')
 
-def rating_color(rating):
+def rating_color(rating: str) -> str:
     return {'5': 'var(--green-dark)', '4': '#3F6212', '3': '#92400E', '2': 'var(--red)', '1': 'var(--red)'}.get(rating, 'var(--ink)')
 
-def score_bar_html(label, score):
+def score_bar_html(label: str, score: int | None) -> str:
     """Generate a single score bar div. FSA 0-25, lower=better."""
     if score is None:
         return ''
@@ -58,7 +59,7 @@ def score_bar_html(label, score):
                     </div>
                 </div>'''
 
-def generate_page(r):
+def generate_page(r: dict[str, Any]) -> str:
     """Fill the Kimi template with restaurant data."""
     html = TEMPLATE
 
@@ -347,7 +348,7 @@ def generate_page(r):
     return html
 
 
-def main():
+def main() -> None:
     with open(os.path.join(REPO, 'data', 'restaurants.json')) as f:
         data = json.load(f)
     

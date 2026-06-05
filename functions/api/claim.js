@@ -1,6 +1,16 @@
 // ThaiData UK — POST /api/claim
 // Submit a claim for a Thai restaurant listing
 
+/**
+ * Handles POST /api/claim — submits a new claim for a restaurant listing
+ * Validates required fields, checks for duplicates, inserts claim, and sends admin notification
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with JSON body {restaurant_name, city, fsa_id, business_type, claimer_name, claimer_email, ...}
+ * @param {object} context.env - Environment bindings with DB (D1Database), TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+ * @param {Function} context.waitUntil - Extends request lifecycle for background tasks
+ * @returns {Promise<Response>} JSON response with claim result or error
+ * @throws {Error} When database operation fails (caught internally)
+ */
 export async function onRequestPost(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -90,7 +100,13 @@ export async function onRequestPost(context) {
   }
 }
 
-// GET /api/claim?email=... — check claim status
+/**
+ * Handles GET /api/claim — checks claim status by email (and optional restaurant+city)
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with ?email (and ?restaurant & ?city) params
+ * @param {object} context.env - Environment bindings with DB (D1Database)
+ * @returns {Promise<Response>} JSON response with claims list or error
+ */
 export async function onRequestGet(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -137,8 +153,22 @@ export async function onRequestGet(context) {
   }
 }
 
-// --- Telegram notification (instant alerts to admin) ---
-
+/**
+ * Sends a Telegram notification to the admin about a new claim submission
+ * @param {object} env - Cloudflare Workers environment bindings
+ * @param {string} env.TELEGRAM_BOT_TOKEN - Telegram bot token for sending messages
+ * @param {string} env.TELEGRAM_CHAT_ID - Telegram chat ID to send notifications to
+ * @param {object} claim - Claim data object
+ * @param {number} claim.id - Claim ID
+ * @param {string} claim.restaurant_name - Restaurant name
+ * @param {string} claim.city - City
+ * @param {string} claim.claimer_name - Name of the person claiming
+ * @param {string} claim.claimer_email - Email of the person claiming
+ * @param {string} [claim.claimer_phone] - Phone number (optional)
+ * @param {string} [claim.claimer_role] - Role (owner, manager, head_chef, staff)
+ * @param {string} [claim.business_type] - Type of business (restaurant, takeaway)
+ * @returns {Promise<void>}
+ */
 async function sendAdminNotification(env, claim) {
   const botToken = env.TELEGRAM_BOT_TOKEN;
   const chatId = env.TELEGRAM_CHAT_ID;

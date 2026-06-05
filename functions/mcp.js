@@ -15,6 +15,11 @@ let restaurantsCache = null;
 let cacheTime = 0;
 const CACHE_TTL = 300000; // 5 minutes
 
+/**
+ * Fetches cities data from static JSON API with in-memory caching (5 min TTL)
+ * Falls back to EMBEDDED_DATA on fetch failure
+ * @returns {Promise<object>} Cities data object with {cities: Array, statistics: object, ...}
+ */
 async function getCities() {
   const now = Date.now();
   if (citiesCache && (now - cacheTime) < CACHE_TTL) return citiesCache;
@@ -29,6 +34,11 @@ async function getCities() {
   }
 }
 
+/**
+ * Fetches restaurants data from static JSON API with in-memory caching (5 min TTL)
+ * Falls back to empty array on fetch failure
+ * @returns {Promise<object>} Restaurants data object with {restaurants: Array}
+ */
 async function getRestaurants() {
   const now = Date.now();
   if (restaurantsCache && (now - cacheTime) < CACHE_TTL) return restaurantsCache;
@@ -186,6 +196,12 @@ const TOOLS = [
 ];
 
 // ── Helpers ─────────────────────────────────────────────────────────
+/**
+ * Finds a city in the cities array by name (exact, starts-with, or includes match)
+ * @param {Array} cities - Array of city objects with a "name" property
+ * @param {string} name - City name to search for
+ * @returns {object|undefined} The matching city object, or undefined if not found
+ */
 function findCity(cities, name) {
   const query = name.toLowerCase().trim();
   let city = cities.find(c => c.name.toLowerCase() === query);
@@ -195,6 +211,12 @@ function findCity(cities, name) {
 }
 
 // ── Tool handlers ───────────────────────────────────────────────────
+/**
+ * Routes a tool call to the appropriate handler function
+ * @param {string} name - Tool name (e.g. "get_city_stats", "search_restaurants")
+ * @param {object} args - Tool arguments object
+ * @returns {Promise<object>} Result object from the tool handler, or {error} for unknown tools
+ */
 async function handleTool(name, args) {
   switch (name) {
     case "get_city_stats": return getCityStats(args);
@@ -211,6 +233,12 @@ async function handleTool(name, args) {
   }
 }
 
+/**
+ * Handles the get_city_stats tool — returns detailed Thai restaurant statistics for a UK city
+ * @param {object} params - Tool parameters
+ * @param {string} params.city - UK city name
+ * @returns {Promise<object>} City statistics including restaurant counts, hygiene rating, density, and market size
+ */
 async function getCityStats(params) {
   const data = await getCities();
   const cities = data.cities || EMBEDDED_DATA.cities;
@@ -237,6 +265,18 @@ async function getCityStats(params) {
   };
 }
 
+/**
+ * Handles the search_restaurants tool — searches Thai restaurants by city, type, hygiene rating, and FSA detail scores
+ * @param {object} params - Search parameters
+ * @param {string} params.city - UK city name to search in
+ * @param {string} [params.type] - Business type filter (restaurant, takeaway, all)
+ * @param {number} [params.min_rating] - Minimum hygiene rating (1-5)
+ * @param {number} [params.max_hygiene_score] - Maximum FSA hygiene score (0-25, lower is better)
+ * @param {number} [params.max_structural_score] - Maximum FSA structural score (0-25)
+ * @param {number} [params.max_management_score] - Maximum FSA management confidence score (0-25)
+ * @param {number} [params.limit] - Maximum results to return (default: 10, max: 50)
+ * @returns {Promise<object>} Search results with matching restaurants and summary
+ */
 async function searchRestaurants(params) {
   const data = await getRestaurants();
   let results = data.restaurants || [];
@@ -329,8 +369,21 @@ async function searchRestaurants(params) {
 }
 
 // ── Haversine distance (miles) ──────────────────────────────────────
+/**
+ * Converts degrees to radians
+ * @param {number} deg - Angle in degrees
+ * @returns {number} Angle in radians
+ */
 function toRad(deg) { return deg * Math.PI / 180; }
 
+/**
+ * Calculates distance in miles between two GPS coordinates using the Haversine formula
+ * @param {number} lat1 - Latitude of point 1
+ * @param {number} lng1 - Longitude of point 1
+ * @param {number} lat2 - Latitude of point 2
+ * @param {number} lng2 - Longitude of point 2
+ * @returns {number} Distance in miles
+ */
 function haversineMiles(lat1, lng1, lat2, lng2) {
   const R = 3959; // Earth radius in miles
   const dLat = toRad(lat2 - lat1);
@@ -342,6 +395,19 @@ function haversineMiles(lat1, lng1, lat2, lng2) {
 }
 
 // ── find_nearby tool ────────────────────────────────────────────────
+/**
+ * Handles the find_nearby tool — finds Thai restaurants near a UK postcode with distance and optional filters
+ * @param {object} params - Search parameters
+ * @param {string} params.postcode - UK postcode to search near (e.g. "LS1 4AG")
+ * @param {number} [params.radius] - Search radius in miles (default: 3, max: 25)
+ * @param {string} [params.type] - Business type filter (restaurant, takeaway, all)
+ * @param {number} [params.min_rating] - Minimum hygiene rating (1-5)
+ * @param {number} [params.max_hygiene_score] - Maximum FSA hygiene score (0-25)
+ * @param {number} [params.max_structural_score] - Maximum FSA structural score (0-25)
+ * @param {number} [params.max_management_score] - Maximum FSA management score (0-25)
+ * @param {number} [params.limit] - Maximum results (default: 10, max: 25)
+ * @returns {Promise<object>} Nearby restaurants with distance and scores
+ */
 async function findNearby(params) {
   const postcode = (params.postcode || '').trim();
   if (!postcode) return { error: "Postcode is required. E.g. 'LS1 4AG'" };
@@ -451,6 +517,10 @@ async function findNearby(params) {
   };
 }
 
+/**
+ * Handles the get_uk_overview tool — returns overall UK Thai restaurant market statistics
+ * @returns {Promise<object>} Market overview with total businesses, average hygiene, market size, and growth rate
+ */
 async function getUKOverview() {
   const data = await getCities();
   const cities = data.cities || EMBEDDED_DATA.cities;
@@ -474,6 +544,13 @@ async function getUKOverview() {
   };
 }
 
+/**
+ * Handles the compare_cities tool — compares Thai restaurant statistics between two UK cities side by side
+ * @param {object} params - Comparison parameters
+ * @param {string} params.city1 - First city name
+ * @param {string} params.city2 - Second city name
+ * @returns {Promise<object>} Side-by-side comparison with differences
+ */
 async function compareCities(params) {
   const data = await getCities();
   const cities = data.cities || EMBEDDED_DATA.cities;
@@ -495,6 +572,17 @@ async function compareCities(params) {
   };
 }
 
+/**
+ * Summarises a city's key statistics for comparison display
+ * @param {object} c - City data object
+ * @param {number} c.population - City population
+ * @param {number} c.total_thai_businesses - Total Thai restaurants/takeaways
+ * @param {number} c.restaurants - Dine-in restaurants count
+ * @param {number} c.takeaways - Takeaway count
+ * @param {number} c.avg_hygiene_rating - Average hygiene rating
+ * @param {number} c.per_100k - Thai businesses per 100k population
+ * @returns {object} Summarised city statistics
+ */
 function summarize(c) {
   return {
     population: c.population,
@@ -506,6 +594,13 @@ function summarize(c) {
   };
 }
 
+/**
+ * Handles the rank_cities tool — ranks UK cities by Thai restaurant count, hygiene rating, or density per 100k
+ * @param {object} params - Ranking parameters
+ * @param {string} params.metric - Metric to rank by ("total", "rating", or "density")
+ * @param {number} [params.limit] - Number of cities to return (default: 10, max: 50)
+ * @returns {Promise<object>} Ranked list of cities with full statistics
+ */
 async function rankCities(params) {
   const data = await getCities();
   let cities = [...(data.cities || EMBEDDED_DATA.cities)];
@@ -534,6 +629,10 @@ async function rankCities(params) {
   };
 }
 
+/**
+ * Handles the get_opening_costs tool — returns estimated cost breakdown for opening a Thai restaurant in the UK
+ * @returns {Promise<object>} Cost breakdown with min/max ranges for each category and total estimate
+ */
 async function getOpeningCosts() {
   let totalMin = 0, totalMax = 0;
   for (const k of Object.keys(OPENING_COSTS)) {
@@ -548,6 +647,10 @@ async function getOpeningCosts() {
   };
 }
 
+/**
+ * Handles the get_delivery_rates tool — returns current delivery platform commission rates for Uber Eats, Deliveroo, and Just Eat
+ * @returns {object} Platform commission rates with average menu markup and tips
+ */
 function getDeliveryRates() {
   return {
     platforms: DELIVERY_COMMISSIONS,
@@ -556,6 +659,10 @@ function getDeliveryRates() {
   };
 }
 
+/**
+ * Handles the get_visa_info tool — returns Skilled Worker Visa costs and requirements for hiring Thai chefs in the UK
+ * @returns {object} Visa info including minimum salary, processing time, cost breakdown, and key requirements
+ */
 function getVisaInfo() {
   const s = EMBEDDED_DATA.statistics;
   return {
@@ -579,6 +686,10 @@ function getVisaInfo() {
   };
 }
 
+/**
+ * Handles the get_market_health tool — returns a comprehensive market health assessment with competition levels, cost pressures, opportunities, and key risks
+ * @returns {Promise<object>} Market health assessment with hotspots, underserved cities, cost pressures, and risks
+ */
 async function getMarketHealth() {
   const data = await getCities();
   const cities = data.cities || EMBEDDED_DATA.cities;
@@ -615,6 +726,12 @@ async function getMarketHealth() {
 }
 
 // ── JSON-RPC 2.0 protocol ──────────────────────────────────────────
+/**
+ * Parses and dispatches a JSON-RPC 2.0 request from the incoming HTTP request body
+ * Handles initialize, tools/list, tools/call, ping, and notifications methods
+ * @param {Request} request - Incoming HTTP request with JSON body
+ * @returns {Promise<Response>} JSON-RPC 2.0 formatted response
+ */
 async function handleJSONRPC(request) {
   let body;
   try { body = await request.json(); }
@@ -662,6 +779,12 @@ async function handleJSONRPC(request) {
   }
 }
 
+/**
+ * Creates a JSON-RPC 2.0 success (result) response
+ * @param {string|number|null} id - Request ID from the original JSON-RPC request
+ * @param {object} result - The result data to wrap in a JSON-RPC response
+ * @returns {Response} HTTP 200 response with JSON-RPC result body
+ */
 function jsonRPCResult(id, result) {
   return new Response(JSON.stringify({ jsonrpc: "2.0", id, result }), {
     status: 200,
@@ -669,6 +792,13 @@ function jsonRPCResult(id, result) {
   });
 }
 
+/**
+ * Creates a JSON-RPC 2.0 error response
+ * @param {string|number|null} id - Request ID from the original JSON-RPC request (may be null for parse errors)
+ * @param {number} code - JSON-RPC error code (e.g. -32700 for parse error, -32601 for method not found)
+ * @param {string} message - Human-readable error message
+ * @returns {Response} HTTP 200 response with JSON-RPC error body
+ */
 function jsonRPCError(id, code, message) {
   return new Response(JSON.stringify({ jsonrpc: "2.0", id: id || null, error: { code, message } }), {
     status: 200,
@@ -677,6 +807,11 @@ function jsonRPCError(id, code, message) {
 }
 
 // ── Cloudflare Pages Function exports ───────────────────────────────
+/**
+ * Cloudflare Pages Function handler for OPTIONS requests (CORS preflight)
+ * Returns 204 No Content with permissive CORS headers
+ * @returns {Response} 204 response with CORS headers
+ */
 export async function onRequestOptions() {
   return new Response(null, {
     status: 204,
@@ -689,6 +824,12 @@ export async function onRequestOptions() {
   });
 }
 
+/**
+ * Cloudflare Pages Function handler for POST requests — routes to the JSON-RPC handler and adds CORS headers
+ * @param {object} context - Cloudflare Pages Function context
+ * @param {Request} context.request - Incoming HTTP request
+ * @returns {Promise<Response>} HTTP response with CORS headers
+ */
 export async function onRequestPost(context) {
   const response = await handleJSONRPC(context.request);
   const headers = new Headers(response.headers);
@@ -698,6 +839,11 @@ export async function onRequestPost(context) {
   return new Response(response.body, { status: response.status, headers });
 }
 
+/**
+ * Cloudflare Pages Function catch-all handler for GET and other non-POST/OPTIONS requests
+ * Returns server metadata, available tools, and usage examples
+ * @returns {Response} 200 OK with server info in JSON format
+ */
 export async function onRequest() {
   return new Response(JSON.stringify({
     name: "ThaiData UK MCP Server v2.0",

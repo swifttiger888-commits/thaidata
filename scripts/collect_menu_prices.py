@@ -22,12 +22,14 @@ Methodology per restaurant:
 Target: Top 5 dishes × 10 cities × 3 restaurants per city = 150 data points
 """
 
-CITIES = [
+from typing import Any
+
+CITIES: list[str] = [
     "London", "Manchester", "Leeds", "Birmingham", "Bristol",
     "Edinburgh", "Sheffield", "Brighton", "Liverpool", "Nottingham"
 ]
 
-TOP_DISHES = [
+TOP_DISHES: list[str] = [
     "Pad Thai (chicken/prawn)",
     "Green Curry (chicken)",
     "Tom Yum Soup (prawn)",
@@ -40,7 +42,7 @@ TOP_DISHES = [
 # Each city: pick 3 popular Thai restaurants from our FSA data.
 # For each: find dine-in price AND delivery price for each dish.
 
-SURVEY_TEMPLATE = {
+SURVEY_TEMPLATE: dict[str, Any] = {
     "collected": "YYYY-MM-DD",
     "methodology": "Manual collection from restaurant websites + delivery platforms",
     "notes": [
@@ -77,7 +79,7 @@ SURVEY_TEMPLATE = {
 # These are starting points — you'll need to manually verify prices.
 # Web scraping restaurant menus is fragile; manual verification is essential.
 
-def search_deliveroo_restaurants(city):
+def search_deliveroo_restaurants(city: str) -> str:
     """Search Deliveroo for Thai restaurants in a city. Returns slugs to check."""
     # Deliveroo search URL pattern:
     # https://deliveroo.co.uk/restaurants/{city}?cuisine=thai
@@ -87,14 +89,14 @@ def search_deliveroo_restaurants(city):
     print(f"  Deliveroo search: {url}")
     return url
 
-def search_ubereats_restaurants(city):
+def search_ubereats_restaurants(city: str) -> str:
     """Search Uber Eats for Thai restaurants in a city."""
     slug = city.lower().replace(' ', '-')
     url = f"https://www.ubereats.com/gb/near/thai-restaurant/{slug}"
     print(f"  Uber Eats search: {url}")
     return url
 
-def search_justeat_restaurants(city):
+def search_justeat_restaurants(city: str) -> str:
     """Search Just Eat for Thai restaurants in a city."""
     # Just Eat uses postcodes; city search is approximate
     print(f"  Just Eat: search 'Thai restaurant {city}' on just-eat.co.uk")

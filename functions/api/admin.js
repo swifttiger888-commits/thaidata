@@ -1,7 +1,11 @@
 // ThaiData UK — /api/admin
 // Admin panel: review claims, approve/reject, manage listings
 
-// --- Crypto helper ---
+/**
+ * Computes SHA-256 hex digest of a string
+ * @param {string} text - Text to hash (e.g. auth token)
+ * @returns {Promise<string>} Hex-encoded SHA-256 hash
+ */
 async function sha256(text) {
   const encoder = new TextEncoder();
   const data = encoder.encode(text);
@@ -11,7 +15,17 @@ async function sha256(text) {
     .join('');
 }
 
-// --- Resend email sender ---
+/**
+ * Sends approval email with magic link via Resend API
+ * @param {object} env - Cloudflare Workers environment bindings
+ * @param {string} env.RESEND_API_KEY - Resend API key for sending emails
+ * @param {object} options - Email parameters
+ * @param {string} options.email - Recipient email address
+ * @param {string} options.restaurant_name - Name of the restaurant
+ * @param {string} options.city - City of the restaurant
+ * @param {string} options.magicLink - One-time magic link URL
+ * @returns {Promise<void>}
+ */
 async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink }) {
   const apiKey = env.RESEND_API_KEY;
   if (!apiKey) {
@@ -49,6 +63,12 @@ async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink
 
 // ADMIN_PASSWORD is read from env.ADMIN_PASSWORD at runtime
 
+/**
+ * Checks Authorization header against ADMIN_PASSWORD
+ * @param {Request} request - Incoming HTTP request
+ * @param {object} env - Environment bindings with ADMIN_PASSWORD
+ * @returns {Response|null} Response with error if unauthorized, null if authorized
+ */
 function requireAdmin(request, env) {
   const auth = request.headers.get('Authorization');
   if (!auth || !auth.startsWith('Bearer ')) {
@@ -69,8 +89,14 @@ function requireAdmin(request, env) {
   return null; // Authorized
 }
 
-// POST /api/admin/login — simple password auth, returns session token
-// Rate-limited: 5 attempts per 15 minutes per IP
+/**
+ * Handles POST /api/admin/login — authenticates admin with password, returns session token
+ * Rate-limited: 5 attempts per 15 minutes per IP
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with JSON body {password}
+ * @param {object} context.env - Environment bindings with ADMIN_PASSWORD and DB (D1Database)
+ * @returns {Promise<Response>} JSON response with session token or error
+ */
 export async function onRequestPost(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -155,7 +181,14 @@ export async function onRequestPost(context) {
   }
 }
 
-// GET /api/admin — list all claims (admin only)
+/**
+ * Handles GET /api/admin — lists all claims (admin only, session auth required)
+ * Supports ?status=pending|approved|rejected, ?city filter, ?limit
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with Authorization: Bearer session token
+ * @param {object} context.env - Environment bindings with DB (D1Database)
+ * @returns {Promise<Response>} JSON response with claims list or error
+ */
 export async function onRequestGet(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -217,7 +250,15 @@ export async function onRequestGet(context) {
   }
 }
 
-// PUT /api/admin — approve or reject a claim
+/**
+ * Handles PUT /api/admin — approve or reject a claim (admin only, session auth required)
+ * Also sends magic link email when a claim is approved
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with Authorization: Bearer and JSON body {claim_id, action, admin_notes}
+ * @param {object} context.env - Environment bindings with DB (D1Database) and RESEND_API_KEY
+ * @param {Function} context.waitUntil - Extends request lifecycle for background tasks
+ * @returns {Promise<Response>} JSON response indicating success or error
+ */
 export async function onRequestPut(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -415,7 +456,13 @@ export async function onRequestPut(context) {
   }
 }
 
-// DELETE /api/admin — delete a claim and its listing
+/**
+ * Handles DELETE /api/admin — deletes a claim and associated listing (admin only, session auth required)
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with Authorization: Bearer and ?claim_id param
+ * @param {object} context.env - Environment bindings with DB (D1Database)
+ * @returns {Promise<Response>} JSON response indicating success or error
+ */
 export async function onRequestDelete(context) {
   const { request, env } = context;
   const corsHeaders = {

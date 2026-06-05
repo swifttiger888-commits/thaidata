@@ -9,6 +9,7 @@ Run: python3 -m pytest tests/  (or python3 -m unittest tests/test_pipeline.py)
 
 import json, os, sys, unittest, tempfile
 from pathlib import Path
+from typing import Any, Optional
 
 REPO = Path(__file__).resolve().parent.parent
 
@@ -71,7 +72,7 @@ DIRECT_CITIES = {
 }
 
 
-def map_la_to_city(local_authority):
+def map_la_to_city(local_authority: str) -> str:
     """Match the exact logic from fetch_all_thai_data.py."""
     if local_authority in LA_TO_CITY:
         return LA_TO_CITY[local_authority]
@@ -91,7 +92,7 @@ def map_la_to_city(local_authority):
     return local_authority
 
 
-def parse_fsa_establishment(e):
+def parse_fsa_establishment(e: dict) -> dict | None:
     """Match the logic from fetch_all_thai_data.py main()."""
     rating = e.get('RatingValue', '')
     if rating in ('Awaiting Inspection', 'AwaitingInspection', '', None):
@@ -155,24 +156,24 @@ MOCK_FSA_RECORD = {
 class TestLAToCityMapping(unittest.TestCase):
     """Test the Local Authority → city name mapping logic."""
 
-    def test_london_boroughs(self):
+    def test_london_boroughs(self) -> None:
         self.assertEqual(map_la_to_city('Westminster'), 'London')
         self.assertEqual(map_la_to_city('Camden'), 'London')
         self.assertEqual(map_la_to_city('Tower Hamlets'), 'London')
         self.assertEqual(map_la_to_city('City of London'), 'London')
 
-    def test_direct_cities(self):
+    def test_direct_cities(self) -> None:
         self.assertEqual(map_la_to_city('Manchester'), 'Manchester')
         self.assertEqual(map_la_to_city('Birmingham'), 'Birmingham')
         self.assertEqual(map_la_to_city('Leeds'), 'Leeds')
 
-    def test_suffixed_cities(self):
+    def test_suffixed_cities(self) -> None:
         self.assertEqual(map_la_to_city('Edinburgh (City of)'), 'Edinburgh')
         self.assertEqual(map_la_to_city('Glasgow City'), 'Glasgow')
         self.assertEqual(map_la_to_city('Dundee City'), 'Dundee')
         self.assertEqual(map_la_to_city('Aberdeen City'), 'Aberdeen')
 
-    def test_hyphenated_cities(self):
+    def test_hyphenated_cities(self) -> None:
         self.assertEqual(map_la_to_city('Brighton and Hove'), 'Brighton')
         self.assertEqual(map_la_to_city('Bournemouth, Christchurch and Poole'), 'Bournemouth')
         self.assertEqual(map_la_to_city('Kingston upon Hull'), 'Hull')
@@ -181,7 +182,7 @@ class TestLAToCityMapping(unittest.TestCase):
         self.assertEqual(map_la_to_city('Southend-on-Sea'), 'Southend')
         self.assertEqual(map_la_to_city('Telford and Wrekin'), 'Telford')
 
-    def test_unmapped_la_returns_self(self):
+    def test_unmapped_la_returns_self(self) -> None:
         """Unknown LAs should return the LA name as-is."""
         result = map_la_to_city('Some Obscure Council')
         self.assertEqual(result, 'Some Obscure Council')
@@ -190,7 +191,7 @@ class TestLAToCityMapping(unittest.TestCase):
 class TestFsaParsing(unittest.TestCase):
     """Test FSA API response parsing."""
 
-    def test_parse_valid_restaurant(self):
+    def test_parse_valid_restaurant(self) -> None:
         result = parse_fsa_establishment(MOCK_FSA_RECORD)
         self.assertIsNotNone(result)
         self.assertEqual(result['id'], 123456)
@@ -201,50 +202,50 @@ class TestFsaParsing(unittest.TestCase):
         self.assertEqual(result['postcode'], 'SW1A 1AA')
         self.assertEqual(result['address'], '123 High Street')
 
-    def test_parse_takeaway(self):
+    def test_parse_takeaway(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['BusinessType'] = 'Takeaway'
         result = parse_fsa_establishment(record)
         self.assertEqual(result['type'], 'takeaway')
 
-    def test_skip_awaiting_inspection(self):
+    def test_skip_awaiting_inspection(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['RatingValue'] = 'Awaiting Inspection'
         result = parse_fsa_establishment(record)
         self.assertIsNone(result)
 
-    def test_skip_empty_rating(self):
+    def test_skip_empty_rating(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['RatingValue'] = ''
         result = parse_fsa_establishment(record)
         self.assertIsNone(result)
 
-    def test_skip_none_rating(self):
+    def test_skip_none_rating(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['RatingValue'] = None
         result = parse_fsa_establishment(record)
         self.assertIsNone(result)
 
-    def test_geocode_missing(self):
+    def test_geocode_missing(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['Geocode'] = {}
         result = parse_fsa_establishment(record)
         self.assertEqual(result['longitude'], '')
         self.assertEqual(result['latitude'], '')
 
-    def test_rating_non_numeric(self):
+    def test_rating_non_numeric(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['RatingValue'] = 'Exempt'
         result = parse_fsa_establishment(record)
         self.assertEqual(result['hygiene_rating'], 'Exempt')
 
-    def test_missing_business_name(self):
+    def test_missing_business_name(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         del record['BusinessName']
         result = parse_fsa_establishment(record)
         self.assertEqual(result['name'], 'Unknown')
 
-    def test_partial_address(self):
+    def test_partial_address(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['AddressLine2'] = 'Some Area'
         record['AddressLine3'] = 'A Town'
@@ -256,7 +257,7 @@ class TestDataIntegrity(unittest.TestCase):
     """Test the actual data files for consistency."""
 
     @classmethod
-    def setUpClass(cls):
+    def setUpClass(cls) -> None:
         cls.restaurants_path = REPO / 'data' / 'restaurants.json'
         cls.cities_path = REPO / 'api' / 'v1' / 'cities.json'
         cls.data_path = REPO / 'api' / 'v1' / 'data.json'
@@ -269,30 +270,30 @@ class TestDataIntegrity(unittest.TestCase):
             with open(cls.data_path) as f:
                 cls.data = json.load(f)
 
-    def test_metadata_total_matches_count(self):
+    def test_metadata_total_matches_count(self) -> None:
         meta = self.restaurants.get('total', 0)
         actual = len(self.restaurants.get('restaurants', []))
         self.assertEqual(meta, actual,
                          f"metadata total={meta} != actual records={actual}")
 
-    def test_city_total_matches_restaurant_total(self):
+    def test_city_total_matches_restaurant_total(self) -> None:
         meta_total = self.restaurants.get('total', 0)
         city_sum = sum(c['total_thai_businesses'] for c in self.cities['cities'])
         self.assertEqual(city_sum, meta_total,
                          f"cities sum={city_sum} != restaurants total={meta_total}")
 
-    def test_no_duplicate_fhrsids(self):
+    def test_no_duplicate_fhrsids(self) -> None:
         ids = [r['id'] for r in self.restaurants['restaurants']]
         dupes = [i for i in ids if ids.count(i) > 1]
         self.assertEqual(len(dupes), 0, f"Duplicate FHRSIDs: {sorted(set(dupes))}")
 
-    def test_hygiene_ratings_valid(self):
+    def test_hygiene_ratings_valid(self) -> None:
         valid = {'0', '1', '2', '3', '4', '5', 'AwaitingPublication', 'Exempt'}
         for r in self.restaurants['restaurants']:
             hr = r.get('hygiene_rating', '')
             self.assertIn(hr, valid, f"id={r['id']}: invalid hygiene_rating='{hr}'")
 
-    def test_restaurant_type_split_consistent(self):
+    def test_restaurant_type_split_consistent(self) -> None:
         city_rest = sum(c['restaurants'] for c in self.cities['cities'])
         city_take = sum(c['takeaways'] for c in self.cities['cities'])
         actual_rest = sum(1 for r in self.restaurants['restaurants'] if r.get('type') == 'restaurant')
@@ -300,7 +301,7 @@ class TestDataIntegrity(unittest.TestCase):
         self.assertEqual(city_rest, actual_rest)
         self.assertEqual(city_take, actual_take)
 
-    def test_all_records_have_required_fields(self):
+    def test_all_records_have_required_fields(self) -> None:
         required = ['id', 'name', 'type', 'city', 'local_authority', 'hygiene_rating']
         for r in self.restaurants['restaurants']:
             for field in required:
@@ -308,23 +309,23 @@ class TestDataIntegrity(unittest.TestCase):
                 self.assertNotEqual(r.get(field), '',
                                     f"Empty field '{field}' in restaurant #{r.get('id', '?')}")
 
-    def test_cities_sorted_by_count_descending(self):
+    def test_cities_sorted_by_count_descending(self) -> None:
         counts = [c['total_thai_businesses'] for c in self.cities['cities']]
         self.assertEqual(counts, sorted(counts, reverse=True),
                          "Cities should be sorted by count descending")
 
-    def test_avg_hygiene_rating_in_range(self):
+    def test_avg_hygiene_rating_in_range(self) -> None:
         for c in self.cities['cities']:
             rating = c['avg_hygiene_rating']
             self.assertGreaterEqual(rating, 0)
             self.assertLessEqual(rating, 5)
 
-    def test_restaurant_count_positive(self):
+    def test_restaurant_count_positive(self) -> None:
         for c in self.cities['cities']:
             self.assertGreater(c['total_thai_businesses'], 0,
                                f"City '{c['name']}' has 0 businesses")
 
-    def test_data_json_consistency(self):
+    def test_data_json_consistency(self) -> None:
         if self.data:
             stat_total = self.data.get('statistics', {}).get('total_uk_thai_businesses', 0)
             self.assertEqual(stat_total, self.restaurants.get('total', 0))

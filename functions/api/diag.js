@@ -1,4 +1,10 @@
 // ThaiData UK — GET /api/diag — diagnostic endpoint for env vars and Telegram
+/**
+ * Handles GET /api/diag — diagnostic endpoint for checking env var configuration and Telegram connectivity
+ * @param {object} context - Cloudflare Workers function context
+ * @param {object} context.env - Environment bindings with all env vars
+ * @returns {Promise<Response>} JSON response with env var status and Telegram test result
+ */
 export async function onRequestGet(context) {
   const { env } = context;
   const results = {};

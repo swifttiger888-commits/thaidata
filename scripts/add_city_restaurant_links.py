@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Add restaurant listing links to city pages."""
 import json, os, re
+from typing import Any
 
 REPO = '/tmp/thaidata-repo'
 
-def slugify(s):
+def slugify(s: str) -> str:
     s = s.lower().strip()
     s = re.sub(r'[^\w\s-]', '', s)
     s = re.sub(r'[-\s]+', '-', s)
@@ -15,12 +16,12 @@ with open(os.path.join(REPO, 'data', 'restaurants.json')) as f:
     data = json.load(f)
 
 from collections import defaultdict
-city_restaurants = defaultdict(list)
+city_restaurants: defaultdict[str, list[dict[str, Any]]] = defaultdict(list)
 for r in data['restaurants']:
     city_restaurants[r['city']].append(r)
 
 # Sort each city's restaurants: 5-star first, then 4-star, etc.
-def rating_sort_key(r):
+def rating_sort_key(r: dict[str, Any]) -> int:
     val = r.get('hygiene_rating', '0')
     try:
         return -int(val)
@@ -32,8 +33,8 @@ for city in city_restaurants:
 
 # Process each city page
 cities_dir = os.path.join(REPO, 'cities')
-updated = 0
-skipped = 0
+updated: int = 0
+skipped: int = 0
 
 for filename in sorted(os.listdir(cities_dir)):
     if not filename.endswith('.html'):

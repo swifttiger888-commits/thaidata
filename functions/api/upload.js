@@ -6,6 +6,16 @@ const CF_ACCOUNT_ID = 'badd33ce94008f499f2ae75fd3b04574';
 const CF_DELIVERY = 'https://imagedelivery.net/0mC63s07iTD25-GQ6n3_8A';
 const CF_API = `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/images/v1`;
 
+/**
+ * Handles POST /api/upload — upload restaurant photos to Cloudflare Images
+ * Requires valid magic link token in Authorization header
+ * Accepts multipart/form-data with "photos" field (JPEG/PNG/WebP, max 10MB each)
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with Authorization: Bearer token and multipart form data
+ * @param {object} context.env - Environment bindings with DB (D1Database) and CF_IMAGES_API_TOKEN
+ * @returns {Promise<Response>} JSON response with uploaded image URLs or error
+ * @throws {Error} When upload or database operation fails (caught internally)
+ */
 export async function onRequestPost(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -129,7 +139,11 @@ export async function onRequestPost(context) {
   }
 }
 
-// --- Crypto helper ---
+/**
+ * Computes SHA-256 hex digest of a string
+ * @param {string} text - Text to hash (e.g. auth token)
+ * @returns {Promise<string>} Hex-encoded SHA-256 hash
+ */
 async function sha256(text) {
   const encoder = new TextEncoder();
   const data = encoder.encode(text);

@@ -7,10 +7,10 @@ import urllib.request
 import urllib.parse
 import sys
 
-HUB_URL = "https://pubsubhubbub.appspot.com/"
+HUB_URL: str = "https://pubsubhubbub.appspot.com/"
 
 # URLs to ping — hub will re-fetch these and push to subscribers
-PING_URLS = [
+PING_URLS: list[str] = [
     "https://thaidata.uk/feed.json",
     "https://thaidata.uk/sitemap.xml",
     "https://thaidata.uk/how-many-thai-restaurants-uk",
@@ -18,7 +18,7 @@ PING_URLS = [
     "https://thaidata.uk/thai-restaurants-city-breakdown-uk",
 ]
 
-def ping_hub(feed_url):
+def ping_hub(feed_url: str) -> tuple[bool, str]:
     data = urllib.parse.urlencode({
         "hub.mode": "publish",
         "hub.url": feed_url,

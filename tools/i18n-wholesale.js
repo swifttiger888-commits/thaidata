@@ -59,6 +59,11 @@ const translations = {
   }
 };
 
+/**
+ * Sets the UI language by applying translations to all [data-i18n] elements
+ * and persisting the selection to localStorage. Re-runs analysis on change.
+ * @param {string} lang - Language code ("en" or "th")
+ */
 function setLanguage(lang) {
   localStorage.setItem('thaidata_lang', lang);
   document.documentElement.lang = lang;

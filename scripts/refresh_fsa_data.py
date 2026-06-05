@@ -7,12 +7,13 @@ Designed to run as a cron job or manually.
 import json, time, urllib.request, urllib.parse, os, subprocess
 from collections import defaultdict
 from datetime import datetime
+from typing import Any
 
 REPO_DIR = '/tmp/thaidata-repo'
 DATA_FILE = '/tmp/thai_fsa_latest.json'
 CHANGE_LOG = '/tmp/thai_fsa_changes.txt'
 
-def fetch_all(name, business_type_id, scheme_key):
+def fetch_all(name: str, business_type_id: str, scheme_key: str) -> list[dict[str, Any]]:
     """Fetch all establishments matching criteria from FSA API."""
     all_ests = []
     page = 1
@@ -40,7 +41,7 @@ def fetch_all(name, business_type_id, scheme_key):
         time.sleep(0.15)
     return all_ests
 
-def count_by_la(establishments):
+def count_by_la(establishments: list[dict[str, Any]]) -> dict[str, dict[str, int]]:
     """Group establishments by LocalAuthority, return counts."""
     by_la = defaultdict(lambda: {'total': 0, 'restaurants': 0, 'takeaways': 0})
     for e in establishments:
@@ -59,7 +60,7 @@ def count_by_la(establishments):
             by_la[la]['restaurants'] += 1
     return dict(by_la)
 
-def main():
+def main() -> None:
     changes = []
     start = datetime.now()
     print(f"=== ThaiData FSA Refresh — {start.strftime('%Y-%m-%d %H:%M')} ===\n")

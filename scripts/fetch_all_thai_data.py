@@ -12,6 +12,7 @@ Run: python3 fetch_all_thai_data.py
 import json, time, urllib.request, urllib.parse, os, sys
 from collections import defaultdict
 from datetime import datetime
+from typing import Any
 
 # ── Configuration ────────────────────────────────────────────────────
 REPO_DIR = '/tmp/thaidata-dl'
@@ -156,7 +157,7 @@ CITY_POPULATIONS = {
 }
 
 
-def map_la_to_city(local_authority):
+def map_la_to_city(local_authority: str) -> str:
     """Map a Local Authority name to its parent city."""
     if local_authority in LA_TO_CITY:
         return LA_TO_CITY[local_authority]
@@ -173,7 +174,7 @@ def map_la_to_city(local_authority):
     return local_authority
 
 
-def get_population(city_name):
+def get_population(city_name: str) -> int | None:
     """Get population for a city, with fallbacks."""
     if city_name in CITY_POPULATIONS:
         return CITY_POPULATIONS[city_name]
@@ -186,7 +187,7 @@ def get_population(city_name):
     return None
 
 
-def fetch_all(name, business_type_id, scheme_key):
+def fetch_all(name: str, business_type_id: str, scheme_key: str) -> list[dict[str, Any]]:
     """Fetch all establishments matching criteria from FSA API. Returns list of dicts."""
     all_ests = []
     page = 1
@@ -218,7 +219,7 @@ def fetch_all(name, business_type_id, scheme_key):
     return all_ests
 
 
-def main():
+def main() -> None:
     start = datetime.now()
     print(f"=== Fetching ALL UK Thai Restaurant Data ===\n")
     print(f"Started: {start.strftime('%Y-%m-%d %H:%M:%S')}\n")

@@ -1,3 +1,8 @@
+/**
+ * Cookie consent banner for ThaiData UK
+ * @module privacy-banner
+ */
+
 (function() {
     // 1. Check if consent already given
     if (localStorage.getItem('thaidata_consent')) return;

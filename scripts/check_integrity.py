@@ -10,6 +10,7 @@ Exit code: 0 = all checks pass, 1 = warnings, 2 = errors
 
 import json, os, sys, re
 from pathlib import Path
+from typing import Any
 
 REPO = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO / 'data'
@@ -17,11 +18,11 @@ API_DIR = REPO / 'api' / 'v1'
 R_DIR = REPO / 'r'
 SCHEMA_DIR = REPO / 'schemas'
 
-errors = []
-warnings = []
+errors: list[str] = []
+warnings: list[str] = []
 
 
-def load_json(path, label):
+def load_json(path: Path, label: str) -> dict[str, Any] | None:
     try:
         with open(path) as f:
             return json.load(f)
@@ -30,7 +31,7 @@ def load_json(path, label):
         return None
 
 
-def check_schema(data, schema_path, label):
+def check_schema(data: dict[str, Any] | None, schema_path: Path, label: str) -> None:
     """Basic schema validation without jsonschema library (stdlib only)."""
     if not data:
         return

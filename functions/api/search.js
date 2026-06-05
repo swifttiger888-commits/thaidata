@@ -1,6 +1,14 @@
 // ThaiData UK — GET /api/search?q=X&city=Y
 // Proxy FSA API to avoid CORS, filtered to Thai restaurants only
 
+/**
+ * Handles GET /api/search — proxies FSA API to search Thai restaurants
+ * @param {object} context - Cloudflare Workers function context
+ * @param {Request} context.request - Incoming HTTP request with ?q, ?city, ?limit params
+ * @param {object} context.env - Environment bindings
+ * @returns {Promise<Response>} JSON response with search results or error message
+ * @throws {Error} When FSA API request fails (caught internally)
+ */
 export async function onRequestGet(context) {
   const { request, env } = context;
   const corsHeaders = {
@@ -108,6 +116,15 @@ export async function onRequestGet(context) {
   }
 }
 
+/**
+ * Extracts a UK city name from an FSA establishment address
+ * @param {object} establishment - FSA establishment object with AddressLine fields
+ * @param {string} [establishment.AddressLine1] - First address line
+ * @param {string} [establishment.AddressLine2] - Second address line
+ * @param {string} [establishment.AddressLine3] - Third address line
+ * @param {string} [establishment.AddressLine4] - Fourth address line
+ * @returns {string} The detected city name, or the last address line as fallback
+ */
 function extractCity(establishment) {
   // Try to extract city from address fields
   const addressParts = [

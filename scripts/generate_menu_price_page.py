@@ -6,6 +6,7 @@ Run this AFTER collect_menu_prices.py has been filled in and saved to
 """
 import json, os, html
 from statistics import mean
+from typing import Any
 
 # Load data
 data_path = '/tmp/thai_menu_prices.json'
@@ -16,9 +17,9 @@ if not os.path.exists(data_path):
     exit(1)
 
 with open(data_path) as f:
-    survey = json.load(f)
+    survey: dict[str, Any] = json.load(f)
 
-DISPLAY_NAMES = {
+DISPLAY_NAMES: dict[str, str] = {
     "Pad Thai (chicken/prawn)": "Pad Thai",
     "Green Curry (chicken)": "Green Curry", 
     "Tom Yum Soup (prawn)": "Tom Yum",
@@ -27,12 +28,12 @@ DISPLAY_NAMES = {
 }
 
 # === COMPUTE STATISTICS ===
-all_spreads = []  # delivery markup percentages
-dish_stats = {}   # per-dish averages
-city_stats = {}   # per-city averages
+all_spreads: list[float] = []  # delivery markup percentages
+dish_stats: dict[str, dict[str, list[float]]] = {}   # per-dish averages
+city_stats: dict[str, dict[str, float | int]] = {}   # per-city averages
 
 for city_name, city_data in survey.get('cities', {}).items():
-    city_prices = {'dine_in': [], 'delivery': [], 'spreads': []}
+    city_prices: dict[str, list[float]] = {'dine_in': [], 'delivery': [], 'spreads': []}
     
     for rest in city_data.get('restaurants', []):
         for dish_key, prices in rest.get('prices', {}).items():
@@ -59,10 +60,10 @@ for city_name, city_data in survey.get('cities', {}).items():
             'data_points': len(city_prices['spreads'])
         }
 
-avg_uk_spread = round(mean(all_spreads), 1) if all_spreads else 0
+avg_uk_spread: float = round(mean(all_spreads), 1) if all_spreads else 0
 
 # Compute dish averages
-dish_averages = {}
+dish_averages: dict[str, dict[str, float | int]] = {}
 for dish, stats in dish_stats.items():
     dish_averages[dish] = {
         'avg_dine_in': round(mean(stats['dine_in']), 2),
@@ -72,7 +73,7 @@ for dish, stats in dish_stats.items():
     }
 
 # === BUILD CITY COMPARISON ROWS ===
-city_rows = []
+city_rows: list[str] = []
 for city_name, stats in sorted(city_stats.items(), key=lambda x: x[1]['avg_spread'], reverse=True):
     city_rows.append(f'''                        <tr>
                             <td class="city-name">{html.escape(city_name)}</td>
@@ -84,7 +85,7 @@ for city_name, stats in sorted(city_stats.items(), key=lambda x: x[1]['avg_sprea
 city_rows_html = '\n'.join(city_rows) if city_rows else '<tr><td colspan="5" style="color:var(--ink4);text-align:center;padding:40px;">Data being collected — check back soon</td></tr>'
 
 # === BUILD DISH COMPARISON ROWS ===
-dish_rows = []
+dish_rows: list[str] = []
 for dish_key, stats in sorted(dish_averages.items(), key=lambda x: x[1]['avg_spread'], reverse=True):
     name = DISPLAY_NAMES.get(dish_key, dish_key)
     dish_rows.append(f'''                        <tr>
