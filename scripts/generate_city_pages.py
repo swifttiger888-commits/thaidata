@@ -209,11 +209,10 @@ def compute_city_stats(restaurants: list[dict[str, Any]]) -> dict[str, Any]:
 # ── Mode detection ──────────────────────────────────────────────────────────────
 
 def detect_html_mode(html: str) -> str | None:
-    """Detect mode from HTML safeguard markers."""
-    first_line = html[:200]
-    if "<!-- MANUAL -->" in first_line:
+    """Detect mode from HTML safeguard markers (full-file scan)."""
+    if "<!-- MANUAL -->" in html:
         return "manual"
-    match = re.search(r"<!--\s*CITIES-MODE:\s*(\w+)\s*-->", first_line)
+    match = re.search(r"<!--\s*CITIES-MODE:\s*(\w+)\s*-->", html)
     if match:
         return match.group(1)
     return None
