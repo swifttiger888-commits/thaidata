@@ -101,8 +101,18 @@ function extractPhone(html, jsonld) {
     }
   }
   if (phones.length > 0) {
-    // Prefer phone near "phone" / "call" / "tel"
-    return { value: phones[0], found_in: 'footer', confidence: 'medium' };
+    // Prefer phone near "phone"/"call"/"tel"/"contact" text within 200 chars
+    const contactWords = /\b(phone|tel|call|contact|book|reservation|reserve)\b/i;
+    for (const p of phones) {
+      const idx = html.indexOf(p);
+      if (idx >= 0) {
+        const ctx = html.substring(Math.max(0, idx - 200), Math.min(html.length, idx + 200));
+        if (contactWords.test(ctx)) {
+          return { value: p, found_in: 'footer', confidence: 'medium' };
+        }
+      }
+    }
+    // No phone found near contact context — skip dubious matches
   }
   return null;
 }
