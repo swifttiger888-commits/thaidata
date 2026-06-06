@@ -283,7 +283,8 @@
     }
 
     html {
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      overflow-x: hidden
     }
 
     body {
@@ -2007,7 +2008,15 @@
       }
 
       .guide-strip a {
-        text-align: center
+        text-align: center;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        color: #065F56 !important
+      }
+
+      .guide-strip a i {
+        color: #065F56 !important
       }
     }
     /* ══════ INTEL HUB ══════ */
