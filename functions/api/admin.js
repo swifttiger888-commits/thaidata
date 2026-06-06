@@ -223,15 +223,18 @@ export async function onRequestGet(context) {
     const city = url.searchParams.get('city');
     const limit = parseInt(url.searchParams.get('limit') || '50');
 
-    let query = 'SELECT * FROM claims WHERE claim_status = ?';
+    let query = `SELECT c.*, l.enrichment
+      FROM claims c
+      LEFT JOIN listings l ON l.claim_id = c.id
+      WHERE c.claim_status = ?`;
     const params = [status];
 
     if (city) {
-      query += ' AND city = ?';
+      query += ' AND c.city = ?';
       params.push(city);
     }
 
-    query += ' ORDER BY created_at DESC LIMIT ?';
+    query += ' ORDER BY c.created_at DESC LIMIT ?';
     params.push(limit);
 
     const results = await env.DB.prepare(query).bind(...params).all();

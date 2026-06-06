@@ -45,6 +45,11 @@ body {
         .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
         .badge-pending { background: rgba(245,158,11,0.15); color: #F59E0B; }
         .badge-approved { background: rgba(16,185,129,0.15); color: #10B981; }
+        .enrich-line { font-size: 0.73rem; color: #64748B; margin-top: 3px; }
+        .enrich-line .enrich-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; vertical-align: middle; position: relative; top: -1px; }
+        .enrich-dot-success { background: #10B981; }
+        .enrich-dot-partial { background: #F59E0B; }
+        .enrich-dot-failed { background: #EF4444; }
         .actions { display: flex; gap: 8px; flex-shrink: 0; }
         .actions button { width: auto; padding: 6px 14px; font-size: 0.8rem; }
         .toast { position: fixed; top: 20px; right: 20px; padding: 12px 20px; border-radius: 10px; font-weight: 600; z-index: 1000; }
@@ -167,6 +172,31 @@ body {
                 badgeSpan.className = 'badge badge-' + c.claim_status;
                 badgeSpan.textContent = c.claim_status;
                 infoDiv.appendChild(badgeSpan);
+
+                // Enrichment status line (read-only, parsed client-side)
+                if (c.enrichment) {
+                    try {
+                        var enr = typeof c.enrichment === 'string' ? JSON.parse(c.enrichment) : c.enrichment;
+                        if (enr && enr.status) {
+                            var dotClass = 'enrich-dot-' + enr.status;
+                            var scrapedDate = enr.scraped_at ? new Date(enr.scraped_at).toLocaleDateString('en-GB', {day:'numeric',month:'short'}) : '';
+                            var domain = '';
+                            try { domain = new URL(enr.source_url || '').hostname.replace(/^www\./,''); } catch(e) {}
+                            var fieldCount = (enr.fields && Array.isArray(enr.fields)) ? enr.fields.length : 0;
+                            var fieldLabel = fieldCount === 1 ? '1 field' : fieldCount + ' fields';
+
+                            var enrichDiv = document.createElement('div');
+                            enrichDiv.className = 'enrich-line';
+                            var dot = document.createElement('span');
+                            dot.className = 'enrich-dot ' + dotClass;
+                            enrichDiv.appendChild(dot);
+                            enrichDiv.appendChild(document.createTextNode(
+                                'Enrichment: ' + enr.status + ' · scraped ' + scrapedDate + ' · ' + domain + ' · ' + fieldLabel
+                            ));
+                            infoDiv.appendChild(enrichDiv);
+                        }
+                    } catch(e) { /* malformed enrichment — hide silently */ }
+                }
 
                 claimRow.appendChild(infoDiv);
 
