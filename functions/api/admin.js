@@ -523,3 +523,62 @@ export async function onRequestDelete(context) {
     });
   }
 }
+
+/**
+ * Handles PATCH /api/admin — update a single listing field (admin only)
+ * Body: { listing_id, field, value }
+ * Whitelist: restaurant_name, city, description, phone, opening_hours, website,
+ *   social_instagram, social_facebook, email, address, postcode, cuisine_specialty
+ */
+export async function onRequestPatch(context) {
+  const { request, env } = context;
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json',
+  };
+
+  try {
+    const auth = request.headers.get('Authorization');
+    if (!auth || !auth.startsWith('Bearer ')) {
+      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+        status: 401, headers: corsHeaders,
+      });
+    }
+    const token = auth.slice(7);
+    const session = await env.DB.prepare(
+      "SELECT id FROM admin_sessions WHERE token = ? AND expires_at > datetime('now')"
+    ).bind(token).first();
+    if (!session) {
+      return new Response(JSON.stringify({ error: 'Session expired or invalid' }), {
+        status: 403, headers: corsHeaders,
+      });
+    }
+
+    const body = await request.json();
+    const { listing_id, field, value } = body;
+    const allowed = new Set([
+      'restaurant_name', 'city', 'description', 'phone', 'opening_hours',
+      'website', 'social_instagram', 'social_facebook', 'email', 'address',
+      'postcode', 'cuisine_specialty'
+    ]);
+    if (!listing_id || !field || !allowed.has(field)) {
+      return new Response(JSON.stringify({ error: 'listing_id, field (whitelisted), and value required' }), {
+        status: 400, headers: corsHeaders,
+      });
+    }
+
+    await env.DB.prepare(
+      `UPDATE listings SET ${field} = ?, updated_at = datetime('now') WHERE id = ?`
+    ).bind(value, listing_id).run();
+
+    return new Response(JSON.stringify({ success: true, listing_id, field, value }), {
+      status: 200, headers: corsHeaders,
+    });
+
+  } catch (err) {
+    console.error('Admin patch error:', err);
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500, headers: corsHeaders,
+    });
+  }
+}
