@@ -124,6 +124,7 @@ Write exactly 1-2 short sentences (max 200 characters total) describing this res
 
 RULES:
 - Be factual. No promotional language, no superlatives, no marketing speak.
+- Do not repeat the restaurant name or city as a prefix. Start directly with the factual description.
 - Paraphrase into your own words. Do NOT copy phrases verbatim from the source text.
 - Include: city/area location if clear, any specific factual detail present in the source (e.g. "family-run", "city centre", specific cuisine style mentioned).
 - Do NOT infer dish categories, service style, or other typical Thai-restaurant facts unless they are explicitly present in the source text or structured data.
