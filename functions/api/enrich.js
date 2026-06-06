@@ -1,5 +1,6 @@
 // ThaiData UK — POST /api/enrich
 // Scrape restaurant website for structured data (JSON-LD, OG, footer)
+// v1.1: generates a short factual summary via Workers AI instead of copying raw text.
 // Stores enrichment JSON on the listing. Supports ?id= param for dry-run.
 
 /**
@@ -36,6 +37,132 @@ function discoverPages(html, baseUrl) {
   }
   return resolved;
 }
+
+// ─── Source text collection (v1.1 — input for summary generation) ────────────
+
+/**
+ * Collect restricted website text as input for the summary generator.
+ * Sources: JSON-LD description, meta description, h1/h2 headings,
+ * first substantive intro block, optional about-page intro.
+ * Returns cleaned text capped at ~2500 chars, or null if too thin.
+ */
+function collectSourceText(html, jsonld, aboutHtml) {
+  const parts = [];
+
+  // 1. JSON-LD description
+  if (jsonld && jsonld.description) {
+    const d = String(jsonld.description).replace(/\s+/g, ' ').trim();
+    if (d.length >= 20) parts.push(d);
+  }
+
+  // 2. Meta description
+  const metaMatch = html.match(/<meta[^>]+name="description"[^>]+content="([^"]+)"/i)
+    || html.match(/<meta[^>]+property="og:description"[^>]+content="([^"]+)"/i);
+  if (metaMatch) {
+    const d = metaMatch[1].replace(/\s+/g, ' ').trim();
+    if (d.length >= 20 && !lowQuality(d)) parts.push(d);
+  }
+
+  // 3. Homepage h1 + h2 headings
+  const headings = [];
+  const hRe = /<h[12][^>]*>([\s\S]*?)<\/h[12]>/gi;
+  let hm;
+  while ((hm = hRe.exec(html)) !== null) {
+    const t = hm[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    if (t.length >= 3 && t.length <= 120) headings.push(t);
+  }
+  if (headings.length > 0) parts.push('Page headings: ' + headings.join(' | '));
+
+  // 4. First substantive intro block (longest <p> in first 8000 chars, 50-400 chars, not boilerplate)
+  const introChunk = html.substring(0, 8000);
+  const paraRe = /<p[^>]*>([\s\S]*?)<\/p>/gi;
+  let bestPara = '';
+  let pm;
+  while ((pm = paraRe.exec(introChunk)) !== null) {
+    const text = pm[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    if (text.length >= 50 && text.length <= 400 && !lowQuality(text) && text.length > bestPara.length) {
+      bestPara = text;
+    }
+  }
+  if (bestPara) parts.push(bestPara);
+
+  // 5. About-page intro (if available)
+  if (aboutHtml) {
+    const aboutText = aboutHtml.replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (aboutText.length >= 40) {
+      parts.push('About page: ' + aboutText.substring(0, 500));
+    }
+  }
+
+  const combined = parts.join('\n\n').trim();
+
+  // Quality gate: need at least 80 chars of real content
+  if (combined.length < 80) return null;
+
+  // Cap
+  return combined.substring(0, 2500);
+}
+
+// ─── Summary generation (v1.1 — Workers AI) ─────────────────────────────────
+
+/**
+ * Generate a short factual summary from collected website text.
+ * Uses Cloudflare Workers AI (free tier). Returns null if generation
+ * fails, source text too thin, or AI binding not available.
+ */
+async function generateSummary(sourceText, restaurantName, city, env) {
+  if (!sourceText || sourceText.length < 80) return null;
+  if (!env.AI) { console.warn('Workers AI binding not available — skipping summary generation'); return null; }
+
+  const prompt = `You are writing a factual, neutral directory listing entry for a UK Thai restaurant.
+
+Write exactly 1-2 short sentences (max 200 characters total) describing this restaurant using ONLY the facts provided below.
+
+RULES:
+- Be factual. No promotional language, no superlatives, no marketing speak.
+- Paraphrase into your own words. Do NOT copy phrases verbatim from the source text.
+- Include: city/area location if clear, any specific factual detail present in the source (e.g. "family-run", "city centre", specific cuisine style mentioned).
+- Do NOT infer dish categories, service style, or other typical Thai-restaurant facts unless they are explicitly present in the source text or structured data.
+- If the source text is mostly marketing fluff with no concrete facts, write only the most basic factual sentence (e.g. "Thai restaurant in [city].").
+- Write in British English. No exclamation marks. No quotes.
+
+Restaurant: ${restaurantName}, ${city}
+Source text (for factual reference only — do not copy):
+${sourceText}`;
+
+  try {
+    const response = await env.AI.run('@cf/meta/llama-3.2-1b-instruct', {
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 100,
+      temperature: 0.3,
+    });
+
+    const raw = (response && response.response) ? String(response.response).trim() : '';
+    if (!raw || raw.length < 30) return null;
+
+    // Clean: strip quotes, ensure it ends with punctuation
+    let cleaned = raw.replace(/^["']|["']$/g, '').trim();
+    if (cleaned.length > 250) cleaned = cleaned.substring(0, 247) + '...';
+    if (!/[.!?]$/.test(cleaned)) cleaned += '.';
+
+    // Quality check: must mention city or cuisine or restaurant name
+    const lower = cleaned.toLowerCase();
+    if (!lower.includes(city.toLowerCase()) && !lower.includes('thai') && !lower.includes('restaurant')) {
+      return null; // summary too vague
+    }
+
+    return cleaned;
+  } catch (err) {
+    console.warn('Summary generation failed:', err.message);
+    return null;
+  }
+}
+
+// ─── Field extractors ────────────────────────────────────────────────────────
 
 /**
  * Extract a reasonable short description. Priority: JSON-LD > meta > first
@@ -186,7 +313,7 @@ function extractSocial(html, jsonld) {
  * Main enrichment function: fetch homepage, discover candidate pages,
  * extract fields, return structured enrichment JSON.
  */
-async function runEnrichment(sourceUrl, env) {
+async function runEnrichment(sourceUrl, env, restaurantName, city) {
   const now = new Date().toISOString();
   const base = { scraped_at: now, source_url: sourceUrl, fields: {} };
 
@@ -238,13 +365,15 @@ async function runEnrichment(sourceUrl, env) {
     } catch (_) { /* skip malformed */ }
   }
 
-  // Extract homepage fields
-  base.fields.description = extractDescription(homeHtml, jsonld);
+  // Extract homepage fields (phone, hours, social only — description now generated)
   base.fields.phone = extractPhone(homeHtml, jsonld);
   base.fields.opening_hours = extractHours(homeHtml, jsonld);
 
   const social = extractSocial(homeHtml, jsonld);
   if (social) Object.assign(base.fields, social);
+
+  // Collect source text for summary generation
+  let aboutHtml = null;
 
   // Discover contact/about/menu pages and extract from them
   const extraUrls = discoverPages(homeHtml, sourceUrl);
@@ -262,19 +391,30 @@ async function runEnrichment(sourceUrl, env) {
       if (!base.fields.phone) {
         base.fields.phone = extractPhone(pageHtml, null);
       }
-      // Description (if not found yet and page looks like an about page)
-      if (!base.fields.description && /\babout\b/i.test(url)) {
-        base.fields.description = extractDescription(pageHtml, null);
+      // Capture about-page HTML for source text collection
+      if (/\babout\b/i.test(url) && !aboutHtml) {
+        aboutHtml = pageHtml;
       }
     } catch (_) { /* skip individual page failures */ }
   }
 
-  // Remove null fields
+  // Collect source text and generate summary (v1.1)
+  const rawSourceText = collectSourceText(homeHtml, jsonld, aboutHtml);
+  if (rawSourceText) {
+    base.raw_source_text = rawSourceText;
+    const summary = await generateSummary(rawSourceText, restaurantName || '', city || '', env);
+    if (summary) {
+      base.generated_summary = summary;
+      base.summary_generated_at = now;
+    }
+  }
+
+  // Remove null fields (but keep raw_source_text and generated_summary even if empty)
   for (const key of Object.keys(base.fields)) {
     if (base.fields[key] === null) delete base.fields[key];
   }
 
-  base.status = Object.keys(base.fields).length > 0 ? 'success' : 'partial';
+  base.status = (Object.keys(base.fields).length > 0 || base.generated_summary) ? 'success' : 'partial';
   return base;
 }
 
@@ -301,7 +441,20 @@ export async function onRequestPost(context) {
     let sourceUrl = url.trim();
     if (!/^https?:\/\//i.test(sourceUrl)) sourceUrl = 'https://' + sourceUrl;
 
-    const result = await runEnrichment(sourceUrl, env);
+    // Look up restaurant name/city for the summary prompt
+    let restaurantName = null;
+    let city = null;
+    if (listing_id) {
+      const listing = await env.DB.prepare(
+        'SELECT restaurant_name, city FROM listings WHERE id = ?'
+      ).bind(listing_id).first();
+      if (listing) {
+        restaurantName = listing.restaurant_name;
+        city = listing.city;
+      }
+    }
+
+    const result = await runEnrichment(sourceUrl, env, restaurantName, city);
 
     // Store on listing if listing_id provided
     if (listing_id) {

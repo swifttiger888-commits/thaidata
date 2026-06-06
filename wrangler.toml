@@ -15,5 +15,10 @@ database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
 # ADMIN_PASSWORD = your-secure-password
 # MAGIC_LINK_SECRET = random-64-char-string-for-token-signing
 
+# Workers AI binding (for enrichment summary generation — free tier)
+# Enable in Cloudflare Dashboard > Workers & Pages > thaidata-uk > Settings > Functions > Workers AI
+[ai]
+binding = "AI"
+
 [vars]
 SITE_URL = "https://thaidata.uk"
