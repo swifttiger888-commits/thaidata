@@ -969,7 +969,7 @@
       font-family: inherit;
       font-size: 0.86rem;
       font-weight: 500;
-      color: var(--ink3);
+      color: var(--ink2);
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -1796,7 +1796,7 @@
 
       /* Hero */
       .hero {
-        padding: 100px 0 48px
+        padding: 60px 0 40px
       }
 
       .hero::before {
@@ -2000,6 +2000,15 @@
       .section-title {
         font-size: clamp(1.5rem, 6vw, 2rem)
       }
+
+      .guide-strip {
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      .guide-strip a {
+        text-align: center
+      }
     }
     /* ══════ INTEL HUB ══════ */
     .intel-hub { padding: 80px 0; background: var(--bg2); border-top: 1px solid var(--line); }
@@ -2010,7 +2019,7 @@
     .intel-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
     .intel-icon { background: var(--dark); color: var(--c2); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 24px; }
     .intel-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 1.8rem; }
-    .intel-card p { color: var(--ink3); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; }
+    .intel-card p { color: var(--ink2); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; }
     .intel-link { color: var(--c1); font-weight: 700; text-decoration: none; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
     @media (max-width: 768px) { .intel-grid { grid-template-columns: 1fr; } .intel-card { padding: 30px; } }
 
@@ -2185,7 +2194,7 @@
 
   <!-- FREE GUIDES STRIP -->
   <div style="border-bottom:1px solid var(--line); border-top:1px solid var(--line); background:rgba(16,185,129,0.05);">
-    <div class="wrap" style="display:flex; gap:14px; padding:18px 20px; align-items:center; flex-wrap:wrap; justify-content:center;">
+    <div class="wrap guide-strip" style="display:flex; gap:14px; padding:18px 20px; align-items:center; flex-wrap:wrap; justify-content:center;">
       <span style="color:var(--c2); font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; margin-right:8px;"><i class="fas fa-book-open" style="margin-right:6px;"></i>Free Guides:</span>
       <a href="open-thai-restaurant-uk.html" style="color:#fff; text-decoration:none; font-size:0.85rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:20px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-store" style="margin-right:6px; color:var(--c2);"></i>Open a Thai Restaurant</a>
       <a href="how-many-thai-restaurants-uk.html" style="color:#fff; text-decoration:none; font-size:0.85rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:20px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-chart-pie" style="margin-right:6px; color:var(--c2);"></i>UK Thai Restaurant Count</a>
