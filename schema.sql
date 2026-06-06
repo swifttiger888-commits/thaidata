@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS listings (
   price_range TEXT,  -- £ | ££ | £££
   features TEXT,      -- JSON array string
   photos TEXT,        -- JSON array string of URLs
+  menu_highlights TEXT, -- JSON array of {category, name, description, price}
   claimed_at TEXT DEFAULT (datetime('now')),
   updated_at TEXT DEFAULT (datetime('now'))
 );

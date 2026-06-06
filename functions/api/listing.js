@@ -236,6 +236,7 @@ export async function onRequestGet(context) {
       ...l,
       features: l.features ? JSON.parse(l.features) : [],
       photos: l.photos ? JSON.parse(l.photos) : [],
+      menu_highlights: l.menu_highlights ? JSON.parse(l.menu_highlights) : [],
     }));
 
     return new Response(JSON.stringify({ listings, count: listings.length }), {
@@ -294,7 +295,7 @@ export async function onRequestPut(context) {
     const allowedFields = [
       'description', 'cuisine_specialty', 'website', 'phone', 'email',
       'social_instagram', 'social_facebook', 'social_twitter',
-      'address', 'postcode', 'opening_hours', 'price_range', 'features', 'photos'
+      'address', 'postcode', 'opening_hours', 'price_range', 'features', 'photos', 'menu_highlights'
     ];
 
     // Build SET clause from allowed fields
@@ -306,7 +307,7 @@ export async function onRequestPut(context) {
         sets.push(`${field} = ?`);
         // Stringify arrays/objects
         params.push(
-          (field === 'features' || field === 'photos')
+          (field === 'features' || field === 'photos' || field === 'menu_highlights')
             ? JSON.stringify(body[field])
             : body[field]
         );

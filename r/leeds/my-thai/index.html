@@ -976,6 +976,11 @@
                 <div id="claimed-hours-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.8;"></div>
             </div>
 
+            <div id="claimed-menu" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Menu <em>Highlights</em></h2>
+                <div id="claimed-menu-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:16px;"></div>
+            </div>
+
             <div id="claimed-amenities" class="card animate-in" style="display:none;">
                 <h2 class="card-title">Amenities <em>&amp; Features</em></h2>
                 <div id="claimed-features-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;"></div>
@@ -1001,7 +1006,7 @@
                 <div style="font-size:2.5rem;color:var(--green);margin-bottom:8px;">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <h3 style="color:var(--green-dark);margin:0 0 4px;">Claimed &#10003;</h3>
+                <h3 style="color:var(--green-dark);margin:0 0 4px;">Owner Verified &#10003;</h3>
                 <p style="color:var(--ink-secondary);font-size:0.85rem;margin:0;">This listing is managed by the restaurant owner.</p>
                 <a href="/listing/manage" id="manage-listing-link" style="display:inline-block;margin-top:12px;color:var(--green);font-size:0.85rem;text-decoration:none;">
                     <i class="fas fa-edit"></i> Manage Listing
@@ -1174,6 +1179,47 @@
                             for (var hi = 0; hi < lines.length; hi++) {
                                 if (hi > 0) hoursContent.appendChild(document.createElement('br'));
                                 hoursContent.appendChild(document.createTextNode(lines[hi]));
+                            }
+                        }
+                    }
+                }
+
+                // Menu highlights (max 6 displayed)
+                if (listing.menu_highlights && listing.menu_highlights.length > 0) {
+                    var menuDiv = document.getElementById('claimed-menu');
+                    if (menuDiv) {
+                        menuDiv.style.display = 'block';
+                        var menuGrid = document.getElementById('claimed-menu-grid');
+                        if (menuGrid) {
+                            menuGrid.textContent = '';
+                            var items = listing.menu_highlights.slice(0, 6);
+                            for (var mi = 0; mi < items.length; mi++) {
+                                var dish = items[mi];
+                                var card = document.createElement('div');
+                                card.style.cssText = 'background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px;';
+                                if (dish.category) {
+                                    var cat = document.createElement('div');
+                                    cat.style.cssText = 'font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--green);font-weight:700;margin-bottom:6px;';
+                                    cat.textContent = dish.category;
+                                    card.appendChild(cat);
+                                }
+                                var dname = document.createElement('div');
+                                dname.style.cssText = 'font-weight:600;color:var(--ink);margin-bottom:4px;';
+                                dname.textContent = dish.name;
+                                card.appendChild(dname);
+                                if (dish.description) {
+                                    var desc = document.createElement('div');
+                                    desc.style.cssText = 'color:var(--ink-secondary);font-size:0.85rem;line-height:1.5;margin-bottom:6px;';
+                                    desc.textContent = dish.description;
+                                    card.appendChild(desc);
+                                }
+                                if (dish.price) {
+                                    var price = document.createElement('div');
+                                    price.style.cssText = 'font-weight:700;color:var(--green-dark);font-size:0.95rem;';
+                                    price.textContent = dish.price;
+                                    card.appendChild(price);
+                                }
+                                menuGrid.appendChild(card);
                             }
                         }
                     }

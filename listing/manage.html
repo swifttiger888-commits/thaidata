@@ -172,6 +172,16 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             </div>
 
             <div class="card">
+                <h2>Menu <em>Highlights</em></h2>
+                <p class="hint">Add your best dishes — diners see these on your ThaiData page. Max 8 items, 6 shown publicly.</p>
+                <div id="menu-items-container"></div>
+                <button class="btn btn-secondary" id="add-menu-item-btn" style="margin-top:12px;" type="button">
+                    <i class="fas fa-plus"></i> Add Item
+                </button>
+                <div id="menu-validation-msg" style="color:var(--red);font-size:0.82rem;margin-top:8px;display:none;"></div>
+            </div>
+
+            <div class="card">
                 <h2>Details</h2>
                 <label>Price Range</label>
                 <select id="edit-price">
@@ -213,6 +223,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
     <script>
     let authToken = null;
     let selectedFeatures = [];
+    let menuItems = [];
 
     // Init feature pills
     document.querySelectorAll('.checkbox-pill').forEach(pill => {
@@ -225,6 +236,122 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
     function updateFeaturesArray() {
         selectedFeatures = Array.from(document.querySelectorAll('.checkbox-pill.selected')).map(p => p.dataset.feature);
     }
+
+    // --- Menu Highlights ---
+    const addMenuBtn = document.getElementById('add-menu-item-btn');
+    if (addMenuBtn) {
+        addMenuBtn.addEventListener('click', function() {
+            if (menuItems.length >= 8) { toast('Maximum 8 menu items', 'error'); return; }
+            menuItems.push({ category: '', name: '', description: '', price: '' });
+            renderMenuRows();
+        });
+    }
+
+    function renderMenuRows() {
+        var container = document.getElementById('menu-items-container');
+        if (!container) return;
+        container.textContent = '';
+        // Update add button state
+        var btn = document.getElementById('add-menu-item-btn');
+        if (btn) btn.disabled = menuItems.length >= 8;
+
+        for (var i = 0; i < menuItems.length; i++) {
+            var item = menuItems[i];
+            var row = document.createElement('div');
+            row.style.cssText = 'background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px;';
+
+            var catLabel = document.createElement('label');
+            catLabel.textContent = 'Category';
+            var catSelect = document.createElement('select');
+            catSelect.setAttribute('data-index', i);
+            catSelect.setAttribute('data-field', 'category');
+            var cats = ['', 'Starters', 'Soups', 'Salads', 'Mains', 'Curries', 'Noodles', 'Rice', 'Desserts', 'Drinks'];
+            for (var ci = 0; ci < cats.length; ci++) {
+                var opt = document.createElement('option');
+                opt.value = cats[ci];
+                opt.textContent = cats[ci] || '— Category —';
+                opt.selected = (item.category === cats[ci]);
+                catSelect.appendChild(opt);
+            }
+            catSelect.addEventListener('change', function() {
+                var idx = parseInt(this.getAttribute('data-index'));
+                menuItems[idx].category = this.value;
+            });
+
+            var nameInput = makeMenuInput(i, 'name', 'Dish Name *', item.name, true);
+            var descInput = makeMenuInput(i, 'description', 'Description (optional)', item.description, false);
+            var priceInput = makeMenuInput(i, 'price', 'Price (e.g. £12.95)', item.price, false);
+
+            var removeBtn = document.createElement('button');
+            removeBtn.textContent = '✕ Remove';
+            removeBtn.style.cssText = 'background:none;border:1px solid var(--red);color:var(--red);padding:4px 12px;border-radius:6px;font-size:0.75rem;margin-top:8px;cursor:pointer;';
+            removeBtn.setAttribute('data-index', i);
+            removeBtn.addEventListener('click', function() {
+                var idx = parseInt(this.getAttribute('data-index'));
+                menuItems.splice(idx, 1);
+                renderMenuRows();
+            });
+
+            row.appendChild(catLabel);
+            row.appendChild(catSelect);
+            row.appendChild(nameInput);
+            row.appendChild(descInput);
+            row.appendChild(priceInput);
+            row.appendChild(removeBtn);
+            container.appendChild(row);
+        }
+    }
+
+    function makeMenuInput(idx, field, placeholder, value, required) {
+        var container = document.createElement('div');
+        container.style.cssText = 'margin-top:10px;';
+
+        var label = document.createElement('label');
+        label.textContent = placeholder;
+        container.appendChild(label);
+
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.value = value || '';
+        input.setAttribute('data-index', idx);
+        input.setAttribute('data-field', field);
+        input.addEventListener('input', function() {
+            var i = parseInt(this.getAttribute('data-index'));
+            menuItems[i][field] = this.value;
+        });
+        container.appendChild(input);
+        return container;
+    }
+
+    function validateMenu() {
+        // Trim whitespace from all items
+        for (var i = 0; i < menuItems.length; i++) {
+            for (var k in menuItems[i]) {
+                if (typeof menuItems[i][k] === 'string') menuItems[i][k] = menuItems[i][k].trim();
+            }
+        }
+        // Remove empty items (no name, no description, no price)
+        menuItems = menuItems.filter(function(item) {
+            return item.name || item.description || item.price;
+        });
+        renderMenuRows();
+        // Validate remaining: each needs name + (price or description)
+        for (var j = 0; j < menuItems.length; j++) {
+            var it = menuItems[j];
+            if (!it.name) {
+                return 'Item ' + (j + 1) + ' is missing a dish name.';
+            }
+            if (!it.price && !it.description) {
+                return 'Item ' + (j + 1) + ' needs a price or description.';
+            }
+        }
+        return null; // valid
+    }
+
+    function serializeMenu() {
+        return menuItems.length > 0 ? menuItems : null;
+    }
+    // --- End Menu Highlights ---
 
     // Extract token from URL or input
     function getToken() {
@@ -328,11 +455,25 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
         // Photos preview
         renderPhotoPreviews(l.photos || []);
+
+        // Menu highlights
+        menuItems = (l.menu_highlights && l.menu_highlights.length > 0) ? l.menu_highlights.slice(0, 8) : [];
+        renderMenuRows();
     }
 
     // Save listing
     async function saveListing() {
         if (!authToken) { toast('No active session', 'error'); return; }
+
+        // Validate menu before save
+        var menuErr = validateMenu();
+        if (menuErr) {
+            toast(menuErr, 'error');
+            document.getElementById('menu-validation-msg').textContent = menuErr;
+            document.getElementById('menu-validation-msg').style.display = 'block';
+            return;
+        }
+        document.getElementById('menu-validation-msg').style.display = 'none';
 
         const btn = document.getElementById('save-btn');
         btn.disabled = true;
@@ -352,6 +493,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             opening_hours: document.getElementById('edit-hours').value.trim() || null,
             price_range: document.getElementById('edit-price').value || null,
             features: selectedFeatures.length > 0 ? selectedFeatures : null,
+            menu_highlights: serializeMenu(),
         };
 
         // Remove null values
