@@ -80,12 +80,13 @@
             font-family: 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-    img, svg, video {
+    img, svg, video, canvas {
       max-width: 100%;
       height: auto
     }
         
-        body {
+                html { overflow-x: hidden; }
+body {
             background-color: var(--primary-dark);
             color: var(--text-primary);
             line-height: 1.6;

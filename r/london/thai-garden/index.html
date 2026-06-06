@@ -44,9 +44,13 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
 
         body {
+            overflow-x: hidden;
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             color: var(--ink);
             background: var(--cream);
@@ -55,7 +59,7 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        img, svg { max-width: 100%; height: auto; }
+        img, svg, video, canvas { max-width: 100%; height: auto; }
 
         /* ============ NAVIGATION ============ */
         .nav {

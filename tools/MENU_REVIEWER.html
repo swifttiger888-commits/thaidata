@@ -61,11 +61,12 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    img, svg, video {
+    img, svg, video, canvas {
       max-width: 100%;
       height: auto
     }
-        body { 
+                html { overflow-x: hidden; }
+body { 
             background-color: var(--bg); 
             color: white; 
             font-family: 'Inter', sans-serif; 

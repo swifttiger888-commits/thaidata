@@ -59,11 +59,12 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    img, svg, video {
+    img, svg, video, canvas {
       max-width: 100%;
       height: auto
     }
-        body { 
+                html { overflow-x: hidden; }
+body { 
             font-family: 'Inter', system-ui, sans-serif; 
             color: white; 
             background: var(--bg); 
