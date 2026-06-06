@@ -89,11 +89,17 @@ function extractPhone(html, jsonld) {
     if (val.length >= 8) return { value: val, found_in: 'json-ld', confidence: 'high' };
   }
 
-  // Footer or anywhere with a UK phone pattern
-  const phoneRe = /(\+?0\d{3,4}[\s-]?\d{3,4}[\s-]?\d{3,4})/g;
+  // Footer or anywhere with a strict UK phone pattern
+  // Must start with 0[1-9] (not 00) and have 10-11 total digits
+  const phoneRe = /(0[1-9]\d{1,4}[\s-]?\d{3,4}[\s-]?\d{3,4})/g;
   const phones = [];
   let pm;
-  while ((pm = phoneRe.exec(html)) !== null) phones.push(pm[0]);
+  while ((pm = phoneRe.exec(html)) !== null) {
+    const num = pm[0].replace(/[\s-]/g, '');
+    if (num.length >= 10 && num.length <= 11 && !num.startsWith('00')) {
+      phones.push(pm[0]);
+    }
+  }
   if (phones.length > 0) {
     // Prefer phone near "phone" / "call" / "tel"
     return { value: phones[0], found_in: 'footer', confidence: 'medium' };
