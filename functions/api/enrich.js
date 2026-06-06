@@ -147,6 +147,26 @@ ${sourceText}`;
 
     // Clean: strip quotes, ensure it ends with punctuation
     let cleaned = raw.replace(/^["']|["']$/g, '').trim();
+
+    // Strip LLM prefix: small models often echo "RestaurantName, City\n" before the actual summary
+    if (restaurantName || city) {
+      const esc = s => s ? s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') : '';
+      const namePat = esc(restaurantName);
+      const cityPat = esc(city);
+      const prefixes = [];
+      if (namePat && cityPat) {
+        prefixes.push(new RegExp('^' + namePat + ',\\s*' + cityPat + '\\s*[\\n\\-—:·\\s]+', 'i'));
+      }
+      if (namePat) {
+        prefixes.push(new RegExp('^' + namePat + '\\s*[\\n\\-—:·,\\s]+', 'i'));
+      }
+      if (cityPat) {
+        prefixes.push(new RegExp('^' + cityPat + '\\s*[\\n\\-—:·,\\s]+', 'i'));
+      }
+      for (const re of prefixes) {
+        cleaned = cleaned.replace(re, '').trim();
+      }
+    }
     if (cleaned.length > 250) cleaned = cleaned.substring(0, 247) + '...';
     if (!/[.!?]$/.test(cleaned)) cleaned += '.';
 
