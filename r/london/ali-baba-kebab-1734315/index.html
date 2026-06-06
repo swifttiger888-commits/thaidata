@@ -1062,7 +1062,10 @@
             var span = document.createElement('span');
             span.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(16,185,129,0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
             span.textContent = field.confidence === 'high' ? 'auto' : field.confidence === 'medium' ? 'auto' : '';
-            return span;
+            var frag = document.createDocumentFragment();
+            frag.appendChild(document.createTextNode(' '));
+            frag.appendChild(span);
+            return frag;
         }
 
         // -- Check if this restaurant has a claimed listing --
