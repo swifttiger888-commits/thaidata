@@ -253,6 +253,7 @@ export async function onRequestGet(context) {
       photos: l.photos ? JSON.parse(l.photos) : [],
       menu_highlights: l.menu_highlights ? JSON.parse(l.menu_highlights) : [],
       enrichment: l.enrichment ? JSON.parse(l.enrichment) : null,
+      page_url: pageUrl(l.restaurant_name, l.city),
     }));
 
     return new Response(JSON.stringify({ listings, count: listings.length }), {
