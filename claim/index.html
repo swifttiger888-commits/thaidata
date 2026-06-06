@@ -14,6 +14,15 @@
     <meta property="og:description" content="Own a Thai restaurant? Claim your listing and add photos, menu, hours. Free.">
     <meta property="og:locale" content="en_GB">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B6RYQZX5QX');
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
@@ -413,6 +422,16 @@ body {
                 showSection('section-confirm');
                 document.getElementById('section-confirm').scrollIntoView({ behavior: 'smooth' });
                 toast('Claim submitted! ✅');
+                // GA4 event
+                if (typeof gtag === 'function') {
+                    const src = new URLSearchParams(window.location.search).get('src') || 'direct';
+                    gtag('event', 'claim_submitted', {
+                        restaurant_name: selectedRestaurant.name,
+                        restaurant_city: selectedRestaurant.city || '',
+                        claim_source: src,
+                        fsa_id: selectedRestaurant.id ? String(selectedRestaurant.id) : 'manual',
+                    });
+                }
             } else {
                 if (data.status === 'already_claimed') {
                     toast('⚠️ This restaurant has already been claimed', 'error');
