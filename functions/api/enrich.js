@@ -123,7 +123,7 @@ async function generateSummary(sourceText, restaurantName, city, env) {
 Write 1-2 short sentences (target: 180-260 characters total) describing this restaurant using ONLY the facts provided below.
 
 STRUCTURE:
-- Sentence 1: what it is and where (e.g. "A family-run Thai restaurant in Leeds city centre.")
+- Sentence 1: what it is and where (e.g. "A Thai restaurant in Leeds city centre.")
 - Sentence 2: one additional factual detail if the source text supports it. If no supporting detail exists, stop at one sentence — do not invent filler.
 
 RULES:
