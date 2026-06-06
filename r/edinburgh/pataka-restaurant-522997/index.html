@@ -1080,11 +1080,21 @@
                 const listing = data.listings[0];
                 console.log('Enrichment: listing loaded', listing.restaurant_name, 'photos:', listing.photos ? listing.photos.length : 0);
 
-                // Hide claim CTA, show claimed badge
+                // Hide claim CTA (listing exists = claimed)
                 var claimCard = document.querySelector('.claim-card');
                 if (claimCard) claimCard.style.display = 'none';
-                var badge = document.getElementById('claimed-badge');
-                if (badge) badge.style.display = 'block';
+
+                // Owner Verified badge: only when owner has set >=1 meaningful field
+                // Website alone is NOT sufficient — must be a field the owner actively manages
+                var hasOwnerData = listing.description || listing.phone || listing.opening_hours ||
+                    (listing.photos && listing.photos.length > 0) ||
+                    (listing.menu_highlights && listing.menu_highlights.length > 0) ||
+                    (listing.features && listing.features.length > 0) ||
+                    listing.social_instagram || listing.social_facebook;
+                if (hasOwnerData) {
+                    var badge = document.getElementById('claimed-badge');
+                    if (badge) badge.style.display = 'block';
+                }
 
                 // --- Populate claimed content sections ---
 
