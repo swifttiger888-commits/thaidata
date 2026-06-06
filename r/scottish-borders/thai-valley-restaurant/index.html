@@ -794,7 +794,7 @@
             <ul class="nav-links" id="navLinks">
                                 <li><a href="/cities/scottish-borders"><i class="fas fa-arrow-left" style="font-size:0.75em;margin-right:4px;"></i>Scottish Borders</a></li>
                 <li><a href="/thai-restaurants-city-breakdown-uk">All Cities</a></li>
-                <li><a href="/claim/">Claim or list your restaurant</a></li>
+                <li><a href="/claim/?src=footer">Claim or list your restaurant</a></li>
             </ul>
         </div>
     </nav>
@@ -829,6 +829,9 @@
                         <div class="hero-location">
                 <i class="fas fa-map-marker-alt"></i> Scottish Borders
             </div>
+            <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);">
+                <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to update your details.</a>
+            </p>
         </div>
     </section>
 
@@ -926,10 +929,10 @@
         <aside class="sidebar-col">
 
             <!-- Claim CTA (shown when NOT claimed) -->
-            <div class="claim-card animate-in delay-2">
+            <div class="claim-card animate-in delay-2" id="claim">
                 <h3>Own this restaurant?</h3>
-                <p>Claim your free listing to add photos, menus, opening hours and links, and keep your information up to date for ThaiData visitors.</p>
-                                <a href="/claim/" class="btn">
+                <p>Claim your free listing to add photos, menus, opening hours and links, and keep your information up to date for ThaiData visitors. When your details are accurate, it's easier for diners to choose you with confidence.</p>
+                                <a href="/claim/?src=restaurant-card" class="btn">
                     Claim This Listing <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
