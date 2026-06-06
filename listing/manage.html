@@ -420,9 +420,9 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             document.getElementById('edit-screen').style.display = 'block';
             document.getElementById('edit-name').textContent = listing.restaurant_name;
             
-            // Set view listing link
+            // Set view listing link from API
             var viewLink = document.getElementById('view-listing-link');
-            if (viewLink) viewLink.href = '/r/' + listing.city.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/' + listing.restaurant_name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/';
+            if (viewLink && listing.page_url) viewLink.href = listing.page_url;
             
             toast('Listing loaded ✓');
 

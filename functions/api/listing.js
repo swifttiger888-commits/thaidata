@@ -16,6 +16,18 @@ async function sha256(text) {
     .join('');
 }
 
+function slugify(s) {
+  s = s.toLowerCase().trim();
+  s = s.replace(/[^\w\s-]/g, '');    // remove non-word chars (matches Python slugify)
+  s = s.replace(/[-\s]+/g, '-');      // collapse hyphens and spaces
+  s = s.replace(/^-+|-+$/g, '');      // strip leading/trailing hyphens
+  return s;
+}
+
+function pageUrl(name, city) {
+  return '/r/' + slugify(city) + '/' + slugify(name) + '/';
+}
+
 // --- Resend email sender ---
 /**
  * Sends a magic-link email via Resend API to a restaurant owner
@@ -198,6 +210,8 @@ export async function onRequestGet(context) {
 
       listing.features = listing.features ? JSON.parse(listing.features) : [];
       listing.photos = listing.photos ? JSON.parse(listing.photos) : [];
+      listing.menu_highlights = listing.menu_highlights ? JSON.parse(listing.menu_highlights) : [];
+      listing.page_url = pageUrl(listing.restaurant_name, listing.city);
 
       return new Response(JSON.stringify({ listings: [listing], count: 1 }), {
         status: 200,
