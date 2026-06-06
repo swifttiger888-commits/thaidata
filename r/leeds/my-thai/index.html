@@ -1141,10 +1141,6 @@
                 const listing = data.listings[0];
                 console.log('Enrichment: listing loaded', listing.restaurant_name, 'photos:', listing.photos ? listing.photos.length : 0);
 
-                // Hide claim CTA (listing exists = claimed)
-                var claimCard = document.querySelector('.claim-card');
-                if (claimCard) claimCard.style.display = 'none';
-
                 // Owner Verified badge: only when owner has set >=1 meaningful field
                 // Website alone is NOT sufficient — must be a field the owner actively manages
                 var hasOwnerData = listing.description || listing.phone || listing.opening_hours ||
@@ -1152,9 +1148,24 @@
                     (listing.menu_highlights && listing.menu_highlights.length > 0) ||
                     (listing.features && listing.features.length > 0) ||
                     listing.social_instagram || listing.social_facebook;
+
+                var claimCard = document.querySelector('.claim-card');
                 if (hasOwnerData) {
+                    // Owner verified: hide CTA, show badge
+                    if (claimCard) claimCard.style.display = 'none';
                     var badge = document.getElementById('claimed-badge');
                     if (badge) badge.style.display = 'block';
+                } else {
+                    // Listing exists, no owner data: show CTA, hide badge
+                    var badge = document.getElementById('claimed-badge');
+                    if (badge) badge.style.display = 'none';
+                    if (claimCard) {
+                        claimCard.style.display = 'block';
+                        var h3 = claimCard.querySelector('h3');
+                        if (h3) h3.textContent = 'Own this restaurant?';
+                        var p = claimCard.querySelector('p');
+                        if (p) p.textContent = 'Claim this listing to verify and update your details.';
+                    }
                 }
 
                 // --- Populate claimed content sections ---

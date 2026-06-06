@@ -434,7 +434,7 @@ body {
                 }
             } else {
                 if (data.status === 'already_claimed') {
-                    toast('⚠️ This restaurant has already been claimed', 'error');
+                    toast('This restaurant already has a listing on ThaiData. If you\'re the owner, contact hello@thaidata.uk.', 'success');
                 } else if (data.status === 'duplicate') {
                     toast('You already have a pending claim for this restaurant', 'error');
                 } else {
