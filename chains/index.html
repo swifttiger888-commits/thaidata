@@ -42,6 +42,15 @@
 
     <style>
         :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --card-bg: rgba(255,255,255,0.02); }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img, svg, video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }
@@ -56,6 +65,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--ink4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
         .nav-links a:hover { color: white; }
+a:visited { color: #0A7A6F; }
         @media(max-width:768px) { .hamburger { display: block; } .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px 20px; gap: 14px; } .nav-links.open { display: flex; } }
 
         .hero { padding: 60px 0 30px; text-align: center; }
@@ -96,8 +106,8 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .data-note strong { color: white; }
 
         .cta { text-align: center; padding: 30px 0 40px; }
-        .cta a { display: inline-block; background: var(--c2); color: white; padding: 14px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
-        .cta a:hover { background: var(--c1); }
+        .cta a { display: inline-block; background: #10B981; color: #0C1220; padding: 14px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+        .cta a:hover { background: #0D9F6E; }
         .cta .sec { background: transparent; border: 1px solid var(--line); margin-left: 10px; }
         .cta .sec:hover { border-color: var(--c2); }
 

@@ -17,7 +17,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        :root { --c1:
+        :focus-visible {
+                    outline: 2px solid #10B981;
+                    outline-offset: 2px;
+                    border-radius: 4px;
+                }
+                :focus:not(:focus-visible) {
+                    outline: none;
+                }
+ #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img, svg, video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }

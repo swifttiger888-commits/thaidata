@@ -23,6 +23,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
         img, svg, video, canvas { max-width: 100%; height: auto; }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
             html { overflow-x: hidden; }

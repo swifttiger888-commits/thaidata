@@ -18,6 +18,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #FAFAF9; --dark: #0C1220; --c1: #10B981; --line: rgba(0,0,0,0.08); --text: #1a1a1a; --muted: #6b7280; }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
 * { margin:0; padding:0; box-sizing:border-box; }
         img, svg, video, canvas { max-width: 100%; height: auto; }
         html { overflow-x: hidden; }

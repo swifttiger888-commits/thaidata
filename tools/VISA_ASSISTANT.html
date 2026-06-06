@@ -72,6 +72,15 @@
             --error: #ff5a5f;
             --border: #233554;
         }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
         
         * {
             margin: 0;

@@ -46,6 +46,15 @@
             --radius-xl: 24px;
             --radius-full: 9999px;
         }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -540,8 +549,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--green);
-            color: white;
+            background: #065F56;
+            color: #FFFFFF;
             padding: 14px 32px;
             border-radius: var(--radius-full);
             font-weight: 700;

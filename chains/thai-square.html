@@ -17,6 +17,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #FAFAF9; --dark: #0C1220; --c1: #10B981; --c2: #10B981; --line: rgba(0,0,0,0.08); --text: #1a1a1a; --muted: #6b7280; }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
 * { margin:0; padding:0; box-sizing:border-box; }
         img, svg, video, canvas { max-width: 100%; height: auto; }
         html { overflow-x: hidden; }
@@ -29,6 +38,7 @@ nav { background: var(--dark); border-bottom: 1px solid rgba(255,255,255,0.08); 
 .nav-links { display: flex; gap: 24px; }
 .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; }
 .nav-links a:hover { color: white; }
+a:visited { color: #0A7A6F; }
 .wrap { max-width: 800px; margin: 0 auto; padding: 48px 32px; }
 h1 { font-family: 'Instrument Serif', serif; font-size: 2.4rem; color: var(--dark); margin-bottom: 8px; }
 .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 32px; }
@@ -37,7 +47,7 @@ td { padding: 12px 16px; border-bottom: 1px solid var(--line); }
 td:first-child { font-weight: 600; color: var(--dark); width: 180px; background: #f9fafb; }
 h2 { font-family: 'Instrument Serif', serif; font-size: 1.6rem; color: var(--dark); margin: 32px 0 12px; }
 p { margin-bottom: 16px; }
-a { color: var(--c1); }
+a { color: #0A7A6F; }
 .back-link { display: inline-block; margin-top: 40px; color: var(--c1); text-decoration: none; font-weight: 500; }
 footer { text-align: center; padding: 40px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
 @media(max-width:600px) { .nav-bar { padding: 0 16px; } .wrap { padding: 32px 16px; } h1 { font-size: 1.8rem; } }

@@ -45,6 +45,15 @@
 
     <style>
         :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --card-bg: rgba(255,255,255,0.02); }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img, svg, video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }
@@ -99,8 +108,8 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .featured-section { background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.15); border-radius: 16px; padding: 24px; margin: 30px 0; }
 
         .cta { text-align: center; padding: 30px 0 50px; }
-        .cta a { display: inline-block; background: var(--c2); color: white; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; }
-        .cta a:hover { background: var(--c1); }
+        .cta a { display: inline-block; background: #10B981; color: #0C1220; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; }
+        .cta a:hover { background: #0D9F6E; }
 
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; }
         footer a { color: var(--ink4); text-decoration: none; }

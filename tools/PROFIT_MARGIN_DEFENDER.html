@@ -62,6 +62,15 @@
             box-sizing: border-box;
             font-family: 'Inter', sans-serif;
         }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
 
     img, svg, video, canvas {
       max-width: 100%;

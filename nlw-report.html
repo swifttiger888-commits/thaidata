@@ -75,6 +75,15 @@
 
   <style>
         img, svg, video, canvas { max-width: 100%; height: auto; }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
 
     *,
     *::before,
@@ -207,8 +216,8 @@
     }
 
     .btn-fill {
-      background: var(--c1);
-      color: white;
+      background: #065F56;
+      color: #FFFFFF;
       padding: 10px 20px;
       border-radius: 8px
     }

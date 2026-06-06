@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html><head><style>
         img, svg, video, canvas { max-width: 100%; height: auto; }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
 
         html { overflow-x: hidden; }
 body{background:#0C1220;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:Inter,sans-serif;
