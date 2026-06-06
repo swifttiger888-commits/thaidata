@@ -222,6 +222,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
     <script>
     let authToken = null;
+    let listingId = null;
     let selectedFeatures = [];
     let menuItems = [];
 
@@ -414,6 +415,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             }
 
             const listing = data.listings[0];
+            listingId = listing.id || null;
             populateForm(listing);
 
             document.getElementById('entry-screen').style.display = 'none';
@@ -522,13 +524,13 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                 document.getElementById('upload-btn') && (document.getElementById('upload-btn').style.display = 'none');
                 document.getElementById('photo-input') && (document.getElementById('photo-input').style.display = 'none');
                 toast('Listing updated! ✓<br><small>Token used. Request a new magic link to edit again.</small>');
-                // Trigger enrichment if website provided (fire-and-forget)
-                if (payload.website) {
+                // Trigger enrichment if website provided (fire-and-forget, stores to D1)
+                if (payload.website && listingId) {
                     fetch('/api/enrich', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ url: payload.website }),
-                    }).catch(function() { /* silent — enrichment is best-effort */ });
+                        body: JSON.stringify({ url: payload.website, listing_id: listingId }),
+                    }).catch(function() { /* silent */ });
                 }
             } else {
                 toast(data.error || 'Error saving', 'error');
