@@ -120,15 +120,18 @@ async function generateSummary(sourceText, restaurantName, city, env) {
 
   const prompt = `You are writing a factual, neutral directory listing entry for a UK Thai restaurant.
 
-Write exactly 1-2 short sentences (max 200 characters total) describing this restaurant using ONLY the facts provided below.
+Write 1-2 short sentences (target: 180-260 characters total) describing this restaurant using ONLY the facts provided below.
+
+STRUCTURE:
+- Sentence 1: what it is and where (e.g. "A family-run Thai restaurant in Leeds city centre.")
+- Sentence 2: one additional factual detail if the source text supports it. If no supporting detail exists, stop at one sentence — do not invent filler.
 
 RULES:
 - Be factual. No promotional language, no superlatives, no marketing speak.
 - Do not repeat the restaurant name or city as a prefix. Start directly with the factual description.
 - Paraphrase into your own words. Do NOT copy phrases verbatim from the source text.
-- Include: city/area location if clear, any specific factual detail present in the source (e.g. "family-run", "city centre", specific cuisine style mentioned).
-- Do NOT infer dish categories, service style, or other typical Thai-restaurant facts unless they are explicitly present in the source text or structured data.
-- If the source text is mostly marketing fluff with no concrete facts, write only the most basic factual sentence (e.g. "Thai restaurant in [city].").
+- Do NOT infer details unless explicitly present in the source text.
+- If the source text is mostly marketing fluff with no concrete facts, write only the shortest factual sentence (e.g. "Thai restaurant in Leeds.").
 - Write in British English. No exclamation marks. No quotes.
 
 Restaurant: ${restaurantName}, ${city}
