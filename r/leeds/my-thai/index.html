@@ -961,6 +961,13 @@
             </div>
 
             <!-- === CLAIMED CONTENT (hidden until owner claims listing) === -->
+
+            <div id="enrichment-card" class="card animate-in" style="display:none;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.12);">
+                <h2 class="card-title">From Their <em>Website</em></h2>
+                <p style="font-size:0.75rem;color:var(--ink-tertiary);margin-bottom:12px;">Auto-detected from the restaurant's website. Owner-verified where indicated.</p>
+                <div id="enrichment-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.6;"></div>
+            </div>
+
             <div id="claimed-description" class="card animate-in" style="display:none;">
                 <h2 class="card-title">About <em>This Restaurant</em></h2>
                 <div class="claimed-description-text" style="color:var(--ink-secondary);font-size:0.95rem;line-height:1.7;"></div>
@@ -1112,6 +1119,13 @@
             return a;
         }
 
+        function mkEnrichTag(field) {
+            var span = document.createElement('span');
+            span.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(16,185,129,0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
+            span.textContent = field.confidence === 'high' ? 'auto' : field.confidence === 'medium' ? 'auto' : '';
+            return span;
+        }
+
         // -- Check if this restaurant has a claimed listing --
         (function enrichListing() {
             document.addEventListener('DOMContentLoaded', async function() {
@@ -1221,6 +1235,86 @@
                                 }
                                 menuGrid.appendChild(card);
                             }
+                        }
+                    }
+                }
+
+                // --- Enrichment: auto-detected website data ---
+                if (listing.enrichment && listing.enrichment.status === 'success' && listing.enrichment.fields) {
+                    var fields = listing.enrichment.fields;
+                    var enrDiv = document.getElementById('enrichment-card');
+                    var enrContent = document.getElementById('enrichment-content');
+                    if (enrDiv && enrContent) {
+                        enrContent.textContent = '';
+                        var shownAny = false;
+
+                        // Description fallback
+                        if (!listing.description && fields.description) {
+                            shownAny = true;
+                            var p = document.createElement('p');
+                            p.style.cssText = 'margin-bottom:10px;';
+                            p.textContent = fields.description.value;
+                            var tag = mkEnrichTag(fields.description);
+                            p.appendChild(tag);
+                            enrContent.appendChild(p);
+                        }
+
+                        // Phone fallback
+                        if (!listing.phone && fields.phone) {
+                            shownAny = true;
+                            var d = document.createElement('div');
+                            d.style.cssText = 'margin-bottom:6px;';
+                            var i = document.createElement('i');
+                            i.className = 'fas fa-phone-alt';
+                            i.style.cssText = 'color:var(--green);width:20px;margin-right:8px;';
+                            d.appendChild(i);
+                            d.appendChild(document.createTextNode(fields.phone.value));
+                            d.appendChild(mkEnrichTag(fields.phone));
+                            enrContent.appendChild(d);
+                        }
+
+                        // Hours fallback
+                        if (!listing.opening_hours && fields.opening_hours) {
+                            shownAny = true;
+                            var hd = document.createElement('div');
+                            hd.style.cssText = 'margin-bottom:6px;';
+                            var hi = document.createElement('i');
+                            hi.className = 'fas fa-clock';
+                            hi.style.cssText = 'color:var(--green);width:20px;margin-right:8px;';
+                            hd.appendChild(hi);
+                            hd.appendChild(document.createTextNode(fields.opening_hours.value));
+                            hd.appendChild(mkEnrichTag(fields.opening_hours));
+                            enrContent.appendChild(hd);
+                        }
+
+                        // Social fallback
+                        if (!listing.social_instagram && fields.social_instagram) {
+                            shownAny = true;
+                            var sd = document.createElement('div');
+                            sd.style.cssText = 'margin-bottom:6px;';
+                            var si = document.createElement('i');
+                            si.className = 'fab fa-instagram';
+                            si.style.cssText = 'color:var(--green);width:20px;margin-right:8px;';
+                            sd.appendChild(si);
+                            sd.appendChild(document.createTextNode(fields.social_instagram.value.replace('https://www.instagram.com/', '@').replace('https://instagram.com/', '@').replace('/', '')));
+                            sd.appendChild(mkEnrichTag(fields.social_instagram));
+                            enrContent.appendChild(sd);
+                        }
+                        if (!listing.social_facebook && fields.social_facebook) {
+                            shownAny = true;
+                            var fd = document.createElement('div');
+                            fd.style.cssText = 'margin-bottom:6px;';
+                            var fi = document.createElement('i');
+                            fi.className = 'fab fa-facebook';
+                            fi.style.cssText = 'color:var(--green);width:20px;margin-right:8px;';
+                            fd.appendChild(fi);
+                            fd.appendChild(document.createTextNode(fields.social_facebook.value));
+                            fd.appendChild(mkEnrichTag(fields.social_facebook));
+                            enrContent.appendChild(fd);
+                        }
+
+                        if (shownAny) {
+                            enrDiv.style.display = 'block';
                         }
                     }
                 }

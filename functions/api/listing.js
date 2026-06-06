@@ -211,6 +211,7 @@ export async function onRequestGet(context) {
       listing.features = listing.features ? JSON.parse(listing.features) : [];
       listing.photos = listing.photos ? JSON.parse(listing.photos) : [];
       listing.menu_highlights = listing.menu_highlights ? JSON.parse(listing.menu_highlights) : [];
+      listing.enrichment = listing.enrichment ? JSON.parse(listing.enrichment) : null;
       listing.page_url = pageUrl(listing.restaurant_name, listing.city);
 
       return new Response(JSON.stringify({ listings: [listing], count: 1 }), {
@@ -251,6 +252,7 @@ export async function onRequestGet(context) {
       features: l.features ? JSON.parse(l.features) : [],
       photos: l.photos ? JSON.parse(l.photos) : [],
       menu_highlights: l.menu_highlights ? JSON.parse(l.menu_highlights) : [],
+      enrichment: l.enrichment ? JSON.parse(l.enrichment) : null,
     }));
 
     return new Response(JSON.stringify({ listings, count: listings.length }), {

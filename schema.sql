@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS listings (
   features TEXT,      -- JSON array string
   photos TEXT,        -- JSON array string of URLs
   menu_highlights TEXT, -- JSON array of {category, name, description, price}
+  enrichment TEXT,     -- JSON: {scraped_at, source_url, status, fields[{value,found_in,confidence}]}
   claimed_at TEXT DEFAULT (datetime('now')),
   updated_at TEXT DEFAULT (datetime('now'))
 );

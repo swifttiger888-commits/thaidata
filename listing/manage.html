@@ -522,6 +522,14 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                 document.getElementById('upload-btn') && (document.getElementById('upload-btn').style.display = 'none');
                 document.getElementById('photo-input') && (document.getElementById('photo-input').style.display = 'none');
                 toast('Listing updated! ✓<br><small>Token used. Request a new magic link to edit again.</small>');
+                // Trigger enrichment if website provided (fire-and-forget)
+                if (payload.website) {
+                    fetch('/api/enrich', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ url: payload.website }),
+                    }).catch(function() { /* silent — enrichment is best-effort */ });
+                }
             } else {
                 toast(data.error || 'Error saving', 'error');
                 btn.disabled = false;
