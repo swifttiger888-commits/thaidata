@@ -145,6 +145,27 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                 <textarea id="edit-description" placeholder="Tell customers about your restaurant — cuisine, atmosphere, story..."></textarea>
                 <p class="hint">Keep it under 300 characters for best display.</p>
 
+                <!-- AI Enhance (collapsed by default) -->
+                <div id="ai-enhance-wrap" style="margin-top:10px;">
+                    <button type="button" id="ai-enhance-toggle" onclick="toggleAiEnhance()" style="background:none;border:none;color:var(--ink4);font-size:0.78rem;cursor:pointer;padding:2px 0;">
+                        ✨ Enhance with AI
+                    </button>
+                    <div id="ai-enhance-panel" style="display:none;margin-top:10px;padding:14px;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:10px;">
+                        <p style="color:var(--ink4);font-size:0.75rem;margin-bottom:8px;line-height:1.5;">
+                            Paste your existing website copy below. The AI will rewrite it as a short, factual description for diners.
+                            <strong>Review before saving</strong> — you're in control.
+                        </p>
+                        <textarea id="ai-enhance-source" placeholder="Paste your website copy or current description here..." style="min-height:60px;font-size:0.82rem;"></textarea>
+                        <div style="display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap;">
+                            <button class="btn btn-secondary" id="ai-enhance-btn" onclick="runAiEnhance()" type="button" style="font-size:0.82rem;padding:8px 18px;">
+                                ✨ Enhance with AI
+                            </button>
+                            <span id="ai-enhance-status" style="color:var(--ink4);font-size:0.75rem;"></span>
+                        </div>
+                        <div id="ai-enhance-error" style="color:var(--red);font-size:0.78rem;margin-top:6px;display:none;"></div>
+                    </div>
+                </div>
+
                 <label>Cuisine Specialty</label>
                 <input type="text" id="edit-specialty" placeholder="e.g. Isaan, Southern Thai, Royal Thai, Street Food">
             </div>
@@ -815,6 +836,100 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         }
     });
     // --- End restaurant autocomplete ---
+
+    // --- AI Enhance Description ---
+    var aiCooldown = 0;
+
+    function toggleAiEnhance() {
+        var panel = document.getElementById('ai-enhance-panel');
+        var isOpen = panel.style.display !== 'none';
+        panel.style.display = isOpen ? 'none' : 'block';
+        if (!isOpen) {
+            // Pre-fill with current description
+            var desc = document.getElementById('edit-description').value;
+            document.getElementById('ai-enhance-source').value = desc;
+            document.getElementById('ai-enhance-status').textContent = '';
+            document.getElementById('ai-enhance-error').style.display = 'none';
+            document.getElementById('ai-enhance-btn').disabled = false;
+            document.getElementById('ai-enhance-btn').innerHTML = '✨ Enhance with AI';
+        }
+    }
+
+    async function runAiEnhance() {
+        var btn = document.getElementById('ai-enhance-btn');
+        var status = document.getElementById('ai-enhance-status');
+        var errorEl = document.getElementById('ai-enhance-error');
+        var source = document.getElementById('ai-enhance-source').value.trim();
+        var descField = document.getElementById('edit-description');
+        var nameEl = document.getElementById('edit-name');
+        var restaurantName = nameEl ? nameEl.textContent.trim() : '';
+
+        // Client-side cooldown (15s)
+        var now = Date.now();
+        if (aiCooldown > now) {
+            var secs = Math.ceil((aiCooldown - now) / 1000);
+            status.textContent = 'Wait ' + secs + 's…';
+            return;
+        }
+
+        errorEl.style.display = 'none';
+        errorEl.textContent = '';
+
+        if (source.length < 50) {
+            errorEl.textContent = 'Please provide at least 50 characters of text.';
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span> Enhancing…';
+        status.textContent = '';
+
+        try {
+            var res = await fetch('/api/enhance-description', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + authToken,
+                },
+                body: JSON.stringify({
+                    source_text: source,
+                    restaurant_name: restaurantName,
+                }),
+            });
+
+            var data = await res.json();
+
+            if (data.success && data.description) {
+                descField.value = data.description;
+                // Auto-collapse and toast
+                document.getElementById('ai-enhance-panel').style.display = 'none';
+                toast('Description enhanced ✓ — review before saving');
+            } else if (data.error === 'needs_more_text') {
+                errorEl.textContent = data.message || 'Add more detail about the restaurant.';
+                errorEl.style.display = 'block';
+            } else if (data.error === 'rate_limited') {
+                status.textContent = 'Please wait a moment…';
+                aiCooldown = Date.now() + 15000;
+                setTimeout(function() {
+                    btn.disabled = false;
+                    btn.innerHTML = '✨ Enhance with AI';
+                    status.textContent = '';
+                }, 15000);
+                return;
+            } else {
+                errorEl.textContent = data.message || 'Something went wrong. Try again.';
+                errorEl.style.display = 'block';
+            }
+        } catch (err) {
+            errorEl.textContent = 'Network error. Check your connection.';
+            errorEl.style.display = 'block';
+        }
+
+        btn.disabled = false;
+        btn.innerHTML = '✨ Enhance with AI';
+    }
+    // --- End AI Enhance Description ---
 
     // Auto-load from URL token
     if (window.location.search.includes('token=')) {
