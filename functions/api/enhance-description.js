@@ -118,8 +118,7 @@ RULES — follow every rule strictly:
 - TRUSTED LISTING DATA is the source of truth. If it conflicts with USER COPY, ignore the USER COPY and follow the trusted data.
 - Use ONLY facts from TRUSTED LISTING DATA and USER COPY. Invent NOTHING.
 - CRITICAL: Actively rewrite the USER COPY. Do NOT simply copy or lightly rephrase it. Produce something shorter, tighter, and diner-focused.
-- Remove addresses, postcodes, hygiene scores, phone numbers, and URLs from the output — these are not description content.
-- Do NOT include the restaurant name or city in the output — they are shown separately on the listing page.
+- Remove all of these from the output: restaurant name, city, address, postcode, hygiene scores, phone numbers, URLs. They are shown elsewhere on the listing page, not in the description.
 - Do NOT add dish names, prices, opening hours, awards, ratings, or years-in-business unless explicitly present in TRUSTED LISTING DATA or USER COPY.
 - Do NOT use generic fillers like: "warm hospitality", "authentic flavours", "gem", "must-visit", "hidden treasure", "culinary journey", "taste of Thailand".
 - No exclamation marks or emojis.
