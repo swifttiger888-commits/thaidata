@@ -2,7 +2,7 @@
 // Lightweight restaurant autocomplete from our FSA-derived dataset.
 // Returns top 10 matches: prefix-first, then substring, max 10 results.
 const SEARCH_URL =
-  'https://raw.githubusercontent.com/nousresearch/thaidata-site/main/data/restaurants-search.json';
+  'https://thaidata.uk/data/restaurants-search.json';
 
 let searchIndex = null;
 
