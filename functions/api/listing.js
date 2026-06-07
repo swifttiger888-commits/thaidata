@@ -406,8 +406,8 @@ export async function onRequestPost(context) {
     const claim = await env.DB.prepare(matchQuery).bind(...matchParams).first();
 
     if (!claim) {
-      return new Response(JSON.stringify({ error: 'No approved claim found for this restaurant and email combination' }), {
-        status: 404,
+      return new Response(JSON.stringify({ success: true, message: 'If an approved claim exists, a magic link has been sent to the registered email.' }), {
+        status: 200,
         headers: corsHeaders,
       });
     }
@@ -432,8 +432,7 @@ export async function onRequestPost(context) {
 
     return new Response(JSON.stringify({
       success: true,
-      message: 'Magic link sent! Check your email.',
-      magic_link: magicLink,
+      message: 'If an approved claim exists, a magic link has been sent to the registered email.',
     }), {
       status: 200,
       headers: corsHeaders,

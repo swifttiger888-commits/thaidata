@@ -650,10 +650,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             const data = await res.json();
 
             if (res.ok) {
-                toast('Magic link generated! Check the link below.');
-                document.getElementById('token-input').value = data.magic_link;
-            } else {
-                toast(data.error || 'No approved claim found', 'error');
+                toast('If an approved claim exists, a magic link has been sent to the registered email.');
             }
         } catch (err) {
             toast('Network error', 'error');
