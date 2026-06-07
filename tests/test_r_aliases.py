@@ -4,8 +4,8 @@
 import json, re, os, sys, subprocess, time
 
 BASE = 'https://thaidata.uk'
-ALIASES_FILE = '/tmp/thaidata-repo/data/r-aliases.json'
-REPO = '/tmp/thaidata-repo'
+REPO = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
+ALIASES_FILE = os.path.join(REPO, 'data', 'r-aliases.json')
 
 # Load aliases for reference
 with open(ALIASES_FILE) as f:
@@ -23,7 +23,7 @@ def slugify(s):
     s = re.sub(r'[-\s]+', '-', s)
     return s.strip('-')
 
-def test(name, url, expected_status, expected_location=None, check_fsa=False):
+def check(name, url, expected_status, expected_location=None, check_fsa=False):
     """Curl a URL and check status + optional redirect location."""
     try:
         # Use -L to NOT follow redirects, -o /dev/null -w to get status
@@ -84,10 +84,10 @@ print('=' * 60)
 print('Test 1: Exact static route still 200 with FSA content')
 print('=' * 60)
 # Verify a known existing restaurant page returns 200 with FSA marker
-test('Chaophraya Leeds (canonical)',
+check('Chaophraya Leeds (canonical)',
      f'{BASE}/r/leeds/chao-phraya-thai-restaurant/',
      200, check_fsa=True)
-test('Giggling Squid Leeds (canonical)',
+check('Giggling Squid Leeds (canonical)',
      f'{BASE}/r/leeds/giggling-squid/',
      200, check_fsa=True)
 
@@ -101,7 +101,7 @@ for alias in ALIASES:
     canonical = alias['canonical']
     expected_path = f'/r/{city}/{slugify(canonical)}/'
     
-    test(f'Alias "{slug}" in {city} → "{canonical}"',
+    check(f'Alias "{slug}" in {city} → "{canonical}"',
          f'{BASE}/r/{city}/{slug}/',
          301, expected_location=expected_path)
 
@@ -109,16 +109,16 @@ print()
 print('=' * 60)
 print('Test 3: Ambiguous / non-aliased routes 404')
 print('=' * 60)
-test('Short ambiguous term in Leeds',
+check('Short ambiguous term in Leeds',
      f'{BASE}/r/leeds/thai/',
      404)
-test('Very short name (3 chars)',
+check('Very short name (3 chars)',
      f'{BASE}/r/leeds/ab/',
      404)
-test('Completely nonexistent in Leeds',
+check('Completely nonexistent in Leeds',
      f'{BASE}/r/leeds/pizza-express/',
      404)
-test('No alias for partial first-word match',
+check('No alias for partial first-word match',
      f'{BASE}/r/leeds/giggling/',
      404)
 
@@ -126,10 +126,10 @@ print()
 print('=' * 60)
 print('Test 4: Nonexistent city + restaurant 404')
 print('=' * 60)
-test('Nonexistent city + restaurant',
+check('Nonexistent city + restaurant',
      f'{BASE}/r/london/pizza-express/',
      404)
-test('Nonexistent city only',
+check('Nonexistent city only',
      f'{BASE}/r/atlantis/',
      200)  # 2 segments = pass through, Cloudflare SPA fallback returns homepage
 
@@ -137,10 +137,10 @@ print()
 print('=' * 60)
 print('Test 5: Hub / city pages still work (pass through)')
 print('=' * 60)
-test('Root /r/ hub',
+check('Root /r/ hub',
      f'{BASE}/r/',
      200)
-test('Leeds city /r/ page',
+check('Leeds city /r/ page',
      f'{BASE}/r/leeds/',
      200)
 
@@ -148,16 +148,16 @@ print()
 print('=' * 60)
 print('Test 6: Normal 404 vs claim-specific 404')
 print('=' * 60)
-test('Standard 404 — no source param',
+check('Standard 404 — no source param',
      f'{BASE}/r/leeds/nonexistent/',
      404)
-test('Claim 404 — ?source=claim on broken URL',
+check('Claim 404 — ?source=claim on broken URL',
      f'{BASE}/r/leeds/nonexistent/?source=claim',
      404)
-test('Claim 404 — ?source=claim on a different broken URL',
+check('Claim 404 — ?source=claim on a different broken URL',
      f'{BASE}/r/leeds/my-thai-place/?source=claim',
      404)
-test('Standard 404 — ?source=other is NOT treated as claim',
+check('Standard 404 — ?source=other is NOT treated as claim',
      f'{BASE}/r/leeds/nonexistent/?source=other',
      404)
 
