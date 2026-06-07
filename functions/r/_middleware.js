@@ -80,7 +80,39 @@ export async function onRequest(context) {
       }
     }
 
-    // Not found — return proper 404
+    // Claim-specific 404 (?source=claim) — helpful state for first-time claimants
+    const isClaimSource = url.searchParams.get('source') === 'claim';
+
+    if (isClaimSource) {
+      const claimSubject = 'Claim help: ' + url.pathname;
+      return new Response(
+        '<!DOCTYPE html><html lang="en"><head><title>Claimed Listing — ThaiData</title>'
+        + '<meta name="robots" content="noindex"><style>body{font-family:sans-serif;'
+        + 'display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;'
+        + 'background:#0C1220;color:white;text-align:center;padding:20px;}'
+        + 'h1{font-size:2.5rem;margin-bottom:16px;}'
+        + 'p{color:#94A3B8;line-height:1.6;margin:8px 0;}'
+        + '.actions{margin-top:32px;display:flex;flex-direction:column;align-items:center;gap:16px;}'
+        + '.btn{display:inline-block;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;}'
+        + '.btn-primary{background:#10B981;color:white;}'
+        + '.btn-primary:hover{background:#059669;}'
+        + '.btn-secondary{color:#10B981;text-decoration:underline;font-size:0.9rem;}'
+        + '</style></head><body><div>'
+        + '<h1>Page not ready yet</h1>'
+        + '<p>You\'ve claimed this restaurant listing, but the public page hasn\'t been generated yet.</p>'
+        + '<p>It will go live once your claim is approved.</p>'
+        + '<div class="actions">'
+        + '<a href="/admin/" class="btn btn-primary">Find my restaurant</a>'
+        + '<a href="mailto:hello@thaidata.uk?subject=' + encodeURIComponent(claimSubject) + '" class="btn-secondary">Contact ThaiData &rarr;</a>'
+        + '</div></div></body></html>',
+        {
+          status: 404,
+          headers: { 'content-type': 'text/html; charset=utf-8' },
+        }
+      );
+    }
+
+    // Standard 404 — concise, minimal, for general users
     return new Response(
       '<!DOCTYPE html><html lang="en"><head><title>Not Found — ThaiData</title>'
       + '<meta name="robots" content="noindex"><style>body{font-family:sans-serif;'

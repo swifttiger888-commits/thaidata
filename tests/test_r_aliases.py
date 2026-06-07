@@ -146,6 +146,23 @@ test('Leeds city /r/ page',
 
 print()
 print('=' * 60)
+print('Test 6: Normal 404 vs claim-specific 404')
+print('=' * 60)
+test('Standard 404 — no source param',
+     f'{BASE}/r/leeds/nonexistent/',
+     404)
+test('Claim 404 — ?source=claim on broken URL',
+     f'{BASE}/r/leeds/nonexistent/?source=claim',
+     404)
+test('Claim 404 — ?source=claim on a different broken URL',
+     f'{BASE}/r/leeds/my-thai-place/?source=claim',
+     404)
+test('Standard 404 — ?source=other is NOT treated as claim',
+     f'{BASE}/r/leeds/nonexistent/?source=other',
+     404)
+
+print()
+print('=' * 60)
 print(f'Results: {results["pass"]} passed, {results["fail"]} failed')
 print('=' * 60)
 
