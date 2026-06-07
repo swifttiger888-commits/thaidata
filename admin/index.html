@@ -282,6 +282,7 @@ body {
                 <div class="detail-row"><div class="dl">City</div><div class="dv">${claim.city}</div></div>
                 <div class="detail-row"><div class="dl">FSA ID</div><div class="dv">${claim.fsa_id || '—'}</div></div>
                 <div class="detail-row"><div class="dl">Business Type</div><div class="dv">${claim.business_type}</div></div>
+                <div class="detail-row"><div class="dl">Listing Page</div><div class="dv"><a href="${pageUrl(claim.restaurant_name, claim.city)}" target="_blank" style="color:var(--c2);text-decoration:underline;text-underline-offset:2px;">View live listing <i class="fas fa-external-link-alt" style="font-size:0.75rem;"></i></a></div></div>
                 <hr style="border-color:var(--line);margin:16px 0;">
                 <div class="detail-row"><div class="dl">Claimer Name</div><div class="dv">${claim.claimer_name}</div></div>
                 <div class="detail-row"><div class="dl">Email</div><div class="dv">${claim.claimer_email}</div></div>
@@ -358,6 +359,18 @@ body {
         } catch (err) {
             toast('Network error', 'error');
         }
+    }
+
+    // Build restaurant page URL matching backend slugify
+    function slugify(s) {
+        s = s.toLowerCase().trim();
+        s = s.replace(/[^\w\s-]/g, '');
+        s = s.replace(/[-\s]+/g, '-');
+        s = s.replace(/^-+|-+$/g, '');
+        return s;
+    }
+    function pageUrl(name, city) {
+        return '/r/' + slugify(city) + '/' + slugify(name) + '/';
     }
     </script>
 </body>
