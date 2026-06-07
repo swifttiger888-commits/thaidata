@@ -552,7 +552,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
     }
 
     function populateForm(l) {
-        document.getElementById('edit-description').value = (l.description || '').substring(0, 300);
+        document.getElementById('edit-description').value = (l.description || '').substring(0, 800);
         document.getElementById('edit-specialty').value = l.cuisine_specialty || '';
         document.getElementById('edit-phone').value = l.phone || '';
         document.getElementById('edit-email').value = l.email || '';
