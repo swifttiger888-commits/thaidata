@@ -190,6 +190,8 @@ body {
             <input type="text" id="claimer-name" placeholder="e.g. Sarah Johnson">
             <label>Your Email *</label>
             <input type="email" id="claimer-email" placeholder="e.g. you@restaurant.com">
+            <label>Confirm Email *</label>
+            <input type="email" id="claimer-email-confirm" placeholder="Re-type your email">
             <label>Your Phone</label>
             <input type="tel" id="claimer-phone" placeholder="Optional — for faster verification">
             <label>Your Role</label>
@@ -355,6 +357,8 @@ body {
 
         if (!name) { toast('Please enter your name', 'error'); return; }
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { toast('Please enter a valid email', 'error'); return; }
+        const emailConfirm = document.getElementById('claimer-email-confirm').value.trim();
+        if (email !== emailConfirm) { toast('Emails do not match', 'error'); return; }
         if (!selectedRestaurant) { toast('Please search for your restaurant first', 'error'); return; }
         if (!selectedRestaurant.id) { toast('Please select your restaurant from the search results', 'error'); return; }
 
