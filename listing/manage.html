@@ -644,7 +644,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             const res = await fetch('/api/listing', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ restaurant_name: name, city, email }),
+                body: JSON.stringify({ restaurant_name: name, city, email, fsa_id: document.getElementById('request-fsa-id').value || null }),
             });
 
             const data = await res.json();

@@ -385,7 +385,7 @@ export async function onRequestPost(context) {
 
   try {
     const body = await request.json();
-    const { restaurant_name, city, email } = body;
+    const { restaurant_name, city, email, fsa_id } = body;
 
     if (!restaurant_name || !city || !email) {
       return new Response(JSON.stringify({ error: 'restaurant_name, city, and email required' }), {
@@ -394,10 +394,16 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Find the approved claim for this restaurant + email match
-    const claim = await env.DB.prepare(
-      "SELECT c.id as claim_id, c.claimer_email, l.id as listing_id FROM claims c LEFT JOIN listings l ON l.claim_id = c.id WHERE c.restaurant_name = ? AND c.city = ? AND c.claimer_email = ? AND c.claim_status = 'approved'"
-    ).bind(restaurant_name, city, email).first();
+    // Find the approved claim — by fsa_id when available, fall back to text match
+    let matchQuery, matchParams;
+    if (fsa_id) {
+      matchQuery = "SELECT c.id as claim_id, c.claimer_email, l.id as listing_id FROM claims c LEFT JOIN listings l ON l.claim_id = c.id WHERE c.fsa_id = ? AND c.claimer_email = ? AND c.claim_status = 'approved'";
+      matchParams = [String(fsa_id), email];
+    } else {
+      matchQuery = "SELECT c.id as claim_id, c.claimer_email, l.id as listing_id FROM claims c LEFT JOIN listings l ON l.claim_id = c.id WHERE c.restaurant_name = ? AND c.city = ? AND c.claimer_email = ? AND c.claim_status = 'approved'";
+      matchParams = [restaurant_name, city, email];
+    }
+    const claim = await env.DB.prepare(matchQuery).bind(...matchParams).first();
 
     if (!claim) {
       return new Response(JSON.stringify({ error: 'No approved claim found for this restaurant and email combination' }), {
