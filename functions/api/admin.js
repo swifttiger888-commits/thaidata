@@ -466,7 +466,7 @@ export async function onRequestPut(context) {
         'INSERT INTO auth_tokens (listing_id, token_hash, expires_at) VALUES (?, ?, ?)'
       ).bind(listingId, tokenHash, expiresAt).run();
 
-      const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
+const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
       context.waitUntil(sendMagicLinkEmail(env, {
         email: claim.claimer_email,
         restaurant_name: claim.restaurant_name,
