@@ -61,6 +61,14 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .checkbox-pill { padding: 8px 14px; border: 1px solid var(--line); border-radius: 20px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; user-select: none; color: white; }
         .checkbox-pill:hover { border-color: var(--ink4); }
         .checkbox-pill.selected { border-color: var(--c2); background: rgba(16,185,129,0.15); color: var(--c2); }
+        .autocomplete-wrap { position: relative; }
+        .autocomplete-dropdown { position: absolute; top: 100%; left: 0; right: 0; z-index: 50; max-height: 280px; overflow-y: auto; background: #111827; border: 1px solid var(--line); border-radius: 10px; margin-top: 2px; display: none; }
+        .autocomplete-dropdown .ac-item { padding: 10px 14px; cursor: pointer; font-size: 0.85rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .autocomplete-dropdown .ac-item:last-child { border-bottom: none; }
+        .autocomplete-dropdown .ac-item:hover { background: rgba(16,185,129,0.12); }
+        .autocomplete-dropdown .ac-item .ac-name { font-weight: 500; }
+        .autocomplete-dropdown .ac-item .ac-meta { color: var(--ink4); font-size: 0.75rem; margin-top: 1px; }
+        .autocomplete-dropdown .ac-empty { padding: 14px; color: var(--ink4); font-size: 0.82rem; text-align: center; }
 
         .btn { display: inline-block; background: #10B981; color: #0C1220; padding: 13px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; }
         .btn:hover { background: var(--c1); color: white; }
@@ -107,7 +115,11 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             <p style="color:var(--ink4);font-size:0.85rem;">Don't have a token? <a href="../claim/" style="color:var(--c2);">Claim your restaurant first</a>, then request a magic link.</p>
             <p style="color:var(--ink4);font-size:0.85rem;">Want to request a new magic link?</p>
             <label>Restaurant Name</label>
-            <input type="text" id="request-name" placeholder="Your restaurant name">
+            <div class="autocomplete-wrap">
+            <input type="text" id="request-name" placeholder="Start typing your restaurant name..." autocomplete="off">
+            <input type="hidden" id="request-fsa-id">
+            <div id="restaurant-autocomplete" class="autocomplete-dropdown"></div>
+            </div>
             <label>City</label>
             <input type="text" id="request-city" placeholder="City">
             <label>Email (used in claim)</label>
@@ -725,6 +737,78 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         btn.disabled = false;
         btn.innerHTML = '<i class="fas fa-upload"></i> Upload';
     }
+
+    // --- Restaurant autocomplete ---
+    let acTimeout = null;
+    let selectedRestaurant = null;
+
+    document.getElementById('request-name').addEventListener('input', function() {
+        clearTimeout(acTimeout);
+        selectedRestaurant = null;
+        document.getElementById('request-fsa-id').value = '';
+        const q = this.value.trim();
+        if (q.length < 2) {
+            document.getElementById('restaurant-autocomplete').style.display = 'none';
+            return;
+        }
+        acTimeout = setTimeout(function() {
+            fetch('/api/search-restaurants?q=' + encodeURIComponent(q))
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    var dd = document.getElementById('restaurant-autocomplete');
+                    if (!data || data.length === 0) {
+                        dd.innerHTML = '<div class="ac-empty">No restaurants found</div>';
+                        dd.style.display = 'block';
+                        return;
+                    }
+                    dd.innerHTML = data.map(function(r) {
+                        return '<div class="ac-item" data-fsa="' + r.id + '" data-name="' + escHtml(r.name) + '" data-city="' + escHtml(r.city) + '">' +
+                            '<div class="ac-name">' + escHtml(r.name) + '</div>' +
+                            '<div class="ac-meta">' + escHtml(r.city) + ', ' + escHtml(r.pc) + '</div>' +
+                            '</div>';
+                    }).join('');
+                    dd.style.display = 'block';
+                    dd.querySelectorAll('.ac-item').forEach(function(el) {
+                        el.addEventListener('click', function() {
+                            selectRestaurant(this.dataset.fsa, this.dataset.name, this.dataset.city);
+                        });
+                    });
+                })
+                .catch(function() { /* silent fail, dropdown disappears */ });
+        }, 200);
+    });
+
+    function escHtml(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function selectRestaurant(fsaId, name, city) {
+        document.getElementById('request-name').value = name;
+        document.getElementById('request-city').value = city;
+        document.getElementById('request-fsa-id').value = fsaId;
+        selectedRestaurant = { fsaId: fsaId, name: name, city: city };
+        document.getElementById('restaurant-autocomplete').style.display = 'none';
+    }
+
+    // Dismiss dropdown on blur, escape
+    document.getElementById('request-name').addEventListener('blur', function() {
+        setTimeout(function() {
+            document.getElementById('restaurant-autocomplete').style.display = 'none';
+        }, 180);
+    });
+    document.getElementById('request-name').addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.getElementById('restaurant-autocomplete').style.display = 'none';
+        }
+    });
+    // Dismiss on click outside
+    document.addEventListener('click', function(e) {
+        var wrap = document.querySelector('.autocomplete-wrap');
+        if (wrap && !wrap.contains(e.target)) {
+            document.getElementById('restaurant-autocomplete').style.display = 'none';
+        }
+    });
+    // --- End restaurant autocomplete ---
 
     // Auto-load from URL token
     if (window.location.search.includes('token=')) {
