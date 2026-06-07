@@ -343,8 +343,8 @@ export async function onRequestPut(context) {
     const body = await request.json();
     const { claim_id, action, admin_notes } = body;
 
-    if (!claim_id || !action || !['approved', 'rejected', 'recover'].includes(action)) {
-      return new Response(JSON.stringify({ error: 'claim_id and action (approved|rejected|recover) required' }), {
+    if (!claim_id || !action || !['approved', 'rejected', 'recover', 'reopen', 'reset'].includes(action)) {
+      return new Response(JSON.stringify({ error: 'claim_id and action (approved|rejected|recover|reopen|reset) required' }), {
         status: 400,
         headers: corsHeaders,
       });
@@ -537,6 +537,58 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
       return new Response(JSON.stringify({
         success: true,
         message: `Recovery email sent to ${new_email}.`,
+        claim_id,
+      }), { status: 200, headers: corsHeaders });
+    } else if (action === 'reopen') {
+      // Reopen a rejected or reset claim back to pending for re-review
+      const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
+      if (!claim) {
+        return new Response(JSON.stringify({ error: 'Claim not found' }), {
+          status: 404, headers: corsHeaders,
+        });
+      }
+
+      await env.DB.prepare(
+        "UPDATE claims SET claim_status = 'pending', reviewed_at = NULL, admin_notes = ? WHERE id = ?"
+      ).bind(admin_notes || null, claim_id).run();
+
+      return new Response(JSON.stringify({
+        success: true,
+        message: 'Claim reopened for review.',
+        claim_id,
+      }), { status: 200, headers: corsHeaders });
+    } else if (action === 'reset') {
+      // Reset a listing back to defaults + reopen claim for re-review
+      const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
+      if (!claim) {
+        return new Response(JSON.stringify({ error: 'Claim not found' }), {
+          status: 404, headers: corsHeaders,
+        });
+      }
+
+      // Clear owner-editable listing fields, keep name/city/fsa address/postcode
+      await env.DB.prepare(
+        `UPDATE listings SET
+          description = NULL, cuisine_specialty = NULL, phone = NULL, email = NULL,
+          website = NULL, social_instagram = NULL, social_facebook = NULL, social_twitter = NULL,
+          opening_hours = NULL, price_range = NULL, features = NULL, menu_highlights = NULL,
+          enrichment = NULL, updated_at = datetime('now')
+        WHERE claim_id = ?`
+      ).bind(claim_id).run();
+
+      // Invalidate existing auth tokens
+      await env.DB.prepare(
+        'DELETE FROM auth_tokens WHERE listing_id IN (SELECT id FROM listings WHERE claim_id = ?)'
+      ).bind(claim_id).run();
+
+      // Set claim back to pending for re-review
+      await env.DB.prepare(
+        "UPDATE claims SET claim_status = 'pending', reviewed_at = NULL, admin_notes = ? WHERE id = ?"
+      ).bind(admin_notes || null, claim_id).run();
+
+      return new Response(JSON.stringify({
+        success: true,
+        message: 'Listing reset. Claim reopened for review.',
         claim_id,
       }), { status: 200, headers: corsHeaders });
     } else {

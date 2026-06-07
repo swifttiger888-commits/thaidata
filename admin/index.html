@@ -251,6 +251,8 @@ body {
                                     ${c.claim_status === 'pending' ? `
                                         <button class="btn btn-sm btn-approve" onclick="approveClaim(${c.id})" title="Approve">✓</button>
                                         <button class="btn btn-sm btn-reject" onclick="rejectClaim(${c.id})" title="Reject">✕</button>
+                                    ` : c.claim_status === 'rejected' ? `
+                                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--c2);color:var(--c2);" onclick="reopenClaim(${c.id})" title="Reopen for review">↻</button>
                                     ` : ''}
                                 </td>
                             </tr>
@@ -307,6 +309,14 @@ body {
                             <input type="email" id="recover-new-email" placeholder="New email address" style="flex:1;padding:8px 12px;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:8px;color:white;font-size:0.85rem;">
                             <button class="btn btn-sm" style="white-space:nowrap;background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;" onclick="recoverClaim(${claim.id})">Send Recovery Link</button>
                         </div>
+                    </div>
+                    <div style="margin-top:12px;">
+                        <button class="btn btn-sm btn-reject" onclick="if(confirm('Reset this listing? All owner-edited data will be cleared and the claim will reopen for review.'))resetClaim(${claim.id})">Reset listing</button>
+                    </div>
+                    ` : ''}
+                    ${claim.claim_status === 'rejected' ? `
+                    <div style="margin-top:16px;">
+                        <button class="btn btn-sm" style="background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;" onclick="reopenClaim(${claim.id});closeModal();">↻ Reopen for review</button>
                     </div>
                     ` : ''}
                     <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;margin-top:12px;" onclick="closeModal()">Close</button>
@@ -398,6 +408,55 @@ body {
                 loadClaims(currentTab);
             } else {
                 toast(data.error || 'Recovery failed', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        }
+    }
+
+    // Reopen a rejected claim back to pending for re-review
+    async function reopenClaim(claimId) {
+        if (!claimId) return;
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + sessionToken,
+                },
+                body: JSON.stringify({ action: 'reopen', claim_id: claimId }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Claim reopened for review');
+                loadClaims(currentTab);
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        }
+    }
+
+    // Reset a listing: clear owner-editable fields and reopen claim
+    async function resetClaim(claimId) {
+        if (!claimId) return;
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + sessionToken,
+                },
+                body: JSON.stringify({ action: 'reset', claim_id: claimId }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Listing reset. Claim reopened.');
+                closeModal();
+                loadClaims(currentTab);
+            } else {
+                toast(data.error || 'Error', 'error');
             }
         } catch (err) {
             toast('Network error', 'error');
