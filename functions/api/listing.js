@@ -415,14 +415,14 @@ export async function onRequestPost(context) {
       'INSERT INTO auth_tokens (listing_id, token_hash, expires_at) VALUES (?, ?, ?)'
     ).bind(claim.listing_id, tokenHash, expiresAt).run();
 
-    // Send magic link email via Resend (fire-and-forget)
+    // Send magic link email inline (not waitUntil)
     const magicLink = `https://thaidata.uk/listing/manage?token=${token}`;
-    context.waitUntil(sendMagicLinkEmail(env, {
+    await sendMagicLinkEmail(env, {
       email: claim.claimer_email,
       restaurant_name,
       city,
       magicLink,
-    }));
+    });
 
     return new Response(JSON.stringify({
       success: true,

@@ -467,12 +467,13 @@ export async function onRequestPut(context) {
       ).bind(listingId, tokenHash, expiresAt).run();
 
 const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
-      context.waitUntil(sendMagicLinkEmail(env, {
+      // Send magic link email inline (not waitUntil — confirmed unreliable for Resend)
+      await sendMagicLinkEmail(env, {
         email: claim.claimer_email,
         restaurant_name: claim.restaurant_name,
         city: claim.city,
         magicLink,
-      }));
+      });
 
       return new Response(JSON.stringify({
         success: true,
@@ -497,12 +498,13 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
         "UPDATE claims SET claim_status = 'rejected', reviewed_at = datetime('now'), admin_notes = ? WHERE id = ?"
       ).bind(admin_notes || null, claim_id).run();
 
-      context.waitUntil(sendClaimRejectedEmail(env, {
+      // Send rejection email inline (not waitUntil)
+      await sendClaimRejectedEmail(env, {
         claimer_name: claim.claimer_name,
         claimer_email: claim.claimer_email,
         restaurant_name: claim.restaurant_name,
         city: claim.city,
-      }));
+      });
 
       return new Response(JSON.stringify({
         success: true,
