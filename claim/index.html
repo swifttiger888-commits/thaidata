@@ -175,20 +175,7 @@ body {
                 <input type="text" id="search-input" placeholder="Type your restaurant name (min 3 chars)..." autocomplete="off">
                 <div class="results" id="search-results"></div>
             </div>
-            <p style="color:var(--ink4);font-size:0.8rem;margin-top:8px;">Can't find your restaurant? <a href="javascript:showManualEntry()" style="color:var(--c2);">Enter details manually</a>.</p>
-            <div style="margin-top:16px; display:none;" id="manual-entry">
-                <label>Restaurant Name</label>
-                <input type="text" id="manual-name" placeholder="e.g. Sukhothai Leeds">
-                <label>City</label>
-                <input type="text" id="manual-city" placeholder="e.g. Leeds">
-                <label>Business Type</label>
-                <select id="manual-type">
-                    <option value="restaurant">Dine-in Restaurant</option>
-                    <option value="takeaway">Takeaway</option>
-                    <option value="other">Other</option>
-                </select>
-                <button class="btn btn-sm" style="margin-top:12px;" onclick="useManualEntry()">Use These Details</button>
-            </div>
+            <p style="color:var(--ink4);font-size:0.8rem;margin-top:8px;">Can't find your restaurant? <a href="mailto:hello@thaidata.uk" style="color:var(--c2);">Let us know</a> and we'll add it.</p>
         </div>
 
         <!-- STEP 2: Claim form -->
@@ -317,7 +304,7 @@ body {
                 .then(r => r.json())
                 .then(data => {
                     if (!data.results || data.results.length === 0) {
-                        searchResults.innerHTML = '<div style="padding:16px;color:var(--ink4);">No Thai restaurants found. Try a different name or <a href="javascript:showManualEntry()" style="color:var(--c2);">enter manually</a>.</div>';
+                        searchResults.innerHTML = '<div style="padding:16px;color:var(--ink4);">No Thai restaurants found. Try a different name or <a href="mailto:hello@thaidata.uk" style="color:var(--c2);">let us know</a>.</div>';
                         return;
                     }
                     searchResults.innerHTML = data.results.map(r => `
@@ -360,29 +347,6 @@ body {
         document.getElementById('section-form').scrollIntoView({ behavior: 'smooth' });
     }
 
-    function showManualEntry() {
-        document.getElementById('manual-entry').style.display = 'block';
-        searchResults.classList.remove('show');
-    }
-
-    function useManualEntry() {
-        const name = document.getElementById('manual-name').value.trim();
-        const city = document.getElementById('manual-city').value.trim();
-        const type = document.getElementById('manual-type').value;
-
-        if (!name || !city) { toast('Please enter restaurant name and city', 'error'); return; }
-
-        selectedRestaurant = { name, city, business_type: type, id: null, address: '', postcode: '', rating: null };
-
-        document.getElementById('sel-name').textContent = name;
-        document.getElementById('sel-addr').textContent = city;
-        document.getElementById('sel-rating').textContent = '';
-
-        setStep(2);
-        showSection('section-form');
-        document.getElementById('section-form').scrollIntoView({ behavior: 'smooth' });
-    }
-
     // Submit claim
     async function submitClaim() {
         const btn = document.getElementById('submit-btn');
@@ -392,6 +356,7 @@ body {
         if (!name) { toast('Please enter your name', 'error'); return; }
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { toast('Please enter a valid email', 'error'); return; }
         if (!selectedRestaurant) { toast('Please search for your restaurant first', 'error'); return; }
+        if (!selectedRestaurant.id) { toast('Please select your restaurant from the search results', 'error'); return; }
 
         btn.disabled = true;
         btn.innerHTML = '<span class="spinner"></span> Submitting...';
