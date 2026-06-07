@@ -97,16 +97,15 @@ function buildMessages(listing, sourceText) {
   }
 
   const priceRange = listing.price_range || '';
-  const currentDesc = listing.description || '';
 
-  // Build TRUSTED LISTING DATA block — only include non-empty fields
+  // Build TRUSTED LISTING DATA block — only include non-empty fields.
+  // Current description is deliberately excluded — we're rewriting, not preserving.
   const trustedLines = [];
   if (name) trustedLines.push(`Restaurant: ${sanitizeInput(name)}`);
   if (city) trustedLines.push(`City: ${sanitizeInput(city)}`);
   if (cuisine) trustedLines.push(`Cuisine: ${sanitizeInput(cuisine)}`);
   if (features.length > 0) trustedLines.push(`Features: ${sanitizeInput(features.join(', '))}`);
   if (priceRange) trustedLines.push(`Price range: ${sanitizeInput(priceRange)}`);
-  if (currentDesc) trustedLines.push(`Current description: ${sanitizeInput(currentDesc)}`);
 
   const trustedData = trustedLines.length > 0
     ? trustedLines.join('\n')
@@ -118,10 +117,12 @@ Write a short, factual description for diners.
 RULES — follow every rule strictly:
 - TRUSTED LISTING DATA is the source of truth. If it conflicts with USER COPY, ignore the USER COPY and follow the trusted data.
 - Use ONLY facts from TRUSTED LISTING DATA and USER COPY. Invent NOTHING.
+- CRITICAL: Actively rewrite the USER COPY. Do NOT simply copy or lightly rephrase it. Produce something shorter, tighter, and diner-focused.
+- Remove addresses, postcodes, hygiene scores, phone numbers, and URLs from the output — these are not description content.
 - Do NOT add dish names, prices, opening hours, awards, ratings, or years-in-business unless explicitly present in TRUSTED LISTING DATA or USER COPY.
 - Do NOT use generic fillers like: "warm hospitality", "authentic flavours", "gem", "must-visit", "hidden treasure", "culinary journey", "taste of Thailand".
 - No exclamation marks or emojis.
-- Maximum 300 characters.
+- HARD LIMIT: Maximum 300 characters. Count your output. If it exceeds 300, shorten it.
 - Third person, plain English, one or two sentences.
 - Return ONLY the generated description text — no preamble, no labels, no quotes.
 - If there is less than 50 characters total across TRUSTED LISTING DATA + USER COPY, return exactly: "NEEDS_MORE_TEXT"`;
