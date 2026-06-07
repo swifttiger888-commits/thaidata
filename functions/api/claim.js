@@ -70,25 +70,25 @@ export async function onRequestPost(context) {
 
     const claimId = result.meta.last_row_id;
 
-    // Fire-and-forget email notification to admin
-    context.waitUntil(sendAdminNotification(env, {
-      id: claimId,
-      restaurant_name,
-      city,
-      claimer_name,
-      claimer_email,
-      claimer_phone,
-      claimer_role,
-      business_type,
-    }));
-
-    // Fire-and-forget confirmation email to claimant
-    context.waitUntil(sendClaimConfirmationEmail(env, {
-      claimer_name,
-      claimer_email,
-      restaurant_name,
-      city,
-    }));
+    // Send both notifications before responding (inline, not waitUntil)
+    await Promise.allSettled([
+      sendAdminNotification(env, {
+        id: claimId,
+        restaurant_name,
+        city,
+        claimer_name,
+        claimer_email,
+        claimer_phone,
+        claimer_role,
+        business_type,
+      }),
+      sendClaimConfirmationEmail(env, {
+        claimer_name,
+        claimer_email,
+        restaurant_name,
+        city,
+      }),
+    ]);
 
     return new Response(JSON.stringify({
       success: true,
