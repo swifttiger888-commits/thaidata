@@ -61,6 +61,52 @@ async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink
   }
 }
 
+/**
+ * Sends claim rejection email via Resend API
+ * @param {object} env - Cloudflare Workers environment bindings
+ * @param {string} env.RESEND_API_KEY - Resend API key
+ * @param {object} options - Email parameters
+ * @param {string} options.claimer_name - Name of the claimant
+ * @param {string} options.claimer_email - Recipient email address
+ * @param {string} options.restaurant_name - Name of the restaurant
+ * @param {string} options.city - City of the restaurant
+ * @returns {Promise<void>}
+ */
+async function sendClaimRejectedEmail(env, { claimer_name, claimer_email, restaurant_name, city }) {
+  const apiKey = env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error('Missing RESEND_API_KEY — cannot send rejection email');
+    return;
+  }
+
+  const html = '<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n</head>\n<body style="margin:0;padding:0;background-color:#f5f5f0;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,sans-serif;">\n  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;padding:40px 0;">\n    <tr>\n      <td align="center">\n        <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">\n          <tr>\n            <td style="padding:32px 40px 0;">\n              <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#10B981,#059669);border-radius:12px;">\n                <tr>\n                  <td style="padding:32px 32px 24px;text-align:center;">\n                    <img src="https://thaidata.uk/static/logo-email.png" width="180" height="72" alt="ThaiData UK" style="display:block;border:0;outline:none;margin:0 auto 20px;">\n                    <h1 style="margin:0 0 8px;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:-0.3px;">Claim Update</h1>\n                    <p style="margin:0;color:rgba(255,255,255,0.9);font-size:15px;line-height:1.5;">' + restaurant_name + '<br>\n                      <span style="font-size:13px;opacity:0.7;">' + city + '</span>\n                    </p>\n                  </td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n          <tr>\n            <td style="padding:24px 40px 32px;">\n              <table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:10px;border:1px solid #e8e8dc;">\n                <tr>\n                  <td style="padding:32px;">\n                    <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">\n                      Hi ' + claimer_name + ',</p>\n                    <p style="margin:0 0 16px;color:#555555;font-size:14px;line-height:1.6;">\n                      Thanks for submitting a claim for <strong>' + restaurant_name + '</strong> in ' + city + '.</p>\n                    <p style="margin:0 0 16px;color:#555555;font-size:14px;line-height:1.6;">\n                      We&rsquo;ve reviewed the request and couldn&rsquo;t verify the claim at this time.</p>\n                    <p style="margin:0 0 24px;color:#555555;font-size:14px;line-height:1.6;">\n                      If you believe this was a mistake, please reply to this email with any extra details that help confirm your connection to the restaurant.</p>\n                    <p style="margin:0;color:#555555;font-size:14px;line-height:1.6;">\n                      Thanks,<br>The ThaiData team</p>\n                  </td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n          <tr>\n            <td style="padding:0 40px 32px;text-align:center;">\n              <p style="margin:0;color:#aaaaaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a></p>\n            </td>\n          </tr>\n        </table>\n      </td>\n    </tr>\n  </table>\n</body>\n</html>';
+
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + apiKey,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'ThaiData UK <noreply@thaidata.uk>',
+        to: [claimer_email],
+        subject: 'Update on your ThaiData claim for ' + restaurant_name,
+        html: html,
+      }),
+    });
+
+    if (!res.ok) {
+      const errBody = await res.text();
+      console.error('Resend API error ' + res.status + ': ' + errBody);
+    } else {
+      console.log('Rejection email sent to ' + claimer_email + ' for ' + restaurant_name);
+    }
+  } catch (err) {
+    console.error('Resend send failed:', err.message);
+  }
+}
+
 // ADMIN_PASSWORD is read from env.ADMIN_PASSWORD at runtime
 
 /**
@@ -438,10 +484,25 @@ export async function onRequestPut(context) {
       });
 
     } else {
-      // Reject
+      // Reject — fetch claim data first, then send email
+      const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
+      if (!claim) {
+        return new Response(JSON.stringify({ error: 'Claim not found' }), {
+          status: 404,
+          headers: corsHeaders,
+        });
+      }
+
       await env.DB.prepare(
         "UPDATE claims SET claim_status = 'rejected', reviewed_at = datetime('now'), admin_notes = ? WHERE id = ?"
       ).bind(admin_notes || null, claim_id).run();
+
+      context.waitUntil(sendClaimRejectedEmail(env, {
+        claimer_name: claim.claimer_name,
+        claimer_email: claim.claimer_email,
+        restaurant_name: claim.restaurant_name,
+        city: claim.city,
+      }));
 
       return new Response(JSON.stringify({
         success: true,
