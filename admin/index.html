@@ -299,7 +299,17 @@ body {
                         <button class="btn btn-approve" onclick="approveClaim(${claim.id});closeModal();">Approve</button>
                         <button class="btn btn-reject" onclick="rejectClaim(${claim.id});closeModal();">Reject</button>
                     ` : ''}
-                    <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;" onclick="closeModal()">Close</button>
+                    ${claim.claim_status === 'approved' ? `
+                    <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--line);">
+                        <div style="font-size:0.82rem;color:var(--ink4);margin-bottom:6px;">Recover Access</div>
+                        <div class="detail-row"><div class="dl">Current Email</div><div class="dv" id="recover-current-email">${claim.claimer_email}</div></div>
+                        <div style="display:flex;gap:8px;margin-top:8px;">
+                            <input type="email" id="recover-new-email" placeholder="New email address" style="flex:1;padding:8px 12px;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:8px;color:white;font-size:0.85rem;">
+                            <button class="btn btn-sm" style="white-space:nowrap;background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;" onclick="recoverClaim(${claim.id})">Send Recovery Link</button>
+                        </div>
+                    </div>
+                    ` : ''}
+                    <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;margin-top:12px;" onclick="closeModal()">Close</button>
                 </div>
             `;
             document.getElementById('modal-overlay').classList.add('show');
@@ -355,6 +365,39 @@ body {
                 loadClaims(currentTab);
             } else {
                 toast(data.error || 'Error', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        }
+    }
+
+    // Recover access — update claimer email and send magic link
+    async function recoverClaim(claimId) {
+        var email = document.getElementById('recover-new-email').value.trim();
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            toast('Enter a valid email address', 'error');
+            return;
+        }
+        var currentEmailEl = document.getElementById('recover-current-email');
+        var currentEmail = currentEmailEl ? currentEmailEl.textContent.trim() : '';
+        if (!confirm('Send recovery link to ' + email + '?\n\nThis will change the claimer email from:\n  ' + currentEmail + '\n  → ' + email + '\n\nA magic link will be emailed to the new address.')) return;
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + sessionToken,
+                },
+                body: JSON.stringify({ action: 'recover', claim_id: claimId, new_email: email }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Recovery link sent to ' + email);
+                document.getElementById('recover-new-email').value = '';
+                if (currentEmailEl) currentEmailEl.textContent = email;
+                loadClaims(currentTab);
+            } else {
+                toast(data.error || 'Recovery failed', 'error');
             }
         } catch (err) {
             toast('Network error', 'error');

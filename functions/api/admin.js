@@ -343,8 +343,8 @@ export async function onRequestPut(context) {
     const body = await request.json();
     const { claim_id, action, admin_notes } = body;
 
-    if (!claim_id || !action || !['approved', 'rejected'].includes(action)) {
-      return new Response(JSON.stringify({ error: 'claim_id and action (approved|rejected) required' }), {
+    if (!claim_id || !action || !['approved', 'rejected', 'recover'].includes(action)) {
+      return new Response(JSON.stringify({ error: 'claim_id and action (approved|rejected|recover) required' }), {
         status: 400,
         headers: corsHeaders,
       });
@@ -514,6 +514,63 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
         status: 200,
         headers: corsHeaders,
       });
+    }
+
+    } else if (action === 'recover') {
+      const { new_email } = body;
+      if (!new_email) {
+        return new Response(JSON.stringify({ error: 'new_email required' }), {
+          status: 400, headers: corsHeaders,
+        });
+      }
+
+      const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
+      if (!claim) {
+        return new Response(JSON.stringify({ error: 'Claim not found' }), {
+          status: 404, headers: corsHeaders,
+        });
+      }
+      if (claim.claim_status !== 'approved') {
+        return new Response(JSON.stringify({ error: 'Claim must be approved first' }), {
+          status: 400, headers: corsHeaders,
+        });
+      }
+
+      const oldEmail = claim.claimer_email;
+      const auditLine = `[${new Date().toISOString()}] Admin session ${session.id} recovery: claimer_email changed from ${oldEmail} to ${new_email}.`;
+      const updatedNotes = [claim.admin_notes, auditLine].filter(Boolean).join('\n');
+
+      await env.DB.prepare(
+        "UPDATE claims SET claimer_email = ?, admin_notes = ? WHERE id = ?"
+      ).bind(new_email, updatedNotes, claim_id).run();
+
+      // Generate fresh magic link
+      const rawToken = crypto.randomUUID();
+      const tokenHash = await sha256(rawToken);
+      const expiresAt = new Date(Date.now() + 60 * 60 * 1000).toISOString();
+
+      const listing = await env.DB.prepare(
+        'SELECT id FROM listings WHERE claim_id = ?'
+      ).bind(claim_id).first();
+
+      if (listing) {
+        await env.DB.prepare(
+          'INSERT INTO auth_tokens (listing_id, token_hash, expires_at) VALUES (?, ?, ?)'
+        ).bind(listing.id, tokenHash, expiresAt).run();
+
+        await sendMagicLinkEmail(env, {
+          email: new_email,
+          restaurant_name: claim.restaurant_name,
+          city: claim.city,
+          magicLink: `https://thaidata.uk/listing/manage?token=${rawToken}`,
+        });
+      }
+
+      return new Response(JSON.stringify({
+        success: true,
+        message: `Recovery email sent to ${new_email}.`,
+        claim_id,
+      }), { status: 200, headers: corsHeaders });
     }
 
   } catch (err) {
