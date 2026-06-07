@@ -225,9 +225,12 @@ export async function onRequestGet(context) {
 
     let query = `SELECT c.*, l.enrichment
       FROM claims c
-      LEFT JOIN listings l ON l.claim_id = c.id
-      WHERE c.claim_status = ?`;
-    const params = [status];
+      LEFT JOIN listings l ON l.claim_id = c.id`;
+    const params = [];
+    if (status !== 'all') {
+      query += ' WHERE c.claim_status = ?';
+      params.push(status);
+    }
 
     if (city) {
       query += ' AND c.city = ?';
