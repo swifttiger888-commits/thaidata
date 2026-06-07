@@ -31,14 +31,16 @@ export async function onRequest(context) {
   const name = segments.slice(2).join('/');
 
   try {
-    // Try to serve the static file. If it's a real page (has FSA marker),
+    // Try to serve the static file. If it's a real page (has "Hygiene" marker),
     // return it directly — no alias resolution needed.
     const { ASSETS } = env;
     const assetResponse = await ASSETS.fetch(url.toString());
 
     if (assetResponse.ok) {
       const text = await assetResponse.clone().text();
-      if (text.includes('FSA') || text.includes('Hygiene')) {
+      // Real restaurant pages contain "FSA X/5 Hygiene Rating" (from Kimi template)
+      // The SPA fallback (homepage) does NOT have "Hygiene" anywhere
+      if (text.includes('Hygiene')) {
         // This is a real restaurant page — serve from static assets
         return new Response(text, {
           status: 200,
@@ -52,13 +54,15 @@ export async function onRequest(context) {
 
     // No static page at this URL — the request hit the SPA fallback.
     // Check curated alias list before returning 404.
-    const aliasesUrl = 'https://thaidata.uk/data/r-aliases.json';
-    const aliasesRes = await fetch(aliasesUrl, {
-      cf: { cacheTtl: 300, cacheEverything: true },
-    });
+    let aliasData;
+    try {
+      const aliasesRes = await fetch('https://thaidata.uk/data/r-aliases.json');
+      if (aliasesRes.ok) {
+        aliasData = await aliasesRes.json();
+      }
+    } catch (_) {} // fetch error — treat as no aliases available
 
-    if (aliasesRes.ok) {
-      const aliasData = await aliasesRes.json();
+    if (aliasData) {
       const aliasList = aliasData.aliases || [];
       const aliasSlug = name.toLowerCase().replace(/[-\s]+/g, '-').replace(/^-+|-+$/g, '');
       const aliasCity = city.toLowerCase();
@@ -69,7 +73,10 @@ export async function onRequest(context) {
 
       if (match) {
         const correctUrl = pageUrl(match.canonical, match.city);
-        return Response.redirect(new URL(correctUrl, url.origin), 301);
+        return new Response(null, {
+          status: 301,
+          headers: { 'Location': correctUrl },
+        });
       }
     }
 
