@@ -58,12 +58,12 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         @media (max-width: 500px) { .row { grid-template-columns: 1fr; } }
 
         .checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
-        .checkbox-pill { padding: 8px 14px; border: 1px solid var(--line); border-radius: 20px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; user-select: none; }
+        .checkbox-pill { padding: 8px 14px; border: 1px solid var(--line); border-radius: 20px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; user-select: none; color: white; }
         .checkbox-pill:hover { border-color: var(--ink4); }
         .checkbox-pill.selected { border-color: var(--c2); background: rgba(16,185,129,0.15); color: var(--c2); }
 
-        .btn { display: inline-block; background: #10B981; color: #0C1220; padding: 13px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; border: none; cursor: pointer; transition: background 0.2s; }
-        .btn:hover { background: var(--c1); }
+        .btn { display: inline-block; background: #10B981; color: #0C1220; padding: 13px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn:hover { background: var(--c1); color: white; }
         .btn:disabled { opacity: 0.5; cursor: not-allowed; }
         .btn-secondary { background: transparent; border: 1px solid var(--line); color: white; }
         .btn-secondary:hover { border-color: var(--c2); background: rgba(16,185,129,0.08); color: var(--c2); }
@@ -134,7 +134,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                 <p class="hint">Add photos of your restaurant — interior, dishes, exterior. Max 10MB each, JPEG/PNG/WebP.</p>
                 <div id="photos-preview" style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;"></div>
                 <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-                    <input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp,image/avif" multiple style="flex:1;min-width:200px;color:var(--ink4);">
+                    <input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp,image/avif" multiple style="flex:1;min-width:200px;color:white;">
                     <button class="btn btn-secondary" id="upload-btn" onclick="uploadPhotos()" style="white-space:nowrap;">
                         <i class="fas fa-upload"></i> Upload
                     </button>
@@ -178,13 +178,17 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                     <div class="hours-row"><span class="hours-day">Sun</span><input type="time" id="hours-open-sun" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-sun" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-sun" onchange="toggleHoursDay('sun')"> Closed</label></div>
                 </div>
                 <style>
-                    .hours-row { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
-                    .hours-day { width:40px; font-weight:600; color:var(--ink3); font-size:0.85rem; }
-                    .hours-time { width:100%; padding:8px 10px; background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:8px; color:white; font-size:0.85rem; font-family:inherit; }
+                    .hours-row { display:grid; grid-template-columns:40px 1fr auto 1fr 80px; gap:6px; align-items:center; margin-bottom:8px; }
+                    @media (max-width:500px) {
+                        .hours-row { grid-template-columns:40px 1fr auto 1fr; }
+                        .hours-closed { grid-column:2 / -1; margin-top:-4px; }
+                    }
+                    .hours-day { font-weight:600; color:var(--ink3); font-size:0.85rem; }
+                    .hours-time { width:100%; padding:8px 10px; background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:8px; color:white; font-size:0.85rem; font-family:inherit; min-width:0; }
                     .hours-time:focus { outline:none; border-color:var(--c2); }
                     .hours-time:disabled { opacity:0.3; }
-                    .hours-to { color:var(--ink4); font-size:0.8rem; }
-                    .hours-closed { display:flex; align-items:center; gap:4px; white-space:nowrap; font-size:0.8rem; color:var(--ink4); cursor:pointer; min-width:70px; }
+                    .hours-to { color:var(--ink4); font-size:0.8rem; text-align:center; }
+                    .hours-closed { display:flex; align-items:center; gap:4px; white-space:nowrap; font-size:0.8rem; color:var(--ink4); cursor:pointer; }
                 </style>
             </div>
 
