@@ -484,38 +484,6 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
         headers: corsHeaders,
       });
 
-    } else {
-      // Reject — fetch claim data first, then send email
-      const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
-      if (!claim) {
-        return new Response(JSON.stringify({ error: 'Claim not found' }), {
-          status: 404,
-          headers: corsHeaders,
-        });
-      }
-
-      await env.DB.prepare(
-        "UPDATE claims SET claim_status = 'rejected', reviewed_at = datetime('now'), admin_notes = ? WHERE id = ?"
-      ).bind(admin_notes || null, claim_id).run();
-
-      // Send rejection email inline (not waitUntil)
-      await sendClaimRejectedEmail(env, {
-        claimer_name: claim.claimer_name,
-        claimer_email: claim.claimer_email,
-        restaurant_name: claim.restaurant_name,
-        city: claim.city,
-      });
-
-      return new Response(JSON.stringify({
-        success: true,
-        message: 'Claim rejected.',
-        claim_id,
-      }), {
-        status: 200,
-        headers: corsHeaders,
-      });
-    }
-
     } else if (action === 'recover') {
       const { new_email } = body;
       if (!new_email) {
@@ -571,6 +539,36 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
         message: `Recovery email sent to ${new_email}.`,
         claim_id,
       }), { status: 200, headers: corsHeaders });
+    } else {
+      // Reject — fetch claim data first, then send email
+      const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
+      if (!claim) {
+        return new Response(JSON.stringify({ error: 'Claim not found' }), {
+          status: 404,
+          headers: corsHeaders,
+        });
+      }
+
+      await env.DB.prepare(
+        "UPDATE claims SET claim_status = 'rejected', reviewed_at = datetime('now'), admin_notes = ? WHERE id = ?"
+      ).bind(admin_notes || null, claim_id).run();
+
+      // Send rejection email inline (not waitUntil)
+      await sendClaimRejectedEmail(env, {
+        claimer_name: claim.claimer_name,
+        claimer_email: claim.claimer_email,
+        restaurant_name: claim.restaurant_name,
+        city: claim.city,
+      });
+
+      return new Response(JSON.stringify({
+        success: true,
+        message: 'Claim rejected.',
+        claim_id,
+      }), {
+        status: 200,
+        headers: corsHeaders,
+      });
     }
 
   } catch (err) {
