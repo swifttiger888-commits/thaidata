@@ -1,12 +1,11 @@
 // ThaiData UK — /api/enhance-description
 // AI-powered description enhancer for listing owners
-// Uses Workers AI to condense website copy into a short listing summary
+// Uses Workers AI to rewrite website copy into a short listing summary
+// Grounded in trusted DB fields — user copy is optional secondary context
 // One-shot, human-review only, no auto-publish
 
 /**
  * Simple in-memory IP rate limiter (per-worker instance)
- * Tracks request timestamps per IP, rejects if <10s since last request.
- * Cloudflare Workers are per-isolate — this is approximate but good enough.
  * @type {Map<string, number>}
  */
 const ipRateMap = new Map();
@@ -26,15 +25,12 @@ function isRateLimited(ip) {
 
 /**
  * Sanitize user text: strip control chars and prompt-injection patterns
- * before it enters the AI prompt boundary.
  * @param {string} text
  * @returns {string}
  */
 function sanitizeInput(text) {
   if (!text) return '';
-  // Strip null bytes and control characters (except newlines and tabs)
   let s = text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
-  // Collapse multiple whitespace
   s = s.replace(/\s+/g, ' ').trim();
   return s;
 }
@@ -52,8 +48,6 @@ function validateOutput(text) {
   if (text.length > 500) {
     return { valid: false, reason: 'too_long' };
   }
-  // Reject if output appears to contain injection artifacts
-  // (e.g. the model leaked instructions or system prompt content)
   const injectionPatterns = [
     /ignore\s+(your\s+)?(previous|above|all|system)/i,
     /you\s+are\s+(an?\s+)?(AI|assistant|model|language\s+model)/i,
@@ -66,7 +60,6 @@ function validateOutput(text) {
       return { valid: false, reason: 'injection_detected' };
     }
   }
-  // Reject if it contains raw URLs (owners shouldn't want links in descriptions)
   if (/https?:\/\/[^\s]+/.test(text)) {
     return { valid: false, reason: 'contains_url' };
   }
@@ -74,29 +67,71 @@ function validateOutput(text) {
 }
 
 /**
- * Build the system prompt with strict instructions and clear user-data boundaries.
- * The source text is treated as untrusted data — delimited explicitly.
- * @param {string} restaurantName
- * @param {string} sourceText
+ * SHA-256 hash for token comparison
+ * @param {string} text
+ * @returns {Promise<string>}
+ */
+async function sha256(text) {
+  const data = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+/**
+ * Build the AI messages with grounded listing data + optional user copy.
+ * Trusted DB fields are the primary source of truth; user copy is
+ * secondary and may not override stored facts.
+ * @param {object} listing - Listing record from the DB
+ * @param {string} sourceText - Optional user-pasted text
  * @returns {Array} Messages array for Workers AI
  */
-function buildMessages(restaurantName, sourceText) {
+function buildMessages(listing, sourceText) {
+  // Extract trusted DB fields
+  const name = listing.restaurant_name || '';
+  const city = listing.city || '';
+  const cuisine = listing.cuisine_specialty || '';
+
+  let features = [];
+  if (listing.features) {
+    try { features = JSON.parse(listing.features); } catch { features = []; }
+  }
+
+  const priceRange = listing.price_range || '';
+  const currentDesc = listing.description || '';
+
+  // Build TRUSTED LISTING DATA block — only include non-empty fields
+  const trustedLines = [];
+  if (name) trustedLines.push(`Restaurant: ${sanitizeInput(name)}`);
+  if (city) trustedLines.push(`City: ${sanitizeInput(city)}`);
+  if (cuisine) trustedLines.push(`Cuisine: ${sanitizeInput(cuisine)}`);
+  if (features.length > 0) trustedLines.push(`Features: ${sanitizeInput(features.join(', '))}`);
+  if (priceRange) trustedLines.push(`Price range: ${sanitizeInput(priceRange)}`);
+  if (currentDesc) trustedLines.push(`Current description: ${sanitizeInput(currentDesc)}`);
+
+  const trustedData = trustedLines.length > 0
+    ? trustedLines.join('\n')
+    : '(no listing data available)';
+
   const system = `You are a restaurant listing editor for ThaiData UK, a Thai restaurant directory.
-Your only job: condense the source text below into a short description.
+Write a short, factual description for diners.
 
 RULES — follow every rule strictly:
-- Use ONLY facts from the source text. Invent NOTHING.
-- Do NOT add dish names, prices, hours, awards, ratings, or history unless explicitly in the source.
-- Do NOT use any of these phrases: "warm hospitality", "authentic flavours", "gem", "must-visit", "hidden treasure", "culinary journey", "taste of Thailand", "family-run", "attention to detail".
+- TRUSTED LISTING DATA is the source of truth. If it conflicts with USER COPY, ignore the USER COPY and follow the trusted data.
+- Use ONLY facts from TRUSTED LISTING DATA and USER COPY. Invent NOTHING.
+- Do NOT add dish names, prices, opening hours, awards, ratings, or years-in-business unless explicitly present in TRUSTED LISTING DATA or USER COPY.
+- Do NOT use generic fillers like: "warm hospitality", "authentic flavours", "gem", "must-visit", "hidden treasure", "culinary journey", "taste of Thailand".
 - No exclamation marks or emojis.
 - Maximum 300 characters.
 - Third person, plain English, one or two sentences.
 - Return ONLY the generated description text — no preamble, no labels, no quotes.
-- If the source text below is empty, under 50 characters, or has no usable content, return exactly: "NEEDS_MORE_TEXT"`;
+- If there is less than 50 characters total across TRUSTED LISTING DATA + USER COPY, return exactly: "NEEDS_MORE_TEXT"`;
 
-  const user = `--- BEGIN SOURCE ---
-Restaurant: ${restaurantName}
-Description source: ${sourceText}
+  const user = `--- TRUSTED LISTING DATA (ground truth) ---
+${trustedData}
+
+--- USER COPY (optional — wording reference only) ---
+--- BEGIN SOURCE ---
+${sanitizeInput(sourceText || '')}
 --- END SOURCE ---
 
 Generate the short description now following all rules above.`;
@@ -109,8 +144,8 @@ Generate the short description now following all rules above.`;
 
 /**
  * Handles POST /api/enhance-description
- * Expects: { source_text: string, restaurant_name?: string }
- * Auth: Bearer token (same as listing manage page)
+ * Expects: { source_text?: string, restaurant_name?: string }
+ * Auth: Bearer token (same as listing manage page) — validated against DB
  */
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -120,11 +155,42 @@ export async function onRequestPost(context) {
     'Content-Type': 'application/json',
   };
 
-  // --- Auth ---
+  // --- Auth: validate Bearer token and resolve listing ---
   const auth = request.headers.get('Authorization');
   if (!auth || !auth.startsWith('Bearer ')) {
-    return new Response(JSON.stringify({ error: 'Unauthorized' }), {
-      status: 403,
+    return new Response(JSON.stringify({ success: false, error: 'unauthorized' }), {
+      status: 401,
+      headers: corsHeaders,
+    });
+  }
+
+  let listing;
+  try {
+    const rawToken = auth.slice(7);
+    const tokenHash = await sha256(rawToken);
+    const tokenRecord = await env.DB.prepare(
+      "SELECT listing_id FROM auth_tokens WHERE token_hash = ? AND expires_at > datetime('now') AND used = 0"
+    ).bind(tokenHash).first();
+
+    if (!tokenRecord) {
+      return new Response(JSON.stringify({ success: false, error: 'unauthorized' }), {
+        status: 401,
+        headers: corsHeaders,
+      });
+    }
+
+    listing = await env.DB.prepare('SELECT * FROM listings WHERE id = ?').bind(tokenRecord.listing_id).first();
+
+    if (!listing) {
+      return new Response(JSON.stringify({ success: false, error: 'unauthorized' }), {
+        status: 401,
+        headers: corsHeaders,
+      });
+    }
+  } catch (dbErr) {
+    console.error('Auth DB error:', dbErr.message);
+    return new Response(JSON.stringify({ success: false, error: 'server_error', message: 'Authentication failed.' }), {
+      status: 500,
       headers: corsHeaders,
     });
   }
@@ -154,21 +220,7 @@ export async function onRequestPost(context) {
   }
 
   const rawSource = body.source_text || '';
-  const restaurantName = sanitizeInput(body.restaurant_name || '');
-
-  // Sanitize input (strip injection vectors, control chars)
   const sourceText = sanitizeInput(rawSource);
-
-  if (!sourceText || sourceText.length < 50) {
-    return new Response(JSON.stringify({
-      success: false,
-      error: 'needs_more_text',
-      message: 'Please provide at least 50 characters of website copy or description text.',
-    }), {
-      status: 200,
-      headers: corsHeaders,
-    });
-  }
 
   if (sourceText.length > 2000) {
     return new Response(JSON.stringify({
@@ -181,8 +233,8 @@ export async function onRequestPost(context) {
     });
   }
 
-  // --- Build messages ---
-  const messages = buildMessages(restaurantName, sourceText);
+  // --- Build grounded messages ---
+  const messages = buildMessages(listing, sourceText);
 
   // --- Call Workers AI ---
   try {
@@ -199,7 +251,7 @@ export async function onRequestPost(context) {
       return new Response(JSON.stringify({
         success: false,
         error: 'needs_more_text',
-        message: 'The source text is too short or lacks usable content. Add more detail about the restaurant.',
+        message: 'Add more detail about the restaurant, then try again.',
       }), {
         status: 200,
         headers: corsHeaders,
