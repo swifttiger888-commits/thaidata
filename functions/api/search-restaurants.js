@@ -23,25 +23,43 @@ export async function onRequestGet(context) {
     'Content-Type': 'application/json',
   };
 
-  const q = (context.request.url.match(/[?&]q=([^&]*)/i) || [])[1];
-  if (!q || q.length < 2) {
+  const url = new URL(context.request.url);
+  const raw = url.searchParams.get('q');
+  if (!raw || raw.length < 2) {
     return new Response(JSON.stringify([]), { status: 200, headers: corsHeaders });
   }
 
-  const needle = q.toLowerCase().replace(/[.+^${}()|[\]\\]/g, '');
+  const needle = raw.toLowerCase().replace(/[.+^${}()|[\]\\]/g, '');
   const index = await loadIndex();
 
   const prefix = [];
-  const substring = [];
 
   for (const r of index) {
     const name = r.name.toLowerCase();
     if (name.startsWith(needle)) {
       prefix.push(r);
-      if (prefix.length >= 10) break;
     }
   }
 
+  // Score prefix matches: prefer names where the query is followed by
+  // a space + letter (clean brand names over "Thai &..." or "Thai 1...")
+  function score(name) {
+    const rest = name.slice(needle.length);
+    if (/^ [a-z]/.test(rest)) return 2;   // "Thai Garden", "Thai Edge"
+    if (/^[ &]/.test(rest)) return 1;     // "Thai & Pie", "Thai 1"
+    return 0;                               // exact match or other
+  }
+
+  prefix.sort((a, b) => {
+    const sa = score(a.name.toLowerCase());
+    const sb = score(b.name.toLowerCase());
+    if (sa !== sb) return sb - sa;
+    if (a.name.length !== b.name.length) return a.name.length - b.name.length;
+    return a.name.localeCompare(b.name);
+  });
+
+  // Fill remaining slots with substring matches
+  const substring = [];
   if (prefix.length < 10) {
     for (const r of index) {
       const name = r.name.toLowerCase();
