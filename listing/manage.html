@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444; }
+        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #7A8BA0; --ink4: #94A3B8; --line: rgba(255,255,255,0.18); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444; }
 :focus-visible {
             outline: 2px solid #10B981;
             outline-offset: 2px;
@@ -39,7 +39,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
         section { padding: 20px 0; }
 
-        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
+        .card { background: rgba(255,255,255,0.06); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
         .card h2 { font-family: 'Instrument Serif', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 16px; }
         .card h2 em { font-style: italic; color: var(--c2); }
         .card label { display: block; color: var(--ink3); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; margin-top: 14px; }
@@ -103,7 +103,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             <input type="text" id="token-input" placeholder="Paste your full magic link or just the token...">
             <button class="btn" style="margin-top:12px;" onclick="loadListing()">Access My Listing</button>
 
-            <hr style="border-color:var(--line);margin:24px 0;">
+            <hr style="border-color:rgba(255,255,255,0.3);margin:24px 0;">
             <p style="color:var(--ink4);font-size:0.85rem;">Don't have a token? <a href="../claim/" style="color:var(--c2);">Claim your restaurant first</a>, then request a magic link.</p>
             <p style="color:var(--ink4);font-size:0.85rem;">Want to request a new magic link?</p>
             <label>Restaurant Name</label>
