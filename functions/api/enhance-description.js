@@ -135,7 +135,7 @@ ${trustedData}
 ${sanitizeInput(sourceText || '')}
 --- END SOURCE ---
 
-Generate the short description now following all rules above.`;
+Generate the short description now following all rules above. The output must not start with the restaurant name, city, or address — begin with the cuisine or what the restaurant offers.`;
 
   return [
     { role: 'system', content: system },
