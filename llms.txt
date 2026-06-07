@@ -22,6 +22,9 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Delivery Commissions](https://thaidata.uk/thai-restaurant-delivery-commissions-uk.html): Platform-by-platform breakdown of Deliveroo, Uber Eats, and Just Eat fees. True margin after commission, VAT, and packaging.
 - [Wholesale Suppliers](https://thaidata.uk/thai-wholesale-suppliers-uk.html): Complete directory of UK Thai-specific wholesalers. Regional coverage, minimum orders, specialty items.
 
+## Learn
+- [Thai Food Culture](https://thaidata.uk/learn): Regional differences, UK vs Thailand, health, eating patterns, and the tradition of sharing Thai dishes.
+
 ## Industry Reports
 - [State of UK Thai Food 2026](https://thaidata.uk/state-of-uk-thai-food-2026.html): Definitive annual report. Market size, trends, growth rates, and competitive landscape.
 - [The 2026 Chef Visa Cliff](https://thaidata.uk/analysis/chef-visa-cliff.html): Analysis of the Skilled Worker visa impact on Thai restaurant staffing. Why sponsorship routes are narrowing.
