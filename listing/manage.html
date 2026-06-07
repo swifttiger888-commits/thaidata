@@ -168,7 +168,24 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
             <div class="card">
                 <h2>Opening <em>Hours</em></h2>
-                <textarea id="edit-hours" placeholder="e.g. Mon-Thu: 12:00-22:00, Fri-Sat: 12:00-23:00, Sun: 12:00-21:00"></textarea>
+                <div id="hours-editor">
+                    <div class="hours-row"><span class="hours-day">Mon</span><input type="time" id="hours-open-mon" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-mon" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-mon" onchange="toggleHoursDay('mon')"> Closed</label></div>
+                    <div class="hours-row"><span class="hours-day">Tue</span><input type="time" id="hours-open-tue" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-tue" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-tue" onchange="toggleHoursDay('tue')"> Closed</label></div>
+                    <div class="hours-row"><span class="hours-day">Wed</span><input type="time" id="hours-open-wed" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-wed" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-wed" onchange="toggleHoursDay('wed')"> Closed</label></div>
+                    <div class="hours-row"><span class="hours-day">Thu</span><input type="time" id="hours-open-thu" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-thu" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-thu" onchange="toggleHoursDay('thu')"> Closed</label></div>
+                    <div class="hours-row"><span class="hours-day">Fri</span><input type="time" id="hours-open-fri" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-fri" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-fri" onchange="toggleHoursDay('fri')"> Closed</label></div>
+                    <div class="hours-row"><span class="hours-day">Sat</span><input type="time" id="hours-open-sat" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-sat" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-sat" onchange="toggleHoursDay('sat')"> Closed</label></div>
+                    <div class="hours-row"><span class="hours-day">Sun</span><input type="time" id="hours-open-sun" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-sun" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-sun" onchange="toggleHoursDay('sun')"> Closed</label></div>
+                </div>
+                <style>
+                    .hours-row { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+                    .hours-day { width:40px; font-weight:600; color:var(--ink3); font-size:0.85rem; }
+                    .hours-time { width:100%; padding:8px 10px; background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:8px; color:white; font-size:0.85rem; font-family:inherit; }
+                    .hours-time:focus { outline:none; border-color:var(--c2); }
+                    .hours-time:disabled { opacity:0.3; }
+                    .hours-to { color:var(--ink4); font-size:0.8rem; }
+                    .hours-closed { display:flex; align-items:center; gap:4px; white-space:nowrap; font-size:0.8rem; color:var(--ink4); cursor:pointer; min-width:70px; }
+                </style>
             </div>
 
             <div class="card">
@@ -354,6 +371,60 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
     }
     // --- End Menu Highlights ---
 
+    // --- Opening Hours Helpers ---
+    const HOURS_DAYS = ['mon','tue','wed','thu','fri','sat','sun'];
+    const HOURS_LABELS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+    function toggleHoursDay(day) {
+        const closed = document.getElementById('hours-closed-' + day).checked;
+        document.getElementById('hours-open-' + day).disabled = closed;
+        document.getElementById('hours-close-' + day).disabled = closed;
+        if (closed) {
+            document.getElementById('hours-open-' + day).value = '';
+            document.getElementById('hours-close-' + day).value = '';
+        }
+    }
+
+    function serializeHours() {
+        const lines = [];
+        for (let i = 0; i < HOURS_DAYS.length; i++) {
+            const d = HOURS_DAYS[i];
+            const closed = document.getElementById('hours-closed-' + d).checked;
+            if (closed) {
+                lines.push(HOURS_LABELS[i] + ' closed');
+            } else {
+                const open = document.getElementById('hours-open-' + d).value;
+                const close = document.getElementById('hours-close-' + d).value;
+                if (open && close) {
+                    lines.push(HOURS_LABELS[i] + ' ' + open + '-' + close);
+                }
+            }
+        }
+        return lines.length > 0 ? lines.join('\n') : null;
+    }
+
+    function deserializeHours(str) {
+        if (!str) return;
+        const lines = str.split('\n').map(function(s) { return s.trim(); });
+        for (let li = 0; li < lines.length; li++) {
+            const line = lines[li];
+            if (!line) continue;
+            const parts = line.split(' ');
+            const dayIdx = HOURS_LABELS.indexOf(parts[0]);
+            if (dayIdx === -1) continue;
+            const d = HOURS_DAYS[dayIdx];
+            if (parts[1] === 'closed') {
+                document.getElementById('hours-closed-' + d).checked = true;
+                toggleHoursDay(d);
+            } else if (parts.length >= 2 && parts[1].indexOf('-') !== -1) {
+                const times = parts[1].split('-');
+                document.getElementById('hours-open-' + d).value = times[0];
+                document.getElementById('hours-close-' + d).value = times[1];
+            }
+        }
+    }
+    // --- End Opening Hours Helpers ---
+
     // Extract token from URL or input
     function getToken() {
         // Check URL params
@@ -445,7 +516,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         document.getElementById('edit-instagram').value = l.social_instagram || '';
         document.getElementById('edit-facebook').value = l.social_facebook || '';
         document.getElementById('edit-twitter').value = l.social_twitter || '';
-        document.getElementById('edit-hours').value = l.opening_hours || '';
+        deserializeHours(l.opening_hours || '');
         document.getElementById('edit-price').value = l.price_range || '';
 
         // Features
@@ -492,7 +563,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             social_instagram: document.getElementById('edit-instagram').value.trim() || null,
             social_facebook: document.getElementById('edit-facebook').value.trim() || null,
             social_twitter: document.getElementById('edit-twitter').value.trim() || null,
-            opening_hours: document.getElementById('edit-hours').value.trim() || null,
+            opening_hours: serializeHours(),
             price_range: document.getElementById('edit-price').value || null,
             features: selectedFeatures.length > 0 ? selectedFeatures : null,
             menu_highlights: serializeMenu(),
