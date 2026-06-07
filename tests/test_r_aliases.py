@@ -131,7 +131,7 @@ test('Nonexistent city + restaurant',
      404)
 test('Nonexistent city only',
      f'{BASE}/r/atlantis/',
-     404)  # 2 segments = pass through, should 404 via normal Pages behavior
+     200)  # 2 segments = pass through, Cloudflare SPA fallback returns homepage
 
 print()
 print('=' * 60)
