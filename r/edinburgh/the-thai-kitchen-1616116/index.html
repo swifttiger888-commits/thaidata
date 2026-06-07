@@ -1119,14 +1119,14 @@
                     }
                 }
 
-                // Photos
-                if (listing.photos && listing.photos.length > 0) {
-                    var photosDiv = document.getElementById('claimed-photos');
-                    if (photosDiv) {
-                        photosDiv.style.display = 'block';
-                        var grid = document.getElementById('claimed-photos-grid');
-                        if (grid) {
-                            grid.textContent = '';
+                // Photos — always show gallery when claimed
+                var photosDiv = document.getElementById('claimed-photos');
+                if (photosDiv) {
+                    photosDiv.style.display = 'block';
+                    var grid = document.getElementById('claimed-photos-grid');
+                    if (grid) {
+                        grid.textContent = '';
+                        if (listing.photos && listing.photos.length > 0) {
                             listing.photos.forEach(function(url) {
                                 var a = document.createElement('a');
                                 a.href = htmlEscape(url);
@@ -1140,6 +1140,14 @@
                                 a.appendChild(img);
                                 grid.appendChild(a);
                             });
+                        } else {
+                            var emptyDiv = document.createElement('div');
+                            emptyDiv.style.cssText = 'text-align:center;padding:32px;';
+                            emptyDiv.innerHTML = '<i class="fas fa-camera" style="font-size:2rem;color:var(--ink4);margin-bottom:12px;"></i>'
+                                + '<p style="color:var(--ink3);font-weight:600;margin-bottom:8px;">No photos yet</p>'
+                                + '<p style="color:var(--ink4);font-size:0.85rem;max-width:360px;margin:0 auto 16px;line-height:1.5;">Owners can add photos, menus and opening hours by claiming their listing.</p>'
+                                + '<a href="#claim" style="color:var(--c2);font-weight:600;">Claim this listing →</a>';
+                            grid.appendChild(emptyDiv);
                         }
                     }
                 }
