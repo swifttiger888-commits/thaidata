@@ -100,9 +100,9 @@ export async function onRequest(context) {
         + '</style></head><body><div>'
         + '<h1>Page not ready yet</h1>'
         + '<p>You\'ve claimed this restaurant listing, but the public page hasn\'t been generated yet.</p>'
-        + '<p>It will go live once your claim is approved.</p>'
+        + '<p>It will go live once your claim is approved and the listing is set up in our system.</p>'
         + '<div class="actions">'
-        + '<a href="/admin/" class="btn btn-primary">Find my restaurant</a>'
+        + '<a href="/admin/" class="btn btn-primary">Manage my claim</a>'
         + '<a href="mailto:hello@thaidata.uk?subject=' + encodeURIComponent(claimSubject) + '" class="btn-secondary">Contact ThaiData &rarr;</a>'
         + '</div></div></body></html>',
         {
