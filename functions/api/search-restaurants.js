@@ -42,12 +42,14 @@ export async function onRequestGet(context) {
   }
 
   // Score prefix matches: prefer names where the query is followed by
-  // a space + letter (clean brand names over "Thai &..." or "Thai 1...")
+  // a clean word boundary, then in-word continuation (multi-word query),
+  // then special chars. Tiebreak: shorter name = better.
   function score(name) {
     const rest = name.slice(needle.length);
-    if (/^ [a-z]/.test(rest)) return 2;   // "Thai Garden", "Thai Edge"
-    if (/^[ &]/.test(rest)) return 1;     // "Thai & Pie", "Thai 1"
-    return 0;                               // exact match or other
+    if (/^ [a-z]/.test(rest)) return 3;   // "Thai | Garden" — clean boundary
+    if (/^[a-z]/.test(rest)) return 2;    // "Thai |dge" — in-word (multi-q)
+    if (/^[ &0-9]/.test(rest)) return 1;  // "Thai & Pie", "Thai 1"
+    return 0;
   }
 
   prefix.sort((a, b) => {
