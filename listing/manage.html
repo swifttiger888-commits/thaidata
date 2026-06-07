@@ -190,7 +190,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                     <div class="hours-row"><span class="hours-day">Sun</span><input type="time" id="hours-open-sun" class="hours-time"><span class="hours-to">to</span><input type="time" id="hours-close-sun" class="hours-time"><label class="hours-closed"><input type="checkbox" id="hours-closed-sun" onchange="toggleHoursDay('sun')"> Closed</label></div>
                 </div>
                 <style>
-                    .hours-row { display:grid; grid-template-columns:40px 1fr auto 1fr 80px; gap:6px; align-items:center; margin-bottom:8px; }
+                    .hours-row { display:grid; grid-template-columns:40px minmax(90px,120px) auto minmax(90px,120px) auto; gap:6px; align-items:center; margin-bottom:8px; }
                     @media (max-width:500px) {
                         .hours-row { grid-template-columns:40px 1fr auto 1fr; }
                         .hours-closed { grid-column:2 / -1; margin-top:-4px; }
