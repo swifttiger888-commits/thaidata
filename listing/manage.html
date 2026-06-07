@@ -152,13 +152,12 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                     </button>
                     <div id="ai-enhance-panel" style="display:none;margin-top:10px;padding:14px;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:10px;">
                         <p style="color:var(--ink4);font-size:0.75rem;margin-bottom:8px;line-height:1.5;">
-                            Paste your existing website copy below. The AI will rewrite it as a short, factual description for diners.
-                            <strong>Review before saving</strong> — you're in control.
+                            Paste website copy or edit the text below. AI will create a short, factual description. Review before saving.
                         </p>
                         <textarea id="ai-enhance-source" placeholder="Paste your website copy or current description here..." style="min-height:60px;font-size:0.82rem;"></textarea>
                         <div style="display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap;">
                             <button class="btn btn-secondary" id="ai-enhance-btn" onclick="runAiEnhance()" type="button" style="font-size:0.82rem;padding:8px 18px;">
-                                ✨ Enhance with AI
+                                Generate description
                             </button>
                             <span id="ai-enhance-status" style="color:var(--ink4);font-size:0.75rem;"></span>
                         </div>
@@ -851,7 +850,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
             document.getElementById('ai-enhance-status').textContent = '';
             document.getElementById('ai-enhance-error').style.display = 'none';
             document.getElementById('ai-enhance-btn').disabled = false;
-            document.getElementById('ai-enhance-btn').innerHTML = '✨ Enhance with AI';
+            document.getElementById('ai-enhance-btn').innerHTML = 'Generate description';
         }
     }
 
@@ -913,7 +912,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                 aiCooldown = Date.now() + 15000;
                 setTimeout(function() {
                     btn.disabled = false;
-                    btn.innerHTML = '✨ Enhance with AI';
+                    btn.innerHTML = 'Generate description';
                     status.textContent = '';
                 }, 15000);
                 return;
@@ -927,7 +926,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         }
 
         btn.disabled = false;
-        btn.innerHTML = '✨ Enhance with AI';
+        btn.innerHTML = 'Generate description';
     }
     // --- End AI Enhance Description ---
 
