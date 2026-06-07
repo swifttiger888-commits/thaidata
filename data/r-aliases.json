@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "description": "Curated short-name aliases for restaurant URLs. Add when users report broken links for missing-style URLs like /r/{city}/{alias}/. Each alias must be unique: only one restaurant in that city contains the alias term.",
+  "aliases": [
+    { "slug": "chaophraya", "city": "leeds", "canonical": "Chao Phraya Thai Restaurant" },
+    { "slug": "nois", "city": "leeds", "canonical": "Noi's Thai Kitchen" },
+    { "slug": "rosas", "city": "leeds", "canonical": "Rosa's Thai Cafe" }
+  ]
+}
