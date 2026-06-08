@@ -103,8 +103,32 @@ for filename in sorted(os.listdir(cities_dir)):
         html = f.read()
     
     # Remove any existing Browse Restaurants section (avoid duplicates)
+    BEGIN_MARKER = '<!-- BEGIN Browse Restaurants -->'
+    END_MARKER   = '<!-- END Browse Restaurants -->'
+    
+    # Remove sentinel-wrapped section if present
+    if BEGIN_MARKER in html:
+        start = html.find(BEGIN_MARKER)
+        stop  = html.find(END_MARKER, start)
+        if stop != -1:
+            html = html[:start] + html[stop + len(END_MARKER):]
+    
+    # Remove old-format sections (boundary-based: robust against nested divs)
+    OLD_MARKER = '<!-- Individual Restaurant Listings -->'
+    while OLD_MARKER in html:
+        start = html.find(OLD_MARKER)
+        # Find the next boundary: another old marker, sentinel, or footer
+        boundaries = []
+        for b in [OLD_MARKER, '<!-- BEGIN Browse', '<footer>', '</body>']:
+            pos = html.find(b, start + len(OLD_MARKER))
+            if pos != -1:
+                boundaries.append(pos)
+        end = min(boundaries) if boundaries else len(html)
+        html = html[:start] + html[end:]
+
+    # Strip deprecated AUTO:top-rated zone (no longer generated)
     html = re.sub(
-        r'<!-- Individual Restaurant Listings -->.*?</div>\s*\n\s*(?=<div class="card"|</div>\s*\n\s*</div>|$)',
+        r'\n?<!-- AUTO:top-rated -->.*?<!-- END:AUTO:top-rated -->\n?',
         '',
         html,
         flags=re.DOTALL
@@ -135,8 +159,7 @@ for filename in sorted(os.listdir(cities_dir)):
                         <i class="fas fa-chevron-right" style="color:var(--ink3);font-size:0.7rem;"></i>
                     </a>\n'''
     
-    section = f'''
-        <!-- Individual Restaurant Listings -->
+    section = f'''{BEGIN_MARKER}
         <div class="card" style="margin-top:20px;">
             <h2 id="browse">Browse <em>Restaurants</em> in {city_name}</h2>
             <p style="color:var(--ink4);font-size:0.9rem;margin-bottom:16px;">View individual restaurant pages with full FSA hygiene scores, maps, and details. <a href="/r/" style="color:var(--c2);">What's this?</a></p>
@@ -146,6 +169,7 @@ for filename in sorted(os.listdir(cities_dir)):
                 <a href="/r/" style="color:var(--c2);font-size:0.85rem;text-decoration:none;">View all {len(matches)} restaurants in {city_name} →</a>
             </p>
         </div>
+{END_MARKER}
 '''
     
     # Insert before footer or before the last </div> in .wrap

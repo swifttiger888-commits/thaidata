@@ -47,11 +47,9 @@ BASE_URL = "https://thaidata.uk"
 ENRICHED_MIN = 13
 ENRICHED_MAX = 35  # Above this = considered large enough for bespoke (London)
 
-# Recognised AUTO zone names
 AUTO_ZONES = {
     "schema",
     "market-snapshot",
-    "top-rated",
     "chain-presence",
     "postcode-areas",
     "faq",
@@ -358,37 +356,6 @@ def build_market_snapshot_html(city: str, stats: dict[str, Any]) -> str:
     )
 
 
-def build_top_rated_html(stats: dict[str, Any]) -> str:
-    """Build the top-rated AUTO block."""
-    lines: list[str] = []
-    for r in stats["sorted_restaurants"][:10]:
-        rating = r.get("hygiene_rating", "?")
-        stars = "★" * int(rating) if rating and rating.isdigit() else "—"
-        rtype = "Restaurant" if r.get("type") == "restaurant" else "Takeaway"
-        name = " ".join(r["name"].split())  # Collapse double spaces
-        lines.append(
-            f'  <tr>'
-            f'<td style="padding:6px 8px;color:white;">{name}</td>'
-            f'<td style="padding:6px 8px;color:var(--ink4);">{rtype}</td>'
-            f'<td style="padding:6px 8px;color:var(--ink4);">{r.get("postcode", "")}</td>'
-            f'<td style="padding:6px 8px;color:var(--c2);">{stars}</td>'
-            f'</tr>'
-        )
-    return (
-        '<div class="card">\n'
-        '  <h2>Top <em>Rated</em></h2>\n'
-        '  <div style="overflow-x:auto;">\n'
-        '  <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">\n'
-        '  <thead><tr style="text-align:left;border-bottom:1px solid var(--line);">'
-        '<th style="padding:8px;color:var(--ink4);">Name</th>'
-        '<th style="padding:8px;color:var(--ink4);">Type</th>'
-        '<th style="padding:8px;color:var(--ink4);">Postcode</th>'
-        '<th style="padding:8px;color:var(--ink4);">FSA</th>'
-        '</tr></thead>\n  <tbody>\n'
-        + "\n".join(lines) +
-        '\n  </tbody>\n  </table>\n  </div>\n</div>'
-    )
-
 
 def build_chain_presence_html(city: str, chains: list[str], count: int) -> str:
     """Build the chain-presence AUTO block."""
@@ -661,7 +628,6 @@ def process_city(
         # Replace or inject all AUTO zones
         html = inject_auto_zones(html, "schema", build_schema_html(schemas))
         html = inject_auto_zones(html, "market-snapshot", build_market_snapshot_html(city_name, stats))
-        html = inject_auto_zones(html, "top-rated", build_top_rated_html(stats))
         if stats["chains"]:
             html = inject_auto_zones(html, "chain-presence", build_chain_presence_html(city_name, stats["chains"], stats["count"]))
         if stats["postcode_areas"]:
@@ -673,7 +639,6 @@ def process_city(
         for zone_name, zone_content_fn in [
             ("schema", lambda: build_schema_html(schemas)),
             ("market-snapshot", lambda: build_market_snapshot_html(city_name, stats)),
-            ("top-rated", lambda: build_top_rated_html(stats)),
             ("chain-presence", lambda: build_chain_presence_html(city_name, stats["chains"], stats["count"]) if stats["chains"] else None),
             ("postcode-areas", lambda: build_postcode_areas_html(stats["postcode_areas"], city_name) if stats["postcode_areas"] else None),
             ("faq", lambda: build_faq_html(schemas)),
