@@ -313,7 +313,12 @@ body {
     }
 
     async function deleteClaim(id, name) {
-        if (!confirm('Delete claim #' + id + ' for "' + name + '"? This removes the listing and all photos.')) return;
+        var typed = prompt('Type "' + name + '" to confirm permanent deletion. This cannot be undone.');
+        if (typed === null) return;
+        if (typed.trim().toLowerCase() !== name.trim().toLowerCase()) {
+            toast('Name did not match. Deletion cancelled.', 'error');
+            return;
+        }
         try {
             const res = await fetch('/api/admin?claim_id=' + id, {
                 method: 'DELETE',
