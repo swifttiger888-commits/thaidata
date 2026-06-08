@@ -500,8 +500,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
 
     # ---- Related links ----
     html = html.replace(
-        '<!-- DYNAMIC: related_city_link -->\n            <a href="/cities/leeds"><i class="fas fa-arrow-left" style="font-size:0.75em;margin-right:4px;"></i> All Thai restaurants in Leeds</a>',
-        f'            <a href="/cities/{city_slug}"><i class="fas fa-arrow-left" style="font-size:0.75em;margin-right:4px;"></i> All Thai restaurants in {city}</a>'
+        '<!-- DYNAMIC: related_city_link -->\n            <h3>Explore More</h3>\n            <a href="/cities/leeds">\n                <i class="fas fa-arrow-left"></i> All Thai restaurants in Leeds',
+        f'            <a href="/cities/{city_slug}#browse">\n                <i class="fas fa-arrow-left"></i> All Thai restaurants in {city}'
     )
 
     # ---- Claim link (same for all unclaimed) ----
@@ -603,7 +603,14 @@ def main() -> None:
             os.makedirs(dir_path, exist_ok=True)
             
             html = generate_page(r, closed_ids, city_open)
-            with open(os.path.join(dir_path, 'index.html'), 'w') as f:
+            
+            # Don't overwrite the template file (r/leeds/my-thai/index.html)
+            template_path = os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html')
+            out_path = os.path.join(dir_path, 'index.html')
+            if os.path.abspath(out_path) == os.path.abspath(template_path):
+                continue
+            
+            with open(out_path, 'w') as f:
                 f.write(html)
             
             generated += 1
