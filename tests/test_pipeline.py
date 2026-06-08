@@ -216,7 +216,7 @@ class TestDataIntegrity(unittest.TestCase):
         self.assertEqual(len(dupes), 0, f"Duplicate FHRSIDs: {sorted(set(dupes))}")
 
     def test_hygiene_ratings_valid(self) -> None:
-        valid = {'0', '1', '2', '3', '4', '5', 'AwaitingPublication', 'Exempt'}
+        valid = {'0', '1', '2', '3', '4', '5', 'AwaitingPublication', 'Exempt', 'Pass', 'Improvement Required'}
         for r in self.restaurants['restaurants']:
             hr = r.get('hygiene_rating', '')
             self.assertIn(hr, valid, f"id={r['id']}: invalid hygiene_rating='{hr}'")
