@@ -2798,6 +2798,63 @@
     </div>
   </section>
 
+  <!-- RECENTLY ADDED -->
+  <section class="section" id="recently-added" style="padding: 60px 0;">
+    <div class="wrap">
+      <h2 class="section-title">Recently added to <em>ThaiData</em></h2>
+      <p style="color: var(--ink3); margin-bottom: 24px; font-size: 0.9rem;">New FSA-registered Thai businesses discovered in our latest data refresh. Not necessarily new openings — these are the most recent additions to our directory.</p>
+      <div id="recent-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
+        <p style="color: var(--ink4);">Loading...</p>
+      </div>
+      <p style="margin-top: 16px; text-align: center;">
+        <a href="/r/" style="color: var(--c2); font-size: 0.85rem;">Browse all Thai restaurants →</a>
+      </p>
+    </div>
+  </section>
+  <script>
+    (function() {
+      var container = document.getElementById('recent-list');
+      fetch('/data/recent_additions.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(data) {
+          if (!data || !data.restaurants || !data.restaurants.length) {
+            container.innerHTML = '<p style="color: var(--ink4);">No recent additions yet — check back after our next weekly refresh.</p>';
+            return;
+          }
+          var items = data.restaurants.slice(0, 10);
+          container.innerHTML = '';
+          items.forEach(function(rest) {
+            var slug = rest.name.toLowerCase().replace(/[^a-z0-9\\s-]/g, '').replace(/[\\s-]+/g, '-').replace(/^-|-$/g, '');
+            var citySlug = rest.city.toLowerCase().replace(/[^a-z0-9\\s-]/g, '').replace(/[\\s-]+/g, '-').replace(/^-|-$/g, '');
+            var card = document.createElement('a');
+            card.href = '/r/' + citySlug + '/' + slug + '/';
+            card.style.cssText = 'display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card-bg);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;transition:border-color 0.2s;';
+            card.onmouseenter = function() { this.style.borderColor = 'var(--c2)'; };
+            card.onmouseleave = function() { this.style.borderColor = 'var(--line)'; };
+            var info = document.createElement('div');
+            info.style.cssText = 'flex:1;min-width:0;';
+            var nameEl = document.createElement('div');
+            nameEl.style.cssText = 'font-weight:600;font-size:0.9rem;color:var(--ink);';
+            nameEl.textContent = rest.name;
+            info.appendChild(nameEl);
+            var meta = document.createElement('div');
+            meta.style.cssText = 'font-size:0.78rem;color:var(--ink4);margin-top:2px;';
+            meta.textContent = rest.city + ' · Added ' + rest.discovered_on;
+            info.appendChild(meta);
+            card.appendChild(info);
+            var arrow = document.createElement('span');
+            arrow.style.cssText = 'color:var(--ink3);font-size:0.7rem;';
+            arrow.innerHTML = '&#10095;';
+            card.appendChild(arrow);
+            container.appendChild(card);
+          });
+        })
+        .catch(function() {
+          container.innerHTML = '<p style="color: var(--ink4);">Recent additions unavailable right now.</p>';
+        });
+    })();
+  </script>
+
   <!-- FOOTER -->
   <footer>
     <div class="wrap">

@@ -28,41 +28,83 @@ def main() -> None:
     start = datetime.now()
     print(f"=== ThaiData FSA Pipeline — {start.strftime('%Y-%m-%d %H:%M')} ===\n")
 
-    # ── Step 1: snapshot before ──────────────────────────────────────
+    # ── Step 1: snapshot BEFORE fetch ─────────────────────────────────
     old_count = 0
+    old_ids: set[str] = set()
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE) as f:
             old_data = json.load(f)
         old_count = old_data.get('total', len(old_data.get('restaurants', [])))
+        for r in old_data.get('restaurants', []):
+            old_ids.add(str(r.get('id', '')))
 
     # ── Step 2: fetch fresh FSA data ─────────────────────────────────
     if not run([sys.executable, f'{SCRIPTS}/fetch_all_thai_data.py'],
-               'Step 1/4: Fetch fresh FSA data'):
+               'Step 1/5: Fetch fresh FSA data'):
         print("❌ FSA fetch failed. Aborting.")
         sys.exit(1)
 
-    # ── Step 3: snapshot after ───────────────────────────────────────
+    # ── Step 3: snapshot AFTER + compute delta ────────────────────────
     new_count = 0
+    new_ids: set[str] = set()
+    new_restaurants: list[dict] = []
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE) as f:
             new_data = json.load(f)
         new_count = new_data.get('total', len(new_data.get('restaurants', [])))
+        for r in new_data.get('restaurants', []):
+            rid = str(r.get('id', ''))
+            new_ids.add(rid)
+            if rid and rid not in old_ids and old_count > 0:
+                new_restaurants.append({
+                    'fsa_id': rid,
+                    'name': r.get('name', ''),
+                    'city': r.get('city', ''),
+                    'type': r.get('type', 'restaurant'),
+                })
 
     diff = new_count - old_count
     print(f"\n  Data: {old_count} → {new_count} ({diff:+d})")
+    if new_restaurants:
+        print(f"  🆕 New FSA listings: {len(new_restaurants)}")
 
-    # ── Step 4: regenerate pages ─────────────────────────────────────
+    # ── Step 4: update recent_additions.json ─────────────────────────
+    today = start.strftime('%Y-%m-%d')
+    recent_path = os.path.join(REPO_DIR, 'data', 'recent_additions.json')
+    recent = {'updated': today, 'restaurants': []}
+    if os.path.exists(recent_path):
+        with open(recent_path) as f:
+            recent = json.load(f)
+
+    # Merge: prepend new, dedupe by fsa_id, keep last 90 days
+    existing_ids = {r['fsa_id'] for r in recent.get('restaurants', [])}
+    for nr in new_restaurants:
+        if nr['fsa_id'] not in existing_ids:
+            nr['discovered_on'] = today
+            recent['restaurants'].insert(0, nr)
+            existing_ids.add(nr['fsa_id'])
+
+    # Trim: keep last 90 days worth (max 50 entries)
+    cutoff = f'{start.year}-{start.month:02d}-{start.day:02d}'
+    recent['restaurants'] = recent['restaurants'][:50]
+    recent['updated'] = today
+
+    with open(recent_path, 'w') as f:
+        json.dump(recent, f, indent=2)
+    print(f"  📋 Recent additions: {len(recent['restaurants'])} tracked")
+
+    # ── Step 5: regenerate pages ─────────────────────────────────────
     if not run([sys.executable, f'{SCRIPTS}/generate_restaurant_pages.py'],
-               'Step 2/4: Regenerate restaurant pages'):
+               'Step 2/5: Regenerate restaurant pages'):
         print("❌ Restaurant page generation failed. Aborting.")
         sys.exit(1)
 
     if not run([sys.executable, f'{SCRIPTS}/generate_city_pages.py', '--apply'],
-               'Step 3/4: Regenerate city page AUTO blocks'):
+               'Step 3/5: Regenerate city page AUTO blocks'):
         print("⚠️  City page regeneration failed (non-fatal)")
 
     if not run([sys.executable, f'{SCRIPTS}/add_city_restaurant_links.py'],
-               'Step 4/4: Regenerate city browse cards'):
+               'Step 4/5: Regenerate city browse cards'):
         print("⚠️  City card regeneration failed (non-fatal)")
 
     # ── Step 5: commit & push ────────────────────────────────────────
