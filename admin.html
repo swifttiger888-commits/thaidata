@@ -60,6 +60,11 @@ body {
         .hidden { display: none; }
         .view-link { color: #10B981; text-decoration: none; font-size: 0.8rem; white-space: nowrap; }
         .view-link:hover { text-decoration: underline; }
+        .fsa-id-line { font-size: 0.73rem; color: #64748B; margin-top: 4px; display: flex; align-items: center; gap: 6px; }
+        .fsa-id-line code { font-family: monospace; color: #94A3B8; }
+        .fsa-copy-btn { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: #94A3B8; cursor: pointer; padding: 1px 6px; border-radius: 4px; font-size: 0.65rem; }
+        .fsa-copy-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+        .fsa-copy-btn.copied { background: rgba(16,185,129,0.15); border-color: #10B981; color: #10B981; }
 
         @media (max-width: 640px) {
             body { padding: 20px 12px; }
@@ -205,6 +210,28 @@ body {
                 var dateStr = c.created_at ? new Date(c.created_at).toLocaleDateString() : '';
                 metaDiv.textContent = c.city + ' \u00b7 ' + c.claimer_email + ' \u00b7 ' + dateStr;
                 infoDiv.appendChild(metaDiv);
+
+                // FSA ID label with copy button
+                if (c.fsa_id) {
+                    var fsaLine = document.createElement('div');
+                    fsaLine.className = 'fsa-id-line';
+                    var fsaCode = document.createElement('code');
+                    fsaCode.textContent = 'FSA ID: ' + c.fsa_id;
+                    fsaLine.appendChild(fsaCode);
+                    var copyBtn = document.createElement('button');
+                    copyBtn.className = 'fsa-copy-btn';
+                    copyBtn.textContent = 'Copy';
+                    copyBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        navigator.clipboard.writeText(String(c.fsa_id)).then(function() {
+                            copyBtn.textContent = 'Copied!';
+                            copyBtn.classList.add('copied');
+                            setTimeout(function() { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('copied'); }, 2000);
+                        });
+                    });
+                    fsaLine.appendChild(copyBtn);
+                    infoDiv.appendChild(fsaLine);
+                }
 
                 var badgeSpan = document.createElement('span');
                 badgeSpan.className = 'badge badge-' + c.claim_status;

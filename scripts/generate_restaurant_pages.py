@@ -212,6 +212,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         )
     else:
         html = html.replace('<!-- DYNAMIC: robots_meta -->\n', '')
+    # ---- FSA ID meta tag (inspectable from devtools) ----
+    html = html.replace(
+        '<!-- DYNAMIC: fsa_id_meta -->\n    <meta name="thaidata:fsa-id" content="842597">',
+        f'    <meta name="thaidata:fsa-id" content="{fsa_id}">'
+    )
     html = html.replace(
         '<!-- DYNAMIC: og_url -->\n    <meta property="og:url" content="https://thaidata.uk/r/leeds/my-thai/"',
         f'    <meta property="og:url" content="{canonical}"'
