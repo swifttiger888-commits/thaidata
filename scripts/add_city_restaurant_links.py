@@ -133,6 +133,16 @@ for filename in sorted(os.listdir(cities_dir)):
         html,
         flags=re.DOTALL
     )
+
+    # Strip inline 🍜 Top Rated table (redundant with browse cards)
+    html = re.sub(
+        r'<div style="background:white;border-radius:12px;padding:20px 24px;margin:20px 0;'
+        r'box-shadow:0 1px 3px rgba\(0,0,0,0\.08\);">\s*'
+        r'<h3[^>]*>🍜 Top Rated</h3>.*?</div>',
+        '',
+        html,
+        flags=re.DOTALL
+    )
     
     # Build the restaurant links section
     top_restaurants = matches[:8]  # Top 8 by rating
