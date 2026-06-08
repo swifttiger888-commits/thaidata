@@ -643,6 +643,8 @@ def main() -> None:
 
     print(f"Generating {total} restaurant pages with Kimi v2 template...")
 
+    written_slugs: set[str] = set()
+
     for i, r in enumerate(restaurants):
         try:
             # Skip excluded restaurants (moderation layer)
@@ -653,9 +655,11 @@ def main() -> None:
             
             dir_path = os.path.join(OUT_DIR, city_slug, rest_slug)
             
-            # Handle duplicates in same city by appending FSA ID
-            if os.path.exists(os.path.join(dir_path, 'index.html')):
+            # Handle duplicates: track written slugs per run; same slug again = collision → use -id suffix
+            collision_key = f"{city_slug}/{rest_slug}"
+            if collision_key in written_slugs:
                 dir_path = os.path.join(OUT_DIR, city_slug, f"{rest_slug}-{r['id']}")
+            written_slugs.add(collision_key)
             
             os.makedirs(dir_path, exist_ok=True)
             

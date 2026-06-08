@@ -115,7 +115,7 @@ def main() -> None:
     status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
     dirty_lines = [l for l in status.stdout.split('\n') if l.strip()]
     unrelated = [l for l in dirty_lines
-                 if not any(l.split()[-1].startswith(p) for p in owned_prefixes)]
+                 if not any(l.split()[-1].strip('"').startswith(p) for p in owned_prefixes)]
     if unrelated:
         print(f"  ⚠️ Aborting: {len(unrelated)} unrelated dirty file(s)")
         for f in unrelated[:10]:
