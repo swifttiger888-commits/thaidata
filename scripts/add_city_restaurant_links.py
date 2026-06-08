@@ -171,9 +171,10 @@ for filename in sorted(os.listdir(cities_dir)):
     )
     
     # Build the restaurant links section
-    top_restaurants = matches[:8]  # Top 8 by rating
+    MAX_DISPLAY = 100  # show all for typical cities; London (358) gets capped
+    displayed = matches[:MAX_DISPLAY]
     links_html = ''
-    for r in top_restaurants:
+    for r in displayed:
         r_slug = slugify(r['name'])
         r_city_slug = slugify(r['city'])
         rating = r.get('hygiene_rating', '?')
@@ -202,7 +203,7 @@ for filename in sorted(os.listdir(cities_dir)):
             <div style="display:flex;flex-direction:column;gap:8px;">
 {links_html}            </div>
             <p style="margin-top:14px;text-align:center;">
-                <a href="/cities/{city_slug}#browse" style="color:var(--c2);font-size:0.85rem;text-decoration:none;">View all {len(matches)} restaurants in {city_name} →</a>
+                <a href="/r/" style="color:var(--c2);font-size:0.85rem;text-decoration:none;">Browse all restaurant pages →</a>
             </p>
         </div>
 {END_MARKER}
