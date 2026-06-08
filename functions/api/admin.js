@@ -269,7 +269,7 @@ export async function onRequestGet(context) {
     const city = url.searchParams.get('city');
     const limit = parseInt(url.searchParams.get('limit') || '50');
 
-    let query = `SELECT c.*, l.enrichment, l.page_url
+    let query = `SELECT c.*, l.enrichment
       FROM claims c
       LEFT JOIN listings l ON l.claim_id = c.id`;
     const params = [];
