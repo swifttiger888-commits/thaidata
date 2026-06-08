@@ -293,7 +293,7 @@ body {
                 }
 
                 // Exclusion status badge
-                if (c.fsa_id && window._excludedIds && window._excludedIds.has(c.fsa_id)) {
+                if (c.fsa_id && window._excludedIds && (window._excludedIds.has(c.fsa_id) || window._excludedIds.has(Number(c.fsa_id)))) {
                     var exclBadge = document.createElement('span');
                     exclBadge.className = 'excluded-badge';
                     exclBadge.textContent = 'excluded';
@@ -409,7 +409,7 @@ body {
                 // Exclude / Restore button (needs fsa_id)
                 if (c.fsa_id) {
                     var exclBtn = document.createElement('button');
-                    var isExcluded = window._excludedIds && window._excludedIds.has(c.fsa_id);
+                    var isExcluded = window._excludedIds && (window._excludedIds.has(c.fsa_id) || window._excludedIds.has(Number(c.fsa_id)));
                     if (isExcluded) {
                         exclBtn.style.background = '#10B981';
                         exclBtn.textContent = 'Restore';
