@@ -240,7 +240,7 @@ body {
             }
 
             for (var ci = 0; ci < data.claims.length; ci++) {
-                var c = data.claims[ci];
+                let c = data.claims[ci];
                 var claimRow = document.createElement('div');
                 claimRow.className = 'claim';
 
@@ -265,7 +265,7 @@ body {
                     var fsaCode = document.createElement('code');
                     fsaCode.textContent = 'FSA ID: ' + c.fsa_id;
                     fsaLine.appendChild(fsaCode);
-                    var copyBtn = document.createElement('button');
+                    let copyBtn = document.createElement('button');
                     copyBtn.className = 'fsa-copy-btn';
                     copyBtn.textContent = 'Copy';
                     copyBtn.addEventListener('click', function(e) {
