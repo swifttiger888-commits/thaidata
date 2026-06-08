@@ -2,6 +2,90 @@
   "updated": "2026-06-08",
   "restaurants": [
     {
+      "fsa_id": "1583716",
+      "name": "Zaal Indian Cuisine",
+      "city": "Stafford",
+      "type": "takeaway",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1911988",
+      "name": "ZAA PIZZERIA",
+      "city": "Newcastle",
+      "type": "takeaway",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "172132",
+      "name": "Zaal",
+      "city": "Wealden",
+      "type": "takeaway",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1004678",
+      "name": "The Siam Zaa",
+      "city": "Newcastle",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1129821",
+      "name": "Zaal Indian Dining",
+      "city": "Thurrock",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "345555",
+      "name": "Abu Zaad Restaurant",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1626000",
+      "name": "Zaal Fine Dining",
+      "city": "Hart",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1923782",
+      "name": "Zaat Restaurant",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1033747",
+      "name": "Abu Zaad",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "315505",
+      "name": "ZAAL",
+      "city": "Runnymede",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1721229",
+      "name": "Wraps&Wings/SukhumThai/WowSticks/YumYum/OrientalBo/Khao",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "578053",
+      "name": "Sukothai",
+      "city": "Cornwall",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
       "fsa_id": "962308",
       "name": "The Eight Bells Thai Cuisine",
       "city": "Vale of White Horse",

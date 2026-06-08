@@ -11,9 +11,9 @@
     "UKHospitality"
   ],
   "statistics": {
-    "total_uk_thai_businesses": 1469,
-    "total_full_service_restaurants": 1165,
-    "total_quick_service_takeaways": 304,
+    "total_uk_thai_businesses": 1481,
+    "total_full_service_restaurants": 1174,
+    "total_quick_service_takeaways": 307,
     "uk_average_hygiene_rating": 4.1,
     "uk_average_per_100k_density": 2.6,
     "hygiene_rating_5_percentage": 50.4,
@@ -55,10 +55,10 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 354,
-      "restaurants": 281,
+      "total_thai_businesses": 358,
+      "restaurants": 285,
       "takeaways": 73,
-      "per_100k": 3.9,
+      "per_100k": 4.0,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 120
     },

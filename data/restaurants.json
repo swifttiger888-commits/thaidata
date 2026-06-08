@@ -1,7 +1,7 @@
 {
   "name": "ThaiData UK \u2014 Restaurant Directory",
   "updated": "2026-06-08",
-  "total": 1469,
+  "total": 1481,
   "sources": [
     "FSA FHRS",
     "FSA FHIS"
@@ -1009,19 +1009,6 @@
       "latitude": ""
     },
     {
-      "id": 1773556,
-      "name": "Thai Basil",
-      "type": "restaurant",
-      "city": "Ashford",
-      "local_authority": "Ashford",
-      "postcode": "TN23 5GR",
-      "address": "3A The Singleton Centre Hoxton Close, Singleton",
-      "hygiene_rating": "5",
-      "rating_date": "2024-05-24T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1861558,
       "name": "Thai Basil",
       "type": "restaurant",
@@ -1031,6 +1018,19 @@
       "address": "1 Cavendish Street, Skipton",
       "hygiene_rating": "5",
       "rating_date": "2024-06-05T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1773556,
+      "name": "Thai Basil",
+      "type": "restaurant",
+      "city": "Ashford",
+      "local_authority": "Ashford",
+      "postcode": "TN23 5GR",
+      "address": "3A The Singleton Centre Hoxton Close, Singleton",
+      "hygiene_rating": "5",
+      "rating_date": "2024-05-24T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -1217,6 +1217,19 @@
       "latitude": ""
     },
     {
+      "id": 748496,
+      "name": "Thai Express",
+      "type": "restaurant",
+      "city": "Thurrock",
+      "local_authority": "Thurrock",
+      "postcode": "RM20 2ZJ",
+      "address": "Unit 431, Intu Lakeside, West Thurrock Way, West Thurrock",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-06T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1381445,
       "name": "Thai Express",
       "type": "restaurant",
@@ -1243,19 +1256,6 @@
       "latitude": ""
     },
     {
-      "id": 748496,
-      "name": "Thai Express",
-      "type": "restaurant",
-      "city": "Thurrock",
-      "local_authority": "Thurrock",
-      "postcode": "RM20 2ZJ",
-      "address": "Unit 431, Intu Lakeside, West Thurrock Way, West Thurrock",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-06T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 488767,
       "name": "Thai Gallery",
       "type": "restaurant",
@@ -1269,19 +1269,6 @@
       "latitude": ""
     },
     {
-      "id": 385037,
-      "name": "Thai Garden",
-      "type": "restaurant",
-      "city": "Bristol",
-      "local_authority": "Bristol",
-      "postcode": "BS3 3LR",
-      "address": "100 West Street, Bedminster, Bristol",
-      "hygiene_rating": "5",
-      "rating_date": "2024-10-29T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1104225,
       "name": "Thai Garden",
       "type": "restaurant",
@@ -1291,6 +1278,19 @@
       "address": "3a King Street, Hereford",
       "hygiene_rating": "5",
       "rating_date": "2025-06-13T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 385037,
+      "name": "Thai Garden",
+      "type": "restaurant",
+      "city": "Bristol",
+      "local_authority": "Bristol",
+      "postcode": "BS3 3LR",
+      "address": "100 West Street, Bedminster, Bristol",
+      "hygiene_rating": "5",
+      "rating_date": "2024-10-29T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -1464,6 +1464,19 @@
       "latitude": ""
     },
     {
+      "id": 544329,
+      "name": "Thai Orchid",
+      "type": "restaurant",
+      "city": "Windsor and Maidenhead",
+      "local_authority": "Windsor and Maidenhead",
+      "postcode": "SL6 8NJ",
+      "address": "The Thai Orchard, Ray Mead Road, Maidenhead",
+      "hygiene_rating": "5",
+      "rating_date": "2022-03-18T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 221998,
       "name": "Thai Orchid",
       "type": "restaurant",
@@ -1486,19 +1499,6 @@
       "address": "5 Cathedral Yard, Exeter, Devon",
       "hygiene_rating": "5",
       "rating_date": "2025-02-13T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 544329,
-      "name": "Thai Orchid",
-      "type": "restaurant",
-      "city": "Windsor and Maidenhead",
-      "local_authority": "Windsor and Maidenhead",
-      "postcode": "SL6 8NJ",
-      "address": "The Thai Orchard, Ray Mead Road, Maidenhead",
-      "hygiene_rating": "5",
-      "rating_date": "2022-03-18T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -1711,19 +1711,6 @@
       "latitude": ""
     },
     {
-      "id": 334798,
-      "name": "Thai Taste",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Kensington and Chelsea",
-      "postcode": "SW7 4ET",
-      "address": "130 Cromwell Road, LONDON",
-      "hygiene_rating": "5",
-      "rating_date": "2025-04-22T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 682959,
       "name": "Thai Taste",
       "type": "restaurant",
@@ -1733,6 +1720,19 @@
       "address": "Unit 58d Swansea Market, Oxford Street, City Centre",
       "hygiene_rating": "5",
       "rating_date": "2026-01-21T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 334798,
+      "name": "Thai Taste",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Kensington and Chelsea",
+      "postcode": "SW7 4ET",
+      "address": "130 Cromwell Road, LONDON",
+      "hygiene_rating": "5",
+      "rating_date": "2025-04-22T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -2309,6 +2309,19 @@
       "latitude": ""
     },
     {
+      "id": 1717094,
+      "name": "Thai House",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Barnet",
+      "postcode": "EN4 8RQ",
+      "address": "72 East Barnet Road Barnet",
+      "hygiene_rating": "4",
+      "rating_date": "2026-01-22T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 149806,
       "name": "Thai House",
       "type": "restaurant",
@@ -2348,15 +2361,15 @@
       "latitude": ""
     },
     {
-      "id": 1717094,
-      "name": "Thai House",
+      "id": 1453069,
+      "name": "Thai Kitchen",
       "type": "restaurant",
-      "city": "London",
-      "local_authority": "Barnet",
-      "postcode": "EN4 8RQ",
-      "address": "72 East Barnet Road Barnet",
+      "city": "Herefordshire",
+      "local_authority": "Herefordshire",
+      "postcode": "HR5 3BJ",
+      "address": "Shop, 36 High Street, Kington",
       "hygiene_rating": "4",
-      "rating_date": "2026-01-22T00:00:00",
+      "rating_date": "2025-03-13T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -2383,19 +2396,6 @@
       "address": "The Queen Adelaide, High Street, Blagdon, Bristol",
       "hygiene_rating": "4",
       "rating_date": "2025-10-27T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1453069,
-      "name": "Thai Kitchen",
-      "type": "restaurant",
-      "city": "Herefordshire",
-      "local_authority": "Herefordshire",
-      "postcode": "HR5 3BJ",
-      "address": "Shop, 36 High Street, Kington",
-      "hygiene_rating": "4",
-      "rating_date": "2025-03-13T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -2452,19 +2452,6 @@
       "latitude": ""
     },
     {
-      "id": 259779,
-      "name": "Thai Orchid",
-      "type": "restaurant",
-      "city": "Wiltshire",
-      "local_authority": "Wiltshire",
-      "postcode": "",
-      "address": "58A FISHERTON STREET, SALISBURY",
-      "hygiene_rating": "4",
-      "rating_date": "2024-11-05T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 81662,
       "name": "Thai Orchid",
       "type": "restaurant",
@@ -2474,6 +2461,19 @@
       "address": "33 Cannon Street, Preston",
       "hygiene_rating": "4",
       "rating_date": "2025-11-14T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 259779,
+      "name": "Thai Orchid",
+      "type": "restaurant",
+      "city": "Wiltshire",
+      "local_authority": "Wiltshire",
+      "postcode": "",
+      "address": "58A FISHERTON STREET, SALISBURY",
+      "hygiene_rating": "4",
+      "rating_date": "2024-11-05T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -3037,19 +3037,6 @@
       "latitude": ""
     },
     {
-      "id": 1715144,
-      "name": "Thai Square",
-      "type": "restaurant",
-      "city": "St Albans City",
-      "local_authority": "St Albans City",
-      "postcode": "AL3 4ES",
-      "address": "27-28 George Street, St Albans, Hertfordshire",
-      "hygiene_rating": "3",
-      "rating_date": "2024-10-09T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 413602,
       "name": "Thai Square",
       "type": "restaurant",
@@ -3059,6 +3046,19 @@
       "address": "BASEMENT AND GROUND FLOOR NORWAY HOUSE 21-24 COCKSPUR STREET, LONDON",
       "hygiene_rating": "3",
       "rating_date": "2025-10-04T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1715144,
+      "name": "Thai Square",
+      "type": "restaurant",
+      "city": "St Albans City",
+      "local_authority": "St Albans City",
+      "postcode": "AL3 4ES",
+      "address": "27-28 George Street, St Albans, Hertfordshire",
+      "hygiene_rating": "3",
+      "rating_date": "2024-10-09T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -4428,19 +4428,6 @@
       "latitude": ""
     },
     {
-      "id": 1571577,
-      "name": "Pad Thai Story",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Wandsworth",
-      "postcode": "SW18 1TQ",
-      "address": "543 Old York Road, London, Wandsworth",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-04T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1573114,
       "name": "Pad Thai Story",
       "type": "restaurant",
@@ -4463,6 +4450,19 @@
       "address": "82 Fulham Palace Road, London",
       "hygiene_rating": "5",
       "rating_date": "2026-03-19T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1571577,
+      "name": "Pad Thai Story",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Wandsworth",
+      "postcode": "SW18 1TQ",
+      "address": "543 Old York Road, London, Wandsworth",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-04T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -4675,15 +4675,15 @@
       "latitude": ""
     },
     {
-      "id": 724325,
-      "name": "Rosa's Thai Cafe",
+      "id": 1085440,
+      "name": "Rosa's Thai cafe",
       "type": "restaurant",
       "city": "London",
-      "local_authority": "Islington",
-      "postcode": "N1 0QX",
-      "address": "Rosa's Thai Cafe, Ground Floor, 6 Theberton Street, London",
+      "local_authority": "Camden",
+      "postcode": "NW6 1SD",
+      "address": "Ground Floor Front Haskell House, 152 West End Lane, London",
       "hygiene_rating": "5",
-      "rating_date": "2024-11-07T00:00:00",
+      "rating_date": "2026-02-10T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -4714,19 +4714,6 @@
       "latitude": ""
     },
     {
-      "id": 1031152,
-      "name": "Rosa's Thai Cafe",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Camden",
-      "postcode": "WC2H 9LN",
-      "address": "26 Earlham Street, London",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-06T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 950574,
       "name": "Rosa's Thai Cafe",
       "type": "restaurant",
@@ -4736,71 +4723,6 @@
       "address": "Ground Floor, 36 Atlantic Road, London",
       "hygiene_rating": "5",
       "rating_date": "2025-01-28T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1336988,
-      "name": "Rosa's Thai Cafe",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Greenwich",
-      "postcode": "SE10 9JB",
-      "address": "16 Nelson Road, Greenwich",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-18T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1089579,
-      "name": "Rosa's Thai Cafe",
-      "type": "restaurant",
-      "city": "Dartford",
-      "local_authority": "Dartford",
-      "postcode": "DA9 9SG",
-      "address": "Rosas Thai Cafe, Unit SVU07, Plaza - Upper, Bluewater",
-      "hygiene_rating": "5",
-      "rating_date": "2024-10-22T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1051393,
-      "name": "Rosa's Thai Cafe",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Ealing",
-      "postcode": "W5 2NX",
-      "address": "33 Haven Green, Ealing",
-      "hygiene_rating": "5",
-      "rating_date": "2024-12-04T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1456319,
-      "name": "Rosa's Thai Cafe",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Islington",
-      "postcode": "N1 9DX",
-      "address": "Rosa's Thai Cafe, 15-17 Caledonian Road, London, N1 9DX",
-      "hygiene_rating": "5",
-      "rating_date": "2025-09-16T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1816451,
-      "name": "Rosa's Thai Cafe",
-      "type": "restaurant",
-      "city": "Manchester",
-      "local_authority": "Manchester",
-      "postcode": "M3 3WB",
-      "address": "The Old Courthouse, 184-186 Deansgate, Manchester",
-      "hygiene_rating": "5",
-      "rating_date": "2025-11-06T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -4818,15 +4740,80 @@
       "latitude": ""
     },
     {
-      "id": 1219294,
+      "id": 724325,
       "name": "Rosa's Thai Cafe",
       "type": "restaurant",
-      "city": "Liverpool",
-      "local_authority": "Liverpool",
-      "postcode": "L3 4AD",
-      "address": "7 Britannia Pavilion Gower Street, Liverpool",
+      "city": "London",
+      "local_authority": "Islington",
+      "postcode": "N1 0QX",
+      "address": "Rosa's Thai Cafe, Ground Floor, 6 Theberton Street, London",
       "hygiene_rating": "5",
-      "rating_date": "2019-12-17T00:00:00",
+      "rating_date": "2024-11-07T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1031152,
+      "name": "Rosa's Thai Cafe",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Camden",
+      "postcode": "WC2H 9LN",
+      "address": "26 Earlham Street, London",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-06T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1456319,
+      "name": "Rosa's Thai Cafe",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Islington",
+      "postcode": "N1 9DX",
+      "address": "Rosa's Thai Cafe, 15-17 Caledonian Road, London, N1 9DX",
+      "hygiene_rating": "5",
+      "rating_date": "2025-09-16T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1051393,
+      "name": "Rosa's Thai Cafe",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Ealing",
+      "postcode": "W5 2NX",
+      "address": "33 Haven Green, Ealing",
+      "hygiene_rating": "5",
+      "rating_date": "2024-12-04T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1816451,
+      "name": "Rosa's Thai Cafe",
+      "type": "restaurant",
+      "city": "Manchester",
+      "local_authority": "Manchester",
+      "postcode": "M3 3WB",
+      "address": "The Old Courthouse, 184-186 Deansgate, Manchester",
+      "hygiene_rating": "5",
+      "rating_date": "2025-11-06T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1089579,
+      "name": "Rosa's Thai Cafe",
+      "type": "restaurant",
+      "city": "Dartford",
+      "local_authority": "Dartford",
+      "postcode": "DA9 9SG",
+      "address": "Rosas Thai Cafe, Unit SVU07, Plaza - Upper, Bluewater",
+      "hygiene_rating": "5",
+      "rating_date": "2024-10-22T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -4844,19 +4831,6 @@
       "latitude": ""
     },
     {
-      "id": 1314707,
-      "name": "Rosa's Thai Cafe",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Lambeth",
-      "postcode": "SE1 8LL",
-      "address": "77 The Cut, London",
-      "hygiene_rating": "5",
-      "rating_date": "2024-05-13T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1157916,
       "name": "Rosa's Thai Cafe",
       "type": "restaurant",
@@ -4870,28 +4844,41 @@
       "latitude": ""
     },
     {
-      "id": 1085440,
-      "name": "Rosa's Thai cafe",
+      "id": 1314707,
+      "name": "Rosa's Thai Cafe",
       "type": "restaurant",
       "city": "London",
-      "local_authority": "Camden",
-      "postcode": "NW6 1SD",
-      "address": "Ground Floor Front Haskell House, 152 West End Lane, London",
+      "local_authority": "Lambeth",
+      "postcode": "SE1 8LL",
+      "address": "77 The Cut, London",
       "hygiene_rating": "5",
-      "rating_date": "2026-02-10T00:00:00",
+      "rating_date": "2024-05-13T00:00:00",
       "longitude": "",
       "latitude": ""
     },
     {
-      "id": 1572598,
+      "id": 1219294,
+      "name": "Rosa's Thai Cafe",
+      "type": "restaurant",
+      "city": "Liverpool",
+      "local_authority": "Liverpool",
+      "postcode": "L3 4AD",
+      "address": "7 Britannia Pavilion Gower Street, Liverpool",
+      "hygiene_rating": "5",
+      "rating_date": "2019-12-17T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1336988,
       "name": "Rosa's Thai Cafe",
       "type": "restaurant",
       "city": "London",
-      "local_authority": "Wandsworth",
-      "postcode": "SW17 0RN",
-      "address": "70 Tooting High Street, London, Wandsworth",
+      "local_authority": "Greenwich",
+      "postcode": "SE10 9JB",
+      "address": "16 Nelson Road, Greenwich",
       "hygiene_rating": "5",
-      "rating_date": "2026-04-22T00:00:00",
+      "rating_date": "2025-06-18T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -4905,6 +4892,19 @@
       "address": "54 Northcote Road, London, Wandsworth",
       "hygiene_rating": "5",
       "rating_date": "2026-04-30T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1572598,
+      "name": "Rosa's Thai Cafe",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Wandsworth",
+      "postcode": "SW17 0RN",
+      "address": "70 Tooting High Street, London, Wandsworth",
+      "hygiene_rating": "5",
+      "rating_date": "2026-04-22T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -4974,19 +4974,6 @@
       "latitude": ""
     },
     {
-      "id": 1201223,
-      "name": "Rosas thai cafe",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Southwark",
-      "postcode": "SE1 2SD",
-      "address": "Unit 6 1, 2, Duchess Walk, London",
-      "hygiene_rating": "5",
-      "rating_date": "2024-09-04T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 943369,
       "name": "Rosas Thai Cafe",
       "type": "restaurant",
@@ -4996,6 +4983,19 @@
       "address": "RAILWAY ARCH 381 MENTMORE TERRACE, Hackney, London",
       "hygiene_rating": "5",
       "rating_date": "2026-01-07T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1201223,
+      "name": "Rosas thai cafe",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Southwark",
+      "postcode": "SE1 2SD",
+      "address": "Unit 6 1, 2, Duchess Walk, London",
+      "hygiene_rating": "5",
+      "rating_date": "2024-09-04T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -5468,19 +5468,6 @@
       "latitude": ""
     },
     {
-      "id": 1765991,
-      "name": "Thai Bach Express",
-      "type": "restaurant",
-      "city": "Swansea",
-      "local_authority": "Swansea",
-      "postcode": "SA2 7JU",
-      "address": "Swansea Airport, Fairwood",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-20T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1830209,
       "name": "Thai Bach Express",
       "type": "restaurant",
@@ -5490,6 +5477,19 @@
       "address": "",
       "hygiene_rating": "5",
       "rating_date": "2025-10-28T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1765991,
+      "name": "Thai Bach Express",
+      "type": "restaurant",
+      "city": "Swansea",
+      "local_authority": "Swansea",
+      "postcode": "SA2 7JU",
+      "address": "Swansea Airport, Fairwood",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-20T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -5793,19 +5793,6 @@
       "latitude": ""
     },
     {
-      "id": 220325,
-      "name": "Thai Street Cafe",
-      "type": "restaurant",
-      "city": "Southampton",
-      "local_authority": "Southampton",
-      "postcode": "SO14 1ND",
-      "address": "3 Pound Tree Road, Southampton",
-      "hygiene_rating": "5",
-      "rating_date": "2025-07-16T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1673448,
       "name": "Thai Street Cafe",
       "type": "restaurant",
@@ -5828,6 +5815,19 @@
       "address": "31 High Street North, Ruskington",
       "hygiene_rating": "5",
       "rating_date": "2024-07-31T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 220325,
+      "name": "Thai Street Cafe",
+      "type": "restaurant",
+      "city": "Southampton",
+      "local_authority": "Southampton",
+      "postcode": "SO14 1ND",
+      "address": "3 Pound Tree Road, Southampton",
+      "hygiene_rating": "5",
+      "rating_date": "2025-07-16T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -6027,19 +6027,6 @@
       "latitude": ""
     },
     {
-      "id": 1621192,
-      "name": "The Thai Classic",
-      "type": "restaurant",
-      "city": "Birmingham",
-      "local_authority": "Birmingham",
-      "postcode": "B5 6AB",
-      "address": "Unit 4 Latitude, Bromsgrove Street, Birmingham",
-      "hygiene_rating": "5",
-      "rating_date": "2025-01-20T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1897069,
       "name": "The Thai Classic",
       "type": "restaurant",
@@ -6049,6 +6036,19 @@
       "address": "Ground Floor, 54 Highcross Street, Leicester",
       "hygiene_rating": "5",
       "rating_date": "2026-03-10T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1621192,
+      "name": "The Thai Classic",
+      "type": "restaurant",
+      "city": "Birmingham",
+      "local_authority": "Birmingham",
+      "postcode": "B5 6AB",
+      "address": "Unit 4 Latitude, Bromsgrove Street, Birmingham",
+      "hygiene_rating": "5",
+      "rating_date": "2025-01-20T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -11955,19 +11955,6 @@
       "latitude": ""
     },
     {
-      "id": 1682549,
-      "name": "Chai Green",
-      "type": "restaurant",
-      "city": "Cardiff",
-      "local_authority": "Cardiff",
-      "postcode": "CF24 3RP",
-      "address": "2 Albany Road, Roath, Cardiff",
-      "hygiene_rating": "3",
-      "rating_date": "2025-08-21T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1846719,
       "name": "Chai Green",
       "type": "restaurant",
@@ -11977,6 +11964,19 @@
       "address": "97A Commercial Road, Portsmouth",
       "hygiene_rating": "3",
       "rating_date": "2026-01-21T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1682549,
+      "name": "Chai Green",
+      "type": "restaurant",
+      "city": "Cardiff",
+      "local_authority": "Cardiff",
+      "postcode": "CF24 3RP",
+      "address": "2 Albany Road, Roath, Cardiff",
+      "hygiene_rating": "3",
+      "rating_date": "2025-08-21T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -12137,6 +12137,32 @@
       "latitude": ""
     },
     {
+      "id": 1677185,
+      "name": "Cha Cha Chai",
+      "type": "restaurant",
+      "city": "Middlesbrough",
+      "local_authority": "Middlesbrough",
+      "postcode": "TS1 3QP",
+      "address": "248-254 Linthorpe Road, Middlesbrough",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-12T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1594433,
+      "name": "Cha Cha Chai",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Waltham Forest",
+      "postcode": "E17 9PT",
+      "address": "Ground Floor 245 Hoe Street, Walthamstow, London",
+      "hygiene_rating": "5",
+      "rating_date": "2024-05-15T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1726174,
       "name": "Cha Cha Chai",
       "type": "restaurant",
@@ -12172,32 +12198,6 @@
       "address": "7 Food Court, Charles Street Mall, The Broadway, Bradford",
       "hygiene_rating": "5",
       "rating_date": "2025-07-31T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1594433,
-      "name": "Cha Cha Chai",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Waltham Forest",
-      "postcode": "E17 9PT",
-      "address": "Ground Floor 245 Hoe Street, Walthamstow, London",
-      "hygiene_rating": "5",
-      "rating_date": "2024-05-15T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1677185,
-      "name": "Cha Cha Chai",
-      "type": "restaurant",
-      "city": "Middlesbrough",
-      "local_authority": "Middlesbrough",
-      "postcode": "TS1 3QP",
-      "address": "248-254 Linthorpe Road, Middlesbrough",
-      "hygiene_rating": "5",
-      "rating_date": "2026-02-12T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -18455,19 +18455,6 @@
       "latitude": ""
     },
     {
-      "id": 1221101,
-      "name": "SUKHOTHAI",
-      "type": "restaurant",
-      "city": "Wirral",
-      "local_authority": "Wirral",
-      "postcode": "CH48 0RB",
-      "address": "119 - 121 Banks Road, West Kirby, Wirral",
-      "hygiene_rating": "5",
-      "rating_date": "2026-02-13T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 83700,
       "name": "Sukhothai",
       "type": "restaurant",
@@ -18477,19 +18464,6 @@
       "address": "6 Windmill Street, Gravesend, Kent",
       "hygiene_rating": "5",
       "rating_date": "2025-12-02T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 521984,
-      "name": "Sukhothai",
-      "type": "restaurant",
-      "city": "Leeds",
-      "local_authority": "Leeds",
-      "postcode": "LS1 5PQ",
-      "address": "15 South Parade, Leeds",
-      "hygiene_rating": "5",
-      "rating_date": "2023-07-27T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -18507,6 +18481,32 @@
       "latitude": ""
     },
     {
+      "id": 521984,
+      "name": "Sukhothai",
+      "type": "restaurant",
+      "city": "Leeds",
+      "local_authority": "Leeds",
+      "postcode": "LS1 5PQ",
+      "address": "15 South Parade, Leeds",
+      "hygiene_rating": "5",
+      "rating_date": "2023-07-27T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1221101,
+      "name": "SUKHOTHAI",
+      "type": "restaurant",
+      "city": "Wirral",
+      "local_authority": "Wirral",
+      "postcode": "CH48 0RB",
+      "address": "119 - 121 Banks Road, West Kirby, Wirral",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-13T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1868547,
       "name": "Sukhothai",
       "type": "restaurant",
@@ -18516,19 +18516,6 @@
       "address": "Town Centre House Cheltenham Crescent, Harrogate",
       "hygiene_rating": "4",
       "rating_date": "2026-01-06T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 902906,
-      "name": "Sukhothai Restaurant",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Havering",
-      "postcode": "RM11 3YD",
-      "address": "155 High Street, Hornchurch",
-      "hygiene_rating": "5",
-      "rating_date": "2025-10-30T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -18546,6 +18533,19 @@
       "latitude": ""
     },
     {
+      "id": 902906,
+      "name": "Sukhothai Restaurant",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Havering",
+      "postcode": "RM11 3YD",
+      "address": "155 High Street, Hornchurch",
+      "hygiene_rating": "5",
+      "rating_date": "2025-10-30T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 342713,
       "name": "SukhoThai Restaurant",
       "type": "restaurant",
@@ -18555,6 +18555,32 @@
       "address": "304 Holdenhurst Road, Bournemouth",
       "hygiene_rating": "4",
       "rating_date": "2024-02-21T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 578053,
+      "name": "Sukothai",
+      "type": "restaurant",
+      "city": "Cornwall",
+      "local_authority": "Cornwall",
+      "postcode": "TR18 4BQ",
+      "address": "47 Queen Street, Penzance, Cornwall",
+      "hygiene_rating": "5",
+      "rating_date": "2025-10-17T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1721229,
+      "name": "Wraps&Wings/SukhumThai/WowSticks/YumYum/OrientalBo/Khao",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Wandsworth",
+      "postcode": "SW15 6BA",
+      "address": "5 Putney Hill, London, Wandsworth",
+      "hygiene_rating": "5",
+      "rating_date": "2024-07-24T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -18633,6 +18659,136 @@
       "address": "7 Lendal, York",
       "hygiene_rating": "5",
       "rating_date": "2025-04-02T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 315505,
+      "name": "ZAAL",
+      "type": "restaurant",
+      "city": "Runnymede",
+      "local_authority": "Runnymede",
+      "postcode": "KT15 1JH",
+      "address": "5 Ongar Parade, Addlestone",
+      "hygiene_rating": "5",
+      "rating_date": "2024-06-12T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1033747,
+      "name": "Abu Zaad",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Ealing",
+      "postcode": "W13 0SU",
+      "address": "Shop, 20 - 22 Broadway, West Ealing",
+      "hygiene_rating": "5",
+      "rating_date": "2025-08-11T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1923782,
+      "name": "Zaat Restaurant",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Lambeth",
+      "postcode": "SW9 8HX",
+      "address": "Arch, 5 Atlantic Road, London",
+      "hygiene_rating": "4",
+      "rating_date": "2026-02-06T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1626000,
+      "name": "Zaal Fine Dining",
+      "type": "restaurant",
+      "city": "Hart",
+      "local_authority": "Hart",
+      "postcode": "GU52 7QL",
+      "address": "Zaal, 24 Reading Road South, Fleet, Hampshire",
+      "hygiene_rating": "5",
+      "rating_date": "2026-03-23T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 345555,
+      "name": "Abu Zaad Restaurant",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Hammersmith and Fulham",
+      "postcode": "W12 8LH",
+      "address": "29 Uxbridge Road, London",
+      "hygiene_rating": "4",
+      "rating_date": "2026-03-04T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1129821,
+      "name": "Zaal Indian Dining",
+      "type": "restaurant",
+      "city": "Thurrock",
+      "local_authority": "Thurrock",
+      "postcode": "SS17 9AA",
+      "address": "3 Lampits Hill, Corringham, Essex",
+      "hygiene_rating": "4",
+      "rating_date": "2026-01-20T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1004678,
+      "name": "The Siam Zaa",
+      "type": "restaurant",
+      "city": "Newcastle",
+      "local_authority": "Newcastle Upon Tyne",
+      "postcode": "NE1 4DG",
+      "address": "The Siam Zaa 4 Waterloo Street, Newcastle Upon Tyne",
+      "hygiene_rating": "4",
+      "rating_date": "2025-01-31T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 172132,
+      "name": "Zaal",
+      "type": "takeaway",
+      "city": "Wealden",
+      "local_authority": "Wealden",
+      "postcode": "TN6 2SH",
+      "address": "1 The Parade Eridge Road, Crowborough, East Sussex",
+      "hygiene_rating": "4",
+      "rating_date": "2025-03-26T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1911988,
+      "name": "ZAA PIZZERIA",
+      "type": "takeaway",
+      "city": "Newcastle",
+      "local_authority": "Newcastle Upon Tyne",
+      "postcode": "NE1 6QF",
+      "address": "Zza Pizzerica Stack Newcastle Worswick Chambers Pilgrim Street, Newcastle Upon Tyne",
+      "hygiene_rating": "5",
+      "rating_date": "2026-03-03T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1583716,
+      "name": "Zaal Indian Cuisine",
+      "type": "takeaway",
+      "city": "Stafford",
+      "local_authority": "Stafford",
+      "postcode": "ST20 0EZ",
+      "address": "1 Station Road, Gnosall, Stafford",
+      "hygiene_rating": "3",
+      "rating_date": "2025-07-14T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19027,19 +19183,6 @@
       "latitude": ""
     },
     {
-      "id": 1893532,
-      "name": "Mango Tree",
-      "type": "restaurant",
-      "city": "Cardiff",
-      "local_authority": "Cardiff",
-      "postcode": "CF14 1DD",
-      "address": "65 Merthyr Road, Whitchurch, Cardiff",
-      "hygiene_rating": "5",
-      "rating_date": "2025-11-13T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 307649,
       "name": "Mango Tree",
       "type": "restaurant",
@@ -19049,6 +19192,19 @@
       "address": "Market Square, Kirkby Stephen",
       "hygiene_rating": "5",
       "rating_date": "2025-06-17T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1893532,
+      "name": "Mango Tree",
+      "type": "restaurant",
+      "city": "Cardiff",
+      "local_authority": "Cardiff",
+      "postcode": "CF14 1DD",
+      "address": "65 Merthyr Road, Whitchurch, Cardiff",
+      "hygiene_rating": "5",
+      "rating_date": "2025-11-13T00:00:00",
       "longitude": "",
       "latitude": ""
     },

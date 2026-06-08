@@ -1,0 +1,746 @@
+[
+  {
+    "fsa_id": 1670813,
+    "name": "Ali Baaba",
+    "city": "Cornwall",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 175870,
+    "name": "Ali Baba",
+    "city": "Adur",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1584351,
+    "name": "Ali Baba",
+    "city": "Westminster",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1546435,
+    "name": "Ali Baba",
+    "city": "Calderdale",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1485738,
+    "name": "Ali Baba",
+    "city": "Barking and Dagenham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 889992,
+    "name": "Ali Baba",
+    "city": "Cheshire East",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 342453,
+    "name": "Ali Baba",
+    "city": "Bournemouth, Christchurch and Poole",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 124611,
+    "name": "Ali Baba",
+    "city": "Rochdale",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1101244,
+    "name": "Ali Baba",
+    "city": "Havering",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1873629,
+    "name": "Ali Baba 40 Dishes",
+    "city": "South Hams",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1299504,
+    "name": "Ali Baba Grill",
+    "city": "Folkestone and Hythe",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 412060,
+    "name": "Ali Baba Kebab",
+    "city": "Westminster",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1734315,
+    "name": "Ali Baba Kebab",
+    "city": "Hackney",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 961026,
+    "name": "Ali Baba Kebab House",
+    "city": "North Hertfordshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1833353,
+    "name": "Ali Baba Kebab Pizza & Burgers",
+    "city": "Rhondda Cynon Taf",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 604472,
+    "name": "Ali Baba Lounge",
+    "city": "Birmingham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 519550,
+    "name": "Ali Baba Lounge",
+    "city": "Hillingdon",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 490108,
+    "name": "Ali Baba Magic",
+    "city": "Hounslow",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 30086,
+    "name": "Ali Baba Pizza & Kebab House",
+    "city": "North Northamptonshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 150090,
+    "name": "Ali Baba Pizza Peri Peri",
+    "city": "Somerset",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 411519,
+    "name": "Ali Baba Restaurant",
+    "city": "Westminster",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 115858,
+    "name": "Ali Baba UK",
+    "city": "Stoke-On-Trent",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1321195,
+    "name": "Ali baba fried chicken ltd",
+    "city": "Southwark",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1921000,
+    "name": "Alli baba waterloo",
+    "city": "Southwark",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 630785,
+    "name": "Amore Baba Ltd ta II Fiume",
+    "city": "Wiltshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1911586,
+    "name": "BABA DARBAR LTD",
+    "city": "Bolton",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1918531,
+    "name": "BABA TANG CHINESE RESTAURANT",
+    "city": "Camden",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 251353,
+    "name": "BaBa Jons",
+    "city": "Stockton On Tees",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1270176,
+    "name": "Baaba Shair Ltd",
+    "city": "Leicester City",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1395882,
+    "name": "Baba",
+    "city": "Newcastle Upon Tyne",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 175783,
+    "name": "Baba Ali",
+    "city": "Powys",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 716442,
+    "name": "Baba Alis Kebab House Ltd",
+    "city": "Powys",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1881512,
+    "name": "Baba Bubble",
+    "city": "Coventry",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1866378,
+    "name": "Baba Burgers",
+    "city": "Westminster",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1544130,
+    "name": "Baba Burgerz",
+    "city": "West Lancashire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1825207,
+    "name": "Baba Burgerz",
+    "city": "Knowsley",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1761610,
+    "name": "Baba Dhaba",
+    "city": "Newham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1432258,
+    "name": "Baba Dough",
+    "city": "Rushcliffe",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1768172,
+    "name": "Baba Falooda",
+    "city": "Wandsworth",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1411026,
+    "name": "Baba Food",
+    "city": "Newham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 963569,
+    "name": "Baba Foundation",
+    "city": "Croydon",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 678958,
+    "name": "Baba G",
+    "city": "South Lanarkshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1136140,
+    "name": "Baba G Kitchen",
+    "city": "Fermanagh and Omagh",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1055885,
+    "name": "Baba G Lebanese Grill",
+    "city": "Hammersmith and Fulham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1704526,
+    "name": "Baba G's",
+    "city": "Lewisham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 931977,
+    "name": "Baba G's",
+    "city": "Camden",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1620507,
+    "name": "Baba Ganoush",
+    "city": "City of London Corporation",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 299157,
+    "name": "Baba Ganoush Canteen",
+    "city": "Westmorland and Furness",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1061633,
+    "name": "Baba Ganoush Kitchen",
+    "city": "Bristol",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 298861,
+    "name": "Baba Ganoush Shop",
+    "city": "Westmorland and Furness",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1594995,
+    "name": "Baba Ghanouj",
+    "city": "Kensington and Chelsea",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1760465,
+    "name": "Baba Gurgur",
+    "city": "Cornwall",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 490223,
+    "name": "Baba Jan's",
+    "city": "Hounslow",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 316091,
+    "name": "Baba Kebab",
+    "city": "Enfield",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 584523,
+    "name": "Baba Kebab House",
+    "city": "Thanet",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 938471,
+    "name": "Baba Kebab and Pizza",
+    "city": "Bristol",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 705487,
+    "name": "Baba Kitchen Chinese Takeaway",
+    "city": "North Lincolnshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1341935,
+    "name": "Baba Lal peri peri chicken and pizza ltd",
+    "city": "Luton",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1787092,
+    "name": "Baba Restaurant",
+    "city": "Kensington and Chelsea",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 328433,
+    "name": "Baba Roti House",
+    "city": "Bradford",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 324735,
+    "name": "Baba Roti House",
+    "city": "Bradford",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1780970,
+    "name": "Baba Rupz",
+    "city": "Stoke-On-Trent",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1267992,
+    "name": "Baba Salaam Restaurant",
+    "city": "Hammersmith and Fulham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 917719,
+    "name": "Baba Salam Cafe",
+    "city": "Hammersmith and Fulham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1710537,
+    "name": "Baba Tang",
+    "city": "Wandsworth",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1903955,
+    "name": "Baba Tang",
+    "city": "Hackney",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1935144,
+    "name": "Baba Tang",
+    "city": "Hackney",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1843972,
+    "name": "Baba Tikka also t/a Bolton Burger Blast",
+    "city": "Bolton",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1497037,
+    "name": "Baba Turkish Kebab",
+    "city": "Newham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1904812,
+    "name": "Baba Turkish Restaurant",
+    "city": "Nottingham City",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1575691,
+    "name": "Baba Wali LTD",
+    "city": "Barnet",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1782304,
+    "name": "Baba Yaga's Cake",
+    "city": "Wandsworth",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1541739,
+    "name": "Baba Yaga's House",
+    "city": "North Tyneside",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1903878,
+    "name": "Baba doner",
+    "city": "Hackney",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1213659,
+    "name": "Baba g's",
+    "city": "Southwark",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1719543,
+    "name": "Baba tang",
+    "city": "Southwark",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1643237,
+    "name": "Bacaba Indian Restaurant",
+    "city": "Sandwell",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1587816,
+    "name": "Bubala Soho",
+    "city": "Westminster",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1288232,
+    "name": "Bubba / Bullet Peri Peri",
+    "city": "Edinburgh (City of)",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 801160,
+    "name": "Bubba Drews, The Sassy Elephant and O'Connor's",
+    "city": "Armagh City, Banbridge and Craigavon",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1956554,
+    "name": "Bubba Fried Chicken / Heathfire",
+    "city": "Norwich City",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1427672,
+    "name": "Bubba Oasis",
+    "city": "Islington",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 916750,
+    "name": "Bubba Q",
+    "city": "Edinburgh (City of)",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1035189,
+    "name": "Bufala Di Londra",
+    "city": "Haringey",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1094878,
+    "name": "Bufala Fowey",
+    "city": "Cornwall",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 867884,
+    "name": "Cafe Baba",
+    "city": "Oxford City",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1818376,
+    "name": "Cafe Khan Baba",
+    "city": "Manchester",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1786986,
+    "name": "Chai Baba",
+    "city": "Tower Hamlets",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1638542,
+    "name": "Curry Baba",
+    "city": "Cornwall",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1453502,
+    "name": "Durumcu Ali Baba",
+    "city": "Enfield",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1656460,
+    "name": "Etci Baba",
+    "city": "Leicester City",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1890030,
+    "name": "Khan Baba Roti House",
+    "city": "Bradford",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1496577,
+    "name": "Kingswood Baba Kebab And Pizza",
+    "city": "South Gloucestershire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 912303,
+    "name": "Mimmo La Bufala",
+    "city": "Camden",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1518961,
+    "name": "Nusara",
+    "city": "Dorset",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 342542,
+    "name": "Nusara",
+    "city": "Bournemouth, Christchurch and Poole",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1351786,
+    "name": "Nusara",
+    "city": "Bournemouth, Christchurch and Poole",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1402379,
+    "name": "Nusara Thai",
+    "city": "Bournemouth, Christchurch and Poole",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 404608,
+    "name": "Original BABA LAL Ltd",
+    "city": "Luton",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1853251,
+    "name": "Peer Baba Resturant and Catering",
+    "city": "Bradford",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 533373,
+    "name": "Saba Banqueting Hall",
+    "city": "Brent",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 29256,
+    "name": "Saba Fast Food",
+    "city": "Inverclyde",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1682411,
+    "name": "Saba Maison De Luxe",
+    "city": "Sunderland",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 989995,
+    "name": "Steinys Ltd T/A Bubala",
+    "city": "Tower Hamlets",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 726499,
+    "name": "The Busby Hotel",
+    "city": "East Renfrewshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1683020,
+    "name": "The Origional Baba Roti House",
+    "city": "Bradford",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 23203,
+    "name": "Tushba Pizza",
+    "city": "Leicester City",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1625930,
+    "name": "Wali Baba Kebabish",
+    "city": "Leeds",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1712657,
+    "name": "kEATchen United /Baba B'sBurgers /LaToroMexicana /Fireaway /OhMyGelato",
+    "city": "South Lanarkshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1790965,
+    "name": "Bahara - Indian Kitchen and Culture",
+    "city": "Tower Hamlets",
+    "chain": "Patara"
+  },
+  {
+    "fsa_id": 1930322,
+    "name": "Ektara",
+    "city": "Tower Hamlets",
+    "chain": "Patara"
+  },
+  {
+    "fsa_id": 1843387,
+    "name": "El Catala",
+    "city": "Shropshire",
+    "chain": "Patara"
+  },
+  {
+    "fsa_id": 1595366,
+    "name": "Hamara Community Cafe",
+    "city": "Leeds",
+    "chain": "Patara"
+  },
+  {
+    "fsa_id": 622486,
+    "name": "Matara Centre",
+    "city": "Cotswold",
+    "chain": "Patara"
+  },
+  {
+    "fsa_id": 522997,
+    "name": "Pataka Restaurant",
+    "city": "Edinburgh (City of)",
+    "chain": "Patara"
+  },
+  {
+    "fsa_id": 912852,
+    "name": "Rosa\u2019s Thai",
+    "city": "York",
+    "chain": "Rosa's Thai"
+  },
+  {
+    "fsa_id": 1655927,
+    "name": "Rosa\u2019s Thai Edinburgh",
+    "city": "Edinburgh (City of)",
+    "chain": "Rosa's Thai"
+  },
+  {
+    "fsa_id": 1519276,
+    "name": "Siam Zapp Authentic Thai Noodle Bar",
+    "city": "Blackburn",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 489866,
+    "name": "Thai Tawee Zapp & Bun",
+    "city": "Hounslow",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1247008,
+    "name": "Thai Zapp at Heron Pub",
+    "city": "Westminster",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1023006,
+    "name": "Zap Coffee",
+    "city": "Shropshire",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1719306,
+    "name": "Zap Supermarket",
+    "city": "Dacorum",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1674030,
+    "name": "Zap Thai Co Ltd",
+    "city": "West Suffolk",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1417968,
+    "name": "Zapp",
+    "city": "Camden",
+    "chain": "Zaap"
+  }
+]
