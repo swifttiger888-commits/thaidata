@@ -37,13 +37,35 @@ def main() -> None:
     all_ests = []
     
     # Core Thai search
+    thai_before = 0
     for scheme in ['FHRS', 'FHIS']:
         for bt in ['1', '7844']:
             label = f"{scheme} {'Restaurant/Cafe' if bt == '1' else 'Takeaway'}"
             ests = fetch_all('Thai', bt, scheme)
             print(f"  {label}: {len(ests)} establishments")
             all_ests.extend(ests)
+            thai_before += len(ests)
             time.sleep(DELAY)
+    
+    # Post-filter: the FSA API's name search is over-eager — searching for
+    # "Thai" also returns businesses with "Chai", "Khai", etc. (anything
+    # containing "hai").  Keep only businesses whose name actually contains
+    # "thai" (case-insensitive).  Genuine Thai restaurants without "Thai"
+    # in the name (e.g. Giggling Squid, Busaba) are covered by chain searches.
+    THAI_NAME_ALLOWLIST: set[int] = set()  # FSA IDs of verified Thai without 'thai' in name
+    filtered = []
+    dropped_non_thai = 0
+    for e in all_ests:
+        name = (e.get('BusinessName') or '').lower()
+        if 'thai' in name or e.get('FHRSID') in THAI_NAME_ALLOWLIST:
+            filtered.append(e)
+        else:
+            dropped_non_thai += 1
+    if dropped_non_thai:
+        print(f"  ⚠️ Dropped {dropped_non_thai} non-Thai results from core search "
+              f"(kept {len(filtered)} of {len(all_ests)})")
+    all_ests = filtered
+    thai_after = len(all_ests)
     
     # Chain searches (many Thai restaurants don't have "Thai" in the name)
     CHAINS = ['Giggling Squid', 'Busaba', 'Chaophraya', 'Patara', 'Sukhothai', 'Zaap',
