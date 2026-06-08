@@ -120,9 +120,51 @@ def score_bar_html(label: str, score: int | None) -> str:
                     </div>
                 </div>'''
 
-def generate_page(r: dict[str, Any]) -> str:
+def build_nearby_section(city: str, city_slug: str, city_open: dict[str, list[dict[str, Any]]]) -> str:
+    """Build the 'Nearby Thai restaurants' section for closed venues."""
+    open_list = city_open.get(city, [])[:4]  # top 4 by hygiene rating
+    if not open_list:
+        return ''
+    
+    cards = []
+    for rest in open_list:
+        name = rest['name']
+        rating = rest.get('hygiene_rating', '')
+        addr = rest.get('address', '')
+        # Extract just the street part for display
+        street = addr.split(',')[0].strip() if addr else city
+        rest_slug = slugify(name)
+        rclass = rating_class(rating) if rating else ''
+        rcolor = '#3F6212' if rating == '5' else '#92400E' if rating in ('3', '2', '1') else 'var(--green-dark)'
+        
+        cards.append(f'''            <a href="/r/{city_slug}/{rest_slug}/" class="nearby-card">
+                <div class="nearby-rating" style="background:{'var(--green-light)' if rating == '5' else 'var(--amber-light)' if rating in ('3','4') else 'var(--red-light)'};color:{rcolor};">{rating}</div>
+                <div class="nearby-info">
+                    <div class="nearby-name">{name}</div>
+                    <div class="nearby-addr">{street}</div>
+                </div>
+            </a>''')
+    
+    nearby_html = f'''    <section class="nearby-section">
+        <div class="nearby-inner">
+            <h3>Nearby Thai restaurants in {city}</h3>
+            <p style="color: var(--ink-secondary); font-size: 0.85rem; margin-bottom: 20px;">Looking for Thai food in {city}? These nearby Thai restaurants are open and highly rated.</p>
+            <div class="nearby-grid">
+{chr(10).join(cards)}
+            </div>
+        </div>
+    </section>'''
+    return nearby_html
+
+
+def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dict[str, list[dict[str, Any]]] = None) -> str:
     """Fill the Kimi template with restaurant data."""
+    if closed_ids is None:
+        closed_ids = set()
+    if city_open is None:
+        city_open = {}
     html = TEMPLATE
+    is_closed = str(r['id']) in closed_ids
 
     def safe_sub(pattern: str, replacement: str, text: str) -> str:
         """re.sub that doesn't interpret backslashes in replacement (safe for names with smart quotes)."""
@@ -162,6 +204,14 @@ def generate_page(r: dict[str, Any]) -> str:
         '<!-- DYNAMIC: canonical_url -->\n    <link rel="canonical" href="https://thaidata.uk/r/leeds/my-thai/"',
         f'    <link rel="canonical" href="{canonical}"'
     )
+    # ---- Robots meta (closed = noindex) ----
+    if is_closed:
+        html = html.replace(
+            '<!-- DYNAMIC: robots_meta -->\n    <meta name="robots" content="index, follow">',
+            '    <meta name="robots" content="noindex, follow">'
+        )
+    else:
+        html = html.replace('<!-- DYNAMIC: robots_meta -->\n', '')
     html = html.replace(
         '<!-- DYNAMIC: og_url -->\n    <meta property="og:url" content="https://thaidata.uk/r/leeds/my-thai/"',
         f'    <meta property="og:url" content="{canonical}"'
@@ -282,6 +332,16 @@ def generate_page(r: dict[str, Any]) -> str:
         f'        <a href="/">Home</a>\n        <span> › </span>\n        <a href="/cities/{city_slug}">{city}</a>\n        <span> › </span>\n        <span>{name}</span>'
     )
 
+    # ---- Closed banner ----
+    if is_closed:
+        closed_banner_html = f'''    <div class="closed-banner">
+        <i class="fas fa-door-closed"></i> <strong>Permanently Closed</strong>
+        <span class="closed-note">This venue has been reported as permanently closed. Information kept for reference.</span>
+    </div>'''
+        html = html.replace('<!-- DYNAMIC: closed_banner -->\n', closed_banner_html + '\n')
+    else:
+        html = html.replace('<!-- DYNAMIC: closed_banner -->\n', '')
+
     # ---- Hero badges ----
     html = html.replace(
         '<!-- DYNAMIC: badge_rating -->\n                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA 5/5\n                </span>',
@@ -328,6 +388,20 @@ def generate_page(r: dict[str, Any]) -> str:
             end_idx = end_tag + len('</p>')
             replacement = f'{anchor}\n            <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">\n                {intro_text}\n            </p>'
             html = html[:anchor_idx] + replacement + html[end_idx:]
+
+    # ---- Hero claim CTA (closed = show closed notice) ----
+    if is_closed:
+        hero_closed_notice = f'''            <p style="margin-top:12px;font-size:0.85rem;color:rgba(255,200,200,0.9);">
+                <i class="fas fa-door-closed" style="margin-right:4px;"></i>This venue has been reported as permanently closed.
+            </p>'''
+        # Replace the marker + claim CTA paragraph
+        html = safe_sub(
+            r'<!-- DYNAMIC: hero_claim_cta -->\s*\n\s*<p style="margin-top:12px;font-size:0\.85rem;color:var\(--ink-secondary\);">.*?</p>',
+            hero_closed_notice,
+            html
+        )
+    else:
+        html = html.replace('<!-- DYNAMIC: hero_claim_cta -->\n', '')
 
     # ---- Action buttons ----
     if lat is not None and lng is not None:
@@ -436,6 +510,20 @@ def generate_page(r: dict[str, Any]) -> str:
         '                <a href="/claim/" class="btn">'
     )
 
+    # ---- Sidebar claim CTA (closed = replace with closed notice) ----
+    if is_closed:
+        sidebar_closed = f'''            <div class="closed-notice-card">
+                <h3>Permanently Closed</h3>
+                <p>This venue has been reported as permanently closed. The information on this page is kept for historical reference only.</p>
+            </div>'''
+        html = safe_sub(
+            r'<!-- DYNAMIC: sidebar_claim_cta -->\s*\n\s*<!-- Claim CTA.*?id="claim">.*?</div>',
+            '<!-- DYNAMIC: sidebar_claim_cta -->\n' + sidebar_closed + '\n',
+            html
+        )
+    else:
+        html = html.replace('<!-- DYNAMIC: sidebar_claim_cta -->\n', '')
+
     # ---- JS variables for enrichment script ----
     html = html.replace(
         "                const RESTAURANT_NAME = 'My Thai';",
@@ -446,7 +534,14 @@ def generate_page(r: dict[str, Any]) -> str:
         f"                const RESTAURANT_CITY = '{city}';"
     )
 
-    # ---- Clean up remaining DYNAMIC markers (claimed content, not shown yet) ----
+    # ---- Nearby section (closed venues only) ----
+    if is_closed:
+        nearby_html = build_nearby_section(city, city_slug, city_open)
+        html = html.replace('<!-- DYNAMIC: nearby_section -->\n', nearby_html)
+    else:
+        html = html.replace('<!-- DYNAMIC: nearby_section -->\n', '')
+
+    # ---- Clean up remaining DYNAMIC markers ----
     # These are commented out HTML blocks — leave them as-is (they're hidden)
     # Just remove the marker comments for cleanliness
     html = re.sub(r'<!-- DYNAMIC: [^-]+ -->\n', '', html)
@@ -463,6 +558,31 @@ def main() -> None:
         data = json.load(f)
     
     restaurants = data['restaurants']
+    
+    # Load closed venues
+    closed_ids: set[str] = set()
+    closed_path = os.path.join(REPO, 'data', 'closed_venues.json')
+    if os.path.exists(closed_path):
+        with open(closed_path) as f:
+            closed_data = json.load(f)
+        for entry in closed_data:
+            closed_ids.add(str(entry['fsa_id']))
+        print(f"Loaded {len(closed_ids)} closed venue(s) from closed_venues.json")
+    
+    # Build city → open restaurants map (for nearby section)
+    city_open: dict[str, list[dict[str, Any]]] = {}
+    for r in restaurants:
+        fsa_id_str = str(r['id'])
+        if fsa_id_str in closed_ids:
+            continue
+        city = r['city']
+        if city not in city_open:
+            city_open[city] = []
+        city_open[city].append(r)
+    
+    # Sort each city by hygiene rating desc (best first)
+    for city in city_open:
+        city_open[city].sort(key=lambda r: (-int(r.get('hygiene_rating', '0') or '0') if (r.get('hygiene_rating', '') or '').isdigit() else 0, r['name']))
     total = len(restaurants)
     generated = 0
     errors = 0
@@ -482,7 +602,7 @@ def main() -> None:
             
             os.makedirs(dir_path, exist_ok=True)
             
-            html = generate_page(r)
+            html = generate_page(r, closed_ids, city_open)
             with open(os.path.join(dir_path, 'index.html'), 'w') as f:
                 f.write(html)
             

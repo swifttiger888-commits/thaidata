@@ -186,6 +186,14 @@ body {
                 badgeSpan.textContent = c.claim_status;
                 infoDiv.appendChild(badgeSpan);
 
+                if (c.is_closed) {
+                    var closedBadge = document.createElement('span');
+                    closedBadge.className = 'badge';
+                    closedBadge.style.cssText = 'background:rgba(239,68,68,0.15);color:#EF4444;margin-left:6px;';
+                    closedBadge.textContent = 'closed';
+                    infoDiv.appendChild(closedBadge);
+                }
+
                 // Enrichment status line (read-only, parsed client-side)
                 if (c.enrichment) {
                     try {
@@ -274,6 +282,24 @@ body {
                 }
                 actionsDiv.appendChild(deleteBtn);
 
+                // Closed toggle (approved claims only — needs a listing)
+                if (c.claim_status === 'approved' && c.listing_id) {
+                    var closedBtn = document.createElement('button');
+                    if (c.is_closed) {
+                        closedBtn.style.background = '#10B981';
+                        closedBtn.textContent = 'Reopen venue';
+                        closedBtn.title = 'Mark venue as open again';
+                    } else {
+                        closedBtn.style.background = '#EF4444';
+                        closedBtn.textContent = 'Mark closed';
+                        closedBtn.title = 'Mark venue as permanently closed';
+                    }
+                    closedBtn.addEventListener('click', (function(listingId, currentState) {
+                        return function() { toggleClosed(listingId, !currentState); };
+                    })(c.listing_id, c.is_closed));
+                    actionsDiv.appendChild(closedBtn);
+                }
+
                 claimRow.appendChild(actionsDiv);
                 list.appendChild(claimRow);
             }
@@ -303,6 +329,28 @@ body {
             const data = await res.json();
             if (res.ok) {
                 toast('Claim ' + action + '!');
+                loadClaims();
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (e) {
+            toast('Network error', 'error');
+        }
+    }
+
+    async function toggleClosed(listingId, closed) {
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + sessionToken,
+                },
+                body: JSON.stringify({ listing_id: listingId, field: 'is_closed', value: closed ? 1 : 0 }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast(closed ? 'Venue marked as closed' : 'Venue reopened');
                 loadClaims();
             } else {
                 toast(data.error || 'Error', 'error');

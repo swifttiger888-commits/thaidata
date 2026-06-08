@@ -62,6 +62,21 @@ export async function onRequestPost(context) {
       });
     }
 
+    // Check if restaurant is marked as permanently closed
+    const closedListing = await env.DB.prepare(
+      'SELECT id FROM listings WHERE restaurant_name = ? AND city = ? AND is_closed = 1'
+    ).bind(restaurant_name, city).first();
+
+    if (closedListing) {
+      return new Response(JSON.stringify({
+        error: 'This venue has been marked as permanently closed and cannot be claimed.',
+        status: 'permanently_closed'
+      }), {
+        status: 410,
+        headers: corsHeaders,
+      });
+    }
+
     // Insert claim
     const result = await env.DB.prepare(
       `INSERT INTO claims (restaurant_name, city, fsa_id, business_type, claimer_name, claimer_email, claimer_phone, claimer_role, verification_notes)

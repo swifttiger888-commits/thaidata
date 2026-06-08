@@ -269,7 +269,7 @@ export async function onRequestGet(context) {
     const city = url.searchParams.get('city');
     const limit = parseInt(url.searchParams.get('limit') || '50');
 
-    let query = `SELECT c.*, l.enrichment
+    let query = `SELECT c.*, l.id as listing_id, l.is_closed, l.enrichment
       FROM claims c
       LEFT JOIN listings l ON l.claim_id = c.id`;
     const params = [];
@@ -732,7 +732,7 @@ export async function onRequestPatch(context) {
     const allowed = new Set([
       'restaurant_name', 'city', 'description', 'phone', 'opening_hours',
       'website', 'social_instagram', 'social_facebook', 'email', 'address',
-      'postcode', 'cuisine_specialty'
+      'postcode', 'cuisine_specialty', 'is_closed'
     ]);
     if (!listing_id || !field || !allowed.has(field)) {
       return new Response(JSON.stringify({ error: 'listing_id, field (whitelisted), and value required' }), {

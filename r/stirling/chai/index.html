@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chai, Stirling — FSA 3/5 Hygiene Rating | ThaiData</title>
     <meta name="description" content="Chai in Stirling: FSA 3/5 restaurant. 26 Barnton Street, Stirling. Full address, hygiene inspection scores, and map. Claim this free listing.">
-    <meta name="robots" content="index, follow">
+        <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://thaidata.uk/r/stirling/chai/">
     <meta property="og:type" content="website">
         <meta property="og:url" content="https://thaidata.uk/r/stirling/chai/">
@@ -736,6 +736,114 @@
             .main { grid-template-columns: 1fr; }
             .card { box-shadow: none; border: 1px solid #ddd; }
         }
+        /* ============ CLOSED BANNER ============ */
+        .closed-banner {
+            background: linear-gradient(135deg, #7F1D1D 0%, #991B1B 100%);
+            color: white;
+            padding: 14px 24px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+        .closed-banner i {
+            margin-right: 8px;
+            opacity: 0.8;
+        }
+        .closed-banner .closed-note {
+            display: block;
+            font-size: 0.78rem;
+            opacity: 0.7;
+            margin-top: 2px;
+            font-weight: 400;
+        }
+
+        /* ============ CLOSED NOTICE (replaces claim CTA) ============ */
+        .closed-notice-card {
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+        }
+        .closed-notice-card h3 {
+            color: #991B1B;
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+        .closed-notice-card p {
+            color: #7F1D1D;
+            font-size: 0.88rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ============ NEARBY SECTION ============ */
+        .nearby-section {
+            background: var(--white);
+            border-top: 1px solid var(--border-light);
+            padding: 40px 24px 48px;
+        }
+        .nearby-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nearby-section h3 {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--ink);
+        }
+        .nearby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 14px;
+        }
+        .nearby-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--ink);
+            transition: all 0.2s;
+        }
+        .nearby-card:hover {
+            border-color: var(--green);
+            box-shadow: var(--shadow-sm);
+        }
+        .nearby-card .nearby-rating {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+        .nearby-card .nearby-info {
+            min-width: 0;
+        }
+        .nearby-card .nearby-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nearby-card .nearby-addr {
+            font-size: 0.75rem;
+            color: var(--ink-tertiary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
     </style>
 
     <!-- Schema: Restaurant -->
@@ -804,6 +912,7 @@
         <span>Chai</span>
     </div>
 
+    
     <!-- ============ HERO ============ -->
     <section class="hero">
         <div class="hero-bg"></div>
@@ -828,7 +937,7 @@
                         <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">
                 Chai is a Thai restaurant in Stirling. FSA hygiene rating 3/5, last inspected January 2026.
             </p>
-            <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);">
+                        <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);">
                 <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
             </p>
         </div>
@@ -939,7 +1048,7 @@
         <!-- ============ SIDEBAR ============ -->
         <aside class="sidebar-col">
 
-            <!-- Claim CTA (shown when NOT claimed) -->
+                        <!-- Claim CTA (shown when NOT claimed) -->
             <div class="claim-card animate-in delay-2" id="claim">
                 <h3>Own this restaurant?</h3>
                 <p>Claim your free listing to add photos, menus, opening hours and links, and keep your information up to date for ThaiData visitors. When your details are accurate, it's easier for diners to choose you with confidence.</p>
@@ -1024,6 +1133,7 @@
         </div>
     </div>
 
+    
     <!-- ============ FOOTER ============ -->
     <footer class="site-footer">
         <p>
