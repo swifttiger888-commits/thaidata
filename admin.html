@@ -587,7 +587,7 @@ body {
         }
 
         // Already excluded?
-        if (window._excludedIds && window._excludedIds.has(fsaId)) {
+        if (window._excludedIds && (window._excludedIds.has(fsaId) || window._excludedIds.has(String(fsaId)))) {
             alreadyEl.textContent = 'FSA ID ' + fsaId + ' is already excluded.';
             alreadyEl.classList.add('visible');
             return;
@@ -597,7 +597,7 @@ body {
         var found = null;
         if (window._allClaims) {
             for (var i = 0; i < window._allClaims.length; i++) {
-                if (window._allClaims[i].fsa_id === fsaId) {
+                if (window._allClaims[i].fsa_id == fsaId) {
                     found = window._allClaims[i];
                     break;
                 }
