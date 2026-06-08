@@ -56,6 +56,15 @@ body {
         .toast-success { background: #064e3b; color: #10B981; }
         .toast-error { background: #450a0a; color: #EF4444; }
         .hidden { display: none; }
+        .view-link { color: #10B981; text-decoration: none; font-size: 0.8rem; white-space: nowrap; }
+        .view-link:hover { text-decoration: underline; }
+
+        @media (max-width: 640px) {
+            body { padding: 20px 12px; }
+            .claim { flex-direction: column; gap: 10px; }
+            .actions { flex-wrap: wrap; }
+            .actions button { font-size: 0.75rem; padding: 6px 10px; }
+        }
     </style>
 </head>
 <body>
@@ -92,6 +101,10 @@ body {
         var d = document.createElement('div');
         d.appendChild(document.createTextNode(str));
         return d.innerHTML;
+    }
+
+    function slugify(s) {
+        return s.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
     }
 
     function toast(msg, type) {
@@ -221,17 +234,44 @@ body {
                     actionsDiv.appendChild(rejectBtn);
                 }
 
+                var viewBtn = document.createElement('button');
+                viewBtn.style.background = 'transparent';
+                viewBtn.style.border = '1px solid rgba(255,255,255,0.15)';
+                viewBtn.textContent = 'View';
+                viewBtn.title = 'Open public listing page';
+                var pageUrl = c.page_url || ('/r/' + slugify(c.city) + '/' + slugify(c.restaurant_name) + '/');
+                viewBtn.addEventListener('click', (function(url) {
+                    return function() { window.open(url, '_blank'); };
+                })(pageUrl));
+                actionsDiv.appendChild(viewBtn);
+
                 var deleteBtn = document.createElement('button');
-                deleteBtn.className = 'danger';
-                deleteBtn.textContent = 'Delete';
-                deleteBtn.setAttribute('data-claim-id', c.id);
-                deleteBtn.setAttribute('data-name', c.restaurant_name);
-                deleteBtn.addEventListener('click', function(e) {
-                    var btn = e.currentTarget;
-                    var id = parseInt(btn.getAttribute('data-claim-id'));
-                    var name = btn.getAttribute('data-name');
-                    deleteClaim(id, name);
-                });
+                if (c.claim_status === 'pending') {
+                    deleteBtn.className = 'danger';
+                    deleteBtn.textContent = 'Remove permanently';
+                    deleteBtn.setAttribute('data-claim-id', c.id);
+                    deleteBtn.setAttribute('data-name', c.restaurant_name);
+                    deleteBtn.addEventListener('click', function(e) {
+                        var btn = e.currentTarget;
+                        var id = parseInt(btn.getAttribute('data-claim-id'));
+                        var name = btn.getAttribute('data-name');
+                        deleteClaim(id, name);
+                    });
+                } else if (c.claim_status === 'approved') {
+                    deleteBtn.style.background = '#F59E0B';
+                    deleteBtn.textContent = 'Reset listing';
+                    deleteBtn.title = 'Clear owner data and reopen for re-review';
+                    deleteBtn.addEventListener('click', (function(id) {
+                        return function() { actionClaim(id, 'reset'); };
+                    })(c.id));
+                } else if (c.claim_status === 'rejected') {
+                    deleteBtn.style.background = '#64748B';
+                    deleteBtn.textContent = 'Reopen claim';
+                    deleteBtn.title = 'Reopen for re-review';
+                    deleteBtn.addEventListener('click', (function(id) {
+                        return function() { actionClaim(id, 'reopen'); };
+                    })(c.id));
+                }
                 actionsDiv.appendChild(deleteBtn);
 
                 claimRow.appendChild(actionsDiv);
