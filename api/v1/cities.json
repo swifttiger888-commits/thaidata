@@ -1678,16 +1678,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Blaby",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 2,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
       "name": "Thurrock",
       "population": null,
       "total_thai_businesses": 2,
@@ -1696,6 +1686,16 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
       "postcode_areas": 2
+    },
+    {
+      "name": "Blaby",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
     },
     {
       "name": "Cherwell",
@@ -2548,7 +2548,7 @@
       "postcode_areas": 1
     },
     {
-      "name": "North Lanarkshire",
+      "name": "Renfrewshire",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 0,
@@ -2558,7 +2558,7 @@
       "postcode_areas": 1
     },
     {
-      "name": "Renfrewshire",
+      "name": "North Lanarkshire",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 0,
