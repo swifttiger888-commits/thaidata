@@ -346,6 +346,94 @@ def build_schema_html(schemas: list[dict[str, Any]]) -> str:
     return "\n".join(parts)
 
 
+def update_hero_stats(html: str, city: str, stats: dict[str, Any], total_uk: int) -> str:
+    """Update stale hero-section numbers to match current (post-exclusion) stats.
+
+    The hero section on hybrid/programmatic city pages predates the exclusion
+    system.  Its hard-coded counts drift out of sync whenever a restaurant is
+    excluded.  This function performs targeted regex replacements so the hero
+    always reflects post-exclusion reality — without needing AUTO-zone markers
+    in the hero itself.
+    """
+    count = stats["count"]
+    dine_in = stats["dine_in"]
+    takeaway = stats["takeaway"]
+    avg_rating = stats["avg_rating"]
+
+    # 1. city-stats div:  "14 (13 dine-in, 1 takeaway)"  → fresh numbers
+    raw_count = stats.get("_raw_count", count)
+    raw_dine_in = stats.get("_raw_dine_in", dine_in)
+    raw_takeaway = stats.get("_raw_takeaway", takeaway)
+    html = re.sub(
+        r'(Thai businesses:</strong> <span[^>]*>)\d+\s*\(\d+ dine-in, \d+ takeaway\)',
+        f'\\g<1>{raw_count} ({raw_dine_in} dine-in, {raw_takeaway} takeaway)',
+        html,
+    )
+    # 2. sub paragraph:  "13 FSA-registered Thai businesses"
+    html = re.sub(
+        r'(<p class="sub">)\d+( FSA-registered Thai businesses)',
+        f'\\g<1>{count}\\g<2>',
+        html,
+    )
+    # 3. stat-row: four <div class="num"> blocks inside stat-row div
+    stars = "★" * round(avg_rating) if avg_rating else ""
+    # Instead of fragile count=1, replace the whole stat-row block
+    stat_row_html = (
+        '<div class="stat-row">\n'
+        '            <div class="stat">\n'
+        f'                <div class="num">{count}</div>\n'
+        '                <div class="lbl">Total Thai Businesses</div>\n'
+        '            </div>\n'
+        '            <div class="stat">\n'
+        f'                <div class="num">{dine_in}</div>\n'
+        '                <div class="lbl">Dine-in Restaurants</div>\n'
+        '            </div>\n'
+        '            <div class="stat">\n'
+        f'                <div class="num">{takeaway}</div>\n'
+        '                <div class="lbl">Takeaways</div>\n'
+        '            </div>\n'
+        '            <div class="stat">\n'
+        f'                <div class="num">{stars}</div>\n'
+        '                <div class="lbl">Avg Hygiene Rating</div>\n'
+        '            </div>\n'
+        '        </div>'
+    )
+    html = re.sub(
+        r'<div class="stat-row">.*?</div>\s*</div>\s*\n\s*<div class="card">',
+        stat_row_html + '\n\n        <div class="card">',
+        html,
+        flags=re.DOTALL,
+    )
+    # 4. Market Overview:  "13 Thai food businesses"
+    html = re.sub(
+        r'(has <strong>)\d+( Thai food businesses</strong>)',
+        f'\\g<1>{count}\\g<2>',
+        html,
+    )
+    # 5. Market Position vs London / UK total
+    uk_total = total_uk
+    london_count = stats.get("_london_count", 0)  # set by caller if available
+    if london_count:
+        html = re.sub(
+            r"(London's )\d+( Thai businesses)",
+            f"\\g<1>{london_count}\\g<2>",
+            html,
+        )
+    if uk_total:
+        html = re.sub(
+            r'(all )\d+( FSA-registered Thai businesses across the UK)',
+            f'\\g<1>{uk_total}\\g<2>',
+            html,
+        )
+        html = re.sub(
+            r'(all )\d+( UK Thai businesses)',
+            f'\\g<1>{uk_total}\\g<2>',
+            html,
+        )
+
+    return html
+
+
 def build_market_snapshot_html(city: str, stats: dict[str, Any]) -> str:
     """Build the market-snapshot AUTO block."""
     businesses = stats["count"]
@@ -578,6 +666,16 @@ def process_city(
     stats = compute_city_stats(restaurants)
     rank = compute_national_rank(by_city, city_name)
 
+    # Compute totals needed for hero-stat updates
+    total_uk = len(all_data["raw"].get("restaurants", []))
+    london_restaurants = by_city.get("London", [])
+    stats["_london_count"] = len(london_restaurants)
+    # Raw count including excluded (for city-stats div which shows FSA total)
+    raw_city = [r for r in all_data["raw"].get("restaurants", []) if r.get("city") == city_name]
+    stats["_raw_count"] = len(raw_city)
+    stats["_raw_dine_in"] = sum(1 for r in raw_city if r.get("type") == "restaurant")
+    stats["_raw_takeaway"] = stats["_raw_count"] - stats["_raw_dine_in"]
+
     # Build schema
     schemas = build_all_schema(city_name, slug, stats, rank)
     schema_errors = validate_all_schema(schemas)
@@ -600,6 +698,10 @@ def process_city(
     # ── Generate / update HTML ──
 
     html = existing_html or f"<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n<title>Thai Restaurants in {city_name} | ThaiData</title>\n</head>\n<body>\n</body>\n</html>"
+
+    # Update stale hero-section numbers (pre-dates exclusion system)
+    if existing_html and mode in ("programmatic", "hybrid"):
+        html = update_hero_stats(html, city_name, stats, total_uk)
 
     # Add mode comment if not present
     if f"CITIES-MODE: {mode}" not in html:
