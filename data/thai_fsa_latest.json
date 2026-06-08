@@ -1,0 +1,1552 @@
+{
+  "total": 1681,
+  "by_la": {
+    "Chesterfield": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Brighton and Hove": {
+      "total": 13,
+      "restaurants": 12,
+      "takeaways": 1
+    },
+    "Bath and North East Somerset": {
+      "total": 10,
+      "restaurants": 9,
+      "takeaways": 1
+    },
+    "Windsor and Maidenhead": {
+      "total": 10,
+      "restaurants": 9,
+      "takeaways": 1
+    },
+    "Tendring": {
+      "total": 7,
+      "restaurants": 5,
+      "takeaways": 2
+    },
+    "Powys": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Croydon": {
+      "total": 10,
+      "restaurants": 8,
+      "takeaways": 2
+    },
+    "Darlington": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Torbay": {
+      "total": 9,
+      "restaurants": 5,
+      "takeaways": 4
+    },
+    "York": {
+      "total": 10,
+      "restaurants": 8,
+      "takeaways": 2
+    },
+    "New Forest": {
+      "total": 6,
+      "restaurants": 6,
+      "takeaways": 0
+    },
+    "Cardiff": {
+      "total": 7,
+      "restaurants": 7,
+      "takeaways": 0
+    },
+    "Tandridge": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Winchester City": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Lambeth": {
+      "total": 10,
+      "restaurants": 7,
+      "takeaways": 3
+    },
+    "Bristol": {
+      "total": 19,
+      "restaurants": 15,
+      "takeaways": 4
+    },
+    "Kensington and Chelsea": {
+      "total": 22,
+      "restaurants": 22,
+      "takeaways": 0
+    },
+    "Wrexham": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Manchester": {
+      "total": 28,
+      "restaurants": 24,
+      "takeaways": 4
+    },
+    "Trafford": {
+      "total": 6,
+      "restaurants": 5,
+      "takeaways": 1
+    },
+    "Herefordshire": {
+      "total": 9,
+      "restaurants": 8,
+      "takeaways": 1
+    },
+    "Oldham": {
+      "total": 6,
+      "restaurants": 3,
+      "takeaways": 3
+    },
+    "Tower Hamlets": {
+      "total": 30,
+      "restaurants": 21,
+      "takeaways": 9
+    },
+    "Bournemouth, Christchurch and Poole": {
+      "total": 14,
+      "restaurants": 11,
+      "takeaways": 3
+    },
+    "North Yorkshire": {
+      "total": 14,
+      "restaurants": 13,
+      "takeaways": 1
+    },
+    "North Somerset": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Bradford": {
+      "total": 15,
+      "restaurants": 10,
+      "takeaways": 5
+    },
+    "Uttlesford": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Havering": {
+      "total": 6,
+      "restaurants": 5,
+      "takeaways": 1
+    },
+    "Islington": {
+      "total": 16,
+      "restaurants": 13,
+      "takeaways": 3
+    },
+    "Warrington": {
+      "total": 6,
+      "restaurants": 5,
+      "takeaways": 1
+    },
+    "North Norfolk": {
+      "total": 7,
+      "restaurants": 7,
+      "takeaways": 0
+    },
+    "Harborough": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Southwark": {
+      "total": 17,
+      "restaurants": 5,
+      "takeaways": 12
+    },
+    "Central Bedfordshire": {
+      "total": 8,
+      "restaurants": 8,
+      "takeaways": 0
+    },
+    "Bromsgrove": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Flintshire": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Mole Valley": {
+      "total": 5,
+      "restaurants": 4,
+      "takeaways": 1
+    },
+    "Harrow": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Leeds": {
+      "total": 34,
+      "restaurants": 27,
+      "takeaways": 7
+    },
+    "Newcastle Upon Tyne": {
+      "total": 11,
+      "restaurants": 9,
+      "takeaways": 2
+    },
+    "Hounslow": {
+      "total": 13,
+      "restaurants": 9,
+      "takeaways": 4
+    },
+    "Kingston-Upon-Thames": {
+      "total": 7,
+      "restaurants": 7,
+      "takeaways": 0
+    },
+    "Richmond-Upon-Thames": {
+      "total": 14,
+      "restaurants": 14,
+      "takeaways": 0
+    },
+    "Haringey": {
+      "total": 7,
+      "restaurants": 7,
+      "takeaways": 0
+    },
+    "Liverpool": {
+      "total": 6,
+      "restaurants": 6,
+      "takeaways": 0
+    },
+    "Teignbridge": {
+      "total": 5,
+      "restaurants": 3,
+      "takeaways": 2
+    },
+    "Cornwall": {
+      "total": 16,
+      "restaurants": 11,
+      "takeaways": 5
+    },
+    "Erewash": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Dorset": {
+      "total": 11,
+      "restaurants": 8,
+      "takeaways": 3
+    },
+    "Rugby": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Hammersmith and Fulham": {
+      "total": 23,
+      "restaurants": 21,
+      "takeaways": 2
+    },
+    "Norwich City": {
+      "total": 8,
+      "restaurants": 6,
+      "takeaways": 2
+    },
+    "Exeter City": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Wandsworth": {
+      "total": 21,
+      "restaurants": 21,
+      "takeaways": 0
+    },
+    "Westminster": {
+      "total": 36,
+      "restaurants": 31,
+      "takeaways": 5
+    },
+    "Reading": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Cheltenham": {
+      "total": 5,
+      "restaurants": 5,
+      "takeaways": 0
+    },
+    "Oxford City": {
+      "total": 7,
+      "restaurants": 7,
+      "takeaways": 0
+    },
+    "Derry City and Strabane": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "North Northamptonshire": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Cheshire West and Chester": {
+      "total": 8,
+      "restaurants": 6,
+      "takeaways": 2
+    },
+    "Ashford": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Bassetlaw": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Rother": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Blackpool": {
+      "total": 7,
+      "restaurants": 3,
+      "takeaways": 4
+    },
+    "Sutton": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Braintree": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Reigate and Banstead": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Bromley": {
+      "total": 12,
+      "restaurants": 10,
+      "takeaways": 2
+    },
+    "Coventry": {
+      "total": 6,
+      "restaurants": 1,
+      "takeaways": 5
+    },
+    "Vale of Glamorgan": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Somerset": {
+      "total": 9,
+      "restaurants": 6,
+      "takeaways": 3
+    },
+    "Blaby": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Birmingham": {
+      "total": 17,
+      "restaurants": 15,
+      "takeaways": 2
+    },
+    "Thurrock": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Gwynedd": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Waverley": {
+      "total": 5,
+      "restaurants": 5,
+      "takeaways": 0
+    },
+    "Warwick": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Telford and Wrekin Council": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Eastbourne": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Thanet": {
+      "total": 8,
+      "restaurants": 7,
+      "takeaways": 1
+    },
+    "Cherwell": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Solihull": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "North East Lincolnshire": {
+      "total": 4,
+      "restaurants": 2,
+      "takeaways": 2
+    },
+    "Sefton": {
+      "total": 5,
+      "restaurants": 4,
+      "takeaways": 1
+    },
+    "Durham": {
+      "total": 7,
+      "restaurants": 6,
+      "takeaways": 1
+    },
+    "Kirklees": {
+      "total": 13,
+      "restaurants": 10,
+      "takeaways": 3
+    },
+    "Staffordshire Moorlands": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "City of London Corporation": {
+      "total": 6,
+      "restaurants": 4,
+      "takeaways": 2
+    },
+    "Swansea": {
+      "total": 14,
+      "restaurants": 12,
+      "takeaways": 2
+    },
+    "Shropshire": {
+      "total": 11,
+      "restaurants": 9,
+      "takeaways": 2
+    },
+    "Sheffield": {
+      "total": 13,
+      "restaurants": 12,
+      "takeaways": 1
+    },
+    "Lancaster City": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Ealing": {
+      "total": 17,
+      "restaurants": 15,
+      "takeaways": 2
+    },
+    "Cumberland": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Hartlepool": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Broxtowe": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "East Riding of Yorkshire": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Buckinghamshire": {
+      "total": 11,
+      "restaurants": 11,
+      "takeaways": 0
+    },
+    "East Staffordshire": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Leicester City": {
+      "total": 15,
+      "restaurants": 10,
+      "takeaways": 5
+    },
+    "Medway": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Merton": {
+      "total": 14,
+      "restaurants": 14,
+      "takeaways": 0
+    },
+    "Elmbridge": {
+      "total": 8,
+      "restaurants": 8,
+      "takeaways": 0
+    },
+    "Waltham Forest": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Portsmouth": {
+      "total": 5,
+      "restaurants": 5,
+      "takeaways": 0
+    },
+    "Swindon": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Dudley": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Dacorum": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Wyre": {
+      "total": 6,
+      "restaurants": 5,
+      "takeaways": 1
+    },
+    "Worthing": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Basildon": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Plymouth City": {
+      "total": 6,
+      "restaurants": 4,
+      "takeaways": 2
+    },
+    "Belfast City": {
+      "total": 7,
+      "restaurants": 6,
+      "takeaways": 1
+    },
+    "Barnet": {
+      "total": 11,
+      "restaurants": 9,
+      "takeaways": 2
+    },
+    "Wychavon": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Wiltshire": {
+      "total": 9,
+      "restaurants": 8,
+      "takeaways": 1
+    },
+    "Preston": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Maidstone": {
+      "total": 6,
+      "restaurants": 6,
+      "takeaways": 0
+    },
+    "Brent": {
+      "total": 11,
+      "restaurants": 8,
+      "takeaways": 3
+    },
+    "North Kesteven": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Mid Sussex": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Camden": {
+      "total": 31,
+      "restaurants": 18,
+      "takeaways": 13
+    },
+    "Wirral": {
+      "total": 8,
+      "restaurants": 8,
+      "takeaways": 0
+    },
+    "Tunbridge Wells": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Great Yarmouth": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Hillingdon": {
+      "total": 10,
+      "restaurants": 8,
+      "takeaways": 2
+    },
+    "Colchester": {
+      "total": 4,
+      "restaurants": 2,
+      "takeaways": 2
+    },
+    "Runnymede": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Wokingham": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Cotswold": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Redbridge": {
+      "total": 10,
+      "restaurants": 5,
+      "takeaways": 5
+    },
+    "Milton Keynes": {
+      "total": 6,
+      "restaurants": 4,
+      "takeaways": 2
+    },
+    "Canterbury City": {
+      "total": 5,
+      "restaurants": 3,
+      "takeaways": 2
+    },
+    "St Albans City": {
+      "total": 7,
+      "restaurants": 7,
+      "takeaways": 0
+    },
+    "Conwy": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Pendle": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Three Rivers": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Vale of White Horse": {
+      "total": 5,
+      "restaurants": 4,
+      "takeaways": 1
+    },
+    "Charnwood": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "East Cambridgeshire": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Wealden": {
+      "total": 6,
+      "restaurants": 5,
+      "takeaways": 1
+    },
+    "Swale": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Gravesham": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Westmorland and Furness": {
+      "total": 11,
+      "restaurants": 9,
+      "takeaways": 2
+    },
+    "Huntingdonshire": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Fylde": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Calderdale": {
+      "total": 7,
+      "restaurants": 3,
+      "takeaways": 4
+    },
+    "Folkestone and Hythe": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "King's Lynn and West Norfolk": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Nuneaton and Bedworth": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Greenwich": {
+      "total": 7,
+      "restaurants": 5,
+      "takeaways": 2
+    },
+    "West Suffolk": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Forest of Dean": {
+      "total": 3,
+      "restaurants": 1,
+      "takeaways": 2
+    },
+    "East Hertfordshire": {
+      "total": 6,
+      "restaurants": 5,
+      "takeaways": 1
+    },
+    "Spelthorne": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Ipswich": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Chelmsford": {
+      "total": 6,
+      "restaurants": 5,
+      "takeaways": 1
+    },
+    "Stockton On Tees": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Wolverhampton": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Lewisham": {
+      "total": 7,
+      "restaurants": 3,
+      "takeaways": 4
+    },
+    "Barnsley": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Dover": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Hertsmere": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Luton": {
+      "total": 6,
+      "restaurants": 3,
+      "takeaways": 3
+    },
+    "West Northamptonshire": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Wigan": {
+      "total": 6,
+      "restaurants": 4,
+      "takeaways": 2
+    },
+    "Welwyn Hatfield": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Hackney": {
+      "total": 7,
+      "restaurants": 4,
+      "takeaways": 3
+    },
+    "Rotherham": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Tonbridge and Malling": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Lewes": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Tewkesbury": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Stratford-on-Avon": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "East Devon": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Bedford": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Dartford": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Guildford": {
+      "total": 5,
+      "restaurants": 4,
+      "takeaways": 1
+    },
+    "Bury": {
+      "total": 5,
+      "restaurants": 2,
+      "takeaways": 3
+    },
+    "High Peak": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Redcar and Cleveland": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "West Oxfordshire": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Boston": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Gloucester City": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "Worcester City": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Hastings": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "St Helens": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Lincoln City": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Bolton": {
+      "total": 10,
+      "restaurants": 5,
+      "takeaways": 5
+    },
+    "Lichfield": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Southampton": {
+      "total": 3,
+      "restaurants": 1,
+      "takeaways": 2
+    },
+    "Broadland": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Rhondda Cynon Taf": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "East Hampshire": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Stockport": {
+      "total": 6,
+      "restaurants": 2,
+      "takeaways": 4
+    },
+    "Isle of Wight": {
+      "total": 6,
+      "restaurants": 6,
+      "takeaways": 0
+    },
+    "Slough": {
+      "total": 5,
+      "restaurants": 5,
+      "takeaways": 0
+    },
+    "Epsom and Ewell": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Derby City": {
+      "total": 5,
+      "restaurants": 4,
+      "takeaways": 1
+    },
+    "Newark and Sherwood": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Southend-On-Sea": {
+      "total": 7,
+      "restaurants": 7,
+      "takeaways": 0
+    },
+    "Northumberland": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Newham": {
+      "total": 16,
+      "restaurants": 15,
+      "takeaways": 1
+    },
+    "South Gloucestershire": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "West Berkshire": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Salford": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Bexley": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "East Suffolk": {
+      "total": 4,
+      "restaurants": 2,
+      "takeaways": 2
+    },
+    "South Oxfordshire": {
+      "total": 4,
+      "restaurants": 2,
+      "takeaways": 2
+    },
+    "Fenland": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Fareham": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "West Lancashire": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "North Hertfordshire": {
+      "total": 6,
+      "restaurants": 4,
+      "takeaways": 2
+    },
+    "Crawley": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Maldon": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "North West Leicestershire": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Mid Suffolk": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Stoke-On-Trent": {
+      "total": 4,
+      "restaurants": 3,
+      "takeaways": 1
+    },
+    "Anglesey": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Stevenage": {
+      "total": 4,
+      "restaurants": 2,
+      "takeaways": 2
+    },
+    "Epping Forest": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Wakefield": {
+      "total": 4,
+      "restaurants": 2,
+      "takeaways": 2
+    },
+    "Hull City": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "East Lindsey": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Test Valley": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Horsham": {
+      "total": 4,
+      "restaurants": 4,
+      "takeaways": 0
+    },
+    "Nottingham City": {
+      "total": 8,
+      "restaurants": 7,
+      "takeaways": 1
+    },
+    "Stafford": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Cambridge City": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Neath Port Talbot": {
+      "total": 5,
+      "restaurants": 1,
+      "takeaways": 4
+    },
+    "Carmarthenshire": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Mansfield": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Rushmoor": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Enfield": {
+      "total": 4,
+      "restaurants": 2,
+      "takeaways": 2
+    },
+    "Melton": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Derbyshire Dales": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Tameside": {
+      "total": 5,
+      "restaurants": 3,
+      "takeaways": 2
+    },
+    "Mid Devon": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "North Devon": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Watford": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Doncaster": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "North Lincolnshire": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Hinckley and Bosworth": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Hart": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "South Derbyshire": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Halton": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Woking": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Sunderland": {
+      "total": 6,
+      "restaurants": 3,
+      "takeaways": 3
+    },
+    "Bracknell Forest": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Sandwell": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Blackburn": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Barking and Dagenham": {
+      "total": 3,
+      "restaurants": 1,
+      "takeaways": 2
+    },
+    "Bridgend": {
+      "total": 3,
+      "restaurants": 1,
+      "takeaways": 2
+    },
+    "Middlesbrough": {
+      "total": 3,
+      "restaurants": 1,
+      "takeaways": 2
+    },
+    "Hyndburn": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Burnley": {
+      "total": 5,
+      "restaurants": 3,
+      "takeaways": 2
+    },
+    "Walsall": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Ceredigion": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Antrim and Newtownabbey": {
+      "total": 2,
+      "restaurants": 0,
+      "takeaways": 2
+    },
+    "Fermanagh and Omagh": {
+      "total": 4,
+      "restaurants": 0,
+      "takeaways": 4
+    },
+    "Arun": {
+      "total": 2,
+      "restaurants": 0,
+      "takeaways": 2
+    },
+    "Cheshire East": {
+      "total": 3,
+      "restaurants": 0,
+      "takeaways": 3
+    },
+    "Mid and East Antrim": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Armagh City, Banbridge and Craigavon": {
+      "total": 3,
+      "restaurants": 1,
+      "takeaways": 2
+    },
+    "Brentwood": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Pembrokeshire": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Babergh": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Sevenoaks": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Castle Point": {
+      "total": 2,
+      "restaurants": 0,
+      "takeaways": 2
+    },
+    "South Cambridgeshire": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Eastleigh": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Torridge": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "North Warwickshire": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Wyre Forest": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Lisburn and Castlereagh City": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Newry, Mourne and Down": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Gateshead": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Rossendale": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "South Tyneside": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Dundee City": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Glasgow City": {
+      "total": 8,
+      "restaurants": 5,
+      "takeaways": 3
+    },
+    "Stirling": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Highland": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Edinburgh (City of)": {
+      "total": 24,
+      "restaurants": 15,
+      "takeaways": 9
+    },
+    "North Ayrshire": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Falkirk": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "East Lothian": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Argyll and Bute": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Moray": {
+      "total": 3,
+      "restaurants": 2,
+      "takeaways": 1
+    },
+    "Angus": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Aberdeen City": {
+      "total": 5,
+      "restaurants": 4,
+      "takeaways": 1
+    },
+    "Scottish Borders": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Perth and Kinross": {
+      "total": 2,
+      "restaurants": 2,
+      "takeaways": 0
+    },
+    "Fife": {
+      "total": 3,
+      "restaurants": 3,
+      "takeaways": 0
+    },
+    "East Dunbartonshire": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "West Lothian": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "North Lanarkshire": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Renfrewshire": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "South Lanarkshire": {
+      "total": 3,
+      "restaurants": 0,
+      "takeaways": 3
+    },
+    "Rushcliffe": {
+      "total": 2,
+      "restaurants": 1,
+      "takeaways": 1
+    },
+    "Chichester": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Adur": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "North Tyneside": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Rochdale": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "Knowsley": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "South Hams": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    },
+    "East Renfrewshire": {
+      "total": 1,
+      "restaurants": 1,
+      "takeaways": 0
+    },
+    "Inverclyde": {
+      "total": 1,
+      "restaurants": 0,
+      "takeaways": 1
+    }
+  },
+  "date": "2026-06-08 09:09",
+  "chain_added": 209
+}

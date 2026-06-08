@@ -28,6 +28,67 @@ def format_date(datestr: str) -> str:
     except:
         return datestr[:7] if len(datestr) >= 7 else datestr
 
+def extract_neighbourhood(address: str, city: str) -> str:
+    """Extract neighbourhood from address. e.g. '33 Town Street, Horsforth, Leeds' -> 'Horsforth'"""
+    if not address or not city:
+        return ''
+    # Split on commas, strip whitespace
+    parts = [p.strip() for p in address.split(',')]
+    # Look for the part right before the city
+    city_lower = city.lower()
+    for i, p in enumerate(parts):
+        if p.lower() == city_lower and i > 0:
+            # Return the part before the city, stripping street numbers
+            prev = parts[i-1]
+            # Remove leading numbers/street prefixes
+            prev = prev.strip()
+            if prev and not prev[0].isdigit():
+                return prev
+            # If it starts with a number, try the part before that
+            if i > 1:
+                prev2 = parts[i-2].strip()
+                if prev2 and not prev2[0].isdigit():
+                    return prev2
+    # Fallback: return the last non-city, non-postcode part
+    for p in reversed(parts):
+        p = p.strip()
+        if p.lower() != city_lower and not any(c.isdigit() for c in p[:4]) and p and not p[0].isdigit():
+            return p
+    return ''
+
+def build_intro(r: dict[str, Any]) -> str:
+    """Build a 1-2 sentence intro paragraph for the listing page.
+    Uses only FSA source data: name, type, address (neighbourhood), city, hygiene_rating, rating_date."""
+    name = r['name']
+    city = r['city']
+    rtype = r.get('type', 'restaurant')
+    rating = r.get('hygiene_rating', '')
+    rating_date = format_date(r.get('rating_date', ''))
+    address = r.get('address', '')
+
+    type_word = 'restaurant' if rtype == 'restaurant' else 'takeaway'
+
+    neighbourhood = extract_neighbourhood(address, city)
+    if neighbourhood:
+        location = f'{neighbourhood}, {city}'
+    else:
+        location = city
+
+    intro = f'{name} is a Thai {type_word} in {location}.'
+
+    # Add hygiene rating sentence if we have both rating and date
+    if rating and rating != 'N/A':
+        date_str = f', last inspected {rating_date}' if rating_date and rating_date != 'Unknown' else ''
+        intro += f' FSA hygiene rating {rating}/5{date_str}.'
+
+    return intro
+
+def build_serves_cuisine(rtype: str) -> str:
+    """Map restaurant type to servesCuisine. Conservative mapping — only use type field for safe hints."""
+    if rtype == 'takeaway':
+        return 'Thai takeaway'
+    return 'Thai'
+
 def rating_class(rating: str) -> str:
     return {'5': 'r5', '4': 'r4', '3': 'r3', '2': 'r2', '1': 'r1'}.get(rating, 'r3')
 
@@ -62,6 +123,10 @@ def score_bar_html(label: str, score: int | None) -> str:
 def generate_page(r: dict[str, Any]) -> str:
     """Fill the Kimi template with restaurant data."""
     html = TEMPLATE
+
+    def safe_sub(pattern: str, replacement: str, text: str) -> str:
+        """re.sub that doesn't interpret backslashes in replacement (safe for names with smart quotes)."""
+        return re.sub(pattern, lambda m: replacement, text, flags=re.DOTALL)
 
     name = r['name']
     city = r['city']
@@ -119,35 +184,80 @@ def generate_page(r: dict[str, Any]) -> str:
             "latitude": {lat},
             "longitude": {lng}
         }}'''
+
+    # Build schema variables from FSA data only (no D1)
+    cuisine = build_serves_cuisine(rtype)
+    intro_text = build_intro(r)
+
+    # dateModified as ISO date string from rating_date
+    date_modified = ''
+    raw_date = r.get('rating_date', '')
+    if raw_date:
+        try:
+            dt = datetime.fromisoformat(raw_date.replace('Z', '+00:00'))
+            date_modified = dt.strftime('%Y-%m-%d')
+        except:
+            pass
+
+    # additionalProperty for FSA scores (only if numeric scores exist — Scottish FHIS has none)
+    addprop_parts = []
+    hy_score = r.get('hygiene_score')
+    st_score = r.get('structural_score')
+    mg_score = r.get('management_score')
+    if hy_score is not None:
+        addprop_parts.append(f'''            {{
+                "@type": "PropertyValue",
+                "name": "FSA Hygiene Score",
+                "value": {hy_score},
+                "description": "Hygiene score (0=best, 25=worst)"
+            }}''')
+    if st_score is not None:
+        addprop_parts.append(f'''            {{
+                "@type": "PropertyValue",
+                "name": "FSA Structural Score",
+                "value": {st_score},
+                "description": "Structural score (0=best, 25=worst)"
+            }}''')
+    if mg_score is not None:
+        addprop_parts.append(f'''            {{
+                "@type": "PropertyValue",
+                "name": "FSA Management Score",
+                "value": {mg_score},
+                "description": "Management confidence score (0=best, 25=worst)"
+            }}''')
+
+    addprop_block = ''
+    if addprop_parts:
+        addprop_block = ',\n        "additionalProperty": [\n' + ',\n'.join(addprop_parts) + '\n        ]'
+
+    # Only include dateModified if we have it, otherwise omit
+    date_line = f',\n        "dateModified": {json.dumps(date_modified)}' if date_modified else ''
     
     schema_restaurant = f'''    <script type="application/ld+json">
     {{
         "@context": "https://schema.org",
         "@type": "Restaurant",
-        "name": "{name}",
-        "servesCuisine": "Thai",
+        "name": {json.dumps(name)},
+        "description": {json.dumps(intro_text)},
+        "servesCuisine": {json.dumps(cuisine)},
         "address": {{
             "@type": "PostalAddress",
-            "streetAddress": "{address}",
-            "addressLocality": "{city}",
-            "postalCode": "{postcode}",
+            "streetAddress": {json.dumps(address)},
+            "addressLocality": {json.dumps(city)},
+            "postalCode": {json.dumps(postcode)},
             "addressCountry": "GB"
-        }}{geo_json},
-        "aggregateRating": {{
-            "@type": "AggregateRating",
-            "ratingValue": "{rating}",
-            "bestRating": "5",
-            "reviewAspect": "Hygiene"
-        }}
+        }}{geo_json}{date_line}{addprop_block}
     }}
     </script>'''
     
     # Replace from marker to end of current schema block
-    html = re.sub(
-        r'<!-- DYNAMIC: schema_restaurant -->.*?</script>',
-        schema_restaurant,
-        html, flags=re.DOTALL
-    )
+    anchor = '<!-- DYNAMIC: schema_restaurant -->'
+    anchor_idx = html.find(anchor)
+    if anchor_idx >= 0:
+        end_tag = html.find('</script>', anchor_idx)
+        if end_tag >= 0:
+            end_idx = end_tag + len('</script>')
+            html = html[:anchor_idx] + schema_restaurant + html[end_idx:]
 
     schema_breadcrumb = f'''    <script type="application/ld+json">
     {{
@@ -160,11 +270,7 @@ def generate_page(r: dict[str, Any]) -> str:
         ]
     }}
     </script>'''
-    html = re.sub(
-        r'<!-- DYNAMIC: schema_breadcrumb -->.*?</script>',
-        schema_breadcrumb,
-        html, flags=re.DOTALL
-    )
+    html = safe_sub(r'<!-- DYNAMIC: schema_breadcrumb -->.*?</script>', schema_breadcrumb, html)
 
     # ---- Nav / Breadcrumb ----
     html = html.replace(
@@ -186,13 +292,16 @@ def generate_page(r: dict[str, Any]) -> str:
         f'                <span class="badge badge-type">\n                    <i class="fas {rtype_icon}"></i> {rtype_label}\n                </span>'
     )
 
-    # ---- Restaurant name (keep "My <em>Thai</em>" style if it fits, otherwise just plain) ----
+    # ---- Restaurant name (keep "<em>last word</em>" style, add type + city suffix) ----
     # Kimi italicized the last word. Let's keep it simple: wrap last word in <em> if multi-word
     words = name.split()
     if len(words) > 1:
         name_html = ' '.join(words[:-1]) + f' <em>{words[-1]}</em>'
     else:
         name_html = name
+
+    type_word_label = 'Restaurant' if rtype == 'restaurant' else 'Takeaway'
+    name_html += f' — Thai {type_word_label} in {city}'
     
     html = html.replace(
         '<!-- DYNAMIC: restaurant_name -->\n            <h1>My <em>Thai</em></h1>',
@@ -206,6 +315,19 @@ def generate_page(r: dict[str, Any]) -> str:
         '<!-- DYNAMIC: location_line -->\n            <div class="hero-location">\n                <i class="fas fa-map-marker-alt"></i> Leeds, West Yorkshire\n            </div>',
         f'            <div class="hero-location">\n                <i class="fas fa-map-marker-alt"></i> {location_text}\n            </div>'
     )
+
+    # ---- Intro paragraph ----
+    intro_text = build_intro(r)
+    # Use string find/replace instead of re.sub to avoid backslash escaping issues
+    # with restaurant names containing smart quotes (e.g. \u2019)
+    anchor = '<!-- DYNAMIC: intro_paragraph -->'
+    anchor_idx = html.find(anchor)
+    if anchor_idx >= 0:
+        end_tag = html.find('</p>', anchor_idx)
+        if end_tag >= 0:
+            end_idx = end_tag + len('</p>')
+            replacement = f'{anchor}\n            <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">\n                {intro_text}\n            </p>'
+            html = html[:anchor_idx] + replacement + html[end_idx:]
 
     # ---- Action buttons ----
     if lat is not None and lng is not None:
@@ -245,10 +367,6 @@ def generate_page(r: dict[str, Any]) -> str:
     )
 
     # ---- Score bars ----
-    hy_score = r.get('hygiene_score')
-    st_score = r.get('structural_score')
-    mg_score = r.get('management_score')
-    
     scores_html = ''
     if hy_score is not None:
         scores_html += score_bar_html('Hygiene', hy_score)
@@ -284,11 +402,7 @@ def generate_page(r: dict[str, Any]) -> str:
     else:
         map_html = ''
     
-    html = re.sub(
-        r'<!-- DYNAMIC: map_iframe.*?-->.*?<div class="map-wrap">.*?</div>',
-        map_html if map_html else '',
-        html, flags=re.DOTALL
-    )
+    html = safe_sub(r'<!-- DYNAMIC: map_iframe.*?-->.*?<div class="map-wrap">.*?</div>', map_html if map_html else '', html)
 
     # ---- Trust items ----
     trust_items = f'''                    <li class="trust-item">
@@ -308,11 +422,7 @@ def generate_page(r: dict[str, Any]) -> str:
                         <div><strong>Inspected {date_str.split()[-1] if ' ' in date_str else date_str}</strong>Rating up to date</div>
                     </li>'''
     
-    html = re.sub(
-        r'<!-- DYNAMIC: trust_items -->.*?</ul>',
-        trust_items + '\n                </ul>',
-        html, flags=re.DOTALL
-    )
+    html = safe_sub(r'<!-- DYNAMIC: trust_items -->.*?</ul>', trust_items + '\n                </ul>', html)
 
     # ---- Related links ----
     html = html.replace(

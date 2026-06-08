@@ -744,6 +744,7 @@
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "name": "Rosa's Thai",
+        "description": "Rosa's Thai is a Thai restaurant in London. FSA hygiene rating 5/5, last inspected September 2023.",
         "servesCuisine": "Thai",
         "address": {
             "@type": "PostalAddress",
@@ -757,12 +758,27 @@
             "latitude": 51.493874,
             "longitude": -0.141234
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "reviewAspect": "Hygiene"
-        }
+        "dateModified": "2023-09-05",
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "FSA Hygiene Score",
+                "value": 5,
+                "description": "Hygiene score (0=best, 25=worst)"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "FSA Structural Score",
+                "value": 5,
+                "description": "Structural score (0=best, 25=worst)"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "FSA Management Score",
+                "value": 5,
+                "description": "Management confidence score (0=best, 25=worst)"
+            }
+        ]
     }
     </script>
 
@@ -825,10 +841,13 @@
                     <i class="fas fa-utensils"></i> Restaurant
                 </span>
             </div>
-                        <h1>Rosa's <em>Thai</em></h1>
+                        <h1>Rosa's <em>Thai</em> — Thai Restaurant in London</h1>
                         <div class="hero-location">
                 <i class="fas fa-map-marker-alt"></i> London, London
             </div>
+                        <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">
+                Rosa's Thai is a Thai restaurant in London. FSA hygiene rating 5/5, last inspected September 2023.
+            </p>
             <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);">
                 <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
             </p>
@@ -1038,6 +1057,14 @@
             <br>
             <a href="/thai-restaurants-city-breakdown-uk">
                 <i class="fas fa-arrow-left"></i> All UK cities
+            </a>
+            <br>
+            <a href="/r/">
+                <i class="fas fa-arrow-left"></i> Browse all Thai restaurants by city
+            </a>
+            <br>
+            <a href="/dish-prices">
+                <i class="fas fa-arrow-left"></i> Compare Thai dish prices across UK cities
             </a>
         </div>
     </div>

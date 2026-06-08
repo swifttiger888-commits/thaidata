@@ -744,7 +744,8 @@
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "name": "Thai Lotus",
-        "servesCuisine": "Thai",
+        "description": "Thai Lotus is a Thai takeaway in READING, Oxford. FSA hygiene rating 5/5, last inspected January 2025.",
+        "servesCuisine": "Thai takeaway",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "3 The Arcade, High Street, Goring, READING",
@@ -757,12 +758,27 @@
             "latitude": 51.522453,
             "longitude": -1.136456
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "reviewAspect": "Hygiene"
-        }
+        "dateModified": "2025-01-15",
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "FSA Hygiene Score",
+                "value": 5,
+                "description": "Hygiene score (0=best, 25=worst)"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "FSA Structural Score",
+                "value": 5,
+                "description": "Structural score (0=best, 25=worst)"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "FSA Management Score",
+                "value": 5,
+                "description": "Management confidence score (0=best, 25=worst)"
+            }
+        ]
     }
     </script>
 
@@ -825,10 +841,13 @@
                     <i class="fas fa-box"></i> Takeaway
                 </span>
             </div>
-                        <h1>Thai <em>Lotus</em></h1>
+                        <h1>Thai <em>Lotus</em> — Thai Takeaway in Oxford</h1>
                         <div class="hero-location">
                 <i class="fas fa-map-marker-alt"></i> Oxford, South East
             </div>
+                        <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">
+                Thai Lotus is a Thai takeaway in READING, Oxford. FSA hygiene rating 5/5, last inspected January 2025.
+            </p>
             <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);">
                 <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
             </p>
@@ -931,7 +950,7 @@
 
             <div id="enrichment-card" class="card animate-in" style="display:none;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.12);">
                 <h2 class="card-title">From Their <em>Website</em></h2>
-                <p style="font-size:0.75rem;color:var(--ink-tertiary);margin-bottom:12px;">Auto-detected from the restaurant's website. Owner-verified where indicated.</p>
+                <p style="font-size:0.75rem;color:var(--ink-tertiary);margin-bottom:12px;">Auto-detected from the restaurant's website. Owner-verified where indicated. Restaurant owners can update or remove this information at any time by claiming their listing.</p>
                 <div id="enrichment-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.6;"></div>
             </div>
 
@@ -1039,6 +1058,14 @@
             <a href="/thai-restaurants-city-breakdown-uk">
                 <i class="fas fa-arrow-left"></i> All UK cities
             </a>
+            <br>
+            <a href="/r/">
+                <i class="fas fa-arrow-left"></i> Browse all Thai restaurants by city
+            </a>
+            <br>
+            <a href="/dish-prices">
+                <i class="fas fa-arrow-left"></i> Compare Thai dish prices across UK cities
+            </a>
         </div>
     </div>
 
@@ -1087,7 +1114,10 @@
             var span = document.createElement('span');
             span.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(16,185,129,0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
             span.textContent = field.confidence === 'high' ? 'auto' : field.confidence === 'medium' ? 'auto' : '';
-            return span;
+            var frag = document.createDocumentFragment();
+            frag.appendChild(document.createTextNode(' '));
+            frag.appendChild(span);
+            return frag;
         }
 
         // -- Check if this restaurant has a claimed listing --
@@ -1102,11 +1132,32 @@
                 const listing = data.listings[0];
                 console.log('Enrichment: listing loaded', listing.restaurant_name, 'photos:', listing.photos ? listing.photos.length : 0);
 
-                // Hide claim CTA, show claimed badge
+                // Owner Verified badge: only when owner has set >=1 meaningful field
+                // Website alone is NOT sufficient — must be a field the owner actively manages
+                var hasOwnerData = listing.description || listing.phone || listing.opening_hours ||
+                    (listing.photos && listing.photos.length > 0) ||
+                    (listing.menu_highlights && listing.menu_highlights.length > 0) ||
+                    (listing.features && listing.features.length > 0) ||
+                    listing.social_instagram || listing.social_facebook;
+
                 var claimCard = document.querySelector('.claim-card');
-                if (claimCard) claimCard.style.display = 'none';
-                var badge = document.getElementById('claimed-badge');
-                if (badge) badge.style.display = 'block';
+                if (hasOwnerData) {
+                    // Owner verified: hide CTA, show badge
+                    if (claimCard) claimCard.style.display = 'none';
+                    var badge = document.getElementById('claimed-badge');
+                    if (badge) badge.style.display = 'block';
+                } else {
+                    // Listing exists, no owner data: show CTA, hide badge
+                    var badge = document.getElementById('claimed-badge');
+                    if (badge) badge.style.display = 'none';
+                    if (claimCard) {
+                        claimCard.style.display = 'block';
+                        var h3 = claimCard.querySelector('h3');
+                        if (h3) h3.textContent = 'Own this restaurant?';
+                        var p = claimCard.querySelector('p');
+                        if (p) p.textContent = 'Claim this listing to verify and update your details.';
+                    }
+                }
 
                 // --- Populate claimed content sections ---
 
@@ -1212,24 +1263,33 @@
                 }
 
                 // --- Enrichment: auto-detected website data ---
-                if (listing.enrichment && listing.enrichment.status === 'success' && listing.enrichment.fields) {
-                    var fields = listing.enrichment.fields;
+                // v1.1: shows generated_summary (AI-written) instead of raw scraped text
+                var enr = listing.enrichment;
+                if (enr && enr.status === 'success') {
                     var enrDiv = document.getElementById('enrichment-card');
                     var enrContent = document.getElementById('enrichment-content');
                     if (enrDiv && enrContent) {
                         enrContent.textContent = '';
                         var shownAny = false;
 
-                        // Description fallback
-                        if (!listing.description && fields.description) {
+                        // Generated summary (v1.1 — replaces raw description)
+                        if (!listing.description && enr.generated_summary) {
                             shownAny = true;
                             var p = document.createElement('p');
                             p.style.cssText = 'margin-bottom:10px;';
-                            p.textContent = fields.description.value;
-                            var tag = mkEnrichTag(fields.description);
-                            p.appendChild(tag);
+                            p.textContent = enr.generated_summary;
+                            var tag = document.createElement('span');
+                            tag.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(16,185,129,0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
+                            tag.textContent = 'auto';
+                            var frag = document.createDocumentFragment();
+                            frag.appendChild(document.createTextNode(' '));
+                            frag.appendChild(tag);
+                            p.appendChild(frag);
                             enrContent.appendChild(p);
                         }
+
+                        // Remaining fallback fields (unchanged)
+                        var fields = enr.fields || {};
 
                         // Phone fallback
                         if (!listing.phone && fields.phone) {
