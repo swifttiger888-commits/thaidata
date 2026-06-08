@@ -90,6 +90,16 @@ body {
                 </select>
                 <button onclick="logout()" style="width:auto;background:transparent;border:1px solid rgba(255,255,255,0.2);">Logout</button>
             </div>
+
+            <!-- Exclude by FSA ID -->
+            <div class="card" style="margin-bottom:20px;padding:16px 20px;">
+                <div style="font-size:0.85rem;color:#94A3B8;margin-bottom:8px;">Exclude by FSA ID <span id="excl-count" style="color:#EF4444;"></span></div>
+                <div style="display:flex;gap:8px;">
+                    <input type="number" id="exclude-fsa-id" placeholder="FSA ID (e.g. 411519)" style="flex:1;margin:0;">
+                    <button onclick="excludeByFsaId()" style="width:auto;margin:0;background:#EF4444;">Exclude</button>
+                </div>
+            </div>
+
             <div id="claims-list"></div>
         </div>
     </div>
@@ -160,6 +170,12 @@ body {
             const data = await claimsRes.json();
             const exclData = exclRes.ok ? await exclRes.json() : { exclusions: [] };
             window._excludedIds = new Set((exclData.exclusions || []).filter(e => !e.restored_at).map(e => e.fsa_id));
+            var countEl = document.getElementById('excl-count');
+            if (countEl && window._excludedIds.size > 0) {
+                countEl.textContent = '(' + window._excludedIds.size + ' excluded)';
+            } else if (countEl) {
+                countEl.textContent = '';
+            }
             const list = document.getElementById('claims-list');
             list.textContent = '';
 
@@ -471,6 +487,19 @@ body {
         } catch (e) {
             toast('Network error', 'error');
         }
+    }
+
+    function excludeByFsaId() {
+        var input = document.getElementById('exclude-fsa-id');
+        var fsaId = parseInt(input.value);
+        if (!fsaId || fsaId <= 0) {
+            toast('Enter a valid FSA ID', 'error');
+            return;
+        }
+        var reason = prompt('Reason for exclusion (e.g. "non-Thai — Indian tea shop"):');
+        if (!reason) return;
+        excludeRestaurant(fsaId);
+        input.value = '';
     }
     </script>
 </body>
