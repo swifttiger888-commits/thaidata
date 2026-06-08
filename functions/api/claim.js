@@ -38,10 +38,10 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Check if restaurant is already claimed
+    // Check if restaurant is already claimed (pending or approved)
     const existing = await env.DB.prepare(
-      'SELECT id FROM claims WHERE restaurant_name = ? AND city = ? AND claim_status = ?'
-    ).bind(restaurant_name, city, 'approved').first();
+      'SELECT id FROM claims WHERE restaurant_name = ? AND city = ? AND claim_status IN (?, ?)'
+    ).bind(restaurant_name, city, 'pending', 'approved').first();
 
     if (existing) {
       return new Response(JSON.stringify({ error: 'This restaurant has already been claimed', status: 'already_claimed' }), {

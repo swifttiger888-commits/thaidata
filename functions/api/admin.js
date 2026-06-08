@@ -271,7 +271,7 @@ export async function onRequestGet(context) {
 
     let query = `SELECT c.*, l.id as listing_id, l.is_closed, l.enrichment
       FROM claims c
-      LEFT JOIN listings l ON l.claim_id = c.id`;
+      LEFT JOIN listings l ON l.claim_id = c.id AND c.claim_status = 'approved'`;
     const params = [];
     if (status !== 'all') {
       query += ' WHERE c.claim_status = ?';
@@ -540,11 +540,16 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
         claim_id,
       }), { status: 200, headers: corsHeaders });
     } else if (action === 'reopen') {
-      // Reopen a rejected or reset claim back to pending for re-review
+      // Reopen a rejected claim back to pending for re-review
       const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
       if (!claim) {
         return new Response(JSON.stringify({ error: 'Claim not found' }), {
           status: 404, headers: corsHeaders,
+        });
+      }
+      if (claim.claim_status !== 'rejected') {
+        return new Response(JSON.stringify({ error: 'Can only reopen rejected claims' }), {
+          status: 400, headers: corsHeaders,
         });
       }
 
