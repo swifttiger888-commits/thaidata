@@ -102,6 +102,14 @@ for filename in sorted(os.listdir(cities_dir)):
     with open(filepath) as f:
         html = f.read()
     
+    # Remove any existing Browse Restaurants section (avoid duplicates)
+    html = re.sub(
+        r'<!-- Individual Restaurant Listings -->.*?</div>\s*\n\s*(?=<div class="card"|</div>\s*\n\s*</div>|$)',
+        '',
+        html,
+        flags=re.DOTALL
+    )
+    
     # Build the restaurant links section
     top_restaurants = matches[:8]  # Top 8 by rating
     links_html = ''
@@ -130,7 +138,7 @@ for filename in sorted(os.listdir(cities_dir)):
     section = f'''
         <!-- Individual Restaurant Listings -->
         <div class="card" style="margin-top:20px;">
-            <h2>Browse <em>Restaurants</em> in {city_name}</h2>
+            <h2 id="browse">Browse <em>Restaurants</em> in {city_name}</h2>
             <p style="color:var(--ink4);font-size:0.9rem;margin-bottom:16px;">View individual restaurant pages with full FSA hygiene scores, maps, and details. <a href="/r/" style="color:var(--c2);">What's this?</a></p>
             <div style="display:flex;flex-direction:column;gap:8px;">
 {links_html}            </div>
