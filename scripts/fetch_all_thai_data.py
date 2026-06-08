@@ -48,6 +48,17 @@ def main() -> None:
     # Chain searches (many Thai restaurants don't have "Thai" in the name)
     CHAINS = ['Giggling Squid', 'Busaba', 'Chaophraya', 'Patara', 'Sukhothai', 'Zaap',
               'Rosa\'s Thai', 'Thaikhun', 'Thai Square', 'Banana Tree', 'Mango Tree']
+    
+    # ── Curated exceptions for verified Thai venues that fall through ──
+    # Variant spellings that FSA substring-matches but the chain-name filter rejects
+    CHAIN_VARIANTS = {
+        'Sukhothai': ['sukothai', 'sukhumthai'],   # misspelling + ghost kitchen
+        'Zaap':       ['zaa'],                       # Siam Zaa (Newcastle)
+    }
+    # Hard allowlist by FSA ID — confirmed genuine Thai, bypasses chain-name check
+    FSA_ALLOWLIST = {578053, 1721229, 1004678}
+    
+    rejects = []  # for audit trail
     chain_added = 0
     for chain in CHAINS:
         for scheme in ['FHRS', 'FHIS']:
@@ -56,15 +67,42 @@ def main() -> None:
                 try:
                     ests = fetch_all(chain, bt, scheme)
                     chain_lower = chain.lower()
+                    variants = [v.lower() for v in CHAIN_VARIANTS.get(chain, [])]
                     for e in ests:
-                        # FSA API does substring matching — filter out false positives
-                        # (e.g. "Patara" matching "Hamara", "Busaba" matching "Ali Baba")
-                        if chain_lower not in e.get('BusinessName', '').lower():
+                        name = e.get('BusinessName', '')
+                        name_lower = name.lower()
+                        fid = e.get('FHRSID')
+                        # ── Allowlist check ──
+                        if fid in FSA_ALLOWLIST:
+                            all_ests.append(e)
+                            chain_added += 1
+                            continue
+                        # ── Variant match ──
+                        if any(v in name_lower for v in variants):
+                            all_ests.append(e)
+                            chain_added += 1
+                            continue
+                        # ── Default: full chain name must be in business name ──
+                        if chain_lower not in name_lower:
+                            rejects.append({
+                                'fsa_id': fid,
+                                'name': name,
+                                'city': e.get('LocalAuthorityName', ''),
+                                'chain': chain,
+                            })
                             continue
                         all_ests.append(e)
                         chain_added += 1
                 except Exception:
                     pass
+    
+    # ── Write rejection audit file ──
+    if rejects:
+        rejects.sort(key=lambda r: (r['chain'], r['name']))
+        reject_path = os.path.join(REPO_DIR, 'data', 'chain_filter_rejects.json')
+        with open(reject_path, 'w') as f:
+            json.dump(rejects, f, indent=2)
+        print(f"  Chain filter rejects: {len(rejects)} → data/chain_filter_rejects.json")
     print(f"  Chain additions: {chain_added}")
     
     # Deduplicate by FHRSID
