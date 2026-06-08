@@ -197,7 +197,7 @@ for filename in sorted(os.listdir(cities_dir)):
     
     section = f'''{BEGIN_MARKER}
         <div class="card" style="margin-top:20px;">
-            <h2 id="browse">Browse <em>Restaurants</em> in {city_name}</h2>
+            <h2 id="browse" style="scroll-margin-top:80px;">Browse <em>Restaurants</em> in {city_name}</h2>
             <p style="color:var(--ink4);font-size:0.9rem;margin-bottom:16px;">View individual restaurant pages with full FSA hygiene scores, maps, and details. <a href="/r/" style="color:var(--c2);">What's this?</a></p>
             <div style="display:flex;flex-direction:column;gap:8px;">
 {links_html}            </div>
