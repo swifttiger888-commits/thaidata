@@ -23,11 +23,22 @@ with open(REPO / "data" / "restaurants.json") as f:
     data = json.load(f)
 
 restaurants = data["restaurants"]
-total = len(restaurants)
+
+# Load exclusions (moderation layer)
+excluded_ids: set[int] = set()
+excl_path = REPO / "data" / "exclusions.json"
+if excl_path.exists():
+    with open(excl_path) as f:
+        excl_data = json.load(f)
+    excluded_ids.update(excl_data.get("excluded_fsa_ids", []))
+
+# Filter out excluded restaurants before any grouping/counting
+active_restaurants = [r for r in restaurants if r["id"] not in excluded_ids]
+total = len(active_restaurants)
 
 # Group by city
 by_city: dict[str, list[dict[str, Any]]] = defaultdict(list)
-for r in restaurants:
+for r in active_restaurants:
     by_city[r["city"]].append(r)
 
 def slugify(s: str) -> str:
@@ -40,11 +51,11 @@ def rest_url(r: dict[str, Any]) -> str:
     return f"/r/{slugify(r['city'])}/{slugify(r['name'])}/"
 
 # Stats
-all_ratings = [int(r["hygiene_rating"]) for r in restaurants if r.get("hygiene_rating", "").isdigit()]
+all_ratings = [int(r["hygiene_rating"]) for r in active_restaurants if r.get("hygiene_rating", "").isdigit()]
 avg_overall = round(sum(all_ratings) / len(all_ratings), 1) if all_ratings else 0
 five_star = sum(1 for r in all_ratings if r == 5)
 five_pct = round(five_star / total * 100, 1)
-dine_in_total = sum(1 for r in restaurants if r["type"] == "restaurant")
+dine_in_total = sum(1 for r in active_restaurants if r["type"] == "restaurant")
 takeaway_total = total - dine_in_total
 cities_count = len(by_city)
 
@@ -55,7 +66,7 @@ top_cities = city_counts[:10]
 
 # Top-rated overall (must have 5/5)
 top_rated = sorted(
-    [r for r in restaurants if r.get("hygiene_rating") == "5"],
+    [r for r in active_restaurants if r.get("hygiene_rating") == "5"],
     key=lambda r: (r["name"].lower(), r["city"]),
 )[:20]
 
@@ -66,7 +77,7 @@ CHAIN_KEYWORDS: list[str] = [
     "chaophraya", "sukhothai", "bangkok",
 ]
 chain_restaurants: dict[str, list[dict[str, Any]]] = defaultdict(list)
-for r in restaurants:
+for r in active_restaurants:
     name_lower = r["name"].lower()
     for chain in CHAIN_KEYWORDS:
         if chain in name_lower:
@@ -86,7 +97,7 @@ LONDON_NEIGHBOURHOODS: list[dict[str, Any]] = [
     {"id": "putney", "name": "Putney & Wimbledon", "postcodes": ["SW15", "SW19"]},
     {"id": "battersea", "name": "Battersea & Clapham", "postcodes": ["SW11", "SW4", "SW8"]},
 ]
-london_restaurants = [r for r in restaurants if r["city"] == "London"]
+london_restaurants = [r for r in active_restaurants if r["city"] == "London"]
 
 def outward(pc: str) -> str:
     if not pc:
