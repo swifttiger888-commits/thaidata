@@ -55,7 +55,12 @@ def main() -> None:
                 time.sleep(DELAY)
                 try:
                     ests = fetch_all(chain, bt, scheme)
+                    chain_lower = chain.lower()
                     for e in ests:
+                        # FSA API does substring matching — filter out false positives
+                        # (e.g. "Patara" matching "Hamara", "Busaba" matching "Ali Baba")
+                        if chain_lower not in e.get('BusinessName', '').lower():
+                            continue
                         all_ests.append(e)
                         chain_added += 1
                 except Exception:
