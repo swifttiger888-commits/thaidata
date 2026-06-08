@@ -11,9 +11,9 @@
     "UKHospitality"
   ],
   "statistics": {
-    "total_uk_thai_businesses": 1591,
-    "total_full_service_restaurants": 1236,
-    "total_quick_service_takeaways": 355,
+    "total_uk_thai_businesses": 1469,
+    "total_full_service_restaurants": 1165,
+    "total_quick_service_takeaways": 304,
     "uk_average_hygiene_rating": 4.1,
     "uk_average_per_100k_density": 2.6,
     "hygiene_rating_5_percentage": 50.4,
@@ -55,20 +55,20 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 400,
-      "restaurants": 312,
-      "takeaways": 88,
-      "per_100k": 4.5,
-      "avg_hygiene_rating": 4.1,
-      "postcode_areas": 122
+      "total_thai_businesses": 354,
+      "restaurants": 281,
+      "takeaways": 73,
+      "per_100k": 3.9,
+      "avg_hygiene_rating": 4.2,
+      "postcode_areas": 120
     },
     {
       "name": "Leeds",
       "population": 812000,
-      "total_thai_businesses": 34,
-      "restaurants": 27,
-      "takeaways": 7,
-      "per_100k": 4.2,
+      "total_thai_businesses": 32,
+      "restaurants": 26,
+      "takeaways": 6,
+      "per_100k": 3.9,
       "avg_hygiene_rating": 4.4,
       "postcode_areas": 6
     },
@@ -95,62 +95,32 @@
     {
       "name": "Edinburgh",
       "population": 548000,
-      "total_thai_businesses": 24,
-      "restaurants": 15,
-      "takeaways": 9,
-      "per_100k": 4.4,
+      "total_thai_businesses": 21,
+      "restaurants": 13,
+      "takeaways": 8,
+      "per_100k": 3.8,
       "avg_hygiene_rating": 0,
-      "postcode_areas": 9
+      "postcode_areas": 8
     },
     {
       "name": "Bristol",
       "population": 483000,
-      "total_thai_businesses": 19,
-      "restaurants": 15,
-      "takeaways": 4,
-      "per_100k": 3.9,
+      "total_thai_businesses": 17,
+      "restaurants": 14,
+      "takeaways": 3,
+      "per_100k": 3.5,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 7
+      "postcode_areas": 6
     },
     {
       "name": "Birmingham",
       "population": 1166000,
-      "total_thai_businesses": 18,
-      "restaurants": 16,
+      "total_thai_businesses": 17,
+      "restaurants": 15,
       "takeaways": 2,
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 13
-    },
-    {
-      "name": "Leicester",
-      "population": 374000,
-      "total_thai_businesses": 17,
-      "restaurants": 11,
-      "takeaways": 6,
-      "per_100k": 4.5,
-      "avg_hygiene_rating": 4.4,
-      "postcode_areas": 7
-    },
-    {
-      "name": "Cornwall",
-      "population": 575000,
-      "total_thai_businesses": 16,
-      "restaurants": 11,
-      "takeaways": 5,
-      "per_100k": 2.8,
-      "avg_hygiene_rating": 4.9,
-      "postcode_areas": 4
-    },
-    {
-      "name": "Bradford",
-      "population": 547000,
-      "total_thai_businesses": 15,
-      "restaurants": 10,
-      "takeaways": 5,
-      "per_100k": 2.7,
-      "avg_hygiene_rating": 3.8,
-      "postcode_areas": 7
+      "postcode_areas": 12
     },
     {
       "name": "Swansea",
@@ -161,16 +131,6 @@
       "per_100k": 6.1,
       "avg_hygiene_rating": 3.9,
       "postcode_areas": 5
-    },
-    {
-      "name": "Bournemouth",
-      "population": 401000,
-      "total_thai_businesses": 14,
-      "restaurants": 11,
-      "takeaways": 3,
-      "per_100k": 3.5,
-      "avg_hygiene_rating": 4.7,
-      "postcode_areas": 7
     },
     {
       "name": "Richmond-Upon-Thames",
@@ -193,6 +153,16 @@
       "postcode_areas": 6
     },
     {
+      "name": "Leicester",
+      "population": 374000,
+      "total_thai_businesses": 14,
+      "restaurants": 9,
+      "takeaways": 5,
+      "per_100k": 3.7,
+      "avg_hygiene_rating": 4.4,
+      "postcode_areas": 7
+    },
+    {
       "name": "Brighton",
       "population": 277000,
       "total_thai_businesses": 13,
@@ -201,6 +171,36 @@
       "per_100k": 4.7,
       "avg_hygiene_rating": 4.8,
       "postcode_areas": 3
+    },
+    {
+      "name": "Huddersfield",
+      "population": 437000,
+      "total_thai_businesses": 13,
+      "restaurants": 10,
+      "takeaways": 3,
+      "per_100k": 3.0,
+      "avg_hygiene_rating": 3.2,
+      "postcode_areas": 6
+    },
+    {
+      "name": "Bath",
+      "population": 196000,
+      "total_thai_businesses": 12,
+      "restaurants": 11,
+      "takeaways": 1,
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 4.2,
+      "postcode_areas": 2
+    },
+    {
+      "name": "Somerset",
+      "population": 580000,
+      "total_thai_businesses": 12,
+      "restaurants": 9,
+      "takeaways": 3,
+      "per_100k": 2.1,
+      "avg_hygiene_rating": 4.8,
+      "postcode_areas": 7
     }
   ],
   "key_dates_2026": {

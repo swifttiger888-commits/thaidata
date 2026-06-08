@@ -2,8 +2,8 @@
   "run_date": "2026-06-08",
   "applied": true,
   "total_cities": 273,
-  "generated": 261,
-  "quarantined": 10,
+  "generated": 256,
+  "quarantined": 15,
   "skipped": 1,
   "quarantined_pages": [
     {
@@ -15,12 +15,32 @@
       "reason": "No restaurant data for city: Clacton On Sea"
     },
     {
+      "slug": "east-renfrewshire",
+      "reason": "No restaurant data for city: East Renfrewshire"
+    },
+    {
+      "slug": "inverclyde",
+      "reason": "No restaurant data for city: Inverclyde"
+    },
+    {
+      "slug": "knowsley",
+      "reason": "No restaurant data for city: Knowsley"
+    },
+    {
       "slug": "lake-district",
       "reason": "No restaurant data for city: Lake District"
     },
     {
       "slug": "margate",
       "reason": "No restaurant data for city: Margate"
+    },
+    {
+      "slug": "north-tyneside",
+      "reason": "No restaurant data for city: North Tyneside"
+    },
+    {
+      "slug": "rochdale",
+      "reason": "No restaurant data for city: Rochdale"
     },
     {
       "slug": "shrewsbury",
