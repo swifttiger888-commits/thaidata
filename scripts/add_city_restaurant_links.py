@@ -186,13 +186,13 @@ for filename in sorted(os.listdir(cities_dir)):
         rtype_icon = 'fa-utensils' if r.get('type') == 'restaurant' else 'fa-box'
         location = build_location_label(r.get('address', ''), r['city'], r.get('postcode', ''))
         location_html = f'<span style="font-size:0.73rem;color:var(--ink4);display:block;margin-top:2px;">{location}</span>' if location else ''
-        links_html += f'''                    <a href="/r/{r_city_slug}/{r_slug}/" style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;">
-                        <div style="flex:1;min-width:0;">
+        links_html += f'''                    <a href="/r/{r_city_slug}/{r_slug}/" style="display:flex;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;margin-bottom:8px;">
+                        <div style="flex:1;min-width:0;margin-right:10px;">
                             <span style="font-weight:600;font-size:0.9rem;color:white;display:block;">{r['name']}</span>
                             {location_html}
                         </div>
-                        <span style="font-size:0.8rem;color:var(--ink4);"><i class="fas {rtype_icon}" style="margin-right:4px;"></i>{rtype_label}</span>
-                        <span style="font-size:0.8rem;color:var(--c2);">{stars}</span>
+                        <span style="font-size:0.8rem;color:var(--ink4);margin-right:10px;"><i class="fas {rtype_icon}" style="margin-right:4px;"></i>{rtype_label}</span>
+                        <span style="font-size:0.8rem;color:var(--c2);margin-right:10px;">{stars}</span>
                         <i class="fas fa-chevron-right" style="color:var(--ink3);font-size:0.7rem;"></i>
                     </a>\n'''
     
@@ -200,7 +200,7 @@ for filename in sorted(os.listdir(cities_dir)):
         <div class="card" style="margin-top:20px;">
             <h2 id="browse" style="scroll-margin-top:80px;">Browse <em>Restaurants</em> in {city_name}</h2>
             <p style="color:var(--ink4);font-size:0.9rem;margin-bottom:16px;">View individual restaurant pages with full FSA hygiene scores, maps, and details. <a href="/r/" style="color:var(--c2);">What's this?</a></p>
-            <div style="display:flex;flex-direction:column;gap:8px;">
+            <div>
 {links_html}            </div>
             <p style="margin-top:14px;text-align:center;">
                 <a href="/r/" style="color:var(--c2);font-size:0.85rem;text-decoration:none;">Browse all restaurant pages →</a>
