@@ -202,7 +202,7 @@ for filename in sorted(os.listdir(cities_dir)):
             <div style="display:flex;flex-direction:column;gap:8px;">
 {links_html}            </div>
             <p style="margin-top:14px;text-align:center;">
-                <a href="/r/" style="color:var(--c2);font-size:0.85rem;text-decoration:none;">View all {len(matches)} restaurants in {city_name} →</a>
+                <a href="/cities/{city_slug}#browse" style="color:var(--c2);font-size:0.85rem;text-decoration:none;">View all {len(matches)} restaurants in {city_name} →</a>
             </p>
         </div>
 {END_MARKER}
