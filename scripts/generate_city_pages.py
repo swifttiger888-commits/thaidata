@@ -107,12 +107,24 @@ def save_registry(registry: dict[str, Any]) -> None:
 
 
 def load_restaurants() -> dict[str, Any]:
-    """Load restaurants.json and group by city."""
+    """Load restaurants.json and group by city, excluding moderated venues."""
     with open(DATA_PATH) as f:
         data = json.load(f)
 
+    # Load exclusions (moderation layer)
+    excluded_ids: set[int] = set()
+    excl_path = REPO / "data" / "exclusions.json"
+    if excl_path.exists():
+        with open(excl_path) as f:
+            excl_data = json.load(f)
+        excluded_ids.update(excl_data.get("excluded_fsa_ids", []))
+
     by_city: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    total_excluded = 0
     for r in data.get("restaurants", []):
+        if r["id"] in excluded_ids:
+            total_excluded += 1
+            continue
         by_city[r["city"]].append(r)
 
     return {
