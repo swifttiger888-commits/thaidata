@@ -607,8 +607,8 @@ body {
         if (found) {
             showExcludeModal(fsaId, found.restaurant_name, found.city);
         } else {
-            // No claim — still allow exclusion with unknown name
-            showExcludeModal(fsaId, 'Unknown restaurant', '(not in current claims)');
+            errEl.textContent = 'FSA ID ' + fsaId + ' not found. Check the ID or switch status buckets.';
+            errEl.classList.add('visible');
         }
     }
 
