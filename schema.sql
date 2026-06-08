@@ -70,3 +70,14 @@ CREATE INDEX IF NOT EXISTS idx_claims_status ON claims(claim_status);
 CREATE INDEX IF NOT EXISTS idx_claims_city ON claims(city);
 CREATE INDEX IF NOT EXISTS idx_listings_city ON listings(city);
 CREATE INDEX IF NOT EXISTS idx_auth_tokens_hash ON auth_tokens(token_hash);
+
+-- Exclusion/moderation layer (non-destructive, reversible)
+CREATE TABLE IF NOT EXISTS exclusions (
+  fsa_id INTEGER PRIMARY KEY,
+  reason TEXT NOT NULL,
+  excluded_by TEXT NOT NULL,
+  excluded_at TEXT NOT NULL DEFAULT (datetime('now')),
+  restored_by TEXT,
+  restored_at TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_exclusions_active ON exclusions(fsa_id) WHERE restored_at IS NULL;

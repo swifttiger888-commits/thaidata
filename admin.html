@@ -50,6 +50,8 @@ body {
         .enrich-dot-success { background: #10B981; }
         .enrich-dot-partial { background: #F59E0B; }
         .enrich-dot-failed { background: #EF4444; }
+        .badge-closed { background: rgba(239,68,68,0.15); color: #EF4444; }
+        .excluded-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; margin-left: 6px; background: rgba(239,68,68,0.15); color: #EF4444; }
         .actions { display: flex; gap: 8px; flex-shrink: 0; }
         .actions button { width: auto; padding: 6px 14px; font-size: 0.8rem; }
         .toast { position: fixed; top: 20px; right: 20px; padding: 12px 20px; border-radius: 10px; font-weight: 600; z-index: 1000; }
@@ -147,10 +149,17 @@ body {
     async function loadClaims() {
         const status = document.getElementById('status-filter').value;
         try {
-            const res = await fetch('/api/admin?status=' + encodeURIComponent(status), {
-                headers: { 'Authorization': 'Bearer ' + sessionToken },
-            });
-            const data = await res.json();
+            const [claimsRes, exclRes] = await Promise.all([
+                fetch('/api/admin?status=' + encodeURIComponent(status), {
+                    headers: { 'Authorization': 'Bearer ' + sessionToken },
+                }),
+                fetch('/api/admin/exclusions', {
+                    headers: { 'Authorization': 'Bearer ' + sessionToken },
+                }),
+            ]);
+            const data = await claimsRes.json();
+            const exclData = exclRes.ok ? await exclRes.json() : { exclusions: [] };
+            window._excludedIds = new Set((exclData.exclusions || []).filter(e => !e.restored_at).map(e => e.fsa_id));
             const list = document.getElementById('claims-list');
             list.textContent = '';
 
@@ -192,6 +201,14 @@ body {
                     closedBadge.style.cssText = 'background:rgba(239,68,68,0.15);color:#EF4444;margin-left:6px;';
                     closedBadge.textContent = 'closed';
                     infoDiv.appendChild(closedBadge);
+                }
+
+                // Exclusion status badge
+                if (c.fsa_id && window._excludedIds && window._excludedIds.has(c.fsa_id)) {
+                    var exclBadge = document.createElement('span');
+                    exclBadge.className = 'excluded-badge';
+                    exclBadge.textContent = 'excluded';
+                    infoDiv.appendChild(exclBadge);
                 }
 
                 // Enrichment status line (read-only, parsed client-side)
@@ -300,6 +317,31 @@ body {
                     actionsDiv.appendChild(closedBtn);
                 }
 
+                // Exclude / Restore button (needs fsa_id)
+                if (c.fsa_id) {
+                    var exclBtn = document.createElement('button');
+                    var isExcluded = window._excludedIds && window._excludedIds.has(c.fsa_id);
+                    if (isExcluded) {
+                        exclBtn.style.background = '#10B981';
+                        exclBtn.textContent = 'Restore';
+                        exclBtn.title = 'Remove exclusion — restaurant will reappear on next pipeline run';
+                    } else {
+                        exclBtn.style.background = '#EF4444';
+                        exclBtn.textContent = 'Exclude';
+                        exclBtn.title = 'Exclude from site — non-Thai or irrelevant venue';
+                    }
+                    exclBtn.addEventListener('click', (function(fsaId, excluded) {
+                        return function() {
+                            if (excluded) {
+                                restoreExclusion(fsaId);
+                            } else {
+                                excludeRestaurant(fsaId);
+                            }
+                        };
+                    })(c.fsa_id, isExcluded));
+                    actionsDiv.appendChild(exclBtn);
+                }
+
                 claimRow.appendChild(actionsDiv);
                 list.appendChild(claimRow);
             }
@@ -375,6 +417,53 @@ body {
             const data = await res.json();
             if (res.ok) {
                 toast('Deleted!');
+                loadClaims();
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (e) {
+            toast('Network error', 'error');
+        }
+    }
+
+    async function excludeRestaurant(fsaId) {
+        var reason = prompt('Reason for exclusion (e.g. "non-Thai — Egyptian kebab shop"):');
+        if (!reason) return;
+        try {
+            const res = await fetch('/api/admin/exclusions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + sessionToken,
+                },
+                body: JSON.stringify({ fsa_id: fsaId, reason: reason }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Excluded. Will disappear on next pipeline run.');
+                loadClaims();
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (e) {
+            toast('Network error', 'error');
+        }
+    }
+
+    async function restoreExclusion(fsaId) {
+        if (!confirm('Restore this restaurant? It will reappear on the next pipeline run.')) return;
+        try {
+            const res = await fetch('/api/admin/exclusions', {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + sessionToken,
+                },
+                body: JSON.stringify({ fsa_id: fsaId }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Restored. Will reappear on next pipeline run.');
                 loadClaims();
             } else {
                 toast(data.error || 'Error', 'error');

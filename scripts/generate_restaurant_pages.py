@@ -559,6 +559,48 @@ def main() -> None:
     
     restaurants = data['restaurants']
     
+    # Load exclusions (moderation layer — non-Thai or irrelevant venues)
+    excluded_ids: set[int] = set()
+    try:
+        import urllib.request
+        req = urllib.request.Request('https://thaidata.uk/api/exclusions')
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            excl_data = json.loads(resp.read())
+        excluded_ids = set(excl_data.get('excluded_ids', []))
+        print(f"Loaded {len(excluded_ids)} exclusion(s) from API")
+    except Exception as e:
+        print(f"Warning: could not fetch exclusions ({e}) — proceeding without")
+
+    # Cleanup: delete pages for excluded restaurants
+    if excluded_ids:
+        cleaned = 0
+        for dirpath, dirnames, filenames in os.walk(OUT_DIR):
+            for fname in filenames:
+                if fname != 'index.html':
+                    continue
+                fpath = os.path.join(dirpath, fname)
+                try:
+                    with open(fpath) as f:
+                        content = f.read()
+                    # Extract FSA ID from schema JSON-LD
+                    match = re.search(r'"identifier":\s*"?(\d+)"?', content)
+                    if not match:
+                        # Fallback: search for "fsa_id" or "FHRSID" in schema
+                        match = re.search(r'fsa_id.*?(\d{5,7})', content)
+                    if match and int(match.group(1)) in excluded_ids:
+                        os.remove(fpath)
+                        cleaned += 1
+                        # Remove parent dirs if empty
+                        parent = os.path.dirname(fpath)
+                        try:
+                            os.rmdir(parent)  # only removes if empty
+                        except OSError:
+                            pass
+                except Exception:
+                    pass
+        if cleaned:
+            print(f"Cleaned up {cleaned} excluded page(s)")
+    
     # Load closed venues
     closed_ids: set[str] = set()
     closed_path = os.path.join(REPO, 'data', 'closed_venues.json')
@@ -591,6 +633,9 @@ def main() -> None:
 
     for i, r in enumerate(restaurants):
         try:
+            # Skip excluded restaurants (moderation layer)
+            if r['id'] in excluded_ids:
+                continue
             city_slug = slugify(r['city'])
             rest_slug = slugify(r['name'])
             

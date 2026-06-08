@@ -55,9 +55,24 @@ def build_location_label(address: str, city: str, postcode: str) -> str:
 with open(os.path.join(REPO, 'data', 'restaurants.json')) as f:
     data = json.load(f)
 
+# Load exclusions (moderation layer)
+excluded_ids: set[int] = set()
+try:
+    import urllib.request as _ur
+    req = _ur.Request('https://thaidata.uk/api/exclusions')
+    with _ur.urlopen(req, timeout=10) as resp:
+        excl_data = json.loads(resp.read())
+    excluded_ids = set(excl_data.get('excluded_ids', []))
+    if excluded_ids:
+        print(f"Loaded {len(excluded_ids)} exclusion(s) from API")
+except Exception as e:
+    print(f"Warning: could not fetch exclusions ({e}) — proceeding without")
+
 from collections import defaultdict
 city_restaurants: defaultdict[str, list[dict[str, Any]]] = defaultdict(list)
 for r in data['restaurants']:
+    if r['id'] in excluded_ids:
+        continue
     city_restaurants[r['city']].append(r)
 
 # Sort each city's restaurants: 5-star first, then 4-star, etc.
