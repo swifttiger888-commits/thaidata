@@ -13268,19 +13268,6 @@
       "latitude": ""
     },
     {
-      "id": 1721663,
-      "name": "Baan Thai",
-      "type": "takeaway",
-      "city": "Somerset",
-      "local_authority": "Somerset",
-      "postcode": "TA6",
-      "address": "",
-      "hygiene_rating": "5",
-      "rating_date": "2024-07-31T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1032064,
       "name": "Baan Thai",
       "type": "takeaway",
@@ -13290,6 +13277,19 @@
       "address": "69 Church Street, Towns Parks, Antrim, Antrim",
       "hygiene_rating": "5",
       "rating_date": "2025-08-20T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1721663,
+      "name": "Baan Thai",
+      "type": "takeaway",
+      "city": "Somerset",
+      "local_authority": "Somerset",
+      "postcode": "TA6",
+      "address": "",
+      "hygiene_rating": "5",
+      "rating_date": "2024-07-31T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -13606,19 +13606,6 @@
       "latitude": ""
     },
     {
-      "id": 259619,
-      "name": "Thai Pan",
-      "type": "takeaway",
-      "city": "Hartlepool",
-      "local_authority": "Hartlepool",
-      "postcode": "TS26 8PU",
-      "address": "34a Duke Street, Hartlepool",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-20T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 191815,
       "name": "Thai Pan",
       "type": "takeaway",
@@ -13641,6 +13628,19 @@
       "address": "Thai Pan (Pitch 8E), Queensway, Town Centre, Stevenage",
       "hygiene_rating": "5",
       "rating_date": "2025-11-26T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 259619,
+      "name": "Thai Pan",
+      "type": "takeaway",
+      "city": "Hartlepool",
+      "local_authority": "Hartlepool",
+      "postcode": "TS26 8PU",
+      "address": "34a Duke Street, Hartlepool",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-20T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -14698,19 +14698,6 @@
       "latitude": ""
     },
     {
-      "id": 1810181,
-      "name": "Thai Street Food",
-      "type": "takeaway",
-      "city": "Teignbridge",
-      "local_authority": "Teignbridge",
-      "postcode": "EX7 0PQ",
-      "address": "Geralds Supermarket Warren Road Dawlish Warren",
-      "hygiene_rating": "5",
-      "rating_date": "2025-08-19T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 896454,
       "name": "Thai Street Food",
       "type": "takeaway",
@@ -14720,6 +14707,19 @@
       "address": "110 South Road, Waterloo",
       "hygiene_rating": "5",
       "rating_date": "2025-07-01T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1810181,
+      "name": "Thai Street Food",
+      "type": "takeaway",
+      "city": "Teignbridge",
+      "local_authority": "Teignbridge",
+      "postcode": "EX7 0PQ",
+      "address": "Geralds Supermarket Warren Road Dawlish Warren",
+      "hygiene_rating": "5",
+      "rating_date": "2025-08-19T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -15244,19 +15244,6 @@
       "latitude": ""
     },
     {
-      "id": 928751,
-      "name": "The Thai Kitchen",
-      "type": "takeaway",
-      "city": "Fermanagh and Omagh",
-      "local_authority": "Fermanagh and Omagh",
-      "postcode": "BT74 6AA",
-      "address": "50 Belmore Street, Tonystick, Enniskillen, Fermanagh",
-      "hygiene_rating": "3",
-      "rating_date": "2024-12-12T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 252182,
       "name": "The Thai Kitchen",
       "type": "takeaway",
@@ -15266,6 +15253,19 @@
       "address": "7a Tamworth Road, Long Eaton",
       "hygiene_rating": "3",
       "rating_date": "2025-06-18T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 928751,
+      "name": "The Thai Kitchen",
+      "type": "takeaway",
+      "city": "Fermanagh and Omagh",
+      "local_authority": "Fermanagh and Omagh",
+      "postcode": "BT74 6AA",
+      "address": "50 Belmore Street, Tonystick, Enniskillen, Fermanagh",
+      "hygiene_rating": "3",
+      "rating_date": "2024-12-12T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -16206,6 +16206,19 @@
       "latitude": ""
     },
     {
+      "id": 1612241,
+      "name": "Chai Guys",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Camden",
+      "postcode": "WC2H 9LX",
+      "address": "BW10 Seven Dials Market, 35 Earlham Street",
+      "hygiene_rating": "5",
+      "rating_date": "2024-12-05T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1634303,
       "name": "Chai Guys",
       "type": "takeaway",
@@ -16228,19 +16241,6 @@
       "address": "16 Horner Square, London",
       "hygiene_rating": "5",
       "rating_date": "2025-02-24T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1612241,
-      "name": "Chai Guys",
-      "type": "takeaway",
-      "city": "London",
-      "local_authority": "Camden",
-      "postcode": "WC2H 9LX",
-      "address": "BW10 Seven Dials Market, 35 Earlham Street",
-      "hygiene_rating": "5",
-      "rating_date": "2024-12-05T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19846,6 +19846,19 @@
       "latitude": ""
     },
     {
+      "id": 1221101,
+      "name": "SUKHOTHAI",
+      "type": "restaurant",
+      "city": "Wirral",
+      "local_authority": "Wirral",
+      "postcode": "CH48 0RB",
+      "address": "119 - 121 Banks Road, West Kirby, Wirral",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-13T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 83700,
       "name": "Sukhothai",
       "type": "restaurant",
@@ -19855,19 +19868,6 @@
       "address": "6 Windmill Street, Gravesend, Kent",
       "hygiene_rating": "5",
       "rating_date": "2025-12-02T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 356057,
-      "name": "Sukhothai",
-      "type": "restaurant",
-      "city": "Buckinghamshire",
-      "local_authority": "Buckinghamshire",
-      "postcode": "HP16 0AN",
-      "address": "50 High Street, Great Missenden, Buckinghamshire",
-      "hygiene_rating": "5",
-      "rating_date": "2024-07-25T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19885,15 +19885,15 @@
       "latitude": ""
     },
     {
-      "id": 1221101,
-      "name": "SUKHOTHAI",
+      "id": 356057,
+      "name": "Sukhothai",
       "type": "restaurant",
-      "city": "Wirral",
-      "local_authority": "Wirral",
-      "postcode": "CH48 0RB",
-      "address": "119 - 121 Banks Road, West Kirby, Wirral",
+      "city": "Buckinghamshire",
+      "local_authority": "Buckinghamshire",
+      "postcode": "HP16 0AN",
+      "address": "50 High Street, Great Missenden, Buckinghamshire",
       "hygiene_rating": "5",
-      "rating_date": "2026-02-13T00:00:00",
+      "rating_date": "2024-07-25T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19911,19 +19911,6 @@
       "latitude": ""
     },
     {
-      "id": 321058,
-      "name": "Sukhothai Restaurant",
-      "type": "restaurant",
-      "city": "Leeds",
-      "local_authority": "Leeds",
-      "postcode": "LS7 4PE",
-      "address": "8 Regent Street, Chapeltown, Leeds",
-      "hygiene_rating": "5",
-      "rating_date": "2025-08-03T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 902906,
       "name": "Sukhothai Restaurant",
       "type": "restaurant",
@@ -19933,6 +19920,19 @@
       "address": "155 High Street, Hornchurch",
       "hygiene_rating": "5",
       "rating_date": "2025-10-30T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 321058,
+      "name": "Sukhothai Restaurant",
+      "type": "restaurant",
+      "city": "Leeds",
+      "local_authority": "Leeds",
+      "postcode": "LS7 4PE",
+      "address": "8 Regent Street, Chapeltown, Leeds",
+      "hygiene_rating": "5",
+      "rating_date": "2025-08-03T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -20288,19 +20288,6 @@
       "latitude": ""
     },
     {
-      "id": 437504,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Sheffield",
-      "local_authority": "Sheffield",
-      "postcode": "S9 1EP",
-      "address": "55 The Oasis Meadowhall Centre, Meadowhall Way, Sheffield",
-      "hygiene_rating": "4",
-      "rating_date": "2025-03-12T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 836583,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -20310,6 +20297,19 @@
       "address": "Unit A, Threeways House, George Street, Oxford",
       "hygiene_rating": "4",
       "rating_date": "2025-11-19T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 437504,
+      "name": "Thaikhun",
+      "type": "restaurant",
+      "city": "Sheffield",
+      "local_authority": "Sheffield",
+      "postcode": "S9 1EP",
+      "address": "55 The Oasis Meadowhall Centre, Meadowhall Way, Sheffield",
+      "hygiene_rating": "4",
+      "rating_date": "2025-03-12T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -20327,19 +20327,6 @@
       "latitude": ""
     },
     {
-      "id": 811936,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Glasgow",
-      "local_authority": "Glasgow City",
-      "postcode": "G53 6AF",
-      "address": "Unit 48, 763 Barrhead Road, Glasgow",
-      "hygiene_rating": "Pass",
-      "rating_date": "2026-02-12T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 696479,
       "name": "THAIKHUN",
       "type": "restaurant",
@@ -20353,15 +20340,15 @@
       "latitude": ""
     },
     {
-      "id": 663888,
-      "name": "Banana Tree",
+      "id": 811936,
+      "name": "Thaikhun",
       "type": "restaurant",
-      "city": "Milton Keynes",
-      "local_authority": "Milton Keynes",
-      "postcode": "MK9 2HP",
-      "address": "Unit 800 Holkham Walk, The Hub, Central Milton Keynes",
-      "hygiene_rating": "5",
-      "rating_date": "2025-02-10T00:00:00",
+      "city": "Glasgow",
+      "local_authority": "Glasgow City",
+      "postcode": "G53 6AF",
+      "address": "Unit 48, 763 Barrhead Road, Glasgow",
+      "hygiene_rating": "Pass",
+      "rating_date": "2026-02-12T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -20375,6 +20362,19 @@
       "address": "237-239 West End Lane, London",
       "hygiene_rating": "5",
       "rating_date": "2025-02-17T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 663888,
+      "name": "Banana Tree",
+      "type": "restaurant",
+      "city": "Milton Keynes",
+      "local_authority": "Milton Keynes",
+      "postcode": "MK9 2HP",
+      "address": "Unit 800 Holkham Walk, The Hub, Central Milton Keynes",
+      "hygiene_rating": "5",
+      "rating_date": "2025-02-10T00:00:00",
       "longitude": "",
       "latitude": ""
     },
