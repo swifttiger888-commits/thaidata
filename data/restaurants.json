@@ -1,7 +1,7 @@
 {
   "name": "ThaiData UK \u2014 Restaurant Directory",
   "updated": "2026-06-08",
-  "total": 1592,
+  "total": 1591,
   "sources": [
     "FSA FHRS",
     "FSA FHIS"
@@ -4541,19 +4541,6 @@
       "address": "19 Grape Lane, York",
       "hygiene_rating": "5",
       "rating_date": "2024-05-10T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1381156,
-      "name": "Pick Thai Ltd",
-      "type": "restaurant",
-      "city": "Stratford-on-Avon",
-      "local_authority": "Stratford-on-Avon",
-      "postcode": "CV37 6HB",
-      "address": "9 Church Street, Stratford-upon-Avon",
-      "hygiene_rating": "5",
-      "rating_date": "2026-02-25T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -11968,19 +11955,6 @@
       "latitude": ""
     },
     {
-      "id": 1682549,
-      "name": "Chai Green",
-      "type": "restaurant",
-      "city": "Cardiff",
-      "local_authority": "Cardiff",
-      "postcode": "CF24 3RP",
-      "address": "2 Albany Road, Roath, Cardiff",
-      "hygiene_rating": "3",
-      "rating_date": "2025-08-21T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1846719,
       "name": "Chai Green",
       "type": "restaurant",
@@ -11990,6 +11964,19 @@
       "address": "97A Commercial Road, Portsmouth",
       "hygiene_rating": "3",
       "rating_date": "2026-01-21T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1682549,
+      "name": "Chai Green",
+      "type": "restaurant",
+      "city": "Cardiff",
+      "local_authority": "Cardiff",
+      "postcode": "CF24 3RP",
+      "address": "2 Albany Road, Roath, Cardiff",
+      "hygiene_rating": "3",
+      "rating_date": "2025-08-21T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -12150,6 +12137,32 @@
       "latitude": ""
     },
     {
+      "id": 1677185,
+      "name": "Cha Cha Chai",
+      "type": "restaurant",
+      "city": "Middlesbrough",
+      "local_authority": "Middlesbrough",
+      "postcode": "TS1 3QP",
+      "address": "248-254 Linthorpe Road, Middlesbrough",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-12T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1594433,
+      "name": "Cha Cha Chai",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Waltham Forest",
+      "postcode": "E17 9PT",
+      "address": "Ground Floor 245 Hoe Street, Walthamstow, London",
+      "hygiene_rating": "5",
+      "rating_date": "2024-05-15T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1726174,
       "name": "Cha Cha Chai",
       "type": "restaurant",
@@ -12185,32 +12198,6 @@
       "address": "7 Food Court, Charles Street Mall, The Broadway, Bradford",
       "hygiene_rating": "5",
       "rating_date": "2025-07-31T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1594433,
-      "name": "Cha Cha Chai",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Waltham Forest",
-      "postcode": "E17 9PT",
-      "address": "Ground Floor 245 Hoe Street, Walthamstow, London",
-      "hygiene_rating": "5",
-      "rating_date": "2024-05-15T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1677185,
-      "name": "Cha Cha Chai",
-      "type": "restaurant",
-      "city": "Middlesbrough",
-      "local_authority": "Middlesbrough",
-      "postcode": "TS1 3QP",
-      "address": "248-254 Linthorpe Road, Middlesbrough",
-      "hygiene_rating": "5",
-      "rating_date": "2026-02-12T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -12384,19 +12371,6 @@
       "latitude": ""
     },
     {
-      "id": 1543586,
-      "name": "Cha Cha Chai",
-      "type": "restaurant",
-      "city": "Walsall",
-      "local_authority": "Walsall",
-      "postcode": "WS2 9QJ",
-      "address": "265 Wednesbury Road, Walsall, West Midlands",
-      "hygiene_rating": "4",
-      "rating_date": "2025-07-21T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1489352,
       "name": "Cha Cha Chai",
       "type": "restaurant",
@@ -12406,6 +12380,19 @@
       "address": "35 London Road, Sheffield",
       "hygiene_rating": "4",
       "rating_date": "2024-06-20T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1543586,
+      "name": "Cha Cha Chai",
+      "type": "restaurant",
+      "city": "Walsall",
+      "local_authority": "Walsall",
+      "postcode": "WS2 9QJ",
+      "address": "265 Wednesbury Road, Walsall, West Midlands",
+      "hygiene_rating": "4",
+      "rating_date": "2025-07-21T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -12592,6 +12579,32 @@
       "latitude": ""
     },
     {
+      "id": 1806845,
+      "name": "Cha Cha Chai",
+      "type": "restaurant",
+      "city": "Leeds",
+      "local_authority": "Leeds",
+      "postcode": "LS8 5PL",
+      "address": "168A Roundhay Road, Leeds",
+      "hygiene_rating": "3",
+      "rating_date": "2025-06-24T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1062490,
+      "name": "Cha Cha Chai",
+      "type": "restaurant",
+      "city": "Bradford",
+      "local_authority": "Bradford",
+      "postcode": "BD8 9AN",
+      "address": "Unit 6 Food Court, Ingleby Road, Bradford",
+      "hygiene_rating": "3",
+      "rating_date": "2025-06-06T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1375383,
       "name": "Cha Cha Chai",
       "type": "restaurant",
@@ -12631,19 +12644,6 @@
       "latitude": ""
     },
     {
-      "id": 1062490,
-      "name": "Cha Cha Chai",
-      "type": "restaurant",
-      "city": "Bradford",
-      "local_authority": "Bradford",
-      "postcode": "BD8 9AN",
-      "address": "Unit 6 Food Court, Ingleby Road, Bradford",
-      "hygiene_rating": "3",
-      "rating_date": "2025-06-06T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1580901,
       "name": "Cha Cha Chai",
       "type": "restaurant",
@@ -12653,19 +12653,6 @@
       "address": "34-36 Yorkshire Street, Oldham",
       "hygiene_rating": "3",
       "rating_date": "2024-03-27T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1806845,
-      "name": "Cha Cha Chai",
-      "type": "restaurant",
-      "city": "Leeds",
-      "local_authority": "Leeds",
-      "postcode": "LS8 5PL",
-      "address": "168A Roundhay Road, Leeds",
-      "hygiene_rating": "3",
-      "rating_date": "2025-06-24T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -17558,19 +17545,6 @@
       "latitude": ""
     },
     {
-      "id": 1730138,
-      "name": "I-chai Express",
-      "type": "takeaway",
-      "city": "Renfrewshire",
-      "local_authority": "Renfrewshire",
-      "postcode": "PA8 7AA",
-      "address": "13 Bridgewater Shopping Centre, Bridgewater Place, Erskine, Renfrewshire",
-      "hygiene_rating": "Pass",
-      "rating_date": "2024-11-21T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1521993,
       "name": "I-Chai Express",
       "type": "takeaway",
@@ -17593,6 +17567,19 @@
       "address": "22d High Street, Airdrie, North Lanarkshire",
       "hygiene_rating": "Pass",
       "rating_date": "2025-04-16T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1730138,
+      "name": "I-chai Express",
+      "type": "takeaway",
+      "city": "Renfrewshire",
+      "local_authority": "Renfrewshire",
+      "postcode": "PA8 7AA",
+      "address": "13 Bridgewater Shopping Centre, Bridgewater Place, Erskine, Renfrewshire",
+      "hygiene_rating": "Pass",
+      "rating_date": "2024-11-21T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19092,6 +19079,19 @@
       "latitude": ""
     },
     {
+      "id": 1546435,
+      "name": "Ali Baba",
+      "type": "takeaway",
+      "city": "Calderdale",
+      "local_authority": "Calderdale",
+      "postcode": "OL14 7LA",
+      "address": "33 Rochdale Road, Todmorden, Calderdale",
+      "hygiene_rating": "5",
+      "rating_date": "2026-01-19T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1485738,
       "name": "Ali Baba",
       "type": "takeaway",
@@ -19114,19 +19114,6 @@
       "address": "187 Nantwich Road, Crewe, Cheshire East",
       "hygiene_rating": "5",
       "rating_date": "2025-01-15T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 1546435,
-      "name": "Ali Baba",
-      "type": "takeaway",
-      "city": "Calderdale",
-      "local_authority": "Calderdale",
-      "postcode": "OL14 7LA",
-      "address": "33 Rochdale Road, Todmorden, Calderdale",
-      "hygiene_rating": "5",
-      "rating_date": "2026-01-19T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19248,19 +19235,6 @@
       "latitude": ""
     },
     {
-      "id": 1719543,
-      "name": "Baba tang",
-      "type": "takeaway",
-      "city": "London",
-      "local_authority": "Southwark",
-      "postcode": "SE15 1NT",
-      "address": "Unit 6, 202, Ilderton Road, London",
-      "hygiene_rating": "5",
-      "rating_date": "2024-06-13T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 1903955,
       "name": "Baba Tang",
       "type": "takeaway",
@@ -19270,6 +19244,19 @@
       "address": "44 STOKE NEWINGTON ROAD, Hackney, London",
       "hygiene_rating": "5",
       "rating_date": "2025-12-02T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1719543,
+      "name": "Baba tang",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Southwark",
+      "postcode": "SE15 1NT",
+      "address": "Unit 6, 202, Ilderton Road, London",
+      "hygiene_rating": "5",
+      "rating_date": "2024-06-13T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19859,19 +19846,6 @@
       "latitude": ""
     },
     {
-      "id": 1221101,
-      "name": "SUKHOTHAI",
-      "type": "restaurant",
-      "city": "Wirral",
-      "local_authority": "Wirral",
-      "postcode": "CH48 0RB",
-      "address": "119 - 121 Banks Road, West Kirby, Wirral",
-      "hygiene_rating": "5",
-      "rating_date": "2026-02-13T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 83700,
       "name": "Sukhothai",
       "type": "restaurant",
@@ -19881,19 +19855,6 @@
       "address": "6 Windmill Street, Gravesend, Kent",
       "hygiene_rating": "5",
       "rating_date": "2025-12-02T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
-      "id": 521984,
-      "name": "Sukhothai",
-      "type": "restaurant",
-      "city": "Leeds",
-      "local_authority": "Leeds",
-      "postcode": "LS1 5PQ",
-      "address": "15 South Parade, Leeds",
-      "hygiene_rating": "5",
-      "rating_date": "2023-07-27T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -19911,6 +19872,32 @@
       "latitude": ""
     },
     {
+      "id": 521984,
+      "name": "Sukhothai",
+      "type": "restaurant",
+      "city": "Leeds",
+      "local_authority": "Leeds",
+      "postcode": "LS1 5PQ",
+      "address": "15 South Parade, Leeds",
+      "hygiene_rating": "5",
+      "rating_date": "2023-07-27T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1221101,
+      "name": "SUKHOTHAI",
+      "type": "restaurant",
+      "city": "Wirral",
+      "local_authority": "Wirral",
+      "postcode": "CH48 0RB",
+      "address": "119 - 121 Banks Road, West Kirby, Wirral",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-13T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
       "id": 1868547,
       "name": "Sukhothai",
       "type": "restaurant",
@@ -19924,19 +19911,6 @@
       "latitude": ""
     },
     {
-      "id": 902906,
-      "name": "Sukhothai Restaurant",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Havering",
-      "postcode": "RM11 3YD",
-      "address": "155 High Street, Hornchurch",
-      "hygiene_rating": "5",
-      "rating_date": "2025-10-30T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 321058,
       "name": "Sukhothai Restaurant",
       "type": "restaurant",
@@ -19946,6 +19920,19 @@
       "address": "8 Regent Street, Chapeltown, Leeds",
       "hygiene_rating": "5",
       "rating_date": "2025-08-03T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 902906,
+      "name": "Sukhothai Restaurant",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Havering",
+      "postcode": "RM11 3YD",
+      "address": "155 High Street, Hornchurch",
+      "hygiene_rating": "5",
+      "rating_date": "2025-10-30T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -20301,19 +20288,6 @@
       "latitude": ""
     },
     {
-      "id": 836583,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Oxford",
-      "local_authority": "Oxford City",
-      "postcode": "OX1 2BJ",
-      "address": "Unit A, Threeways House, George Street, Oxford",
-      "hygiene_rating": "4",
-      "rating_date": "2025-11-19T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 437504,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -20323,6 +20297,19 @@
       "address": "55 The Oasis Meadowhall Centre, Meadowhall Way, Sheffield",
       "hygiene_rating": "4",
       "rating_date": "2025-03-12T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 836583,
+      "name": "Thaikhun",
+      "type": "restaurant",
+      "city": "Oxford",
+      "local_authority": "Oxford City",
+      "postcode": "OX1 2BJ",
+      "address": "Unit A, Threeways House, George Street, Oxford",
+      "hygiene_rating": "4",
+      "rating_date": "2025-11-19T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -20340,19 +20327,6 @@
       "latitude": ""
     },
     {
-      "id": 696479,
-      "name": "THAIKHUN",
-      "type": "restaurant",
-      "city": "Aberdeen",
-      "local_authority": "Aberdeen City",
-      "postcode": "AB11 5RG",
-      "address": "Unit FS10 First Level Mall, Union Square, Guild Street",
-      "hygiene_rating": "Pass",
-      "rating_date": "2023-10-10T00:00:00",
-      "longitude": "",
-      "latitude": ""
-    },
-    {
       "id": 811936,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -20366,15 +20340,15 @@
       "latitude": ""
     },
     {
-      "id": 1803464,
-      "name": "Banana Tree",
+      "id": 696479,
+      "name": "THAIKHUN",
       "type": "restaurant",
-      "city": "London",
-      "local_authority": "Camden",
-      "postcode": "NW6 1XN",
-      "address": "237-239 West End Lane, London",
-      "hygiene_rating": "5",
-      "rating_date": "2025-02-17T00:00:00",
+      "city": "Aberdeen",
+      "local_authority": "Aberdeen City",
+      "postcode": "AB11 5RG",
+      "address": "Unit FS10 First Level Mall, Union Square, Guild Street",
+      "hygiene_rating": "Pass",
+      "rating_date": "2023-10-10T00:00:00",
       "longitude": "",
       "latitude": ""
     },
@@ -20388,6 +20362,19 @@
       "address": "Unit 800 Holkham Walk, The Hub, Central Milton Keynes",
       "hygiene_rating": "5",
       "rating_date": "2025-02-10T00:00:00",
+      "longitude": "",
+      "latitude": ""
+    },
+    {
+      "id": 1803464,
+      "name": "Banana Tree",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Camden",
+      "postcode": "NW6 1XN",
+      "address": "237-239 West End Lane, London",
+      "hygiene_rating": "5",
+      "rating_date": "2025-02-17T00:00:00",
       "longitude": "",
       "latitude": ""
     },

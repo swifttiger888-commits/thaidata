@@ -4,7 +4,7 @@
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
   "updated": "2026-06-08",
-  "total_uk": 1592,
+  "total_uk": 1591,
   "cities_tracked": 264,
   "cities": [
     {
@@ -1798,16 +1798,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Stratford-on-Avon",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 1,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
-    },
-    {
       "name": "Dartford",
       "population": null,
       "total_thai_businesses": 2,
@@ -2438,6 +2428,16 @@
       "postcode_areas": 1
     },
     {
+      "name": "Stratford-on-Avon",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Torridge",
       "population": null,
       "total_thai_businesses": 1,
@@ -2548,7 +2548,7 @@
       "postcode_areas": 1
     },
     {
-      "name": "Renfrewshire",
+      "name": "North Lanarkshire",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 0,
@@ -2558,7 +2558,7 @@
       "postcode_areas": 1
     },
     {
-      "name": "North Lanarkshire",
+      "name": "Renfrewshire",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 0,
