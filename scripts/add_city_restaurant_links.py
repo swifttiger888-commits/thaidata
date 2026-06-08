@@ -55,18 +55,29 @@ def build_location_label(address: str, city: str, postcode: str) -> str:
 with open(os.path.join(REPO, 'data', 'restaurants.json')) as f:
     data = json.load(f)
 
-# Load exclusions (moderation layer)
+# Load exclusions (moderation layer — local file primary, API as override)
 excluded_ids: set[int] = set()
+
+# 1. Load from local file (always available)
+local_excl = os.path.join(REPO, 'data', 'exclusions.json')
+if os.path.exists(local_excl):
+    with open(local_excl) as f:
+        excl_local = json.load(f)
+    excluded_ids.update(excl_local.get('excluded_fsa_ids', []))
+    print(f"Loaded {len(excluded_ids)} exclusion(s) from local file")
+
+# 2. Supplement with D1 API (authoritative override)
 try:
     import urllib.request as _ur
-    req = _ur.Request('https://thaidata.uk/api/exclusions')
+    req = _ur.Request('https://thaidata.uk/api/exclusions', headers={'User-Agent': 'ThaiData-Pipeline/1.0'})
     with _ur.urlopen(req, timeout=10) as resp:
         excl_data = json.loads(resp.read())
-    excluded_ids = set(excl_data.get('excluded_ids', []))
-    if excluded_ids:
-        print(f"Loaded {len(excluded_ids)} exclusion(s) from API")
+    api_ids = set(excl_data.get('excluded_ids', []))
+    if api_ids:
+        excluded_ids.update(api_ids)
+        print(f"Loaded {len(api_ids)} additional exclusion(s) from D1 API")
 except Exception as e:
-    print(f"Warning: could not fetch exclusions ({e}) — proceeding without")
+    print(f"Note: D1 exclusions unavailable ({e}) — using local file only")
 
 from collections import defaultdict
 city_restaurants: defaultdict[str, list[dict[str, Any]]] = defaultdict(list)

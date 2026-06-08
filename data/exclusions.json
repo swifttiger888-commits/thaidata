@@ -1,0 +1,15 @@
+{
+  "comment": "Manual exclusions — non-Thai venues caught by FSA 'Thai' substring match. Pipeline reads this file as primary source, with D1 API as override when available.",
+  "excluded_fsa_ids": [
+    411519,
+    175870,
+    604472,
+    115858,
+    1485738,
+    1499269,
+    1321195,
+    1542543,
+    1833353,
+    1873629
+  ]
+}
