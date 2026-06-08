@@ -72,6 +72,35 @@ body {
             .actions { flex-wrap: wrap; }
             .actions button { font-size: 0.75rem; padding: 6px 10px; }
         }
+
+        /* Exclude modal */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6); z-index: 2000;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .modal-overlay.hidden { display: none; }
+        .modal-box {
+            background: #1A2332; border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 14px; padding: 28px; max-width: 440px; width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .modal-box h3 { font-size: 1.1rem; margin-bottom: 6px; }
+        .modal-box .modal-detail { font-size: 0.8rem; color: #64748B; margin-bottom: 16px; }
+        .modal-box label { display: block; font-size: 0.8rem; color: #94A3B8; margin-bottom: 6px; }
+        .modal-box textarea {
+            width: 100%; padding: 10px 12px; border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.05); color: white;
+            font-size: 0.9rem; resize: vertical; min-height: 60px;
+        }
+        .modal-actions { display: flex; gap: 10px; margin-top: 16px; justify-content: flex-end; }
+        .modal-actions button { width: auto; padding: 8px 20px; font-size: 0.85rem; }
+        .modal-actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .exclude-error { color: #EF4444; font-size: 0.8rem; margin-top: 8px; display: none; }
+        .exclude-error.visible { display: block; }
+        .exclude-already { color: #F59E0B; font-size: 0.8rem; margin-top: 8px; display: none; }
+        .exclude-already.visible { display: block; }
     </style>
 </head>
 <body>
@@ -101,8 +130,10 @@ body {
                 <div style="font-size:0.85rem;color:#94A3B8;margin-bottom:8px;">Exclude by FSA ID <span id="excl-count" style="color:#EF4444;"></span></div>
                 <div style="display:flex;gap:8px;">
                     <input type="number" id="exclude-fsa-id" placeholder="FSA ID (e.g. 411519)" style="flex:1;margin:0;">
-                    <button onclick="excludeByFsaId()" style="width:auto;margin:0;background:#EF4444;">Exclude</button>
+                    <button id="exclude-by-id-btn" onclick="excludeByFsaId()" style="width:auto;margin:0;background:#EF4444;">Exclude</button>
                 </div>
+                <div id="exclude-error" class="exclude-error"></div>
+                <div id="exclude-already" class="exclude-already"></div>
             </div>
 
             <div id="claims-list"></div>
@@ -110,6 +141,20 @@ body {
     </div>
 
     <div id="toast-container"></div>
+
+    <!-- Exclude confirmation modal -->
+    <div id="exclude-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h3>Exclude restaurant</h3>
+            <div class="modal-detail" id="modal-detail"></div>
+            <label for="modal-reason">Reason</label>
+            <textarea id="modal-reason" placeholder="e.g. non-Thai — Indian tea shop"></textarea>
+            <div class="modal-actions">
+                <button onclick="closeExcludeModal()" style="background:#374151;">Cancel</button>
+                <button id="modal-submit-btn" onclick="submitExclusion()" style="background:#EF4444;">Exclude</button>
+            </div>
+        </div>
+    </div>
 
     <script>
     let sessionToken = null;
@@ -175,6 +220,7 @@ body {
             const data = await claimsRes.json();
             const exclData = exclRes.ok ? await exclRes.json() : { exclusions: [] };
             window._excludedIds = new Set((exclData.exclusions || []).filter(e => !e.restored_at).map(e => e.fsa_id));
+            window._allClaims = data.claims;
             var countEl = document.getElementById('excl-count');
             if (countEl && window._excludedIds.size > 0) {
                 countEl.textContent = '(' + window._excludedIds.size + ' excluded)';
@@ -373,15 +419,15 @@ body {
                         exclBtn.textContent = 'Exclude';
                         exclBtn.title = 'Exclude from site — non-Thai or irrelevant venue';
                     }
-                    exclBtn.addEventListener('click', (function(fsaId, excluded) {
+                    exclBtn.addEventListener('click', (function(fsaId, excluded, restName, restCity) {
                         return function() {
                             if (excluded) {
                                 restoreExclusion(fsaId);
                             } else {
-                                excludeRestaurant(fsaId);
+                                showExcludeModal(fsaId, restName, restCity);
                             }
                         };
-                    })(c.fsa_id, isExcluded));
+                    })(c.fsa_id, isExcluded, c.restaurant_name, c.city));
                     actionsDiv.appendChild(exclBtn);
                 }
 
@@ -469,9 +515,35 @@ body {
         }
     }
 
-    async function excludeRestaurant(fsaId) {
-        var reason = prompt('Reason for exclusion (e.g. "non-Thai — Egyptian kebab shop"):');
-        if (!reason) return;
+    // ── Pending exclusion state ──
+    let _pendingFsaId = null;
+
+    function showExcludeModal(fsaId, name, city) {
+        _pendingFsaId = fsaId;
+        document.getElementById('modal-detail').innerHTML =
+            '<strong>' + escapeHtml(name) + '</strong><br>' +
+            escapeHtml(city) + ' · FSA ID: ' + fsaId;
+        document.getElementById('modal-reason').value = '';
+        document.getElementById('modal-submit-btn').disabled = false;
+        document.getElementById('modal-submit-btn').textContent = 'Exclude';
+        document.getElementById('exclude-modal').classList.remove('hidden');
+        document.getElementById('modal-reason').focus();
+    }
+
+    function closeExcludeModal() {
+        document.getElementById('exclude-modal').classList.add('hidden');
+        _pendingFsaId = null;
+    }
+
+    async function submitExclusion() {
+        var reason = document.getElementById('modal-reason').value.trim();
+        if (!reason) {
+            toast('Please enter a reason', 'error');
+            return;
+        }
+        var btn = document.getElementById('modal-submit-btn');
+        btn.disabled = true;
+        btn.textContent = 'Submitting…';
         try {
             const res = await fetch('/api/admin/exclusions', {
                 method: 'POST',
@@ -479,17 +551,64 @@ body {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + sessionToken,
                 },
-                body: JSON.stringify({ fsa_id: fsaId, reason: reason }),
+                body: JSON.stringify({ fsa_id: _pendingFsaId, reason: reason }),
             });
             const data = await res.json();
             if (res.ok) {
                 toast('Excluded. Will disappear on next pipeline run.');
+                closeExcludeModal();
                 loadClaims();
+                var input = document.getElementById('exclude-fsa-id');
+                if (input) input.value = '';
             } else {
                 toast(data.error || 'Error', 'error');
+                btn.disabled = false;
+                btn.textContent = 'Exclude';
             }
         } catch (e) {
             toast('Network error', 'error');
+            btn.disabled = false;
+            btn.textContent = 'Exclude';
+        }
+    }
+
+    function excludeByFsaId() {
+        var input = document.getElementById('exclude-fsa-id');
+        var fsaId = parseInt(input.value);
+        var errEl = document.getElementById('exclude-error');
+        var alreadyEl = document.getElementById('exclude-already');
+        errEl.classList.remove('visible');
+        alreadyEl.classList.remove('visible');
+
+        if (!fsaId || fsaId <= 0) {
+            errEl.textContent = 'Enter a valid FSA ID';
+            errEl.classList.add('visible');
+            return;
+        }
+
+        // Already excluded?
+        if (window._excludedIds && window._excludedIds.has(fsaId)) {
+            alreadyEl.textContent = 'FSA ID ' + fsaId + ' is already excluded.';
+            alreadyEl.classList.add('visible');
+            return;
+        }
+
+        // Look up in loaded claims
+        var found = null;
+        if (window._allClaims) {
+            for (var i = 0; i < window._allClaims.length; i++) {
+                if (window._allClaims[i].fsa_id === fsaId) {
+                    found = window._allClaims[i];
+                    break;
+                }
+            }
+        }
+
+        if (found) {
+            showExcludeModal(fsaId, found.restaurant_name, found.city);
+        } else {
+            // No claim — still allow exclusion with unknown name
+            showExcludeModal(fsaId, 'Unknown restaurant', '(not in current claims)');
         }
     }
 
@@ -516,17 +635,10 @@ body {
         }
     }
 
-    function excludeByFsaId() {
-        var input = document.getElementById('exclude-fsa-id');
-        var fsaId = parseInt(input.value);
-        if (!fsaId || fsaId <= 0) {
-            toast('Enter a valid FSA ID', 'error');
-            return;
-        }
-        var reason = prompt('Reason for exclusion (e.g. "non-Thai — Indian tea shop"):');
-        if (!reason) return;
-        excludeRestaurant(fsaId);
-        input.value = '';
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
     }
     </script>
 </body>
