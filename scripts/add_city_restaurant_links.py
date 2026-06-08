@@ -11,6 +11,46 @@ def slugify(s: str) -> str:
     s = re.sub(r'[-\s]+', '-', s)
     return s.strip('-')
 
+def extract_neighbourhood(address: str, city: str) -> str:
+    """Extract neighbourhood from address. e.g. '33 Town Street, Horsforth, Leeds' -> 'Horsforth'"""
+    if not address or not city:
+        return ''
+    parts = [p.strip() for p in address.split(',')]
+    city_lower = city.lower()
+    for i, p in enumerate(parts):
+        if p.lower() == city_lower and i > 0:
+            prev = parts[i-1].strip()
+            if prev and not prev[0].isdigit():
+                return prev
+            if i > 1:
+                prev2 = parts[i-2].strip()
+                if prev2 and not prev2[0].isdigit():
+                    return prev2
+    for p in reversed(parts):
+        p = p.strip()
+        if p.lower() != city_lower and not any(c.isdigit() for c in p[:4]) and p and not p[0].isdigit():
+            return p
+    return ''
+
+def outward_postcode(postcode: str) -> str:
+    """Extract outward postcode. e.g. 'LS22 6NQ' -> 'LS22'"""
+    if not postcode:
+        return ''
+    match = re.match(r'([A-Z0-9]+)', postcode.strip())
+    return match.group(1) if match else postcode.strip()
+
+def build_location_label(address: str, city: str, postcode: str) -> str:
+    """Build compact location label: 'Neighbourhood • LS22' or 'LS22' or first address line."""
+    neighbourhood = extract_neighbourhood(address, city)
+    outward = outward_postcode(postcode)
+    if neighbourhood and outward:
+        return f"{neighbourhood} • {outward}"
+    if outward:
+        return outward
+    if address:
+        return address.split(',')[0].strip()
+    return ''
+
 # Build city → top restaurants map
 with open(os.path.join(REPO, 'data', 'restaurants.json')) as f:
     data = json.load(f)
@@ -75,8 +115,13 @@ for filename in sorted(os.listdir(cities_dir)):
             stars = '—'
         rtype_label = 'Restaurant' if r.get('type') == 'restaurant' else 'Takeaway'
         rtype_icon = 'fa-utensils' if r.get('type') == 'restaurant' else 'fa-box'
+        location = build_location_label(r.get('address', ''), r['city'], r.get('postcode', ''))
+        location_html = f'<span style="font-size:0.73rem;color:var(--ink4);display:block;margin-top:2px;">{location}</span>' if location else ''
         links_html += f'''                    <a href="/r/{r_city_slug}/{r_slug}/" style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;">
-                        <span style="font-weight:600;font-size:0.9rem;color:white;flex:1;">{r['name']}</span>
+                        <div style="flex:1;min-width:0;">
+                            <span style="font-weight:600;font-size:0.9rem;color:white;display:block;">{r['name']}</span>
+                            {location_html}
+                        </div>
                         <span style="font-size:0.8rem;color:var(--ink4);"><i class="fas {rtype_icon}" style="margin-right:4px;"></i>{rtype_label}</span>
                         <span style="font-size:0.8rem;color:var(--c2);">{stars}</span>
                         <i class="fas fa-chevron-right" style="color:var(--ink3);font-size:0.7rem;"></i>
