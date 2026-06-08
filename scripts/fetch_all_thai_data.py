@@ -18,7 +18,7 @@ from city_mapper import LA_TO_CITY, CITY_POPULATIONS, map_la_to_city, get_popula
 from fsa_client import fetch_all
 
 # ── Configuration ────────────────────────────────────────────────────
-REPO_DIR = '/tmp/thaidata-dl'
+REPO_DIR = '/tmp/thaidata-repo'
 RESTAURANTS_FILE = os.path.join(REPO_DIR, 'data', 'restaurants.json')
 CITIES_FILE = os.path.join(REPO_DIR, 'api', 'v1', 'cities.json')
 DATA_FILE = os.path.join(REPO_DIR, 'api', 'v1', 'data.json')

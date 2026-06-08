@@ -123,46 +123,47 @@ def main() -> None:
     if significant and old_total > 0:
         print(f"\n🔄 Significant changes detected. Rebuilding pages and pushing...")
         
-        # Update key HTML pages with new total count
-        import re as _re
-        html_files_to_update = [
-            'how-many-thai-restaurants-uk.html',
-            'index.html',
-            'state-of-uk-thai-food-2026.html'
-        ]
-        today = start.strftime('%Y-%m-%d')
-        for html_file in html_files_to_update:
-            path = os.path.join(REPO_DIR, html_file)
-            if os.path.exists(path):
-                with open(path, 'r') as _f:
-                    _html = _f.read()
-                # Update count numbers
-                if str(old_total) in _html:
-                    _html = _html.replace(f'>{old_total}<', f'>{total}<')
-                    _html = _html.replace(f'>{old_total:,}<', f'>{total:,}<')
-                    changes.append(f"Updated {html_file}: {old_total} → {total}")
-                # Update date badge
-                _date_badge = f'Data updated: {today}'
-                if 'Data updated:' in _html:
-                    _html = _re.sub(r'Data updated: \d{4}-\d{2}-\d{2}', _date_badge, _html)
-                with open(path, 'w') as _f:
-                    _f.write(_html)
-        
-        # Push the updated data
+        # Push the updated data files
         os.chdir(REPO_DIR)
-        subprocess.run(['git', 'pull'], capture_output=True)
-        subprocess.run(['git', 'add', DATA_FILE.replace('/tmp/', 'data/')], capture_output=True)
-        
+
+        # Guard: abort if unrelated files are dirty or staged
+        status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+        owned = {'data/restaurants.json', 'api/v1/cities.json', 'api/v1/data.json'}
+        dirty = [line.split()[-1] for line in status.stdout.split('\n') if line.strip() and line.split()[-1] not in owned]
+        if dirty:
+            print(f"   ⚠️ Aborting push: {len(dirty)} unrelated file(s) dirty/staged")
+            for f in dirty[:10]:
+                print(f"      {f}")
+            return
+
+        # Stage only the data files the pipeline owns
+        subprocess.run(['git', 'add', 'data/restaurants.json', 'api/v1/cities.json', 'api/v1/data.json'],
+                       capture_output=True)
+
+        diff = total - old_total
         commit_msg = f"Auto-refresh: FSA data update — {total} Thai businesses ({diff:+d})"
         result = subprocess.run(['git', 'commit', '-m', commit_msg], capture_output=True, text=True)
-        if result.returncode == 0:
-            subprocess.run(['git', 'push'], capture_output=True)
-            print("   ✅ Pushed to GitHub — Cloudflare will auto-deploy")
-            # WebSub ping — notify subscribers (Google, AI crawlers) of updated content
-            print("   📡 Pinging WebSub hub...")
-            subprocess.run(['python3', f'{REPO_DIR}/scripts/websub-ping.py'], capture_output=False)
-        else:
-            print("   ⚠️ No changes to commit")
+        if result.returncode != 0:
+            print("   ℹ️ No changes to commit (data unchanged)")
+            return
+
+        # Pull + push — fail loudly on non-zero
+        pull = subprocess.run(['git', 'pull', '--rebase'], capture_output=True, text=True)
+        if pull.returncode != 0:
+            print(f"   ❌ git pull --rebase failed:\n{pull.stderr}")
+            # Attempt abort to leave repo clean
+            subprocess.run(['git', 'rebase', '--abort'], capture_output=True)
+            return
+
+        push = subprocess.run(['git', 'push'], capture_output=True, text=True)
+        if push.returncode != 0:
+            print(f"   ❌ git push failed:\n{push.stderr}")
+            return
+
+        print("   ✅ Pushed to GitHub — Cloudflare will auto-deploy")
+        # WebSub ping — notify subscribers (Google, AI crawlers) of updated content
+        print("   📡 Pinging WebSub hub...")
+        subprocess.run(['python3', f'{REPO_DIR}/scripts/websub-ping.py'], capture_output=False)
     elif old_total > 0:
         print(f"\n✅ No significant changes ({total - old_total:+d}). Skipping rebuild.")
     else:
