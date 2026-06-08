@@ -1,9 +1,42 @@
 {
   "run_date": "2026-06-08",
   "applied": true,
-  "total_cities": 253,
-  "generated": 251,
-  "quarantined": 0,
+  "total_cities": 273,
+  "generated": 263,
+  "quarantined": 8,
   "skipped": 1,
-  "quarantined_pages": []
+  "quarantined_pages": [
+    {
+      "slug": "clacton-on-sea",
+      "reason": "No restaurant data for city: Clacton On Sea"
+    },
+    {
+      "slug": "lake-district",
+      "reason": "No restaurant data for city: Lake District"
+    },
+    {
+      "slug": "margate",
+      "reason": "No restaurant data for city: Margate"
+    },
+    {
+      "slug": "shrewsbury",
+      "reason": "No restaurant data for city: Shrewsbury"
+    },
+    {
+      "slug": "stratford-upon-avon",
+      "reason": "No restaurant data for city: Stratford Upon Avon"
+    },
+    {
+      "slug": "taunton",
+      "reason": "No restaurant data for city: Taunton"
+    },
+    {
+      "slug": "torquay",
+      "reason": "No restaurant data for city: Torquay"
+    },
+    {
+      "slug": "weston-super-mare",
+      "reason": "No restaurant data for city: Weston Super Mare"
+    }
+  ]
 }

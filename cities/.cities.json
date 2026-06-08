@@ -3810,6 +3810,292 @@
           "reason": "Registry initialisation"
         }
       ]
+    },
+    "tendring": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 7,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "torbay": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 9,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "somerset": {
+      "tier": "enriched",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 13,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        },
+        {
+          "from": "hybrid",
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Generator run"
+        }
+      ]
+    },
+    "north-norfolk": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 7,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "dorset": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 11,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "thanet": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 8,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "staffordshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 5,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "shropshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 11,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "buckinghamshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 11,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "elmbridge": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 8,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "wiltshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 9,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "westmorland-and-furness": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 12,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "hertfordshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 12,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "stratford-on-avon": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 2,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "devon": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 6,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "oxfordshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 6,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "hampshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 2,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "northumberland": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 2,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "gloucestershire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 3,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
+    },
+    "warwickshire": {
+      "tier": "standard",
+      "mode": "programmatic",
+      "quarantined": false,
+      "restaurant_count": 1,
+      "transitions": [
+        {
+          "from": null,
+          "to": "programmatic",
+          "date": "2026-06-08",
+          "reason": "Auto-created from new restaurant data"
+        }
+      ]
     }
   }
 }

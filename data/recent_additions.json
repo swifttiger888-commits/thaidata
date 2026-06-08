@@ -1,4 +1,26 @@
 {
   "updated": "2026-06-08",
-  "restaurants": []
+  "restaurants": [
+    {
+      "fsa_id": "962308",
+      "name": "The Eight Bells Thai Cuisine",
+      "city": "Vale of White Horse",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1955945",
+      "name": "Tata\u2019s Thai Kitchen",
+      "city": "Fylde",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    },
+    {
+      "fsa_id": "1822904",
+      "name": "Rosa's Thai",
+      "city": "Reading",
+      "type": "restaurant",
+      "discovered_on": "2026-06-08"
+    }
+  ]
 }
