@@ -24,9 +24,19 @@ with open(REPO / "data" / "restaurants.json") as f:
 
 restaurants = data["restaurants"]
 
-# Group by city
+# Load exclusions (moderation layer)
+excluded_ids: set[int] = set()
+excl_path = REPO / "data" / "exclusions.json"
+if excl_path.exists():
+    with open(excl_path) as f:
+        excl_data = json.load(f)
+    excluded_ids.update(excl_data.get("excluded_fsa_ids", []))
+
+# Group by city (excluding moderated venues)
 by_city: dict[str, list[dict[str, Any]]] = defaultdict(list)
 for r in restaurants:
+    if r["id"] in excluded_ids:
+        continue
     by_city[r["city"]].append(r)
 
 def slugify(s: str) -> str:
