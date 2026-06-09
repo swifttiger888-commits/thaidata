@@ -343,8 +343,8 @@ export async function onRequestPut(context) {
     const body = await request.json();
     const { claim_id, action, admin_notes } = body;
 
-    if (!claim_id || !action || !['approved', 'rejected', 'recover', 'reopen', 'reset'].includes(action)) {
-      return new Response(JSON.stringify({ error: 'claim_id and action (approved|rejected|recover|reopen|reset) required' }), {
+    if (!claim_id || !action || !['approved', 'rejected', 'recover', 'reopen', 'reset', 'dismiss'].includes(action)) {
+      return new Response(JSON.stringify({ error: 'claim_id and action (approved|rejected|recover|reopen|reset|dismiss) required' }), {
         status: 400,
         headers: corsHeaders,
       });
@@ -567,6 +567,29 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
       return new Response(JSON.stringify({
         success: true,
         message: 'Claim reopened for review.',
+        claim_id,
+      }), { status: 200, headers: corsHeaders });
+    } else if (action === 'dismiss') {
+      // Archive a rejected claim — removes from active review
+      const claim = await env.DB.prepare('SELECT * FROM claims WHERE id = ?').bind(claim_id).first();
+      if (!claim) {
+        return new Response(JSON.stringify({ error: 'Claim not found' }), {
+          status: 404, headers: corsHeaders,
+        });
+      }
+      if (claim.claim_status !== 'rejected') {
+        return new Response(JSON.stringify({ error: 'Can only dismiss rejected claims' }), {
+          status: 400, headers: corsHeaders,
+        });
+      }
+
+      await env.DB.prepare(
+        "UPDATE claims SET claim_status = 'archived', reviewed_at = datetime('now'), admin_notes = ? WHERE id = ?"
+      ).bind(admin_notes || null, claim_id).run();
+
+      return new Response(JSON.stringify({
+        success: true,
+        message: 'Claim archived. No longer appears in active review.',
         claim_id,
       }), { status: 200, headers: corsHeaders });
     } else if (action === 'reset') {

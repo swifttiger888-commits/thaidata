@@ -269,6 +269,7 @@ body {
                                         <button class="btn btn-sm btn-approve" onclick="approveClaim(${c.id})" title="Approve">✓</button>
                                         <button class="btn btn-sm btn-reject" onclick="rejectClaim(${c.id})" title="Reject">✕</button>
                                     ` : c.claim_status === 'rejected' ? `
+                                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="dismissClaim(${c.id})" title="Archive permanently. Removes from active review.">✕</button>
                                         <button class="btn btn-sm" style="background:transparent;border:1px solid var(--c2);color:var(--c2);" onclick="reopenClaim(${c.id})" title="Return to Pending tab for re-review. Does not unclaim the listing.">↻</button>
                                     ` : ''}
                                 </td>
@@ -339,7 +340,9 @@ body {
                     ` : ''}
                     ${claim.claim_status === 'rejected' ? `
                     <div style="margin-top:16px;">
-                        <button class="btn btn-sm" style="background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;" onclick="reopenClaim(${claim.id});closeModal();">↻ Reopen (returns to Pending tab for re-review)</button>
+                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="if(confirm('Archive this rejected claim? It will be removed from active review but kept for reference.')){dismissClaim(${claim.id});closeModal();}">✕ Dismiss (archive permanently)</button>
+                        <button class="btn btn-sm" style="background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;margin-top:8px;" onclick="reopenClaim(${claim.id});closeModal();">↻ Reopen (returns to Pending tab for re-review)</button>
+                    </div>
                     </div>
                     ` : ''}
                     <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;margin-top:12px;" onclick="closeModal()">Close</button>
@@ -495,6 +498,34 @@ body {
             if (res.ok) {
                 toast('Listing reset. Claim reopened. Static regeneration may still be needed for the /r/ page.');
                 closeModal();
+                loadClaims(currentTab);
+            } else {
+                toast(data.error || 'Error', 'error');
+            }
+        } catch (err) {
+            toast('Network error', 'error');
+        } finally {
+            enableActions();
+        }
+    }
+
+    // Dismiss a rejected claim to archived — removes from active review
+    async function dismissClaim(claimId) {
+        if (actionsBusy) return;
+        if (!confirm('Archive this claim? It will be permanently removed from active review but kept for reference.')) return;
+        disableActions();
+        try {
+            const res = await fetch('/api/admin', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + sessionToken,
+                },
+                body: JSON.stringify({ action: 'dismiss', claim_id: claimId }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+                toast('Claim archived.');
                 loadClaims(currentTab);
             } else {
                 toast(data.error || 'Error', 'error');
