@@ -360,6 +360,13 @@ export async function onRequestPut(context) {
         });
       }
 
+      // Idempotency guard: prevent approving an already-approved claim
+      if (claim.claim_status === 'approved') {
+        return new Response(JSON.stringify({
+          error: 'Claim is already approved. No action taken.',
+        }), { status: 409, headers: corsHeaders });
+      }
+
       // Check if this restaurant already has an approved listing
       let listingId;
       const existing = await env.DB.prepare(
@@ -645,61 +652,13 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
  * @returns {Promise<Response>} JSON response indicating success or error
  */
 export async function onRequestDelete(context) {
-  const { request, env } = context;
   const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
   };
-
-  try {
-    // Auth check
-    const auth = request.headers.get('Authorization');
-    if (!auth || !auth.startsWith('Bearer ')) {
-      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
-        status: 401, headers: corsHeaders,
-      });
-    }
-
-    const token = auth.slice(7);
-    const session = await env.DB.prepare(
-      "SELECT id FROM admin_sessions WHERE token = ? AND expires_at > datetime('now')"
-    ).bind(token).first();
-
-    if (!session) {
-      return new Response(JSON.stringify({ error: 'Session expired or invalid' }), {
-        status: 403, headers: corsHeaders,
-      });
-    }
-
-    const url = new URL(request.url);
-    const claimId = url.searchParams.get('claim_id');
-
-    if (!claimId) {
-      return new Response(JSON.stringify({ error: 'claim_id required' }), {
-        status: 400, headers: corsHeaders,
-      });
-    }
-
-    // Delete listing if exists
-    await env.DB.prepare('DELETE FROM listings WHERE claim_id = ?').bind(claimId).run();
-    // Delete auth tokens for this listing
-    await env.DB.prepare('DELETE FROM auth_tokens WHERE listing_id NOT IN (SELECT id FROM listings)').run();
-    // Delete the claim
-    await env.DB.prepare('DELETE FROM claims WHERE id = ?').bind(claimId).run();
-
-    return new Response(JSON.stringify({
-      success: true,
-      message: `Claim ${claimId} and associated listing deleted.`,
-    }), {
-      status: 200, headers: corsHeaders,
-    });
-
-  } catch (err) {
-    console.error('Admin delete error:', err);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
-      status: 500, headers: corsHeaders,
-    });
-  }
+  return new Response(JSON.stringify({
+    error: 'DELETE is disabled. No destructive operations permitted in the legacy admin.',
+  }), { status: 405, headers: corsHeaders });
 }
 
 /**
@@ -737,7 +696,7 @@ export async function onRequestPatch(context) {
     const allowed = new Set([
       'restaurant_name', 'city', 'description', 'phone', 'opening_hours',
       'website', 'social_instagram', 'social_facebook', 'email', 'address',
-      'postcode', 'cuisine_specialty', 'is_closed'
+      'postcode', 'cuisine_specialty'
     ]);
     if (!listing_id || !field || !allowed.has(field)) {
       return new Response(JSON.stringify({ error: 'listing_id, field (whitelisted), and value required' }), {

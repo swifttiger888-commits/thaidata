@@ -131,8 +131,14 @@ body {
 
     <!-- Detail modal -->
     <div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
-        <div class="modal" id="modal-content"></div>
+    <div class="modal" id="modal-content"></div>
     </div>
+
+    <!-- Pending indicator for non-blocking requests -->
+    <div id="request-busy" style="display:none;position:fixed;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#10B981,#059669);z-index:9999;animation:pulse 1.5s ease-in-out infinite;"></div>
+    <style>
+    @keyframes pulse { 0%,100% { opacity:0.4; } 50% { opacity:1; } }
+    </style>
 
     <div id="toast-container"></div>
 
@@ -143,6 +149,17 @@ body {
     <script>
     let sessionToken = localStorage.getItem('thaidata_admin_token');
     let currentTab = 'pending';
+    let actionsBusy = false;
+
+    // Disable interactive actions while a request is in flight
+    function disableActions() {
+        actionsBusy = true;
+        document.getElementById('request-busy').style.display = 'block';
+    }
+    function enableActions() {
+        actionsBusy = false;
+        document.getElementById('request-busy').style.display = 'none';
+    }
 
     // On load
     if (sessionToken) {
@@ -279,6 +296,12 @@ body {
             if (!claim) { toast('Claim not found', 'error'); return; }
 
             document.getElementById('modal-content').innerHTML = `
+                <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:8px;padding:12px;margin-bottom:16px;font-size:0.82rem;color:#FCA5A5;line-height:1.5;">
+                    <strong>⚠️ Safety notice</strong><br>
+                    • Approving sends a magic link email to the claimant<br>
+                    • Do NOT click any action button more than once<br>
+                    • Static pages do NOT regenerate automatically — run the generator separately
+                </div>
                 <h3>Claim <em>Details</em></h3>
                 <div class="detail-row"><div class="dl">Restaurant</div><div class="dv">${claim.restaurant_name}</div></div>
                 <div class="detail-row"><div class="dl">City</div><div class="dv">${claim.city}</div></div>
@@ -334,7 +357,9 @@ body {
 
     // Approve
     async function approveClaim(claimId) {
-        if (!confirm('Approve this claim? A listing will be created.')) return;
+        if (actionsBusy) return;
+        if (!confirm('Approve this claim? A magic link email will be sent to the claimant.')) return;
+        disableActions();
         try {
             const res = await fetch('/api/admin', {
                 method: 'PUT',
@@ -346,20 +371,24 @@ body {
             });
             const data = await res.json();
             if (res.ok) {
-                toast('Claim approved ✓');
+                toast('Claim approved ✓ Listing created. Static regeneration may still be needed for the /r/ page.');
                 loadClaims(currentTab);
             } else {
                 toast(data.error || 'Error', 'error');
             }
         } catch (err) {
             toast('Network error', 'error');
+        } finally {
+            enableActions();
         }
     }
 
     // Reject
     async function rejectClaim(claimId) {
+        if (actionsBusy) return;
         const notes = prompt('Reason for rejection (optional):');
         if (notes === null) return; // cancelled
+        disableActions();
         try {
             const res = await fetch('/api/admin', {
                 method: 'PUT',
@@ -378,11 +407,14 @@ body {
             }
         } catch (err) {
             toast('Network error', 'error');
+        } finally {
+            enableActions();
         }
     }
 
     // Recover access — update claimer email and send magic link
     async function recoverClaim(claimId) {
+        if (actionsBusy) return;
         var email = document.getElementById('recover-new-email').value.trim();
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             toast('Enter a valid email address', 'error');
@@ -391,6 +423,7 @@ body {
         var currentEmailEl = document.getElementById('recover-current-email');
         var currentEmail = currentEmailEl ? currentEmailEl.textContent.trim() : '';
         if (!confirm('Send recovery link to ' + email + '?\n\nThis will change the claimer email from:\n  ' + currentEmail + '\n  → ' + email + '\n\nA magic link will be emailed to the new address.')) return;
+        disableActions();
         try {
             const res = await fetch('/api/admin', {
                 method: 'PUT',
@@ -411,12 +444,16 @@ body {
             }
         } catch (err) {
             toast('Network error', 'error');
+        } finally {
+            enableActions();
         }
     }
 
     // Reopen a rejected claim back to pending for re-review
     async function reopenClaim(claimId) {
+        if (actionsBusy) return;
         if (!claimId) return;
+        disableActions();
         try {
             const res = await fetch('/api/admin', {
                 method: 'PUT',
@@ -435,12 +472,16 @@ body {
             }
         } catch (err) {
             toast('Network error', 'error');
+        } finally {
+            enableActions();
         }
     }
 
     // Reset a listing: clear owner-editable fields and reopen claim
     async function resetClaim(claimId) {
+        if (actionsBusy) return;
         if (!claimId) return;
+        disableActions();
         try {
             const res = await fetch('/api/admin', {
                 method: 'PUT',
@@ -452,7 +493,7 @@ body {
             });
             const data = await res.json();
             if (res.ok) {
-                toast('Listing reset. Claim reopened.');
+                toast('Listing reset. Claim reopened. Static regeneration may still be needed for the /r/ page.');
                 closeModal();
                 loadClaims(currentTab);
             } else {
@@ -460,6 +501,8 @@ body {
             }
         } catch (err) {
             toast('Network error', 'error');
+        } finally {
+            enableActions();
         }
     }
 
