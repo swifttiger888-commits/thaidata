@@ -577,8 +577,8 @@ const magicLink = 'https://thaidata.uk/listing/manage?token=' + rawToken;
           status: 404, headers: corsHeaders,
         });
       }
-      if (claim.claim_status !== 'rejected') {
-        return new Response(JSON.stringify({ error: 'Can only dismiss rejected claims' }), {
+      if (claim.claim_status === 'archived') {
+        return new Response(JSON.stringify({ error: 'Claim is already archived' }), {
           status: 400, headers: corsHeaders,
         });
       }

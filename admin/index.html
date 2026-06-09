@@ -266,8 +266,10 @@ body {
                                 <td>
                                     <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;" onclick="viewDetail(${c.id})" title="View details"><i class="fas fa-eye"></i></button>
                                     ${c.claim_status === 'pending' ? `
-                                        <button class="btn btn-sm btn-approve" onclick="approveClaim(${c.id})" title="Approve">✓</button>
                                         <button class="btn btn-sm btn-reject" onclick="rejectClaim(${c.id})" title="Reject">✕</button>
+                                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="dismissClaim(${c.id})" title="Archive permanently. Removes from active review.">✕</button>
+                                    ` : c.claim_status === 'approved' ? `
+                                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="dismissClaim(${c.id})" title="Archive this test record permanently.">✕</button>
                                     ` : c.claim_status === 'rejected' ? `
                                         <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="dismissClaim(${c.id})" title="Archive permanently. Removes from active review.">✕</button>
                                         <button class="btn btn-sm" style="background:transparent;border:1px solid var(--c2);color:var(--c2);" onclick="reopenClaim(${c.id})" title="Return to Pending tab for re-review. Does not unclaim the listing.">↻</button>
@@ -298,10 +300,10 @@ body {
 
             document.getElementById('modal-content').innerHTML = `
                 <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:8px;padding:12px;margin-bottom:16px;font-size:0.82rem;color:#FCA5A5;line-height:1.5;">
-                    <strong>⚠️ Safety notice</strong><br>
-                    • Approving sends a magic link email to the claimant<br>
+                    <strong>⚠️ Decommissioned admin — test data only</strong><br>
+                    • Dismiss archives a claim permanently (kept for reference)<br>
                     • Do NOT click any action button more than once<br>
-                    • Static pages do NOT regenerate automatically — run the generator separately
+                    • Static pages do NOT regenerate — run generator separately
                 </div>
                 <h3>Claim <em>Details</em></h3>
                 <div class="detail-row"><div class="dl">Restaurant</div><div class="dv">${claim.restaurant_name}</div></div>
@@ -322,21 +324,11 @@ body {
                 ${claim.admin_notes ? `<div class="detail-row"><div class="dl">Admin Notes</div><div class="dv">${claim.admin_notes}</div></div>` : ''}
                 <div style="margin-top:20px;display:flex;gap:10px;">
                     ${claim.claim_status === 'pending' ? `
-                        <button class="btn btn-approve" onclick="approveClaim(${claim.id});closeModal();">Approve</button>
                         <button class="btn btn-reject" onclick="rejectClaim(${claim.id});closeModal();">Reject</button>
+                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="if(confirm('Archive this pending claim permanently?')){dismissClaim(${claim.id});closeModal();}">✕ Dismiss (archive)</button>
                     ` : ''}
                     ${claim.claim_status === 'approved' ? `
-                    <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--line);">
-                        <div style="font-size:0.82rem;color:var(--ink4);margin-bottom:6px;">Recover Access</div>
-                        <div class="detail-row"><div class="dl">Current Email</div><div class="dv" id="recover-current-email">${claim.claimer_email}</div></div>
-                        <div style="display:flex;gap:8px;margin-top:8px;">
-                            <input type="email" id="recover-new-email" placeholder="New email address" style="flex:1;padding:8px 12px;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:8px;color:white;font-size:0.85rem;">
-                            <button class="btn btn-sm" style="white-space:nowrap;background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;" onclick="recoverClaim(${claim.id})">Send Recovery Link</button>
-                        </div>
-                    </div>
-                    <div style="margin-top:12px;">
-                        <button class="btn btn-sm btn-reject" onclick="if(confirm('Reset this listing? All owner-edited data will be cleared and the claim will reopen for review.'))resetClaim(${claim.id})">Reset listing</button>
-                    </div>
+                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="if(confirm('Archive this approved claim? The D1 record will be kept for reference.')){dismissClaim(${claim.id});closeModal();}">✕ Dismiss (archive permanently)</button>
                     ` : ''}
                     ${claim.claim_status === 'rejected' ? `
                     <div style="margin-top:16px;">
