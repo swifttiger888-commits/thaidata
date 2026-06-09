@@ -169,8 +169,8 @@ def main() -> None:
             'address': ', '.join(addr_parts),
             'hygiene_rating': str(rating) if rating else 'Unknown',
             'rating_date': e.get('RatingDate', ''),
-            'longitude': e.get('Geocode', {}).get('Longitude', ''),
-            'latitude': e.get('Geocode', {}).get('Latitude', ''),
+            'longitude': e.get('geocode', {}).get('longitude', ''),
+            'latitude': e.get('geocode', {}).get('latitude', ''),
         }
         restaurants.append(record)
     

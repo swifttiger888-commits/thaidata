@@ -18,12 +18,6 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1546435,
-    "name": "Ali Baba",
-    "city": "Calderdale",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 1485738,
     "name": "Ali Baba",
     "city": "Barking and Dagenham",
@@ -33,6 +27,12 @@
     "fsa_id": 889992,
     "name": "Ali Baba",
     "city": "Cheshire East",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1546435,
+    "name": "Ali Baba",
+    "city": "Calderdale",
     "chain": "Busaba"
   },
   {
