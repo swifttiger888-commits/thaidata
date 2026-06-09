@@ -12,115 +12,13 @@
  * @throws {Error} When database operation fails (caught internally)
  */
 export async function onRequestPost(context) {
-  const { request, env } = context;
   const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
   };
-
-  try {
-    const body = await request.json();
-    const { restaurant_name, city, fsa_id, business_type, claimer_name, claimer_email, claimer_phone, claimer_role, verification_notes } = body;
-
-    // Validate required fields
-    if (!restaurant_name || !city || !claimer_name || !claimer_email) {
-      return new Response(JSON.stringify({ error: 'Missing required fields: restaurant_name, city, claimer_name, claimer_email' }), {
-        status: 400,
-        headers: corsHeaders,
-      });
-    }
-
-    // Validate email format
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(claimer_email)) {
-      return new Response(JSON.stringify({ error: 'Invalid email address' }), {
-        status: 400,
-        headers: corsHeaders,
-      });
-    }
-
-    // Check if restaurant is already claimed (pending or approved)
-    const existing = await env.DB.prepare(
-      'SELECT id FROM claims WHERE restaurant_name = ? AND city = ? AND claim_status IN (?, ?)'
-    ).bind(restaurant_name, city, 'pending', 'approved').first();
-
-    if (existing) {
-      return new Response(JSON.stringify({ error: 'This restaurant has already been claimed', status: 'already_claimed' }), {
-        status: 409,
-        headers: corsHeaders,
-      });
-    }
-
-    // Check for duplicate pending claim
-    const pending = await env.DB.prepare(
-      'SELECT id FROM claims WHERE restaurant_name = ? AND city = ? AND claimer_email = ? AND claim_status = ?'
-    ).bind(restaurant_name, city, claimer_email, 'pending').first();
-
-    if (pending) {
-      return new Response(JSON.stringify({ message: 'You already have a pending claim for this restaurant', status: 'duplicate', id: pending.id }), {
-        status: 200,
-        headers: corsHeaders,
-      });
-    }
-
-    // Check if restaurant is marked as permanently closed
-    const closedListing = await env.DB.prepare(
-      'SELECT id FROM listings WHERE restaurant_name = ? AND city = ? AND is_closed = 1'
-    ).bind(restaurant_name, city).first();
-
-    if (closedListing) {
-      return new Response(JSON.stringify({
-        error: 'This venue has been marked as permanently closed and cannot be claimed.',
-        status: 'permanently_closed'
-      }), {
-        status: 410,
-        headers: corsHeaders,
-      });
-    }
-
-    // Insert claim
-    const result = await env.DB.prepare(
-      `INSERT INTO claims (restaurant_name, city, fsa_id, business_type, claimer_name, claimer_email, claimer_phone, claimer_role, verification_notes)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
-    ).bind(restaurant_name, city, fsa_id || null, business_type || 'restaurant', claimer_name, claimer_email, claimer_phone || null, claimer_role || 'owner', verification_notes || null).run();
-
-    const claimId = result.meta.last_row_id;
-
-    // Send both notifications before responding (inline, not waitUntil)
-    await Promise.allSettled([
-      sendAdminNotification(env, {
-        id: claimId,
-        restaurant_name,
-        city,
-        claimer_name,
-        claimer_email,
-        claimer_phone,
-        claimer_role,
-        business_type,
-      }),
-      sendClaimConfirmationEmail(env, {
-        claimer_name,
-        claimer_email,
-        restaurant_name,
-        city,
-      }),
-    ]);
-
-    return new Response(JSON.stringify({
-      success: true,
-      message: 'Claim submitted successfully. We will review and get back to you within 48 hours.',
-      id: claimId,
-    }), {
-      status: 201,
-      headers: corsHeaders,
-    });
-
-  } catch (err) {
-    console.error('Claim submission error:', err);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
-      headers: corsHeaders,
-    });
-  }
+  return new Response(JSON.stringify({
+    error: 'Claim submission is disabled. The claim system has been decommissioned.',
+  }), { status: 501, headers: corsHeaders });
 }
 
 /**
