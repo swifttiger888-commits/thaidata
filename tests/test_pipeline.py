@@ -44,8 +44,8 @@ def parse_fsa_establishment(e: dict) -> dict | None:
         'address': ', '.join(addr_parts),
         'hygiene_rating': str(rating),
         'rating_date': e.get('RatingDate', ''),
-        'longitude': e.get('Geocode', {}).get('Longitude', ''),
-        'latitude': e.get('Geocode', {}).get('Latitude', ''),
+        'longitude': e.get('geocode', {}).get('longitude', ''),
+        'latitude': e.get('geocode', {}).get('latitude', ''),
     }
 
 
@@ -69,9 +69,9 @@ MOCK_FSA_RECORD = {
     "LocalAuthorityWebSite": "",
     "LocalAuthorityEmailAddress": "",
     "SchemeType": "FHRS",
-    "Geocode": {
-        "Longitude": -0.1276,
-        "Latitude": 51.5074,
+    "geocode": {
+        "longitude": -0.1276,
+        "latitude": 51.5074,
     },
     "Scores": {
         "Hygiene": 5,
@@ -156,7 +156,7 @@ class TestFsaParsing(unittest.TestCase):
 
     def test_geocode_missing(self) -> None:
         record = dict(MOCK_FSA_RECORD)
-        record['Geocode'] = {}
+        record['geocode'] = {}
         result = parse_fsa_establishment(record)
         self.assertEqual(result['longitude'], '')
         self.assertEqual(result['latitude'], '')
