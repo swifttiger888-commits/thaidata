@@ -421,13 +421,18 @@ def update_hero_stats(html: str, city: str, stats: dict[str, Any], total_uk: int
         )
     if uk_total:
         html = re.sub(
-            r'(all )\d+( FSA-registered Thai businesses across the UK)',
+            r'(all )[\d,]+( FSA-registered Thai businesses across the UK)',
             f'\\g<1>{uk_total}\\g<2>',
             html,
         )
         html = re.sub(
-            r'(all )\d+( UK Thai businesses)',
-            f'\\g<1>{uk_total}\\g<2>',
+            r'(all )[\d,]+( UK Thai businesses)',
+            f'\\\\g<1>{uk_total}\\\\g<2>',
+            html,
+        )
+        html = re.sub(
+            r'(accounts for [\d.]+% of all )[\d,]+( FSA-registered Thai businesses)',
+            f'\\\\g<1>{uk_total}\\\\g<2>',
             html,
         )
 
