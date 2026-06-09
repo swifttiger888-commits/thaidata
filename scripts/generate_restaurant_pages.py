@@ -409,11 +409,10 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         html = html.replace('<!-- DYNAMIC: hero_claim_cta -->\n', '')
 
     # ---- Action buttons ----
-    if lat is not None and lng is not None:
+    if lat and lng:
         directions_href = f'https://www.google.com/maps/dir/?api=1&destination={lat},{lng}'
         map_href = f'https://www.google.com/maps?q={lat},{lng}'
     else:
-        # Fallback: search by address
         addr_query = address.replace(' ', '+').replace(',', '') + '+' + postcode
         directions_href = f'https://www.google.com/maps/dir/?api=1&destination={addr_query}'
         map_href = f'https://www.google.com/maps?q={addr_query}'
@@ -468,7 +467,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
 
     # ---- Map iframe ----
-    if lat is not None and lng is not None:
+    if lat and lng:
         map_html = f'''                <div class="map-wrap">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300!2d{lng}!3d{lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z{lat}!5e0!3m2!1sen!2suk!4v1"
@@ -479,7 +478,10 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
                     </iframe>
                 </div>'''
     else:
-        map_html = ''
+        map_html = f'''                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:32px 24px;text-align:center;margin-top:16px;">
+                    <p style="color:#64748b;margin:0 0 8px;"><i class="fas fa-map-marker-alt" style="margin-right:6px;color:#94a3b8;"></i> Map coordinates unavailable for this location.</p>
+                    <p style="color:#94a3b8;font-size:0.85rem;margin:0;">Use <strong>Get Directions</strong> or <strong>View on Map</strong> above to open this address in Google Maps.</p>
+                </div>'''
     
     html = safe_sub(r'<!-- DYNAMIC: map_iframe.*?-->.*?<div class="map-wrap">.*?</div>', map_html if map_html else '', html)
 
