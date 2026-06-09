@@ -269,7 +269,7 @@ body {
                                         <button class="btn btn-sm btn-approve" onclick="approveClaim(${c.id})" title="Approve">✓</button>
                                         <button class="btn btn-sm btn-reject" onclick="rejectClaim(${c.id})" title="Reject">✕</button>
                                     ` : c.claim_status === 'rejected' ? `
-                                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--c2);color:var(--c2);" onclick="reopenClaim(${c.id})" title="Reopen for review">↻</button>
+                                        <button class="btn btn-sm" style="background:transparent;border:1px solid var(--c2);color:var(--c2);" onclick="reopenClaim(${c.id})" title="Return to Pending tab for re-review. Does not unclaim the listing.">↻</button>
                                     ` : ''}
                                 </td>
                             </tr>
@@ -339,7 +339,7 @@ body {
                     ` : ''}
                     ${claim.claim_status === 'rejected' ? `
                     <div style="margin-top:16px;">
-                        <button class="btn btn-sm" style="background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;" onclick="reopenClaim(${claim.id});closeModal();">↻ Reopen for review</button>
+                        <button class="btn btn-sm" style="background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;" onclick="reopenClaim(${claim.id});closeModal();">↻ Reopen (returns to Pending tab for re-review)</button>
                     </div>
                     ` : ''}
                     <button class="btn btn-sm" style="background:transparent;border:1px solid var(--line);color:white;margin-top:12px;" onclick="closeModal()">Close</button>
