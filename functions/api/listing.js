@@ -220,12 +220,43 @@ export async function onRequestGet(context) {
       });
     }
 
-    // Public queries — archived. No active public listings.
-    return new Response(JSON.stringify({
-      listings: [],
-      count: 0,
-      message: 'Listing system is archived.',
-    }), {
+    // Public queries
+    const restaurant = url.searchParams.get('restaurant');
+    const city = url.searchParams.get('city');
+    const fsaId = url.searchParams.get('fsa_id');
+
+    let query = 'SELECT * FROM listings WHERE 1=1';
+    const params = [];
+
+    if (restaurant && city) {
+      query += ' AND restaurant_name = ? AND city = ?';
+      params.push(restaurant, city);
+    } else if (fsaId) {
+      query += ' AND fsa_id = ?';
+      params.push(fsaId);
+    } else if (city) {
+      query += ' AND city = ?';
+      params.push(city);
+    } else {
+      return new Response(JSON.stringify({ error: 'Provide restaurant+city, fsa_id, city, or auth token' }), {
+        status: 400,
+        headers: corsHeaders,
+      });
+    }
+
+    const results = await env.DB.prepare(query).bind(...params).all();
+
+    // Parse JSON fields
+    const listings = results.results.map(l => ({
+      ...l,
+      features: l.features ? JSON.parse(l.features) : [],
+      photos: l.photos ? JSON.parse(l.photos) : [],
+      menu_highlights: l.menu_highlights ? JSON.parse(l.menu_highlights) : [],
+      enrichment: l.enrichment ? JSON.parse(l.enrichment) : null,
+      page_url: pageUrl(l.restaurant_name, l.city),
+    }));
+
+    return new Response(JSON.stringify({ listings, count: listings.length }), {
       status: 200,
       headers: corsHeaders,
     });
