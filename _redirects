@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Redirect bare /sitemap (which hits SPA fallback → index.html) to the real XML sitemap
+/sitemap /sitemap.xml 301
