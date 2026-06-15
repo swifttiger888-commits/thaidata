@@ -90,15 +90,15 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 604472,
-    "name": "Ali Baba Lounge",
-    "city": "Birmingham",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 519550,
     "name": "Ali Baba Lounge",
     "city": "Hillingdon",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 604472,
+    "name": "Ali Baba Lounge",
+    "city": "Birmingham",
     "chain": "Busaba"
   },
   {
@@ -607,7 +607,7 @@
   },
   {
     "fsa_id": 29256,
-    "name": "Saba Fast Food",
+    "name": "Saba Fast Foods",
     "city": "Inverclyde",
     "chain": "Busaba"
   },
@@ -627,6 +627,18 @@
     "fsa_id": 726499,
     "name": "The Busby Hotel",
     "city": "East Renfrewshire",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1945609,
+    "name": "The Hungry Leaf/Hungry Crust/Kakdii/Saba (Pod 20)",
+    "city": "Wandsworth",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 328025,
+    "name": "The Original Baba Tandoori Roti House",
+    "city": "Bradford",
     "chain": "Busaba"
   },
   {
@@ -672,6 +684,12 @@
     "chain": "Patara"
   },
   {
+    "fsa_id": 1494100,
+    "name": "HPH - Hazara Pizza House",
+    "city": "Wakefield",
+    "chain": "Patara"
+  },
+  {
     "fsa_id": 1595366,
     "name": "Hamara Community Cafe",
     "city": "Leeds",
@@ -702,6 +720,18 @@
     "chain": "Rosa's Thai"
   },
   {
+    "fsa_id": 1033747,
+    "name": "Abu Zaad",
+    "city": "Ealing",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 345555,
+    "name": "Abu Zaad Restaurant",
+    "city": "Hammersmith and Fulham",
+    "chain": "Zaap"
+  },
+  {
     "fsa_id": 1519276,
     "name": "Siam Zapp Authentic Thai Noodle Bar",
     "city": "Blackburn",
@@ -717,6 +747,60 @@
     "fsa_id": 1247008,
     "name": "Thai Zapp at Heron Pub",
     "city": "Westminster",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1911988,
+    "name": "ZAA PIZZERIA",
+    "city": "Newcastle Upon Tyne",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1811410,
+    "name": "ZAAD",
+    "city": "Liverpool",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 315505,
+    "name": "ZAAL",
+    "city": "Runnymede",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 172132,
+    "name": "Zaal",
+    "city": "Wealden",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1626000,
+    "name": "Zaal Fine Dining",
+    "city": "Hart",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1583716,
+    "name": "Zaal Indian Cuisine",
+    "city": "Stafford",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1129821,
+    "name": "Zaal Indian Dining",
+    "city": "Thurrock",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1908628,
+    "name": "Zaal Indian Kitchen",
+    "city": "Derby City",
+    "chain": "Zaap"
+  },
+  {
+    "fsa_id": 1923782,
+    "name": "Zaat Restaurant",
+    "city": "Lambeth",
     "chain": "Zaap"
   },
   {

@@ -31,3 +31,8 @@ Thumbs.db
 .tmp/
 *.tmp
 *.bak
+
+# Archive and local docs
+.archive/
+docs/legacy-admin-*
+docs/thaidata-environment-overview.md

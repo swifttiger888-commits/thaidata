@@ -165,6 +165,7 @@
             padding: 16px 24px 0;
             color: var(--ink-tertiary);
             font-size: 0.8rem;
+            overflow-wrap: break-word;
         }
         .breadcrumb a {
             color: var(--ink-secondary);
@@ -249,6 +250,7 @@
             color: white;
             margin-bottom: 8px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            overflow-wrap: break-word;
         }
         .hero h1 em {
             font-style: italic;
@@ -263,6 +265,9 @@
             color: rgba(255,255,255,0.6);
             margin-right: 4px;
             font-size: 0.875rem;
+        }
+        .intro-blurb {
+            overflow-wrap: break-word;
         }
 
         @media (max-width: 768px) {
@@ -485,6 +490,7 @@
             color: var(--ink-secondary);
             font-size: 0.95rem;
             line-height: 1.7;
+            overflow-wrap: break-word;
         }
         .address-text strong {
             color: var(--ink);
@@ -864,8 +870,8 @@
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": ,
-            "longitude": 
+            "latitude": 51.4596374,
+            "longitude": -0.1893247
         },
         "dateModified": "2025-03-04"
     }
@@ -947,10 +953,10 @@
     <!-- ============ QUICK ACTIONS ============ -->
     <div class="actions-bar">
         <div class="actions-inner animate-in delay-1">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=543+Old+York+Road+London+Wandsworth+SW18 1TQ" target="_blank" rel="noopener" class="action-btn action-btn-primary">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=51.4596374,-0.1893247" target="_blank" rel="noopener" class="action-btn action-btn-primary">
                 <i class="fas fa-directions"></i> Get Directions
             </a>
-                        <a href="https://www.google.com/maps?q=543+Old+York+Road+London+Wandsworth+SW18 1TQ" target="_blank" rel="noopener" class="action-btn action-btn-secondary">
+                        <a href="https://www.google.com/maps?q=51.4596374,-0.1893247" target="_blank" rel="noopener" class="action-btn action-btn-secondary">
                 <i class="fas fa-map"></i> View on Map
             </a>
                         <!-- <a href="tel:+44113xxxxxx" class="action-btn action-btn-secondary"><i class="fas fa-phone"></i> Call</a> -->
@@ -1000,9 +1006,14 @@
                     </div>
                 </div>
 
-                                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:32px 24px;text-align:center;margin-top:16px;">
-                    <p style="color:#64748b;margin:0 0 8px;"><i class="fas fa-map-marker-alt" style="margin-right:6px;color:#94a3b8;"></i> Map coordinates unavailable for this location.</p>
-                    <p style="color:#94a3b8;font-size:0.85rem;margin:0;">Use <strong>Get Directions</strong> or <strong>View on Map</strong> above to open this address in Google Maps.</p>
+                                <div class="map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300!2d-0.1893247!3d51.4596374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z51.4596374!5e0!3m2!1sen!2suk!4v1"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Map showing location of Pad Thai Story in London">
+                    </iframe>
                 </div>
             </div>
 
