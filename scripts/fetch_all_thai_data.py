@@ -75,7 +75,7 @@ def main() -> None:
     # Variant spellings that FSA substring-matches but the chain-name filter rejects
     CHAIN_VARIANTS = {
         'Sukhothai': ['sukothai', 'sukhumthai'],   # misspelling + ghost kitchen
-        'Zaap':       ['zaa'],                       # Siam Zaa (Newcastle)
+        'Zaap':       [],                           # 'zaa' variant removed — too broad, matched Zaal/Zaad/Zaat
     }
     # Hard allowlist by FSA ID — confirmed genuine Thai, bypasses chain-name check
     FSA_ALLOWLIST = {578053, 1721229, 1004678}

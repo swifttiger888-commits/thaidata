@@ -1930,11 +1930,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://thaidata.uk/r/hart/zaal-fine-dining/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://thaidata.uk/r/hartlepool/baan-thai/</loc>
     <changefreq>monthly</changefreq>
@@ -3925,11 +3921,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://thaidata.uk/r/london/zaat-restaurant/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://thaidata.uk/r/luton/nakorn-thai-restaurant/</loc>
     <changefreq>monthly</changefreq>
@@ -4295,11 +4287,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://thaidata.uk/r/newcastle/zaa-pizzeria/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://thaidata.uk/r/newcastle/zaap/</loc>
     <changefreq>monthly</changefreq>
@@ -4845,11 +4833,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://thaidata.uk/r/runnymede/zaal/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://thaidata.uk/r/rushcliffe/giggling-squid/</loc>
     <changefreq>monthly</changefreq>
@@ -5185,11 +5169,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://thaidata.uk/r/stafford/zaal-indian-cuisine/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://thaidata.uk/r/staffordshire/baan-thai-restaurant-ltd/</loc>
     <changefreq>monthly</changefreq>
@@ -5560,11 +5540,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://thaidata.uk/r/thurrock/zaal-indian-dining/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://thaidata.uk/r/tonbridge-and-malling/pad-thai-restaurant/</loc>
     <changefreq>monthly</changefreq>
@@ -5855,11 +5831,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://thaidata.uk/r/wealden/zaal/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   <url>
     <loc>https://thaidata.uk/r/welwyn-hatfield/giggling-squid/</loc>
     <changefreq>monthly</changefreq>

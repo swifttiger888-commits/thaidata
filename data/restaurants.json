@@ -1,7 +1,7 @@
 {
   "name": "ThaiData UK \u2014 Restaurant Directory",
   "updated": "2026-06-09",
-  "total": 1275,
+  "total": 1266,
   "sources": [
     "FSA FHRS",
     "FSA FHIS"
@@ -15985,84 +15985,6 @@
       "latitude": "53.960375"
     },
     {
-      "id": 315505,
-      "name": "ZAAL",
-      "type": "restaurant",
-      "city": "Runnymede",
-      "local_authority": "Runnymede",
-      "postcode": "KT15 1JH",
-      "address": "5 Ongar Parade, Addlestone",
-      "hygiene_rating": "5",
-      "rating_date": "2024-06-12T00:00:00",
-      "longitude": "-0.506777",
-      "latitude": "51.363026"
-    },
-    {
-      "id": 1033747,
-      "name": "Abu Zaad",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Ealing",
-      "postcode": "W13 0SU",
-      "address": "Shop, 20 - 22 Broadway, West Ealing",
-      "hygiene_rating": "5",
-      "rating_date": "2025-08-11T00:00:00",
-      "longitude": "-0.3208847",
-      "latitude": "51.5108809"
-    },
-    {
-      "id": 1923782,
-      "name": "Zaat Restaurant",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Lambeth",
-      "postcode": "SW9 8HX",
-      "address": "Arch, 5 Atlantic Road, London",
-      "hygiene_rating": "4",
-      "rating_date": "2026-02-06T00:00:00",
-      "longitude": "-0.1144399",
-      "latitude": "51.4632822"
-    },
-    {
-      "id": 1626000,
-      "name": "Zaal Fine Dining",
-      "type": "restaurant",
-      "city": "Hart",
-      "local_authority": "Hart",
-      "postcode": "GU52 7QL",
-      "address": "Zaal, 24 Reading Road South, Fleet, Hampshire",
-      "hygiene_rating": "5",
-      "rating_date": "2026-03-23T00:00:00",
-      "longitude": "-0.8446223",
-      "latitude": "51.2777304"
-    },
-    {
-      "id": 345555,
-      "name": "Abu Zaad Restaurant",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Hammersmith and Fulham",
-      "postcode": "W12 8LH",
-      "address": "29 Uxbridge Road, London",
-      "hygiene_rating": "4",
-      "rating_date": "2026-03-04T00:00:00",
-      "longitude": "-0.227612",
-      "latitude": "51.505579"
-    },
-    {
-      "id": 1129821,
-      "name": "Zaal Indian Dining",
-      "type": "restaurant",
-      "city": "Thurrock",
-      "local_authority": "Thurrock",
-      "postcode": "SS17 9AA",
-      "address": "3 Lampits Hill, Corringham, Essex",
-      "hygiene_rating": "4",
-      "rating_date": "2026-01-20T00:00:00",
-      "longitude": "0.459617",
-      "latitude": "51.526615"
-    },
-    {
       "id": 1004678,
       "name": "The Siam Zaa",
       "type": "restaurant",
@@ -16074,45 +15996,6 @@
       "rating_date": "2025-01-31T00:00:00",
       "longitude": null,
       "latitude": null
-    },
-    {
-      "id": 172132,
-      "name": "Zaal",
-      "type": "takeaway",
-      "city": "Wealden",
-      "local_authority": "Wealden",
-      "postcode": "TN6 2SH",
-      "address": "1 The Parade Eridge Road, Crowborough, East Sussex",
-      "hygiene_rating": "4",
-      "rating_date": "2025-03-26T00:00:00",
-      "longitude": "0.1621591",
-      "latitude": "51.0607625"
-    },
-    {
-      "id": 1911988,
-      "name": "ZAA PIZZERIA",
-      "type": "takeaway",
-      "city": "Newcastle",
-      "local_authority": "Newcastle Upon Tyne",
-      "postcode": "NE1 6QF",
-      "address": "Zza Pizzerica Stack Newcastle Worswick Chambers Pilgrim Street, Newcastle Upon Tyne",
-      "hygiene_rating": "5",
-      "rating_date": "2026-03-03T00:00:00",
-      "longitude": null,
-      "latitude": null
-    },
-    {
-      "id": 1583716,
-      "name": "Zaal Indian Cuisine",
-      "type": "takeaway",
-      "city": "Stafford",
-      "local_authority": "Stafford",
-      "postcode": "ST20 0EZ",
-      "address": "1 Station Road, Gnosall, Stafford",
-      "hygiene_rating": "3",
-      "rating_date": "2025-07-14T00:00:00",
-      "longitude": "-2.2555003",
-      "latitude": "52.7831499"
     },
     {
       "id": 1472881,
