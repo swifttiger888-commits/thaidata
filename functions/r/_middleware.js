@@ -27,6 +27,17 @@ export async function onRequest(context) {
     return next();
   }
 
+  // Enforce trailing slash on restaurant detail pages (3+ segments).
+  // Cloudflare Pages serves index.html at both /r/city/slug and /r/city/slug/,
+  // creating duplicate URLs. Canonical tags use trailing-slash form — redirect
+  // the bare version so Google only indexes one URL per restaurant.
+  if (!url.pathname.endsWith('/')) {
+    return new Response(null, {
+      status: 301,
+      headers: { 'Location': url.pathname + '/' + url.search },
+    });
+  }
+
   const city = segments[1];
   const name = segments.slice(2).join('/');
 
