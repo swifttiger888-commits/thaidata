@@ -2819,8 +2819,8 @@
           var items = data.restaurants.slice(0, 10);
           container.innerHTML = '';
           items.forEach(function(rest) {
-            var slug = rest.name.toLowerCase().replace(/[^a-z0-9\\s-]/g, '').replace(/[\\s-]+/g, '-').replace(/^-|-$/g, '');
-            var citySlug = rest.city.toLowerCase().replace(/[^a-z0-9\\s-]/g, '').replace(/[\\s-]+/g, '-').replace(/^-|-$/g, '');
+            var slug = rest.name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
+            var citySlug = rest.city.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
             var card = document.createElement('a');
             card.href = '/r/' + citySlug + '/' + slug + '/';
             card.style.cssText = 'display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card-bg);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;transition:border-color 0.2s;';
