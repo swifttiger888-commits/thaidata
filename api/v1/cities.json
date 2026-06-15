@@ -11,9 +11,9 @@
       "name": "London",
       "population": 8970000,
       "total_thai_businesses": 280,
-      "restaurants": 236,
+      "restaurants": 233,
       "takeaways": 47,
-      "per_100k": 3.2,
+      "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 100
     },
@@ -208,16 +208,6 @@
       "postcode_areas": 6
     },
     {
-      "name": "Newcastle",
-      "population": 307000,
-      "total_thai_businesses": 8,
-      "restaurants": 8,
-      "takeaways": 1,
-      "per_100k": 2.9,
-      "avg_hygiene_rating": 4.7,
-      "postcode_areas": 1
-    },
-    {
       "name": "Sheffield",
       "population": 584000,
       "total_thai_businesses": 9,
@@ -226,6 +216,16 @@
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.6,
       "postcode_areas": 4
+    },
+    {
+      "name": "Newcastle",
+      "population": 307000,
+      "total_thai_businesses": 8,
+      "restaurants": 8,
+      "takeaways": 0,
+      "per_100k": 2.6,
+      "avg_hygiene_rating": 4.7,
+      "postcode_areas": 1
     },
     {
       "name": "Central Bedfordshire",
@@ -528,16 +528,6 @@
       "postcode_areas": 3
     },
     {
-      "name": "Wealden",
-      "population": null,
-      "total_thai_businesses": 5,
-      "restaurants": 5,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.3,
-      "postcode_areas": 4
-    },
-    {
       "name": "Calderdale",
       "population": null,
       "total_thai_businesses": 6,
@@ -626,6 +616,16 @@
       "per_100k": 3.0,
       "avg_hygiene_rating": 0,
       "postcode_areas": 2
+    },
+    {
+      "name": "Wealden",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 5,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3,
+      "postcode_areas": 4
     },
     {
       "name": "Mole Valley",
@@ -878,16 +878,6 @@
       "postcode_areas": 3
     },
     {
-      "name": "Runnymede",
-      "population": null,
-      "total_thai_businesses": 3,
-      "restaurants": 4,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
-    },
-    {
       "name": "Fylde",
       "population": null,
       "total_thai_businesses": 4,
@@ -986,6 +976,16 @@
       "per_100k": 1.4,
       "avg_hygiene_rating": 3.2,
       "postcode_areas": 4
+    },
+    {
+      "name": "Runnymede",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5,
+      "postcode_areas": 2
     },
     {
       "name": "Darlington",
@@ -1468,16 +1468,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Thurrock",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 2,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
-    },
-    {
       "name": "Cherwell",
       "population": null,
       "total_thai_businesses": 2,
@@ -1768,16 +1758,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Stafford",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 1,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
-    },
-    {
       "name": "Carmarthenshire",
       "population": null,
       "total_thai_businesses": 2,
@@ -1796,16 +1776,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 2
-    },
-    {
-      "name": "Hart",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 2,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
     },
     {
       "name": "Bracknell Forest",
@@ -1976,6 +1946,36 @@
       "per_100k": 3.9,
       "avg_hygiene_rating": 0,
       "postcode_areas": 2
+    },
+    {
+      "name": "Thurrock",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5,
+      "postcode_areas": 2
+    },
+    {
+      "name": "Stafford",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 2
+    },
+    {
+      "name": "Hart",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
     },
     {
       "name": "Chesterfield",
