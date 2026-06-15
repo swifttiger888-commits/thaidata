@@ -10,7 +10,7 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 283,
+      "total_thai_businesses": 280,
       "restaurants": 236,
       "takeaways": 47,
       "per_100k": 3.2,
@@ -210,7 +210,7 @@
     {
       "name": "Newcastle",
       "population": 307000,
-      "total_thai_businesses": 9,
+      "total_thai_businesses": 8,
       "restaurants": 8,
       "takeaways": 1,
       "per_100k": 2.9,
@@ -530,7 +530,7 @@
     {
       "name": "Wealden",
       "population": null,
-      "total_thai_businesses": 6,
+      "total_thai_businesses": 5,
       "restaurants": 5,
       "takeaways": 1,
       "per_100k": null,
@@ -880,7 +880,7 @@
     {
       "name": "Runnymede",
       "population": null,
-      "total_thai_businesses": 4,
+      "total_thai_businesses": 3,
       "restaurants": 4,
       "takeaways": 0,
       "per_100k": null,
@@ -1470,7 +1470,7 @@
     {
       "name": "Thurrock",
       "population": null,
-      "total_thai_businesses": 2,
+      "total_thai_businesses": 1,
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": null,
@@ -1770,7 +1770,7 @@
     {
       "name": "Stafford",
       "population": null,
-      "total_thai_businesses": 2,
+      "total_thai_businesses": 1,
       "restaurants": 1,
       "takeaways": 1,
       "per_100k": null,
@@ -1800,7 +1800,7 @@
     {
       "name": "Hart",
       "population": null,
-      "total_thai_businesses": 2,
+      "total_thai_businesses": 1,
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": null,
