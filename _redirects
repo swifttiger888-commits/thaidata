@@ -4,3 +4,7 @@
 # Redirect bare paths (which hit SPA fallback → index.html) to their XML files
 /sitemap /sitemap.xml 301
 /sitemap-pages /sitemap-pages.xml 301
+
+# Redirect deleted non-Thai chain pages
+/chains/chai-green /chains/ 301
+/chains/i-chai-express /chains/ 301
