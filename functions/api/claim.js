@@ -1,6 +1,8 @@
 // ThaiData UK — POST /api/claim
 // Submit a claim for a Thai restaurant listing
 
+import { sendClaimConfirmationEmail } from './_email.js';
+
 /**
  * Handles POST /api/claim — submits a new claim for a restaurant listing
  * Validates required fields, checks for duplicates, inserts claim, and sends admin notification
@@ -102,6 +104,7 @@ export async function onRequestPost(context) {
         claimer_email,
         restaurant_name,
         city,
+        claimId,
       }),
     ]);
 
@@ -234,80 +237,5 @@ async function sendAdminNotification(env, claim) {
     }
   } catch (err) {
     console.error('Telegram notification failed:', err.message);
-  }
-}
-
-/**
- * Sends a confirmation email to the claimant about their submitted claim
- * @param {object} env - Cloudflare Workers environment bindings
- * @param {string} env.RESEND_API_KEY - Resend API key for sending emails
- * @param {object} data - Claim data
- * @param {string} data.claimer_name - Name of the person claiming
- * @param {string} data.claimer_email - Email of the person claiming
- * @param {string} data.restaurant_name - Restaurant name
- * @param {string} data.city - City
- * @returns {Promise<void>}
- */
-async function sendClaimConfirmationEmail(env, { claimer_name, claimer_email, restaurant_name, city }) {
-  const apiKey = env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error('Missing RESEND_API_KEY — cannot send claim confirmation email');
-    return;
-  }
-
-  const html = `<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#f5f5f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
-<table width="100%" style="padding:40px 0;"><tr><td align="center">
-<table width="560" style="max-width:560px;">
-<tr><td style="padding:0 40px;">
-<table width="100%" style="background:linear-gradient(135deg,#10B981,#059669);border-radius:12px;">
-<tr><td style="padding:32px;text-align:center;">
-<img src="https://thaidata.uk/static/logo-email.png" width="180" height="72" alt="ThaiData" style="display:block;border:0;margin:0 auto 16px;">
-<h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">Claim Received</h1>
-<p style="margin:0;color:rgba(255,255,255,0.85);font-size:13px;">${restaurant_name} &middot; ${city}</p>
-</td></tr></table>
-</td></tr>
-<tr><td style="padding:24px 40px;">
-<table width="100%" style="background:#fff;border-radius:10px;border:1px solid #e8e8dc;">
-<tr><td style="padding:32px;">
-<p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">Hi ${claimer_name},</p>
-<p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">We&rsquo;ve received your claim for <strong>${restaurant_name}</strong> in ${city}.</p>
-<p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">We&rsquo;ll review your details and, if everything looks good, send you a one&shy;time magic link so you can edit your ThaiData listing.</p>
-<p style="margin:0 0 24px;color:#555;font-size:14px;line-height:1.6;">You don&rsquo;t need to do anything else right now. If you made this request by mistake, you can ignore this email.</p>
-<p style="margin:0;color:#555;font-size:14px;line-height:1.6;">Thanks,<br>The ThaiData team</p>
-</td></tr></table>
-</td></tr>
-<tr><td style="padding:0 40px 32px;text-align:center;">
-<p style="margin:0;color:#aaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a></p>
-</td></tr></table>
-</td></tr></table>
-</body>
-</html>`;
-
-  try {
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'ThaiData UK <noreply@thaidata.uk>',
-        to: [claimer_email],
-        subject: `We\u2019ve received your claim for ${restaurant_name}`,
-        html,
-      }),
-    });
-
-    if (!res.ok) {
-      const errBody = await res.text();
-      console.error(`Resend API error ${res.status}: ${errBody}`);
-    } else {
-      console.log(`Claim confirmation email sent to ${claimer_email} for ${restaurant_name}`);
-    }
-  } catch (err) {
-    console.error('Resend claim confirmation failed:', err.message);
   }
 }

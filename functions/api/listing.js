@@ -1,20 +1,7 @@
 // ThaiData UK — /api/listing
 // Get and update enhanced restaurant listings
 
-// --- Crypto helper ---
-/**
- * Computes SHA-256 hex digest of a string
- * @param {string} text - Text to hash (e.g. auth token)
- * @returns {Promise<string>} Hex-encoded SHA-256 hash
- */
-async function sha256(text) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(text);
-  const hash = await crypto.subtle.digest('SHA-256', data);
-  return Array.from(new Uint8Array(hash))
-    .map(b => b.toString(16).padStart(2, '0'))
-    .join('');
-}
+import { sha256, sendMagicLinkEmail } from './_email.js';
 
 function slugify(s) {
   s = s.toLowerCase().trim();
@@ -26,143 +13,6 @@ function slugify(s) {
 
 function pageUrl(name, city) {
   return '/r/' + slugify(city) + '/' + slugify(name) + '/';
-}
-
-// --- Resend email sender ---
-/**
- * Sends a magic-link email via Resend API to a restaurant owner
- * @param {object} env - Cloudflare Workers environment bindings
- * @param {string} env.RESEND_API_KEY - Resend API key for sending emails
- * @param {object} options - Email parameters
- * @param {string} options.email - Recipient email address
- * @param {string} options.restaurant_name - Name of the restaurant
- * @param {string} options.city - City of the restaurant
- * @param {string} options.magicLink - One-time magic link URL
- * @returns {Promise<void>}
- */
-async function sendMagicLinkEmail(env, { email, restaurant_name, city, magicLink }) {
-  const apiKey = env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error('Missing RESEND_API_KEY — cannot send magic link email');
-    return;
-  }
-
-  const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin:0;padding:0;background-color:#f5f5f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;padding:40px 0;">
-    <tr>
-      <td align="center">
-        <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
-
-          <!-- Hero + Logo combined -->
-          <tr>
-            <td style="padding:32px 40px 0;">
-              <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#10B981,#059669);border-radius:12px;">
-                <tr>
-                  <td style="padding:32px 32px 24px;text-align:center;">
-                    <img src="https://thaidata.uk/static/logo-email.png" width="180" height="72" alt="ThaiData UK" style="display:block;border:0;outline:none;margin:0 auto 20px;">
-                    <h1 style="margin:0 0 8px;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:-0.3px;">Manage Your Listing</h1>
-                    <p style="margin:0;color:rgba(255,255,255,0.9);font-size:15px;line-height:1.5;">
-                      ${restaurant_name}<br>
-                      <span style="font-size:13px;opacity:0.7;">${city}</span>
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Body -->
-          <tr>
-            <td style="padding:24px 40px 32px;">
-              <table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:10px;border:1px solid #e8e8dc;">
-                <tr>
-                  <td style="padding:32px;">
-                    <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">
-                      You're one click away from editing your restaurant listing on ThaiData UK — the UK's fastest-growing Thai restaurant directory.
-                    </p>
-
-                    <p style="margin:0 0 20px;color:#555;font-size:14px;line-height:1.6;">
-                      What you can update:
-                    </p>
-
-                    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
-                      <tr>
-                        <td style="padding:5px 0;color:#444;font-size:14px;">✓ Photos, description & cuisine specialities</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px 0;color:#444;font-size:14px;">✓ Opening hours, website & social links</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px 0;color:#444;font-size:14px;">✓ Contact details & price range</td>
-                      </tr>
-                    </table>
-
-                    <table width="100%" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td align="center">
-                          <a href="${magicLink}" style="display:inline-block;background:#10B981;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Edit My Listing →</a>
-                        </td>
-                      </tr>
-                    </table>
-
-                    <p style="margin:24px 0 0;color:#999;font-size:12px;line-height:1.5;text-align:center;">
-                      This link expires in 1 hour and can only be used once.<br>
-                      If you didn't request this, you can safely ignore this email.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Footer -->
-          <tr>
-            <td style="padding:0 40px 32px;text-align:center;">
-              <p style="margin:0;color:#aaa;font-size:11px;line-height:1.6;">
-                ThaiData UK · The UK's Thai restaurant directory<br>
-                <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a>
-              </p>
-            </td>
-          </tr>
-
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-`;
-
-  try {
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'ThaiData UK <noreply@thaidata.uk>',
-        to: [email],
-        subject: `🔑 Your magic link for ${restaurant_name}`,
-        html,
-      }),
-    });
-
-    if (!res.ok) {
-      const errBody = await res.text();
-      console.error(`Resend API error ${res.status}: ${errBody}`);
-    } else {
-      console.log(`Magic link email sent to ${email} for ${restaurant_name}`);
-    }
-  } catch (err) {
-    console.error('Resend send failed:', err.message);
-  }
 }
 
 /**
@@ -428,6 +278,8 @@ export async function onRequestPost(context) {
       restaurant_name,
       city,
       magicLink,
+      variant: 'self_service',
+      claimId: claim.claim_id,
     });
 
     return new Response(JSON.stringify({
