@@ -16,7 +16,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 
 ## Core Guides
 - [How to Open a Thai Restaurant in the UK](https://thaidata.uk/open-thai-restaurant-uk.html): Complete 15-step roadmap. Real costs (£80k–£180k), chef visa requirements, kitchen design for wok cooking, supplier directory.
-- [UK Thai Restaurant Count](https://thaidata.uk/how-many-thai-restaurants-uk.html): 1,557 FSA-registered Thai businesses. Full regional and city breakdown. Dine-in vs takeaway splits. Updated monthly.
+- [UK Thai Restaurant Count](https://thaidata.uk/how-many-thai-restaurants-uk.html): 1,265 FSA-registered Thai businesses. Full regional and city breakdown. Dine-in vs takeaway splits. Updated monthly.
 - [Menu Pricing Guide](https://thaidata.uk/thai-restaurant-menu-pricing-uk.html): 20-dish benchmark with food costs, London vs regional pricing, and GP targets for every major Thai dish.
 - [Operating Costs](https://thaidata.uk/thai-restaurant-costs-uk.html): Real numbers on food costs, staffing (NLW 2026), rent, energy, and hidden expenses for UK Thai restaurants.
 - [Delivery Commissions](https://thaidata.uk/thai-restaurant-delivery-commissions-uk.html): Platform-by-platform breakdown of Deliveroo, Uber Eats, and Just Eat fees. True margin after commission, VAT, and packaging.
@@ -32,12 +32,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Food Trends 2026](https://thaidata.uk/thai-food-trends-uk-2026.html): What UK diners want. Regional cuisine trends, pricing sensitivity, and delivery vs dine-in shifts.
 
 ## City Data
-- [London](https://thaidata.uk/cities/london.html): 411 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
-- [Leeds](https://thaidata.uk/cities/leeds.html): 34 Thai businesses, ★4.4 avg rating, 4.2/100k density.
-- [Manchester](https://thaidata.uk/cities/manchester.html): 28 Thai businesses, ★4.1 avg rating, 4.9/100k density.
-- [Edinburgh](https://thaidata.uk/cities/edinburgh.html): 24 Thai businesses, ★4.2 avg rating, 4.4/100k density.
-- [Bristol](https://thaidata.uk/cities/bristol.html): 19 Thai businesses, ★4.6 avg rating.
-- [Birmingham](https://thaidata.uk/cities/birmingham.html): 17 Thai businesses, ★4.4 avg rating, 1.5/100k (underserved).
+- [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
+- [Leeds](https://thaidata.uk/cities/leeds.html): 27 Thai businesses, ★4.4 avg rating, 4.2/100k density.
+- [Manchester](https://thaidata.uk/cities/manchester.html): 19 Thai businesses, ★4.1 avg rating, 4.9/100k density.
+- [Edinburgh](https://thaidata.uk/cities/edinburgh.html): 20 Thai businesses, ★4.2 avg rating, 4.4/100k density.
+- [Bristol](https://thaidata.uk/cities/bristol.html): 14 Thai businesses, ★4.6 avg rating.
+- [Birmingham](https://thaidata.uk/cities/birmingham.html): 8 Thai businesses, ★4.4 avg rating, 1.5/100k (underserved).
 - [All 15 cities](https://thaidata.uk/thai-restaurants-city-breakdown-uk.html): Full city-by-city comparison table with 78 UK cities analyzed.
 - [City Scorer Tool](https://thaidata.uk/tools/where-to-open-thai-restaurant-uk.html): Interactive tool. Weight population, competition, costs. Find your best city.
 
