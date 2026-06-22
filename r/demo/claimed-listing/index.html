@@ -273,6 +273,8 @@
     </footer>
 
     <script>
+        // GA4 — demo listing viewed
+        if (typeof gtag === 'function') { gtag('event', 'demo_listing_viewed'); }
         // Dismiss banner persists for session
         var banner = document.getElementById('demo-banner');
         if (sessionStorage.getItem('demo-banner-dismissed')) {
