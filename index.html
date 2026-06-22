@@ -267,6 +267,14 @@
   </script>
 
   <style>
+    @font-face {
+      font-family: 'Inter-fallback';
+      src: local('Arial');
+      size-adjust: 107%;
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
     *,
     *::before,
     *::after {
@@ -295,7 +303,7 @@
     }
 
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Inter', 'Inter-fallback', system-ui, sans-serif;
       color: #0F172A;
       background: #FAFAF9;
       line-height: 1.6;
