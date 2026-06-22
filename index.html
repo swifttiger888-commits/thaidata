@@ -2196,7 +2196,7 @@
               <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:14px;line-height:1.5">See exactly which dishes to re-price, how much to raise your best sellers, and a clear plan to protect your profit.</div>
               <div class="hr-email-label">Or get a free summary for your restaurant</div>
               <div class="hr-email-row" id="hr-form">
-                <input type="email" class="hr-email-input" placeholder="you@restaurant.co.uk" id="hr-email" />
+                <input type="email" class="hr-email-input" aria-label="Email for free report" placeholder="you@restaurant.co.uk" id="hr-email" />
                 <button class="hr-email-btn" onclick="submitHero()">Send it</button>
               </div>
               <div class="hr-ok" id="hr-ok">You're on the list — redirecting you now...</div>
@@ -2355,20 +2355,20 @@
                     <div class="nlw-hdr">Current</div>
                   </div>
                   <div class="nlw-row">
-                    <div class="nlw-lbl">Age 21+ (NLW)</div><input type="number" class="nlw-input" id="n21s" value="3"
-                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="n21h" value="40" min="0"
+                    <div class="nlw-lbl">Age 21+ (NLW)</div><input type="number" class="nlw-input" id="n21s" aria-label="NLW Age 21+ staff count" value="3"
+                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="n21h" aria-label="NLW Age 21+ hours per week" value="40" min="0"
                       oninput="runNLW()" />
                     <div class="nlw-rate">£12.21</div>
                   </div>
                   <div class="nlw-row">
-                    <div class="nlw-lbl">Age 18–20</div><input type="number" class="nlw-input" id="n20s" value="2"
-                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="n20h" value="30" min="0"
+                    <div class="nlw-lbl">Age 18–20</div><input type="number" class="nlw-input" id="n20s" aria-label="NLW Age 18-20 staff count" value="2"
+                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="n20h" aria-label="NLW Age 18-20 hours per week" value="30" min="0"
                       oninput="runNLW()" />
                     <div class="nlw-rate">£10.00</div>
                   </div>
                   <div class="nlw-row">
-                    <div class="nlw-lbl">Apprentice</div><input type="number" class="nlw-input" id="nAs" value="1"
-                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="nAh" value="35" min="0"
+                    <div class="nlw-lbl">Apprentice</div><input type="number" class="nlw-input" id="nAs" aria-label="NLW Apprentice staff count" value="1"
+                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="nAh" aria-label="NLW Apprentice hours per week" value="35" min="0"
                       oninput="runNLW()" />
                     <div class="nlw-rate">£7.55</div>
                   </div>
@@ -2398,7 +2398,7 @@
             <div class="tool-2col">
               <div>
                 <div class="field-label">Dish name (any spelling or Thai script)</div>
-                <input type="text" class="field-input" id="dish-input" placeholder="e.g. pad tai, green cury, ผัดไทย..."
+                <input type="text" class="field-input" id="dish-input" aria-label="Search dish name" placeholder="e.g. pad tai, green cury, ผัดไทย..."
                   oninput="clearDish()" />
                 <div class="field-label">Platform</div>
                 <select class="field-select" id="dish-platform">
@@ -2443,27 +2443,27 @@
               <div>
                 <div class="slider-group">
                   <div class="slider-head"><span class="slider-name">Food cost per dish</span><span class="slider-val"
-                      id="sv-food">£3.20</span></div><input type="range" id="sl-food" min="100" max="700" value="320"
+                      id="sv-food">£3.20</span></div><input type="range" id="sl-food" aria-label="Food cost per dish" min="100" max="700" value="320"
                     oninput="runStress()" />
                 </div>
                 <div class="slider-group">
                   <div class="slider-head"><span class="slider-name">Labour cost per cover</span><span
-                      class="slider-val" id="sv-labour">£2.50</span></div><input type="range" id="sl-labour" min="50"
+                      class="slider-val" id="sv-labour">£2.50</span></div><input type="range" id="sl-labour" aria-label="Labour cost per dish" min="50"
                     max="500" value="250" oninput="runStress()" />
                 </div>
                 <div class="slider-group">
                   <div class="slider-head"><span class="slider-name">Packaging cost</span><span class="slider-val"
-                      id="sv-pkg">£0.45</span></div><input type="range" id="sl-pkg" min="10" max="200" value="45"
+                      id="sv-pkg">£0.45</span></div><input type="range" id="sl-pkg" aria-label="Packaging cost per dish" min="10" max="200" value="45"
                     oninput="runStress()" />
                 </div>
                 <div class="slider-group">
                   <div class="slider-head"><span class="slider-name">Platform commission</span><span class="slider-val"
-                      id="sv-comm">30%</span></div><input type="range" id="sl-comm" min="0" max="40" value="30"
+                      id="sv-comm">30%</span></div><input type="range" id="sl-comm" aria-label="Delivery commission rate" min="0" max="40" value="30"
                     oninput="runStress()" />
                 </div>
                 <div class="slider-group">
                   <div class="slider-head"><span class="slider-name">Target GP margin</span><span class="slider-val"
-                      id="sv-gp">65%</span></div><input type="range" id="sl-gp" min="40" max="80" value="65"
+                      id="sv-gp">65%</span></div><input type="range" id="sl-gp" aria-label="Gross profit target" min="40" max="80" value="65"
                     oninput="runStress()" />
                 </div>
                 <button class="tool-btn-main" onclick="runStress()">Get instant breakdown</button>
@@ -2493,9 +2493,9 @@
             <div class="tool-2col">
               <div>
                 <div class="field-label">Business Name</div>
-                <input type="text" class="field-input" placeholder="e.g. Blue Orchid Thai" id="nap-name-teaser" />
+                <input type="text" class="field-input" aria-label="Search restaurant name" placeholder="e.g. Blue Orchid Thai" id="nap-name-teaser" />
                 <div class="field-label">Postcode</div>
-                <input type="text" class="field-input" placeholder="e.g. SW1A 1AA" id="nap-post-teaser" />
+                <input type="text" class="field-input" aria-label="Enter postcode" placeholder="e.g. SW1A 1AA" id="nap-post-teaser" />
                 <button class="tool-btn-main" onclick="location.href='/tools/NAP_CHECKER.html'">Launch Full Trust Audit →</button>
               </div>
               <div class="result-box">
@@ -2793,7 +2793,7 @@
             
             <div id="cta-wrap">
               <div class="cta-form" style="display: flex; gap: 12px; margin-bottom: 15px;">
-                <input type="email" class="cta-input" placeholder="you@restaurant.co.uk" id="cta-email" style="flex: 1; padding: 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(0,0,0,0.2); color: white;" />
+                <input type="email" class="cta-input" aria-label="Email for profit report" placeholder="you@restaurant.co.uk" id="cta-email" style="flex: 1; padding: 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(0,0,0,0.2); color: white;" />
                 <button class="btn btn-fill btn-lg" onclick="submitWL('cta-wrap','cta-ok')" style="padding: 18px 30px; border-radius: 12px; font-weight: 700;">Get my free report</button>
               </div>
               <p class="cta-note" style="font-size: 0.85rem; color: var(--ink3);"><i class="fas fa-shield-check"></i> No credit card. Unsubscribe any time. Your data stays private.</p>
@@ -2920,7 +2920,7 @@
         <h2 style="font-family:'Instrument Serif', serif; font-size:2.5rem; margin-bottom:20px;">Download the 2026 <em>Profit Survival PDF</em></h2>
         <p style="color:var(--ink4); margin-bottom:30px;">Get the executive summary of our 2026 research. 15 pages of actionable pricing strategies and procurement audits.</p>
         <div class="cta-form" style="display:flex; gap:10px; margin-bottom:15px;">
-            <input type="email" class="cta-input" placeholder="Enter your email" id="exit-email" style="flex:1; background:rgba(255,255,255,0.05); border:1px solid var(--line); padding:15px; border-radius:10px; color:white;" />
+            <input type="email" class="cta-input" aria-label="Email for download" placeholder="Enter your email" id="exit-email" style="flex:1; background:rgba(255,255,255,0.05); border:1px solid var(--line); padding:15px; border-radius:10px; color:white;" />
             <button class="btn btn-fill" onclick="submitExit()" style="padding:15px 25px; border-radius:10px; font-weight:700;">Send PDF</button>
         </div>
         <p style="font-size:0.8rem; color:var(--ink3);">No spam. Join 284+ other Thai restaurateurs.</p>
