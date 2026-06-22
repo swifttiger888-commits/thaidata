@@ -275,6 +275,20 @@
       descent-override: 22%;
       line-gap-override: 0%;
     }
+    @font-face {
+      font-family: 'Instrument-fallback';
+      src: local('Georgia'), local('Times New Roman');
+      size-adjust: 105%;
+      ascent-override: 95%;
+      descent-override: 25%;
+      line-gap-override: 0%;
+    }
+    body {
+      font-family: 'Inter', 'Inter-fallback', system-ui, sans-serif;
+    }
+    h1, h2, h3, .instrument {
+      font-family: 'Instrument Serif', 'Instrument-fallback', Georgia, serif;
+    }
     *,
     *::before,
     *::after {
