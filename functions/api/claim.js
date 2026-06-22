@@ -1,7 +1,7 @@
 // ThaiData UK — POST /api/claim
 // Submit a claim for a Thai restaurant listing
 
-import { sendClaimConfirmationEmail } from './_email.js';
+import { sendClaimConfirmationEmail, sendAdminClaimNotification } from './_email.js';
 
 /**
  * Handles POST /api/claim — submits a new claim for a restaurant listing
@@ -87,9 +87,19 @@ export async function onRequestPost(context) {
 
     const claimId = result.meta.last_row_id;
 
-    // Send both notifications before responding (inline, not waitUntil)
+    // Send notifications before responding (inline, not waitUntil)
     await Promise.allSettled([
       sendAdminNotification(env, {
+        id: claimId,
+        restaurant_name,
+        city,
+        claimer_name,
+        claimer_email,
+        claimer_phone,
+        claimer_role,
+        business_type,
+      }),
+      sendAdminClaimNotification(env, {
         id: claimId,
         restaurant_name,
         city,

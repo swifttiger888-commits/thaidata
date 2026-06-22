@@ -392,3 +392,33 @@ export async function sendClaimRejectedEmail(env, { claimer_name, claimer_email,
     restaurantName: restaurant_name,
   });
 }
+
+/**
+ * Admin notification — sent to hello@thaidata.uk when a new claim is submitted
+ */
+export async function sendAdminClaimNotification(env, { id, restaurant_name, city, claimer_name, claimer_email, claimer_phone, claimer_role, business_type }) {
+  const subject = `🔔 New claim #${id} — ${restaurant_name}, ${city}`;
+  const role = claimer_role === 'owner' ? 'Owner' : claimer_role === 'manager' ? 'Manager' : claimer_role === 'head_chef' ? 'Head Chef' : 'Staff';
+  const businessType = business_type === 'takeaway' ? 'Takeaway' : 'Restaurant';
+  const phoneLine = claimer_phone ? `\n📞 ${claimer_phone}` : '';
+
+  const html = `<p style="font-size:15px;line-height:1.6;margin:0 0 16px;">New claim submitted.</p>
+<table style="font-size:14px;line-height:1.8;margin:0 0 16px;border-collapse:collapse;">
+  <tr><td style="padding:4px 12px 4px 0;color:#666;">Restaurant:</td><td style="padding:4px 0;font-weight:600;">${restaurant_name}</td></tr>
+  <tr><td style="padding:4px 12px 4px 0;color:#666;">City:</td><td style="padding:4px 0;">${city}</td></tr>
+  <tr><td style="padding:4px 12px 4px 0;color:#666;">Type:</td><td style="padding:4px 0;">${businessType}</td></tr>
+  <tr><td style="padding:4px 12px 4px 0;color:#666;">Claimant:</td><td style="padding:4px 0;">${claimer_name}</td></tr>
+  <tr><td style="padding:4px 12px 4px 0;color:#666;">Email:</td><td style="padding:4px 0;"><a href="mailto:${claimer_email}" style="color:#10B981;">${claimer_email}</a></td></tr>
+  <tr><td style="padding:4px 12px 4px 0;color:#666;">Role:</td><td style="padding:4px 0;">${role}</td></tr>${phoneLine ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Phone:</td><td style="padding:4px 0;">${claimer_phone}</td></tr>` : ''}
+</table>
+<p style="margin:20px 0 0;"><a href="https://thaidata.uk/admin/" style="display:inline-block;background:#10B981;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Review in Admin →</a></p>`;
+
+  return sendEmail(env, {
+    to: 'hello@thaidata.uk',
+    subject,
+    html,
+    emailType: 'admin_claim_notification',
+    claimId: id,
+    restaurantName: restaurant_name,
+  });
+}
