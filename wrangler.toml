@@ -9,7 +9,7 @@ compatibility_date = "2026-06-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "thaidata-db"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "1905002a-1739-4a06-b6c2-f08d1c0d77a8"
 
 # Environment variables (set in Cloudflare Dashboard > Workers & Pages > thaidata-uk > Settings > Variables)
 # ADMIN_PASSWORD = your-secure-password

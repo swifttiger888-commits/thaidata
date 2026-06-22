@@ -944,7 +944,7 @@
                         <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">
                 Siam Zapp Authentic Thai Noodle Bar is a Thai takeaway in Blackburn With Darwen, Blackburn. FSA hygiene rating 5/5, last inspected May 2024.
             </p>
-                        <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);">
+                        <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);" id="hero-claim-cta">
                 <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
             </p>
         </div>
@@ -988,7 +988,7 @@
 
                                 <p class="score-note">
                     <i class="fas fa-info-circle" style="margin-right: 4px;"></i>
-                    Scores from the Food Standards Agency. Lower is better (0 = highest standard, 25 = needs improvement).
+                    Scores from the Food Standards Agency. Rated 0–5 — 5 = Very Good.
                 </p>
             </div>
 
@@ -1229,6 +1229,10 @@
                         if (p) p.textContent = 'Claim this listing to verify and update your details.';
                     }
                 }
+
+                // Hide hero claim CTA when a listing exists (claimed or has owner data)
+                var heroCta = document.getElementById('hero-claim-cta');
+                if (heroCta) heroCta.style.display = 'none';
 
                 // --- Populate claimed content sections ---
 
