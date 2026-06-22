@@ -304,6 +304,10 @@ body {
         searchResults.classList.add('show');
 
         searchTimer = setTimeout(() => {
+            // GA4 tracking — claim search
+            if (typeof gtag === 'function') {
+                gtag('event', 'claim_search', { search_term: q });
+            }
             fetch(`/api/search?q=${encodeURIComponent(q)}&limit=10`)
                 .then(r => r.json())
                 .then(data => {
@@ -349,6 +353,15 @@ body {
         setStep(2);
         showSection('section-form');
         document.getElementById('section-form').scrollIntoView({ behavior: 'smooth' });
+        // GA4 tracking
+        if (typeof gtag === 'function') {
+            gtag('event', 'claim_select', {
+                restaurant_name: r.name,
+                restaurant_city: r.city || '',
+                fsa_id: r.id ? String(r.id) : 'unknown',
+                has_rating: !!r.rating,
+            });
+        }
     }
 
     // Submit claim
