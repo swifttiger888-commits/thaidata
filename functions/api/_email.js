@@ -65,7 +65,7 @@ async function sendEmail(env, { to, subject, html, emailType, claimId, restauran
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'ThaiData UK <noreply@thaidata.uk>',
+        from: 'ThaiData UK <hello@thaidata.uk>',
         to: [to],
         subject,
         html,
