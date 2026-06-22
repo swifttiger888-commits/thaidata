@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Garden, Leeds — Demo Claimed Listing | ThaiData</title>
+    <meta name="description" content="See what a claimed ThaiData listing looks like. Thai Garden is a demo — photos, menu, hours, website, and FSA data all in one place.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://thaidata.uk/r/demo/claimed-listing/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thaidata.uk/r/demo/claimed-listing/">
+    <meta property="og:title" content="Thai Garden, Leeds — Demo Claimed Listing | ThaiData">
+    <meta property="og:description" content="See what your Thai restaurant listing could look like. Free to claim.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=1200">
+    <meta property="og:locale" content="en_GB">
+    <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
+    <style>
+        :root { --cream: #FFFBEB; --white: #FFFFFF; --green: #10B981; --green-dark: #0A7A6F; --green-light: #D1FAE5; --ink: #1F2937; --ink-secondary: #6B7280; --ink-tertiary: #9CA3AF; --border: #E5E7EB; --border-light: #F3F4F6; --amber: #F59E0B; --amber-light: #FEF3C7; --red: #EF4444; --red-light: #FEE2E2; --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05); --shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1); --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); --radius-sm: 8px; --radius: 12px; --radius-lg: 16px; --radius-xl: 24px; --radius-full: 9999px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        img, svg { max-width: 100%; height: auto; display: block; }
+
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* Nav */
+        nav { background: var(--white); border-bottom: 1px solid var(--border); height: 64px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.3rem; color: var(--ink); text-decoration: none; }
+        .logo-icon { height: 32px; width: auto; }
+        .nav-links { display: flex; gap: 8px; align-items: center; }
+        .nav-links a { color: var(--ink-secondary); font-size: 0.85rem; text-decoration: none; padding: 6px 12px; border-radius: var(--radius-sm); transition: all 0.2s; }
+        .nav-links a:hover { background: var(--border-light); color: var(--ink); }
+
+        /* Demo Banner */
+        .demo-banner { background: var(--green); color: var(--white); text-align: center; padding: 12px 24px; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .demo-banner a { color: var(--white); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+        .demo-banner .dismiss { background: none; border: none; color: rgba(255,255,255,0.7); cursor: pointer; font-size: 1.1rem; margin-left: 12px; }
+        .demo-banner.hidden { display: none; }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 16px 0; font-size: 0.8rem; color: var(--ink-tertiary); }
+        .breadcrumbs a { color: var(--ink-secondary); text-decoration: none; }
+        .breadcrumbs a:hover { color: var(--green-dark); }
+
+        /* Layout */
+        .listing-grid { display: grid; grid-template-columns: 1fr 320px; gap: 32px; padding: 0 0 40px; }
+        @media (max-width: 850px) { .listing-grid { grid-template-columns: 1fr; } }
+
+        /* Hero */
+        .hero-image { border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 24px; position: relative; }
+        .hero-image img { width: 100%; height: 320px; object-fit: cover; }
+        @media (max-width: 600px) { .hero-image img { height: 200px; } }
+
+        /* Restaurant Header */
+        .restaurant-header { margin-bottom: 24px; }
+        .restaurant-header h1 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; margin-bottom: 4px; line-height: 1.2; }
+        .restaurant-header .tagline { color: var(--ink-secondary); font-size: 1rem; margin-bottom: 12px; }
+        .restaurant-header .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+        .restaurant-header .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 600; padding: 6px 14px; border-radius: var(--radius-full); }
+        .badge-green { background: var(--green-light); color: var(--green-dark); }
+        .badge-amber { background: var(--amber-light); color: #92400E; }
+
+        /* Description */
+        .card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 24px; }
+        .card h2 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 14px; }
+        .card p { color: var(--ink-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 10px; }
+
+        /* Feature Tags */
+        .feature-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+        .feature-tag { background: var(--border-light); border: 1px solid var(--border); padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.8rem; color: var(--ink-secondary); display: inline-flex; align-items: center; gap: 6px; }
+        .feature-tag i { color: var(--green); }
+
+        /* Hours + Contact */
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 500px) { .info-grid { grid-template-columns: 1fr; } }
+        .info-item { padding: 12px 0; border-bottom: 1px solid var(--border-light); }
+        .info-item:last-child { border-bottom: none; }
+        .info-item .label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-tertiary); margin-bottom: 4px; }
+        .info-item .value { font-size: 0.9rem; color: var(--ink); }
+        .info-item .value a { color: var(--green-dark); text-decoration: none; }
+        .info-item .value a:hover { text-decoration: underline; }
+
+        /* Photo Gallery */
+        .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+        @media (max-width: 500px) { .photo-grid { grid-template-columns: 1fr; } }
+        .photo-grid img { border-radius: var(--radius-sm); height: 180px; width: 100%; object-fit: cover; }
+        @media (max-width: 500px) { .photo-grid img { height: 220px; } }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: 84px; align-self: start; }
+        .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 20px; }
+        .sidebar-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--green-dark); }
+        .sidebar-card p { font-size: 0.85rem; color: var(--ink-secondary); margin-bottom: 16px; }
+        .sidebar-card .btn { display: block; width: 100%; padding: 12px; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600; text-decoration: none; text-align: center; transition: all 0.2s; cursor: pointer; }
+        .btn-fill { background: var(--green); color: var(--white); border: none; }
+        .btn-fill:hover { background: var(--green-dark); }
+        .btn-ghost { background: transparent; color: var(--green-dark); border: 1px solid var(--green); }
+        .btn-ghost:hover { background: var(--green-light); }
+
+        .sidebar-stat { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-light); font-size: 0.85rem; }
+        .sidebar-stat:last-child { border-bottom: none; }
+        .sidebar-stat .label { color: var(--ink-tertiary); }
+        .sidebar-stat .value { font-weight: 600; color: var(--ink); }
+
+        /* Map Placeholder */
+        .map-placeholder { background: var(--border-light); border-radius: var(--radius); height: 160px; display: flex; align-items: center; justify-content: center; color: var(--ink-tertiary); font-size: 0.85rem; gap: 8px; margin-bottom: 20px; }
+
+        /* Footer */
+        .site-footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; font-size: 0.8rem; color: var(--ink-tertiary); }
+        .site-footer a { color: var(--ink-secondary); text-decoration: none; margin: 0 8px; }
+        .site-footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- Demo Banner -->
+    <div class="demo-banner" id="demo-banner">
+        <i class="fas fa-info-circle"></i>
+        This is an example of a claimed <strong>ThaiData</strong> listing. Claim yours free at
+        <a href="/claim/">Claim Your Listing →</a>
+        <button class="dismiss" onclick="document.getElementById('demo-banner').classList.add('hidden')" aria-label="Dismiss"><i class="fas fa-times"></i></button>
+    </div>
+
+    <nav>
+        <div class="nav-bar">
+            <a href="/" class="logo"><img src="/logo-icon.svg" alt="ThaiData" class="logo-icon"> ThaiData</a>
+            <div class="nav-links">
+                <a href="/claim/">Claim Your Listing</a>
+                <a href="/guides/">Guides</a>
+                <a href="/how-many-thai-restaurants-uk">Data</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrap">
+
+        <div class="breadcrumbs">
+            <a href="/">Home</a> &rsaquo; 
+            <a href="/thai-restaurants-city-breakdown-uk">Leeds</a> &rsaquo; 
+            Thai Garden <span style="color:var(--green);font-size:0.75rem;margin-left:8px;"><i class="fas fa-check-circle"></i> Demo — example listing</span>
+        </div>
+
+        <div class="listing-grid">
+
+            <!-- Main Column -->
+            <div class="main-col">
+
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=1200&q=80" alt="Pad Thai — example claimed listing photo" loading="lazy">
+                </div>
+
+                <div class="restaurant-header">
+                    <div class="badge-row">
+                        <span class="badge badge-green"><i class="fas fa-star"></i> FSA 5/5</span>
+                        <span class="badge badge-amber"><i class="fas fa-utensils"></i> Restaurant</span>
+                        <span class="badge badge-green"><i class="fas fa-check-circle"></i> Owner Verified</span>
+                    </div>
+                    <h1>Thai Garden — <em>Authentic Thai Cuisine in Leeds</em></h1>
+                    <p class="tagline">Family-owned Thai restaurant serving traditional recipes passed down for three generations.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-wine-glass-alt"></i> Licensed bar</span>
+                        <span class="feature-tag"><i class="fas fa-seedling"></i> Vegetarian menu</span>
+                        <span class="feature-tag"><i class="fas fa-people-arrows"></i> Private dining</span>
+                        <span class="feature-tag"><i class="fas fa-shopping-bag"></i> Takeaway available</span>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="card">
+                    <h2>About <em>Thai Garden</em></h2>
+                    <p>Welcome to Thai Garden, where we bring the vibrant flavours of Thailand to the heart of Leeds. Our menu celebrates the balance of sweet, sour, salty, and spicy that defines authentic Thai cooking — from our signature Phad Thai to slow-cooked Massaman curry, every dish is made fresh to order using ingredients sourced directly from trusted suppliers.</p>
+                    <p>Whether you're joining us for a relaxed lunch, a celebratory dinner, or ordering takeaway for the family, our team is committed to making every meal memorable. We also offer a dedicated vegetarian menu and can cater for most dietary requirements with advance notice.</p>
+                </div>
+
+                <!-- Hours & Contact -->
+                <div class="card">
+                    <h2>Hours & <em>Contact</em></h2>
+                    <div class="info-grid">
+                        <div>
+                            <div class="info-item">
+                                <div class="label"><i class="far fa-clock" style="margin-right:6px;"></i>Opening Hours</div>
+                                <div class="value">Mon–Sat: 12:00–3:00pm, 5:00–10:00pm<br>Sun: 1:00–9:00pm</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label"><i class="fas fa-phone" style="margin-right:6px;"></i>Phone</div>
+                                <div class="value">0113 000 0000</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label"><i class="fas fa-globe" style="margin-right:6px;"></i>Website</div>
+                                <div class="value"><a href="#">www.thaigardenleeds.co.uk</a></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info-item">
+                                <div class="label"><i class="fas fa-map-marker-alt" style="margin-right:6px;"></i>Address</div>
+                                <div class="value">42 Park Row<br>Leeds<br>LS1 5HN</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="label"><i class="fas fa-envelope" style="margin-right:6px;"></i>Email</div>
+                                <div class="value"><a href="mailto:hello@thaigardenleeds.co.uk">hello@thaigardenleeds.co.uk</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="card">
+                    <h2>Photo <em>Gallery</em></h2>
+                    <p style="color:var(--ink-tertiary);font-size:0.85rem;margin-bottom:12px;">Add photos of your dishes, interior, and team — free with every claimed listing.</p>
+                    <div class="photo-grid">
+                        <img src="https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4?w=600&q=80" alt="Thai green curry — example claimed listing photo" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Thai food bowl — example claimed listing photo" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=600&q=80" alt="Thai food spread — example claimed listing photo" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <div class="sidebar-card">
+                    <h3><i class="fas fa-check-circle" style="color:var(--green);margin-right:6px;"></i> Owner Verified</h3>
+                    <p>This listing is managed by the restaurant owner. Photos, hours, and contact details are provided and maintained by the business.</p>
+                    <a href="/claim/" class="btn btn-fill"><i class="fas fa-pen" style="margin-right:6px;"></i> Claim Your Free Listing</a>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>At a <em>Glance</em></h3>
+                    <div class="sidebar-stat">
+                        <span class="label">Cuisine</span>
+                        <span class="value">Thai</span>
+                    </div>
+                    <div class="sidebar-stat">
+                        <span class="label">FSA Rating</span>
+                        <span class="value" style="color:var(--green);">5/5 — Very Good</span>
+                    </div>
+                    <div class="sidebar-stat">
+                        <span class="label">Type</span>
+                        <span class="value">Restaurant</span>
+                    </div>
+                    <div class="sidebar-stat">
+                        <span class="label">Price Range</span>
+                        <span class="value">££ — £10–£20</span>
+                    </div>
+                    <div class="sidebar-stat">
+                        <span class="label">Last Inspection</span>
+                        <span class="value">March 2025</span>
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt" style="font-size:1.3rem;"></i>
+                    <span>Map — 42 Park Row, Leeds</span>
+                </div>
+
+                <p style="font-size:0.75rem;color:var(--ink-tertiary);text-align:center;line-height:1.6;">
+                    <i class="fas fa-info-circle"></i> This is a demo listing created to show what a claimed ThaiData profile looks like.<br>
+                    <a href="/claim/" style="color:var(--green-dark);">Claim your real listing for free →</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 ThaiData.uk · <a href="/about">About</a> · <a href="/guides">Guides</a> · <a href="/privacy">Privacy</a> · <a href="/how-many-thai-restaurants-uk">Data</a> · <a href="/claim/">Claim</a></p>
+        <p style="margin-top:6px;font-size:0.75rem;">Demo listing. Not a real restaurant.</p>
+    </footer>
+
+    <script>
+        // Dismiss banner persists for session
+        var banner = document.getElementById('demo-banner');
+        if (sessionStorage.getItem('demo-banner-dismissed')) {
+            banner.classList.add('hidden');
+        }
+        banner.querySelector('.dismiss').addEventListener('click', function() {
+            sessionStorage.setItem('demo-banner-dismissed', '1');
+        });
+    </script>
+
+</body>
+</html>
