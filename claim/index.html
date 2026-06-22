@@ -171,6 +171,7 @@ body {
         <div class="card" id="section-search">
             <h2>1. Find Your <em>Restaurant</em></h2>
             <p style="color:var(--ink4);font-size:0.95rem;margin-bottom:16px;">Search for your Thai restaurant by name. We pull data from the Food Standards Agency register.</p>
+            <p style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:10px;padding:12px 16px;font-size:0.88rem;color:rgba(255,255,255,0.8);margin-bottom:18px;"><i class="fas fa-check-circle" style="color:var(--c2);margin-right:6px;"></i><strong>1,275</strong> Thai restaurants listed across the UK. Claim yours in under 2 minutes.</p>
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="Type your restaurant name (min 3 chars)..." autocomplete="off">
                 <div class="results" id="search-results"></div>
@@ -215,7 +216,7 @@ body {
                 <p style="color:var(--ink4);margin-top:8px;">We'll review your claim for <strong id="confirm-name"></strong> within 48 hours.</p>
                 <p style="color:var(--ink4);font-size:0.85rem;">Check <strong id="confirm-email"></strong> for updates.</p>
                 <p style="color:var(--ink4);font-size:0.8rem;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);">Need to provide extra proof? Email documents to <a href="mailto:hello@thaidata.uk" style="color:var(--c2);">hello@thaidata.uk</a> with your restaurant name.</p>
-                <button class="btn btn-secondary" style="margin-top:20px;" onclick="checkStatus()">Check Claim Status</button>
+                <button class="btn btn-fill" style="margin-top:20px;" onclick="checkStatus()">Check Claim Status</button>
             </div>
         </div>
 
@@ -231,7 +232,7 @@ body {
         <!-- FAQ -->
         <div class="card" style="margin-top:40px;">
             <h2>Frequently <em>Asked</em> Questions</h2>
-            <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-item open" onclick="this.classList.toggle('open')">
                 <div class="q">Is it really free? <i class="fas fa-chevron-down" style="font-size:0.8rem;"></i></div>
                 <div class="a">Yes. Claiming and managing your listing is completely free. We're building the most comprehensive directory of UK Thai restaurants.</div>
             </div>
