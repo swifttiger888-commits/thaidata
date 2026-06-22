@@ -46,6 +46,9 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Songkran 2026](https://thaidata.uk/songkran-uk.html): Thai New Year events across the UK. Dates, venues, traditions.
 - [Loy Krathong](https://thaidata.uk/loy-krathong-uk.html): Festival of Lights. UK celebrations, locations, dates.
 
+## Chains
+- [UK Thai Restaurant Chains](https://thaidata.uk/thai-chains-uk): Data comparison of 10 UK Thai chains. Location counts, FSA hygiene ratings, geographic coverage. Giggling Squid (47), Rosa's Thai (32), Busaba (8), and more.
+
 ## Data
 - [Hugging Face Dataset](https://huggingface.co/datasets/thaidata/uk-thai-restaurants): Full dataset — 1,594 restaurants, 253 cities, geocoded. Free to use (ODbL).
 - [API](https://thaidata.uk/api/v1/): Machine-readable JSON endpoint for UK Thai restaurant statistics.
