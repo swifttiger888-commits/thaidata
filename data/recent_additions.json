@@ -1,6 +1,62 @@
 {
-  "updated": "2026-06-15",
+  "updated": "2026-06-22",
   "restaurants": [
+    {
+      "fsa_id": "1960055",
+      "name": "Thai Food Co.",
+      "city": "Torbay",
+      "type": "takeaway",
+      "discovered_on": "2026-06-22"
+    },
+    {
+      "fsa_id": "1890653",
+      "name": "Thai Noodle Express",
+      "city": "Birmingham",
+      "type": "takeaway",
+      "discovered_on": "2026-06-22"
+    },
+    {
+      "fsa_id": "1875566",
+      "name": "Halal Thai Kitchen",
+      "city": "Birmingham",
+      "type": "takeaway",
+      "discovered_on": "2026-06-22"
+    },
+    {
+      "fsa_id": "1867745",
+      "name": "Thai Corner Limited",
+      "city": "Neath Port Talbot",
+      "type": "restaurant",
+      "discovered_on": "2026-06-22"
+    },
+    {
+      "fsa_id": "1956426",
+      "name": "Jasmine Thai Cuisine",
+      "city": "South Norfolk",
+      "type": "restaurant",
+      "discovered_on": "2026-06-22"
+    },
+    {
+      "fsa_id": "1605544",
+      "name": "Jude's Thai",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-06-22"
+    },
+    {
+      "fsa_id": "1489166",
+      "name": "Thai Village",
+      "city": "Thanet",
+      "type": "restaurant",
+      "discovered_on": "2026-06-22"
+    },
+    {
+      "fsa_id": "1827401",
+      "name": "Rosa's Thai",
+      "city": "Reading",
+      "type": "restaurant",
+      "discovered_on": "2026-06-22"
+    },
     {
       "fsa_id": "1932688",
       "name": "Thai and Fry",

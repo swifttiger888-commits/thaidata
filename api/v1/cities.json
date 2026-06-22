@@ -3,15 +3,15 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-06-15",
-  "total_uk": 1266,
-  "cities_tracked": 253,
+  "updated": "2026-06-22",
+  "total_uk": 1265,
+  "cities_tracked": 254,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 281,
-      "restaurants": 233,
+      "total_thai_businesses": 280,
+      "restaurants": 232,
       "takeaways": 48,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
@@ -258,6 +258,26 @@
       "postcode_areas": 3
     },
     {
+      "name": "Birmingham",
+      "population": 1166000,
+      "total_thai_businesses": 8,
+      "restaurants": 6,
+      "takeaways": 2,
+      "per_100k": 0.7,
+      "avg_hygiene_rating": 4.8,
+      "postcode_areas": 6
+    },
+    {
+      "name": "Thanet",
+      "population": null,
+      "total_thai_businesses": 8,
+      "restaurants": 8,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 2
+    },
+    {
       "name": "Huddersfield",
       "population": 437000,
       "total_thai_businesses": 8,
@@ -338,16 +358,6 @@
       "postcode_areas": 5
     },
     {
-      "name": "Thanet",
-      "population": null,
-      "total_thai_businesses": 7,
-      "restaurants": 7,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
-    },
-    {
       "name": "Shropshire",
       "population": 325000,
       "total_thai_businesses": 7,
@@ -388,16 +398,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Wirral",
-      "population": 325000,
-      "total_thai_businesses": 7,
-      "restaurants": 7,
-      "takeaways": 0,
-      "per_100k": 2.2,
-      "avg_hygiene_rating": 4.1,
-      "postcode_areas": 2
-    },
-    {
       "name": "Elmbridge",
       "population": null,
       "total_thai_businesses": 7,
@@ -434,7 +434,7 @@
       "restaurants": 6,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 4.0,
+      "avg_hygiene_rating": 4.7,
       "postcode_areas": 2
     },
     {
@@ -468,16 +468,6 @@
       "postcode_areas": 3
     },
     {
-      "name": "Birmingham",
-      "population": 1166000,
-      "total_thai_businesses": 6,
-      "restaurants": 6,
-      "takeaways": 0,
-      "per_100k": 0.5,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 4
-    },
-    {
       "name": "Durham",
       "population": null,
       "total_thai_businesses": 6,
@@ -506,6 +496,16 @@
       "per_100k": 2.3,
       "avg_hygiene_rating": 4.7,
       "postcode_areas": 4
+    },
+    {
+      "name": "Wirral",
+      "population": 325000,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": 1.8,
+      "avg_hygiene_rating": 4.2,
+      "postcode_areas": 2
     },
     {
       "name": "Milton Keynes",
@@ -566,6 +566,16 @@
       "per_100k": 0.8,
       "avg_hygiene_rating": 4.5,
       "postcode_areas": 5
+    },
+    {
+      "name": "Neath Port Talbot",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 2,
+      "takeaways": 4,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 2
     },
     {
       "name": "Stockport",
@@ -688,16 +698,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Portsmouth",
-      "population": 208000,
-      "total_thai_businesses": 5,
-      "restaurants": 5,
-      "takeaways": 0,
-      "per_100k": 2.4,
-      "avg_hygiene_rating": 4.8,
-      "postcode_areas": 4
-    },
-    {
       "name": "Canterbury",
       "population": 64000,
       "total_thai_businesses": 5,
@@ -756,16 +756,6 @@
       "per_100k": 1.7,
       "avg_hygiene_rating": 3.8,
       "postcode_areas": 4
-    },
-    {
-      "name": "Neath Port Talbot",
-      "population": null,
-      "total_thai_businesses": 5,
-      "restaurants": 1,
-      "takeaways": 4,
-      "per_100k": null,
-      "avg_hygiene_rating": 3.8,
-      "postcode_areas": 2
     },
     {
       "name": "Tandridge",
@@ -855,6 +845,16 @@
       "takeaways": 0,
       "per_100k": 1.2,
       "avg_hygiene_rating": 4.5,
+      "postcode_areas": 3
+    },
+    {
+      "name": "Portsmouth",
+      "population": 208000,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": 1.9,
+      "avg_hygiene_rating": 4.8,
       "postcode_areas": 3
     },
     {
@@ -975,16 +975,6 @@
       "takeaways": 2,
       "per_100k": 1.7,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 4
-    },
-    {
-      "name": "Sunderland",
-      "population": 278000,
-      "total_thai_businesses": 4,
-      "restaurants": 1,
-      "takeaways": 3,
-      "per_100k": 1.4,
-      "avg_hygiene_rating": 3.2,
       "postcode_areas": 4
     },
     {
@@ -1198,16 +1188,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Wokingham",
-      "population": 180000,
-      "total_thai_businesses": 3,
-      "restaurants": 3,
-      "takeaways": 0,
-      "per_100k": 1.7,
-      "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
-    },
-    {
       "name": "Gravesham",
       "population": null,
       "total_thai_businesses": 3,
@@ -1316,6 +1296,16 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
       "postcode_areas": 1
+    },
+    {
+      "name": "Sunderland",
+      "population": 278000,
+      "total_thai_businesses": 3,
+      "restaurants": 1,
+      "takeaways": 2,
+      "per_100k": 1.1,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 3
     },
     {
       "name": "Fermanagh and Omagh",
@@ -1438,16 +1428,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Reigate and Banstead",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 2,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
-    },
-    {
       "name": "Vale of Glamorgan",
       "population": null,
       "total_thai_businesses": 2,
@@ -1506,6 +1486,16 @@
       "per_100k": 0.8,
       "avg_hygiene_rating": 3.5,
       "postcode_areas": 1
+    },
+    {
+      "name": "Wokingham",
+      "population": 180000,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": 1.1,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 2
     },
     {
       "name": "Cotswold",
@@ -1978,6 +1968,16 @@
       "postcode_areas": 1
     },
     {
+      "name": "Reigate and Banstead",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Thurrock",
       "population": null,
       "total_thai_businesses": 1,
@@ -1999,6 +1999,16 @@
     },
     {
       "name": "Huntingdonshire",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
+      "name": "South Norfolk",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 1,

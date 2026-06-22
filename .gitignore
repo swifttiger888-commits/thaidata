@@ -5,6 +5,7 @@
 .env.*.local
 
 # Python
+.venv/
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -28,6 +29,7 @@ node_modules/
 Thumbs.db
 
 # Temp / generated
+.wrangler/
 .tmp/
 *.tmp
 *.bak
