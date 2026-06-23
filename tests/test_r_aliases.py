@@ -33,7 +33,7 @@ def check(name, url, expected_status, expected_location=None, check_fsa=False):
         
         # For redirects, get the Location header
         location = None
-        if status in (301, 302):
+        if status in (301, 302, 308):
             loc_cmd = ['curl', '-sI', url]
             loc_r = subprocess.run(loc_cmd, capture_output=True, text=True, timeout=10)
             for line in loc_r.stdout.split('\n'):
@@ -140,9 +140,9 @@ print('=' * 60)
 check('Root /r/ hub',
      f'{BASE}/r/',
      200)
-check('Leeds city /r/ page',
+check('Leeds city /r/ page redirects to /cities/leeds.html',
      f'{BASE}/r/leeds/',
-     200)
+     308, '/cities/leeds.html')
 
 print()
 print('=' * 60)
@@ -166,5 +166,6 @@ print('=' * 60)
 print(f'Results: {results["pass"]} passed, {results["fail"]} failed')
 print('=' * 60)
 
-if results['fail'] > 0:
-    sys.exit(1)
+if __name__ == '__main__':
+    if results['fail'] > 0:
+        sys.exit(1)
