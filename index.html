@@ -2939,7 +2939,7 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js" defer></script>
   <script>
     // Mobile menu toggle
     function toggleMenu() {
@@ -3144,38 +3144,40 @@
       { name: "Coconut Ice Cream", thai: "ไอศกรีมกะทิ", rom: "Ai Sakhrim Kathi", aliases: ["coconut ice cream", "thai ice cream", "coconut icecream", "ไอศกรีมกะทิ", "ไอศกรีม"], cost: 1.20, pct: 0.175, note: "Coconut milk ice cream, peanuts, sticky rice, jackfruit" },
       { name: "Purple Rice Pudding", thai: "ข้าวเหนียวดำ", rom: "Khao Niao Dam", aliases: ["purple rice", "black sticky rice", "purple rice pudding", "khao niao dam", "black rice", "ข้าวเหนียวดำ"], cost: 1.10, pct: 0.168, note: "Black glutinous rice, coconut cream, palm sugar" },
     ];
-    const fuseItems = [];
-    DISHES.forEach(d => { d.aliases.forEach(a => fuseItems.push({ alias: a, dish: d })); fuseItems.push({ alias: d.name.toLowerCase(), dish: d }); fuseItems.push({ alias: d.rom.toLowerCase(), dish: d }) });
-    const fuse = new Fuse(fuseItems, { keys: ['alias'], threshold: 0.45, includeScore: true });
-
     function clearDish() { document.getElementById('dish-result').innerHTML = `<div class="result-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><p>Type a dish name to get started</p></div>` }
 
-    function runDish() {
-      const q = document.getElementById('dish-input').value.trim().toLowerCase();
-      const pl = document.getElementById('dish-platform').value;
-      const gp = parseInt(document.getElementById('dish-gp').value) / 100;
-      const el = document.getElementById('dish-result');
-      if (!q) { el.innerHTML = `<div class="result-empty"><p>Please type a dish name</p></div>`; return }
-      const res = fuse.search(q);
-      if (!res.length) { el.innerHTML = `<div class="result-empty"><p>No match for "${q}" — try another spelling</p></div>`; return }
-      const d = res[0].item.dish, conf = Math.round((1 - res[0].score) * 100);
-      const comm = { dine: 0, uber: 0.30, deliveroo: 0.32, justeat: 0.14 }[pl];
-      const vat = 0.20;
-      const minP = d.cost / ((1 - gp) * (1 - comm) * (1 / (1 + vat)));
-      const recP = Math.ceil(minP * 1.08 / 0.50) * 0.50 - 0.05;
-      const minR = Math.ceil(minP / 0.50) * 0.50 - 0.05;
-      const net = recP * (1 - comm) / (1 + vat);
-      const actGP = ((net - d.cost) / net * 100).toFixed(1);
-      const plN = { dine: 'Dine-in', uber: 'Uber Eats', deliveroo: 'Deliveroo', justeat: 'Just Eat' }[pl];
-      el.innerHTML = `
+    document.addEventListener('DOMContentLoaded', function() {
+      const fuseItems = [];
+      DISHES.forEach(d => { d.aliases.forEach(a => fuseItems.push({ alias: a, dish: d })); fuseItems.push({ alias: d.name.toLowerCase(), dish: d }); fuseItems.push({ alias: d.rom.toLowerCase(), dish: d }) });
+      const fuse = new Fuse(fuseItems, { keys: ['alias'], threshold: 0.45, includeScore: true });
+
+      window.runDish = function() {
+        const q = document.getElementById('dish-input').value.trim().toLowerCase();
+        const pl = document.getElementById('dish-platform').value;
+        const gp = parseInt(document.getElementById('dish-gp').value) / 100;
+        const el = document.getElementById('dish-result');
+        if (!q) { el.innerHTML = `<div class="result-empty"><p>Please type a dish name</p></div>`; return }
+        const res = fuse.search(q);
+        if (!res.length) { el.innerHTML = `<div class="result-empty"><p>No match for "${q}" — try another spelling</p></div>`; return }
+        const d = res[0].item.dish, conf = Math.round((1 - res[0].score) * 100);
+        const comm = { dine: 0, uber: 0.30, deliveroo: 0.32, justeat: 0.14 }[pl];
+        const vat = 0.20;
+        const minP = d.cost / ((1 - gp) * (1 - comm) * (1 / (1 + vat)));
+        const recP = Math.ceil(minP * 1.08 / 0.50) * 0.50 - 0.05;
+        const minR = Math.ceil(minP / 0.50) * 0.50 - 0.05;
+        const net = recP * (1 - comm) / (1 + vat);
+        const actGP = ((net - d.cost) / net * 100).toFixed(1);
+        const plN = { dine: 'Dine-in', uber: 'Uber Eats', deliveroo: 'Deliveroo', justeat: 'Just Eat' }[pl];
+        el.innerHTML = `
     <div class="r-match"><div class="r-match-name">Matched: ${d.name}</div><div class="r-match-thai">${d.thai} &middot; ${d.rom}</div><div class="r-match-conf">Confidence: ${conf}% &middot; ${d.note}</div></div>
     <div class="r-row"><span class="r-key">Food cost (database)</span><span class="r-val">&pound;${d.cost.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Platform</span><span class="r-val">${plN}${comm ? ` (${Math.round(comm * 100)}%)` : ''}</span></div>
     <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">&pound;${minR.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.15rem">&pound;${recP.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Actual GP at recommended</span><span class="r-val ${parseFloat(actGP) >= 65 ? 'green' : 'amber'}">${actGP}%</span></div>`;
-    }
-    document.getElementById('dish-input').addEventListener('keydown', e => { if (e.key === 'Enter') runDish() });
+      };
+      document.getElementById('dish-input').addEventListener('keydown', e => { if (e.key === 'Enter') window.runDish() });
+    });
 
     // ═══ NLW CALCULATOR ═══
     function runNLW() {
