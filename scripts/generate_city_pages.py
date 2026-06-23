@@ -346,6 +346,28 @@ def build_schema_html(schemas: list[dict[str, Any]]) -> str:
     return "\n".join(parts)
 
 
+def validate_rendered_schema(schema_html: str) -> list[str]:
+    """Validate that every ld+json block in schema_html is parseable JSON.
+
+    Returns a list of error strings.  Empty list = all valid.
+    Call after build_schema_html() and before injecting into the page.
+    """
+    errors: list[str] = []
+    pattern = re.compile(
+        r'<script\s+type="application/ld\+json"[^>]*>(.*?)</script>',
+        re.DOTALL,
+    )
+    for i, match in enumerate(pattern.finditer(schema_html), 1):
+        raw = match.group(1)
+        try:
+            json.loads(raw)
+        except json.JSONDecodeError as exc:
+            errors.append(
+                f"Schema block {i}: invalid JSON at position {exc.pos} — {exc.msg}"
+            )
+    return errors
+
+
 def update_hero_stats(html: str, city: str, stats: dict[str, Any], total_uk: int) -> str:
     """Update stale hero-section numbers to match current (post-exclusion) stats.
 
@@ -593,7 +615,7 @@ def inject_auto_zones(html: str, zone_name: str, content: str) -> str:
     replacement = f"<!-- AUTO:{zone_name} -->\n{content}\n<!-- END:AUTO:{zone_name} -->"
 
     if re.search(pattern, html, re.DOTALL):
-        return re.sub(pattern, replacement, html, count=1, flags=re.DOTALL)
+        return re.sub(pattern, lambda m: replacement, html, count=1, flags=re.DOTALL)
 
     # Not found — append before </body>
     print(f"  ℹ️  AUTO:{zone_name} not found — appending before </body>")
@@ -743,9 +765,19 @@ def process_city(
     for start, end in reversed(schema_to_remove):
         html = html[:start] + html[end:]
 
+    # Build and validate schema HTML before injecting into the page.
+    # Catches JSON serialisation failures (e.g. backslash corruption in re.sub)
+    # that the earlier dict-level validation cannot see.
+    schema_html = build_schema_html(schemas)
+    render_errors = validate_rendered_schema(schema_html)
+    if render_errors:
+        result["action"] = "quarantined"
+        result["errors"].extend(render_errors)
+        return result
+
     if mode == "programmatic":
         # Replace or inject all AUTO zones
-        html = inject_auto_zones(html, "schema", build_schema_html(schemas))
+        html = inject_auto_zones(html, "schema", schema_html)
         html = inject_auto_zones(html, "market-snapshot", build_market_snapshot_html(city_name, stats))
         if stats["chains"]:
             html = inject_auto_zones(html, "chain-presence", build_chain_presence_html(city_name, stats["chains"], stats["count"]))
@@ -756,7 +788,7 @@ def process_city(
     elif mode == "hybrid":
         # Replace existing AUTO zones + inject new ones needed for enrichment
         for zone_name, zone_content_fn in [
-            ("schema", lambda: build_schema_html(schemas)),
+            ("schema", lambda: schema_html),
             ("market-snapshot", lambda: build_market_snapshot_html(city_name, stats)),
             ("chain-presence", lambda: build_chain_presence_html(city_name, stats["chains"], stats["count"]) if stats["chains"] else None),
             ("postcode-areas", lambda: build_postcode_areas_html(stats["postcode_areas"], city_name) if stats["postcode_areas"] else None),
