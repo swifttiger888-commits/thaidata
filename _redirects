@@ -5,6 +5,10 @@
 /sitemap /sitemap.xml 301
 /sitemap-pages /sitemap-pages.xml 301
 
+# City hub pages — rewrite /r/<city>/ to cities/<city>.html
+/r/:city  /cities/:city.html  200
+/r/:city/  /cities/:city.html  200
+
 # Redirect deleted non-Thai chain pages
 /chains/chai-green /chains/ 301
 /chains/i-chai-express /chains/ 301
