@@ -331,9 +331,9 @@
             box-shadow: var(--shadow);
         }
 
-        /* ============ CONTACT & INFO CARD (mobile enrichment) ============ */
+        /* ============ CONTACT & INFO CARD (replaces action bar + quick-info) ============ */
         .contact-info-card {
-            display: none; /* hidden on desktop — action bar+quick-info handle this */
+            display: block;
         }
         .contact-grid {
             display: flex;
@@ -374,10 +374,7 @@
             font-weight: 600;
         }
 
-        @media (max-width: 768px) {
-            .actions-bar, .quick-info { display: none !important; }
-            .contact-info-card { display: block; }
-        }
+        .actions-bar, .quick-info { display: none !important; }
 
         /* ============ MAIN LAYOUT ============ */
         .main {
