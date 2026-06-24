@@ -331,6 +331,24 @@
             box-shadow: var(--shadow);
         }
 
+        /* ============ QUICK INFO MOBILE ============ */
+        @media (max-width: 768px) {
+            /* Hide phone/website cards (duplicated in action bar) */
+            .quick-info-card:has(.fa-phone-alt),
+            .quick-info-card:has(.fa-globe) {
+                display: none !important;
+            }
+            /* Compact opening hours so it fits beside price card */
+            .quick-info-card:has(.fa-clock) {
+                min-width: 160px !important;
+            }
+            .quick-info-card:has(.fa-clock) > div:last-child {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
         /* ============ MAIN LAYOUT ============ */
         .main {
             max-width: 1100px;
