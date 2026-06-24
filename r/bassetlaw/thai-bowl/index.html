@@ -324,22 +324,52 @@
             box-shadow: var(--shadow);
         }
 
-        /* ============ QUICK INFO MOBILE ============ */
+        /* ============ CONTACT & INFO CARD (mobile enrichment) ============ */
+        .contact-info-card {
+            display: none; /* hidden on desktop — action bar+quick-info handle this */
+        }
+        .contact-grid {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .contact-block {
+            flex: 1;
+            min-width: 180px;
+        }
+        .contact-block-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .contact-hours-text {
+            font-size: 0.9rem;
+            color: var(--ink-secondary);
+            line-height: 1.8;
+        }
+        .contact-detail {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        .contact-detail a {
+            color: var(--green-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+        .contact-detail .price-label {
+            color: var(--ink-secondary);
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
-            /* Hide phone/website cards (duplicated in action bar) */
-            .quick-info-card:has(.fa-phone-alt),
-            .quick-info-card:has(.fa-globe) {
-                display: none !important;
-            }
-            /* Compact opening hours so it fits beside price card */
-            .quick-info-card:has(.fa-clock) {
-                min-width: 160px !important;
-            }
-            .quick-info-card:has(.fa-clock) > div:last-child {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+            .actions-bar, .quick-info { display: none !important; }
+            .contact-info-card { display: block; }
         }
 
         /* ============ MAIN LAYOUT ============ */
@@ -1060,6 +1090,22 @@
                         referrerpolicy="no-referrer-when-downgrade"
                         title="Map showing location of Thai Bowl in Bassetlaw">
                     </iframe>
+                </div>
+            </div>
+
+            <!-- === CONTACT & INFO (shown on mobile instead of action bar + quick-info) === -->
+                        <div class="card contact-info-card">
+                <h2 class="card-title">Hours &amp; <em>Contact</em></h2>
+                <div class="contact-grid">
+                                        <div class="contact-block">
+                        <h4 class="contact-block-title"><i class="far fa-clock" style="margin-right:6px;"></i> Opening Hours</h4>
+                        <div class="contact-hours-text">Monday: 5:00 – 10:30 PM<br>Tuesday: Closed<br>Wednesday: 5:00 – 10:30 PM<br>Thursday: 5:00 – 10:30 PM<br>Friday: 5:00 – 10:30 PM<br>Saturday: 5:00 – 10:30 PM<br>Sunday: 5:00 – 10:30 PM</div>
+                    </div>
+                                        <div class="contact-block">
+                        <h4 class="contact-block-title"><i class="fas fa-phone-alt" style="margin-right:6px;"></i> Contact</h4>
+                        <div class="contact-detail"><a href="tel:01777 703887">01777 703887</a></div>
+                        <div class="contact-detail"><a href="https://www.thaibowl-takeaway.co.uk/" target="_blank" rel="noopener">Visit website →</a></div>
+                    </div>
                 </div>
             </div>
 

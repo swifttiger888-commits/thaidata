@@ -531,9 +531,39 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
                 f'            <div class="quick-info-card" style="flex:1;min-width:140px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);">\n                <div style="color:var(--ink-tertiary);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;"><i class="fas fa-globe" style="margin-right:6px;"></i>Website</div>\n                <div style="font-size:0.85rem;"><a href="{enr_website}" target="_blank" rel="noopener" style="color:var(--green-dark);text-decoration:none;word-break:break-all;">Visit website →</a></div>\n            </div>'
             )
         else:
-            html = re.sub(r'<!-- DYNAMIC: quick_info_website -->.*?\n            </div>', '', html, flags=re.DOTALL)
+            html = re.sub(r'<!-- DYNAMIC: quick_info_website -->.*?\\n            </div>', '', html, flags=re.DOTALL)
+
+    # ---- Contact & Info section (mobile-friendly enrichment, hidden on desktop) ----
+    if has_enrichment:
+        html = html.replace('<!-- DYNAMIC: contact_info_open -->\n', '')
+        html = html.replace('            <!-- DYNAMIC: contact_info_close -->\n', '')
+        if enr_hours and len(enr_hours) > 0:
+            hours_str = '<br>'.join(enr_hours[:7])
+            html = html.replace(
+                '<!-- DYNAMIC: contact_hours -->\n                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"far fa-clock\" style=\"margin-right:6px;\"></i> Opening Hours</h4>\n                        <div class=\"contact-hours-text\">Mon\u2013Sun: 5:00\u201310:00\u202fPM</div>\n                    </div>',
+                '                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"far fa-clock\" style=\"margin-right:6px;\"></i> Opening Hours</h4>\n                        <div class=\"contact-hours-text\">' + hours_str + '</div>\n                    </div>'
+            )
+        else:
+            html = re.sub(r'<!-- DYNAMIC: contact_hours -->.*?\n                    </div>', '', html, flags=re.DOTALL)
+
+        detail_items = []
+        if enr_phone:
+            detail_items.append('<div class=\"contact-detail\"><a href=\"tel:' + enr_phone + '\">' + enr_phone + '</a></div>')
+        if enr_website:
+            detail_items.append('<div class=\"contact-detail\"><a href=\"' + enr_website + '\" target=\"_blank\" rel=\"noopener\">Visit website \u2192</a></div>')
+        if enr_price:
+            detail_items.append('<div class=\"contact-detail\"><span class=\"price-label\">Price: ' + enr_price + '</span></div>')
+
+        if detail_items:
+            details_str = '\n                        '.join(detail_items)
+            html = html.replace(
+                '<!-- DYNAMIC: contact_details -->\n                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"fas fa-phone-alt\" style=\"margin-right:6px;\"></i> Contact</h4>\n                        <div class=\"contact-detail\"><a href=\"tel:01246 271998\">01246 271998</a></div>\n                        <div class=\"contact-detail\"><a href=\"https://...\" target=\"_blank\" rel=\"noopener\">Visit website \u2192</a></div>\n                        <div class=\"contact-detail\"><span class=\"price-label\">Price: \u00a3\u00a3</span></div>\n                    </div>',
+                '                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"fas fa-phone-alt\" style=\"margin-right:6px;\"></i> Contact</h4>\n                        ' + details_str + '\n                    </div>'
+            )
+        else:
+            html = re.sub(r'<!-- DYNAMIC: contact_details -->.*?\n                    </div>', '', html, flags=re.DOTALL)
     else:
-        html = re.sub(r'<!-- DYNAMIC: quick_info_open -->.*?<!-- DYNAMIC: quick_info_close -->\n', '', html, flags=re.DOTALL)
+        html = re.sub(r'<!-- DYNAMIC: contact_info_open -->.*?<!-- DYNAMIC: contact_info_close -->\\n', '', html, flags=re.DOTALL)
 
     # ---- Hygiene rating card ----
     html = html.replace(
