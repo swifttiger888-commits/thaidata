@@ -81,3 +81,23 @@ CREATE TABLE IF NOT EXISTS exclusions (
   restored_at TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_exclusions_active ON exclusions(fsa_id) WHERE restored_at IS NULL;
+
+-- Google Places enrichment (auto-populated, separate from owner-managed listings)
+-- Lookup flow: Find Place (name + lat/lng) → Place Details (Place ID)
+-- Priority at render: listings table wins (owner data), this fills gaps
+CREATE TABLE IF NOT EXISTS google_enrichment (
+  fsa_id INTEGER PRIMARY KEY,
+  google_place_id TEXT NOT NULL,
+  rating REAL,
+  review_count INTEGER,
+  phone TEXT,
+  website TEXT,
+  opening_hours TEXT,   -- JSON: weekdayDescriptions from Places API
+  photos TEXT,           -- JSON: array of {name, googleMapsUri} photo references
+  description TEXT,      -- editorialSummary from Places API
+  price_level TEXT,      -- PRICE_LEVEL_FREE / INEXPENSIVE / MODERATE / EXPENSIVE / VERY_EXPENSIVE
+  raw_response TEXT,     -- full Places API JSON snapshot
+  fetched_at TEXT DEFAULT (datetime('now')),
+  expires_at TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_google_enrichment_place_id ON google_enrichment(google_place_id);

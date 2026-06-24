@@ -157,12 +157,17 @@ def build_nearby_section(city: str, city_slug: str, city_open: dict[str, list[di
     return nearby_html
 
 
-def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dict[str, list[dict[str, Any]]] = None) -> str:
-    """Fill the Kimi template with restaurant data."""
+def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dict[str, list[dict[str, Any]]] = None, enrichment: dict[str, Any] = None) -> str:
+    """Fill the Kimi template with restaurant data.
+    enrichment: optional dict with google_place_id, rating, review_count, phone,
+                website, opening_hours, photos, description, price_level.
+                Keyed by fsa_id string."""
     if closed_ids is None:
         closed_ids = set()
     if city_open is None:
         city_open = {}
+    if enrichment is None:
+        enrichment = {}
     html = TEMPLATE
     is_closed = str(r['id']) in closed_ids
 
@@ -244,6 +249,26 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     cuisine = build_serves_cuisine(rtype)
     intro_text = build_intro(r)
 
+    # ---- Google Places enrichment (auto-populated, separate from D1 listings) ----
+    enr = enrichment.get(str(fsa_id)) or {}
+    enr_rating = enr.get('rating')
+    enr_review_count = enr.get('review_count')
+    enr_phone = enr.get('phone')
+    enr_website = enr.get('website')
+    enr_desc = enr.get('description')
+    enr_price = enr.get('price_level')
+    enr_hours_raw = enr.get('opening_hours')  # JSON string of weekdayDescriptions
+    enr_photos_raw = enr.get('photos')  # JSON string of photo references
+    # Parse JSON strings from enrichment file
+    try:
+        enr_hours = json.loads(enr_hours_raw) if isinstance(enr_hours_raw, str) else enr_hours_raw
+    except (json.JSONDecodeError, TypeError):
+        enr_hours = None
+    try:
+        enr_photos = json.loads(enr_photos_raw) if isinstance(enr_photos_raw, str) else enr_photos_raw
+    except (json.JSONDecodeError, TypeError):
+        enr_photos = None
+
     # dateModified as ISO date string from rating_date
     date_modified = ''
     raw_date = r.get('rating_date', '')
@@ -287,13 +312,45 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
 
     # Only include dateModified if we have it, otherwise omit
     date_line = f',\n        "dateModified": {json.dumps(date_modified)}' if date_modified else ''
-    
+
+    # ---- Enrichment schema fields ----
+    enrichment_schema_parts = []
+
+    # Use enrichment description if available (richer than FSA-only intro)
+    schema_desc = enr_desc if enr_desc else intro_text
+
+    if enr_rating and enr_review_count:
+        enrichment_schema_parts.append(f'''        "aggregateRating": {{
+            "@type": "AggregateRating",
+            "ratingValue": {enr_rating},
+            "reviewCount": {enr_review_count},
+            "bestRating": 5
+        }}''')
+
+    if enr_phone:
+        enrichment_schema_parts.append(f'        "telephone": {json.dumps(enr_phone)}')
+
+    if enr_price:
+        enrichment_schema_parts.append(f'        "priceRange": {json.dumps(enr_price)}')
+
+    if enr_photos and len(enr_photos) > 0:
+        first_photo_uri = enr_photos[0].get("googleMapsUri", "")
+        if first_photo_uri:
+            enrichment_schema_parts.append(f'        "image": {json.dumps(first_photo_uri)}')
+
+    if enr_hours and len(enr_hours) > 0:
+        enrichment_schema_parts.append(f'''        "openingHours": {json.dumps(enr_hours)}''')
+
+    enrichment_block = ''
+    if enrichment_schema_parts:
+        enrichment_block = ',\n' + ',\n'.join(enrichment_schema_parts)
+
     schema_restaurant = f'''    <script type="application/ld+json">
     {{
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "name": {json.dumps(name)},
-        "description": {json.dumps(intro_text)},
+        "description": {json.dumps(schema_desc)},
         "servesCuisine": {json.dumps(cuisine)},
         "address": {{
             "@type": "PostalAddress",
@@ -301,7 +358,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             "addressLocality": {json.dumps(city)},
             "postalCode": {json.dumps(postcode)},
             "addressCountry": "GB"
-        }}{geo_json}{date_line}{addprop_block}
+        }}{geo_json}{date_line}{addprop_block}{enrichment_block}
     }}
     </script>'''
     
@@ -644,6 +701,19 @@ def main() -> None:
     # Sort each city by hygiene rating desc (best first)
     for city in city_open:
         city_open[city].sort(key=lambda r: (-int(r.get('hygiene_rating', '0') or '0') if (r.get('hygiene_rating', '') or '').isdigit() else 0, r['name']))
+    
+    # ---- Load Google Places enrichment ----
+    enrichment_lookup: dict[str, dict[str, Any]] = {}
+    enrichment_path = os.path.join(REPO, 'data', 'google_enrichment.json')
+    if os.path.exists(enrichment_path):
+        with open(enrichment_path) as f:
+            enrichment_data = json.load(f)
+        for entry in enrichment_data:
+            if entry.get('google_place_id'):  # Only include successful lookups
+                enrichment_lookup[str(entry['fsa_id'])] = entry
+        print(f"Loaded {len(enrichment_lookup)} enrichment entries")
+    else:
+        print("No enrichment data found — pages will use FSA-only content")
     total = len(restaurants)
     generated = 0
     errors = 0
@@ -670,7 +740,7 @@ def main() -> None:
             
             os.makedirs(dir_path, exist_ok=True)
             
-            html = generate_page(r, closed_ids, city_open)
+            html = generate_page(r, closed_ids, city_open, enrichment_lookup)
             
             # Don't overwrite the template file (r/leeds/my-thai/index.html)
             template_path = os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html')
