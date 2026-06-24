@@ -465,75 +465,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     else:
         html = html.replace('<!-- DYNAMIC: hero_claim_cta -->\n', '')
 
-    # ---- Action buttons ----
-    if lat and lng:
-        directions_href = f'https://www.google.com/maps/dir/?api=1&destination={lat},{lng}'
-        map_href = f'https://www.google.com/maps?q={lat},{lng}'
-    else:
-        addr_query = address.replace(' ', '+').replace(',', '') + '+' + postcode
-        directions_href = f'https://www.google.com/maps/dir/?api=1&destination={addr_query}'
-        map_href = f'https://www.google.com/maps?q={addr_query}'
-    
-    html = html.replace(
-        '<!-- DYNAMIC: action_directions -->\n            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=53.801537,-1.543306" target="_blank" rel="noopener" class="action-btn action-btn-primary">\n                <i class="fas fa-directions"></i> Get Directions\n            </a>',
-        f'            <a href="{directions_href}" target="_blank" rel="noopener" class="action-btn action-btn-primary">\n                <i class="fas fa-directions"></i> Get Directions\n            </a>'
-    )
-    html = html.replace(
-        '<!-- DYNAMIC: action_map -->\n            <a href="https://www.google.com/maps?q=53.801537,-1.543306" target="_blank" rel="noopener" class="action-btn action-btn-secondary">\n                <i class="fas fa-map"></i> View on Map\n            </a>',
-        f'            <a href="{map_href}" target="_blank" rel="noopener" class="action-btn action-btn-secondary">\n                <i class="fas fa-map"></i> View on Map\n            </a>'
-    )
-
-    # ---- Enrichment action buttons (phone + website) ----
-    if enr_phone:
-        html = html.replace(
-            '<!-- DYNAMIC: action_call -->\n            <a href="tel:+44113xxxxxx" class="action-btn action-btn-secondary"><i class="fas fa-phone"></i> Call</a>',
-            f'            <a href="tel:{enr_phone}" class="action-btn action-btn-secondary"><i class="fas fa-phone"></i> {enr_phone}</a>'
-        )
-    else:
-        html = re.sub(r'<!-- DYNAMIC: action_call -->.*?\n            </a>', '', html, flags=re.DOTALL)
-    
-    if enr_website:
-        html = html.replace(
-            '<!-- DYNAMIC: action_website -->\n            <a href="https://..." target="_blank" rel="noopener" class="action-btn action-btn-secondary"><i class="fas fa-globe"></i> Website</a>',
-            f'            <a href="{enr_website}" target="_blank" rel="noopener" class="action-btn action-btn-secondary"><i class="fas fa-globe"></i> Website</a>'
-        )
-    else:
-        html = re.sub(r'<!-- DYNAMIC: action_website -->.*?\n            </a>', '', html, flags=re.DOTALL)
-
-    # ---- Quick Info section (hours, price, phone, website) ----
+    # ---- Contact & Info section (replaces action bar + quick-info) ----
     has_enrichment = any([enr_hours, enr_price, enr_phone, enr_website])
-    if has_enrichment:
-        # Remove open/close markers
-        html = html.replace('<!-- DYNAMIC: quick_info_open -->\n', '')
-        html = html.replace('    <!-- DYNAMIC: quick_info_close -->\n', '')
-        if enr_hours and len(enr_hours) > 0:
-            hours_str = '<br>'.join(enr_hours[:7])
-            html = html.replace(
-                '<!-- DYNAMIC: quick_info_hours -->\n            <div class="quick-info-card" style="flex:1;min-width:200px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);">\n                <div style="color:var(--ink-tertiary);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;"><i class="far fa-clock" style="margin-right:6px;"></i>Opening Hours</div>\n                <div style="font-size:0.85rem;color:var(--ink-secondary);line-height:1.6;">Mon-Sun: 5:00–10:00 PM</div>\n            </div>',
-                f'            <div class="quick-info-card" style="flex:1;min-width:200px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);">\n                <div style="color:var(--ink-tertiary);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;"><i class="far fa-clock" style="margin-right:6px;"></i>Opening Hours</div>\n                <div style="font-size:0.85rem;color:var(--ink-secondary);line-height:1.6;">{hours_str}</div>\n            </div>'
-            )
-        else:
-            html = re.sub(r'<!-- DYNAMIC: quick_info_hours -->.*?\n            </div>', '', html, flags=re.DOTALL)
-        if enr_price:
-            html = html.replace('££', enr_price)
-        else:
-            html = re.sub(r'<!-- DYNAMIC: quick_info_price -->.*?\n            </div>', '', html, flags=re.DOTALL)
-        if enr_phone:
-            html = html.replace(
-                '<!-- DYNAMIC: quick_info_phone -->\n            <div class="quick-info-card" style="flex:1;min-width:140px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);">\n                <div style="color:var(--ink-tertiary);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;"><i class="fas fa-phone-alt" style="margin-right:6px;"></i>Phone</div>\n                <div style="font-size:0.9rem;color:var(--ink);"><a href="tel:01246271998" style="color:var(--ink);text-decoration:none;">01246 271998</a></div>\n            </div>',
-                f'            <div class="quick-info-card" style="flex:1;min-width:140px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);">\n                <div style="color:var(--ink-tertiary);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;"><i class="fas fa-phone-alt" style="margin-right:6px;"></i>Phone</div>\n                <div style="font-size:0.9rem;color:var(--ink);"><a href="tel:{enr_phone}" style="color:var(--ink);text-decoration:none;">{enr_phone}</a></div>\n            </div>'
-            )
-        else:
-            html = re.sub(r'<!-- DYNAMIC: quick_info_phone -->.*?\n            </div>', '', html, flags=re.DOTALL)
-        if enr_website:
-            html = html.replace(
-                '<!-- DYNAMIC: quick_info_website -->\n            <div class="quick-info-card" style="flex:1;min-width:140px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);">\n                <div style="color:var(--ink-tertiary);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;"><i class="fas fa-globe" style="margin-right:6px;"></i>Website</div>\n                <div style="font-size:0.85rem;"><a href="https://..." target="_blank" rel="noopener" style="color:var(--green-dark);text-decoration:none;word-break:break-all;">Visit website →</a></div>\n            </div>',
-                f'            <div class="quick-info-card" style="flex:1;min-width:140px;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow-sm);">\n                <div style="color:var(--ink-tertiary);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;"><i class="fas fa-globe" style="margin-right:6px;"></i>Website</div>\n                <div style="font-size:0.85rem;"><a href="{enr_website}" target="_blank" rel="noopener" style="color:var(--green-dark);text-decoration:none;word-break:break-all;">Visit website →</a></div>\n            </div>'
-            )
-        else:
-            html = re.sub(r'<!-- DYNAMIC: quick_info_website -->.*?\\n            </div>', '', html, flags=re.DOTALL)
-
-    # ---- Contact & Info section (mobile-friendly enrichment, hidden on desktop) ----
     if has_enrichment:
         html = html.replace('<!-- DYNAMIC: contact_info_open -->\n', '')
         html = html.replace('            <!-- DYNAMIC: contact_info_close -->\n', '')

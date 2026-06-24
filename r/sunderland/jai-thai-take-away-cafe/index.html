@@ -275,56 +275,7 @@
             .hero-watermark { width: 250px; height: 250px; opacity: 0.04; }
         }
 
-        /* ============ QUICK ACTIONS ============ */
-        .actions-bar {
-            max-width: 1100px;
-            margin: -28px auto 0;
-            padding: 0 24px;
-            position: relative;
-            z-index: 10;
-        }
-        .actions-inner {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .action-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 22px;
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .action-btn-primary {
-            background: var(--green);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-        .action-btn-primary:hover {
-            background: var(--green-dark);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
-        }
-        .action-btn-secondary {
-            background: var(--white);
-            color: var(--ink);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-        }
-        .action-btn-secondary:hover {
-            border-color: var(--green);
-            color: var(--green-dark);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow);
-        }
-
-        /* ============ CONTACT & INFO CARD (replaces action bar + quick-info) ============ */
+        /* ============ MAIN LAYOUT ============ */
         .contact-info-card {
             display: block;
         }
@@ -366,8 +317,6 @@
             color: var(--ink-secondary);
             font-weight: 600;
         }
-
-        .actions-bar, .quick-info { display: none !important; }
 
         /* ============ MAIN LAYOUT ============ */
         .main {
@@ -783,7 +732,7 @@
 
         /* ============ PRINT ============ */
         @media print {
-            .nav, .actions-bar, .claim-card, .related, .site-footer { display: none; }
+            .claim-card, .related, .site-footer { display: none; }
             .hero { height: 200px; }
             .main { grid-template-columns: 1fr; }
             .card { box-shadow: none; border: 1px solid #ddd; }
@@ -1004,17 +953,182 @@
         </div>
     </section>
 
-    <!-- ============ QUICK ACTIONS ============ -->
-    <div class="actions-bar">
-        <div class="actions-inner animate-in delay-1">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=54.915011,-1.381315" target="_blank" rel="noopener" class="action-btn action-btn-primary">
-                <i class="fas fa-directions"></i> Get Directions
+    <!-- ============ MAIN CONTENT ============ -->
+    <div class="main">
+        <div class="content-col">
+
+            <!-- === HYGIENE RATING (HERO TRUST SIGNAL) === -->
+            <div class="card animate-in delay-2">
+                                <h2 class="card-title">Hygiene <em>Rating</em></h2>
+
+                <div class="hygiene-hero">
+                                        <div class="rating-circle r3">
+                        <span class="score">3</span>
+                        <span class="of">of 5</span>
+                    </div>
+                    <div class="rating-meta">
+                                                <div class="rating-meta-label" style="color: #92400E;">Generally Satisfactory</div>
+                                                <div class="rating-meta-detail">
+                            Last inspected: July 2023<br>
+                                                        <span style="color: var(--ink-tertiary);">Local authority: Sunderland</span>
+                        </div>
+                    </div>
+                </div>
+
+                                <p class="score-note">
+                    <i class="fas fa-info-circle" style="margin-right: 4px;"></i>
+                    Scores from the Food Standards Agency. Rated 0–5 — 5 = Very Good.
+                </p>
+            </div>
+
+            <!-- === LOCATION & MAP === -->
+            <div class="card animate-in delay-3">
+                                <h2 class="card-title">Location <em>&amp; Map</em></h2>
+
+                <div class="address-block">
+                    <i class="fas fa-location-dot"></i>
+                    <div class="address-text">
+                                                <strong>Jai Thai Take Away & Cafe</strong><br>
+                        16, Roker Avenue, Sunderland<br>
+                        Sunderland<br>
+                        SR6 0BY
+                    </div>
+                </div>
+
+                                <div class="map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300!2d-1.381315!3d54.915011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z54.915011!5e0!3m2!1sen!2suk!4v1"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Map showing location of Jai Thai Take Away & Cafe in Sunderland">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- === CONTACT & INFO (shown on mobile instead of action bar + quick-info) === -->
+                        <div class="card contact-info-card">
+                <h2 class="card-title">Hours &amp; <em>Contact</em></h2>
+                <div class="contact-grid">
+                                        <div class="contact-block">
+                        <h4 class="contact-block-title"><i class="far fa-clock" style="margin-right:6px;"></i> Opening Hours</h4>
+                        <div class="contact-hours-text">Monday: Closed<br>Tuesday: Closed<br>Wednesday: Closed<br>Thursday: 5:00 – 10:00 PM<br>Friday: 5:00 – 10:00 PM<br>Saturday: 5:00 – 10:00 PM<br>Sunday: 5:00 – 10:00 PM</div>
+                    </div>
+                                        <div class="contact-block">
+                        <h4 class="contact-block-title"><i class="fas fa-phone-alt" style="margin-right:6px;"></i> Contact</h4>
+                        <div class="contact-detail"><a href="tel:0191 565 3865">0191 565 3865</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- === CLAIMED CONTENT (hidden until owner claims listing) === -->
+
+            <div id="enrichment-card" class="card animate-in" style="display:none;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.12);">
+                <h2 class="card-title">From Their <em>Website</em></h2>
+                <p style="font-size:0.75rem;color:var(--ink-tertiary);margin-bottom:12px;">Auto-detected from the restaurant's website. Owner-verified where indicated. Restaurant owners can update or remove this information at any time by claiming their listing.</p>
+                <div id="enrichment-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.6;"></div>
+            </div>
+
+            <div id="claimed-description" class="card animate-in" style="display:none;">
+                <h2 class="card-title">About <em>This Restaurant</em></h2>
+                <div class="claimed-description-text" style="color:var(--ink-secondary);font-size:0.95rem;line-height:1.7;"></div>
+            </div>
+
+            <div id="claimed-photos" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Photo <em>Gallery</em></h2>
+                <div id="claimed-photos-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-top:16px;"></div>
+            </div>
+
+            <div id="claimed-hours" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Opening <em>Hours</em></h2>
+                <div id="claimed-hours-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.8;"></div>
+            </div>
+
+            <div id="claimed-menu" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Menu <em>Highlights</em></h2>
+                <div id="claimed-menu-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:16px;"></div>
+            </div>
+
+            <div id="claimed-amenities" class="card animate-in" style="display:none;">
+                <h2 class="card-title">Amenities <em>&amp; Features</em></h2>
+                <div id="claimed-features-list" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;"></div>
+            </div>
+
+        </div>
+
+        <!-- ============ SIDEBAR ============ -->
+        <aside class="sidebar-col">
+
+                        <!-- Claim CTA (shown when NOT claimed) -->
+            <div class="claim-card animate-in delay-2" id="claim">
+                <h3>Own this restaurant?</h3>
+                <p>Claim your free listing to add photos, menus, opening hours and links, and keep your information up to date for ThaiData visitors. When your details are accurate, it's easier for diners to choose you with confidence.</p>
+                                <a href="/claim/?src=restaurant-card" class="btn">
+                    Claim This Listing <i class="fas fa-arrow-right"></i>
+                </a>
+                <p style="margin-top:10px;font-size:0.78rem;"><a href="/r/demo/claimed-listing/" style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">See an example claimed listing →</a></p>
+            </div>
+
+            <!-- Claimed badge (shown when claimed) -->
+            <div id="claimed-badge" class="card" style="display:none;background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(10,122,111,0.04));border:1px solid rgba(16,185,129,0.2);text-align:center;">
+                <div style="font-size:2.5rem;color:var(--green);margin-bottom:8px;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 style="color:var(--green-dark);margin:0 0 4px;">Owner Verified &#10003;</h3>
+                <p style="color:var(--ink-secondary);font-size:0.85rem;margin:0;">This listing is managed by the restaurant owner.</p>
+                <a href="/listing/manage" id="manage-listing-link" style="display:inline-block;margin-top:12px;color:var(--green);font-size:0.85rem;text-decoration:none;">
+                    <i class="fas fa-edit"></i> Manage Listing
+                </a>
+            </div>
+
+            <!-- Trust Sidebar -->
+            <div class="card animate-in delay-3">
+                <h2 class="card-title" style="font-size: 1.15rem;">At a <em>Glance</em></h2>
+                <ul class="trust-list">
+                                        <li class="trust-item">
+                        <i class="fas fa-shield-check"></i>
+                        <div><strong>FSA Verified</strong>Government inspection data</div>
+                    </li>
+                    <li class="trust-item">
+                        <i class="fas fa-utensils"></i>
+                        <div><strong>Thai Cuisine</strong>Authentic flavours</div>
+                    </li>
+                    <li class="trust-item">
+                        <i class="fas fa-map-pin"></i>
+                        <div><strong>Sunderland</strong>UK</div>
+                    </li>
+                    <li class="trust-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <div><strong>Inspected 2023</strong>Rating up to date</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- === CLAIMED SIDEBAR CONTENT (hidden until claimed) === -->
+            <div id="claimed-price-range" class="card animate-in delay-4" style="display:none;">
+                <h2 class="card-title" style="font-size:1.15rem;">Price <em>Range</em></h2>
+                <div id="claimed-price-value" style="font-size:1.5rem;color:var(--ink);font-weight:600;text-align:center;padding:8px 0;"></div>
+            </div>
+
+            <div id="claimed-social" class="card animate-in delay-4" style="display:none;">
+                <h2 class="card-title" style="font-size:1.15rem;">Follow <em>Us</em></h2>
+                <div id="claimed-social-links" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;"></div>
+            </div>
+
+            <div id="claimed-contact" class="card animate-in delay-4" style="display:none;">
+                <h2 class="card-title" style="font-size:1.15rem;">Contact <em>Details</em></h2>
+                <div id="claimed-contact-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.8;"></div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- ============ RELATED LINKS ============ -->
+    <div class="related">
+        <div class="related-inner">
+                        <a href="/cities/sunderland#browse">
+                <i class="fas fa-arrow-left"></i> All Thai restaurants in Sunderland
             </a>
-                        <a href="https://www.google.com/maps?q=54.915011,-1.381315" target="_blank" rel="noopener" class="action-btn action-btn-secondary">
-                <i class="fas fa-map"></i> View on Map
-            </a>
-                        <a href="tel:0191 565 3865" class="action-btn action-btn-secondary"><i class="fas fa-phone"></i> 0191 565 3865</a>
-            
             <br>
             <a href="/thai-restaurants-city-breakdown-uk">
                 <i class="fas fa-arrow-left"></i> All UK cities
