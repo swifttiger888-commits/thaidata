@@ -1725,15 +1725,15 @@
                 <div class="field-label">Dish name (any spelling or Thai script)</div>
                 <input type="text" class="field-input" id="dish-input" aria-label="Search dish name" placeholder="e.g. pad tai, green cury, ผัดไทย..."
                   oninput="clearDish()" />
-                <div class="field-label">Platform</div>
-                <select class="field-select" id="dish-platform">
+                <div class="field-label" id="dish-platform-label">Platform</div>
+                <select class="field-select" id="dish-platform" aria-labelledby="dish-platform-label">
                   <option value="dine">Dine-in / Takeaway</option>
                   <option value="uber">Uber Eats (30%)</option>
                   <option value="deliveroo">Deliveroo (32%)</option>
                   <option value="justeat">Just Eat (14%)</option>
                 </select>
-                <div class="field-label">Target GP margin</div>
-                <select class="field-select" id="dish-gp">
+                <div class="field-label" id="dish-gp-label">Target GP margin</div>
+                <select class="field-select" id="dish-gp" aria-labelledby="dish-gp-label">
                   <option value="65">65% GP (premium)</option>
                   <option value="70" selected>70% GP (standard)</option>
                   <option value="75">75% GP (value-focused)</option>
