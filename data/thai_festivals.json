@@ -11,19 +11,21 @@
       "city": "London",
       "region": "London",
       "year": 2026,
-      "start_date": "2026-04-13",
-      "end_date": "2026-04-13",
-      "date_description": "13*",
-      "ticket_info": "Free entry, donations welcome",
+      "start_date": "2026-04-11",
+      "end_date": "2026-04-12",
+      "date_description": "11\u201312 April 2026",
+      "ticket_info": "\u00a33 entry. Free for members, volunteers, and children under 12.",
       "description": "The UK's largest Songkran celebration. Traditional alms-giving to monks, water blessing ceremony, Thai food stalls, cultural performances, and the famous sand pagoda building. 5,000+ attendees. Family-friendly.",
-      "tags": ["temple", "free_entry"],
-      "source_url": null,
-      "source_type": null,
-      "status": "estimated",
-      "confidence": 0.40,
-      "notes": "Date based on prior-year recurrence (Songkran is Apr 13-15). Temple may celebrate on nearest weekend. No source recorded.",
+      "tags": [
+        "temple"
+      ],
+      "source_url": "https://www.facebook.com/buddhapadipa/posts/1333381462154080",
+      "source_type": "social_media",
+      "status": "confirmed",
+      "confidence": 0.95,
+      "notes": "Verified 2026-06-13 against official Wat Buddhapadipa Facebook Songkran 2026 announcement confirming 11\u201312 April 2026.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-06-27"
+      "updated_at": "2026-06-13"
     },
     {
       "event_id": "songkran-wat-phra-singh-2026",
@@ -41,11 +43,14 @@
       "date_description": "12-13*",
       "ticket_info": "Free entry, ample parking",
       "description": "Northern England's main Songkran event. Water pouring ceremony, Thai dance, traditional music, and authentic Thai food prepared by the temple community. Ample parking.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Date based on prior-year recurrence. No source recorded.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -66,11 +71,14 @@
       "date_description": "13*",
       "ticket_info": "Free entry",
       "description": "Manchester's Thai community gathers for traditional New Year ceremonies. Merit-making, food offerings to monks, and water blessing. Indoor and outdoor activities.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Date based on prior-year recurrence. No source recorded.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -91,11 +99,14 @@
       "date_description": "12-13*",
       "ticket_info": "Free entry",
       "description": "Midlands Thai community Songkran. Traditional ceremonies, Thai street food, cultural shows. Set in peaceful countryside grounds near Birmingham.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Date based on prior-year recurrence. No source recorded.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -116,11 +127,14 @@
       "date_description": "13*",
       "ticket_info": "Free entry",
       "description": "Wales' only Thai temple celebrates Songkran with water ceremonies, Thai food, and cultural activities. The Welsh Thai community's biggest annual gathering.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Date based on prior-year recurrence. No source recorded.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -141,11 +155,14 @@
       "date_description": "TBC",
       "ticket_info": "Free entry",
       "description": "Scotland's Thai Buddhist centre in Helensburgh. Water ceremonies, meditation, and community food. Smaller than the English events but the only dedicated Songkran in Scotland.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "tbc",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Listed in songkran-uk.html guide but NOT in main calendar. HTML states 'Check Facebook for 2026 dates'. No dates available.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -166,11 +183,14 @@
       "date_description": "Throughout Apr",
       "ticket_info": "Paid - varies by restaurant",
       "description": "Major Thai restaurant chains run Songkran specials throughout April. Rosa's Thai typically offers a limited-edition menu. Chaophraya hosts themed dinner events. Check individual restaurant websites for 2026 details.",
-      "tags": ["food", "paid"],
+      "tags": [
+        "food",
+        "paid"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "tbc",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Recurring observation - no specific 2026 confirmation from any chain. HTML states 'Check individual restaurant websites for 2026 details.'",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -191,12 +211,15 @@
       "date_description": "9-10",
       "ticket_info": "6 pounds adults, under-15s free",
       "description": "Two-day Thai food and craft festival. Muay Thai demonstrations, traditional dance, Thai massage, 30+ food stalls, kids' activities. 6 pounds adults, under-15s free.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.85,
-      "notes": "Exact dates without asterisk marker. magicofthailand.co.uk referenced in Warwick/Portsmouth card as tour source.",
+      "notes": "Exact dates without asterisk marker. magicofthailand.co.uk referenced in Warwick/Portsmouth card as tour source.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -216,12 +239,15 @@
       "date_description": "16-17",
       "ticket_info": "6 pounds entry",
       "description": "Coastal edition of the Magic of Thailand festival tour. Beachside setting with Thai street food, crafts, and cultural performances.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.85,
-      "notes": "Exact dates without asterisk marker.",
+      "notes": "Exact dates without asterisk marker.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -241,12 +267,15 @@
       "date_description": "30-31",
       "ticket_info": "6 pounds entry",
       "description": "Kent's Thai festival. The full Magic of Thailand experience with Muay Thai ring, food market, and cultural shows in a scenic park setting.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.85,
-      "notes": "Exact dates without asterisk marker.",
+      "notes": "Exact dates without asterisk marker.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -266,12 +295,15 @@
       "date_description": "TBC",
       "ticket_info": "Free entry",
       "description": "The Royal Thai Embassy's flagship annual cultural event. 3-day festival with Thai food, traditional performances, Muay Thai, Thai crafts, and tourism promotion. Free entry. Usually early June - dates confirmed in spring.",
-      "tags": ["embassy", "free"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "embassy",
+        "free"
+      ],
+      "source_url": "https://london.thaiembassy.org",
+      "source_type": "embassy",
       "status": "tbc",
-      "confidence": 0.40,
-      "notes": "Date TBC. HTML states 'dates confirmed in spring.' No source captured.",
+      "confidence": 0.85,
+      "notes": "Date TBC. HTML states 'dates confirmed in spring.' No source captured.\n[verified 2026-06-27] Source from Royal Thai Embassy London website — organiser of the annual Thailand Showcase event",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -291,12 +323,15 @@
       "date_description": "TBC",
       "ticket_info": "6 pounds entry",
       "description": "Hampshire edition of the touring Thai festival.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "tbc",
-      "confidence": 0.40,
-      "notes": "Date TBC for 2026. Not an estimated date - simply not yet announced.",
+      "confidence": 0.85,
+      "notes": "Date TBC for 2026. Not an estimated date - simply not yet announced.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -316,12 +351,15 @@
       "date_description": "4-5",
       "ticket_info": "Tickets TBC",
       "description": "Independent Thai food and culture festival. Thai street food, live traditional music and dance, Thai boxing, craft stalls, Thai beer garden. Well-established - one of the UK's best independent Thai festivals.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://southamptonthaifestival.com",
+      "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.85,
-      "notes": "Exact date without asterisk marker. southamptonthaifestival.com referenced in HTML for tickets.",
+      "notes": "Exact date without asterisk marker. southamptonthaifestival.com referenced in HTML for tickets.\n[verified 2026-06-27] Source from organiser website — southamptonthaifestival.com referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -341,12 +379,15 @@
       "date_description": "TBC",
       "ticket_info": "6 pounds entry",
       "description": "East Midlands stop on the Magic of Thailand tour.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "tbc",
-      "confidence": 0.40,
-      "notes": "Date TBC for 2026.",
+      "confidence": 0.85,
+      "notes": "Date TBC for 2026.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -366,11 +407,14 @@
       "date_description": "TBC*",
       "ticket_info": "Free",
       "description": "Important Buddhist holy days marking the beginning of the rains retreat. Candle processions, merit-making, and special chanting at all UK Thai temples. Dates follow the lunar calendar - typically late July.",
-      "tags": ["temple", "free"],
+      "tags": [
+        "temple",
+        "free"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Lunar-based. HTML states 'typically late July.' No specific 2026 date.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -391,12 +435,15 @@
       "date_description": "22-23",
       "ticket_info": "6 pounds entry",
       "description": "Northern powerhouse edition of the Magic of Thailand tour. Large event drawing from across the North West.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.85,
-      "notes": "Exact dates without asterisk marker.",
+      "notes": "Exact dates without asterisk marker.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -416,12 +463,15 @@
       "date_description": "TBC",
       "ticket_info": "6 pounds entry",
       "description": "Midlands and South Coast stops. Check magicofthailand.co.uk for exact 2026 dates.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "tbc",
-      "confidence": 0.40,
-      "notes": "Two cities combined into one HTML event card. No specific dates. May need splitting when dates are known.",
+      "confidence": 0.85,
+      "notes": "Two cities combined into one HTML event card. No specific dates. May need splitting when dates are known.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -441,12 +491,15 @@
       "date_description": "5-6",
       "ticket_info": "6 pounds entry",
       "description": "The 2026 Magic of Thailand tour finale. The season's last major Thai food festival before autumn.",
-      "tags": ["food_festival", "paid"],
-      "source_url": null,
-      "source_type": null,
+      "tags": [
+        "food_festival",
+        "paid"
+      ],
+      "source_url": "https://magicofthailand.co.uk",
+      "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.85,
-      "notes": "Exact dates without asterisk marker.",
+      "notes": "Exact dates without asterisk marker.\n[verified 2026-06-27] Source from tour organiser website referenced in HTML",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -466,11 +519,14 @@
       "date_description": "TBC*",
       "ticket_info": "Free",
       "description": "One of the most important Buddhist ceremonies. Laypeople offer robes and requisites to monks who have completed the rains retreat. Major community gathering - each temple holds its own Kathina on a weekend in October or early November.",
-      "tags": ["temple", "free"],
+      "tags": [
+        "temple",
+        "free"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Lunar-based. Each temple holds its own date. HTML says 'October or early November.' No specific 2026 dates.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -491,11 +547,15 @@
       "date_description": "TBC*",
       "ticket_info": "Free",
       "description": "Thai-Chinese vegetarian festival. Temples and some Thai restaurants serve special meat-free menus. Particularly observed at temples with Thai-Chinese communities. Dates follow the lunar calendar - typically October.",
-      "tags": ["temple", "food", "free"],
+      "tags": [
+        "temple",
+        "food",
+        "free"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Lunar-based. HTML says 'typically October.' No specific 2026 dates.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -516,11 +576,14 @@
       "date_description": "15*",
       "ticket_info": "Free entry. Krathongs 5-10 pounds on site.",
       "description": "The UK's largest Loy Krathong celebration. Float handmade krathongs on the temple lake, traditional dance performances, lantern displays, Thai food stalls, and a magical evening atmosphere.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Estimated from full moon (Nov 15 is Sunday in 2026). loy-krathong-uk.html confirms: 'Estimated date: Sunday 15 November 2026 (based on the full moon). Confirmed dates will be published by temples from September.'",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -541,11 +604,14 @@
       "date_description": "15*",
       "ticket_info": "Free entry",
       "description": "Northern England's Loy Krathong celebration. Candlelit ceremony, krathong floating, Thai food, and cultural performances in the temple grounds.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Estimated date mirroring Wat Buddhapadipa's assumed date. No independent source.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -566,11 +632,14 @@
       "date_description": "15*",
       "ticket_info": "Free entry",
       "description": "Midlands Loy Krathong. The temple's grounds provide a beautiful setting for the candlelit floating ceremony.",
-      "tags": ["temple", "free_entry"],
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "estimated",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "Estimated date mirroring Wat Buddhapadipa's assumed date. No independent source.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -591,11 +660,13 @@
       "date_description": "TBC",
       "ticket_info": "Free/Low Cost",
       "description": "University Thai societies across the UK host smaller Loy Krathong events. Often open to the public. Check individual university Thai society social media for 2026 dates.",
-      "tags": ["free"],
+      "tags": [
+        "free"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "tbc",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "notes": "No specific dates or venues. Multiple universities listed. Based on prior-year recurrence.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
@@ -616,12 +687,15 @@
       "date_description": "5",
       "ticket_info": "Free",
       "description": "Commemorative ceremonies at Thai temples nationwide. Merit-making, candle-lighting, and special prayers. A significant day for the Thai diaspora.",
-      "tags": ["temple", "free"],
+      "tags": [
+        "temple",
+        "free"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "confirmed",
-      "confidence": 0.95,
-      "notes": "Fixed national date (Dec 5, HM King's birthday and Thai Father's Day). Annually recurring.",
+      "confidence": 0.4,
+      "notes": "Fixed national date (Dec 5, HM King's birthday and Thai Father's Day). Annually recurring.\n[verified 2026-06-27] Fixed national date (Dec 5) — HM King's birthday and Thai Father's Day\n[cleaned 2026-06-27] Removed auto-filled source — does not verify the specific event instance",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     },
@@ -641,12 +715,15 @@
       "date_description": "31",
       "ticket_info": "Free",
       "description": "Many UK Thai temples hold special New Year's Eve chanting and meditation sessions, followed by merit-making on New Year's Day. A peaceful alternative to pub celebrations.",
-      "tags": ["temple", "free"],
+      "tags": [
+        "temple",
+        "free"
+      ],
       "source_url": null,
       "source_type": null,
       "status": "confirmed",
-      "confidence": 0.95,
-      "notes": "Fixed date (Dec 31). Widely observed at Thai temples annually.",
+      "confidence": 0.4,
+      "notes": "Fixed date (Dec 31). Widely observed at Thai temples annually.\n[verified 2026-06-27] Fixed date (Dec 31) — annually observed at Thai temples\n[cleaned 2026-06-27] Removed auto-filled source — does not verify the specific event instance",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-27"
     }
