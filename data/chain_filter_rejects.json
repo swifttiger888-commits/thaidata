@@ -468,7 +468,7 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 801160,
+    "fsa_id": 1961096,
     "name": "Bubba Drews, The Sassy Elephant and O'Connor's",
     "city": "Armagh City, Banbridge and Craigavon",
     "chain": "Busaba"
@@ -702,6 +702,12 @@
     "chain": "Patara"
   },
   {
+    "fsa_id": 653482,
+    "name": "Hazara Restaurant",
+    "city": "Camden",
+    "chain": "Patara"
+  },
+  {
     "fsa_id": 622486,
     "name": "Matara Centre",
     "city": "Cotswold",
@@ -717,6 +723,12 @@
     "fsa_id": 912852,
     "name": "Rosa\u2019s Thai",
     "city": "York",
+    "chain": "Rosa's Thai"
+  },
+  {
+    "fsa_id": 1655927,
+    "name": "Rosa\u2019s Thai Edinburgh",
+    "city": "Edinburgh (City of)",
     "chain": "Rosa's Thai"
   },
   {

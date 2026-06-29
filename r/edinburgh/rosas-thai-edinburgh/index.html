@@ -275,53 +275,47 @@
             .hero-watermark { width: 250px; height: 250px; opacity: 0.04; }
         }
 
-        /* ============ QUICK ACTIONS ============ */
-        .actions-bar {
-            max-width: 1100px;
-            margin: -28px auto 0;
-            padding: 0 24px;
-            position: relative;
-            z-index: 10;
+        /* ============ MAIN LAYOUT ============ */
+        .contact-info-card {
+            display: block;
         }
-        .actions-inner {
+        .contact-grid {
             display: flex;
-            gap: 10px;
+            gap: 24px;
             flex-wrap: wrap;
         }
-        .action-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 22px;
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
+        .contact-block {
+            flex: 1;
+            min-width: 180px;
+        }
+        .contact-block-title {
+            font-size: 0.85rem;
             font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .action-btn-primary {
-            background: var(--green);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-        .action-btn-primary:hover {
-            background: var(--green-dark);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
-        }
-        .action-btn-secondary {
-            background: var(--white);
             color: var(--ink);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-light);
         }
-        .action-btn-secondary:hover {
-            border-color: var(--green);
+        .contact-hours-text {
+            font-size: 0.9rem;
+            color: var(--ink-secondary);
+            line-height: 1.8;
+        }
+        .contact-detail {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        .contact-detail a {
             color: var(--green-dark);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+        .contact-detail .price-label {
+            color: var(--ink-secondary);
+            font-weight: 600;
         }
 
         /* ============ MAIN LAYOUT ============ */
@@ -724,21 +718,9 @@
         }
         .site-footer a:hover { color: var(--green-dark); }
 
-        /* ============ ANIMATIONS ============ */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-in {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-        .delay-1 { animation-delay: 0.1s; opacity: 0; }
-        .delay-2 { animation-delay: 0.2s; opacity: 0; }
-        .delay-3 { animation-delay: 0.3s; opacity: 0; }
-
         /* ============ PRINT ============ */
         @media print {
-            .nav, .actions-bar, .claim-card, .related, .site-footer { display: none; }
+            .claim-card, .related, .site-footer { display: none; }
             .hero { height: 200px; }
             .main { grid-template-columns: 1fr; }
             .card { box-shadow: none; border: 1px solid #ddd; }
@@ -873,7 +855,17 @@
             "latitude": 55.9535452,
             "longitude": -3.2003398
         },
-        "dateModified": "2024-12-10"
+        "dateModified": "2024-12-10",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.7,
+            "reviewCount": 2435,
+            "bestRating": 5
+        },
+        "telephone": "0131 609 0003",
+        "priceRange": "\u00a3\u00a3",
+        "image": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDF0O76mQE!2e10!4m2!3m1!1s0x4887c71ffd30b783:0x38e9f8baae64bc7c",
+        "openingHours": ["Monday: 12:00\u2009\u2013\u200910:00\u202fPM", "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM", "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM", "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM", "Friday: 12:00\u2009\u2013\u200910:30\u202fPM", "Saturday: 12:00\u2009\u2013\u200910:30\u202fPM", "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"]
     }
     </script>
 
@@ -944,32 +936,18 @@
                         <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">
                 Rosa’s Thai Edinburgh is a Thai restaurant in Edinburgh. FSA hygiene rating Pass/5, last inspected December 2024.
             </p>
-                        <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);">
+                        <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);" id="hero-claim-cta">
                 <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
             </p>
         </div>
     </section>
 
-    <!-- ============ QUICK ACTIONS ============ -->
-    <div class="actions-bar">
-        <div class="actions-inner animate-in delay-1">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=55.9535452,-3.2003398" target="_blank" rel="noopener" class="action-btn action-btn-primary">
-                <i class="fas fa-directions"></i> Get Directions
-            </a>
-                        <a href="https://www.google.com/maps?q=55.9535452,-3.2003398" target="_blank" rel="noopener" class="action-btn action-btn-secondary">
-                <i class="fas fa-map"></i> View on Map
-            </a>
-                        <!-- <a href="tel:+44113xxxxxx" class="action-btn action-btn-secondary"><i class="fas fa-phone"></i> Call</a> -->
-                        <!-- <a href="https://..." target="_blank" rel="noopener" class="action-btn action-btn-secondary"><i class="fas fa-globe"></i> Website</a> -->
-        </div>
-    </div>
-
     <!-- ============ MAIN CONTENT ============ -->
     <div class="main">
         <div class="content-col">
 
-            <!-- === HYGIENE RATING (HERO TRUST SIGNAL) === -->
-            <div class="card animate-in delay-2">
+            <!-- === HYGIENE RATING === -->
+            <div class="card">
                                 <h2 class="card-title">Hygiene <em>Rating</em></h2>
 
                 <div class="hygiene-hero">
@@ -988,12 +966,12 @@
 
                                 <p class="score-note">
                     <i class="fas fa-info-circle" style="margin-right: 4px;"></i>
-                    Scores from the Food Standards Agency. Lower is better (0 = highest standard, 25 = needs improvement).
+                    Scores from the Food Standards Agency. Rated 0–5 — 5 = Very Good.
                 </p>
             </div>
 
             <!-- === LOCATION & MAP === -->
-            <div class="card animate-in delay-3">
+            <div class="card">
                                 <h2 class="card-title">Location <em>&amp; Map</em></h2>
 
                 <div class="address-block">
@@ -1014,6 +992,23 @@
                         referrerpolicy="no-referrer-when-downgrade"
                         title="Map showing location of Rosa’s Thai Edinburgh in Edinburgh">
                     </iframe>
+                </div>
+            </div>
+
+            <!-- === CONTACT & INFO (shown on mobile instead of action bar + quick-info) === -->
+                        <div class="card contact-info-card">
+                <h2 class="card-title">Hours &amp; <em>Contact</em></h2>
+                <div class="contact-grid">
+                                        <div class="contact-block">
+                        <h4 class="contact-block-title"><i class="far fa-clock" style="margin-right:6px;"></i> Opening Hours</h4>
+                        <div class="contact-hours-text">Monday: 12:00 – 10:00 PM<br>Tuesday: 12:00 – 10:00 PM<br>Wednesday: 12:00 – 10:00 PM<br>Thursday: 12:00 – 10:00 PM<br>Friday: 12:00 – 10:30 PM<br>Saturday: 12:00 – 10:30 PM<br>Sunday: 12:00 – 10:00 PM</div>
+                    </div>
+                                        <div class="contact-block">
+                        <h4 class="contact-block-title"><i class="fas fa-phone-alt" style="margin-right:6px;"></i> Contact</h4>
+                        <div class="contact-detail"><a href="tel:0131 609 0003">0131 609 0003</a></div>
+                        <div class="contact-detail"><a href="https://rosasthai.com/locations/rosas-thai-restaurant-delivery-takeaway-edinburgh?utm_campaign=gmb&utm_medium=organic&utm_source=local" target="_blank" rel="noopener">Visit website →</a></div>
+                        <div class="contact-detail"><span class="price-label">Price: ££</span></div>
+                    </div>
                 </div>
             </div>
 
@@ -1056,12 +1051,13 @@
         <aside class="sidebar-col">
 
                         <!-- Claim CTA (shown when NOT claimed) -->
-            <div class="claim-card animate-in delay-2" id="claim">
+            <div class="claim-card" id="claim">
                 <h3>Own this restaurant?</h3>
                 <p>Claim your free listing to add photos, menus, opening hours and links, and keep your information up to date for ThaiData visitors. When your details are accurate, it's easier for diners to choose you with confidence.</p>
                                 <a href="/claim/?src=restaurant-card" class="btn">
                     Claim This Listing <i class="fas fa-arrow-right"></i>
                 </a>
+                <p style="margin-top:10px;font-size:0.78rem;"><a href="/r/demo/claimed-listing/" style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">See an example claimed listing →</a></p>
             </div>
 
             <!-- Claimed badge (shown when claimed) -->
@@ -1077,7 +1073,7 @@
             </div>
 
             <!-- Trust Sidebar -->
-            <div class="card animate-in delay-3">
+            <div class="card">
                 <h2 class="card-title" style="font-size: 1.15rem;">At a <em>Glance</em></h2>
                 <ul class="trust-list">
                                         <li class="trust-item">
@@ -1229,6 +1225,10 @@
                         if (p) p.textContent = 'Claim this listing to verify and update your details.';
                     }
                 }
+
+                // Hide hero claim CTA when a listing exists (claimed or has owner data)
+                var heroCta = document.getElementById('hero-claim-cta');
+                if (heroCta) heroCta.style.display = 'none';
 
                 // --- Populate claimed content sections ---
 

@@ -3,19 +3,19 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-06-22",
-  "total_uk": 1265,
+  "updated": "2026-06-29",
+  "total_uk": 1268,
   "cities_tracked": 254,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 280,
-      "restaurants": 232,
+      "total_thai_businesses": 278,
+      "restaurants": 230,
       "takeaways": 48,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 100
+      "postcode_areas": 99
     },
     {
       "name": "Leeds",
@@ -398,6 +398,16 @@
       "postcode_areas": 1
     },
     {
+      "name": "St Albans City",
+      "population": null,
+      "total_thai_businesses": 7,
+      "restaurants": 7,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.6,
+      "postcode_areas": 3
+    },
+    {
       "name": "Elmbridge",
       "population": null,
       "total_thai_businesses": 7,
@@ -406,16 +416,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 3.4,
       "postcode_areas": 2
-    },
-    {
-      "name": "St Albans City",
-      "population": null,
-      "total_thai_businesses": 7,
-      "restaurants": 7,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.4,
-      "postcode_areas": 3
     },
     {
       "name": "Glasgow",
@@ -466,6 +466,16 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
       "postcode_areas": 3
+    },
+    {
+      "name": "Liverpool",
+      "population": 500000,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": 1.2,
+      "avg_hygiene_rating": 4.3,
+      "postcode_areas": 6
     },
     {
       "name": "Durham",
@@ -628,6 +638,16 @@
       "postcode_areas": 2
     },
     {
+      "name": "Portsmouth",
+      "population": 208000,
+      "total_thai_businesses": 5,
+      "restaurants": 5,
+      "takeaways": 0,
+      "per_100k": 2.4,
+      "avg_hygiene_rating": 4.8,
+      "postcode_areas": 4
+    },
+    {
       "name": "Mole Valley",
       "population": null,
       "total_thai_businesses": 5,
@@ -636,16 +656,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
       "postcode_areas": 2
-    },
-    {
-      "name": "Liverpool",
-      "population": 500000,
-      "total_thai_businesses": 5,
-      "restaurants": 5,
-      "takeaways": 0,
-      "per_100k": 1.0,
-      "avg_hygiene_rating": 4.4,
-      "postcode_areas": 5
     },
     {
       "name": "Teignbridge",
@@ -666,6 +676,16 @@
       "per_100k": 4.2,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
+    },
+    {
+      "name": "Gwynedd",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 4,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.8,
+      "postcode_areas": 2
     },
     {
       "name": "Waverley",
@@ -758,6 +778,16 @@
       "postcode_areas": 4
     },
     {
+      "name": "Stevenage",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 3,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Tandridge",
       "population": null,
       "total_thai_businesses": 4,
@@ -766,16 +796,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 3
-    },
-    {
-      "name": "Gwynedd",
-      "population": null,
-      "total_thai_businesses": 4,
-      "restaurants": 3,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.8,
-      "postcode_areas": 2
     },
     {
       "name": "Warwick",
@@ -845,16 +865,6 @@
       "takeaways": 0,
       "per_100k": 1.2,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 3
-    },
-    {
-      "name": "Portsmouth",
-      "population": 208000,
-      "total_thai_businesses": 4,
-      "restaurants": 4,
-      "takeaways": 0,
-      "per_100k": 1.9,
-      "avg_hygiene_rating": 4.8,
       "postcode_areas": 3
     },
     {
@@ -935,16 +945,6 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Stevenage",
-      "population": null,
-      "total_thai_businesses": 4,
-      "restaurants": 2,
-      "takeaways": 2,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
     },
     {
@@ -1034,7 +1034,7 @@
       "restaurants": 2,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 4.3,
+      "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
     },
     {
@@ -1348,6 +1348,16 @@
       "postcode_areas": 2
     },
     {
+      "name": "Nuneaton and Bedworth",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Powys",
       "population": null,
       "total_thai_businesses": 2,
@@ -1578,16 +1588,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Nuneaton and Bedworth",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 2,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
       "name": "Welwyn Hatfield",
       "population": null,
       "total_thai_businesses": 2,
@@ -1735,6 +1735,16 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 2.0,
+      "postcode_areas": 2
+    },
+    {
+      "name": "Test Valley",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0,
       "postcode_areas": 2
     },
     {
@@ -2209,16 +2219,6 @@
     },
     {
       "name": "Epping Forest",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 1,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Test Valley",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 1,
