@@ -86,11 +86,17 @@
                 'ad_storage': 'granted'
             });
         }
+        if (typeof clarity === 'function') {
+            clarity('consent', true);
+        }
         banner.remove();
     };
 
     document.getElementById('cb-no').onclick = function() {
         localStorage.setItem('thaidata_consent', 'denied');
+        if (typeof clarity === 'function') {
+            clarity('consent', false);
+        }
         banner.remove();
     };
 
