@@ -1,6 +1,6 @@
 {
   "name": "ThaiData UK \u2014 Restaurant Directory",
-  "updated": "2026-06-29",
+  "updated": "2026-07-06",
   "total": 1268,
   "sources": [
     "FSA FHRS",
@@ -1212,7 +1212,7 @@
       "postcode": "SE20 8JB",
       "address": "158 Maple Road, Penge, London",
       "hygiene_rating": "5",
-      "rating_date": "2024-08-08T00:00:00",
+      "rating_date": "2026-06-29T00:00:00",
       "longitude": "-0.055172",
       "latitude": "51.414493"
     },
@@ -1633,19 +1633,6 @@
       "latitude": "51.5301132"
     },
     {
-      "id": 1575841,
-      "name": "Thai River",
-      "type": "restaurant",
-      "city": "Durham",
-      "local_authority": "Durham",
-      "postcode": "DH1 4SL",
-      "address": "32 THE RIVERWALK MILLBURNGATE, DURHAM",
-      "hygiene_rating": "5",
-      "rating_date": "2024-08-06T00:00:00",
-      "longitude": "-1.5783394",
-      "latitude": "54.7773555"
-    },
-    {
       "id": 1794672,
       "name": "Thai Sarakham",
       "type": "restaurant",
@@ -1771,7 +1758,7 @@
       "postcode": "RG4 7AD",
       "address": "8 Church Road, Caversham, Reading",
       "hygiene_rating": "5",
-      "rating_date": "2024-05-23T00:00:00",
+      "rating_date": "2026-05-19T00:00:00",
       "longitude": "-0.9771369",
       "latitude": "51.4672668"
     },
@@ -2751,6 +2738,19 @@
       "latitude": "54.591642"
     },
     {
+      "id": 1931625,
+      "name": "Ty Thai",
+      "type": "restaurant",
+      "city": "Merthyr Tydfil",
+      "local_authority": "Merthyr Tydfil",
+      "postcode": "CF47 8BZ",
+      "address": "Unit F4 St Tydfil Market Tydfil House Graham Way, Merthyr Tydfil",
+      "hygiene_rating": "4",
+      "rating_date": "2026-05-29T00:00:00",
+      "longitude": null,
+      "latitude": null
+    },
+    {
       "id": 1747570,
       "name": "Urban Thai",
       "type": "restaurant",
@@ -2928,7 +2928,7 @@
       "postcode": "CO1 2QW",
       "address": "82A East Hill, Colchester, Essex",
       "hygiene_rating": "3",
-      "rating_date": "2024-11-22T00:00:00",
+      "rating_date": "2026-05-27T00:00:00",
       "longitude": "0.9088236",
       "latitude": "51.8901429"
     },
@@ -4605,7 +4605,7 @@
       "postcode": "YO1 7HU",
       "address": "19 Grape Lane, York",
       "hygiene_rating": "5",
-      "rating_date": "2024-05-10T00:00:00",
+      "rating_date": "2026-06-24T00:00:00",
       "longitude": "-1.082084",
       "latitude": "53.960891"
     },
@@ -4694,11 +4694,11 @@
       "city": "Bedford",
       "local_authority": "Bedford",
       "postcode": "MK40 3JG",
-      "address": "41 St Cuthberts Street, Bedford",
+      "address": "41 ST CUTHBERTS STREET, BEDFORD",
       "hygiene_rating": "5",
       "rating_date": "2026-05-14T00:00:00",
-      "longitude": "-0.462942",
-      "latitude": "52.138805"
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": 1574532,
@@ -4995,7 +4995,7 @@
       "postcode": "B3 3AX",
       "address": "2B Chamberlain Square, Birmingham",
       "hygiene_rating": "5",
-      "rating_date": "2021-08-22T00:00:00",
+      "rating_date": "2021-04-06T00:00:00",
       "longitude": "-1.9049466",
       "latitude": "52.4797533"
     },
@@ -5203,7 +5203,7 @@
       "postcode": "PO1 1DE",
       "address": "16 Edinburgh Road, Portsmouth",
       "hygiene_rating": "5",
-      "rating_date": "2024-06-19T00:00:00",
+      "rating_date": "2026-06-16T00:00:00",
       "longitude": "-1.09146797657013",
       "latitude": "50.8003234863281"
     },
@@ -6022,7 +6022,7 @@
       "postcode": "W1W 7HR",
       "address": "14 RIDING HOUSE STREET, LONDON",
       "hygiene_rating": "5",
-      "rating_date": "2023-09-05T00:00:00",
+      "rating_date": "2026-06-22T00:00:00",
       "longitude": "-0.1416533",
       "latitude": "51.5182507"
     },
@@ -8323,7 +8323,7 @@
       "postcode": "LN11 7SF",
       "address": "Bridge Farm House, Main Road, Saltfleet, Louth",
       "hygiene_rating": "5",
-      "rating_date": "2024-05-15T00:00:00",
+      "rating_date": "2026-06-23T00:00:00",
       "longitude": "0.1880006",
       "latitude": "53.4151676"
     },
@@ -9199,19 +9199,6 @@
       "latitude": "51.5581305"
     },
     {
-      "id": 1846398,
-      "name": "Siam Heaven Thai Restaurant",
-      "type": "restaurant",
-      "city": "Bedford",
-      "local_authority": "Bedford",
-      "postcode": "MK40 2TH",
-      "address": "36 The Broadway, Bedford",
-      "hygiene_rating": "4",
-      "rating_date": "2025-08-27T00:00:00",
-      "longitude": "-0.468084",
-      "latitude": "52.139699"
-    },
-    {
       "id": 1831220,
       "name": "Thai Noodles and Rice",
       "type": "restaurant",
@@ -10016,6 +10003,19 @@
       "rating_date": "2025-05-21T00:00:00",
       "longitude": "-4.0033581",
       "latitude": "51.5752895"
+    },
+    {
+      "id": 1956789,
+      "name": "Pick Thai Bar & Restaurant",
+      "type": "restaurant",
+      "city": "Stratford-on-Avon",
+      "local_authority": "Stratford-on-Avon",
+      "postcode": "CV37 6LW",
+      "address": "5 Ely Street, Stratford-upon-Avon",
+      "hygiene_rating": "5",
+      "rating_date": "2026-06-23T00:00:00",
+      "longitude": "-1.7081042",
+      "latitude": "52.1914808"
     },
     {
       "id": 852675,
@@ -12171,7 +12171,7 @@
       "postcode": "NW1 8AF",
       "address": "6b Paddock Alley, Camden Lock Place, London",
       "hygiene_rating": "1",
-      "rating_date": "2025-11-25T00:00:00",
+      "rating_date": "2026-05-26T00:00:00",
       "longitude": "-0.146625995635986",
       "latitude": "51.541332244873"
     },
@@ -13008,19 +13008,6 @@
       "latitude": "53.6614532470703"
     },
     {
-      "id": 1875566,
-      "name": "Halal Thai Kitchen",
-      "type": "takeaway",
-      "city": "Birmingham",
-      "local_authority": "Birmingham",
-      "postcode": "B11 3RR",
-      "address": "Unit 7, Weston Industrial Estate, Weston Lane, Birmingham",
-      "hygiene_rating": "4",
-      "rating_date": "2025-12-03T00:00:00",
-      "longitude": "-1.8501412",
-      "latitude": "52.4510433"
-    },
-    {
       "id": 1704817,
       "name": "Isaan Thai Cafe",
       "type": "takeaway",
@@ -13201,19 +13188,6 @@
       "rating_date": "2025-09-17T00:00:00",
       "longitude": "-0.094213",
       "latitude": "51.634849"
-    },
-    {
-      "id": 1890653,
-      "name": "Thai Noodle Express",
-      "type": "takeaway",
-      "city": "Birmingham",
-      "local_authority": "Birmingham",
-      "postcode": "B73 5DA",
-      "address": "4 Chester Road, Sutton Vesey, Birmingham, Birmingham",
-      "hygiene_rating": "4",
-      "rating_date": "2026-04-07T00:00:00",
-      "longitude": "-1.8592352",
-      "latitude": "52.5479835"
     },
     {
       "id": 1870801,
@@ -13593,6 +13567,19 @@
       "latitude": "54.510582"
     },
     {
+      "id": 1783088,
+      "name": "Number 1 Pad Thai",
+      "type": "takeaway",
+      "city": "Stratford-on-Avon",
+      "local_authority": "Stratford-on-Avon",
+      "postcode": "CV37",
+      "address": "",
+      "hygiene_rating": "5",
+      "rating_date": "2024-12-02T00:00:00",
+      "longitude": null,
+      "latitude": null
+    },
+    {
       "id": 1775922,
       "name": "OH THAI TO GO",
       "type": "takeaway",
@@ -13747,6 +13734,19 @@
       "rating_date": "2024-11-09T00:00:00",
       "longitude": "-0.0983716",
       "latitude": "51.4984564"
+    },
+    {
+      "id": 1846398,
+      "name": "Siam Heaven Thai Restaurant",
+      "type": "takeaway",
+      "city": "Bedford",
+      "local_authority": "Bedford",
+      "postcode": "MK40 2TH",
+      "address": "36 THE BROADWAY, BEDFORD",
+      "hygiene_rating": "4",
+      "rating_date": "2025-08-27T00:00:00",
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": 1346397,
@@ -14152,19 +14152,6 @@
       "latitude": null
     },
     {
-      "id": 1519276,
-      "name": "Siam Zapp Authentic Thai Noodle Bar",
-      "type": "takeaway",
-      "city": "Blackburn",
-      "local_authority": "Blackburn",
-      "postcode": "BB1 6EA",
-      "address": "65 Whalley Range, Blackburn, Blackburn With Darwen",
-      "hygiene_rating": "5",
-      "rating_date": "2024-05-08T00:00:00",
-      "longitude": "-2.478866",
-      "latitude": "53.7548355"
-    },
-    {
       "id": 1932417,
       "name": "Tams Thai Fusion & Tams Bar",
       "type": "takeaway",
@@ -14280,6 +14267,19 @@
       "rating_date": "2026-05-21T00:00:00",
       "longitude": "-3.0045627",
       "latitude": "50.7766264"
+    },
+    {
+      "id": 1930834,
+      "name": "IThai Noodle Bar Kiosk",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Greenwich",
+      "postcode": "SE10 0PH",
+      "address": "Underground Station North Greenwich Transport Interchange 5 Millennium Way, Greenwich",
+      "hygiene_rating": "3",
+      "rating_date": "2026-05-28T00:00:00",
+      "longitude": "0.0035616",
+      "latitude": "51.5002365"
     },
     {
       "id": 1874035,
@@ -14732,7 +14732,7 @@
       "postcode": "EH2 3BG",
       "address": "45 North Castle Street, Edinburgh",
       "hygiene_rating": "Improvement Required",
-      "rating_date": "2026-03-03T00:00:00",
+      "rating_date": "2026-06-04T00:00:00",
       "longitude": "-3.2034009",
       "latitude": "55.9531021"
     },
@@ -15413,19 +15413,6 @@
       "latitude": "51.23489"
     },
     {
-      "id": 727555,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Sevenoaks",
-      "local_authority": "Sevenoaks",
-      "postcode": "TN13 1LL",
-      "address": "3C Dorset Street, Sevenoaks, KENT",
-      "hygiene_rating": "5",
-      "rating_date": "2024-05-21T00:00:00",
-      "longitude": "0.192113",
-      "latitude": "51.270914"
-    },
-    {
       "id": 1381200,
       "name": "Giggling Squid",
       "type": "restaurant",
@@ -15567,6 +15554,19 @@
       "rating_date": "2026-06-15T00:00:00",
       "longitude": "-3.1661169",
       "latitude": "51.463256"
+    },
+    {
+      "id": 727555,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Sevenoaks",
+      "local_authority": "Sevenoaks",
+      "postcode": "TN13 1LL",
+      "address": "3C Dorset Street, Sevenoaks, KENT",
+      "hygiene_rating": "5",
+      "rating_date": "2026-06-22T00:00:00",
+      "longitude": "0.192113",
+      "latitude": "51.270914"
     },
     {
       "id": 1055740,
@@ -15746,7 +15746,7 @@
       "postcode": "AB10 1HB",
       "address": "1 Union Terrace, Aberdeen",
       "hygiene_rating": "Pass",
-      "rating_date": "2019-07-17T00:00:00",
+      "rating_date": "2026-06-12T00:00:00",
       "longitude": null,
       "latitude": null
     },
@@ -16076,19 +16076,6 @@
       "latitude": "53.4656639099121"
     },
     {
-      "id": 836583,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Oxford",
-      "local_authority": "Oxford City",
-      "postcode": "OX1 2BJ",
-      "address": "Unit A, Threeways House, George Street, Oxford",
-      "hygiene_rating": "4",
-      "rating_date": "2025-11-19T00:00:00",
-      "longitude": "-1.261062",
-      "latitude": "51.753851"
-    },
-    {
       "id": 437504,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -16100,6 +16087,19 @@
       "rating_date": "2025-03-12T00:00:00",
       "longitude": "-1.412476",
       "latitude": "53.413049"
+    },
+    {
+      "id": 836583,
+      "name": "Thaikhun",
+      "type": "restaurant",
+      "city": "Oxford",
+      "local_authority": "Oxford City",
+      "postcode": "OX1 2BJ",
+      "address": "Unit A, Threeways House, George Street, Oxford",
+      "hygiene_rating": "4",
+      "rating_date": "2025-11-19T00:00:00",
+      "longitude": "-1.261062",
+      "latitude": "51.753851"
     },
     {
       "id": 1817391,
@@ -16115,19 +16115,6 @@
       "latitude": "53.479872"
     },
     {
-      "id": 696479,
-      "name": "THAIKHUN",
-      "type": "restaurant",
-      "city": "Aberdeen",
-      "local_authority": "Aberdeen City",
-      "postcode": "AB11 5RG",
-      "address": "Unit FS10 First Level Mall, Union Square, Guild Street",
-      "hygiene_rating": "Pass",
-      "rating_date": "2023-10-10T00:00:00",
-      "longitude": "-2.096921",
-      "latitude": "57.143568"
-    },
-    {
       "id": 811936,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -16141,17 +16128,17 @@
       "latitude": "55.822897"
     },
     {
-      "id": 1803464,
-      "name": "Banana Tree",
+      "id": 696479,
+      "name": "THAIKHUN",
       "type": "restaurant",
-      "city": "London",
-      "local_authority": "Camden",
-      "postcode": "NW6 1XN",
-      "address": "237-239 West End Lane, London",
-      "hygiene_rating": "5",
-      "rating_date": "2025-02-17T00:00:00",
-      "longitude": "-0.191699996590614",
-      "latitude": "51.5498313903809"
+      "city": "Aberdeen",
+      "local_authority": "Aberdeen City",
+      "postcode": "AB11 5RG",
+      "address": "Unit FS10 First Level Mall, Union Square, Guild Street",
+      "hygiene_rating": "Pass",
+      "rating_date": "2023-10-10T00:00:00",
+      "longitude": "-2.096921",
+      "latitude": "57.143568"
     },
     {
       "id": 663888,
@@ -16165,6 +16152,19 @@
       "rating_date": "2025-02-10T00:00:00",
       "longitude": null,
       "latitude": null
+    },
+    {
+      "id": 1803464,
+      "name": "Banana Tree",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Camden",
+      "postcode": "NW6 1XN",
+      "address": "237-239 West End Lane, London",
+      "hygiene_rating": "5",
+      "rating_date": "2025-02-17T00:00:00",
+      "longitude": "-0.191699996590614",
+      "latitude": "51.5498313903809"
     },
     {
       "id": 1572252,
@@ -16414,19 +16414,6 @@
       "latitude": "52.572017"
     },
     {
-      "id": 307649,
-      "name": "Mango Tree",
-      "type": "restaurant",
-      "city": "Westmorland and Furness",
-      "local_authority": "Westmorland and Furness",
-      "postcode": "CA17 4QT",
-      "address": "Market Square, Kirkby Stephen",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-17T00:00:00",
-      "longitude": "-2.348319",
-      "latitude": "54.473365"
-    },
-    {
       "id": 1893532,
       "name": "Mango Tree",
       "type": "restaurant",
@@ -16438,6 +16425,19 @@
       "rating_date": "2025-11-13T00:00:00",
       "longitude": "-3.2178754",
       "latitude": "51.5118053"
+    },
+    {
+      "id": 307649,
+      "name": "Mango Tree",
+      "type": "restaurant",
+      "city": "Westmorland and Furness",
+      "local_authority": "Westmorland and Furness",
+      "postcode": "CA17 4QT",
+      "address": "Market Square, Kirkby Stephen",
+      "hygiene_rating": "5",
+      "rating_date": "2025-06-17T00:00:00",
+      "longitude": "-2.348319",
+      "latitude": "54.473365"
     },
     {
       "id": 1806274,

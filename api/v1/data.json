@@ -2,7 +2,7 @@
   "name": "ThaiData UK",
   "description": "Business intelligence and cost defense tools for UK Thai restaurant operators",
   "url": "https://thaidata.uk",
-  "last_updated": "2026-06-29",
+  "last_updated": "2026-07-06",
   "data_sources": [
     "FSA FHRS",
     "FSA FHIS",
@@ -55,9 +55,9 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 278,
+      "total_thai_businesses": 279,
       "restaurants": 230,
-      "takeaways": 48,
+      "takeaways": 49,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 99

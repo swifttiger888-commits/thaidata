@@ -594,12 +594,6 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1853251,
-    "name": "Peer Baba Resturant and Catering",
-    "city": "Bradford",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 1929764,
     "name": "SABA",
     "city": "City of London Corporation",
@@ -741,12 +735,6 @@
     "fsa_id": 345555,
     "name": "Abu Zaad Restaurant",
     "city": "Hammersmith and Fulham",
-    "chain": "Zaap"
-  },
-  {
-    "fsa_id": 1519276,
-    "name": "Siam Zapp Authentic Thai Noodle Bar",
-    "city": "Blackburn",
     "chain": "Zaap"
   },
   {

@@ -1,14 +1,18 @@
 {
-  "run_date": "2026-06-29",
+  "run_date": "2026-07-06",
   "applied": true,
-  "total_cities": 274,
+  "total_cities": 275,
   "generated": 253,
-  "quarantined": 19,
+  "quarantined": 20,
   "skipped": 1,
   "quarantined_pages": [
     {
       "slug": "adur",
       "reason": "No restaurant data for city: Adur"
+    },
+    {
+      "slug": "blackburn",
+      "reason": "No restaurant data for city: Blackburn"
     },
     {
       "slug": "clacton-on-sea",
