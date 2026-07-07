@@ -19,7 +19,7 @@ REPO = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
 # IndexNow endpoints
 ENDPOINTS = [
     'https://www.bing.com/indexnow',
-    'https://search.yandex.com/indexnow',
+    'https://yandex.com/indexnow',
     'https://api.indexnow.org/indexnow',
 ]
 
@@ -86,7 +86,7 @@ def main():
     all_ok = True
     for endpoint, status, msg in results:
         short = endpoint.split('//')[1].split('/')[0]
-        ok = status == 200
+        ok = status in (200, 202)
         if not ok:
             all_ok = False
         print(f"  {'✓' if ok else '✗'} {short:30s} → {status} ({msg})")
