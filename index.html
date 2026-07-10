@@ -2175,7 +2175,7 @@
             nameEl.textContent = rest.name;
             info.appendChild(nameEl);
             var meta = document.createElement('div');
-            meta.style.cssText = 'font-size:0.78rem;color:var(--ink4);margin-top:2px;';
+            meta.style.cssText = 'font-size:0.78rem;color:var(--ink3);margin-top:2px;';
             meta.textContent = rest.city + ' · Added ' + rest.discovered_on;
             info.appendChild(meta);
             card.appendChild(info);
@@ -2187,7 +2187,7 @@
           });
         })
         .catch(function() {
-          container.innerHTML = '<p style="color: var(--ink4);">Recent additions unavailable right now.</p>';
+          container.innerHTML = '<p style="color: var(--ink3);">Recent additions unavailable right now.</p>';
         });
     })();
   </script>
