@@ -57,6 +57,8 @@ async function sendEmail(env, { to, subject, html, emailType, claimId, restauran
     return { success: false, error: 'Missing RESEND_API_KEY', logId };
   }
 
+  const replyToEmail = env.ADMIN_EMAIL || 'hello@thaidata.uk';
+
   try {
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -66,6 +68,7 @@ async function sendEmail(env, { to, subject, html, emailType, claimId, restauran
       },
       body: JSON.stringify({
         from: 'ThaiData UK <hello@thaidata.uk>',
+        reply_to: replyToEmail,
         to: [to],
         subject,
         html,
