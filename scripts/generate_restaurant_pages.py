@@ -199,11 +199,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- Head replacements ----
     html = html.replace(
         '<!-- DYNAMIC: title -->\n    <title>My Thai, Leeds — FSA 5/5 Hygiene Rating | ThaiData</title>',
-        f'    <title>{name}, {city} — FSA {rating}/5 Hygiene Rating | ThaiData</title>'
+        f'    <title>{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK</title>'
     )
     html = html.replace(
         'content="My Thai in Leeds: FSA 5/5 restaurant. Full address, hygiene inspection scores, and map. Claim this free listing."',
-        f'content="{name} in {city}: FSA {rating}/5 {rtype_label.lower()}.{ " " + address + "." if address else "" } Full address, hygiene inspection scores, and map. Claim this free listing."'
+        f'content="{name} in {city}:{ " " + address + "." if address else "" } FSA {rating}/5 {rtype_label.lower()}. Full address, contact details, inspection scores, and map. Updated {format_date(r.get("rating_date", ""))}."'
     )
     html = html.replace(
         '<!-- DYNAMIC: canonical_url -->\n    <link rel="canonical" href="https://thaidata.uk/r/leeds/my-thai/"',
@@ -228,11 +228,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
     html = html.replace(
         '<!-- DYNAMIC: og_title -->\n    <meta property="og:title" content="My Thai, Leeds — FSA 5/5 | ThaiData"',
-        f'    <meta property="og:title" content="{name}, {city} — FSA {rating}/5 | ThaiData"'
+        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK"'
     )
     html = html.replace(
         '<!-- DYNAMIC: og_description -->\n    <meta property="og:description" content="FSA 5/5 hygiene rating. Thai restaurant in Leeds. View inspection scores and claim this listing."',
-        f'    <meta property="og:description" content="FSA {rating}/5 hygiene rating. {rtype_label} in {city}. View inspection scores and claim this listing."'
+        f'    <meta property="og:description" content="{name} in {city}:{ " " + address + "." if address else "" } FSA {rating}/5 {rtype_label}. View inspection scores, contact details and map."'
     )
 
     # ---- Schema ----
