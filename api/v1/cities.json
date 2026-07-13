@@ -3,16 +3,16 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-07-06",
-  "total_uk": 1268,
-  "cities_tracked": 254,
+  "updated": "2026-07-13",
+  "total_uk": 1272,
+  "cities_tracked": 255,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 279,
-      "restaurants": 230,
-      "takeaways": 49,
+      "total_thai_businesses": 281,
+      "restaurants": 231,
+      "takeaways": 50,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 99
@@ -100,10 +100,10 @@
     {
       "name": "Cornwall",
       "population": 575000,
-      "total_thai_businesses": 12,
-      "restaurants": 9,
+      "total_thai_businesses": 13,
+      "restaurants": 10,
       "takeaways": 3,
-      "per_100k": 2.1,
+      "per_100k": 2.3,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 4
     },
@@ -224,7 +224,7 @@
       "restaurants": 8,
       "takeaways": 0,
       "per_100k": 2.7,
-      "avg_hygiene_rating": 3.6,
+      "avg_hygiene_rating": 3.4,
       "postcode_areas": 5
     },
     {
@@ -264,7 +264,7 @@
       "restaurants": 8,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 5.0,
+      "avg_hygiene_rating": 4.9,
       "postcode_areas": 2
     },
     {
@@ -316,16 +316,6 @@
       "per_100k": 3.3,
       "avg_hygiene_rating": 3.6,
       "postcode_areas": 4
-    },
-    {
-      "name": "North Norfolk",
-      "population": null,
-      "total_thai_businesses": 7,
-      "restaurants": 7,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.6,
-      "postcode_areas": 2
     },
     {
       "name": "Cheshire West and Chester",
@@ -448,6 +438,16 @@
       "postcode_areas": 3
     },
     {
+      "name": "North Norfolk",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.7,
+      "postcode_areas": 2
+    },
+    {
       "name": "Kingston-Upon-Thames",
       "population": null,
       "total_thai_businesses": 6,
@@ -564,7 +564,7 @@
       "restaurants": 4,
       "takeaways": 2,
       "per_100k": 0.8,
-      "avg_hygiene_rating": 4.5,
+      "avg_hygiene_rating": 4.2,
       "postcode_areas": 5
     },
     {
@@ -576,6 +576,16 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
       "postcode_areas": 2
+    },
+    {
+      "name": "Southend",
+      "population": 185000,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": 3.2,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 3
     },
     {
       "name": "Stockport",
@@ -604,18 +614,8 @@
       "restaurants": 5,
       "takeaways": 1,
       "per_100k": 2.3,
-      "avg_hygiene_rating": 3.8,
-      "postcode_areas": 4
-    },
-    {
-      "name": "Southend",
-      "population": 185000,
-      "total_thai_businesses": 6,
-      "restaurants": 6,
-      "takeaways": 0,
-      "per_100k": 3.2,
       "avg_hygiene_rating": 3.7,
-      "postcode_areas": 3
+      "postcode_areas": 4
     },
     {
       "name": "Aberdeen",
@@ -656,16 +656,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 3
-    },
-    {
-      "name": "Cheltenham",
-      "population": 120000,
-      "total_thai_businesses": 5,
-      "restaurants": 5,
-      "takeaways": 0,
-      "per_100k": 4.2,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
     },
     {
       "name": "Gwynedd",
@@ -798,6 +788,16 @@
       "postcode_areas": 3
     },
     {
+      "name": "Cheltenham",
+      "population": 120000,
+      "total_thai_businesses": 4,
+      "restaurants": 4,
+      "takeaways": 0,
+      "per_100k": 3.3,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Warwick",
       "population": null,
       "total_thai_businesses": 4,
@@ -864,7 +864,7 @@
       "restaurants": 4,
       "takeaways": 0,
       "per_100k": 1.2,
-      "avg_hygiene_rating": 4.5,
+      "avg_hygiene_rating": 4.0,
       "postcode_areas": 3
     },
     {
@@ -1004,7 +1004,7 @@
       "restaurants": 1,
       "takeaways": 2,
       "per_100k": 1.2,
-      "avg_hygiene_rating": 4.7,
+      "avg_hygiene_rating": 3.7,
       "postcode_areas": 3
     },
     {
@@ -1254,7 +1254,7 @@
       "restaurants": 2,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 4.0,
+      "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
     },
     {
@@ -1598,6 +1598,16 @@
       "postcode_areas": 1
     },
     {
+      "name": "Stockton On Tees",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Welwyn Hatfield",
       "population": null,
       "total_thai_businesses": 2,
@@ -1796,6 +1806,16 @@
       "per_100k": 1.6,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 2
+    },
+    {
+      "name": "Eastleigh",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5,
+      "postcode_areas": 1
     },
     {
       "name": "Bridgend",
@@ -2018,6 +2038,16 @@
       "postcode_areas": 1
     },
     {
+      "name": "Knowsley",
+      "population": 155000,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": 0.6,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Merthyr Tydfil",
       "population": null,
       "total_thai_businesses": 1,
@@ -2054,16 +2084,6 @@
       "restaurants": 1,
       "takeaways": 0,
       "per_100k": 0.7,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Stockton On Tees",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 1,
-      "takeaways": 0,
-      "per_100k": null,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
     },
@@ -2359,16 +2379,6 @@
     },
     {
       "name": "Babergh",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 0,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Eastleigh",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 0,
