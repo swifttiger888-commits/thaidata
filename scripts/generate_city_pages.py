@@ -382,6 +382,9 @@ def update_hero_stats(html: str, city: str, stats: dict[str, Any], total_uk: int
     takeaway = stats["takeaway"]
     avg_rating = stats["avg_rating"]
 
+    # 0. Strip regex artifacts from previous broken generator runs
+    html = re.sub(r'\\g<\d+>', '', html)
+
     # 1. city-stats div:  "14 (13 dine-in, 1 takeaway)"  → fresh numbers
     raw_count = stats.get("_raw_count", count)
     raw_dine_in = stats.get("_raw_dine_in", dine_in)
