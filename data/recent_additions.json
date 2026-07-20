@@ -1,6 +1,34 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-20",
   "restaurants": [
+    {
+      "fsa_id": "1932902",
+      "name": "Kinlab Thai Takeaway",
+      "city": "Darlington",
+      "type": "takeaway",
+      "discovered_on": "2026-07-20"
+    },
+    {
+      "fsa_id": "1960266",
+      "name": "Simply Thai",
+      "city": "London",
+      "type": "takeaway",
+      "discovered_on": "2026-07-20"
+    },
+    {
+      "fsa_id": "1960334",
+      "name": "Tuk Tuk Thai + Tuk Tuk Pan Asian",
+      "city": "Rochford",
+      "type": "restaurant",
+      "discovered_on": "2026-07-20"
+    },
+    {
+      "fsa_id": "1921019",
+      "name": "Thai Co",
+      "city": "Rochford",
+      "type": "restaurant",
+      "discovered_on": "2026-07-20"
+    },
     {
       "fsa_id": "1938694",
       "name": "CANAL THAI FLAVOR",

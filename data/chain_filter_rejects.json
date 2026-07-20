@@ -18,6 +18,12 @@
     "chain": "Busaba"
   },
   {
+    "fsa_id": 1546435,
+    "name": "Ali Baba",
+    "city": "Calderdale",
+    "chain": "Busaba"
+  },
+  {
     "fsa_id": 1485738,
     "name": "Ali Baba",
     "city": "Barking and Dagenham",
@@ -30,12 +36,6 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1546435,
-    "name": "Ali Baba",
-    "city": "Calderdale",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 342453,
     "name": "Ali Baba",
     "city": "Bournemouth, Christchurch and Poole",
@@ -45,12 +45,6 @@
     "fsa_id": 124611,
     "name": "Ali Baba",
     "city": "Rochdale",
-    "chain": "Busaba"
-  },
-  {
-    "fsa_id": 1101244,
-    "name": "Ali Baba",
-    "city": "Havering",
     "chain": "Busaba"
   },
   {
@@ -84,21 +78,15 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1833353,
-    "name": "Ali Baba Kebab Pizza & Burgers",
-    "city": "Rhondda Cynon Taf",
+    "fsa_id": 604472,
+    "name": "Ali Baba Lounge",
+    "city": "Birmingham",
     "chain": "Busaba"
   },
   {
     "fsa_id": 519550,
     "name": "Ali Baba Lounge",
     "city": "Hillingdon",
-    "chain": "Busaba"
-  },
-  {
-    "fsa_id": 604472,
-    "name": "Ali Baba Lounge",
-    "city": "Birmingham",
     "chain": "Busaba"
   },
   {
@@ -183,6 +171,12 @@
     "fsa_id": 716442,
     "name": "Baba Alis Kebab House Ltd",
     "city": "Powys",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1969060,
+    "name": "Baba Azz",
+    "city": "Manchester",
     "chain": "Busaba"
   },
   {
