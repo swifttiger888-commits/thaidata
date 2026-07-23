@@ -16,6 +16,119 @@ function pageUrl(name, city) {
   return '/r/' + slugify(city) + '/' + slugify(name) + '/';
 }
 
+/**
+ * Escape HTML entities to prevent XSS in D1-sourced content.
+ */
+function htmlEscape(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/**
+ * Inject claimed listing enrichment into restaurant page HTML.
+ * Extracts restaurant name + city from existing JSON-LD, queries D1,
+ * enriches the Restaurant schema and adds a Quick Facts card.
+ * Returns original HTML unchanged if no claimed data found or on any error.
+ */
+async function injectClaimedEnrichment(html, env) {
+  if (!env.DB) return html;  // No D1 binding — skip
+
+  // 1. Extract restaurant name + city from existing JSON-LD
+  const ldMatch = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+  if (!ldMatch) return html;
+
+  let ld;
+  try { ld = JSON.parse(ldMatch[1]); } catch (_) { return html; }
+
+  // Find the Restaurant object (handles both array and single-object formats)
+  const schemas = Array.isArray(ld) ? ld : [ld];
+  const restaurant = schemas.find(s => s['@type'] === 'Restaurant');
+  if (!restaurant) return html;
+
+  const name = restaurant.name;
+  const city = restaurant.address?.addressLocality;
+  if (!name || !city) return html;
+
+  // 2. Query D1 for claimed listing enrichment
+  let listing;
+  try {
+    listing = await env.DB.prepare(
+      'SELECT l.cuisine_specialty, l.features, l.price_range, l.opening_hours, l.website, l.description, l.phone FROM listings l JOIN claims c ON l.claim_id = c.id WHERE l.restaurant_name = ? AND l.city = ? AND c.claim_status = ?'
+    ).bind(name, city, 'approved').first();
+  } catch (_) { return html; }
+
+  if (!listing) return html;
+
+  // 3. Enrich the JSON-LD Restaurant schema
+  if (listing.description) {
+    restaurant.description = listing.description;
+  }
+  if (listing.cuisine_specialty) {
+    restaurant.servesCuisine = listing.cuisine_specialty;
+  }
+  if (listing.price_range) {
+    restaurant.priceRange = listing.price_range;
+  }
+  if (listing.phone) {
+    restaurant.telephone = listing.phone;
+  }
+  if (listing.opening_hours) {
+    try {
+      restaurant.openingHours = listing.opening_hours;
+    } catch (_) {}
+  }
+  if (listing.website) {
+    try {
+      restaurant.sameAs = restaurant.sameAs || [];
+      if (!restaurant.sameAs.includes(listing.website)) {
+        restaurant.sameAs.push(listing.website);
+      }
+    } catch (_) {}
+  }
+
+  // Replace the JSON-LD block with enriched version
+  const ldBlock = ldMatch[0];
+  const enrichedLd = JSON.stringify(ld);
+  html = html.replace(ldBlock, '<script type="application/ld+json">' + enrichedLd + '</script>');
+
+  // 4. Build Quick Facts HTML card
+  const facts = [];
+  if (listing.cuisine_specialty) {
+    facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Cuisine</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);">' + htmlEscape(listing.cuisine_specialty) + '</span></div>');
+  }
+  if (listing.price_range) {
+    facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Price</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);">' + htmlEscape(listing.price_range) + '</span></div>');
+  }
+  if (listing.opening_hours) {
+    const hours = Array.isArray(listing.opening_hours) ? listing.opening_hours : [listing.opening_hours];
+    facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);flex-shrink:0;">Hours</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);text-align:right;">' + htmlEscape(hours.join('<br>')) + '</span></div>');
+  }
+  if (listing.website) {
+    facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Website</span><span class="qf-value" style="font-weight:500;"><a href="' + htmlEscape(listing.website) + '" target="_blank" rel="noopener" style="color:var(--accent, #10B981);text-decoration:none;">Visit →</a></span></div>');
+  }
+  if (listing.description) {
+    facts.push('<div class="qf-desc" style="padding-top:8px;font-size:0.9rem;color:var(--ink3, #374151);line-height:1.6;">' + htmlEscape(listing.description) + '</div>');
+  }
+
+  if (facts.length > 0) {
+    const card = '\n            <!-- Quick Facts (server-injected from claimed listing) -->\n            <div id="quick-facts" class="card" style="margin-bottom:24px;">\n                <h3 style="margin:0 0 16px;font-weight:600;">Quick Facts</h3>\n                ' + facts.join('\n                ') + '\n            </div>\n';
+    // Inject before Trust Sidebar anchor
+    if (html.includes('<!-- Trust Sidebar -->')) {
+      html = html.replace('<!-- Trust Sidebar -->', card + '            <!-- Trust Sidebar -->');
+    } else {
+      // Fallback: inject before Schema: Restaurant (visible anchor always present)
+      html = html.replace('<!-- Schema: Restaurant -->', card + '    <!-- Schema: Restaurant -->');
+    }
+  }
+
+  return html;
+}
+
 export async function onRequest(context) {
   const { request, env, next } = context;
   const url = new URL(request.url);
@@ -53,7 +166,15 @@ export async function onRequest(context) {
       // The SPA fallback (homepage) does NOT have "Hygiene" anywhere
       if (text.includes('Hygiene')) {
         // This is a real restaurant page — serve from static assets
-        return new Response(text, {
+        // Inject claimed listing enrichment for AEO/SEO visibility
+        let enrichedText = text;
+        try {
+          enrichedText = await injectClaimedEnrichment(text, env);
+        } catch (e) {
+          // D1 failure or parse error — serve original page unchanged
+          console.warn('Enrichment injection failed:', e.message);
+        }
+        return new Response(enrichedText, {
           status: 200,
           headers: {
             'content-type': 'text/html; charset=utf-8',
