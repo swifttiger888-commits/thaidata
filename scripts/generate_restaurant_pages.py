@@ -202,8 +202,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         f'    <title>{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK</title>'
     )
     html = html.replace(
-        'content="My Thai in Leeds: FSA 5/5 restaurant. Full address, hygiene inspection scores, and map. Claim this free listing."',
-        f'content="{name} in {city}:{ " " + address + "." if address else "" } FSA {rating}/5 {rtype_label.lower()}. Full address, contact details, inspection scores, and map. Updated {format_date(r.get("rating_date", ""))}."'
+        'content="FSA inspection data for My Thai, Leeds. 5/5 hygiene rating. See hygiene, structural, and management breakdown scores. 43 Wade Lane, Leeds City Centre, Leeds. Updated November 2025."',
+        f'content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
     )
     html = html.replace(
         '<!-- DYNAMIC: canonical_url -->\n    <link rel="canonical" href="https://thaidata.uk/r/leeds/my-thai/"',
@@ -232,7 +232,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
     html = html.replace(
         '<!-- DYNAMIC: og_description -->\n    <meta property="og:description" content="FSA 5/5 hygiene rating. Thai restaurant in Leeds. View inspection scores and claim this listing."',
-        f'    <meta property="og:description" content="{name} in {city}:{ " " + address + "." if address else "" } FSA {rating}/5 {rtype_label}. View inspection scores, contact details and map."'
+        f'    <meta property="og:description" content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
     )
 
     # ---- Schema ----

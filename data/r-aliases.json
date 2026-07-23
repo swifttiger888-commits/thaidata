@@ -4,6 +4,7 @@
   "aliases": [
     { "slug": "chaophraya", "city": "leeds", "canonical": "Chao Phraya Thai Restaurant" },
     { "slug": "nois", "city": "leeds", "canonical": "Noi's Thai Kitchen" },
-    { "slug": "rosas", "city": "leeds", "canonical": "Rosa's Thai Cafe" }
+    { "slug": "rosas", "city": "leeds", "canonical": "Rosa's Thai Cafe" },
+    { "slug": "banana-tree", "city": "henley-on-thames", "canonical": "Banana Tree Henley", "target_city": "oxfordshire", "comment": "Searched as 'banana tree henley' — canonical page is at /r/oxfordshire/banana-tree-henley/" }
   ]
 }

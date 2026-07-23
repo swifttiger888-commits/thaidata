@@ -83,7 +83,8 @@ export async function onRequest(context) {
       );
 
       if (match) {
-        const correctUrl = pageUrl(match.canonical, match.city);
+        const redirectCity = match.target_city || match.city;
+        const correctUrl = pageUrl(match.canonical, redirectCity);
         return new Response(null, {
           status: 301,
           headers: { 'Location': correctUrl },
