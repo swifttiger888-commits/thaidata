@@ -2,7 +2,7 @@
   "name": "ThaiData UK",
   "description": "Business intelligence and cost defense tools for UK Thai restaurant operators",
   "url": "https://thaidata.uk",
-  "last_updated": "2026-07-20",
+  "last_updated": "2026-07-28",
   "data_sources": [
     "FSA FHRS",
     "FSA FHIS",
@@ -11,9 +11,9 @@
     "UKHospitality"
   ],
   "statistics": {
-    "total_uk_thai_businesses": 1273,
-    "total_full_service_restaurants": 1016,
-    "total_quick_service_takeaways": 257,
+    "total_uk_thai_businesses": 1277,
+    "total_full_service_restaurants": 1022,
+    "total_quick_service_takeaways": 255,
     "uk_average_hygiene_rating": 4.1,
     "uk_average_per_100k_density": 2.6,
     "hygiene_rating_5_percentage": 50.4,
@@ -55,10 +55,10 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 279,
-      "restaurants": 228,
+      "total_thai_businesses": 283,
+      "restaurants": 232,
       "takeaways": 51,
-      "per_100k": 3.1,
+      "per_100k": 3.2,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 99
     },
@@ -79,7 +79,7 @@
       "restaurants": 21,
       "takeaways": 3,
       "per_100k": 11.4,
-      "avg_hygiene_rating": 4.3,
+      "avg_hygiene_rating": 4.2,
       "postcode_areas": 8
     },
     {
@@ -103,6 +103,16 @@
       "postcode_areas": 10
     },
     {
+      "name": "Swansea",
+      "population": 247000,
+      "total_thai_businesses": 15,
+      "restaurants": 13,
+      "takeaways": 2,
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 3.8,
+      "postcode_areas": 5
+    },
+    {
       "name": "Bristol",
       "population": 483000,
       "total_thai_businesses": 14,
@@ -121,16 +131,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.4,
       "postcode_areas": 4
-    },
-    {
-      "name": "Swansea",
-      "population": 247000,
-      "total_thai_businesses": 14,
-      "restaurants": 12,
-      "takeaways": 2,
-      "per_100k": 5.7,
-      "avg_hygiene_rating": 3.9,
-      "postcode_areas": 5
     },
     {
       "name": "Brighton",

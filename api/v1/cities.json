@@ -3,17 +3,17 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-07-20",
-  "total_uk": 1273,
+  "updated": "2026-07-28",
+  "total_uk": 1277,
   "cities_tracked": 256,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 279,
-      "restaurants": 228,
+      "total_thai_businesses": 283,
+      "restaurants": 232,
       "takeaways": 51,
-      "per_100k": 3.1,
+      "per_100k": 3.2,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 99
     },
@@ -34,7 +34,7 @@
       "restaurants": 21,
       "takeaways": 3,
       "per_100k": 11.4,
-      "avg_hygiene_rating": 4.3,
+      "avg_hygiene_rating": 4.2,
       "postcode_areas": 8
     },
     {
@@ -58,6 +58,16 @@
       "postcode_areas": 10
     },
     {
+      "name": "Swansea",
+      "population": 247000,
+      "total_thai_businesses": 15,
+      "restaurants": 13,
+      "takeaways": 2,
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 3.8,
+      "postcode_areas": 5
+    },
+    {
       "name": "Bristol",
       "population": 483000,
       "total_thai_businesses": 14,
@@ -76,16 +86,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.4,
       "postcode_areas": 4
-    },
-    {
-      "name": "Swansea",
-      "population": 247000,
-      "total_thai_businesses": 14,
-      "restaurants": 12,
-      "takeaways": 2,
-      "per_100k": 5.7,
-      "avg_hygiene_rating": 3.9,
-      "postcode_areas": 5
     },
     {
       "name": "Brighton",
@@ -278,6 +278,16 @@
       "postcode_areas": 5
     },
     {
+      "name": "Shropshire",
+      "population": 325000,
+      "total_thai_businesses": 8,
+      "restaurants": 6,
+      "takeaways": 2,
+      "per_100k": 2.5,
+      "avg_hygiene_rating": 3.9,
+      "postcode_areas": 5
+    },
+    {
       "name": "Wiltshire",
       "population": 520000,
       "total_thai_businesses": 8,
@@ -345,16 +355,6 @@
       "takeaways": 4,
       "per_100k": 4.9,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 5
-    },
-    {
-      "name": "Shropshire",
-      "population": 325000,
-      "total_thai_businesses": 7,
-      "restaurants": 5,
-      "takeaways": 2,
-      "per_100k": 2.2,
-      "avg_hygiene_rating": 4.0,
       "postcode_areas": 5
     },
     {
@@ -515,16 +515,6 @@
       "takeaways": 1,
       "per_100k": 2.1,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 3
-    },
-    {
-      "name": "Cambridge",
-      "population": 146000,
-      "total_thai_businesses": 6,
-      "restaurants": 5,
-      "takeaways": 1,
-      "per_100k": 4.1,
-      "avg_hygiene_rating": 4.8,
       "postcode_areas": 3
     },
     {
@@ -718,6 +708,16 @@
       "postcode_areas": 1
     },
     {
+      "name": "Cambridge",
+      "population": 146000,
+      "total_thai_businesses": 5,
+      "restaurants": 5,
+      "takeaways": 0,
+      "per_100k": 3.4,
+      "avg_hygiene_rating": 4.8,
+      "postcode_areas": 3
+    },
+    {
       "name": "Wealden",
       "population": null,
       "total_thai_businesses": 5,
@@ -908,6 +908,16 @@
       "postcode_areas": 2
     },
     {
+      "name": "Epsom and Ewell",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5,
+      "postcode_areas": 1
+    },
+    {
       "name": "West Suffolk",
       "population": null,
       "total_thai_businesses": 4,
@@ -945,16 +955,6 @@
       "takeaways": 2,
       "per_100k": 1.6,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Epsom and Ewell",
-      "population": null,
-      "total_thai_businesses": 4,
-      "restaurants": 3,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.2,
       "postcode_areas": 1
     },
     {
@@ -1076,16 +1076,6 @@
       "per_100k": 2.1,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 2
-    },
-    {
-      "name": "Rugby",
-      "population": null,
-      "total_thai_businesses": 3,
-      "restaurants": 2,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.7,
-      "postcode_areas": 1
     },
     {
       "name": "Dudley",
@@ -1264,7 +1254,7 @@
       "restaurants": 2,
       "takeaways": 1,
       "per_100k": 2.9,
-      "avg_hygiene_rating": 4.3,
+      "avg_hygiene_rating": 4.7,
       "postcode_areas": 2
     },
     {
@@ -1324,7 +1314,7 @@
       "restaurants": 0,
       "takeaways": 3,
       "per_100k": null,
-      "avg_hygiene_rating": 3.3,
+      "avg_hygiene_rating": 3.7,
       "postcode_areas": 2
     },
     {
@@ -1364,7 +1354,7 @@
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 5.0,
+      "avg_hygiene_rating": 2.5,
       "postcode_areas": 1
     },
     {
@@ -1506,6 +1496,16 @@
       "per_100k": 0.7,
       "avg_hygiene_rating": 4.5,
       "postcode_areas": 2
+    },
+    {
+      "name": "Rugby",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.5,
+      "postcode_areas": 1
     },
     {
       "name": "Swindon",
