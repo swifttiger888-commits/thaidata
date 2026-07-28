@@ -1,0 +1,267 @@
+#!/usr/bin/env python3
+"""
+Sitemap generator for thaidata.uk
+
+Generates:
+  - sitemap-r-restaurants.xml  (restaurant detail pages)
+  - sitemap-pages.xml           (city pages, static pages, blog posts, tools, chains, learn)
+  - sitemap.xml                 (sitemap index)
+
+Discovers restaurant pages from r/*/*/index.html files on disk.
+Discovers city pages from cities/*.html files.
+Uses curated lists for static/blog/tool/chain/learn pages.
+"""
+
+from __future__ import annotations
+
+import os
+from datetime import datetime
+from xml.etree.ElementTree import Element, SubElement, tostring
+from xml.dom import minidom
+
+REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+TODAY = datetime.utcnow().strftime("%Y-%m-%d")
+
+
+def register_namespace():
+    """Register sitemap namespace so output isn't ns0: prefixed."""
+    try:
+        from xml.etree.ElementTree import register_namespace
+        register_namespace("", NS)
+    except AttributeError:
+        pass
+
+
+def url_element(loc: str, lastmod: str | None = None, changefreq: str | None = None,
+                priority: str | None = None) -> Element:
+    """Create a <url> element."""
+    el = Element("url")
+    loc_el = SubElement(el, "loc")
+    loc_el.text = loc
+    if lastmod:
+        lm = SubElement(el, "lastmod")
+        lm.text = lastmod
+    if changefreq:
+        cf = SubElement(el, "changefreq")
+        cf.text = changefreq
+    if priority:
+        pr = SubElement(el, "priority")
+        pr.text = priority
+    return el
+
+
+def discover_restaurant_pages() -> list[dict]:
+    """Walk r/<city>/<slug>/index.html and return list of URL dicts."""
+    r_dir = os.path.join(REPO_DIR, "r")
+    pages = []
+    if not os.path.isdir(r_dir):
+        return pages
+
+    for city in sorted(os.listdir(r_dir)):
+        city_path = os.path.join(r_dir, city)
+        if not os.path.isdir(city_path):
+            continue
+        for slug in sorted(os.listdir(city_path)):
+            slug_path = os.path.join(city_path, slug)
+            if not os.path.isdir(slug_path):
+                continue
+            index_path = os.path.join(slug_path, "index.html")
+            if os.path.isfile(index_path):
+                pages.append({
+                    "loc": f"https://thaidata.uk/r/{city}/{slug}/",
+                    "changefreq": "monthly",
+                    "priority": "0.6",
+                })
+    return pages
+
+
+def discover_city_pages() -> list[dict]:
+    """Walk cities/*.html and return list of URL dicts."""
+    cities_dir = os.path.join(REPO_DIR, "cities")
+    pages = []
+    if not os.path.isdir(cities_dir):
+        return pages
+
+    for fname in sorted(os.listdir(cities_dir)):
+        if not fname.endswith(".html"):
+            continue
+        city_slug = fname[:-5]  # strip .html
+        pages.append({
+            "loc": f"https://thaidata.uk/cities/{city_slug}",
+            "changefreq": "monthly",
+            "priority": "0.8",
+        })
+        # Also add /r/<city>/ hub page (redirects to cities/<city>.html)
+        pages.append({
+            "loc": f"https://thaidata.uk/r/{city_slug}",
+            "changefreq": "monthly",
+            "priority": "0.7",
+        })
+    return pages
+
+
+def get_static_pages() -> list[dict]:
+    """Return curated list of static/blog/tool pages."""
+    pages = [
+        # Core pages
+        {"loc": "https://thaidata.uk/", "changefreq": "weekly", "priority": "1.0"},
+        {"loc": "https://thaidata.uk/about", "priority": "0.9"},
+        {"loc": "https://thaidata.uk/restaurants", "priority": "0.9"},
+        {"loc": "https://thaidata.uk/guides", "priority": "0.9"},
+        {"loc": "https://thaidata.uk/learn", "priority": "0.9"},
+        {"loc": "https://thaidata.uk/faq", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/privacy", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/terms", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/brand-image", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/data-quality", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/dish-prices", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/sitemap-page", "priority": "0.5"},
+        {"loc": "https://thaidata.uk/tools", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/nlw-report", "priority": "0.7"},
+
+        # Blog / data-driven content
+        {"loc": "https://thaidata.uk/how-many-thai-restaurants-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/state-of-uk-thai-food-2026", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/thai-restaurants-city-breakdown-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/thai-festivals-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/songkran-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/loy-krathong-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/thai-chains-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/thai-menu-price-index-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/open-thai-restaurant-uk", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/open-thai-restaurant-timeline-uk", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-chef-visa-uk", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-food-trends-uk-2026", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-delivery-profit-analysis-2026", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-restaurant-costs-uk", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-restaurant-delivery-commissions-uk", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-restaurant-menu-pricing-uk", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-restaurant-revenue-benchmarks-uk", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-restaurant-gp-calculator", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-restaurant-marketing-uk", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/thai-wholesale-suppliers-uk", "priority": "0.7"},
+
+        # Tools
+        {"loc": "https://thaidata.uk/tools/where-to-open-thai-restaurant-uk", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-restaurant-break-even-calculator", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-restaurant-market-report", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-competitor-radar", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-restaurant-hygiene-lookup", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-restaurant-staffing-calculator", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-restaurant-health-check", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-restaurant-valuation", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/delivery-profit-calculator", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-ingredient-price-tracker", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-supplier-price-tracker", "priority": "0.6"},
+        {"loc": "https://thaidata.uk/tools/thai-menu-price-elasticity-tester", "priority": "0.6"},
+    ]
+    return pages
+
+
+def discover_html_pages(subdir: str, url_prefix: str, priority: str = "0.7",
+                         changefreq: str = "monthly") -> list[dict]:
+    """Discover HTML files in a subdirectory."""
+    d = os.path.join(REPO_DIR, subdir)
+    pages = []
+    if not os.path.isdir(d):
+        return pages
+    for fname in sorted(os.listdir(d)):
+        if not fname.endswith(".html"):
+            continue
+        slug = fname[:-5]  # strip .html
+        pages.append({
+            "loc": f"https://thaidata.uk/{url_prefix}/{slug}",
+            "changefreq": changefreq,
+            "priority": priority,
+        })
+    return pages
+
+
+def write_sitemap(filename: str, urls: list[dict], with_lastmod: bool = True):
+    """Write a sitemap XML file."""
+    register_namespace()
+    urlset = Element("urlset", xmlns=NS)
+
+    for entry in urls:
+        kwargs = {
+            "loc": entry["loc"],
+            "changefreq": entry.get("changefreq", "monthly"),
+            "priority": entry.get("priority", "0.6"),
+        }
+        if with_lastmod:
+            kwargs["lastmod"] = TODAY
+        urlset.append(url_element(**kwargs))
+
+    raw = tostring(urlset, encoding="unicode")
+    pretty = minidom.parseString(raw).toprettyxml(indent="  ", encoding="UTF-8")
+    # Remove the XML declaration line from minidom output (we add our own)
+    lines = pretty.decode("utf-8").split("\n")
+    # Remove first line (<?xml ...?>) and add our own
+    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n' + "\n".join(lines[1:])
+
+    out_path = os.path.join(REPO_DIR, filename)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(xml_str)
+    return out_path
+
+
+def main():
+    print("Generating sitemaps...")
+
+    # ── Restaurant pages ──────────────────────────────────────────
+    restaurant_urls = discover_restaurant_pages()
+    write_sitemap("sitemap-r-restaurants.xml", restaurant_urls, with_lastmod=False)
+    print(f"  sitemap-r-restaurants.xml: {len(restaurant_urls)} restaurant pages")
+
+    # ── Static + blog + tool pages ────────────────────────────────
+    static_urls = get_static_pages()
+
+    # ── City pages (auto-discovered) ──────────────────────────────
+    city_urls = discover_city_pages()
+    print(f"  City pages: {len([u for u in city_urls if '/cities/' in u['loc']])} city + {len([u for u in city_urls if '/r/' in u['loc']])} r/ hubs")
+
+    # ── Chain pages (auto-discovered) ─────────────────────────────
+    chain_urls = discover_html_pages("chains", "chains", priority="0.7")
+
+    # ── Learn pages (auto-discovered) ─────────────────────────────
+    learn_urls = discover_html_pages("learn", "learn", priority="0.7")
+
+    # ── Combine pages sitemap ─────────────────────────────────────
+    all_page_urls = static_urls + city_urls + chain_urls + learn_urls
+    # Deduplicate by loc
+    seen = set()
+    deduped = []
+    for u in all_page_urls:
+        if u["loc"] not in seen:
+            seen.add(u["loc"])
+            deduped.append(u)
+    write_sitemap("sitemap-pages.xml", deduped)
+    print(f"  sitemap-pages.xml: {len(deduped)} total pages")
+
+    # ── Sitemap index ─────────────────────────────────────────────
+    register_namespace()
+    sitemapindex = Element("sitemapindex", xmlns=NS)
+    for sitemap_file in ["sitemap-pages.xml", "sitemap-r-restaurants.xml"]:
+        sm = SubElement(sitemapindex, "sitemap")
+        loc_el = SubElement(sm, "loc")
+        loc_el.text = f"https://thaidata.uk/{sitemap_file}"
+        lm = SubElement(sm, "lastmod")
+        lm.text = TODAY
+
+    raw = tostring(sitemapindex, encoding="unicode")
+    pretty = minidom.parseString(raw).toprettyxml(indent="  ", encoding="UTF-8")
+    lines = pretty.decode("utf-8").split("\n")
+    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n' + "\n".join(lines[1:])
+
+    with open(os.path.join(REPO_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write(xml_str)
+    print(f"  sitemap.xml: index file")
+
+    # ── Summary ──────────────────────────────────────────────────
+    total = len(restaurant_urls) + len(deduped)
+    print(f"\n✅ Sitemaps generated: {total:,} total URLs")
+
+
+if __name__ == "__main__":
+    main()

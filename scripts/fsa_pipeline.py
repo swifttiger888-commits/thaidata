@@ -40,7 +40,7 @@ def main() -> None:
 
     # ── Step 2: fetch fresh FSA data ─────────────────────────────────
     if not run([sys.executable, f'{SCRIPTS}/fetch_all_thai_data.py'],
-               'Step 1/5: Fetch fresh FSA data'):
+               'Step 1/6: Fetch fresh FSA data'):
         print("❌ FSA fetch failed. Aborting.")
         sys.exit(1)
 
@@ -95,7 +95,7 @@ def main() -> None:
 
     # ── Step 5: regenerate pages ─────────────────────────────────────
     if not run([sys.executable, f'{SCRIPTS}/generate_restaurant_pages.py'],
-               'Step 2/5: Regenerate restaurant pages'):
+               'Step 2/6: Regenerate restaurant pages'):
         print("❌ Restaurant page generation failed. Aborting.")
         sys.exit(1)
 
@@ -104,14 +104,18 @@ def main() -> None:
         print("⚠️  City page regeneration failed (non-fatal)")
 
     if not run([sys.executable, f'{SCRIPTS}/add_city_restaurant_links.py'],
-               'Step 4/5: Regenerate city browse cards'):
+               'Step 4/6: Regenerate city browse cards'):
         print("⚠️  City card regeneration failed (non-fatal)")
 
-    # ── Step 5: commit & push ────────────────────────────────────────
+    if not run([sys.executable, f'{SCRIPTS}/generate_sitemaps.py'],
+               'Step 5/6: Regenerate sitemaps'):
+        print("⚠️  Sitemap generation failed (non-fatal)")
+
+    # ── Step 6: commit & push ────────────────────────────────────────
     os.chdir(REPO_DIR)
 
     # Guard: only stage files we own
-    owned_prefixes = ('data/', 'api/', 'r/', 'cities/')
+    owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap')
     status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
     dirty_lines = [l for l in status.stdout.split('\n') if l.strip()]
     unrelated = [l for l in dirty_lines
@@ -129,7 +133,7 @@ def main() -> None:
         return
 
     # Stage everything that changed
-    subprocess.run(['git', 'add', 'data/', 'api/', 'r/', 'cities/'], capture_output=True)
+    subprocess.run(['git', 'add', 'data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py'], capture_output=True)
 
     commit_msg = f"Auto-refresh: FSA data update — {new_count} Thai businesses ({diff:+d})"
     result = subprocess.run(['git', 'commit', '-m', commit_msg], capture_output=True, text=True)
