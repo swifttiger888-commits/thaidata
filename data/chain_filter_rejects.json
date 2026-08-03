@@ -84,15 +84,15 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 604472,
-    "name": "Ali Baba Lounge",
-    "city": "Birmingham",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 519550,
     "name": "Ali Baba Lounge",
     "city": "Hillingdon",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 604472,
+    "name": "Ali Baba Lounge",
+    "city": "Birmingham",
     "chain": "Busaba"
   },
   {
