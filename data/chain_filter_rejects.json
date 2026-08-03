@@ -18,12 +18,6 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1546435,
-    "name": "Ali Baba",
-    "city": "Calderdale",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 1485738,
     "name": "Ali Baba",
     "city": "Barking and Dagenham",
@@ -33,6 +27,12 @@
     "fsa_id": 889992,
     "name": "Ali Baba",
     "city": "Cheshire East",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1546435,
+    "name": "Ali Baba",
+    "city": "Calderdale",
     "chain": "Busaba"
   },
   {
@@ -654,21 +654,9 @@
     "chain": "Patara"
   },
   {
-    "fsa_id": 1494100,
-    "name": "HPH - Hazara Pizza House",
-    "city": "Wakefield",
-    "chain": "Patara"
-  },
-  {
     "fsa_id": 1595366,
     "name": "Hamara Community Cafe",
     "city": "Leeds",
-    "chain": "Patara"
-  },
-  {
-    "fsa_id": 653482,
-    "name": "Hazara Restaurant",
-    "city": "Camden",
     "chain": "Patara"
   },
   {

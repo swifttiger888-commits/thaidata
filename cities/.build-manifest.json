@@ -1,9 +1,9 @@
 {
-  "run_date": "2026-07-28",
+  "run_date": "2026-08-03",
   "applied": true,
   "total_cities": 276,
-  "generated": 255,
-  "quarantined": 19,
+  "generated": 254,
+  "quarantined": 20,
   "skipped": 1,
   "quarantined_pages": [
     {
@@ -25,6 +25,10 @@
     {
       "slug": "east-renfrewshire",
       "reason": "No restaurant data for city: East Renfrewshire"
+    },
+    {
+      "slug": "hampshire",
+      "reason": "No restaurant data for city: Hampshire"
     },
     {
       "slug": "inverclyde",
