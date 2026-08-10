@@ -3,19 +3,19 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-08-03",
-  "total_uk": 1273,
+  "updated": "2026-08-10",
+  "total_uk": 1269,
   "cities_tracked": 255,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 283,
-      "restaurants": 232,
+      "total_thai_businesses": 280,
+      "restaurants": 229,
       "takeaways": 51,
-      "per_100k": 3.2,
+      "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 99
+      "postcode_areas": 98
     },
     {
       "name": "Leeds",
@@ -38,16 +38,6 @@
       "postcode_areas": 8
     },
     {
-      "name": "Edinburgh",
-      "population": 548000,
-      "total_thai_businesses": 20,
-      "restaurants": 12,
-      "takeaways": 8,
-      "per_100k": 3.6,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 7
-    },
-    {
       "name": "Manchester",
       "population": 568000,
       "total_thai_businesses": 19,
@@ -56,6 +46,16 @@
       "per_100k": 3.3,
       "avg_hygiene_rating": 4.3,
       "postcode_areas": 10
+    },
+    {
+      "name": "Edinburgh",
+      "population": 548000,
+      "total_thai_businesses": 19,
+      "restaurants": 12,
+      "takeaways": 7,
+      "per_100k": 3.5,
+      "avg_hygiene_rating": 0,
+      "postcode_areas": 7
     },
     {
       "name": "Swansea",
@@ -88,16 +88,6 @@
       "postcode_areas": 4
     },
     {
-      "name": "Brighton",
-      "population": 277000,
-      "total_thai_businesses": 13,
-      "restaurants": 12,
-      "takeaways": 1,
-      "per_100k": 4.7,
-      "avg_hygiene_rating": 4.8,
-      "postcode_areas": 3
-    },
-    {
       "name": "Cornwall",
       "population": 575000,
       "total_thai_businesses": 13,
@@ -106,6 +96,16 @@
       "per_100k": 2.3,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 4
+    },
+    {
+      "name": "Brighton",
+      "population": 277000,
+      "total_thai_businesses": 12,
+      "restaurants": 11,
+      "takeaways": 1,
+      "per_100k": 4.3,
+      "avg_hygiene_rating": 4.9,
+      "postcode_areas": 3
     },
     {
       "name": "Somerset",
@@ -144,7 +144,7 @@
       "restaurants": 10,
       "takeaways": 0,
       "per_100k": 5.1,
-      "avg_hygiene_rating": 4.3,
+      "avg_hygiene_rating": 4.5,
       "postcode_areas": 2
     },
     {
@@ -298,6 +298,16 @@
       "postcode_areas": 5
     },
     {
+      "name": "Elmbridge",
+      "population": null,
+      "total_thai_businesses": 8,
+      "restaurants": 8,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5,
+      "postcode_areas": 3
+    },
+    {
       "name": "Tendring",
       "population": null,
       "total_thai_businesses": 7,
@@ -396,16 +406,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.6,
       "postcode_areas": 3
-    },
-    {
-      "name": "Elmbridge",
-      "population": null,
-      "total_thai_businesses": 7,
-      "restaurants": 7,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 3.4,
-      "postcode_areas": 2
     },
     {
       "name": "Glasgow",
@@ -714,7 +714,7 @@
       "restaurants": 5,
       "takeaways": 0,
       "per_100k": 3.4,
-      "avg_hygiene_rating": 4.8,
+      "avg_hygiene_rating": 4.6,
       "postcode_areas": 3
     },
     {
@@ -1025,16 +1025,6 @@
       "takeaways": 0,
       "per_100k": 2.2,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
-    },
-    {
-      "name": "Reading",
-      "population": 175000,
-      "total_thai_businesses": 3,
-      "restaurants": 3,
-      "takeaways": 0,
-      "per_100k": 1.7,
-      "avg_hygiene_rating": 4.3,
       "postcode_areas": 2
     },
     {
@@ -1478,6 +1468,16 @@
       "postcode_areas": 2
     },
     {
+      "name": "Reading",
+      "population": 175000,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": 1.1,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 2
+    },
+    {
       "name": "Hartlepool",
       "population": null,
       "total_thai_businesses": 2,
@@ -1584,6 +1584,16 @@
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
+      "name": "Lincoln",
+      "population": 104000,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": 1.9,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
     },
@@ -2154,16 +2164,6 @@
       "restaurants": 1,
       "takeaways": 0,
       "per_100k": 0.5,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Lincoln",
-      "population": 104000,
-      "total_thai_businesses": 1,
-      "restaurants": 1,
-      "takeaways": 0,
-      "per_100k": 1.0,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
     },

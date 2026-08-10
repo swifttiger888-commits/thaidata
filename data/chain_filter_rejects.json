@@ -84,15 +84,15 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 604472,
-    "name": "Ali Baba Lounge",
-    "city": "Birmingham",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 519550,
     "name": "Ali Baba Lounge",
     "city": "Hillingdon",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 604472,
+    "name": "Ali Baba Lounge",
+    "city": "Birmingham",
     "chain": "Busaba"
   },
   {
@@ -261,12 +261,6 @@
     "fsa_id": 1704526,
     "name": "Baba G's",
     "city": "Lewisham",
-    "chain": "Busaba"
-  },
-  {
-    "fsa_id": 931977,
-    "name": "Baba G's",
-    "city": "Camden",
     "chain": "Busaba"
   },
   {
@@ -634,18 +628,6 @@
     "name": "kEATchen United /Baba B'sBurgers /LaToroMexicana /Fireaway /OhMyGelato",
     "city": "South Lanarkshire",
     "chain": "Busaba"
-  },
-  {
-    "fsa_id": 1790965,
-    "name": "Bahara - Indian Kitchen and Culture",
-    "city": "Tower Hamlets",
-    "chain": "Patara"
-  },
-  {
-    "fsa_id": 1930322,
-    "name": "Ektara",
-    "city": "Tower Hamlets",
-    "chain": "Patara"
   },
   {
     "fsa_id": 1843387,

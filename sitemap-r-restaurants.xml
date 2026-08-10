@@ -1606,6 +1606,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/elmbridge/maisie-thai-restaurant/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/elmbridge/thai-courtyard/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2496,6 +2501,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/lincoln/araya-thai-restaurant/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/lincoln/thai-marina-restaurant/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2652,6 +2662,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/beijing-noodles-china-town-burrito-tequila-thai-street-foods/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/beijing-noodles-olivia-pizza-china-town-thai-street-foods-golden-wok-meal-box-burrito-tequila-the-burrito-bowl/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3896,6 +3911,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/london/the-great-thai-rice-and-noodle/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/london/the-great-thai-rice-noodles/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3942,6 +3962,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/vegan-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/waewien-thai-kitchen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
