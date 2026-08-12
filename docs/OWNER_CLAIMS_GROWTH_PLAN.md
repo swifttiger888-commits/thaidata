@@ -65,6 +65,8 @@ Tier meaning: `flash` = mechanical, fully specified, low-judgement.
 | T2.4 | "Who runs ThaiData" trust section         | flash | P0.3       | TODO |
 | T2.5 | Post-approval flow review (manage.html)   | pro   | —          | TODO |
 | T2.6 | Security pass on admin surfaces           | pro   | —          | TODO |
+| T2.7 | Listing page: enrichment-led redesign     | pro   | —          | TODO |
+| T2.8 | Homepage: cut to router page              | pro   | T2.2 for title only | TODO |
 | T3.1 | Internal linking audit                    | pro   | P0.2       | TODO |
 | T3.2 | llms.txt freshness                        | flash | —          | TODO |
 
@@ -109,6 +111,14 @@ phone numbers, postal addresses for all 1,269).
   when the index has no match. Rationale: the FSA proxy's Thai-keyword name
   filter made **90 of 1,269 listed restaurants unfindable** in claim search
   (e.g. the entire Banana Tree chain).
+- Scottish rating rendering fixed in `generate_restaurant_pages.py`: FHIS
+  text outcomes ('Pass', 'Improvement Required', 'Exempt' — 56 venues) no
+  longer break the 0–5 rating circle or render as nonsense like
+  "FSA Improvement Required/5" in titles/badges/meta; they get a colour pill,
+  an FHIS explainer label, and a corrected footnote. '0' ratings mapped
+  correctly. `REPO` is now overridable via the `THAIDATA_REPO` env var so the
+  generator can run outside the Hermes container:
+  `THAIDATA_REPO=$PWD python scripts/generate_restaurant_pages.py`.
 
 **Repo conventions the executor must respect:**
 - Pages under `r/` and `cities/` are GENERATED. Change the generators in
@@ -301,6 +311,62 @@ pages link to /claim/**. Fix that.
   rough in a follow-up section appended to this file.
   *Accept:* a test claim can be approved and its listing visibly updated
   end-to-end without touching the database by hand.
+
+- **T2.7 — Listing page: lead with the restaurant, not the inspection.**
+  Files: `r/leeds/my-thai/index.html` (template) +
+  `scripts/generate_restaurant_pages.py`. Never edit generated pages; verify
+  with `THAIDATA_REPO=$PWD python scripts/generate_restaurant_pages.py` then
+  `git checkout -- r/` before committing (commit ONLY template + generator).
+  Changes, all data-driven from `data/google_enrichment.json` (keyed by
+  fsa_id; 1,249/1,265 records have `rating` + `review_count`):
+  (a) Add a Google rating badge next to the FSA badge in the hero and in the
+  hygiene card area: "★ 4.4 (145 Google reviews)", linked to
+  `https://www.google.com/maps/place/?q=place_id:<google_place_id>` with
+  visible "Google" attribution per Google Maps Platform attribution rules.
+  Never fabricate a rating; omit the badge when enrichment has none.
+  (b) Replace the boilerplate "At a Glance" sidebar items ("Thai Cuisine —
+  Authentic flavours", "<City> — UK") with per-restaurant facts: Google
+  rating, price level when present, venue type, and "1 of <N> Thai venues in
+  <city>" computed from `data/restaurants.json`.
+  (c) Fix the hero claim-line contrast: the light-green-on-green paragraph
+  under the H1 must meet WCAG AA (4.5:1) against the hero gradient — check
+  `docs/mobile-layout-contrast-guidelines.md`.
+  (d) Style the "Explore More" related-links block as cards consistent with
+  the page's card design (it is currently a bare link list).
+  (e) Check the Google Maps `embed?pb=` iframe renders on the LIVE site
+  (needs a human or an agent with network access); if broken, switch the
+  generator to `https://maps.google.com/maps?q=<lat>,<lng>&output=embed`.
+  *Accept:* regenerated sample pages (one English 5-rated, one Scottish
+  'Improvement Required', one with no enrichment) render correctly;
+  `python -m pytest tests/ -q` stays green; FSA data remains visible on
+  every page (data integrity — do NOT hide bad hygiene ratings).
+
+- **T2.8 — Homepage: cut to a router page (~75% shorter).**
+  File: `index.html` (it is hand-authored, not generated). Today it is
+  ~8,200px tall on desktop: an owner-pitch hero + an entire NLW cost article
+  with an embedded multi-step calculator + a guides hub + inline FAQ + email
+  capture + a mega tool list. Restructure to, in order:
+  (1) Hero: H1 "Every Thai restaurant in the UK, verified" + one-line sub +
+  two CTAs — "Find a Thai restaurant" → `/restaurants.html`, "Own one? Claim
+  your free listing" → `/claim/?src=home`.
+  (2) Proof strip: restaurant count, area count, "updated daily from FSA
+  data" (compute counts from `data/restaurants.json`, don't hardcode).
+  (3) Three route cards: Directory (cities index) / Owner tools (`/tools.html`)
+  / Reports & data (`/state-of-uk-thai-food-2026.html`).
+  (4) Compact guides row (top 4 guides max) + existing email capture.
+  (5) Slim footer.
+  The NLW article + calculator content must be RELOCATED, not deleted:
+  the article duplicates `nlw-report.html` — diff them and merge anything
+  unique into `nlw-report.html`; move the interactive calculator markup+JS
+  to a new `tools/wage-cost-calculator.html` and link it from `tools.html`.
+  Preserve: GA4 tag, canonical, `privacy-banner.js`, structured data, and
+  the `<title>` decision from T2.2 (if still blocked, keep the current
+  title text but complete the restructure).
+  *Accept:* rendered full-page height at 1280px width is under 3,000px
+  (measure with a headless browser or estimate by section count); every
+  removed section is reachable via a link on the new page; all internal
+  links resolve to files in the repo; `python scripts/ci_typecheck.py`
+  passes.
 
 - **T2.6 — Security pass on admin surfaces (before any outreach batch).**
   `admin.html`, `admin/`, `functions/api/admin.js` and

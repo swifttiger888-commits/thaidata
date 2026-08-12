@@ -8,7 +8,7 @@ from urllib.parse import quote
 from datetime import datetime
 from typing import Any
 
-REPO = '/tmp/thaidata-repo'
+REPO = os.environ.get('THAIDATA_REPO', '/tmp/thaidata-repo')
 OUT_DIR = os.path.join(REPO, 'r')
 
 # Load the Kimi template
@@ -80,7 +80,7 @@ def build_intro(r: dict[str, Any]) -> str:
     # Add hygiene rating sentence if we have both rating and date
     if rating and rating != 'N/A':
         date_str = f', last inspected {rating_date}' if rating_date and rating_date != 'Unknown' else ''
-        intro += f' FSA hygiene rating {rating}/5{date_str}.'
+        intro += f' FSA hygiene rating {rating_display(rating)}{date_str}.'
 
     return intro
 
@@ -90,14 +90,33 @@ def build_serves_cuisine(rtype: str) -> str:
         return 'Thai takeaway'
     return 'Thai'
 
+# England/Wales/NI (FHRS) rate 0-5; Scotland (FHIS) uses text outcomes:
+# 'Pass', 'Improvement Required', 'Exempt' (plus 'Awaiting Inspection').
+NUMERIC_RATINGS = {'0', '1', '2', '3', '4', '5'}
+
+def rating_is_numeric(rating: str) -> bool:
+    return rating in NUMERIC_RATINGS
+
+def rating_display(rating: str) -> str:
+    """'4/5' for FHRS ratings; the FHIS outcome verbatim for Scottish venues."""
+    return f'{rating}/5' if rating in NUMERIC_RATINGS else rating
+
 def rating_class(rating: str) -> str:
-    return {'5': 'r5', '4': 'r4', '3': 'r3', '2': 'r2', '1': 'r1'}.get(rating, 'r3')
+    return {'5': 'r5', '4': 'r4', '3': 'r3', '2': 'r2', '1': 'r1', '0': 'r1'}.get(rating, 'r3')
 
 def rating_label(rating: str) -> str:
-    return {'5': 'Very Good', '4': 'Good', '3': 'Generally Satisfactory', '2': 'Improvement Necessary', '1': 'Major Improvement Necessary'}.get(rating, 'Rated')
+    return {'5': 'Very Good', '4': 'Good', '3': 'Generally Satisfactory',
+            '2': 'Improvement Necessary', '1': 'Major Improvement Necessary',
+            '0': 'Urgent Improvement Necessary',
+            'Pass': "Scotland's hygiene scheme (FHIS)",
+            'Improvement Required': "Scotland's hygiene scheme (FHIS)",
+            'Exempt': "Scotland's hygiene scheme (FHIS)",
+            'N/A': 'Not yet rated'}.get(rating, 'Rated')
 
 def rating_color(rating: str) -> str:
-    return {'5': 'var(--green-dark)', '4': '#3F6212', '3': '#92400E', '2': 'var(--red)', '1': 'var(--red)'}.get(rating, 'var(--ink)')
+    return {'5': 'var(--green-dark)', '4': '#3F6212', '3': '#92400E', '2': 'var(--red)', '1': 'var(--red)',
+            '0': 'var(--red)', 'Pass': 'var(--green-dark)',
+            'Improvement Required': 'var(--red)', 'Exempt': '#475569'}.get(rating, 'var(--ink)')
 
 def score_bar_html(label: str, score: int | None) -> str:
     """Generate a single score bar div. FSA 0-25, lower=better."""
@@ -137,9 +156,10 @@ def build_nearby_section(city: str, city_slug: str, city_open: dict[str, list[di
         rest_slug = slugify(name)
         rclass = rating_class(rating) if rating else ''
         rcolor = '#3F6212' if rating == '5' else '#92400E' if rating in ('3', '2', '1') else 'var(--green-dark)'
-        
+        chip = {'Improvement Required': 'Imp. Req.'}.get(rating, rating)
+
         cards.append(f'''            <a href="/r/{city_slug}/{rest_slug}/" class="nearby-card">
-                <div class="nearby-rating" style="background:{'var(--green-light)' if rating == '5' else 'var(--amber-light)' if rating in ('3','4') else 'var(--red-light)'};color:{rcolor};">{rating}</div>
+                <div class="nearby-rating" style="background:{'var(--green-light)' if rating in ('5', 'Pass') else 'var(--amber-light)' if rating in ('3','4') else 'var(--red-light)'};color:{rcolor};">{chip}</div>
                 <div class="nearby-info">
                     <div class="nearby-name">{name}</div>
                     <div class="nearby-addr">{street}</div>
@@ -200,11 +220,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- Head replacements ----
     html = html.replace(
         '<!-- DYNAMIC: title -->\n    <title>My Thai, Leeds — FSA 5/5 Hygiene Rating | ThaiData</title>',
-        f'    <title>{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK</title>'
+        f'    <title>{name} {city} · {address if address else city} · FSA {rating_display(rating)} | ThaiData UK</title>'
     )
     html = html.replace(
         'content="FSA inspection data for My Thai, Leeds. 5/5 hygiene rating. See hygiene, structural, and management breakdown scores. 43 Wade Lane, Leeds City Centre, Leeds. Updated November 2025."',
-        f'content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+        f'content="FSA inspection data for {name}, {city}. Hygiene rating: {rating_display(rating)}. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
     )
     html = html.replace(
         '<!-- DYNAMIC: canonical_url -->\n    <link rel="canonical" href="https://thaidata.uk/r/leeds/my-thai/"',
@@ -229,11 +249,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
     html = html.replace(
         '<!-- DYNAMIC: og_title -->\n    <meta property="og:title" content="My Thai, Leeds — FSA 5/5 | ThaiData"',
-        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK"'
+        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · FSA {rating_display(rating)} | ThaiData UK"'
     )
     html = html.replace(
         '<!-- DYNAMIC: og_description -->\n    <meta property="og:description" content="FSA 5/5 hygiene rating. Thai restaurant in Leeds. View inspection scores and claim this listing."',
-        f'    <meta property="og:description" content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+        f'    <meta property="og:description" content="FSA inspection data for {name}, {city}. Hygiene rating: {rating_display(rating)}. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
     )
 
     # ---- Schema ----
@@ -408,7 +428,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- Hero badges ----
     html = html.replace(
         '<!-- DYNAMIC: badge_rating -->\n                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA 5/5\n                </span>',
-        f'                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA {rating}/5\n                </span>'
+        f'                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA {rating_display(rating)}\n                </span>'
     )
     html = html.replace(
         '<!-- DYNAMIC: badge_type -->\n                <span class="badge badge-type">\n                    <i class="fas fa-utensils"></i> Restaurant\n                </span>',
@@ -500,10 +520,27 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         html = re.sub(r'<!-- DYNAMIC: contact_info_open -->.*?<!-- DYNAMIC: contact_info_close -->\\n', '', html, flags=re.DOTALL)
 
     # ---- Hygiene rating card ----
+    # The circle is designed for a single 0-5 digit; Scottish FHIS text
+    # outcomes ('Pass', 'Improvement Required', 'Exempt') get a pill instead.
+    if rating_is_numeric(rating):
+        rating_visual = f'                    <div class="rating-circle {rclass}">\n                        <span class="score">{rating}</span>\n                        <span class="of">of 5</span>\n                    </div>'
+    else:
+        pill_bg = {'Pass': 'var(--green-light)', 'Improvement Required': '#FEE2E2'}.get(rating, '#F1F5F9')
+        pill_fg = {'Pass': 'var(--green-dark)', 'Improvement Required': '#B91C1C'}.get(rating, '#475569')
+        rating_visual = (
+            f'                    <div style="display:inline-flex;align-items:center;justify-content:center;'
+            f'background:{pill_bg};color:{pill_fg};border-radius:16px;padding:18px 24px;'
+            f'font-weight:700;font-size:1.2rem;line-height:1.3;text-align:center;max-width:220px;flex-shrink:0;">{rating}</div>'
+        )
     html = html.replace(
         '<!-- DYNAMIC: rating_circle -->\n                    <div class="rating-circle r5">\n                        <span class="score">5</span>\n                        <span class="of">of 5</span>\n                    </div>',
-        f'                    <div class="rating-circle {rclass}">\n                        <span class="score">{rating}</span>\n                        <span class="of">of 5</span>\n                    </div>'
+        rating_visual
     )
+    if not rating_is_numeric(rating):
+        html = html.replace(
+            'Scores from the Food Standards Agency. Rated 0–5 — 5 = Very Good.',
+            "Outcome from the Food Standards Agency under Scotland's Food Hygiene Information Scheme (Pass / Improvement Required)."
+        )
     html = html.replace(
         '<!-- DYNAMIC: rating_label -->\n                        <div class="rating-meta-label" style="color: var(--green-dark);">Very Good</div>',
         f'                        <div class="rating-meta-label" style="color: {rcolor};">{rlabel}</div>'
