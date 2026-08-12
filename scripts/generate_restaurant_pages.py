@@ -4,6 +4,7 @@ Generate individual restaurant listing pages from restaurants.json
 using the Kimi-designed template v2 (cream bg, green hero, 2-col layout).
 """
 import json, os, re, sys, unicodedata
+from urllib.parse import quote
 from datetime import datetime
 from typing import Any
 
@@ -588,6 +589,14 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         '<!-- DYNAMIC: claim_link -->\n                <a href="/claim/" class="btn">',
         '                <a href="/claim/" class="btn">'
     )
+
+    # Pass restaurant identity to the claim page so it can pre-select this
+    # restaurant (claim/index.html reads ?rid= and ?rname= and skips search)
+    if not is_closed:
+        html = html.replace(
+            '/claim/?src=restaurant-card',
+            f'/claim/?src=restaurant-card&amp;rid={fsa_id}&amp;rname={quote(str(name))}'
+        )
 
     # ---- Sidebar claim CTA (closed = replace with closed notice) ----
     if is_closed:
