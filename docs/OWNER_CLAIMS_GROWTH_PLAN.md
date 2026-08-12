@@ -180,10 +180,16 @@ pages link to /claim/**. Fix that.
   twitter:title). **Ask the site owner before changing** — the calculator
   title may be a deliberate SEO experiment.
 
-- **T2.3 — Demo listing link integrity.**
-  `claim/index.html` links to `/r/demo/claimed-listing/`. Verify that path
-  exists in the repo; if not, point it at a real claimed example or build the
-  demo page. *Accept:* link returns a page in local repo tree.
+- **T2.3 — Demo listing link is broken (confirmed).**
+  `claim/index.html` links to `/r/demo/claimed-listing/`, which exists neither
+  as a static file nor in `functions/r/_middleware.js` nor `_redirects` — the
+  claim page's main persuasion link is a 404. Build the demo page: copy a real
+  generated page from `r/`, rename to "Demo Thai Restaurant", and populate the
+  claimed-state sections that the template hides for unclaimed listings
+  (photos, description, hours — the CSS classes `claimed-badge` /
+  `claimed-description` already exist in the template). Add
+  `noindex` meta. *Accept:* the path resolves in the repo tree and shows
+  visibly richer content than an unclaimed page.
 
 ---
 
