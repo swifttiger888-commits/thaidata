@@ -307,14 +307,32 @@ body {
             if (typeof gtag === 'function') {
                 gtag('event', 'claim_search', { search_term: q });
             }
-            fetch(`/api/search?q=${encodeURIComponent(q)}&limit=10`)
-                .then(r => r.json())
-                .then(data => renderResults(data.results || []))
+            searchClaims(q)
+                .then(renderResults)
                 .catch(() => {
                     searchResults.innerHTML = '<div style="padding:16px;color:var(--red);">Search failed. Try again.</div>';
                 });
         }, 400);
     });
+
+    // Search the curated ThaiData dataset first — it contains every listed
+    // restaurant, including the ~90 without a Thai keyword in their name
+    // (e.g. Banana Tree) that the live FSA proxy's keyword filter drops.
+    // Fall back to the FSA register for venues not yet in the dataset.
+    async function searchClaims(q) {
+        try {
+            const local = await fetch(`/api/search-restaurants?q=${encodeURIComponent(q)}`).then(r => r.json());
+            if (Array.isArray(local) && local.length > 0) {
+                return local.map(r => ({
+                    id: r.id, name: r.name, city: r.city || '',
+                    postcode: r.pc || '', address: '', rating: null,
+                    business_type: 'restaurant',
+                }));
+            }
+        } catch (e) { /* fall through to FSA */ }
+        const data = await fetch(`/api/search?q=${encodeURIComponent(q)}&limit=10`).then(r => r.json());
+        return data.results || [];
+    }
 
     function renderResults(list) {
         if (list.length === 0) {
@@ -324,7 +342,7 @@ body {
         searchResults.innerHTML = list.map(r => `
             <div class="result-item" onclick="selectRestaurant(${JSON.stringify(r).replace(/"/g, '&quot;')})">
                 <div class="rname">${r.name}</div>
-                <div class="raddr">${r.address}, ${r.postcode || ''}</div>
+                <div class="raddr">${[r.address, r.postcode].filter(Boolean).join(', ')}</div>
                 <div class="rmeta">
                     <span>${r.city || '—'}</span>
                     ${r.rating ? `<span class="rating-badge r${r.rating}">★${r.rating}</span>` : '<span>Unrated</span>'}
@@ -344,10 +362,8 @@ body {
         searchInput.value = rname;
         searchResults.innerHTML = '<div style="padding:16px;color:var(--ink4);"><span class="spinner"></span> Finding your restaurant...</div>';
         searchResults.classList.add('show');
-        fetch(`/api/search?q=${encodeURIComponent(rname)}&limit=10`)
-            .then(r => r.json())
-            .then(data => {
-                const list = data.results || [];
+        searchClaims(rname)
+            .then(list => {
                 const match = rid ? list.find(r => String(r.id) === String(rid)) : (list.length === 1 ? list[0] : null);
                 if (match) {
                     searchResults.classList.remove('show');
@@ -372,7 +388,7 @@ body {
         searchResults.classList.remove('show');
 
         document.getElementById('sel-name').textContent = r.name;
-        document.getElementById('sel-addr').textContent = [r.address, r.postcode].filter(Boolean).join(', ');
+        document.getElementById('sel-addr').textContent = [r.address || r.city, r.postcode].filter(Boolean).join(', ');
         if (r.rating) {
             document.getElementById('sel-rating').innerHTML = `<span class="rating-badge r${r.rating}">FSA ★${r.rating}</span>`;
         }

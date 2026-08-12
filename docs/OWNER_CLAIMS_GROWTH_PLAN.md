@@ -38,6 +38,11 @@ phone numbers, postal addresses for all 1,269).
   `/claim/?src=restaurant-card&rid=<fsa_id>&rname=<urlencoded name>`.
   Generated pages under `r/` pick this up on the next pipeline run — do NOT
   hand-edit files under `r/`.
+- `claim/index.html` search now queries `/api/search-restaurants` (curated
+  local index) first, falling back to `/api/search` (live FSA proxy) only
+  when the index has no match. Rationale: the FSA proxy's Thai-keyword name
+  filter made **90 of 1,269 listed restaurants unfindable** in claim search
+  (e.g. the entire Banana Tree chain).
 
 **Repo conventions the executor must respect:**
 - Pages under `r/` and `cities/` are GENERATED. Change the generators in
@@ -68,6 +73,10 @@ These cannot be done by the executing model. Do them first; Phase 3 depends on P
 - **P0.3** Decide the outreach sender identity (name + reply-to on
   hello@thaidata.uk) and whether a small print budget (~£150–300 for
   postcards) exists. Record the decision in this file under P0.3.
+- **P0.4** Email deliverability: verify SPF, DKIM and DMARC records exist for
+  thaidata.uk (e.g. via your DNS host or `dig txt thaidata.uk`). Outreach
+  email (T1.4) MUST NOT be sent until these pass — cold mail without them
+  lands in spam and can burn the domain's reputation.
 
 ---
 
@@ -192,6 +201,34 @@ pages link to /claim/**. Fix that.
   visibly richer content than an unclaimed page.
 
 ---
+
+- **T2.4 — "Who runs ThaiData" trust section.**
+  Owners receiving cold outreach will look the site up before handing over
+  name/email/phone. Add a short section to `about.html` (and a one-line
+  footer credit site-wide via the generators) naming the person or company
+  behind the site, with a reply-to human email. Content comes from the site
+  owner (see P0.3) — the executor wires it in, never invents identity
+  details. *Accept:* about.html names a real operator; claim page links to it.
+
+- **T2.5 — Post-approval experience review.**
+  `listing/manage.html` (941 lines) is what an owner reaches after approval.
+  Walk the full flow against a claimed test record: token/link arrival email
+  (`functions/api/_email.js`), every editable field saving via
+  `functions/api/listing.js`, photo upload via `functions/api/upload.js`,
+  and how the claimed listing then renders under `r/`
+  (`functions/r/_middleware.js`). Fix what's broken; list what's merely
+  rough in a follow-up section appended to this file.
+  *Accept:* a test claim can be approved and its listing visibly updated
+  end-to-end without touching the database by hand.
+
+- **T2.6 — Security pass on admin surfaces (before any outreach batch).**
+  `admin.html`, `admin/`, `functions/api/admin.js` and
+  `functions/api/admin/exclusions.js` are publicly served; their auth has
+  not been audited. Review authn/authz on every admin and write endpoint
+  (claims approval, exclusions, uploads, enrichment). Run the repo's
+  security-review tooling if available. *Accept:* every state-changing
+  endpoint verifiably rejects unauthenticated requests; findings and fixes
+  noted in the PR that closes this task.
 
 ## Phase 3 — Indexing & SEO (only after P0.2 data exists)
 
