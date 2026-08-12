@@ -1,10 +1,76 @@
 # Owner Claims Growth Plan
 
 **Written:** 2026-08-12 · **Owner:** thaidata.uk
-**Purpose:** A file-scoped, sequenced task list any capable model/agent can execute
-without re-deriving context. Each task has a target file, exact change, and an
-acceptance check. Execute phases in order; tasks within a phase are independent
-unless noted.
+**Purpose:** A file-scoped, sequenced task list executed by lightweight agents
+(e.g. DeepSeek v4 flash / v4 pro on Hermes). Each task has a target file, exact
+change, and an acceptance check. Execute phases in order; tasks within a phase
+are independent unless the Task Index says otherwise.
+
+---
+
+## Execution protocol — every agent reads this first, every run
+
+1. **Pick ONE task** from the Task Index below whose Status is `TODO`, whose
+   dependencies are `DONE`, and whose Tier matches your model (`flash` tasks
+   may also be done by `pro`; never the reverse).
+2. Set its Status to `IN PROGRESS` in the Task Index (commit this with your
+   work, not separately).
+3. Do **only** what the task specifies. If the task is ambiguous, or its
+   acceptance check cannot be met, set Status to `BLOCKED: <one-line reason>`
+   and stop — do not improvise, broaden scope, or "fix" neighbouring code.
+4. Before committing, run ALL of:
+   - `python -m pytest tests/ -q` (must stay at 88 passed)
+   - `python scripts/ci_typecheck.py` (must print all-pass)
+   - `node --check` on any inline `<script>` you edited (extract to a temp
+     file first)
+5. Commit with message `T<id>: <what changed>` and set Status to `DONE` in the
+   same commit. One task per commit. Keep the diff minimal — no reformatting,
+   no dependency upgrades, no drive-by changes.
+
+**Hard rules (violating any of these = failed task):**
+- NEVER edit files under `r/` or `cities/` — they are generated. The only
+  exception is `r/leeds/my-thai/index.html` (the template) when a task names
+  it explicitly. Page-level changes go in `scripts/generate_*.py`.
+- NEVER edit `data/thai_fsa_latest.json`, `sitemap*.xml`, `feed.json`, or
+  anything under `.wrangler/` — pipeline-owned.
+- NEVER commit secrets, tokens, or `.env` values. `wrangler.toml` stays as-is.
+- NEVER invent facts that will be shown to humans: no fabricated statistics,
+  testimonials, staff names, or company details. If a task needs content only
+  the site owner knows, it is `BLOCKED` until they supply it.
+- NEVER send email, post to social media, or contact any restaurant. Agents
+  build artifacts (CSVs, templates, QR codes); a human sends everything.
+- GA4 events `claim_search` / `claim_select` / `claim_submitted` must keep
+  firing after any claim-page change.
+
+## Task Index & routing
+
+Tier meaning: `flash` = mechanical, fully specified, low-judgement.
+`pro` = multi-file reasoning, parsing, or security-sensitive.
+`human` = only the site owner can do it. Update Status in place.
+
+| ID   | Summary                                   | Tier  | Depends on | Status |
+|------|-------------------------------------------|-------|------------|--------|
+| P0.1 | GA4 filters + key event                   | human | —          | TODO |
+| P0.2 | GSC snapshot → docs/gsc-snapshot-2026-08.md | human | —        | TODO |
+| P0.3 | Sender identity + print budget decision   | human | —          | TODO |
+| P0.4 | SPF/DKIM/DMARC verified on thaidata.uk    | human | —          | TODO |
+| T1.1 | Outreach master CSV                       | flash | —          | TODO |
+| T1.2 | Email finder script (polite, single-pass) | pro   | T1.1       | TODO |
+| T1.3 | Per-city report pages (claim incentive)   | pro   | —          | TODO |
+| T1.4 | Outreach copy pack + QR code script       | pro   | T1.1, P0.3 | TODO |
+| T1.5 | Persist claim_source in D1                | pro   | —          | TODO |
+| T2.1 | Claim banners on ~35 owner-facing pages   | flash | —          | TODO |
+| T2.2 | Homepage title fix                        | flash | P0 decision by owner | BLOCKED: owner decision |
+| T2.3 | Build /r/demo/claimed-listing/ (404 now)  | pro   | —          | TODO |
+| T2.4 | "Who runs ThaiData" trust section         | flash | P0.3       | TODO |
+| T2.5 | Post-approval flow review (manage.html)   | pro   | —          | TODO |
+| T2.6 | Security pass on admin surfaces           | pro   | —          | TODO |
+| T3.1 | Internal linking audit                    | pro   | P0.2       | TODO |
+| T3.2 | llms.txt freshness                        | flash | —          | TODO |
+
+Recommended order: T2.1 → T1.1 → T1.5 → T2.3 → T1.3 → T1.2 → T1.4 (needs
+P0.3), with T2.6 done before any outreach is actually sent. Phase 3 waits
+for P0.2 data.
 
 ---
 
@@ -177,6 +243,21 @@ pages link to /claim/**. Fix that.
   every page in `tools/` (~22 files). Respect
   `docs/cta-link-accessibility-guidelines.md` and
   `docs/mobile-layout-contrast-guidelines.md`.
+  Use this exact markup — pick the variant matching the page's background
+  (inspect the page's `body` background color; light page → light variant):
+
+  ```html
+  <!-- light pages -->
+  <div style="background:#ECFDF5;border:1px solid rgba(16,185,129,0.35);border-radius:12px;padding:14px 20px;margin:20px 0;font-size:0.95rem;color:#065F46;">
+    <strong>Own a Thai restaurant?</strong> Your listing is already on ThaiData —
+    <a href="/claim/?src=owner-tools" style="color:#0A7A6F;font-weight:700;">claim it free in 2 minutes &rarr;</a>
+  </div>
+  <!-- dark pages -->
+  <div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:12px;padding:14px 20px;margin:20px 0;font-size:0.95rem;color:#D1FAE5;">
+    <strong>Own a Thai restaurant?</strong> Your listing is already on ThaiData —
+    <a href="/claim/?src=owner-tools" style="color:#10B981;font-weight:700;">claim it free in 2 minutes &rarr;</a>
+  </div>
+  ```
   *Accept:* `grep -L '/claim/?src=owner-tools' <those files>` returns empty;
   banner passes the contrast guideline; pages remain valid per
   `scripts/ci_typecheck.py`.
