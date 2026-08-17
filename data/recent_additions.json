@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-10",
+  "updated": "2026-08-17",
   "restaurants": [
+    {
+      "fsa_id": "1881809",
+      "name": "Aizah Thai & Cafe, Spicy Wok",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-08-17"
+    },
+    {
+      "fsa_id": "78170",
+      "name": "Mum Likes Thai Food",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-08-17"
+    },
     {
       "fsa_id": "1976103",
       "name": "The Great Thai Rice and Noodle",
@@ -334,20 +348,6 @@
       "fsa_id": "962308",
       "name": "The Eight Bells Thai Cuisine",
       "city": "Vale of White Horse",
-      "type": "restaurant",
-      "discovered_on": "2026-06-08"
-    },
-    {
-      "fsa_id": "1955945",
-      "name": "Tata\u2019s Thai Kitchen",
-      "city": "Fylde",
-      "type": "restaurant",
-      "discovered_on": "2026-06-08"
-    },
-    {
-      "fsa_id": "1822904",
-      "name": "Rosa's Thai",
-      "city": "Reading",
       "type": "restaurant",
       "discovered_on": "2026-06-08"
     }

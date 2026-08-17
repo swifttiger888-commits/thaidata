@@ -1,9 +1,9 @@
 {
-  "run_date": "2026-08-10",
+  "run_date": "2026-08-17",
   "applied": true,
   "total_cities": 276,
-  "generated": 254,
-  "quarantined": 20,
+  "generated": 253,
+  "quarantined": 21,
   "skipped": 1,
   "quarantined_pages": [
     {
@@ -13,6 +13,10 @@
     {
       "slug": "blackburn",
       "reason": "No restaurant data for city: Blackburn"
+    },
+    {
+      "slug": "ceredigion",
+      "reason": "No restaurant data for city: Ceredigion"
     },
     {
       "slug": "clacton-on-sea",

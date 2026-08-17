@@ -1296,6 +1296,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/doncaster/charm-thai-cafe/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/doncaster/charm-thai-takeaway-and-cafe/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2681,6 +2686,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/london/busaba-1907809/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/london/busaba-eathai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3057,6 +3067,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/mum-likes-thai-food-1966214/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/mum-likes-thai-food-78170/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4687,6 +4702,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/portsmouth/lins-thai-cafe/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/portsmouth/lins-thai-café/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
