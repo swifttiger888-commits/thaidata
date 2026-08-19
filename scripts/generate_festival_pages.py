@@ -147,12 +147,23 @@ def event_card_html(e):
 
 
 def generate_ld_json(events):
-    """Generate inline LD+JSON schema for ItemList with select events."""
+    """Generate inline LD+JSON schema for ItemList with select events.
+
+    Only future events are included — Google ignores past events for rich
+    results, and marking past events EventScheduled is inaccurate.
+    """
     items = []
     idx = 1
+    today = datetime.now().date()
     for e in events:
         if e["status"] == "tbc" or not e["start_date"]:
             continue
+        try:
+            sd_dt = datetime.fromisoformat(e["start_date"]).date()
+        except ValueError:
+            continue
+        if sd_dt < today:
+            continue  # past event — omit from schema
         name = e["event_name"]
         sd = e["start_date"]
         ed = e["end_date"] if e["end_date"] != e["start_date"] else None
