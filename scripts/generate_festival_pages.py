@@ -162,10 +162,19 @@ def generate_ld_json(events):
             "@type": "Event",
             "name": name,
             "startDate": sd,
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "description": (e["description"] or "").strip(),
             "location": {"@type": "Place", "name": loc_name, "address": loc_addr}
         }
         if ed:
             item["endDate"] = ed
+        org = (e.get("organiser") or "").strip()
+        if org:
+            item["organizer"] = {"@type": "Organization", "name": org}
+        ticket = (e.get("ticket_info") or "").strip().lower()
+        if ticket.startswith("free"):
+            item["isAccessibleForFree"] = True
         items.append({"@type": "ListItem", "position": idx, "item": item})
         idx += 1
         if idx > 10:
