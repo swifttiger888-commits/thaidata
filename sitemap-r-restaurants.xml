@@ -541,6 +541,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/bristol/brother-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/bristol/cha-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3191,6 +3196,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/london/pad-thai-corner/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/london/pad-thai-express-home-dish/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3897,6 +3907,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/the-forester-ealing-thai-restaurant/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/the-fuchka-man-halal-thai-chinese-morog-polau/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5387,6 +5402,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/sunderland/jai-thai-take-away-cafe/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/sunderland/mais-thai-takeaway/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

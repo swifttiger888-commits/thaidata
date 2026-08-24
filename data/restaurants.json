@@ -1,7 +1,7 @@
 {
   "name": "ThaiData UK \u2014 Restaurant Directory",
-  "updated": "2026-08-17",
-  "total": 1263,
+  "updated": "2026-08-24",
+  "total": 1264,
   "sources": [
     "FSA FHRS",
     "FSA FHIS"
@@ -214,6 +214,19 @@
       "rating_date": "2025-06-12T00:00:00",
       "longitude": "-3.1899696",
       "latitude": "51.5021734"
+    },
+    {
+      "id": 1931734,
+      "name": "Brother Thai",
+      "type": "restaurant",
+      "city": "Bristol",
+      "local_authority": "Bristol",
+      "postcode": "BS1 3RU",
+      "address": "104 Stokes Croft, St Pauls, Bristol",
+      "hygiene_rating": "5",
+      "rating_date": "2026-08-04T00:00:00",
+      "longitude": "-2.5896057",
+      "latitude": "51.4636563"
     },
     {
       "id": 1245417,
@@ -667,8 +680,8 @@
       "address": "Ground Floor 32 - 34 Mosley Street, Newcastle Upon Tyne",
       "hygiene_rating": "5",
       "rating_date": "2026-03-12T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-1.61104",
+      "latitude": "54.9704901"
     },
     {
       "id": 1558152,
@@ -758,8 +771,8 @@
       "address": "104 - 105 Grainger Market Grainger Street, Newcastle Upon Tyne",
       "hygiene_rating": "5",
       "rating_date": "2025-09-10T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-1.6147669",
+      "latitude": "54.9728293"
     },
     {
       "id": 717193,
@@ -1113,19 +1126,6 @@
       "latitude": "53.7859366"
     },
     {
-      "id": 1199724,
-      "name": "Thai Cafe",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Sutton",
-      "postcode": "SM3 8HW",
-      "address": "516 London Road, North Cheam",
-      "hygiene_rating": "5",
-      "rating_date": "2025-09-24T00:00:00",
-      "longitude": "-0.226958",
-      "latitude": "51.371562"
-    },
-    {
       "id": 775436,
       "name": "Thai Chava",
       "type": "restaurant",
@@ -1408,8 +1408,8 @@
       "address": "93 Clayton Street, Newcastle Upon Tyne",
       "hygiene_rating": "5",
       "rating_date": "2026-03-16T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-1.617986",
+      "latitude": "54.9710512"
     },
     {
       "id": 1601394,
@@ -2062,19 +2062,6 @@
       "latitude": "52.6389808654785"
     },
     {
-      "id": 1605544,
-      "name": "Jude's Thai",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Westminster",
-      "postcode": "SW1E 5NE",
-      "address": "MARKET HALL VICTORIA 191 VICTORIA STREET, LONDON",
-      "hygiene_rating": "4",
-      "rating_date": "2025-02-05T00:00:00",
-      "longitude": "-0.1443307",
-      "latitude": "51.4963598"
-    },
-    {
       "id": 1066392,
       "name": "Limehouse Thai",
       "type": "restaurant",
@@ -2548,12 +2535,12 @@
       "type": "restaurant",
       "city": "Wiltshire",
       "local_authority": "Wiltshire",
-      "postcode": "",
+      "postcode": "SP2 7RB",
       "address": "58A FISHERTON STREET, SALISBURY",
       "hygiene_rating": "4",
-      "rating_date": "2024-11-05T00:00:00",
-      "longitude": "-1.8002829",
-      "latitude": "51.0697123"
+      "rating_date": "2026-07-24T00:00:00",
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": 721263,
@@ -2825,8 +2812,8 @@
       "address": "3 Leazes Lane, Newcastle Upon Tyne",
       "hygiene_rating": "3",
       "rating_date": "2026-04-21T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-1.6174177",
+      "latitude": "54.9750124"
     },
     {
       "id": 345062,
@@ -2840,6 +2827,19 @@
       "rating_date": "2026-03-18T00:00:00",
       "longitude": "-0.225283",
       "latitude": "51.502855"
+    },
+    {
+      "id": 1605544,
+      "name": "Jude's Thai",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Westminster",
+      "postcode": "SW1E 5NE",
+      "address": "MARKET HALL VICTORIA 191 VICTORIA STREET, LONDON",
+      "hygiene_rating": "3",
+      "rating_date": "2026-07-18T00:00:00",
+      "longitude": "-0.1443307",
+      "latitude": "51.4963598"
     },
     {
       "id": 1831022,
@@ -2866,19 +2866,6 @@
       "rating_date": "2025-06-19T00:00:00",
       "longitude": "0.23216700553894",
       "latitude": "51.138557434082"
-    },
-    {
-      "id": 1602277,
-      "name": "Lek Thai",
-      "type": "restaurant",
-      "city": "Great Yarmouth",
-      "local_authority": "Great Yarmouth",
-      "postcode": "",
-      "address": "50-51 Marine Parade, Great Yarmouth, Norfolk",
-      "hygiene_rating": "3",
-      "rating_date": "2024-12-19T00:00:00",
-      "longitude": "1.7365152",
-      "latitude": "52.6066554"
     },
     {
       "id": 1949857,
@@ -3334,6 +3321,19 @@
       "rating_date": "2026-02-05T00:00:00",
       "longitude": "-0.445796",
       "latitude": "51.368258"
+    },
+    {
+      "id": 1647583,
+      "name": "Thara Thai",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Bromley",
+      "postcode": "BR2 7EJ",
+      "address": "42 Station Approach, Hayes, Bromley",
+      "hygiene_rating": "2",
+      "rating_date": "2026-07-02T00:00:00",
+      "longitude": "0.010904",
+      "latitude": "51.37666"
     },
     {
       "id": 1247963,
@@ -4203,8 +4203,8 @@
       "address": "29 Forth Banks, Newcastle Upon Tyne",
       "hygiene_rating": "5",
       "rating_date": "2024-08-28T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-1.616053",
+      "latitude": "54.9656804"
     },
     {
       "id": 1709487,
@@ -4738,19 +4738,6 @@
       "rating_date": "2025-06-04T00:00:00",
       "longitude": "-0.304131",
       "latitude": "51.4575118"
-    },
-    {
-      "id": 1421595,
-      "name": "Rin's Thai Kitchen",
-      "type": "restaurant",
-      "city": "Charnwood",
-      "local_authority": "Charnwood",
-      "postcode": "LE11 5BE",
-      "address": "18 The Rushes, Loughborough",
-      "hygiene_rating": "5",
-      "rating_date": "2022-07-21T00:00:00",
-      "longitude": "-1.209447",
-      "latitude": "52.773299"
     },
     {
       "id": 1765522,
@@ -7938,6 +7925,19 @@
       "latitude": "51.521409"
     },
     {
+      "id": 1421595,
+      "name": "Rin's Thai Kitchen",
+      "type": "restaurant",
+      "city": "Charnwood",
+      "local_authority": "Charnwood",
+      "postcode": "LE11 5BE",
+      "address": "18 The Rushes, Loughborough",
+      "hygiene_rating": "2",
+      "rating_date": "2026-07-13T00:00:00",
+      "longitude": "-1.209447",
+      "latitude": "52.773299"
+    },
+    {
       "id": 962596,
       "name": "Thai Chef Restaurant",
       "type": "restaurant",
@@ -8025,8 +8025,8 @@
       "address": "13a Marefair, Northampton, NN1 1SR",
       "hygiene_rating": "1",
       "rating_date": "2026-03-18T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-0.9015493",
+      "latitude": "52.2366395"
     },
     {
       "id": 140096,
@@ -8144,19 +8144,6 @@
       "rating_date": "2025-03-12T00:00:00",
       "longitude": "-1.543289",
       "latitude": "53.794322"
-    },
-    {
-      "id": 1582029,
-      "name": "Chor Muang Thai Gastro",
-      "type": "restaurant",
-      "city": "Vale of White Horse",
-      "local_authority": "Vale of White Horse",
-      "postcode": "OX11 9NU",
-      "address": "The Blueberry London Road, Blewbury, Didcot",
-      "hygiene_rating": "5",
-      "rating_date": "2025-01-23T00:00:00",
-      "longitude": null,
-      "latitude": null
     },
     {
       "id": 281405,
@@ -9030,6 +9017,19 @@
       "latitude": "52.248187"
     },
     {
+      "id": 553267,
+      "name": "Aroy Dee Thai York",
+      "type": "restaurant",
+      "city": "York",
+      "local_authority": "York",
+      "postcode": "YO1 9SP",
+      "address": "3 King Street, York",
+      "hygiene_rating": "4",
+      "rating_date": "2026-07-14T00:00:00",
+      "longitude": "-1.082696",
+      "latitude": "53.957336"
+    },
+    {
       "id": 1248168,
       "name": "Baan Thai Restaurant Ltd",
       "type": "restaurant",
@@ -9342,19 +9342,6 @@
       "latitude": "53.367913"
     },
     {
-      "id": 553267,
-      "name": "Aroy Dee Thai York",
-      "type": "restaurant",
-      "city": "York",
-      "local_authority": "York",
-      "postcode": "YO1 9SP",
-      "address": "3 King Street, York",
-      "hygiene_rating": "3",
-      "rating_date": "2025-01-16T00:00:00",
-      "longitude": "-1.082696",
-      "latitude": "53.957336"
-    },
-    {
       "id": 581171,
       "name": "Bangkok Thai Restaurant Lytham",
       "type": "restaurant",
@@ -9532,7 +9519,7 @@
       "postcode": "W1H 1LL",
       "address": "26 CRAWFORD STREET, LONDON",
       "hygiene_rating": "3",
-      "rating_date": "2025-01-22T00:00:00",
+      "rating_date": "2026-07-14T00:00:00",
       "longitude": "-0.1607475",
       "latitude": "51.5197836"
     },
@@ -11209,7 +11196,7 @@
       "postcode": "E1 1DE",
       "address": "219 Whitechapel Road, London",
       "hygiene_rating": "4",
-      "rating_date": "2025-07-31T00:00:00",
+      "rating_date": "2026-07-27T00:00:00",
       "longitude": "-0.062303",
       "latitude": "51.518872"
     },
@@ -11238,6 +11225,19 @@
       "rating_date": "2025-06-17T00:00:00",
       "longitude": "-0.7989306",
       "latitude": "54.1342478"
+    },
+    {
+      "id": 1895640,
+      "name": "The Fuchka Man, Halal Thai & Chinese, Morog Polau",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Tower Hamlets",
+      "postcode": "E2 0PG",
+      "address": "Unit 03 Globe Town Food Court, 82a Roman Road, London",
+      "hygiene_rating": "1",
+      "rating_date": "2026-04-30T00:00:00",
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": 1029007,
@@ -11339,7 +11339,7 @@
       "postcode": "DH7 9XB",
       "address": "46 FRONT STREET, LANGLEY PARK",
       "hygiene_rating": "5",
-      "rating_date": "2023-11-20T00:00:00",
+      "rating_date": "2026-07-30T00:00:00",
       "longitude": "-1.6703641",
       "latitude": "54.7994462"
     },
@@ -12111,19 +12111,6 @@
       "latitude": "51.443003"
     },
     {
-      "id": 1647583,
-      "name": "Thara Thai",
-      "type": "takeaway",
-      "city": "London",
-      "local_authority": "Bromley",
-      "postcode": "BR2 7EJ",
-      "address": "42 Station Approach, Hayes, Bromley",
-      "hygiene_rating": "2",
-      "rating_date": "2026-07-02T00:00:00",
-      "longitude": "0.010904",
-      "latitude": "51.37666"
-    },
-    {
       "id": 110946,
       "name": "Lana Thai",
       "type": "takeaway",
@@ -12497,6 +12484,19 @@
       "address": "",
       "hygiene_rating": "5",
       "rating_date": "2025-09-30T00:00:00",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "id": 1918142,
+      "name": "Pad thai corner",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Southwark",
+      "postcode": "SE1 8NJ",
+      "address": "Blackfriars Food Market, Blackfriars Road",
+      "hygiene_rating": "5",
+      "rating_date": "2026-07-24T00:00:00",
       "longitude": null,
       "latitude": null
     },
@@ -13266,6 +13266,19 @@
       "rating_date": "2026-04-29T00:00:00",
       "longitude": "-1.2847382",
       "latitude": "51.6700225"
+    },
+    {
+      "id": 1958854,
+      "name": "Mais Thai Takeaway",
+      "type": "takeaway",
+      "city": "Sunderland",
+      "local_authority": "Sunderland",
+      "postcode": "DH4 4QX",
+      "address": "Unit 1, Wheatsheaf Corner, Shiney Row, Houghton-le-Spring",
+      "hygiene_rating": "3",
+      "rating_date": "2026-07-16T00:00:00",
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": 1893153,
@@ -15556,19 +15569,6 @@
       "latitude": "51.5024885"
     },
     {
-      "id": 346455,
-      "name": "Busaba Eathai",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Hammersmith and Fulham",
-      "postcode": "W12 7GA",
-      "address": "Unit 1027, Westfield London Shopping Centre, Ariel Way, London",
-      "hygiene_rating": "5",
-      "rating_date": "2026-03-06T00:00:00",
-      "longitude": "-0.223254",
-      "latitude": "51.507212"
-    },
-    {
       "id": 425017,
       "name": "Busaba Eathai",
       "type": "restaurant",
@@ -15580,6 +15580,19 @@
       "rating_date": "2023-03-14T00:00:00",
       "longitude": "-0.1325333",
       "latitude": "51.5195627"
+    },
+    {
+      "id": 346455,
+      "name": "Busaba Eathai",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Hammersmith and Fulham",
+      "postcode": "W12 7GA",
+      "address": "Unit 1027, Westfield London Shopping Centre, Ariel Way, London",
+      "hygiene_rating": "5",
+      "rating_date": "2026-03-06T00:00:00",
+      "longitude": "-0.223254",
+      "latitude": "51.507212"
     },
     {
       "id": 1386427,
@@ -15877,8 +15890,8 @@
       "address": "Zaap 117 Newgate Street, Newcastle Upon Tyne",
       "hygiene_rating": "5",
       "rating_date": "2024-07-31T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-1.6183117",
+      "latitude": "54.9729753"
     },
     {
       "id": 1688969,
@@ -15972,19 +15985,6 @@
       "latitude": "54.95765"
     },
     {
-      "id": 914659,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Bath",
-      "local_authority": "Bath and North East Somerset",
-      "postcode": "BA1 1AT",
-      "address": "2 Newark Street, City Centre, Bath",
-      "hygiene_rating": "5",
-      "rating_date": "2024-03-07T00:00:00",
-      "longitude": "-2.359205",
-      "latitude": "51.378387"
-    },
-    {
       "id": 938892,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -16009,6 +16009,19 @@
       "rating_date": "2026-06-16T00:00:00",
       "longitude": "-2.34880399703979",
       "latitude": "53.4656639099121"
+    },
+    {
+      "id": 914659,
+      "name": "Thaikhun",
+      "type": "restaurant",
+      "city": "Bath",
+      "local_authority": "Bath and North East Somerset",
+      "postcode": "BA1 1AT",
+      "address": "2 Newark Street, City Centre, Bath",
+      "hygiene_rating": "5",
+      "rating_date": "2026-07-31T00:00:00",
+      "longitude": "-2.359205",
+      "latitude": "51.378387"
     },
     {
       "id": 836583,
@@ -16050,19 +16063,6 @@
       "latitude": "53.479872"
     },
     {
-      "id": 811936,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Glasgow",
-      "local_authority": "Glasgow City",
-      "postcode": "G53 6AF",
-      "address": "Unit 48, 763 Barrhead Road, Glasgow",
-      "hygiene_rating": "Pass",
-      "rating_date": "2026-02-12T00:00:00",
-      "longitude": "-4.342073",
-      "latitude": "55.822897"
-    },
-    {
       "id": 696479,
       "name": "THAIKHUN",
       "type": "restaurant",
@@ -16076,17 +16076,17 @@
       "latitude": "57.143568"
     },
     {
-      "id": 663888,
-      "name": "Banana Tree",
+      "id": 811936,
+      "name": "Thaikhun",
       "type": "restaurant",
-      "city": "Milton Keynes",
-      "local_authority": "Milton Keynes",
-      "postcode": "MK9 2HP",
-      "address": "Unit 800 Holkham Walk, The Hub, Central Milton Keynes",
-      "hygiene_rating": "5",
-      "rating_date": "2025-02-10T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "city": "Glasgow",
+      "local_authority": "Glasgow City",
+      "postcode": "G53 6AF",
+      "address": "Unit 48, 763 Barrhead Road, Glasgow",
+      "hygiene_rating": "Pass",
+      "rating_date": "2026-02-12T00:00:00",
+      "longitude": "-4.342073",
+      "latitude": "55.822897"
     },
     {
       "id": 1803464,
@@ -16100,6 +16100,19 @@
       "rating_date": "2025-02-17T00:00:00",
       "longitude": "-0.191699996590614",
       "latitude": "51.5498313903809"
+    },
+    {
+      "id": 663888,
+      "name": "Banana Tree",
+      "type": "restaurant",
+      "city": "Milton Keynes",
+      "local_authority": "Milton Keynes",
+      "postcode": "MK9 2HP",
+      "address": "Unit 800 Holkham Walk, The Hub, Central Milton Keynes",
+      "hygiene_rating": "5",
+      "rating_date": "2025-02-10T00:00:00",
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": 1572252,
@@ -16349,19 +16362,6 @@
       "latitude": "52.572017"
     },
     {
-      "id": 1893532,
-      "name": "Mango Tree",
-      "type": "restaurant",
-      "city": "Cardiff",
-      "local_authority": "Cardiff",
-      "postcode": "CF14 1DD",
-      "address": "65 Merthyr Road, Whitchurch, Cardiff",
-      "hygiene_rating": "5",
-      "rating_date": "2025-11-13T00:00:00",
-      "longitude": "-3.2178754",
-      "latitude": "51.5118053"
-    },
-    {
       "id": 307649,
       "name": "Mango Tree",
       "type": "restaurant",
@@ -16373,6 +16373,19 @@
       "rating_date": "2025-06-17T00:00:00",
       "longitude": "-2.348319",
       "latitude": "54.473365"
+    },
+    {
+      "id": 1893532,
+      "name": "Mango Tree",
+      "type": "restaurant",
+      "city": "Cardiff",
+      "local_authority": "Cardiff",
+      "postcode": "CF14 1DD",
+      "address": "65 Merthyr Road, Whitchurch, Cardiff",
+      "hygiene_rating": "5",
+      "rating_date": "2025-11-13T00:00:00",
+      "longitude": "-3.2178754",
+      "latitude": "51.5118053"
     },
     {
       "id": 1806274,

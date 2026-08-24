@@ -2,7 +2,7 @@
   "name": "ThaiData UK",
   "description": "Business intelligence and cost defense tools for UK Thai restaurant operators",
   "url": "https://thaidata.uk",
-  "last_updated": "2026-08-17",
+  "last_updated": "2026-08-24",
   "data_sources": [
     "FSA FHRS",
     "FSA FHIS",
@@ -11,9 +11,9 @@
     "UKHospitality"
   ],
   "statistics": {
-    "total_uk_thai_businesses": 1263,
+    "total_uk_thai_businesses": 1264,
     "total_full_service_restaurants": 1013,
-    "total_quick_service_takeaways": 250,
+    "total_quick_service_takeaways": 251,
     "uk_average_hygiene_rating": 4.1,
     "uk_average_per_100k_density": 2.6,
     "hygiene_rating_5_percentage": 50.4,
@@ -55,8 +55,8 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 281,
-      "restaurants": 230,
+      "total_thai_businesses": 282,
+      "restaurants": 231,
       "takeaways": 51,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
@@ -103,6 +103,16 @@
       "postcode_areas": 7
     },
     {
+      "name": "Bristol",
+      "population": 483000,
+      "total_thai_businesses": 15,
+      "restaurants": 13,
+      "takeaways": 2,
+      "per_100k": 3.1,
+      "avg_hygiene_rating": 4.7,
+      "postcode_areas": 6
+    },
+    {
       "name": "Swansea",
       "population": 247000,
       "total_thai_businesses": 15,
@@ -111,16 +121,6 @@
       "per_100k": 6.1,
       "avg_hygiene_rating": 3.8,
       "postcode_areas": 5
-    },
-    {
-      "name": "Bristol",
-      "population": 483000,
-      "total_thai_businesses": 14,
-      "restaurants": 12,
-      "takeaways": 2,
-      "per_100k": 2.9,
-      "avg_hygiene_rating": 4.7,
-      "postcode_areas": 6
     },
     {
       "name": "Richmond-Upon-Thames",

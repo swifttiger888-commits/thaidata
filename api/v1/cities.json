@@ -3,15 +3,15 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-08-17",
-  "total_uk": 1263,
+  "updated": "2026-08-24",
+  "total_uk": 1264,
   "cities_tracked": 254,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 281,
-      "restaurants": 230,
+      "total_thai_businesses": 282,
+      "restaurants": 231,
       "takeaways": 51,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
@@ -58,6 +58,16 @@
       "postcode_areas": 7
     },
     {
+      "name": "Bristol",
+      "population": 483000,
+      "total_thai_businesses": 15,
+      "restaurants": 13,
+      "takeaways": 2,
+      "per_100k": 3.1,
+      "avg_hygiene_rating": 4.7,
+      "postcode_areas": 6
+    },
+    {
       "name": "Swansea",
       "population": 247000,
       "total_thai_businesses": 15,
@@ -66,16 +76,6 @@
       "per_100k": 6.1,
       "avg_hygiene_rating": 3.8,
       "postcode_areas": 5
-    },
-    {
-      "name": "Bristol",
-      "population": 483000,
-      "total_thai_businesses": 14,
-      "restaurants": 12,
-      "takeaways": 2,
-      "per_100k": 2.9,
-      "avg_hygiene_rating": 4.7,
-      "postcode_areas": 6
     },
     {
       "name": "Richmond-Upon-Thames",
@@ -295,7 +295,7 @@
       "takeaways": 1,
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 5
+      "postcode_areas": 6
     },
     {
       "name": "Elmbridge",
@@ -688,16 +688,6 @@
       "postcode_areas": 3
     },
     {
-      "name": "Vale of White Horse",
-      "population": null,
-      "total_thai_businesses": 5,
-      "restaurants": 4,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 3.8,
-      "postcode_areas": 1
-    },
-    {
       "name": "Wealden",
       "population": null,
       "total_thai_businesses": 5,
@@ -878,6 +868,16 @@
       "postcode_areas": 3
     },
     {
+      "name": "Vale of White Horse",
+      "population": null,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 3.5,
+      "postcode_areas": 1
+    },
+    {
       "name": "Cambridge",
       "population": 146000,
       "total_thai_businesses": 4,
@@ -956,6 +956,16 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
       "postcode_areas": 2
+    },
+    {
+      "name": "Sunderland",
+      "population": 278000,
+      "total_thai_businesses": 4,
+      "restaurants": 1,
+      "takeaways": 3,
+      "per_100k": 1.4,
+      "avg_hygiene_rating": 3.8,
+      "postcode_areas": 4
     },
     {
       "name": "Wrexham",
@@ -1128,16 +1138,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Great Yarmouth",
-      "population": null,
-      "total_thai_businesses": 3,
-      "restaurants": 2,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 3.7,
-      "postcode_areas": 1
-    },
-    {
       "name": "Runnymede",
       "population": null,
       "total_thai_businesses": 3,
@@ -1286,16 +1286,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 2
-    },
-    {
-      "name": "Sunderland",
-      "population": 278000,
-      "total_thai_businesses": 3,
-      "restaurants": 1,
-      "takeaways": 2,
-      "per_100k": 1.1,
-      "avg_hygiene_rating": 4.0,
-      "postcode_areas": 3
     },
     {
       "name": "Fermanagh and Omagh",
@@ -1574,7 +1564,7 @@
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 3.5,
+      "avg_hygiene_rating": 2.0,
       "postcode_areas": 1
     },
     {
@@ -1806,6 +1796,16 @@
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 2
+    },
+    {
+      "name": "Great Yarmouth",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 1
     },
     {
       "name": "Bracknell Forest",

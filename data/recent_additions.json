@@ -1,6 +1,34 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-08-24",
   "restaurants": [
+    {
+      "fsa_id": "1958854",
+      "name": "Mais Thai Takeaway",
+      "city": "Sunderland",
+      "type": "takeaway",
+      "discovered_on": "2026-08-24"
+    },
+    {
+      "fsa_id": "1918142",
+      "name": "Pad thai corner",
+      "city": "London",
+      "type": "takeaway",
+      "discovered_on": "2026-08-24"
+    },
+    {
+      "fsa_id": "1895640",
+      "name": "The Fuchka Man, Halal Thai & Chinese, Morog Polau",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-08-24"
+    },
+    {
+      "fsa_id": "1931734",
+      "name": "Brother Thai",
+      "city": "Bristol",
+      "type": "restaurant",
+      "discovered_on": "2026-08-24"
+    },
     {
       "fsa_id": "1881809",
       "name": "Aizah Thai & Cafe, Spicy Wok",
@@ -322,34 +350,6 @@
       "city": "Somerset",
       "type": "restaurant",
       "discovered_on": "2026-06-15"
-    },
-    {
-      "fsa_id": "1004678",
-      "name": "The Siam Zaa",
-      "city": "Newcastle",
-      "type": "restaurant",
-      "discovered_on": "2026-06-08"
-    },
-    {
-      "fsa_id": "1721229",
-      "name": "Wraps&Wings/SukhumThai/WowSticks/YumYum/OrientalBo/Khao",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-06-08"
-    },
-    {
-      "fsa_id": "578053",
-      "name": "Sukothai",
-      "city": "Cornwall",
-      "type": "restaurant",
-      "discovered_on": "2026-06-08"
-    },
-    {
-      "fsa_id": "962308",
-      "name": "The Eight Bells Thai Cuisine",
-      "city": "Vale of White Horse",
-      "type": "restaurant",
-      "discovered_on": "2026-06-08"
     }
   ]
 }
