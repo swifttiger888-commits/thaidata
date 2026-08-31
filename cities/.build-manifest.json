@@ -1,9 +1,9 @@
 {
-  "run_date": "2026-08-24",
+  "run_date": "2026-08-31",
   "applied": true,
   "total_cities": 276,
-  "generated": 253,
-  "quarantined": 21,
+  "generated": 252,
+  "quarantined": 22,
   "skipped": 1,
   "quarantined_pages": [
     {
@@ -73,6 +73,10 @@
     {
       "slug": "south-lanarkshire",
       "reason": "No restaurant data for city: South Lanarkshire"
+    },
+    {
+      "slug": "stafford",
+      "reason": "No restaurant data for city: Stafford"
     },
     {
       "slug": "stratford-upon-avon",

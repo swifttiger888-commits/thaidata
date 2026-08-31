@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-24",
+  "updated": "2026-08-31",
   "restaurants": [
+    {
+      "fsa_id": "1956559",
+      "name": "Thai To Go",
+      "city": "Norwich",
+      "type": "takeaway",
+      "discovered_on": "2026-08-31"
+    },
+    {
+      "fsa_id": "1909079",
+      "name": "BKK Thai Takeaway",
+      "city": "Cheshire East",
+      "type": "takeaway",
+      "discovered_on": "2026-08-31"
+    },
+    {
+      "fsa_id": "1932296",
+      "name": "Thai Kitchen",
+      "city": "Oldham",
+      "type": "takeaway",
+      "discovered_on": "2026-08-31"
+    },
     {
       "fsa_id": "1958854",
       "name": "Mais Thai Takeaway",
@@ -328,27 +349,6 @@
       "name": "Thai and Fry",
       "city": "London",
       "type": "takeaway",
-      "discovered_on": "2026-06-15"
-    },
-    {
-      "fsa_id": "1846383",
-      "name": "Thai Andaman Restaurant",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-06-15"
-    },
-    {
-      "fsa_id": "1898834",
-      "name": "Rodfai Thai Cuisine",
-      "city": "Epsom and Ewell",
-      "type": "restaurant",
-      "discovered_on": "2026-06-15"
-    },
-    {
-      "fsa_id": "1393671",
-      "name": "Baan Thai",
-      "city": "Somerset",
-      "type": "restaurant",
       "discovered_on": "2026-06-15"
     }
   ]

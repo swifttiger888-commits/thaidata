@@ -3,16 +3,16 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-08-24",
-  "total_uk": 1264,
-  "cities_tracked": 254,
+  "updated": "2026-08-31",
+  "total_uk": 1261,
+  "cities_tracked": 253,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 282,
-      "restaurants": 231,
-      "takeaways": 51,
+      "total_thai_businesses": 280,
+      "restaurants": 230,
+      "takeaways": 50,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 99
@@ -198,6 +198,16 @@
       "postcode_areas": 6
     },
     {
+      "name": "Norwich",
+      "population": 148000,
+      "total_thai_businesses": 9,
+      "restaurants": 6,
+      "takeaways": 3,
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 4.3,
+      "postcode_areas": 3
+    },
+    {
       "name": "Sheffield",
       "population": 584000,
       "total_thai_businesses": 9,
@@ -216,26 +226,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
       "postcode_areas": 4
-    },
-    {
-      "name": "Newcastle",
-      "population": 307000,
-      "total_thai_businesses": 8,
-      "restaurants": 8,
-      "takeaways": 0,
-      "per_100k": 2.6,
-      "avg_hygiene_rating": 4.6,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Norwich",
-      "population": 148000,
-      "total_thai_businesses": 8,
-      "restaurants": 6,
-      "takeaways": 2,
-      "per_100k": 5.4,
-      "avg_hygiene_rating": 4.5,
-      "postcode_areas": 3
     },
     {
       "name": "Oxford",
@@ -344,8 +334,18 @@
       "restaurants": 7,
       "takeaways": 0,
       "per_100k": 2.3,
-      "avg_hygiene_rating": 3.7,
+      "avg_hygiene_rating": 4.0,
       "postcode_areas": 5
+    },
+    {
+      "name": "Newcastle",
+      "population": 307000,
+      "total_thai_businesses": 7,
+      "restaurants": 7,
+      "takeaways": 0,
+      "per_100k": 2.3,
+      "avg_hygiene_rating": 4.7,
+      "postcode_areas": 1
     },
     {
       "name": "Cheshire West and Chester",
@@ -778,6 +778,16 @@
       "postcode_areas": 3
     },
     {
+      "name": "Oldham",
+      "population": 243000,
+      "total_thai_businesses": 4,
+      "restaurants": 1,
+      "takeaways": 3,
+      "per_100k": 1.6,
+      "avg_hygiene_rating": 3.8,
+      "postcode_areas": 4
+    },
+    {
       "name": "Cheltenham",
       "population": 120000,
       "total_thai_businesses": 4,
@@ -978,16 +988,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Oldham",
-      "population": 243000,
-      "total_thai_businesses": 3,
-      "restaurants": 1,
-      "takeaways": 2,
-      "per_100k": 1.2,
-      "avg_hygiene_rating": 3.3,
-      "postcode_areas": 3
-    },
-    {
       "name": "Uttlesford",
       "population": null,
       "total_thai_businesses": 3,
@@ -1008,16 +1008,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Exeter",
-      "population": 135000,
-      "total_thai_businesses": 3,
-      "restaurants": 3,
-      "takeaways": 0,
-      "per_100k": 2.2,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
-    },
-    {
       "name": "Reading",
       "population": 175000,
       "total_thai_businesses": 3,
@@ -1025,6 +1015,16 @@
       "takeaways": 0,
       "per_100k": 1.7,
       "avg_hygiene_rating": 4.3,
+      "postcode_areas": 2
+    },
+    {
+      "name": "Exeter",
+      "population": 135000,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": 2.2,
+      "avg_hygiene_rating": 5.0,
       "postcode_areas": 2
     },
     {
@@ -1064,7 +1064,7 @@
       "restaurants": 3,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 3.0,
+      "avg_hygiene_rating": 4.0,
       "postcode_areas": 2
     },
     {
@@ -1296,6 +1296,16 @@
       "per_100k": null,
       "avg_hygiene_rating": 3.7,
       "postcode_areas": 2
+    },
+    {
+      "name": "Cheshire East",
+      "population": 390000,
+      "total_thai_businesses": 3,
+      "restaurants": 0,
+      "takeaways": 3,
+      "per_100k": 0.8,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 3
     },
     {
       "name": "Highland",
@@ -1564,7 +1574,7 @@
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 2.0,
+      "avg_hygiene_rating": 1.5,
       "postcode_areas": 1
     },
     {
@@ -1828,26 +1838,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Bridgend",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 0,
-      "takeaways": 2,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Antrim and Newtownabbey",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 0,
-      "takeaways": 2,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
-    },
-    {
       "name": "Arun",
       "population": null,
       "total_thai_businesses": 2,
@@ -1856,16 +1846,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
-    },
-    {
-      "name": "Cheshire East",
-      "population": 390000,
-      "total_thai_businesses": 2,
-      "restaurants": 0,
-      "takeaways": 2,
-      "per_100k": 0.5,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
     },
     {
       "name": "Armagh City, Banbridge and Craigavon",
@@ -2278,16 +2258,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Stafford",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 1,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
       "name": "Mansfield",
       "population": null,
       "total_thai_businesses": 1,
@@ -2345,6 +2315,26 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
+      "postcode_areas": 1
+    },
+    {
+      "name": "Bridgend",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 1
+    },
+    {
+      "name": "Antrim and Newtownabbey",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
       "postcode_areas": 1
     },
     {
