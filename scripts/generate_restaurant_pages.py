@@ -3,7 +3,7 @@
 Generate individual restaurant listing pages from restaurants.json
 using the Kimi-designed template v2 (cream bg, green hero, 2-col layout).
 """
-import json, os, re, sys, unicodedata
+import json, os, re, sys, unicodedata, shutil
 from datetime import datetime
 from typing import Any
 
@@ -157,11 +157,16 @@ def build_nearby_section(city: str, city_slug: str, city_open: dict[str, list[di
     return nearby_html
 
 
-def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dict[str, list[dict[str, Any]]] = None, enrichment: dict[str, Any] = None) -> str:
+def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dict[str, list[dict[str, Any]]] = None, enrichment: dict[str, Any] = None, rest_slug: str | None = None, canonical_url: str | None = None) -> str:
     """Fill the Kimi template with restaurant data.
     enrichment: optional dict with google_place_id, rating, review_count, phone,
                 website, opening_hours, photos, description, price_level.
-                Keyed by fsa_id string."""
+                Keyed by fsa_id string.
+    rest_slug: resolved slug for this page (may include an -{fsa_id} suffix for
+               name-collisions). If None, slugify(name) is used.
+    canonical_url: canonical URL for this page. If None, self-referencing URL
+               is built from city_slug + rest_slug. Pass the clean-slug URL to
+               make this page a proper alternate (non-indexable duplicate)."""
     if closed_ids is None:
         closed_ids = set()
     if city_open is None:
@@ -178,7 +183,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     name = r['name']
     city = r['city']
     city_slug = slugify(city)
-    rest_slug = slugify(name)
+    rest_slug = rest_slug or slugify(name)
     rating = r.get('hygiene_rating', 'N/A')
     postcode = r.get('postcode', '')
     address = r.get('address', '')
@@ -194,7 +199,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     rtype_icon = 'fa-utensils' if rtype == 'restaurant' else 'fa-box'
     rtype_label = rtype.replace('_', ' ').title()
     fsa_id = r['id']
-    canonical = f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
+    canonical = canonical_url or f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
 
     # ---- Head replacements ----
     html = html.replace(
@@ -735,27 +740,68 @@ def main() -> None:
 
     print(f"Generating {total} restaurant pages with Kimi v2 template...")
 
-    written_slugs: set[str] = set()
+    # Pre-scan existing pages: which record currently owns each clean slug.
+    # Preserves the live URL -> restaurant mapping across regeneration runs
+    # (restaurants.json order is not stable across pipeline runs).
+    clean_owner: dict[tuple[str, str], str] = {}
+    for root, dirs, files in os.walk(OUT_DIR):
+        if 'index.html' not in files:
+            continue
+        rel = os.path.relpath(root, OUT_DIR)
+        parts = rel.split(os.sep)
+        if len(parts) != 2:
+            continue
+        rest_slug_d = parts[1]
+        if re.search(r'-\d+$', rest_slug_d):
+            continue
+        try:
+            with open(os.path.join(root, 'index.html'), encoding='utf-8', errors='ignore') as f:
+                m = re.search(r'fsa-id" content="(\d+)"', f.read())
+            if m:
+                clean_owner[(parts[0], rest_slug_d)] = m.group(1)
+        except OSError:
+            continue
+    print(f"  Loaded {len(clean_owner)} clean-slug owners from existing pages")
 
-    for i, r in enumerate(restaurants):
+    def slug_sort_key(r: dict[str, Any]) -> tuple:
+        """Deterministic order: owner of the existing clean slug first (if any),
+        then by id ascending. Guarantees slug assignment is stable across runs."""
+        ck = (slugify(r['city']), slugify(r['name']))
+        owner = clean_owner.get(ck)
+        return (slugify(r['city']), slugify(r['name']), 0 if owner == str(r['id']) else 1, int(r['id']))
+
+    ordered = sorted(restaurants, key=slug_sort_key)
+    slug_owner: dict[tuple[str, str], dict[str, Any]] = {}
+    generated_ids: set[str] = set()
+
+    for i, r in enumerate(ordered):
         try:
             # Skip excluded restaurants (moderation layer)
             if r['id'] in excluded_ids:
                 continue
             city_slug = slugify(r['city'])
             rest_slug = slugify(r['name'])
-            
+            collision_key = (city_slug, rest_slug)
+
             dir_path = os.path.join(OUT_DIR, city_slug, rest_slug)
-            
-            # Handle duplicates: track written slugs per run; same slug again = collision → use -id suffix
-            collision_key = f"{city_slug}/{rest_slug}"
-            if collision_key in written_slugs:
+            canonical_url = None
+            if collision_key in slug_owner:
+                # Name collision in this city — write as {slug}-{fsa_id}
                 dir_path = os.path.join(OUT_DIR, city_slug, f"{rest_slug}-{r['id']}")
-            written_slugs.add(collision_key)
-            
+                owner = slug_owner[collision_key]
+                if (owner.get('address') == r.get('address')
+                        and str(owner.get('hygiene_rating', '')) == str(r.get('hygiene_rating', ''))):
+                    # Identical duplicate record — keep as a proper alternate
+                    # (canonical to the clean slug, non-indexable by design).
+                    canonical_url = f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
+            else:
+                slug_owner[collision_key] = r
+
             os.makedirs(dir_path, exist_ok=True)
-            
-            html = generate_page(r, closed_ids, city_open, enrichment_lookup)
+
+            html = generate_page(r, closed_ids, city_open, enrichment_lookup,
+                                 rest_slug=os.path.basename(dir_path),
+                                 canonical_url=canonical_url)
             
             # Don't overwrite the template file (r/leeds/my-thai/index.html)
             template_path = os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html')
@@ -765,7 +811,8 @@ def main() -> None:
             
             with open(out_path, 'w') as f:
                 f.write(html)
-            
+
+            generated_ids.add(str(r['id']))
             generated += 1
             
             if (i + 1) % 200 == 0:
@@ -778,6 +825,37 @@ def main() -> None:
             errors += 1
     
     print(f"\nDone. Generated: {generated}, Errors: {errors}")
+
+    # ── Prune stale pages ─────────────────────────────────────────
+    # Remove dirs whose embedded fsa-id was NOT written this run
+    # (records removed from restaurants.json, or deleted from moderation
+    # exclusions). Only prune when the run was clean — a partial run must
+    # never delete pages for records that merely failed to generate.
+    pruned = 0
+    if errors == 0:
+        template_abspath = os.path.abspath(os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html'))
+        for root, dirs, files in os.walk(OUT_DIR):
+            if 'index.html' not in files:
+                continue
+            rel = os.path.relpath(root, OUT_DIR)
+            parts = rel.split(os.sep)
+            if len(parts) != 2:
+                continue
+            idx_path = os.path.join(root, 'index.html')
+            if os.path.abspath(idx_path) == template_abspath:
+                continue
+            with open(idx_path, encoding='utf-8', errors='ignore') as f:
+                m = re.search(r'fsa-id" content="(\d+)"', f.read())
+            if m and m.group(1) not in generated_ids:
+                shutil.rmtree(root)
+                pruned += 1
+                try:
+                    os.rmdir(os.path.join(OUT_DIR, parts[0]))  # clean up empty city dir
+                except OSError:
+                    pass
+        print(f"  Pruned {pruned} stale page(s) not in current data")
+    else:
+        print(f"  Skipped stale-page pruning ({errors} generation errors)")
 
 
 if __name__ == '__main__':

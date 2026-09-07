@@ -14,7 +14,9 @@ Uses curated lists for static/blog/tool/chain/learn pages.
 
 from __future__ import annotations
 
+import json
 import os
+import re
 from datetime import datetime
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
@@ -52,11 +54,26 @@ def url_element(loc: str, lastmod: str | None = None, changefreq: str | None = N
 
 
 def discover_restaurant_pages() -> list[dict]:
-    """Walk r/<city>/<slug>/index.html and return list of URL dicts."""
+    """Walk r/<city>/<slug>/index.html and return list of URL dicts.
+
+    Only pages that are actually indexable are submitted:
+    - canonical must be self-referencing (skips alternate/duplicate pages)
+    - embedded fsa-id must exist in the current restaurants.json (skips stale
+      pages whose records were removed)
+    - must not be noindex (closed venues, moderation exclusions)
+    """
     r_dir = os.path.join(REPO_DIR, "r")
     pages = []
     if not os.path.isdir(r_dir):
         return pages
+
+    # Current fsa ids (single source of truth)
+    data_path = os.path.join(REPO_DIR, "data", "restaurants.json")
+    current_ids: set[str] = set()
+    if os.path.isfile(data_path):
+        with open(data_path, encoding="utf-8") as f:
+            data = json.load(f)
+        current_ids = {str(r["id"]) for r in data.get("restaurants", [])}
 
     for city in sorted(os.listdir(r_dir)):
         city_path = os.path.join(r_dir, city)
@@ -67,12 +84,24 @@ def discover_restaurant_pages() -> list[dict]:
             if not os.path.isdir(slug_path):
                 continue
             index_path = os.path.join(slug_path, "index.html")
-            if os.path.isfile(index_path):
-                pages.append({
-                    "loc": f"https://thaidata.uk/r/{city}/{slug}/",
-                    "changefreq": "monthly",
-                    "priority": "0.6",
-                })
+            if not os.path.isfile(index_path):
+                continue
+            with open(index_path, encoding="utf-8", errors="ignore") as f:
+                html = f.read()
+            loc = f"https://thaidata.uk/r/{city}/{slug}/"
+            canon = re.search(r'rel="canonical" href="([^"]*)"', html)
+            if not canon or canon.group(1) != loc:
+                continue  # alternate page (canonical elsewhere) — not indexable
+            fsa_id = re.search(r'fsa-id" content="(\d+)"', html)
+            if not fsa_id or fsa_id.group(1) not in current_ids:
+                continue  # stale page — record no longer in current data
+            if re.search(r'name="robots" content="noindex[^"]*"', html):
+                continue  # closed venue / excluded — not indexable
+            pages.append({
+                "loc": loc,
+                "changefreq": "monthly",
+                "priority": "0.6",
+            })
     return pages
 
 
@@ -102,8 +131,8 @@ def get_static_pages() -> list[dict]:
         {"loc": "https://thaidata.uk/", "changefreq": "weekly", "priority": "1.0"},
         {"loc": "https://thaidata.uk/about", "priority": "0.9"},
         {"loc": "https://thaidata.uk/restaurants", "priority": "0.9"},
-        {"loc": "https://thaidata.uk/r", "priority": "0.8"},
-        {"loc": "https://thaidata.uk/chains", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/r/", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/chains/", "priority": "0.8"},
         {"loc": "https://thaidata.uk/guides", "priority": "0.9"},
         {"loc": "https://thaidata.uk/learn", "priority": "0.9"},
         {"loc": "https://thaidata.uk/faq", "priority": "0.8"},

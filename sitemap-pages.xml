@@ -19,13 +19,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r</loc>
+    <loc>https://thaidata.uk/r/</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/chains</loc>
+    <loc>https://thaidata.uk/chains/</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
