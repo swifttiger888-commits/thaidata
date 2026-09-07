@@ -173,6 +173,11 @@ async function injectClaimedEnrichment(html, env) {
   }
 
   if (injection) {
+    // Claimed pages with data: Quick Facts already carries contact info,
+    // so drop the static hero contact strip to avoid duplication.
+    if (facts.length > 0) {
+      html = html.replace(/<div class="contact-strip" id="contact-strip"[^>]*>[\s\S]*?<\/div>/, '');
+    }
     // Inject before Trust Sidebar anchor
     if (html.includes('<!-- Trust Sidebar -->')) {
       html = html.replace('<!-- Trust Sidebar -->', injection + '            <!-- Trust Sidebar -->');

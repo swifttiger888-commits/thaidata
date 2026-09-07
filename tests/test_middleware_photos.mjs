@@ -181,4 +181,29 @@ const SAMPLE_HTML_RATED = `<!DOCTYPE html><html><head><title>Test</title>
   console.log('PASS 11: malformed ratingValue skipped');
 }
 
+// 12. Contact strip removed on claimed page with data
+{
+  const htmlWithStrip = SAMPLE_HTML.replace('<p>FSA 5/5 Hygiene Rating</p>',
+    '<div class="contact-strip" id="contact-strip" style="margin-top:10px;"><a class="cs-item" href="tel:0113 245 9245">0113 245 9245</a></div><p>FSA 5/5 Hygiene Rating</p>');
+  const env = makeEnv({ description: 'owner data here' });
+  env.ASSETS = { async fetch() { return new Response(htmlWithStrip, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(!body.includes('contact-strip'), 'strip removed on claimed page');
+  assert.ok(body.includes('Quick Facts'), 'facts still injected');
+  console.log('PASS 12: contact strip suppressed on claimed page');
+}
+
+// 13. Contact strip kept on unclaimed page
+{
+  const htmlWithStrip = SAMPLE_HTML.replace('<p>FSA 5/5 Hygiene Rating</p>',
+    '<div class="contact-strip" id="contact-strip" style="margin-top:10px;"><a class="cs-item" href="tel:0113 245 9245">0113 245 9245</a></div><p>FSA 5/5 Hygiene Rating</p>');
+  const env = makeEnv(null);
+  env.ASSETS = { async fetch() { return new Response(htmlWithStrip, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(body.includes('contact-strip'), 'strip kept on unclaimed page');
+  console.log('PASS 13: contact strip kept on unclaimed page');
+}
+
 console.log('ALL MIDDLEWARE PHOTO TESTS PASSED');

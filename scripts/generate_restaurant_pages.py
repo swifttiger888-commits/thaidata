@@ -473,6 +473,32 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         f'            <div class="hero-location">\n                <i class="fas fa-map-marker-alt"></i> {location_text}\n            </div>'
     )
 
+    # ---- Contact strip (mobile-first: phone/website/hours anchor in first fold) ----
+    # Claimed listings get contact data from Quick Facts (middleware strips this).
+    if not is_closed:
+        strip_items = []
+        if enr_phone:
+            strip_items.append(
+                '<a class="cs-item" href="tel:' + enr_phone + '" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>' + enr_phone + '</a>'
+            )
+        if enr_website:
+            strip_items.append(
+                '<a class="cs-item" href="' + enr_website + '" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-globe" style="margin-right:5px;"></i>Website</a>'
+            )
+        if enr_hours:
+            strip_items.append(
+                '<a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>Hours</a>'
+            )
+        if strip_items:
+            sep = '<span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span>'
+            strip = ('<div class="contact-strip" id="contact-strip" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;">'
+                     + sep.join(strip_items) + '</div>')
+            html = re.sub(r'<!-- DYNAMIC: contact_strip -->.*?</div>', strip, html, flags=re.DOTALL)
+        else:
+            html = re.sub(r'<!-- DYNAMIC: contact_strip -->.*?</div>', '', html, flags=re.DOTALL)
+    else:
+        html = re.sub(r'<!-- DYNAMIC: contact_strip -->.*?</div>', '', html, flags=re.DOTALL)
+
     # ---- Intro paragraph ----
     intro_text = build_intro(r)
     # Use string find/replace instead of re.sub to avoid backslash escaping issues
