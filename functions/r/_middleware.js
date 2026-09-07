@@ -118,6 +118,15 @@ async function injectClaimedEnrichment(html, env) {
   if (listing.cuisine_specialty) {
     facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Cuisine</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);">' + htmlEscape(listing.cuisine_specialty) + '</span></div>');
   }
+  if (listing.features) {
+    let feats = listing.features;
+    if (typeof feats === 'string') {
+      try { feats = JSON.parse(feats); } catch (_) { feats = [feats]; }
+    }
+    if (Array.isArray(feats) && feats.length > 0) {
+      facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);flex-shrink:0;padding-top:1px;">Features</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);text-align:right;">' + feats.map(f => htmlEscape(f)).join('<br>') + '</span></div>');
+    }
+  }
   if (listing.price_range) {
     facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Price</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);">' + htmlEscape(listing.price_range) + '</span></div>');
   }

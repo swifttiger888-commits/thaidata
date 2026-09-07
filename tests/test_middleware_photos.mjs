@@ -114,4 +114,27 @@ function req(path) {
   console.log('PASS 6: imagedelivery URL escaped safely');
 }
 
+// 7. Features (JSON string) render in Quick Facts, escaped
+{
+  const env = makeEnv({
+    features: JSON.stringify(['Vegetarian options', 'Happy hour 12<5 daily']),
+  });
+  const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(body.includes('>Features</span>'), 'features row present');
+  assert.ok(body.includes('Vegetarian options'), 'feature 1');
+  assert.ok(!body.includes('12<5 daily'), 'feature escaped (no raw <)');
+  assert.ok(body.includes('12&lt;5 daily'), 'escaped feature text');
+  console.log('PASS 7: features rendered + escaped');
+}
+
+// 8. Features as array also render
+{
+  const env = makeEnv({ features: ['BYOB', 'Halal'] });
+  const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(body.includes('BYOB') && body.includes('Halal'), 'array features render');
+  console.log('PASS 8: features as array');
+}
+
 console.log('ALL MIDDLEWARE PHOTO TESTS PASSED');

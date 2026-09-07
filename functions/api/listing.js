@@ -247,7 +247,7 @@ export async function onRequestPost(context) {
     // Find the approved claim — by fsa_id when available, fall back to text match
     let matchQuery, matchParams;
     if (fsa_id) {
-      matchQuery = "SELECT c.id as claim_id, c.claimer_email, l.id as listing_id FROM claims c LEFT JOIN listings l ON l.claim_id = c.id WHERE c.fsa_id = ? AND c.claimer_email = ? AND c.claim_status = 'approved'";
+      matchQuery = "SELECT c.id as claim_id, c.claimer_email, l.id as listing_id FROM claims c LEFT JOIN listings l ON l.claim_id = c.id WHERE CAST(c.fsa_id AS TEXT) = ? AND c.claimer_email = ? AND c.claim_status = 'approved'";
       matchParams = [String(fsa_id), email];
     } else {
       matchQuery = "SELECT c.id as claim_id, c.claimer_email, l.id as listing_id FROM claims c LEFT JOIN listings l ON l.claim_id = c.id WHERE c.restaurant_name = ? AND c.city = ? AND c.claimer_email = ? AND c.claim_status = 'approved'";

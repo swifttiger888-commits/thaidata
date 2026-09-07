@@ -289,7 +289,7 @@ export async function onRequestPut(context) {
         context.waitUntil((async () => {
           try {
             const fsaRes = await fetch(
-              `https://api.ratings.food.gov.uk/Establishments/${claim.fsa_id}`,
+              `https://api.ratings.food.gov.uk/Establishments/${String(claim.fsa_id)}`,
               { headers: { 'x-api-version': '2', 'Accept': 'application/json' } }
             );
             if (fsaRes.ok) {

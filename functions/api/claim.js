@@ -83,7 +83,7 @@ export async function onRequestPost(context) {
     const result = await env.DB.prepare(
       `INSERT INTO claims (restaurant_name, city, fsa_id, business_type, claimer_name, claimer_email, claimer_phone, claimer_role, verification_notes)
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
-    ).bind(restaurant_name, city, fsa_id || null, business_type || 'restaurant', claimer_name, claimer_email, claimer_phone || null, claimer_role || 'owner', verification_notes || null).run();
+    ).bind(restaurant_name, city, fsa_id ? String(fsa_id) : null, business_type || 'restaurant', claimer_name, claimer_email, claimer_phone || null, claimer_role || 'owner', verification_notes || null).run();
 
     const claimId = result.meta.last_row_id;
 
