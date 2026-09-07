@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-07",
   "restaurants": [
+    {
+      "fsa_id": "1721229",
+      "name": "Wraps&Wings/SukhumThai/WowSticks/YumYum/OrientalBo/Khao",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-09-07"
+    },
+    {
+      "fsa_id": "1929089",
+      "name": "Imm Dee Thai kitchen",
+      "city": "Shropshire",
+      "type": "restaurant",
+      "discovered_on": "2026-09-07"
+    },
+    {
+      "fsa_id": "1943430",
+      "name": "That Thai Place",
+      "city": "Cheshire West and Chester",
+      "type": "restaurant",
+      "discovered_on": "2026-09-07"
+    },
     {
       "fsa_id": "1956559",
       "name": "Thai To Go",
@@ -329,27 +350,6 @@
       "city": "London",
       "type": "restaurant",
       "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1489166",
-      "name": "Thai Village",
-      "city": "Thanet",
-      "type": "restaurant",
-      "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1827401",
-      "name": "Rosa's Thai",
-      "city": "Reading",
-      "type": "restaurant",
-      "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1932688",
-      "name": "Thai and Fry",
-      "city": "London",
-      "type": "takeaway",
-      "discovered_on": "2026-06-15"
     }
   ]
 }

@@ -3,15 +3,15 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-08-31",
-  "total_uk": 1261,
+  "updated": "2026-09-07",
+  "total_uk": 1264,
   "cities_tracked": 253,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 280,
-      "restaurants": 230,
+      "total_thai_businesses": 281,
+      "restaurants": 231,
       "takeaways": 50,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
@@ -74,7 +74,7 @@
       "restaurants": 13,
       "takeaways": 2,
       "per_100k": 6.1,
-      "avg_hygiene_rating": 3.8,
+      "avg_hygiene_rating": 3.7,
       "postcode_areas": 5
     },
     {
@@ -208,6 +208,16 @@
       "postcode_areas": 3
     },
     {
+      "name": "Shropshire",
+      "population": 325000,
+      "total_thai_businesses": 9,
+      "restaurants": 7,
+      "takeaways": 2,
+      "per_100k": 2.8,
+      "avg_hygiene_rating": 3.9,
+      "postcode_areas": 5
+    },
+    {
       "name": "Sheffield",
       "population": 584000,
       "total_thai_businesses": 9,
@@ -238,6 +248,16 @@
       "postcode_areas": 3
     },
     {
+      "name": "Cheshire West and Chester",
+      "population": 357000,
+      "total_thai_businesses": 8,
+      "restaurants": 6,
+      "takeaways": 2,
+      "per_100k": 2.2,
+      "avg_hygiene_rating": 4.8,
+      "postcode_areas": 4
+    },
+    {
       "name": "Birmingham",
       "population": 1166000,
       "total_thai_businesses": 8,
@@ -265,16 +285,6 @@
       "takeaways": 2,
       "per_100k": 1.8,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 5
-    },
-    {
-      "name": "Shropshire",
-      "population": 325000,
-      "total_thai_businesses": 8,
-      "restaurants": 6,
-      "takeaways": 2,
-      "per_100k": 2.5,
-      "avg_hygiene_rating": 3.9,
       "postcode_areas": 5
     },
     {
@@ -348,16 +358,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Cheshire West and Chester",
-      "population": 357000,
-      "total_thai_businesses": 7,
-      "restaurants": 5,
-      "takeaways": 2,
-      "per_100k": 2.0,
-      "avg_hygiene_rating": 4.7,
-      "postcode_areas": 4
-    },
-    {
       "name": "Blackpool",
       "population": 142000,
       "total_thai_businesses": 7,
@@ -366,6 +366,16 @@
       "per_100k": 4.9,
       "avg_hygiene_rating": 4.4,
       "postcode_areas": 5
+    },
+    {
+      "name": "Maidstone",
+      "population": null,
+      "total_thai_businesses": 7,
+      "restaurants": 6,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.1,
+      "postcode_areas": 1
     },
     {
       "name": "Leicester",
@@ -386,16 +396,6 @@
       "per_100k": 2.0,
       "avg_hygiene_rating": 3.6,
       "postcode_areas": 5
-    },
-    {
-      "name": "Maidstone",
-      "population": null,
-      "total_thai_businesses": 7,
-      "restaurants": 6,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 3.9,
-      "postcode_areas": 1
     },
     {
       "name": "St Albans City",
@@ -594,7 +594,7 @@
       "restaurants": 5,
       "takeaways": 1,
       "per_100k": 2.3,
-      "avg_hygiene_rating": 3.7,
+      "avg_hygiene_rating": 3.2,
       "postcode_areas": 4
     },
     {
@@ -605,6 +605,16 @@
       "takeaways": 1,
       "per_100k": 3.0,
       "avg_hygiene_rating": 0,
+      "postcode_areas": 2
+    },
+    {
+      "name": "Staffordshire",
+      "population": 880000,
+      "total_thai_businesses": 5,
+      "restaurants": 5,
+      "takeaways": 0,
+      "per_100k": 0.6,
+      "avg_hygiene_rating": 4.4,
       "postcode_areas": 2
     },
     {
@@ -666,16 +676,6 @@
       "per_100k": 1.8,
       "avg_hygiene_rating": 4.8,
       "postcode_areas": 5
-    },
-    {
-      "name": "Staffordshire",
-      "population": 880000,
-      "total_thai_businesses": 5,
-      "restaurants": 5,
-      "takeaways": 0,
-      "per_100k": 0.6,
-      "avg_hygiene_rating": 3.6,
-      "postcode_areas": 2
     },
     {
       "name": "Canterbury",
@@ -1144,7 +1144,7 @@
       "restaurants": 3,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 4.3,
+      "avg_hygiene_rating": 3.7,
       "postcode_areas": 2
     },
     {
@@ -1668,6 +1668,16 @@
       "postcode_areas": 2
     },
     {
+      "name": "Test Valley",
+      "population": null,
+      "total_thai_businesses": 2,
+      "restaurants": 2,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 2
+    },
+    {
       "name": "Gloucester",
       "population": 132000,
       "total_thai_businesses": 2,
@@ -1765,16 +1775,6 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 2.0,
-      "postcode_areas": 2
-    },
-    {
-      "name": "Test Valley",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 2,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.0,
       "postcode_areas": 2
     },
     {
