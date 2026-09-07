@@ -30,8 +30,10 @@ CTR_TEST_SLUGS = {
     ("teignbridge", "thai-smile-cafe"),
 }
 
-# Load the Kimi template
-with open(os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html')) as f:
+# Load the Kimi template (pristine master — lives OUTSIDE the generated
+# page tree so regeneration can never overwrite it and poison the
+# DYNAMIC placeholders. NEVER write to this file from generate_page.)
+with open(os.path.join(REPO, 'templates', 'restaurant.html')) as f:
     TEMPLATE = f.read()
 
 def slugify(s: str) -> str:
@@ -505,31 +507,33 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         html = html.replace('            <!-- DYNAMIC: contact_info_close -->\n', '')
         if enr_hours and len(enr_hours) > 0:
             hours_str = '<br>'.join(enr_hours[:7])
-            html = html.replace(
-                '<!-- DYNAMIC: contact_hours -->\n                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"far fa-clock\" style=\"margin-right:6px;\"></i> Opening Hours</h4>\n                        <div class=\"contact-hours-text\">Mon\u2013Sun: 5:00\u201310:00\u202fPM</div>\n                    </div>',
-                '                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"far fa-clock\" style=\"margin-right:6px;\"></i> Opening Hours</h4>\n                        <div class=\"contact-hours-text\">' + hours_str + '</div>\n                    </div>'
+            html = re.sub(
+                r'<!-- DYNAMIC: contact_hours -->.*?\n                    </div>',
+                '<!-- DYNAMIC: contact_hours -->\n                    <div class="contact-block">\n                        <h4 class="contact-block-title"><i class="far fa-clock" style="margin-right:6px;"></i> Opening Hours</h4>\n                        <div class="contact-hours-text">' + hours_str + '</div>\n                    </div>',
+                html, flags=re.DOTALL
             )
         else:
             html = re.sub(r'<!-- DYNAMIC: contact_hours -->.*?\n                    </div>', '', html, flags=re.DOTALL)
 
         detail_items = []
         if enr_phone:
-            detail_items.append('<div class=\"contact-detail\"><a href=\"tel:' + enr_phone + '\">' + enr_phone + '</a></div>')
+            detail_items.append('<div class="contact-detail"><a href="tel:' + enr_phone + '">' + enr_phone + '</a></div>')
         if enr_website:
-            detail_items.append('<div class=\"contact-detail\"><a href=\"' + enr_website + '\" target=\"_blank\" rel=\"noopener\">Visit website \u2192</a></div>')
+            detail_items.append('<div class="contact-detail"><a href="' + enr_website + '" target="_blank" rel="noopener">Visit website →</a></div>')
         if enr_price:
-            detail_items.append('<div class=\"contact-detail\"><span class=\"price-label\">Price: ' + enr_price + '</span></div>')
+            detail_items.append('<div class="contact-detail"><span class="price-label">Price: ' + enr_price + '</span></div>')
 
         if detail_items:
             details_str = '\n                        '.join(detail_items)
-            html = html.replace(
-                '<!-- DYNAMIC: contact_details -->\n                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"fas fa-phone-alt\" style=\"margin-right:6px;\"></i> Contact</h4>\n                        <div class=\"contact-detail\"><a href=\"tel:01246 271998\">01246 271998</a></div>\n                        <div class=\"contact-detail\"><a href=\"https://...\" target=\"_blank\" rel=\"noopener\">Visit website \u2192</a></div>\n                        <div class=\"contact-detail\"><span class=\"price-label\">Price: \u00a3\u00a3</span></div>\n                    </div>',
-                '                    <div class=\"contact-block\">\n                        <h4 class=\"contact-block-title\"><i class=\"fas fa-phone-alt\" style=\"margin-right:6px;\"></i> Contact</h4>\n                        ' + details_str + '\n                    </div>'
+            html = re.sub(
+                r'<!-- DYNAMIC: contact_details -->.*?\n                    </div>',
+                '<!-- DYNAMIC: contact_details -->\n                    <div class="contact-block">\n                        <h4 class="contact-block-title"><i class="fas fa-phone-alt" style="margin-right:6px;"></i> Contact</h4>\n                        ' + details_str + '\n                    </div>',
+                html, flags=re.DOTALL
             )
         else:
             html = re.sub(r'<!-- DYNAMIC: contact_details -->.*?\n                    </div>', '', html, flags=re.DOTALL)
     else:
-        html = re.sub(r'<!-- DYNAMIC: contact_info_open -->.*?<!-- DYNAMIC: contact_info_close -->\\n', '', html, flags=re.DOTALL)
+        html = re.sub(r'<!-- DYNAMIC: contact_info_open -->.*?<!-- DYNAMIC: contact_info_close -->\n', '', html, flags=re.DOTALL)
 
     # ---- Hygiene rating card ----
     html = html.replace(
@@ -801,6 +805,7 @@ def main() -> None:
     ordered = sorted(restaurants, key=slug_sort_key)
     slug_owner: dict[tuple[str, str], dict[str, Any]] = {}
     generated_ids: set[str] = set()
+    generated_paths: dict[str, str] = {}
 
     for i, r in enumerate(ordered):
         try:
@@ -830,17 +835,14 @@ def main() -> None:
             html = generate_page(r, closed_ids, city_open, enrichment_lookup,
                                  rest_slug=os.path.basename(dir_path),
                                  canonical_url=canonical_url)
-            
-            # Don't overwrite the template file (r/leeds/my-thai/index.html)
-            template_path = os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html')
+
             out_path = os.path.join(dir_path, 'index.html')
-            if os.path.abspath(out_path) == os.path.abspath(template_path):
-                continue
-            
+
             with open(out_path, 'w') as f:
                 f.write(html)
 
             generated_ids.add(str(r['id']))
+            generated_paths[str(r['id'])] = dir_path
             generated += 1
             
             if (i + 1) % 200 == 0:
@@ -855,13 +857,15 @@ def main() -> None:
     print(f"\nDone. Generated: {generated}, Errors: {errors}")
 
     # ── Prune stale pages ─────────────────────────────────────────
-    # Remove dirs whose embedded fsa-id was NOT written this run
-    # (records removed from restaurants.json, or deleted from moderation
-    # exclusions). Only prune when the run was clean — a partial run must
-    # never delete pages for records that merely failed to generate.
+    # Remove dirs whose embedded fsa-id is not written AT THIS PATH this
+    # run. Catches: records removed from restaurants.json, moderation
+    # exclusions, AND stale duplicate dirs (an id that moved to a
+    # different slug — e.g. clean-slug ownership reassigned). Only prune
+    # when the run was clean — a partial run must never delete pages for
+    # records that merely failed to generate.
     pruned = 0
-    if errors == 0:
-        template_abspath = os.path.abspath(os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html'))
+    if errors == 0 and not os.environ.get('SKIP_PRUNE'):
+        expected_paths = {str(fid): os.path.abspath(p) for fid, p in generated_paths.items()}
         for root, dirs, files in os.walk(OUT_DIR):
             if 'index.html' not in files:
                 continue
@@ -870,18 +874,16 @@ def main() -> None:
             if len(parts) != 2:
                 continue
             idx_path = os.path.join(root, 'index.html')
-            if os.path.abspath(idx_path) == template_abspath:
-                continue
             with open(idx_path, encoding='utf-8', errors='ignore') as f:
                 m = re.search(r'fsa-id" content="(\d+)"', f.read())
-            if m and m.group(1) not in generated_ids:
+            if m and os.path.abspath(root) != expected_paths.get(m.group(1)):
                 shutil.rmtree(root)
                 pruned += 1
                 try:
                     os.rmdir(os.path.join(OUT_DIR, parts[0]))  # clean up empty city dir
                 except OSError:
                     pass
-        print(f"  Pruned {pruned} stale page(s) not in current data")
+        print(f"  Pruned {pruned} stale page(s) not at their expected path")
     else:
         print(f"  Skipped stale-page pruning ({errors} generation errors)")
 
