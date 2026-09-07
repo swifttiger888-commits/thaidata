@@ -58,11 +58,24 @@ async function injectClaimedEnrichment(html, env) {
   let listing;
   try {
     listing = await env.DB.prepare(
-      'SELECT l.cuisine_specialty, l.features, l.price_range, l.opening_hours, l.website, l.description, l.phone FROM listings l JOIN claims c ON l.claim_id = c.id WHERE l.restaurant_name = ? AND l.city = ? AND c.claim_status = ?'
+      'SELECT l.cuisine_specialty, l.features, l.price_range, l.opening_hours, l.website, l.description, l.phone, l.photos FROM listings l JOIN claims c ON l.claim_id = c.id WHERE l.restaurant_name = ? AND l.city = ? AND c.claim_status = ?'
     ).bind(name, city, 'approved').first();
   } catch (_) { return html; }
 
   if (!listing) return html;
+
+  // Parse owner photos (stored as JSON string or array by /api/upload)
+  let photoUrls = [];
+  if (listing.photos) {
+    if (typeof listing.photos === 'string') {
+      try { photoUrls = JSON.parse(listing.photos); } catch (_) { photoUrls = []; }
+    } else if (Array.isArray(listing.photos)) {
+      photoUrls = listing.photos;
+    }
+  }
+  // Allowlist: only Cloudflare Images delivery URLs (stored by our own /api/upload).
+  // Anything else is rejected — prevents script-tag breakout and external hotlinking.
+  photoUrls = photoUrls.filter(u => u.startsWith('https://imagedelivery.net/'));
 
   // 3. Enrich the JSON-LD Restaurant schema
   if (listing.description) {
@@ -90,10 +103,14 @@ async function injectClaimedEnrichment(html, env) {
       }
     } catch (_) {}
   }
+  if (photoUrls.length > 0) {
+    restaurant.image = photoUrls;
+  }
 
   // Replace the JSON-LD block with enriched version
   const ldBlock = ldMatch[0];
-  const enrichedLd = JSON.stringify(ld);
+  // Escape '</' so no JSON string can terminate the surrounding <script> element
+  const enrichedLd = JSON.stringify(ld).replace(/<\//g, '<\\/');
   html = html.replace(ldBlock, '<script type="application/ld+json">' + enrichedLd + '</script>');
 
   // 4. Build Quick Facts HTML card
@@ -115,14 +132,30 @@ async function injectClaimedEnrichment(html, env) {
     facts.push('<div class="qf-desc" style="padding-top:8px;font-size:0.9rem;color:var(--ink3, #374151);line-height:1.6;">' + htmlEscape(listing.description) + '</div>');
   }
 
+  // 5. Build injected HTML: Quick Facts card + owner photo gallery
+  let injection = '';
   if (facts.length > 0) {
-    const card = '\n            <!-- Quick Facts (server-injected from claimed listing) -->\n            <div id="quick-facts" class="card" style="margin-bottom:24px;">\n                <h3 style="margin:0 0 16px;font-weight:600;">Quick Facts</h3>\n                ' + facts.join('\n                ') + '\n            </div>\n';
+    injection += '\n            <!-- Quick Facts (server-injected from claimed listing) -->\n            <div id="quick-facts" class="card" style="margin-bottom:24px;">\n                <h3 style="margin:0 0 16px;font-weight:600;">Quick Facts</h3>\n                ' + facts.join('\n                ') + '\n            </div>\n';
+  }
+
+  if (photoUrls.length > 0) {
+    // CF Images flexible variants: stored URL is /{id}/public → swap for /w=400, /w=800
+    const imgs = photoUrls.slice(0, 12).map((u, i) => {
+      const base = u.replace(/\/public$/, '');
+      const w400 = base + '/w=400';
+      const w800 = base + '/w=800';
+      return '<img src="' + htmlEscape(w400) + '" srcset="' + htmlEscape(w400) + ' 400w, ' + htmlEscape(w800) + ' 800w" sizes="(max-width: 640px) 100vw, 300px" alt="Owner photo ' + (i + 1) + '" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:10px;aspect-ratio:4/3;object-fit:cover;display:block;">';
+    }).join('');
+    injection += '\n            <!-- Owner Photos (server-injected) -->\n            <div id="owner-photos" class="card" style="margin-bottom:24px;">\n                <h3 style="margin:0 0 16px;font-weight:600;">Photos</h3>\n                <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));gap:10px;">' + imgs + '</div>\n            </div>\n';
+  }
+
+  if (injection) {
     // Inject before Trust Sidebar anchor
     if (html.includes('<!-- Trust Sidebar -->')) {
-      html = html.replace('<!-- Trust Sidebar -->', card + '            <!-- Trust Sidebar -->');
+      html = html.replace('<!-- Trust Sidebar -->', injection + '            <!-- Trust Sidebar -->');
     } else {
       // Fallback: inject before Schema: Restaurant (visible anchor always present)
-      html = html.replace('<!-- Schema: Restaurant -->', card + '    <!-- Schema: Restaurant -->');
+      html = html.replace('<!-- Schema: Restaurant -->', injection + '    <!-- Schema: Restaurant -->');
     }
   }
 

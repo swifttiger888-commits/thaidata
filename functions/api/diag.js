@@ -15,6 +15,7 @@ export async function onRequestGet(context) {
   results.TELEGRAM_CHAT_ID = env.TELEGRAM_CHAT_ID ? 'SET: ' + env.TELEGRAM_CHAT_ID : 'MISSING';
   results.ADMIN_EMAIL = env.ADMIN_EMAIL ? 'SET: ' + env.ADMIN_EMAIL : 'MISSING';
   results.RESEND_API_KEY = env.RESEND_API_KEY ? 'SET (length ' + env.RESEND_API_KEY.length + ')' : 'MISSING';
+  results.CF_IMAGES_API_TOKEN = env.CF_IMAGES_API_TOKEN ? 'SET (length ' + env.CF_IMAGES_API_TOKEN.length + ')' : 'MISSING';
 
   // Test Telegram send
   if (env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) {
