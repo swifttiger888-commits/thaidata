@@ -10,6 +10,26 @@ from typing import Any
 REPO = '/tmp/thaidata-repo'
 OUT_DIR = os.path.join(REPO, 'r')
 
+# ── Meta description A/B test (Sep 2026) ──────────────────────────
+# Pages in this set get a name-first meta description instead of the
+# FSA-first format, testing whether leading with the restaurant name
+# lifts CTR on branded queries. Measure via GSC page-level CTR after
+# 2 weeks; revert or expand based on results.
+CTR_TEST_SLUGS = {
+    ("west-lothian", "jais-thai"),
+    ("wakefield", "tiger-thai"),
+    ("bristol", "beijing-chinese-thai-takeaway"),
+    ("richmond-upon-thames", "orange-thai"),
+    ("high-peak", "thai-delight"),
+    ("cornwall", "talay-thai"),
+    ("carmarthenshire", "bahn-mai-thai-restaurant"),
+    ("sefton", "nannapat-thai-restaurant-bar"),
+    ("east-suffolk", "thai-street-cafe"),
+    ("north-kesteven", "thai-street-cafe"),
+    ("shropshire", "thai-box"),
+    ("teignbridge", "thai-smile-cafe"),
+}
+
 # Load the Kimi template
 with open(os.path.join(OUT_DIR, 'leeds', 'my-thai', 'index.html')) as f:
     TEMPLATE = f.read()
@@ -202,13 +222,21 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     canonical = canonical_url or f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
 
     # ---- Head replacements ----
+    test_key = (city_slug, rest_slug)
+    if test_key in CTR_TEST_SLUGS:
+        # A/B variant: name-first (branded queries) — see CTR_TEST_SLUGS
+        meta_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating}/5. {address if address else city}. Inspection scores and contact details."'
+        og_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating}/5. Inspection scores and contact details. {address if address else city}."'
+    else:
+        meta_desc = f'content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+        og_desc = f'content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
     html = html.replace(
         '<!-- DYNAMIC: title -->\n    <title>My Thai, Leeds — FSA 5/5 Hygiene Rating | ThaiData</title>',
         f'    <title>{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK</title>'
     )
     html = html.replace(
         'content="FSA inspection data for My Thai, Leeds. 5/5 hygiene rating. See hygiene, structural, and management breakdown scores. 43 Wade Lane, Leeds City Centre, Leeds. Updated November 2025."',
-        f'content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+        meta_desc
     )
     html = html.replace(
         '<!-- DYNAMIC: canonical_url -->\n    <link rel="canonical" href="https://thaidata.uk/r/leeds/my-thai/"',
@@ -237,7 +265,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
     html = html.replace(
         '<!-- DYNAMIC: og_description -->\n    <meta property="og:description" content="FSA 5/5 hygiene rating. Thai restaurant in Leeds. View inspection scores and claim this listing."',
-        f'    <meta property="og:description" content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+        f'    <meta property="og:description" {og_desc}'
     )
 
     # ---- Schema ----
