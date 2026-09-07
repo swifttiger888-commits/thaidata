@@ -13,8 +13,8 @@
       "year": 2026,
       "start_date": "2026-04-11",
       "end_date": "2026-04-12",
-      "date_description": "11\u201312 April 2026",
-      "ticket_info": "\u00a33 entry. Free for members, volunteers, and children under 12.",
+      "date_description": "11–12 April 2026",
+      "ticket_info": "£3 entry. Free for members, volunteers, and children under 12.",
       "description": "The UK's largest Songkran celebration. Traditional alms-giving to monks, water blessing ceremony, Thai food stalls, cultural performances, and the famous sand pagoda building. 5,000+ attendees. Family-friendly.",
       "tags": [
         "temple"
@@ -23,7 +23,7 @@
       "source_type": "social_media",
       "status": "confirmed",
       "confidence": 0.95,
-      "notes": "Verified 2026-06-13 against official Wat Buddhapadipa Facebook Songkran 2026 announcement confirming 11\u201312 April 2026.",
+      "notes": "Verified 2026-06-13 against official Wat Buddhapadipa Facebook Songkran 2026 announcement confirming 11–12 April 2026.",
       "created_at": "2026-06-27",
       "updated_at": "2026-06-13"
     },
@@ -527,9 +527,9 @@
       "source_type": null,
       "status": "estimated",
       "confidence": 0.4,
-      "notes": "Lunar-based. Each temple holds its own date. HTML says 'October or early November.' No specific 2026 dates.",
+      "notes": "Lunar-based. Each temple holds its own date. HTML says ‘October or early November.’ No specific 2026 dates. [verified 2026-09-07] Royal Thai Embassy London confirms 2025 Royal Kathina at Wat Buddhapadipa on 1 November 2025. Vassa ends 19 October 2026, so the 2026 Kathina season runs roughly 20 October – 17 November. No UK temple dates announced yet.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-06-27"
+      "updated_at": "2026-09-07"
     },
     {
       "event_id": "vegetarian-festival-2026",
@@ -542,9 +542,9 @@
       "city": null,
       "region": null,
       "year": 2026,
-      "start_date": null,
-      "end_date": null,
-      "date_description": "TBC*",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-18",
+      "date_description": "10–18*",
       "ticket_info": "Free",
       "description": "Thai-Chinese vegetarian festival. Temples and some Thai restaurants serve special meat-free menus. Particularly observed at temples with Thai-Chinese communities. Dates follow the lunar calendar - typically October.",
       "tags": [
@@ -556,9 +556,9 @@
       "source_type": null,
       "status": "estimated",
       "confidence": 0.4,
-      "notes": "Lunar-based. HTML says 'typically October.' No specific 2026 dates.",
+      "notes": "Lunar-based. HTML says ‘typically October.’ No specific 2026 date. [verified 2026-09-07] 2026 observance of the 9th Chinese lunar month falls 10–18 October (evephuket.com, thailandhighlights.com). Dates vary ±1 day by source and by UK venue.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-06-27"
+      "updated_at": "2026-09-07"
     },
     {
       "event_id": "loy-krathong-wat-buddhapadipa-2026",
@@ -571,9 +571,9 @@
       "city": "London",
       "region": "London",
       "year": 2026,
-      "start_date": "2026-11-15",
-      "end_date": "2026-11-15",
-      "date_description": "15*",
+      "start_date": "2026-11-24",
+      "end_date": "2026-11-24",
+      "date_description": "24*",
       "ticket_info": "Free entry. Krathongs 5-10 pounds on site.",
       "description": "The UK's largest Loy Krathong celebration. Float handmade krathongs on the temple lake, traditional dance performances, lantern displays, Thai food stalls, and a magical evening atmosphere.",
       "tags": [
@@ -584,9 +584,9 @@
       "source_type": null,
       "status": "estimated",
       "confidence": 0.4,
-      "notes": "Estimated from full moon (Nov 15 is Sunday in 2026). loy-krathong-uk.html confirms: 'Estimated date: Sunday 15 November 2026 (based on the full moon). Confirmed dates will be published by temples from September.'",
+      "notes": "Estimated from full moon of 12th Thai lunar month. [verified 2026-09-07] Full moon is 24 November 2026 (Wikipedia lunar-calendar table, jamiesphuketblog.com 2026 guide; some Thai sources list the 24–25 festival period). UK temples usually celebrate on the nearest Sunday — awaiting Wat Buddhapadipa confirmation.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-06-27"
+      "updated_at": "2026-09-07"
     },
     {
       "event_id": "loy-krathong-wat-phra-singh-2026",
@@ -599,9 +599,9 @@
       "city": "Runcorn",
       "region": "North West",
       "year": 2026,
-      "start_date": "2026-11-15",
-      "end_date": "2026-11-15",
-      "date_description": "15*",
+      "start_date": "2026-11-24",
+      "end_date": "2026-11-24",
+      "date_description": "24*",
       "ticket_info": "Free entry",
       "description": "Northern England's Loy Krathong celebration. Candlelit ceremony, krathong floating, Thai food, and cultural performances in the temple grounds.",
       "tags": [
@@ -612,9 +612,9 @@
       "source_type": null,
       "status": "estimated",
       "confidence": 0.4,
-      "notes": "Estimated date mirroring Wat Buddhapadipa's assumed date. No independent source.",
+      "notes": "Estimated date following Wat Buddhapadipa’s assumed date. No independent source. [verified 2026-09-07] Full moon of 12th Thai lunar month is 24 November 2026.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-06-27"
+      "updated_at": "2026-09-07"
     },
     {
       "event_id": "loy-krathong-wat-mahathat-2026",
@@ -627,9 +627,9 @@
       "city": "Kings Bromley",
       "region": "West Midlands",
       "year": 2026,
-      "start_date": "2026-11-15",
-      "end_date": "2026-11-15",
-      "date_description": "15*",
+      "start_date": "2026-11-24",
+      "end_date": "2026-11-24",
+      "date_description": "24*",
       "ticket_info": "Free entry",
       "description": "Midlands Loy Krathong. The temple's grounds provide a beautiful setting for the candlelit floating ceremony.",
       "tags": [
@@ -640,9 +640,9 @@
       "source_type": null,
       "status": "estimated",
       "confidence": 0.4,
-      "notes": "Estimated date mirroring Wat Buddhapadipa's assumed date. No independent source.",
+      "notes": "Estimated date following Wat Buddhapadipa’s assumed date. No independent source. [verified 2026-09-07] Full moon of 12th Thai lunar month is 24 November 2026.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-06-27"
+      "updated_at": "2026-09-07"
     },
     {
       "event_id": "loy-krathong-university-societies-2026",

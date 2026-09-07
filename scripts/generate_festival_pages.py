@@ -76,6 +76,19 @@ def load_events():
         return json.load(f)["events"]
 
 
+def is_past(e, today=None):
+    """True if the event's final day (end_date, else start_date) is before today."""
+    if today is None:
+        today = datetime.now().date()
+    d = e.get("end_date") or e.get("start_date")
+    if not d:
+        return False
+    try:
+        return datetime.fromisoformat(d).date() < today
+    except ValueError:
+        return False
+
+
 def event_month(e):
     """Return int month (1-12) or None for null-date events."""
     if e["start_date"]:
@@ -135,10 +148,13 @@ def event_card_html(e):
     day_label = e["date_description"] or ""
     loc = e["address"] or e["venue_name"] or ""
     tags = tag_html(e["tags"], e["ticket_info"])
-    return f'''            <div class="event-card">
+    past = is_past(e)
+    past_cls = " event-past" if past else ""
+    ended = '<span class="ev-ended">Ended</span>' if past else ""
+    return f'''            <div class="event-card{past_cls}">
                 <div class="event-date"><div class="month">{month_label}</div><div class="day">{day_label}</div></div>
                 <div class="event-info">
-                    <div class="ev-title">{e["event_name"]}</div>
+                    <div class="ev-title">{e["event_name"]}{ended}</div>
                     <div class="ev-location"><i class="fas fa-map-marker-alt"></i>{loc}</div>
                     <div class="ev-desc">{e["description"]}</div>
                     <div class="event-tags">{tags}</div>
@@ -326,6 +342,11 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: v
         .tag-free {{ background: rgba(34,197,94,0.15); color: #22C55E; }}
         .tag-paid {{ background: rgba(236,72,153,0.15); color: var(--pink); }}
 
+        /* Past events */
+        .event-card.event-past {{ opacity: 0.55; }}
+        .event-card.event-past:hover {{ opacity: 0.85; }}
+        .ev-ended {{ display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; background: rgba(148,163,184,0.14); color: var(--ink3); margin-left: 8px; vertical-align: 2px; }}
+
         /* Month headers */
         .month-header {{ font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: var(--c2); padding: 30px 0 10px; border-top: 1px solid var(--line); margin-top: 10px; }}
 
@@ -380,7 +401,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: v
     <div class="section">
         <div class="wrap">
             <h2><em>2026</em> Event Calendar</h2>
-            <p style="color:var(--ink4); margin-bottom:20px;">Events are updated regularly. Dates marked * are estimated based on lunar calendar or previous years — confirm with the venue before travelling.</p>
+            <p style="color:var(--ink4); margin-bottom:20px;">Events are updated regularly. Dates marked * are estimated based on lunar calendar or previous years — confirm with the venue before travelling. Events that have already happened are marked Ended and kept for reference.</p>
 {calendar_html}
         </div>
     </div>
@@ -603,7 +624,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: v
 
     <div class="header-section">
         <div class="wrap">
-            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">13–15 April 2026</div>
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--c2); margin-bottom:16px;">Next: 13–15 April 2027</div>
             <h1>Songkran <em>in the UK</em><br>Thai New Year 2026</h1>
             <p>Where to celebrate Songkran across the UK — temple water ceremonies, food festivals, restaurant specials, and what to expect at your first Thai New Year.</p>
         </div>
@@ -625,6 +646,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: v
     <div class="section">
         <div class="wrap">
             <h2>Where to <em>Celebrate</em> in 2026</h2>
+            <p>The 2026 celebrations have now ended. These temples hold Songkran every year — 2027 dates are typically confirmed from January. Check each temple's Facebook page for next year's dates.</p>
 {venue_cards}
         </div>
     </div>
@@ -823,7 +845,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: v
     <div class="section">
         <div class="wrap">
             <h2>Where to <em>Celebrate</em> in 2026</h2>
-            <p>Estimated date: <strong style="color:white;">Sunday 15 November 2026</strong> (based on the full moon). Confirmed dates will be published by temples from September.</p>
+            <p>Estimated date: <strong style="color:white;">Tuesday 24 November 2026</strong> (full moon of the 12th Thai lunar month). UK temples usually celebrate on the nearest Sunday — confirmed dates will be published by temples from September.</p>
 {venue_cards}
         </div>
     </div>
