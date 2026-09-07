@@ -137,4 +137,48 @@ function req(path) {
   console.log('PASS 8: features as array');
 }
 
+const SAMPLE_HTML_RATED = `<!DOCTYPE html><html><head><title>Test</title>
+<script type="application/ld+json">{"@type":"Restaurant","name":"Test Thai","address":{"addressLocality":"Leeds","streetAddress":"1 Test St"},"aggregateRating":{"@type":"AggregateRating","ratingValue":4.4,"reviewCount":2040,"bestRating":5}}</script>
+</head><body>
+<p>FSA 5/5 Hygiene Rating</p>
+<!-- Trust Sidebar --><div id="trust">trust</div>
+</body></html>`;
+
+// 9. aggregateRating + claimed listing → visible rating + attribution
+{
+  const env = makeEnv({ description: 'x', photos: [] });
+  env.ASSETS = { async fetch() { return new Response(SAMPLE_HTML_RATED, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(body.includes('Google rating'), 'rating row present');
+  assert.ok(body.includes('4.4'), 'rating value shown');
+  assert.ok(body.includes('2,040 reviews'), 'review count formatted');
+  assert.ok(body.includes('Data from Google'), 'attribution present');
+  assert.ok(body.includes('google.com/maps/search/?api=1&amp;query=Test%20Thai%20Leeds'), 'maps attribution link');
+  console.log('PASS 9: rating visible on claimed page + attribution');
+}
+
+// 10. aggregateRating but NOT claimed → rating stays schema-only
+{
+  const env = makeEnv(null);
+  env.ASSETS = { async fetch() { return new Response(SAMPLE_HTML_RATED, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(!body.includes('Google rating'), 'no visible rating on unclaimed page');
+  assert.ok(body.includes('aggregateRating'), 'schema still carries rating');
+  console.log('PASS 10: unclaimed page keeps rating schema-only');
+}
+
+// 11. Malformed ratingValue → skipped safely
+{
+  const ratedBad = SAMPLE_HTML_RATED.replace('"ratingValue":4.4', '"ratingValue":"abc"');
+  const env = makeEnv({ description: 'x' });
+  env.ASSETS = { async fetch() { return new Response(ratedBad, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(!body.includes('Google rating'), 'malformed rating not shown');
+  assert.ok(body.includes('Quick Facts'), 'rest of card intact');
+  console.log('PASS 11: malformed ratingValue skipped');
+}
+
 console.log('ALL MIDDLEWARE PHOTO TESTS PASSED');

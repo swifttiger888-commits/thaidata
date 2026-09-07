@@ -54,6 +54,12 @@ async function injectClaimedEnrichment(html, env) {
   const city = restaurant.address?.addressLocality;
   if (!name || !city) return html;
 
+  // Google rating lifted from build-time schema (visible on claimed pages only)
+  const agg = restaurant.aggregateRating || {};
+  const ratingValue = typeof agg.ratingValue === 'number' ? agg.ratingValue : parseFloat(agg.ratingValue);
+  const reviewCount = agg.reviewCount ? parseInt(agg.reviewCount, 10) : null;
+  const hasRating = Number.isFinite(ratingValue) && ratingValue > 0;
+
   // 2. Query D1 for claimed listing enrichment
   let listing;
   try {
@@ -115,6 +121,14 @@ async function injectClaimedEnrichment(html, env) {
 
   // 4. Build Quick Facts HTML card
   const facts = [];
+  if (hasRating) {
+    // Visible rating on claimed pages only — with Google attribution (Maps ToS 3.2.3(a))
+    const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(name + ' ' + city);
+    const stars = Math.min(5, Math.max(0, Math.round(ratingValue)));
+    const countText = reviewCount ? ' · ' + reviewCount.toLocaleString('en-GB') + ' reviews' : '';
+    facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Google rating</span><span class="qf-value" style="font-weight:600;color:var(--ink2, #1f2937);">' + '★'.repeat(stars) + ' ' + htmlEscape(String(ratingValue)) + '<span style="font-weight:400;color:var(--ink4, #6b7280);">' + htmlEscape(countText) + '</span></span></div>');
+    facts.push('<div style="padding-top:4px;font-size:0.7rem;color:var(--ink4, #6b7280);"><a href="' + htmlEscape(mapsUrl) + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Data from Google</a></div>');
+  }
   if (listing.cuisine_specialty) {
     facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Cuisine</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);">' + htmlEscape(listing.cuisine_specialty) + '</span></div>');
   }
