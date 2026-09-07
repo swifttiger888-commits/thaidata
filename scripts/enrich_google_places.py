@@ -17,10 +17,14 @@ REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
 OUTPUT = DATA / "google_enrichment.json"
 
-# Read API key from file
-key_file = Path("/tmp/.google_places_key")
+# Read API key from file — durable path first; /tmp is wiped on reboot
+key_file = Path(os.environ.get("GOOGLE_PLACES_KEY_FILE") or "/opt/thaidata-repo/secrets/google_places_key")
 if not key_file.exists():
-    print("ERROR: /tmp/.google_places_key not found. Save the API key there first.")
+    key_file = Path("/tmp/.google_places_key")
+if not key_file.exists():
+    print("ERROR: Google Places API key not found.")
+    print("  Save it to /opt/thaidata-repo/secrets/google_places_key (chmod 600),")
+    print("  or set GOOGLE_PLACES_KEY_FILE, or fall back to /tmp/.google_places_key.")
     sys.exit(1)
 API_KEY = key_file.read_text().strip()
 PLACES_URL = "https://places.googleapis.com/v1/places"

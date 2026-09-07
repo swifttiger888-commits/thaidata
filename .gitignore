@@ -38,3 +38,4 @@ Thumbs.db
 .archive/
 docs/legacy-admin-*
 docs/thaidata-environment-overview.md
+secrets/

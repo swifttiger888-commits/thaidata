@@ -92,12 +92,6 @@ def discover_city_pages() -> list[dict]:
             "changefreq": "monthly",
             "priority": "0.8",
         })
-        # Also add /r/<city>/ hub page (redirects to cities/<city>.html)
-        pages.append({
-            "loc": f"https://thaidata.uk/r/{city_slug}",
-            "changefreq": "monthly",
-            "priority": "0.7",
-        })
     return pages
 
 
@@ -108,6 +102,8 @@ def get_static_pages() -> list[dict]:
         {"loc": "https://thaidata.uk/", "changefreq": "weekly", "priority": "1.0"},
         {"loc": "https://thaidata.uk/about", "priority": "0.9"},
         {"loc": "https://thaidata.uk/restaurants", "priority": "0.9"},
+        {"loc": "https://thaidata.uk/r", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/chains", "priority": "0.8"},
         {"loc": "https://thaidata.uk/guides", "priority": "0.9"},
         {"loc": "https://thaidata.uk/learn", "priority": "0.9"},
         {"loc": "https://thaidata.uk/faq", "priority": "0.8"},
@@ -167,7 +163,7 @@ def discover_html_pages(subdir: str, url_prefix: str, priority: str = "0.7",
     if not os.path.isdir(d):
         return pages
     for fname in sorted(os.listdir(d)):
-        if not fname.endswith(".html"):
+        if not fname.endswith(".html") or fname == "index.html":
             continue
         slug = fname[:-5]  # strip .html
         pages.append({

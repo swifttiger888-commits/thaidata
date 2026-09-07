@@ -18,15 +18,18 @@ API_URL = "https://thaidata.uk/api/enrichment"
 CHUNK_SIZE = 100  # rows per POST
 
 def get_password():
-    """Read admin password from file or env."""
-    pw_file = Path("/tmp/.thaidata_admin_password")
-    if pw_file.exists():
-        return pw_file.read_text().strip()
+    """Read admin password from file or env — durable path first; /tmp is wiped on reboot."""
     pw = os.environ.get("THAIDATA_ADMIN_PASSWORD")
     if pw:
         return pw
+    for pw_path in ("/opt/thaidata-repo/secrets/thaidata_admin_password",
+                    "/tmp/.thaidata_admin_password"):
+        pw_file = Path(pw_path)
+        if pw_file.exists():
+            return pw_file.read_text().strip()
     print("ERROR: Admin password not found.")
-    print("  Save it to /tmp/.thaidata_admin_password or set THAIDATA_ADMIN_PASSWORD")
+    print("  Save it to /opt/thaidata-repo/secrets/thaidata_admin_password (chmod 600),")
+    print("  or /tmp/.thaidata_admin_password, or set THAIDATA_ADMIN_PASSWORD")
     sys.exit(1)
 
 def main():
