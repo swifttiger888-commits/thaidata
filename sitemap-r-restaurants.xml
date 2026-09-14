@@ -681,11 +681,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/buckinghamshire/urban-thai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/burnley/siam-thai-cafe-takeaway/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2526,6 +2521,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/london/arya-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/london/asiatique-thai-restaurant/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3402,11 +3402,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/songkran-thai-restaurant/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/london/springfield-thai-cuisine/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4621,6 +4616,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/preston/thai-royal/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/reading/rosas-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4912,6 +4912,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/sheffield/zaap-six-limited/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/shetland-islands/tjs-thai-chinese-restaurant-takeaway/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5767,6 +5772,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/waverley/giggling-squid/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/waverley/golden-fleece-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

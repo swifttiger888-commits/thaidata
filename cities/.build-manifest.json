@@ -1,8 +1,8 @@
 {
-  "run_date": "2026-09-07",
+  "run_date": "2026-09-14",
   "applied": true,
-  "total_cities": 276,
-  "generated": 252,
+  "total_cities": 277,
+  "generated": 253,
   "quarantined": 22,
   "skipped": 1,
   "quarantined_pages": [

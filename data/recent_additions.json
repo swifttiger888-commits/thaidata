@@ -1,6 +1,34 @@
 {
-  "updated": "2026-09-07",
+  "updated": "2026-09-14",
   "restaurants": [
+    {
+      "fsa_id": "1986142",
+      "name": "TJ's Thai & Chinese Restaurant & Takeaway",
+      "city": "Shetland Islands",
+      "type": "restaurant",
+      "discovered_on": "2026-09-14"
+    },
+    {
+      "fsa_id": "1154152",
+      "name": "Golden Fleece Thai",
+      "city": "Waverley",
+      "type": "restaurant",
+      "discovered_on": "2026-09-14"
+    },
+    {
+      "fsa_id": "1589947",
+      "name": "Thai Royal",
+      "city": "Preston",
+      "type": "restaurant",
+      "discovered_on": "2026-09-14"
+    },
+    {
+      "fsa_id": "1975238",
+      "name": "Arya Thai",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-09-14"
+    },
     {
       "fsa_id": "1721229",
       "name": "Wraps&Wings/SukhumThai/WowSticks/YumYum/OrientalBo/Khao",
@@ -321,34 +349,6 @@
       "name": "Thai Noodle Express",
       "city": "Birmingham",
       "type": "takeaway",
-      "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1875566",
-      "name": "Halal Thai Kitchen",
-      "city": "Birmingham",
-      "type": "takeaway",
-      "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1867745",
-      "name": "Thai Corner Limited",
-      "city": "Neath Port Talbot",
-      "type": "restaurant",
-      "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1956426",
-      "name": "Jasmine Thai Cuisine",
-      "city": "South Norfolk",
-      "type": "restaurant",
-      "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1605544",
-      "name": "Jude's Thai",
-      "city": "London",
-      "type": "restaurant",
       "discovered_on": "2026-06-22"
     }
   ]

@@ -3,9 +3,9 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-09-07",
-  "total_uk": 1264,
-  "cities_tracked": 253,
+  "updated": "2026-09-14",
+  "total_uk": 1266,
+  "cities_tracked": 254,
   "cities": [
     {
       "name": "London",
@@ -15,7 +15,7 @@
       "takeaways": 50,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 99
+      "postcode_areas": 98
     },
     {
       "name": "Leeds",
@@ -148,16 +148,6 @@
       "postcode_areas": 6
     },
     {
-      "name": "Buckinghamshire",
-      "population": 560000,
-      "total_thai_businesses": 10,
-      "restaurants": 10,
-      "takeaways": 0,
-      "per_100k": 1.8,
-      "avg_hygiene_rating": 4.5,
-      "postcode_areas": 7
-    },
-    {
       "name": "Hertfordshire",
       "population": 1200000,
       "total_thai_businesses": 10,
@@ -226,6 +216,16 @@
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.6,
       "postcode_areas": 4
+    },
+    {
+      "name": "Buckinghamshire",
+      "population": 560000,
+      "total_thai_businesses": 9,
+      "restaurants": 9,
+      "takeaways": 0,
+      "per_100k": 1.6,
+      "avg_hygiene_rating": 4.6,
+      "postcode_areas": 6
     },
     {
       "name": "Westmorland and Furness",
@@ -478,6 +478,16 @@
       "postcode_areas": 6
     },
     {
+      "name": "Waverley",
+      "population": null,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.2,
+      "postcode_areas": 5
+    },
+    {
       "name": "Wyre",
       "population": null,
       "total_thai_businesses": 6,
@@ -656,16 +666,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
       "postcode_areas": 2
-    },
-    {
-      "name": "Waverley",
-      "population": null,
-      "total_thai_businesses": 5,
-      "restaurants": 5,
-      "takeaways": 0,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.8,
-      "postcode_areas": 4
     },
     {
       "name": "Sefton",
@@ -868,6 +868,16 @@
       "postcode_areas": 3
     },
     {
+      "name": "Preston",
+      "population": 150000,
+      "total_thai_businesses": 4,
+      "restaurants": 3,
+      "takeaways": 1,
+      "per_100k": 2.7,
+      "avg_hygiene_rating": 4.0,
+      "postcode_areas": 2
+    },
+    {
       "name": "Colchester",
       "population": 195000,
       "total_thai_businesses": 4,
@@ -1008,16 +1018,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Reading",
-      "population": 175000,
-      "total_thai_businesses": 3,
-      "restaurants": 3,
-      "takeaways": 0,
-      "per_100k": 1.7,
-      "avg_hygiene_rating": 4.3,
-      "postcode_areas": 2
-    },
-    {
       "name": "Exeter",
       "population": 135000,
       "total_thai_businesses": 3,
@@ -1025,6 +1025,16 @@
       "takeaways": 0,
       "per_100k": 2.2,
       "avg_hygiene_rating": 5.0,
+      "postcode_areas": 2
+    },
+    {
+      "name": "Reading",
+      "population": 175000,
+      "total_thai_businesses": 3,
+      "restaurants": 3,
+      "takeaways": 0,
+      "per_100k": 1.7,
+      "avg_hygiene_rating": 4.3,
       "postcode_areas": 2
     },
     {
@@ -1095,16 +1105,6 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 2
-    },
-    {
-      "name": "Preston",
-      "population": 150000,
-      "total_thai_businesses": 3,
-      "restaurants": 2,
-      "takeaways": 1,
-      "per_100k": 2.0,
-      "avg_hygiene_rating": 4.0,
       "postcode_areas": 2
     },
     {
@@ -2489,6 +2489,16 @@
     },
     {
       "name": "Scottish Borders",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 0,
+      "postcode_areas": 1
+    },
+    {
+      "name": "Shetland Islands",
       "population": null,
       "total_thai_businesses": 1,
       "restaurants": 1,
