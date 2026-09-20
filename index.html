@@ -299,7 +299,7 @@
 :focus-visible {
             outline: 2px solid #10B981;
             outline-offset: 2px;
-            border-radius: 4px;
+            border-radius: 8px;
         }
         :focus:not(:focus-visible) {
             outline: none;
@@ -331,19 +331,19 @@
     }
 
     :root {
-      --c1: #0A7A6F;
-      --c2: #10B981;
-      --c3: #065F56;
+      --c1: #0E6E5C;
+      --c2: #0E6E5C;
+      --c3: #0A5346;
       --dark: #0C1220;
       --dark2: #131B2E;
       --dark3: #1A253D;
-      --ink: #0F172A;
-      --ink2: #334155;
-      --ink3: #64748B;
-      --ink4: #94A3B8;
-      --line: #E5E7EB;
-      --bg: #FAFAF9;
-      --bg2: #F3F4F6;
+      --ink: #0F1A1C;
+      --ink2: #4C5C5E;
+      --ink3: #4C5C5E;
+      --ink4: #4C5C5E;
+      --line: #DCE3E1;
+      --bg: #FFFFFF;
+      --bg2: #F5F7F6;
       --white: #FFFFFF;
     }
 
@@ -411,7 +411,7 @@
     }
 
     .nav-link {
-      font-size: 0.84rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.55);
       font-weight: 500;
       transition: color 0.2s
@@ -431,7 +431,7 @@
       cursor: pointer;
       transition: all 0.2s;
       text-decoration: none;
-      font-size: 0.88rem;
+      font-size: 0.875rem;
     }
 
     .btn-fill {
@@ -461,8 +461,8 @@
 
     .btn-lg {
       padding: 14px 28px;
-      font-size: 0.95rem;
-      border-radius: 10px
+      font-size: 1rem;
+      border-radius: 8px
     }
 
     .hamburger {
@@ -507,7 +507,7 @@
       .nav-r .nav-link {
         display: block;
         padding: 12px 0;
-        font-size: 0.95rem;
+        font-size: 1rem;
         border-bottom: 1px solid rgba(255,255,255,0.06)
       }
 
@@ -606,7 +606,7 @@
     }
 
     .hero-sub {
-      font-size: 1.05rem;
+      font-size: 1.125rem;
       color: rgba(255, 255, 255, 0.65);
       line-height: 1.75;
       margin-bottom: 36px;
@@ -621,14 +621,14 @@
     }
 
     .hero-note {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.4);
       margin-top: 2px;
       line-height: 1.4
     }
 
     .hero-secondary-link {
-      font-size: 0.84rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.6);
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -650,7 +650,7 @@
     }
 
     .hero-calc-title {
-      font-size: 0.8rem;
+      font-size: 0.875rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -675,7 +675,7 @@
     }
 
     .calc-label {
-      font-size: 0.84rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.55)
     }
 
@@ -683,10 +683,10 @@
       width: 52px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 6px 8px;
       color: white;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       text-align: center;
       font-family: inherit;
     }
@@ -697,7 +697,7 @@
     }
 
     .calc-rate {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.35);
       white-space: nowrap
     }
@@ -712,7 +712,7 @@
       border-radius: 8px;
       font-family: inherit;
       font-weight: 600;
-      font-size: 0.92rem;
+      font-size: 0.875rem;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -725,7 +725,7 @@
       margin-top: 16px;
       background: rgba(220, 38, 38, 0.12);
       border: 1px solid rgba(220, 38, 38, 0.2);
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 14px 18px;
       visibility: hidden;
       min-height: 70px;
@@ -743,7 +743,7 @@
     }
 
     .hr-sub {
-      font-size: 0.82rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.5);
       line-height: 1.5
     }
@@ -758,7 +758,7 @@
     }
 
     .hr-email-label {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.5)
     }
 
@@ -771,11 +771,11 @@
       flex: 1;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 7px;
+      border-radius: 8px;
       padding: 9px 12px;
       color: white;
       font-family: inherit;
-      font-size: 0.84rem;
+      font-size: 0.875rem;
     }
 
     .hr-email-input:focus {
@@ -787,17 +787,17 @@
       background: var(--c2);
       color: white;
       border: none;
-      border-radius: 7px;
+      border-radius: 8px;
       padding: 9px 14px;
       font-family: inherit;
       font-weight: 600;
-      font-size: 0.82rem;
+      font-size: 0.875rem;
       cursor: pointer;
       white-space: nowrap;
     }
 
     .hr-ok {
-      font-size: 0.82rem;
+      font-size: 0.875rem;
       color: var(--c2);
       padding: 8px 0;
       display: none
@@ -838,19 +838,19 @@
     .urgency-pill {
       background: #DC2626;
       color: white;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       padding: 3px 10px;
-      border-radius: 20px;
+      border-radius: 16px;
       white-space: nowrap;
       flex-shrink: 0;
     }
 
     .urgency-text {
       color: rgba(255, 255, 255, 0.85);
-      font-size: 0.84rem
+      font-size: 0.875rem
     }
 
     .urgency-text strong {
@@ -883,7 +883,7 @@
       }
 
       .hero-sub {
-        font-size: 0.95rem
+        font-size: 1rem
       }
 
       .hero-actions {
@@ -902,16 +902,16 @@
 
       .calc-input {
         width: 44px;
-        font-size: 0.82rem;
+        font-size: 0.875rem;
         padding: 5px 4px
       }
 
       .calc-rate {
-        font-size: 0.7rem
+        font-size: 0.75rem
       }
 
       .calc-label {
-        font-size: 0.78rem
+        font-size: 0.875rem
       }
 
       /* Urgency */
@@ -920,7 +920,7 @@
       }
 
       .urgency-text {
-        font-size: 0.78rem
+        font-size: 0.875rem
       }
 
       /* Insight strip */
@@ -945,7 +945,7 @@
       .tab-btn {
         flex: 1;
         padding: 10px 6px;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         text-align: center;
         white-space: nowrap;
       }
@@ -955,7 +955,7 @@
       }
 
       .tool-subtitle {
-        font-size: 0.87rem
+        font-size: 0.875rem
       }
 
       .nlw-row {
@@ -969,15 +969,15 @@
 
       .nlw-input {
         padding: 6px 4px;
-        font-size: 0.82rem
+        font-size: 0.875rem
       }
 
       .nlw-rate {
-        font-size: 0.72rem
+        font-size: 0.75rem
       }
 
       .nlw-hdr {
-        font-size: 0.65rem
+        font-size: 0.75rem
       }
 
       .slider-group {
@@ -989,11 +989,11 @@
       }
 
       .r-key {
-        font-size: 0.78rem
+        font-size: 0.875rem
       }
 
       .r-val {
-        font-size: 0.84rem
+        font-size: 0.875rem
       }
 
       /* Problem */
@@ -1002,7 +1002,7 @@
       }
 
       .prob-desc {
-        font-size: 0.93rem
+        font-size: 0.875rem
       }
 
       /* Outcomes */
@@ -1020,12 +1020,12 @@
       }
 
       .data-table {
-        font-size: 0.78rem
+        font-size: 0.875rem
       }
 
       .data-table thead th {
         padding: 10px 10px;
-        font-size: 0.65rem
+        font-size: 0.75rem
       }
 
       .data-table tbody td {
@@ -1038,13 +1038,13 @@
       }
 
       .faq-q {
-        font-size: 0.88rem;
+        font-size: 0.875rem;
         padding: 16px 16px
       }
 
       .faq-a {
         padding: 0 16px 16px;
-        font-size: 0.85rem
+        font-size: 0.875rem
       }
 
       /* CTA */
@@ -1053,7 +1053,7 @@
       }
 
       .cta-sub {
-        font-size: 0.93rem
+        font-size: 0.875rem
       }
 
       /* Footer */
@@ -1077,7 +1077,7 @@
     }
 
     .eyebrow {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -1112,17 +1112,17 @@
       margin-bottom: 24px;
       background: var(--line);
       padding: 4px;
-      border-radius: 10px;
+      border-radius: 8px;
       width: fit-content;
     }
 
     .tab-btn {
       padding: 8px 20px;
-      border-radius: 7px;
+      border-radius: 8px;
       border: none;
       background: transparent;
       font-family: inherit;
-      font-size: 0.86rem;
+      font-size: 0.875rem;
       font-weight: 500;
       color: var(--ink2);
       cursor: pointer;
@@ -1147,7 +1147,7 @@
     .tool-box {
       background: white;
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 36px;
       box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
     }
@@ -1156,20 +1156,20 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--c1);
       background: #D1FAE5;
       padding: 4px 12px;
-      border-radius: 20px;
+      border-radius: 16px;
       margin-bottom: 14px;
     }
 
     .tool-subtitle {
       color: var(--ink3);
-      font-size: 0.93rem;
+      font-size: 0.875rem;
       margin-bottom: 24px;
       line-height: 1.65
     }
@@ -1188,7 +1188,7 @@
     }
 
     .field-label {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       font-weight: 600;
       color: var(--ink2);
       margin-bottom: 6px;
@@ -1208,7 +1208,7 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       font-family: inherit;
-      font-size: 0.92rem;
+      font-size: 0.875rem;
       color: var(--ink);
       background: white;
       transition: border-color 0.2s;
@@ -1227,10 +1227,10 @@
       background: var(--c1);
       color: white;
       border: none;
-      border-radius: 9px;
+      border-radius: 8px;
       font-family: inherit;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 1rem;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -1243,7 +1243,7 @@
     .result-box {
       background: var(--bg2);
       border: 1px solid var(--line);
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 22px;
       min-height: 200px;
       display: flex;
@@ -1264,7 +1264,7 @@
     }
 
     .result-empty p {
-      font-size: 0.88rem
+      font-size: 0.875rem
     }
 
     .r-match {
@@ -1280,7 +1280,7 @@
     }
 
     .r-match-thai {
-      font-size: 0.82rem;
+      font-size: 0.875rem;
       color: var(--ink3);
       margin-top: 2px
     }
@@ -1304,12 +1304,12 @@
     }
 
     .r-key {
-      font-size: 0.83rem;
+      font-size: 0.875rem;
       color: var(--ink3)
     }
 
     .r-val {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 600;
       color: var(--ink)
     }
@@ -1342,7 +1342,7 @@
     }
 
     .nlw-hdr {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.04em;
@@ -1351,7 +1351,7 @@
     }
 
     .nlw-lbl {
-      font-size: 0.83rem;
+      font-size: 0.875rem;
       color: var(--ink2)
     }
 
@@ -1359,10 +1359,10 @@
       width: 100%;
       padding: 7px;
       border: 1px solid var(--line);
-      border-radius: 6px;
+      border-radius: 8px;
       text-align: center;
       font-family: inherit;
-      font-size: 0.88rem;
+      font-size: 0.875rem;
       color: var(--ink);
     }
 
@@ -1372,7 +1372,7 @@
     }
 
     .nlw-rate {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       color: var(--ink3);
       text-align: center
     }
@@ -1383,7 +1383,7 @@
       border: 1px solid #FDE68A;
       border-radius: 8px;
       padding: 12px 14px;
-      font-size: 0.83rem;
+      font-size: 0.875rem;
       color: #92400E;
       line-height: 1.5;
     }
@@ -1401,13 +1401,13 @@
     }
 
     .slider-name {
-      font-size: 0.83rem;
+      font-size: 0.875rem;
       font-weight: 500;
       color: var(--ink2)
     }
 
     .slider-val {
-      font-size: 0.88rem;
+      font-size: 0.875rem;
       font-weight: 700;
       color: var(--c1)
     }
@@ -1417,7 +1417,7 @@
       -webkit-appearance: none;
       appearance: none;
       height: 5px;
-      border-radius: 5px;
+      border-radius: 8px;
       background: linear-gradient(to right, var(--c1) var(--pct, 50%), var(--line) var(--pct, 50%));
     }
 
@@ -1454,7 +1454,7 @@
       font-size: clamp(2.125rem, 4.5vw, 3.25rem); line-height: 1.06; letter-spacing: -0.02em;
       color: var(--ink); margin: 0 0 20px; }
     .hero-h1-accent { color: var(--c3); }
-    .hero-sub { font-size: 1.1875rem; line-height: 1.6; color: var(--ink2); max-width: 62ch; margin: 0 0 30px; }
+    .hero-sub { font-size: 1.125rem; line-height: 1.6; color: var(--ink2); max-width: 62ch; margin: 0 0 30px; }
     .hero-search { position: relative; display: flex; gap: 10px; max-width: 580px; margin: 0 0 14px; }
     .hero-search-input { flex: 1 1 auto; min-width: 0; font: inherit; font-size: 1rem; padding: 15px 16px;
       border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
@@ -1465,11 +1465,11 @@
       border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 6px 24px rgba(15,26,28,.10);
       z-index: 30; max-height: 340px; overflow: auto; }
     .hero-search-results a { display: block; padding: 12px 15px; text-decoration: none; color: var(--ink);
-      border-bottom: 1px solid var(--line); font-size: 0.9375rem; line-height: 1.35; }
+      border-bottom: 1px solid var(--line); font-size: 1rem; line-height: 1.35; }
     .hero-search-results a:last-child { border-bottom: 0; }
     .hero-search-results a:hover, .hero-search-results a:focus { background: #E6F2EE; color: var(--c3); }
-    .hero-search-results .hres-city { display: block; font-size: 0.8125rem; color: var(--ink3); margin-top: 2px; }
-    .hero-search-results .hres-empty, .hero-search-results .hres-loading { padding: 14px 15px; color: var(--ink3); font-size: 0.9375rem; }
+    .hero-search-results .hres-city { display: block; font-size: 0.875rem; color: var(--ink3); margin-top: 2px; }
+    .hero-search-results .hres-empty, .hero-search-results .hres-loading { padding: 14px 15px; color: var(--ink3); font-size: 1rem; }
     .hero-note { font-size: 0.875rem; color: var(--ink3); margin: 0 0 24px; }
     .hero-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 26px; padding: 0; margin: 0;
       font-size: 0.875rem; color: var(--ink2); }
@@ -1491,7 +1491,7 @@
     @media (max-width: 640px) {
       .hero { padding: 84px 0 40px; }
       .hero-h1 { font-size: 2rem; }
-      .hero-sub { font-size: 1.0625rem; }
+      .hero-sub { font-size: 1.125rem; }
       .hero-search { flex-direction: column; }
       .hero-search-btn { width: 100%; }
       .hero-trust { flex-direction: column; gap: 8px; }
@@ -1548,24 +1548,14 @@
     </div>
   </section>
 
-  <!-- URGENCY BAR -->
-  <div class="urgency">
-    <div class="wrap">
-      <div class="urgency-inner">
-        <span class="urgency-pill">1 Apr 2026</span>
-        <p class="urgency-text"><strong>National Living Wage rises to £12.71/hr.</strong> <a href="index.html#waitlist" style="color:#FBBF24;text-decoration:underline">Get your 2026 Profit Survival Report &rarr;</a></p>
-      </div>
-    </div>
-  </div>
-
   <!-- FREE GUIDES STRIP -->
   <div style="border-bottom:1px solid var(--line); border-top:1px solid var(--line); background:rgba(16,185,129,0.05);">
     <div class="wrap guide-strip" style="display:flex; gap:14px; padding:18px 20px; align-items:center; flex-wrap:wrap; justify-content:center;">
-      <span style="color:var(--c1); font-weight:700; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; margin-right:8px;"><i class="fas fa-book-open" style="margin-right:6px;"></i>Free Guides:</span>
-      <a href="open-thai-restaurant-uk.html" style="color:#fff; text-decoration:none; font-size:0.85rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:20px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-store" style="margin-right:6px; color:var(--c2);"></i>Open a Thai Restaurant</a>
-      <a href="how-many-thai-restaurants-uk.html" style="color:#fff; text-decoration:none; font-size:0.85rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:20px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-chart-pie" style="margin-right:6px; color:var(--c2);"></i>UK Thai Restaurant Count</a>
-      <a href="thai-restaurant-menu-pricing-uk.html" style="color:#fff; text-decoration:none; font-size:0.85rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:20px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-tags" style="margin-right:6px; color:var(--c2);"></i>Menu Pricing Guide</a>
-      <a href="thai-festivals-uk.html" style="color:#fff; text-decoration:none; font-size:0.85rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:20px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-calendar-alt" style="margin-right:6px; color:var(--c2);"></i>Festival Calendar</a>
+      <span style="color:var(--c1); font-weight:700; font-size:0.875rem; text-transform:uppercase; letter-spacing:0.1em; margin-right:8px;"><i class="fas fa-book-open" style="margin-right:6px;"></i>Free Guides:</span>
+      <a href="open-thai-restaurant-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-store" style="margin-right:6px; color:var(--c2);"></i>Open a Thai Restaurant</a>
+      <a href="how-many-thai-restaurants-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-chart-pie" style="margin-right:6px; color:var(--c2);"></i>UK Thai Restaurant Count</a>
+      <a href="thai-restaurant-menu-pricing-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-tags" style="margin-right:6px; color:var(--c2);"></i>Menu Pricing Guide</a>
+      <a href="thai-festivals-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-calendar-alt" style="margin-right:6px; color:var(--c2);"></i>Festival Calendar</a>
     </div>
   </div>
 
@@ -1661,6 +1651,16 @@
       </div>
     </div>
   </section>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency">
+    <div class="wrap">
+      <div class="urgency-inner">
+        <span class="urgency-pill">1 Apr 2026</span>
+        <p class="urgency-text"><strong>National Living Wage rises to £12.71/hr.</strong> <a href="index.html#waitlist" style="color:#FBBF24;text-decoration:underline">Get your 2026 Profit Survival Report &rarr;</a></p>
+      </div>
+    </div>
+  </div>
 
   <!-- TOOLS SECTION -->
   <section class="tools" id="tools">
@@ -1808,7 +1808,7 @@
                 </div>
                 <button class="tool-btn-main" onclick="runStress()">Get instant breakdown</button>
                 <div style="margin-top:12px; text-align:center;">
-                  <a href="tools/PROFIT_MARGIN_DEFENDER.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.8rem;">Launch Full Premium Module (Charts & Presets) →</a>
+                  <a href="tools/PROFIT_MARGIN_DEFENDER.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.875rem;">Launch Full Premium Module (Charts & Presets) →</a>
                 </div>
               </div>
               <div class="result-box" id="stress-result">
@@ -1846,7 +1846,7 @@
               </div>
             </div>
             <div style="margin-top:20px; text-align:center; padding-top:15px; border-top:1px solid var(--line);">
-               <p style="font-size:0.8rem; color:var(--ink4); margin-bottom:10px;">Did you know? 1 in 3 UK restaurants have "Conflicting Identity" issues that block them from Gemini/ChatGPT discovery.</p>
+               <p style="font-size:0.875rem; color:var(--ink4); margin-bottom:10px;">Did you know? 1 in 3 UK restaurants have "Conflicting Identity" issues that block them from Gemini/ChatGPT discovery.</p>
             </div>
           </div>
         </div>
@@ -1902,11 +1902,11 @@
 
       <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:16px; margin-bottom:30px;">
         <a href="open-thai-restaurant-uk.html" class="intel-card reveal" style="grid-column:span 2; border-color:var(--c2);">
-          <div class="intel-icon" style="background:var(--dark); color:var(--c2);"><i class="fas fa-store"></i></div>
+          <div class="intel-icon" style="background:#E6F2EE; color:#0E6E5C;"><i class="fas fa-store"></i></div>
           <div style="display:flex; justify-content:space-between; align-items:flex-start;">
             <div><h3>How to Open a Thai Restaurant in the UK</h3>
             <p>15-step roadmap. Real costs (£80k–£180k). Chef visa reality. The guide generic restaurant blogs can't write.</p></div>
-            <span class="status-pill status-success" style="background:#10B981; color:white; padding:4px 10px; border-radius:100px; font-size:0.7rem; font-weight:800; text-transform:uppercase;">Featured</span>
+            <span class="status-pill status-success" style="background:#10B981; color:white; padding:4px 10px; border-radius:999px; font-size:0.75rem; font-weight:800; text-transform:uppercase;">Featured</span>
           </div>
           <div class="intel-link" style="color:var(--c2)">Read the guide →</div>
         </a>
@@ -1931,7 +1931,7 @@
       </div>
 
       <div style="text-align:center;">
-        <a href="guides.html" style="display:inline-block; background:var(--c1); color:white; padding:14px 32px; border-radius:50px; font-weight:700; text-decoration:none; font-size:1rem;"><i class="fas fa-book-open" style="margin-right:8px;"></i>Browse All Free Guides</a>
+        <a href="guides.html" style="display:inline-block; background:var(--c1); color:white; padding:14px 32px; border-radius:999px; font-weight:700; text-decoration:none; font-size:1rem;"><i class="fas fa-book-open" style="margin-right:8px;"></i>Browse All Free Guides</a>
       </div>
     </div>
   </section>
@@ -1941,7 +1941,7 @@
     <div class="wrap">
       <h2 style="font-family:'Instrument Serif', serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:400; margin-bottom:12px; line-height:1.2;">Is your restaurant on <em>ThaiData</em>?</h2>
       <p style="color:var(--ink3); font-size:1rem; max-width:500px; margin:0 auto 20px;">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
-      <a href="/claim/" class="btn" style="display:inline-block; background:#10B981; color:#0C1220; padding:14px 32px; border-radius:50px; font-weight:700; text-decoration:none; font-size:1rem;"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
+      <a href="/claim/" class="btn" style="display:inline-block; background:#10B981; color:#0C1220; padding:14px 32px; border-radius:999px; font-weight:700; text-decoration:none; font-size:1rem;"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
     </div>
   </section>
 
@@ -2129,19 +2129,19 @@
           <div class="cta-content">
             <div class="eyebrow" style="color: var(--c2); font-weight: 700; margin-bottom: 20px;">Free Weekly Brief — The UK Thai Restaurant Market</div>
             <h2 class="section-title" style="margin-bottom: 20px;">Stay ahead of <em>your market</em></h2>
-            <p class="cta-sub" style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px;">Join Thai restaurant owners getting the free weekly market brief. FSA hygiene alerts, new openings in your city, supplier price moves, and profit tips. No spam, unsubscribe any time.</p>
+            <p class="cta-sub" style="font-size: 1.125rem; opacity: 0.8; margin-bottom: 40px;">Join Thai restaurant owners getting the free weekly market brief. FSA hygiene alerts, new openings in your city, supplier price moves, and profit tips. No spam, unsubscribe any time.</p>
             
             <div id="cta-wrap">
               <div class="cta-form" style="display: flex; gap: 12px; margin-bottom: 15px;">
-                <input type="email" class="cta-input" aria-label="Email for profit report" placeholder="you@restaurant.co.uk" id="cta-email" style="flex: 1; padding: 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(0,0,0,0.2); color: white;" />
-                <button class="btn btn-fill btn-lg" onclick="submitWL('cta-wrap','cta-ok')" style="padding: 18px 30px; border-radius: 12px; font-weight: 700;">Get my free report</button>
+                <input type="email" class="cta-input" aria-label="Email for profit report" placeholder="you@restaurant.co.uk" id="cta-email" style="flex: 1; padding: 18px; border-radius: 16px; border: 1px solid var(--line); background: rgba(0,0,0,0.2); color: white;" />
+                <button class="btn btn-fill btn-lg" onclick="submitWL('cta-wrap','cta-ok')" style="padding: 18px 30px; border-radius: 16px; font-weight: 700;">Get my free report</button>
               </div>
-              <p class="cta-note" style="font-size: 0.85rem; color: var(--ink3);"><i class="fas fa-shield-check"></i> No credit card. Unsubscribe any time. Your data stays private.</p>
+              <p class="cta-note" style="font-size: 0.875rem; color: var(--ink3);"><i class="fas fa-shield-check"></i> No credit card. Unsubscribe any time. Your data stays private.</p>
             </div>
           </div>
           <div class="cta-visual" style="position: relative;">
             <div style="position: absolute; top: -20%; right: -20%; width: 140%; height: 140%; background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0) 70%); z-index: -1;"></div>
-            <img src="thaidata_free_report_mockup.jpg" alt="Free Report Mockup" width="640" height="640" loading="lazy" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);">
+            <img src="thaidata_free_report_mockup.jpg" alt="Free Report Mockup" width="640" height="640" loading="lazy" style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);">
           </div>
         </div>
         <div class="cta-ok" id="cta-ok" style="display:none; text-align:center; padding: 60px; font-size: 1.5rem; color: var(--c2);">&#10003; &nbsp; You're on the list — redirecting...</div>
@@ -2153,12 +2153,12 @@
   <section class="section" id="recently-added" style="padding: 60px 0;">
     <div class="wrap">
       <h2 class="section-title">Recently added to <em>ThaiData</em></h2>
-      <p style="color: var(--ink3); margin-bottom: 24px; font-size: 0.9rem;">New FSA-registered Thai businesses discovered in our latest data refresh. Not necessarily new openings — these are the most recent additions to our directory.</p>
+      <p style="color: var(--ink3); margin-bottom: 24px; font-size: 0.875rem;">New FSA-registered Thai businesses discovered in our latest data refresh. Not necessarily new openings — these are the most recent additions to our directory.</p>
       <div id="recent-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
         <p style="color: var(--ink4);">Loading...</p>
       </div>
       <p style="margin-top: 16px; text-align: center;">
-        <a href="/r/" style="color: var(--c1); font-size: 0.85rem;">Browse all Thai restaurants →</a>
+        <a href="/r/" style="color: var(--c1); font-size: 0.875rem;">Browse all Thai restaurants →</a>
       </p>
     </div>
   </section>
@@ -2180,22 +2180,22 @@
             var citySlug = rest.city.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
             var card = document.createElement('a');
             card.href = '/r/' + citySlug + '/' + slug + '/';
-            card.style.cssText = 'display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card-bg);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;transition:border-color 0.2s;';
+            card.style.cssText = 'display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card-bg);border:1px solid var(--line);border-radius:16px;text-decoration:none;color:inherit;transition:border-color 0.2s;';
             card.onmouseenter = function() { this.style.borderColor = 'var(--c2)'; };
             card.onmouseleave = function() { this.style.borderColor = 'var(--line)'; };
             var info = document.createElement('div');
             info.style.cssText = 'flex:1;min-width:0;';
             var nameEl = document.createElement('div');
-            nameEl.style.cssText = 'font-weight:600;font-size:0.9rem;color:var(--ink);';
+            nameEl.style.cssText = 'font-weight:600;font-size:0.875rem;color:var(--ink);';
             nameEl.textContent = rest.name;
             info.appendChild(nameEl);
             var meta = document.createElement('div');
-            meta.style.cssText = 'font-size:0.78rem;color:var(--ink3);margin-top:2px;';
+            meta.style.cssText = 'font-size:0.875rem;color:var(--ink3);margin-top:2px;';
             meta.textContent = rest.city + ' · Added ' + rest.discovered_on;
             info.appendChild(meta);
             card.appendChild(info);
             var arrow = document.createElement('span');
-            arrow.style.cssText = 'color:var(--ink3);font-size:0.7rem;';
+            arrow.style.cssText = 'color:var(--ink3);font-size:0.75rem;';
             arrow.innerHTML = '&#10095;';
             card.appendChild(arrow);
             container.appendChild(card);
@@ -2254,16 +2254,16 @@
 
   <!-- Exit Intent Modal -->
   <div id="exit-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:10000; align-items:center; justify-content:center; backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);">
-    <div style="background:#0C1220; border:1px solid var(--line); border-radius:30px; padding:50px; max-width:550px; text-align:center; position:relative; box-shadow:0 30px 60px rgba(0,0,0,0.5);">
+    <div style="background:#0C1220; border:1px solid var(--line); border-radius:16px; padding:50px; max-width:550px; text-align:center; position:relative; box-shadow:0 30px 60px rgba(0,0,0,0.5);">
         <button onclick="closeExit()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:var(--ink4); font-size:1.5rem; cursor:pointer;">&times;</button>
         <div class="eyebrow" style="color:var(--c2); margin-bottom:15px;">Wait! Secure your 2026 Future</div>
         <h2 style="font-family:'Instrument Serif', serif; font-size:2.5rem; margin-bottom:20px;">Download the 2026 <em>Profit Survival PDF</em></h2>
         <p style="color:var(--ink4); margin-bottom:30px;">Get the executive summary of our 2026 research. 15 pages of actionable pricing strategies and procurement audits.</p>
         <div class="cta-form" style="display:flex; gap:10px; margin-bottom:15px;">
-            <input type="email" class="cta-input" aria-label="Email for download" placeholder="Enter your email" id="exit-email" style="flex:1; background:rgba(255,255,255,0.05); border:1px solid var(--line); padding:15px; border-radius:10px; color:white;" />
-            <button class="btn btn-fill" onclick="submitExit()" style="padding:15px 25px; border-radius:10px; font-weight:700;">Send PDF</button>
+            <input type="email" class="cta-input" aria-label="Email for download" placeholder="Enter your email" id="exit-email" style="flex:1; background:rgba(255,255,255,0.05); border:1px solid var(--line); padding:15px; border-radius:8px; color:white;" />
+            <button class="btn btn-fill" onclick="submitExit()" style="padding:15px 25px; border-radius:8px; font-weight:700;">Send PDF</button>
         </div>
-        <p style="font-size:0.8rem; color:var(--ink3);">No spam. Join 284+ other Thai restaurateurs.</p>
+        <p style="font-size:0.875rem; color:var(--ink3);">No spam. Join 284+ other Thai restaurateurs.</p>
     </div>
   </div>
 
@@ -2288,7 +2288,7 @@
         const email = document.getElementById('exit-email').value;
         const { ok } = await submitEmail(email, 'exit-intent-pdf');
         if (ok) {
-            document.getElementById('exit-modal').innerHTML = '<div style="padding:40px; color:var(--c2); font-size:1.2rem; font-weight:700;">Check your inbox. Your survival guide is on the way.</div>';
+            document.getElementById('exit-modal').innerHTML = '<div style="padding:40px; color:var(--c2); font-size:1.125rem; font-weight:700;">Check your inbox. Your survival guide is on the way.</div>';
             setTimeout(closeExit, 2500);
         }
     }
@@ -2504,7 +2504,7 @@
     <div class="r-row"><span class="r-key">Food cost (database)</span><span class="r-val">&pound;${d.cost.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Platform</span><span class="r-val">${plN}${comm ? ` (${Math.round(comm * 100)}%)` : ''}</span></div>
     <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">&pound;${minR.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.15rem">&pound;${recP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">&pound;${recP.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Actual GP at recommended</span><span class="r-val ${parseFloat(actGP) >= 65 ? 'green' : 'amber'}">${actGP}%</span></div>`;
       };
       document.getElementById('dish-input').addEventListener('keydown', e => { if (e.key === 'Enter') window.runDish() });
@@ -2540,7 +2540,7 @@
     <div class="r-row"><span class="r-key">Net annual increase</span><span class="r-val red">+&pound;${Math.round(totalAnn).toLocaleString()} (+${pct}%)</span></div>
     <div class="impact-box"><p>This factors in the &pound;10,500 Employment Allowance. To absorb this, you need &pound;${(totalAnn / 52 / 7).toFixed(2)} extra GP per day.</p></div>
     <div style="margin-top:12px; text-align:center;">
-      <a href="tools/VISA_ASSISTANT.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.8rem;">Launch Chef Visa Assistant (RQF-6 Check) →</a>
+      <a href="tools/VISA_ASSISTANT.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.875rem;">Launch Chef Visa Assistant (RQF-6 Check) →</a>
     </div>`;
     }
 
@@ -2568,7 +2568,7 @@
     <div class="r-row"><span class="r-key">VAT deducted</span><span class="r-val">&pound;${vatAmt.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Net after commission</span><span class="r-val">&pound;${net.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">&pound;${minP.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.15rem">&pound;${recP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">&pound;${recP.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Profit per dish</span><span class="r-val ${gpC}">&pound;${profit.toFixed(2)} (${actGP}% GP)</span></div>`;
     }
 

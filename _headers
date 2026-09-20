@@ -19,3 +19,7 @@
 # Root HTML
 /
   Cache-Control: public, max-age=600, must-revalidate
+
+# CSS — must revalidate so design-token changes ship promptly
+/*.css
+  Cache-Control: public, max-age=600, must-revalidate

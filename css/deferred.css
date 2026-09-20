@@ -11,7 +11,7 @@
     }
 
     .insight-strip-head p {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       font-weight: 700;
       letter-spacing: 0.07em;
       text-transform: uppercase;
@@ -41,12 +41,12 @@
     .insight-card {
       background: var(--bg2);
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 22px 24px;
     }
 
     .insight-card-label {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -55,7 +55,7 @@
     }
 
     .insight-finding {
-      font-size: 1.05rem;
+      font-size: 1.125rem;
       font-weight: 600;
       color: var(--ink);
       line-height: 1.45;
@@ -63,7 +63,7 @@
     }
 
     .insight-detail {
-      font-size: 0.83rem;
+      font-size: 0.875rem;
       color: var(--ink3);
       line-height: 1.6
     }
@@ -71,12 +71,12 @@
     .insight-pill {
       display: inline-block;
       margin-top: 12px;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       padding: 3px 10px;
-      border-radius: 20px;
+      border-radius: 16px;
     }
 
     .pill-red {
@@ -135,7 +135,7 @@
       background: #1a0f0f;
       border: 1px solid #3d1a1a;
       border-left: 3px solid #DC2626;
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 14px 16px;
       margin-bottom: 28px;
       line-height: 1.6
@@ -143,7 +143,7 @@
 
     .prob-proof-label {
       display: block;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -165,7 +165,7 @@
     .prob-card {
       background: var(--bg2);
       border: 1px solid var(--line);
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 16px 18px;
       display: flex;
       gap: 14px;
@@ -178,14 +178,14 @@
     }
 
     .prob-card h4 {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 600;
       color: var(--ink);
       margin-bottom: 3px
     }
 
     .prob-card p {
-      font-size: 0.83rem;
+      font-size: 0.875rem;
       color: var(--ink3);
       line-height: 1.55
     }
@@ -216,7 +216,7 @@
 
     .outcomes-header p {
       color: rgba(255, 255, 255, 0.55);
-      font-size: 0.95rem;
+      font-size: 1rem;
       max-width: 440px;
       margin: 18px auto 0
     }
@@ -236,7 +236,7 @@
     .outcome-card {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 28px;
     }
 
@@ -264,7 +264,7 @@
     }
 
     .oc-finding {
-      font-size: 1.05rem;
+      font-size: 1.125rem;
       font-weight: 600;
       color: white;
       line-height: 1.45;
@@ -276,7 +276,7 @@
       border: 1px solid rgba(16, 185, 129, 0.15);
       border-radius: 8px;
       padding: 12px 14px;
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.7);
       line-height: 1.55;
     }
@@ -299,10 +299,10 @@
 
     .cta { background: var(--bg2); padding: 100px 0; border-top: 1px solid var(--line); }
     .cta .section-title em { color: var(--c2); }
-    .cta-sub { font-size: 1.1rem; line-height: 1.7; color: var(--ink4); }
+    .cta-sub { font-size: 1.125rem; line-height: 1.7; color: var(--ink4); }
     .cta-input { background: rgba(0,0,0,0.2); border: 1px solid var(--line); color: white; transition: all 0.2s; }
     .cta-input:focus { border-color: var(--c2); background: rgba(0,0,0,0.3); }
-    .cta-note { font-size: 0.85rem; color: var(--ink3); display: flex; align-items: center; gap: 8px; justify-content: flex-start; }
+    .cta-note { font-size: 0.875rem; color: var(--ink3); display: flex; align-items: center; gap: 8px; justify-content: flex-start; }
     .cta-note i { color: var(--c1); }
 
     .cta-ok {
@@ -311,7 +311,7 @@
       gap: 8px;
       font-weight: 600;
       color: var(--c1);
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin: 0 auto;
       justify-content: center;
     }
@@ -335,14 +335,14 @@
     }
 
     .ft-brand p {
-      font-size: 0.84rem;
+      font-size: 0.875rem;
       color: #64748B;
       line-height: 1.65;
       max-width: 240px
     }
 
     .ft-col h5 {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -359,7 +359,7 @@
     }
 
     .ft-col ul li a {
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       color: #64748B;
       transition: color 0.2s
     }
@@ -377,19 +377,19 @@
     }
 
     .ft-bottom p {
-      font-size: 0.8rem;
+      font-size: 0.875rem;
       color: #334155
     }
 
     .ft-pill {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #334155;
       background: #0D1829;
       padding: 4px 12px;
-      border-radius: 20px
+      border-radius: 16px
     }
 
     @media(max-width:768px) {
@@ -424,20 +424,20 @@
       overflow-x: auto;
       margin-top: 36px;
       border: 1px solid var(--line);
-      border-radius: 12px
+      border-radius: 16px
     }
 
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.87rem
+      font-size: 0.875rem
     }
 
     .data-table thead th {
       background: var(--bg2);
       padding: 12px 16px;
       text-align: left;
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -466,7 +466,7 @@
     }
 
     .data-table .dish-thai {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       color: var(--ink3);
       display: block;
       margin-top: 2px
@@ -494,7 +494,7 @@
     }
 
     .data-note {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       color: var(--ink4);
       margin-top: 12px;
       padding: 0 4px
@@ -520,7 +520,7 @@
     .faq-item {
       background: white;
       border: 1px solid var(--line);
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden
     }
 
@@ -534,7 +534,7 @@
       background: none;
       border: none;
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--ink);
       cursor: pointer;
@@ -565,7 +565,7 @@
     .faq-a {
       display: none;
       padding: 0 22px 18px;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--ink3);
       line-height: 1.75
     }
@@ -637,12 +637,12 @@
     .intel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
     @media (max-width: 1100px) { .intel-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 768px) { .intel-grid { grid-template-columns: 1fr; } .intel-card { grid-column: span 1 !important; } }
-    .intel-card { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 40px; text-align: left; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
+    .intel-card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 40px; text-align: left; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
     .intel-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    .intel-icon { background: var(--dark); color: var(--c2); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 24px; }
-    .intel-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 1.8rem; }
-    .intel-card p { color: var(--ink2); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; }
-    .intel-link { color: var(--c1); font-weight: 700; text-decoration: none; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+    .intel-icon { background: var(--dark); color: var(--c2); width: 50px; height: 50px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 24px; }
+    .intel-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 2rem; }
+    .intel-card p { color: var(--ink2); font-size: 1rem; margin-bottom: 24px; line-height: 1.6; }
+    .intel-link { color: var(--c1); font-weight: 700; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 8px; }
     @media (max-width: 768px) { .intel-grid { grid-template-columns: 1fr; } .intel-card { padding: 30px; } }
 
     .success .checklist-icon { color: var(--c2); }
@@ -657,7 +657,7 @@
     .progress-bar {
       height: 6px;
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
+      border-radius: 8px;
       overflow: hidden;
       margin: 15px 0;
     }
@@ -671,7 +671,7 @@
 
     .status-updates {
       list-style: none;
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       color: var(--ink4);
     }
 
@@ -689,7 +689,7 @@
       margin-top: 40px;
       padding: 30px;
       background: rgba(16, 185, 129, 0.1);
-      border-radius: 12px;
+      border-radius: 16px;
       border: 1px solid rgba(16, 185, 129, 0.2);
     }
 
