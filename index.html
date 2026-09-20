@@ -286,9 +286,7 @@
     body {
       font-family: 'Inter', 'Inter-fallback', system-ui, sans-serif;
     }
-    h1, h2, h3, .instrument {
-      font-family: 'Instrument Serif', 'Instrument-fallback', Georgia, serif;
-    }
+    h1, h2, h3, .instrument { font-family: 'Archivo', 'Archivo-fallback', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; }
     *,
     *::before,
     *::after {
@@ -297,7 +295,7 @@
       padding: 0
     }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid var(--turmeric);
             outline-offset: 2px;
             border-radius: 8px;
         }
@@ -458,7 +456,7 @@
     }
 
     .btn-fill {
-      background: #065F56;
+      background: var(--red-press);
       color: #FFFFFF;
       padding: 10px 20px;
       border-radius: 8px;
@@ -615,7 +613,6 @@
     }
 
     .hero h1 {
-      font-family: 'Instrument Serif', serif;
       font-weight: 400;
       font-size: clamp(2.2rem, 4vw, 3.2rem);
       line-height: 1.1;
@@ -624,7 +621,7 @@
     }
 
     .hero h1 em {
-      font-style: italic;
+      font-style: normal;
       color: var(--c2)
     }
 
@@ -1109,7 +1106,6 @@
     }
 
     .section-title {
-      font-family: 'Instrument Serif', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       font-weight: 400;
       line-height: 1.15;
@@ -1118,7 +1114,7 @@
     }
 
     .section-title em {
-      font-style: italic;
+      font-style: normal;
       color: var(--c1)
     }
 
@@ -1481,7 +1477,7 @@
     .hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--c3);
       background: #E6F2EE; border: 1px solid #CFE5DD; border-radius: 999px; padding: 6px 14px;
       letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 22px; }
-    .hero-h1 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;
+    .hero-h1 { font-weight: 400;
       font-size: clamp(2.125rem, 4.5vw, 3.25rem); line-height: 1.06; letter-spacing: -0.02em;
       color: var(--ink); margin: 0 0 20px; }
     .hero-h1-accent { color: var(--c3); }
@@ -2208,6 +2204,11 @@ footer { background: var(--ink); color: var(--ivory); padding: 40px 0 32px; }
   .ft-row { flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 40px; }
   .ft-links { max-width: 620px; }
 }
+
+/* The design bans italics outright. <em> is kept for semantics (screen readers and
+   crawlers read the emphasis) but loses the slant - for this audience the italic
+   was the least readable thing on the page. */
+em { font-style: normal; font-weight: 700; }
 </style>
 <body>
   <div class="grain"></div>
@@ -2537,9 +2538,9 @@ footer { background: var(--ink); color: var(--ivory); padding: 40px 0 32px; }
   <!-- CLAIM CTA -->
   <section style="padding: 60px 0; text-align: center; min-height: 180px; contain: layout style;">
     <div class="wrap">
-      <h2 style="font-family:'Instrument Serif', serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:400; margin-bottom:12px; line-height:1.2;">Is your restaurant on <em>ThaiData</em>?</h2>
+      <h2 style="font-size:clamp(1.5rem,3vw,2rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:12px; line-height:1.15;">Is your restaurant on <em>ThaiData</em>?</h2>
       <p style="color:var(--ink3); font-size:1rem; max-width:500px; margin:0 auto 20px;">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
-      <a href="/claim/" class="btn" style="display:inline-block; background:#10B981; color:#0C1220; padding:14px 32px; border-radius:999px; font-weight:700; text-decoration:none; font-size:1rem;"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
+      <a href="/claim/" class="btn-primary"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
     </div>
   </section>
 
@@ -2626,7 +2627,7 @@ footer { background: var(--ink); color: var(--ivory); padding: 40px 0 32px; }
     <div style="background:#0C1220; border:1px solid var(--line); border-radius:16px; padding:50px; max-width:550px; text-align:center; position:relative; box-shadow:0 30px 60px rgba(0,0,0,0.5);">
         <button onclick="closeExit()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:var(--ink4); font-size:1.5rem; cursor:pointer;">&times;</button>
         <div class="eyebrow" style="color:var(--c2); margin-bottom:15px;">Wait! Secure your 2026 Future</div>
-        <h2 style="font-family:'Instrument Serif', serif; font-size:2.5rem; margin-bottom:20px;">Download the 2026 <em>Profit Survival PDF</em></h2>
+        <h2 style="font-size:2.5rem; font-weight:800; letter-spacing:-0.02em; margin-bottom:20px;">Download the 2026 <em>Profit Survival PDF</em></h2>
         <p style="color:var(--ink4); margin-bottom:30px;">Get the executive summary of our 2026 research. 15 pages of actionable pricing strategies and procurement audits.</p>
         <div class="cta-form" style="display:flex; gap:10px; margin-bottom:15px;">
             <input type="email" class="cta-input" aria-label="Email for download" placeholder="Enter your email" id="exit-email" style="flex:1; background:rgba(255,255,255,0.05); border:1px solid var(--line); padding:15px; border-radius:8px; color:white;" />
