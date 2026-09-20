@@ -17,8 +17,8 @@
             width: 90%;
             max-width: 500px;
             background: #ffffff;
-            border: 1px solid #E5E7EB;
-            border-radius: 16px;
+            border: 1px solid #DCE3E1;
+            border-radius: 8px;
             padding: 24px;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
             z-index: 9999;
@@ -34,25 +34,25 @@
             to { transform: translate(-50%, 0); opacity: 1; }
         }
 
-        .cb-text { font-size: 0.9rem; color: #374151; line-height: 1.5; }
-        .cb-text a { color: #0A7A6F; text-decoration: underline; font-weight: 500; }
+        .cb-text { font-size: 0.875rem; color: #4C5C5E; line-height: 1.5; }
+        .cb-text a { color: #0E6E5C; text-decoration: underline; font-weight: 500; }
         
         .cb-btns { display: flex; gap: 12px; }
         .cb-btn { 
             flex: 1; 
             padding: 10px 16px; 
             border-radius: 8px; 
-            font-size: 0.85rem; 
+            font-size: 0.875rem; 
             font-weight: 600; 
             cursor: pointer; 
             transition: all 0.2s;
             border: none;
             text-align: center;
         }
-        .cb-accept { background: #0A7A6F; color: white; }
-        .cb-accept:hover { background: #065F56; }
-        .cb-decline { background: #F3F4F6; color: #4B5563; }
-        .cb-decline:hover { background: #E5E7EB; }
+        .cb-accept { background: #0E6E5C; color: white; }
+        .cb-accept:hover { background: #0A5346; }
+        .cb-decline { background: #F5F7F6; color: #4C5C5E; }
+        .cb-decline:hover { background: #DCE3E1; }
 
         @media (max-width: 480px) {
             #cookie-banner { bottom: 16px; padding: 20px; }

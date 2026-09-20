@@ -2650,6 +2650,20 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   })();
   </script>
+
+  <style id="token-gaps">
+    /* Complete the token system. These three fell outside both stylesheets:
+       - body carried a literal rgb(15,23,42) instead of var(--ink)
+       - <h3> had no size, so it rendered at the browser default 1.17em (18.72px)
+       - buttons/inputs had no size, rendering at the control default 13.33px.
+         Setting 1rem also stops iOS zooming the viewport on input focus (<16px). */
+    body { color: var(--ink); }
+    h1, h2, h3, h4, h5, h6 { color: var(--ink); }
+    h3 { font-size: 1.125rem; }
+    h4, h5, h6 { font-size: 1rem; }
+    button, input, select, textarea { font-size: 1rem; }
+    small { font-size: 0.875rem; }
+  </style>
 </body>
 
 </html>
