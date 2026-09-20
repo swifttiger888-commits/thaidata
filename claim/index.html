@@ -338,6 +338,19 @@ body {
         }
     });
 
+    // Prefill and auto-search when the visitor arrives from a listing or menu CTA,
+    // e.g. /claim/?restaurant=Thai%20Aroy%20Dee&city=Leeds
+    // Without this the owner lands on a blank box and has to retype the name of the
+    // restaurant they were just looking at — the highest-friction step in the funnel.
+    (function prefillFromQuery() {
+        const params = new URLSearchParams(window.location.search);
+        const name = (params.get('restaurant') || '').trim();
+        if (name.length < 3) return;
+        searchInput.value = name;
+        searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+        searchInput.focus();
+    })();
+
     function selectRestaurant(r) {
         selectedRestaurant = r;
         searchInput.value = r.name;

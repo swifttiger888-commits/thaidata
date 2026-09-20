@@ -23,6 +23,7 @@ Input JSON schema:
 }
 """
 import json, re, sys, html, datetime
+from urllib.parse import quote
 
 def money(p):
     """Normalise OCR spacing only. Never changes the value."""
@@ -255,7 +256,7 @@ footer p{{margin:0 0 6px}}
   <div class="cta">
     <h2>Own {esc(rname)}?</h2>
     <p>We've published your full menu to give it a page that's actually readable on a phone and findable on Google — free. Claim your listing to correct any price, edit descriptions, or add dishes.</p>
-    <a class="btn" href="/claim/?restaurant={esc(rname)}&amp;city={esc(city)}">Claim this listing — free</a>
+    <a class="btn" href="/claim/?restaurant={quote(rname)}&amp;city={quote(city)}">Claim this listing — free</a>
   </div>
 </main>
 
