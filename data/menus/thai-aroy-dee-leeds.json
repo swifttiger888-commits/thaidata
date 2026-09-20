@@ -337,12 +337,13 @@
   "Hot Pots": [
    {
     "num": 106,
-    "name": "Tom Yum Hot Pot Prawn or Seafood",
+    "name": "Tom Yum Hot Pot",
     "description": "Thai spicy, hot and sour lemongrass clear soup with mushrooms, served in a hot pot.",
-    "price": "£20.95",
+    "price": "£20.95 / £23.95",
     "category": "Hot Pots",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "price_note": "Chicken £20.95 · Prawn or Seafood £23.95"
    },
    {
     "num": 107,
@@ -1001,7 +1002,7 @@
    },
    {
     "num": 80,
-    "name": "Ga-Prao Neua / Moo Daeng with Rice",
+    "name": "Khao Pad Puu (Crab Fried Rice)",
     "description": "Thai-style egg fried rice with vegetables.",
     "price": "£11.95",
     "category": "Noodle & Rice Dishes",
@@ -1095,5 +1096,19 @@
  ],
  "source_label": "Thai Aroy Dee's own PDF menu",
  "checked": "2026-09-20",
- "fsa_rating": 5
+ "fsa_rating": 5,
+ "verified": {
+  "method": "vision extraction (google/gemini-3.8-flash) + independent verification pass",
+  "dates": "2026-09-20",
+  "dishes_confirmed": 119,
+  "corrections_applied": [
+   "dish 80 name was 'Ga-Prao Neua / Moo Daeng with Rice' — a misread of dish 98. Correct: 'Khao Pad Puu (Crab Fried Rice)' £11.95. Confirmed by two independent reads.",
+   "dish 106 printed as one dish with two protein prices. Correct price '£20.95 / £23.95' (Chicken / Prawn or Seafood), was recorded as £20.95 only."
+  ],
+  "unverified": [
+   "Section boundaries for dishes 98-105 — dish names and prices are verified, but the printed heading they sit under is not. Listed under Chef's Specials as a best guess.",
+   "Chilli-level markers (eg 'C 4') appear next to some dishes on the printed menu but are only partially captured, so they are omitted rather than guessed."
+  ],
+  "completeness": "dishes 1-108 present with no gaps; prices verified where printed"
+ }
 }

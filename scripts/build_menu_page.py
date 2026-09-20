@@ -52,6 +52,8 @@ def dish_html(it, protein_tiers=None):
     bits.append("</div>")
     if it.get("description"):
         bits.append(f'<p class="dish-desc">{esc(it["description"])}</p>')
+    if it.get("price_note"):
+        bits.append(f'<p class="dish-note">{esc(it["price_note"])}</p>')
     bits.append("</div></li>")
     return "".join(bits)
 
@@ -207,6 +209,7 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .badge-veg{{background:var(--green-light);color:var(--green-dark)}}
 .dish-price{{font-weight:700;color:var(--green-dark);white-space:nowrap;font-variant-numeric:tabular-nums}}
 .dish-desc{{margin:3px 0 0;font-size:var(--step--1);color:var(--ink-secondary);max-width:64ch}}
+.dish-note{{margin:4px 0 0;font-size:.8125rem;color:var(--ink-tertiary);font-weight:500}}
 .cta{{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;margin:34px 0 50px}}
 .cta h2{{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:var(--step-2);margin:0 0 8px}}
 .cta p{{margin:0 0 16px;color:var(--ink-secondary);font-size:var(--step--1)}}
