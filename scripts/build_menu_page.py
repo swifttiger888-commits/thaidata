@@ -224,6 +224,16 @@ footer p{{margin:0 0 6px}}
   .cat-title{{font-size:var(--step-1)}}
   .dish{{padding:11px 0}}
 }}
+@media (min-width:900px){{
+  /* 12 categories do not fit one strip in 880px, so the strip scrolled and cut a
+     chip mid-word. Wrap on wide screens instead — every category is then visible
+     without interaction. Mobile keeps the scroll strip, where wrapping to three
+     rows would eat too much vertical space. */
+  .chips{{flex-wrap:wrap;overflow-x:visible;gap:7px}}
+  nav.catnav::after{{display:none}}
+  .navchip{{padding:4px 11px;font-size:.8125rem}}
+  .navrow{{gap:16px}}
+}}
 @media print{{
   nav.catnav,.cta{{display:none}}
   body{{background:#fff}}
