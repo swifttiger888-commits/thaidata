@@ -73,7 +73,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 
         .cta { text-align: center; padding: 40px 0 60px; }
         .cta a { display: inline-block; background: #A3132B; color: #FFFFFF; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
-        .cta a:hover { background: #0D9F6E; }
+        .cta a:hover { background: #7E0E20; }
         .cta .secondary { background: transparent; border: 1px solid var(--line); margin-left: 12px; }
         .cta .secondary:hover { border-color: var(--c2); }
 
@@ -157,7 +157,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             <p>**vs UK total:** Gwynedd 1268 across the UK.</p>
         </div>
 
-        <div class="card" style="background:rgba(16,185,129,0.03);border:1px dashed rgba(16,185,129,0.2);">
+        <div class="card" style="background:rgba(163, 19, 43, 0.03);border:1px dashed rgba(163, 19, 43, 0.2);">
             <h2 style="font-size:1.2rem;"><i class="fas fa-lightbulb" style="color:var(--c2);margin-right:8px;"></i>What This Means for <em>Operators</em></h2>
             <p>If you're considering opening a Thai restaurant in Gwynedd, the data suggests specific market dynamics are harder to assess without population data — further local research is recommended. Use our <a href='../thai-restaurant-costs-uk.html' style='color:var(--c2);'>operating costs guide</a> to model the numbers, and check the <a href='../thai-restaurants-city-breakdown-uk.html' style='color:var(--c2);'>full city comparison</a> to see how Gwynedd stacks up against other cities.</p>
         </div>
@@ -329,7 +329,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 grid.textContent = '';
                 data.listings.forEach(function(l) {
                     var card = document.createElement('div');
-                    card.style.cssText = 'background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.12);border-radius:10px;padding:16px;';
+                    card.style.cssText = 'background:rgba(163, 19, 43, 0.03);border:1px solid rgba(163, 19, 43, 0.12);border-radius:10px;padding:16px;';
 
                     var headerDiv = document.createElement('div');
                     headerDiv.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:8px;';
@@ -340,7 +340,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                     headerDiv.appendChild(nameSpan);
 
                     var badgeSpan = document.createElement('span');
-                    badgeSpan.style.cssText = 'font-size:0.68rem;padding:2px 6px;border-radius:10px;background:rgba(16,185,129,0.15);color:var(--c2);';
+                    badgeSpan.style.cssText = 'font-size:0.68rem;padding:2px 6px;border-radius:10px;background:rgba(163, 19, 43, 0.15);color:var(--c2);';
                     badgeSpan.textContent = 'Claimed \u2713';
                     headerDiv.appendChild(badgeSpan);
 
@@ -401,7 +401,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                     var nameSpan = link.querySelector('span');
                     if (nameSpan && claimedNames[nameSpan.textContent.trim().toLowerCase()]) {
                         var badge = document.createElement('span');
-                        badge.style.cssText = 'font-size:0.62rem;padding:1px 6px;border-radius:8px;background:rgba(16,185,129,0.2);color:#A3132B;margin-left:6px;font-weight:600;white-space:nowrap;';
+                        badge.style.cssText = 'font-size:0.62rem;padding:1px 6px;border-radius:8px;background:rgba(163, 19, 43, 0.2);color:#A3132B;margin-left:6px;font-weight:600;white-space:nowrap;';
                         badge.textContent = 'Claimed \u2713';
                         nameSpan.appendChild(badge);
                     }

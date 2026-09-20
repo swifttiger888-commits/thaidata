@@ -99,7 +99,7 @@ body {
         header { margin-bottom: 40px; }
         h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
         h1 em { font-style: normal; color: var(--c2); }
-        .p-badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16, 185, 129, 0.1); color: var(--c2); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border: 1px solid rgba(16, 185, 129, 0.2); }
+        .p-badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(163, 19, 43, 0.1); color: var(--c2); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border: 1px solid rgba(163, 19, 43, 0.2); }
 
         .dashboard-layout { display: grid; grid-template-columns: 350px 1fr; gap: 30px; }
         @media (max-width: 1000px) { .dashboard-layout { grid-template-columns: 1fr; } }
@@ -114,12 +114,12 @@ body {
             width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 5px; appearance: none;
             outline: none; transition: background 0.2s;
         }
-        input[type="range"]::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--c2); cursor: pointer; box-shadow: 0 0 10px rgba(16,185,129,0.5); border: 2px solid white; }
+        input[type="range"]::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--c2); cursor: pointer; box-shadow: 0 0 10px rgba(163, 19, 43, 0.5); border: 2px solid white; }
 
         /* Right Panel - Stats */
         .analytics-main { display: grid; gap: 30px; }
         
-        .score-hero { background: linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(12,18,32,1) 100%); border: 1px solid var(--line); border-radius: 24px; padding: 40px; display: flex; align-items: center; gap: 40px; }
+        .score-hero { background: linear-gradient(135deg, rgba(163, 19, 43, 0.1) 0%, rgba(12,18,32,1) 100%); border: 1px solid var(--line); border-radius: 24px; padding: 40px; display: flex; align-items: center; gap: 40px; }
         @media (max-width: 600px) { .score-hero { flex-direction: column; text-align: center; } }
         
         .resilience-dial { width: 180px; height: 180px; position: relative; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -141,7 +141,7 @@ body {
 
         .chart-box { background: #FFFFFF; border: 1px solid var(--line); border-radius: 20px; padding: 30px; }
 
-        .recs-box { border-left: 4px solid var(--c2); padding: 25px; background: rgba(16, 185, 129, 0.03); border-radius: 0 16px 16px 0; }
+        .recs-box { border-left: 4px solid var(--c2); padding: 25px; background: rgba(163, 19, 43, 0.03); border-radius: 0 16px 16px 0; }
         .rec-item { display: flex; gap: 15px; margin-top: 20px; }
         .rec-icon { color: var(--c2); margin-top: 4px; }
         .rec-text h5 { margin-bottom: 4px; }
@@ -150,7 +150,7 @@ body {
         .status-pill { padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
         .status-danger { background: rgba(239, 68, 68, 0.1); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.2); }
         .status-warning { background: rgba(245, 158, 11, 0.1); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.2); }
-        .status-success { background: rgba(16, 185, 129, 0.1); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.2); }
+        .status-success { background: rgba(163, 19, 43, 0.1); color: var(--success); border: 1px solid rgba(163, 19, 43, 0.2); }
 
         footer { text-align: center; margin-top: 100px; padding: 40px; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
     </style>
@@ -416,7 +416,7 @@ body {
                         label: 'Net Margin %',
                         data: [18.2, 17.1, 15.4, 14.8, (18 - (100-score)/5)],
                         borderColor: score > 75 ? '#A3132B' : (score > 50 ? '#F59E0B' : '#EF4444'),
-                        backgroundColor: 'rgba(16, 185, 129, 0.05)',
+                        backgroundColor: 'rgba(163, 19, 43, 0.05)',
                         fill: true,
                         tension: 0.4
                     }]

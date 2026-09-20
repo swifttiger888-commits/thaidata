@@ -54,7 +54,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 
         /* Hero */
         .report-hero { padding: 80px 0 50px; text-align: center; position: relative; }
-        .report-hero::before { content: ''; position: absolute; top: 50%; left: 50%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .report-hero::before { content: ''; position: absolute; top: 50%; left: 50%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(163, 19, 43, 0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
         .report-hero .eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--c2); margin-bottom: 16px; }
         .report-hero h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 800; line-height: 1.12; margin-bottom: 20px; position: relative; }
         .report-hero h1 em { font-style: normal; color: var(--c2); }
@@ -92,7 +92,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .rank-table .bar-wrap { background: rgba(255,255,255,0.03); border-radius: 4px; height: 6px; margin-top: 4px; overflow: hidden; }
         .rank-table .bar { height: 100%; background: var(--c2); border-radius: 4px; }
 
-        .highlight-box { background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(16,185,129,0.02)); border: 1px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 24px 28px; margin: 24px 0; }
+        .highlight-box { background: linear-gradient(135deg, rgba(163, 19, 43, 0.08), rgba(163, 19, 43, 0.02)); border: 1px solid rgba(163, 19, 43, 0.2); border-radius: 16px; padding: 24px 28px; margin: 24px 0; }
         .highlight-box p { color: rgba(255,255,255,0.85); }
 
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -102,7 +102,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .share-bar { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 20px 24px; text-align: center; margin: 40px 0; }
         .share-bar p { color: var(--ink4); font-size: 0.9rem; margin-bottom: 12px; }
         .share-bar a { display: inline-block; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none; margin: 4px; color: var(--ink); background: rgba(255,255,255,0.05); border: 1px solid var(--line); transition: all 0.15s; }
-        .share-bar a:hover { border-color: var(--c2); background: rgba(16,185,129,0.1); }
+        .share-bar a:hover { border-color: var(--c2); background: rgba(163, 19, 43, 0.1); }
         .share-bar a.twitter:hover { border-color: #1DA1F2; background: rgba(29,161,242,0.1); }
 
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
@@ -125,7 +125,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .viz-label { min-width: 90px; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.85); }
         .viz-track { flex: 1; height: 28px; background: #FFFFFF; border-radius: 6px; overflow: hidden; position: relative; }
         .viz-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding: 0 10px; font-size: 0.75rem; font-weight: 700; color: var(--ink); transition: width 0.6s ease; min-width: fit-content; }
-        .viz-fill.green { background: linear-gradient(90deg, rgba(16,185,129,0.6), var(--c2)); }
+        .viz-fill.green { background: linear-gradient(90deg, rgba(163, 19, 43, 0.6), var(--c2)); }
         .viz-fill.gold { background: linear-gradient(90deg, rgba(245,158,11,0.6), var(--gold)); }
         .viz-fill.red { background: linear-gradient(90deg, rgba(239,68,68,0.6), var(--red)); }
         .viz-fill.orange { background: linear-gradient(90deg, rgba(249,115,22,0.6), #F97316); }
@@ -139,7 +139,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .pair-head .markup-badge { font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; background: rgba(245,158,11,0.15); color: var(--gold); }
         .pair-bars { display: flex; gap: 4px; height: 22px; }
         .pair-bar { height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding: 0 6px; font-size: 0.65rem; font-weight: 700; color: var(--ink); min-width: fit-content; position: relative; }
-        .pair-bar.green { background: linear-gradient(90deg, rgba(16,185,129,0.5), var(--c2)); }
+        .pair-bar.green { background: linear-gradient(90deg, rgba(163, 19, 43, 0.5), var(--c2)); }
         .pair-bar.gold { background: linear-gradient(90deg, rgba(245,158,11,0.5), var(--gold)); }
         .pair-legend { display: flex; gap: 20px; margin-top: 12px; font-size: 0.75rem; color: var(--ink4); }
         .pair-legend span { display: flex; align-items: center; gap: 6px; }
@@ -152,7 +152,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .hygiene-stars { min-width: 40px; font-size: 0.8rem; text-align: right; }
         .hygiene-track { flex: 1; height: 24px; background: #FFFFFF; border-radius: 6px; overflow: hidden; }
         .hygiene-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding: 0 8px; font-size: 0.7rem; font-weight: 700; color: var(--ink); }
-        .hygiene-fill.s5 { background: linear-gradient(90deg, rgba(16,185,129,0.5), var(--c2)); }
+        .hygiene-fill.s5 { background: linear-gradient(90deg, rgba(163, 19, 43, 0.5), var(--c2)); }
         .hygiene-fill.s4 { background: linear-gradient(90deg, rgba(132,204,22,0.5), #84CC16); }
         .hygiene-fill.s3 { background: linear-gradient(90deg, rgba(250,204,21,0.5), #FACC15); color: #1a1a2e; }
         .hygiene-fill.s2 { background: linear-gradient(90deg, rgba(251,146,60,0.5), #FB923C); }

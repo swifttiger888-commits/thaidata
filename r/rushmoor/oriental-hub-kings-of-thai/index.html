@@ -197,16 +197,16 @@
         .breadcrumb span { color: var(--ink-tertiary); }
 
         /* ============ HERO ============ */
-        .hero {
+        .hero { border-bottom: 1px solid var(--hairline);
             position: relative;
             width: 100%;
-            height: 380px;
+            height: 220px;
             overflow: hidden;
         }
         .hero-bg {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+            background: var(--ivory);
         }
         .hero-watermark {
             position: absolute;
@@ -215,7 +215,7 @@
             width: 400px;
             height: 400px;
             opacity: 0.06;
-            color: white;
+            color: var(--ink);
         }
         .hero-overlay {
             position: absolute;
@@ -261,7 +261,7 @@
             font-size: clamp(2.2rem, 5vw, 3.2rem);
             font-weight: 800;
             line-height: 1.1;
-            color: white;
+            color: var(--ink);
             margin-bottom: 8px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.15);
             overflow-wrap: break-word;
@@ -525,7 +525,7 @@
         /* ============ CLAIM CTA ============ */
         .claim-card {
             background: linear-gradient(135deg, var(--green-light) 0%, #ECFDF5 100%);
-            border: 1px solid rgba(16,185,129,0.2);
+            border: 1px solid rgba(163, 19, 43, 0.2);
             border-radius: var(--radius-lg);
             padding: 32px;
             text-align: center;
@@ -539,7 +539,7 @@
             right: -20%;
             width: 200px;
             height: 200px;
-            background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(163, 19, 43, 0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
         .claim-card h3 {
@@ -567,13 +567,13 @@
             text-decoration: none;
             font-size: 0.95rem;
             transition: all 0.2s;
-            box-shadow: 0 4px 14px rgba(16,185,129,0.3);
+            box-shadow: 0 4px 14px rgba(163, 19, 43, 0.3);
             position: relative;
         }
         .claim-card .btn:hover {
             background: var(--green-dark);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(16,185,129,0.4);
+            box-shadow: 0 6px 20px rgba(163, 19, 43, 0.4);
         }
 
         /* ============ SIDEBAR: TRUST BADGES ============ */
@@ -1010,7 +1010,7 @@
             
             <!-- === CLAIMED CONTENT (hidden until owner claims listing) === -->
 
-            <div id="enrichment-card" class="card animate-in" style="display:none;background:rgba(16,185,129,0.03);border:1px solid rgba(16,185,129,0.12);">
+            <div id="enrichment-card" class="card animate-in" style="display:none;background:rgba(163, 19, 43, 0.03);border:1px solid rgba(163, 19, 43, 0.12);">
                 <h2 class="card-title">From Their <em>Website</em></h2>
                 <p style="font-size:0.75rem;color:var(--ink-tertiary);margin-bottom:12px;">Auto-detected from the restaurant's website. Owner-verified where indicated. Restaurant owners can update or remove this information at any time by claiming their listing.</p>
                 <div id="enrichment-content" style="color:var(--ink-secondary);font-size:0.9rem;line-height:1.6;"></div>
@@ -1057,7 +1057,7 @@
             </div>
 
             <!-- Claimed badge (shown when claimed) -->
-            <div id="claimed-badge" class="card" style="display:none;background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(10,122,111,0.04));border:1px solid rgba(16,185,129,0.2);text-align:center;">
+            <div id="claimed-badge" class="card" style="display:none;background:linear-gradient(135deg,rgba(163, 19, 43, 0.08),rgba(10,122,111,0.04));border:1px solid rgba(163, 19, 43, 0.2);text-align:center;">
                 <div style="font-size:2.5rem;color:var(--green);margin-bottom:8px;">
                     <i class="fas fa-check-circle"></i>
                 </div>
@@ -1175,7 +1175,7 @@
 
         function mkEnrichTag(field) {
             var span = document.createElement('span');
-            span.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(16,185,129,0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
+            span.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(163, 19, 43, 0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
             span.textContent = field.confidence === 'high' ? 'auto' : field.confidence === 'medium' ? 'auto' : '';
             var frag = document.createDocumentFragment();
             frag.appendChild(document.createTextNode(' '));
@@ -1346,7 +1346,7 @@
                             p.style.cssText = 'margin-bottom:10px;';
                             p.textContent = enr.generated_summary;
                             var tag = document.createElement('span');
-                            tag.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(16,185,129,0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
+                            tag.style.cssText = 'font-size:0.65rem;color:var(--green-dark);background:rgba(163, 19, 43, 0.08);padding:1px 6px;border-radius:4px;margin-left:6px;white-space:nowrap;';
                             tag.textContent = 'auto';
                             var frag = document.createDocumentFragment();
                             frag.appendChild(document.createTextNode(' '));
