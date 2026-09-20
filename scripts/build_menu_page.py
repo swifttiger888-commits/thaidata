@@ -62,6 +62,10 @@ def build(data):
     slug_name = re.sub(r"[^a-z0-9]+", "-", rname.lower()).strip("-")
     listing_url = f"/r/{slug_city}/{slug_name}/"
     checked = data.get("checked") or datetime.date.today().isoformat()
+    try:
+        checked_human = datetime.date.fromisoformat(checked).strftime("%d %B %Y").lstrip("0")
+    except ValueError:
+        checked_human = checked
 
     cats = data["categories"]
     total = sum(len(v) for v in cats.values()) + len(data.get("addons") or [])
@@ -176,11 +180,18 @@ h1 em{{font-style:italic;color:var(--green-dark)}}
 .notice{{background:var(--cream);border:1px solid #FDE68A;border-radius:var(--radius);padding:14px 16px;margin:22px 0;font-size:var(--step--1);color:#78350F}}
 .notice a{{color:#78350F;font-weight:600}}
 nav.catnav{{position:sticky;top:0;z-index:20;background:rgba(250,250,249,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:11px 0;margin-bottom:8px}}
-.chips{{display:flex;gap:8px;overflow-x:auto;padding:0 20px;max-width:880px;margin:0 auto;scrollbar-width:none}}
+/* Right-edge fade signals that the chip strip scrolls horizontally.
+   Without it the last chip is clipped flush at the viewport edge. */
+nav.catnav::after{{content:"";position:absolute;top:0;right:0;bottom:0;width:38px;pointer-events:none;background:linear-gradient(to right,rgba(250,250,249,0) 0%,rgba(250,250,249,.96) 70%)}}
+.navrow{{display:flex;align-items:center;gap:14px;max-width:880px;margin:0 auto;padding:0 20px}}
+.navbrand{{flex:0 0 auto;font-weight:600;font-size:var(--step--1);color:var(--ink);white-space:nowrap;text-decoration:none;display:none}}
+.navbrand:hover{{color:var(--green-dark)}}
+@media (min-width:620px){{ .navbrand{{display:block}} }}
+.chips{{display:flex;gap:8px;overflow-x:auto;padding:0;scrollbar-width:none;flex:1 1 auto;min-width:0}}
 .chips::-webkit-scrollbar{{display:none}}
 .navchip{{flex:0 0 auto;font-size:var(--step--1);font-weight:500;color:var(--ink-secondary);text-decoration:none;padding:5px 12px;border:1px solid var(--border);border-radius:999px;background:var(--white);white-space:nowrap}}
 .navchip:hover{{border-color:var(--green);color:var(--green-dark)}}
-section.cat{{padding:26px 0 6px}}
+section.cat{{padding:26px 0 6px;scroll-margin-top:78px}}
 .cat-title{{font-size:var(--step-2);margin:0 0 14px;padding-bottom:9px;border-bottom:2px solid var(--green-light)}}
 .tiers{{background:var(--green-light);border-radius:var(--radius);padding:14px 16px;margin:0 0 16px}}
 .tiers-label{{margin:0 0 8px;font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green-dark)}}
@@ -202,6 +213,13 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .btn{{display:inline-block;background:var(--green-dark);color:#fff;text-decoration:none;font-weight:600;padding:11px 22px;border-radius:999px;font-size:var(--step--1)}}
 footer{{border-top:1px solid var(--border);padding:22px 0 40px;font-size:.8125rem;color:var(--ink-tertiary)}}
 footer p{{margin:0 0 6px}}
+@media (max-width:640px){{
+  h1{{font-size:var(--step-2)}}
+  .notice{{padding:11px 13px;margin:14px 0;font-size:.8125rem;line-height:1.5}}
+  section.cat{{padding:20px 0 4px;scroll-margin-top:66px}}
+  .cat-title{{font-size:var(--step-1)}}
+  .dish{{padding:11px 0}}
+}}
 @media print{{
   nav.catnav,.cta{{display:none}}
   body{{background:#fff}}
@@ -221,12 +239,12 @@ footer p{{margin:0 0 6px}}
   </p>
 </div></header>
 
-<nav class="catnav"><div class="chips">{nav}</div></nav>
+<nav class="catnav"><div class="navrow"><a class="navbrand" href="{listing_url}">{esc(rname)}</a><div class="chips">{nav}</div></div></nav>
 
 <main class="wrap">
   <div class="notice">
-    Menu published by ThaiData UK from <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','the restaurant&rsquo;s own menu'))}</a>,
-    read on <b>{checked}</b>. Prices are set by the restaurant and can change — please confirm when ordering.
+    Published by ThaiData UK from <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','the restaurant&rsquo;s own menu'))}</a>, read {checked_human}.
+    Prices are set by the restaurant — please confirm when ordering.
   </div>
 
   {"".join(sections)}
