@@ -23,7 +23,9 @@
     "price": "£ 5.50",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 10,
@@ -32,7 +34,9 @@
     "price": "£ 14.95",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 11,
@@ -41,7 +45,9 @@
     "price": "£ 3.50",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 2,
@@ -50,7 +56,9 @@
     "price": "£ 5.50",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 3,
@@ -59,7 +67,9 @@
     "price": "£ 5.50",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 4,
@@ -68,7 +78,9 @@
     "price": "£ 5.50",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 5,
@@ -77,7 +89,9 @@
     "price": "£ 5.95",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": false
    },
    {
     "num": 6,
@@ -86,7 +100,9 @@
     "price": "£ 5.95",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": false
    },
    {
     "num": 7,
@@ -95,7 +111,9 @@
     "price": "£ 5.95",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 8,
@@ -104,7 +122,9 @@
     "price": "£ 5.95",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 9,
@@ -113,64 +133,355 @@
     "price": "£ 5.95",
     "category": "Starters",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    }
   ],
-  "Chef's Specials": [
+  "Noodle & Rice Dishes": [
    {
     "num": 100,
     "name": "Pad Boong Moo-Grob with / without Rice",
     "description": "Crispy pork belly stir-fried with morning glory and chillies.",
     "price": "£12.95",
-    "category": "Chef's Specials",
+    "category": "Noodle & Rice Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": false
    },
    {
     "num": 101,
     "name": "Prig Gang Moo-Grob with / without Rice",
     "description": "Crispy pork belly stir-fried with red curry paste and vegetables.",
     "price": "£12.95",
-    "category": "Chef's Specials",
+    "category": "Noodle & Rice Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 3,
+    "celery": true
    },
    {
     "num": 102,
     "name": "Kaa Moo with Noodles",
     "description": "Slow-braised pork leg served with egg noodles and a boiled egg.",
     "price": "£11.95",
-    "category": "Chef's Specials",
+    "category": "Noodle & Rice Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 103,
     "name": "Guay Jub",
     "description": "Silky rolled rice noodles in a dark, peppery herbal broth.",
     "price": "£11.95",
-    "category": "Chef's Specials",
+    "category": "Noodle & Rice Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 104,
     "name": "Kao Lao En Dtoon",
     "description": "Slow-cooked, gelatinous beef tendons in a savoury clear broth, served without noodles.",
     "price": "£12.95",
-    "category": "Chef's Specials",
+    "category": "Noodle & Rice Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 105,
     "name": "Kao Lao Beef / Pork",
     "description": "Pork or beef in a savoury, clear broth, served without noodles.",
     "price": "£10.95",
-    "category": "Chef's Specials",
+    "category": "Noodle & Rice Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
+   {
+    "num": 98,
+    "name": "Ga-Prao Neua / Moo Dtoon with Rice",
+    "description": "Slow-cooked stewed pork or beef stir-fried with basil leaves and chillies.",
+    "price": "£10.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 5,
+    "celery": true
+   },
+   {
+    "num": 99,
+    "name": "Ga-Prao Moo-Grob with / without Rice",
+    "description": "Crispy pork belly stir-fried with basil leaves and chillies.",
+    "price": "£12.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 5,
+    "celery": true
+   },
+   {
+    "num": 58,
+    "name": "Pad Thai Chicken/Pork/Beef",
+    "description": "Rice noodles, eggs and bean sprouts, stir-fried in tamarind sauce. Topped with peanuts.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 59,
+    "name": "Pad Thai Prawns",
+    "description": "Rice noodles, eggs and bean sprouts, stir-fried in tamarind sauce. Topped with peanuts.",
+    "price": "£10.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 60,
+    "name": "Pad Kua Chicken",
+    "description": "Stir-fried thick rice noodles with spring onions, eggs and preserved vegetables.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 61,
+    "name": "Pad Kee Mao Chicken/Pork/Beef",
+    "description": "Drunken stir-fried thick rice noodles with basil, fresh chilli and vegetables.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 4,
+    "celery": true
+   },
+   {
+    "num": 62,
+    "name": "Pad Kee Mao Prawns",
+    "description": "Drunken stir-fried thick rice noodles with basil, fresh chilli and vegetables.",
+    "price": "£10.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 4,
+    "celery": true
+   },
+   {
+    "num": 63,
+    "name": "Pad Si Aew Chicken/Pork/Beef",
+    "description": "Stir-fried thick rice noodles with egg, vegetables and dark soy sauce.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 64,
+    "name": "Pad Si Aew Prawns",
+    "description": "Stir-fried thick rice noodles with egg, vegetables and dark soy sauce.",
+    "price": "£10.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 65,
+    "name": "Raat Na Chicken/Pork/Beef",
+    "description": "Stir-fried thick noodles topped with a savoury gravy, soy sauce and vegetables.",
+    "price": "£10.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": true
+   },
+   {
+    "num": 66,
+    "name": "Raat Na Seafood",
+    "description": "Stir-fried thick noodles topped with a savoury gravy, soy sauce and vegetables.",
+    "price": "£11.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": true
+   },
+   {
+    "num": 67,
+    "name": "Suki Chicken/Pork/Beef",
+    "description": "Stir-fried Noodles or Noodle Soup with Thai-style Suki sauce and glass noodles.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 2,
+    "celery": true
+   },
+   {
+    "num": 68,
+    "name": "Suki Seafood",
+    "description": "Stir-fried Noodles or Noodle Soup with Thai-style Suki sauce and glass noodles.",
+    "price": "£11.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 2,
+    "celery": true
+   },
+   {
+    "num": 69,
+    "name": "Seafood Yen Ta Fo",
+    "description": "Pink noodle soup with mixed seafood and fish balls, served with crispy wonton.",
+    "price": "£11.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": true
+   },
+   {
+    "num": 70,
+    "name": "Kuay Dtiao Neua / Moo Dtoon",
+    "description": "Slow-stewed, aromatic broth with tender meat, topped with beef or pork balls.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": true
+   },
+   {
+    "num": 71,
+    "name": "Kuay Dtiao Tom Yum Moo-Sup",
+    "description": "Spicy, sour noodle soup with minced & stewed pork.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 2,
+    "celery": true
+   },
+   {
+    "num": 72,
+    "name": "Noodle Tom Yum Soup Chicken/Prawn",
+    "description": "A spicy, hot and sour Tom Yum soup with noodles.",
+    "price": "£9.95/£10.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 2,
+    "celery": true
+   },
+   {
+    "num": 73,
+    "name": "Khao Kaa Moo",
+    "description": "Meltingly tender stewed pork leg served over rice with boiled egg and special dipping sauce.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 74,
+    "name": "Khao Pad Sapparod Chicken/Prawn",
+    "description": "Famous Thai egg fried rice with curry powder, pineapple, cashew nuts, and vegetables.",
+    "price": "£9.95/£10.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 75,
+    "name": "Khao Man Gai (Hainanese Chicken Rice) with Poached Chicken/Crispy Chicken",
+    "description": "Chicken with garlic and ginger rice served with cucumber and special soybean sauce.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": true
+   },
+   {
+    "num": 76,
+    "name": "Pad Ga-Prao Minced Chicken / Pork / Beef with Rice",
+    "description": "Stir-fried with basil leaves and chillies, served over rice.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 5,
+    "celery": true
+   },
+   {
+    "num": 77,
+    "name": "Pad Ga-Prao Seafood with Rice",
+    "description": "Stir-fried with basil leaves and chillies, served over rice.",
+    "price": "£11.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": 5,
+    "celery": true
+   },
+   {
+    "num": 78,
+    "name": "Khao Pad Chicken / Pork / Beef",
+    "description": "Thai-style egg fried rice with vegetables.",
+    "price": "£9.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": false
+   },
+   {
+    "num": 79,
+    "name": "Khao Pad with Seafood",
+    "description": "Thai-style egg fried rice with vegetables.",
+    "price": "£11.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": true
+   },
+   {
+    "num": 80,
+    "name": "Khao Pad Puu (Crab Fried Rice)",
+    "description": "Thai-style egg fried rice with vegetables.",
+    "price": "£11.95",
+    "category": "Noodle & Rice Dishes",
+    "vegetarian": false,
+    "heat": null,
+    "spice": null,
+    "celery": true
+   }
+  ],
+  "Chef's Specials": [
    {
     "num": 33,
     "name": "Khao Niao & Moo Yang",
@@ -178,7 +489,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 34,
@@ -187,7 +500,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 4,
+    "celery": true
    },
    {
     "num": 35,
@@ -196,7 +511,9 @@
     "price": "£14.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 5,
+    "celery": true
    },
    {
     "num": 36,
@@ -205,7 +522,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 4,
+    "celery": true
    },
    {
     "num": 37,
@@ -214,7 +533,9 @@
     "price": "£10.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 38,
@@ -223,7 +544,9 @@
     "price": "£10.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 39,
@@ -232,7 +555,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 4,
+    "celery": false
    },
    {
     "num": 40,
@@ -241,7 +566,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 41,
@@ -250,7 +577,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": false
    },
    {
     "num": 91,
@@ -259,7 +588,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": false
    },
    {
     "num": 92,
@@ -268,7 +599,9 @@
     "price": "£14.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 5,
+    "celery": true
    },
    {
     "num": 93,
@@ -277,7 +610,9 @@
     "price": "£15.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 94,
@@ -286,7 +621,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 95,
@@ -295,7 +632,9 @@
     "price": "£13.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 96,
@@ -304,7 +643,9 @@
     "price": "£12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 97,
@@ -313,25 +654,9 @@
     "price": "£9.95 / £10.95 / £12.95",
     "category": "Chef's Specials",
     "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 98,
-    "name": "Ga-Prao Neua / Moo Dtoon with Rice",
-    "description": "Slow-cooked stewed pork or beef stir-fried with basil leaves and chillies.",
-    "price": "£10.95",
-    "category": "Chef's Specials",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 99,
-    "name": "Ga-Prao Moo-Grob with / without Rice",
-    "description": "Crispy pork belly stir-fried with basil leaves and chillies.",
-    "price": "£12.95",
-    "category": "Chef's Specials",
-    "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    }
   ],
   "Hot Pots": [
@@ -343,7 +668,9 @@
     "category": "Hot Pots",
     "vegetarian": false,
     "heat": null,
-    "price_note": "Chicken £20.95 · Prawn or Seafood £23.95"
+    "price_note": "Chicken £20.95 · Prawn or Seafood £23.95",
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 107,
@@ -352,7 +679,9 @@
     "price": "£24.95",
     "category": "Hot Pots",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    }
   ],
   "Side Dishes": [
@@ -362,8 +691,10 @@
     "description": "",
     "price": "£12.95",
     "category": "Side Dishes",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 81,
@@ -372,7 +703,9 @@
     "price": "£5.50",
     "category": "Side Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": true
    },
    {
     "num": 82,
@@ -381,7 +714,9 @@
     "price": "£5.95",
     "category": "Side Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": true
    },
    {
     "num": 83,
@@ -390,7 +725,9 @@
     "price": "£5.95",
     "category": "Side Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 84,
@@ -399,7 +736,9 @@
     "price": "£5.95",
     "category": "Side Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 85,
@@ -407,8 +746,10 @@
     "description": "",
     "price": "£3.00",
     "category": "Side Dishes",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 86,
@@ -417,7 +758,9 @@
     "price": "£3.95",
     "category": "Side Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 87,
@@ -425,8 +768,10 @@
     "description": "",
     "price": "£3.95",
     "category": "Side Dishes",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 88,
@@ -434,8 +779,10 @@
     "description": "",
     "price": "£3.95",
     "category": "Side Dishes",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 89,
@@ -443,8 +790,10 @@
     "description": "",
     "price": "£3.95",
     "category": "Side Dishes",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 90,
@@ -452,8 +801,10 @@
     "description": "",
     "price": "£3.95",
     "category": "Side Dishes",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": null,
+    "celery": false
    }
   ],
   "Vegetarian Starters": [
@@ -464,7 +815,9 @@
     "price": "£ 5.50",
     "category": "Vegetarian Starters",
     "vegetarian": true,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 13,
@@ -473,7 +826,9 @@
     "price": "£ 5.50",
     "category": "Vegetarian Starters",
     "vegetarian": true,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 14,
@@ -482,7 +837,9 @@
     "price": "£ 5.50",
     "category": "Vegetarian Starters",
     "vegetarian": true,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 15,
@@ -490,8 +847,10 @@
     "description": "Crispy tofu, spring onions, ginger and peanuts, tossed in Thai chilli paste and lime dressing, served on lettuce.",
     "price": "£ 5.50",
     "category": "Vegetarian Starters",
-    "vegetarian": true,
-    "heat": null
+    "vegetarian": false,
+    "heat": null,
+    "spice": 1,
+    "celery": true
    }
   ],
   "Soups": [
@@ -502,7 +861,9 @@
     "price": "£5.50",
     "category": "Soups",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 17,
@@ -511,7 +872,9 @@
     "price": "£5.50",
     "category": "Soups",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": true
    },
    {
     "num": 18,
@@ -520,7 +883,9 @@
     "price": "£5.95",
     "category": "Soups",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 19,
@@ -528,8 +893,10 @@
     "description": "Thai spicy, hot and sour lemongrass clear soup with mushrooms.",
     "price": "£5.50",
     "category": "Soups",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 20,
@@ -537,8 +904,10 @@
     "description": "Coconut soup with galangal and lime, loaded with mushrooms.",
     "price": "£5.50",
     "category": "Soups",
-    "vegetarian": false,
-    "heat": null
+    "vegetarian": true,
+    "heat": null,
+    "spice": 1,
+    "celery": true
    }
   ],
   "Main Courses": [
@@ -549,7 +918,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 4,
+    "celery": true
    },
    {
     "num": 22,
@@ -558,7 +929,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 23,
@@ -567,7 +940,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": true
    },
    {
     "num": 24,
@@ -576,7 +951,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 25,
@@ -585,7 +962,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 3,
+    "celery": true
    },
    {
     "num": 26,
@@ -594,7 +973,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 27,
@@ -603,7 +984,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 5,
+    "celery": false
    },
    {
     "num": 28,
@@ -612,7 +995,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 1,
+    "celery": true
    },
    {
     "num": 29,
@@ -621,7 +1006,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": false
    },
    {
     "num": 30,
@@ -630,7 +1017,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 31,
@@ -639,7 +1028,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 32,
@@ -648,7 +1039,9 @@
     "price": null,
     "category": "Main Courses",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    }
   ],
   "Fish Dishes": [
@@ -659,7 +1052,9 @@
     "price": "£ 17.95",
     "category": "Fish Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": false
    },
    {
     "num": 43,
@@ -668,7 +1063,9 @@
     "price": "£ 17.95",
     "category": "Fish Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": false
    },
    {
     "num": 44,
@@ -677,7 +1074,9 @@
     "price": "£ 17.95",
     "category": "Fish Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 5,
+    "celery": true
    },
    {
     "num": 45,
@@ -686,7 +1085,9 @@
     "price": "£17.95",
     "category": "Fish Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 5,
+    "celery": true
    },
    {
     "num": 46,
@@ -695,7 +1096,9 @@
     "price": "£17.95",
     "category": "Fish Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 3,
+    "celery": true
    }
   ],
   "Sizzling Dishes": [
@@ -706,7 +1109,9 @@
     "price": "£13.95",
     "category": "Sizzling Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    },
    {
     "num": 48,
@@ -715,7 +1120,9 @@
     "price": "£13.95",
     "category": "Sizzling Dishes",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": null,
+    "celery": true
    }
   ],
   "Salads": [
@@ -726,7 +1133,9 @@
     "price": "£11.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 50,
@@ -735,7 +1144,9 @@
     "price": "£9.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 51,
@@ -744,7 +1155,9 @@
     "price": "£12.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 4,
+    "celery": true
    },
    {
     "num": 52,
@@ -753,7 +1166,9 @@
     "price": "£10.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 53,
@@ -762,7 +1177,9 @@
     "price": "£12.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 4,
+    "celery": true
    },
    {
     "num": 54,
@@ -771,7 +1188,9 @@
     "price": "£12.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 55,
@@ -780,7 +1199,9 @@
     "price": "£13.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": false
    },
    {
     "num": 56,
@@ -789,7 +1210,9 @@
     "price": "£10.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 2,
+    "celery": true
    },
    {
     "num": 57,
@@ -798,216 +1221,9 @@
     "price": "£11.95",
     "category": "Salads",
     "vegetarian": false,
-    "heat": null
-   }
-  ],
-  "Noodle & Rice Dishes": [
-   {
-    "num": 58,
-    "name": "Pad Thai Chicken/Pork/Beef",
-    "description": "Rice noodles, eggs and bean sprouts, stir-fried in tamarind sauce. Topped with peanuts.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 59,
-    "name": "Pad Thai Prawns",
-    "description": "Rice noodles, eggs and bean sprouts, stir-fried in tamarind sauce. Topped with peanuts.",
-    "price": "£10.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 60,
-    "name": "Pad Kua Chicken",
-    "description": "Stir-fried thick rice noodles with spring onions, eggs and preserved vegetables.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 61,
-    "name": "Pad Kee Mao Chicken/Pork/Beef",
-    "description": "Drunken stir-fried thick rice noodles with basil, fresh chilli and vegetables.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 62,
-    "name": "Pad Kee Mao Prawns",
-    "description": "Drunken stir-fried thick rice noodles with basil, fresh chilli and vegetables.",
-    "price": "£10.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 63,
-    "name": "Pad Si Aew Chicken/Pork/Beef",
-    "description": "Stir-fried thick rice noodles with egg, vegetables and dark soy sauce.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 64,
-    "name": "Pad Si Aew Prawns",
-    "description": "Stir-fried thick rice noodles with egg, vegetables and dark soy sauce.",
-    "price": "£10.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 65,
-    "name": "Raat Na Chicken/Pork/Beef",
-    "description": "Stir-fried thick noodles topped with a savoury gravy, soy sauce and vegetables.",
-    "price": "£10.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 66,
-    "name": "Raat Na Seafood",
-    "description": "Stir-fried thick noodles topped with a savoury gravy, soy sauce and vegetables.",
-    "price": "£11.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 67,
-    "name": "Suki Chicken/Pork/Beef",
-    "description": "Stir-fried Noodles or Noodle Soup with Thai-style Suki sauce and glass noodles.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 68,
-    "name": "Suki Seafood",
-    "description": "Stir-fried Noodles or Noodle Soup with Thai-style Suki sauce and glass noodles.",
-    "price": "£11.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 69,
-    "name": "Seafood Yen Ta Fo",
-    "description": "Pink noodle soup with mixed seafood and fish balls, served with crispy wonton.",
-    "price": "£11.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 70,
-    "name": "Kuay Dtiao Neua / Moo Dtoon",
-    "description": "Slow-stewed, aromatic broth with tender meat, topped with beef or pork balls.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 71,
-    "name": "Kuay Dtiao Tom Yum Moo-Sup",
-    "description": "Spicy, sour noodle soup with minced & stewed pork.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 72,
-    "name": "Noodle Tom Yum Soup Chicken/Prawn",
-    "description": "A spicy, hot and sour Tom Yum soup with noodles.",
-    "price": "£9.95/£10.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 73,
-    "name": "Khao Kaa Moo",
-    "description": "Meltingly tender stewed pork leg served over rice with boiled egg and special dipping sauce.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 74,
-    "name": "Khao Pad Sapparod Chicken/Prawn",
-    "description": "Famous Thai egg fried rice with curry powder, pineapple, cashew nuts, and vegetables.",
-    "price": "£9.95/£10.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 75,
-    "name": "Khao Man Gai (Hainanese Chicken Rice) with Poached Chicken/Crispy Chicken",
-    "description": "Chicken with garlic and ginger rice served with cucumber and special soybean sauce.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 76,
-    "name": "Pad Ga-Prao Minced Chicken / Pork / Beef with Rice",
-    "description": "Stir-fried with basil leaves and chillies, served over rice.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 77,
-    "name": "Pad Ga-Prao Seafood with Rice",
-    "description": "Stir-fried with basil leaves and chillies, served over rice.",
-    "price": "£11.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 78,
-    "name": "Khao Pad Chicken / Pork / Beef",
-    "description": "Thai-style egg fried rice with vegetables.",
-    "price": "£9.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 79,
-    "name": "Khao Pad with Seafood",
-    "description": "Thai-style egg fried rice with vegetables.",
-    "price": "£11.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
-   },
-   {
-    "num": 80,
-    "name": "Khao Pad Puu (Crab Fried Rice)",
-    "description": "Thai-style egg fried rice with vegetables.",
-    "price": "£11.95",
-    "category": "Noodle & Rice Dishes",
-    "vegetarian": false,
-    "heat": null
+    "heat": null,
+    "spice": 3,
+    "celery": true
    }
   ]
  },
@@ -1106,9 +1322,20 @@
    "dish 106 printed as one dish with two protein prices. Correct price '£20.95 / £23.95' (Chicken / Prawn or Seafood), was recorded as £20.95 only."
   ],
   "unverified": [
-   "Section boundaries for dishes 98-105 — dish names and prices are verified, but the printed heading they sit under is not. Listed under Chef's Specials as a best guess.",
    "Chilli-level markers (eg 'C 4') appear next to some dishes on the printed menu but are only partially captured, so they are omitted rather than guessed."
   ],
-  "completeness": "dishes 1-108 present with no gaps; prices verified where printed"
+  "completeness": "dishes 1-108 present with no gaps; prices verified where printed",
+  "markers": {
+   "method": "legend read verbatim (C=Celery, V=Vegetarian, chilli 1-5=spice) + high-res fine-slice marker pass cross-checked vs full-page map",
+   "spice_levels": 53,
+   "celery_flagged": 64,
+   "vegetarian_flagged": 11,
+   "section_correction": "dishes 98-105 moved from Chef's Specials to Noodle & Rice Dishes",
+   "minor_conflicts_resolved_to_fine_slice": [
+    "dish 15 (Yum Tofu): V not confirmed at high res — left unmarked",
+    "dish 53 (Seafood Yum): celery 'C' confirmed at high res",
+    "dish 83 (Pad Pak Sum Sahai): V not confirmed at high res — left unmarked"
+   ]
+  }
  }
 }

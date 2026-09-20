@@ -40,13 +40,18 @@ def esc(s):
 def dish_html(it, protein_tiers=None):
     price = money(it.get("price"))
     veg = it.get("vegetarian")
-    heat = it.get("heat")
+    spice = it.get("spice")
+    celery = it.get("celery")
     bits = [f'<li class="dish">']
     bits.append('<div class="dish-main">')
     bits.append('<div class="dish-head">')
     bits.append(f'<h3 class="dish-name">{esc(it["name"])}')
     if veg:
         bits.append('<span class="badge badge-veg" title="Vegetarian">V</span>')
+    if spice:
+        bits.append(f'<span class="badge badge-spice" title="Spice level {spice}/5">🌶 {spice}</span>')
+    if celery:
+        bits.append('<span class="badge badge-celery" title="Contains celery">C</span>')
     bits.append("</h3>")
     if price:
         bits.append(f'<span class="dish-price">{esc(price)}</span>')
@@ -71,6 +76,13 @@ def build(data):
         checked_human = checked
 
     cats = data["categories"]
+    CATEGORY_ORDER = ["Starters", "Vegetarian Starters", "Soups", "Main Courses",
+                      "Chef's Specials", "Fish Dishes", "Sizzling Dishes", "Salads",
+                      "Noodle & Rice Dishes", "Side Dishes", "Hot Pots"]
+    cats = {k: v for k, v in sorted(
+        cats.items(),
+        key=lambda kv: CATEGORY_ORDER.index(kv[0]) if kv[0] in CATEGORY_ORDER else 99,
+    )}
     total = sum(len(v) for v in cats.values()) + len(data.get("addons") or [])
     priced = sum(1 for v in cats.values() for i in v if i.get("price"))
 
@@ -208,6 +220,10 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .dish-name{{font-size:var(--step-0);font-weight:600;margin:0;display:flex;align-items:center;gap:7px}}
 .badge{{font-size:.6875rem;font-weight:700;padding:1px 6px;border-radius:var(--radius-sm);line-height:1.5}}
 .badge-veg{{background:var(--green-light);color:var(--green-dark)}}
+.badge-spice{{background:#FEE2E2;color:#B91C1C}}
+.badge-celery{{background:var(--border-light);color:var(--ink-tertiary)}}
+.legend{{font-size:.8125rem;color:var(--ink-tertiary);margin:0 0 16px}}
+.legend .badge{{vertical-align:middle;margin:0 3px}}
 .dish-price{{font-weight:700;color:var(--green-dark);white-space:nowrap;font-variant-numeric:tabular-nums}}
 .dish-desc{{margin:3px 0 0;font-size:var(--step--1);color:var(--ink-secondary);max-width:64ch}}
 .dish-note{{margin:4px 0 0;font-size:.8125rem;color:var(--ink-tertiary);font-weight:500}}
@@ -260,6 +276,8 @@ footer p{{margin:0 0 6px}}
     Published by ThaiData UK from <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','the restaurant&rsquo;s own menu'))}</a>, read {checked_human}.
     Prices are set by the restaurant — please confirm when ordering.
   </div>
+
+  <p class="legend">Symbols: <span class="badge badge-spice">🌶 4</span> spice level (1&ndash;5) &nbsp;&middot;&nbsp; <span class="badge badge-celery">C</span> celery &nbsp;&middot;&nbsp; <span class="badge badge-veg">V</span> vegetarian</p>
 
   {"".join(sections)}
 
