@@ -2206,12 +2206,13 @@ em { font-style: normal; font-weight: 700; }
   <div class="grain"></div>
 
   <!-- NAV -->
-  <nav id="main-nav">
-    <div class="nav-bar">
-      <a href="index.html" class="logo">
-        <img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="111" height="40">
+  <nav id="main-nav" class="td-masthead" aria-label="Primary">
+    <div class="nav-bar td-bar">
+      <a href="/" class="logo td-brand">
+        <span class="td-mark" aria-hidden="true"></span><span class="td-wordmark">ThaiData UK</span>
       </a>
-      <div class="nav-r">
+      <div class="nav-r td-links">
+        <a href="#hero-q" class="nav-link" data-find-restaurant>Find my restaurant</a>
         <a href="tools.html" class="nav-link">Tools</a>
         <a href="guides.html" class="nav-link">Guides</a>
         <a href="learn.html" class="nav-link">Learn</a>
@@ -2227,15 +2228,13 @@ em { font-style: normal; font-weight: 700; }
   </nav>
 
   <!-- HERO — ONE pitch: find your restaurant, claim it free -->
-  <main>
+  <main class="td-home">
   <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
 
       <!-- ░░ LEFT: the mobile stack, unchanged on desktop ░░ -->
       <div class="hero-col">
-        <div class="hero-rule" aria-hidden="true"></div>
-
         <h1 class="hero-h1">Your restaurant is already listed.</h1>
         <p class="hero-lead">1,265 UK Thai restaurants, built from official Food Standards Agency records. Claim yours free, forever.</p>
 
@@ -2418,54 +2417,6 @@ em { font-style: normal; font-weight: 700; }
   </script>
 </section>
   <!-- INSIGHT STRIP — plain English findings, not charts -->
-  <section class="insight-strip" id="what-you-find">
-    <div class="wrap">
-      <div class="insight-strip-head reveal">
-        <p>What Thai restaurant owners discover</p>
-        <h2>The numbers most operators <em>don't know</em></h2>
-      </div>
-      <div class="insight-cards">
-        <div class="insight-card reveal">
-          <div class="insight-card-label">Delivery margins</div>
-          <div class="insight-finding">Your Pad Thai probably earns you £2.10 on Uber Eats — not the £7+ it looks like
-          </div>
-          <div class="insight-detail">After a 30% commission, VAT, and packaging, a £13 Pad Thai nets around £7.30.
-            Subtract your food cost and you're left with a fraction of what you expected.</div>
-          <span class="insight-pill pill-red">Most owners are shocked by this</span>
-        </div>
-        <div class="insight-card reveal reveal-d1">
-          <div class="insight-card-label">NLW April 2026</div>
-          <div class="insight-finding">A typical Thai restaurant with 6 staff faces £6,200–£9,400 more per year from
-            April</div>
-          <div class="insight-detail">The NLW jump from £12.21 to £12.71 hits hardest for mixed-age kitchen teams. Most
-            operators haven't modelled the exact number for their roster.</div>
-          <span class="insight-pill pill-amber">Calculate yours in 60 seconds above</span>
-        </div>
-        <div class="insight-card reveal reveal-d2">
-          <div class="insight-card-label">Menu pricing</div>
-          <div class="insight-finding">A £1.50 price rise across 8 dishes covers the entire NLW increase for most small
-            teams</div>
-          <div class="insight-detail">Most operators raise prices on 6–8 dishes and cover the wage gap without a single
-            complaint. The tool shows you which dishes to move and what the maths looks like.</div>
-          <span class="insight-pill pill-green">Actionable, not just data</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEM SECTION -->
-  
-
-  <!-- URGENCY BAR -->
-  
-
-  <!-- TOOLS SECTION -->
-  
-
-  <!-- OUTCOMES — what operators discover, plain language -->
-  
-
-  <!-- FREE GUIDES & RESOURCES -->
   <section id="getting-started" class="how-claim">
     <div class="wrap">
       <p class="label">Three steps</p>
@@ -2490,6 +2441,39 @@ em { font-style: normal; font-weight: 700; }
       <p class="how-claim-cta">
         <a class="btn-primary" href="/claim/">Claim your listing free</a>
       </p>
+    </div>
+  </section><section class="insight-strip" id="what-you-find">
+    <div class="wrap">
+      <div class="insight-strip-head">
+        <p>What Thai restaurant owners discover</p>
+        <h2>The numbers most operators <em>don't know</em></h2>
+      </div>
+      <div class="insight-cards">
+        <div class="insight-card">
+          <div class="insight-card-label">Delivery margins</div>
+          <div class="insight-finding">Your Pad Thai probably earns you £2.10 on Uber Eats — not the £7+ it looks like
+          </div>
+          <div class="insight-detail">After a 30% commission, VAT, and packaging, a £13 Pad Thai nets around £7.30.
+            Subtract your food cost and you're left with a fraction of what you expected.</div>
+          <span class="insight-pill pill-red">Most owners are shocked by this</span>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-label">NLW April 2026</div>
+          <div class="insight-finding">A typical Thai restaurant with 6 staff faces £6,200–£9,400 more per year from
+            April</div>
+          <div class="insight-detail">The NLW jump from £12.21 to £12.71 hits hardest for mixed-age kitchen teams. Most
+            operators haven't modelled the exact number for their roster.</div>
+          
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-label">Menu pricing</div>
+          <div class="insight-finding">A £1.50 price rise across 8 dishes covers the entire NLW increase for most small
+            teams</div>
+          <div class="insight-detail">Most operators raise prices on 6–8 dishes and cover the wage gap without a single
+            complaint. The tool shows you which dishes to move and what the maths looks like.</div>
+          <span class="insight-pill pill-green">Actionable, not just data</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -2528,10 +2512,10 @@ em { font-style: normal; font-weight: 700; }
   </section>
 
   <!-- CLAIM CTA -->
-  <section style="padding: 60px 0; text-align: center; min-height: 180px; contain: layout style;">
+  <section class="final-claim">
     <div class="wrap">
-      <h2 style="font-size:clamp(1.5rem,3vw,2rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:12px; line-height:1.15;">Is your restaurant on <em>ThaiData</em>?</h2>
-      <p style="color:var(--ink3); font-size:1rem; max-width:500px; margin:0 auto 20px;">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
+      <h2>Find your restaurant. Make it yours.</h2>
+      <p style="max-width:500px; margin:16px auto 24px;">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
       <a href="/claim/" class="btn-primary"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
     </div>
   </section>
@@ -2661,9 +2645,7 @@ em { font-style: normal; font-weight: 700; }
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40) });
 
-    // ── Scroll reveal ──
-    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }) }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    // No scroll-reveal observer. Homepage content is rendered visibly by HTML and CSS.
 
     // ── Config ── Replace YOUR_ACCESS_KEY with key from https://web3forms.com (free, verify email once)
     const WEB3FORMS_KEY = '882f2e26-a610-415c-93b7-d97436a302f5';
@@ -3028,6 +3010,352 @@ em { font-style: normal; font-weight: 700; }
     button, input, select, textarea { font-size: 1rem; }
     small { font-size: 0.875rem; }
   </style>
+
+<style id="td-masthead-css">
+#main-nav.td-masthead,
+#main-nav.td-masthead * {
+  box-sizing: border-box;
+}
+
+#main-nav.td-masthead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: block;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  padding: 0;
+  background: #FFFFFF;
+  color: #332F2B;
+  border: 0;
+  border-bottom: 1px solid #E5DED5;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", sans-serif;
+}
+
+#main-nav.td-masthead.td-fixed {
+  position: fixed;
+}
+
+#main-nav.td-masthead .td-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  height: 71px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: transparent;
+}
+
+#main-nav.td-masthead .td-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  color: #332F2B;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+#main-nav.td-masthead .td-mark {
+  display: block;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  background: #F2B21A;
+  -webkit-mask: url("/elephant-icon.svg") center / contain no-repeat;
+  mask: url("/elephant-icon.svg") center / contain no-repeat;
+  mask-mode: alpha;
+}
+
+#main-nav.td-masthead .td-wordmark {
+  color: #332F2B;
+}
+
+#main-nav.td-masthead .td-links {
+  position: static;
+  inset: auto;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0 0 0 auto;
+  padding: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  scrollbar-width: thin;
+}
+
+#main-nav.td-masthead .td-links > a,
+#main-nav.td-masthead .td-back {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 2px;
+  color: #4A403C !important;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: none;
+}
+
+#main-nav.td-masthead .td-links > a.active,
+#main-nav.td-masthead .td-links > a[aria-current="page"],
+#main-nav.td-masthead .td-links > a:hover,
+#main-nav.td-masthead .td-back:hover {
+  color: #A61938 !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+#main-nav.td-masthead a:focus-visible {
+  outline: 2px solid #A61938;
+  outline-offset: 2px;
+}
+
+#main-nav.td-masthead .hamburger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #main-nav.td-masthead .td-bar {
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  #main-nav.td-masthead .td-brand {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  #main-nav.td-masthead .td-links {
+    gap: 12px;
+  }
+}
+</style>
+
+<style id="td-home-css">
+/* ── td-home ────────────────────────────────────────────────────────────────
+   The homepage's layout, spacing and type system, from openai/gpt-6-astra-pro's
+   review. One alignment rail, one spacing scale, one type scale with a job per
+   level. Loaded last so it is the final word without editing the legacy rules.
+
+   Rationale for the values is in the review: the search control's prominence is
+   not negotiable, the insight cards get MORE room than before (they are reading,
+   not a dashboard), and nothing here is a fixed height to manufacture a shorter
+   screenshot.
+   ------------------------------------------------------------------------- */
+:root {
+  --td-ink: #1C1917;
+  --td-muted: #57534E;
+  --td-paper: #FBF7F0;
+  --td-white: #FFFFFF;
+  --td-line: #D6D3D1;
+  --td-red: #A30F2D;
+}
+
+.td-home,
+.td-home * { box-sizing: border-box; }
+
+.td-home {
+  color: #1C1917;
+  font: 400 17px/26px "Inter", sans-serif;
+}
+
+.td-home :where(h1, h2, h3, p, ul, ol, figure) { margin: 0; }
+.td-home :where(input, button, select, textarea) { font-family: "Inter", sans-serif; }
+
+/* One rail: 1136px maximum, 152px of ground either side at 1440, 20px gutters at 390. */
+.td-home > section > .wrap {
+  width: calc(100% - 48px) !important;
+  max-width: 1136px !important;
+  margin-inline: auto !important;
+  padding: 0 !important;
+}
+
+/* Section rhythm. Hero breathes at the top because the masthead is now in flow. */
+.td-home .hero {
+  padding: 48px 0 64px !important;
+  background: var(--td-paper) !important;
+  border-bottom: 0 !important;
+}
+
+.td-home .insight-strip,
+.td-home .how-claim,
+.td-home .towns,
+.td-home .final-claim { padding: 64px 0 !important; }
+
+.td-home .insight-strip,
+.td-home .how-claim,
+.td-home .final-claim { background: var(--td-white); }
+
+.td-home .towns { background: var(--td-paper); }
+
+/* Type: nine roles, each with one job. */
+.td-home .hero-h1 {
+  font: 800 72px/76px "Archivo", sans-serif;
+  letter-spacing: -2px;
+}
+
+.td-home .hero-lead {
+  font: 400 20px/30px "Inter", sans-serif;
+  margin-top: 16px;
+}
+
+.td-home > section > .wrap > h2 {
+  font: 700 36px/40px "Archivo", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.td-home .insight-card h3,
+.td-home .how-claim h3,
+.td-home .step h3 {
+  font: 600 20px/28px "Archivo", sans-serif;
+}
+
+.td-home .label,
+.td-home .insight-card-label,
+.td-home .eyebrow {
+  font: 700 15px/20px "Inter", sans-serif;
+  color: var(--td-muted);
+}
+
+.td-home .insight-finding,
+.td-home .insight-detail,
+.td-home .towns p,
+.td-home .how-claim p {
+  font: 400 17px/26px "Inter", sans-serif;
+}
+
+.td-home .insight-detail,
+.td-home .towns p { color: var(--td-muted); }
+
+/* Internal relationships, as a scale rather than a set of accidents. */
+.td-home .insight-card { padding: 24px !important; }
+.td-home .insight-card-label { margin-bottom: 12px !important; }
+.td-home .insight-card h3 { margin-bottom: 12px !important; }
+.td-home .insight-card .insight-finding { margin-bottom: 12px !important; }
+.td-home .insight-card .insight-pill { margin-top: 16px; }
+.td-home .insight-strip-head { margin-bottom: 32px !important; }
+.td-home .insight-strip-head h2 { margin-top: 8px !important; }
+.td-home .how-claim .steps,
+.td-home .how-claim h2 + * { margin-top: 32px !important; }
+.td-home .how-claim h3 { margin-bottom: 8px !important; }
+.td-home .towns h2 { margin-top: 8px !important; }
+.td-home .towns .town-list { margin-top: 32px !important; }
+
+/* The red pill was 3.95:1. It is now about 6.8:1. */
+.td-home .insight-pill {
+  display: inline-block;
+  max-width: 100%;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: normal;
+  font: 700 15px/20px "Inter", sans-serif;
+}
+
+.td-home .insight-pill.pill-red {
+  color: #991B1B;
+  background: #FEE2E2;
+}
+
+/* The search control keeps its prominence. */
+#hero-q {
+  min-height: 56px;
+  scroll-margin-top: 96px;
+}
+
+[data-find-restaurant] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.td-home :where(a, button, input):focus-visible {
+  outline: 3px solid #1C1917;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .td-home > section > .wrap { width: calc(100% - 40px) !important; }
+
+  .td-home .hero { padding: 32px 0 48px !important; }
+
+  .td-home .insight-strip,
+  .td-home .how-claim,
+  .td-home .towns,
+  .td-home .final-claim { padding: 48px 0 !important; }
+
+  .td-home .hero-h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -1px;
+  }
+
+  .td-home .hero-lead {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .td-home > section > .wrap > h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  #hero-q { scroll-margin-top: 88px; }
+}
+</style>
 </body>
 
 </html>

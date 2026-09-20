@@ -585,28 +585,20 @@
       text-decoration: underline
     }
 
-    /* Scroll reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none
-    }
-
-    .reveal-d1 {
-      transition-delay: 0.1s
-    }
-
-    .reveal-d2 {
-      transition-delay: 0.2s
-    }
-
+    /* Homepage content is visible independently of JavaScript.
+       The reveal that used to live here set opacity: 0 on real content and relied on an
+       IntersectionObserver to undo it. With scripts blocked, or an exception anywhere
+       else on the page, that content was not dimmed - it was gone. Kept as a guard so an
+       overlooked reveal class cannot reintroduce the failure. */
+    .reveal,
+    .reveal.visible,
+    .reveal-d1,
+    .reveal-d2,
     .reveal-d3 {
-      transition-delay: 0.3s
+      opacity: 1;
+      transform: none;
+      transition: none;
+      animation: none
     }
 
     /* ══════ MOBILE ══════ */
