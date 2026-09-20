@@ -42,10 +42,16 @@ def dish_html(it, protein_tiers=None):
     veg = it.get("vegetarian")
     spice = it.get("spice")
     celery = it.get("celery")
+    num = it.get("num")
+    # Keep the menu's own dish number visible so customers can cross-reference the
+    # printed menu ("I'll have number 47"). Number + name live in one span so the
+    # flex gaps in .dish-name don't separate them from each other.
+    label = (f'<span class="dish-num">{num}.</span> {esc(it["name"])}'
+             if num else esc(it["name"]))
     bits = [f'<li class="dish">']
     bits.append('<div class="dish-main">')
     bits.append('<div class="dish-head">')
-    bits.append(f'<h3 class="dish-name">{esc(it["name"])}')
+    bits.append(f'<h3 class="dish-name"><span class="dish-label">{label}</span>')
     if veg:
         bits.append('<span class="badge badge-veg" title="Vegetarian">V</span>')
     if spice:
@@ -218,6 +224,8 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .dish:last-child{{border-bottom:0}}
 .dish-head{{display:flex;justify-content:space-between;align-items:baseline;gap:14px}}
 .dish-name{{font-size:var(--step-0);font-weight:600;margin:0;display:flex;align-items:center;gap:7px}}
+.dish-label{{display:inline}}
+.dish-num{{color:var(--ink-tertiary);font-weight:600;font-variant-numeric:tabular-nums}}
 .badge{{font-size:.6875rem;font-weight:700;padding:1px 6px;border-radius:var(--radius-sm);line-height:1.5}}
 .badge-veg{{background:var(--green-light);color:var(--green-dark)}}
 .badge-spice{{background:#FEE2E2;color:#B91C1C}}
