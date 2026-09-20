@@ -379,7 +379,10 @@
     }
 
     /* ══════ NAV ══════ */
-    nav {
+    /* Scoped to the masthead. As a bare `nav` selector this ALSO matched the footer's
+       <nav class="ft-links" aria-label="Footer">, taking it out of the footer and pinning
+       it over the hero at z-index 200 - ivory text on an ivory page. */
+    #main-nav {
       position: fixed;
       top: 0;
       left: 0;
@@ -2515,7 +2518,7 @@ em { font-style: normal; font-weight: 700; }
   <section class="final-claim">
     <div class="wrap">
       <h2>Find your restaurant. Make it yours.</h2>
-      <p style="max-width:500px; margin:16px auto 24px;">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
+      <p class="final-copy">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
       <a href="/claim/" class="btn-primary"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
     </div>
   </section>
@@ -3102,7 +3105,7 @@ em { font-style: normal; font-weight: 700; }
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px;
+  gap: 12px;
   width: auto;
   min-width: 0;
   max-width: 100%;
@@ -3294,6 +3297,15 @@ em { font-style: normal; font-weight: 700; }
 .td-home .towns h2 { margin-top: 8px !important; }
 .td-home .towns .town-list { margin-top: 32px !important; }
 
+/* The final section is a left-aligned stack. Its paragraph was centred by a surviving
+   `margin: auto`, which put the copy at x=470 while the heading and button sat at x=152. */
+.td-home .final-claim h2 { text-align: left; }
+.td-home .final-copy {
+  max-width: 60ch;
+  margin: 16px 0 24px;
+  text-align: left;
+}
+
 /* The red pill was 3.95:1. It is now about 6.8:1. */
 .td-home .insight-pill {
   display: inline-block;
@@ -3320,6 +3332,13 @@ em { font-style: normal; font-weight: 700; }
   align-items: center;
   justify-content: center;
   min-height: 44px;
+}
+
+/* Ten destinations in one row. They fit at 1440; on narrower desktops the row scrolls,
+   and a clipped final label reads as a broken character rather than as overflow. */
+@media (min-width: 768px) and (max-width: 1180px) {
+  #main-nav.td-masthead .td-links { gap: 10px; }
+  #main-nav.td-masthead .td-links > a { font-size: 14px; }
 }
 
 .td-home :where(a, button, input):focus-visible {
