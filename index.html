@@ -3337,9 +3337,16 @@ em { font-style: normal; font-weight: 700; }
   #main-nav.td-masthead .td-links > a { font-size: 14px; }
 }
 
-.td-home :where(a, button, input):focus-visible {
+.td-home :where(a, button):focus-visible {
   outline: 3px solid #1C1917;
   outline-offset: 3px;
+}
+
+/* The search input must NOT get the ink focus ring: the field that owns it already
+   signals focus with a lacquer border, a turmeric outline and a soft red halo, and a
+   second ring painted inside the field read as a stray black box. */
+.td-home input:focus-visible {
+  outline: none;
 }
 
 @media (max-width: 767px) {
