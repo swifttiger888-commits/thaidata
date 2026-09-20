@@ -15,8 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary meta -->
-  <title>Free Minimum Wage Calculator for UK Thai Restaurants | ThaiData</title>
-  <meta name="description" content="Free tools for UK Thai restaurant owners. Calculate your April 2026 minimum wage increase, check dish prices, stress-test delivery margins. No signup needed." />
+  <title>Thai Restaurants UK &mdash; Claim Your Free Listing | ThaiData UK</title>
+  <meta name="description" content="We list 1,265 Thai restaurants across the UK from official Food Standards Agency records. Find yours, claim the free listing, and control your photos, menu, opening hours and website link. No card needed." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="ThaiData UK" />
   <link rel="canonical" href="https://thaidata.uk/" />
@@ -29,9 +29,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thaidata.uk/" />
   <meta property="og:site_name" content="ThaiData UK" />
-  <meta property="og:title" content="ThaiData UK — Free Minimum Wage Calculator for UK Thai Restaurants" />
+  <meta property="og:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
   <meta property="og:description"
-    content="Find out what the April 2026 minimum wage rise will cost your Thai restaurant. Free calculator, dish price checker, and profit checker. No signup." />
+    content="1,265 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing — control your photos, menu, hours and website link." />
   <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -41,13 +41,12 @@
 
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ThaiData UK — Free Minimum Wage Calculator for UK Thai Restaurants" />
+  <meta name="twitter:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
   <meta name="twitter:description"
-    content="Find out what the April 2026 minimum wage rise will cost your Thai restaurant in 60 seconds. Free, no signup." />
+    content="1,265 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing in minutes." />
   <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp" />
 
-  <!-- Preload critical hero image -->
-  <link rel="preload" as="image" href="thaidataukhero.webp">
+  <!-- Hero image removed: light hero, no decorative LCP image -->
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -209,7 +208,7 @@
     "@type": "WebSite",
     "name": "ThaiData UK",
     "url": "https://thaidata.uk/",
-    "description": "Free cost intelligence tools for UK Thai restaurant operators — wage calculator, dish price checker, and profit checker.",
+    "description": "The free UK register of Thai restaurants, built from official Food Standards Agency records. Find and claim your restaurant's free listing.",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {"@type": "EntryPoint", "urlTemplate": "https://thaidata.uk/?q={search_term_string}"},
@@ -223,12 +222,12 @@
   {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
-    "name": ["Wage Calculator", "Dish Price Check", "Profit Checker", "FAQ"],
+    "name": ["Restaurants", "Guides", "Claim your listing", "FAQ"],
     "url": [
-      "https://thaidata.uk/#tools",
-      "https://thaidata.uk/#dish-prices",
-      "https://thaidata.uk/#tools",
-      "https://thaidata.uk/#faq"
+      "https://thaidata.uk/restaurants.html",
+      "https://thaidata.uk/guides.html",
+      "https://thaidata.uk/claim/",
+      "https://thaidata.uk/faq.html"
     ]
   }
   </script>
@@ -239,7 +238,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ThaiData UK",
-    "description": "Business intelligence and cost defense tools for UK Thai restaurant operators. Market data, wage calculators, menu pricing benchmarks, and chef visa guidance.",
+    "description": "The free UK register of Thai restaurants, built from official Food Standards Agency records. Owners can claim and edit their own listing at no cost.",
     "url": "https://thaidata.uk",
     "email": "hello@thaidata.uk",
     "telephone": "0113 496 0000",
@@ -1442,6 +1441,62 @@
 
 
 
+
+  <style id="hero-v2">
+    /* Hero v2 — ONE pitch, light "official register" surface.
+       Appended after the original stylesheet so these win on equal specificity. */
+    .hero { background: var(--bg); color: var(--ink); padding: 112px 0 56px; border-bottom: 1px solid var(--line); }
+    .hero-inner { max-width: 760px; }
+    .hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--c3);
+      background: #E6F2EE; border: 1px solid #CFE5DD; border-radius: 999px; padding: 6px 14px;
+      letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 22px; }
+    .hero-h1 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;
+      font-size: clamp(2.125rem, 4.5vw, 3.25rem); line-height: 1.06; letter-spacing: -0.02em;
+      color: var(--ink); margin: 0 0 20px; }
+    .hero-h1-accent { color: var(--c3); }
+    .hero-sub { font-size: 1.1875rem; line-height: 1.6; color: var(--ink2); max-width: 62ch; margin: 0 0 30px; }
+    .hero-search { position: relative; display: flex; gap: 10px; max-width: 580px; margin: 0 0 14px; }
+    .hero-search-input { flex: 1 1 auto; min-width: 0; font: inherit; font-size: 1rem; padding: 15px 16px;
+      border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+    .hero-search-input::placeholder { color: var(--ink4); }
+    .hero-search-input:focus { outline: 2px solid var(--c1); outline-offset: 1px; border-color: var(--c1); }
+    .hero-search-btn { flex: 0 0 auto; white-space: nowrap; }
+    .hero-search-results { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #fff;
+      border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 6px 24px rgba(15,26,28,.10);
+      z-index: 30; max-height: 340px; overflow: auto; }
+    .hero-search-results a { display: block; padding: 12px 15px; text-decoration: none; color: var(--ink);
+      border-bottom: 1px solid var(--line); font-size: 0.9375rem; line-height: 1.35; }
+    .hero-search-results a:last-child { border-bottom: 0; }
+    .hero-search-results a:hover, .hero-search-results a:focus { background: #E6F2EE; color: var(--c3); }
+    .hero-search-results .hres-city { display: block; font-size: 0.8125rem; color: var(--ink3); margin-top: 2px; }
+    .hero-search-results .hres-empty, .hero-search-results .hres-loading { padding: 14px 15px; color: var(--ink3); font-size: 0.9375rem; }
+    .hero-note { font-size: 0.875rem; color: var(--ink3); margin: 0 0 24px; }
+    .hero-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 26px; padding: 0; margin: 0;
+      font-size: 0.875rem; color: var(--ink2); }
+    .hero-trust li { position: relative; padding-left: 20px; }
+    .hero-trust li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--c1); font-weight: 700; }
+    .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .hero-layout { display: block; }   /* old 2-col grid no longer used */
+    /* The nav (white links + white logo SVG + dark mobile drawer) was built for a dark
+       hero. The hero is now light, so at scrollY=0 white links would sit invisibly on
+       off-white. Fix: hold the nav's dark .scrolled surface at ALL times rather than
+       only past 40px. Keeps one consistent dark header on the light page. */
+    #main-nav, nav.scrolled {
+      background: rgba(12, 18, 32, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    @media (max-width: 900px) { .hero { padding: 92px 0 44px; } }
+    @media (max-width: 640px) {
+      .hero { padding: 84px 0 40px; }
+      .hero-h1 { font-size: 2rem; }
+      .hero-sub { font-size: 1.0625rem; }
+      .hero-search { flex-direction: column; }
+      .hero-search-btn { width: 100%; }
+      .hero-trust { flex-direction: column; gap: 8px; }
+    }
+  </style>
 <body>
   <div class="grain"></div>
 
@@ -1456,79 +1511,39 @@
         <a href="guides.html" class="nav-link">Guides</a>
         <a href="learn.html" class="nav-link">Learn</a>
         <a href="restaurants.html" class="nav-link">Restaurants</a>
-        <a href="claim/index.html" class="nav-link" style="color:var(--c2);">Claim Listing</a>
+        <a href="/claim/" class="nav-link" style="color:var(--c2);font-weight:600;">Claim your listing</a>
         <a href="dish-prices.html" class="nav-link">Dish prices</a>
         <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="thai-festivals-uk.html" class="nav-link"><i class="fas fa-calendar-alt" style="margin-right:4px;"></i>Festivals</a>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="index.html#waitlist" class="btn btn-ghost">Get free report</a>
       </div>
       <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO — ONE pitch: find your restaurant, claim it free -->
   <main>
   <section class="hero">
     <div class="wrap">
-      <div class="hero-layout">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">1,265 UK Thai restaurants &middot; Free listings &middot; FSA data</p>
+        <h1 class="hero-h1">Your Thai restaurant is already listed. <em class="hero-h1-accent">Claim it free.</em></h1>
+        <p class="hero-sub">We list 1,265 Thai restaurants across the UK, built from official Food Standards Agency records. Find yours, prove you&rsquo;re the owner, and control your photos, menu, opening hours and website link. Free, forever. No card needed.</p>
 
-        <div>
-          <div class="hero-eyebrow">Already listed on ThaiData?</div>
-          <h1>Your restaurant is already on ThaiData</h1>
-          <p class="hero-sub">Claim your free listing — add photos, menu, hours, and website in minutes. Verified owners get full edit access, no cost.</p>
-          <div class="hero-actions">
-            <a href="/claim/" class="btn btn-fill btn-lg"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim My Restaurant Listing</a>
-            <p class="hero-note">Takes 5 minutes. No payment required.</p>
-            <a href="index.html#tools" class="hero-secondary-link">See my April 2026 cost increase →</a>
-          </div>
-        </div>
+        <form class="hero-search" id="hero-search-form" role="search" autocomplete="off" action="/claim/">
+          <label class="sr-only" for="hero-search-input">Restaurant name or postcode</label>
+          <input type="search" id="hero-search-input" name="restaurant" class="hero-search-input"
+                 placeholder="Restaurant name or postcode" aria-describedby="hero-search-hint" />
+          <button type="submit" class="btn btn-fill hero-search-btn">Find my restaurant</button>
+          <div class="hero-search-results" id="hero-search-results" hidden></div>
+        </form>
+        <p class="hero-note" id="hero-search-hint">Free forever &middot; Takes about 5 minutes &middot; No payment details.</p>
 
-        <!-- Quick NLW calculator in hero -->
-        <div class="hero-calc">
-          <div class="hero-calc-title">Wage increase — 60 second check</div>
-          <div class="nlw-row" style="margin-bottom:8px">
-            <div></div>
-            <div class="nlw-hdr">Staff</div>
-            <div class="nlw-hdr">Hrs/wk</div>
-            <div class="nlw-hdr">Rate</div>
-          </div>
-          <div class="calc-row">
-            <div class="calc-label">Age 21+ (min wage)</div>
-            <input type="number" class="calc-input" id="h21s" aria-label="Age 21+ staff count" value="3" min="0" oninput="heroNLW()" />
-            <input type="number" class="calc-input" id="h21h" aria-label="Age 21+ hours per week" value="40" min="0" oninput="heroNLW()" />
-            <span class="calc-rate">£12.21</span>
-          </div>
-          <div class="calc-row">
-            <div class="calc-label">Age 18–20</div>
-            <input type="number" class="calc-input" id="h20s" aria-label="Age 18-20 staff count" value="2" min="0" oninput="heroNLW()" />
-            <input type="number" class="calc-input" id="h20h" aria-label="Age 18-20 hours per week" value="30" min="0" oninput="heroNLW()" />
-            <span class="calc-rate">£10.00</span>
-          </div>
-          <div class="calc-row" style="border-bottom:none">
-            <div class="calc-label">Apprentice</div>
-            <input type="number" class="calc-input" id="hAs" aria-label="Apprentice staff count" value="1" min="0" oninput="heroNLW()" />
-            <input type="number" class="calc-input" id="hAh" aria-label="Apprentice hours per week" value="35" min="0" oninput="heroNLW()" />
-            <span class="calc-rate">£7.55</span>
-          </div>
-          <button class="calc-btn" onclick="heroNLW(true)">Show my April 2026 cost increase</button>
-
-          <div class="hero-result" id="hero-result">
-            <div class="hr-main" id="hr-ann"></div>
-            <div class="hr-sub" id="hr-desc"></div>
-            <div class="hr-action">
-              <a href="nlw-report.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--c1);color:white;padding:10px 18px;border-radius:8px;font-weight:600;font-size:0.84rem;margin-bottom:10px;text-decoration:none;transition:all 0.2s">Get your personalised action plan — Free Beta →</a>
-              <div style="font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:14px;line-height:1.5">See exactly which dishes to re-price, how much to raise your best sellers, and a clear plan to protect your profit.</div>
-              <div class="hr-email-label">Or get a free summary for your restaurant</div>
-              <div class="hr-email-row" id="hr-form">
-                <input type="email" class="hr-email-input" aria-label="Email for free report" placeholder="you@restaurant.co.uk" id="hr-email" />
-                <button class="hr-email-btn" onclick="submitHero()">Send it</button>
-              </div>
-              <div class="hr-ok" id="hr-ok">You're on the list — redirecting you now...</div>
-            </div>
-          </div>
-        </div>
-
+        <ul class="hero-trust">
+          <li>Source: Food Standards Agency register</li>
+          <li>1,265 restaurants listed</li>
+          <li>Owner-verified listings are edited by the owner, not us</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -2371,6 +2386,9 @@
     }
 
     function heroNLW(force) {
+      // The hero calculator was removed from this page (hero is now the claim search).
+      // Without this guard the DOMContentLoaded call would null-deref on every load.
+      if (!document.getElementById('h21s')) return;
       const s1 = +document.getElementById('h21s').value || 0, h1 = +document.getElementById('h21h').value || 0;
       const s2 = +document.getElementById('h20s').value || 0, h2 = +document.getElementById('h20h').value || 0;
       const s3 = +document.getElementById('hAs').value || 0, h3 = +document.getElementById('hAh').value || 0;
@@ -2563,9 +2581,75 @@
     }
 
     // Init
-    document.addEventListener('DOMContentLoaded', () => { runStress(); runNLW(); heroNLW(true) });
+    document.addEventListener('DOMContentLoaded', () => { runStress(); runNLW(); });
   </script>
   <script src="privacy-banner.js" defer></script>
+
+  <script>
+  /* Hero search — "find my restaurant".
+     Uses the existing /api/search-restaurants index, then hands off to
+     /claim/?restaurant=<name>, which prefills and auto-searches (built + verified earlier).
+     Handing off to the claim flow beats deriving /r/<city>/<slug>/ URLs: the two search
+     endpoints disagree on `city` ("Essex" vs "Clacton on Sea") and the API returns the FSA
+     URL, not ours — so a derived link could 404. No derived URLs = no broken links. */
+  (function () {
+    var form = document.getElementById('hero-search-form');
+    var input = document.getElementById('hero-search-input');
+    var box = document.getElementById('hero-search-results');
+    if (!form || !input || !box) return;
+    var timer = null, ctrl = null, current = [];
+
+    var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ESC[c]; }); }
+    function claimHref(name) { return '/claim/?restaurant=' + encodeURIComponent(name); }
+    function close() { box.hidden = true; box.innerHTML = ''; }
+    function open(html) { box.innerHTML = html; box.hidden = false; }
+
+    function render(rows) {
+      if (!rows.length) {
+        open('<div class="hres-empty">No Thai restaurant found by that name. <a href="/claim/">Search on the claim page</a>.</div>');
+        return;
+      }
+      open(rows.map(function (r) {
+        return '<a href="' + claimHref(r.name) + '"><strong>' + esc(r.name) + '</strong>' +
+               '<span class="hres-city">' + esc(r.city) + (r.pc ? ' \u00b7 ' + esc(r.pc) : '') + '</span></a>';
+      }).join(''));
+    }
+
+    function run(q) {
+      if (ctrl) { try { ctrl.abort(); } catch (e) {} }
+      ctrl = new AbortController();
+      open('<div class="hres-loading">Searching\u2026</div>');
+      fetch('/api/search-restaurants?q=' + encodeURIComponent(q), { signal: ctrl.signal })
+        .then(function (r) { return r.json(); })
+        .then(function (rows) { current = rows || []; render(current); })
+        .catch(function (e) {
+          if (e && e.name === 'AbortError') return;
+          open('<div class="hres-empty">Search unavailable \u2014 <a href="/claim/">search on the claim page</a>.</div>');
+        });
+    }
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim();
+      clearTimeout(timer);
+      if (q.length < 2) { close(); return; }
+      timer = setTimeout(function () { run(q); }, 220);
+    });
+    input.addEventListener('focus', function () {
+      if (input.value.trim().length >= 2 && current.length) render(current);
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = input.value.trim();
+      if (current.length) { window.location.href = claimHref(current[0].name); return; }
+      if (q) window.location.href = claimHref(q);
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.hero-search')) close();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+  </script>
 </body>
 
 </html>
