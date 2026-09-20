@@ -190,6 +190,62 @@ async function injectClaimedEnrichment(html, env) {
   return html;
 }
 
+/**
+ * Inject a "Full Menu" call-to-action when the restaurant has a generated menu page.
+ *
+ * Menu pages are produced by scripts/build_menu_page.py and carry a
+ * name="thaidata-page" marker meta tag. We cannot trust ASSETS.fetch() returning ok,
+ * because Pages answers unmatched paths with the homepage and HTTP 200. If no menu
+ * page exists the HTML is returned unchanged, so this is a no-op for the other
+ * ~1,265 restaurants until their menus are generated.
+ */
+async function injectMenuLink(html, city, name, origin, env) {
+  if (!env.ASSETS) return html;
+
+  const menuPath = '/r/' + city + '/' + name + '/menu/';
+  let res;
+  try {
+    res = await env.ASSETS.fetch(new URL(menuPath, origin).toString());
+  } catch (_) {
+    return html;  // asset layer unavailable — serve the page untouched
+  }
+  if (!res || !res.ok) return html;
+
+  let menuHtml;
+  try { menuHtml = await res.text(); } catch (_) { return html; }
+  if (!menuHtml.includes('name="thaidata-page"')) return html;
+
+  // Dish count from the Menu schema so the CTA can be specific rather than vague.
+  let count = 0;
+  try {
+    const ld = menuHtml.match(/<script type="application\/ld\+json">(\{"@context":"https:\/\/schema\.org","@type":"Menu"[\s\S]*?)<\/script>/);
+    if (ld) {
+      const menu = JSON.parse(ld[1]);
+      count = (menu.hasMenuSection || []).reduce((n, s) => n + (s.hasMenuItem || []).length, 0);
+    }
+  } catch (_) {}
+
+  const blurb = count
+    ? htmlEscape(String(count)) + ' dishes &middot; every dish with prices, taken from the restaurant&rsquo;s own menu.'
+    : 'Every dish with prices, taken from the restaurant&rsquo;s own menu.';
+
+  const card =
+    '\n                <!-- Full Menu CTA (server-injected) -->\n'
+    + '                <div class="card" id="full-menu-cta" style="margin-bottom:24px;border-color:#A7F3D0;background:linear-gradient(180deg,#F0FDF9,#FFFFFF);">\n'
+    + '                    <h2 class="card-title" style="margin-top:0;">Full <em>Menu</em></h2>\n'
+    + '                    <p style="margin:6px 0 14px;color:var(--ink-secondary,#6B7280);font-size:0.9rem;">' + blurb + '</p>\n'
+    + '                    <a href="' + htmlEscape(menuPath) + '" style="display:inline-block;background:#0A7A6F;color:#fff;text-decoration:none;font-weight:600;padding:10px 20px;border-radius:999px;font-size:0.9rem;">View the full menu &rarr;</a>\n'
+    + '                </div>\n';
+
+  if (html.includes('<!-- === HYGIENE RATING === -->')) {
+    return html.replace('<!-- === HYGIENE RATING === -->', card + '                <!-- === HYGIENE RATING === -->');
+  }
+  if (html.includes('<!-- ============ MAIN CONTENT ============ -->')) {
+    return html.replace('<!-- ============ MAIN CONTENT ============ -->', '<!-- ============ MAIN CONTENT ============ -->' + card);
+  }
+  return html;
+}
+
 export async function onRequest(context) {
   const { request, env, next } = context;
   const url = new URL(request.url);
@@ -255,6 +311,12 @@ export async function onRequest(context) {
         } catch (e) {
           // D1 failure or parse error — serve original page unchanged
           console.warn('Enrichment injection failed:', e.message);
+        }
+        // Link to the generated full menu page, when one exists for this venue.
+        try {
+          enrichedText = await injectMenuLink(enrichedText, city, name, url.origin, env);
+        } catch (e) {
+          console.warn('Menu link injection failed:', e.message);
         }
         return new Response(enrichedText, {
           status: 200,
