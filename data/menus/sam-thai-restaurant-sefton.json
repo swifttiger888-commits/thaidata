@@ -1,0 +1,81 @@
+{
+ "restaurant": "Sam Thai Restaurant",
+ "city": "Sefton",
+ "fsa_id": "628338",
+ "address": "",
+ "source": "https://sam-thai-restaurant-southport.co.uk/wp-content/uploads/2023/02/sam-thai-kids-menu.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "sam-thai-restaurant",
+ "pricing_notes": [],
+ "categories": {
+  "Kids Menu": [
+   {
+    "num": "",
+    "name": "FRIED RICE WITH CHICKEN",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "PAD THAI CHICKEN",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "PAD MAE CHICKEN",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "CHICKEN NUGGETS WITH RICE",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "CHICKEN NUGGETS WITH CHIPS",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "SWEET AND SOUR CHICKEN WITH RICE",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "GANG KIEAW WITH RICE",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "CHICKEN SATAY WITH RICE",
+    "description": "",
+    "price": "5.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

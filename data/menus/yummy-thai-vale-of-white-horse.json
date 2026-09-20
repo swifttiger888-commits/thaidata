@@ -1,0 +1,813 @@
+{
+ "restaurant": "Yummy Thai",
+ "city": "Vale of White Horse",
+ "fsa_id": "264217",
+ "address": "",
+ "source": "http://www.yummythaiwantage.co.uk/resources/YummyThai-Food-Allergy-Awareness-Sept25.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "yummy-thai",
+ "pricing_notes": [],
+ "categories": {
+  "Food Allergy Awareness\nDishes containing allergens:": [
+   {
+    "num": "2.",
+    "name": "Tod Man Pla",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "3.",
+    "name": "Satay Gai",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "4.",
+    "name": "Dim Sum",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "5.",
+    "name": "See Krong Moo Tod",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "6.",
+    "name": "Kha Nom Pang Na Goong",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "7.",
+    "name": "Goong Chup Pang Tod",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "8.",
+    "name": "Stir Fried King Prawns with Shell",
+    "description": "A Thai sweet chilli Sauce\nB Chinese capital Sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "9.",
+    "name": "Deep Fried Large Duck Spring Roll",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "10",
+    "name": "Poo Nim",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "11.",
+    "name": "Tom Yum Soup",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "12.",
+    "name": "Tom Kha Soup",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "13",
+    "name": "Yum Neau",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "14A",
+    "name": "Som Tum Goong",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "15.",
+    "name": "Gaeng Kiew Wan",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "16.",
+    "name": "Panang Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "17.",
+    "name": "Massaman",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "18.",
+    "name": "Lamb Rendang",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "19",
+    "name": "Priew Wan Sauce",
+    "description": "(batter)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "20.",
+    "name": "Pad Khing Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "21",
+    "name": "Pad Bai Gaprao Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "虾片 Prawn Crackers",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "0.",
+    "name": "泰虾片 Thai Crackers",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "22.",
+    "name": "Pad Med Mamuang Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "23.",
+    "name": "Kratiam Prigtai Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "24",
+    "name": "Sizzling Weeping Tiger",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "25.",
+    "name": "Pla Tod Lad Prik",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "26",
+    "name": "Pla Nung Manao",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "27.",
+    "name": "Sizzling Hoy Farang",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "28.",
+    "name": "Hoy Thai Rock",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "29.",
+    "name": "Gaeng Phed",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "29A.",
+    "name": "Thai Red Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "30.",
+    "name": "Phed Makam",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "31.",
+    "name": "Royal Fried Rice.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "32.",
+    "name": "Coconut Rice.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "33.",
+    "name": "Sticky Rice.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "34.",
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "35.",
+    "name": "Pad Thai",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "36.",
+    "name": "Spicy Noodles",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "37.",
+    "name": "Roti Canai",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "38",
+    "name": "Salt & Pepper A.- Pork Ribs",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "B.- Chicken Pieces",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "C.- King Prawns",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Food Allergy Awareness\nDishes containing\nallergens:": [
+   {
+    "num": "39.",
+    "name": "Capital and Fruity Sauce A- Pork Ribs",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "B- Chicken Pieces",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "C- King Prawns",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "40.",
+    "name": "Sweet Chilli Sauce A- Pork Ribs",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "41.",
+    "name": "Smoke Chicken .",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "42A.",
+    "name": "Butterfly King Prawns",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "42B.",
+    "name": "Deep Fried Prawn Dumplings",
+    "description": "(Dipping Sauce )",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "43.",
+    "name": "Grilled Pork Dumpling",
+    "description": "(Dipping Sauce )",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "44.",
+    "name": "Deep Fried Wanton .",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "44A.",
+    "name": "Chicken & Sweet Corn Soup",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "45.",
+    "name": "Chicken & Noodles Soup",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "46.",
+    "name": "Crispy Aromatic Duck",
+    "description": "(Dipping Sauce )",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "47.",
+    "name": "Black Bean Sauce.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "48.",
+    "name": "Sweet & Sour Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "49.",
+    "name": "Chinese Curry Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "50.",
+    "name": "Kung Po Sauce.",
+    "description": "(batter)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "51.",
+    "name": "Oyster Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "52.",
+    "name": "Sweet Chilli Sauce.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Food Allergy Awareness Dishes containing allergens:": [
+   {
+    "num": "53.",
+    "name": "Garlic Chilli Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "54",
+    "name": "Chinese Season Green",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "55.",
+    "name": "Crispy Chilli Beef. (batter)",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "56.",
+    "name": "Lemon Sauce (batter)",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "57.",
+    "name": "Mongolian Crispy Lamb",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "58.",
+    "name": "Sizzling Sirloin Steak in Mandarin Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "59.",
+    "name": "Sizzling Sirloin Steak in Black Bean Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "60.",
+    "name": "Egg Fried Rice.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "61.",
+    "name": "Chicken Fried Rice.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "62.",
+    "name": "Roast Duck Fried Rice",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "63a.",
+    "name": "Yeung Chow Fried Rice.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "64.",
+    "name": "Chicken Chow Mein.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "65",
+    "name": "Roast Duck Chow Mein",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "66.",
+    "name": "Beef Chow Mein",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "67.",
+    "name": "Plain Chow Mein.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "68.",
+    "name": "Salt & Pepper Bean Curd.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "69.",
+    "name": "Pohpiatod",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "70.",
+    "name": "Vegetable Dim Sum",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "71.",
+    "name": "Tung Tong",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "72.",
+    "name": "Tod Man Kao Phod",
+    "description": "(Dipping Sauce)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "44B.",
+    "name": "Vegetarian Sweet Corn Soup (No egg)",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "21D.",
+    "name": "Aubergine Pad Bai Gaprao",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "19D.",
+    "name": "Priew Wan Sauce with Tofu.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "73.",
+    "name": "Broccoli with Soya Sauce.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "49F.",
+    "name": "Chinese Style Curry Mushroom",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "74",
+    "name": "Stir Fried Mix Vegetables with Garlic Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "75",
+    "name": "Stir Fried Black Bean Sauce with Fine Green Bean.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "76.",
+    "name": "Stir Fried Bean Sprouts with Garlic",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "17c.",
+    "name": "Massaman Sauce with Tofu",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "63B.",
+    "name": "Vegetable Yeung Chao Fried Rice",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "77.",
+    "name": "Vegetable Yeung Chao Noodle.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "78.",
+    "name": "Noodles with Beansprouts",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "35A.",
+    "name": "Vegetables Pad Thai",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Yummy Yummy Chips",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Pieces in Salad Sauce.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Banana Fritter",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Coconut Pandan Cake Roll",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Marmite Chicken.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Udon",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

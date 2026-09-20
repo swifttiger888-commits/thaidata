@@ -1,0 +1,574 @@
+{
+ "restaurant": "Ploy's Thai Bistro",
+ "city": "Kingston-Upon-Thames",
+ "fsa_id": "1709016",
+ "address": "",
+ "source": "https://ploysthaibistro.co.uk/wp-content/uploads/2026/01/CRE_DS_A4_Ploy_Main-Menu1-4p-01.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "ploys-thai-bistro",
+ "pricing_notes": [
+  "Add Rice Noodles as a main + £6",
+  "Vegetables £12.95",
+  "Tofu, Chicken £13.95",
+  "Beef,Pork Belly, Duck, King Prawns £15.95",
+  "River Prawn £17.95",
+  "Beef, Duck, King Prawns £15.95"
+ ],
+ "categories": {
+  "Street": [
+   {
+    "num": "S1.",
+    "name": "Khao Soi- Grilled Chicken",
+    "description": "'World Famous' Northern Thai Curry Soup served with egg noodles and grilled chicken, onions, shallots, spring onions & chilli paste.",
+    "price": "£18.50",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "S2.",
+    "name": "Kha Nah Moo Krob + Kai Dao",
+    "description": "'Thai street classic' stir-fried pork belly with cabbage, chilli, garlic, yellow bean sauce on rice & fried egg",
+    "price": "£17.50",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "S3.",
+    "name": "Ka Prao + Kai Dao",
+    "description": "'Famous dry stir-fried' minced chicken OR pork belly with chilli, garlic, and Thai basil leaves on rice & fried egg",
+    "price": "£17.50",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "S4.",
+    "name": "Guay Tiew Kua Gai",
+    "description": "\"Street Classic\"- flat rice noodles stir-fried with egg, chicken, garlic, spring onions on shredded lettuce topped with omelette, crushed peanuts & Sriracha sauce",
+    "price": "£15.50",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "S5.",
+    "name": "Goong Ob Woonsen",
+    "description": "River prawn glass noodles cooked in a gingery & peppery sesame sauce, pak choi, celery, coriander, spring onions & seafood dipping sauce",
+    "price": "£18.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Classic": [
+   {
+    "num": "S6.",
+    "name": "Gang Phed Ped Yang",
+    "description": "Triple cook roast duck in sweet & fruity red curry sauce served with pineapple, cherry tomatoes & bell peppers",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "S7.",
+    "name": "Duck Tamarind",
+    "description": "Grilled roasted duck breast with tamarind sauce on pak choi, topped with fried shallots",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S8.",
+    "name": "Panang Grilled Sirloin",
+    "description": "Grilled Sirloin in rich & creamy panang curry, bell peppers, green beans, fragranced with sliced lime leaves.",
+    "price": "£19.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "S9.",
+    "name": "Lime & Chilli Sea Bass (Pla Neung Ma Nao)",
+    "description": "Steamed Whole Sea Bass in fresh lemongrass, lime leaves, celery served with 'house spicy lime & chilli dressing",
+    "price": "£23.95",
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "S10.",
+    "name": "Three Flavoured Sea Bass (Pla Sarm Ros)",
+    "description": "Deep Fried Whole Sea Bass - topped with spicy three-flavoured tamarind sauce, chilli, garlic and basil dressing",
+    "price": "£23.95",
+    "vegetarian": false,
+    "heat": "2"
+   }
+  ],
+  "Small Plates & Nibbles": [
+   {
+    "num": "",
+    "name": "Platter for 2",
+    "description": "Spring roll, Fish cake, Chicken Satay, Chicken & Prawn toast, Gyoza",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawn Crackers",
+    "description": "",
+    "price": "£4.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Edamame",
+    "description": "",
+    "price": "£6.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Crispy Fried Tofu",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Corn Cake",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Spring Rolls",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Satay",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Grilled Chicken",
+    "description": "",
+    "price": "£10.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Wings",
+    "description": "",
+    "price": "£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Gyoza",
+    "description": "",
+    "price": "£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Dim Sum (Pork & Prawn)",
+    "description": "",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Sesame Prawn & Chicken Toast",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawn Tempura",
+    "description": "",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Fish Cake",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Thai Calamari",
+    "description": "",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Soup": [
+   {
+    "num": "",
+    "name": "TOM YUM (ต้มยำ)",
+    "description": "Spicy, Sour soup infused with lemongrass, galangal, lime leaves, coriander, tomatoes & Thai chilli",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "TOM KHA (ต้มข่า)",
+    "description": "Creamy, Sour coconut milk soup infused with galangal, lime leaves, lemongrass, coriander & chilli",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mushroom",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken & Mushroom",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawn & Mushroom",
+    "description": "",
+    "price": "£9.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Salad": [
+   {
+    "num": "",
+    "name": "Som Tum (Papaya Salads)",
+    "description": "\"Famous\" shredded green papaya , carrots, tomatoes, green beans, chilli, garlic, peanuts, lime with tamarind & palm sugar dressing",
+    "price": "£11.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "",
+    "name": "Larb",
+    "description": "North-Eastern Thai salad with dried-tossed rice, chilli, red onions, fresh Thai herbs, & lime juice dressing",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Grilled Chicken",
+    "description": "",
+    "price": "£14.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Grilled Duck",
+    "description": "",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Grilled Sirloin",
+    "description": "",
+    "price": "£18.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Fried Seabass",
+    "description": "",
+    "price": "£23.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Yum Woonsen",
+    "description": "Spicy glass noodles salads with minced chicken, prawns, shredded carrots, onions, tomatoes, fresh herbs, lime & chilli dressing.",
+    "price": "£14.95",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "Wok Stir - Fry": [
+   {
+    "num": "",
+    "name": "Chilli & Basil (Pad Ka Prao)",
+    "description": "The spicy favourite, fragranced with Chilli, Garlic, Thai basil + bell peppers, onions & green beans",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Garlic & Black Pepper (Pad Kra Tiam Prik Thai)",
+    "description": "Stir-fried in garlic, black pepper, coriander & topped with spring onions + crispy shallots served on lettuces",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Curry Paste & Lime Leaves (Pad Prik Gang)",
+    "description": "Traditional stir-fried in red curry paste, green beans, chilli, garlic & fragranced lime leaves",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Fresh Ginger (Pad Khing)",
+    "description": "Classic light stir-fried with ginger, mushroom, bell peppers, onions & spring onions",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Cashew nuts (Pad Med Ma Muang)",
+    "description": "Stir-fried in oyster sauce with carrot, bell peppers, onions & spring onions\nChange to Battered Chicken for £2 extra",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "Curry": [
+   {
+    "num": "",
+    "name": "Green",
+    "description": "Aromatic green chilli paste, in coconut milk + bell peppers, bamboo shoots, courgette & sweet basil leaves",
+    "price": null,
+    "vegetarian": true,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Massaman",
+    "description": "Mildly spiced - coconut milk with onions, potatoes, tomatoes, cashew nuts topped with shallots + spring onion",
+    "price": null,
+    "vegetarian": true,
+    "heat": "1"
+   },
+   {
+    "num": "",
+    "name": "Red",
+    "description": "Blend of iconic Thai herbs - red chilli paste, coconut milk, bell peppers, bamboo shoots, courgette & sweet basil leaves",
+    "price": null,
+    "vegetarian": true,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Panang",
+    "description": "Rich and creamy coconut milk + bell peppers, green beans, fragranced with sliced lime leaves",
+    "price": null,
+    "vegetarian": true,
+    "heat": "1"
+   }
+  ],
+  "Noodles": [
+   {
+    "num": "",
+    "name": "Pad Thai",
+    "description": "\"The famous\" - rice noodles stir-fried with egg, shallots, tamarind sauce, beansprout, chives & crushed peanuts",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Kuay Tiew Ped (Duck Noodle Soup)",
+    "description": "Duck Broth & Thai Spiced, celery served with egg noodles, pak choi and beansprout",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Pad See Eiw",
+    "description": "\"Ploy's favourite flat rice noodles stir-fried with egg, pak choi, cabbages in dark oyster sauce & white pepper",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Pad Kee Mao",
+    "description": "\"Spicy Drunken'- stir-fried udon noodles with chilli, garlic, lemongrass, bell peppers, onions, beans & sweet basil leaves in dark oyster sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   }
+  ],
+  "Fried Rice": [
+   {
+    "num": "",
+    "name": "Fried Rice (Khao Pad)",
+    "description": "\"Classic\" House fried rice with egg, tomatoes, cabbages, onions & spring onions in dark oyster sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Pineapple Fried Rice (Khao Pad Sapparod)",
+    "description": "A balance of sweet, fruity & mild spiced fried rice with chicken & prawn, egg, onions, pineapple, spring onions & carrots, cashew nut + turmeric curry powder",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Crab Meat Fried Rice (Khao Pad Pu)",
+    "description": "Stir-fried rice with egg & spring onions, topped with Thai omelette, light soy sauce",
+    "price": "£15.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Vegs": [
+   {
+    "num": "",
+    "name": "Broccoli - garlic & oyster soy sauce",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Pak Choi - garlic & oyster soy sauce",
+    "description": "",
+    "price": "£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mixed Greens - chilli, garlic & yellow bean sauce",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "Sides": [
+   {
+    "num": "",
+    "name": "Jasmine Rice",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£4.25",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Extras": [
+   {
+    "num": "",
+    "name": "Fried Egg",
+    "description": "",
+    "price": "£2.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Omelette (2 eggs)",
+    "description": "",
+    "price": "£3.90",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Add vegetables",
+    "description": "",
+    "price": "£2.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Tofu, Chicken",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Duck, Prawn, Pork Belly, Beef",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Fresh Chilli in Fish Sauce",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

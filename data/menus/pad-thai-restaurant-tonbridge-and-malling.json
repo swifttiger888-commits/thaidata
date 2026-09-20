@@ -1,0 +1,203 @@
+{
+ "restaurant": "Pad Thai Restaurant",
+ "city": "Tonbridge and Malling",
+ "fsa_id": "291482",
+ "address": "",
+ "source": "https://www.pad-thai.co.uk/_files/ugd/c9cffb_a9871a1746034ca18f59633b21ac0d91.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "pad-thai-restaurant",
+ "pricing_notes": [
+  "Ice Cream – 2 Scoops £5.95"
+ ],
+ "categories": {
+  "Dessert Wine": [
+   {
+    "num": "40.",
+    "name": "Moscato d'asti, Pitule, Cantine Neirano Italy",
+    "description": "Fresh and gently sparkling with delicate aromas of honey, flowers and candied citrus fruits. An excellent choice specially recommended with Thai desserts.",
+    "price": "125ml Glass £5.95 / Bottle £22.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Liqueurs, Teas & Coffees": [
+   {
+    "num": "",
+    "name": "Liqueur Coffee",
+    "description": "",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Floater Coffee",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Cappuccino",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Espresso",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Double Espresso",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Filter Coffee",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Tea per person",
+    "description": "Selection of English, Green, Jasmine & Peppermint.",
+    "price": "£2.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Ice Cream – 2 Scoops £5.95": [
+   {
+    "num": "1",
+    "name": "Vanilla",
+    "description": "Vanilla Dream is a Mövenpick classic. We blend Madagascan Bourbon Vanilla with Alpine cream. So good you’ll think you’re dreaming.",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "2",
+    "name": "Chocolate",
+    "description": "Real Swiss chocolate and a blend of first-quality cocoa give the ice cream its supreme depth of flavour. Maracaibo cocoa adds its signature to a crisp ripple that breaks into crunchy shavings as you bite into it.",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "3",
+    "name": "Lemon Sorbet",
+    "description": "The lemons sit out in the Sicilian sun to give them that extra punchy citrus flavour. Small chunks and real juice, is there any better way of enjoying a lemon?",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "4",
+    "name": "Flavour of the Day",
+    "description": "A constantly changing selection of ice creams and sorbets. Please ask your server for today’s choice.",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Thai Desserts": [
+   {
+    "num": "5",
+    "name": "Kanom Tuoy",
+    "description": "Steamed Thai Coconut dessert made with tapioca and rice flour hand mixed with coconut milk and palm sugar.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "6",
+    "name": "Banana Fritter",
+    "description": "Served with vanilla ice cream, topped with maple syrup and sesame seeds.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "7",
+    "name": "Kanom Gluoy",
+    "description": "Thai steamed banana cake cooked with fresh coconut meat, Thai banana and coconut milk.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "8",
+    "name": "Kao Tom Mud",
+    "description": "Thai sticky rice pudding with banana served with vanilla ice cream, topped with maple syrup and sesame seeds.",
+    "price": "£7.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "9 Speciality Teas £3.95": [
+   {
+    "num": "A",
+    "name": "GINGER TWIST (herbal infusion – caffeine free)",
+    "description": "A harmonious mix of lemongrass, tropical fruits and mint, fuelled with a touch of ginger and ginseng.",
+    "price": "3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "B",
+    "name": "ORGANIC DETOX INFUSION (herbal infusion – caffeine free)",
+    "description": "A luscious detoxifying herbal infusion highlighted by clean notes of mint and basil. A spa retreat in a cup.",
+    "price": "3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "C",
+    "name": "GREEN TEA TROPICAL (herbal infusion – light caffeine)",
+    "description": "Smooth green tea leaves are harmoniously blended with sweet tropical fruits to create a tasteful and healthy infusion.",
+    "price": "3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "D",
+    "name": "ORGANIC GREEN DRAGON (herbal infusion – light caffeine)",
+    "description": "Delicately pan fried, these smooth, highest grade china longjing green tea leaves brew a nutty and buttery cup.",
+    "price": "3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "E",
+    "name": "WHITE ORCHARD (white tea – lightest caffeine)",
+    "description": "Mouth-watering fruits of melon and peach harmoniously blended with the delicate notes of pure china white tea leaves.",
+    "price": "3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "F",
+    "name": "ORANGE DULCE (black tea – caffeine)",
+    "description": "Like a lusciously rich dessert, orange dulce is a dark brew teaming with notes of orange.",
+    "price": "3.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

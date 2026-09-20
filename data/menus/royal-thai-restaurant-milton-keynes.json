@@ -1,0 +1,310 @@
+{
+ "restaurant": "Royal Thai Restaurant",
+ "city": "Milton Keynes",
+ "fsa_id": "126374",
+ "address": "",
+ "source": "http://royalthai-restaurants.co.uk/RT-Takeaway-Menu.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "royal-thai-restaurant",
+ "pricing_notes": [],
+ "categories": {
+  "Soups & Salads": [
+   {
+    "num": "17.",
+    "name": "Tom Yum",
+    "description": "Spicy & sour soup with mushrooms, lemon grass, lime leaves, galangal fresh chillis & coriander.",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Chicken / Tofu",
+    "description": "",
+    "price": "£ 8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawns",
+    "description": "",
+    "price": "£ 9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mixed seafood",
+    "description": "",
+    "price": "£ 9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mushrooms / Mixed Vegetables",
+    "description": "",
+    "price": "£ 8.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Jumbo Prawns",
+    "description": "",
+    "price": "£ 14.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "18.",
+    "name": "Tom Kha",
+    "description": "A milder spicy & sour soup with coconut, mushrooms, lemon grass, lime leaves galangal, fresh chillis & coriander.",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "19.",
+    "name": "Papaya Salad",
+    "description": "Very popular spicy papaya salad mixed with garlic , fresh chillis peanuts & lemon juice.",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Vegetarian",
+    "description": "",
+    "price": "£ 11.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "20.",
+    "name": "Thai Salad with Roasted Rice",
+    "description": "Spicy mixed salad with Thai herb dry chillis, ground roasted rice & lemon juice.",
+    "price": "£ 9.50",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Chicken / Pork",
+    "description": "",
+    "price": "£ 11.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mixed Seafood / Fish",
+    "description": "",
+    "price": "£ 18.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mixed Vegetables",
+    "description": "",
+    "price": "£ 10.95",
+    "vegetarian": true,
+    "heat": null
+   }
+  ],
+  "Vegetables Stir Fried (V)": [
+   {
+    "num": "23.",
+    "name": "Mixed Vegetables",
+    "description": "Stir fried in oyster sauce.",
+    "price": "£ 9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "24.",
+    "name": "Broccoli",
+    "description": "Stir fried in oyster sauce",
+    "price": "£ 9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "26.",
+    "name": "Bean Sprouts",
+    "description": "Stir fried with spring onion in soya sauce",
+    "price": "£ 9.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Thai Curry": [
+   {
+    "num": "27.",
+    "name": "Thai Green Curry",
+    "description": "Classic Thai green curry paste with coconut milk, bamboo shoots,\ngreen peppers, red peppers & sweet basil\nPrawns / Duck / Beef £ 12.95\nChicken / Pork £ 11.95\nTofu £ 10.95\nVegetables (V) £ 9.95\nJumbo Prawns £ 16.95",
+    "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 9.95 / £ 16.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "28.",
+    "name": "Thai Red Curry",
+    "description": "Classic Thai red curry paste with coconut milk, bamboo shoots,\ngreen peppers, red peppers\nPrawns / Duck / Beef £ 12.95\nChicken / Pork £ 11.95\nTofu £ 10.95\nVegetables (V) £ 9.95\nJumbo Prawns £ 16.95",
+    "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 9.95 / £ 16.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "29.",
+    "name": "Massaman",
+    "description": "Massaman curry paste with coconut milk, potatoes, onions & cashew nuts.\nLamp / Beef £ 12.95\nChicken £ 11.95",
+    "price": "£ 12.95 / £ 11.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "32.",
+    "name": "Panang",
+    "description": "Aromatic panaeng curry paste with coconut cream, green been & lime leaves.\nPrawns / Duck / Beef £ 12.95\nChicken / Pork £ 11.95\nTofu £ 10.95\nVegetables (V) £ 9.95\nJumbo Prawns £ 16.95",
+    "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 9.95 / £ 16.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "33.",
+    "name": "Gaeng Phed Ped Yang ( Special Curry Duck)",
+    "description": "Special Thai roasted duck with red curry paste in coconut milk, pineapple pieces & cherry tomatoes.",
+    "price": "£ 12.95",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "Special Duck and Seafoods": [
+   {
+    "num": "36.",
+    "name": "Duck Tamarind ( Ped Makarm)",
+    "description": "Sliced roast duck top with Royal Thai special tamarind sauce served with crispy noodles.",
+    "price": "£ 14.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "37.",
+    "name": "Orange Duck",
+    "description": "Sliced roast duck top with Royal Thai special Orange sauce served with crispy noodles.",
+    "price": "£ 14.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "38.",
+    "name": "Hor Mok Talay",
+    "description": "Steamed mixed seafood with red curry paste in coconut milk eggs & lime leaves.",
+    "price": "£ 14.95",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "Stir Fried": [
+   {
+    "num": "39.",
+    "name": "Phad Khing ( Ginger Stir Fried )",
+    "description": "Stir fried ginger, mushrooms, onions & spring onions in oyster sauce.\nPrawns / Duck / Beef\nChicken / Pork\nTofu",
+    "price": "£ 12.95 / £ 11.95 / £ 10.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "40.",
+    "name": "Pad Med Manuang Hinnaparn ( Cashew Nut Stir Fried )",
+    "description": "Stir fried cashew nut & spring onions in oyster sauce.\nPrawns / Duck / Beef\nChicken / Pork\nTofu",
+    "price": "£ 12.95 / £ 11.95 / £ 10.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "41.",
+    "name": "Pad Graprao ( Basil & Chillis Stir fried )",
+    "description": "Stir fried garlic fresh chillis & basil leaf in oyster sauce.\nPrawns / Duck / Beef\nChicken / Pork\nTofu\nFish",
+    "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 18.00",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "42.",
+    "name": "Pad Prik Khing ( Red Curry Paste Stir Fried )",
+    "description": "Stir fried red curry paste with green beans, peppers, lime leaves & Thai herb\nPrawns\nPork\nTofu",
+    "price": "£ 12.95 / £ 11.95 / £ 10.95",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "Stir Fried (Continued)": [
+   {
+    "num": "43.",
+    "name": "Priew Wan (Sweet & Sour Stir Fried)",
+    "description": "Stir fried cucumbers, pineapple pieces, red peppers & tomatoes in\nsweet & sour sauce.\nChicken / Pork £ 11.95\nPrawns / Duck £ 12.95\nTofu £ 9.95\nFish £ 16.00",
+    "price": "£ 11.95 / £ 12.95 / £ 9.95 / £ 16.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "45.",
+    "name": "Nam Prik Pao ( Chillis Oil Stir Fried )",
+    "description": "Stir fried chillis oil with onions & red peppers .\nChicken / Pork £ 11.95\nPrawns / Beef £ 12.95\nTofu £ 10.95\nJumbo Prawns £ 16.95",
+    "price": "£ 11.95 / £ 12.95 / £ 10.95 / £ 16.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "46.",
+    "name": "Prik Thai Dam ( Black Pepper Stir Fried)",
+    "description": "Stir fried black peppers, baby corn & onions.\nChicken / Pork £ 11.95\nPrawns / Beef £ 12.95\nJumbo Prawns £ 16.95",
+    "price": "£ 11.95 / £ 12.95 / £ 16.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Special Fish and Prawn": [
+   {
+    "num": "47.",
+    "name": "Sa-Mon Pai",
+    "description": "Deep fried fish or jumbo prawns seasoned with fresh Thai herbs\nserved with a special Royal Thai sauce.\nJumbo Prawns £ 18.00\nFish £ 21.00",
+    "price": "£ 18.00 / £ 21.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "48.",
+    "name": "Sea Bass with Soya Sauce",
+    "description": "Steamed sea bass top with ginger, spring onion in soya sauce.",
+    "price": "£ 21.00",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "49.",
+    "name": "Sea Bass with Lemon Sauce",
+    "description": "Steamed sea bass topped with seafood sauce & served with lemon slices.",
+    "price": "£ 21.00",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": [
+  {
+   "dish": "Mixed Seafood",
+   "category": "Soups & Salads",
+   "prices": [
+    "£ 9.95",
+    "£ 15.95"
+   ]
+  }
+ ]
+}

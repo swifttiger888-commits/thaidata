@@ -1,0 +1,534 @@
+{
+ "restaurant": "Thai Moon Restaurant",
+ "city": "Cornwall",
+ "fsa_id": "1790755",
+ "address": "",
+ "source": "https://www.thaimoon.co.uk/wp-content/uploads/2023/08/Thai-Moon-menu-2023.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "thai-moon-restaurant",
+ "pricing_notes": [
+  "MENU A (@ £20.70 per person)",
+  "MENU B (@ £20.70 per person)",
+  "MENU C (Vegetarian) ((@ £18.10 per person)",
+  "All set menu prices include a portion of steamed or fried rice per person",
+  "(10% reduction for meals that are collected)",
+  "(per person)"
+ ],
+ "categories": {
+  "THAI \"ESARN\" SPECIALS\n(North Eastern Thailand Dishes)": [
+   {
+    "num": "43.",
+    "name": "LABB",
+    "description": "Thai herbs, chilli, onion and lemon juice.\nWith: Chicken £11.10\n: Pork £11.10\n: Beef £11.10",
+    "price": "£11.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "44.",
+    "name": "GUNG PHAA",
+    "description": "A salad of prawn with Thai herbs, spring onion,\ncorriander, chilli and lemon juice.",
+    "price": "£11.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "45.",
+    "name": "PHAA TODD KRATIUM",
+    "description": "Deep fried Sea bass with vegetables\ntopped with deep fried garlic.",
+    "price": "£13.25",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "FISH DISHES": [
+   {
+    "num": "32.",
+    "name": "PLAA NEUNG MA NOW",
+    "description": "Sea bass steamed with soy sauce\nand topped with a chilli, garlic,\nand lemon juice sauce",
+    "price": "£13.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "33.",
+    "name": "PLAA NEUNG SEE-IEW",
+    "description": "Sea bass steamed with soy sauce\nand topped with spring onion, ginger,\nmushrooms and peppers.",
+    "price": "£13.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "34.",
+    "name": "PLAA SAM ROOD",
+    "description": "Sea bass pan fried\nand topped with chilli sauce,\npineapple and tomato.",
+    "price": "£13.25",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "THAI CURRY DISHES": [
+   {
+    "num": "25.",
+    "name": "GAENG KHIAN WAAN",
+    "description": "A Thai green curry with coconut milk, mixed vegetables,\npeppers and bamboo shoots.\nWith: Chicken £11.10\nPork £11.10\nBeef £11.10\nPrawn £11.25\nVegetables £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "26.",
+    "name": "GAENG PHET",
+    "description": "A Thai red curry with coconut milk, mixed vegetables, peppers\nand bamboo shoots.\nWith: Chicken £11.10\nPork £11.10\nBeef £11.10\nPrawn £11.25\nVegetables £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "2 7.",
+    "name": "GAENG PANAENG",
+    "description": "A curry with coconut milk, onion, peppers, spring onion and\nbamboo shoots topped with kaffir lime leaves\nWith: Chicken £11.10\nPork £11.10\nBeef £11.10\nPrawn £11.25\nFish £11.25\nVegetables £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "27A.",
+    "name": "PAT PIK GAENG",
+    "description": "A Thai red curry with coconut milk ,onion, long beans, and\npeppers cooked in a chilli oil.\nWith: Chicken ,Pork or Beef £11.10\nSeafood £11.25\nVegetables £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "28.",
+    "name": "GAENG MASSAMAN",
+    "description": "A curry with carrot, onion,tomato,nuts and potato in coconut\nmilk\nWith: Chicken £11.10\nBeef £11.10",
+    "price": "£11.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "29.",
+    "name": "PAD PO TAK",
+    "description": "Prawn, squid and mussels stir fried with onion, peppers and\nmixed vegetables in a red curry sauce",
+    "price": "£11.25",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "SET MENUS\n(For two or more people)": [
+   {
+    "num": "(1)",
+    "name": "Sateh gai",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(3)",
+    "name": "Khanom pang na gai",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(4)",
+    "name": "Ribs of pork",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(7)",
+    "name": "Gung chup pang tod",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(26)",
+    "name": "Gaeng phet (Chicken)",
+    "description": "Main course\nA Selection of :-",
+    "price": null,
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "(17)",
+    "name": "Priaw waan (Pork)",
+    "description": "Main course\nA Selection of :-",
+    "price": null,
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "(21)",
+    "name": "Pat pak (Vegetarian)",
+    "description": "Main course\nA Selection of :-",
+    "price": null,
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "(5)",
+    "name": "Tord man plaa",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(19)",
+    "name": "Pat Met Mamuang (Chicken)",
+    "description": "Main course\nA Selection of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(2)",
+    "name": "Spring rolls",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(6)",
+    "name": "Tord mun khow phode",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "(9)",
+    "name": "Vegetable tempura",
+    "description": "A mixed starter of :-",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "STARTERS": [
+   {
+    "num": "1.",
+    "name": "SATAY GAI",
+    "description": "Marinated pieces of chicken breast threaded on a stick, barbecued and served with a peanut sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "2.",
+    "name": "SPRING ROLLS",
+    "description": "Thai style crispy spring rolls containing noodles and vegetables served with a sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "2A.",
+    "name": "PO PIA PHED THOD",
+    "description": "Thai style crispy spring rolls containing duck and vegetables served with a barbeque sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "3.",
+    "name": "KHANOM PANG GAI (Chicken Toast)",
+    "description": "Marinated minced chicken sprinkled with sesame seeds, deep fried on bread and served with a sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "4.",
+    "name": "GRAH DOOG MOO (Ribs of Pork)",
+    "description": "Spare ribs of pork served with a barbecue sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "5.",
+    "name": "TOD MUN PLA (Thai Fishcakes)",
+    "description": "Minced fish blended with red curry paste, green beans and lime leaves, served with a sweet chilli, Cucumber and ground peanut sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "6.",
+    "name": "TOD MUN KHOW PHODE",
+    "description": "Sweetcorn mixed with red curry paste and lime leaves deep fried and served with a sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "7.",
+    "name": "GUNG CHUP PANG TOD",
+    "description": "Deep fried prawns in batter served with a sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "9.",
+    "name": "VEGETABLE TEMPURA",
+    "description": "Mixed vegetables fried in a light batter and served with a sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "10.",
+    "name": "PIK GAI ( Chicken Wings)",
+    "description": "Chicken wings deep fried and served with a barbecue/oyster sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "12.",
+    "name": "DIM SUM",
+    "description": "Wonton pastries containing a mix of minced chicken, carrot and onion served with a sweet dark soy sauce.",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "MIXED STARTERS": [
+   {
+    "num": "12A.",
+    "name": "A SELECTION OF:-",
+    "description": "Khanom Pang Na Gai (3)\nSateh Gai (1)\nSpring Rolls (2)\nTord Mun Khow Phode (6)",
+    "price": "£7.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "12B.",
+    "name": "A SELECTION OF:- (Vegetarian)",
+    "description": "Spring Rolls (2)\nTord Man Khao Pood (6)\nVegetable Tempura (9)",
+    "price": "£6.95",
+    "vegetarian": true,
+    "heat": null
+   }
+  ],
+  "THAI SOUPS": [
+   {
+    "num": "13.",
+    "name": "TOM YAM",
+    "description": "Thai style mushroom soup flavoured with lemon grass, lime leaves, tomato and galangal.\nWith: Chicken £7.10\n: Prawn £8.50",
+    "price": "£5.65/£7.10/£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "14.",
+    "name": "TOM KHA",
+    "description": "Thai style soup flavoured with Lemon grass, lime leaves, Tomato, mushrooms and coconut milk\nWith: Chicken £7.10\n: Beef £7.10\n: Pork £7.10\n: Prawn £8.50",
+    "price": "£5.95/£7.10/£8.50",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "THAI SALADS": [
+   {
+    "num": "15.",
+    "name": "YUM WOON SEN",
+    "description": "Minced pork with noodles, spring onion, chilli, Garlic, sugar, lemon juice and fish sauce.",
+    "price": "£8.75",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "16.",
+    "name": "YUM SAM ROOD",
+    "description": "A chopped salad with spring onion, soy sauce, tomato, lemon juice, chilli and garlic.\nWith: Beef £8.75\n: Seafood £10.30",
+    "price": "£6.75/£8.75/£10.30",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "DUCK DISHES": [
+   {
+    "num": "30.",
+    "name": "DUCK PAT MAKARM",
+    "description": "Slices of duck on a bed of vegetables with peppers, cashew nuts and a tamarind sauce.",
+    "price": "£11.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "31.",
+    "name": "DUCK THAI SAKON",
+    "description": "Slices of duck on a bed of vegetables with peppers, spring onion, in a red curry sauce.",
+    "price": "£11.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "31A.",
+    "name": "GAENG PHET PED YANG",
+    "description": "Slices of duck in a red curry sauce with Pineapple and tomato",
+    "price": "£11.25",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "STIR FRIES": [
+   {
+    "num": "17.",
+    "name": "PRIAW WAAN",
+    "description": "A traditional sweet and sour.\nStir fried tomatoes, onion, peppers, pineapple and cucumber in a sweet and sour sauce.\nWith Chicken, Pork or Beef £11.10\n: Prawn £11.25\n: Vegetables £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "18.",
+    "name": "PAT NAM MAN HOI",
+    "description": "Choose from below to be stir-fried with carrots, Mushrooms and spring onions in an oyster sauce.\nWith Chicken, Pork or Beef £11.10\n: Prawn £11.25\n: Vegetables £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "19.",
+    "name": "PAT MET MAMUANG",
+    "description": "Chicken stir fried in oyster sauce, with onions, Mushrooms, cashews and peppers.",
+    "price": "£11.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "20.",
+    "name": "PAT BAI GRAPOW",
+    "description": "A stir-fry with peppers,onion,mushrooms and longbeans with a special blend of garlic,oyster sauce and sweet Basil.\nWith Chicken, Pork or Beef £11.10\n: Prawn £11.25\n: Duck £11.25",
+    "price": "£11.10/£11.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "21.",
+    "name": "PAT PAK (VEGETARIAN)",
+    "description": "A special blend of assorted vegetables with bean sprouts, garlic, broccoli and mushrooms in an oyster sauce",
+    "price": "£9.25",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "22.",
+    "name": "GAI PAT TAKAI",
+    "description": "Chicken stir fried in a green curry sauce with lemon grass,mixed vegetables and thai herbs",
+    "price": "£11.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "23.",
+    "name": "PAT KHING",
+    "description": "A stir fry of shredded ginger, mushrooms, spring onion and peppers in an oyster sauce.\nWith Duck £11.25\n: Beef, Chicken or Pork £11.10\n: Prawn £11.25",
+    "price": "£11.25/£11.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "24.",
+    "name": "GA TA RON",
+    "description": "Stir fry with mushrooms, carrots, onion, cauliflower, broccoli and green beans in a mandarin sauce.\nWith Duck £11.25\n: Beef, Chicken or Pork £11.10\n: Prawn £11.25",
+    "price": "£11.25/£11.10",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "24A.",
+    "name": "WEEPING TIGER",
+    "description": "Slices of beef in oyster sauce with spring onions, corriander and a sprinkling of black pepper",
+    "price": "£11.10",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "NOODLE DISHES": [
+   {
+    "num": "35.",
+    "name": "PAT THAI",
+    "description": "Stir fried rice noodles and egg with bean sprouts, spring onions, crushed peanuts and tamarind sauce.\nWith Chicken £11.10\n: Beef £11.10\n: Pork £11.10\n: Prawn £11.25\n: Vegetarian £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "36.",
+    "name": "PAT SEE IEW",
+    "description": "Stir fried rice noodles and egg with vegetables and oyster sauce.\nWith Chicken £11.10\n: Beef £11.10\n: Pork £11.10\n: Prawn £11.25\n: Vegetarian £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "37.",
+    "name": "RAAD NAH",
+    "description": "Stir fried rice noodles with vegetables, Potato flour and oyster sauce.\nWith Chicken £11.10\n: Beef £11.10\n: Pork £11.10\n: Prawn £11.25\n: Vegetarian £9.95",
+    "price": "£11.10/£11.25/£9.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "RICE DISHES": [
+   {
+    "num": "38.",
+    "name": "JASMINE RICE",
+    "description": "Steamed fragrant jasmine rice",
+    "price": "£4.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "39.",
+    "name": "EGG FRIED RICE",
+    "description": "Fried rice with egg, sugar and salt.",
+    "price": "£4.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "40.",
+    "name": "COCONUT RICE",
+    "description": "Jasmine rice with coconut milk",
+    "price": "£4.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "41.",
+    "name": "GWAI TEO",
+    "description": "Stir fried noodles with egg bean sprouts and spring onion.",
+    "price": "£4.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "41A.",
+    "name": "THAI STICKY RICE",
+    "description": "",
+    "price": "£4.45",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

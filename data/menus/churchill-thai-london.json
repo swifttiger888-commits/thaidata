@@ -1,0 +1,299 @@
+{
+ "restaurant": "Churchill Thai",
+ "city": "London",
+ "fsa_id": "333836",
+ "address": "",
+ "source": "https://www.churchillarmskensington.co.uk/-/media/sites/pubs-and-hotels/c/the-churchill-arms-kensington-_-p021/files/global-menu-files/thai-menus---may-2025.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "churchill-thai",
+ "pricing_notes": [],
+ "categories": {
+  "NOODLES": [
+   {
+    "num": "1.",
+    "name": "Pad Thai (Very Mild/Mild or Spicy)",
+    "description": "Special “Thai rice noodles” stir-fried with chilli sauce, beansprouts, carrots, spring onions and egg",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "2.",
+    "name": "Pad Si-ew",
+    "description": "Thick noodles stir-fried with soy sauce, egg, peas, red and green peppers, beansprouts, carrots and mixed vegetables",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "16.",
+    "name": "Pad Kee-Mao",
+    "description": "Noodles stir-fried with fresh chopped chilli, garlic, red and green peppers, green beans, cabbage and basil leaves",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "3"
+   }
+  ],
+  "RICE DISHES": [
+   {
+    "num": "4.",
+    "name": "Kao Pad",
+    "description": "Stir-fried rice with egg, soy sauce, peas, sprinkled with spring onions, carrots, red and green peppers",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "SIDE DISHES": [
+   {
+    "num": "",
+    "name": "Spring Rolls (veg-6pcs)",
+    "description": "",
+    "price": "7.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawn Rolls (6pcs)",
+    "description": "",
+    "price": "7.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawn Crackers",
+    "description": "with a sweet chilli dip",
+    "price": "5.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir-fried Mixed Vegetables",
+    "description": "",
+    "price": "8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "4.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Wings",
+    "description": "",
+    "price": "7.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Satah",
+    "description": "",
+    "price": "7.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Dumplings",
+    "description": "With Pork & Prawns",
+    "price": "7.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Extra Ground Peanuts",
+    "description": "",
+    "price": "1.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Extra Deep-fried Cashew Nuts",
+    "description": "",
+    "price": "2.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Extra Sweet Chilli Dip",
+    "description": "",
+    "price": "0.50",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "CURRY": [
+   {
+    "num": "7.",
+    "name": "Duck Curry",
+    "description": "Roast duck only\nSpecial roasted duck curry made from “dried red chilli” cooked in coconut milk, pineapple pieces, red and green peppers, peas, tomatoes and sweet basil leaves",
+    "price": "16.00",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "9.",
+    "name": "Jungle Curry",
+    "description": "A tasty hot curry (without coconut milk) made from “jungle curry paste” cooked with vegetables and Thai herbs",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "12.",
+    "name": "Green Curry",
+    "description": "A traditional Thai green curry made from “fresh green chilli and Thai herbs” cooked in coconut milk with peas, bamboo shoots, red and green peppers and sweet basil leaves",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "20.",
+    "name": "Panang Curry",
+    "description": "A spicy red curry made of “dried red chilli” with coconut milk, Thai lime leaves, sweet basil leaves, red and green peppers",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "STIR-FRIED": [
+   {
+    "num": "5",
+    "name": "Pad Ka-Prao",
+    "description": "Stir-fried with chopped chilli, garlic, onions, fresh basil leaves, red and green peppers",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "8",
+    "name": "Pad Nam Prik Pao",
+    "description": "Stir-fried with “sweet chilli paste”,onions, long beans, sweet basil leaves, red and green peppers",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "10",
+    "name": "Pad Khing",
+    "description": "Stir-fried with ginger, onions, black fungus spring onions, red and green peppers, pineapple pieces",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "11",
+    "name": "Pad Ped",
+    "description": "Stir-fried with red curry paste, long beans, onions, red and green pepper, bamboo shoots and sweet basil leaves",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "13",
+    "name": "Pad Kra Tiem Prik-Tai",
+    "description": "Stir-fried with garlic, pepper ground, spring onions, carrots, coriander sauce, onions, red and green peppers",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "14",
+    "name": "Pad Priew Wan",
+    "description": "Stir-fried with homemade”sweet & sour sauce”, red and green peppers, carrots, peas, onions, mushrooms, spring onions, tomatoes and pineapple pieces",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "15",
+    "name": "Pad Himmaparn (Mild or Spicy )",
+    "description": "Chicken only\nStir-fried with cashew nuts, spring onions, red and green peppers, onions",
+    "price": "16.00",
+    "vegetarian": false,
+    "heat": "1 or 2"
+   },
+   {
+    "num": "15.",
+    "name": "Pad Himmaparn (Mild or Spicy)",
+    "description": "Chicken only\nStir-fried with cashew nuts, spring onions, red and green peppers, onions in soy sauce",
+    "price": "16.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "17.",
+    "name": "Pad Nam Man Hoi",
+    "description": "Beef only\nStir-fried with oyster sauce, onions, carrots, red and green peppers, spring onions and mushrooms",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "18.",
+    "name": "Pad Prik (Mild or Spicy)",
+    "description": "Stir-fried with onions, chilli, red and green peppers, sprinkled with chopped spring onion",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "19.",
+    "name": "Moo Pad Prik Khing",
+    "description": "Pork only\nTender cut of pork stir-fried with curry paste, onions, long beans, Thai herbs, red and green peppers",
+    "price": "14.00",
+    "vegetarian": false,
+    "heat": "2"
+   }
+  ],
+  "DESSERTS": [
+   {
+    "num": "",
+    "name": "Apple Pie",
+    "description": "An all-time classic dessert",
+    "price": "5.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chocolate Cake",
+    "description": "",
+    "price": "5.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Thai Iced Tea",
+    "description": "A Thai spin on a classic, served with milk",
+    "price": "4.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Jasmine Tea",
+    "description": "",
+    "price": "2.00",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

@@ -1,0 +1,454 @@
+{
+ "restaurant": "Thai Smile Restaurant",
+ "city": "Bury",
+ "fsa_id": "1645974",
+ "address": "",
+ "source": "https://thaismile-restaurant.co.uk/menu.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "thai-smile-restaurant",
+ "pricing_notes": [
+  "CHICKEN £14.99 PORK £14.99 BEEF £15.99 PRAWN £16.99 SEAFOOD £18.99",
+  "Vegetables £14.99 | Tofu £15.99",
+  "CHICKEN £14.99",
+  "PORK £14.99",
+  "BEEF £15.99",
+  "SEAFOOD £18.99",
+  "PRAWN £16.99",
+  "£11.99"
+ ],
+ "categories": {
+  "Mains (Curry) All Served with Jasmine Rice": [
+   {
+    "num": "B1",
+    "name": "Thai Classic Red Curry",
+    "description": "Flavoured with Spicy Red Curry Paste With Coconut, Red Chilli, Lime Leaves, Sweet Basil, Bamboo Shoots, Courgette, Aubergine & Baby Corn",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "B2",
+    "name": "Green Curry",
+    "description": "Flavoured with in a Spicy Green Paste with Coconut, Aubergine, Green Chilli, Lime Leaves, Long Beans, Courgette, Sweet Basil, Bamboo Shoots & Baby Corn",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "B3",
+    "name": "Massaman",
+    "description": "A Mild Curry Sauce from Southern Thailand Cooked in Coconut Milk with Massaman Curry Paste, Onions, Potato Topped With Fry Onion",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "B4",
+    "name": "Paneng",
+    "description": "Flavoured with Paneng Red Curry Paste & Long Beans, Peppers, Coconut Cream, Slight Red Chilli And Kaffir Leaves",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "B5",
+    "name": "Yellow Curry",
+    "description": "The Famous Thai Yellow Curry Cooked with Coconut Milk, Onions & Potatoes Topped With Fry Onion",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "B6",
+    "name": "Pad Ka Pao (Hot)",
+    "description": "Stir Fried with Garlic, Green Bean ,onion, Peppers, Chilli & Bouquet Of Holy Basil Leaves",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "B7",
+    "name": "Lamb Massaman Curry",
+    "description": "Onions, Potatoes, Peppers & Carrots Topped with Fry Onion",
+    "price": "£19.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "B8",
+    "name": "Thai Style Pork BBQ with Sticky Rice",
+    "description": "Skewers Marinated in Soya And Seasoning Sauces & Teriyaki Sauce on Top",
+    "price": "£15.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "B9",
+    "name": "Duck Curry",
+    "description": "Roasted Duck, Cooked in Coconut Milk with Pepper Chilli, Courgette Aubergine, Tomato, Pinapple & Basil with Red Curry Paste",
+    "price": "£18.99",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "B10",
+    "name": "Crispy Duck Pad Ka Pow",
+    "description": "with Chilli and Thai Basil",
+    "price": "£18.99",
+    "vegetarian": false,
+    "heat": "2"
+   }
+  ],
+  "Soup": [
+   {
+    "num": "F1",
+    "name": "Duck Noodle Soup",
+    "description": "Greasing aromatic Duck, Rice Noodles, Bean Sprouts, finely chopped Spring Onions & Corriander",
+    "price": "£18.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "F2",
+    "name": "Chicken Noodle Soup",
+    "description": "Rice Noodles with Chicken & Bean Sprouts, finely chopped Spring Onions and Corriander",
+    "price": "£17.50",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Sides": [
+   {
+    "num": "",
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Jasmine Rice",
+    "description": "",
+    "price": "£3.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chips",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Curry Sauce",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Coconut Milk",
+    "description": "",
+    "price": "£1.50",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Vegetarian Mains & Tofu": [
+   {
+    "num": "G1",
+    "name": "Red, Green, Massaman, Paneng & Yellow Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "G2",
+    "name": "Pad Ka Pao (Hot)",
+    "description": "Stir Fried with Garlic, Beans, Pepper, Onion, Chilli & Bouquet of Holy Basil Leaves",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "G3",
+    "name": "Pad Met Mamuang",
+    "description": "Stir Fried with Chilli Paste,vegetables with Cashew Nuts",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "G4",
+    "name": "Hed Pad Kratiem Prig Thai",
+    "description": "Stir Fried Mushrooms with Garlic, Leek, Peppers & Corriander",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "G5",
+    "name": "Pad Priew Wan",
+    "description": "Stir Fried Mixed Vegetables, Cucumber, Pineapple, in a Sweet & Sour Sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "G6",
+    "name": "Oyster Sauce Stir Fried Vegetables",
+    "description": "Mix Vegetables With Oyster Sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "G7",
+    "name": "Pad Thai",
+    "description": "Stir Fried Rice Noodles With Egg, Leek, Carrot, Spring Onions, Bean Sprouts, Peanut & Tamarind",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "G8",
+    "name": "Pineapple Fried Rice Mix Veg",
+    "description": "Fried Rice with Egg, Onions, Cashew Nuts, Yellow, Curry Powder, Pineapple and a pinch of Salt & Pepper & Seasoning Sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Stir Fry": [
+   {
+    "num": "C1",
+    "name": "Sweet & Sour Stir Fry",
+    "description": "Stir Fried Pineapple, Cucumber, Onions, Tomato, Red & Green Pepper with Sweet & Sour Sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "C2",
+    "name": "Cashew Nut Stir Fry",
+    "description": "Stir Fried with Chilli Paste, Spring Onion, Cashew Nuts, Red & Green Pepper",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "C3",
+    "name": "Garlic Stir Fry",
+    "description": "Stir Fried Garlic & Black Pepper, Garnished in Spring Onion & Corriander, Leeks & Onion",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "C4",
+    "name": "Oyster Sauce Stir Fry",
+    "description": "Mix Vegetables with Oyster Sauce",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "C5",
+    "name": "Ginger & Garlic Stir Fry",
+    "description": "Stir Fried with Seasoning Sauce, Leeks, Spring Onions, Mushrooms, Garlic, Ginger",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "C6",
+    "name": "Tamarind Prawn",
+    "description": "Tamarind Sauce, Shallot Cashew Nuts & Spring Onion",
+    "price": "£16.99",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Kids Menu": [
+   {
+    "num": "F1",
+    "name": "Chicken Satay",
+    "description": "with chips",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "F2",
+    "name": "Chicken Wings",
+    "description": "with chips",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "F3",
+    "name": "Chicken Nuggets",
+    "description": "with chips",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "F4",
+    "name": "Popcorn Chicken",
+    "description": "with chips",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Starters": [
+   {
+    "num": "A0",
+    "name": "Thai Smile Selection Platter",
+    "description": "Tempura Prawn, Chicken Satay, Spring Roll & Chicken Prawn Toast Wings With Sweet Chilli Dip & Peanut Sauce",
+    "price": "(For 2) £21.99 (For 3) £25.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A1",
+    "name": "Salt & Pepper Squid",
+    "description": "Served With Sweet Chilli Dip",
+    "price": "£9.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A2",
+    "name": "Prawn Cracker",
+    "description": "Served With Sweet Chili Dip",
+    "price": "£5.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A3",
+    "name": "Home Made Spring Rolls",
+    "description": "Crispy Spring Rolls Filled With Vegetables And Served With Sweetchilli dip",
+    "price": "£8.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A4",
+    "name": "Duck Spring Roll",
+    "description": "Vegetable Leeks, Cabbage, Carrots & Duck Meat Served With Hoisin Sauce",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A5",
+    "name": "Thai Fish Cakes",
+    "description": "Made With Fresh In House Fish Cakes Served With Sweet Chilli Dip",
+    "price": "£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A6",
+    "name": "Gyoza Chicken Vegetable",
+    "description": "Served With Teriyaki Sauce",
+    "price": "£8.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A7",
+    "name": "Thai Style Chicken Satay",
+    "description": "Homemade Served With Peanut Sauce",
+    "price": "£8.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A8",
+    "name": "Chicken Wings",
+    "description": "Crispy Chicken Wings With Sweet Chilli Sauce",
+    "price": "£7.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A9",
+    "name": "Tom Yum (Prawn)",
+    "description": "Hot And Sour Soup Mix with Spices, Galangal Chilli, Corriander, Onion, Mushroom, Lime Leaves, Fresh Lime Juice.",
+    "price": "£10.99",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Tom Yum (Chicken)",
+    "description": "Hot And Sour Soup Mix with Spices, Galangal Chilli, Corriander, Onion, Mushroom, Lime Leaves, Fresh Lime Juice.",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Tom Yum (Vegetable)",
+    "description": "Hot And Sour Soup Mix with Spices, Galangal Chilli, Corriander, Onion, Mushroom, Lime Leaves, Fresh Lime Juice.",
+    "price": "£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A10",
+    "name": "Prawns Tempura",
+    "description": "Deep Fried Lightly Battered Tempura Prawns With Sweet Chilli Sauce",
+    "price": "£9.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A11",
+    "name": "Chicken & Prawns Toast",
+    "description": "With Sweet Chilli Dip",
+    "price": "£9.00",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "A12",
+    "name": "Gyoza Vegetable & Tofu",
+    "description": "Served With Teriyaki Sauce",
+    "price": "£8.99",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

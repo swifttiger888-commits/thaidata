@@ -1,0 +1,748 @@
+{
+ "restaurant": "Woburn Thai",
+ "city": "Central Bedfordshire",
+ "fsa_id": "687502",
+ "address": "",
+ "source": "https://woburnthai.co.uk/menus/main-menu-woburn-thai.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "woburn-thai",
+ "pricing_notes": [
+  "Any noodles dishes taken as main dish will will be extra £4.00 chargeable",
+  "SET MENU A",
+  "£22.95",
+  "PER PERSON",
+  "MINIMUM 2 PERSONS OR MORE",
+  "SET MENU B",
+  "£26.95",
+  "SET MENU C",
+  "£34.95",
+  "SET MENU D",
+  "VEGETARIAN",
+  "£20.95"
+ ],
+ "categories": {
+  "VEGETABLES": [
+   {
+    "num": "51.",
+    "name": "PHAD HED GRA TIUM (V)",
+    "description": "Stir fried seasonal mushrooms with garlic sauce",
+    "price": "£7.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "52.",
+    "name": "PHAD PAK RUMMIT (V)",
+    "description": "Stir fried mixed vegetables in soya sauce",
+    "price": "£7.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "53.",
+    "name": "PHAD PAK CHOI",
+    "description": "Stir fried pak choi with garlic in oyster sauce",
+    "price": "£7.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "RICE & NOODLES": [
+   {
+    "num": "54.",
+    "name": "PHAD THAI (N)",
+    "description": "Fried Thai noodles with egg, beansprouts & tamarind sauce\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£10.95/£9.95/£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "55.",
+    "name": "PHAD SIE EAW",
+    "description": "Stir fried rice noodles with vegetables and soya sauce with egg\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£10.95/£9.95/£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "56.",
+    "name": "PHAD KEE MAOW",
+    "description": "Stir fried rice noodles with vegetables, garlic & chillies with egg\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£10.95/£9.95/£8.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "57.",
+    "name": "PHAD MEE",
+    "description": "Stir fried egg noodles with vegetables with egg\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£10.95/£9.95/£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "58.",
+    "name": "GUAY TIEW (V)",
+    "description": "Plain noodles with beansprouts with soy sauce",
+    "price": "£5.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "59.",
+    "name": "KHAO PHAD KHAI (V)",
+    "description": "Egg Rice",
+    "price": "£4.75",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "60.",
+    "name": "KHAO GA THI (V)",
+    "description": "Steamed coconut rice",
+    "price": "£4.75",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "61.",
+    "name": "KHAO SUAY (V)",
+    "description": "Steamed Thai jasmine rice",
+    "price": "£4.25",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "62.",
+    "name": "KHAO GATIEM (V)",
+    "description": "Garlic Rice",
+    "price": "£4.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "63.",
+    "name": "PRAWN CRACKERS (G) (F)",
+    "description": "(Per basket)",
+    "price": "£3.75",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "STARTERS": [
+   {
+    "num": "",
+    "name": "Selection of satay chicken, vegetable spring rolls, sesame prawn toast, fried chicken wings & tiger prawns in batter",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mixed Hors D'oevres or Ped Ron",
+    "description": "(Aromatic crispy duck with pancakes)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mixed Vegetarian Hors D'oevres",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "1.",
+    "name": "MIXED HORS D'OEUVRES (N)",
+    "description": "(For a minimum of 2 people) Selection of satay chicken, vegetable spring rolls, sesame prawns on toast, per person deep fried chicken wings & tiger prawns in batter",
+    "price": "£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "2.",
+    "name": "PED RON",
+    "description": "(For a minimum of 2 people) Aromatic shredded crispy duck served with pancakes, salad and hoi sin sauce per person",
+    "price": "£8.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "3.",
+    "name": "MIXED SEAFOOD HORS D'OEUVRES",
+    "description": "(For a minimum of 2 people) Selection of steamed tiger prawns in spicy lemon dressing, Thai fish cakes, per person soft shell crab fried with black pepper & sea salt, tiger prawn spring rolls & fried calamari in batter",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "4.",
+    "name": "FISH CAKE",
+    "description": "Marinated featherback fish paste in fresh herbs & spices",
+    "price": "£7.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "5.",
+    "name": "SATAY CHICKEN (N)",
+    "description": "Grilled marinated strips of chicken breast in herbs & spices, served with peanut sauce and cucumber relish",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "6.",
+    "name": "GOONG HOM SABAI",
+    "description": "Deep fried pastry wrapped tiger prawns, served with sweet chili sauce",
+    "price": "£7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "7.",
+    "name": "SESAME PRAWNS ON TOAST",
+    "description": "Prawns on toast, fried in lightly spiced chefs secret recipe with ginger & plum sauce",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "8.",
+    "name": "PEEK GAI TORD",
+    "description": "Deep fried chicken wings in barbecue sauce Thai style",
+    "price": "£6.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "9.",
+    "name": "GOONG TA LAI",
+    "description": "Steamed tiger prawns served with special home made spicy sauce",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "10.",
+    "name": "GOONG PAOW",
+    "description": "Grilled marinated jumbo prawns served with spicy lemon & garlic sauce. Served with sizzling dish",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "MAIN COURSE": [
+   {
+    "num": "",
+    "name": "Stir fried beef with fresh ginger, chillies & soya bean paste.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Traditional chicken green curry with coconut milk,",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir fried mixed vegetables with oyster sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Steamed Thai rice, Coffee or Tea",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir fried tiger prawns & vegetables in Thai style sweet & sour sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir fried beef with mushrooms & onions in oyster sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Traditional Thai red curry with duck in coconut milk",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Steamed Thai rice",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Coffee or Tea",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir fried roasted duck breast with garlic & soya sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Crispy sea bass fillet with chilli sauce & sweet basil leaves",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Aromatic smooth curry with beef in coconut milk & kaffir lime leaves",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir fried chicken with vegetables in Thai style sweet & sour sauce.",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Traditional Thai rice noodles with tiger prawns in tamarind sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Steamed rice",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Traditional green curry with Tofu & vegetables in coconut milk",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir fried aubergine with fresh ginger, chillies & soya bean paste",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir fried mushrooms with garlic & soya sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "SECOND COURSE": [
+   {
+    "num": "",
+    "name": "Tom Yum Goong",
+    "description": "(Traditional Thai spicy & sour soup with fresh herbs & lemon grass with tiger prawns)",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "DESSERT": [
+   {
+    "num": "",
+    "name": "Banana fritter & luxury ice cream",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Coffee or Tea",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Vegetable STARTERS": [
+   {
+    "num": "11.",
+    "name": "VEGETARIAN HORS D'OEUVRES (V) (N)",
+    "description": "(For a minimum of 2 people)\nGrilled mushrooms satay, vegetable spring rolls, fried\nbattered mixed vegetables per person",
+    "price": "£7.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "12.",
+    "name": "SPRING ROLLS",
+    "description": "Thai vegetarian spring rolls stuffed with mixed vegetables\n& glass noodles with sweet chilli sauce",
+    "price": "£6.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "13.",
+    "name": "TORD MUN KAO PHOD",
+    "description": "Deep fried sweet corn fritter with sweet chilli sauce",
+    "price": "£6.50",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "14.",
+    "name": "PHAK TORD",
+    "description": "Deep fried crispy battered vegetables, served with sweet chilli sauce",
+    "price": "£6.50",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "SALADS": [
+   {
+    "num": "15.",
+    "name": "YUM TALAY (Seafood Salad)",
+    "description": "Spicy mixed seafood topped in fresh Thai herbs,\nspicy lime dressing",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "16.",
+    "name": "YUM NEAU YANG (Beef Salad)",
+    "description": "Marinated grilled beef sirloin topped in fresh Thai herbs,\nspicy lime dressing",
+    "price": "£13.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "17.",
+    "name": "PHLA GOONG (Tiger Prawn Salad)",
+    "description": "Spicy tiger prawns topped in fresh Thai herbs with chillies in oil",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "SOUPS": [
+   {
+    "num": "18.",
+    "name": "TOM YUM",
+    "description": "Traditional spicy and sour soup with lemon grass, mushrooms,\nkaffir lime leaves, galangal & chili in oil\nMushroom or Vegetables (V)\nPrawns £7.95\nChicken £6.95",
+    "price": "£5.95/£7.95/£6.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "19.",
+    "name": "TOM KHA",
+    "description": "Traditional sour and spicy soup with Thai herbs and coconut milk\nMushroom or Vegetables (V)\nPrawns\nChicken",
+    "price": "£5.95/£7.95/£6.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "20.",
+    "name": "PO TAK",
+    "description": "Spicy & sour mixed seafood with lemon grass, kaffir\nleaves & holly basil leaves",
+    "price": "£9.50",
+    "vegetarian": false,
+    "heat": "2"
+   }
+  ],
+  "CURRIES": [
+   {
+    "num": "21.",
+    "name": "GREEN CURRY (GEANG KEAW WAN)",
+    "description": "Famous Thai green curry with Thai herbs & coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£15.95/£14.50/£11.95/£9.50",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "22.",
+    "name": "RED CURRY (GEANG DANG)",
+    "description": "Famous Thai red curry with Thai coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£15.95/£14.50/£11.95/£9.50",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "23.",
+    "name": "MASSAMAN CURRY (N)",
+    "description": "Traditional style curry with peanuts, potato and coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£15.95/£14.50/£11.95/£9.50",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "24.",
+    "name": "PANANG CURRY",
+    "description": "Aromatic smooth curry with coconut milk & kaffir lime leaves\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£15.95/£14.50/£11.95/£9.50",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "25.",
+    "name": "YELLOW CURRY",
+    "description": "Thai curry in mild coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£15.95/£14.50/£11.95/£9.50",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "26.",
+    "name": "GEANG PA",
+    "description": "Thai clear curry in ‘jungle” style with mixed vegetables & fresh Thai herbs\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "price": "£15.95/£14.50/£11.95/£9.50",
+    "vegetarian": false,
+    "heat": "3"
+   }
+  ],
+  "STIR FRIED": [
+   {
+    "num": "27.",
+    "name": "PHAD PEAW WAN",
+    "description": "Light stir fried with vegetables,Thai style with sweet and sour sauce",
+    "price": "£16.95/£11.95/£9.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "28.",
+    "name": "PHAD KHING",
+    "description": "Stir fried with fresh ginger, chillies & soya bean paste",
+    "price": "£16.95/£11.95/£9.50",
+    "vegetarian": true,
+    "heat": "1"
+   },
+   {
+    "num": "29.",
+    "name": "PHAD GRA TIUM",
+    "description": "Stir fried with garlic and soya sauce",
+    "price": "£16.95/£11.95/£9.50",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "30.",
+    "name": "PHAD KRA PRAOW",
+    "description": "Wok fried with chillies, hooly basil leaves in Thai fish sauce",
+    "price": "£16.95/£11.95/£9.50",
+    "vegetarian": true,
+    "heat": "2"
+   },
+   {
+    "num": "31.",
+    "name": "PHAD MED MA MUANG (N)",
+    "description": "Stir fried with roasted chillies, cashew nuts water chestnuts in chilli oil",
+    "price": "£16.95/£11.95/£9.50",
+    "vegetarian": true,
+    "heat": "1"
+   },
+   {
+    "num": "32.",
+    "name": "NUAE PHAD NAM MUN HOI",
+    "description": "Flash fried beef with oyster sauce, mushrooms & onions",
+    "price": "£11.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "33.",
+    "name": "SEAU RONG HAI",
+    "description": "Grilled beef sirloin steak on fried onions & vegetables with spicy tamarind sauce. Served with sizzling dish",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "34.",
+    "name": "PED PEAW WAN",
+    "description": "Crispy duck with vegetables in Thai style sweet & sour sauce",
+    "price": "£15.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "35.",
+    "name": "PED GA TIUM",
+    "description": "Roasted duck breast topped with garlic & soya sauce",
+    "price": "£15.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "36.",
+    "name": "PED PHAD BAI HOLAPA",
+    "description": "Stir fried duck breast with chillies & sweet basil leaves",
+    "price": "£15.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "37.",
+    "name": "PED MA KHAM",
+    "description": "Roasted duck breast topped with smooth tamarind sauce",
+    "price": "£15.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "SEAFOOD": [
+   {
+    "num": "38.",
+    "name": "GOONG PAOW",
+    "description": "Grilled marinated jumbo king prawns Served with sizzling dish & spicy lemon & garlic sauce",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "39.",
+    "name": "GOONG PHAD NAM PRIK PAOW",
+    "description": "Wok fried tiger prawns with roasted chilli paste & onions",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "40.",
+    "name": "CHU CHEF GOONG",
+    "description": "Smooth aromatic curry with jumbo king prawns & kaffir lime leaves and coconut milk",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "41.",
+    "name": "GOONG TROD GRA TIUM PRINK THAI",
+    "description": "Sauteed king prawns with garlic pepper, served with fried garlic & coriander",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "42.",
+    "name": "PHAD RUMMIT TALAY PRIK PAOW",
+    "description": "Stir fried mixed seafood, with onions, pepper & sweet basil leaves in chilli oil",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "43.",
+    "name": "RUAM MIT TALAY PAOW",
+    "description": "Mixed grill of seafood, king prawns, squid & green mussels with Thai spicy sauce. Served with sizzling dish.",
+    "price": "£32.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "44.",
+    "name": "PLA CHU CHEE",
+    "description": "Smooth aromatic curry with black cod fillet and kaffir lime leaves",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "45.",
+    "name": "PLA NEUNG MA NAOW",
+    "description": "Steamed fresh sea bass fillet topped with spicy lemon and dressing",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "46.",
+    "name": "PLA NEUNG SE EAW",
+    "description": "Steamed fresh sea bass topped with fresh ginger, spring onions & soya sauce",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "47.",
+    "name": "PLA KRA PONG TROD LARD PRIK",
+    "description": "Deep fried fresh sea bass in sweet & sour chilli garlic sauce",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "48.",
+    "name": "HOY SHELL TORD GRA TIUM",
+    "description": "Sauteed sea scallops with garlic & peppers, served with fresh garlic & coriander",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "49.",
+    "name": "HOY SHELL PHAD PRIK THAI DAM",
+    "description": "Sauteed sea scallops with onions, peppers & spring onions in black pepper sauce",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "50.",
+    "name": "HOY SHELL PHAD BAI GRA PAOW",
+    "description": "Stir fried sea scallops with garlic, chillies and holly basil leaves",
+    "price": "£17.95",
+    "vegetarian": false,
+    "heat": "2"
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

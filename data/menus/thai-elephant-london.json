@@ -1,0 +1,14 @@
+{
+ "restaurant": "Thai Elephant",
+ "city": "London",
+ "fsa_id": "357200",
+ "address": "",
+ "source": "https://www.thai-elephant.co.uk/ThaiElephant_DrinksMenu.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "thai-elephant",
+ "pricing_notes": [],
+ "categories": {},
+ "addons": [],
+ "_conflicts": []
+}

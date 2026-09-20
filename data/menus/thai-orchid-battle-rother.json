@@ -1,0 +1,843 @@
+{
+ "restaurant": "Thai Orchid Battle",
+ "city": "Rother",
+ "fsa_id": "776717",
+ "address": "",
+ "source": "https://thaiorchidbattle.com/download/Thai%20Orchid%20Battle%20-%20Take%20Away%20Menu.pdf",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "thai-orchid-battle",
+ "pricing_notes": [
+  "SET MEAL A ..............per person £30.95 each",
+  "SET MEAL B ..............per person £36.95 each",
+  "SET MEAL C ..............per person £45.95 each",
+  "Select one of the following main ingredients for your curry or stir-fry These dishes do not automatically include rice or noodles. You may select any of our rice or noodle dishes to accompany your main and we are always happy to suggest good combinations. a) Chicken.......... £13.95 b) Beef (except Massaman).......... £14.45 c) Pork.......... £13.95 d) King Prawn.......... £14.95 e) Squid.......... £14.95 f) Roast Duck.......... £14.45 v) Vegetable.......... £13.45 Tofu) Vegetable & Tofu.......... £13.95",
+  "Select one of the following main ingredients for your noodle dish a) Chicken.........................................................................................£14.45 b) Beef..............................................................................................£14.95 c) Pork..............................................................................................£14.45 d) King Prawn...................................................................................£15.45 e) Squid.............................................................................................£15.45 f) Duck..............................................................................................£14.95 v) Vegetable (Ve Option)...................................................................£13.95 Tofu) Vegetable & Tofu (Ve Option)...................................................£14.45"
+ ],
+ "categories": {
+  "MEAL TO SHARE\n(for a minimum order of 2 people)": [
+   {
+    "num": "",
+    "name": "Vegetable Spring Rolls",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Crispy Vegetable Bags",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Thai Corn Cakes",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Vegetable Tempura",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Vegetable & Tofu Panaeng Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "",
+    "name": "Stir Fried Vermicelli (Glass Noodles) with Wild Mushrooms & Vegetables",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Sweet and Sour Mixed Vegetables",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Thai Jasmine Rice",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Satay",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Pork Spare Ribs",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawns in Blankets",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Thai Chicken Green Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Sweet and Sour Pork",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Stir Fried Beef with Chilli and Basil",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "",
+    "name": "Mixed Vegetables",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Prawns on Toast",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Roast Duck Spring Rolls",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Massaman Curry with Beef",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "3 Flavoured Deep Fried Sea Bass",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "",
+    "name": "Stir Fried Mixed Seafood with Chilli and Basil",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "",
+    "name": "Flaming Wok Oriental Cabbage",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "DESSERTS": [
+   {
+    "num": "",
+    "name": "Chocolate Fudge Brownie",
+    "description": "(Gluten Free option)\nServed warm with cream or ice cream",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Banana Fritter & Ice Cream",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mango & Sticky Rice",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "STARTERS": [
+   {
+    "num": "P/C",
+    "name": "Thai Prawn Crackers (GF)",
+    "description": "",
+    "price": "£4.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "PCV",
+    "name": "Thai Vegan Crackers",
+    "description": "",
+    "price": "£4.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S1",
+    "name": "Chicken Satay (GF)",
+    "description": "",
+    "price": "£8.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S2",
+    "name": "Thai Fish Cakes (GF)",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S3",
+    "name": "Thai Crispy Chicken Bags",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S3a",
+    "name": "Thai Crispy Vegetable Bags (Ve)",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "S4",
+    "name": "Roast Duck Spring Rolls",
+    "description": "",
+    "price": "£8.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S5",
+    "name": "Vegetable Spring Rolls (Ve)",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "S6",
+    "name": "Prawn Tempura",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S7",
+    "name": "Squid Tempura",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S7a",
+    "name": "Salt and Pepper Squid",
+    "description": "",
+    "price": "£9.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "S7b",
+    "name": "Salt and Pepper King Prawns",
+    "description": "",
+    "price": "£9.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "S7c",
+    "name": "Salt and Pepper Fried Tofu (Ve)",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": true,
+    "heat": "1"
+   },
+   {
+    "num": "S8",
+    "name": "Vegetable Tempura (Ve)",
+    "description": "",
+    "price": "£8.45",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "S10",
+    "name": "Deep Fried Tofu Satay (GF, Ve, N)",
+    "description": "Served with Peanut Satay Sauce",
+    "price": "£8.45",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "S55",
+    "name": "Sesame Prawns on Toast",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "S55GF",
+    "name": "Sesame Prawns on Toast (GF)",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S12",
+    "name": "Pork & Prawn Dim Sum",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S13",
+    "name": "Pork Spare Ribs",
+    "description": "",
+    "price": "£11.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S56",
+    "name": "Thai Corn Cakes (V, Ve option)",
+    "description": "",
+    "price": "£8.45",
+    "vegetarian": true,
+    "heat": "1"
+   },
+   {
+    "num": "S14",
+    "name": "Mixed Starters (Serves 2) (N)",
+    "description": "Chicken Satay, Prawns in Blankets, Spare Ribs, Veg Spring Rolls & Thai Crispy Bags",
+    "price": "£20.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S15",
+    "name": "Mixed Vegetarian Starters (Serves 2)",
+    "description": "(V, Ve option, N)\nVegetable Tempura, Veg Spring Rolls, Corn Cakes & Crispy Vegetable Bags",
+    "price": "£18.95",
+    "vegetarian": true,
+    "heat": null
+   }
+  ],
+  "SOUPS": [
+   {
+    "num": "S16",
+    "name": "Thai Wonton Soup",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "S17",
+    "name": "Hot and Sour Soup",
+    "description": "a) Chicken £8.45\nd) King Prawn £8.95\nv) Vegetable (Ve) £8.45",
+    "price": "£8.45/£8.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "S18",
+    "name": "Thai Soup in Coconut Milk",
+    "description": "a) Chicken £8.95\nd) King Prawn £9.45\nv) Vegetable (Ve) £8.95",
+    "price": "£8.95/£9.45",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "THAI SALADS (YUM & SOM TUM)": [
+   {
+    "num": "S19",
+    "name": "Thai Papaya Salad (Ve Option)",
+    "description": "",
+    "price": "£13.95",
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "S20",
+    "name": "Chargrilled Beef Salad",
+    "description": "",
+    "price": "£16.95",
+    "vegetarian": false,
+    "heat": "1"
+   }
+  ],
+  "CHEF'S SPECIALS": [
+   {
+    "num": "M21",
+    "name": "Steamed Sea Bass",
+    "description": "in Spicy Lime Juice",
+    "price": "£22.95",
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "M23",
+    "name": "Deep Fried Sea Bass",
+    "description": "in Garlic and Pepper Sauce",
+    "price": "£22.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M24",
+    "name": "3 Flavoured Deep Fried Sea Bass",
+    "description": "S&S Tamarind, Savoury Fish Sauce",
+    "price": "£25.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "M25",
+    "name": "Mixed Seafood Pad Cha",
+    "description": "With Red Chilli Paste & Traditional Herbs of Thailand",
+    "price": "£25.95",
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "M26",
+    "name": "Chargrilled Tiger Prawns",
+    "description": "",
+    "price": "£20.95",
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "M27",
+    "name": "Chu-Chi Tiger Prawns",
+    "description": "",
+    "price": "£22.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "M28",
+    "name": "Chu-Chi Sea Bass",
+    "description": "",
+    "price": "£22.95",
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "M29",
+    "name": "Butterflied Tiger Prawns Pad Thai",
+    "description": "",
+    "price": "£20.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M30",
+    "name": "Tiger Prawns",
+    "description": "in Tamarind or Honey Sauce\nin Sweet Chilli Sauce",
+    "price": "£20.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M32",
+    "name": "Weeping Tiger (Seared Sirloin)",
+    "description": "",
+    "price": "£24.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M34",
+    "name": "Roast Duck",
+    "description": "with Tamarind or Honey Sauce",
+    "price": "£20.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M35",
+    "name": "Crispy Aromatic Duck",
+    "description": "a) Quarter £12.95\nb) Half £22.95\nc) Whole £40.95",
+    "price": "£12.95/£22.95/£40.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "VEGETABLE SIDE DISHES": [
+   {
+    "num": "M55",
+    "name": "Mixed Vegetables",
+    "description": "",
+    "price": "£10.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M56",
+    "name": "Broccoli & Carrot",
+    "description": "",
+    "price": "£10.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M59",
+    "name": "Flaming Wok Thai Sweet Cabbage",
+    "description": "",
+    "price": "£10.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "CURRY": [
+   {
+    "num": "M36",
+    "name": "Green Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "M37",
+    "name": "Red Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "2"
+   },
+   {
+    "num": "M38",
+    "name": "Panaeng Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "M39",
+    "name": "Massaman Curry",
+    "description": "Slow Cooked Beef or Lamb",
+    "price": "£15.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M40",
+    "name": "Chu-Chi Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "M41",
+    "name": "Yellow Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M42",
+    "name": "Roast Duck Curry (No ingredient options)",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "M43",
+    "name": "Jungle Curry",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "3"
+   }
+  ],
+  "STIR-FRY": [
+   {
+    "num": "M44",
+    "name": "Stir Fried with Chilli & Basil",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "M45",
+    "name": "Stir Fry with Cashew Nuts",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "1"
+   },
+   {
+    "num": "M46",
+    "name": "Stir Fried with Ginger & Mushroom",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M47",
+    "name": "Stir Fried with Garlic & Black Pepper",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M48",
+    "name": "Stir Fried with Sweet & Sour Sauce",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M49",
+    "name": "Stir fried with Sweet Baby Corn",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "NOODLE DISHES": [
+   {
+    "num": "M51RN",
+    "name": "Plain Rice Noodles",
+    "description": "with Beansprouts",
+    "price": "£10.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M51EN",
+    "name": "Plain Yellow Noodles (Contains Wheat)..",
+    "description": "with Beansprouts",
+    "price": "£10.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "ADD Chicken or Pork",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "ADD Beef or Duck",
+    "description": "",
+    "price": "£3.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "ADD King Prawn or Squid",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "ADD Vegetables",
+    "description": "",
+    "price": "£2.75",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "ADD Vegetables & Tofu",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M52",
+    "name": "Pad Thai - Thin Ribbon Rice Noodles",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "M53",
+    "name": "Pad Chilli Noodles - Wide Ribbon Rice Noodles",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": "3"
+   },
+   {
+    "num": "M54",
+    "name": "Pad Mhee - Round Yellow Noodles (Contains Wheat)",
+    "description": "",
+    "price": null,
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "RICE DISHES": [
+   {
+    "num": "R1",
+    "name": "Steamed Thai Jasmine Rice (Ve)",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "R2",
+    "name": "Steamed Thai Sticky Rice (Ve)",
+    "description": "",
+    "price": "£4.45",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "R3",
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.45",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "R4",
+    "name": "Ginger and Garlic Fried Rice (Ve)",
+    "description": "",
+    "price": "£4.75",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "R5a",
+    "name": "Coconut Rice (Ve)",
+    "description": "",
+    "price": "£4.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "R5",
+    "name": "Coconut Rice (Serves 2) (Ve)",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "R7",
+    "name": "Pineapple Rice (Ve) (Serves 2)",
+    "description": "",
+    "price": "£13.95",
+    "vegetarian": true,
+    "heat": null
+   },
+   {
+    "num": "R6",
+    "name": "Special Fried Rice (Serves 2)",
+    "description": "(a) Chicken £13.95\n(b) Beef £14.95\n(c) Pork £13.95\n(d) King Prawn £14.95\n(f) Duck £14.95\n(v) Vegetable (Ve Option) £12.95\n(t) Tofu (Ve Option) £13.95",
+    "price": "£12.95/£13.95/£14.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "R8",
+    "name": "Spicy Fried Rice with Aromatic Thai Chilli Paste (Serves 2)",
+    "description": "(a) Chicken £14.45\n(b) Beef £15.45\n(c) Pork £14.45\n(d) King Prawn £15.45\n(f) Duck £14.95\n(v) Vegetable (Ve Option) £13.95\n(t) Tofu (Ve Option) £14.45",
+    "price": "£13.95/£14.45/£14.95/£15.45",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

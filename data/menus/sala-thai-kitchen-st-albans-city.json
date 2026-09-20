@@ -1,0 +1,141 @@
+{
+ "restaurant": "Sala Thai Kitchen",
+ "city": "St Albans City",
+ "fsa_id": "1755237",
+ "address": "",
+ "source": "https://www.salathaikitchen.co.uk/_files/ugd/a0c953_a3e25664d388456889c56982f58c4c6a.pdf?index=true",
+ "source_label": "the restaurant’s own PDF menu",
+ "checked": "2026-09-20",
+ "slug": "sala-thai-kitchen",
+ "pricing_notes": [],
+ "categories": {
+  "Mains": [
+   {
+    "num": "",
+    "name": "Fried Chicken Wings",
+    "description": "Served with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "price": "£ 7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Tofu in Breadcrumbs",
+    "description": "Served in a wrap, or with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "price": "£ 7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Breast in Breadcrumbs",
+    "description": "Served in a wrap, or with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "price": "£ 7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Chicken Massaman Curry (mild)",
+    "description": "Served with Jasmine Rice",
+    "price": "£ 7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Satay Chicken",
+    "description": "Served in a wrap, or with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "price": "£ 7.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Tofu Massaman Curry (mild)",
+    "description": "Served with Jasmine Rice",
+    "price": "£ 7.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Desserts": [
+   {
+    "num": "",
+    "name": "Vanilla Ice Cream",
+    "description": "",
+    "price": "£ 2.75",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Fruit Salad",
+    "description": "",
+    "price": "£ 2.75",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Mango Sorbet",
+    "description": "",
+    "price": "£ 2.75",
+    "vegetarian": false,
+    "heat": null
+   }
+  ],
+  "Drinks": [
+   {
+    "num": "",
+    "name": "Orange Juice",
+    "description": "",
+    "price": "£ 1.75",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Diet Coke",
+    "description": "",
+    "price": "£ 2.15",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Apple Juice",
+    "description": "",
+    "price": "£ 1.75",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Lemonade",
+    "description": "",
+    "price": "£ 2.25",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Lychee Juice",
+    "description": "",
+    "price": "£ 1.95",
+    "vegetarian": false,
+    "heat": null
+   },
+   {
+    "num": "",
+    "name": "Coconut Water",
+    "description": "",
+    "price": "£ 1.95",
+    "vegetarian": false,
+    "heat": null
+   }
+  ]
+ },
+ "addons": [],
+ "_conflicts": []
+}

@@ -22,7 +22,7 @@ Input JSON schema:
   "addons": [ {num,name,description,price,vegetarian,heat}, ... ]
 }
 """
-import json, re, sys, html, datetime
+import json, os, re, sys, html, datetime
 from urllib.parse import quote
 
 def money(p):
@@ -69,11 +69,26 @@ def dish_html(it, protein_tiers=None):
     bits.append("</div></li>")
     return "".join(bits)
 
-def build(data):
+def build(data, dst=None):
     rname = data["restaurant"]
     city = data["city"]
-    slug_city = re.sub(r"[^a-z0-9]+", "-", city.lower()).strip("-")
-    slug_name = re.sub(r"[^a-z0-9]+", "-", rname.lower()).strip("-")
+    # The canonical URL and the breadcrumb link to the listing page must point at
+    # where the file ACTUALLY lives. Deriving the slug from the restaurant name
+    # diverges from the live listing pages as soon as a name contains punctuation:
+    # "Ploy's Thai Bistro" slugifies to "ploy-s-thai-bistro" here, while its real
+    # listing page is /r/kingston-upon-thames/ploys-thai-bistro/. The canonical then
+    # pointed at a URL that does not exist, and the sitemap generator - which only
+    # accepts a page whose canonical matches its own path - dropped the page
+    # entirely, costing it all its search value. So prefer the output path, which is
+    # authoritative, and fall back to the name only when it is not in the usual shape.
+    slug_city = slug_name = None
+    if dst:
+        parts = os.path.normpath(os.path.abspath(dst)).split(os.sep)
+        if len(parts) >= 4 and parts[-2] == "menu":
+            slug_name, slug_city = parts[-3], parts[-4]
+    if not slug_city or not slug_name:
+        slug_city = re.sub(r"[^a-z0-9]+", "-", city.lower()).strip("-")
+        slug_name = re.sub(r"[^a-z0-9]+", "-", rname.lower()).strip("-")
     listing_url = f"/r/{slug_city}/{slug_name}/"
     checked = data.get("checked") or datetime.date.today().isoformat()
     try:
@@ -108,11 +123,34 @@ def build(data):
         )
         tier_html = f'<div class="tiers"><p class="tiers-label">Choose your protein</p><ul>{rows}</ul></div>'
 
+    # ---- pricing policy callout (set-price menus, lunch deals, buffets) ----
+    # Some menus price the whole meal rather than each dish ("any starter and main
+    # course for 14.50"). Those dishes legitimately have no individual price, so
+    # without surfacing the policy the page reads as a pricelist with no prices -
+    # which looks broken and would rightly annoy the restaurant.
+    pricing = data.get("pricing_notes") or []
+    notes_html = ""
+    if pricing:
+        nrows = "".join(f"<li>{esc(n)}</li>" for n in pricing)
+        notes_html = (f'<div class="pricing-notes"><p class="pricing-notes-label">'
+                      f'How this menu is priced</p><ul>{nrows}</ul></div>')
+
     # ---- sections ----
+    def dish_sort_key(x):
+        """Dish numbers are printed strings ("8", "12a") but unnumbered dishes get
+        an int fallback. Sorting the mixed types raised TypeError, which broke every
+        menu that mixes numbered and unnumbered dishes. Numbered first, in numeric
+        order; unnumbered keep their original order at the end."""
+        n = x.get("num")
+        try:
+            return (0, int(str(n).strip()), "")
+        except (TypeError, ValueError):
+            return (1, 0, str(x.get("name", "")))
+
     sections = []
     for c, dishes in cats.items():
         cid = re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
-        rows = "".join(dish_html(d) for d in sorted(dishes, key=lambda x: x.get("num") or 0))
+        rows = "".join(dish_html(d) for d in sorted(dishes, key=dish_sort_key))
         callout = tier_html if c == "Main Courses" and tier_html else ""
         sections.append(
             f'<section class="cat" id="cat-{cid}">'
@@ -146,7 +184,7 @@ def build(data):
         "dateModified": checked,
         "hasMenuSection": [
             {"@type": "MenuSection", "name": c,
-             "hasMenuItem": [mi(d) for d in sorted(v, key=lambda x: x.get("num") or 0)]}
+             "hasMenuItem": [mi(d) for d in sorted(v, key=dish_sort_key)]}
             for c, v in cats.items()
         ] + ([{"@type": "MenuSection", "name": "Add to any meal",
                "hasMenuItem": [mi(d) for d in data["addons"]]}] if data.get("addons") else []),
@@ -235,6 +273,10 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .dish-price{{font-weight:700;color:var(--green-dark);white-space:nowrap;font-variant-numeric:tabular-nums}}
 .dish-desc{{margin:3px 0 0;font-size:var(--step--1);color:var(--ink-secondary);max-width:64ch}}
 .dish-note{{margin:4px 0 0;font-size:.8125rem;color:var(--ink-tertiary);font-weight:500}}
+.pricing-notes{{background:var(--green-light);border:1px solid rgba(16,185,129,.28);border-radius:var(--radius);padding:14px 18px;margin:0 0 22px}}
+.pricing-notes-label{{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-secondary);margin:0 0 7px}}
+.pricing-notes ul{{list-style:none;margin:0;padding:0}}
+.pricing-notes li{{font-size:.9375rem;line-height:1.5;color:var(--ink);padding:2px 0}}
 .cta{{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;margin:34px 0 50px}}
 .cta h2{{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:var(--step-2);margin:0 0 8px}}
 .cta p{{margin:0 0 16px;color:var(--ink-secondary);font-size:var(--step--1)}}
@@ -287,6 +329,7 @@ footer p{{margin:0 0 6px}}
 
   <p class="legend">Symbols: <span class="badge badge-spice">🌶 4</span> spice level (1&ndash;5) &nbsp;&middot;&nbsp; <span class="badge badge-celery">C</span> celery &nbsp;&middot;&nbsp; <span class="badge badge-veg">V</span> vegetarian</p>
 
+  {notes_html}
   {"".join(sections)}
 
   <div class="cta">
@@ -324,6 +367,6 @@ footer p{{margin:0 0 6px}}
 if __name__ == "__main__":
     src, dst = sys.argv[1], sys.argv[2]
     data = json.load(open(src, encoding="utf-8"))
-    out = build(data)
+    out = build(data, dst)
     open(dst, "w", encoding="utf-8").write(out)
     print(f"wrote {dst} ({len(out)} bytes)")
