@@ -194,7 +194,7 @@ nav.catnav::after{{content:"";position:absolute;top:0;right:0;bottom:0;width:38p
 .chips::-webkit-scrollbar{{display:none}}
 .navchip{{flex:0 0 auto;font-size:var(--step--1);font-weight:500;color:var(--ink-secondary);text-decoration:none;padding:5px 12px;border:1px solid var(--border);border-radius:999px;background:var(--white);white-space:nowrap}}
 .navchip:hover{{border-color:var(--green);color:var(--green-dark)}}
-section.cat{{padding:26px 0 6px;scroll-margin-top:78px}}
+section.cat{{padding:26px 0 6px;scroll-margin-top:calc(var(--navh, 78px) + 14px)}}
 .cat-title{{font-size:var(--step-2);margin:0 0 14px;padding-bottom:9px;border-bottom:2px solid var(--green-light)}}
 .tiers{{background:var(--green-light);border-radius:var(--radius);padding:14px 16px;margin:0 0 16px}}
 .tiers-label{{margin:0 0 8px;font-size:.8125rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green-dark)}}
@@ -220,7 +220,7 @@ footer p{{margin:0 0 6px}}
 @media (max-width:640px){{
   h1{{font-size:var(--step-2)}}
   .notice{{padding:11px 13px;margin:14px 0;font-size:.8125rem;line-height:1.5}}
-  section.cat{{padding:20px 0 4px;scroll-margin-top:66px}}
+  section.cat{{padding:20px 0 4px}}
   .cat-title{{font-size:var(--step-1)}}
   .dish{{padding:11px 0}}
 }}
@@ -274,6 +274,23 @@ footer p{{margin:0 0 6px}}
   <p>Source: <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','restaurant menu'))}</a> · read {checked}</p>
   <p>ThaiData UK · <a href="{listing_url}">Restaurant details &amp; food hygiene rating</a> · <a href="/">All UK Thai restaurants</a></p>
 </div></footer>
+<script>
+// The category nav is sticky and its height changes with how many rows the chips
+// wrap to (one row on narrow screens, two or three on wider ones). A hardcoded
+// scroll-margin-top therefore clips the target heading at some viewport widths.
+// Publish the measured height as --navh so section anchors always clear it.
+(function () {{
+  var nav = document.querySelector('.catnav');
+  if (!nav) return;
+  function setNavHeight() {{
+    document.documentElement.style.setProperty('--navh', nav.offsetHeight + 'px');
+  }}
+  setNavHeight();
+  window.addEventListener('resize', setNavHeight);
+  if (window.ResizeObserver) new ResizeObserver(setNavHeight).observe(nav);
+  window.addEventListener('load', setNavHeight);
+}})();
+</script>
 </body>
 </html>
 """
