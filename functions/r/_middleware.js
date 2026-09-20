@@ -149,7 +149,7 @@ async function injectClaimedEnrichment(html, env) {
     facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);flex-shrink:0;">Hours</span><span class="qf-value" style="font-weight:500;color:var(--ink2, #1f2937);text-align:right;">' + htmlEscape(hours.join('<br>')) + '</span></div>');
   }
   if (listing.website) {
-    facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Website</span><span class="qf-value" style="font-weight:500;"><a href="' + htmlEscape(listing.website) + '" target="_blank" rel="noopener" style="color:var(--accent, #10B981);text-decoration:none;">Visit →</a></span></div>');
+    facts.push('<div class="qf-item" style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--ink1, #e5e7eb);"><span class="qf-label" style="font-size:0.85rem;color:var(--ink4, #6b7280);">Website</span><span class="qf-value" style="font-weight:500;"><a href="' + htmlEscape(listing.website) + '" target="_blank" rel="noopener" style="color:var(--accent, #A3132B);text-decoration:none;">Visit →</a></span></div>');
   }
   if (listing.description) {
     facts.push('<div class="qf-desc" style="padding-top:8px;font-size:0.9rem;color:var(--ink3, #374151);line-height:1.6;">' + htmlEscape(listing.description) + '</div>');
@@ -234,7 +234,7 @@ async function injectMenuLink(html, city, name, origin, env) {
     + '                <div class="card" id="full-menu-cta" style="margin-bottom:24px;border-color:#A7F3D0;background:linear-gradient(180deg,#F0FDF9,#FFFFFF);">\n'
     + '                    <h2 class="card-title" style="margin-top:0;">Full <em>Menu</em></h2>\n'
     + '                    <p style="margin:6px 0 14px;color:var(--ink-secondary,#6B7280);font-size:0.9rem;">' + blurb + '</p>\n'
-    + '                    <a href="' + htmlEscape(menuPath) + '" style="display:inline-block;background:#0A7A6F;color:#fff;text-decoration:none;font-weight:600;padding:10px 20px;border-radius:999px;font-size:0.9rem;">View the full menu &rarr;</a>\n'
+    + '                    <a href="' + htmlEscape(menuPath) + '" style="display:inline-block;background:#A3132B;color:#fff;text-decoration:none;font-weight:600;padding:10px 20px;border-radius:999px;font-size:0.9rem;">View the full menu &rarr;</a>\n'
     + '                </div>\n';
 
   if (html.includes('<!-- === HYGIENE RATING === -->')) {
@@ -366,14 +366,14 @@ export async function onRequest(context) {
         '<!DOCTYPE html><html lang="en"><head><title>Claimed Listing — ThaiData</title>'
         + '<meta name="robots" content="noindex"><style>body{font-family:sans-serif;'
         + 'display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;'
-        + 'background:#0C1220;color:white;text-align:center;padding:20px;}'
+        + 'background:#FBF7F0;color:#1A1614;text-align:center;padding:20px;}'
         + 'h1{font-size:2.5rem;margin-bottom:16px;}'
         + 'p{color:#94A3B8;line-height:1.6;margin:8px 0;}'
         + '.actions{margin-top:32px;display:flex;flex-direction:column;align-items:center;gap:16px;}'
         + '.btn{display:inline-block;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;}'
-        + '.btn-primary{background:#10B981;color:white;}'
-        + '.btn-primary:hover{background:#059669;}'
-        + '.btn-secondary{color:#10B981;text-decoration:underline;font-size:0.9rem;}'
+        + '.btn-primary{background:#A3132B;color:white;}'
+        + '.btn-primary:hover{background:#7E0E20;}'
+        + '.btn-secondary{color:#A3132B;text-decoration:underline;font-size:0.9rem;}'
         + '</style></head><body><div>'
         + '<h1>Page not ready yet</h1>'
         + '<p>You\'ve claimed this restaurant listing, but the public page hasn\'t been generated yet.</p>'
@@ -394,9 +394,9 @@ export async function onRequest(context) {
       '<!DOCTYPE html><html lang="en"><head><title>Not Found — ThaiData</title>'
       + '<meta name="robots" content="noindex"><style>body{font-family:sans-serif;'
       + 'display:flex;align-items:center;justify-content:center;height:100vh;margin:0;'
-      + 'background:#0C1220;color:white;text-align:center;}'
+      + 'background:#FBF7F0;color:#1A1614;text-align:center;}'
       + 'h1{font-size:3rem;margin-bottom:8px;opacity:0.5;}p{color:#94A3B8;}'
-      + 'a{color:#10B981;}</style></head><body><div><h1>404</h1>'
+      + 'a{color:#A3132B;}</style></head><body><div><h1>404</h1>'
       + '<p>Restaurant not found in our directory.</p>'
       + '<p><a href="/">thaidata.uk</a></p></div></body></html>',
       {

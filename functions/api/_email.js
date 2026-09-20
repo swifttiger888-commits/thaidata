@@ -118,7 +118,7 @@ function emailShell({ heroTitle, heroSubtitleHtml, bodyHtml, footerHtml }) {
         <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;">
           <tr>
             <td style="padding:32px 40px 0;">
-              <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#10B981,#059669);border-radius:12px;">
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#A3132B,#7E0E20);border-radius:12px;">
                 <tr>
                   <td style="padding:32px 32px 24px;text-align:center;">
                     <img src="https://thaidata.uk/static/logo-email.png" width="180" height="72" alt="ThaiData UK" style="display:block;border:0;outline:none;margin:0 auto 20px;">
@@ -164,7 +164,7 @@ function buildMagicLinkApprovalHtml({ restaurant_name, city, magicLink }) {
                     <table width="100%" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="center">
-                          <a href="${magicLink}" style="display:inline-block;background:#10B981;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Edit My Listing →</a>
+                          <a href="${magicLink}" style="display:inline-block;background:#A3132B;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Edit My Listing →</a>
                         </td>
                       </tr>
                     </table>
@@ -177,7 +177,7 @@ function buildMagicLinkApprovalHtml({ restaurant_name, city, magicLink }) {
             <td style="padding:0 40px 32px;text-align:center;">
               <p style="margin:0;color:#aaa;font-size:11px;line-height:1.6;">
                 ThaiData UK · The UK's Thai restaurant directory<br>
-                <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a>
+                <a href="https://thaidata.uk" style="color:#A3132B;text-decoration:none;">thaidata.uk</a>
               </p>
             </td>
           </tr>`,
@@ -210,7 +210,7 @@ function buildMagicLinkSelfServiceHtml({ restaurant_name, city, magicLink }) {
                     <table width="100%" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="center">
-                          <a href="${magicLink}" style="display:inline-block;background:#10B981;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Edit My Listing →</a>
+                          <a href="${magicLink}" style="display:inline-block;background:#A3132B;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Edit My Listing →</a>
                         </td>
                       </tr>
                     </table>
@@ -223,7 +223,7 @@ function buildMagicLinkSelfServiceHtml({ restaurant_name, city, magicLink }) {
             <td style="padding:0 40px 32px;text-align:center;">
               <p style="margin:0;color:#aaa;font-size:11px;line-height:1.6;">
                 ThaiData UK · The UK's Thai restaurant directory<br>
-                <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a>
+                <a href="https://thaidata.uk" style="color:#A3132B;text-decoration:none;">thaidata.uk</a>
               </p>
             </td>
           </tr>`,
@@ -245,7 +245,7 @@ function buildRecoveryHtml({ restaurant_name, city, magicLink }) {
                     <table width="100%" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="center">
-                          <a href="${magicLink}" style="display:inline-block;background:#10B981;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Edit My Listing →</a>
+                          <a href="${magicLink}" style="display:inline-block;background:#A3132B;color:#ffffff;padding:14px 44px;border-radius:8px;text-decoration:none;font-size:16px;font-weight:600;">Edit My Listing →</a>
                         </td>
                       </tr>
                     </table>
@@ -258,7 +258,7 @@ function buildRecoveryHtml({ restaurant_name, city, magicLink }) {
             <td style="padding:0 40px 32px;text-align:center;">
               <p style="margin:0;color:#aaa;font-size:11px;line-height:1.6;">
                 ThaiData UK · The UK's Thai restaurant directory<br>
-                <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a>
+                <a href="https://thaidata.uk" style="color:#A3132B;text-decoration:none;">thaidata.uk</a>
               </p>
             </td>
           </tr>`,
@@ -279,7 +279,7 @@ function buildClaimConfirmationHtml({ claimer_name, restaurant_name, city }) {
     footerHtml: `
           <tr>
             <td style="padding:0 40px 32px;text-align:center;">
-              <p style="margin:0;color:#aaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a></p>
+              <p style="margin:0;color:#aaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#A3132B;text-decoration:none;">thaidata.uk</a></p>
             </td>
           </tr>`,
   });
@@ -306,7 +306,7 @@ function buildClaimRejectedHtml({ claimer_name, restaurant_name, city }) {
     footerHtml: `
           <tr>
             <td style="padding:0 40px 32px;text-align:center;">
-              <p style="margin:0;color:#aaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#10B981;text-decoration:none;">thaidata.uk</a></p>
+              <p style="margin:0;color:#aaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#A3132B;text-decoration:none;">thaidata.uk</a></p>
             </td>
           </tr>`,
   });
@@ -411,10 +411,10 @@ export async function sendAdminClaimNotification(env, { id, restaurant_name, cit
   <tr><td style="padding:4px 12px 4px 0;color:#666;">City:</td><td style="padding:4px 0;">${city}</td></tr>
   <tr><td style="padding:4px 12px 4px 0;color:#666;">Type:</td><td style="padding:4px 0;">${businessType}</td></tr>
   <tr><td style="padding:4px 12px 4px 0;color:#666;">Claimant:</td><td style="padding:4px 0;">${claimer_name}</td></tr>
-  <tr><td style="padding:4px 12px 4px 0;color:#666;">Email:</td><td style="padding:4px 0;"><a href="mailto:${claimer_email}" style="color:#10B981;">${claimer_email}</a></td></tr>
+  <tr><td style="padding:4px 12px 4px 0;color:#666;">Email:</td><td style="padding:4px 0;"><a href="mailto:${claimer_email}" style="color:#A3132B;">${claimer_email}</a></td></tr>
   <tr><td style="padding:4px 12px 4px 0;color:#666;">Role:</td><td style="padding:4px 0;">${role}</td></tr>${phoneLine ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Phone:</td><td style="padding:4px 0;">${claimer_phone}</td></tr>` : ''}
 </table>
-<p style="margin:20px 0 0;"><a href="https://thaidata.uk/admin/" style="display:inline-block;background:#10B981;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Review in Admin →</a></p>`;
+<p style="margin:20px 0 0;"><a href="https://thaidata.uk/admin/" style="display:inline-block;background:#A3132B;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;">Review in Admin →</a></p>`;
 
   return sendEmail(env, {
     to: 'hello@thaidata.uk',
