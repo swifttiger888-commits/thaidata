@@ -18,11 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root {
-            /* ══ ThaiData brand — matches the homepage ══ */
             --ivory: #FBF7F0;
             --paper: #FFFFFF;
-            --cream: #FBF7F0;
             --white: #FFFFFF;
+            --cream: #FBF7F0;
             --ink: #1A1614;
             --ink-soft: #4A403C;
             --ink-mute: #7A6F6A;
@@ -35,10 +34,8 @@
             --turmeric: #F2B21A;
             --jade: #047857;
 
-            /* ══ SEMANTIC — meaning, not brand. Must NOT follow the brand colour. ══
-               --success* keeps a real green: it renders the FSA hygiene scale,
-               where 5/5 is good. Repointing it at the brand red would show a
-               top-rated kitchen as failing. */
+            /* SEMANTIC - meaning, not brand. --success renders the FSA hygiene scale:
+               5/5 is good, so it must stay green even though the brand is red. */
             --success: #047857;
             --success-dark: #065F46;
             --success-light: #D1FAE5;
@@ -47,8 +44,8 @@
             --danger: #B91C1C;
             --danger-light: #FEE2E2;
 
-            /* ══ legacy aliases — the old tokens were named after their COLOUR,
-               not their role, which is why this ever looked like a rename. ══ */
+            /* legacy aliases - the old tokens were named after their COLOUR, not their
+               role, so the ~30 var() uses resolve with no rule edits */
             --green: var(--brand);
             --green-dark: var(--brand-press);
             --green-light: var(--brand-tint);
@@ -56,15 +53,14 @@
             --red-light: var(--danger-light);
             --ink-secondary: var(--ink-soft);
             --ink-tertiary: var(--ink-mute);
-
-            --shadow-sm: 0 1px 2px 0 rgba(26,22,20,0.05);
-            --shadow: 0 1px 3px 0 rgba(26,22,20,0.08), 0 1px 2px -1px rgba(26,22,20,0.06);
-            --shadow-md: 0 4px 6px -1px rgba(26,22,20,0.08);
-            --shadow-lg: 0 10px 15px -3px rgba(26,22,20,0.10);
-            --radius-sm: 6px;
-            --radius: 10px;
-            --radius-lg: 14px;
-            --radius-xl: 20px;
+--shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+            --shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
             --radius-full: 9999px;
         }
 :focus-visible {
@@ -268,7 +264,8 @@
             color: white;
             margin-bottom: 8px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.15);
-            overflow-wrap: break-word; letter-spacing: -0.02em;}
+            overflow-wrap: break-word;
+        }
         .hero h1 em {
             font-style: normal;
             color: rgba(255,255,255,0.85);
@@ -370,7 +367,8 @@
             font-size: 1.4rem;
             font-weight: 800;
             margin-bottom: 20px;
-            color: var(--ink); letter-spacing: -0.02em;}
+            color: var(--ink);
+        }
         .card-title em {
             font-style: normal;
             color: var(--green-dark);
@@ -421,7 +419,8 @@
             font-family: 'Archivo', 'Inter', system-ui, sans-serif;
             font-size: 2.2rem;
             line-height: 1;
-            font-weight: 800; letter-spacing: -0.02em;}
+            font-weight: 800;
+        }
         .rating-circle .of {
             font-size: 0.7rem;
             opacity: 0.7;
@@ -548,7 +547,8 @@
             font-size: 1.3rem;
             font-weight: 800;
             margin-bottom: 8px;
-            color: var(--green-dark); letter-spacing: -0.02em;}
+            color: var(--green-dark);
+        }
         .claim-card p {
             color: var(--ink-secondary);
             font-size: 0.9rem;
@@ -699,7 +699,8 @@
             font-size: 1.1rem;
             font-weight: 800;
             margin-bottom: 12px;
-            color: var(--ink); letter-spacing: -0.02em;}
+            color: var(--ink);
+        }
         .related a {
             display: inline-flex;
             align-items: center;
@@ -772,7 +773,7 @@
             color: #991B1B;
             font-family: 'Archivo', 'Inter', system-ui, sans-serif;
             font-size: 1.2rem;
-            margin-bottom: 6px; font-weight: 800; letter-spacing: -0.02em;}
+            margin-bottom: 6px; font-weight: 800;}
         .closed-notice-card p {
             color: #7F1D1D;
             font-size: 0.88rem;
@@ -794,7 +795,7 @@
             font-family: 'Archivo', 'Inter', system-ui, sans-serif;
             font-size: 1.3rem;
             margin-bottom: 20px;
-            color: var(--ink); font-weight: 800; letter-spacing: -0.02em;}
+            color: var(--ink); font-weight: 800;}
         .nearby-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

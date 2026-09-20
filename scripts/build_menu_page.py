@@ -210,20 +210,58 @@ def build(data, dst=None):
 <link rel="canonical" href="https://thaidata.uk/r/{slug_city}/{slug_name}/menu/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
 <script type="application/ld+json">{json.dumps(menu_schema, ensure_ascii=False, separators=(",",":"))}</script>
 <script type="application/ld+json">{json.dumps(rest_schema, ensure_ascii=False, separators=(",",":"))}</script>
 <style>
-:root{{
-  --green:#10B981; --green-dark:#0A7A6F; --green-light:#D1FAE5;
-  --ink:#1F2937; --ink-secondary:#6B7280; --ink-tertiary:#9CA3AF;
-  --border:#E5E7EB; --border-light:#F3F4F6; --white:#FFF; --cream:#FFFBEB;
-  --amber:#B45309; --amber-light:#FEF3C7;
-  --radius-sm:8px; --radius:12px; --radius-lg:16px;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.05); --shadow:0 1px 3px rgba(0,0,0,.1);
-  --shadow-md:0 4px 6px -1px rgba(0,0,0,.1);
-  --step--1:.875rem; --step-0:1rem; --step-1:1.25rem; --step-2:1.5rem; --step-3:2rem;
-}}
+:root {{
+            --ivory: #FBF7F0;
+            --paper: #FFFFFF;
+            --white: #FFFFFF;
+            --cream: #FBF7F0;
+            --ink: #1A1614;
+            --ink-soft: #4A403C;
+            --ink-mute: #7A6F6A;
+            --hairline: #E7DFD5;
+            --border: #E7DFD5;
+            --border-light: #F2EDE6;
+            --brand: #A3132B;
+            --brand-press: #7E0E20;
+            --brand-tint: #F7E8EB;
+            --turmeric: #F2B21A;
+            --jade: #047857;
+
+            /* SEMANTIC - meaning, not brand. --success renders the FSA hygiene scale:
+               5/5 is good, so it must stay green even though the brand is red. */
+            --success: #047857;
+            --success-dark: #065F46;
+            --success-light: #D1FAE5;
+            --amber: #B45309;
+            --amber-light: #FEF3C7;
+            --danger: #B91C1C;
+            --danger-light: #FEE2E2;
+
+            /* legacy aliases - the old tokens were named after their COLOUR, not their
+               role, so the ~30 var() uses resolve with no rule edits */
+            --green: var(--brand);
+            --green-dark: var(--brand-press);
+            --green-light: var(--brand-tint);
+            --red: var(--danger);
+            --red-light: var(--danger-light);
+            --ink-secondary: var(--ink-soft);
+            --ink-tertiary: var(--ink-mute);
+--radius-sm:8px;
+            --radius:12px;
+            --radius-lg:16px;
+            --shadow-sm:0 1px 2px rgba(0,0,0,.05);
+            --shadow:0 1px 3px rgba(0,0,0,.1);
+            --shadow-md:0 4px 6px -1px rgba(0,0,0,.1);
+            --step--1:.875rem;
+            --step-0:1rem;
+            --step-1:1.25rem;
+            --step-2:1.5rem;
+            --step-3:2rem;
+        }}
 *{{box-sizing:border-box}}
 body{{margin:0;background:#FAFAF9;color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}}
 a{{color:var(--green-dark)}}
@@ -231,8 +269,8 @@ a{{color:var(--green-dark)}}
 header.masthead{{background:var(--white);border-bottom:1px solid var(--border);padding:20px 0}}
 .crumb{{font-size:var(--step--1);color:var(--ink-secondary);margin:0 0 6px}}
 .crumb a{{text-decoration:none}}
-h1{{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:var(--step-3);line-height:1.15;margin:0 0 8px}}
-h1 em{{font-style:italic;color:var(--green-dark)}}
+h1{{font-family:'Archivo', 'Inter', system-ui, sans-serif;font-weight: 800;font-size:var(--step-3);line-height:1.15;margin:0 0 8px}}
+h1 em{{font-style: normal;color:var(--green-dark)}}
 .meta{{font-size:var(--step--1);color:var(--ink-secondary);margin:0;display:flex;flex-wrap:wrap;gap:6px 14px}}
 .meta b{{color:var(--ink);font-weight:600}}
 .fsapill{{display:inline-block;background:var(--green-light);color:var(--green-dark);font-weight:700;font-size:.8125rem;padding:2px 9px;border-radius:999px}}
@@ -278,7 +316,7 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .pricing-notes ul{{list-style:none;margin:0;padding:0}}
 .pricing-notes li{{font-size:.9375rem;line-height:1.5;color:var(--ink);padding:2px 0}}
 .cta{{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:24px;margin:34px 0 50px}}
-.cta h2{{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:var(--step-2);margin:0 0 8px}}
+.cta h2{{font-family:'Archivo', 'Inter', system-ui, sans-serif;font-weight: 800;font-size:var(--step-2);margin:0 0 8px}}
 .cta p{{margin:0 0 16px;color:var(--ink-secondary);font-size:var(--step--1)}}
 .btn{{display:inline-block;background:var(--green-dark);color:#fff;text-decoration:none;font-weight:600;padding:11px 22px;border-radius:999px;font-size:var(--step--1)}}
 footer{{border-top:1px solid var(--border);padding:22px 0 40px;font-size:.8125rem;color:var(--ink-tertiary)}}
@@ -305,6 +343,7 @@ footer p{{margin:0 0 6px}}
   body{{background:#fff}}
   .dish{{break-inside:avoid}}
 }}
+em {{ font-style: normal; font-weight: 700; }}
 </style>
 </head>
 <body>
