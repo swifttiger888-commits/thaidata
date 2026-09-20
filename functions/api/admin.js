@@ -342,8 +342,9 @@ export async function onRequestPut(context) {
                 desc = `For authentic Thai food in ${claim.city}, ${claim.restaurant_name} on ${shortAddr} delivers${ratingTail}${hygieneInsight} The kitchen takes pride in sourcing quality ingredients and staying true to traditional recipes passed down through generations. Expect balanced flavours, fresh herbs, and the perfect blend of sweet, sour, salty, and spicy that defines great Thai cooking.`;
               }
 
-              // Append customisation hint
-              desc += ` [The owner can edit this description to add their story, signature dishes, and what makes ${claim.restaurant_name} unique.]`;
+              // Description is owner-editable via the magic-link manage page.
+              // No placeholder text is appended — it would be published in the
+              // page copy and JSON-LD before the owner ever edits it.
 
               await env.DB.prepare(
                 `UPDATE listings SET address = ?, postcode = ?, description = ?, updated_at = datetime('now') WHERE id = ?`
