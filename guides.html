@@ -196,18 +196,190 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             .nav-links a:last-child { border-bottom: none; }
         }
     </style>
+<style id="td-masthead-css">
+#main-nav.td-masthead,
+#main-nav.td-masthead * {
+  box-sizing: border-box;
+}
+
+#main-nav.td-masthead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: block;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  padding: 0;
+  background: #FFFFFF;
+  color: #332F2B;
+  border: 0;
+  border-bottom: 1px solid #E5DED5;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", sans-serif;
+}
+
+#main-nav.td-masthead.td-fixed {
+  position: fixed;
+}
+
+#main-nav.td-masthead .td-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  height: 71px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: transparent;
+}
+
+#main-nav.td-masthead .td-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  color: #332F2B;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+#main-nav.td-masthead .td-mark {
+  display: block;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  background: #F2B21A;
+  -webkit-mask: url("/elephant-icon.svg") center / contain no-repeat;
+  mask: url("/elephant-icon.svg") center / contain no-repeat;
+  mask-mode: alpha;
+}
+
+#main-nav.td-masthead .td-wordmark {
+  color: #332F2B;
+}
+
+#main-nav.td-masthead .td-links {
+  position: static;
+  inset: auto;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0 0 0 auto;
+  padding: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  scrollbar-width: thin;
+}
+
+#main-nav.td-masthead .td-links > a,
+#main-nav.td-masthead .td-back {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 2px;
+  color: #4A403C !important;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: none;
+}
+
+#main-nav.td-masthead .td-links > a.active,
+#main-nav.td-masthead .td-links > a[aria-current="page"],
+#main-nav.td-masthead .td-links > a:hover,
+#main-nav.td-masthead .td-back:hover {
+  color: #A61938 !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+#main-nav.td-masthead a:focus-visible {
+  outline: 2px solid #A61938;
+  outline-offset: 2px;
+}
+
+#main-nav.td-masthead .hamburger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #main-nav.td-masthead .td-bar {
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  #main-nav.td-masthead .td-brand {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  #main-nav.td-masthead .td-links {
+    gap: 12px;
+  }
+}
+</style>
 </head>
 <body>
     <div class="grain"></div>
 
-    <nav>
-        <div class="nav-bar">
-            <a href="index.html" class="logo">
-                <img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="111" height="40">
+    <nav id="main-nav" class="td-masthead" aria-label="Primary">
+        <div class="nav-bar td-bar">
+            <a href="/" class="logo td-brand">
+                <span class="td-mark" aria-hidden="true"></span><span class="td-wordmark">ThaiData UK</span>
             </a>
-            <div class="nav-links">
+            <div class="nav-links td-links">
                 <a href="tools.html">Tools</a>
-                <a href="guides.html" class="active">Guides</a>
+                <a href="guides.html" class="active" aria-current="page">Guides</a>
                 <a href="learn.html">Learn</a>
                 <a href="restaurants.html">Restaurants</a>
                 <a href="claim/index.html" style="color:var(--c2);">Claim Listing</a>
