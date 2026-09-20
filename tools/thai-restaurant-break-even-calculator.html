@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root{--c1:#0A7A6F;--c2:#10B981;--dark:#0C1220;--ink2:#334155;--ink3:#64748B;--ink4:#94A3B8;--line:rgba(255,255,255,0.1);--bg:#0C1220}
+        :root{--c1: #A3132B;--c2: #A3132B;--dark: #FFFFFF;--ink2: #4A403C;--ink3: #7A6F6A;--ink4: #9C918C;--line: #E7DFD5;--bg: #FBF7F0}
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -22,29 +22,29 @@
 
         *{box-sizing:border-box;margin:0;padding:0}img,svg,video, canvas{max-width:100%;height:auto}
                 html { overflow-x: hidden; }
-body{font-family:'Inter',system-ui,sans-serif;color:white;background:var(--bg);line-height:1.6;overflow-x:hidden}
+body{font-family:'Inter',system-ui,sans-serif;color: var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
         nav{background:var(--dark);border-bottom:1px solid var(--line);height:72px;display:flex;align-items:center}
         .nav-bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%}
-        .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.3rem;color:white;text-decoration:none}
+        .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.3rem;color: var(--ink);text-decoration:none}
         .logo i{color:var(--c2);font-size:1.4rem}
         .container{max-width:1000px;margin:0 auto;padding:40px 20px 80px}
         header{text-align:center;margin-bottom:32px}
-        h1{font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:400;line-height:1.15;margin-bottom:12px}
-        h1 em{font-style:italic;color:var(--c2)}
+        h1{font-family:'Archivo','Inter',system-ui,sans-serif;font-size:clamp(2rem,5vw,2.8rem);font-weight: 800;line-height:1.15;margin-bottom:12px}
+        h1 em{font-style: normal;color:var(--c2)}
         .layout{display:grid;grid-template-columns:380px 1fr;gap:30px}@media(max-width:800px){.layout{grid-template-columns:1fr}}
-        .controls{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:16px;padding:24px}
+        .controls{background:#FFFFFF;border:1px solid var(--line);border-radius:16px;padding:24px}
         .field{margin-bottom:18px}.field label{display:block;font-size:0.82rem;color:var(--ink4);margin-bottom:6px}
-        .field input{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;color:white;font-family:inherit;font-size:0.95rem}
+        .field input{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 14px;color: var(--ink);font-family:inherit;font-size:0.95rem}
         .field input:focus{outline:none;border-color:var(--c2)}
-        .results h2{font-family:'Instrument Serif',serif;font-size:1.5rem;margin-bottom:16px}
-        .result-card{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:10px}
+        .results h2{font-family:'Archivo','Inter',system-ui,sans-serif;font-size:1.5rem;margin-bottom:16px font-weight: 800;}
+        .result-card{background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:10px}
         .result-card.big{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.03)}
         .rc-label{font-size:0.75rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px}
-        .rc-value{font-family:'Instrument Serif',serif;font-size:2.4rem;color:var(--c2);line-height:1}
+        .rc-value{font-family:'Archivo','Inter',system-ui,sans-serif;font-size:2.4rem;color:var(--c2);line-height:1 font-weight: 800;}
         .rc-sub{font-size:0.82rem;color:var(--ink4);margin-top:6px}
         .breakdown{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
-        .bd-item{background:rgba(255,255,255,0.02);border-radius:8px;padding:14px;text-align:center}
-        .bd-val{font-size:1.2rem;font-weight:700;color:white}.bd-label{font-size:0.72rem;color:var(--ink4);margin-top:4px}
+        .bd-item{background:#FFFFFF;border-radius:8px;padding:14px;text-align:center}
+        .bd-val{font-size:1.2rem;font-weight:700;color: var(--ink)}.bd-label{font-size:0.72rem;color:var(--ink4);margin-top:4px}
         footer{text-align:center;padding:40px 0;border-top:1px solid var(--line);color:var(--ink4);font-size:0.85rem;margin-top:40px}
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Thai Restaurant Break-Even Calculator","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://thaidata.uk/tools/thai-restaurant-break-even-calculator","description":"Calculate daily covers needed to break even. Free tool for UK Thai restaurant operators.","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script>

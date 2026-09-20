@@ -445,25 +445,25 @@ LONDON_PAGE = f"""<!DOCTYPE html>
     {schema_html}
 
     <style>
-        :root {{ --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --card-bg: rgba(255,255,255,0.02); }}
+        :root {{ --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --card-bg: #FFFFFF; }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         img, svg, video {{ max-width: 100%; height: auto; }}
-        body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
+        body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
         .grain {{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }}
         .wrap {{ max-width: 960px; margin: 0 auto; padding: 0 20px; }}
         nav {{ background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; }}
         body > nav {{ position: sticky; top: 0; z-index: 100; }}
         .nav-bar {{ max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }}
-        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }}
+        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }}
         .logo-icon {{ height: 36px; width: auto; }}
 
         .hero {{ padding: 80px 0 40px; text-align: center; }}
-        .hero h1 {{ font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }}
-        .hero h1 em {{ font-style: italic; color: var(--c2); }}
+        .hero h1 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }}
+        .hero h1 em {{ font-style: normal; color: var(--c2); }}
         .hero .subtitle {{ color: var(--ink4); font-size: 1.05rem; max-width: 640px; margin: 0 auto 24px; line-height: 1.7; }}
         .hero-stats {{ display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }}
         .hero-stat {{ text-align: center; }}
-        .hero-stat .num {{ font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); }}
+        .hero-stat .num {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.2rem; color: var(--c2); font-weight: 800;}}
         .hero-stat .lbl {{ color: var(--ink4); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }}
 
         .hood-nav {{ display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 40px auto; max-width: 720px; height: auto; align-items: flex-start; }}
@@ -475,40 +475,40 @@ LONDON_PAGE = f"""<!DOCTYPE html>
 
         .hood-section {{ padding: 32px 0; scroll-margin-top: 80px; }}
         .hood-section + .hood-section {{ border-top: 1px solid var(--line); }}
-        .hood-section h2 {{ font-family: 'Instrument Serif', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 4px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }}
-        .hood-section h2 em {{ font-style: italic; color: var(--c2); }}
+        .hood-section h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }}
+        .hood-section h2 em {{ font-style: normal; color: var(--c2); }}
         .hood-badge {{ font-size: 0.7rem; background: rgba(16,185,129,0.15); color: var(--c2); padding: 3px 12px; border-radius: 50px; font-family: 'Inter', sans-serif; font-weight: 500; }}
         .hood-stats {{ font-size: 0.85rem; color: var(--ink4); margin-bottom: 12px; }}
         .hood-desc {{ color: var(--ink3); line-height: 1.7; font-size: 0.95rem; margin-bottom: 8px; }}
         .hood-best {{ font-size: 0.9rem; color: var(--ink4); margin-bottom: 12px; }}
-        .hood-section p strong {{ color: white; }}
+        .hood-section p strong {{ color: var(--ink); }}
 
         .rest-cards {{ margin-top: 16px; }}
         .rest-cards h3 {{ font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink4); margin-bottom: 8px; }}
         .rest-card {{ display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; transition: border-color 0.2s; margin: 0 6px 6px 0; }}
         .rest-card:hover {{ border-color: var(--c2); }}
-        .rest-card strong {{ color: white; font-size: 0.85rem; font-weight: 600; }}
+        .rest-card strong {{ color: var(--ink); font-size: 0.85rem; font-weight: 600; }}
         .rest-type {{ color: var(--ink4); font-size: 0.75rem; }}
         .rest-rating {{ color: var(--c2); font-size: 0.85rem; }}
 
         .faq-section {{ margin: 48px 0; }}
-        .faq-section h2 {{ font-family: 'Instrument Serif', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 20px; }}
-        .faq-section h2 em {{ font-style: italic; color: var(--c2); }}
+        .faq-section h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; }}
+        .faq-section h2 em {{ font-style: normal; color: var(--c2); }}
         .faq-item {{ margin: 8px 0; padding: 16px 20px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px; }}
-        .faq-item summary {{ cursor: pointer; font-weight: 600; color: white; font-size: 0.95rem; }}
+        .faq-item summary {{ cursor: pointer; font-weight: 600; color: var(--ink); font-size: 0.95rem; }}
         .faq-item summary::-webkit-details-marker {{ color: var(--c2); }}
         .faq-item p {{ margin-top: 10px; color: var(--ink3); line-height: 1.7; font-size: 0.9rem; }}
 
         .start-section {{ margin: 40px 0; }}
-        .start-section h2 {{ font-family: 'Instrument Serif', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 16px; }}
-        .start-section h2 em {{ font-style: italic; color: var(--c2); }}
+        .start-section h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; }}
+        .start-section h2 em {{ font-style: normal; color: var(--c2); }}
         .start-cards {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }}
         .start-card {{ background: var(--card-bg); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }}
-        .start-card h3 {{ font-size: 1rem; color: white; margin-bottom: 6px; }}
+        .start-card h3 {{ font-size: 1rem; color: var(--ink); margin-bottom: 6px; }}
         .start-card p {{ color: var(--ink3); font-size: 0.85rem; line-height: 1.6; }}
 
         .chain-overview {{ margin: 40px 0; padding: 28px 32px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 16px; }}
-        .chain-overview h2 {{ font-family: 'Instrument Serif', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 12px; }}
+        .chain-overview h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; }}
         .chain-overview p {{ color: var(--ink3); font-size: 0.9rem; line-height: 1.7; }}
 
         .cta {{ text-align: center; padding: 40px 0 60px; }}
@@ -517,7 +517,7 @@ LONDON_PAGE = f"""<!DOCTYPE html>
 
         footer {{ text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; }}
         footer a {{ color: var(--ink4); text-decoration: none; }}
-        footer a:hover {{ color: white; }}
+        footer a:hover {{ color: var(--ink); }}
     </style>
 </head>
 <body>

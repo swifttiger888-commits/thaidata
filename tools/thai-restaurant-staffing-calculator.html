@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -31,44 +31,44 @@
       height: auto
     }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6;;
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6;;
       overflow-x: hidden
     }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px 80px; }
         header { text-align: center; margin-bottom: 36px; }
         .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
-        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
-        h1 em { font-style: italic; color: var(--c2); }
+        h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: normal; color: var(--c2); }
         header p { color: var(--ink4); font-size: 1rem; }
 
         .layout { display: grid; grid-template-columns: 340px 1fr; gap: 30px; }
         @media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
 
-        .controls { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 26px; height: fit-content; }
-        .controls h3 { font-family: 'Instrument Serif', serif; font-size: 1.2rem; margin-bottom: 20px; }
+        .controls { background: #FFFFFF; border: 1px solid var(--line); border-radius: 18px; padding: 26px; height: fit-content; }
+        .controls h3 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.2rem; margin-bottom: 20px; font-weight: 800;}
         .input-group { margin-bottom: 18px; }
         .input-group label { display: block; font-size: 0.8rem; color: var(--ink4); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
-        .input-group input, .input-group select { width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 10px; color: white; font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; }
+        .input-group input, .input-group select { width: 100%; padding: 12px 14px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; }
         .input-group input:focus, .input-group select:focus { border-color: var(--c2); }
         .input-group select { appearance: none; cursor: pointer; }
-        .input-group select option { background: var(--dark); color: white; }
+        .input-group select option { background: var(--dark); color: var(--ink); }
 
         .results { }
-        .results h3 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; margin-bottom: 20px; }
+        .results h3 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.3rem; margin-bottom: 20px; font-weight: 800;}
 
         .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
         @media (max-width: 500px) { .stat-row { grid-template-columns: 1fr; } }
-        .stat-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 20px; text-align: center; }
-        .stat-card .stat-num { font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: var(--c2); }
+        .stat-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 20px; text-align: center; }
+        .stat-card .stat-num { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.8rem; color: var(--c2); font-weight: 800;}
         .stat-card .stat-label { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
 
-        .staff-section { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; margin-bottom: 14px; }
+        .staff-section { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; margin-bottom: 14px; }
         .staff-section h4 { font-size: 0.9rem; color: var(--c2); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
         .staff-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
         .staff-row:last-child { border-bottom: none; }
@@ -77,7 +77,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .staff-cost { color: var(--ink4); font-size: 0.8rem; }
 
         .total-bar { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.2); border-radius: 14px; padding: 20px 24px; margin-top: 20px; }
-        .total-bar .big-number { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: var(--c2); }
+        .total-bar .big-number { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.2rem; color: var(--c2); font-weight: 800;}
         .total-bar .label { color: var(--ink4); font-size: 0.8rem; }
 
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 60px; }

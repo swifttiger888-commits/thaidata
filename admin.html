@@ -18,7 +18,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -29,12 +29,12 @@
         img, svg, video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }
 body {
-        overflow-x: hidden; font-family: system-ui, sans-serif; background: #0C1220; color: white; padding: 40px 20px; }
+        overflow-x: hidden; font-family: system-ui, sans-serif; background: #FBF7F0; color: white; padding: 40px 20px; }
         .wrap { max-width: 700px; margin: 0 auto; }
         h1 { font-size: 1.5rem; margin-bottom: 24px; }
         .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
         input, select, button { width: 100%; padding: 12px; margin: 8px 0; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: white; font-size: 0.95rem; }
-        button { background: #10B981; border: none; cursor: pointer; font-weight: 600; }
+        button { background: #A3132B; border: none; cursor: pointer; font-weight: 600; }
         button:hover { background: #059669; }
         button.danger { background: #EF4444; }
         button.danger:hover { background: #DC2626; }
@@ -44,10 +44,10 @@ body {
         .claim-meta { font-size: 0.8rem; color: #94A3B8; }
         .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
         .badge-pending { background: rgba(245,158,11,0.15); color: #F59E0B; }
-        .badge-approved { background: rgba(16,185,129,0.15); color: #10B981; }
+        .badge-approved { background: rgba(16,185,129,0.15); color: #A3132B; }
         .enrich-line { font-size: 0.73rem; color: #64748B; margin-top: 3px; }
         .enrich-line .enrich-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; vertical-align: middle; position: relative; top: -1px; }
-        .enrich-dot-success { background: #10B981; }
+        .enrich-dot-success { background: #A3132B; }
         .enrich-dot-partial { background: #F59E0B; }
         .enrich-dot-failed { background: #EF4444; }
         .badge-closed { background: rgba(239,68,68,0.15); color: #EF4444; }
@@ -55,16 +55,16 @@ body {
         .actions { display: flex; gap: 8px; flex-shrink: 0; }
         .actions button { width: auto; padding: 6px 14px; font-size: 0.8rem; }
         .toast { position: fixed; top: 20px; right: 20px; padding: 12px 20px; border-radius: 10px; font-weight: 600; z-index: 1000; }
-        .toast-success { background: #064e3b; color: #10B981; }
+        .toast-success { background: #064e3b; color: #A3132B; }
         .toast-error { background: #450a0a; color: #EF4444; }
         .hidden { display: none; }
-        .view-link { color: #10B981; text-decoration: none; font-size: 0.8rem; white-space: nowrap; }
+        .view-link { color: #A3132B; text-decoration: none; font-size: 0.8rem; white-space: nowrap; }
         .view-link:hover { text-decoration: underline; }
         .fsa-id-line { font-size: 0.73rem; color: #64748B; margin-top: 4px; display: flex; align-items: center; gap: 6px; }
         .fsa-id-line code { font-family: monospace; color: #94A3B8; }
         .fsa-copy-btn { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: #94A3B8; cursor: pointer; padding: 1px 6px; border-radius: 4px; font-size: 0.65rem; }
         .fsa-copy-btn:hover { background: rgba(255,255,255,0.15); color: white; }
-        .fsa-copy-btn.copied { background: rgba(16,185,129,0.15); border-color: #10B981; color: #10B981; }
+        .fsa-copy-btn.copied { background: rgba(16,185,129,0.15); border-color: #A3132B; color: #A3132B; }
 
         @media (max-width: 640px) {
             body { padding: 20px 12px; }
@@ -333,7 +333,7 @@ body {
 
                 if (c.claim_status === 'pending') {
                     var approveBtn = document.createElement('button');
-                    approveBtn.style.background = '#10B981';
+                    approveBtn.style.background = '#A3132B';
                     approveBtn.textContent = 'Approve';
                     approveBtn.addEventListener('click', (function(id) {
                         return function() { approveClaim(id); };
@@ -393,7 +393,7 @@ body {
                 if (c.claim_status === 'approved' && c.listing_id) {
                     var closedBtn = document.createElement('button');
                     if (c.is_closed) {
-                        closedBtn.style.background = '#10B981';
+                        closedBtn.style.background = '#A3132B';
                         closedBtn.textContent = 'Reopen venue';
                         closedBtn.title = 'Mark venue as open again';
                     } else {
@@ -412,7 +412,7 @@ body {
                     var exclBtn = document.createElement('button');
                     var isExcluded = window._excludedIds && (window._excludedIds.has(c.fsa_id) || window._excludedIds.has(Number(c.fsa_id)));
                     if (isExcluded) {
-                        exclBtn.style.background = '#10B981';
+                        exclBtn.style.background = '#A3132B';
                         exclBtn.textContent = 'Restore';
                         exclBtn.title = 'Remove exclusion — restaurant will reappear on next pipeline run';
                     } else {

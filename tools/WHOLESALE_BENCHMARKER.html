@@ -60,11 +60,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
-            --danger: #EF4444; --warning: #F59E0B; --success: #10B981;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
+            --danger: #EF4444; --warning: #F59E0B; --success: #A3132B;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -81,7 +81,7 @@
     }
                 html { overflow-x: hidden; }
 body { 
-            background-color: var(--bg); color: white; font-family: 'Inter', sans-serif; line-height: 1.6; 
+            background-color: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; 
             -webkit-font-smoothing: antialiased;;
       overflow-x: hidden
     }
@@ -89,7 +89,7 @@ body {
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
         .nav-back { color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none; }
         @media (max-width: 480px) { .nav-back { display: none; } .logo { font-size: 1.1rem; } }
@@ -97,8 +97,8 @@ body {
         .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
         
         header { margin-bottom: 40px; }
-        h1 { font-family: 'Instrument Serif', serif; font-size: 3rem; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
-        h1 em { font-style: italic; color: var(--c2); }
+        h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
+        h1 em { font-style: normal; color: var(--c2); }
         .p-badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16, 185, 129, 0.1); color: var(--c2); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border: 1px solid rgba(16, 185, 129, 0.2); }
 
         header {
@@ -130,7 +130,7 @@ body {
         }
 
         .card {
-            background-color: rgba(255,255,255,0.02);
+            background-color: var(--ink);
             border-radius: 20px;
             padding: 25px;
             border: 1px solid var(--line);
@@ -138,13 +138,13 @@ body {
 
         .card-title {
             font-size: 1.5rem;
-            font-weight: 400;
-            font-family: 'Instrument Serif', serif;
+            font-weight: 800;
+            font-family:'Archivo','Inter',system-ui,sans-serif;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
-            color: white;
+            color: var(--ink);
         }
 
         .card-title i {
@@ -168,7 +168,7 @@ body {
             background-color: rgba(255,255,255,0.05);
             border: 1px solid var(--line);
             border-radius: 8px;
-            color: white;
+            color: var(--ink);
             font-size: 16px;
             transition: all 0.3s ease;
         }
@@ -291,7 +291,7 @@ body {
         }
 
         .heatmap-item {
-            background-color: #0f172a;
+            background-color: #1A1614;
             border-radius: 8px;
             padding: 15px;
             text-align: center;
@@ -338,7 +338,7 @@ body {
         }
 
         .better {
-            color: #10b981;
+            color: #A3132B;
         }
 
         .worse {

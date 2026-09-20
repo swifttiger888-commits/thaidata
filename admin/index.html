@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #B45309; --red: #EF4444; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -23,24 +23,24 @@
         img, svg, video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }
 body {
-        overflow-x: hidden; font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        overflow-x: hidden; font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 36px; width: auto; display: inline-block; }
 
         .header { padding: 40px 0 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-        .header h1 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; }
-        .header h1 em { font-style: italic; color: var(--c2); }
+        .header h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; font-weight: 800; }
+        .header h1 em { font-style: normal; color: var(--c2); }
 
         /* Tabs */
-        .tabs { display: flex; gap: 4px; margin-bottom: 24px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 4px; width: fit-content; }
+        .tabs { display: flex; gap: 4px; margin-bottom: 24px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; padding: 4px; width: fit-content; }
         .tab { padding: 8px 18px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: none; background: transparent; color: var(--ink4); transition: all 0.15s; }
         .tab.active { background: var(--c2); color: white; }
-        .tab:hover:not(.active) { color: white; }
+        .tab:hover:not(.active) { color: var(--ink); }
 
         /* Table */
         .table-wrap { overflow-x: auto; }
@@ -62,16 +62,16 @@ body {
         .btn-sm { padding: 6px 12px; font-size: 0.75rem; }
 
         /* Login */
-        .login-box { max-width: 400px; margin: 80px auto; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 40px 32px; text-align: center; }
-        .login-box h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; margin-bottom: 8px; }
-        .login-box input { width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 10px; color: white; font-size: 0.95rem; margin: 12px 0; text-align: center; }
+        .login-box { max-width: 400px; margin: 80px auto; background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 40px 32px; text-align: center; }
+        .login-box h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.8rem; margin-bottom: 8px; font-weight: 800;}
+        .login-box input { width: 100%; padding: 12px 16px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); font-size: 0.95rem; margin: 12px 0; text-align: center; }
         .login-box input:focus { outline: none; border-color: var(--c2); }
 
         /* Details modal */
         .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; display: none; align-items: center; justify-content: center; }
         .modal-overlay.show { display: flex; }
         .modal { background: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 32px; max-width: 560px; width: 90%; max-height: 80vh; overflow-y: auto; }
-        .modal h3 { font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 16px; }
+        .modal h3 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; margin-bottom: 16px; font-weight: 800;}
         .modal .detail-row { margin-bottom: 12px; }
         .modal .detail-row .dl { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
         .modal .detail-row .dv { font-size: 0.95rem; margin-top: 2px; }
@@ -135,7 +135,7 @@ body {
     </div>
 
     <!-- Pending indicator for non-blocking requests -->
-    <div id="request-busy" style="display:none;position:fixed;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#10B981,#059669);z-index:9999;animation:pulse 1.5s ease-in-out infinite;"></div>
+    <div id="request-busy" style="display:none;position:fixed;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#A3132B,#059669);z-index:9999;animation:pulse 1.5s ease-in-out infinite;"></div>
     <style>
     @keyframes pulse { 0%,100% { opacity:0.4; } 50% { opacity:1; } }
     </style>
@@ -333,7 +333,7 @@ body {
                     ${claim.claim_status === 'rejected' ? `
                     <div style="margin-top:16px;">
                         <button class="btn btn-sm" style="background:transparent;border:1px solid var(--red);color:var(--red);" onclick="if(confirm('Archive this rejected claim? It will be removed from active review but kept for reference.')){dismissClaim(${claim.id});closeModal();}">✕ Dismiss (archive permanently)</button>
-                        <button class="btn btn-sm" style="background:var(--c2);color:#0C1220;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;margin-top:8px;" onclick="reopenClaim(${claim.id});closeModal();">↻ Reopen (returns to Pending tab for re-review)</button>
+                        <button class="btn btn-sm" style="background:var(--c2);color: #FFFFFF;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;margin-top:8px;" onclick="reopenClaim(${claim.id});closeModal();">↻ Reopen (returns to Pending tab for re-review)</button>
                     </div>
                     </div>
                     ` : ''}

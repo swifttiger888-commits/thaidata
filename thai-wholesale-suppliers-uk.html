@@ -21,14 +21,14 @@
         :root {
             --c1:
         :focus-visible {
-                    outline: 2px solid #10B981;
+                    outline: 2px solid #A3132B;
                     outline-offset: 2px;
                     border-radius: 4px;
                 }
                 :focus:not(:focus-visible) {
                     outline: none;
                 }
- #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B;
+ #7E0E20; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #B45309;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -38,28 +38,28 @@
     }
                 html { overflow-x: hidden; }
 body {
-        overflow-x: hidden; font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        overflow-x: hidden; font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
         .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
-        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; position: relative; }
-        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: normal; color: var(--c2); }
         .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
 
         .section { padding: 30px 0 50px; }
-        .section h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 8px; }
-        .section h2 em { font-style: italic; color: var(--c2); }
+        .section h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
+        .section h2 em { font-style: normal; color: var(--c2); }
         .section h3 { font-size: 1.05rem; font-weight: 600; margin: 20px 0 10px; }
         .section p { color: var(--ink4); font-size: 0.9rem; margin-bottom: 16px; line-height: 1.7; }
 
-        .supplier-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin: 12px 0; transition: border-color 0.15s; }
+        .supplier-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin: 12px 0; transition: border-color 0.15s; }
         .supplier-card:hover { border-color: var(--c2); }
         .supplier-card .s-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
         .supplier-card .s-loc { color: var(--ink3); font-size: 0.82rem; margin-bottom: 6px; }
@@ -72,9 +72,9 @@ body {
         .tag-specialist { background: rgba(139,92,246,0.12); color: #A78BFA; }
         .tag-online { background: rgba(59,130,246,0.12); color: #60A5FA; }
 
-        .data-table-wrapper { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow-x: auto; }
+        .data-table-wrapper { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; overflow-x: auto; }
         .data-table { width: 100%; border-collapse: collapse; min-width: 700px; }
-        .data-table thead th { padding: 14px 18px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+        .data-table thead th { padding: 14px 18px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); border-bottom: 1px solid var(--line); background: #FFFFFF; }
         .data-table tbody td { padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
         .data-table .price-cell { font-weight: 700; color: var(--c2); }
 
@@ -82,11 +82,11 @@ body {
         .insight-box h3 { color: var(--c2); font-size: 0.9rem; margin: 0 0 6px; }
         .insight-box p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
 
-        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: rgba(255,255,255,0.02); border-radius: 10px; border: 1px dashed var(--line); }
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: #FFFFFF; border-radius: 10px; border: 1px dashed var(--line); }
 
         footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
         footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
-        footer a:hover { color: white; }
+        footer a:hover { color: var(--ink); }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 2rem; }

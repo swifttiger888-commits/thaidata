@@ -55,10 +55,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -75,7 +75,7 @@
                 html { overflow-x: hidden; }
 body { 
             font-family: 'Inter', system-ui, sans-serif; 
-            color: white; 
+            color: var(--ink); 
             background: var(--bg); 
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;;
@@ -86,15 +86,15 @@ body {
         
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .section { padding: 80px 0; }
         .header { text-align: center; margin-bottom: 50px; }
         .header h1 { 
-            font-family: 'Instrument Serif', serif; 
+            font-family:'Archivo','Inter',system-ui,sans-serif; 
             font-size: clamp(2.5rem, 8vw, 4rem); 
-            font-weight: 400; 
+            font-weight: 800; 
             line-height: 1.1; 
             margin-bottom: 20px; 
             background: linear-gradient(to right, var(--c2), white); 
@@ -102,11 +102,11 @@ body {
             background-clip: text; 
             color: transparent; 
         }
-        .header h1 em { font-style: italic; color: var(--c2); }
+        .header h1 em { font-style: normal; color: var(--c2); }
         .header p { color: var(--ink4); font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
 
         .tool-wrapper { 
-            background: rgba(255, 255, 255, 0.02); 
+            background: #FFFFFF; 
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 20px; 
@@ -121,9 +121,9 @@ body {
 
         .label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--c2); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
         .input-group { margin-bottom: 24px; }
-        .input-text { width: 100%; padding: 14px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: 8px; color: white; font-size: 1rem; }
+        .input-text { width: 100%; padding: 14px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font-size: 1rem; }
         .input-text:focus { outline: none; border-color: var(--c2); background: rgba(0,0,0,0.4); }
-        .textarea { width: 100%; height: 250px; padding: 16px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: 12px; color: white; font-family: inherit; font-size: 0.95rem; resize: none; }
+        .textarea { width: 100%; height: 250px; padding: 16px; background: rgba(0,0,0,0.2); border: 1px solid var(--line); border-radius: 12px; color: var(--ink); font-family: inherit; font-size: 0.95rem; resize: none; }
         .textarea:focus { outline: none; border-color: var(--c2); background: rgba(0,0,0,0.4); }
 
         .btn-magic { width: 100%; padding: 16px; background: linear-gradient(90deg, var(--c1), var(--c2)); color: white; border: none; border-radius: 9px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s; font-size: 1rem; }
@@ -135,7 +135,7 @@ body {
         .btn-copy { padding: 8px 16px; background: var(--c2); color: var(--dark); border: none; border-radius: 6px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: 0.2s; }
         .btn-copy:hover { transform: scale(1.05); }
 
-        .hint { margin-top: 20px; font-size: 0.85rem; color: var(--ink4); line-height: 1.5; display: flex; gap: 12px; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); }
+        .hint { margin-top: 20px; font-size: 0.85rem; color: var(--ink4); line-height: 1.5; display: flex; gap: 12px; padding: 15px; border-radius: 8px; background: #FFFFFF; border: 1px solid var(--line); }
         .hint i { color: var(--c2); font-size: 1.1rem; }
 
         @media (max-width: 900px) {
@@ -204,7 +204,7 @@ body {
             </div>
 
             <div style="margin-top: 50px; background: rgba(255,255,255,0.03); padding: 40px; border-radius: 16px; border: 1px solid var(--line);">
-                <h3 style="font-family:'Instrument Serif', serif; font-size:2rem; margin-bottom:20px; color:var(--c2);">How to install this code?</h3>
+                <h3 style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size:2rem; margin-bottom:20px; color:var(--c2);">How to install this code?</h3>
                 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:30px;">
                     <div>
                         <div style="font-weight:800; color:var(--c2); margin-bottom:10px;">STEP 1</div>
@@ -289,7 +289,7 @@ body {
                 btn.style.background = "#ffffff";
                 setTimeout(() => {
                     btn.textContent = "Copy Code";
-                    btn.style.background = "#10B981";
+                    btn.style.background = "#A3132B";
                 }, 2000);
             });
         }

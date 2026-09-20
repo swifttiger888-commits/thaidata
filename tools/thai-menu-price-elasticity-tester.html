@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root{--c1:#0A7A6F;--c2:#10B981;--dark:#0C1220;--ink2:#334155;--ink3:#64748B;--ink4:#94A3B8;--line:rgba(255,255,255,0.1);--bg:#0C1220}
+        :root{--c1: #A3132B;--c2: #A3132B;--dark: #FFFFFF;--ink2: #4A403C;--ink3: #7A6F6A;--ink4: #9C918C;--line: #E7DFD5;--bg: #FBF7F0}
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -22,27 +22,27 @@
 
         *{box-sizing:border-box;margin:0;padding:0}img,svg,video, canvas{max-width:100%;height:auto}
                 html { overflow-x: hidden; }
-body{font-family:'Inter',system-ui,sans-serif;color:white;background:var(--bg);line-height:1.6;overflow-x:hidden}
+body{font-family:'Inter',system-ui,sans-serif;color: var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
         nav{background:var(--dark);border-bottom:1px solid var(--line);height:72px;display:flex;align-items:center}
         .nav-bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;width:100%}
-        .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.3rem;color:white;text-decoration:none}
+        .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.3rem;color: var(--ink);text-decoration:none}
         .logo i{color:var(--c2);font-size:1.4rem}
         .container{max-width:1000px;margin:0 auto;padding:40px 20px 80px}
         header{text-align:center;margin-bottom:32px}
-        h1{font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:400;line-height:1.15;margin-bottom:12px}
-        h1 em{font-style:italic;color:var(--c2)}
+        h1{font-family:'Archivo','Inter',system-ui,sans-serif;font-size:clamp(2rem,5vw,2.8rem);font-weight: 800;line-height:1.15;margin-bottom:12px}
+        h1 em{font-style: normal;color:var(--c2)}
         .layout{display:grid;grid-template-columns:380px 1fr;gap:30px}@media(max-width:800px){.layout{grid-template-columns:1fr}}
-        .controls{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:16px;padding:24px}
+        .controls{background:#FFFFFF;border:1px solid var(--line);border-radius:16px;padding:24px}
         .field{margin-bottom:16px}.field label{display:flex;justify-content:space-between;font-size:0.82rem;color:var(--ink4);margin-bottom:6px}
         .field label span:last-child{color:var(--c2);font-weight:600}
         .field input[type=range]{width:100%}
         .field .val-row{display:flex;justify-content:space-between;font-size:0.75rem;color:var(--ink4)}
-        .results h2{font-family:'Instrument Serif',serif;font-size:1.5rem;margin-bottom:16px}
-        .rc{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:10px}
+        .results h2{font-family:'Archivo','Inter',system-ui,sans-serif;font-size:1.5rem;margin-bottom:16px font-weight: 800;}
+        .rc{background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:10px}
         .rc.big{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.03)}
         .rc.good .rval{color:var(--c2)}.rc.bad .rval{color:#EF4444}
         .rlbl{font-size:0.75rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px}
-        .rval{font-family:'Instrument Serif',serif;font-size:2rem;line-height:1.1}
+        .rval{font-family:'Archivo','Inter',system-ui,sans-serif;font-size:2rem;line-height:1.1 font-weight: 800;}
         .rsub{font-size:0.82rem;color:var(--ink4);margin-top:4px}
         .verdict{padding:24px;border-radius:14px;margin-top:16px;text-align:center}
         .verdict.good{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25)}

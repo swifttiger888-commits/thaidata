@@ -538,7 +538,7 @@ def build_faq_html(schemas: list[dict[str, Any]]) -> str:
         answer = qa.get("acceptedAnswer", {}).get("text", "")
         items += (
             f'<details style="margin:8px 0;padding:12px 16px;'
-            f'background:rgba(255,255,255,0.02);border:1px solid var(--line);'
+            f'background:#FFFFFF;border:1px solid var(--line);'
             f'border-radius:10px;">\n'
             f'  <summary style="cursor:pointer;font-weight:600;color:white;">'
             f'{question}</summary>\n'

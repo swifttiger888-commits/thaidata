@@ -116,28 +116,28 @@ HTML = f'''<!DOCTYPE html>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root {{ --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }}
+        :root {{ --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }}
+        body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }}
         .grain {{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }}
         .wrap {{ max-width: 1100px; margin: 0 auto; padding: 0 20px; }}
         nav {{ background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }}
         .nav-bar {{ max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }}
-        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }}
+        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }}
         .logo-icon {{ color: var(--c2); font-size: 1.5rem; }}
         .hero {{ padding: 80px 0 50px; text-align: center; }}
-        .hero h1 {{ font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; }}
-        .hero h1 em {{ font-style: italic; color: var(--c2); }}
+        .hero h1 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }}
+        .hero h1 em {{ font-style: normal; color: var(--c2); }}
         .hero p {{ color: var(--ink4); font-size: 1.1rem; max-width: 650px; margin: 0 auto; }}
         .badge {{ display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 16px; }}
 
         .section {{ padding: 30px 0 50px; }}
-        .section h2 {{ font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; margin-bottom: 10px; }}
-        .section h2 em {{ font-style: italic; color: var(--c2); }}
+        .section h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 10px; }}
+        .section h2 em {{ font-style: normal; color: var(--c2); }}
         .section-desc {{ color: var(--ink4); margin-bottom: 24px; font-size: 0.95rem; }}
 
         .big-stat {{ text-align: center; margin: 30px 0; }}
-        .big-stat .number {{ font-family: 'Instrument Serif', serif; font-size: 4rem; color: '#EF4444' if avg_uk_spread > 15 else '#F59E0B' if avg_uk_spread > 10 else 'var(--c2)'; line-height: 1; }}
+        .big-stat .number {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 4rem; color: '#EF4444' if avg_uk_spread > 15 else '#F59E0B' if avg_uk_spread > 10 else 'var(--c2)'; line-height: 1; font-weight: 800;}}
         .big-stat .label {{ color: var(--ink4); font-size: 0.9rem; margin-top: 8px; }}
 
         .highlight-box {{ background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }}
@@ -146,22 +146,22 @@ HTML = f'''<!DOCTYPE html>
         .highlight-box li {{ padding: 8px 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.05); }}
         .highlight-box li:last-child {{ border-bottom: none; }}
 
-        .table-wrap {{ background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin: 20px 0; }}
+        .table-wrap {{ background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin: 20px 0; }}
         table {{ width: 100%; border-collapse: collapse; }}
-        thead th {{ padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); background: rgba(255,255,255,0.02); border-bottom: 1px solid var(--line); }}
+        thead th {{ padding: 14px 16px; text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink4); background: #FFFFFF; border-bottom: 1px solid var(--line); }}
         thead th.right {{ text-align: right; }}
         tbody td {{ padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 0.9rem; }}
         tbody tr:last-child td {{ border-bottom: none; }}
-        tbody tr:hover {{ background: rgba(255,255,255,0.02); }}
+        tbody tr:hover {{ background: #FFFFFF; }}
         .city-name {{ font-weight: 600; }}
         .city-count {{ font-weight: 700; color: var(--c2); text-align: right; }}
         .city-rating {{ text-align: right; font-weight: 600; }}
         .city-pc {{ text-align: right; color: var(--ink3); font-size: 0.8rem; }}
 
-        .source-note {{ font-size: 0.85rem; color: var(--ink4); margin-top: 40px; line-height: 1.7; padding: 24px; background: rgba(255,255,255,0.02); border-radius: 14px; border: 1px dashed var(--line); }}
+        .source-note {{ font-size: 0.85rem; color: var(--ink4); margin-top: 40px; line-height: 1.7; padding: 24px; background: #FFFFFF; border-radius: 14px; border: 1px dashed var(--line); }}
         footer {{ text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; }}
         footer a {{ color: var(--ink4); text-decoration: none; }}
-        footer a:hover {{ color: white; }}
+        footer a:hover {{ color: var(--ink); }}
 
         @media (max-width: 768px) {{ .hero h1 {{ font-size: 1.8rem; }} }}
     </style>
@@ -251,8 +251,8 @@ HTML = f'''<!DOCTYPE html>
 
 # Write page
 os.makedirs('/tmp/thaidata-repo', exist_ok=True)
-with open('/tmp/thaidata-repo/thai-menu-price-index-uk.html', 'w') as f:
+with open('/opt/thaidata-repo/thai-menu-price-index-uk.html', 'w') as f:
     f.write(HTML)
 print(f"Page generated: {len(HTML):,} bytes")
 print(f"Data: {len(all_spreads)} prices across {len(city_stats)} cities, UK avg markup: +{avg_uk_spread}%")
-print("Page saved to /tmp/thaidata-repo/thai-menu-price-index-uk.html")
+print("Page saved to /opt/thaidata-repo/thai-menu-price-index-uk.html")

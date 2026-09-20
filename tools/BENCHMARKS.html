@@ -57,10 +57,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -78,7 +78,7 @@
                 html { overflow-x: hidden; }
 body { 
             font-family: 'Inter', system-ui, sans-serif; 
-            color: white; 
+            color: var(--ink); 
             background: var(--bg); 
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;;
@@ -91,18 +91,18 @@ body {
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
         
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .header-section { padding: 80px 0 60px; text-align: center; }
-        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 20px; }
-        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+        .header-section h1 em { font-style: normal; color: var(--c2); }
         .header-section p { color: var(--ink4); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
 
         .data-section { padding: 40px 0 80px; }
 
         .data-table-wrapper { 
-            background: rgba(255,255,255,0.02); 
+            background: #FFFFFF; 
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--line); 
@@ -124,17 +124,17 @@ body {
         }
         .data-table tbody td { padding: 18px 20px; border-bottom: 1px solid var(--line); font-size: 1rem; color: rgba(255,255,255,0.8); }
         .data-table tbody tr:last-child td { border-bottom: none; }
-        .data-table .dish-name { font-weight: 600; color: white; display: block; }
+        .data-table .dish-name { font-weight: 600; color: var(--ink); display: block; }
         .data-table .dish-thai { font-size: 0.85rem; color: var(--c2); display: block; margin-top: 4px; }
         .data-table .price-range { font-weight: 700; color: var(--c2); }
         .data-table .margin-hi { color: var(--c2); font-weight: 700; }
         .data-table .margin-mid { color: #F59E0B; font-weight: 700; }
         
-        .data-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--line); }
+        .data-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: #FFFFFF; border-radius: 12px; border: 1px dashed var(--line); }
 
         footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 40px; }
         footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
-        footer a:hover { color: white; }
+        footer a:hover { color: var(--ink); }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 2.2rem; }

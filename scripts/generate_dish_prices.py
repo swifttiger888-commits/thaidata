@@ -165,64 +165,64 @@ HTML = f"""<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <style>
-        :root {{ --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; }}
+        :root {{ --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B; }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         img,svg,video {{ max-width: 100%; height: auto; }}
-        body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
+        body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
         .grain {{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }}
         .wrap {{ max-width: 900px; margin: 0 auto; padding: 0 20px; }}
         nav {{ background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }}
         .nav-bar {{ max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; position: relative; }}
-        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }}
+        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }}
         .logo-icon {{ height: 36px; width: auto; }}
         .nav-links {{ display: flex; gap: 20px; align-items: center; }}
         .nav-links a {{ color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }}
         .nav-links a:hover {{ color: var(--c2); }}
-        .hamburger {{ display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 8px; }}
+        .hamburger {{ display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; padding: 8px; }}
         .hamburger:hover {{ color: var(--c2); }}
         @media(max-width:768px) {{ .nav-links {{ display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 20px; gap: 16px; }} .nav-links.open {{ display: flex; }} .hamburger {{ display: block; }} }}
 
         .hero {{ padding: 60px 0 30px; text-align: center; }}
-        .hero h1 {{ font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }}
-        .hero h1 em {{ font-style: italic; color: var(--c2); }}
+        .hero h1 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }}
+        .hero h1 em {{ font-style: normal; color: var(--c2); }}
         .hero .sub {{ color: var(--ink4); font-size: 1rem; max-width: 560px; margin: 0 auto; line-height: 1.7; }}
 
         .intro {{ margin: 20px 0 30px; }}
         .intro p {{ color: var(--ink3); line-height: 1.7; margin-bottom: 10px; font-size: 0.92rem; }}
 
         .stats-row {{ display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }}
-        .stat-pill {{ background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; text-align: center; min-width: 80px; }}
-        .stat-pill .num {{ font-family: 'Instrument Serif', serif; font-size: 1.4rem; color: var(--c2); }}
+        .stat-pill {{ background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; text-align: center; min-width: 80px; }}
+        .stat-pill .num {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.4rem; color: var(--c2); font-weight: 800;}}
         .stat-pill .lbl {{ color: var(--ink4); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }}
 
         .section {{ margin: 32px 0; }}
-        .section h2 {{ font-family: 'Instrument Serif', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 14px; }}
-        .section h2 em {{ font-style: italic; color: var(--c2); }}
+        .section h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 14px; }}
+        .section h2 em {{ font-style: normal; color: var(--c2); }}
 
         .price-table {{ width: 100%; border-collapse: collapse; margin-bottom: 10px; }}
         .price-table th {{ text-align: left; padding: 10px 14px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink4); border-bottom: 1px solid var(--line); font-weight: 600; }}
         .price-table td {{ padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.92rem; }}
-        .price-table tr:hover td {{ background: rgba(255,255,255,0.02); }}
+        .price-table tr:hover td {{ background: #FFFFFF; }}
         .price-table .dish {{ font-weight: 600; }}
         .price-table .dine-in {{ color: var(--c2); font-weight: 600; }}
         .price-table .delivery {{ color: var(--gold); font-weight: 600; }}
         .price-table .markup {{ color: var(--ink4); }}
         .price-table .city-link {{ color: var(--c2); text-decoration: underline; text-underline-offset: 3px; }}
-        .price-table .city-link:hover {{ color: white; }}
+        .price-table .city-link:hover {{ color: var(--ink); }}
 
         .highlight-box {{ background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.2); border-radius: 14px; padding: 24px; margin: 20px 0; }}
-        .highlight-box h3 {{ font-family: 'Instrument Serif', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 8px; }}
+        .highlight-box h3 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }}
         .highlight-box p, .highlight-box li {{ color: var(--ink3); font-size: 0.88rem; line-height: 1.7; }}
         .highlight-box ul {{ padding-left: 18px; margin-top: 8px; }}
         .highlight-box ul li {{ margin-bottom: 6px; }}
 
         .link-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 16px 0; }}
-        .link-card {{ background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 18px; text-decoration: none; transition: border-color 0.2s; }}
+        .link-card {{ background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; padding: 18px; text-decoration: none; transition: border-color 0.2s; }}
         .link-card:hover {{ border-color: var(--c2); }}
-        .link-card h3 {{ font-size: 0.95rem; color: white; margin-bottom: 4px; }}
+        .link-card h3 {{ font-size: 0.95rem; color: var(--ink); margin-bottom: 4px; }}
         .link-card p {{ font-size: 0.8rem; color: var(--ink4); }}
 
-        .note {{ color: var(--ink4); font-size: 0.8rem; font-style: italic; margin: 16px 0; }}
+        .note {{ color: var(--ink4); font-size: 0.8rem; font-style: normal; margin: 16px 0; }}
 
         footer {{ border-top: 1px solid var(--line); padding: 30px 0 50px; text-align: center; font-size: 0.85rem; color: var(--ink4); margin-top: 30px; }}
         footer a {{ color: var(--ink4); text-decoration: none; }}
@@ -310,7 +310,7 @@ HTML = f"""<!DOCTYPE html>
         </div>
 
         <!-- Methodology -->
-        <div class="highlight-box" style="border-color:var(--line);background:rgba(255,255,255,0.02);">
+        <div class="highlight-box" style="border-color:var(--line);background:#FFFFFF;">
             <h3>Methodology & Limitations</h3>
             <p>Prices were collected in June 2026 from a sample of 3-5 popular Thai restaurants per city. Dine-in prices come from official restaurant websites or Google Business Profile menu photos. Delivery prices come from Deliveroo, Uber Eats, and Just Eat menu listings. Where a restaurant does not offer a specific dish, it was excluded from the average. Prices exclude optional service charges and delivery fees.</p>
             <p style="margin-top:8px;">This is a manual survey, not an automated scrape. Coverage will expand as we collect more data. <a href="/thai-menu-price-index-uk" style="color:var(--c2);">Full methodology report</a>.</p>

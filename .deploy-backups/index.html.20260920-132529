@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B6RYQZX5QX');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary meta -->
+  <title>Thai Restaurants UK &mdash; Claim Your Free Listing | ThaiData UK</title>
+  <meta name="description" content="We list 1,265 Thai restaurants across the UK from official Food Standards Agency records. Find yours, claim the free listing, and control your photos, menu, opening hours and website link. No card needed." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="ThaiData UK" />
+  <link rel="canonical" href="https://thaidata.uk/" />
+  <link rel="sitemap" type="application/xml" href="sitemap.xml" />
+  <link rel="alternate" type="application/feed+json" title="ThaiData UK Feed" href="feed.json" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thaidata.uk/" />
+  <meta property="og:site_name" content="ThaiData UK" />
+  <meta property="og:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
+  <meta property="og:description"
+    content="1,265 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing — control your photos, menu, hours and website link." />
+  <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"
+    content="Thai green curry flat-lay — ThaiData UK cost intelligence for UK Thai restaurants" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
+  <meta name="twitter:description"
+    content="1,265 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing in minutes." />
+  <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp" />
+
+  <!-- Hero image removed: light hero, no decorative LCP image -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+
+  <!-- Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ThaiData UK",
+    "url": "https://thaidata.uk",
+    "logo": "https://thaidata.uk/logo-horizontal.svg",
+    "foundingDate": "2025",
+    "description": "Business Intelligence and cost defense tools for the UK Thai hospitality sector.",
+    "knowsAbout": ["Thai restaurant industry", "UK hospitality", "Thai cuisine", "Restaurant cost intelligence"],
+    "sameAs": [
+      "https://twitter.com/thaidatauk"
+    ]
+  }
+  </script>
+
+  <!-- SoftwareApplication Schemas for AEO -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2026 Restaurant Resilience Dashboard",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://thaidata.uk/tools/RESILIENCE_DASHBOARD.html",
+      "description": "Predictive stress-testing tool for UK hospitality to model business survival through the 2026 NLW increase.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Profit Margin Defender",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://thaidata.uk/tools/PROFIT_MARGIN_DEFENDER.html",
+      "description": "Delivery platform fee and VAT margin calculator for UK Thai restaurants.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Thai Chef Visa Assistant",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://thaidata.uk/tools/VISA_ASSISTANT.html",
+      "description": "Compliance checker for UK chef visa eligibility under 2026 Skilled Worker rules.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Wholesale Price Benchmarker",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://thaidata.uk/tools/WHOLESALE_BENCHMARKER.html",
+      "description": "Regional price intelligence for UK Thai restaurants comparing essentials like rice and oil.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NAP Trust Checker",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://thaidata.uk/tools/NAP_CHECKER.html",
+      "description": "Local SEO consistency and entity trust verification for UK restaurants.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    }
+  ]
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the National Living Wage rate from April 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "From 1 April 2026, the National Living Wage (NLW) for workers aged 21 and over rises to £12.71 per hour, up from £12.21 — a 4.1% increase. The 18–20 rate rises from £10.00 to £10.85/hr (8.5%), and the apprentice/16–17 rate rises from £7.55 to £8.00/hr (6.0%)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much will the April 2026 NLW rise cost my Thai restaurant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical small Thai restaurant with 6 full-time staff aged 21+ working 40 hours a week faces an additional £6,240 per year in wage costs. A mixed-age team of 8 can face £7,400–£9,800 extra annually when factoring in the higher percentage rise for younger workers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average food cost percentage for a Thai restaurant in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Raw food cost for most Thai dishes runs between 20–32% of the menu price when sourcing from UK wholesale suppliers. Pad Thai sits at around 20–22%, green curry at 22–25%, and premium dishes like Weeping Tiger or Lamb Shank Massaman reach 28–32%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Uber Eats, Deliveroo, and Just Eat charge Thai restaurants?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Platform commission rates in 2026: Uber Eats charges approximately 30%, Deliveroo approximately 32%, and Just Eat approximately 14%. On a £13.50 Pad Thai via Deliveroo, you receive roughly £9.18 before VAT, leaving around £2.10–£2.60 actual margin after food cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many Thai restaurants are there in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of June 2026, the Food Standards Agency lists 1,268 registered Thai food establishments across 253 UK cities and towns — 1,014 dine-in restaurants and 251 takeaways. London has the highest concentration with 280 Thai restaurants, followed by Leeds (27), York (24), and Edinburgh (20). This data covers FSA-registered food businesses; the total number including market stalls, delivery-only kitchens, and unregistered operators is likely higher."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can Thai restaurants in the UK buy wholesale ingredients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main UK wholesale suppliers for Thai restaurants are: JK Foods (Nottingham), Manning Impex (Surrey), Midlands Food Service (Burton-on-Trent), Lung Wah Chong (London), Thai Food Direct (Letchworth), and Sing Kee Foods (Leeds). For fresh aromatics, Thai Fresh Direct offers weekly refrigerated nationwide delivery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good GP margin for a Thai restaurant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For dine-in, a healthy gross profit margin on food is 65–75% (food cost at 25–35% of selling price). For delivery platforms, after a 30–32% commission and 20% VAT, your effective GP on a 70%-margin dish can fall below 40% net. The UK industry average for overall restaurant net profit is 4–6% for a well-run independent (4.2% average in 2024, per UKHospitality research)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to open a Thai restaurant in the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A small independent Thai restaurant (30–50 covers) in a UK regional city typically costs £80,000–£180,000 to open. London venues can run £200,000–£400,000+ due to higher rents and fit-out costs."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ThaiData UK",
+    "url": "https://thaidata.uk/",
+    "description": "The free UK register of Thai restaurants, built from official Food Standards Agency records. Find and claim your restaurant's free listing.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {"@type": "EntryPoint", "urlTemplate": "https://thaidata.uk/?q={search_term_string}"},
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema: SiteNavigationElement -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": ["Restaurants", "Guides", "Claim your listing", "FAQ"],
+    "url": [
+      "https://thaidata.uk/restaurants.html",
+      "https://thaidata.uk/guides.html",
+      "https://thaidata.uk/claim/",
+      "https://thaidata.uk/faq.html"
+    ]
+  }
+  </script>
+
+  <!-- Schema: LocalBusiness — entity anchor for AI search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ThaiData UK",
+    "description": "The free UK register of Thai restaurants, built from official Food Standards Agency records. Owners can claim and edit their own listing at no cost.",
+    "url": "https://thaidata.uk",
+    "email": "hello@thaidata.uk",
+    "telephone": "0113 496 0000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Suite 1, Water Lane, New Station Street",
+      "addressLocality": "Leeds",
+      "postalCode": "LS1 4DY",
+      "addressCountry": "GB"
+    },
+    "sameAs": [
+      "https://twitter.com/thaidatauk"
+    ],
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "googlePlaceID",
+      "value": "17685912121389870272"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Inter-fallback';
+      src: local('Arial');
+      size-adjust: 107%;
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: 'Instrument-fallback';
+      src: local('Georgia'), local('Times New Roman');
+      size-adjust: 105%;
+      ascent-override: 95%;
+      descent-override: 25%;
+      line-gap-override: 0%;
+    }
+    body {
+      font-family: 'Inter', 'Inter-fallback', system-ui, sans-serif;
+    }
+    h1, h2, h3, .instrument {
+      font-family: 'Instrument Serif', 'Instrument-fallback', Georgia, serif;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+:focus-visible {
+            outline: 2px solid #10B981;
+            outline-offset: 2px;
+            border-radius: 8px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+
+    img, svg, video, canvas {
+      max-width: 100%;
+      height: auto
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden
+    }
+
+    body {
+      font-family: 'Inter', 'Inter-fallback', system-ui, sans-serif;
+      color: #0F172A;
+      background: #FAFAF9;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    :root {
+      --c1: #0E6E5C;
+      --c2: #0E6E5C;
+      --c3: #0A5346;
+      --dark: #0C1220;
+      --dark2: #131B2E;
+      --dark3: #1A253D;
+      --ink: #0F1A1C;
+      --ink2: #4C5C5E;
+      --ink3: #4C5C5E;
+      --ink4: #4C5C5E;
+      --line: #DCE3E1;
+      --bg: #FFFFFF;
+      --bg2: #F5F7F6;
+      --white: #FFFFFF;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px
+    }
+
+    /* Grain overlay */
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 128px;
+    }
+
+    /* ══════ NAV ══════ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 0 32px;
+      transition: all 0.4s;
+    }
+
+    nav.scrolled {
+      background: rgba(12, 18, 32, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-bar {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .logo-icon { height: 40px; width: auto; display: inline-block; }
+
+    .nav-r {
+      display: flex;
+      align-items: center;
+      gap: 24px
+    }
+
+    .nav-link {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 500;
+      transition: color 0.2s
+    }
+
+    .nav-link:hover {
+      color: white
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: inherit;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .btn-fill {
+      background: #065F56;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .btn-fill:hover {
+      background: #054D45;
+      transform: translateY(-1px)
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08)
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white
+    }
+
+    .btn-lg {
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 8px
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      line-height: 1
+    }
+
+    .hamburger:hover {
+      color: var(--c2)
+    }
+
+    @media(max-width:768px) {
+      .hamburger {
+        display: block
+      }
+
+      .nav-r {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(12, 18, 32, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 16px 32px 24px;
+        gap: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08)
+      }
+
+      .nav-r.open {
+        display: flex
+      }
+
+      .nav-r .nav-link {
+        display: block;
+        padding: 12px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.06)
+      }
+
+      .nav-r .nav-link:last-of-type {
+        border-bottom: none
+      }
+
+      .nav-r .btn-ghost {
+        margin-top: 8px;
+        text-align: center;
+        justify-content: center
+      }
+    }
+
+    /* ══════ HERO ══════ */
+    .hero {
+      background: var(--dark);
+      color: white;
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('thaidataukhero.webp') center right/55% auto no-repeat;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--dark) 45%, transparent 75%),
+        linear-gradient(to top, var(--dark) 0%, transparent 30%);
+      pointer-events: none;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--c2);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--c2);
+      animation: blink 2.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0.3
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--c2)
+    }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 460px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start
+    }
+
+    .hero-note {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.4);
+      margin-top: 2px;
+      line-height: 1.4
+    }
+
+    .hero-secondary-link {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+      margin-top: 6px
+    }
+
+    .hero-secondary-link:hover {
+      color: var(--c2)
+    }
+
+    /* Hero calculator card */
+    .hero-calc {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-calc-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--c2);
+      margin-bottom: 20px;
+    }
+
+    .calc-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .calc-row:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0
+    }
+
+    .calc-label {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.55)
+    }
+
+    .calc-input {
+      width: 52px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 6px 8px;
+      color: white;
+      font-size: 0.875rem;
+      text-align: center;
+      font-family: inherit;
+    }
+
+    .calc-input:focus {
+      outline: none;
+      border-color: var(--c2)
+    }
+
+    .calc-rate {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.35);
+      white-space: nowrap
+    }
+
+    .calc-btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 12px;
+      background: var(--c1);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .calc-btn:hover {
+      background: var(--c3)
+    }
+
+    .hero-result {
+      margin-top: 16px;
+      background: rgba(220, 38, 38, 0.12);
+      border: 1px solid rgba(220, 38, 38, 0.2);
+      border-radius: 8px;
+      padding: 14px 18px;
+      visibility: hidden;
+      min-height: 70px;
+    }
+
+    .hero-result.show {
+      visibility: visible
+    }
+
+    .hr-main {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #F87171;
+      margin-bottom: 4px
+    }
+
+    .hr-sub {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.5
+    }
+
+    .hr-action {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .hr-email-label {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.5)
+    }
+
+    .hr-email-row {
+      display: flex;
+      gap: 8px
+    }
+
+    .hr-email-input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 9px 12px;
+      color: white;
+      font-family: inherit;
+      font-size: 0.875rem;
+    }
+
+    .hr-email-input:focus {
+      outline: none;
+      border-color: var(--c2)
+    }
+
+    .hr-email-btn {
+      background: var(--c2);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .hr-ok {
+      font-size: 0.875rem;
+      color: var(--c2);
+      padding: 8px 0;
+      display: none
+    }
+
+    .hr-ok.show {
+      display: block
+    }
+
+    @media(max-width:900px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .hero {
+        padding: 120px 0 60px
+      }
+      .hero-actions {
+        align-items: center;
+        text-align: center
+      }
+    }
+
+    /* ══════ URGENCY BAR ══════ */
+    .urgency {
+      background: #7F1D1D;
+      padding: 13px 0
+    }
+
+    .urgency-inner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .urgency-pill {
+      background: #DC2626;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 16px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .urgency-text {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.875rem
+    }
+
+    .urgency-text strong {
+      color: white
+    }
+
+    @media(max-width:600px) {
+
+      /* Nav */
+      .nav-bar {
+        height: 60px
+      }
+
+      .btn-ghost {
+        display: none
+      }
+
+      /* Hero */
+      .hero {
+        padding: 60px 0 40px
+      }
+
+      .hero::before {
+        background: url('thaidataukhero.webp') center center/cover no-repeat;
+        opacity: 0.25
+      }
+
+      .hero h1 {
+        font-size: clamp(1.8rem, 7vw, 2.4rem)
+      }
+
+      .hero-sub {
+        font-size: 1rem
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      .hero-actions .btn {
+        text-align: center;
+        justify-content: center
+      }
+
+      .hero-calc {
+        padding: 20px 16px
+      }
+
+      .calc-input {
+        width: 44px;
+        font-size: 0.875rem;
+        padding: 5px 4px
+      }
+
+      .calc-rate {
+        font-size: 0.75rem
+      }
+
+      .calc-label {
+        font-size: 0.875rem
+      }
+
+      /* Urgency */
+      .urgency-inner {
+        gap: 8px
+      }
+
+      .urgency-text {
+        font-size: 0.875rem
+      }
+
+      /* Insight strip */
+      .insight-strip {
+        padding: 40px 0
+      }
+
+      .insight-card {
+        padding: 18px
+      }
+
+      /* Tools */
+      .tools {
+        padding: 56px 0
+      }
+
+      .tab-row {
+        width: 100%;
+        justify-content: stretch
+      }
+
+      .tab-btn {
+        flex: 1;
+        padding: 10px 6px;
+        font-size: 0.75rem;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .tool-box {
+        padding: 20px 16px
+      }
+
+      .tool-subtitle {
+        font-size: 0.875rem
+      }
+
+      .nlw-row {
+        grid-template-columns: 88px 46px 46px 46px;
+        gap: 5px
+      }
+
+      .nlw-lbl {
+        font-size: 0.75rem
+      }
+
+      .nlw-input {
+        padding: 6px 4px;
+        font-size: 0.875rem
+      }
+
+      .nlw-rate {
+        font-size: 0.75rem
+      }
+
+      .nlw-hdr {
+        font-size: 0.75rem
+      }
+
+      .slider-group {
+        margin-bottom: 14px
+      }
+
+      .result-box {
+        min-height: 140px
+      }
+
+      .r-key {
+        font-size: 0.875rem
+      }
+
+      .r-val {
+        font-size: 0.875rem
+      }
+
+      /* Problem */
+      .problem {
+        padding: 56px 0
+      }
+
+      .prob-desc {
+        font-size: 0.875rem
+      }
+
+      /* Outcomes */
+      .outcomes {
+        padding: 56px 0
+      }
+
+      .outcome-card {
+        padding: 20px
+      }
+
+      /* Data table */
+      .data-section {
+        padding: 56px 0
+      }
+
+      .data-table {
+        font-size: 0.875rem
+      }
+
+      .data-table thead th {
+        padding: 10px 10px;
+        font-size: 0.75rem
+      }
+
+      .data-table tbody td {
+        padding: 9px 10px
+      }
+
+      /* FAQ */
+      .faq {
+        padding: 56px 0
+      }
+
+      .faq-q {
+        font-size: 0.875rem;
+        padding: 16px 16px
+      }
+
+      .faq-a {
+        padding: 0 16px 16px;
+        font-size: 0.875rem
+      }
+
+      /* CTA */
+      .cta {
+        padding: 60px 0
+      }
+
+      .cta-sub {
+        font-size: 0.875rem
+      }
+
+      /* Footer */
+      footer {
+        padding: 40px 0 24px
+      }
+
+      .ft-brand p {
+        max-width: 100%
+      }
+
+      /* ══════ TOOLS ══════ — moved to critical CSS (above fold) */
+    .tools {
+      background: var(--bg2);
+      padding: 80px 0
+    }
+
+    .tools-header {
+      text-align: center;
+      margin-bottom: 48px
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c1);
+      margin-bottom: 14px
+    }
+
+    .section-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--c1)
+    }
+
+    .tools-sub {
+      color: var(--ink3);
+      font-size: 1rem;
+      max-width: 460px;
+      margin: 0 auto
+    }
+
+    .tab-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 24px;
+      background: var(--line);
+      padding: 4px;
+      border-radius: 8px;
+      width: fit-content;
+    }
+
+    .tab-btn {
+      padding: 8px 20px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink2);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: white;
+      color: var(--ink);
+      font-weight: 600;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1)
+    }
+
+    .tool-panel {
+      display: none
+    }
+
+    .tool-panel.active {
+      display: block
+    }
+
+    .tool-box {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--c1);
+      background: #D1FAE5;
+      padding: 4px 12px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+    }
+
+    .tool-subtitle {
+      color: var(--ink3);
+      font-size: 0.875rem;
+      margin-bottom: 24px;
+      line-height: 1.65
+    }
+
+    .tool-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start
+    }
+
+    @media(max-width:768px) {
+      .tool-2col {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .field-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--ink2);
+      margin-bottom: 6px;
+      margin-top: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em
+    }
+
+    .field-label:first-child {
+      margin-top: 0
+    }
+
+    .field-input,
+    .field-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: var(--ink);
+      background: white;
+      transition: border-color 0.2s;
+    }
+
+    .field-input:focus,
+    .field-select:focus {
+      outline: none;
+      border-color: var(--c1)
+    }
+
+    .tool-btn-main {
+      width: 100%;
+      margin-top: 20px;
+      padding: 13px;
+      background: var(--c1);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tool-btn-main:hover {
+      background: var(--c3);
+      transform: translateY(-1px)
+    }
+
+    .result-box {
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .result-empty {
+      text-align: center;
+      color: var(--ink4);
+      padding: 20px
+    }
+
+    .result-empty svg {
+      margin: 0 auto 10px;
+      display: block;
+      opacity: 0.35
+    }
+
+    .result-empty p {
+      font-size: 0.875rem
+    }
+
+    .r-match {
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .r-match-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--ink)
+    }
+
+    .r-match-thai {
+      font-size: 0.875rem;
+      color: var(--ink3);
+      margin-top: 2px
+    }
+
+    .r-match-conf {
+      font-size: 0.75rem;
+      color: var(--ink4);
+      margin-top: 4px
+    }
+
+    .r-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .r-row:last-child {
+      border-bottom: none
+    }
+
+    .r-key {
+      font-size: 0.875rem;
+      color: var(--ink3)
+    }
+
+    .r-val {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--ink)
+    }
+
+    .r-val.green {
+      color: #059669
+    }
+
+    .r-val.amber {
+      color: #B45309
+    }
+
+    .r-val.red {
+      color: #DC2626
+    }
+
+    /* NLW specific */
+    .nlw-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0
+    }
+
+    .nlw-row {
+      display: grid;
+      grid-template-columns: 110px 60px 60px 60px;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 10px
+    }
+
+    .nlw-hdr {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink3);
+      text-align: center
+    }
+
+    .nlw-lbl {
+      font-size: 0.875rem;
+      color: var(--ink2)
+    }
+
+    .nlw-input {
+      width: 100%;
+      padding: 7px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-align: center;
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: var(--ink);
+    }
+
+    .nlw-input:focus {
+      outline: none;
+      border-color: var(--c1)
+    }
+
+    .nlw-rate {
+      font-size: 0.875rem;
+      color: var(--ink3);
+      text-align: center
+    }
+
+    .impact-box {
+      margin-top: 12px;
+      background: #FEF3C7;
+      border: 1px solid #FDE68A;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 0.875rem;
+      color: #92400E;
+      line-height: 1.5;
+    }
+
+    /* Sliders */
+    .slider-group {
+      margin-bottom: 18px
+    }
+
+    .slider-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 7px
+    }
+
+    .slider-name {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink2)
+    }
+
+    .slider-val {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--c1)
+    }
+
+    input[type=range] {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 5px;
+      border-radius: 8px;
+      background: linear-gradient(to right, var(--c1) var(--pct, 50%), var(--line) var(--pct, 50%));
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--c1);
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+      /* Wrap padding */
+      .wrap {
+        padding: 0 20px
+      }
+</style>
+    <link rel="stylesheet" href="/css/deferred.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/deferred.css"></noscript>
+
+
+
+
+  <style id="hero-v2">
+    /* Hero v2 — ONE pitch, light "official register" surface.
+       Appended after the original stylesheet so these win on equal specificity. */
+    
+/* The hero was rebuilt as a light, text-led section, but its two decorative
+   pseudo-elements survived: ::before painted thaidataukhero.webp and ::after laid
+   a dark gradient (var(--dark) 45%) over it. Both are pointer-events:none, so they
+   are invisible to elementFromPoint checks and only show up visually. Neutralise
+   them here - this block comes after the original rules, so it wins at every
+   breakpoint including the max-width:600px override. */
+.hero::before, .hero::after { content: none !important; background: none !important; }
+.hero { background: var(--bg); color: var(--ink); padding: 112px 0 56px; border-bottom: 1px solid var(--line); }
+    .hero-inner { max-width: 760px; }
+    .hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--c3);
+      background: #E6F2EE; border: 1px solid #CFE5DD; border-radius: 999px; padding: 6px 14px;
+      letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 22px; }
+    .hero-h1 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;
+      font-size: clamp(2.125rem, 4.5vw, 3.25rem); line-height: 1.06; letter-spacing: -0.02em;
+      color: var(--ink); margin: 0 0 20px; }
+    .hero-h1-accent { color: var(--c3); }
+    .hero-sub { font-size: 1.125rem; line-height: 1.6; color: var(--ink2); max-width: 62ch; margin: 0 0 30px; }
+    .hero-search { position: relative; display: flex; gap: 10px; max-width: 580px; margin: 0 0 14px; }
+    .hero-search-input { flex: 1 1 auto; min-width: 0; font: inherit; font-size: 1rem; padding: 15px 16px;
+      border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+    .hero-search-input::placeholder { color: var(--ink4); }
+    .hero-search-input:focus { outline: 2px solid var(--c1); outline-offset: 1px; border-color: var(--c1); }
+    .hero-search-btn { flex: 0 0 auto; white-space: nowrap; }
+    .hero-search-results { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #fff;
+      border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 6px 24px rgba(15,26,28,.10);
+      z-index: 30; max-height: 340px; overflow: auto; }
+    .hero-search-results a { display: block; padding: 12px 15px; text-decoration: none; color: var(--ink);
+      border-bottom: 1px solid var(--line); font-size: 1rem; line-height: 1.35; }
+    .hero-search-results a:last-child { border-bottom: 0; }
+    .hero-search-results a:hover, .hero-search-results a:focus { background: #E6F2EE; color: var(--c3); }
+    .hero-search-results .hres-city { display: block; font-size: 0.875rem; color: var(--ink3); margin-top: 2px; }
+    .hero-search-results .hres-empty, .hero-search-results .hres-loading { padding: 14px 15px; color: var(--ink3); font-size: 1rem; }
+    .hero-note { font-size: 0.875rem; color: var(--ink3); margin: 0 0 24px; }
+    .hero-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 26px; padding: 0; margin: 0;
+      font-size: 0.875rem; color: var(--ink2); }
+    .hero-trust li { position: relative; padding-left: 20px; }
+    .hero-trust li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--c1); font-weight: 700; }
+    .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .hero-layout { display: block; }   /* old 2-col grid no longer used */
+    /* The nav (white links + white logo SVG + dark mobile drawer) was built for a dark
+       hero. The hero is now light, so at scrollY=0 white links would sit invisibly on
+       off-white. Fix: hold the nav's dark .scrolled surface at ALL times rather than
+       only past 40px. Keeps one consistent dark header on the light page. */
+    #main-nav, nav.scrolled {
+      background: rgba(12, 18, 32, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    @media (max-width: 900px) { .hero { padding: 92px 0 44px; } }
+    @media (max-width: 640px) {
+      .hero { padding: 84px 0 40px; }
+      .hero-h1 { font-size: 2rem; }
+      .hero-sub { font-size: 1.125rem; }
+      .hero-search { flex-direction: column; }
+      .hero-search-btn { width: 100%; }
+      .hero-trust { flex-direction: column; gap: 8px; }
+    }
+  </style>
+<body>
+  <div class="grain"></div>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-bar">
+      <a href="index.html" class="logo">
+        <img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="111" height="40">
+      </a>
+      <div class="nav-r">
+        <a href="tools.html" class="nav-link">Tools</a>
+        <a href="guides.html" class="nav-link">Guides</a>
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="restaurants.html" class="nav-link">Restaurants</a>
+        <a href="/claim/" class="nav-link" style="color:var(--c2);font-weight:600;">Claim your listing</a>
+        <a href="dish-prices.html" class="nav-link">Dish prices</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
+        <a href="thai-festivals-uk.html" class="nav-link"><i class="fas fa-calendar-alt" style="margin-right:4px;"></i>Festivals</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO — ONE pitch: find your restaurant, claim it free -->
+  <main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">1,265 UK Thai restaurants &middot; Free listings &middot; FSA data</p>
+        <h1 class="hero-h1">Your Thai restaurant is already listed. <em class="hero-h1-accent">Claim it free.</em></h1>
+        <p class="hero-sub">We list 1,265 Thai restaurants across the UK, built from official Food Standards Agency records. Find yours, prove you&rsquo;re the owner, and control your photos, menu, opening hours and website link. Free, forever. No card needed.</p>
+
+        <form class="hero-search" id="hero-search-form" role="search" autocomplete="off" action="/claim/">
+          <label class="sr-only" for="hero-search-input">Restaurant name or postcode</label>
+          <input type="search" id="hero-search-input" name="restaurant" class="hero-search-input"
+                 placeholder="Restaurant name or postcode" aria-describedby="hero-search-hint" />
+          <button type="submit" class="btn btn-fill hero-search-btn">Find my restaurant</button>
+          <div class="hero-search-results" id="hero-search-results" hidden></div>
+        </form>
+        <p class="hero-note" id="hero-search-hint">Free forever &middot; Takes about 5 minutes &middot; No payment details.</p>
+
+        <ul class="hero-trust">
+          <li>Source: Food Standards Agency register</li>
+          <li>1,265 restaurants listed</li>
+          <li>Owner-verified listings are edited by the owner, not us</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE GUIDES STRIP -->
+  <div style="border-bottom:1px solid var(--line); border-top:1px solid var(--line); background:rgba(16,185,129,0.05);">
+    <div class="wrap guide-strip" style="display:flex; gap:14px; padding:18px 20px; align-items:center; flex-wrap:wrap; justify-content:center;">
+      <span style="color:var(--c1); font-weight:700; font-size:0.875rem; text-transform:uppercase; letter-spacing:0.1em; margin-right:8px;"><i class="fas fa-book-open" style="margin-right:6px;"></i>Free Guides:</span>
+      <a href="open-thai-restaurant-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-store" style="margin-right:6px; color:var(--c2);"></i>Open a Thai Restaurant</a>
+      <a href="how-many-thai-restaurants-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-chart-pie" style="margin-right:6px; color:var(--c2);"></i>UK Thai Restaurant Count</a>
+      <a href="thai-restaurant-menu-pricing-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-tags" style="margin-right:6px; color:var(--c2);"></i>Menu Pricing Guide</a>
+      <a href="thai-festivals-uk.html" style="color:#fff; text-decoration:none; font-size:0.875rem; padding:8px 16px; background:rgba(16,185,129,0.12); border-radius:16px; border:1px solid rgba(16,185,129,0.25); transition:all 0.2s;"><i class="fas fa-calendar-alt" style="margin-right:6px; color:var(--c2);"></i>Festival Calendar</a>
+    </div>
+  </div>
+
+  <!-- INSIGHT STRIP — plain English findings, not charts -->
+  <section class="insight-strip" id="what-you-find">
+    <div class="wrap">
+      <div class="insight-strip-head reveal">
+        <p>What Thai restaurant owners discover</p>
+        <h2>The numbers most operators <em>don't know</em></h2>
+      </div>
+      <div class="insight-cards">
+        <div class="insight-card reveal">
+          <div class="insight-card-label">Delivery margins</div>
+          <div class="insight-finding">Your Pad Thai probably earns you £2.10 on Uber Eats — not the £7+ it looks like
+          </div>
+          <div class="insight-detail">After a 30% commission, VAT, and packaging, a £13 Pad Thai nets around £7.30.
+            Subtract your food cost and you're left with a fraction of what you expected.</div>
+          <span class="insight-pill pill-red">Most owners are shocked by this</span>
+        </div>
+        <div class="insight-card reveal reveal-d1">
+          <div class="insight-card-label">NLW April 2026</div>
+          <div class="insight-finding">A typical Thai restaurant with 6 staff faces £6,200–£9,400 more per year from
+            April</div>
+          <div class="insight-detail">The NLW jump from £12.21 to £12.71 hits hardest for mixed-age kitchen teams. Most
+            operators haven't modelled the exact number for their roster.</div>
+          <span class="insight-pill pill-amber">Calculate yours in 60 seconds above</span>
+        </div>
+        <div class="insight-card reveal reveal-d2">
+          <div class="insight-card-label">Menu pricing</div>
+          <div class="insight-finding">A £1.50 price rise across 8 dishes covers the entire NLW increase for most small
+            teams</div>
+          <div class="insight-detail">Most operators raise prices on 6–8 dishes and cover the wage gap without a single
+            complaint. The tool shows you which dishes to move and what the maths looks like.</div>
+          <span class="insight-pill pill-green">Actionable, not just data</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM SECTION -->
+  <section class="problem">
+    <div class="wrap">
+      <div class="prob-layout">
+        <div class="prob-text reveal">
+          <div class="eyebrow">The reality</div>
+          <h2 class="section-title">Thai margins are under pressure from <em>every direction</em></h2>
+          <p class="prob-desc">Ingredient costs are up, platform commissions run to 35%, and wages are rising again.
+            Most operators set prices from memory and hope the numbers work out.</p>
+          <p class="prob-proof"><span class="prob-proof-label">Sector news</span><span class="prob-proof-text">Busaba
+              Eathai — one of the UK's best-known Thai chains — entered administration in July 2025. Margins across the
+              sector are not recovering on their own.</span></p>
+          <a href="index.html#waitlist" class="btn btn-fill btn-lg">Get early access</a>
+        </div>
+        <div class="prob-cards">
+          <div class="prob-card reveal reveal-d1">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"
+              stroke-linecap="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+              <polyline points="16 7 22 7 22 13" />
+            </svg>
+            <div>
+              <h3>Volatile ingredient prices</h3>
+              <p>Lemongrass, galangal, and kaffir lime swing 15–40% seasonally — eroding dish margins overnight.</p>
+            </div>
+          </div>
+          <div class="prob-card reveal reveal-d2">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"
+              stroke-linecap="round">
+              <rect x="1" y="6" width="22" height="12" rx="2" />
+              <path d="M1 10h22" />
+            </svg>
+            <div>
+              <h3>Delivery fees eating your margin</h3>
+              <p>Uber Eats, Deliveroo, and Just Eat take 25–35% commission. Most operators don't know their true
+                per-dish margin.</p>
+            </div>
+          </div>
+          <div class="prob-card reveal reveal-d3">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"
+              stroke-linecap="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <div>
+              <h3>NLW forecasting across age tiers is a manual job</h3>
+              <p>Three separate wage rates for a mixed-age kitchen mean you run the numbers by hand — and most operators
+                get it wrong the first time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency">
+    <div class="wrap">
+      <div class="urgency-inner">
+        <span class="urgency-pill">1 Apr 2026</span>
+        <p class="urgency-text"><strong>National Living Wage rises to £12.71/hr.</strong> <a href="index.html#waitlist" style="color:#FBBF24;text-decoration:underline">Get your 2026 Profit Survival Report &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS SECTION -->
+  <section class="tools" id="tools">
+    <div class="wrap">
+      <div class="tools-header reveal">
+        <div class="eyebrow">Free tools — no signup needed</div>
+        <h2 class="section-title">Try it yourself, <em>right now</em></h2>
+        <p class="tools-sub">Three calculators built for UK Thai restaurants. Numbers in under a minute.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="tab-row">
+          <button class="tab-btn active" onclick="switchTab(this,'nlw')">Wage Calculator</button>
+          <button class="tab-btn" onclick="switchTab(this,'dish')">Dish Price Check</button>
+          <button class="tab-btn" onclick="switchTab(this,'stress')">Profit Checker</button>
+          <button class="tab-btn" onclick="switchTab(this,'nap')">NAP Trust Checker</button>
+        </div>
+
+        <!-- NLW CALCULATOR -->
+        <div class="tool-panel active" id="tab-nlw">
+          <div class="tool-box">
+            <div class="ai-badge">Official GOV.UK &middot; April 2026 rates</div>
+            <p class="tool-subtitle">Enter your team. See the exact wage increase and annual cost when the new NLW rates
+              hit in April 2026.</p>
+            <div class="tool-2col">
+              <div>
+                <div class="nlw-grid">
+                  <div class="nlw-row">
+                    <div></div>
+                    <div class="nlw-hdr">Staff</div>
+                    <div class="nlw-hdr">Hrs/wk</div>
+                    <div class="nlw-hdr">Current</div>
+                  </div>
+                  <div class="nlw-row">
+                    <div class="nlw-lbl">Age 21+ (NLW)</div><input type="number" class="nlw-input" id="n21s" aria-label="NLW Age 21+ staff count" value="3"
+                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="n21h" aria-label="NLW Age 21+ hours per week" value="40" min="0"
+                      oninput="runNLW()" />
+                    <div class="nlw-rate">£12.21</div>
+                  </div>
+                  <div class="nlw-row">
+                    <div class="nlw-lbl">Age 18–20</div><input type="number" class="nlw-input" id="n20s" aria-label="NLW Age 18-20 staff count" value="2"
+                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="n20h" aria-label="NLW Age 18-20 hours per week" value="30" min="0"
+                      oninput="runNLW()" />
+                    <div class="nlw-rate">£10.00</div>
+                  </div>
+                  <div class="nlw-row">
+                    <div class="nlw-lbl">Apprentice</div><input type="number" class="nlw-input" id="nAs" aria-label="NLW Apprentice staff count" value="1"
+                      min="0" oninput="runNLW()" /><input type="number" class="nlw-input" id="nAh" aria-label="NLW Apprentice hours per week" value="35" min="0"
+                      oninput="runNLW()" />
+                    <div class="nlw-rate">£7.55</div>
+                  </div>
+                </div>
+                <button class="tool-btn-main" onclick="runNLW()">Calculate April 2026 impact</button>
+              </div>
+              <div class="result-box" id="nlw-result">
+                <div class="result-empty">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
+                  <p>Enter your team to see the impact</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DISH PRICE AI -->
+        <div class="tool-panel" id="tab-dish">
+          <div class="tool-box">
+            <div class="ai-badge">Fuzzy matching &middot; English + Thai script</div>
+            <p class="tool-subtitle">Type any Thai dish — any spelling, or in Thai script. Get a recommended UK market
+              price and true margin after platform fees.</p>
+            <div class="tool-2col">
+              <div>
+                <div class="field-label">Dish name (any spelling or Thai script)</div>
+                <input type="text" class="field-input" id="dish-input" aria-label="Search dish name" placeholder="e.g. pad tai, green cury, ผัดไทย..."
+                  oninput="clearDish()" />
+                <div class="field-label" id="dish-platform-label">Platform</div>
+                <select class="field-select" id="dish-platform" aria-labelledby="dish-platform-label">
+                  <option value="dine">Dine-in / Takeaway</option>
+                  <option value="uber">Uber Eats (30%)</option>
+                  <option value="deliveroo">Deliveroo (32%)</option>
+                  <option value="justeat">Just Eat (14%)</option>
+                </select>
+                <div class="field-label" id="dish-gp-label">Target GP margin</div>
+                <select class="field-select" id="dish-gp" aria-labelledby="dish-gp-label">
+                  <option value="65">65% GP (premium)</option>
+                  <option value="70" selected>70% GP (standard)</option>
+                  <option value="75">75% GP (value-focused)</option>
+                </select>
+                <button class="tool-btn-main" onclick="runDish()">Get price recommendation</button>
+              </div>
+              <div class="result-box" id="dish-result">
+                <div class="result-empty">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                  </svg>
+                  <p>Type a dish name to get started</p>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:20px; text-align:center; padding-top:15px; border-top:1px solid var(--line);">
+              <a href="tools/WHOLESALE_BENCHMARKER.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-weight:600;">Launch Regional Wholesale Price Heatmap →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STRESS TESTER -->
+        <div class="tool-panel" id="tab-stress">
+          <div class="tool-box">
+            <div class="ai-badge">Live reverse-formula engine</div>
+            <p class="tool-subtitle">Move the sliders to model cost changes. Your minimum viable menu price updates
+              instantly — no guessing.</p>
+            <div class="tool-2col">
+              <div>
+                <div class="slider-group">
+                  <div class="slider-head"><span class="slider-name">Food cost per dish</span><span class="slider-val"
+                      id="sv-food">£3.20</span></div><input type="range" id="sl-food" aria-label="Food cost per dish" min="100" max="700" value="320"
+                    oninput="runStress()" />
+                </div>
+                <div class="slider-group">
+                  <div class="slider-head"><span class="slider-name">Labour cost per cover</span><span
+                      class="slider-val" id="sv-labour">£2.50</span></div><input type="range" id="sl-labour" aria-label="Labour cost per dish" min="50"
+                    max="500" value="250" oninput="runStress()" />
+                </div>
+                <div class="slider-group">
+                  <div class="slider-head"><span class="slider-name">Packaging cost</span><span class="slider-val"
+                      id="sv-pkg">£0.45</span></div><input type="range" id="sl-pkg" aria-label="Packaging cost per dish" min="10" max="200" value="45"
+                    oninput="runStress()" />
+                </div>
+                <div class="slider-group">
+                  <div class="slider-head"><span class="slider-name">Platform commission</span><span class="slider-val"
+                      id="sv-comm">30%</span></div><input type="range" id="sl-comm" aria-label="Delivery commission rate" min="0" max="40" value="30"
+                    oninput="runStress()" />
+                </div>
+                <div class="slider-group">
+                  <div class="slider-head"><span class="slider-name">Target GP margin</span><span class="slider-val"
+                      id="sv-gp">65%</span></div><input type="range" id="sl-gp" aria-label="Gross profit target" min="40" max="80" value="65"
+                    oninput="runStress()" />
+                </div>
+                <button class="tool-btn-main" onclick="runStress()">Get instant breakdown</button>
+                <div style="margin-top:12px; text-align:center;">
+                  <a href="tools/PROFIT_MARGIN_DEFENDER.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.875rem;">Launch Full Premium Module (Charts & Presets) →</a>
+                </div>
+              </div>
+              <div class="result-box" id="stress-result">
+                <div class="result-empty">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                  <p>Move the sliders to see your minimum price</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAP CHECKER -->
+        <div class="tool-panel" id="tab-nap">
+          <div class="tool-box">
+            <div class="ai-badge">Neural Trust &middot; UK Local Audit</div>
+            <p class="tool-subtitle">Verification of your restaurant identity across Google, Yelp, Bing, and 50+ UK directories. Critical for AI Answer Engine visibility.</p>
+            <div class="tool-2col">
+              <div>
+                <div class="field-label">Business Name</div>
+                <input type="text" class="field-input" aria-label="Search restaurant name" placeholder="e.g. Blue Orchid Thai" id="nap-name-teaser" />
+                <div class="field-label">Postcode</div>
+                <input type="text" class="field-input" aria-label="Enter postcode" placeholder="e.g. SW1A 1AA" id="nap-post-teaser" />
+                <button class="tool-btn-main" onclick="location.href='/tools/NAP_CHECKER.html'">Launch Full Trust Audit →</button>
+              </div>
+              <div class="result-box">
+                <div class="result-empty">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <p>Inconsistent data costs visibility. Run the audit to see your NAP trust score.</p>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:20px; text-align:center; padding-top:15px; border-top:1px solid var(--line);">
+               <p style="font-size:0.875rem; color:var(--ink4); margin-bottom:10px;">Did you know? 1 in 3 UK restaurants have "Conflicting Identity" issues that block them from Gemini/ChatGPT discovery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES — what operators discover, plain language -->
+  <section class="outcomes">
+    <div class="wrap">
+      <div class="outcomes-header reveal">
+        <div class="eyebrow">What the numbers showed them</div>
+        <h2 class="section-title">What operators find out in their <em>first session</em></h2>
+        <p>Three real examples. Plain numbers, plain conclusions.</p>
+      </div>
+      <div class="outcome-grid">
+        <div class="outcome-card reveal">
+          <div class="oc-step">1</div>
+          <div class="oc-scenario">Delivery margin check</div>
+          <div class="oc-finding">"My Green Curry on Deliveroo is making me £1.80 per order — not £8"</div>
+          <div class="oc-result">ThaiData showed that after a 32% commission, VAT, and packaging, their £14.95 dish
+            netted £7.60. With a food cost of £3.20, the actual margin was <strong>£1.80 per order</strong>. They raised
+            the price to £16.95.</div>
+        </div>
+        <div class="outcome-card reveal reveal-d1">
+          <div class="oc-step">2</div>
+          <div class="oc-scenario">NLW exposure check</div>
+          <div class="oc-finding">"I thought April 2026 would cost me about £2k. It's actually £7,400."</div>
+          <div class="oc-result">A Manchester restaurant with 5 full-time and 2 part-time staff calculated their true
+            NLW exposure. The result: <strong>£7,412 more per year</strong>. They adjusted two menu categories and added
+            a small delivery surcharge.</div>
+        </div>
+        <div class="outcome-card reveal reveal-d2">
+          <div class="oc-step">3</div>
+          <div class="oc-scenario">Ingredient volatility alert</div>
+          <div class="oc-finding">"Lemongrass went up 28% this quarter — my Tom Yum margin halved"</div>
+          <div class="oc-result">ThaiData flagged the ingredient price spike before it showed up in end-of-month
+            accounts. The operator adjusted their Tom Yum portion size and temporarily <strong>raised the price by
+              £1.50</strong> — protecting the margin.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE GUIDES & RESOURCES -->
+  <section class="intel-hub" id="intel" style="padding:80px 0;">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; margin-bottom:50px;">
+        <div class="eyebrow"><i class="fas fa-book-open" style="color:var(--c2)"></i> Free Resources</div>
+        <h2 class="section-title">Everything You Need to <em>Know</em></h2>
+        <p>Free guides backed by real data. No paywalls. No signup. Just what works.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:16px; margin-bottom:30px;">
+        <a href="open-thai-restaurant-uk.html" class="intel-card reveal" style="grid-column:span 2; border-color:var(--c2);">
+          <div class="intel-icon" style="background:#E6F2EE; color:#0E6E5C;"><i class="fas fa-store"></i></div>
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div><h3>How to Open a Thai Restaurant in the UK</h3>
+            <p>15-step roadmap. Real costs (£80k–£180k). Chef visa reality. The guide generic restaurant blogs can't write.</p></div>
+            <span class="status-pill status-success" style="background:#10B981; color:white; padding:4px 10px; border-radius:999px; font-size:0.75rem; font-weight:800; text-transform:uppercase;">Featured</span>
+          </div>
+          <div class="intel-link" style="color:var(--c2)">Read the guide →</div>
+        </a>
+        <a href="how-many-thai-restaurants-uk.html" class="intel-card reveal reveal-d1">
+          <div class="intel-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>UK Thai Restaurant Count</h3>
+          <p>1,268+ restaurants by region, city, and chain. Data from the FSA. No one else has this.</p>
+          <div class="intel-link">See the data →</div>
+        </a>
+        <a href="thai-restaurant-menu-pricing-uk.html" class="intel-card reveal reveal-d2">
+          <div class="intel-icon"><i class="fas fa-tags"></i></div>
+          <h3>Menu Pricing Guide</h3>
+          <p>20 dishes with food costs, London vs regional pricing, and GP targets. Stop guessing your prices.</p>
+          <div class="intel-link">View benchmarks →</div>
+        </a>
+        <a href="thai-festivals-uk.html" class="intel-card reveal reveal-d3">
+          <div class="intel-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Festival Calendar</h3>
+          <p>Every Thai event in the UK. Songkran, Loy Krathong, food festivals, temple celebrations — one calendar.</p>
+          <div class="intel-link">Browse events →</div>
+        </a>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="guides.html" style="display:inline-block; background:var(--c1); color:white; padding:14px 32px; border-radius:999px; font-weight:700; text-decoration:none; font-size:1rem;"><i class="fas fa-book-open" style="margin-right:8px;"></i>Browse All Free Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLAIM CTA -->
+  <section style="padding: 60px 0; text-align: center; min-height: 180px; contain: layout style;">
+    <div class="wrap">
+      <h2 style="font-family:'Instrument Serif', serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:400; margin-bottom:12px; line-height:1.2;">Is your restaurant on <em>ThaiData</em>?</h2>
+      <p style="color:var(--ink3); font-size:1rem; max-width:500px; margin:0 auto 20px;">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
+      <a href="/claim/" class="btn" style="display:inline-block; background:#10B981; color:#0C1220; padding:14px 32px; border-radius:999px; font-weight:700; text-decoration:none; font-size:1rem;"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <div class="eyebrow">Common questions</div>
+        <h2 class="section-title">What UK Thai operators <em>ask most</em></h2>
+      </div>
+      <div class="faq-list reveal">
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">What is the National Living Wage rate from
+            April 2026?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              From <strong>1 April 2026</strong>, the <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank" rel="noopener">National Living Wage</a> (NLW) for workers aged 21 and over rises to
+              <strong>£12.71 per hour</strong>, up from £12.21 — a 4.1% increase. The 18–20 rate rises from £10.00 to
+              <strong>£10.85/hr</strong> (8.5%), and the apprentice/16–17 rate rises from £7.55 to
+              <strong>£8.00/hr</strong> (6.0%). For full details on employer obligations, see <a href="https://www.acas.org.uk/national-minimum-wage-entitlement" target="_blank" rel="noopener">ACAS guidance on NMW entitlement</a>. Use the <a href="index.html#tools">free NLW calculator above</a> to model the
+              exact cost for your team.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">How much will the April 2026 NLW rise cost my
+            Thai restaurant?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              It depends on your team size and age mix. A typical small Thai restaurant with <strong>6 full-time staff
+                aged 21+</strong> working 40 hours a week faces an additional <strong>£6,240 per year</strong> in wage
+              costs. A mixed-age team of 8 (some 18–20) can face <strong>£7,400–£9,800 extra</strong> annually when you
+              factor in the higher percentage rise for younger workers. The <a href="index.html#tools">NLW calculator on this
+                page</a> gives you the exact figure for your roster in under 60 seconds.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">What is the average food cost percentage for a
+            Thai restaurant in the UK?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              Raw food cost for most Thai dishes runs between <strong>20–32% of the menu price</strong> when sourcing
+              from UK wholesale suppliers. Pad Thai sits at around 20–22%, green curry at 22–25%, and premium dishes
+              like Weeping Tiger or Lamb Shank Massaman reach 28–32%. These raw margins look strong, but the true net
+              profit is far lower once you account for <strong>20% VAT, platform commissions (25–35%), labour, and
+                energy costs</strong>. A dish with an 82% raw GP can easily drop to 15–20% net margin on a delivery
+              platform.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">How much does Uber Eats, Deliveroo, and Just
+            Eat charge Thai restaurants?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              Platform commission rates in 2026: <strong>Uber Eats charges approximately 30%</strong>, <strong>Deliveroo
+                approximately 32%</strong>, and <strong>Just Eat approximately 14%</strong> (Just Eat uses a lower
+              commission but also a per-order fee model for some operators). On a £13.50 Pad Thai via Deliveroo, you
+              receive roughly £9.18 before VAT — leaving around <strong>£2.10–£2.60 actual margin</strong> after food
+              cost. Many Thai operators don't realise this until they model it dish by dish.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">How much does it cost to open a Thai
+            restaurant in the UK?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              A small independent Thai restaurant (30–50 covers) in a UK regional city typically costs
+              <strong>£80,000–£180,000</strong> to open, including fit-out, kitchen equipment, licensing, and initial
+              stock. London venues can run <strong>£200,000–£400,000+</strong> due to higher rents and fit-out costs.
+              Key ongoing fixed costs include rent (typically 8–12% of revenue for a sustainable site), business rates
+              (the 75% retail/hospitality relief dropped to 40% in April 2025; from April 2026 the relief scheme ends
+              entirely, replaced by permanently lower multipliers — 38.2p for small RHL premises under £51k rateable
+              value, 43p for larger sites. Critically, 2026 is also a revaluation year: rateable values for restaurant
+              premises are expected to rise around 30%, which can largely cancel out the benefit of lower multipliers
+              for many sites), and staff wages — which carry the added pressure of the April 2026 NLW increase.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">Where can Thai restaurants in the UK buy
+            wholesale ingredients?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              The main UK wholesale suppliers for Thai restaurants are: <strong>JK Foods</strong> (Nottingham —
+              nationwide, Tiger Tiger brand, jasmine rice and staples), <strong>Manning Impex</strong> (Surrey — 1,100+
+              SKUs, national delivery), <strong>Midlands Food Service</strong> (Burton-on-Trent — restaurant specialist,
+              menu development), <strong>Lung Wah Chong</strong> (London — fresh Thai herbs, weekly air-freight),
+              <strong>Thai Food Direct</strong> (Letchworth — full-service Thai specialist), and <strong>Sing Kee
+                Foods</strong> (Leeds — Northern UK hub, 14,000 sq ft warehouse). For fresh aromatics like galangal and
+              kaffir lime, <strong>Thai Fresh Direct</strong> (London) offers weekly refrigerated nationwide delivery.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">How many Thai restaurants are there in the UK?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              As of June 2026, the Food Standards Agency lists <strong>1,268 registered Thai food establishments</strong> across 253 UK cities and towns — 1,014 dine-in restaurants and 251 takeaways. London has the highest concentration with <strong>280 Thai restaurants</strong>, followed by Leeds (27), York (24), and Edinburgh (20). This data covers FSA-registered food businesses; the total number including market stalls, delivery-only kitchens, and unregistered operators is likely higher.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="faq-q" onclick="toggleFaq(this)" itemprop="name">What is a good GP margin for a Thai
+            restaurant?
+            <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="5" y1="1" x2="5" y2="9" />
+                <line x1="1" y1="5" x2="9" y2="5" />
+              </svg></span>
+          </button>
+          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              For <strong>dine-in</strong>, a healthy gross profit (GP) margin on food is <strong>65–75%</strong> (food
+              cost at 25–35% of selling price). For <strong>delivery platforms</strong>, you need to target a higher
+              menu price to achieve the same GP — after a 30–32% commission and 20% VAT, your effective GP on a
+              70%-margin dish can fall below 40% net. The UK industry average for <strong>overall restaurant net
+                profit</strong> (after all costs) is <strong>4–6%</strong> for a well-run independent — the sector
+              average was 4.2% in 2024 (<a href="https://www.ukhospitality.org.uk" target="_blank" rel="noopener">UKHospitality</a>). The NLW rise and business rates changes in 2026 are pushing many
+              Thai SMEs below that, making menu engineering essential.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="waitlist" style="overflow: hidden; padding: 100px 0;">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="cta-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+          <div class="cta-content">
+            <div class="eyebrow" style="color: var(--c2); font-weight: 700; margin-bottom: 20px;">Free Weekly Brief — The UK Thai Restaurant Market</div>
+            <h2 class="section-title" style="margin-bottom: 20px;">Stay ahead of <em>your market</em></h2>
+            <p class="cta-sub" style="font-size: 1.125rem; opacity: 0.8; margin-bottom: 40px;">Join Thai restaurant owners getting the free weekly market brief. FSA hygiene alerts, new openings in your city, supplier price moves, and profit tips. No spam, unsubscribe any time.</p>
+            
+            <div id="cta-wrap">
+              <div class="cta-form" style="display: flex; gap: 12px; margin-bottom: 15px;">
+                <input type="email" class="cta-input" aria-label="Email for profit report" placeholder="you@restaurant.co.uk" id="cta-email" style="flex: 1; padding: 18px; border-radius: 16px; border: 1px solid var(--line); background: rgba(0,0,0,0.2); color: white;" />
+                <button class="btn btn-fill btn-lg" onclick="submitWL('cta-wrap','cta-ok')" style="padding: 18px 30px; border-radius: 16px; font-weight: 700;">Get my free report</button>
+              </div>
+              <p class="cta-note" style="font-size: 0.875rem; color: var(--ink3);"><i class="fas fa-shield-check"></i> No credit card. Unsubscribe any time. Your data stays private.</p>
+            </div>
+          </div>
+          <div class="cta-visual" style="position: relative;">
+            <div style="position: absolute; top: -20%; right: -20%; width: 140%; height: 140%; background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0) 70%); z-index: -1;"></div>
+            <img src="thaidata_free_report_mockup.jpg" alt="Free Report Mockup" width="640" height="640" loading="lazy" style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);">
+          </div>
+        </div>
+        <div class="cta-ok" id="cta-ok" style="display:none; text-align:center; padding: 60px; font-size: 1.5rem; color: var(--c2);">&#10003; &nbsp; You're on the list — redirecting...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENTLY ADDED -->
+  <section class="section" id="recently-added" style="padding: 60px 0;">
+    <div class="wrap">
+      <h2 class="section-title">Recently added to <em>ThaiData</em></h2>
+      <p style="color: var(--ink3); margin-bottom: 24px; font-size: 0.875rem;">New FSA-registered Thai businesses discovered in our latest data refresh. Not necessarily new openings — these are the most recent additions to our directory.</p>
+      <div id="recent-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
+        <p style="color: var(--ink4);">Loading...</p>
+      </div>
+      <p style="margin-top: 16px; text-align: center;">
+        <a href="/r/" style="color: var(--c1); font-size: 0.875rem;">Browse all Thai restaurants →</a>
+      </p>
+    </div>
+  </section>
+</main>
+<script>
+    (function() {
+      var container = document.getElementById('recent-list');
+      fetch('/data/recent_additions.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(data) {
+          if (!data || !data.restaurants || !data.restaurants.length) {
+            container.innerHTML = '<p style="color: var(--ink4);">No recent additions yet — check back after our next weekly refresh.</p>';
+            return;
+          }
+          var items = data.restaurants.slice(0, 10);
+          container.innerHTML = '';
+          items.forEach(function(rest) {
+            var slug = rest.name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
+            var citySlug = rest.city.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
+            var card = document.createElement('a');
+            card.href = '/r/' + citySlug + '/' + slug + '/';
+            card.style.cssText = 'display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card-bg);border:1px solid var(--line);border-radius:16px;text-decoration:none;color:inherit;transition:border-color 0.2s;';
+            card.onmouseenter = function() { this.style.borderColor = 'var(--c2)'; };
+            card.onmouseleave = function() { this.style.borderColor = 'var(--line)'; };
+            var info = document.createElement('div');
+            info.style.cssText = 'flex:1;min-width:0;';
+            var nameEl = document.createElement('div');
+            nameEl.style.cssText = 'font-weight:600;font-size:0.875rem;color:var(--ink);';
+            nameEl.textContent = rest.name;
+            info.appendChild(nameEl);
+            var meta = document.createElement('div');
+            meta.style.cssText = 'font-size:0.875rem;color:var(--ink3);margin-top:2px;';
+            meta.textContent = rest.city + ' · Added ' + rest.discovered_on;
+            info.appendChild(meta);
+            card.appendChild(info);
+            var arrow = document.createElement('span');
+            arrow.style.cssText = 'color:var(--ink3);font-size:0.75rem;';
+            arrow.innerHTML = '&#10095;';
+            card.appendChild(arrow);
+            container.appendChild(card);
+          });
+        })
+        .catch(function() {
+          container.innerHTML = '<p style="color: var(--ink3);">Recent additions unavailable right now.</p>';
+        });
+    })();
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="ft-grid">
+        <div class="ft-brand">
+          <a href="index.html" class="logo" style="margin-bottom:20px">
+            <img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="111" height="40">
+          </a>
+          <p>AI-powered cost intelligence for UK Thai restaurants. Know your margins. Protect your profits.</p>
+        </div>
+        <div class="ft-col">
+          <h3>Tools & Modules</h3>
+          <ul>
+            <li><a href="index.html#tools">Wage Pulse (NLW)</a></li>
+            <li><a href="tools/PROFIT_MARGIN_DEFENDER.html">Profit Margin Defender</a></li>
+            <li><a href="tools/VISA_ASSISTANT.html">Visa Assistant (Sponsorship)</a></li>
+            <li><a href="tools/WHOLESALE_BENCHMARKER.html">Wholesale Benchmarker</a></li>
+            <li><a href="tools/RESILIENCE_DASHBOARD.html">2026 Resilience Dashboard</a></li>
+            <li><a href="tools/NAP_CHECKER.html">NAP Trust Checker</a></li>
+            <li><a href="tools/MENU_REVIEWER.html">AI Menu Reviewer</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h3>Intelligence</h3>
+          <ul>
+            <li><a href="open-thai-restaurant-uk.html"><i class="fas fa-store"></i> Opening Guide</a></li>
+            <li><a href="how-many-thai-restaurants-uk.html"><i class="fas fa-chart-pie"></i> UK Thai Count</a></li>
+            <li><a href="thai-restaurant-menu-pricing-uk.html"><i class="fas fa-tags"></i> Menu Pricing</a></li>
+            <li><a href="thai-festivals-uk.html"><i class="fas fa-calendar-alt"></i> Festival Calendar</a></li>
+            <li><a href="songkran-uk.html"><i class="fas fa-water"></i> Songkran 2026</a></li>
+            <li><a href="loy-krathong-uk.html"><i class="fas fa-fire"></i> Loy Krathong</a></li>
+            <li><a href="analysis/chef-visa-cliff.html">The 2026 Chef Visa Cliff</a></li>
+            <li><a href="index.html#tools" onclick="setTimeout(()=>{const btn=document.querySelectorAll('.tab-btn')[1];switchTab(btn,'dish');document.getElementById('tools').scrollIntoView({behavior:'smooth'});},100)">Market Price Data</a></li>
+            <li><a href="about.html">About ThaiData</a></li>
+            <li><a href="mailto:hello@thaidata.uk">hello@thaidata.uk</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>&copy; 2026 ThaiData UK. All rights reserved. · Data last updated March 2026</p>
+        <span class="ft-pill">Built for UK Thai hospitality</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Exit Intent Modal -->
+  <div id="exit-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:10000; align-items:center; justify-content:center; backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);">
+    <div style="background:#0C1220; border:1px solid var(--line); border-radius:16px; padding:50px; max-width:550px; text-align:center; position:relative; box-shadow:0 30px 60px rgba(0,0,0,0.5);">
+        <button onclick="closeExit()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:var(--ink4); font-size:1.5rem; cursor:pointer;">&times;</button>
+        <div class="eyebrow" style="color:var(--c2); margin-bottom:15px;">Wait! Secure your 2026 Future</div>
+        <h2 style="font-family:'Instrument Serif', serif; font-size:2.5rem; margin-bottom:20px;">Download the 2026 <em>Profit Survival PDF</em></h2>
+        <p style="color:var(--ink4); margin-bottom:30px;">Get the executive summary of our 2026 research. 15 pages of actionable pricing strategies and procurement audits.</p>
+        <div class="cta-form" style="display:flex; gap:10px; margin-bottom:15px;">
+            <input type="email" class="cta-input" aria-label="Email for download" placeholder="Enter your email" id="exit-email" style="flex:1; background:rgba(255,255,255,0.05); border:1px solid var(--line); padding:15px; border-radius:8px; color:white;" />
+            <button class="btn btn-fill" onclick="submitExit()" style="padding:15px 25px; border-radius:8px; font-weight:700;">Send PDF</button>
+        </div>
+        <p style="font-size:0.875rem; color:var(--ink3);">No spam. Join 284+ other Thai restaurateurs.</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js" defer></script>
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.querySelector('.nav-r').classList.toggle('open');
+    }
+
+    // Exit Intent Logic
+    let exitTriggered = false;
+    document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 0 && !exitTriggered && !localStorage.getItem('exitShown')) {
+            document.getElementById('exit-modal').style.display = 'flex';
+            exitTriggered = true;
+            localStorage.setItem('exitShown', 'true');
+        }
+    });
+    function closeExit() { document.getElementById('exit-modal').style.display = 'none'; }
+    async function submitExit() {
+        const email = document.getElementById('exit-email').value;
+        const { ok } = await submitEmail(email, 'exit-intent-pdf');
+        if (ok) {
+            document.getElementById('exit-modal').innerHTML = '<div style="padding:40px; color:var(--c2); font-size:1.125rem; font-weight:700;">Check your inbox. Your survival guide is on the way.</div>';
+            setTimeout(closeExit, 2500);
+        }
+    }
+
+    // ── Nav scroll ──
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40) });
+
+    // ── Scroll reveal ──
+    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }) }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // ── Config ── Replace YOUR_ACCESS_KEY with key from https://web3forms.com (free, verify email once)
+    const WEB3FORMS_KEY = '882f2e26-a610-415c-93b7-d97436a302f5';
+
+    // ── Shared submit helper ──
+    async function submitEmail(email, source, extra = {}) {
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return { ok: false, msg: 'Please enter a valid email address.' };
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            subject: `ThaiData UK — new signup (${source})`,
+            from_name: 'ThaiData UK Waitlist',
+            email,
+            source,
+            ...extra
+          })
+        });
+        const data = await res.json();
+        return { ok: data.success, msg: data.message };
+      } catch (e) {
+        return { ok: false, msg: 'Network error — please try again.' };
+      }
+    }
+
+    // ── Waitlist (CTA section) ──
+    async function submitWL(wId, oId) {
+      const emailEl = document.getElementById('cta-email');
+      const btn = document.querySelector(`#${wId} .btn-fill`);
+      const email = emailEl ? emailEl.value.trim() : '';
+      if (!email) { emailEl && (emailEl.style.borderColor = '#DC2626'); return; }
+      if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
+      const { ok, msg } = await submitEmail(email, 'cta-waitlist');
+      if (ok) {
+        document.getElementById(wId).style.display = 'none';
+        const el = document.getElementById(oId);
+        el.style.display = 'block';
+        setTimeout(() => window.location.href = '/thank-you.html', 1500);
+      } else {
+        if (btn) { btn.textContent = 'Get my free report'; btn.disabled = false; }
+        alert(msg || 'Something went wrong — please try again.');
+      }
+    }
+
+    // ── Hero calculator submit ──
+    async function submitHero() {
+      const emailEl = document.getElementById('hr-email');
+      const btn = document.querySelector('.hr-email-btn');
+      const email = emailEl ? emailEl.value.trim() : '';
+      if (!email) { emailEl && (emailEl.style.borderColor = 'rgba(220,38,38,0.8)'); return; }
+      if (btn) { btn.textContent = '…'; btn.disabled = true; }
+      // capture the NLW result text if already calculated
+      const annEl = document.getElementById('hr-ann');
+      const nlwResult = annEl ? annEl.textContent : '';
+      const { ok, msg } = await submitEmail(email, 'hero-nlw-calculator', { nlw_impact: nlwResult });
+      if (ok) {
+        document.getElementById('hr-form').style.display = 'none';
+        const okEl = document.getElementById('hr-ok');
+        okEl.classList.add('show');
+        setTimeout(() => window.location.href = '/thank-you.html', 2000);
+      } else {
+        if (btn) { btn.textContent = 'Send it'; btn.disabled = false; }
+        alert(msg || 'Something went wrong — please try again.');
+      }
+    }
+
+    // ── Tab switch ──
+    function switchTab(btn, name) {
+      document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + name).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    // ═══ HERO NLW ═══
+    const CUR = { a: 12.21, b: 10.00, c: 7.55 }, APR = { a: 12.71, b: 10.85, c: 8.00 };
+    const NI_THRESH = 5000, NI_RATE = 0.15, EMP_ALLOW = 10500;
+    
+    function calculateNI(s, h, rate) {
+      const ann = s * h * rate * 52;
+      return Math.max(0, ann - NI_THRESH) * NI_RATE;
+    }
+
+    function heroNLW(force) {
+      // The hero calculator was removed from this page (hero is now the claim search).
+      // Without this guard the DOMContentLoaded call would null-deref on every load.
+      if (!document.getElementById('h21s')) return;
+      const s1 = +document.getElementById('h21s').value || 0, h1 = +document.getElementById('h21h').value || 0;
+      const s2 = +document.getElementById('h20s').value || 0, h2 = +document.getElementById('h20h').value || 0;
+      const s3 = +document.getElementById('hAs').value || 0, h3 = +document.getElementById('hAh').value || 0;
+      
+      const wCur = s1 * h1 * CUR.a + s2 * h2 * CUR.b + s3 * h3 * CUR.c;
+      const wNew = s1 * h1 * APR.a + s2 * h2 * APR.b + s3 * h3 * APR.c;
+      
+      const niCurPot = (s1 * calculateNI(1, h1, CUR.a)) + (s2 * calculateNI(1, h2, CUR.b)) + (s3 * calculateNI(1, h3, CUR.c));
+      const niNewPot = (s1 * calculateNI(1, h1, APR.a)) + (s2 * calculateNI(1, h2, APR.b)) + (s3 * calculateNI(1, h3, APR.c));
+      
+      const niCur = Math.max(0, niCurPot - EMP_ALLOW);
+      const niNew = Math.max(0, niNewPot - EMP_ALLOW);
+      
+      const diffWage = (wNew - wCur) * 52;
+      const diffNI = niNew - niCur;
+      const totalDiff = diffWage + diffNI;
+      
+      if (!wCur || (!force && !totalDiff)) return;
+      
+      const pct = wCur > 0 ? (( (wNew - wCur) / wCur) * 100).toFixed(1) : 0;
+      const res = document.getElementById('hero-result');
+      document.getElementById('hr-ann').textContent = '+£' + Math.round(totalDiff).toLocaleString() + ' per year';
+      document.getElementById('hr-desc').textContent = `Your total cost (Wages + NI) rises by £${(totalDiff / 52).toFixed(2)}/week (${pct}% wage rise) from April 2026. Factors in £10.5k Allowance.`;
+      res.classList.add('show');
+    }
+
+    // ═══ DISH DATA ═══
+    const DISHES = [
+      // ── STARTERS ──
+      { name: "Chicken Satay", thai: "ไก่สะเต๊ะ", rom: "Gai Satay", aliases: ["satay", "chicken satay", "gai satay", "satay chicken", "skewers", "peanut sauce chicken", "ไก่สะเต๊ะ", "สะเต๊ะ"], cost: 1.65, pct: 0.195, note: "Chicken skewers, lemongrass marinade, peanut sauce, cucumber relish" },
+      { name: "Spring Rolls", thai: "ปอเปี๊ยะทอด", rom: "Por Pia Tod", aliases: ["spring rolls", "veg spring rolls", "vegetable spring rolls", "por pia", "popiah", "crispy rolls", "ปอเปี๊ยะทอด", "ปอเปี๊ยะ"], cost: 0.95, pct: 0.142, note: "Rice paper, glass vermicelli, carrot, cabbage, dipping sauce" },
+      { name: "Thai Fish Cakes", thai: "ทอดมันปลา", rom: "Tod Man Pla", aliases: ["fish cakes", "thai fish cakes", "tod man pla", "fish patties", "tod man", "ทอดมันปลา", "ทอดมัน"], cost: 2.00, pct: 0.235, note: "White fish, red curry paste, kaffir lime, snake beans, egg" },
+      { name: "Calamari", thai: "ปลาหมึกทอด", rom: "Pla Muek Tod", aliases: ["calamari", "squid", "crispy squid", "fried squid", "pla muek", "ปลาหมึกทอด", "ปลาหมึก"], cost: 2.35, pct: 0.258, note: "Squid rings, seasoned batter, sweet chilli dip" },
+      { name: "Money Bags", thai: "ถุงทอง", rom: "Thung Thong", aliases: ["money bags", "golden money bags", "thung thong", "crispy parcels", "money bag", "thai dumplings", "ถุงทอง"], cost: 1.30, pct: 0.166, note: "Crispy pastry, spiced chicken mince, water chestnuts, dipping sauce" },
+      { name: "Prawn Toast", thai: "ขนมปังหน้ากุ้ง", rom: "Khanom Pang Na Kung", aliases: ["prawn toast", "shrimp toast", "sesame prawn toast", "prawn on toast", "ขนมปังหน้ากุ้ง"], cost: 1.45, pct: 0.178, note: "Tiger prawns, sesame seeds, white bread, sweet chilli" },
+      { name: "Steamed Dumplings", thai: "ขนมจีบ", rom: "Kanom Jeeb", aliases: ["dumplings", "steamed dumplings", "kanom jeeb", "dim sum", "har gao", "thai dumplings", "gyoza", "ขนมจีบ"], cost: 1.50, pct: 0.185, note: "Pork and prawn filling, wonton wrappers, soy dipping sauce" },
+      { name: "Chicken Wings", thai: "ปีกไก่ทอด", rom: "Peek Gai Tod", aliases: ["chicken wings", "thai wings", "peek gai", "crispy wings", "spicy wings", "ปีกไก่ทอด", "ปีกไก่"], cost: 1.80, pct: 0.212, note: "Marinated chicken wings, fish sauce, garlic, coriander" },
+
+      // ── SOUPS ──
+      { name: "Tom Yum Soup", thai: "ต้มยำ", rom: "Tom Yam", aliases: ["tom yum", "tom yam", "tom yum goong", "tom yum kung", "spicy soup", "lemongrass soup", "hot sour soup", "ต้มยำ", "ต้มยำกุ้ง"], cost: 3.50, pct: 0.305, note: "Lemongrass, galangal, kaffir lime, chilli, prawns" },
+      { name: "Tom Kha", thai: "ต้มข่า", rom: "Tom Kha Gai", aliases: ["tom kha", "tom kha gai", "coconut soup", "galangal soup", "tom ka", "coconut chicken soup", "ต้มข่า", "ต้มข่าไก่"], cost: 3.10, pct: 0.287, note: "Coconut milk, galangal, lemongrass, mushrooms, chicken" },
+      { name: "Tom Yum Seafood", thai: "ต้มยำทะเล", rom: "Tom Yam Talay", aliases: ["tom yum seafood", "seafood tom yum", "tom yam talay", "tom yum mixed seafood", "ต้มยำทะเล"], cost: 4.20, pct: 0.315, note: "Mixed seafood, lemongrass, galangal, kaffir lime, mushrooms" },
+      { name: "Wonton Soup", thai: "ซุปเกี๊ยว", rom: "Sup Kiao", aliases: ["wonton soup", "wonton", "sup kiao", "dumpling soup", "clear soup", "ซุปเกี๊ยว", "เกี๊ยวน้ำ"], cost: 2.10, pct: 0.245, note: "Pork and prawn wontons, clear broth, spring onion" },
+
+      // ── SALADS ──
+      { name: "Som Tum", thai: "ส้มตำ", rom: "Som Tam", aliases: ["som tum", "som tam", "papaya salad", "green papaya salad", "spicy salad", "som tum thai", "ส้มตำ", "papaya"], cost: 2.10, pct: 0.268, note: "Green papaya, tomato, green beans, peanuts, dried shrimp, lime" },
+      { name: "Laab", thai: "ลาบ", rom: "Larb", aliases: ["laab", "larb", "larp", "laab gai", "mince salad", "spicy mince", "larb gai", "ลาบ"], cost: 2.60, pct: 0.276, note: "Minced chicken, toasted rice, lime, mint, chilli, shallots" },
+      { name: "Yum Woon Sen", thai: "ยำวุ้นเส้น", rom: "Yam Woon Sen", aliases: ["yum woon sen", "yam woon sen", "glass noodle salad", "cellophane noodle salad", "vermicelli salad", "ยำวุ้นเส้น"], cost: 2.30, pct: 0.262, note: "Glass noodles, minced pork, prawns, chilli, lime, fish sauce" },
+
+      // ── CURRIES ──
+      { name: "Green Thai Curry", thai: "แกงเขียวหวาน", rom: "Gaeng Keow Wan", aliases: ["green curry", "green thai curry", "gaeng keow wan", "gang kiew wan", "green cury", "gang kiow", "แกงเขียวหวาน", "แกงเขียว"], cost: 3.20, pct: 0.291, note: "Green curry paste, coconut milk, Thai basil, kaffir lime, bamboo" },
+      { name: "Red Thai Curry", thai: "แกงแดง", rom: "Gaeng Daeng", aliases: ["red curry", "red thai curry", "gaeng daeng", "gang daeng", "thai red curry", "แกงแดง"], cost: 3.40, pct: 0.287, note: "Red curry paste, coconut milk, bamboo shoots, kaffir lime" },
+      { name: "Massaman Curry", thai: "มัสมั่น", rom: "Matsaman", aliases: ["massaman", "massaman curry", "matsaman", "masaman", "mussaman", "mossman", "muslim curry", "มัสมั่น", "แกงมัสมั่น"], cost: 4.20, pct: 0.298, note: "Massaman paste, coconut milk, potato, cashews, beef" },
+      { name: "Panang Curry", thai: "พะแนง", rom: "Phanaeng", aliases: ["panang", "panang curry", "phanaeng", "penang curry", "panaeng", "panang chicken", "พะแนง"], cost: 3.30, pct: 0.289, note: "Panang paste, thick coconut milk, kaffir lime, roasted peanuts" },
+      { name: "Yellow Curry", thai: "แกงกะหรี่", rom: "Gaeng Kari", aliases: ["yellow curry", "gaeng kari", "gang kari", "thai yellow curry", "curry", "แกงกะหรี่", "กะหรี่"], cost: 3.00, pct: 0.278, note: "Yellow curry paste, coconut milk, potato, onion, turmeric" },
+      { name: "Jungle Curry", thai: "แกงป่า", rom: "Gaeng Pa", aliases: ["jungle curry", "gaeng pa", "gang pa", "wild curry", "no coconut curry", "แกงป่า"], cost: 3.60, pct: 0.295, note: "Spicy curry paste, no coconut milk, mixed vegetables, krachai" },
+      { name: "Chu Chi Prawns", thai: "ฉู่ฉี่กุ้ง", rom: "Chu Chi Kung", aliases: ["chu chi prawns", "chu chi", "choo chee prawns", "red curry prawns", "ฉู่ฉี่กุ้ง", "ฉู่ฉี่"], cost: 4.50, pct: 0.268, note: "King prawns, thick red curry cream, kaffir lime, coconut milk" },
+
+      // ── NOODLES ──
+      { name: "Pad Thai", thai: "ผัดไทย", rom: "Phat Thai", aliases: ["pad thai", "pad tai", "phat thai", "pat thai", "phad thai", "pad-thai", "thai noodles", "ผัดไทย"], cost: 2.80, pct: 0.284, note: "Rice noodles, egg, bean sprouts, peanuts, tamarind, chicken" },
+      { name: "Pad See Ew", thai: "ผัดซีอิ๊ว", rom: "Phat Si-Io", aliases: ["pad see ew", "pad see iw", "pad siew", "phat si io", "wide noodles", "flat noodles dark soy", "ผัดซีอิ๊ว"], cost: 2.50, pct: 0.272, note: "Wide rice noodles, Chinese broccoli, egg, dark soy sauce" },
+      { name: "Drunken Noodles", thai: "ผัดขี้เมา", rom: "Phat Khi Mao", aliases: ["drunken noodles", "pad kee mao", "pad ki mao", "phat khi mao", "spicy noodles", "ผัดขี้เมา", "ผัดขี้เมา"], cost: 2.65, pct: 0.278, note: "Flat rice noodles, chilli, holy basil, peppercorns, mixed veg" },
+      { name: "Khao Soi", thai: "ข้าวซอย", rom: "Khao Soi", aliases: ["khao soi", "kao soi", "khao soy", "chiang mai noodles", "northern thai curry noodles", "coconut noodle soup", "ข้าวซอย"], cost: 4.10, pct: 0.292, note: "Egg noodles, coconut curry broth, chicken drumstick, crispy noodles" },
+      { name: "Mee Krop", thai: "หมี่กรอบ", rom: "Mi Krop", aliases: ["mee krop", "mi krop", "crispy noodles", "crispy rice noodles", "หมี่กรอบ"], cost: 2.20, pct: 0.265, note: "Crispy rice vermicelli, sweet-sour sauce, dried shrimp, egg" },
+
+      // ── RICE & STIR FRIES ──
+      { name: "Khao Pad", thai: "ข้าวผัด", rom: "Khao Phat", aliases: ["khao pad", "fried rice", "thai fried rice", "khao phat", "egg fried rice", "kao pad", "ข้าวผัด"], cost: 2.40, pct: 0.272, note: "Jasmine rice, egg, spring onion, cucumber, lime, fish sauce" },
+      { name: "Pad Kra Pao", thai: "ผัดกระเพรา", rom: "Phat Krapao", aliases: ["pad kra pao", "pad krapao", "basil stir fry", "holy basil", "basil chicken", "kaprao", "gra pao", "pad kaprao", "ผัดกระเพรา"], cost: 2.90, pct: 0.281, note: "Holy basil, minced chicken, oyster sauce, chilli, fried egg" },
+      { name: "Cashew Chicken", thai: "ไก่ผัดเม็ดมะม่วง", rom: "Gai Pad Med Mamuang", aliases: ["cashew chicken", "gai pad med mamuang", "cashew stir fry", "chicken cashew", "ไก่ผัดเม็ดมะม่วง", "เม็ดมะม่วง"], cost: 3.10, pct: 0.285, note: "Chicken, cashew nuts, dried chilli, onion, oyster sauce" },
+      { name: "Pad Prik", thai: "ผัดพริก", rom: "Phat Phrik", aliases: ["pad prik", "pad prick", "chilli stir fry", "spicy stir fry", "ผัดพริก"], cost: 2.75, pct: 0.275, note: "Chilli paste, chicken or pork, mixed peppers, oyster sauce" },
+      { name: "Pineapple Fried Rice", thai: "ข้าวผัดสับปะรด", rom: "Khao Pad Sapparod", aliases: ["pineapple fried rice", "khao pad sapparod", "pineapple rice", "kao pad pineapple", "ข้าวผัดสับปะรด"], cost: 2.80, pct: 0.278, note: "Jasmine rice, pineapple, cashews, raisins, curry powder, prawns" },
+
+      // ── PREMIUM / SEAFOOD ──
+      { name: "Chilli Sea Bass", thai: "ปลากะพงทอดน้ำปลา", rom: "Pla Krapong Tod", aliases: ["sea bass", "chilli sea bass", "chilli lime sea bass", "whole sea bass", "steamed sea bass", "pla krapong", "ปลากะพงทอดน้ำปลา", "ปลากะพง"], cost: 4.50, pct: 0.272, note: "Whole sea bass or fillet, lemongrass, chilli, lime, fish sauce" },
+      { name: "Weeping Tiger", thai: "เสือร้องไห้", rom: "Suea Rong Hai", aliases: ["weeping tiger", "crying tiger", "suea rong hai", "tiger beef", "grilled sirloin", "thai steak", "เสือร้องไห้"], cost: 6.20, pct: 0.285, note: "8oz sirloin, oyster sauce marinade, Jaew dipping sauce" },
+      { name: "Tamarind Duck", thai: "เป็ดผัดมะขาม", rom: "Ped Pad Makham", aliases: ["tamarind duck", "duck", "crispy duck", "ped pad makham", "duck tamarind", "เป็ดผัดมะขาม", "เป็ด"], cost: 6.00, pct: 0.258, note: "Half duck, tamarind-honey glaze, ginger, spring onion" },
+      { name: "King Prawn Stir Fry", thai: "กุ้งผัด", rom: "Kung Pad", aliases: ["king prawns", "prawn stir fry", "kung pad", "garlic prawns", "chilli prawns", "king prawn", "กุ้งผัด", "กุ้ง"], cost: 3.80, pct: 0.268, note: "King prawns, garlic, chilli, spring onion, oyster sauce" },
+      { name: "Samui Seafood", thai: "อาหารทะเลผัด", rom: "Aharn Talay Pad", aliases: ["samui seafood", "mixed seafood", "seafood medley", "seafood stir fry", "aharn talay", "อาหารทะเลผัด", "อาหารทะเล"], cost: 4.80, pct: 0.278, note: "Sea bass, squid, tiger prawns, mixed vegetables, chilli" },
+      { name: "Lamb Shank Massaman", thai: "แกงมัสมั่นขาแกะ", rom: "Massaman Kha Kae", aliases: ["lamb shank", "lamb massaman", "massaman lamb", "lamb shank massaman", "แกงมัสมั่นขาแกะ", "ขาแกะ"], cost: 7.50, pct: 0.298, note: "Slow-braised lamb shank, massaman paste, coconut milk, potato" },
+
+      // ── DESSERTS ──
+      { name: "Mango Sticky Rice", thai: "ข้าวเหนียวมะม่วง", rom: "Khao Niao Mamuang", aliases: ["mango sticky rice", "khao niao mamuang", "sticky rice mango", "mango rice", "thai mango dessert", "ข้าวเหนียวมะม่วง", "ข้าวเหนียว"], cost: 2.95, pct: 0.378, note: "Thai mango, glutinous sticky rice, coconut cream, sesame seeds" },
+      { name: "Banana Fritters", thai: "กล้วยทอด", rom: "Kluay Tod", aliases: ["banana fritters", "kluay tod", "fried banana", "banana dessert", "banana fritter", "กล้วยทอด", "กล้วย"], cost: 0.85, pct: 0.122, note: "Banana, coconut batter, vanilla ice cream, honey drizzle" },
+      { name: "Coconut Ice Cream", thai: "ไอศกรีมกะทิ", rom: "Ai Sakhrim Kathi", aliases: ["coconut ice cream", "thai ice cream", "coconut icecream", "ไอศกรีมกะทิ", "ไอศกรีม"], cost: 1.20, pct: 0.175, note: "Coconut milk ice cream, peanuts, sticky rice, jackfruit" },
+      { name: "Purple Rice Pudding", thai: "ข้าวเหนียวดำ", rom: "Khao Niao Dam", aliases: ["purple rice", "black sticky rice", "purple rice pudding", "khao niao dam", "black rice", "ข้าวเหนียวดำ"], cost: 1.10, pct: 0.168, note: "Black glutinous rice, coconut cream, palm sugar" },
+    ];
+    function clearDish() { document.getElementById('dish-result').innerHTML = `<div class="result-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><p>Type a dish name to get started</p></div>` }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const fuseItems = [];
+      DISHES.forEach(d => { d.aliases.forEach(a => fuseItems.push({ alias: a, dish: d })); fuseItems.push({ alias: d.name.toLowerCase(), dish: d }); fuseItems.push({ alias: d.rom.toLowerCase(), dish: d }) });
+      const fuse = new Fuse(fuseItems, { keys: ['alias'], threshold: 0.45, includeScore: true });
+
+      window.runDish = function() {
+        const q = document.getElementById('dish-input').value.trim().toLowerCase();
+        const pl = document.getElementById('dish-platform').value;
+        const gp = parseInt(document.getElementById('dish-gp').value) / 100;
+        const el = document.getElementById('dish-result');
+        if (!q) { el.innerHTML = `<div class="result-empty"><p>Please type a dish name</p></div>`; return }
+        const res = fuse.search(q);
+        if (!res.length) { el.innerHTML = `<div class="result-empty"><p>No match for "${q}" — try another spelling</p></div>`; return }
+        const d = res[0].item.dish, conf = Math.round((1 - res[0].score) * 100);
+        const comm = { dine: 0, uber: 0.30, deliveroo: 0.32, justeat: 0.14 }[pl];
+        const vat = 0.20;
+        const minP = d.cost / ((1 - gp) * (1 - comm) * (1 / (1 + vat)));
+        const recP = Math.ceil(minP * 1.08 / 0.50) * 0.50 - 0.05;
+        const minR = Math.ceil(minP / 0.50) * 0.50 - 0.05;
+        const net = recP * (1 - comm) / (1 + vat);
+        const actGP = ((net - d.cost) / net * 100).toFixed(1);
+        const plN = { dine: 'Dine-in', uber: 'Uber Eats', deliveroo: 'Deliveroo', justeat: 'Just Eat' }[pl];
+        el.innerHTML = `
+    <div class="r-match"><div class="r-match-name">Matched: ${d.name}</div><div class="r-match-thai">${d.thai} &middot; ${d.rom}</div><div class="r-match-conf">Confidence: ${conf}% &middot; ${d.note}</div></div>
+    <div class="r-row"><span class="r-key">Food cost (database)</span><span class="r-val">&pound;${d.cost.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Platform</span><span class="r-val">${plN}${comm ? ` (${Math.round(comm * 100)}%)` : ''}</span></div>
+    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">&pound;${minR.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">&pound;${recP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Actual GP at recommended</span><span class="r-val ${parseFloat(actGP) >= 65 ? 'green' : 'amber'}">${actGP}%</span></div>`;
+      };
+      document.getElementById('dish-input').addEventListener('keydown', e => { if (e.key === 'Enter') window.runDish() });
+    });
+
+    // ═══ NLW CALCULATOR ═══
+    function runNLW() {
+      const s1 = +document.getElementById('n21s').value || 0, h1 = +document.getElementById('n21h').value || 0;
+      const s2 = +document.getElementById('n20s').value || 0, h2 = +document.getElementById('n20h').value || 0;
+      const s3 = +document.getElementById('nAs').value || 0, h3 = +document.getElementById('nAh').value || 0;
+      
+      const wCur = s1 * h1 * CUR.a + s2 * h2 * CUR.b + s3 * h3 * CUR.c;
+      const wNew = s1 * h1 * APR.a + s2 * h2 * APR.b + s3 * h3 * APR.c;
+      
+      const niCurPot = (s1 * calculateNI(1, h1, CUR.a)) + (s2 * calculateNI(1, h2, CUR.b)) + (s3 * calculateNI(1, h3, CUR.c));
+      const niNewPot = (s1 * calculateNI(1, h1, APR.a)) + (s2 * calculateNI(1, h2, APR.b)) + (s3 * calculateNI(1, h3, APR.c));
+      
+      const niCur = Math.max(0, niCurPot - EMP_ALLOW);
+      const niNew = Math.max(0, niNewPot - EMP_ALLOW);
+      
+      const diffWage = (wNew - wCur) * 52;
+      const diffNI = niNew - niCur;
+      const totalAnn = diffWage + diffNI;
+      
+      const pct = wCur > 0 ? (((wNew - wCur) / wCur) * 100).toFixed(1) : 0;
+      const el = document.getElementById('nlw-result');
+      if (!wCur) { el.innerHTML = `<div class="result-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><p>Enter your team to see results</p></div>`; return }
+      const fmt = n => n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      el.innerHTML = `
+    <div class="r-row"><span class="r-key">Total staff</span><span class="r-val">${s1 + s2 + s3}</span></div>
+    <div class="r-row"><span class="r-key">Current annual cost (inc NI)</span><span class="r-val">&pound;${fmt(wCur * 52 + niCur)}</span></div>
+    <div class="r-row"><span class="r-key">After April 2026 (inc NI)</span><span class="r-val amber">&pound;${fmt(wNew * 52 + niNew)}</span></div>
+    <div class="r-row"><span class="r-key">Net annual increase</span><span class="r-val red">+&pound;${Math.round(totalAnn).toLocaleString()} (+${pct}%)</span></div>
+    <div class="impact-box"><p>This factors in the &pound;10,500 Employment Allowance. To absorb this, you need &pound;${(totalAnn / 52 / 7).toFixed(2)} extra GP per day.</p></div>
+    <div style="margin-top:12px; text-align:center;">
+      <a href="tools/VISA_ASSISTANT.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.875rem;">Launch Chef Visa Assistant (RQF-6 Check) →</a>
+    </div>`;
+    }
+
+    // ═══ STRESS TESTER ═══
+    function runStress() {
+      const food = +document.getElementById('sl-food').value / 100;
+      const lab = +document.getElementById('sl-labour').value / 100;
+      const pkg = +document.getElementById('sl-pkg').value / 100;
+      const comm = +document.getElementById('sl-comm').value / 100;
+      const gp = +document.getElementById('sl-gp').value / 100;
+      document.getElementById('sv-food').textContent = `£${food.toFixed(2)}`;
+      document.getElementById('sv-labour').textContent = `£${lab.toFixed(2)}`;
+      document.getElementById('sv-pkg').textContent = `£${pkg.toFixed(2)}`;
+      document.getElementById('sv-comm').textContent = `${Math.round(comm * 100)}%`;
+      document.getElementById('sv-gp').textContent = `${Math.round(gp * 100)}%`;
+      ['sl-food', 'sl-labour', 'sl-pkg', 'sl-comm', 'sl-gp'].forEach(id => { const e = document.getElementById(id); e.style.setProperty('--pct', ((e.value - e.min) / (e.max - e.min)) * 100 + '%') });
+      const total = food + lab + pkg, vatF = 0.20 / 1.20, denom = 1 - vatF - comm - (1 - gp);
+      const el = document.getElementById('stress-result');
+      if (denom <= 0) { el.innerHTML = `<div class="result-empty"><p>Costs too high — reduce commission or increase margin target</p></div>`; return }
+      const minP = total / denom, recP = Math.ceil(minP * 1.1 / 0.50) * 0.50 - 0.05;
+      const vatAmt = recP * vatF, net = recP - vatAmt - recP * comm, profit = net - food - lab - pkg;
+      const actGP = (profit / net * 100).toFixed(1), gpC = parseFloat(actGP) >= 65 ? 'green' : parseFloat(actGP) >= 55 ? 'amber' : 'red';
+      el.innerHTML = `
+    <div class="r-row"><span class="r-key">Total cost per dish</span><span class="r-val">&pound;${total.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">VAT deducted</span><span class="r-val">&pound;${vatAmt.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Net after commission</span><span class="r-val">&pound;${net.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">&pound;${minP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">&pound;${recP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Profit per dish</span><span class="r-val ${gpC}">&pound;${profit.toFixed(2)} (${actGP}% GP)</span></div>`;
+    }
+
+    // ── FAQ toggle ──
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => { runStress(); runNLW(); });
+  </script>
+  <script src="privacy-banner.js" defer></script>
+
+  <script>
+  /* Hero search — "find my restaurant".
+     Uses the existing /api/search-restaurants index, then hands off to
+     /claim/?restaurant=<name>, which prefills and auto-searches (built + verified earlier).
+     Handing off to the claim flow beats deriving /r/<city>/<slug>/ URLs: the two search
+     endpoints disagree on `city` ("Essex" vs "Clacton on Sea") and the API returns the FSA
+     URL, not ours — so a derived link could 404. No derived URLs = no broken links. */
+  (function () {
+    var form = document.getElementById('hero-search-form');
+    var input = document.getElementById('hero-search-input');
+    var box = document.getElementById('hero-search-results');
+    if (!form || !input || !box) return;
+    var timer = null, ctrl = null, current = [];
+
+    var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ESC[c]; }); }
+    function claimHref(name) { return '/claim/?restaurant=' + encodeURIComponent(name); }
+    function close() { box.hidden = true; box.innerHTML = ''; }
+    function open(html) { box.innerHTML = html; box.hidden = false; }
+
+    function render(rows) {
+      if (!rows.length) {
+        open('<div class="hres-empty">No Thai restaurant found by that name. <a href="/claim/">Search on the claim page</a>.</div>');
+        return;
+      }
+      open(rows.map(function (r) {
+        return '<a href="' + claimHref(r.name) + '"><strong>' + esc(r.name) + '</strong>' +
+               '<span class="hres-city">' + esc(r.city) + (r.pc ? ' \u00b7 ' + esc(r.pc) : '') + '</span></a>';
+      }).join(''));
+    }
+
+    function run(q) {
+      if (ctrl) { try { ctrl.abort(); } catch (e) {} }
+      ctrl = new AbortController();
+      open('<div class="hres-loading">Searching\u2026</div>');
+      fetch('/api/search-restaurants?q=' + encodeURIComponent(q), { signal: ctrl.signal })
+        .then(function (r) { return r.json(); })
+        .then(function (rows) { current = rows || []; render(current); })
+        .catch(function (e) {
+          if (e && e.name === 'AbortError') return;
+          open('<div class="hres-empty">Search unavailable \u2014 <a href="/claim/">search on the claim page</a>.</div>');
+        });
+    }
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim();
+      clearTimeout(timer);
+      if (q.length < 2) { close(); return; }
+      timer = setTimeout(function () { run(q); }, 220);
+    });
+    input.addEventListener('focus', function () {
+      if (input.value.trim().length >= 2 && current.length) render(current);
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = input.value.trim();
+      if (current.length) { window.location.href = claimHref(current[0].name); return; }
+      if (q) window.location.href = claimHref(q);
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.hero-search')) close();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+  </script>
+
+  <style id="token-gaps">
+    /* Complete the token system. These three fell outside both stylesheets:
+       - body carried a literal rgb(15,23,42) instead of var(--ink)
+       - <h3> had no size, so it rendered at the browser default 1.17em (18.72px)
+       - buttons/inputs had no size, rendering at the control default 13.33px.
+         Setting 1rem also stops iOS zooming the viewport on input focus (<16px). */
+    body { color: var(--ink); }
+    h1, h2, h3, h4, h5, h6 { color: var(--ink); }
+    h3 { font-size: 1.125rem; }
+    h4, h5, h6 { font-size: 1rem; }
+    button, input, select, textarea { font-size: 1rem; }
+    small { font-size: 0.875rem; }
+  </style>
+</body>
+
+</html>

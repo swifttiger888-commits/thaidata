@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
             --emerald: var(--c2);
             --navy: var(--bg);
             --ivory: #FAFAF9;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -46,15 +46,15 @@ body {
         /* Header */
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 36px; width: auto; display: inline-block; }
 
         /* Hero */
         .hero { padding: 80px 0; text-align: center; border-bottom: 1px solid var(--line); }
         .hero h1 { 
-            font-family: 'Instrument Serif', serif; 
+            font-family:'Archivo','Inter',system-ui,sans-serif; 
             font-size: clamp(2.5rem, 8vw, 4rem); 
-            font-weight: 400; 
+            font-weight: 800; 
             line-height: 1.1; 
             margin-bottom: 20px; 
             background: linear-gradient(to right, var(--c2), white); 
@@ -81,26 +81,25 @@ body {
         /* Main Content */
         section { padding: 80px 0; border-bottom: 1px solid var(--line); }
         .section-title { 
-            font-family: 'Instrument Serif', serif; 
+            font-family:'Archivo','Inter',system-ui,sans-serif; 
             font-size: 2.5rem; 
             color: var(--c2); 
             margin-bottom: 30px; 
-            display: flex; align-items: center; gap: 15px; 
-        }
+            display: flex; align-items: center; gap: 15px; font-weight: 800;}
 
         .text-block { 
-            background: rgba(255,255,255,0.02); 
+            background: #FFFFFF; 
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 40px; 
             border-radius: 16px; 
             border: 1px solid var(--line); 
         }
-        .text-block h3 { color: white; margin-bottom: 15px; font-size: 1.6rem; font-family: 'Instrument Serif', serif; font-weight: 400; }
+        .text-block h3 { color: var(--ink); margin-bottom: 15px; font-size: 1.6rem; font-family:'Archivo','Inter',system-ui,sans-serif; font-weight: 800; }
         .text-block p { margin-bottom: 20px; color: var(--ink4); }
         .text-block ul, .text-block ol { margin-left: 20px; margin-bottom: 20px; color: var(--ink4); }
         .text-block li { margin-bottom: 10px; }
-        .text-block li strong { color: white; }
+        .text-block li strong { color: var(--ink); }
 
         /* Code Snippet */
         .code-snippet { background: #011627; border-radius: 12px; padding: 25px; margin: 25px 0; border: 1px solid rgba(255,255,255,0.1); }
@@ -111,18 +110,18 @@ body {
 
         /* Action Plan */
         .checkbox-plan { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .checkbox-item { background: rgba(255,255,255,0.02); padding: 30px; border-radius: 12px; border: 1px solid var(--line); display: flex; gap: 20px; }
+        .checkbox-item { background: #FFFFFF; padding: 30px; border-radius: 12px; border: 1px solid var(--line); display: flex; gap: 20px; }
         .checkbox-item i { color: var(--c2); font-size: 1.5rem; }
-        .checkbox-item h4 { margin-bottom: 10px; font-family: 'Instrument Serif', serif; font-size: 1.4rem; font-weight: 400; }
+        .checkbox-item h4 { margin-bottom: 10px; font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.4rem; font-weight: 800; }
         .checkbox-item p { font-size: 0.95rem; color: var(--ink4); line-height: 1.5; }
 
         /* Footer */
         footer { padding: 80px 0; text-align: center; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
-        .footer-logo { font-size: 1.6rem; font-weight: 700; color: white; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; }
+        .footer-logo { font-size: 1.6rem; font-weight: 700; color: var(--ink); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; }
         .footer-logo i { color: var(--c2); }
         .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
         .footer-links a { color: var(--ink4); text-decoration: none; transition: color 0.2s; }
-        .footer-links a:hover { color: white; }
+        .footer-links a:hover { color: var(--ink); }
         .copyright { font-size: 0.85rem; opacity: 0.6; }
 
         @media (max-width: 768px) {

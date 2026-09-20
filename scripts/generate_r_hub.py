@@ -208,25 +208,25 @@ HTML = f"""<!DOCTYPE html>
     </script>
 
     <style>
-        :root {{ --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --card-bg: rgba(255,255,255,0.02); }}
+        :root {{ --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --card-bg: #FFFFFF; }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         img, svg, video {{ max-width: 100%; height: auto; }}
-        body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
+        body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
         .grain {{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }}
         .wrap {{ max-width: 960px; margin: 0 auto; padding: 0 20px; }}
         nav {{ background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }}
         .nav-bar {{ max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }}
-        .logo {{ display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.3rem; color: white; text-decoration: none; }}
+        .logo {{ display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.3rem; color: var(--ink); text-decoration: none; }}
         .logo-icon {{ height: 32px; width: auto; }}
-        .hamburger {{ display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }}
+        .hamburger {{ display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; }}
         .nav-links {{ display: flex; gap: 20px; align-items: center; }}
         .nav-links a {{ color: var(--ink4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }}
-        .nav-links a:hover {{ color: white; }}
+        .nav-links a:hover {{ color: var(--ink); }}
         @media(max-width:768px) {{ .hamburger {{ display: block; }} .nav-links {{ display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px 20px; gap: 14px; }} .nav-links.open {{ display: flex; }} }}
 
         .hero {{ padding: 60px 0 30px; text-align: center; }}
-        .hero h1 {{ font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }}
-        .hero h1 em {{ font-style: italic; color: var(--c2); }}
+        .hero h1 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }}
+        .hero h1 em {{ font-style: normal; color: var(--c2); }}
         .hero .sub {{ color: var(--ink4); font-size: 1rem; max-width: 560px; margin: 0 auto; line-height: 1.7; }}
 
         .intro {{ margin: 24px 0 32px; }}
@@ -234,31 +234,31 @@ HTML = f"""<!DOCTYPE html>
 
         .stats-row {{ display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }}
         .stat-pill {{ background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; text-align: center; min-width: 90px; }}
-        .stat-pill .num {{ font-family: 'Instrument Serif', serif; font-size: 1.5rem; color: var(--c2); }}
+        .stat-pill .num {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; color: var(--c2); font-weight: 800;}}
         .stat-pill .lbl {{ color: var(--ink4); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }}
 
         .section {{ margin: 36px 0; }}
-        .section h2 {{ font-family: 'Instrument Serif', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 4px; }}
-        .section h2 em {{ font-style: italic; color: var(--c2); }}
+        .section h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 4px; }}
+        .section h2 em {{ font-style: normal; color: var(--c2); }}
         .section .subtitle {{ color: var(--ink4); font-size: 0.88rem; margin-bottom: 14px; }}
 
         .browse-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }}
         .browse-card {{ display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; transition: border-color 0.2s; }}
         .browse-card:hover {{ border-color: var(--c2); }}
-        .browse-card .bc-name {{ font-weight: 500; font-size: 0.88rem; color: white; }}
-        .browse-card .bc-count {{ font-family: 'Instrument Serif', serif; font-size: 0.95rem; color: var(--c2); }}
+        .browse-card .bc-name {{ font-weight: 500; font-size: 0.88rem; color: var(--ink); }}
+        .browse-card .bc-count {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 0.95rem; color: var(--c2); font-weight: 800;}}
         .browse-card.chain .bc-count {{ font-size: 0.78rem; color: var(--ink3); }}
         .browse-card.london {{ border-left: 2px solid var(--c2); }}
 
         .rest-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }}
         .rest-link {{ display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; transition: border-color 0.2s; }}
         .rest-link:hover {{ border-color: var(--c2); }}
-        .rest-link .rl-name {{ font-weight: 500; font-size: 0.85rem; color: white; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
+        .rest-link .rl-name {{ font-weight: 500; font-size: 0.85rem; color: var(--ink); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
         .rest-link .rl-city {{ font-size: 0.75rem; color: var(--ink4); }}
         .rest-link .rl-type {{ font-size: 0.7rem; color: var(--ink3); padding: 2px 8px; border: 1px solid var(--line); border-radius: 50px; }}
 
         .info-card {{ background: var(--card-bg); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 16px 0; }}
-        .info-card h3 {{ font-size: 0.95rem; color: white; margin-bottom: 8px; }}
+        .info-card h3 {{ font-size: 0.95rem; color: var(--ink); margin-bottom: 8px; }}
         .info-card p {{ color: var(--ink3); font-size: 0.88rem; line-height: 1.7; }}
 
         .cta {{ text-align: center; padding: 30px 0 40px; }}
@@ -269,7 +269,7 @@ HTML = f"""<!DOCTYPE html>
 
         footer {{ text-align: center; padding: 30px 0 50px; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.8rem; margin-top: 40px; }}
         footer a {{ color: var(--ink4); text-decoration: none; }}
-        footer a:hover {{ color: white; }}
+        footer a:hover {{ color: var(--ink); }}
     </style>
 </head>
 <body>

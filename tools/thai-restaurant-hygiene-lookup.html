@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -33,24 +33,24 @@
       height: auto
     }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6;;
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6;;
       overflow-x: hidden
     }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .container { max-width: 700px; margin: 0 auto; padding: 60px 20px 80px; }
         header { text-align: center; margin-bottom: 40px; }
         .badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16,185,129,0.1); color: var(--c2); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(16,185,129,0.25); margin-bottom: 14px; }
-        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
-        h1 em { font-style: italic; color: var(--c2); }
+        h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
+        h1 em { font-style: normal; color: var(--c2); }
         header p { color: var(--ink4); font-size: 1rem; }
 
         .search-box { position: relative; margin-bottom: 30px; }
-        .search-box input { width: 100%; padding: 16px 20px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 14px; color: white; font-size: 1.05rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
+        .search-box input { width: 100%; padding: 16px 20px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; color: var(--ink); font-size: 1.05rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
         .search-box input:focus { border-color: var(--c2); }
         .search-box input::placeholder { color: var(--ink3); }
         .search-box button { position: absolute; right: 6px; top: 6px; padding: 10px 20px; background: var(--c2); color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 0.9rem; font-family: 'Inter', sans-serif; }
@@ -58,7 +58,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .search-box button:disabled { opacity: 0.5; cursor: not-allowed; }
 
         .results { }
-        .result-item { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-bottom: 10px; display: flex; align-items: center; gap: 18px; }
+        .result-item { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-bottom: 10px; display: flex; align-items: center; gap: 18px; }
         .rating-badge { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; flex-shrink: 0; }
         .rating-5 { background: rgba(16,185,129,0.15); color: var(--c2); }
         .rating-4 { background: rgba(16,185,129,0.1); color: var(--c2); }
@@ -69,7 +69,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .result-info { flex: 1; }
         .result-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
         .result-detail { color: var(--ink4); font-size: 0.8rem; }
-        .result-detail strong { color: white; }
+        .result-detail strong { color: var(--ink); }
         .result-city { color: var(--ink3); font-size: 0.75rem; margin-top: 4px; }
 
         .loading { text-align: center; padding: 40px; color: var(--ink4); }

@@ -22,13 +22,13 @@
 
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
             --emerald: var(--c2);
             --navy: var(--bg);
             --ivory: #FAFAF9;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -57,23 +57,23 @@ body {
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 36px; width: auto; display: inline-block; }
 
         .hero { margin-bottom: 60px; padding: 80px 0 0; }
         .eyebrow { display: block; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; color: var(--c2); letter-spacing: 0.15em; margin-bottom: 16px; }
-        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 24px; }
-        h1 em { font-style: italic; color: var(--c2); }
+        h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+        h1 em { font-style: normal; color: var(--c2); }
 
         .lead { font-size: 1.25rem; color: var(--ink4); font-weight: 400; margin-bottom: 40px; border-left: 4px solid var(--c2); padding-left: 24px; line-height: 1.6; }
 
         article section { margin-bottom: 40px; }
-        h2 { font-family: 'Instrument Serif', serif; font-size: 2.22rem; margin-bottom: 20px; margin-top: 40px; font-weight: 400; color: white; }
-        h3 { font-size: 1.35rem; margin-bottom: 15px; margin-top: 30px; font-weight: 700; color: white; }
+        h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.22rem; margin-bottom: 20px; margin-top: 40px; font-weight: 800; color: var(--ink); }
+        h3 { font-size: 1.35rem; margin-bottom: 15px; margin-top: 30px; font-weight: 700; color: var(--ink); }
         p { margin-bottom: 24px; color: var(--ink4); }
 
         .highlight-box { 
-            background: rgba(255,255,255,0.02); 
+            background: #FFFFFF; 
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--line); 
@@ -96,7 +96,7 @@ body {
             padding: 50px; border-radius: 24px; text-align: center; margin: 60px 0; 
             box-shadow: 0 40px 100px rgba(0,0,0,0.4);
         }
-        .cta-box h3 { font-family: 'Instrument Serif', serif; font-size: 2.2rem; margin-top: 0; color: white; }
+        .cta-box h3 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.2rem; margin-top: 0; color: var(--ink); font-weight: 800;}
         .cta-box p { color: var(--ink4); margin-bottom: 25px; }
 
         .btn { 
@@ -114,7 +114,7 @@ body {
         }
         .faq-item { margin-bottom: 30px; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
         .faq-item:last-child { border-bottom: none; }
-        .faq-q { font-weight: 700; font-size: 1.15rem; margin-bottom: 12px; color: white; }
+        .faq-q { font-weight: 700; font-size: 1.15rem; margin-bottom: 12px; color: var(--ink); }
         .faq-a { color: var(--ink4); }
 
         @media (max-width: 600px) {

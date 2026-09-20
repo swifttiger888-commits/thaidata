@@ -19,38 +19,38 @@
     <style>
         :root { --c1:
         :focus-visible {
-                    outline: 2px solid #10B981;
+                    outline: 2px solid #A3132B;
                     outline-offset: 2px;
                     border-radius: 4px;
                 }
                 :focus:not(:focus-visible) {
                     outline: none;
                 }
- #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+ #7E0E20; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img, svg, video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; overflow-x: hidden; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; overflow-x: hidden; }
         .wrap { max-width: 780px; margin: 0 auto; padding: 0 20px; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; }
         .nav-bar { max-width: 780px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo i { color: var(--c2); font-size: 1.5rem; }
         
         .article-header { padding: 50px 0 30px; text-align: center; }
         .article-header .date { font-size: 0.75rem; color: var(--c2); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
-        .article-header h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 400; line-height: 1.2; margin-bottom: 16px; }
-        .article-header h1 em { font-style: italic; color: var(--c2); }
+        .article-header h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+        .article-header h1 em { font-style: normal; color: var(--c2); }
         .article-header .subtitle { color: var(--ink4); font-size: 1.05rem; max-width: 550px; margin: 0 auto; }
         
-        .content h2 { font-family: 'Instrument Serif', serif; font-size: 1.6rem; font-weight: 400; margin: 40px 0 12px; }
-        .content h2 em { font-style: italic; color: var(--c2); }
+        .content h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.6rem; font-weight: 800; margin: 40px 0 12px; }
+        .content h2 em { font-style: normal; color: var(--c2); }
         .content p { color: var(--ink4); font-size: 0.98rem; line-height: 1.8; margin-bottom: 16px; }
-        .content strong { color: white; }
+        .content strong { color: var(--ink); }
         
         .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.88rem; }
         .data-table th { text-align: left; padding: 12px 14px; background: rgba(255,255,255,0.03); color: var(--ink4); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--line); }
-        .data-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--ink4); }
+        .data-table td { padding: 12px 14px; border-bottom: 1px solid #FFFFFF; color: var(--ink4); }
         .data-table .highlight { color: var(--c2); font-weight: 600; }
         .data-table .warn { color: #F59E0B; }
         .data-table .bad { color: #EF4444; }
@@ -59,7 +59,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .callout h3 { color: var(--c2); font-size: 0.95rem; margin-bottom: 8px; }
         .callout p { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin: 0; }
         
-        .sources { margin-top: 50px; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--line); }
+        .sources { margin-top: 50px; padding: 20px; background: #FFFFFF; border-radius: 12px; border: 1px dashed var(--line); }
         .sources h3 { color: var(--ink3); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
         .sources p { color: var(--ink4); font-size: 0.82rem; margin: 0; }
         

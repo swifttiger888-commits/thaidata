@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><!-- fa --></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --card-bg: rgba(255,255,255,0.02); --gold: #F59E0B; --purple: #A78BFA; --orange: #FB923C; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --card-bg: #FFFFFF; --gold: #B45309; --purple: #A78BFA; --orange: #FB923C; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -36,40 +36,40 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img,svg,video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; }
-        .hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        .hamburger { display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--ink4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-        .nav-links a:hover { color: white; }
+        .nav-links a:hover { color: var(--ink); }
         @media(max-width:768px) { .hamburger { display: block; } .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--dark); border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px 20px; gap: 14px; } .nav-links.open { display: flex; } }
 
         .hero { padding: 60px 0 30px; text-align: center; }
-        .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
-        .hero h1 em { font-style: italic; color: var(--c2); }
+        .hero h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
+        .hero h1 em { font-style: normal; color: var(--c2); }
         .hero .sub { color: var(--ink4); font-size: 1rem; max-width: 600px; margin: 0 auto; line-height: 1.7; }
 
         .section-header { margin: 42px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
-        .section-header h2 { font-family: 'Instrument Serif', serif; font-size: 1.3rem; font-weight: 400; color: white; display: flex; align-items: center; gap: 10px; }
+        .section-header h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--ink); display: flex; align-items: center; gap: 10px; }
         .section-header h2 i { color: var(--c2); font-size: 1.1rem; width: 24px; text-align: center; }
         .section-header .intro-text { color: var(--ink4); font-size: 0.88rem; margin-top: 6px; line-height: 1.6; }
         .section-header .intro-text a { color: var(--c2); text-decoration: underline; text-underline-offset: 2px; }
 
         .faq-list { list-style: none; padding: 0; }
         .faq-item { border-bottom: 1px solid var(--line); padding: 16px 0; }
-        .faq-q { font-weight: 600; font-size: 0.98rem; margin-bottom: 6px; color: white; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; line-height: 1.4; }
+        .faq-q { font-weight: 600; font-size: 0.98rem; margin-bottom: 6px; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; line-height: 1.4; }
         .faq-q i { color: var(--c2); font-size: 0.8rem; margin-top: 5px; flex-shrink: 0; transition: transform 0.2s; }
         .faq-q.open i { transform: rotate(180deg); }
         .faq-a { color: var(--ink3); font-size: 0.9rem; line-height: 1.7; display: none; padding-right: 24px; }
         .faq-a.open { display: block; }
         .faq-a a { color: var(--c2); text-decoration: underline; text-underline-offset: 2px; }
         .faq-a a:hover { opacity: 0.8; }
-        .faq-a strong { color: white; }
+        .faq-a strong { color: var(--ink); }
         .faq-a ul { margin: 8px 0 8px 18px; }
         .faq-a li { margin-bottom: 4px; }
 
@@ -80,17 +80,17 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 20px 0; }
         .link-card { display: block; background: var(--card-bg); border: 1px solid var(--line); border-radius: 14px; padding: 20px; text-decoration: none; transition: border-color 0.2s; }
         .link-card:hover { border-color: var(--c2); }
-        .link-card h3 { font-size: 0.9rem; color: white; margin-bottom: 4px; font-weight: 600; }
+        .link-card h3 { font-size: 0.9rem; color: var(--ink); margin-bottom: 4px; font-weight: 600; }
         .link-card p { font-size: 0.8rem; color: var(--ink4); line-height: 1.4; }
 
         .highlight-box { background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.15); border-radius: 14px; padding: 24px; margin: 20px 0; }
-        .highlight-box h3 { font-size: 0.95rem; color: white; margin-bottom: 8px; }
+        .highlight-box h3 { font-size: 0.95rem; color: var(--ink); margin-bottom: 8px; }
         .highlight-box p, .highlight-box li { color: var(--ink3); font-size: 0.88rem; line-height: 1.6; }
         .highlight-box ul { margin: 8px 0 8px 18px; }
         .highlight-box a { color: var(--c2); text-decoration: underline; }
 
         .data-note { background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.15); border-radius: 12px; padding: 16px 20px; margin: 20px 0; font-size: 0.85rem; color: var(--ink3); line-height: 1.6; }
-        .data-note strong { color: white; }
+        .data-note strong { color: var(--ink); }
 
         footer { border-top: 1px solid var(--line); padding: 30px 0 50px; text-align: center; font-size: 0.82rem; color: var(--ink4); margin-top: 30px; }
         footer a { color: var(--ink4); text-decoration: none; }

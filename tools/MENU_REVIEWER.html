@@ -56,10 +56,10 @@
     
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -77,7 +77,7 @@
                 html { overflow-x: hidden; }
 body { 
             background-color: var(--bg); 
-            color: white; 
+            color: var(--ink); 
             font-family: 'Inter', sans-serif; 
             line-height: 1.6; 
             -webkit-font-smoothing: antialiased;;
@@ -92,21 +92,21 @@ body {
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .container { max-width: 1000px; margin: 80px auto; padding: 0 20px; }
         
         header { text-align: center; margin-bottom: 60px; }
-        h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 20px; }
-        h1 em { font-style: italic; color: var(--c2); }
+        h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+        h1 em { font-style: normal; color: var(--c2); }
         .subtitle { color: var(--ink4); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
 
         .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         @media (max-width: 850px) { .tool-grid { grid-template-columns: 1fr; } }
 
         .card { 
-            background: rgba(255,255,255,0.02); 
+            background: #FFFFFF; 
             border: 1px solid var(--line); 
             border-radius: 20px; 
             padding: 40px; 
@@ -120,7 +120,7 @@ body {
         textarea {
             width: 100%; height: 200px; background: rgba(0,0,0,0.2); 
             border: 1px solid var(--line); border-radius: 12px; 
-            padding: 20px; color: white; font-family: inherit; font-size: 1.05rem;
+            padding: 20px; color: var(--ink); font-family: inherit; font-size: 1.05rem;
             resize: none; transition: all 0.2s;
         }
         textarea:focus { outline: none; border-color: var(--c2); background: rgba(0,0,0,0.4); }
@@ -163,7 +163,7 @@ body {
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .placeholder-text { color: var(--ink3); font-style: italic; }
+        .placeholder-text { color: var(--ink3); font-style: normal; }
 
         footer { text-align: center; margin-top: 100px; padding: 40px; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
     </style>
@@ -208,7 +208,7 @@ body {
 
                 <div class="loading-state" id="loadingState">
                     <div class="pulse"></div>
-                    <h3 style="font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 10px;">Analyzing Sensory Depth</h3>
+                    <h3 style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; margin-bottom: 10px;">Analyzing Sensory Depth</h3>
                     <p style="color: var(--ink4);">Simulating AI Answer Engine discovery...</p>
                 </div>
 

@@ -74,7 +74,7 @@
   <style>
         img, svg, video, canvas { max-width: 100%; height: auto; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -98,7 +98,7 @@
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      color: #0F172A;
+      color: #1A1614;
       background: #FAFAF9;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -111,13 +111,13 @@
     }
 
     :root {
-      --c1: #0A7A6F;
-      --c2: #10B981;
+      --c1: #7E0E20;
+      --c2: #A3132B;
       --c3: #065F56;
-      --dark: #0C1220;
+      --dark: #FBF7F0;
       --dark2: #131B2E;
       --dark3: #1A253D;
-      --ink: #0F172A;
+      --ink: #1A1614;
       --ink2: #334155;
       --ink3: #64748B;
       --ink4: #94A3B8;
@@ -316,7 +316,7 @@
     }
 
     .page-hero h1 {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Archivo', serif;
       font-weight: 400;
       font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.1;
@@ -325,7 +325,7 @@
     }
 
     .page-hero h1 em {
-      font-style: italic;
+      font-style: normal;
       color: var(--c2)
     }
 
@@ -357,7 +357,7 @@
     }
 
     .section-title {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Archivo', serif;
       font-weight: 400;
       font-size: clamp(1.7rem, 3vw, 2.2rem);
       line-height: 1.15;
@@ -366,7 +366,7 @@
     }
 
     .section-title em {
-      font-style: italic;
+      font-style: normal;
       color: var(--c1)
     }
 
@@ -605,7 +605,7 @@
     }
 
     .preview-box h3 {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Archivo', serif;
       font-size: 1.2rem;
       color: white;
       margin-bottom: 6px
@@ -1167,7 +1167,7 @@
             </svg>
             Request Sent!
           `;
-          showError('Success! We will review and email your personalised report shortly.', '#0A7A6F');
+          showError('Success! We will review and email your personalised report shortly.', '#7E0E20');
         } else {
           showError('Something went wrong — please try again.');
           btn.textContent = 'Get my free beta report';

@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -36,50 +36,50 @@
       height: auto
     }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
       overflow-x: hidden
     }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 36px; width: auto; display: inline-block; }
         
         .hero { padding: 60px 0 40px; text-align: center; }
-        .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; }
-        .hero h1 em { font-style: italic; color: var(--c2); }
+        .hero h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 em { font-style: normal; color: var(--c2); }
         .hero .sub { color: var(--ink4); font-size: 1.1rem; }
         
         .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 30px 0; }
         @media (max-width: 600px) { .stat-row { grid-template-columns: 1fr 1fr; } }
-        .stat { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; text-align: center; }
-        .stat .num { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--c2); line-height: 1.2; }
+        .stat { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 22px; text-align: center; }
+        .stat .num { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; color: var(--c2); line-height: 1.2; font-weight: 800;}
         .stat .lbl { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; }
         
-        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
-        .card h2 { font-family: 'Instrument Serif', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 16px; }
-        .card h2 em { font-style: italic; color: var(--c2); }
+        .card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
+        .card h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
+        .card h2 em { font-style: normal; color: var(--c2); }
         .card p { color: var(--ink4); font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
         
         .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
         @media (max-width: 500px) { .comparison { grid-template-columns: 1fr; } }
-        .comp-item { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+        .comp-item { background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
         .comp-item .label { color: var(--ink4); font-size: 0.8rem; margin-bottom: 6px; }
-        .comp-item .value { font-family: 'Instrument Serif', serif; font-size: 1.5rem; }
+        .comp-item .value { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800;}
         .comp-item .value.good { color: var(--c2); }
         .comp-item .value.warn { color: #F59E0B; }
         .comp-item .sub { color: var(--ink3); font-size: 0.8rem; margin-top: 4px; }
         
         .cta { text-align: center; padding: 40px 0 60px; }
-        .cta a { display: inline-block; background: #10B981; color: #0C1220; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+        .cta a { display: inline-block; background: #A3132B; color: #FFFFFF; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
         .cta a:hover { background: #0D9F6E; }
         .cta .secondary { background: transparent; border: 1px solid var(--line); margin-left: 12px; }
         .cta .secondary:hover { border-color: var(--c2); }
         
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; }
         footer a { color: var(--ink4); text-decoration: none; }
-        footer a:hover { color: white; }
+        footer a:hover { color: var(--ink); }
     </style>
 
 
@@ -96,7 +96,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
     <div class="wrap">
         <div class="hero">
             <h1>Thai Restaurants in<br><em>Swansea</em> — 2026</h1>
-<div class="city-stats" style="background:white;border-radius:12px;padding:20px 24px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><h3 style="margin:0 0 12px;font-size:1.1rem;color:#0C1220;">📊 Market Snapshot</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;font-size:0.9rem;"><div style="color:#0C1220;"><strong>Thai businesses:</strong> <span style="color:#10B981;">15 (13 dine-in, 2 takeaway)</span></div><div style="color:#0C1220;"><strong>Population:</strong> <span style="color:#10B981;">247,000</span></div><div style="color:#0C1220;"><strong>Avg Hygiene Rating:</strong> <span style="color:#10B981;">★★★★ 3.9/5 (FSA data)</span></div><div style="color:#0C1220;"><strong>UK Share:</strong> <span style="color:#10B981;">0.9% of 1268</span></div><div style="color:#0C1220;"><strong>Market:</strong> Competitive</div></div></div>
+<div class="city-stats" style="background:white;border-radius:12px;padding:20px 24px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><h3 style="margin:0 0 12px;font-size:1.1rem;color: #FFFFFF;">📊 Market Snapshot</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;font-size:0.9rem;"><div style="color: #FFFFFF;"><strong>Thai businesses:</strong> <span style="color:#A3132B;">15 (13 dine-in, 2 takeaway)</span></div><div style="color: #FFFFFF;"><strong>Population:</strong> <span style="color:#A3132B;">247,000</span></div><div style="color: #FFFFFF;"><strong>Avg Hygiene Rating:</strong> <span style="color:#A3132B;">★★★★ 3.9/5 (FSA data)</span></div><div style="color: #FFFFFF;"><strong>UK Share:</strong> <span style="color:#A3132B;">0.9% of 1268</span></div><div style="color: #FFFFFF;"><strong>Market:</strong> Competitive</div></div></div>
 
             <p class="sub">15 FSA-registered Thai businesses · ★4.0 average hygiene rating · 0.9% of UK total</p>
             
@@ -494,7 +494,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                     var nameSpan = link.querySelector('span');
                     if (nameSpan && claimedNames[nameSpan.textContent.trim().toLowerCase()]) {
                         var badge = document.createElement('span');
-                        badge.style.cssText = 'font-size:0.62rem;padding:1px 6px;border-radius:8px;background:rgba(16,185,129,0.2);color:#10B981;margin-left:6px;font-weight:600;white-space:nowrap;';
+                        badge.style.cssText = 'font-size:0.62rem;padding:1px 6px;border-radius:8px;background:rgba(16,185,129,0.2);color:#A3132B;margin-left:6px;font-weight:600;white-space:nowrap;';
                         badge.textContent = 'Claimed \u2713';
                         nameSpan.appendChild(badge);
                     }
@@ -546,23 +546,23 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 <!-- AUTO:faq -->
 <div class="card">
   <h2>Frequently Asked <em>Questions</em></h2>
-<details style="margin:8px 0;padding:12px 16px;background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:10px;">
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
   <summary style="cursor:pointer;font-weight:600;color:white;">How many Thai restaurants are in Swansea?</summary>
   <p style="margin-top:8px;color:var(--ink4);">There are 15 FSA-registered Thai businesses in Swansea — 13 dine-in restaurants and 2 takeaways.</p>
 </details>
-<details style="margin:8px 0;padding:12px 16px;background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:10px;">
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
   <summary style="cursor:pointer;font-weight:600;color:white;">What is the top-rated Thai restaurant in Swansea?</summary>
   <p style="margin-top:8px;color:var(--ink4);">The highest-rated Thai restaurants in Swansea include Mai Thai, Nok Nok Authentic Thai Food, Thai Bach Express, all holding 5/5 FSA hygiene stars.</p>
 </details>
-<details style="margin:8px 0;padding:12px 16px;background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:10px;">
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
   <summary style="cursor:pointer;font-weight:600;color:white;">What is the average FSA hygiene rating in Swansea?</summary>
   <p style="margin-top:8px;color:var(--ink4);">The average FSA hygiene rating across 15 Thai businesses in Swansea is 3.7/5 stars.</p>
 </details>
-<details style="margin:8px 0;padding:12px 16px;background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:10px;">
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
   <summary style="cursor:pointer;font-weight:600;color:white;">Which Thai chains operate in Swansea?</summary>
   <p style="margin-top:8px;color:var(--ink4);">Major Thai chains present in Swansea include Mango Tree, Thai Express. The remaining 13 businesses are independent restaurants and takeaways.</p>
 </details>
-<details style="margin:8px 0;padding:12px 16px;background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:10px;">
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
   <summary style="cursor:pointer;font-weight:600;color:white;">Are there more dine-in Thai restaurants or takeaways in Swansea?</summary>
   <p style="margin-top:8px;color:var(--ink4);">There are 13 dine-in restaurants and 2 takeaways in Swansea, which means 87% of Thai businesses offer dine-in service.</p>
 </details>

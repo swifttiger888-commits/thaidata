@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -30,50 +30,50 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img,svg,video, canvas { max-width: 100%; height: auto; }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.025; pointer-events: none; z-index: 999; }
         .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
         .hero { padding: 60px 0 40px; text-align: center; }
-        .hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; }
-        .hero h1 em { font-style: italic; color: var(--c2); }
+        .hero h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 em { font-style: normal; color: var(--c2); }
         .hero .sub { color: var(--ink4); font-size: 1.05rem; max-width: 650px; margin: 0 auto; line-height: 1.7; }
         .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 30px 0; }
         @media (max-width: 600px) { .stat-row { grid-template-columns: 1fr 1fr; } }
-        .stat { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 22px; text-align: center; }
-        .stat .num { font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--c2); line-height: 1.2; }
+        .stat { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 22px; text-align: center; }
+        .stat .num { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; color: var(--c2); line-height: 1.2; font-weight: 800;}
         .stat .lbl { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; }
-        .card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
-        .card h2 { font-family: 'Instrument Serif', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 16px; }
-        .card h2 em { font-style: italic; color: var(--c2); }
+        .card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
+        .card h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; }
+        .card h2 em { font-style: normal; color: var(--c2); }
         .card p { color: var(--ink4); font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
         .resto-list { display: flex; flex-direction: column; gap: 8px; }
         .resto-link { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
         .resto-link:hover { border-color: var(--c2); background: rgba(16,185,129,0.05); }
         .resto-info { flex: 1; min-width: 0; }
-        .resto-name { display: block; font-weight: 600; font-size: 0.95rem; color: white; margin-bottom: 2px; }
+        .resto-name { display: block; font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 2px; }
         .resto-addr { display: block; font-size: 0.8rem; color: var(--ink4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .resto-rating { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; white-space: nowrap; }
         .resto-rating-num { color: var(--ink3); font-size: 0.8rem; }
         .cta { text-align: center; padding: 30px 0 50px; }
-        .cta a { display: inline-block; background: #10B981; color: #0C1220; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: background 0.2s; }
+        .cta a { display: inline-block; background: #A3132B; color: #FFFFFF; padding: 14px 30px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: background 0.2s; }
         .cta a:hover { background: #0D9F6E; }
         .cta .secondary { background: transparent; border: 1px solid var(--line); margin-left: 12px; }
         .cta .secondary:hover { border-color: var(--c2); background: rgba(255,255,255,0.03); }
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; }
         footer a { color: var(--ink4); text-decoration: none; }
-        footer a:hover { color: white; }
+        footer a:hover { color: var(--ink); }
         .top-badge { display: inline-block; background: var(--c2); color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle; }
         .cuisine-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
         .cuisine-tag { background: rgba(16,185,129,0.1); color: var(--c2); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; border: 1px solid rgba(16,185,129,0.2); }
         .highlight-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
         @media (max-width: 500px) { .highlight-row { grid-template-columns: 1fr; } }
-        .highlight-item { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+        .highlight-item { background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
         .highlight-item .label { color: var(--ink4); font-size: 0.8rem; margin-bottom: 4px; }
-        .highlight-item .value { font-size: 1.3rem; font-weight: 600; font-family: 'Instrument Serif', serif; }
+        .highlight-item .value { font-size: 1.3rem; font-weight: 800; font-family:'Archivo','Inter',system-ui,sans-serif; }
         .highlight-item .value.good { color: var(--c2); }
         .highlight-item .value.warn { color: #F59E0B; }
     </style>

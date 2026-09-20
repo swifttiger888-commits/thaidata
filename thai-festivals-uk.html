@@ -31,10 +31,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B; --pink: #EC4899;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B; --pink: #EC4899;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -49,7 +49,7 @@
       height: auto
     }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
       overflow-x: hidden
     }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
@@ -57,26 +57,26 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
         .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
-        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 20px; position: relative; }
-        .header-section h1 em { font-style: italic; color: var(--c2); }
+        .header-section h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 7vw, 3.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; position: relative; }
+        .header-section h1 em { font-style: normal; color: var(--c2); }
         .header-section p { color: var(--ink4); font-size: 1.15rem; max-width: 650px; margin: 0 auto; position: relative; }
 
         .section { padding: 30px 0 60px; }
-        .section h2 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; margin-bottom: 12px; }
-        .section h2 em { font-style: italic; color: var(--c2); }
+        .section h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+        .section h2 em { font-style: normal; color: var(--c2); }
         .section h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; }
 
         /* Event Cards */
-        .event-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 24px 28px; margin: 14px 0; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; }
+        .event-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 24px 28px; margin: 14px 0; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; }
         .event-card:hover { border-color: var(--c2); }
         .event-date { flex-shrink: 0; width: 80px; text-align: center; }
         .event-date .month { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--c2); letter-spacing: 0.1em; }
-        .event-date .day { font-family: 'Instrument Serif', serif; font-size: 2.4rem; line-height: 1; color: white; }
+        .event-date .day { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.4rem; line-height: 1; color: var(--ink); font-weight: 800;}
         .event-info { flex: 1; }
         .event-info .ev-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
         .event-info .ev-location { color: var(--ink3); font-size: 0.85rem; margin-bottom: 4px; }
@@ -96,11 +96,11 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .ev-ended { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; background: rgba(148,163,184,0.14); color: var(--ink3); margin-left: 8px; vertical-align: 2px; }
 
         /* Month headers */
-        .month-header { font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: var(--c2); padding: 30px 0 10px; border-top: 1px solid var(--line); margin-top: 10px; }
+        .month-header { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.8rem; color: var(--c2); padding: 30px 0 10px; border-top: 1px solid var(--line); margin-top: 10px; font-weight: 800;}
 
         /* Temple Directory */
         .temple-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; margin-top: 20px; }
-        .temple-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+        .temple-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
         .temple-card .t-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
         .temple-card .t-name .thai { color: var(--c2); font-weight: 400; font-size: 0.85rem; display: block; margin-top: 2px; }
         .temple-card .t-loc { color: var(--ink4); font-size: 0.82rem; }
@@ -111,11 +111,11 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .cta-box a { display: inline-block; background: var(--c2); color: white; padding: 16px 36px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1rem; transition: background 0.2s; }
         .cta-box a:hover { background: var(--c1); }
 
-        .source-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--line); }
+        .source-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: #FFFFFF; border-radius: 12px; border: 1px dashed var(--line); }
 
         footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
         footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
-        footer a:hover { color: white; }
+        footer a:hover { color: var(--ink); }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 2rem; }
@@ -482,7 +482,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
     <!-- CTA -->
     <div class="cta-box">
         <div class="wrap">
-            <h2 style="font-family:'Instrument Serif',serif; font-size:2rem; margin-bottom:12px;">Running a Thai restaurant?</h2>
+            <h2 style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size:2rem; margin-bottom:12px;">Running a Thai restaurant?</h2>
             <p style="color:var(--ink4); margin-bottom:30px;">Festival dates are prime marketing opportunities. Plan your Songkran and Loy Krathong promotions with our free tools.</p>
             <a href="index.html"><i class="fas fa-calculator" style="margin-right:8px;"></i>Free Restaurant Tools</a>
         </div>

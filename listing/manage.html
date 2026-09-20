@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root { --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #7A8BA0; --ink4: #94A3B8; --line: rgba(255,255,255,0.18); --bg: #0C1220; --gold: #F59E0B; --red: #EF4444; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A8BA0; --ink4: #9C918C; --line: rgba(255,255,255,0.18); --bg: #FBF7F0; --gold: #B45309; --red: #EF4444; }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -27,7 +27,7 @@
       height: auto
     }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
       overflow-x: hidden
     }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
@@ -35,24 +35,24 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 36px; width: auto; display: inline-block; }
 
         section { padding: 20px 0; }
 
         .card { background: rgba(255,255,255,0.06); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
-        .card h2 { font-family: 'Instrument Serif', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 16px; }
-        .card h2 em { font-style: italic; color: var(--c2); }
+        .card h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
+        .card h2 em { font-style: normal; color: var(--c2); }
         .card label { display: block; color: var(--ink3); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 5px; margin-top: 14px; }
         .card label:first-of-type { margin-top: 0; }
         .card input, .card select, .card textarea {
-            width: 100%; padding: 11px 14px; background: rgba(255,255,255,0.04);
-            border: 1px solid var(--line); border-radius: 10px; color: white;
+            width: 100%; padding: 11px 14px; background: #FFFFFF;
+            border: 1px solid var(--line); border-radius: 10px; color: var(--ink);
             font-size: 0.9rem; font-family: inherit;
             transition: border-color 0.2s;
         }
         .card input[type="file"]::file-selector-button {
-            background: transparent; border: 1px solid var(--line); color: white;
+            background: transparent; border: 1px solid var(--line); color: var(--ink);
             padding: 6px 14px; border-radius: 8px; font-size: 0.82rem; font-family: inherit;
             cursor: pointer; margin-right: 10px; transition: all 0.15s;
         }
@@ -67,22 +67,22 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         @media (max-width: 500px) { .row { grid-template-columns: 1fr; } }
 
         .checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
-        .checkbox-pill { padding: 8px 14px; border: 1px solid var(--line); border-radius: 20px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; user-select: none; color: white; }
+        .checkbox-pill { padding: 8px 14px; border: 1px solid var(--line); border-radius: 20px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; user-select: none; color: var(--ink); }
         .checkbox-pill:hover { border-color: var(--ink4); }
         .checkbox-pill.selected { border-color: var(--c2); background: rgba(16,185,129,0.15); color: var(--c2); }
         .autocomplete-wrap { position: relative; }
         .autocomplete-dropdown { position: absolute; top: 100%; left: 0; right: 0; z-index: 50; max-height: 280px; overflow-y: auto; background: #111827; border: 1px solid var(--line); border-radius: 10px; margin-top: 2px; display: none; }
-        .autocomplete-dropdown .ac-item { padding: 10px 14px; cursor: pointer; font-size: 0.85rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .autocomplete-dropdown .ac-item { padding: 10px 14px; cursor: pointer; font-size: 0.85rem; color: var(--ink); border-bottom: 1px solid rgba(255,255,255,0.05); }
         .autocomplete-dropdown .ac-item:last-child { border-bottom: none; }
         .autocomplete-dropdown .ac-item:hover { background: rgba(16,185,129,0.12); }
         .autocomplete-dropdown .ac-item .ac-name { font-weight: 500; }
         .autocomplete-dropdown .ac-item .ac-meta { color: var(--ink4); font-size: 0.75rem; margin-top: 1px; }
         .autocomplete-dropdown .ac-empty { padding: 14px; color: var(--ink4); font-size: 0.82rem; text-align: center; }
 
-        .btn { display: inline-block; background: #10B981; color: #0C1220; padding: 13px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn { display: inline-block; background: #A3132B; color: #FBF7F0; padding: 13px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; }
         .btn:hover { background: var(--c1); color: white; }
         .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .btn-secondary { background: transparent; border: 1px solid var(--line); color: white; }
+        .btn-secondary { background: transparent; border: 1px solid var(--line); color: var(--ink); }
         .btn-secondary:hover { border-color: var(--c2); background: rgba(16,185,129,0.08); color: var(--c2); }
 
         .toast { position: fixed; top: 20px; right: 20px; padding: 14px 22px; border-radius: 12px; font-weight: 600; z-index: 1000; animation: slideIn 0.3s ease; }
@@ -100,7 +100,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
         footer a { color: var(--ink4); text-decoration: none; margin: 0 10px; }
-        footer a:hover { color: white; }
+        footer a:hover { color: var(--ink); }
     </style>
 </head>
 <body>
@@ -226,7 +226,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
                         .hours-closed { grid-column:2 / -1; margin-top:-4px; }
                     }
                     .hours-day { font-weight:600; color:var(--ink3); font-size:0.85rem; }
-                    .hours-time { width:100%; padding:8px 10px; background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:8px; color:white; font-size:0.85rem; font-family:inherit; min-width:0; }
+                    .hours-time { width:100%; padding:8px 10px; background:#FFFFFF; border:1px solid var(--line); border-radius:8px; color: var(--ink); font-size:0.85rem; font-family:inherit; min-width:0; }
                     .hours-time:focus { outline:none; border-color:var(--c2); }
                     .hours-time:disabled { opacity:0.3; }
                     .hours-to { color:var(--ink4); font-size:0.8rem; text-align:center; }
@@ -323,7 +323,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         for (var i = 0; i < menuItems.length; i++) {
             var item = menuItems[i];
             var row = document.createElement('div');
-            row.style.cssText = 'background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px;';
+            row.style.cssText = 'background:#FFFFFF;border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px;';
 
             var catLabel = document.createElement('label');
             catLabel.textContent = 'Category';
@@ -698,7 +698,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         container.innerHTML = currentPhotos.map((url, i) => 
             '<div style="position:relative;width:100px;height:100px;border-radius:8px;overflow:hidden;border:1px solid var(--line);flex-shrink:0;">' +
             '<img src="' + url + '" alt="Photo ' + (i+1) + '" style="width:100%;height:100%;object-fit:cover;" loading="lazy">' +
-            '<button onclick="removePhoto(' + i + ')" style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:white;border:none;border-radius:50%;width:22px;height:22px;cursor:pointer;font-size:12px;line-height:22px;text-align:center;">×</button>' +
+            '<button onclick="removePhoto(' + i + ')" style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color: var(--ink);border:none;border-radius:50%;width:22px;height:22px;cursor:pointer;font-size:12px;line-height:22px;text-align:center;">×</button>' +
             '</div>'
         ).join('');
     }

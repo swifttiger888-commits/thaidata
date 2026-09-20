@@ -19,10 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --gold: #F59E0B;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -37,7 +37,7 @@
       height: auto
     }
                 html { overflow-x: hidden; }
-body { font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased;;
       overflow-x: hidden
     }
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
@@ -45,21 +45,21 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
         .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
-        .header-section h1 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 7vw, 3.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 20px; position: relative; }
-        .header-section h1 em { font-style: italic; color: var(--gold); }
+        .header-section h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 7vw, 3.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; position: relative; }
+        .header-section h1 em { font-style: normal; color: var(--gold); }
         .header-section p { color: var(--ink4); font-size: 1.15rem; max-width: 650px; margin: 0 auto; position: relative; }
 
         .section { padding: 30px 0 60px; }
-        .section h2 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; margin-bottom: 12px; }
-        .section h2 em { font-style: italic; color: var(--gold); }
+        .section h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+        .section h2 em { font-style: normal; color: var(--gold); }
         .section p, .section li { color: var(--ink4); font-size: 0.95rem; line-height: 1.8; margin-bottom: 12px; }
 
-        .event-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 24px 28px; margin: 14px 0; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; }
+        .event-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 24px 28px; margin: 14px 0; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; }
         .event-card:hover { border-color: var(--gold); }
         .event-card .ev-city { flex-shrink: 0; width: 110px; }
         .event-card .ev-city .city-name { font-weight: 700; color: var(--gold); font-size: 0.95rem; }
@@ -75,11 +75,11 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
         .cta-box a { display: inline-block; background: var(--c2); color: white; padding: 16px 36px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1rem; transition: background 0.2s; }
         .cta-box a:hover { background: var(--c1); }
 
-        .source-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px dashed var(--line); }
+        .source-note { font-size: 0.85rem; color: var(--ink4); margin-top: 30px; line-height: 1.6; padding: 20px; background: #FFFFFF; border-radius: 12px; border: 1px dashed var(--line); }
 
         footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
         footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
-        footer a:hover { color: white; }
+        footer a:hover { color: var(--ink); }
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 2rem; }
@@ -198,7 +198,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: white; background: va
 
     <div class="cta-box">
         <div class="wrap">
-            <h2 style="font-family:'Instrument Serif',serif; font-size:2rem; margin-bottom:12px;">More Thai events near you</h2>
+            <h2 style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size:2rem; margin-bottom:12px;">More Thai events near you</h2>
             <p style="color:var(--ink4); margin-bottom:30px;">Loy Krathong, Songkran, food festivals — every Thai event in the UK, one calendar.</p>
             <a href="thai-festivals-uk.html"><i class="fas fa-calendar-alt" style="margin-right:8px;"></i>Full Festival Calendar</a>
         </div>

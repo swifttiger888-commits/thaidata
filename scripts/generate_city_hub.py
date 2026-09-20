@@ -172,34 +172,34 @@ HTML = f"""<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <style>
-        :root {{ --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220; --card-bg: rgba(255,255,255,0.02); }}
+        :root {{ --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --card-bg: #FFFFFF; }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         img, svg, video {{ max-width: 100%; height: auto; }}
-        body {{ font-family: 'Inter', system-ui, sans-serif; color: white; background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
+        body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }}
         .grain {{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }}
         .wrap {{ max-width: 1100px; margin: 0 auto; padding: 0 20px; }}
         nav {{ background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }}
         .nav-bar {{ max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }}
-        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }}
+        .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }}
         .logo-icon {{ height: 36px; width: auto; }}
 
         .hero {{ padding: 60px 0 30px; text-align: center; }}
-        .hero h1 {{ font-family: 'Instrument Serif', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.15; margin-bottom: 14px; }}
-        .hero h1 em {{ font-style: italic; color: var(--c2); }}
+        .hero h1 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }}
+        .hero h1 em {{ font-style: normal; color: var(--c2); }}
         .hero .sub {{ color: var(--ink4); font-size: 1rem; max-width: 640px; margin: 0 auto; line-height: 1.7; }}
 
         .intro {{ margin: 30px 0; }}
         .intro p {{ color: var(--ink3); line-height: 1.8; margin-bottom: 14px; font-size: 0.95rem; }}
 
         .section {{ margin: 40px 0; }}
-        .section h2 {{ font-family: 'Instrument Serif', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 4px; }}
-        .section h2 em {{ font-style: italic; color: var(--c2); }}
+        .section h2 {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }}
+        .section h2 em {{ font-style: normal; color: var(--c2); }}
         .section .subtitle {{ color: var(--ink4); font-size: 0.9rem; margin-bottom: 20px; }}
 
         /* Stats bar */
         .stats-bar {{ display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }}
         .stat-pill {{ background: var(--card-bg); border: 1px solid var(--line); border-radius: 12px; padding: 16px 24px; text-align: center; min-width: 110px; }}
-        .stat-pill .num {{ font-family: 'Instrument Serif', serif; font-size: 1.6rem; color: var(--c2); }}
+        .stat-pill .num {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.6rem; color: var(--c2); font-weight: 800;}}
         .stat-pill .lbl {{ color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }}
 
         /* City directory */
@@ -207,10 +207,10 @@ HTML = f"""<!DOCTYPE html>
         .directory-header span {{ text-align: center; }}
         .directory-header span:first-child {{ text-align: left; }}
 
-        .city-row {{ display: grid; grid-template-columns: 3fr 1fr 1fr 2fr 1fr; gap: 8px; align-items: center; padding: 12px 16px; text-decoration: none; color: white; border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }}
+        .city-row {{ display: grid; grid-template-columns: 3fr 1fr 1fr 2fr 1fr; gap: 8px; align-items: center; padding: 12px 16px; text-decoration: none; color: var(--ink); border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }}
         .city-row:hover {{ background: rgba(255,255,255,0.04); }}
         .city-name {{ font-weight: 500; font-size: 0.9rem; }}
-        .city-count {{ font-family: 'Instrument Serif', serif; font-size: 1.1rem; color: var(--c2); text-align: center; }}
+        .city-count {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.1rem; color: var(--c2); text-align: center; font-weight: 800;}}
         .city-rating {{ font-size: 0.85rem; color: var(--c2); text-align: center; }}
         .city-type {{ font-size: 0.8rem; color: var(--ink3); text-align: center; }}
         .city-five {{ font-size: 0.85rem; color: #FBBF24; text-align: center; }}
@@ -219,7 +219,7 @@ HTML = f"""<!DOCTYPE html>
         /* Highlight boxes */
         .highlight-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }}
         .highlight-card {{ background: var(--card-bg); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }}
-        .highlight-card h3 {{ font-size: 0.9rem; color: white; margin-bottom: 8px; }}
+        .highlight-card h3 {{ font-size: 0.9rem; color: var(--ink); margin-bottom: 8px; }}
         .highlight-card p {{ font-size: 0.85rem; color: var(--ink3); line-height: 1.6; }}
         .highlight-card strong {{ color: var(--c2); }}
 
@@ -231,7 +231,7 @@ HTML = f"""<!DOCTYPE html>
 
         footer {{ text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; }}
         footer a {{ color: var(--ink4); text-decoration: none; }}
-        footer a:hover {{ color: white; }}
+        footer a:hover {{ color: var(--ink); }}
     </style>
 </head>
 <body>
@@ -298,7 +298,7 @@ HTML = f"""<!DOCTYPE html>
 
         <!-- Featured directory -->
         <div class="featured-section">
-            <h2 style="font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:400;margin-bottom:16px;">City <em>Directory</em></h2>
+            <h2 style="font-family:'Archivo','Inter',system-ui,sans-serif;font-size:1.4rem;font-weight:400;margin-bottom:16px;">City <em>Directory</em></h2>
             <p style="color:var(--ink4);font-size:0.85rem;margin-bottom:16px;">Each row links to the full city guide with neighbourhood breakdowns, top-rated picks, chain data, and FAQ.</p>
             <div class="directory-header">
                 <span>City</span>

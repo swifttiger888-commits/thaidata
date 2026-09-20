@@ -60,11 +60,11 @@
     
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
-            --danger: #EF4444; --warning: #F59E0B; --success: #10B981;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
+            --danger: #EF4444; --warning: #F59E0B; --success: #A3132B;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -81,7 +81,7 @@
     }
                 html { overflow-x: hidden; }
 body { 
-            background-color: var(--bg); color: white; font-family: 'Inter', sans-serif; line-height: 1.6; 
+            background-color: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; 
             -webkit-font-smoothing: antialiased;;
       overflow-x: hidden
     }
@@ -89,7 +89,7 @@ body {
         .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
         .nav-back { color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none; }
         @media (max-width: 480px) { .nav-back { display: none; } .logo { font-size: 1.1rem; } }
@@ -97,18 +97,18 @@ body {
         .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
         
         header { margin-bottom: 40px; }
-        h1 { font-family: 'Instrument Serif', serif; font-size: 3rem; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
-        h1 em { font-style: italic; color: var(--c2); }
+        h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
+        h1 em { font-style: normal; color: var(--c2); }
         .p-badge { display: inline-block; padding: 4px 12px; border-radius: 100px; background: rgba(16, 185, 129, 0.1); color: var(--c2); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border: 1px solid rgba(16, 185, 129, 0.2); }
 
         .dashboard-layout { display: grid; grid-template-columns: 350px 1fr; gap: 30px; }
         @media (max-width: 1000px) { .dashboard-layout { grid-template-columns: 1fr; } }
 
         /* Left Panel - Inputs */
-        .controls-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 20px; padding: 30px; height: fit-content; }
+        .controls-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 20px; padding: 30px; height: fit-content; }
         .input-group { margin-bottom: 25px; }
         label { display: flex; justify-content: space-between; color: var(--ink4); font-size: 0.85rem; margin-bottom: 15px; }
-        label span { color: white; font-weight: 600; }
+        label span { color: var(--ink); font-weight: 600; }
         
         input[type="range"] { 
             width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 5px; appearance: none;
@@ -126,7 +126,7 @@ body {
         .dial-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
         .dial-bg { fill: none; stroke: rgba(255,255,255,0.05); stroke-width: 12; }
         .dial-fill { fill: none; stroke: var(--c2); stroke-width: 12; stroke-dasharray: 440; stroke-dashoffset: 440; transition: stroke-dashoffset 1s ease; stroke-linecap: round; }
-        .score-text { position: absolute; font-size: 2.5rem; font-weight: 700; color: white; font-family: 'Instrument Serif', serif; }
+        .score-text { position: absolute; font-size: 2.5rem; font-weight: 700; color: var(--ink); font-family:'Archivo','Inter',system-ui,sans-serif; }
 
         .score-info h2 { font-size: 1.8rem; margin-bottom: 10px; }
         .score-info p { color: var(--ink4); font-size: 1.05rem; margin-bottom: 20px; }
@@ -139,7 +139,7 @@ body {
         .stat-value { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
         .stat-desc { font-size: 0.85rem; color: var(--ink3); }
 
-        .chart-box { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 20px; padding: 30px; }
+        .chart-box { background: #FFFFFF; border: 1px solid var(--line); border-radius: 20px; padding: 30px; }
 
         .recs-box { border-left: 4px solid var(--c2); padding: 25px; background: rgba(16, 185, 129, 0.03); border-radius: 0 16px 16px 0; }
         .rec-item { display: flex; gap: 15px; margin-top: 20px; }
@@ -182,7 +182,7 @@ body {
         <div class="dashboard-layout">
             <!-- Sidebar Controls -->
             <div class="controls-card">
-                <h3 data-i18n="sidebar_heading" style="margin-bottom:25px; font-family:'Instrument Serif', serif; font-size:1.5rem;">2026 Stress Factors</h3>
+                <h3 data-i18n="sidebar_heading" style="margin-bottom:25px; font-family:'Archivo','Inter',system-ui,sans-serif; font-size:1.5rem;">2026 Stress Factors</h3>
                 
                 <div class="input-group">
                     <label><span data-i18n="label_nlw">National Living Wage</span> <span>£<span id="nlwVal">12.71</span></span></label>
@@ -251,14 +251,14 @@ body {
                 </div>
 
                 <div class="chart-box">
-                    <h3 data-i18n="chart_heading" style="margin-bottom:20px; font-family:'Instrument Serif', serif; font-size:1.5rem;">Margin Erosion Map (2024 vs 2026)</h3>
+                    <h3 data-i18n="chart_heading" style="margin-bottom:20px; font-family:'Archivo','Inter',system-ui,sans-serif; font-size:1.5rem;">Margin Erosion Map (2024 vs 2026)</h3>
                     <div style="height:300px;">
                         <canvas id="resilienceChart"></canvas>
                     </div>
                 </div>
 
                 <div class="recs-box">
-                    <h4 data-i18n="recs_heading" style="font-family:'Instrument Serif', serif; font-size:1.3rem;">Strategic Recommendations</h4>
+                    <h4 data-i18n="recs_heading" style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size:1.3rem;">Strategic Recommendations</h4>
                     <div id="recsList">
                         <!-- Recs injected here -->
                     </div>
@@ -267,8 +267,8 @@ body {
         </div>
     </div>
 
-        <div class="card" style="margin-top: 40px; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 20px; padding: 30px;">
-            <h2 data-i18n="faq_heading" style="font-family:'Instrument Serif', serif; font-size:1.8rem; margin-bottom: 20px;"><i class="fas fa-question-circle"></i> 2026 Restaurant Survival FAQ</h2>
+        <div class="card" style="margin-top: 40px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 20px; padding: 30px;">
+            <h2 data-i18n="faq_heading" style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size:1.8rem; margin-bottom: 20px;"><i class="fas fa-question-circle"></i> 2026 Restaurant Survival FAQ</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                 <div>
                     <h2 data-i18n="q1" style="font-size: 1.1rem; color: var(--c2); margin-bottom: 10px;">Will my restaurant survive the 2026 NLW increase?</h2>
@@ -415,7 +415,7 @@ body {
                     datasets: [{
                         label: 'Net Margin %',
                         data: [18.2, 17.1, 15.4, 14.8, (18 - (100-score)/5)],
-                        borderColor: score > 75 ? '#10B981' : (score > 50 ? '#F59E0B' : '#EF4444'),
+                        borderColor: score > 75 ? '#A3132B' : (score > 50 ? '#F59E0B' : '#EF4444'),
                         backgroundColor: 'rgba(16, 185, 129, 0.05)',
                         fill: true,
                         tension: 0.4

@@ -55,10 +55,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root {
-            --c1: #0A7A6F; --c2: #10B981; --dark: #0C1220; --ink: #0F172A; --ink2: #334155; --ink3: #64748B; --ink4: #94A3B8; --line: rgba(255,255,255,0.1); --bg: #0C1220;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0;
         }
 :focus-visible {
-            outline: 2px solid #10B981;
+            outline: 2px solid #A3132B;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -75,7 +75,7 @@
                 html { overflow-x: hidden; }
 body { 
             font-family: 'Inter', system-ui, sans-serif; 
-            color: white; 
+            color: var(--ink); 
             background: var(--bg); 
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;;
@@ -89,15 +89,15 @@ body {
         .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
         .nav-bar { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: white; text-decoration: none; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
         .auditor-section { padding: 80px 0; }
         .auditor-header { text-align: center; margin-bottom: 50px; }
         .auditor-header h1 { 
-            font-family: 'Instrument Serif', serif; 
+            font-family:'Archivo','Inter',system-ui,sans-serif; 
             font-size: clamp(2.5rem, 8vw, 4rem); 
-            font-weight: 400; 
+            font-weight: 800; 
             line-height: 1.1; 
             margin-bottom: 20px; 
             background: linear-gradient(to right, var(--c2), white); 
@@ -105,11 +105,11 @@ body {
             background-clip: text; 
             color: transparent; 
         }
-        .auditor-header h1 em { font-style: italic; color: var(--c2); }
+        .auditor-header h1 em { font-style: normal; color: var(--c2); }
         .auditor-header p { color: var(--ink4); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
 
         .auditor-wrapper { 
-            background: rgba(255,255,255,0.02); 
+            background: #FFFFFF; 
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 24px; 
@@ -121,7 +121,7 @@ body {
 
         .input-section { background: rgba(12, 18, 32, 0.7); border-radius: 12px; padding: 30px; border: 1px solid var(--line); }
         .url-input-group { display: flex; margin-top: 20px; position: relative; gap: 12px; }
-        .url-input { flex: 1; padding: 16px 16px 16px 45px; background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 9px; color: white; font-size: 1rem; }
+        .url-input { flex: 1; padding: 16px 16px 16px 45px; background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 9px; color: var(--ink); font-size: 1rem; }
         .url-input:focus { outline: none; border-color: var(--c2); }
         .url-input-group i { position: absolute; left: 15px; top: 20px; color: var(--ink3); }
         .scan-btn { padding: 16px 24px; background: linear-gradient(90deg, var(--c1), var(--c2)); color: white; border: none; border-radius: 9px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
