@@ -99,7 +99,7 @@
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `
         <div class="cb-text">
-            We use cookies to understand how our pages are used. See our <a href="/privacy.html">Privacy Policy</a>.
+            We use cookies to understand how our pages are used. See our <a href="/privacy">Privacy Policy</a>.
         </div>
         <div class="cb-btns">
             <button class="cb-btn" id="cb-no">Essential only</button>
