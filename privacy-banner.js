@@ -1,6 +1,23 @@
 /**
  * Cookie consent banner for ThaiData UK
  * @module privacy-banner
+ *
+ * Presentation only - the consent logic (localStorage key, gtag/clarity calls, default
+ * deny) is unchanged.
+ *
+ * This used to be a 500px centred floating card with a drop shadow at z-index 9999. On
+ * a 390x844 phone it measured 351x205 at y=623-828, which covered ALL THREE claim rows
+ * in the hero (measured at y=564-664, 665-764, 765-865). The three proof rows are the
+ * entire mechanism of the homepage redesign, so the banner was hiding the thing the page
+ * exists to show.
+ *
+ * It is now a 56px full-bleed bar pinned to the bottom edge:
+ *   - it cannot overlap the hero's rows, because the page reserves its height while shown
+ *   - one line of copy, 15px, at --ink-mute (the design's META level)
+ *   - Accept and Reject are equal-weight ghost buttons, so neither is the "right" answer
+ *   - z-index 90, below the sticky nav
+ * Copy change: "Thai operators" -> "Thai restaurant owners". The design bans "operators";
+ * a 55-year-old owner does not call themselves that.
  */
 
 (function() {
@@ -11,52 +28,64 @@
     const css = `
         #cookie-banner {
             position: fixed;
-            bottom: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 500px;
-            background: #ffffff;
-            border: 1px solid #DCE3E1;
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            z-index: 9999;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: none;
+            background: var(--paper, #FFFFFF);
+            border-top: 1px solid var(--hairline, #E4DCCE);
+            box-shadow: none;
+            padding: 0 16px;
+            min-height: 56px;
+            z-index: 90;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
             gap: 16px;
-            animation: slideUp 0.5s ease-out;
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
-        @keyframes slideUp {
-            from { transform: translate(-50%, 100%); opacity: 0; }
-            to { transform: translate(-50%, 0); opacity: 1; }
-        }
+        /* reserve the bar's height so nothing underneath is ever covered */
+        body.has-consent-bar { padding-bottom: 56px; }
 
-        .cb-text { font-size: 0.875rem; color: #4C5C5E; line-height: 1.5; }
-        .cb-text a { color: #0E6E5C; text-decoration: underline; font-weight: 500; }
-        
-        .cb-btns { display: flex; gap: 12px; }
-        .cb-btn { 
-            flex: 1; 
-            padding: 10px 16px; 
-            border-radius: 8px; 
-            font-size: 0.875rem; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: all 0.2s;
-            border: none;
+        .cb-text {
+            flex: 1 1 auto;
+            font-size: 15px;
+            line-height: 1.35;
+            color: var(--ink-mute, #5B534C);
+            min-width: 0;
+        }
+        .cb-text a { color: var(--red, #A3132B); text-decoration: underline; font-weight: 500; }
+
+        .cb-btns { display: flex; gap: 8px; flex: 0 0 auto; }
+
+        /* equal-weight ghost buttons: neither reads as the default */
+        .cb-btn {
+            padding: 8px 14px;
+            min-height: 40px;
+            border-radius: var(--r-obj, 10px);
+            font-size: 15px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            border: 1px solid var(--hairline, #E4DCCE);
+            background: var(--paper, #FFFFFF);
+            color: var(--ink, #1A1614);
             text-align: center;
+            white-space: nowrap;
         }
-        .cb-accept { background: #0E6E5C; color: white; }
-        .cb-accept:hover { background: #0A5346; }
-        .cb-decline { background: #F5F7F6; color: #4C5C5E; }
-        .cb-decline:hover { background: #DCE3E1; }
+        .cb-btn:hover { border-color: var(--ink, #1A1614); }
+        .cb-btn:focus-visible {
+            outline: 3px solid var(--turmeric, #F2B21A);
+            outline-offset: 2px;
+        }
 
-        @media (max-width: 480px) {
-            #cookie-banner { bottom: 16px; padding: 20px; }
-            .cb-btns { flex-direction: column; }
+        /* on a narrow phone the copy truncates rather than growing the bar */
+        @media (max-width: 560px) {
+            #cookie-banner { gap: 10px; padding: 0 12px; }
+            .cb-text { font-size: 14px; }
+            .cb-btn { padding: 8px 10px; font-size: 14px; }
         }
     `;
     const style = document.createElement('style');
@@ -66,22 +95,30 @@
     // 3. Create Banner HTML
     const banner = document.createElement('div');
     banner.id = 'cookie-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `
         <div class="cb-text">
-            We use cookies to understand how you use our tools and to improve the experience for Thai operators. See our <a href="/privacy.html">Privacy Policy</a>.
+            We use cookies to understand how our pages are used. See our <a href="/privacy.html">Privacy Policy</a>.
         </div>
         <div class="cb-btns">
-            <button class="cb-btn cb-decline" id="cb-no">Essential Only</button>
-            <button class="cb-btn cb-accept" id="cb-yes">Accept All</button>
+            <button class="cb-btn" id="cb-no">Essential only</button>
+            <button class="cb-btn" id="cb-yes">Accept all</button>
         </div>
     `;
     document.body.appendChild(banner);
+    document.body.classList.add('has-consent-bar');
+
+    function dismiss(value) {
+        localStorage.setItem('thaidata_consent', value);
+        banner.remove();
+        document.body.classList.remove('has-consent-bar');
+    }
 
     // 4. Handle Buttons
     document.getElementById('cb-yes').onclick = function() {
-        localStorage.setItem('thaidata_consent', 'granted');
         if (typeof gtag === 'function') {
-            gtag('consent', 'update', { 
+            gtag('consent', 'update', {
                 'analytics_storage': 'granted',
                 'ad_storage': 'granted'
             });
@@ -89,15 +126,14 @@
         if (typeof clarity === 'function') {
             clarity('consent', true);
         }
-        banner.remove();
+        dismiss('granted');
     };
 
     document.getElementById('cb-no').onclick = function() {
-        localStorage.setItem('thaidata_consent', 'denied');
         if (typeof clarity === 'function') {
             clarity('consent', false);
         }
-        banner.remove();
+        dismiss('denied');
     };
 
     // 5. Default Consent State (Deny until accepted)
