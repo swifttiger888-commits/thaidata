@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary meta -->
-  <title>Thai Restaurants UK &mdash; Claim Your Free Listing | ThaiData UK</title>
+  <title>Thai Restaurants UK — Claim Your Free Listing | ThaiData UK</title>
   <meta name="description" content="We list 1,265 Thai restaurants across the UK from official Food Standards Agency records. Find yours, claim the free listing, and control your photos, menu, opening hours and website link. No card needed." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="ThaiData UK" />
@@ -2454,11 +2454,9 @@ em { font-style: normal; font-weight: 700; }
       <div class="insight-cards">
         <div class="insight-card">
           <div class="insight-card-label">Delivery margins</div>
-          <div class="insight-finding">Your Pad Thai probably earns you £2.10 on Uber Eats — not the £7+ it looks like
-          </div>
-          <div class="insight-detail">After a 30% commission, VAT, and packaging, a £13 Pad Thai nets around £7.30.
-            Subtract your food cost and you're left with a fraction of what you expected.</div>
-          <span class="insight-pill pill-red">Most owners are shocked by this</span>
+          <div class="insight-finding">What is left of a £13 Pad Thai after commission, VAT and packaging? Around £7.30 — before your food cost</div>
+          <div class="insight-detail">A 30% commission, VAT treatment, packaging and your own food cost decide what actually remains. The national average will not be your number — run it against your own menu.</div>
+          <span class="insight-pill pill-red">Check your own costs</span>
         </div>
         <div class="insight-card">
           <div class="insight-card-label">NLW April 2026</div>
@@ -2470,10 +2468,8 @@ em { font-style: normal; font-weight: 700; }
         </div>
         <div class="insight-card">
           <div class="insight-card-label">Menu pricing</div>
-          <div class="insight-finding">A £1.50 price rise across 8 dishes covers the entire NLW increase for most small
-            teams</div>
-          <div class="insight-detail">Most operators raise prices on 6–8 dishes and cover the wage gap without a single
-            complaint. The tool shows you which dishes to move and what the maths looks like.</div>
+          <div class="insight-finding">£1.50 across eight dishes: what would it actually cover?</div>
+          <div class="insight-detail">Compare the extra revenue at your sales volume with the wage increase for your team. VAT and delivery fees change the answer, so the menu, not the average, is what settles it.</div>
           <span class="insight-pill pill-green">Actionable, not just data</span>
         </div>
       </div>
@@ -2579,7 +2575,7 @@ em { font-style: normal; font-weight: 700; }
   <footer>
     <div class="wrap">
       <div class="ft-row">
-        <p class="ft-brand-line"><strong>ThaiData UK</strong> &mdash; every UK Thai
+        <p class="ft-brand-line"><strong>ThaiData UK</strong> — every UK Thai
           restaurant, from the Food Standards Agency register.</p>
         <nav class="ft-links" aria-label="Footer">
           <a href="/claim/">Claim your listing</a>
@@ -2850,10 +2846,10 @@ em { font-style: normal; font-weight: 700; }
         const plN = { dine: 'Dine-in', uber: 'Uber Eats', deliveroo: 'Deliveroo', justeat: 'Just Eat' }[pl];
         el.innerHTML = `
     <div class="r-match"><div class="r-match-name">Matched: ${d.name}</div><div class="r-match-thai">${d.thai} &middot; ${d.rom}</div><div class="r-match-conf">Confidence: ${conf}% &middot; ${d.note}</div></div>
-    <div class="r-row"><span class="r-key">Food cost (database)</span><span class="r-val">&pound;${d.cost.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Food cost (database)</span><span class="r-val">£${d.cost.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Platform</span><span class="r-val">${plN}${comm ? ` (${Math.round(comm * 100)}%)` : ''}</span></div>
-    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">&pound;${minR.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">&pound;${recP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">£${minR.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">£${recP.toFixed(2)}</span></div>
     <div class="r-row"><span class="r-key">Actual GP at recommended</span><span class="r-val ${parseFloat(actGP) >= 65 ? 'green' : 'amber'}">${actGP}%</span></div>`;
       };
       document.getElementById('dish-input').addEventListener('keydown', e => { if (e.key === 'Enter') window.runDish() });
@@ -2884,10 +2880,10 @@ em { font-style: normal; font-weight: 700; }
       const fmt = n => n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       el.innerHTML = `
     <div class="r-row"><span class="r-key">Total staff</span><span class="r-val">${s1 + s2 + s3}</span></div>
-    <div class="r-row"><span class="r-key">Current annual cost (inc NI)</span><span class="r-val">&pound;${fmt(wCur * 52 + niCur)}</span></div>
-    <div class="r-row"><span class="r-key">After April 2026 (inc NI)</span><span class="r-val amber">&pound;${fmt(wNew * 52 + niNew)}</span></div>
-    <div class="r-row"><span class="r-key">Net annual increase</span><span class="r-val red">+&pound;${Math.round(totalAnn).toLocaleString()} (+${pct}%)</span></div>
-    <div class="impact-box"><p>This factors in the &pound;10,500 Employment Allowance. To absorb this, you need &pound;${(totalAnn / 52 / 7).toFixed(2)} extra GP per day.</p></div>
+    <div class="r-row"><span class="r-key">Current annual cost (inc NI)</span><span class="r-val">£${fmt(wCur * 52 + niCur)}</span></div>
+    <div class="r-row"><span class="r-key">After April 2026 (inc NI)</span><span class="r-val amber">£${fmt(wNew * 52 + niNew)}</span></div>
+    <div class="r-row"><span class="r-key">Net annual increase</span><span class="r-val red">+£${Math.round(totalAnn).toLocaleString()} (+${pct}%)</span></div>
+    <div class="impact-box"><p>This factors in the £10,500 Employment Allowance. To absorb this, you need £${(totalAnn / 52 / 7).toFixed(2)} extra GP per day.</p></div>
     <div style="margin-top:12px; text-align:center;">
       <a href="tools/VISA_ASSISTANT.html" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.875rem;">Launch Chef Visa Assistant (RQF-6 Check) →</a>
     </div>`;
@@ -2913,12 +2909,12 @@ em { font-style: normal; font-weight: 700; }
       const vatAmt = recP * vatF, net = recP - vatAmt - recP * comm, profit = net - food - lab - pkg;
       const actGP = (profit / net * 100).toFixed(1), gpC = parseFloat(actGP) >= 65 ? 'green' : parseFloat(actGP) >= 55 ? 'amber' : 'red';
       el.innerHTML = `
-    <div class="r-row"><span class="r-key">Total cost per dish</span><span class="r-val">&pound;${total.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">VAT deducted</span><span class="r-val">&pound;${vatAmt.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Net after commission</span><span class="r-val">&pound;${net.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">&pound;${minP.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">&pound;${recP.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Profit per dish</span><span class="r-val ${gpC}">&pound;${profit.toFixed(2)} (${actGP}% GP)</span></div>`;
+    <div class="r-row"><span class="r-key">Total cost per dish</span><span class="r-val">£${total.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">VAT deducted</span><span class="r-val">£${vatAmt.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Net after commission</span><span class="r-val">£${net.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">£${minP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">£${recP.toFixed(2)}</span></div>
+    <div class="r-row"><span class="r-key">Profit per dish</span><span class="r-val ${gpC}">£${profit.toFixed(2)} (${actGP}% GP)</span></div>`;
     }
 
     // ── FAQ toggle ──
