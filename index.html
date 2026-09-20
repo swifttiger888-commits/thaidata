@@ -1445,7 +1445,15 @@
   <style id="hero-v2">
     /* Hero v2 — ONE pitch, light "official register" surface.
        Appended after the original stylesheet so these win on equal specificity. */
-    .hero { background: var(--bg); color: var(--ink); padding: 112px 0 56px; border-bottom: 1px solid var(--line); }
+    
+/* The hero was rebuilt as a light, text-led section, but its two decorative
+   pseudo-elements survived: ::before painted thaidataukhero.webp and ::after laid
+   a dark gradient (var(--dark) 45%) over it. Both are pointer-events:none, so they
+   are invisible to elementFromPoint checks and only show up visually. Neutralise
+   them here - this block comes after the original rules, so it wins at every
+   breakpoint including the max-width:600px override. */
+.hero::before, .hero::after { content: none !important; background: none !important; }
+.hero { background: var(--bg); color: var(--ink); padding: 112px 0 56px; border-bottom: 1px solid var(--line); }
     .hero-inner { max-width: 760px; }
     .hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--c3);
       background: #E6F2EE; border: 1px solid #CFE5DD; border-radius: 999px; padding: 6px 14px;
