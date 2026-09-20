@@ -186,14 +186,14 @@ for filename in sorted(os.listdir(cities_dir)):
         rtype_icon = 'fa-utensils' if r.get('type') == 'restaurant' else 'fa-box'
         location = build_location_label(r.get('address', ''), r['city'], r.get('postcode', ''))
         location_html = f'<span style="font-size:0.73rem;color:var(--ink4);display:block;margin-top:2px;">{location}</span>' if location else ''
-        links_html += f'''                    <a href="/r/{r_city_slug}/{r_slug}/" style="display:flex;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;margin-bottom:8px;">
+        links_html += f'''                    <a href="/r/{r_city_slug}/{r_slug}/" style="display:flex;align-items:center;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;margin-bottom:8px;">
                         <div style="flex:1;min-width:0;margin-right:10px;">
-                            <span style="font-weight:600;font-size:0.9rem;color:white;display:block;">{r['name']}</span>
+                            <span style="font-weight:600;font-size:0.9rem;color:var(--ink);display:block;">{r['name']}</span>
                             {location_html}
                         </div>
-                        <span style="font-size:0.8rem;color:var(--ink4);margin-right:10px;"><i class="fas {rtype_icon}" style="margin-right:4px;"></i>{rtype_label}</span>
+                        <span style="font-size:0.8rem;color:var(--ink4);margin-right:10px;">{rtype_label}</span>
                         <span style="font-size:0.8rem;color:var(--c2);margin-right:10px;">{stars}</span>
-                        <i class="fas fa-chevron-right" style="color:var(--ink3);font-size:0.7rem;"></i>
+                        <span aria-hidden="true" style="color:var(--ink3);font-size:0.9rem;">›</span>
                     </a>\n'''
     
     section = f'''{BEGIN_MARKER}
@@ -209,11 +209,19 @@ for filename in sorted(os.listdir(cities_dir)):
 {END_MARKER}
 '''
     
-    # Insert before footer or before the last </div> in .wrap
-    if '<footer>' in html:
-        html = html.replace('<footer>', section + '\n    <footer>')
-    elif '</body>' in html:
-        html = html.replace('</body>', section + '\n</body>')
+    # Prefer the shell's own region (county/location pages), then any <footer> element,
+    # then bare </body>. The old test looked for '<footer>' exactly, which misses
+    # '<footer class="site-footer">' and would strand the section after the footer.
+    if '<!-- SHELL:browse -->' in html and '<!-- END:SHELL:browse -->' in html:
+        start = html.index('<!-- SHELL:browse -->') + len('<!-- SHELL:browse -->')
+        stop = html.index('<!-- END:SHELL:browse -->', start)
+        html = html[:start] + '\n' + section + '\n' + html[stop:]
+    else:
+        fm = re.search(r'<footer[\s>]', html)
+        if fm:
+            html = html[:fm.start()] + section + '\n    ' + html[fm.start():]
+        elif '</body>' in html:
+            html = html.replace('</body>', section + '\n</body>')
     
     with open(filepath, 'w') as f:
         f.write(html)

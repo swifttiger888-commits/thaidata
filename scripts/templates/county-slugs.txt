@@ -1,0 +1,29 @@
+# Location slugs already published as county / district directories.
+# These get the "County & district directory" eyebrow and the towns-and-villages card.
+# Anything not listed here gets neutral area wording instead of a geography claim.
+# Reviewed 2026-09-20 against cities/*.html — 25 files, all of them in sitemap*.xml.
+buckinghamshire
+devon
+dorset
+elmbridge
+gloucestershire
+hampshire
+hertfordshire
+knowsley
+merthyr-tydfil
+north-norfolk
+northumberland
+oxfordshire
+rochford
+shetland-islands
+shropshire
+somerset
+south-norfolk
+staffordshire
+stratford-on-avon
+tendring
+thanet
+torbay
+warwickshire
+westmorland-and-furness
+wiltshire

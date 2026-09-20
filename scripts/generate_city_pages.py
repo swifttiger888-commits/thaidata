@@ -34,6 +34,11 @@ from scripts.schema.breadcrumb import city_breadcrumb
 from scripts.schema.city_entity import build_city_entity
 from scripts.schema.validator import validate_schema, validate_content_schema_match, strip_html_body
 
+if __package__:
+    from .location_shell import new_location_shell, finish_location_shell
+else:
+    from location_shell import new_location_shell, finish_location_shell
+
 # ── Constants ──────────────────────────────────────────────────────────────────
 
 CITIES_DIR = REPO / "cities"
@@ -727,7 +732,7 @@ def process_city(
 
     # ── Generate / update HTML ──
 
-    html = existing_html or f"<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n<title>Thai Restaurants in {city_name} | ThaiData</title>\n</head>\n<body>\n</body>\n</html>"
+    html = existing_html or new_location_shell(city_name, slug)
 
     # Update stale hero-section numbers (pre-dates exclusion system)
     if existing_html and mode in ("programmatic", "hybrid"):
@@ -813,6 +818,9 @@ def process_city(
         match_errors = validate_content_schema_match(visible_text, s, raw_html=html)
         if match_errors:
             result["warnings"].extend(match_errors)
+
+    # Finalise the shell (no-op on pages without the SHELL:location-v1 signature)
+    html = finish_location_shell(html)
 
     # Write
     with open(html_path, "w") as f:
