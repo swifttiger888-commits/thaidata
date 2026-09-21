@@ -558,15 +558,15 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1518961,
-    "name": "Nusara",
-    "city": "Dorset",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 342542,
     "name": "Nusara",
     "city": "Bournemouth, Christchurch and Poole",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1518961,
+    "name": "Nusara",
+    "city": "Dorset",
     "chain": "Busaba"
   },
   {

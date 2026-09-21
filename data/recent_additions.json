@@ -1,6 +1,62 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-21",
   "restaurants": [
+    {
+      "fsa_id": "1988739",
+      "name": "Busaba Covent Garden",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-09-21"
+    },
+    {
+      "fsa_id": "1988721",
+      "name": "Busaba",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-09-21"
+    },
+    {
+      "fsa_id": "1875179",
+      "name": "Real9ija Foods / Sumptuous Thai / B&S Foods",
+      "city": "London",
+      "type": "takeaway",
+      "discovered_on": "2026-09-21"
+    },
+    {
+      "fsa_id": "1881602",
+      "name": "Thai Spice Kitchen",
+      "city": "Swansea",
+      "type": "takeaway",
+      "discovered_on": "2026-09-21"
+    },
+    {
+      "fsa_id": "1975832",
+      "name": "Pad Thai",
+      "city": "London",
+      "type": "takeaway",
+      "discovered_on": "2026-09-21"
+    },
+    {
+      "fsa_id": "1943901",
+      "name": "So Thai",
+      "city": "Northumberland",
+      "type": "takeaway",
+      "discovered_on": "2026-09-21"
+    },
+    {
+      "fsa_id": "1984469",
+      "name": "Thai Guy",
+      "city": "London",
+      "type": "takeaway",
+      "discovered_on": "2026-09-21"
+    },
+    {
+      "fsa_id": "1950751",
+      "name": "Big Cheeks Thai",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-09-21"
+    },
     {
       "fsa_id": "1986142",
       "name": "TJ's Thai & Chinese Restaurant & Takeaway",
@@ -294,62 +350,6 @@
       "city": "Stevenage",
       "type": "restaurant",
       "discovered_on": "2026-06-29"
-    },
-    {
-      "fsa_id": "1938785",
-      "name": "Sawasdee Traditional Thai Restaurant",
-      "city": "Gwynedd",
-      "type": "restaurant",
-      "discovered_on": "2026-06-29"
-    },
-    {
-      "fsa_id": "1962095",
-      "name": "Nub's Thai Kitchen",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-06-29"
-    },
-    {
-      "fsa_id": "1939669",
-      "name": "Suan Thai Restaurant",
-      "city": "Test Valley",
-      "type": "restaurant",
-      "discovered_on": "2026-06-29"
-    },
-    {
-      "fsa_id": "1736284",
-      "name": "Narrisha\u2019s Thai Kitchen",
-      "city": "Liverpool",
-      "type": "restaurant",
-      "discovered_on": "2026-06-29"
-    },
-    {
-      "fsa_id": "1049855",
-      "name": "Market Thai",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-06-29"
-    },
-    {
-      "fsa_id": "1956755",
-      "name": "Koh Thai",
-      "city": "Portsmouth",
-      "type": "restaurant",
-      "discovered_on": "2026-06-29"
-    },
-    {
-      "fsa_id": "1960055",
-      "name": "Thai Food Co.",
-      "city": "Torbay",
-      "type": "takeaway",
-      "discovered_on": "2026-06-22"
-    },
-    {
-      "fsa_id": "1890653",
-      "name": "Thai Noodle Express",
-      "city": "Birmingham",
-      "type": "takeaway",
-      "discovered_on": "2026-06-22"
     }
   ]
 }

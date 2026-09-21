@@ -3,17 +3,17 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-09-14",
-  "total_uk": 1266,
-  "cities_tracked": 254,
+  "updated": "2026-09-21",
+  "total_uk": 1263,
+  "cities_tracked": 252,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 281,
+      "total_thai_businesses": 284,
       "restaurants": 231,
-      "takeaways": 50,
-      "per_100k": 3.1,
+      "takeaways": 53,
+      "per_100k": 3.2,
       "avg_hygiene_rating": 4.2,
       "postcode_areas": 98
     },
@@ -58,6 +58,16 @@
       "postcode_areas": 7
     },
     {
+      "name": "Swansea",
+      "population": 247000,
+      "total_thai_businesses": 16,
+      "restaurants": 13,
+      "takeaways": 3,
+      "per_100k": 6.5,
+      "avg_hygiene_rating": 3.8,
+      "postcode_areas": 5
+    },
+    {
       "name": "Bristol",
       "population": 483000,
       "total_thai_businesses": 15,
@@ -66,16 +76,6 @@
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.7,
       "postcode_areas": 6
-    },
-    {
-      "name": "Swansea",
-      "population": 247000,
-      "total_thai_businesses": 15,
-      "restaurants": 13,
-      "takeaways": 2,
-      "per_100k": 6.1,
-      "avg_hygiene_rating": 3.7,
-      "postcode_areas": 5
     },
     {
       "name": "Richmond-Upon-Thames",
@@ -188,16 +188,6 @@
       "postcode_areas": 6
     },
     {
-      "name": "Norwich",
-      "population": 148000,
-      "total_thai_businesses": 9,
-      "restaurants": 6,
-      "takeaways": 3,
-      "per_100k": 6.1,
-      "avg_hygiene_rating": 4.3,
-      "postcode_areas": 3
-    },
-    {
       "name": "Shropshire",
       "population": 325000,
       "total_thai_businesses": 9,
@@ -238,6 +228,16 @@
       "postcode_areas": 4
     },
     {
+      "name": "Norwich",
+      "population": 148000,
+      "total_thai_businesses": 8,
+      "restaurants": 6,
+      "takeaways": 2,
+      "per_100k": 5.4,
+      "avg_hygiene_rating": 4.5,
+      "postcode_areas": 3
+    },
+    {
       "name": "Oxford",
       "population": 164000,
       "total_thai_businesses": 8,
@@ -256,16 +256,6 @@
       "per_100k": 2.2,
       "avg_hygiene_rating": 4.8,
       "postcode_areas": 4
-    },
-    {
-      "name": "Birmingham",
-      "population": 1166000,
-      "total_thai_businesses": 8,
-      "restaurants": 6,
-      "takeaways": 2,
-      "per_100k": 0.7,
-      "avg_hygiene_rating": 4.4,
-      "postcode_areas": 6
     },
     {
       "name": "Thanet",
@@ -478,6 +468,16 @@
       "postcode_areas": 6
     },
     {
+      "name": "Birmingham",
+      "population": 1166000,
+      "total_thai_businesses": 6,
+      "restaurants": 6,
+      "takeaways": 0,
+      "per_100k": 0.5,
+      "avg_hygiene_rating": 4.5,
+      "postcode_areas": 4
+    },
+    {
       "name": "Waverley",
       "population": null,
       "total_thai_businesses": 6,
@@ -526,16 +526,6 @@
       "per_100k": 2.1,
       "avg_hygiene_rating": 4.7,
       "postcode_areas": 3
-    },
-    {
-      "name": "Calderdale",
-      "population": null,
-      "total_thai_businesses": 6,
-      "restaurants": 3,
-      "takeaways": 3,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.5,
-      "postcode_areas": 5
     },
     {
       "name": "Wigan",
@@ -596,16 +586,6 @@
       "per_100k": 4.2,
       "avg_hygiene_rating": 3.7,
       "postcode_areas": 1
-    },
-    {
-      "name": "Derby",
-      "population": 260000,
-      "total_thai_businesses": 6,
-      "restaurants": 5,
-      "takeaways": 1,
-      "per_100k": 2.3,
-      "avg_hygiene_rating": 3.2,
-      "postcode_areas": 4
     },
     {
       "name": "Aberdeen",
@@ -698,6 +678,16 @@
       "postcode_areas": 4
     },
     {
+      "name": "Calderdale",
+      "population": null,
+      "total_thai_businesses": 5,
+      "restaurants": 3,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.4,
+      "postcode_areas": 4
+    },
+    {
       "name": "Chelmsford",
       "population": 184000,
       "total_thai_businesses": 5,
@@ -745,6 +735,16 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.6,
+      "postcode_areas": 4
+    },
+    {
+      "name": "Derby",
+      "population": 260000,
+      "total_thai_businesses": 5,
+      "restaurants": 4,
+      "takeaways": 1,
+      "per_100k": 1.9,
+      "avg_hygiene_rating": 3.6,
       "postcode_areas": 4
     },
     {
@@ -1238,6 +1238,16 @@
       "postcode_areas": 2
     },
     {
+      "name": "Northumberland",
+      "population": null,
+      "total_thai_businesses": 3,
+      "restaurants": 1,
+      "takeaways": 2,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.3,
+      "postcode_areas": 2
+    },
+    {
       "name": "East Suffolk",
       "population": null,
       "total_thai_businesses": 3,
@@ -1386,16 +1396,6 @@
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
       "postcode_areas": 2
-    },
-    {
-      "name": "Derry City and Strabane",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 1,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
     },
     {
       "name": "North Northamptonshire",
@@ -1725,16 +1725,6 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Northumberland",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 1,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.5,
       "postcode_areas": 1
     },
     {
@@ -2378,16 +2368,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Torridge",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 0,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
-    },
-    {
       "name": "Hyndburn",
       "population": null,
       "total_thai_businesses": 1,
@@ -2418,6 +2398,16 @@
       "postcode_areas": 1
     },
     {
+      "name": "Rossendale",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 0,
+      "takeaways": 1,
+      "per_100k": null,
+      "avg_hygiene_rating": 5.0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Lisburn and Castlereagh City",
       "population": null,
       "total_thai_businesses": 1,
@@ -2435,16 +2425,6 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Rossendale",
-      "population": null,
-      "total_thai_businesses": 1,
-      "restaurants": 0,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 3.0,
       "postcode_areas": 1
     },
     {
