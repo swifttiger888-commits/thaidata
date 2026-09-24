@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gratitude Thai Lounge Bar Edinburgh · 45 Morningside Road, Edinburgh · FSA Pass/5 | ThaiData UK</title>
-    <meta name="description" content="FSA inspection data for Gratitude Thai Lounge Bar, Edinburgh. Pass/5 hygiene rating. See hygiene, structural, and management breakdown scores. 45 Morningside Road, Edinburgh. Updated March 2023.">
+        <title>Gratitude Thai Lounge Bar Edinburgh · 45 Morningside Road, Edinburgh · FSA Pass | ThaiData UK</title>
+    <meta name="description" content="FSA inspection data for Gratitude Thai Lounge Bar, Edinburgh. FSA status: Pass. See hygiene, structural, and management breakdown scores. 45 Morningside Road, Edinburgh. Updated March 2023.">
         <meta name="robots" content="index, follow">
         <meta name="thaidata:fsa-id" content="1318186">
         <link rel="canonical" href="https://thaidata.uk/r/edinburgh/gratitude-thai-lounge-bar/">
     <meta property="og:type" content="website">
         <meta property="og:url" content="https://thaidata.uk/r/edinburgh/gratitude-thai-lounge-bar/">
-        <meta property="og:title" content="Gratitude Thai Lounge Bar Edinburgh · 45 Morningside Road, Edinburgh · FSA Pass/5 | ThaiData UK">
-        <meta property="og:description" content="FSA inspection data for Gratitude Thai Lounge Bar, Edinburgh. Pass/5 hygiene rating. See the full hygiene, structural, and management breakdown. 45 Morningside Road, Edinburgh. Updated March 2023.">
+        <meta property="og:title" content="Gratitude Thai Lounge Bar Edinburgh · 45 Morningside Road, Edinburgh · FSA Pass | ThaiData UK">
+        <meta property="og:description" content="FSA inspection data for Gratitude Thai Lounge Bar, Edinburgh. FSA status: Pass. See the full hygiene, structural, and management breakdown. 45 Morningside Road, Edinburgh. Updated March 2023.">
     <meta property="og:locale" content="en_GB">
     <link rel="icon" type="image/svg+xml" href="/logo-icon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
@@ -414,6 +414,26 @@
         .rating-circle.r3::before { border-color: var(--amber); }
         .rating-circle.r2, .rating-circle.r1 { background: var(--red-light); color: var(--red); }
         .rating-circle.r2::before, .rating-circle.r1::before { border-color: var(--red); }
+
+        /* FSA Scotland publishes Pass / Improvement Required, and some premises are Exempt.
+           Those are statuses, not scores, so they get a rounded badge instead of the score
+           circle — a circle reading "Pass of 5" claims a score that does not exist. The
+           neutral rn class exists so Exempt is not dressed as either a pass or a fail. */
+        .rating-circle.rn { background: #F1F5F9; color: #334155; }
+        .rating-circle.rn::before { border-color: #94A3B8; }
+        .rating-circle.status {
+            width: auto;
+            min-width: 88px;
+            max-width: 156px;
+            border-radius: 16px;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        .rating-circle.status .score {
+            font-size: 0.95rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
 
         .rating-circle .score {
             font-family: 'Archivo', 'Inter', system-ui, sans-serif;
@@ -854,7 +874,7 @@
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "name": "Gratitude Thai Lounge Bar",
-        "description": "Gratitude Thai Lounge Bar is a Thai restaurant in Edinburgh. FSA hygiene rating Pass/5, last inspected March 2023.",
+        "description": "Gratitude Thai Lounge Bar is a Thai restaurant in Edinburgh. FSA hygiene rating: Pass, last inspected March 2023.",
         "servesCuisine": "Thai",
         "address": {
             "@type": "PostalAddress",
@@ -935,7 +955,7 @@
         <div class="hero-content">
             <div class="badge-row">
                                 <span class="badge badge-rating">
-                    <i class="fas fa-star"></i> FSA Pass/5
+                    <i class="fas fa-star"></i> FSA Pass
                 </span>
                                 <span class="badge badge-type">
                     <i class="fas fa-utensils"></i> Restaurant
@@ -947,7 +967,7 @@
             </div>
             <div class="contact-strip" id="contact-strip" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;"><a class="cs-item" href="tel:0131 259 0539" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>0131 259 0539</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><a class="cs-item" href="https://www.gratitudethailounge.co.uk/?utm_source=GBP.website&utm_medium=GBP&utm_campaign=fd13598-website" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-globe" style="margin-right:5px;"></i>Website</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>Hours</a></div>
                         <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">
-                Gratitude Thai Lounge Bar is a Thai restaurant in Edinburgh. FSA hygiene rating Pass/5, last inspected March 2023.
+                Gratitude Thai Lounge Bar is a Thai restaurant in Edinburgh. FSA hygiene rating: Pass, last inspected March 2023.
             </p>
                         <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);" id="hero-claim-cta">
                 <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
@@ -964,12 +984,11 @@
                                 <h2 class="card-title">Hygiene <em>Rating</em></h2>
 
                 <div class="hygiene-hero">
-                                        <div class="rating-circle r3">
+                                        <div class="rating-circle r5 status">
                         <span class="score">Pass</span>
-                        <span class="of">of 5</span>
                     </div>
                     <div class="rating-meta">
-                                                <div class="rating-meta-label" style="color: var(--ink);">Rated</div>
+                                                <div class="rating-meta-label" style="color: var(--green-dark);">Pass</div>
                                                 <div class="rating-meta-detail">
                             Last inspected: March 2023<br>
                                                         <span style="color: var(--ink-tertiary);">Local authority: Edinburgh (City of)</span>

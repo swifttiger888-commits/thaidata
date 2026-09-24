@@ -101,7 +101,11 @@ def build_intro(r: dict[str, Any]) -> str:
     # Add hygiene rating sentence if we have both rating and date
     if rating and rating != 'N/A':
         date_str = f', last inspected {rating_date}' if rating_date and rating_date != 'Unknown' else ''
-        intro += f' FSA hygiene rating {rating}/5{date_str}.'
+        # A colon only in the non-numeric case, so the numeric sentence stays byte-identical
+        # to what is already live. "FSA hygiene rating Pass" reads as a typo; with the colon
+        # it reads as a status.
+        sep = '' if rating_is_scored(rating) else ':'
+        intro += f' FSA hygiene rating{sep} {rating_text(rating)}{date_str}.'
 
     return intro
 
@@ -111,14 +115,56 @@ def build_serves_cuisine(rtype: str) -> str:
         return 'Thai takeaway'
     return 'Thai'
 
+# A numeric rating is a score out of 5. FSA Scotland instead publishes 'Pass' or
+# 'Improvement Required', and 'Exempt' means the premises is outside the scheme: none of
+# those are scores, and writing them as "Pass/5" is meaningless. Every place that turns a
+# rating into text goes through these helpers so there is one answer, not eight.
+SCORED_RATINGS = {'0', '1', '2', '3', '4', '5'}
+
+# Pass is a pass, Improvement Required is a fail, Exempt is neutral — so they must not all
+# collapse to the same amber default the way an unknown rating previously did.
+NON_SCORED_CLASS = {'Pass': 'r5', 'Improvement Required': 'r2', 'Exempt': 'rn'}
+NON_SCORED_COLOR = {'Pass': 'var(--green-dark)',
+                    'Improvement Required': 'var(--red)',
+                    'Exempt': 'var(--ink)'}
+
+
+def rating_is_scored(rating: str) -> bool:
+    """True when the rating is a 0-5 score (so '/5' is meaningful)."""
+    return str(rating or '').strip() in SCORED_RATINGS
+
+
+def rating_text(rating: str) -> str:
+    """The rating written for a reader: '5/5', or 'Pass', or 'Improvement Required'."""
+    r = str(rating or '').strip()
+    return f'{r}/5' if r in SCORED_RATINGS else (r or 'Not rated')
+
+
+def rating_phrase(rating: str) -> str:
+    """The rating as a clause in a sentence, for meta descriptions."""
+    r = str(rating or '').strip()
+    if r in SCORED_RATINGS:
+        return f'{r}/5 hygiene rating'
+    return f'FSA status: {r}' if r else 'no FSA rating on record'
+
+
 def rating_class(rating: str) -> str:
-    return {'5': 'r5', '4': 'r4', '3': 'r3', '2': 'r2', '1': 'r1'}.get(rating, 'r3')
+    r = str(rating or '').strip()
+    if r in SCORED_RATINGS:
+        return {'5': 'r5', '4': 'r4', '3': 'r3', '2': 'r2', '1': 'r1'}.get(r, 'r3')
+    return NON_SCORED_CLASS.get(r, 'rn')
 
 def rating_label(rating: str) -> str:
-    return {'5': 'Very Good', '4': 'Good', '3': 'Generally Satisfactory', '2': 'Improvement Necessary', '1': 'Major Improvement Necessary'}.get(rating, 'Rated')
+    r = str(rating or '').strip()
+    if r in SCORED_RATINGS:
+        return {'5': 'Very Good', '4': 'Good', '3': 'Generally Satisfactory', '2': 'Improvement Necessary', '1': 'Major Improvement Necessary'}.get(r, 'Rated')
+    return r or 'Rated'
 
 def rating_color(rating: str) -> str:
-    return {'5': 'var(--green-dark)', '4': '#3F6212', '3': '#92400E', '2': 'var(--red)', '1': 'var(--red)'}.get(rating, 'var(--ink)')
+    r = str(rating or '').strip()
+    if r in SCORED_RATINGS:
+        return {'5': 'var(--green-dark)', '4': '#3F6212', '3': '#92400E', '2': 'var(--red)', '1': 'var(--red)'}.get(r, 'var(--ink)')
+    return NON_SCORED_COLOR.get(r, 'var(--ink)')
 
 def score_bar_html(label: str, score: int | None) -> str:
     """Generate a single score bar div. FSA 0-25, lower=better."""
@@ -220,6 +266,18 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     rcolor = rating_color(rating)
     rtype_icon = 'fa-utensils' if rtype == 'restaurant' else 'fa-box'
     rtype_label = rtype.replace('_', ' ').title()
+
+    # The rating card. A score circle when the rating is a number; a status badge when it is
+    # not, because 'of 5' is only meaningful against a score.
+    if rating_is_scored(rating):
+        circle_html = (f'                    <div class="rating-circle {rclass}">\n'
+                       f'                        <span class="score">{rating}</span>\n'
+                       f'                        <span class="of">of 5</span>\n'
+                       f'                    </div>')
+    else:
+        circle_html = (f'                    <div class="rating-circle {rclass} status">\n'
+                       f'                        <span class="score">{rlabel}</span>\n'
+                       f'                    </div>')
     fsa_id = r['id']
     canonical = canonical_url or f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
 
@@ -227,14 +285,14 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     test_key = (city_slug, rest_slug)
     if test_key in CTR_TEST_SLUGS:
         # A/B variant: name-first (branded queries) — see CTR_TEST_SLUGS
-        meta_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating}/5. {address if address else city}. Inspection scores and contact details."'
-        og_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating}/5. Inspection scores and contact details. {address if address else city}."'
+        meta_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating_text(rating)}. {address if address else city}. Inspection scores and contact details."'
+        og_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating_text(rating)}. Inspection scores and contact details. {address if address else city}."'
     else:
-        meta_desc = f'content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
-        og_desc = f'content="FSA inspection data for {name}, {city}. {rating}/5 hygiene rating. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+        meta_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+        og_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
     html = html.replace(
         '<!-- DYNAMIC: title -->\n    <title>My Thai, Leeds — FSA 5/5 Hygiene Rating | ThaiData</title>',
-        f'    <title>{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK</title>'
+        f'    <title>{name} {city} · {address if address else city} · FSA {rating_text(rating)} | ThaiData UK</title>'
     )
     html = html.replace(
         'content="FSA inspection data for My Thai, Leeds. 5/5 hygiene rating. See hygiene, structural, and management breakdown scores. 43 Wade Lane, Leeds City Centre, Leeds. Updated November 2025."',
@@ -263,7 +321,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
     html = html.replace(
         '<!-- DYNAMIC: og_title -->\n    <meta property="og:title" content="My Thai, Leeds — FSA 5/5 | ThaiData"',
-        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · FSA {rating}/5 | ThaiData UK"'
+        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · FSA {rating_text(rating)} | ThaiData UK"'
     )
     html = html.replace(
         '<!-- DYNAMIC: og_description -->\n    <meta property="og:description" content="FSA 5/5 hygiene rating. Thai restaurant in Leeds. View inspection scores and claim this listing."',
@@ -442,7 +500,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- Hero badges ----
     html = html.replace(
         '<!-- DYNAMIC: badge_rating -->\n                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA 5/5\n                </span>',
-        f'                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA {rating}/5\n                </span>'
+        f'                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA {rating_text(rating)}\n                </span>'
     )
     html = html.replace(
         '<!-- DYNAMIC: badge_type -->\n                <span class="badge badge-type">\n                    <i class="fas fa-utensils"></i> Restaurant\n                </span>',
@@ -564,7 +622,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- Hygiene rating card ----
     html = html.replace(
         '<!-- DYNAMIC: rating_circle -->\n                    <div class="rating-circle r5">\n                        <span class="score">5</span>\n                        <span class="of">of 5</span>\n                    </div>',
-        f'                    <div class="rating-circle {rclass}">\n                        <span class="score">{rating}</span>\n                        <span class="of">of 5</span>\n                    </div>'
+        circle_html
     )
     html = html.replace(
         '<!-- DYNAMIC: rating_label -->\n                        <div class="rating-meta-label" style="color: var(--green-dark);">Very Good</div>',
@@ -832,6 +890,9 @@ def main() -> None:
     slug_owner: dict[tuple[str, str], dict[str, Any]] = {}
     generated_ids: set[str] = set()
     generated_paths: dict[str, str] = {}
+    # The hero typeahead index, written at the end of the run from the pages actually
+    # generated. Previously this file was hand-made and drifted from the data.
+    names_index: list[dict[str, str]] = []
 
     for i, r in enumerate(ordered):
         try:
@@ -870,6 +931,12 @@ def main() -> None:
             generated_ids.add(str(r['id']))
             generated_paths[str(r['id'])] = dir_path
             generated += 1
+            names_index.append({
+                'c': city_slug,
+                'n': r['name'],
+                't': r['city'],
+                's': os.path.basename(dir_path),
+            })
             
             if (i + 1) % 200 == 0:
                 print(f"  {i+1}/{total}...")
@@ -881,6 +948,20 @@ def main() -> None:
             errors += 1
     
     print(f"\nDone. Generated: {generated}, Errors: {errors}")
+
+    # ── Hero typeahead index ──────────────────────────────────────
+    # Derived from this run, so it can never disagree with the pages on disk. Sorted by name
+    # then city so the file is stable between runs (the typeahead returns the first 6 matches
+    # in file order, so alphabetical makes which-6-it-shows deterministic rather than arbitrary).
+    if errors == 0:
+        names_index.sort(key=lambda e: (e['n'].casefold(), e['c']))
+        names_path = os.path.join(REPO, 'names.json')
+        with open(names_path, 'w', encoding='utf-8') as f:
+            json.dump(names_index, f, ensure_ascii=False, separators=(',', ':'))
+        print(f"  names.json: {len(names_index)} entries -> {names_path}")
+    else:
+        print(f"  names.json NOT written ({errors} generation errors) — "
+              f"a partial index would hide restaurants from the hero search")
 
     # ── Prune stale pages ─────────────────────────────────────────
     # Remove dirs whose embedded fsa-id is not written AT THIS PATH this
