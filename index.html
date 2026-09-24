@@ -1569,29 +1569,10 @@
   border-bottom: 1px solid var(--hairline);
 }
 
-/* ── THE LOGO FIX ───────────────────────────────────────────────────
-   /logo-horizontal.svg is drawn fill="#ffffff" and is loaded through an
-   <img>, so its fill cannot be reached from this stylesheet. brightness(0)
-   collapses every channel of the raster output to 0 → the white artwork
-   renders as solid black on the ivory bar. One line, no new asset, no
-   markup change. (See NOTES for the exact-ink upgrade path.)            */
-#main-nav .logo { display: inline-flex; align-items: center; }
-#main-nav .logo-icon {
-  display: block;
-  filter: brightness(0);
-}
-/* Fallback if the mark ever becomes multi-colour: uncomment to put the
-   white logo back on an ink chip instead of recolouring it.
-#main-nav .logo-icon {
-  filter: none;
-  background: var(--ink);
-  padding: 6px 10px;
-  border-radius: var(--r-obj);
-  box-sizing: content-box;
-}
-*/
-
-/* ════════════════════════════════════════════════════════════════════
+/* The nav lockup is now /thaidata-lockup.svg, drawn in ink with the lotus
+     mark, so it never needs recolouring. The old brightness(0) hack and its
+     commented-out ink-chip fallback were removed along with the green asset. */
+  /* ════════════════════════════════════════════════════════════════════
    HERO — ivory ground, no photo, no gradient
    ════════════════════════════════════════════════════════════════════ */
 .hero {
