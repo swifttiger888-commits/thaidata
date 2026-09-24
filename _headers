@@ -6,7 +6,7 @@
 /*.jpg
   Cache-Control: public, max-age=604800
 /*.svg
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=600, must-revalidate
 
 # Fonts
 /*.woff2
