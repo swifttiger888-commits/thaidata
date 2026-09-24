@@ -2172,7 +2172,7 @@ em { font-style: normal; font-weight: 700; }
   <nav id="main-nav" class="td-masthead" aria-label="Primary">
     <div class="nav-bar td-bar">
       <a href="/" class="logo td-brand">
-        <span class="td-mark" aria-hidden="true"></span><span class="td-wordmark">ThaiData UK</span>
+        <img class="td-mark" src="/thaidata-mark.svg" alt="" width="32" height="32" aria-hidden="true"><span class="td-wordmark">ThaiData UK</span>
       </a>
       <div class="nav-r td-links">
         <a href="#hero-q" class="nav-link" data-find-restaurant>Find my restaurant</a>
@@ -3043,10 +3043,7 @@ em { font-style: normal; font-weight: 700; }
   flex: 0 0 32px;
   width: 32px;
   height: 32px;
-  background: #F2B21A;
-  -webkit-mask: url("/elephant-icon.svg") center / contain no-repeat;
-  mask: url("/elephant-icon.svg") center / contain no-repeat;
-  mask-mode: alpha;
+  object-fit: contain;
 }
 
 #main-nav.td-masthead .td-wordmark {
