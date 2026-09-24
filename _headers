@@ -23,3 +23,14 @@
 # CSS — must revalidate so design-token changes ship promptly
 /*.css
   Cache-Control: public, max-age=600, must-revalidate
+
+# Favicons - must revalidate so icon changes ship promptly
+# (/*.png is a 7-day cache, which is wrong for an icon we iterate on)
+/favicon.ico
+  Cache-Control: public, max-age=600, must-revalidate
+/favicon-lotus.svg
+  Cache-Control: public, max-age=600, must-revalidate
+/favicon-lotus.png
+  Cache-Control: public, max-age=600, must-revalidate
+/apple-touch-icon.png
+  Cache-Control: public, max-age=600, must-revalidate
