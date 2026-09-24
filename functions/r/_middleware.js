@@ -170,7 +170,7 @@ const DEMO_LISTING_HTML = `<!DOCTYPE html>
     <nav class="nav">
         <div class="nav-inner">
             <a href="/index.html" class="logo">
-                <img src="/elephant-icon.svg" alt="" width="32" height="32" style="width:32px;height:32px;">
+                <img src="/thaidata-mark-v2.svg" alt="" width="32" height="32" style="width:32px;height:32px;">
                 ThaiData
             </a>
             <a href="/claim/" class="nav-back"><i class="fas fa-arrow-left"></i> Back to claiming</a>
