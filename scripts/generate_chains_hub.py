@@ -143,7 +143,7 @@ HTML = f"""<!DOCTYPE html>
     <meta name="description" content="Complete directory of {total_chains} UK Thai restaurant chains verified from FSA data. {major[0]['count']} locations for {major[0]['label']}, plus {major[1]['label']}, {major[2]['label']} and more. City presence, hygiene ratings, and location maps.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/chains/">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.svg">
 
     <meta property="og:title" content="UK Thai Restaurant Chains — Complete Directory 2026 | ThaiData">
     <meta property="og:description" content="{total_chains} UK Thai restaurant chains with FSA-verified location data. City presence breakdowns, hygiene ratings, and sample location maps.">
@@ -245,7 +245,7 @@ HTML = f"""<!DOCTYPE html>
     <div class="grain"></div>
     <nav>
         <div class="nav-bar">
-            <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a>
+            <a href="/" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a>
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
             <div class="nav-links">
                 <a href="/guides.html">Guides</a>

@@ -233,7 +233,7 @@ HTML = f"""<!DOCTYPE html>
     <div class="grain"></div>
     <nav>
         <div class="nav-bar">
-            <a href="/" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a>
+            <a href="/" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a>
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
             <div class="nav-links">
                 <a href="/guides.html">Guides</a>

@@ -383,7 +383,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
     <nav>
         <div class="nav-bar">
             <a href="index.html" class="logo">
-                <img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="111" height="40">
+                <img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40">
             </a>
             <a href="guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Guides</a>
         </div>
@@ -617,7 +617,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
     <div class="grain"></div>
     <nav>
         <div class="nav-bar">
-            <a href="index.html" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
+            <a href="index.html" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
             <a href="thai-festivals-uk.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; All Festivals</a>
         </div>
     </nav>
@@ -816,7 +816,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
     <div class="grain"></div>
     <nav>
         <div class="nav-bar">
-            <a href="index.html" class="logo"><img src="/logo-horizontal.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
+            <a href="index.html" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
             <a href="thai-festivals-uk.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; All Festivals</a>
         </div>
     </nav>

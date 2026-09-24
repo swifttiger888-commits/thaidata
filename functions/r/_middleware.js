@@ -51,7 +51,7 @@ const DEMO_LISTING_HTML = `<!DOCTYPE html>
     <meta property="og:type" content="website">
     <meta property="og:title" content="Example Claimed Listing — ThaiData UK">
     <meta property="og:description" content="See what a claimed ThaiData listing looks like: photos, hours, price range, features and owner description.">
-    <link rel="icon" type="image/svg+xml" href="/elephant-icon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
     <style>

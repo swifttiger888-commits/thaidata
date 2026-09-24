@@ -365,10 +365,7 @@
   flex: 0 0 32px;
   width: 32px;
   height: 32px;
-  background: #F2B21A;
-  -webkit-mask: url("/elephant-icon.svg") center / contain no-repeat;
-  mask: url("/elephant-icon.svg") center / contain no-repeat;
-  mask-mode: alpha;
+  object-fit: contain;
 }
 
 #main-nav.td-masthead .td-wordmark {
@@ -473,7 +470,7 @@
   <nav id="main-nav" class="td-masthead" aria-label="Primary">
     <div class="nav-bar td-bar">
       <a href="/" class="logo td-brand">
-        <span class="td-mark" aria-hidden="true"></span>
+        <img class="td-mark" src="/thaidata-mark-v2.svg" alt="" width="32" height="32" aria-hidden="true">
         <span class="td-wordmark">ThaiData UK</span>
       </a>
       <a class="td-back" href="/thai-restaurants-city-breakdown-uk">
