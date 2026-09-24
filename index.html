@@ -1732,7 +1732,7 @@
 .hero-submit:active { background: var(--red-press); transform: translateY(1px); }
 .hero-submit:focus-visible { outline: 3px solid var(--turmeric); outline-offset: 2px; }
 
-.hero-meta {
+.hero .hero-meta {
   font-size: 15px;
   line-height: 1.45;
   color: var(--ink-mute);
@@ -2025,22 +2025,24 @@
   letter-spacing: 0.08em;
   color: var(--ink);
 }
-/* and FOR EXAMPLE is demoted so the two stop competing */
-#hero-eg-label { font-size: 11px; opacity: 0.55; }
+/* FOR EXAMPLE shares the LABEL level with the field label: at 11px / 55%
+   opacity it broke the s1 floor of 15px (13px for LABEL) and painted
+   3.93:1, under WCAG AA. */
 
-.hero-submit    { font-family: var(--display); font-weight: 700; letter-spacing: 0.005em; }
+.hero .hero-submit { font-family: var(--display); font-weight: 700; letter-spacing: 0.005em; }
 .hero-row-name  { font-family: var(--display); font-weight: 600; }
 .hero-row-cta   { font-family: var(--display); }
 .hero-mapnote   { font-family: var(--display); font-weight: 700; font-variant-numeric: tabular-nums; }
 .hero-card-name { font-family: var(--display); font-weight: 600; }
 
-/* ── focus: a red halo, not a gold ring ────────────────────────────────
-   The reviewer's point: 3px amber + red border + offset shadow reads as a
-   validation warning, not an invitation. Focus now lives on the input only,
-   so the field+button group stops looking like one alert component.          */
+/* ── focus: exactly the two cues DESIGN.md s2 asks for ─────────────────
+   The field owns the indicator -- border -> --red plus a 3px turmeric
+   outline at 2px offset. The wrap contributes nothing. It previously also
+   painted `box-shadow: 5px 5px 0 turmeric, 0 0 0 4px rgba(163,19,43,.14)`,
+   which stacked a second gold block and a third ring onto the same corners;
+   that, not the amber ring, was what read as a validation warning.          */
 .hero-inputwrap:focus-within {
   border-color: var(--red);
-  box-shadow: 5px 5px 0 var(--turmeric), 0 0 0 4px rgba(163, 19, 43, 0.14);
   outline: none;
 }
 .hero-submit:focus-visible {
