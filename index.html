@@ -16,7 +16,7 @@
 
   <!-- Primary meta -->
   <title>Thai Restaurants UK — Claim Your Free Listing | ThaiData UK</title>
-  <meta name="description" content="We list 1,265 Thai restaurants across the UK from official Food Standards Agency records. Find yours, claim the free listing, and control your photos, menu, opening hours and website link. No card needed." />
+  <meta name="description" content="We list 1,263 Thai restaurants across the UK from official Food Standards Agency records. Find yours, claim the free listing, and control your photos, menu, opening hours and website link. No card needed." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="ThaiData UK" />
   <link rel="canonical" href="https://thaidata.uk/" />
@@ -31,7 +31,7 @@
   <meta property="og:site_name" content="ThaiData UK" />
   <meta property="og:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
   <meta property="og:description"
-    content="1,265 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing — control your photos, menu, hours and website link." />
+    content="1,263 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing — control your photos, menu, hours and website link." />
   <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -43,7 +43,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
   <meta name="twitter:description"
-    content="1,265 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing in minutes." />
+    content="1,263 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing in minutes." />
   <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp" />
 
   <!-- Hero image removed: light hero, no decorative LCP image -->
@@ -1606,28 +1606,13 @@
 /* kill the retired hero photo + dark gradient pseudo-elements for good */
 .hero::before { content: none; background: none; }
 
-/* 24px turmeric kranok scroll band, bottom edge of the hero band only.
-   Data-URI cannot read CSS custom properties, so --turmeric is inlined. */
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 24px;
-  pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath d='M0 24V17c7 0 9-3 9-8 0-5 4-9 9-9h6c5 0 9 4 9 9 0 5 2 8 9 8h6v7z' fill='%23F2B21A'/%3E%3C/svg%3E") repeat-x left bottom / 48px 24px;
-}
+
 
 .hero-grid { display: block; }
 .hero-col { max-width: 640px; }
 
 /* ── anchor rule + type ── */
-.hero-rule {
-  width: 64px;
-  height: 4px;
-  background: var(--red);
-  border-radius: var(--r-sharp);
-  margin: 0 0 16px;
-}
+
 .hero .hero-h1 {
   font-family: inherit;
   font-size: 38px;
@@ -1648,11 +1633,13 @@
 }
 
 /* ── shared 13px caps label ── */
-.hero-label {
+.hero .hero-label {
   display: block;
+  font-family: "Archivo", "Noto Sans Thai", "Archivo-fallback", "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  line-height: 1;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink);
   margin: 0 0 8px;
@@ -1690,10 +1677,11 @@
   padding: 0 14px;
   border: 0;
   background: transparent;
-  font-family: inherit;
+  font-family: "Inter", "Noto Sans Thai", system-ui, -apple-system, sans-serif;
   font-size: 19px;
   font-weight: 500;
   line-height: 1.2;
+  letter-spacing: 0;
   color: var(--ink);
   caret-color: var(--red);
   -webkit-appearance: none;
@@ -1763,7 +1751,7 @@
 
 /* ── FOR EXAMPLE panel + result rows (one anatomy, used in both) ── */
 .hero-eg { margin: 26px 0 0; }
-.hero-list {
+.hero .hero-list {
   list-style: none;
   margin: 10px 0 0;
   padding: 0;
@@ -1785,7 +1773,10 @@
   color: var(--ink);
 }
 .hero-row:hover { background: var(--red-wash); }
-.hero-row:focus-visible { outline: 3px solid var(--turmeric); outline-offset: -3px; }
+.hero-row:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: -3px;
+}
 .hero-row-main { flex: 1 1 auto; min-width: 0; }
 .hero-row-name {
   display: block;
@@ -1841,8 +1832,6 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 64fr) minmax(0, 36fr);
-    gap: 72px;
     align-items: start;
   }
 
@@ -1889,66 +1878,23 @@
   .hero-aside { display: block; position: relative; padding-top: 10px; }
   .hero-map {
     display: block;
-    width: 340px;
     max-width: 100%;
-    height: auto;
   }
-  .hero-card {
-    position: relative;
-    z-index: 1;
-    width: 300px;
-    max-width: 100%;
-    margin: -40px 0 0 -40px;
-    margin-left: auto;
-    margin-right: -40px;
-    padding: 20px;
-    background: var(--paper);
-    border: 1px solid var(--hairline);
-    border-radius: var(--r-obj);
-    box-shadow: none;
-  }
-  .hero-card-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .hero-card-name {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.25;
-    color: var(--ink);
-  }
-  .hero-card-meta {
-    margin: 4px 0 0;
-    font-size: 15px;
-    color: var(--ink-mute);
-  }
-  .hero-card .hero-flag { margin-top: 0; }
-  .hero-card-cta {
-    display: inline-flex;
-    align-items: center;
-    min-height: 48px;
-    margin-top: 6px;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--red);
-    text-decoration: none;
-  }
-  .hero-card-cta:hover { color: var(--red-press); text-decoration: underline; }
-  .hero-card-cta:focus-visible { outline: 3px solid var(--turmeric); outline-offset: 2px; }
-  .hero-mapnote {
-    margin: 16px 0 0;
-    font-size: 15px;
-    line-height: 1.4;
-    color: var(--ink-mute);
-  }
+
+
+
+
+
+
+
+
+
 }
 
 /* ════════════════ 1440px+ : container ceiling only ════════════════ */
 @media (min-width: 1440px) {
-  .hero .wrap { max-width: 1200px; margin-inline: auto; }
-  .hero-col { max-width: 640px; }
+
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1958,8 +1904,11 @@
 /* ── mobile fit: measured, not estimated ────────────────────────────────
    The claim rows were 100px each because name / town / chip stacked into
    three lines. One line, 56px, dot instead of chip: saves 132px and gives a
-   real 56px tap target. The 'Unclaimed' state is not lost - it moves to
-   visually-hidden text so screen readers still hear it. */
+   real 56px tap target.
+   The Unclaimed/Owner-verified flag is gone from these rows: the typeahead read
+   `r.claimed`, but names.json carries only c/n/s/t, so every typed result announced
+   "Unclaimed" whether or not it was true. A status the data cannot support is worse
+   than no status. Restoring it needs a real claimed index, not a default. */
 .hero-row {
   display: flex;
   align-items: center;
@@ -1969,7 +1918,15 @@
   border-bottom: 1px solid rgba(26, 22, 20, 0.12);
 }
 .hero-list li:last-child .hero-row { border-bottom: 0; }
-.hero-row-main { display: flex; align-items: baseline; gap: 6px; min-width: 0; flex: 1 1 auto; }
+.hero-row-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 6px;
+  row-gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
 .hero-row-name { font-size: 16px; font-weight: 600; white-space: nowrap; }
 .hero-row-sep { color: var(--ink-mute); }
 .hero-row-town { font-size: 15px; color: var(--ink-mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -2004,36 +1961,46 @@
   line-gap-override: 0%;
 }
 
-.hero,
-.hero .hero-h1,
-.hero-submit,
-.hero-label,
-.hero-row-name,
-.hero-row-cta,
-.hero-mapnote,
-.hero-card-name {
-  --display: 'Archivo', 'Archivo-fallback', 'Helvetica Neue', Arial, sans-serif;
+.hero {
+  --display: 'Archivo', 'Noto Sans Thai', 'Archivo-fallback', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .hero .hero-h1  { font-family: var(--display); }
 
-/* the field label must win its own row: black, not the same grey as FOR EXAMPLE */
-.hero-label {
-  font-family: var(--display);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--ink);
-}
+
 /* FOR EXAMPLE shares the LABEL level with the field label: at 11px / 55%
    opacity it broke the s1 floor of 15px (13px for LABEL) and painted
    3.93:1, under WCAG AA. */
 
 .hero .hero-submit { font-family: var(--display); font-weight: 700; letter-spacing: 0.005em; }
-.hero-row-name  { font-family: var(--display); font-weight: 600; }
-.hero-row-cta   { font-family: var(--display); }
-.hero-mapnote   { font-family: var(--display); font-weight: 700; font-variant-numeric: tabular-nums; }
-.hero-card-name { font-family: var(--display); font-weight: 600; }
+.hero .hero-row-name {
+  font-family: "Inter", "Noto Sans Thai", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.hero .hero-row-cta {
+  font-family: "Inter", "Noto Sans Thai", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.hero .hero-mapnote {
+  font-family: "Inter", "Noto Sans Thai", system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--ink-mute);
+  font-variant-numeric: tabular-nums;
+  margin: 14px 0 0;
+}
+
 
 /* ── focus: exactly the two cues DESIGN.md s2 asks for ─────────────────
    The field owns the indicator -- border -> --red plus a 3px turmeric
@@ -2058,41 +2025,32 @@
    Irish Sea side so it stops covering dots.                                  */
 @media (min-width: 1024px) {
   .hero .hero-h1 { font-size: 80px; line-height: 0.98; letter-spacing: -0.02em; max-width: 17ch; }
-  .hero-rule     { width: 96px; height: 5px; }
-  .hero-map      { width: 460px; height: auto; }
+
+
   /* the 64/36 fr split only ever gave the aside 383px, and a global
      img{max-width:100%} then capped the map there. A measured column
      rather than a ratio is what actually buys the 460px map. */
-  .hero-grid     { grid-template-columns: minmax(0, 1fr) 460px; gap: 56px; }
-  .hero-aside    { align-self: start; margin-top: -34px; }
-  .hero-card     { margin-left: -40px; margin-top: -96px; max-width: 300px; }
-  .hero-mapnote  { margin-top: 18px; }
+
+  .hero-aside {
+    align-self: start;
+  }
+
+
 }
 
-/* ═══ corrected dot map ════════════════════════════════════════════════
-   The map is 391x620 because that is Britain's true projected aspect. The
-   previous asset was 340x460, which stretched the country 1.72x wide - the
-   reason it read as scattered dots rather than as a place.
+/* ═══ restaurant location map ═════════════════════════════════════════
+   Preserve the measured 391px desktop column.
+   Geography and restaurant coordinates share EPSG:3035 and a uniform fit
+   inside a 391x620 canvas. Missing coordinates are disclosed in the caption.
+   No overlay card: measured overlap obscured the south-west locations.    */
 
-   The card used to overlap the map's lower-right corner, which is where the
-   Cornwall/Wales arm and the London cluster are. With a correctly
-   proportioned Britain the empty region is the Atlantic to the lower-left,
-   so the card moves there and stops covering dots.                        */
-.hero-mapnote .hero-mapnote-strong { font-weight: 700; color: var(--ink); }
 
 @media (min-width: 1024px) {
   .hero-grid  { grid-template-columns: minmax(0, 1fr) 391px; gap: 56px; }
-  .hero-map   { width: 391px; height: 620px; }
+  .hero-map   { width: 391px; height: 527px; }
   .hero-aside { margin-top: -26px; }
-  .hero-card  {
-    position: absolute;
-    left: -56px;
-    bottom: 46px;
-    margin: 0;
-    width: 272px;
-    max-width: none;
-  }
-  .hero-mapnote { margin-top: 14px; }
+
+
 }
 
 /* ═══ how claiming works + browse by town ══════════════════════════════
@@ -2234,17 +2192,29 @@ em { font-style: normal; font-weight: 700; }
 
   <!-- HERO — ONE pitch: find your restaurant, claim it free -->
   <main class="td-home">
-  <section class="hero">
+  <style id="hero-anchor-style">
+.hero .hero-rule {
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 0 0 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--red);
+}
+</style>
+<section class="hero">
   <div class="wrap">
     <div class="hero-grid">
 
       <!-- ░░ LEFT: the mobile stack, unchanged on desktop ░░ -->
       <div class="hero-col">
+        <div class="hero-rule" aria-hidden="true"></div>
         <h1 class="hero-h1">Your restaurant is already listed.</h1>
-        <p class="hero-lead">1,265 UK Thai restaurants, built from official Food Standards Agency records. Claim yours free, forever.</p>
+        <p class="hero-lead">1,263 UK Thai restaurants from official FSA records.</p>
 
         <form class="hero-form" id="hero-form" action="/claim/" method="get" role="search" autocomplete="off">
-          <label class="hero-label" for="hero-q">Type your restaurant name</label>
+          <label class="hero-label" for="hero-q">Restaurant name</label>
 
           <div class="hero-field">
             <div class="hero-inputwrap">
@@ -2253,14 +2223,14 @@ em { font-style: normal; font-weight: 700; }
                 <path d="M15.4 15.4 21 21"></path>
               </svg>
               <input class="hero-input" type="search" id="hero-q" name="restaurant"
-                     placeholder="Start typing&hellip;" aria-describedby="hero-meta"
+                     placeholder="Find your free listing" aria-describedby="hero-meta"
                      enterkeyhint="search" spellcheck="false">
               <div class="hero-ta" id="hero-ta" aria-live="polite" hidden></div>
             </div>
             <button class="hero-submit" type="submit">Find my restaurant</button>
           </div>
 
-          <p class="hero-meta" id="hero-meta">Free forever &middot; about 5 minutes &middot; no card needed</p>
+          <p class="hero-meta" id="hero-meta">Free forever. About 5 minutes. No payment card needed.</p>
         </form>
 
         <div class="hero-eg">
@@ -2268,7 +2238,6 @@ em { font-style: normal; font-weight: 700; }
           <ul class="hero-list" aria-labelledby="hero-eg-label">
             <li>
               <a class="hero-row" href="/claim/?restaurant=Thai%20Aroy%20Dee">
-                <span class="hero-row-dot" aria-hidden="true"></span><span class="hero-flag">Unclaimed</span>
                 <span class="hero-row-main">
                   <span class="hero-row-name">Thai Aroy Dee</span>
                   <span class="hero-row-sep" aria-hidden="true">&middot;</span>
@@ -2279,7 +2248,6 @@ em { font-style: normal; font-weight: 700; }
             </li>
             <li>
               <a class="hero-row" href="/claim/?restaurant=Churchill%20Thai">
-                <span class="hero-row-dot" aria-hidden="true"></span><span class="hero-flag">Unclaimed</span>
                 <span class="hero-row-main">
                   <span class="hero-row-name">Churchill Thai</span>
                   <span class="hero-row-sep" aria-hidden="true">&middot;</span>
@@ -2290,7 +2258,6 @@ em { font-style: normal; font-weight: 700; }
             </li>
             <li>
               <a class="hero-row" href="/claim/?restaurant=Mai%20Thai">
-                <span class="hero-row-dot" aria-hidden="true"></span><span class="hero-flag">Unclaimed</span>
                 <span class="hero-row-main">
                   <span class="hero-row-name">Mai Thai</span>
                   <span class="hero-row-sep" aria-hidden="true">&middot;</span>
@@ -2303,21 +2270,14 @@ em { font-style: normal; font-weight: 700; }
         </div>
       </div>
 
-      <!-- ░░ RIGHT: dot-map + one overlapping listing card (>=1024px) ░░ -->
+      <!-- ░░ RIGHT: restaurant locations (>=1024px) ░░ -->
       <aside class="hero-aside" aria-label="Where the listings are">
-        <img class="hero-map" src="uk-dotmap.svg" width="391" height="620"
-             alt="Map of the United Kingdom with a dot for each of the 1,265 listed Thai restaurants.">
-        <div class="hero-card">
-          <div class="hero-card-top">
-            <div>
-              <span class="hero-card-name">Thai Aroy Dee</span>
-              <p class="hero-card-meta">Leeds &middot; FSA register</p>
-            </div>
-            <span class="hero-flag">Unclaimed</span>
-          </div>
-          <a class="hero-card-cta" href="/claim/?restaurant=Thai%20Aroy%20Dee">Claim this listing &rarr;</a>
-        </div>
-        <p class="hero-mapnote">1,265 FSA-registered Thai restaurants &middot; <span class="hero-mapnote-strong">1,192 still unclaimed</span>.</p>
+        <picture>
+          <source media="(min-width: 1024px)" srcset="uk-dotmap.svg">
+          <img class="hero-map" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='391' height='527'/%3E" width="391" height="527"
+               alt="Map of UK Thai restaurant locations." decoding="async">
+        </picture>
+        <p class="hero-mapnote">1,157 restaurants mapped. 106 have no map coordinates.</p>
       </aside>
 
     </div>
@@ -2338,10 +2298,8 @@ em { font-style: normal; font-weight: 700; }
         return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
       });
     }
-    function row(name, meta, claimed) {
+    function row(name, meta) {
       return '<a class="hero-row" href="' + claimHref(name) + '">' +
-               (claimed ? '' : '<span class="hero-row-dot" aria-hidden="true"></span>') +
-               '<span class="hero-flag">' + (claimed ? 'Owner verified' : 'Unclaimed') + '</span>' +
                '<span class="hero-row-main">' +
                  '<span class="hero-row-name">' + esc(name) + '</span>' +
                  (meta ? '<span class="hero-row-sep" aria-hidden="true">\u00b7</span>' +
@@ -2377,7 +2335,7 @@ em { font-style: normal; font-weight: 700; }
         town = r.town || r.t || '';
         if (!name) continue;
         if ((name + ' ' + town).toLowerCase().indexOf(needle) > -1) {
-          out.push(row(name, town, !!r.claimed));
+          out.push(row(name, town));
         }
       }
       out.push('<a class="hero-row" href="' + claimHref(q) + '">' +
@@ -3213,8 +3171,8 @@ em { font-style: normal; font-weight: 700; }
   font: 400 17px/26px "Inter", sans-serif;
 }
 
-.td-home :where(h1, h2, h3, p, ul, ol, figure) { margin: 0; }
-.td-home :where(input, button, select, textarea) { font-family: "Inter", sans-serif; }
+:where(.td-home) :where(h1, h2, h3, p, ul, ol, figure) { margin: 0; }
+:where(.td-home) :where(input, button, select, textarea) { font-family: "Inter", sans-serif; }
 
 /* One rail: 1136px maximum, 152px of ground either side at 1440, 20px gutters at 390. */
 .td-home > section > .wrap {
@@ -3251,6 +3209,8 @@ em { font-style: normal; font-weight: 700; }
 .td-home .hero-lead {
   font: 400 20px/30px "Inter", sans-serif;
   margin-top: 16px;
+  margin-bottom: 26px;   /* declared intent; the :where()
+     reset at byte ~115277 was winning this tie and zeroing it */
 }
 
 .td-home > section > .wrap > h2 {
