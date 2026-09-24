@@ -33,6 +33,8 @@ Thumbs.db
 .tmp/
 *.tmp
 *.bak
+*.orig
+*.rej
 
 # Archive and local docs
 .archive/
