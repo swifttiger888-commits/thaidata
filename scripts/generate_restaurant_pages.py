@@ -470,8 +470,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         "@type": "BreadcrumbList",
         "itemListElement": [
             {{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thaidata.uk/"}},
-            {{"@type": "ListItem", "position": 2, "name": "{city}", "item": "https://thaidata.uk/cities/{city_slug}"}},
-            {{"@type": "ListItem", "position": 3, "name": "{name}"}}
+            {{"@type": "ListItem", "position": 2, "name": {json.dumps(city)}, "item": "https://thaidata.uk/cities/{city_slug}"}},
+            {{"@type": "ListItem", "position": 3, "name": {json.dumps(name)}}}
         ]
     }}
     </script>'''
@@ -727,11 +727,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- JS variables for enrichment script ----
     html = html.replace(
         "                const RESTAURANT_NAME = 'My Thai';",
-        f"                const RESTAURANT_NAME = '{name}';"
+        f"                const RESTAURANT_NAME = {json.dumps(name)};"
     )
     html = html.replace(
         "                const RESTAURANT_CITY = 'Leeds';",
-        f"                const RESTAURANT_CITY = '{city}';"
+        f"                const RESTAURANT_CITY = {json.dumps(city)};"
     )
 
     # ---- Nearby section (closed venues only) ----
