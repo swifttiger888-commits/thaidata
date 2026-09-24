@@ -3126,6 +3126,49 @@ em { font-style: normal; font-weight: 700; }
   display: none;
 }
 
+@media (max-width: 767px) {
+  #main-nav.td-masthead .hamburger { display: block; }
+
+  /* Combo pattern: one link stays inline, the rest move into the drawer.
+     Keep the row a flex container but hide every child, then re-show the conversion link. */
+  #main-nav.td-masthead .td-links > a { display: none; }
+  #main-nav.td-masthead .td-links > a[href="/claim/"] {
+    display: inline-flex;
+    margin-left: auto;
+    padding-right: 4px;
+  }
+
+  #main-nav.td-masthead .td-links.open {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 6px 12px 12px;
+    overflow: visible;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--hairline);
+    box-shadow: 0 14px 28px rgba(28, 25, 23, 0.10);
+    z-index: 60;
+  }
+
+  #main-nav.td-masthead .td-links.open > a {
+    display: inline-flex;
+    width: 100%;
+    margin-left: 0;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  #main-nav.td-masthead .td-links.open > a:last-child { border-bottom: 0; }
+}
+
 @media (max-width: 600px) {
   #main-nav.td-masthead .td-bar {
     gap: 16px;
