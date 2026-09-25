@@ -397,12 +397,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/cities/blackburn</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/cities/blackpool</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -547,12 +541,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/cities/ceredigion</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/cities/charnwood</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -662,12 +650,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/cities/derby</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/cities/derry-city-and-strabane</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -884,12 +866,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/cities/gwynedd</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/cities/hampshire</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1489,12 +1465,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/cities/stafford</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/cities/staffordshire</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -1622,12 +1592,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/cities/torbay</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/cities/torridge</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -532,3 +532,29 @@ class TestFhisHandling:
         assert "**" not in out
         assert "1268" not in out
 
+
+# ── Empty-city state (no listings) ────────────────────────────────────────────
+
+class TestEmptyCityState:
+    def test_empty_state_page_noindexed_and_clean(self):
+        from scripts.generate_city_pages import build_empty_state_page, is_empty_state
+        page = build_empty_state_page("Blackburn", "blackburn")
+        assert is_empty_state(page)
+        assert 'content="noindex, follow"' in page
+        assert 'rel="canonical" href="https://thaidata.uk/cities/blackburn"' in page
+        assert "1268" not in page and "★" not in page
+        assert "<title>" in page and "Blackburn" in page
+
+    def test_sitemap_discovery_skips_empty_state(self, tmp_path, monkeypatch):
+        import scripts.generate_sitemaps as sm
+        from scripts.generate_city_pages import build_empty_state_page
+        monkeypatch.setattr(sm, "REPO_DIR", str(tmp_path))
+        cities = tmp_path / "cities"
+        cities.mkdir()
+        (cities / "normal.html").write_text(
+            "<!DOCTYPE html><html><head><title>Normal</title></head><body>x</body></html>")
+        (cities / "blackburn.html").write_text(build_empty_state_page("Blackburn", "blackburn"))
+        url = [u["loc"] for u in sm.discover_city_pages()]
+        assert any("/cities/normal" in u for u in url)
+        assert not any("/cities/blackburn" in u for u in url)
+

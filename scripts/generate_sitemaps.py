@@ -115,6 +115,15 @@ def discover_city_pages() -> list[dict]:
     for fname in sorted(os.listdir(cities_dir)):
         if not fname.endswith(".html"):
             continue
+        fpath = os.path.join(cities_dir, fname)
+        with open(fpath, encoding="utf-8", errors="ignore") as f:
+            page_html = f.read()
+        # Skip noindexed pages (empty-state pages for cities with no current
+        # listings) — submitting them would just create coverage warnings.
+        if "<!-- CITIES-EMPTY-STATE" in page_html:
+            continue
+        if re.search(r'name="robots" content="noindex', page_html):
+            continue
         city_slug = fname[:-5]  # strip .html
         pages.append({
             "loc": f"https://thaidata.uk/cities/{city_slug}",

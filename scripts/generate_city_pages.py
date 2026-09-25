@@ -18,8 +18,10 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 from collections import defaultdict
+from html import escape as html_escape
 from datetime import date
 from pathlib import Path
 from typing import Any, Literal
@@ -908,12 +910,61 @@ def compute_national_rank(by_city: dict[str, list], city_name: str) -> int:
 
 # ── Per-city processing ────────────────────────────────────────────────────────
 
+EMPTY_STATE_MARKER = "<!-- CITIES-EMPTY-STATE v1 -->"
+
+
+def is_empty_state(html_doc: str) -> bool:
+    """True when a city page is the minimal noindexed empty state."""
+    return EMPTY_STATE_MARKER in html_doc
+
+
+def build_empty_state_page(city: str, slug: str) -> str:
+    """Minimal noindexed page for a city with no current listings.
+
+    Deliberately small: no stale numbers, no AUTO zones. When listings
+    return, the normal generator replaces this page and the noindex is gone.
+    """
+    name = html_escape(city)
+    return f'''<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{EMPTY_STATE_MARKER}
+<title>Thai Restaurants in {name} | ThaiData UK</title>
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="We don't currently list Thai restaurants in {name}. Our directory is refreshed weekly from official Food Standards Agency and Food Standards Scotland data.">
+<link rel="canonical" href="https://thaidata.uk/cities/{slug}">
+<style>
+  body {{ font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; color: #1f2937; background: #fff; }}
+  main {{ max-width: 640px; margin: 0 auto; padding: 64px 24px; }}
+  h1 {{ font-size: 1.6rem; margin: 0 0 16px; }}
+  p {{ line-height: 1.6; color: #4b5563; }}
+  a {{ color: #A3132B; }}
+</style>
+</head>
+<body>
+<main>
+  <h1>Thai restaurants in {name}</h1>
+  <p>We don't currently list any Thai restaurants in {name}.</p>
+  <p>ThaiData UK is refreshed every week from official Food Standards Agency
+  (England, Wales &amp; Northern Ireland) and Food Standards Scotland (Scotland)
+  data &mdash; if a Thai restaurant registers here, its listing will appear
+  automatically.</p>
+  <p><a href="/cities/">Browse all UK cities</a> &nbsp;&middot;&nbsp; <a href="/">ThaiData UK home</a></p>
+</main>
+</body>
+</html>
+'''
+
+
 def process_city(
     slug: str,
     city_name: str,
     registry: dict[str, Any],
     all_data: dict[str, Any],
     city_ctx: dict[str, Any] | None = None,
+    prev_cities: set[str] | None = None,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     """Process a single city page.
@@ -934,6 +985,22 @@ def process_city(
     if not restaurants:
         result["action"] = "quarantined"
         result["errors"].append(f"No restaurant data for city: {city_name}")
+        # Empty cities: once the emptiness is confirmed across two data
+        # snapshots, replace the (now stale) page with a minimal noindexed
+        # empty state. A single bad fetch can never stub out good pages.
+        registry_entry = registry.get("cities", {}).get(slug, {})
+        confirmed_empty = prev_cities is not None and city_name not in prev_cities
+        if registry_entry.get("mode") != "manual" and confirmed_empty:
+            html_path = CITIES_DIR / f"{slug}.html"
+            if html_path.exists():
+                with open(html_path) as f:
+                    existing_es = f.read()
+                if not is_empty_state(existing_es):
+                    if dry_run:
+                        result["action"] = "would-empty-state"
+                    else:
+                        html_path.write_text(build_empty_state_page(city_name, slug))
+                        result["action"] = "empty-state"
         return result
 
     # Read existing HTML (if any)
@@ -942,6 +1009,10 @@ def process_city(
     if html_path.exists():
         with open(html_path) as f:
             existing_html = f.read()
+    # An empty-state page is not a usable base — regenerate from scratch once
+    # listings return (which also drops the noindex automatically).
+    if existing_html is not None and is_empty_state(existing_html):
+        existing_html = None
 
     # Resolve mode
     mode, error = resolve_mode(registry, slug, existing_html)
@@ -1101,6 +1172,28 @@ def main() -> None:
     by_city = all_data["by_city"]
     city_ctx_map = build_city_context(all_data)
 
+    # Previous committed data — used to confirm a city is really empty (two
+    # consecutive data snapshots) before replacing its page with the empty state.
+    prev_cities: set[str] | None = None
+    try:
+        prev_raw = subprocess.run(
+            ['git', 'show', 'HEAD:data/restaurants.json'],
+            capture_output=True, text=True, check=True, cwd=str(REPO)).stdout
+        prev_data = json.loads(prev_raw)
+        # Apply the same moderation exclusions as load_restaurants() so the
+        # comparison is like-for-like (a city emptied by moderation is empty).
+        excluded_ids: set[int] = set()
+        excl_path = REPO / "data" / "exclusions.json"
+        if excl_path.exists():
+            with open(excl_path) as f:
+                excluded_ids = set(json.load(f).get("excluded_fsa_ids", []))
+        prev_cities = {
+            r.get("city", "") for r in prev_data.get("restaurants", [])
+            if r.get("id") not in excluded_ids
+        }
+    except Exception as e:
+        print(f"  ⚠️  Could not read previous data from git — empty-state check disabled ({e})")
+
     # Build city name → slug mapping
     name_to_slug: dict[str, str] = {}
     for city in by_city:
@@ -1110,6 +1203,7 @@ def main() -> None:
     quarantined_count = 0
     generated_count = 0
     skipped_count = 0
+    empty_state_count = 0
 
     if args.city:
         # Single city mode
@@ -1158,6 +1252,7 @@ def main() -> None:
             registry=registry,
             all_data=all_data,
             city_ctx=city_ctx_map.get(city_name, {}),
+            prev_cities=prev_cities,
             dry_run=not args.apply,
         )
         results.append(result)
@@ -1168,6 +1263,12 @@ def main() -> None:
             print(f"  ❌ {slug} — QUARANTINED")
             for e in result.get("errors", []):
                 print(f"     {e}")
+        elif action == "empty-state":
+            empty_state_count += 1
+            print(f"  🫥 {slug} — empty-state page written")
+        elif action == "would-empty-state":
+            empty_state_count += 1
+            print(f"  🫥 {slug} — would write empty-state page")
         elif action == "generated":
             generated_count += 1
             print(f"  ✅ {slug} — generated ({result.get('mode', '?')})")
@@ -1184,7 +1285,8 @@ def main() -> None:
 
     # Summary
     print(f"\n{'='*50}")
-    print(f"  Summary: {generated_count} generated, {quarantined_count} quarantined, {skipped_count} skipped")
+    print(f"  Summary: {generated_count} generated, {quarantined_count} quarantined, "
+          f"{empty_state_count} empty-state, {skipped_count} skipped")
     print(f"{'='*50}")
 
     # Build manifest
@@ -1194,7 +1296,9 @@ def main() -> None:
         "total_cities": len(cities_to_process),
         "generated": generated_count,
         "quarantined": quarantined_count,
+        "empty_state": empty_state_count,
         "skipped": skipped_count,
+        "empty_state_pages": [r["slug"] for r in results if r["action"] in ("empty-state", "would-empty-state")],
         "quarantined_pages": [
             {"slug": r["slug"], "reason": r.get("errors", ["Unknown"])[0]}
             for r in results if r["action"] == "quarantined"
