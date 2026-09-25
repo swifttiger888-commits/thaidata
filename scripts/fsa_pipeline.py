@@ -5,12 +5,15 @@ FSA Data Refresh Pipeline — end-to-end.
 2. Regenerate restaurant pages → r/
 3. Regenerate city cards → cities/
 4. Regenerate city page AUTO blocks → cities/
-5. Commit + push if changes detected
+5. Regenerate the MCP fallback block → functions/mcp.js
+6. Commit + push if changes detected
+7. Publish to HuggingFace (no-op when unchanged; disable via SKIP_HF_PUBLISH=1
+   or a .no_hf_publish file at the repo root)
 """
 import json, os, subprocess, sys
 from datetime import datetime
 
-REPO_DIR = '/tmp/thaidata-repo'
+REPO_DIR = '/opt/thaidata-repo'
 SCRIPTS = os.path.join(REPO_DIR, 'scripts')
 DATA_FILE = os.path.join(REPO_DIR, 'data', 'restaurants.json')
 
@@ -111,11 +114,16 @@ def main() -> None:
                'Step 5/6: Regenerate sitemaps'):
         print("⚠️  Sitemap generation failed (non-fatal)")
 
+    # ── Step 5b: regenerate the MCP fallback (functions/mcp.js) ──────
+    if not run([sys.executable, f'{SCRIPTS}/generate_mcp_fallback.py'],
+               'Step 6: Regenerate MCP fallback data'):
+        print("⚠️  MCP fallback regeneration failed (non-fatal)")
+
     # ── Step 6: commit & push ────────────────────────────────────────
     os.chdir(REPO_DIR)
 
     # Guard: only stage files we own
-    owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap')
+    owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap', 'functions/mcp.js')
     status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
     dirty_lines = [l for l in status.stdout.split('\n') if l.strip()]
     unrelated = [l for l in dirty_lines
@@ -133,7 +141,7 @@ def main() -> None:
         return
 
     # Stage everything that changed
-    subprocess.run(['git', 'add', 'data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py'], capture_output=True)
+    subprocess.run(['git', 'add', 'data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py', 'functions/mcp.js'], capture_output=True)
 
     commit_msg = f"Auto-refresh: FSA data update — {new_count} Thai businesses ({diff:+d})"
     result = subprocess.run(['git', 'commit', '-m', commit_msg], capture_output=True, text=True)
@@ -157,6 +165,11 @@ def main() -> None:
 
     # WebSub ping
     subprocess.run([sys.executable, f'{SCRIPTS}/websub-ping.py'], capture_output=False)
+
+    # ── Step 7: publish the HuggingFace dataset ──────────────────────
+    if not run([sys.executable, f'{SCRIPTS}/publish_hf_dataset.py'],
+               'Step 7: Publish HuggingFace dataset'):
+        print("⚠️  HF dataset publish failed (non-fatal)")
 
     elapsed = (datetime.now() - start).total_seconds()
     print(f"\nDone in {elapsed:.1f}s — {old_count}→{new_count} ({diff:+d})")
