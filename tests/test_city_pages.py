@@ -425,3 +425,94 @@ class TestHasFsaAggregateRating:
             },
         }
         assert not _has_fsa_aggregate_rating(d)
+
+# ── FHIS (Scotland) handling ──────────────────────────────────────────────────
+
+FHIS_EDINBURGH = (
+    [
+        {"id": i, "name": f"Pass Venue {i}", "type": "restaurant",
+         "city": "Edinburgh", "hygiene_rating": "Pass"}
+        for i in range(14)
+    ]
+    + [
+        {"id": 100 + i, "name": f"IR Venue {i}", "type": "takeaway",
+         "city": "Edinburgh", "hygiene_rating": "Improvement Required"}
+        for i in range(5)
+    ]
+)
+
+LEGACY_BLOCK_HTML = """<div class="card"><h2>x Market Snapshot</h2>
+<div><strong>Avg Hygiene Rating:</strong> <span>★★ 2.5/5 (FSA data)</span></div>
+<div><strong>UK Share:</strong> <span>1.5% of 1268</span></div>
+<div class="comparison">
+<div class="comp-item"><div class="label">Per-Capita Density</div><div class="value good">4.4/100k</div><div class="sub">UK avg: 2.6/100k (+1.8)</div></div>
+<div class="comp-item"><div class="label">Hygiene Rating</div><div class="value good">★4.2</div><div class="sub">UK avg: ★4.3 (-0.1)</div></div>
+</div>
+<li>• <strong>vs UK Average:</strong> Edinburgh 1268.</li>
+<div>Data updated: 2026-06-04</div>"""
+
+
+class TestFhisHandling:
+    def test_compute_stats_classifies_fhis(self):
+        from scripts.generate_city_pages import compute_city_stats
+        stats = compute_city_stats(FHIS_EDINBURGH)
+        assert stats["scheme"] == "FHIS"
+        assert stats["fhis_pass"] == 14
+        assert stats["fhis_improvement"] == 5
+        assert stats["fhis_exempt"] == 0
+        assert stats["avg_rating"] == 0.0
+
+    def test_compute_stats_fhrs_unchanged(self):
+        from scripts.generate_city_pages import compute_city_stats
+        stats = compute_city_stats(SAMPLE_RESTAURANTS[:2])
+        assert stats["scheme"] == "FHRS"
+        assert stats["avg_rating"] == 4.5
+
+    def test_market_snapshot_no_zero_rating_for_fhis(self):
+        from scripts.generate_city_pages import build_market_snapshot_html, compute_city_stats
+        stats = compute_city_stats(FHIS_EDINBURGH)
+        snap = build_market_snapshot_html("Edinburgh", stats)
+        assert "14 Pass" in snap
+        assert "0.0" not in snap
+        assert "FHIS-registered" in snap
+
+    def test_faq_fhis_has_no_numeric_claims(self):
+        faq = build_faq_page(
+            "Edinburgh", 19, 0.0, 3, 0, 0, 12, 7,
+            ["Ting Thai", "Absolute Thai Restaurant"],
+            None, scheme="FHIS", fhis_pass=14, fhis_improvement=5,
+            fhis_pass_names=["Ting Thai", "Absolute Thai Restaurant"],
+        )
+        text = " ".join(q["acceptedAnswer"]["text"] for q in faq["mainEntity"])
+        assert "0/5" not in text and "0.0/5" not in text
+        assert "Food Standards Scotland" in text
+        names = [q["name"] for q in faq["mainEntity"]]
+        assert any("rated" in n for n in names)
+
+    def test_faq_fhrs_wording_unchanged(self):
+        faq = build_faq_page("Manchester", 3, 4.7, 1, 4.0, 5.0, 2, 1, ["Hong Thai"], None)
+        text = " ".join(q["acceptedAnswer"]["text"] for q in faq["mainEntity"])
+        assert "all holding 5/5 FSA hygiene stars" in text
+
+    def test_hero_refresh_fhis_legacy_block(self):
+        from scripts.generate_city_pages import compute_city_stats, update_hero_stats
+        stats = compute_city_stats(FHIS_EDINBURGH)
+        ctx = {"population": 548000, "per_100k": 3.5, "uk_density": 2.1,
+               "uk_per_city": 5.0, "uk_avg": 4.4, "data_updated": "2026-09-21"}
+        out = update_hero_stats(LEGACY_BLOCK_HTML, "Edinburgh", stats, 1263, ctx)
+        assert "14 of 19 Pass (FHIS)" in out
+        assert "of 1263" in out and "1268" not in out
+        assert "74% Pass" in out and "FHIS · Food Standards Scotland" in out
+        assert "Data updated: 2026-09-21" in out
+
+    def test_hero_refresh_fhrs_legacy_block(self):
+        from scripts.generate_city_pages import compute_city_stats, update_hero_stats
+        stats = compute_city_stats(SAMPLE_RESTAURANTS[:2])
+        ctx = {"population": 243000, "per_100k": 1.6, "uk_density": 2.1,
+               "uk_per_city": 5.0, "uk_avg": 4.4, "data_updated": "2026-09-21"}
+        out = update_hero_stats(LEGACY_BLOCK_HTML, "Oldham", stats, 1263, ctx)
+        assert "4.5/5 (FSA data)" in out
+        assert "UK avg: ★4.4 (+0.1)" in out
+        assert "Oldham has 2 Thai businesses — the UK average is 5 per city." in out
+        assert "1268" not in out
+

@@ -77,6 +77,11 @@ CHAIN_KEYWORDS: list[str] = [
     "bangkok",
 ]
 
+# Scottish businesses are inspected under the Food Hygiene Information Scheme
+# (FHIS, Food Standards Scotland) and rated Pass / Improvement Required /
+# Exempt — never 0–5. Keep them out of numeric averages; label by scheme.
+FHIS_STATUSES: tuple[str, ...] = ("Pass", "Improvement Required", "Exempt")
+
 # Schema JSON files for validation
 SCHEMA_FILES: dict[str, Path] = {
     "ItemList": SCHEMAS_DIR / "item-list.schema.json",
@@ -140,6 +145,50 @@ def load_restaurants() -> dict[str, Any]:
     }
 
 
+def build_city_context(all_data: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    """Per-city display context + UK baselines for legacy-block refresh.
+
+    Reads api/v1/cities.json (population, per_100k) and derives UK-wide
+    baselines from current data.
+    """
+    ctx: dict[str, dict[str, Any]] = {}
+    uk_density = None
+    uk_per_city = None
+
+    cities_path = REPO / "api" / "v1" / "cities.json"
+    if cities_path.exists():
+        with open(cities_path) as f:
+            cdata = json.load(f)
+        cities = cdata.get("cities", [])
+        for c in cities:
+            ctx[c.get("name", "")] = {
+                "population": c.get("population"),
+                "per_100k": c.get("per_100k"),
+            }
+        pops = [(c["population"], c["total_thai_businesses"]) for c in cities if c.get("population")]
+        if pops:
+            sum_p = sum(p for p, _ in pops)
+            sum_c = sum(n for _, n in pops)
+            if sum_p:
+                uk_density = round(sum_c / sum_p * 1e5, 1)
+        if cities:
+            uk_per_city = len(all_data["raw"].get("restaurants", [])) / len(cities)
+
+    nums = [
+        int(r["hygiene_rating"])
+        for r in all_data["raw"].get("restaurants", [])
+        if str(r.get("hygiene_rating", "")).isdigit()
+    ]
+    uk_avg = round(sum(nums) / len(nums), 1) if nums else None
+
+    for c in ctx.values():
+        c["uk_density"] = uk_density
+        c["uk_per_city"] = uk_per_city
+        c["uk_avg"] = uk_avg
+        c["data_updated"] = all_data.get("updated", "")
+    return ctx
+
+
 def detect_chains(restaurants: list[dict[str, Any]]) -> list[str]:
     """Detect chain names in a city's restaurant list."""
     found: set[str] = set()
@@ -182,6 +231,20 @@ def compute_city_stats(restaurants: list[dict[str, Any]]) -> dict[str, Any]:
         except (ValueError, TypeError):
             pass
 
+    # FHIS (Scotland): Pass / Improvement Required / Exempt are statuses, not
+    # scores. A city is FHIS-rated when none of its businesses carry a numeric
+    # score; the numeric helpers stay at 0 and FHIS counts take over.
+    fhis_rows = [r for r in restaurants if r.get("hygiene_rating") in FHIS_STATUSES]
+    scheme = "FHIS" if (fhis_rows and not ratings) else "FHRS"
+    fhis_pass = sum(1 for r in fhis_rows if r.get("hygiene_rating") == "Pass")
+    fhis_improvement = sum(1 for r in fhis_rows if r.get("hygiene_rating") == "Improvement Required")
+    fhis_exempt = sum(1 for r in fhis_rows if r.get("hygiene_rating") == "Exempt")
+    fhis_pass_names = sorted(
+        " ".join(r.get("name", "").split())
+        for r in fhis_rows
+        if r.get("hygiene_rating") == "Pass"
+    )
+
     avg_rating = sum(ratings) / len(ratings) if ratings else 0.0
     min_rating = min(ratings) if ratings else 0
     max_rating = max(ratings) if ratings else 0
@@ -214,6 +277,11 @@ def compute_city_stats(restaurants: list[dict[str, Any]]) -> dict[str, Any]:
         "min_rating": min_rating,
         "max_rating": max_rating,
         "five_star": five_star,
+        "scheme": scheme,
+        "fhis_pass": fhis_pass,
+        "fhis_improvement": fhis_improvement,
+        "fhis_exempt": fhis_exempt,
+        "fhis_pass_names": fhis_pass_names,
         "sorted_restaurants": sorted_restaurants,
         "top_names": [_clean_name(r["name"]) for r in sorted_restaurants[:5]],
         "chains": chains,
@@ -320,6 +388,11 @@ def build_all_schema(
         takeaway=stats["takeaway"],
         top_restaurant_names=stats["top_names"],
         chains=stats["chains"] if stats["chains"] else None,
+        scheme=stats.get("scheme", "FHRS"),
+        fhis_pass=stats.get("fhis_pass", 0),
+        fhis_improvement=stats.get("fhis_improvement", 0),
+        fhis_exempt=stats.get("fhis_exempt", 0),
+        fhis_pass_names=stats.get("fhis_pass_names", []),
     )
     schemas.append(faq)
 
@@ -373,7 +446,13 @@ def validate_rendered_schema(schema_html: str) -> list[str]:
     return errors
 
 
-def update_hero_stats(html: str, city: str, stats: dict[str, Any], total_uk: int) -> str:
+def update_hero_stats(
+    html: str,
+    city: str,
+    stats: dict[str, Any],
+    total_uk: int,
+    ctx: dict[str, Any] | None = None,
+) -> str:
     """Update stale hero-section numbers to match current (post-exclusion) stats.
 
     The hero section on hybrid/programmatic city pages predates the exclusion
@@ -466,6 +545,90 @@ def update_hero_stats(html: str, city: str, stats: dict[str, Any], total_uk: int
             html,
         )
 
+    # ── 6. Legacy "Market Snapshot" grid + comparison cells (written by older
+    # one-off generators; refreshed here so values never drift or contradict) ──
+    ctx = ctx or {}
+    scheme = stats.get("scheme", "FHRS")
+
+    if scheme == "FHIS":
+        avg_val = f'{stats.get("fhis_pass", 0)} of {count} Pass (FHIS)'
+    else:
+        legacy_stars = "★" * round(avg_rating) if avg_rating >= 1 else ""
+        avg_val = f"{legacy_stars} {avg_rating:.1f}/5 (FSA data)".strip()
+    html = re.sub(
+        r'(<strong>Avg Hygiene Rating:</strong> <span[^>]*>)[^<]*(</span>)',
+        lambda m: m.group(1) + avg_val + m.group(2), html,
+    )
+
+    if total_uk:
+        share_val = f"{count / total_uk * 100:.1f}% of {total_uk}"
+        html = re.sub(
+            r'(<strong>UK Share:</strong> <span[^>]*>)[^<]*(</span>)',
+            lambda m: m.group(1) + share_val + m.group(2), html,
+        )
+
+    population = ctx.get("population")
+    if population:
+        html = re.sub(
+            r'(<strong>Population:</strong> <span[^>]*>)[^<]*(</span>)',
+            lambda m: m.group(1) + f"{population:,}" + m.group(2), html,
+        )
+
+    # comparison card — hygiene cell (normalises both legacy display styles)
+    if scheme == "FHIS":
+        comp_val = f"{round(stats.get('fhis_pass', 0) / count * 100)}% Pass" if count else "—"
+        comp_sub = "FHIS · Food Standards Scotland"
+        html = re.sub(
+            r'(<div class="label">Hygiene Rating</div>\s*<div class="value[^"]*">)[^<]*'
+            r'(</div>\s*<div class="sub">)[^<]*(</div>)',
+            lambda m: m.group(1) + comp_val + m.group(2) + comp_sub + m.group(3), html,
+        )
+    elif ctx.get("uk_avg"):
+        uk_avg_val = ctx["uk_avg"]
+        comp_val = f"★{avg_rating:.1f}"
+        comp_sub = f"UK avg: ★{uk_avg_val:.1f} ({avg_rating - uk_avg_val:+.1f})"
+        html = re.sub(
+            r'(<div class="label">Hygiene Rating</div>\s*<div class="value[^"]*">)[^<]*'
+            r'(</div>\s*<div class="sub">)[^<]*(</div>)',
+            lambda m: m.group(1) + comp_val + m.group(2) + comp_sub + m.group(3), html,
+        )
+
+    # comparison card — density cell
+    per_100k = ctx.get("per_100k")
+    uk_density = ctx.get("uk_density")
+    if uk_density:
+        d_val = f"{per_100k:.1f}/100k" if per_100k else "—/100k"
+        d_sub = (
+            f"UK avg: {uk_density:.1f}/100k ({per_100k - uk_density:+.1f})"
+            if per_100k
+            else f"UK avg: {uk_density:.1f}/100k (—)"
+        )
+        html = re.sub(
+            r'(<div class="label">Per-Capita Density</div>\s*<div class="value[^"]*">)[^<]*'
+            r'(</div>\s*<div class="sub">)[^<]*(</div>)',
+            lambda m: m.group(1) + d_val + m.group(2) + d_sub + m.group(3), html,
+        )
+
+    # legacy garbled line: "vs UK Average: {city} {stale_total}."
+    uk_per_city = ctx.get("uk_per_city")
+    if uk_per_city:
+        words = "business" if count == 1 else "businesses"
+        html = re.sub(
+            r'(<strong>vs UK Average:</strong> )[^<]*?(\.)',
+            lambda m: (
+                m.group(1)
+                + f"{city} has {count} Thai {words} — the UK average is {uk_per_city:.0f} per city"
+                + m.group(2)
+            ), html,
+        )
+
+    data_updated = ctx.get("data_updated")
+    if data_updated:
+        html = re.sub(
+            r'(Data updated: )\d{4}-\d{2}-\d{2}',
+            lambda m: m.group(1) + data_updated, html,
+        )
+
     return html
 
 
@@ -473,12 +636,23 @@ def build_market_snapshot_html(city: str, stats: dict[str, Any]) -> str:
     """Build the market-snapshot AUTO block."""
     businesses = stats["count"]
     pop_word = "businesses" if businesses != 1 else "business"
+    if stats.get("scheme") == "FHIS":
+        registered = "FHIS-registered"
+        rating_line = (
+            f'FHIS ratings (Food Standards Scotland): {stats.get("fhis_pass", 0)} Pass, '
+            f'{stats.get("fhis_improvement", 0)} Improvement Required'
+            + (f', {stats["fhis_exempt"]} Exempt' if stats.get("fhis_exempt") else '')
+            + '. Scotland does not use 0–5 scores.'
+        )
+    else:
+        registered = "FSA-registered"
+        rating_line = f'Average hygiene rating: \u2605{stats["avg_rating"]}/5.'
     return (
         '<div class="card">\n'
         '  <h2>Market <em>Snapshot</em></h2>\n'
         f'  <p>There {("is" if businesses == 1 else "are")} <strong>{businesses}</strong> '
-        f'FSA-registered Thai {pop_word} in <strong>{city}</strong>. '
-        f'Average hygiene rating: \u2605{stats["avg_rating"]}/5. '
+        f'{registered} Thai {pop_word} in <strong>{city}</strong>. '
+        f'{rating_line} '
         f'{stats["dine_in"]} dine-in, {stats["takeaway"]} takeaway.</p>\n'
         f'  <p style="margin-top:10px;font-size:0.88rem;">\n'
         f'    <a href="/dish-prices" style="color:var(--c2);">Compare dish prices</a>'
@@ -657,6 +831,7 @@ def process_city(
     city_name: str,
     registry: dict[str, Any],
     all_data: dict[str, Any],
+    city_ctx: dict[str, Any] | None = None,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     """Process a single city page.
@@ -736,7 +911,7 @@ def process_city(
 
     # Update stale hero-section numbers (pre-dates exclusion system)
     if existing_html and mode in ("programmatic", "hybrid"):
-        html = update_hero_stats(html, city_name, stats, total_uk)
+        html = update_hero_stats(html, city_name, stats, total_uk, city_ctx)
 
     # Add mode comment if not present
     if f"CITIES-MODE: {mode}" not in html:
@@ -842,6 +1017,7 @@ def main() -> None:
     registry = load_registry()
     all_data = load_restaurants()
     by_city = all_data["by_city"]
+    city_ctx_map = build_city_context(all_data)
 
     # Build city name → slug mapping
     name_to_slug: dict[str, str] = {}
@@ -899,6 +1075,7 @@ def main() -> None:
             city_name=city_name,
             registry=registry,
             all_data=all_data,
+            city_ctx=city_ctx_map.get(city_name, {}),
             dry_run=not args.apply,
         )
         results.append(result)
