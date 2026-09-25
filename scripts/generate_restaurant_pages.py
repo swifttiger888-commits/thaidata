@@ -11,25 +11,10 @@ from urllib.parse import quote
 REPO = '/tmp/thaidata-repo'
 OUT_DIR = os.path.join(REPO, 'r')
 
-# ── Meta description A/B test (Sep 2026) ──────────────────────────
-# Pages in this set get a name-first meta description instead of the
-# FSA-first format, testing whether leading with the restaurant name
-# lifts CTR on branded queries. Measure via GSC page-level CTR after
-# 2 weeks; revert or expand based on results.
-CTR_TEST_SLUGS = {
-    ("west-lothian", "jais-thai"),
-    ("wakefield", "tiger-thai"),
-    ("bristol", "beijing-chinese-thai-takeaway"),
-    ("richmond-upon-thames", "orange-thai"),
-    ("high-peak", "thai-delight"),
-    ("cornwall", "talay-thai"),
-    ("carmarthenshire", "bahn-mai-thai-restaurant"),
-    ("sefton", "nannapat-thai-restaurant-bar"),
-    ("east-suffolk", "thai-street-cafe"),
-    ("north-kesteven", "thai-street-cafe"),
-    ("shropshire", "thai-box"),
-    ("teignbridge", "thai-smile-cafe"),
-}
+# ── Meta description: A/B test concluded (Sep 2026) ──────────────
+# The name-first variant showed no lift over 2 weeks and has been
+# removed — every page uses the standard FSA-first description.
+# Audit: .hermes/audits/2026-09-25-gsc-audit.md
 
 # Load the Kimi template (pristine master — lives OUTSIDE the generated
 # page tree so regeneration can never overwrite it and poison the
@@ -283,14 +268,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     canonical = canonical_url or f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
 
     # ---- Head replacements ----
-    test_key = (city_slug, rest_slug)
-    if test_key in CTR_TEST_SLUGS:
-        # A/B variant: name-first (branded queries) — see CTR_TEST_SLUGS
-        meta_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating_text(rating)}. {address if address else city}. Inspection scores and contact details."'
-        og_desc = f'content="{name} {city} — Thai {rtype_label.lower()}, FSA {rating_text(rating)}. Inspection scores and contact details. {address if address else city}."'
-    else:
-        meta_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
-        og_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+    meta_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+    og_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
     html = html.replace(
         '<!-- DYNAMIC: title -->\n    <title>My Thai, Leeds — FSA 5/5 Hygiene Rating | ThaiData</title>',
         f'    <title>{name} {city} · {address if address else city} · FSA {rating_text(rating)} | ThaiData UK</title>'
@@ -886,8 +865,13 @@ def main() -> None:
     if os.path.exists(enrichment_path):
         with open(enrichment_path) as f:
             enrichment_data = json.load(f)
+        # Include entries with usable data: a successful Places lookup
+        # (google_place_id) OR a manually-maintained entry that carries at
+        # least one rendered field. Empty shells (all fields None) stay out.
         for entry in enrichment_data:
-            if entry.get('google_place_id'):  # Only include successful lookups
+            if entry.get('google_place_id') or any(
+                entry.get(k) for k in ('phone', 'website', 'opening_hours', 'price_level', 'description')
+            ):
                 enrichment_lookup[str(entry['fsa_id'])] = entry
         print(f"Loaded {len(enrichment_lookup)} enrichment entries")
     else:
