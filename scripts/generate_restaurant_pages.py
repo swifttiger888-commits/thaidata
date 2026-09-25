@@ -90,8 +90,11 @@ def build_intro(r: dict[str, Any]) -> str:
         # A colon only in the non-numeric case, so the numeric sentence stays byte-identical
         # to what is already live. "FSA hygiene rating Pass" reads as a typo; with the colon
         # it reads as a status.
-        sep = '' if rating_is_scored(rating) else ':'
-        intro += f' FSA hygiene rating{sep} {rating_text(rating)}{date_str}.'
+        if rating_scheme(rating) == 'FHIS':
+            intro += f' FHIS rating: {rating_text(rating)}{date_str}.'
+        else:
+            sep = '' if rating_is_scored(rating) else ':'
+            intro += f' FSA hygiene rating{sep} {rating_text(rating)}{date_str}.'
 
     return intro
 
@@ -126,11 +129,22 @@ def rating_text(rating: str) -> str:
     return f'{r}/5' if r in SCORED_RATINGS else (r or 'Not rated')
 
 
+def rating_scheme(rating: str) -> str:
+    """'FHIS' for Scotland's Pass/Improvement Required statuses, else 'FHRS'.
+
+    Only Pass and Improvement Required are exclusive to the Scottish scheme;
+    'Exempt' is used by both schemes so it stays scheme-neutral in wording.
+    """
+    return 'FHIS' if str(rating or '').strip() in ('Pass', 'Improvement Required') else 'FHRS'
+
+
 def rating_phrase(rating: str) -> str:
     """The rating as a clause in a sentence, for meta descriptions."""
     r = str(rating or '').strip()
     if r in SCORED_RATINGS:
         return f'{r}/5 hygiene rating'
+    if rating_scheme(r) == 'FHIS':
+        return f'FHIS status: {r}'
     return f'FSA status: {r}' if r else 'no FSA rating on record'
 
 
@@ -250,6 +264,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     rclass = rating_class(rating)
     rlabel = rating_label(rating)
     rcolor = rating_color(rating)
+    is_fhis = rating_scheme(rating) == 'FHIS'
     rtype_icon = 'fa-utensils' if rtype == 'restaurant' else 'fa-box'
     rtype_label = rtype.replace('_', ' ').title()
 
@@ -268,11 +283,17 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     canonical = canonical_url or f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
 
     # ---- Head replacements ----
-    meta_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See hygiene, structural, and management breakdown scores.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
-    og_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See the full hygiene, structural, and management breakdown.{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}."'
+    tail = f'{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}.'
+    if is_fhis:
+        meta_desc = f'content="FHIS inspection data for {name}, {city} (Food Standards Scotland). {rating_phrase(rating)}.{tail}"'
+        og_desc = f'content="FHIS inspection data for {name}, {city} (Food Standards Scotland). {rating_phrase(rating)}.{tail}"'
+    else:
+        meta_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See hygiene, structural, and management breakdown scores.{tail}"'
+        og_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See the full hygiene, structural, and management breakdown.{tail}"'
+    scheme_label = 'FHIS' if is_fhis else 'FSA'
     html = html.replace(
         '<!-- DYNAMIC: title -->\n    <title>My Thai, Leeds — FSA 5/5 Hygiene Rating | ThaiData</title>',
-        f'    <title>{name} {city} · {address if address else city} · FSA {rating_text(rating)} | ThaiData UK</title>'
+        f'    <title>{name} {city} · {address if address else city} · {scheme_label} {rating_text(rating)} | ThaiData UK</title>'
     )
     html = html.replace(
         'content="FSA inspection data for My Thai, Leeds. 5/5 hygiene rating. See hygiene, structural, and management breakdown scores. 43 Wade Lane, Leeds City Centre, Leeds. Updated November 2025."',
@@ -301,7 +322,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
     html = html.replace(
         '<!-- DYNAMIC: og_title -->\n    <meta property="og:title" content="My Thai, Leeds — FSA 5/5 | ThaiData"',
-        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · FSA {rating_text(rating)} | ThaiData UK"'
+        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · {scheme_label} {rating_text(rating)} | ThaiData UK"'
     )
     html = html.replace(
         '<!-- DYNAMIC: og_description -->\n    <meta property="og:description" content="FSA 5/5 hygiene rating. Thai restaurant in Leeds. View inspection scores and claim this listing."',
@@ -480,7 +501,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- Hero badges ----
     html = html.replace(
         '<!-- DYNAMIC: badge_rating -->\n                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA 5/5\n                </span>',
-        f'                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA {rating_text(rating)}\n                </span>'
+        f'                <span class="badge badge-rating">\n                    <i class="fas {"fa-star" if rating_is_scored(rating) else "fa-clipboard-check"}"></i> {scheme_label} {rating_text(rating)}\n                </span>'
     )
     html = html.replace(
         '<!-- DYNAMIC: badge_type -->\n                <span class="badge badge-type">\n                    <i class="fas fa-utensils"></i> Restaurant\n                </span>',
@@ -672,9 +693,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     html = safe_sub(r'<!-- DYNAMIC: map_iframe.*?-->.*?<div class="map-wrap">.*?</div>', map_html if map_html else '', html)
 
     # ---- Trust items ----
+    trust_strong = 'FHIS Verified' if is_fhis else 'FSA Verified'
+    trust_sub = 'Food Standards Scotland inspection data' if is_fhis else 'Government inspection data'
     trust_items = f'''                    <li class="trust-item">
                         <i class="fas fa-shield-check"></i>
-                        <div><strong>FSA Verified</strong>Government inspection data</div>
+                        <div><strong>{trust_strong}</strong>{trust_sub}</div>
                     </li>
                     <li class="trust-item">
                         <i class="fas fa-utensils"></i>
