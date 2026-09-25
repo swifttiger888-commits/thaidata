@@ -22,6 +22,7 @@ import subprocess
 import sys
 from collections import defaultdict
 from html import escape as html_escape
+from urllib.parse import quote_plus
 from datetime import date
 from pathlib import Path
 from typing import Any, Literal
@@ -89,6 +90,70 @@ SCHEMA_FILES: dict[str, Path] = {
     "ItemList": SCHEMAS_DIR / "item-list.schema.json",
     "FAQPage": SCHEMAS_DIR / "faq-page.schema.json",
 }
+
+
+# ── Affiliate block (Booking.com) ──────────────────────────────────────────────
+
+AFFILIATE_CONFIG_PATH = REPO / "data" / "affiliates.json"
+AFFILIATE_START = "<!-- AFFILIATE:booking -->"
+AFFILIATE_END = "<!-- END:AFFILIATE:booking -->"
+
+
+def load_affiliate_config() -> dict[str, Any]:
+    """Load data/affiliates.json; {} when absent or unreadable."""
+    if not AFFILIATE_CONFIG_PATH.exists():
+        return {}
+    with open(AFFILIATE_CONFIG_PATH) as f:
+        return json.load(f)
+
+
+def build_booking_block(city_name: str) -> str:
+    """Booking.com 'Where to stay' block, or '' when the feature is disabled."""
+    cfg = load_affiliate_config().get("booking", {})
+    if not cfg.get("enabled"):
+        return ""
+    url = cfg["search_url_template"].format(
+        aid=cfg["aid"], city=quote_plus(city_name)
+    )
+    name = html_escape(city_name)
+    disclosure = html_escape(cfg.get("disclosure", ""))
+    return (
+        '    <section class="card affiliate" aria-labelledby="stay-title">\n'
+        f'      <h2 id="stay-title">Where to stay in {name}</h2>\n'
+        f"      <p>Visiting {name}? Compare hotels and places to stay on Booking.com.</p>\n"
+        f'      <a class="button" href="{html_escape(url, quote=True)}" '
+        f'rel="sponsored nofollow" data-affiliate="booking">Search hotels in {name}</a>\n'
+        f'      <p class="affiliate-note">{disclosure}</p>\n'
+        "    </section>"
+    )
+
+
+def inject_affiliate_block(html: str, city_name: str) -> str:
+    """Insert/refresh the Booking.com block at the end of <main>.
+
+    Idempotent: refreshes the marked block when present, otherwise inserts
+    before the first </main>. Pages without </main> (empty state) are skipped.
+    A disabled config removes any existing block and otherwise changes nothing.
+    """
+    block = build_booking_block(city_name)
+    if AFFILIATE_START in html and AFFILIATE_END in html:
+        left = html.index(AFFILIATE_START) + len(AFFILIATE_START)
+        right = html.index(AFFILIATE_END, left)
+        return html[:left] + ("\n" + block + "\n" if block else "") + html[right:]
+    if not block or "</main>" not in html:
+        return html
+    main_end = html.index("</main>")
+    return (
+        html[:main_end]
+        + "\n"
+        + AFFILIATE_START
+        + "\n"
+        + block
+        + "\n"
+        + AFFILIATE_END
+        + "\n"
+        + html[main_end:]
+    )
 
 
 # ── Slug helpers ────────────────────────────────────────────────────────────────
@@ -1146,6 +1211,10 @@ def process_city(
         match_errors = validate_content_schema_match(visible_text, s, raw_html=html)
         if match_errors:
             result["warnings"].extend(match_errors)
+
+    # Affiliate block (Booking.com) — inserted at the end of <main>, then
+    # shell finalisation validates zone/footer ordering as usual.
+    html = inject_affiliate_block(html, city_name)
 
     # Finalise the shell (no-op on pages without the SHELL:location-v1 signature)
     html = finish_location_shell(html)

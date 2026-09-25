@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "note": "Affiliate config. Blocks render ONLY when enabled=true. URLs are swapped for tracked links when network IDs arrive.",
+  "booking": {
+    "enabled": false,
+    "aid": "PLACEHOLDER_AID",
+    "search_url_template": "https://www.booking.com/searchresults.html?aid={aid}&ss={city}",
+    "disclosure": "Disclosure: ThaiData may earn a commission on bookings made through this link."
+  },
+  "groceries": {
+    "enabled": false,
+    "disclosure": "Disclosure: ThaiData may earn a commission on purchases made through these links.",
+    "merchants": [
+      {
+        "name": "WaNaHong",
+        "url": "https://www.wanahong.co.uk/",
+        "note": "Thai & Oriental supermarket, UK delivery"
+      },
+      {
+        "name": "Chefs for Foodies",
+        "url": "https://www.chefsforfoodies.com/",
+        "note": "Gourmet Thai ingredients"
+      }
+    ]
+  },
+  "grocery_pages": [
+    "thai-restaurant-costs-uk.html",
+    "thai-restaurant-menu-pricing-uk.html",
+    "thai-menu-price-index-uk.html",
+    "thai-food-trends-uk-2026.html",
+    "state-of-uk-thai-food-2026.html",
+    "dish-prices.html"
+  ]
+}
