@@ -176,4 +176,26 @@ await check('non-JSON body rejected', async () => {
   assert.equal(res.status, 400);
 });
 
+// 11. general enquiry without restaurant fields → 201 with sentinel values
+await check('general enquiry stored with sentinels', async () => {
+  const env = { DB: makeDB() };
+  const res = await mod.onRequestPost({
+    request: makeReq({ category: 'general', details: 'Hello — I have a question about claiming a listing.', reporter_email: '', page_url: '/contact' }),
+    env,
+  });
+  assert.equal(res.status, 201);
+  const insert = insertCalls(env)[0];
+  assert.equal(insert.args[0], null); // fsa_id
+  assert.equal(insert.args[1], 'General enquiry');
+  assert.equal(insert.args[2], 'n/a');
+  assert.equal(insert.args[3], 'general');
+});
+
+// 12. general enquiry with too-short message → 400
+await check('general short message rejected', async () => {
+  const env = { DB: makeDB() };
+  const res = await mod.onRequestPost({ request: makeReq({ category: 'general', details: 'short' }), env });
+  assert.equal(res.status, 400);
+});
+
 console.log(`\nAll ${passed} checks passed.`);

@@ -136,6 +136,7 @@ def get_static_pages() -> list[dict]:
         {"loc": "https://thaidata.uk/guides", "priority": "0.9"},
         {"loc": "https://thaidata.uk/learn", "priority": "0.9"},
         {"loc": "https://thaidata.uk/faq", "priority": "0.8"},
+        {"loc": "https://thaidata.uk/contact", "priority": "0.8"},
         {"loc": "https://thaidata.uk/privacy", "priority": "0.7"},
         {"loc": "https://thaidata.uk/terms", "priority": "0.7"},
         {"loc": "https://thaidata.uk/brand-image", "priority": "0.7"},

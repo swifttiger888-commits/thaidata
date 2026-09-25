@@ -117,6 +117,7 @@ CREATE TABLE IF NOT EXISTS corrections (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 CREATE INDEX IF NOT EXISTS idx_corrections_status ON corrections(status);
+CREATE INDEX IF NOT EXISTS idx_corrections_created ON corrections(created_at);
 
 -- Spam throttle for correction submissions (pruned hourly, mirrors login_attempts)
 CREATE TABLE IF NOT EXISTS correction_attempts (

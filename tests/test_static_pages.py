@@ -26,3 +26,19 @@ def test_404_page_links_home():
     assert 'href="/restaurants"' in html
     assert 'href="/claim/"' in html
     assert 'href="/"' in html
+
+
+def test_contact_page_has_faq_and_form():
+    html = read('contact.html')
+    assert 'id="contact-form"' in html
+    assert 'id="contact-message"' in html
+    assert 'id="contact-email"' in html
+    assert 'name="website" class="hp-field"' in html
+    assert 'href="/claim/"' in html
+    assert 'href="/data-quality"' in html
+
+
+def test_index_links_to_contact():
+    html = read('index.html')
+    assert 'class="help-strip"' in html
+    assert '<a href="/contact">Contact</a>' in html

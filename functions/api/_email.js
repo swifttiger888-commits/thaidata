@@ -441,6 +441,7 @@ function esc(s) {
 }
 
 const CORRECTION_CATEGORY_LABELS = {
+  general: 'General enquiry',
   hours: 'Opening hours',
   address: 'Address / location',
   contact: 'Phone / website',
@@ -450,6 +451,7 @@ const CORRECTION_CATEGORY_LABELS = {
 };
 
 function buildCorrectionNotificationHtml({ id, restaurant_name, city, category, details, reporter_email, page_url }) {
+  const isGeneral = category === 'general';
   const label = CORRECTION_CATEGORY_LABELS[category] || category;
   const reporterLine = reporter_email
     ? `<p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">Reporter email: <a href="mailto:${esc(reporter_email)}" style="color:#A3132B;">${esc(reporter_email)}</a></p>`
@@ -458,10 +460,10 @@ function buildCorrectionNotificationHtml({ id, restaurant_name, city, category, 
     ? `<p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">Page: <a href="https://thaidata.uk${esc(page_url)}" style="color:#A3132B;">https://thaidata.uk${esc(page_url)}</a></p>`
     : '';
   return emailShell({
-    heroTitle: 'Correction Report',
-    heroSubtitleHtml: `${esc(restaurant_name)} &middot; ${esc(city)}`,
+    heroTitle: isGeneral ? 'General Enquiry' : 'Correction Report',
+    heroSubtitleHtml: isGeneral ? 'ThaiData UK &middot; contact page' : `${esc(restaurant_name)} &middot; ${esc(city)}`,
     bodyHtml: `
-                    <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">Report #${id} — ${esc(label)}</p>
+                    <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">${isGeneral ? `Message #${id}` : `Report #${id} — ${esc(label)}`}</p>
                     <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;white-space:pre-wrap;">${esc(details)}</p>
                     ${reporterLine}
                     ${pageLine}`,
@@ -477,7 +479,9 @@ function buildCorrectionNotificationHtml({ id, restaurant_name, city, category, 
 /** Notifies the admin inbox about a new correction report (reply-to = reporter when given). */
 export async function sendCorrectionNotification(env, report) {
   const label = CORRECTION_CATEGORY_LABELS[report.category] || report.category;
-  const subject = `Correction report — ${report.restaurant_name} (${report.city}) — ${label}`;
+  const subject = report.category === 'general'
+    ? `General enquiry — ThaiData UK (#${report.id})`
+    : `Correction report — ${report.restaurant_name} (${report.city}) — ${label}`;
   return sendEmail(env, {
     to: env.ADMIN_EMAIL || 'hello@thaidata.uk',
     subject,
@@ -488,14 +492,22 @@ export async function sendCorrectionNotification(env, report) {
   });
 }
 
-function buildCorrectionAckHtml({ restaurant_name, city }) {
+function buildCorrectionAckHtml({ restaurant_name, city, category }) {
+  const isGeneral = category === 'general';
+  const intro = isGeneral
+    ? `Thanks for your message &mdash; we&rsquo;ve got it.`
+    : `Thanks for flagging something on our page for <strong>${esc(restaurant_name)}</strong>. We&rsquo;ve logged your report.`;
+  const middle = isGeneral
+    ? `Every message is read by a human. We&rsquo;re a small setup, so expect a reply within a few hours on weekdays if one is needed.`
+    : `We don&rsquo;t change anything automatically: every report is reviewed first. We&rsquo;re a small setup, so expect a check within a few hours on weekdays &mdash; we&rsquo;ll email you if we need more detail.`;
   return emailShell({
-    heroTitle: 'Report Received',
-    heroSubtitleHtml: `${esc(restaurant_name)} &middot; ${esc(city)}`,
+    heroTitle: isGeneral ? 'Message Received' : 'Report Received',
+    heroSubtitleHtml: isGeneral ? 'ThaiData UK &middot; contact page' : `${esc(restaurant_name)} &middot; ${esc(city)}`,
     bodyHtml: `
                     <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">Hi,</p>
-                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">Thanks for flagging something on our page for <strong>${esc(restaurant_name)}</strong>. We&rsquo;ve logged your report and a human will check it — usually within a few hours.</p>
-                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">We don&rsquo;t change anything automatically: every report is reviewed first. If we need more detail, we&rsquo;ll reply to this email.</p>
+                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">${intro}</p>
+                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">${middle}</p>
+                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">In the meantime, the <a href="https://thaidata.uk/faq" style="color:#A3132B;">FAQ</a> answers most questions about how ThaiData works.</p>
                     <p style="margin:0;color:#555;font-size:14px;line-height:1.6;">Thanks,<br>The ThaiData team</p>`,
     footerHtml: `
           <tr>
@@ -507,11 +519,12 @@ function buildCorrectionAckHtml({ restaurant_name, city }) {
 }
 
 /** Acknowledges a correction report to the reporter. */
-export async function sendCorrectionAck(env, { to, restaurant_name, city }) {
+export async function sendCorrectionAck(env, { to, restaurant_name, city, category }) {
+  const isGeneral = category === 'general';
   return sendEmail(env, {
     to,
-    subject: `We've got your report — ${restaurant_name}`,
-    html: buildCorrectionAckHtml({ restaurant_name, city }),
+    subject: isGeneral ? 'We received your message — ThaiData UK' : `We've got your report — ${restaurant_name}`,
+    html: buildCorrectionAckHtml({ restaurant_name, city, category }),
     emailType: 'correction_ack',
     restaurantName: restaurant_name,
   });

@@ -3,7 +3,7 @@
 
 import { sendCorrectionNotification, sendCorrectionAck } from './_email.js';
 
-const ALLOWED_CATEGORIES = ['hours', 'address', 'contact', 'closed', 'menu', 'other'];
+const ALLOWED_CATEGORIES = ['hours', 'address', 'contact', 'closed', 'menu', 'other', 'general'];
 const MAX_PER_HOUR = 5;
 const MIN_DETAILS = 10;
 const MAX_DETAILS = 2000;
@@ -15,6 +15,7 @@ const MAX_PAGE_URL = 300;
 /**
  * Handles POST /api/correction — records a correction report for a listing.
  * Body: {restaurant_name, city, fsa_id?, category, details, reporter_email?, page_url?, website (honeypot)}
+ *       restaurant_name/city are optional when category is 'general' (contact page).
  * @param {object} context - Cloudflare Workers function context
  * @param {Request} context.request - Incoming HTTP request with JSON body
  * @param {object} context.env - Environment bindings (DB: D1Database, RESEND_API_KEY, ADMIN_EMAIL, TELEGRAM_*)
@@ -39,10 +40,16 @@ export async function onRequestPost(context) {
       return jsonResponse({ success: true }, 200, corsHeaders);
     }
 
-    const restaurant_name = String(body.restaurant_name || '').trim().slice(0, MAX_NAME);
-    const city = String(body.city || '').trim().slice(0, MAX_CITY);
-    const fsa_id = body.fsa_id != null && String(body.fsa_id).trim() ? String(body.fsa_id).trim().slice(0, 20) : null;
     const category = String(body.category || '').trim();
+    let restaurant_name = String(body.restaurant_name || '').trim().slice(0, MAX_NAME);
+    let city = String(body.city || '').trim().slice(0, MAX_CITY);
+    // General enquiries from /contact carry no restaurant context. Fill sentinels so the
+    // NOT NULL columns stay meaningful and 'general' rows stay separable in queries.
+    if (category === 'general') {
+      if (!restaurant_name) restaurant_name = 'General enquiry';
+      if (!city) city = 'n/a';
+    }
+    const fsa_id = body.fsa_id != null && String(body.fsa_id).trim() ? String(body.fsa_id).trim().slice(0, 20) : null;
     const details = String(body.details || '').trim().slice(0, MAX_DETAILS);
     const reporter_email = String(body.reporter_email || '').trim().slice(0, MAX_EMAIL) || null;
     const page_url = String(body.page_url || '').trim().slice(0, MAX_PAGE_URL) || null;
@@ -79,6 +86,13 @@ export async function onRequestPost(context) {
         attempted_at TEXT NOT NULL DEFAULT (datetime('now'))
       )`
     ).run();
+    await env.DB.prepare(
+      'CREATE INDEX IF NOT EXISTS idx_corrections_created ON corrections(created_at)'
+    ).run();
+    // Retention: messages/reports are deleted after 12 months (matches privacy.html).
+    await env.DB.prepare(
+      "DELETE FROM corrections WHERE created_at < datetime('now', '-12 months')"
+    ).run();
 
     // Spam throttle: 5 accepted submissions per hour per IP
     const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
@@ -104,7 +118,7 @@ export async function onRequestPost(context) {
     await Promise.allSettled([
       notifyTelegram(env, { id, restaurant_name, city, category, details, reporter_email, page_url }),
       sendCorrectionNotification(env, { id, restaurant_name, city, category, details, reporter_email, page_url }),
-      reporter_email ? sendCorrectionAck(env, { to: reporter_email, restaurant_name, city }) : Promise.resolve(null),
+      reporter_email ? sendCorrectionAck(env, { to: reporter_email, restaurant_name, city, category }) : Promise.resolve(null),
     ]);
 
     return jsonResponse({ success: true, id }, 201, corsHeaders);
@@ -133,7 +147,10 @@ async function notifyTelegram(env, report) {
   const snippet = report.details.length > 300 ? report.details.slice(0, 300) + '…' : report.details;
   const reporterLine = report.reporter_email ? `\nReply-to: ${report.reporter_email}` : '';
   const pageLine = (report.page_url && report.page_url.startsWith('/')) ? `\nhttps://thaidata.uk${report.page_url}` : '';
-  const text = `🛠 Correction report #${report.id}\n\n${report.restaurant_name} — ${report.city}\nType: ${report.category}\n\n${snippet}${reporterLine}${pageLine}`;
+  const header = report.category === 'general'
+    ? `✍️ General enquiry #${report.id}`
+    : `🛠 Correction report #${report.id}\n\n${report.restaurant_name} — ${report.city}\nType: ${report.category}`;
+  const text = `${header}\n\n${snippet}${reporterLine}${pageLine}`;
 
   try {
     const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
