@@ -554,23 +554,25 @@ def update_hero_stats(
     raw_count = stats.get("_raw_count", count)
 
     def _overview(m: "re.Match[str]") -> str:
-        if not (pop and uk_density):
+        parsed_pop = int(m.group(3).replace(",", "")) if m.group(3) else 0
+        use_pop = pop or parsed_pop
+        if not (use_pop and uk_density):
             return m.group(0)
-        density = raw_count / pop * 1e5
+        density = raw_count / use_pop * 1e5
         diff = density - uk_density
         cmp_word = "above" if diff > 0.3 else ("below" if diff < -0.3 else "in line with")
         biz_word = "business" if raw_count == 1 else "businesses"
         return (
             m.group(1)
             + f"<strong>{raw_count:,} Thai food {biz_word}</strong> "
-            + f"serving a population of approximately <strong>{pop:,}</strong>. "
+            + f"serving a population of approximately <strong>{use_pop:,}</strong>. "
             + f"That's <strong>{density:.1f} Thai businesses per 100,000 residents</strong> "
             + f"— {cmp_word} the UK average of {uk_density}/100k."
         )
 
     html = re.sub(
         r"(<p>[^<]{0,60}? has )<strong>[\d,]+(?: Thai food business(?:es)?)</strong>"
-        r"( serving a population of approximately )<strong>[\d,]+</strong>\. "
+        r"( serving a population of approximately )<strong>([\d,]+)</strong>\. "
         r"That's <strong>[\d.]+(?: Thai businesses per 100,000 residents)</strong>"
         r" — [^<]{0,45}?[\d.]+/100k\.",
         _overview, html,
