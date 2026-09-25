@@ -6316,6 +6316,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/bristol/brother-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/bromsgrove/maekong-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
