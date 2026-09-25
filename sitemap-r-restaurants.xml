@@ -6371,6 +6371,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/lincoln/araya-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/london/churchill-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
