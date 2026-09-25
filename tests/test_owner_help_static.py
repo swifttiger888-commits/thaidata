@@ -56,3 +56,14 @@ def test_closed_page_has_no_claim_or_report_card():
     assert 'id="claim"' not in html
     assert 'Permanently Closed' in html
     assert 'closed-notice-card' in html
+
+
+def test_open_page_hero_report_link():
+    html = read(OPEN_PAGE)
+    assert 'id="hero-report-cta"' in html
+    assert 'href="#report-card"' in html
+
+
+def test_closed_page_has_no_hero_report_link():
+    html = read(CLOSED_PAGE)
+    assert 'href="#report-card"' not in html

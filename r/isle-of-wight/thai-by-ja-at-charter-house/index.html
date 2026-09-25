@@ -1054,6 +1054,9 @@
                         <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);" id="hero-claim-cta">
                 <a href="/claim/?restaurant=Thai%20By%20Ja%20At%20Charter%20House&amp;city=Isle%20of%20Wight&amp;fsa_id=1759467&amp;src=hero-claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
             </p>
+                        <p style="margin-top:6px;font-size:0.8rem;" id="hero-report-cta">
+                <a href="#report-card" style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Spotted a mistake? Report an error</a>
+            </p>
         </div>
     </section>
 
@@ -1384,6 +1387,8 @@
                 // Hide hero claim CTA when a listing exists (claimed or has owner data)
                 var heroCta = document.getElementById('hero-claim-cta');
                 if (heroCta) heroCta.style.display = 'none';
+                var heroReportCta = document.getElementById('hero-report-cta');
+                if (heroReportCta) heroReportCta.style.display = 'none';
 
                 // --- Populate claimed content sections ---
 

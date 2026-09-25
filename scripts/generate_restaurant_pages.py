@@ -582,8 +582,15 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             hero_closed_notice,
             html
         )
+        # Closed venues offer no reporting path — drop the hero report link too
+        html = safe_sub(
+            r'\s*<!-- DYNAMIC: hero_report_cta -->.*?</p>',
+            '',
+            html
+        )
     else:
         html = html.replace('<!-- DYNAMIC: hero_claim_cta -->\n', '')
+        html = html.replace('<!-- DYNAMIC: hero_report_cta -->\n', '')
         if '<a href="#claim"' not in html:
             raise ValueError(f'hero claim anchor missing for {name} ({city})')
         html = html.replace(
@@ -780,8 +787,10 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             raise ValueError(f'claim link not prefilled ({name}, {city})')
         if 'id="report-card"' not in html:
             raise ValueError(f'report card missing ({name}, {city})')
-    elif 'id="report-card"' in html:
-        raise ValueError(f'report card leaked into closed page ({name}, {city})')
+        if 'id="hero-report-cta"' not in html:
+            raise ValueError(f'hero report link missing ({name}, {city})')
+    elif 'id="report-card"' in html or 'id="hero-report-cta"' in html:
+        raise ValueError(f'report UI leaked into closed page ({name}, {city})')
 
     return html
 
