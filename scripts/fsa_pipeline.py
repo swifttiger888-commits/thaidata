@@ -122,19 +122,30 @@ def main() -> None:
     # ── Step 6: commit & push ────────────────────────────────────────
     os.chdir(REPO_DIR)
 
-    # Guard: only stage files we own
+    # Guard: only stage files we own. Untracked files can never be swept into
+    # the commit (staging uses the explicit list below), so only *tracked*
+    # changes outside our paths are a reason to stop.
     owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap', 'functions/mcp.js')
     status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
     dirty_lines = [l for l in status.stdout.split('\n') if l.strip()]
-    unrelated = [l for l in dirty_lines
-                 if not any(l.split()[-1].strip('"').startswith(p) for p in owned_prefixes)]
+    tracked_changes = [l for l in dirty_lines if not l.startswith('??')]
+    untracked = [l for l in dirty_lines if l.startswith('??')]
+
+    def _path_of(line: str) -> str:
+        return line[3:].strip().strip('"') if line.startswith('??') else line.split()[-1].strip('"')
+
+    unrelated = [l for l in tracked_changes
+                 if not any(_path_of(l).startswith(p) for p in owned_prefixes)]
     if unrelated:
-        print(f"  ⚠️ Aborting: {len(unrelated)} unrelated dirty file(s)")
+        print(f"  ⚠️ Aborting: {len(unrelated)} tracked change(s) outside pipeline paths")
         for f in unrelated[:10]:
             print(f"     {f}")
         sys.exit(1)
 
-    if not dirty_lines:
+    if untracked:
+        print(f"  ℹ️ {len(untracked)} untracked file(s) present — ignored (never staged)")
+
+    if not tracked_changes:
         print("\n✅ No changes to commit (data unchanged)")
         elapsed = (datetime.now() - start).total_seconds()
         print(f"Done in {elapsed:.1f}s")
