@@ -597,6 +597,86 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(163, 19, 43, 0.4);
         }
+        /* ============ CLAIM CARD FAQ + REPORT CARD ============ */
+        .claim-card details {
+            border-top: 1px solid rgba(163, 19, 43, 0.15);
+            margin-top: 14px;
+            padding-top: 10px;
+            text-align: left;
+        }
+        .claim-card summary,
+        .report-card summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--ink-secondary);
+        }
+        .claim-card summary { font-size: 0.82rem; }
+        .claim-card summary::-webkit-details-marker,
+        .report-card summary::-webkit-details-marker { display: none; }
+        .claim-card summary i,
+        .report-card summary i {
+            font-size: 0.7rem;
+            color: var(--green-dark);
+            transition: transform 0.2s;
+        }
+        .claim-card details[open] summary i,
+        .report-card details[open] summary i { transform: rotate(180deg); }
+        .claim-card details p {
+            font-size: 0.8rem;
+            color: var(--ink-secondary);
+            margin: 6px 0 0;
+            line-height: 1.5;
+        }
+        .report-card summary { font-size: 0.9rem; color: var(--green-dark); }
+        .report-card label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--ink-secondary);
+            margin: 12px 0 4px;
+        }
+        .report-card select,
+        .report-card textarea,
+        .report-card input[type="email"] {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 8px 10px;
+            font-size: 0.85rem;
+            font-family: inherit;
+            background: var(--paper);
+            color: var(--ink);
+        }
+        .report-card textarea { resize: vertical; }
+        .report-card .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #A3132B;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-top: 14px;
+            width: 100%;
+            font-family: inherit;
+        }
+        .report-card .btn:hover { background: var(--green-dark); }
+        .report-card .btn:disabled { opacity: 0.6; cursor: default; }
+        .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+        #report-status { font-size: 0.82rem; margin: 10px 0 0; line-height: 1.5; display: none; }
+        #report-status.ok { color: var(--success-dark); }
+        #report-status.err { color: var(--danger); }
+        .report-card .report-fallback { font-size: 0.75rem; color: var(--ink-tertiary); margin: 10px 0 0; }
 
         /* ============ SIDEBAR: TRUST BADGES ============ */
         .trust-list {
@@ -972,7 +1052,7 @@
                 Jampee Thai Restaurant is a Thai restaurant in Beaconsfield, Buckinghamshire. FSA hygiene rating 4/5, last inspected April 2025.
             </p>
                         <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);" id="hero-claim-cta">
-                <a href="#claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
+                <a href="/claim/?restaurant=Jampee%20Thai%20Restaurant&amp;city=Buckinghamshire&amp;fsa_id=1216394&amp;src=hero-claim" style="color:var(--green);text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
             </p>
         </div>
     </section>
@@ -1088,13 +1168,51 @@
             <div class="claim-card" id="claim">
                 <h3>Own this restaurant?</h3>
                 <p>Claim your free listing to add photos, menus, opening hours and links, and keep your information up to date for ThaiData visitors. When your details are accurate, it's easier for diners to choose you with confidence.</p>
-                                <a href="/claim/?src=restaurant-card" class="btn">
+                                <a href="/claim/?restaurant=Jampee%20Thai%20Restaurant&amp;city=Buckinghamshire&amp;fsa_id=1216394&amp;src=restaurant-card" class="btn">
                     Claim This Listing <i class="fas fa-arrow-right"></i>
                 </a>
                 <p style="margin-top:10px;font-size:0.78rem;"><a href="/r/demo/claimed-listing/" style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">See an example claimed listing →</a></p>
+                <details>
+                    <summary>Is it free? <i class="fas fa-chevron-down"></i></summary>
+                    <p>Yes — claiming and managing your listing is free. ThaiData is a directory of UK Thai restaurants built on official FSA data.</p>
+                </details>
+                <details>
+                    <summary>What can I add? <i class="fas fa-chevron-down"></i></summary>
+                    <p>Photos, description, opening hours, website, social links, menu highlights, features and price range.</p>
+                </details>
+                <details>
+                    <summary>How long does approval take? <i class="fas fa-chevron-down"></i></summary>
+                    <p>Usually within 48 hours — we check you're connected to the restaurant first.</p>
+                </details>
             </div>
 
-            <!-- Claimed badge (shown when claimed) -->
+                        <div class="card report-card" id="report-card">
+                <h2 class="card-title" style="font-size:1.15rem;">Spotted a <em>mistake</em>?</h2>
+                <p style="color:var(--ink-secondary);font-size:0.85rem;margin:8px 0 0;line-height:1.5;">Know something that's wrong or out of date? Tell us — we check every report before changing anything.</p>
+                <details id="report-details" style="margin-top:12px;">
+                    <summary>Report an error <i class="fas fa-chevron-down"></i></summary>
+                    <form id="report-form" novalidate style="margin-top:10px;">
+                        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <label for="report-category">What's wrong?</label>
+                        <select id="report-category">
+                            <option value="hours">Opening hours</option>
+                            <option value="address">Address or location</option>
+                            <option value="contact">Phone or website</option>
+                            <option value="closed">Permanently closed</option>
+                            <option value="menu">Menu or prices</option>
+                            <option value="other">Something else</option>
+                        </select>
+                        <label for="report-details-text">Details</label>
+                        <textarea id="report-details-text" rows="4" minlength="10" maxlength="2000" placeholder="e.g. We now open at 5pm on Sundays — the page says 12pm."></textarea>
+                        <label for="report-email">Your email (optional — only if you want a reply)</label>
+                        <input type="email" id="report-email" maxlength="254">
+                        <button type="submit" class="btn">Send report</button>
+                        <p id="report-status" role="status"></p>
+                        <p class="report-fallback">Prefer email? <a href="mailto:hello@thaidata.uk" style="color:var(--green-dark);">hello@thaidata.uk</a></p>
+                    </form>
+                </details>
+            </div>
+                        <!-- Claimed badge (shown when claimed) -->
             <div id="claimed-badge" class="card" style="display:none;background:linear-gradient(135deg,rgba(163, 19, 43, 0.08),rgba(163, 19, 43,0.04));border:1px solid rgba(163, 19, 43, 0.2);text-align:center;">
                 <div style="font-size:2.5rem;color:var(--green);margin-bottom:8px;">
                     <i class="fas fa-check-circle"></i>
@@ -1186,6 +1304,7 @@
         // -- Restaurant data for enrichment check --
                 const RESTAURANT_NAME = "Jampee Thai Restaurant";
                 const RESTAURANT_CITY = "Buckinghamshire";
+                const RESTAURANT_FSA_ID = "1216394";
 
         // -- Safe DOM helpers --
         function htmlEscape(str) {
@@ -1242,9 +1361,11 @@
                     listing.social_instagram || listing.social_facebook;
 
                 var claimCard = document.querySelector('.claim-card');
+                var reportCard = document.getElementById('report-card');
                 if (hasOwnerData) {
                     // Owner verified: hide CTA, show badge
                     if (claimCard) claimCard.style.display = 'none';
+                    if (reportCard) reportCard.style.display = 'none';
                     var badge = document.getElementById('claimed-badge');
                     if (badge) badge.style.display = 'block';
                 } else {
@@ -1567,6 +1688,87 @@
                 console.error('Enrichment error:', e.message);
             }
             }); // close DOMContentLoaded
+        })();
+
+        // -- Report an error form (owner-help layer) --
+        (function reportForm() {
+            var form = document.getElementById('report-form');
+            if (!form) return;
+            var detailsEl = document.getElementById('report-details');
+            var statusEl = document.getElementById('report-status');
+            var submitBtn = form.querySelector('button[type="submit"]');
+
+            if (detailsEl) {
+                detailsEl.addEventListener('toggle', function () {
+                    if (detailsEl.open && typeof gtag === 'function') {
+                        gtag('event', 'correction_open', { restaurant_name: RESTAURANT_NAME });
+                    }
+                });
+            }
+
+            function showReportStatus(msg, ok) {
+                if (!statusEl) return;
+                statusEl.textContent = msg;
+                statusEl.className = ok ? 'ok' : 'err';
+                statusEl.style.display = 'block';
+            }
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                var details = document.getElementById('report-details-text').value.trim();
+                var category = document.getElementById('report-category').value;
+                var email = document.getElementById('report-email').value.trim();
+                var honeypot = form.querySelector('input[name="website"]').value;
+
+                if (details.length < 10) {
+                    showReportStatus('Please add a little more detail (at least 10 characters).', false);
+                    return;
+                }
+                if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    showReportStatus("That email address doesn't look right — leave it blank if you don't want a reply.", false);
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                var originalLabel = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+
+                try {
+                    var res = await fetch('/api/correction', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            restaurant_name: RESTAURANT_NAME,
+                            city: RESTAURANT_CITY,
+                            fsa_id: RESTAURANT_FSA_ID,
+                            category: category,
+                            details: details,
+                            reporter_email: email,
+                            website: honeypot,
+                            page_url: window.location.pathname
+                        })
+                    });
+                    var data = {};
+                    try { data = await res.json(); } catch (jsonErr) { /* non-JSON response */ }
+
+                    if (res.ok) {
+                        form.style.display = 'none';
+                        showReportStatus('Thanks — report received. A human checks every report, usually within a few hours.', true);
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'correction_submit', { category: category, restaurant_name: RESTAURANT_NAME });
+                        }
+                    } else if (res.status === 429) {
+                        showReportStatus('Too many reports from this connection right now. Please try again later, or email hello@thaidata.uk.', false);
+                    } else {
+                        showReportStatus((data && data.error) ? data.error : 'Something went wrong. Please try again, or email hello@thaidata.uk.', false);
+                    }
+                } catch (err) {
+                    showReportStatus('Network error. Please try again, or email hello@thaidata.uk.', false);
+                }
+
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalLabel;
+            });
         })();
 
         function toggleMenu() {
