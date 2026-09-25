@@ -449,7 +449,12 @@ LEGACY_BLOCK_HTML = """<div class="card"><h2>x Market Snapshot</h2>
 <div class="comp-item"><div class="label">Hygiene Rating</div><div class="value good">★4.2</div><div class="sub">UK avg: ★4.3 (-0.1)</div></div>
 </div>
 <li>• <strong>vs UK Average:</strong> Edinburgh 1268.</li>
-<div>Data updated: 2026-06-04</div>"""
+<div>Data updated: 2026-06-04</div>
+<p>Testville has **2 Thai food businesses** serving a population of approximately **243,000**. That's **0.8 Thai businesses per 100,000 residents** — below the UK average of 5.1/100k.</p>
+<li>• <strong>vs UK total:</strong> Testville 1268 across the UK.</li>
+<title>Thai Restaurants in Testville Market Data — 12 Businesses, ★★★★☆ Avg Rating</title>
+<meta name="description" content="12 Thai restaurants & takeaways in Testville. Per-capita density (0.8/100k), hygiene ratings (★★★★☆), dine-in vs takeaway split.">
+<p>Note: Scottish ratings use the FHIS scheme (Pass/Improvement Required) converted to numeric equivalents for comparison. Scottish cities typically show lower numeric averages than English cities.</p>"""
 
 
 class TestFhisHandling:
@@ -504,6 +509,11 @@ class TestFhisHandling:
         assert "of 1263" in out and "1268" not in out
         assert "74% Pass" in out and "FHIS · Food Standards Scotland" in out
         assert "Data updated: 2026-09-21" in out
+        assert "above the UK average of 2.1/100k" in out
+        assert "Edinburgh's 19 Thai businesses are part of 1,263 across the UK." in out
+        assert "FHIS ratings: Pass/Improvement Required" in out
+        assert "with no 0–5 scores" in out
+        assert "**" not in out
 
     def test_hero_refresh_fhrs_legacy_block(self):
         from scripts.generate_city_pages import compute_city_stats, update_hero_stats
@@ -514,5 +524,11 @@ class TestFhisHandling:
         assert "4.5/5 (FSA data)" in out
         assert "UK avg: ★4.4 (+0.1)" in out
         assert "Oldham has 2 Thai businesses — the UK average is 5 per city." in out
+        assert "Testville has <strong>2 Thai food businesses</strong>" in out
+        assert "below the UK average of 2.1/100k" in out
+        assert "Oldham's 2 Thai businesses are part of 1,263 across the UK." in out
+        assert "Per-capita density (1.6/100k)" in out
+        assert "hygiene ratings (★★★★★)" in out
+        assert "**" not in out
         assert "1268" not in out
 

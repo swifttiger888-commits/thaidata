@@ -545,6 +545,86 @@ def update_hero_stats(
             html,
         )
 
+    # ── 5b. Markdown artifacts (**bold**) → real HTML, then the later legacy
+    # families (Market Overview paragraph, meta head, FHIS note, vs-UK total) ──
+    html = re.sub(r"\*\*([^*<>]{1,90}?)\*\*", r"<strong>\1</strong>", html)
+
+    pop = ctx.get("population")
+    uk_density = ctx.get("uk_density")
+    raw_count = stats.get("_raw_count", count)
+
+    def _overview(m: "re.Match[str]") -> str:
+        if not (pop and uk_density):
+            return m.group(0)
+        density = raw_count / pop * 1e5
+        diff = density - uk_density
+        cmp_word = "above" if diff > 0.3 else ("below" if diff < -0.3 else "in line with")
+        biz_word = "business" if raw_count == 1 else "businesses"
+        return (
+            m.group(1)
+            + f"<strong>{raw_count:,} Thai food {biz_word}</strong> "
+            + f"serving a population of approximately <strong>{pop:,}</strong>. "
+            + f"That's <strong>{density:.1f} Thai businesses per 100,000 residents</strong> "
+            + f"— {cmp_word} the UK average of {uk_density}/100k."
+        )
+
+    html = re.sub(
+        r"(<p>[^<]{0,60}? has )<strong>[\d,]+(?: Thai food business(?:es)?)</strong>"
+        r"( serving a population of approximately )<strong>[\d,]+</strong>\. "
+        r"That's <strong>[\d.]+(?: Thai businesses per 100,000 residents)</strong>"
+        r" — [^<]{0,45}?[\d.]+/100k\.",
+        _overview, html,
+    )
+
+    # meta head: counts, per-capita density, stars (FHIS-aware)
+    html = re.sub(r"(\d+) Thai restaurants & takeaways in ",
+                  lambda m: f"{raw_count:,} Thai restaurants & takeaways in ", html)
+    per_100k = ctx.get("per_100k")
+    if per_100k:
+        html = re.sub(r"(Per-capita density \()[\d.]+(/100k\))",
+                      lambda m: m.group(1) + f"{per_100k:.1f}" + m.group(2), html)
+    if stats.get("scheme", "FHRS") == "FHIS":
+        html = re.sub(r"(hygiene ratings \()[★☆]+(\))",
+                      r"\1FHIS ratings: Pass/Improvement Required\2", html)
+        html = re.sub(r"(<title>[^<]*? — )[\d,]+( Businesses, )[★☆]+( Avg Rating)",
+                      lambda m: m.group(1) + f"{raw_count:,}" + m.group(2) + "FHIS Rated", html)
+    elif avg_rating:
+        n_full = int(avg_rating + 0.5)
+        meta_stars = "★" * n_full + "☆" * (5 - n_full)
+        html = re.sub(r"(hygiene ratings \()[★☆]+(\))",
+                      lambda m: m.group(1) + meta_stars + m.group(2), html)
+        html = re.sub(r"(<title>[^<]*? — )[\d,]+( Businesses, )[★☆]+( Avg Rating)",
+                      lambda m: m.group(1) + f"{raw_count:,}" + m.group(2) + meta_stars + m.group(3), html)
+    html = re.sub(r"(<title>[^<]*? — )[\d,]+( Businesses)",
+                  lambda m: m.group(1) + f"{raw_count:,}" + m.group(2), html)
+
+    # FHIS mapping note → scheme-accurate wording
+    html = re.sub(
+        r"Note: Scottish ratings use the FHIS scheme[^<]*",
+        "Note: Scotland's ratings use the FHIS scheme (Pass/Improvement Required) "
+        "with no 0–5 scores, so they are not directly comparable with "
+        "England, Wales and Northern Ireland.",
+        html,
+    )
+
+    # "vs UK total" line (both legacy shapes)
+    if total_uk:
+        html = re.sub(
+            r"(<strong>vs UK total:</strong> )(?:[^<]*?accounts for )[\d.]+(% of the )[\d,]+( Thai food businesses across the UK\.)",
+            lambda m: (m.group(1)
+                       + f"{city} accounts for {count / total_uk * 100:.1f}% of the "
+                       + f"{total_uk:,}" + m.group(3)),
+            html,
+        )
+        html = re.sub(
+            r"(<strong>vs UK total:</strong> )(?![^<]*accounts for)[^<]*?( across the UK\.)",
+            lambda m: (m.group(1)
+                       + f"{city}'s {count} Thai "
+                       + ("business is" if count == 1 else "businesses are")
+                       + f" part of {total_uk:,}" + m.group(2)),
+            html,
+        )
+
     # ── 6. Legacy "Market Snapshot" grid + comparison cells (written by older
     # one-off generators; refreshed here so values never drift or contradict) ──
     ctx = ctx or {}
