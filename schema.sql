@@ -101,3 +101,26 @@ CREATE TABLE IF NOT EXISTS google_enrichment (
   expires_at TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_google_enrichment_place_id ON google_enrichment(google_place_id);
+
+-- Correction reports (owner-help report form on /r/ pages).
+-- Rows are reviewable 'new' reports — nothing is auto-applied to any listing.
+CREATE TABLE IF NOT EXISTS corrections (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  fsa_id TEXT,
+  restaurant_name TEXT NOT NULL,
+  city TEXT NOT NULL,
+  category TEXT NOT NULL,
+  details TEXT NOT NULL,
+  reporter_email TEXT,
+  page_url TEXT,
+  status TEXT NOT NULL DEFAULT 'new',
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_corrections_status ON corrections(status);
+
+-- Spam throttle for correction submissions (pruned hourly, mirrors login_attempts)
+CREATE TABLE IF NOT EXISTS correction_attempts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ip TEXT NOT NULL,
+  attempted_at TEXT NOT NULL DEFAULT (datetime('now'))
+);

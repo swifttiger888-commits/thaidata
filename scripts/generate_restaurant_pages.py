@@ -6,6 +6,7 @@ using the Kimi-designed template v2 (cream bg, green hero, 2-col layout).
 import json, os, re, sys, unicodedata, shutil
 from datetime import datetime
 from typing import Any
+from urllib.parse import quote
 
 REPO = '/tmp/thaidata-repo'
 OUT_DIR = os.path.join(REPO, 'r')
@@ -583,6 +584,12 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         )
     else:
         html = html.replace('<!-- DYNAMIC: hero_claim_cta -->\n', '')
+        if '<a href="#claim"' not in html:
+            raise ValueError(f'hero claim anchor missing for {name} ({city})')
+        html = html.replace(
+            '<a href="#claim"',
+            f'<a href="/claim/?restaurant={quote(name)}&amp;city={quote(city)}&amp;fsa_id={str(fsa_id)}&amp;src=hero-claim"',
+        )
 
     # ---- Contact & Info section (replaces action bar + quick-info) ----
     has_enrichment = any([enr_hours, enr_price, enr_phone, enr_website])
@@ -704,11 +711,14 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         f'            <a href="/cities/{city_slug}#browse">\n                <i class="fas fa-arrow-left"></i> All Thai restaurants in {city}'
     )
 
-    # ---- Claim link (same for all unclaimed) ----
-    html = html.replace(
-        '<!-- DYNAMIC: claim_link -->\n                <a href="/claim/" class="btn">',
-        '                <a href="/claim/" class="btn">'
-    )
+    # ---- Claim link (prefill context — the owner lands on /claim/ already searching) ----
+    claim_url = (f'/claim/?restaurant={quote(name)}&amp;city={quote(city)}'
+                 f'&amp;fsa_id={str(fsa_id)}&amp;src=restaurant-card')
+    claim_link_old = ('<!-- DYNAMIC: claim_link -->\n'
+                      '                <a href="/claim/?src=restaurant-card" class="btn">')
+    if claim_link_old not in html:
+        raise ValueError(f'claim_link marker/anchor drifted — check template ({name}, {city})')
+    html = html.replace(claim_link_old, f'                <a href="{claim_url}" class="btn">')
 
     # ---- Sidebar claim CTA (closed = replace with closed notice) ----
     if is_closed:
@@ -724,6 +734,14 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     else:
         html = html.replace('<!-- DYNAMIC: sidebar_claim_cta -->\n', '')
 
+    # ---- Report card (owner-help): closed venues don't offer reporting ----
+    if is_closed:
+        html = safe_sub(
+            r'\s*<!-- DYNAMIC: report_card -->.*?<!-- DYNAMIC: report_card_end -->',
+            '',
+            html
+        )
+
     # ---- JS variables for enrichment script ----
     html = html.replace(
         "                const RESTAURANT_NAME = 'My Thai';",
@@ -732,6 +750,10 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     html = html.replace(
         "                const RESTAURANT_CITY = 'Leeds';",
         f"                const RESTAURANT_CITY = {json.dumps(city)};"
+    )
+    html = html.replace(
+        "                const RESTAURANT_FSA_ID = '0000000';",
+        f'                const RESTAURANT_FSA_ID = {json.dumps(str(fsa_id))};'
     )
 
     # ---- Nearby section (closed venues only) ----
@@ -750,6 +772,17 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # The schema had {{ }} for JSON which got single-braced. Fix:
     html = html.replace('"@context": "https://schema.org",', '"@context": "https://schema.org",')
     
+    # ---- Owner-help phase 1 sanity checks (fail loudly, per page) ----
+    if not is_closed:
+        if f'RESTAURANT_FSA_ID = {json.dumps(str(fsa_id))}' not in html:
+            raise ValueError(f'FSA id const missing ({name}, {city})')
+        if claim_url not in html:
+            raise ValueError(f'claim link not prefilled ({name}, {city})')
+        if 'id="report-card"' not in html:
+            raise ValueError(f'report card missing ({name}, {city})')
+    elif 'id="report-card"' in html:
+        raise ValueError(f'report card leaked into closed page ({name}, {city})')
+
     return html
 
 

@@ -1,6 +1,6 @@
 // ThaiData UK — _email.js (shared email module)
 // Single source of truth for all transactional emails.
-// Used by: admin.js, listing.js, claim.js
+// Used by: admin.js, listing.js, claim.js, correction.js
 //
 // ── Email log table ──
 // Created on first use. Fields:
@@ -23,7 +23,7 @@ export async function sha256(text) {
  * Core transport — logs attempt to email_log, calls Resend, updates log.
  * All other functions in this module route through this one.
  */
-async function sendEmail(env, { to, subject, html, emailType, claimId, restaurantName }) {
+async function sendEmail(env, { to, subject, html, emailType, claimId, restaurantName, replyTo }) {
   // Ensure email_log table exists (same pattern as login_attempts in admin.js)
   await env.DB.prepare(
     `CREATE TABLE IF NOT EXISTS email_log (
@@ -57,7 +57,7 @@ async function sendEmail(env, { to, subject, html, emailType, claimId, restauran
     return { success: false, error: 'Missing RESEND_API_KEY', logId };
   }
 
-  const replyToEmail = env.ADMIN_EMAIL || 'hello@thaidata.uk';
+  const replyToEmail = replyTo || env.ADMIN_EMAIL || 'hello@thaidata.uk';
 
   try {
     const res = await fetch('https://api.resend.com/emails', {
@@ -422,6 +422,97 @@ export async function sendAdminClaimNotification(env, { id, restaurant_name, cit
     html,
     emailType: 'admin_claim_notification',
     claimId: id,
+    restaurantName: restaurant_name,
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Correction reports (owner-help report form on /r/ pages)
+// ═══════════════════════════════════════════════════════════════
+
+/** Minimal HTML escape for user-supplied text in emails. */
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+const CORRECTION_CATEGORY_LABELS = {
+  hours: 'Opening hours',
+  address: 'Address / location',
+  contact: 'Phone / website',
+  closed: 'Permanently closed',
+  menu: 'Menu / prices',
+  other: 'Other',
+};
+
+function buildCorrectionNotificationHtml({ id, restaurant_name, city, category, details, reporter_email, page_url }) {
+  const label = CORRECTION_CATEGORY_LABELS[category] || category;
+  const reporterLine = reporter_email
+    ? `<p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">Reporter email: <a href="mailto:${esc(reporter_email)}" style="color:#A3132B;">${esc(reporter_email)}</a></p>`
+    : `<p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">No reporter email provided.</p>`;
+  const pageLine = (page_url && page_url.startsWith('/'))
+    ? `<p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">Page: <a href="https://thaidata.uk${esc(page_url)}" style="color:#A3132B;">https://thaidata.uk${esc(page_url)}</a></p>`
+    : '';
+  return emailShell({
+    heroTitle: 'Correction Report',
+    heroSubtitleHtml: `${esc(restaurant_name)} &middot; ${esc(city)}`,
+    bodyHtml: `
+                    <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">Report #${id} — ${esc(label)}</p>
+                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;white-space:pre-wrap;">${esc(details)}</p>
+                    ${reporterLine}
+                    ${pageLine}`,
+    footerHtml: `
+          <tr>
+            <td style="padding:0 40px 32px;text-align:center;">
+              <p style="margin:0;color:#aaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#A3132B;text-decoration:none;">thaidata.uk</a></p>
+            </td>
+          </tr>`,
+  });
+}
+
+/** Notifies the admin inbox about a new correction report (reply-to = reporter when given). */
+export async function sendCorrectionNotification(env, report) {
+  const label = CORRECTION_CATEGORY_LABELS[report.category] || report.category;
+  const subject = `Correction report — ${report.restaurant_name} (${report.city}) — ${label}`;
+  return sendEmail(env, {
+    to: env.ADMIN_EMAIL || 'hello@thaidata.uk',
+    subject,
+    html: buildCorrectionNotificationHtml(report),
+    emailType: 'correction_notification',
+    restaurantName: report.restaurant_name,
+    replyTo: report.reporter_email || undefined,
+  });
+}
+
+function buildCorrectionAckHtml({ restaurant_name, city }) {
+  return emailShell({
+    heroTitle: 'Report Received',
+    heroSubtitleHtml: `${esc(restaurant_name)} &middot; ${esc(city)}`,
+    bodyHtml: `
+                    <p style="margin:0 0 16px;color:#1a1a1a;font-size:15px;line-height:1.6;">Hi,</p>
+                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">Thanks for flagging something on our page for <strong>${esc(restaurant_name)}</strong>. We&rsquo;ve logged your report and a human will check it — usually within a few hours.</p>
+                    <p style="margin:0 0 16px;color:#555;font-size:14px;line-height:1.6;">We don&rsquo;t change anything automatically: every report is reviewed first. If we need more detail, we&rsquo;ll reply to this email.</p>
+                    <p style="margin:0;color:#555;font-size:14px;line-height:1.6;">Thanks,<br>The ThaiData team</p>`,
+    footerHtml: `
+          <tr>
+            <td style="padding:0 40px 32px;text-align:center;">
+              <p style="margin:0;color:#aaa;font-size:11px;">ThaiData UK &middot; <a href="https://thaidata.uk" style="color:#A3132B;text-decoration:none;">thaidata.uk</a></p>
+            </td>
+          </tr>`,
+  });
+}
+
+/** Acknowledges a correction report to the reporter. */
+export async function sendCorrectionAck(env, { to, restaurant_name, city }) {
+  return sendEmail(env, {
+    to,
+    subject: `We've got your report — ${restaurant_name}`,
+    html: buildCorrectionAckHtml({ restaurant_name, city }),
+    emailType: 'correction_ack',
     restaurantName: restaurant_name,
   });
 }
