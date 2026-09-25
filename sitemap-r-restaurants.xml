@@ -6416,6 +6416,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/shropshire/thai-box/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/st-albans-city/sala-thai-kitchen/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
