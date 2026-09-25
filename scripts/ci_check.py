@@ -14,6 +14,16 @@ if r['total'] != len(r['restaurants']):
 city_sum = sum(ci['total_thai_businesses'] for ci in c['cities'])
 if city_sum != r['total']:
     errors.append(f'City totals ({city_sum}) != restaurants total ({r["total"]})')
+# FHIS (Scotland) cities must not carry numeric averages, and their status
+# counts must add up to the city total.
+for ci in c['cities']:
+    if ci.get('scheme') == 'FHIS':
+        if ci.get('avg_hygiene_rating') is not None:
+            errors.append(f'{ci["name"]}: FHIS city must not carry a numeric avg_hygiene_rating')
+        fhis_sum = ci.get('fhis_pass', 0) + ci.get('fhis_improvement', 0) + ci.get('fhis_exempt', 0)
+        if fhis_sum != ci['total_thai_businesses']:
+            errors.append(f'{ci["name"]}: FHIS status counts ({fhis_sum}) != total ({ci["total_thai_businesses"]})')
+
 if errors:
     for e in errors:
         print(f'ERROR: {e}')

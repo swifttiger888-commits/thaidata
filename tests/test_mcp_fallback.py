@@ -42,3 +42,24 @@ def test_local_blob_shas_stable():
     # same content → same sha; different content → different sha
     assert shas['a.txt'] == publish.local_blob_shas({'a.txt': 'hello\n'})['a.txt']
     assert shas['a.txt'] != publish.local_blob_shas({'a.txt': 'bye\n'})['a.txt']
+
+
+def test_fallback_fhis_scheme():
+    """FHIS cities carry scheme + status counts, never a numeric average."""
+    block = fallback.build_block()
+    assert '"FHIS"' in block and 'fhis_pass:' in block
+    edi = next(l for l in block.splitlines() if 'name: "Edinburgh"' in l)
+    assert 'avg_hygiene_rating' not in edi and 'scheme: "FHIS"' in edi
+    ldn = next(l for l in block.splitlines() if 'name: "London"' in l)
+    assert 'avg_hygiene_rating:' in ldn and 'scheme: "FHRS"' in ldn
+
+
+def test_cities_json_fhis_invariants():
+    c = json.load(open(os.path.join(REPO, 'api', 'v1', 'cities.json')))
+    for ci in c['cities']:
+        if ci.get('scheme') == 'FHIS':
+            assert ci.get('avg_hygiene_rating') is None, ci['name']
+            fhis_sum = ci.get('fhis_pass', 0) + ci.get('fhis_improvement', 0) + ci.get('fhis_exempt', 0)
+            assert fhis_sum == ci['total_thai_businesses'], ci['name']
+        else:
+            assert isinstance(ci.get('avg_hygiene_rating'), (int, float)), ci['name']

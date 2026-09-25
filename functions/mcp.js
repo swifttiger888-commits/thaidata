@@ -58,13 +58,13 @@ async function getRestaurants() {
 const EMBEDDED_DATA = {
   name: "ThaiData UK",
   cities: [
-    { name: "London", population: 8970000, total_thai_businesses: 284, restaurants: 231, takeaways: 53, per_100k: 3.2, avg_hygiene_rating: 4.2 },
-    { name: "Leeds", population: 812000, total_thai_businesses: 27, restaurants: 22, takeaways: 5, per_100k: 3.3, avg_hygiene_rating: 4.5 },
-    { name: "Manchester", population: 568000, total_thai_businesses: 19, restaurants: 16, takeaways: 3, per_100k: 3.3, avg_hygiene_rating: 4.3 },
-    { name: "Edinburgh", population: 548000, total_thai_businesses: 19, restaurants: 12, takeaways: 7, per_100k: 3.5, avg_hygiene_rating: 0 },
-    { name: "Bristol", population: 483000, total_thai_businesses: 15, restaurants: 13, takeaways: 2, per_100k: 3.1, avg_hygiene_rating: 4.7 },
-    { name: "Birmingham", population: 1166000, total_thai_businesses: 6, restaurants: 6, takeaways: 0, per_100k: 0.5, avg_hygiene_rating: 4.5 },
-    { name: "Glasgow", population: 635000, total_thai_businesses: 7, restaurants: 5, takeaways: 2, per_100k: 1.1, avg_hygiene_rating: 0 }
+    { name: "London", population: 8970000, total_thai_businesses: 284, restaurants: 231, takeaways: 53, per_100k: 3.2, avg_hygiene_rating: 4.2, scheme: "FHRS" },
+    { name: "Leeds", population: 812000, total_thai_businesses: 27, restaurants: 22, takeaways: 5, per_100k: 3.3, avg_hygiene_rating: 4.5, scheme: "FHRS" },
+    { name: "Manchester", population: 568000, total_thai_businesses: 19, restaurants: 16, takeaways: 3, per_100k: 3.3, avg_hygiene_rating: 4.3, scheme: "FHRS" },
+    { name: "Edinburgh", population: 548000, total_thai_businesses: 19, restaurants: 12, takeaways: 7, per_100k: 3.5, scheme: "FHIS", fhis_pass: 14, fhis_improvement: 5, fhis_exempt: 0 },
+    { name: "Bristol", population: 483000, total_thai_businesses: 15, restaurants: 13, takeaways: 2, per_100k: 3.1, avg_hygiene_rating: 4.7, scheme: "FHRS" },
+    { name: "Birmingham", population: 1166000, total_thai_businesses: 6, restaurants: 6, takeaways: 0, per_100k: 0.5, avg_hygiene_rating: 4.5, scheme: "FHRS" },
+    { name: "Glasgow", population: 635000, total_thai_businesses: 7, restaurants: 5, takeaways: 2, per_100k: 1.1, scheme: "FHIS", fhis_pass: 7, fhis_improvement: 0, fhis_exempt: 0 }
   ],
   statistics: {
     total_uk_thai_businesses: 1263,
@@ -261,9 +261,12 @@ async function getCityStats(params) {
       takeaway_pct: city.total_thai_businesses ? Math.round((city.takeaways || 0) / city.total_thai_businesses * 100) + '%' : 'N/A'
     },
     hygiene_rating: city.avg_hygiene_rating || 'N/A',
+    hygiene_scheme: city.scheme === 'FHIS'
+      ? { name: 'FHIS (Food Standards Scotland)', pass: city.fhis_pass || 0, improvement_required: city.fhis_improvement || 0, exempt: city.fhis_exempt || 0 }
+      : 'FHRS (0-5 score, FSA)',
     density_per_100k: city.per_100k || 'N/A',
     market_size: marketSize,
-    source: "FSA FHRS + FHIS, updated " + (data.updated || "June 2026")
+    source: "FSA (FHRS) + Food Standards Scotland (FHIS), updated " + (data.updated || "June 2026")
   };
 }
 
@@ -529,8 +532,10 @@ async function getUKOverview() {
   const total = cities.reduce((s, c) => s + (c.total_thai_businesses || 0), 0);
   const dineIn = cities.reduce((s, c) => s + (c.restaurants || 0), 0);
   const takeaway = cities.reduce((s, c) => s + (c.takeaways || 0), 0);
-  const avgHygiene = cities.length > 0 
-    ? (cities.reduce((s, c) => s + (c.avg_hygiene_rating || 0), 0) / cities.length).toFixed(1)
+  // Scotland (FHIS) has no numeric scores — average the FHRS cities only
+  const scoredCities = cities.filter(c => c.scheme !== 'FHIS' && !!c.avg_hygiene_rating);
+  const avgHygiene = scoredCities.length > 0
+    ? (scoredCities.reduce((s, c) => s + c.avg_hygiene_rating, 0) / scoredCities.length).toFixed(1)
     : 'N/A';
   
   return {
@@ -538,6 +543,7 @@ async function getUKOverview() {
     full_service_restaurants: dineIn,
     quick_service_takeaways: takeaway,
     average_hygiene: avgHygiene,
+    hygiene_average_basis: 'England, Wales and NI (FHRS) only — Scotland rates under FHIS (Pass/Improvement Required)',
     estimated_market_size: EMBEDDED_DATA.statistics.estimated_uk_market_size_gbp,
     growth_2022_2025: EMBEDDED_DATA.statistics.growth_rate_2022_2025_pct + '%',
     cities_tracked: cities.length,
@@ -569,7 +575,7 @@ async function compareCities(params) {
       population_ratio: (c1.population && c2.population) ? (c1.population / c2.population).toFixed(2) + 'x' : 'N/A',
       thai_count_diff: (c1.total_thai_businesses || 0) - (c2.total_thai_businesses || 0),
       density_diff: (c1.per_100k && c2.per_100k) ? (c1.per_100k - c2.per_100k).toFixed(1) + '/100k' : 'N/A',
-      hygiene_diff: (c1.avg_hygiene_rating && c2.avg_hygiene_rating) ? (c1.avg_hygiene_rating - c2.avg_hygiene_rating).toFixed(1) + '★' : 'N/A'
+      hygiene_diff: (c1.avg_hygiene_rating && c2.avg_hygiene_rating) ? (c1.avg_hygiene_rating - c2.avg_hygiene_rating).toFixed(1) + '★' : (c1.scheme === 'FHIS' || c2.scheme === 'FHIS' ? 'N/A — FHIS (Scotland): Pass/Improvement Required, no numeric scores' : 'N/A') 
     }
   };
 }
@@ -610,6 +616,8 @@ async function rankCities(params) {
   const limit = Math.min(params.limit || 10, 50);
   
   if (metric === 'rating') {
+    // Scotland (FHIS) has no numeric scores — excluded from hygiene rankings
+    cities = cities.filter(c => c.scheme !== 'FHIS');
     cities.sort((a, b) => (b.avg_hygiene_rating || 0) - (a.avg_hygiene_rating || 0));
   } else if (metric === 'density') {
     cities.sort((a, b) => (b.per_100k || 0) - (a.per_100k || 0));
@@ -618,7 +626,7 @@ async function rankCities(params) {
   }
   
   const top = cities.slice(0, limit);
-  return {
+  const result = {
     metric,
     rankings: top.map((c, i) => ({
       rank: i + 1,
@@ -629,6 +637,10 @@ async function rankCities(params) {
       population: c.population || 'N/A'
     }))
   };
+  if (metric === 'rating') {
+    result.note = "Scotland (FHIS) is excluded from hygiene rankings — it uses Pass/Improvement Required, not 0-5 scores.";
+  }
+  return result;
 }
 
 /**
@@ -854,7 +866,7 @@ export async function onRequest() {
     version: "2.0.0",
     tools: TOOLS.length,
     tools_list: TOOLS.map(t => ({ name: t.name, description: t.description.split('.')[0] })),
-    data_sources: ["FSA FHRS", "FSA FHIS", "ONS", "HMRC"],
+    data_sources: ["FSA (FHRS)", "Food Standards Scotland (FHIS)", "ONS", "HMRC"],
     new_in_v2: "Named restaurant search, all UK cities, dynamic data loading from live API",
     documentation: "https://modelcontextprotocol.io",
     example: 'curl -X POST https://thaidata.uk/mcp -H "Content-Type: application/json" -d \'{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"search_restaurants","arguments":{"city":"Leeds","min_rating":4}}}\''

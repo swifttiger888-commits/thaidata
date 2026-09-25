@@ -51,15 +51,26 @@ def build_block() -> str:
     city_lines = []
     for name in FALLBACK_CITIES:
         c = by_name[name.lower()]
-        fields = (
+        fields = [
             f'name: "{c["name"]}"',
             f'population: {fmt_num(c["population"])}',
             f'total_thai_businesses: {fmt_num(c["total_thai_businesses"])}',
             f'restaurants: {fmt_num(c["restaurants"])}',
             f'takeaways: {fmt_num(c["takeaways"])}',
             f'per_100k: {fmt_num(c["per_100k"])}',
-            f'avg_hygiene_rating: {fmt_num(c["avg_hygiene_rating"])}',
-        )
+        ]
+        if c.get("scheme") == "FHIS":
+            fields += [
+                'scheme: "FHIS"',
+                f'fhis_pass: {fmt_num(c.get("fhis_pass", 0))}',
+                f'fhis_improvement: {fmt_num(c.get("fhis_improvement", 0))}',
+                f'fhis_exempt: {fmt_num(c.get("fhis_exempt", 0))}',
+            ]
+        else:
+            fields += [
+                f'avg_hygiene_rating: {fmt_num(c.get("avg_hygiene_rating") or 0)}',
+                'scheme: "FHRS"',
+            ]
         city_lines.append('    { ' + ', '.join(fields) + ' },')
     city_lines[-1] = city_lines[-1][:-1]  # no trailing comma on the last city
 

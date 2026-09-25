@@ -181,7 +181,8 @@ def main() -> None:
     print("Step 3/5: Computing city statistics...")
     by_city = defaultdict(lambda: {
         'total': 0, 'restaurants': 0, 'takeaways': 0,
-        'ratings': [], 'postcodes': set()
+        'ratings': [], 'postcodes': set(),
+        'fhis_pass': 0, 'fhis_improvement': 0, 'fhis_exempt': 0
     })
     
     for r in restaurants:
@@ -195,6 +196,12 @@ def main() -> None:
             c['ratings'].append(int(r['hygiene_rating']))
         except (ValueError, TypeError):
             pass
+        if r.get('hygiene_rating') == 'Pass':
+            c['fhis_pass'] += 1
+        elif r.get('hygiene_rating') == 'Improvement Required':
+            c['fhis_improvement'] += 1
+        elif r.get('hygiene_rating') == 'Exempt':
+            c['fhis_exempt'] += 1
         if r['postcode']:
             c['postcodes'].add(r['postcode'][:3].strip())  # Outcode only
     
@@ -202,6 +209,9 @@ def main() -> None:
     cities = []
     for city_name, data in sorted(by_city.items(), key=lambda x: x[1]['total'], reverse=True):
         avg_rating = sum(data['ratings']) / len(data['ratings']) if data['ratings'] else 0
+        fhis_total = data['fhis_pass'] + data['fhis_improvement'] + data['fhis_exempt']
+        # FHIS cities (Scotland) have no numeric scores — never average them to 0
+        is_fhis = bool(fhis_total) and not data['ratings']
         pop = get_population(city_name)
         per_100k = round(data['total'] / pop * 100000, 1) if pop else None
         
@@ -212,7 +222,11 @@ def main() -> None:
             'restaurants': data['restaurants'],
             'takeaways': data['takeaways'],
             'per_100k': per_100k,
-            'avg_hygiene_rating': round(avg_rating, 1),
+            'avg_hygiene_rating': round(avg_rating, 1) if not is_fhis else None,
+            'scheme': 'FHIS' if is_fhis else 'FHRS',
+            'fhis_pass': data['fhis_pass'],
+            'fhis_improvement': data['fhis_improvement'],
+            'fhis_exempt': data['fhis_exempt'],
             'postcode_areas': len(data['postcodes']),
         })
     
@@ -276,7 +290,8 @@ def main() -> None:
     print(f"Dine-in: {dine_in_total}, Takeaway: {takeaway_total}")
     print(f"\nTop 20 cities:")
     for i, c in enumerate(cities[:20]):
-        print(f"  {i+1:2d}. {c['name']:20s} {c['total_thai_businesses']:4d} restaurants  ★{c['avg_hygiene_rating']:.1f}  {c['per_100k'] or '?':>5} /100k")
+        star = f"★{c['avg_hygiene_rating']:.1f}" if c['avg_hygiene_rating'] is not None else 'FHIS'
+        print(f"  {i+1:2d}. {c['name']:20s} {c['total_thai_businesses']:4d} restaurants  {star}  {c['per_100k'] or '?':>5} /100k")
     
     # Print for shell consumption
     print(f"\nCITY_COUNT={len(cities)}")

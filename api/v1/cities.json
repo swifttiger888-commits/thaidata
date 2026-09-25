@@ -1,8 +1,8 @@
 {
-  "name": "ThaiData UK \u2014 Thai Restaurant Data API",
-  "version": "2.0",
-  "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
-  "attribution": "Data from ThaiData.uk / Food Standards Agency",
+  "name": "ThaiData UK — Thai Restaurant Data API",
+  "version": "2.1",
+  "description": "Free, open data on UK Thai restaurants. Sourced from FSA (FHRS) and Food Standards Scotland (FHIS). No API key required.",
+  "attribution": "Data from ThaiData.uk / Food Standards Agency & Food Standards Scotland",
   "updated": "2026-09-21",
   "total_uk": 1263,
   "cities_tracked": 252,
@@ -15,7 +15,11 @@
       "takeaways": 53,
       "per_100k": 3.2,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 98
+      "postcode_areas": 98,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Leeds",
@@ -25,7 +29,11 @@
       "takeaways": 5,
       "per_100k": 3.3,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "York",
@@ -35,7 +43,11 @@
       "takeaways": 3,
       "per_100k": 11.4,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 8
+      "postcode_areas": 8,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Manchester",
@@ -45,7 +57,11 @@
       "takeaways": 3,
       "per_100k": 3.3,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 10
+      "postcode_areas": 10,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Edinburgh",
@@ -54,8 +70,12 @@
       "restaurants": 12,
       "takeaways": 7,
       "per_100k": 3.5,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 7
+      "avg_hygiene_rating": null,
+      "postcode_areas": 7,
+      "scheme": "FHIS",
+      "fhis_pass": 14,
+      "fhis_improvement": 5,
+      "fhis_exempt": 0
     },
     {
       "name": "Swansea",
@@ -65,7 +85,11 @@
       "takeaways": 3,
       "per_100k": 6.5,
       "avg_hygiene_rating": 3.8,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bristol",
@@ -75,7 +99,11 @@
       "takeaways": 2,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Richmond-Upon-Thames",
@@ -85,7 +113,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Brighton",
@@ -95,7 +127,11 @@
       "takeaways": 1,
       "per_100k": 4.3,
       "avg_hygiene_rating": 4.9,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cornwall",
@@ -105,7 +141,11 @@
       "takeaways": 2,
       "per_100k": 2.1,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Somerset",
@@ -115,7 +155,11 @@
       "takeaways": 2,
       "per_100k": 1.9,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bournemouth",
@@ -125,7 +169,11 @@
       "takeaways": 2,
       "per_100k": 2.7,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bath",
@@ -135,7 +183,11 @@
       "takeaways": 0,
       "per_100k": 5.1,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Dorset",
@@ -145,7 +197,11 @@
       "takeaways": 3,
       "per_100k": 2.6,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hertfordshire",
@@ -155,7 +211,11 @@
       "takeaways": 2,
       "per_100k": 0.8,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Windsor and Maidenhead",
@@ -165,7 +225,11 @@
       "takeaways": 1,
       "per_100k": 5.7,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Torbay",
@@ -175,7 +239,11 @@
       "takeaways": 4,
       "per_100k": null,
       "avg_hygiene_rating": 4.9,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Herefordshire",
@@ -185,7 +253,11 @@
       "takeaways": 1,
       "per_100k": 4.6,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Shropshire",
@@ -195,7 +267,11 @@
       "takeaways": 2,
       "per_100k": 2.8,
       "avg_hygiene_rating": 3.9,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Sheffield",
@@ -205,7 +281,11 @@
       "takeaways": 0,
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Buckinghamshire",
@@ -215,7 +295,11 @@
       "takeaways": 0,
       "per_100k": 1.6,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Westmorland and Furness",
@@ -225,7 +309,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Norwich",
@@ -235,7 +323,11 @@
       "takeaways": 2,
       "per_100k": 5.4,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Oxford",
@@ -245,7 +337,11 @@
       "takeaways": 0,
       "per_100k": 4.9,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cheshire West and Chester",
@@ -255,7 +351,11 @@
       "takeaways": 2,
       "per_100k": 2.2,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Thanet",
@@ -265,7 +365,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.9,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Huddersfield",
@@ -275,7 +379,11 @@
       "takeaways": 2,
       "per_100k": 1.8,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wiltshire",
@@ -285,7 +393,11 @@
       "takeaways": 1,
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Elmbridge",
@@ -295,7 +407,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Tendring",
@@ -305,7 +421,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cardiff",
@@ -315,7 +435,11 @@
       "takeaways": 0,
       "per_100k": 1.9,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Warrington",
@@ -325,7 +449,11 @@
       "takeaways": 1,
       "per_100k": 3.3,
       "avg_hygiene_rating": 3.6,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Central Bedfordshire",
@@ -335,7 +463,11 @@
       "takeaways": 0,
       "per_100k": 2.3,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Newcastle",
@@ -345,7 +477,11 @@
       "takeaways": 0,
       "per_100k": 2.3,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Blackpool",
@@ -355,7 +491,11 @@
       "takeaways": 4,
       "per_100k": 4.9,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Maidstone",
@@ -365,7 +505,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.1,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Leicester",
@@ -375,7 +519,11 @@
       "takeaways": 3,
       "per_100k": 1.9,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Belfast",
@@ -385,7 +533,11 @@
       "takeaways": 1,
       "per_100k": 2.0,
       "avg_hygiene_rating": 3.6,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "St Albans City",
@@ -395,7 +547,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Glasgow",
@@ -404,8 +560,12 @@
       "restaurants": 5,
       "takeaways": 2,
       "per_100k": 1.1,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 5
+      "avg_hygiene_rating": null,
+      "postcode_areas": 5,
+      "scheme": "FHIS",
+      "fhis_pass": 7,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "New Forest",
@@ -415,7 +575,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Trafford",
@@ -425,7 +589,11 @@
       "takeaways": 0,
       "per_100k": 2.5,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bradford",
@@ -435,7 +603,11 @@
       "takeaways": 2,
       "per_100k": 1.1,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "North Norfolk",
@@ -445,7 +617,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Kingston-Upon-Thames",
@@ -455,7 +631,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Liverpool",
@@ -465,7 +645,11 @@
       "takeaways": 0,
       "per_100k": 1.2,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 6
+      "postcode_areas": 6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Birmingham",
@@ -475,7 +659,11 @@
       "takeaways": 0,
       "per_100k": 0.5,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Waverley",
@@ -485,7 +673,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wyre",
@@ -495,7 +687,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Plymouth",
@@ -505,7 +701,11 @@
       "takeaways": 2,
       "per_100k": 2.3,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wirral",
@@ -515,7 +715,11 @@
       "takeaways": 0,
       "per_100k": 1.8,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Milton Keynes",
@@ -525,7 +729,11 @@
       "takeaways": 1,
       "per_100k": 2.1,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wigan",
@@ -535,7 +743,11 @@
       "takeaways": 2,
       "per_100k": 1.8,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Devon",
@@ -545,7 +757,11 @@
       "takeaways": 1,
       "per_100k": 0.7,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Oxfordshire",
@@ -555,7 +771,11 @@
       "takeaways": 2,
       "per_100k": 0.8,
       "avg_hygiene_rating": 4.2,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Southend",
@@ -565,7 +785,11 @@
       "takeaways": 0,
       "per_100k": 3.2,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Stockport",
@@ -575,7 +799,11 @@
       "takeaways": 4,
       "per_100k": 2.0,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Isle of Wight",
@@ -585,7 +813,11 @@
       "takeaways": 0,
       "per_100k": 4.2,
       "avg_hygiene_rating": 3.7,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Aberdeen",
@@ -594,8 +826,12 @@
       "restaurants": 5,
       "takeaways": 1,
       "per_100k": 3.0,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 2
+      "avg_hygiene_rating": null,
+      "postcode_areas": 2,
+      "scheme": "FHIS",
+      "fhis_pass": 4,
+      "fhis_improvement": 2,
+      "fhis_exempt": 0
     },
     {
       "name": "Staffordshire",
@@ -605,7 +841,11 @@
       "takeaways": 0,
       "per_100k": 0.6,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Portsmouth",
@@ -615,7 +855,11 @@
       "takeaways": 0,
       "per_100k": 2.4,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Mole Valley",
@@ -625,7 +869,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Teignbridge",
@@ -635,7 +883,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Gwynedd",
@@ -645,7 +897,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Sefton",
@@ -655,7 +911,11 @@
       "takeaways": 1,
       "per_100k": 1.8,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 5
+      "postcode_areas": 5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Canterbury",
@@ -665,7 +925,11 @@
       "takeaways": 2,
       "per_100k": 7.8,
       "avg_hygiene_rating": 3.6,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wealden",
@@ -675,7 +939,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Calderdale",
@@ -685,7 +953,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 4.4,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Chelmsford",
@@ -695,7 +967,11 @@
       "takeaways": 1,
       "per_100k": 2.7,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Guildford",
@@ -705,7 +981,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Neath Port Talbot",
@@ -715,7 +995,11 @@
       "takeaways": 3,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bolton",
@@ -725,7 +1009,11 @@
       "takeaways": 4,
       "per_100k": 1.7,
       "avg_hygiene_rating": 3.8,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Durham",
@@ -735,7 +1023,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.6,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Derby",
@@ -745,7 +1037,11 @@
       "takeaways": 1,
       "per_100k": 1.9,
       "avg_hygiene_rating": 3.6,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Stevenage",
@@ -755,7 +1051,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Darlington",
@@ -765,7 +1065,11 @@
       "takeaways": 1,
       "per_100k": 3.7,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Tandridge",
@@ -775,7 +1079,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Oldham",
@@ -785,7 +1093,11 @@
       "takeaways": 3,
       "per_100k": 1.6,
       "avg_hygiene_rating": 3.8,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cheltenham",
@@ -795,7 +1107,11 @@
       "takeaways": 0,
       "per_100k": 3.3,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Warwick",
@@ -805,7 +1121,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Eastbourne",
@@ -815,7 +1135,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hull",
@@ -825,7 +1149,11 @@
       "takeaways": 1,
       "per_100k": 1.5,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "North East Lincolnshire",
@@ -835,7 +1163,11 @@
       "takeaways": 2,
       "per_100k": 2.5,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cumberland",
@@ -845,7 +1177,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Broxtowe",
@@ -855,7 +1191,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.8,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "East Riding of Yorkshire",
@@ -865,7 +1205,11 @@
       "takeaways": 0,
       "per_100k": 1.2,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Preston",
@@ -875,7 +1219,11 @@
       "takeaways": 1,
       "per_100k": 2.7,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Colchester",
@@ -885,7 +1233,11 @@
       "takeaways": 2,
       "per_100k": 2.1,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Vale of White Horse",
@@ -895,7 +1247,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cambridge",
@@ -905,7 +1261,11 @@
       "takeaways": 0,
       "per_100k": 2.7,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Fylde",
@@ -915,7 +1275,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Epsom and Ewell",
@@ -925,7 +1289,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bury",
@@ -935,7 +1303,11 @@
       "takeaways": 1,
       "per_100k": 2.1,
       "avg_hygiene_rating": 4.8,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "High Peak",
@@ -945,7 +1317,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Southampton",
@@ -955,7 +1331,11 @@
       "takeaways": 2,
       "per_100k": 1.6,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wakefield",
@@ -965,7 +1345,11 @@
       "takeaways": 2,
       "per_100k": 1.2,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Horsham",
@@ -975,7 +1359,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Sunderland",
@@ -985,7 +1373,11 @@
       "takeaways": 3,
       "per_100k": 1.4,
       "avg_hygiene_rating": 3.8,
-      "postcode_areas": 4
+      "postcode_areas": 4,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wrexham",
@@ -995,7 +1387,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Uttlesford",
@@ -1005,7 +1401,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Erewash",
@@ -1015,7 +1415,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Exeter",
@@ -1025,7 +1429,11 @@
       "takeaways": 0,
       "per_100k": 2.2,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Reading",
@@ -1035,7 +1443,11 @@
       "takeaways": 0,
       "per_100k": 1.7,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rother",
@@ -1045,7 +1457,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Coventry",
@@ -1055,7 +1471,11 @@
       "takeaways": 2,
       "per_100k": 0.8,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Lancaster",
@@ -1065,7 +1485,11 @@
       "takeaways": 0,
       "per_100k": 2.1,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Dudley",
@@ -1075,7 +1499,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Worthing",
@@ -1085,7 +1513,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.7,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Basildon",
@@ -1095,7 +1527,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wychavon",
@@ -1105,7 +1541,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "North Kesteven",
@@ -1115,7 +1555,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Mid Sussex",
@@ -1125,7 +1569,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Tunbridge Wells",
@@ -1135,7 +1583,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Runnymede",
@@ -1145,7 +1597,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Gravesham",
@@ -1155,7 +1611,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "West Suffolk",
@@ -1165,7 +1625,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Forest of Dean",
@@ -1175,7 +1639,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Spelthorne",
@@ -1185,7 +1653,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Barnsley",
@@ -1195,7 +1667,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hertsmere",
@@ -1205,7 +1681,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "West Northamptonshire",
@@ -1215,7 +1695,11 @@
       "takeaways": 0,
       "per_100k": 0.7,
       "avg_hygiene_rating": 3.7,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Redcar and Cleveland",
@@ -1225,7 +1709,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Worcester",
@@ -1235,7 +1723,11 @@
       "takeaways": 1,
       "per_100k": 2.9,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Northumberland",
@@ -1245,7 +1737,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 4.3,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "East Suffolk",
@@ -1255,7 +1751,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Nottingham",
@@ -1265,7 +1765,11 @@
       "takeaways": 0,
       "per_100k": 0.9,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rushmoor",
@@ -1275,7 +1779,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.7,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Tameside",
@@ -1285,7 +1793,11 @@
       "takeaways": 1,
       "per_100k": 1.3,
       "avg_hygiene_rating": 2.7,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Stratford-on-Avon",
@@ -1295,7 +1807,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Fermanagh and Omagh",
@@ -1305,7 +1821,11 @@
       "takeaways": 3,
       "per_100k": null,
       "avg_hygiene_rating": 3.7,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cheshire East",
@@ -1315,7 +1835,11 @@
       "takeaways": 3,
       "per_100k": 0.8,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 3
+      "postcode_areas": 3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Highland",
@@ -1324,8 +1848,12 @@
       "restaurants": 2,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 2
+      "avg_hygiene_rating": null,
+      "postcode_areas": 2,
+      "scheme": "FHIS",
+      "fhis_pass": 1,
+      "fhis_improvement": 2,
+      "fhis_exempt": 0
     },
     {
       "name": "Moray",
@@ -1334,8 +1862,12 @@
       "restaurants": 2,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 3,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Fife",
@@ -1344,8 +1876,12 @@
       "restaurants": 3,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 2
+      "avg_hygiene_rating": null,
+      "postcode_areas": 2,
+      "scheme": "FHIS",
+      "fhis_pass": 3,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Nuneaton and Bedworth",
@@ -1355,7 +1891,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 2.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Powys",
@@ -1365,7 +1905,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Winchester City",
@@ -1375,7 +1919,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Harborough",
@@ -1385,7 +1933,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bromsgrove",
@@ -1395,7 +1947,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "North Northamptonshire",
@@ -1405,7 +1961,11 @@
       "takeaways": 0,
       "per_100k": 0.5,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Ashford",
@@ -1415,7 +1975,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rochford",
@@ -1425,7 +1989,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Braintree",
@@ -1435,7 +2003,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Vale of Glamorgan",
@@ -1445,7 +2017,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Blaby",
@@ -1455,7 +2031,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cherwell",
@@ -1465,7 +2045,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hartlepool",
@@ -1475,7 +2059,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Medway",
@@ -1485,7 +2073,11 @@
       "takeaways": 1,
       "per_100k": 0.7,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rugby",
@@ -1495,7 +2087,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Swindon",
@@ -1505,7 +2101,11 @@
       "takeaways": 0,
       "per_100k": 0.8,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Dacorum",
@@ -1515,7 +2115,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wokingham",
@@ -1525,7 +2129,11 @@
       "takeaways": 0,
       "per_100k": 1.1,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Cotswold",
@@ -1535,7 +2143,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Conwy",
@@ -1545,7 +2157,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Pendle",
@@ -1555,7 +2171,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Three Rivers",
@@ -1565,7 +2185,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Charnwood",
@@ -1575,7 +2199,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 1.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Swale",
@@ -1585,7 +2213,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Lincoln",
@@ -1595,7 +2227,11 @@
       "takeaways": 0,
       "per_100k": 1.9,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Folkestone and Hythe",
@@ -1605,7 +2241,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "King's Lynn and West Norfolk",
@@ -1615,7 +2255,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Stockton On Tees",
@@ -1625,7 +2269,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Welwyn Hatfield",
@@ -1635,7 +2283,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rotherham",
@@ -1645,7 +2297,11 @@
       "takeaways": 0,
       "per_100k": 0.8,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bedford",
@@ -1655,7 +2311,11 @@
       "takeaways": 1,
       "per_100k": 1.1,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Dartford",
@@ -1665,7 +2325,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Test Valley",
@@ -1675,7 +2339,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Gloucester",
@@ -1685,7 +2353,11 @@
       "takeaways": 0,
       "per_100k": 1.5,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hastings",
@@ -1695,7 +2367,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Lichfield",
@@ -1705,7 +2381,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Broadland",
@@ -1715,7 +2395,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Newark and Sherwood",
@@ -1725,7 +2409,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Gloucestershire",
@@ -1735,7 +2423,11 @@
       "takeaways": 0,
       "per_100k": 0.3,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "West Berkshire",
@@ -1745,7 +2437,11 @@
       "takeaways": 0,
       "per_100k": 1.2,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Salford",
@@ -1755,7 +2451,11 @@
       "takeaways": 0,
       "per_100k": 0.8,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "West Lancashire",
@@ -1765,7 +2465,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 2.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "East Lindsey",
@@ -1775,7 +2479,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Carmarthenshire",
@@ -1785,7 +2493,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hinckley and Bosworth",
@@ -1795,7 +2507,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Great Yarmouth",
@@ -1805,7 +2521,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bracknell Forest",
@@ -1815,7 +2535,11 @@
       "takeaways": 0,
       "per_100k": 1.6,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Eastleigh",
@@ -1825,7 +2549,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Arun",
@@ -1835,7 +2563,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Armagh City, Banbridge and Craigavon",
@@ -1845,7 +2577,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Brentwood",
@@ -1855,7 +2591,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Sevenoaks",
@@ -1865,7 +2605,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Castle Point",
@@ -1875,7 +2619,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Burnley",
@@ -1885,7 +2633,11 @@
       "takeaways": 2,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Middlesbrough",
@@ -1895,7 +2647,11 @@
       "takeaways": 2,
       "per_100k": 1.4,
       "avg_hygiene_rating": 3.5,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Gateshead",
@@ -1905,7 +2661,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 2
+      "postcode_areas": 2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Falkirk",
@@ -1914,8 +2674,12 @@
       "restaurants": 1,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 2,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "East Lothian",
@@ -1924,8 +2688,12 @@
       "restaurants": 1,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 2
+      "avg_hygiene_rating": null,
+      "postcode_areas": 2,
+      "scheme": "FHIS",
+      "fhis_pass": 2,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Argyll and Bute",
@@ -1934,8 +2702,12 @@
       "restaurants": 1,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 2
+      "avg_hygiene_rating": null,
+      "postcode_areas": 2,
+      "scheme": "FHIS",
+      "fhis_pass": 1,
+      "fhis_improvement": 0,
+      "fhis_exempt": 1
     },
     {
       "name": "Angus",
@@ -1944,8 +2716,12 @@
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 2
+      "avg_hygiene_rating": null,
+      "postcode_areas": 2,
+      "scheme": "FHIS",
+      "fhis_pass": 2,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Perth",
@@ -1954,8 +2730,12 @@
       "restaurants": 2,
       "takeaways": 0,
       "per_100k": 3.9,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 2
+      "avg_hygiene_rating": null,
+      "postcode_areas": 2,
+      "scheme": "FHIS",
+      "fhis_pass": 2,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Chesterfield",
@@ -1965,7 +2745,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Flintshire",
@@ -1975,7 +2759,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bassetlaw",
@@ -1985,7 +2773,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Reigate and Banstead",
@@ -1995,7 +2787,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Thurrock",
@@ -2005,7 +2801,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Telford",
@@ -2015,7 +2815,11 @@
       "takeaways": 0,
       "per_100k": 0.6,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Knowsley",
@@ -2025,7 +2829,11 @@
       "takeaways": 0,
       "per_100k": 0.6,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Merthyr Tydfil",
@@ -2035,7 +2843,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Huntingdonshire",
@@ -2045,7 +2857,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Doncaster",
@@ -2055,7 +2871,11 @@
       "takeaways": 0,
       "per_100k": 0.3,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "South Norfolk",
@@ -2065,7 +2885,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Ipswich",
@@ -2075,7 +2899,11 @@
       "takeaways": 0,
       "per_100k": 0.7,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wolverhampton",
@@ -2085,7 +2913,11 @@
       "takeaways": 0,
       "per_100k": 0.4,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Dover",
@@ -2095,7 +2927,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Luton",
@@ -2105,7 +2941,11 @@
       "takeaways": 0,
       "per_100k": 0.4,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Tonbridge and Malling",
@@ -2115,7 +2955,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Lewes",
@@ -2125,7 +2969,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Boston",
@@ -2135,7 +2983,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "St Helens",
@@ -2145,7 +2997,11 @@
       "takeaways": 0,
       "per_100k": 0.5,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rhondda Cynon Taf",
@@ -2155,7 +3011,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Slough",
@@ -2165,7 +3025,11 @@
       "takeaways": 0,
       "per_100k": 0.6,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Fenland",
@@ -2175,7 +3039,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Fareham",
@@ -2185,7 +3053,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Crawley",
@@ -2195,7 +3067,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Maldon",
@@ -2205,7 +3081,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Mid Suffolk",
@@ -2215,7 +3095,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 3.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Stoke-on-Trent",
@@ -2225,7 +3109,11 @@
       "takeaways": 0,
       "per_100k": 0.4,
       "avg_hygiene_rating": 1.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Anglesey",
@@ -2235,7 +3123,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Epping Forest",
@@ -2245,7 +3137,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Mansfield",
@@ -2255,7 +3151,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Melton",
@@ -2265,7 +3165,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Watford",
@@ -2275,7 +3179,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "North Lincolnshire",
@@ -2285,7 +3193,11 @@
       "takeaways": 0,
       "per_100k": 0.6,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hart",
@@ -2295,7 +3207,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Woking",
@@ -2305,7 +3221,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Bridgend",
@@ -2315,7 +3235,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Antrim and Newtownabbey",
@@ -2325,7 +3249,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Mid and East Antrim",
@@ -2335,7 +3263,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Walsall",
@@ -2345,7 +3277,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Pembrokeshire",
@@ -2355,7 +3291,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Babergh",
@@ -2365,7 +3305,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Hyndburn",
@@ -2375,7 +3319,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Warwickshire",
@@ -2385,7 +3333,11 @@
       "takeaways": 1,
       "per_100k": 0.2,
       "avg_hygiene_rating": 2.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Wyre Forest",
@@ -2395,7 +3347,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 1.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rossendale",
@@ -2405,7 +3361,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Lisburn and Castlereagh City",
@@ -2415,7 +3375,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Newry, Mourne and Down",
@@ -2425,7 +3389,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "South Tyneside",
@@ -2435,7 +3403,11 @@
       "takeaways": 1,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Dundee",
@@ -2444,8 +3416,12 @@
       "restaurants": 1,
       "takeaways": 0,
       "per_100k": 0.7,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 1,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Stirling",
@@ -2454,8 +3430,12 @@
       "restaurants": 1,
       "takeaways": 0,
       "per_100k": 2.0,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 1,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "North Ayrshire",
@@ -2464,8 +3444,12 @@
       "restaurants": 1,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 1,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Scottish Borders",
@@ -2474,8 +3458,12 @@
       "restaurants": 1,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 1,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Shetland Islands",
@@ -2484,8 +3472,12 @@
       "restaurants": 1,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 0,
+      "fhis_improvement": 1,
+      "fhis_exempt": 0
     },
     {
       "name": "West Lothian",
@@ -2494,8 +3486,12 @@
       "restaurants": 0,
       "takeaways": 1,
       "per_100k": null,
-      "avg_hygiene_rating": 0,
-      "postcode_areas": 1
+      "avg_hygiene_rating": null,
+      "postcode_areas": 1,
+      "scheme": "FHIS",
+      "fhis_pass": 1,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Rushcliffe",
@@ -2505,7 +3501,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Chichester",
@@ -2515,7 +3515,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     },
     {
       "name": "Sandwell",
@@ -2525,7 +3529,11 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 5.0,
-      "postcode_areas": 1
+      "postcode_areas": 1,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0
     }
   ]
 }

@@ -245,6 +245,11 @@ class TestDataIntegrity(unittest.TestCase):
     def test_avg_hygiene_rating_in_range(self) -> None:
         for c in self.cities['cities']:
             rating = c['avg_hygiene_rating']
+            if rating is None:
+                # Scotland (FHIS) has no numeric scores — the average must be null
+                self.assertEqual(c.get('scheme'), 'FHIS',
+                                 f"City '{c['name']}' has a null average but is not an FHIS city")
+                continue
             self.assertGreaterEqual(rating, 0)
             self.assertLessEqual(rating, 5)
 
