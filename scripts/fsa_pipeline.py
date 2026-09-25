@@ -125,7 +125,7 @@ def main() -> None:
     # Guard: only stage files we own. Untracked files can never be swept into
     # the commit (staging uses the explicit list below), so only *tracked*
     # changes outside our paths are a reason to stop.
-    owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap', 'functions/mcp.js')
+    owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap', 'functions/mcp.js', 'recipes/')
     status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
     dirty_lines = [l for l in status.stdout.split('\n') if l.strip()]
     tracked_changes = [l for l in dirty_lines if not l.startswith('??')]

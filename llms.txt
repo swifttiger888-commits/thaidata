@@ -31,6 +31,10 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Revenue Benchmarks](https://thaidata.uk/thai-restaurant-revenue-benchmarks-uk.html): Real revenue and profit numbers from UK Thai restaurants. By size, location, and business model.
 - [Food Trends 2026](https://thaidata.uk/thai-food-trends-uk-2026.html): What UK diners want. Regional cuisine trends, pricing sensitivity, and delivery vs dine-in shifts.
 
+## Recipes
+- [Thai Recipes Hub](https://thaidata.uk/recipes/): Real Thai recipes researched from Thai-language sources, translated and cited.
+- [Khao Soi (ข้าวซอย)](https://thaidata.uk/recipes/khao-soi/): Northern Thai curry noodle soup — the authentic version, with 6 cited Thai sources.
+
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
 - [Leeds](https://thaidata.uk/cities/leeds.html): 27 Thai businesses, ★4.4 avg rating, 4.2/100k density.

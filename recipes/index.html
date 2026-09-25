@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Recipes — Researched & Translated from Thai Sources | ThaiData</title>
+    <meta name="description" content="Real Thai recipes, researched from Thai-language sources — chefs, restaurants and home cooks in Thailand — translated, cited, and cooked the authentic way. No westernised shortcuts.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thaidata.uk/recipes/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thaidata.uk/recipes/">
+    <meta property="og:title" content="Thai Recipes — Researched & Translated from Thai Sources">
+    <meta property="og:description" content="Real Thai recipes from Thai-language sources, translated and cited. No westernised shortcuts.">
+    <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
+    <meta property="og:locale" content="en_GB">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
+    <style>
+        :root {
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #7A6F6A; --line: #E7DFD5; --bg: #FBF7F0; --gold: #B45309; --purple: #A78BFA;
+        }
+:focus-visible {
+            outline: 2px solid #A3132B;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    img, svg, video, canvas {
+      max-width: 100%;
+      height: auto
+    }
+                html { overflow-x: hidden; }
+body {
+        overflow-x: hidden; font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("https://grainy-gradients.vercel.app/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: var(--dark); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-bar { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; width: 100%; }
+        .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
+        .logo-icon { height: 40px; width: auto; display: inline-block; }
+
+        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
+        .header-section h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; position: relative; }
+        .header-section h1 em { font-style: normal; color: var(--gold); }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+
+        .section { padding: 30px 0 50px; }
+        .section h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
+        .section h2 em { font-style: normal; color: var(--gold); }
+        .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 14px; }
+
+        .recipe-card { display: block; background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin: 16px 0; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .recipe-card:hover { border-color: var(--gold); }
+        .recipe-card .r-tag { display: inline-block; padding: 5px 12px; background: rgba(245,158,11,0.1); border-radius: 8px; font-size: 0.72rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+        .recipe-card .r-title { font-family:'Archivo','Inter',sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; }
+        .recipe-card .r-thai { color: var(--gold); font-size: 1.1rem; margin-bottom: 10px; }
+        .recipe-card .r-desc { color: var(--ink4); font-size: 0.9rem; line-height: 1.7; }
+        .recipe-card .r-meta { margin-top: 14px; font-size: 0.8rem; color: var(--ink3); }
+
+        .source-note { font-size: 0.82rem; color: var(--ink4); margin-top: 24px; line-height: 1.6; padding: 18px; background: #FFFFFF; border-radius: 10px; border: 1px dashed var(--line); }
+
+        .author-card { display: flex; gap: 18px; align-items: flex-start; background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 22px; margin: 16px 0; }
+        .author-card .a-avatar { width: 52px; height: 52px; border-radius: 50%; background: rgba(245,158,11,0.15); color: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .author-card .a-name { font-weight: 700; font-size: 0.95rem; }
+        .author-card .a-bio { color: var(--ink4); font-size: 0.85rem; line-height: 1.6; margin-top: 4px; }
+
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; margin-top: 30px; }
+        footer a { color: var(--ink4); text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: var(--ink); }
+
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 2rem; }
+        }
+    </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"Recipes","item":"https://thaidata.uk/recipes/"}]}</script>
+</head>
+<body>
+    <div class="grain"></div>
+    <nav>
+        <div class="nav-bar">
+            <a href="/" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
+            <a href="/" style="color: rgba(26, 22, 20, 0.6); font-size:0.9rem; text-decoration:none;">&larr; ThaiData</a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <div class="wrap">
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); margin-bottom:16px;">Cook the real thing</div>
+            <h1>Thai Recipes, <em>From the Source</em></h1>
+            <p>Most English-language Thai recipes are westernised beyond recognition. Every recipe here is researched from Thai-language sources — chefs, restaurants and home cooks in Thailand — translated, and cited. Where the sources disagree, we say so instead of hiding it.</p>
+        </div>
+    </div>
+
+    <!-- Recipes -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>The <em>Recipes</em></h2>
+
+            <a href="/recipes/khao-soi/" class="recipe-card">
+                <span class="r-tag">Northern Thailand · Chiang Mai</span>
+                <div class="r-title">Khao Soi</div>
+                <div class="r-thai">ข้าวซอย</div>
+                <div class="r-desc">Chiang Mai's curry noodle soup: egg noodles in a coconut-cream broth with a homemade spice paste, crowned with fried noodles. The dish TasteAtlas ranked the #1 soup in the world in 2022 — done the way northern Thailand actually makes it.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~65 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 5 &nbsp;·&nbsp; <i class="fas fa-book"></i> 6 cited Thai sources</div>
+            </a>
+
+            <div class="source-note">
+                <p><strong>In research:</strong> Som Tum Pla Ra (ส้มตำปลาร้า) — the Isaan papaya salad with fermented fish, and Pad Kra Prow (ผัดกะเพรา) — the holy-basil stir-fry done properly. Both are being researched from Thai sources now.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How we source -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>How These Recipes Are <em>Sourced</em></h2>
+            <ul>
+                <li><strong>Thai-language sources first.</strong> Chefs, restaurants, cooking schools and home cooks in Thailand — not English re-interpretations of them.</li>
+                <li><strong>Every recipe is cited.</strong> Each page lists its sources with links and access dates.</li>
+                <li><strong>Disagreements are documented.</strong> Thai cooks differ — turmeric root vs powder, ginger vs galangal. We show the variations instead of pretending one recipe is canonical.</li>
+                <li><strong>Western substitutions are called out.</strong> Where UK recipes cut corners, we name it.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Author -->
+    <div class="section" style="padding-top:0;">
+        <div class="wrap">
+            <h2>About the <em>Author</em></h2>
+            <div class="author-card">
+                <div class="a-avatar"><i class="fas fa-utensils"></i></div>
+                <div>
+                    <div class="a-name">Johnny Tiger</div>
+                    <div class="a-bio">Johnny researches and translates Thai recipes from Thai-language sources — chefs, restaurants and home cooks in Thailand — and publishes them with their sources cited. No westernised shortcuts, no invented steps.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <p style="margin-bottom:10px;">
+                <a href="/">Home</a> ·
+                <a href="/restaurants">Restaurants</a> ·
+                <a href="/guides">Guides</a> ·
+                <a href="/about">About</a>
+            </p>
+            <p>&copy; 2026 ThaiData UK. Recipes translated and adapted from cited Thai-language sources.</p>
+        </div>
+    </footer>
+</body>
+</html>
