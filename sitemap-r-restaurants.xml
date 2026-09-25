@@ -6336,6 +6336,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/cheshire-east/bkk-thai-takeaway/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/cornwall/talay-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
