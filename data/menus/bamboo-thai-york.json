@@ -382,7 +382,7 @@
     "num": "61.",
     "name": "Som Tum Thai (N)",
     "description": "Authentic papaya salad with fresh papaya, tomatoes, and green beans, crushed garlic, chillies, and roasted peanuts.",
-    "price": "12.95",
+    "price": "£12.95",
     "vegetarian": false,
     "heat": null
    },
@@ -390,7 +390,7 @@
     "num": "62.",
     "name": "Som Tam Pla Ra",
     "description": "Fresh papaya salad with a bold twist from our northeastern Thai fermented fish sauce.",
-    "price": "13.95",
+    "price": "£13.95",
     "vegetarian": false,
     "heat": "3"
    },
@@ -398,7 +398,7 @@
     "num": "63.",
     "name": "Larb",
     "description": "A Spicy and aromatic salad with protein of your choice, tossed with lime juice, chilli powder, and toasted rice powder. Served with coriander, spring onion, and mint. (Chicken or Pork)",
-    "price": "14.95",
+    "price": "£14.95",
     "vegetarian": false,
     "heat": "2"
    },
@@ -406,7 +406,7 @@
     "num": "64.",
     "name": "Yam Nua",
     "description": "Beef salad with cucumber, carrots, red onion, celery, and tomatoes. All tossed with our homemade spicy dressing.",
-    "price": "15.95",
+    "price": "£15.95",
     "vegetarian": false,
     "heat": "3"
    },
@@ -414,7 +414,7 @@
     "num": "65.",
     "name": "Yum Tofu (V), (VE)",
     "description": "Crispy tofu tossed with our homemade spicy dressing. Served with cucumber, carrots, red onion, celery, and tomatoes.",
-    "price": "14.95",
+    "price": "£14.95",
     "vegetarian": true,
     "heat": null
    }
@@ -424,7 +424,7 @@
     "num": "71.",
     "name": "Steak Panaeng",
     "description": "A little twist on our famous dish. Aromatic Panaeng served hot on juicy sirloin steak!",
-    "price": "19.95",
+    "price": "£19.95",
     "vegetarian": false,
     "heat": null
    },
@@ -432,7 +432,7 @@
     "num": "72.",
     "name": "Gaeng Phed Ped Yang",
     "description": "Pineapple, sweet peppers, and sweet cherry tomatoes simmering in Bamboo Thai's authentic red curry.",
-    "price": "17.95",
+    "price": "£17.95",
     "vegetarian": false,
     "heat": "3"
    },
@@ -440,7 +440,7 @@
     "num": "73.",
     "name": "Guay Tiew Tom Yum (N)",
     "description": "Here comes authentic Thai spicy noodle soup. Served with king prawns, seafood balls and pork.",
-    "price": "19.95",
+    "price": "£19.95",
     "vegetarian": false,
     "heat": "2"
    },
@@ -448,7 +448,7 @@
     "num": "74.",
     "name": "Ped Ma-Kham",
     "description": "Roasted duck served with broccoli and a fried egg. Topped with our homemade sweet and sour tamarind sauce.",
-    "price": "17.95",
+    "price": "£17.95",
     "vegetarian": false,
     "heat": null
    },
@@ -456,7 +456,7 @@
     "num": "75.",
     "name": "Pla Rad Prik",
     "description": "Deep-fried light-battered seabass. Topped with our homemade sweet, sour, and spicy sauces. Bursting with fragrance from red onion, garlic, long red pepper, and coriander.",
-    "price": "17.95",
+    "price": "£17.95",
     "vegetarian": false,
     "heat": null
    },
@@ -464,7 +464,7 @@
     "num": "76.",
     "name": "Khao Pad Sab Pa Rod (N)",
     "description": "Jasmine rice stir-fried with aromatic curry powder. Loaded with flavours from juicy pineapple, cashew nuts, onion, and sweet peppers. Don't also forget to choose your protein!\nChicken £16.95\nPork £16.95\nKing prawn £17.95",
-    "price": "16.95/17.95",
+    "price": "16.95/£17.95",
     "vegetarian": false,
     "heat": null
    },
@@ -472,7 +472,7 @@
     "num": "77.",
     "name": "Guay Tiew Ruea",
     "description": "Rice noodles in strong herby broth with pork and liver.\nBeef £16.95\nPork £15.95",
-    "price": "16.95/15.95",
+    "price": "16.95/£15.95",
     "vegetarian": false,
     "heat": null
    },
@@ -480,7 +480,7 @@
     "num": "78.",
     "name": "Pad Udon Tom Yum",
     "description": "Ready for a perfect fusion? Here is our soft Japanese Udon stir-fried with Thai signature Tom Yam sauce.\nChicken or Pork £14.95\nKing prawn or Roasted duck £16.95\nBeef £15.95\nSeabass £17.95\nMixed vegetables and Tofu £14.95\nCrispy pork belly £17.95",
-    "price": "14.95/16.95/15.95/17.95",
+    "price": "14.95/16.95/15.95/£17.95",
     "vegetarian": false,
     "heat": "2"
    }
@@ -490,7 +490,7 @@
     "num": "81.",
     "name": "Stir-fried Broccoli",
     "description": "",
-    "price": "7.50",
+    "price": "£7.50",
     "vegetarian": false,
     "heat": null
    },
@@ -498,7 +498,7 @@
     "num": "82.",
     "name": "Chips",
     "description": "",
-    "price": "3.50",
+    "price": "£3.50",
     "vegetarian": false,
     "heat": null
    },
@@ -506,7 +506,7 @@
     "num": "83.",
     "name": "Khao Suay (V), (VE)",
     "description": "(Steamed Thai jasmine rice)",
-    "price": "3.00",
+    "price": "£3.00",
     "vegetarian": true,
     "heat": null
    },
@@ -514,7 +514,7 @@
     "num": "84.",
     "name": "Khao Niew (V), (VE)",
     "description": "(Thai sticky rice)",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": true,
     "heat": null
    },
@@ -522,7 +522,7 @@
     "num": "85.",
     "name": "Khao Maprao (V), (VE)",
     "description": "(Thai coconut rice)",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": true,
     "heat": null
    },
@@ -530,7 +530,7 @@
     "num": "86.",
     "name": "Egg fried rice (V)",
     "description": "",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": true,
     "heat": null
    },
@@ -538,7 +538,7 @@
     "num": "87.",
     "name": "Egg Noodles (V)",
     "description": "",
-    "price": "4.50",
+    "price": "£4.50",
     "vegetarian": true,
     "heat": null
    },
@@ -546,7 +546,7 @@
     "num": "88.",
     "name": "Vietnamese prawn crackers",
     "description": "",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -554,7 +554,7 @@
     "num": "89.",
     "name": "Thai prawn crackers",
     "description": "",
-    "price": "3.50",
+    "price": "£3.50",
     "vegetarian": false,
     "heat": null
    },
@@ -562,7 +562,7 @@
     "num": "89A.",
     "name": "Dips",
     "description": "Sweet Chilli\nPeanut\nPlum",
-    "price": "0.50",
+    "price": "£0.50",
     "vegetarian": false,
     "heat": null
    }

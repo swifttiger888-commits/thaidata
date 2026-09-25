@@ -14,7 +14,7 @@
     "num": "1.",
     "name": "SATAY CHICKEN CN",
     "description": "Marinated skewers of grilled chicken breast, served with peanut dip.",
-    "price": "8.95",
+    "price": "£8.95",
     "vegetarian": false,
     "heat": null
    },
@@ -22,7 +22,7 @@
     "num": "2.",
     "name": "SPRING ROLLS V VE",
     "description": "Deep fried spring rolls filled with mixed vegetables & vermicelli noodles, served with sweet chilli dip.",
-    "price": "8.95",
+    "price": "£8.95",
     "vegetarian": true,
     "heat": null
    },
@@ -30,7 +30,7 @@
     "num": "3.",
     "name": "PRAWN TOAST",
     "description": "A blend of minced prawns and chicken spread on French bread, served with sweet chilli dip.",
-    "price": "8.95",
+    "price": "£8.95",
     "vegetarian": false,
     "heat": null
    },
@@ -38,7 +38,7 @@
     "num": "4.",
     "name": "TEMPURA PRAWN",
     "description": "Deep fried prawns in crispy batter, served with sweet chilli dip.",
-    "price": "8.95",
+    "price": "£8.95",
     "vegetarian": false,
     "heat": null
    },
@@ -46,7 +46,7 @@
     "num": "5.",
     "name": "CRISPY CHICKEN WONTON",
     "description": "Marinated chicken wrapped in filo pastry, served with sweet chilli dip.",
-    "price": "8.55",
+    "price": "£8.55",
     "vegetarian": false,
     "heat": null
    },
@@ -54,7 +54,7 @@
     "num": "6.",
     "name": "SAMOSAS",
     "description": "Thai style samosa filled with minced lamb, vegetables & curry powder, served with sweet chilli dip.",
-    "price": "9.55",
+    "price": "£9.55",
     "vegetarian": false,
     "heat": null
    },
@@ -62,7 +62,7 @@
     "num": "7.",
     "name": "SALT & PEPPER SQUID",
     "description": "Deep fried salt & black pepper squid in crispy batter, served with a chilli dipping sauce.",
-    "price": "10.95",
+    "price": "£10.95",
     "vegetarian": false,
     "heat": null
    },
@@ -70,7 +70,7 @@
     "num": "8.",
     "name": "DUMPLING",
     "description": "Thai style steamed dumpling with pork and prawns, served with garlic and soy sauce.",
-    "price": "9.55",
+    "price": "£9.55",
     "vegetarian": false,
     "heat": null
    },
@@ -78,7 +78,7 @@
     "num": "9.",
     "name": "TEMPURA VEGETABLES V VE",
     "description": "Assorted vegetables dipped in batter and deep fried, served with sweet chilli dip.",
-    "price": "8.95",
+    "price": "£8.95",
     "vegetarian": true,
     "heat": null
    },
@@ -86,7 +86,7 @@
     "num": "10.",
     "name": "PAPAYA SALAD – SOM TUM V VE CN",
     "description": "Shredded fresh green papaya, fine bean, carrot, cherry tomatoes, and peanuts tossed in a lemon, garlic and chilli dressing.",
-    "price": "14.65",
+    "price": "£14.65",
     "vegetarian": true,
     "heat": "2"
    },
@@ -94,7 +94,7 @@
     "num": "11.",
     "name": "MALAI THAI SPECIAL MIXED PLATTER CN",
     "description": "A selection of No's. 1,2,3,4 & 6.",
-    "price": "for two 20.95",
+    "price": "for two £20.95",
     "vegetarian": false,
     "heat": null
    },
@@ -102,7 +102,7 @@
     "num": "12.",
     "name": "FISH CAKE CN",
     "description": "Thai fish cake blended with red curry paste, green beans and lime leaves, served with sweet chilli dip.",
-    "price": "9.95",
+    "price": "£9.95",
     "vegetarian": false,
     "heat": null
    },
@@ -110,7 +110,7 @@
     "num": "13.",
     "name": "DUCK SPRING ROLLS",
     "description": "Crispy spring rolls filled with shredded aromatic duck and crunchy vegetables, served with a hoisin dipping sauce.",
-    "price": "12.95",
+    "price": "£12.95",
     "vegetarian": false,
     "heat": null
    },
@@ -118,7 +118,7 @@
     "num": "",
     "name": "PRAWN CRACKERS",
     "description": "",
-    "price": "4.50",
+    "price": "£4.50",
     "vegetarian": false,
     "heat": null
    }
@@ -128,7 +128,7 @@
     "num": "14.",
     "name": "DRUNKEN NOODLES",
     "description": "Spicy Thai rice noodles stir fried with mixed vegetables, basil leaves, chili and soy sauce.\nChoice of Chicken, Barbequed Pork, Beef, Prawn or Mixed Vegetables",
-    "price": "16.55 | Mixed Seafood 19.95",
+    "price": "16.55 | Mixed Seafood £19.95",
     "vegetarian": false,
     "heat": "3"
    },
@@ -136,7 +136,7 @@
     "num": "15.",
     "name": "PAD THAI - A famous Thai dish CN VE",
     "description": "Stir fried rice noodles with egg, bean sprouts, carrot, ground peanut and spring onion.\nChoice of Prawn, Chicken, Barbequed Pork or Mixed Vegetables",
-    "price": "16.55",
+    "price": "£16.55",
     "vegetarian": true,
     "heat": null
    },
@@ -144,7 +144,7 @@
     "num": "16.",
     "name": "PAD MEE VE",
     "description": "Stir fried egg noodles with egg, bean sprouts, onion, carrot, and spring onion.\nChoice of Chicken, Barbequed Pork, Prawn or Mixed Vegetables",
-    "price": "16.55",
+    "price": "£16.55",
     "vegetarian": true,
     "heat": null
    },
@@ -152,7 +152,7 @@
     "num": "17.",
     "name": "PAD SEE EAW - A famous Thai dish",
     "description": "Stir fried rice noodles with vegetables and egg.\nChoice of Chicken, Barbequed Pork, Beef, Prawn or Mixed Vegetables",
-    "price": "16.55 | Mixed Seafood 19.95",
+    "price": "16.55 | Mixed Seafood £19.95",
     "vegetarian": true,
     "heat": null
    },
@@ -160,7 +160,7 @@
     "num": "18.",
     "name": "KOEW TIEW TUM YAM - Noodle Soup",
     "description": "A spicy hot and sour soup with rice noodles, lemon grass,\nThai herbs and fresh chilli. Choice of Chicken, Beef, Prawn or Mixed Seafood",
-    "price": "Chicken 16.55 | Beef 17.95\nPrawn 18.95 | Mixed Seafood 19.95",
+    "price": "Chicken 16.55 | Beef 17.95\nPrawn 18.95 | Mixed Seafood £19.95",
     "vegetarian": false,
     "heat": null
    }
@@ -170,7 +170,7 @@
     "num": "19.",
     "name": "GANG KIEW WAN",
     "description": "A spicy green curry with coconut milk, mixed vegetables, sweet basil and Thai herbs.\nWith a choice of Chicken, Beef, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "2"
    },
@@ -178,7 +178,7 @@
     "num": "20.",
     "name": "MASSAMAN CN",
     "description": "A medium spiced curry with a special blend of red curry paste,\ncoconut milk, roasted cashew and potato.",
-    "price": "Vegetable 15.95 | Chicken 16.95 | Beef 18.95 | Prawn 19.95",
+    "price": "Vegetable 15.95 | Chicken 16.95 | Beef 18.95 | Prawn £19.95",
     "vegetarian": false,
     "heat": null
    },
@@ -186,7 +186,7 @@
     "num": "21.",
     "name": "PANANG",
     "description": "A medium spiced thicker red curry with coconut milk, flavoured with lime leaves,\nred pepper & sweet basil. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "2"
    },
@@ -194,7 +194,7 @@
     "num": "22.",
     "name": "GANG DANG",
     "description": "A spicy red curry with coconut milk, mixed vegetables and sweet basil.\nWith a choice of Chicken, Beef, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "2"
    },
@@ -202,7 +202,7 @@
     "num": "23.",
     "name": "GANG GAREE",
     "description": "A mild yellow curry with potato tomato and coconut milk.\nWith a choice of Chicken, Beef, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": null
    },
@@ -210,7 +210,7 @@
     "num": "24.",
     "name": "GANG PA - Jungle Curry",
     "description": "The ultimate Thai jungle curry with bamboo shoots, baby corn, lime leaves, sweet basil,\nThai herbs & red pepper. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "3"
    }
@@ -220,7 +220,7 @@
     "num": "25.",
     "name": "PLA PAD GRA PRAW",
     "description": "Stir fried cod fillet with fresh chilli, green beans, holy basil, lime leaves, red & green peppers.",
-    "price": "22.95",
+    "price": "£22.95",
     "vegetarian": true,
     "heat": "3"
    },
@@ -228,7 +228,7 @@
     "num": "26.",
     "name": "PAD NUM MANNAN HOI",
     "description": "Stir fried beef with oyster sauce, mushroom, spring onion and mixed vegetable.",
-    "price": "16.55",
+    "price": "£16.55",
     "vegetarian": true,
     "heat": null
    },
@@ -236,7 +236,7 @@
     "num": "27.",
     "name": "PAD PREAW WAN - SWEET & SOUR",
     "description": "Thai style sweet and sour sauce with cucumber, red pepper, onion, tomato and pineapple. With a choice of Chicken, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": null
    },
@@ -244,7 +244,7 @@
     "num": "28.",
     "name": "PAD GRA PRAW",
     "description": "A stir fried dish with fresh chilli, garlic and sweet basil. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "3"
    },
@@ -252,7 +252,7 @@
     "num": "29.",
     "name": "KAO PAD",
     "description": "Stir fried rice with egg and mixed vegetables. Choice of Chicken, Beef, Prawn or Mixed Vegetables",
-    "price": "16.55",
+    "price": "£16.55",
     "vegetarian": false,
     "heat": null
    },
@@ -260,7 +260,7 @@
     "num": "30.",
     "name": "PAD KHING",
     "description": "Stir fried with yellow bean sauce, onion, mushroom, spring onion and ginger. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
-    "price": "16.55 | Prawn 18.95",
+    "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": null
    }
@@ -270,7 +270,7 @@
     "num": "31.",
     "name": "TIGER CRYING - SIMPLY THE BEST",
     "description": "Grilled sirloin steak sliced and topped with a secret Thai style sauce and served in a hot sizzle dish with steamed jasmine rice.",
-    "price": "24.95",
+    "price": "£24.95",
     "vegetarian": false,
     "heat": null
    },
@@ -278,7 +278,7 @@
     "num": "32.",
     "name": "KAO PAD GARPROW MOO GROB",
     "description": "Crispy marinated pork belly stir fried with rice, mixed vegetables, chilli and sweet basil leaves.",
-    "price": "17.95",
+    "price": "£17.95",
     "vegetarian": false,
     "heat": "3"
    }
@@ -288,7 +288,7 @@
     "num": "",
     "name": "TUNA MAYO & RED ONION",
     "description": "",
-    "price": "10.95",
+    "price": "£10.95",
     "vegetarian": false,
     "heat": null
    },
@@ -296,7 +296,7 @@
     "num": "",
     "name": "FISH FINGER",
     "description": "with lemon juice & tartar sauce",
-    "price": "10.95",
+    "price": "£10.95",
     "vegetarian": false,
     "heat": null
    },
@@ -304,7 +304,7 @@
     "num": "",
     "name": "PLOUGHMAN'S",
     "description": "British ham, cheddar, sliced apple & pickle",
-    "price": "10.95",
+    "price": "£10.95",
     "vegetarian": false,
     "heat": null
    },
@@ -312,7 +312,7 @@
     "num": "",
     "name": "CRISPY CHICKEN",
     "description": "with a creamy house dressing",
-    "price": "10.95",
+    "price": "£10.95",
     "vegetarian": false,
     "heat": null
    },
@@ -320,7 +320,7 @@
     "num": "",
     "name": "MATURE CHEDDAR & CHUTNEY",
     "description": "",
-    "price": "10.95",
+    "price": "£10.95",
     "vegetarian": false,
     "heat": null
    },
@@ -328,7 +328,7 @@
     "num": "",
     "name": "HAM, TOMATO & MUSTARD",
     "description": "",
-    "price": "10.95",
+    "price": "£10.95",
     "vegetarian": false,
     "heat": null
    }
@@ -338,7 +338,7 @@
     "num": "",
     "name": "CHUNKY CHIPS",
     "description": "",
-    "price": "4.50",
+    "price": "£4.50",
     "vegetarian": false,
     "heat": null
    },
@@ -346,7 +346,7 @@
     "num": "",
     "name": "CHEESY CHUNKY CHIPS",
     "description": "",
-    "price": "4.95",
+    "price": "£4.95",
     "vegetarian": false,
     "heat": null
    }
@@ -356,7 +356,7 @@
     "num": "",
     "name": "VANILLA",
     "description": "",
-    "price": "6.95",
+    "price": "£6.95",
     "vegetarian": false,
     "heat": null
    },
@@ -364,7 +364,7 @@
     "num": "",
     "name": "CHOCOLATE",
     "description": "",
-    "price": "6.95",
+    "price": "£6.95",
     "vegetarian": false,
     "heat": null
    },
@@ -372,7 +372,7 @@
     "num": "",
     "name": "MINT CHOCOLATE",
     "description": "",
-    "price": "6.95",
+    "price": "£6.95",
     "vegetarian": true,
     "heat": null
    },
@@ -380,7 +380,7 @@
     "num": "",
     "name": "SALTED CARAMEL",
     "description": "",
-    "price": "6.95",
+    "price": "£6.95",
     "vegetarian": false,
     "heat": null
    },
@@ -388,7 +388,7 @@
     "num": "",
     "name": "COCONUT",
     "description": "(made especially just for us!)",
-    "price": "6.95",
+    "price": "£6.95",
     "vegetarian": true,
     "heat": null
    },
@@ -396,7 +396,7 @@
     "num": "",
     "name": "MANGO SORBET",
     "description": "",
-    "price": "6.95",
+    "price": "£6.95",
     "vegetarian": true,
     "heat": null
    }
@@ -406,7 +406,7 @@
     "num": "",
     "name": "BANANA FRITTER",
     "description": "Deep fried banana with vanilla ice cream and golden syrup",
-    "price": "7.95",
+    "price": "£7.95",
     "vegetarian": false,
     "heat": null
    },
@@ -414,7 +414,7 @@
     "num": "",
     "name": "BANANA HOT BOWL",
     "description": "Steamed banana with coconut milk, brown sugar and toasted sesame seed",
-    "price": "7.95",
+    "price": "£7.95",
     "vegetarian": false,
     "heat": null
    },
@@ -422,7 +422,7 @@
     "num": "",
     "name": "LYCHEE FRUIT",
     "description": "Fresh lychee fruit with Thai syrup and vanilla ice cream",
-    "price": "7.95",
+    "price": "£7.95",
     "vegetarian": false,
     "heat": null
    }

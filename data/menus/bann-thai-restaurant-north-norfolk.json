@@ -19,7 +19,7 @@
     "num": "",
     "name": "Singha",
     "description": "330ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -27,7 +27,7 @@
     "num": "",
     "name": "Chang",
     "description": "330ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -35,7 +35,7 @@
     "num": "",
     "name": "Tiger",
     "description": "330ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -43,7 +43,7 @@
     "num": "",
     "name": "Adnams Ghostship (500ml)",
     "description": "",
-    "price": "4.75",
+    "price": "£4.75",
     "vegetarian": false,
     "heat": null
    },
@@ -51,7 +51,7 @@
     "num": "",
     "name": "Adnams Ghostship (Non Alcholic)",
     "description": "",
-    "price": "4.75",
+    "price": "£4.75",
     "vegetarian": false,
     "heat": null
    },
@@ -59,7 +59,7 @@
     "num": "",
     "name": "Becks Blue (non alcoholic)",
     "description": "",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    }
@@ -69,7 +69,7 @@
     "num": "",
     "name": "Strongbow",
     "description": "330ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    }
@@ -79,7 +79,7 @@
     "num": "",
     "name": "Jamieson's",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -87,7 +87,7 @@
     "num": "",
     "name": "Thai Whisky",
     "description": "25ml",
-    "price": "4.50",
+    "price": "£4.50",
     "vegetarian": false,
     "heat": null
    },
@@ -95,7 +95,7 @@
     "num": "",
     "name": "Jack Daniels",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -103,7 +103,7 @@
     "num": "",
     "name": "Southern Comfort",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -111,7 +111,7 @@
     "num": "",
     "name": "Pink Gin",
     "description": "25ml",
-    "price": "4.50",
+    "price": "£4.50",
     "vegetarian": false,
     "heat": null
    },
@@ -119,7 +119,7 @@
     "num": "",
     "name": "Bombay Sapphire",
     "description": "25ml",
-    "price": "4.50",
+    "price": "£4.50",
     "vegetarian": false,
     "heat": null
    },
@@ -127,7 +127,7 @@
     "num": "",
     "name": "Gordon Gin",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -135,7 +135,7 @@
     "num": "",
     "name": "Smirnoff Vodka",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -143,7 +143,7 @@
     "num": "",
     "name": "Bacardi",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -151,7 +151,7 @@
     "num": "",
     "name": "Malibu",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -159,7 +159,7 @@
     "num": "",
     "name": "Tia Maria",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -167,7 +167,7 @@
     "num": "",
     "name": "Cointreau",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -175,7 +175,7 @@
     "num": "",
     "name": "Disarano",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -183,7 +183,7 @@
     "num": "",
     "name": "Drambuie",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -191,7 +191,7 @@
     "num": "",
     "name": "Grand Marnier",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -199,7 +199,7 @@
     "num": "",
     "name": "Courvoisier",
     "description": "25ml",
-    "price": "5.00",
+    "price": "£5.00",
     "vegetarian": false,
     "heat": null
    },
@@ -207,7 +207,7 @@
     "num": "",
     "name": "Martel",
     "description": "25ml",
-    "price": "5.00",
+    "price": "£5.00",
     "vegetarian": false,
     "heat": null
    },
@@ -215,7 +215,7 @@
     "num": "",
     "name": "Captain Morgans",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -223,7 +223,7 @@
     "num": "",
     "name": "Captain Morgans Spiced Rum",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -231,7 +231,7 @@
     "num": "",
     "name": "Sambuca",
     "description": "25ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -239,7 +239,7 @@
     "num": "",
     "name": "Campari",
     "description": "50ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -247,7 +247,7 @@
     "num": "",
     "name": "Martini Dry",
     "description": "50ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -255,7 +255,7 @@
     "num": "",
     "name": "Martini Rosso",
     "description": "50ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -263,7 +263,7 @@
     "num": "",
     "name": "Pimms No 1",
     "description": "50ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -271,7 +271,7 @@
     "num": "",
     "name": "Cinzano",
     "description": "50ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -279,7 +279,7 @@
     "num": "",
     "name": "Cockburns Port",
     "description": "50ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    },
@@ -287,7 +287,7 @@
     "num": "",
     "name": "Baileys",
     "description": "50ml",
-    "price": "4.00",
+    "price": "£4.00",
     "vegetarian": false,
     "heat": null
    }
@@ -297,7 +297,7 @@
     "num": "",
     "name": "Apple Juice",
     "description": "330ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -305,7 +305,7 @@
     "num": "",
     "name": "Mango Juice",
     "description": "330ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -313,7 +313,7 @@
     "num": "",
     "name": "Orange Juice",
     "description": "330ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -321,7 +321,7 @@
     "num": "",
     "name": "Pineapple",
     "description": "330ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -329,7 +329,7 @@
     "num": "",
     "name": "Appletizer",
     "description": "275ml",
-    "price": "2.75",
+    "price": "£2.75",
     "vegetarian": false,
     "heat": null
    },
@@ -337,7 +337,7 @@
     "num": "",
     "name": "J20",
     "description": "275ml",
-    "price": "2.90",
+    "price": "£2.90",
     "vegetarian": false,
     "heat": null
    },
@@ -345,7 +345,7 @@
     "num": "",
     "name": "Coke",
     "description": "330ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -353,7 +353,7 @@
     "num": "",
     "name": "Diet Coke",
     "description": "330ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -361,7 +361,7 @@
     "num": "",
     "name": "Lemonade",
     "description": "330ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    }
@@ -371,7 +371,7 @@
     "num": "",
     "name": "Tonic Water",
     "description": "200ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    },
@@ -379,7 +379,7 @@
     "num": "",
     "name": "Soda Water",
     "description": "200ml",
-    "price": "2.50",
+    "price": "£2.50",
     "vegetarian": false,
     "heat": null
    }
@@ -389,7 +389,7 @@
     "num": "",
     "name": "Summer Fruits",
     "description": "1/2 pt / Pint",
-    "price": "1.00/2.00",
+    "price": "1.00/£2.00",
     "vegetarian": false,
     "heat": null
    }

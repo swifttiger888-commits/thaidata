@@ -14,7 +14,7 @@
     "num": "",
     "name": "FRIED RICE WITH CHICKEN",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    },
@@ -22,7 +22,7 @@
     "num": "",
     "name": "PAD THAI CHICKEN",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    },
@@ -30,7 +30,7 @@
     "num": "",
     "name": "PAD MAE CHICKEN",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    },
@@ -38,7 +38,7 @@
     "num": "",
     "name": "CHICKEN NUGGETS WITH RICE",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    },
@@ -46,7 +46,7 @@
     "num": "",
     "name": "CHICKEN NUGGETS WITH CHIPS",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    },
@@ -54,7 +54,7 @@
     "num": "",
     "name": "SWEET AND SOUR CHICKEN WITH RICE",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    },
@@ -62,7 +62,7 @@
     "num": "",
     "name": "GANG KIEAW WITH RICE",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    },
@@ -70,7 +70,7 @@
     "num": "",
     "name": "CHICKEN SATAY WITH RICE",
     "description": "",
-    "price": "5.95",
+    "price": "£5.95",
     "vegetarian": false,
     "heat": null
    }
