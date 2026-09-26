@@ -43,6 +43,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Massaman (แกงมัสมั่น)](https://thaidata.uk/recipes/massaman/): The world's #1 curry — 16-ingredient spice paste, peanuts as a finish never a sauce.
 - [Tom Kha Gai (ต้มข่าไก่)](https://thaidata.uk/recipes/tom-kha-gai/): Galangal coconut soup — lime off the heat, no dairy, no ginger.
 - [Khao Man Gai (ข้าวมันไก่)](https://thaidata.uk/recipes/khao-man-gai/): Thai chicken rice — chicken-fat rice, tao jiao dipping sauce, three countries documented.
+- [Panang (พะแนง)](https://thaidata.uk/recipes/panang/): The world's #1 stew — court recipe, nine-spice paste, peanuts in the curry, no lime.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
