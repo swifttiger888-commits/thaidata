@@ -38,6 +38,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Pad Krapow (ผัดกะเพรา)](https://thaidata.uk/recipes/pad-krapow/): The real holy-basil stir-fry from a Michelin-starred chef, plus the 1968 original recipe.
 - [Thai Green Curry (แกงเขียวหวาน)](https://thaidata.uk/recipes/green-curry/): From-scratch paste from a Michelin-starred chef, cracked coconut cream, the real green colour.
 - [Tom Yum Goong (ต้มยำกุ้ง)](https://thaidata.uk/recipes/tom-yum-goong/): The real clear hot-and-sour prawn soup — lime off the heat, prawn-head stock.
+- [Laab (ลาบ)](https://thaidata.uk/recipes/laab/): The real Isaan minced meat salad — khao khua toasted rice powder, fresh herbs, Bib Gourmand technique.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
