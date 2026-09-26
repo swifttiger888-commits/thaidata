@@ -35,6 +35,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Thai Recipes Hub](https://thaidata.uk/recipes/): Real Thai recipes researched from Thai-language sources, translated and cited.
 - [Khao Soi (ข้าวซอย)](https://thaidata.uk/recipes/khao-soi/): Northern Thai curry noodle soup — the authentic version, with 6 cited Thai sources.
 - [Som Tum Thai (ส้มตำไทย)](https://thaidata.uk/recipes/som-tum-thai/): The classic green papaya salad from a Michelin-recommended som tum chef, with the som tum family mapped.
+- [Pad Krapow (ผัดกะเพรา)](https://thaidata.uk/recipes/pad-krapow/): The real holy-basil stir-fry from a Michelin-starred chef, plus the 1968 original recipe.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
