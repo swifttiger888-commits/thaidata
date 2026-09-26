@@ -49,6 +49,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Mango Sticky Rice (ข้าวเหนียวมะม่วง)](https://thaidata.uk/recipes/mango-sticky-rice/): Steamed glutinous rice folded with salted coconut cream — the Coachella dessert, the salt is the dish.
 - [Gaeng Som (แกงส้ม)](https://thaidata.uk/recipes/gaeng-som/): The sour curry with no orange — prawn meat in the paste, tamarind + lime, C-curl prawns.
 - [Khao Kha Mu (ข้าวขาหมู)](https://thaidata.uk/recipes/khao-kha-mu/): Braised pork leg rice — caramel first, overnight rest, the dish that's better tomorrow.
+- [Yum Neua (ยำเนื้อย่าง)](https://thaidata.uk/recipes/yum-neua/): Grilled beef salad — warm beef, balanced dressing, the bitter-lime lesson.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
