@@ -44,6 +44,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Tom Kha Gai (ต้มข่าไก่)](https://thaidata.uk/recipes/tom-kha-gai/): Galangal coconut soup — lime off the heat, no dairy, no ginger.
 - [Khao Man Gai (ข้าวมันไก่)](https://thaidata.uk/recipes/khao-man-gai/): Thai chicken rice — chicken-fat rice, tao jiao dipping sauce, three countries documented.
 - [Panang (พะแนง)](https://thaidata.uk/recipes/panang/): The world's #1 stew — court recipe, nine-spice paste, peanuts in the curry, no lime.
+- [Pad See Ew (ผัดซีอิ๊ว)](https://thaidata.uk/recipes/pad-see-ew/): Wide rice noodles charred in the wok, ice-water pork marinade, the burnt edges are the point.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
