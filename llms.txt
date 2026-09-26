@@ -41,6 +41,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Laab (ลาบ)](https://thaidata.uk/recipes/laab/): The real Isaan minced meat salad — khao khua toasted rice powder, fresh herbs, Bib Gourmand technique.
 - [Pad Thai (ผัดไทย)](https://thaidata.uk/recipes/pad-thai/): Tamarind-palm-sugar-fish-sauce balance, sen chan noodles, no ketchup — plus the 3-star Chaiya variant.
 - [Massaman (แกงมัสมั่น)](https://thaidata.uk/recipes/massaman/): The world's #1 curry — 16-ingredient spice paste, peanuts as a finish never a sauce.
+- [Tom Kha Gai (ต้มข่าไก่)](https://thaidata.uk/recipes/tom-kha-gai/): Galangal coconut soup — lime off the heat, no dairy, no ginger.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
