@@ -51,6 +51,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Khao Kha Mu (ข้าวขาหมู)](https://thaidata.uk/recipes/khao-kha-mu/): Braised pork leg rice — caramel first, overnight rest, the dish that's better tomorrow.
 - [Yum Neua (ยำเนื้อย่าง)](https://thaidata.uk/recipes/yum-neua/): Grilled beef salad — warm beef, balanced dressing, the bitter-lime lesson.
 - [Tom Yum Noodle Soup (ก๋วยเตี๋ยวต้มยำ)](https://thaidata.uk/recipes/tom-yum-noodle-soup/): Clear stock, per-bowl peanut dressing, just enough liquid to coat — not a soup.
+- [Thai Iced Tea (ชาไทย)](https://thaidata.uk/recipes/thai-iced-tea/): Spiced black tea, condensed milk, the layered pour — and why it's orange.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
