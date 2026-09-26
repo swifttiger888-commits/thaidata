@@ -40,6 +40,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Tom Yum Goong (ต้มยำกุ้ง)](https://thaidata.uk/recipes/tom-yum-goong/): The real clear hot-and-sour prawn soup — lime off the heat, prawn-head stock.
 - [Laab (ลาบ)](https://thaidata.uk/recipes/laab/): The real Isaan minced meat salad — khao khua toasted rice powder, fresh herbs, Bib Gourmand technique.
 - [Pad Thai (ผัดไทย)](https://thaidata.uk/recipes/pad-thai/): Tamarind-palm-sugar-fish-sauce balance, sen chan noodles, no ketchup — plus the 3-star Chaiya variant.
+- [Massaman (แกงมัสมั่น)](https://thaidata.uk/recipes/massaman/): The world's #1 curry — 16-ingredient spice paste, peanuts as a finish never a sauce.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
