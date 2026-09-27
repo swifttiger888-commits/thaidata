@@ -253,7 +253,7 @@ HTML = f"""<!DOCTYPE html>
                 <a href="/guides.html">Guides</a>
                 <a href="/thai-restaurants-city-breakdown-uk">Cities</a>
                 <a href="/r/">Restaurants</a>
-                <a href="/chains/" style="color:white;">Chains</a>
+                <a href="/chains/" style="color: var(--ink);">Chains</a>
             </div>
         </div>
     </nav>

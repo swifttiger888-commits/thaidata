@@ -868,7 +868,7 @@ def build_faq_html(schemas: list[dict[str, Any]]) -> str:
             f'<details style="margin:8px 0;padding:12px 16px;'
             f'background:#FFFFFF;border:1px solid var(--line);'
             f'border-radius:10px;">\n'
-            f'  <summary style="cursor:pointer;font-weight:600;color:white;">'
+            f'  <summary style="cursor:pointer;font-weight:600;color: var(--ink);">'
             f'{question}</summary>\n'
             f'  <p style="margin-top:8px;color:var(--ink4);">{answer}</p>\n'
             f'</details>\n'
