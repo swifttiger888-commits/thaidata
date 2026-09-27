@@ -57,6 +57,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Chicken Satay (ไก่สะเต๊ะ)](https://thaidata.uk/recipes/chicken-satay/): Coconut-milk marinade, basted on the grill, peanut sauce on two curry pastes — and the ajad that cuts it.
 - [Thai Fish Cakes (ทอดมันปลา)](https://thaidata.uk/recipes/thai-fish-cakes/): Fish kneaded with red curry paste and kaffir lime until it bounces — the ajad pickle, not sweet chilli.
 - [Thai Iced Coffee (กาแฟเย็น)](https://thaidata.uk/recipes/thai-iced-coffee/): The sock-brewed coffee of the old cafés — condensed milk in the glass, evaporated milk over full ice.
+- [Tab Tim Grob (ทับทิมกรอบ)](https://thaidata.uk/recipes/tab-tim-grob/): Crisp rubies — water chestnuts in a tapioca shell, shocked in ice, under salted coconut cream.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
