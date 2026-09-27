@@ -58,6 +58,10 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Thai Fish Cakes (ทอดมันปลา)](https://thaidata.uk/recipes/thai-fish-cakes/): Fish kneaded with red curry paste and kaffir lime until it bounces — the ajad pickle, not sweet chilli.
 - [Thai Iced Coffee (กาแฟเย็น)](https://thaidata.uk/recipes/thai-iced-coffee/): The sock-brewed coffee of the old cafés — condensed milk in the glass, evaporated milk over full ice.
 - [Tab Tim Grob (ทับทิมกรอบ)](https://thaidata.uk/recipes/tab-tim-grob/): Crisp rubies — water chestnuts in a tapioca shell, shocked in ice, under salted coconut cream.
+- [Yellow Curry (แกงกะหรี่)](https://thaidata.uk/recipes/yellow-curry/): The curry that runs on curry powder — chicken, potato, bay leaf, coconut milk, and ajad on the side.
+- [Pad Prik King (ผัดพริกขิง)](https://thaidata.uk/recipes/pad-prik-king/): The stir-fry named for its ginger — crispy pork belly, chilli-ginger paste, long beans, hair-thin kaffir lime.
+- [Thai Banana Fritters (กล้วยแขก)](https://thaidata.uk/recipes/thai-banana-fritters/): The fritters of the street vendors — nam wah bananas, rice-flour batter, coconut, sesame, pandan in the oil.
+- [Kanom Krok (ขนมครก)](https://thaidata.uk/recipes/kanom-krok/): The pancakes of the sizzling pan — rice-flour batter, cooked rice, lime water, coconut cream top, crisp shell and custard heart.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
