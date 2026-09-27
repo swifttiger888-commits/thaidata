@@ -56,6 +56,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Pad Kee Mao (ผัดขี้เมา)](https://thaidata.uk/recipes/pad-kee-mao/): The noodles named for a drunk — pounded chilli relish, wide noodles, holy basil, fresh green peppercorns. No alcohol in the wok.
 - [Chicken Satay (ไก่สะเต๊ะ)](https://thaidata.uk/recipes/chicken-satay/): Coconut-milk marinade, basted on the grill, peanut sauce on two curry pastes — and the ajad that cuts it.
 - [Thai Fish Cakes (ทอดมันปลา)](https://thaidata.uk/recipes/thai-fish-cakes/): Fish kneaded with red curry paste and kaffir lime until it bounces — the ajad pickle, not sweet chilli.
+- [Thai Iced Coffee (กาแฟเย็น)](https://thaidata.uk/recipes/thai-iced-coffee/): The sock-brewed coffee of the old cafés — condensed milk in the glass, evaporated milk over full ice.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
