@@ -54,6 +54,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Thai Iced Tea (ชาไทย)](https://thaidata.uk/recipes/thai-iced-tea/): Spiced black tea, condensed milk, the layered pour — and why it's orange.
 - [Red Curry (แกงเผ็ด)](https://thaidata.uk/recipes/red-curry/): The curry named for being spicy — dried-chilli paste, cracked coconut cream, pork and aubergines, basil and kaffir lime to finish.
 - [Pad Kee Mao (ผัดขี้เมา)](https://thaidata.uk/recipes/pad-kee-mao/): The noodles named for a drunk — pounded chilli relish, wide noodles, holy basil, fresh green peppercorns. No alcohol in the wok.
+- [Chicken Satay (ไก่สะเต๊ะ)](https://thaidata.uk/recipes/chicken-satay/): Coconut-milk marinade, basted on the grill, peanut sauce on two curry pastes — and the ajad that cuts it.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
