@@ -61,7 +61,11 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Yellow Curry (แกงกะหรี่)](https://thaidata.uk/recipes/yellow-curry/): The curry that runs on curry powder — chicken, potato, bay leaf, coconut milk, and ajad on the side.
 - [Pad Prik King (ผัดพริกขิง)](https://thaidata.uk/recipes/pad-prik-king/): The stir-fry named for its ginger — crispy pork belly, chilli-ginger paste, long beans, hair-thin kaffir lime.
 - [Thai Banana Fritters (กล้วยแขก)](https://thaidata.uk/recipes/thai-banana-fritters/): The fritters of the street vendors — nam wah bananas, rice-flour batter, coconut, sesame, pandan in the oil.
-- [Kanom Krok (ขนมครก)](https://thaidata.uk/recipes/kanom-krok/): The pancakes of the sizzling pan — rice-flour batter, cooked rice, lime water, coconut cream top, crisp shell and custard heart.
+- [Kanom Krok (ขนมครก)](https://thaidata.uk/recipes/kanom-krok/): The pancakes of the sizzling pan — rice-flour batter with cooked rice and lime water, coconut cream on top, crisp shell and custard heart.
+- [Thai Omelette (ไข่เจียว)](https://thaidata.uk/recipes/thai-omelette/): The omelette that must puff — eggs whisked to a froth, fried crisp-edged in hot oil, over rice with prik nam pla.
+- [Nam Tok (น้ำตก)](https://thaidata.uk/recipes/nam-tok/): The salad named for the waterfall — grilled pork neck dressed warm in its own juices with lime, fish sauce, toasted rice and mint.
+- [Moo Ping (หมูปิ้ง)](https://thaidata.uk/recipes/moo-ping/): The breakfast skewers — thin pork in coriander-root and coconut marinade, charcoal-grilled and basted, with jaew.
+- [Kanom Tuay (ขนมถ้วย)](https://thaidata.uk/recipes/kanom-tuay/): The dessert in little cups — palm sugar and pandan custard under salted coconut cream, steamed and eaten warm.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
