@@ -66,6 +66,11 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Nam Tok (น้ำตก)](https://thaidata.uk/recipes/nam-tok/): The salad named for the waterfall — grilled pork neck dressed warm in its own juices with lime, fish sauce, toasted rice and mint.
 - [Moo Ping (หมูปิ้ง)](https://thaidata.uk/recipes/moo-ping/): The breakfast skewers — thin pork in coriander-root and coconut marinade, charcoal-grilled and basted, with jaew.
 - [Kanom Tuay (ขนมถ้วย)](https://thaidata.uk/recipes/kanom-tuay/): The dessert in little cups — palm sugar and pandan custard under salted coconut cream, steamed and eaten warm.
+- [Shrimp Cakes (ทอดมันกุ้ง)](https://thaidata.uk/recipes/shrimp-cakes/): The shrimp cakes that bounce — pounded, kneaded, crumbed and fried golden, served with ajad or plum sauce.
+- [Thai Spring Rolls (ปอเปี๊ยะทอด)](https://thaidata.uk/recipes/thai-spring-rolls/): The rolls that must not burst — glass noodles and pork in thin pastry, egg-sealed and fried, dipped in plum sauce.
+- [Gaeng Jued (แกงจืด)](https://thaidata.uk/recipes/gaeng-jued/): The soup with no chilli — clear broth, pork balls, glass noodles, tofu and toasted seaweed.
+- [Cashew Chicken (ไก่ผัดเม็ดมะม่วงหิมพานต์)](https://thaidata.uk/recipes/cashew-chicken/): The Chinese-Thai restaurant classic — fried chicken, roasted cashews, fried dried chillies, oyster-sauce gloss.
+- [Pad Pak Bung Fai Daeng (ผัดผักบุ้งไฟแดง)](https://thaidata.uk/recipes/pad-pak-bung/): The thirty-second dish — morning glory in a screaming wok with garlic, chillies and tao jiao.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
