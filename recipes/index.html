@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thai Recipes — Researched & Translated from Thai Sources | ThaiData</title>
-    <meta name="description" content="Real Thai recipes, researched from Thai-language sources — chefs, restaurants and home cooks in Thailand — translated, cited, and cooked the authentic way. No westernised shortcuts.">
+    <title>Thai Recipes — Researched &amp; Translated from Thai Sources | ThaiData</title>
+    <meta name="description" content="33 real Thai recipes, researched from Thai-language sources — chefs, restaurants and home cooks in Thailand — translated, cited, and cooked the authentic way. Curries, salads, noodles, desserts and more. No westernised shortcuts.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/recipes/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thaidata.uk/recipes/">
-    <meta property="og:title" content="Thai Recipes — Researched & Translated from Thai Sources">
-    <meta property="og:description" content="Real Thai recipes from Thai-language sources, translated and cited. No westernised shortcuts.">
+    <meta property="og:title" content="Thai Recipes — Researched &amp; Translated from Thai Sources">
+    <meta property="og:description" content="33 real Thai recipes from Thai-language sources, translated and cited. No westernised shortcuts.">
     <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
     <meta property="og:locale" content="en_GB">
 
@@ -47,16 +47,26 @@ body {
         .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
 
-        .header-section { padding: 80px 0 60px; text-align: center; position: relative; }
+        .header-section { padding: 80px 0 50px; text-align: center; position: relative; }
         .header-section::before { content: ''; position: absolute; top: 50%; left: 50%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; }
         .header-section h1 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 16px; position: relative; }
         .header-section h1 em { font-style: normal; color: var(--gold); }
-        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 600px; margin: 0 auto; position: relative; }
+        .header-section p { color: var(--ink4); font-size: 1.1rem; max-width: 640px; margin: 0 auto; position: relative; }
+
+        .cat-nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 4px 0 0; position: relative; }
+        .cat-chip { display: inline-flex; align-items: baseline; gap: 6px; padding: 8px 16px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 999px; font-size: 0.84rem; font-weight: 600; color: var(--ink2); text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+        .cat-chip:hover { border-color: var(--gold); color: var(--gold); }
+        .cat-chip b { color: var(--gold); font-weight: 700; }
 
         .section { padding: 30px 0 50px; }
         .section h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
         .section h2 em { font-style: normal; color: var(--gold); }
         .section p, .section li { color: var(--ink4); font-size: 0.9rem; line-height: 1.8; margin-bottom: 14px; }
+
+        .cat-header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 44px 0 4px; scroll-margin-top: 92px; }
+        .cat-header h2 { font-size: 1.6rem; margin-bottom: 0; }
+        .cat-header .cat-thai { color: var(--gold); font-size: 1rem; font-weight: 600; }
+        .cat-header .cat-count { font-size: 0.72rem; color: var(--ink3); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 
         .recipe-card { display: block; background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin: 16px 0; text-decoration: none; color: inherit; transition: border-color 0.2s; }
         .recipe-card:hover { border-color: var(--gold); }
@@ -79,9 +89,12 @@ body {
 
         @media (max-width: 768px) {
             .header-section h1 { font-size: 2rem; }
+            .cat-nav { gap: 6px; }
+            .cat-chip { padding: 7px 12px; font-size: 0.8rem; }
         }
     </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"Recipes","item":"https://thaidata.uk/recipes/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Thai Recipes — researched and translated from Thai sources","itemListElement":[{"@type":"ListItem","position":1,"name":"Chicken Satay (ไก่สะเต๊ะ)","url":"https://thaidata.uk/recipes/chicken-satay/"},{"@type":"ListItem","position":2,"name":"Thai Fish Cakes (ทอดมันปลา)","url":"https://thaidata.uk/recipes/thai-fish-cakes/"},{"@type":"ListItem","position":3,"name":"Moo Ping (หมูปิ้ง)","url":"https://thaidata.uk/recipes/moo-ping/"},{"@type":"ListItem","position":4,"name":"Tom Yum Goong (ต้มยำกุ้ง)","url":"https://thaidata.uk/recipes/tom-yum-goong/"},{"@type":"ListItem","position":5,"name":"Tom Kha Gai (ต้มข่าไก่)","url":"https://thaidata.uk/recipes/tom-kha-gai/"},{"@type":"ListItem","position":6,"name":"Tom Yum Noodle Soup (ก๋วยเตี๋ยวต้มยำ)","url":"https://thaidata.uk/recipes/tom-yum-noodle-soup/"},{"@type":"ListItem","position":7,"name":"Som Tum Thai (ส้มตำไทย)","url":"https://thaidata.uk/recipes/som-tum-thai/"},{"@type":"ListItem","position":8,"name":"Laab (ลาบ)","url":"https://thaidata.uk/recipes/laab/"},{"@type":"ListItem","position":9,"name":"Nam Tok (น้ำตก)","url":"https://thaidata.uk/recipes/nam-tok/"},{"@type":"ListItem","position":10,"name":"Yum Neua (ยำเนื้อย่าง)","url":"https://thaidata.uk/recipes/yum-neua/"},{"@type":"ListItem","position":11,"name":"Thai Green Curry (แกงเขียวหวาน)","url":"https://thaidata.uk/recipes/green-curry/"},{"@type":"ListItem","position":12,"name":"Red Curry (แกงเผ็ด)","url":"https://thaidata.uk/recipes/red-curry/"},{"@type":"ListItem","position":13,"name":"Yellow Curry (แกงกะหรี่)","url":"https://thaidata.uk/recipes/yellow-curry/"},{"@type":"ListItem","position":14,"name":"Panang Curry (พะแนง)","url":"https://thaidata.uk/recipes/panang/"},{"@type":"ListItem","position":15,"name":"Massaman Curry (แกงมัสมั่น)","url":"https://thaidata.uk/recipes/massaman/"},{"@type":"ListItem","position":16,"name":"Gaeng Som (แกงส้ม)","url":"https://thaidata.uk/recipes/gaeng-som/"},{"@type":"ListItem","position":17,"name":"Pad Krapow (ผัดกะเพรา)","url":"https://thaidata.uk/recipes/pad-krapow/"},{"@type":"ListItem","position":18,"name":"Pad Prik King (ผัดพริกขิง)","url":"https://thaidata.uk/recipes/pad-prik-king/"},{"@type":"ListItem","position":19,"name":"Thai Omelette (ไข่เจียว)","url":"https://thaidata.uk/recipes/thai-omelette/"},{"@type":"ListItem","position":20,"name":"Pad Thai (ผัดไทย)","url":"https://thaidata.uk/recipes/pad-thai/"},{"@type":"ListItem","position":21,"name":"Pad See Ew (ผัดซีอิ๊ว)","url":"https://thaidata.uk/recipes/pad-see-ew/"},{"@type":"ListItem","position":22,"name":"Pad Kee Mao (ผัดขี้เมา)","url":"https://thaidata.uk/recipes/pad-kee-mao/"},{"@type":"ListItem","position":23,"name":"Khao Soi (ข้าวซอย)","url":"https://thaidata.uk/recipes/khao-soi/"},{"@type":"ListItem","position":24,"name":"Khao Pad (ข้าวผัด)","url":"https://thaidata.uk/recipes/khao-pad/"},{"@type":"ListItem","position":25,"name":"Khao Man Gai (ข้าวมันไก่)","url":"https://thaidata.uk/recipes/khao-man-gai/"},{"@type":"ListItem","position":26,"name":"Khao Kha Mu (ข้าวขาหมู)","url":"https://thaidata.uk/recipes/khao-kha-mu/"},{"@type":"ListItem","position":27,"name":"Mango Sticky Rice (ข้าวเหนียวมะม่วง)","url":"https://thaidata.uk/recipes/mango-sticky-rice/"},{"@type":"ListItem","position":28,"name":"Tab Tim Grob (ทับทิมกรอบ)","url":"https://thaidata.uk/recipes/tab-tim-grob/"},{"@type":"ListItem","position":29,"name":"Thai Banana Fritters (กล้วยแขก)","url":"https://thaidata.uk/recipes/thai-banana-fritters/"},{"@type":"ListItem","position":30,"name":"Kanom Krok (ขนมครก)","url":"https://thaidata.uk/recipes/kanom-krok/"},{"@type":"ListItem","position":31,"name":"Kanom Tuay (ขนมถ้วย)","url":"https://thaidata.uk/recipes/kanom-tuay/"},{"@type":"ListItem","position":32,"name":"Thai Iced Tea (ชาไทย)","url":"https://thaidata.uk/recipes/thai-iced-tea/"},{"@type":"ListItem","position":33,"name":"Thai Iced Coffee (กาแฟเย็น)","url":"https://thaidata.uk/recipes/thai-iced-coffee/"}]}</script>
 </head>
 <body>
     <div class="grain"></div>
@@ -97,181 +110,29 @@ body {
             <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); margin-bottom:16px;">Cook the real thing</div>
             <h1>Thai Recipes, <em>From the Source</em></h1>
             <p>Most English-language Thai recipes are westernised beyond recognition. Every recipe here is researched from Thai-language sources — chefs, restaurants and home cooks in Thailand — translated, and cited. Where the sources disagree, we say so instead of hiding it.</p>
+            <div class="cat-nav">
+                <a class="cat-chip" href="#starters">Starters <b>3</b></a>
+                <a class="cat-chip" href="#soups">Soups <b>3</b></a>
+                <a class="cat-chip" href="#salads">Salads <b>4</b></a>
+                <a class="cat-chip" href="#curries">Curries <b>6</b></a>
+                <a class="cat-chip" href="#stir-fries">Stir-fries <b>3</b></a>
+                <a class="cat-chip" href="#noodles">Noodles <b>4</b></a>
+                <a class="cat-chip" href="#rice-dishes">Rice dishes <b>3</b></a>
+                <a class="cat-chip" href="#desserts">Desserts <b>5</b></a>
+                <a class="cat-chip" href="#drinks">Drinks <b>2</b></a>
+            </div>
         </div>
     </div>
 
     <!-- Recipes -->
     <div class="section" style="padding-top:0;">
         <div class="wrap">
-            <h2>The <em>Recipes</em></h2>
 
-            <a href="/recipes/khao-soi/" class="recipe-card">
-                <span class="r-tag">Northern Thailand · Chiang Mai</span>
-                <div class="r-title">Khao Soi</div>
-                <div class="r-thai">ข้าวซอย</div>
-                <div class="r-desc">Chiang Mai's curry noodle soup: egg noodles in a coconut-cream broth with a homemade spice paste, crowned with fried noodles. The dish TasteAtlas ranked the #1 soup in the world in 2022 — done the way northern Thailand actually makes it.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~65 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 5 &nbsp;·&nbsp; <i class="fas fa-book"></i> 6 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/som-tum-thai/" class="recipe-card">
-                <span class="r-tag">Thailand · Isaan &amp; Central</span>
-                <div class="r-title">Som Tum Thai</div>
-                <div class="r-thai">ส้มตำไทย</div>
-                <div class="r-desc">The classic green papaya salad, done properly: mortar-pounded with a four-flavour balance of sour, sweet, salty and hot. Recipe from a Michelin-recommended som tum chef — plus the whole som tum family mapped.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~15 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 1 (doubles) &nbsp;·&nbsp; <i class="fas fa-book"></i> 5 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/pad-krapow/" class="recipe-card">
-                <span class="r-tag">Thailand · The One-Plate Meal</span>
-                <div class="r-title">Pad Krapow</div>
-                <div class="r-thai">ผัดกะเพรา</div>
-                <div class="r-desc">Thailand's favourite one-plate meal: minced meat stir-fried at maximum heat with real holy basil, finished with a crispy runny-yolk egg over jasmine rice. Recipe from a Michelin-starred chef — plus the 1968 original.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~20 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 1 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/green-curry/" class="recipe-card">
-                <span class="r-tag">Thailand · The Nation's Favourite</span>
-                <div class="r-title">Thai Green Curry</div>
-                <div class="r-thai">แกงเขียวหวาน</div>
-                <div class="r-desc">The curry Thais eat more than pad thai — from scratch. A 14-ingredient pounded paste from a Michelin-starred chef, cracked coconut cream, pea aubergines, and the green colour it's named for.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~1 hour &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/tom-yum-goong/" class="recipe-card">
-                <span class="r-tag">Thailand · The Family-Table Soup</span>
-                <div class="r-title">Tom Yum Goong</div>
-                <div class="r-thai">ต้มยำกุ้ง</div>
-                <div class="r-desc">The real hot and sour prawn soup: clear, sour-leading, lime squeezed off the heat, prawn-head stock. Recipe from a Michelin-starred chef — plus the four documented ways Thais make it creamy.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~45 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2–3 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/laab/" class="recipe-card">
-                <span class="r-tag">Isaan · The Guest-Honouring Dish</span>
-                <div class="r-title">Laab</div>
-                <div class="r-thai">ลาบ</div>
-                <div class="r-desc">The real Isaan minced meat salad: khao khua toasted rice powder (with makrut leaves, the Bib Gourmand way), hot-salty-sour balance, fresh herbs matched to the meat.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~20 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/pad-thai/" class="recipe-card">
-                <span class="r-tag">Thailand · The Noodle Diplomat</span>
-                <div class="r-title">Pad Thai</div>
-                <div class="r-thai">ผัดไทย</div>
-                <div class="r-desc">The dish the world knows, done right: tamarind-palm-sugar-fish-sauce balance, sen chan noodles, dried shrimp and preserved radish. No ketchup. Technique from Bib Gourmand chefs, plus the 3-star Chaiya variant.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~30 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/massaman/" class="recipe-card">
-                <span class="r-tag">Thailand · The World's #1</span>
-                <div class="r-title">Massaman Curry</div>
-                <div class="r-thai">แกงมัสมั่น</div>
-                <div class="r-desc">The curry CNN ranked the world's best food: a 16-ingredient spice paste — nutmeg, mace, cardamom, cinnamon, cloves — cracked coconut cream, potatoes and tamarind. Peanuts as a finish, never a sauce.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~80 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 10 (halves) &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/tom-kha-gai/" class="recipe-card">
-                <span class="r-tag">Thailand · Named After Its Herb</span>
-                <div class="r-title">Tom Kha Gai</div>
-                <div class="r-thai">ต้มข่าไก่</div>
-                <div class="r-desc">The only Thai soup named after its ingredient: galangal poached gently in coconut milk, cream added late, lime squeezed in off the heat. No dairy, no ginger — Thai cooks mock the milk version in verse.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~35 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/khao-man-gai/" class="recipe-card">
-                <span class="r-tag">Thailand · The Dish Three Countries Claim</span>
-                <div class="r-title">Khao Man Gai</div>
-                <div class="r-thai">ข้าวมันไก่</div>
-                <div class="r-desc">Thai chicken rice: whole chicken poached and rubbed in its own rendered fat, rice stir-fried in that fat with ginger and garlic, and the tao jiao dipping sauce that makes it Thai.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~80 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4–6 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/panang/" class="recipe-card">
-                <span class="r-tag">Thailand · The World's #1 Stew</span>
-                <div class="r-title">Panang Curry</div>
-                <div class="r-thai">พะแนง</div>
-                <div class="r-desc">The curry TasteAtlas ranked #1 stew: beef braised in coconut milk, a from-scratch paste, ground peanuts stirred into the curry as it reduces, pickled shallots on the side. No lime.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~90 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/pad-see-ew/" class="recipe-card">
-                <span class="r-tag">Thailand · The Chef-Killer Dish</span>
-                <div class="r-title">Pad See Ew</div>
-                <div class="r-thai">ผัดซีอิ๊ว</div>
-                <div class="r-desc">Fresh wide rice noodles pre-coated in dark soy and charred in a very hot wok — the burnt edges are the point — with ice-water-marinated pork, egg and kale.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~25 min + marinating &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/khao-pad/" class="recipe-card">
-                <span class="r-tag">Thailand · The Dish Everyone Thinks They Can Cook</span>
-                <div class="r-title">Khao Pad</div>
-                <div class="r-thai">ข้าวผัด</div>
-                <div class="r-desc">Day-old jasmine rice fried hard in a hot wok, garlic and pork and egg, tomato folded in gently, prik nam pla on the side. Plus the crab version that put a street stall in the Michelin Guide.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~20 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/mango-sticky-rice/" class="recipe-card">
-                <span class="r-tag">Thailand · The Coachella Dessert</span>
-                <div class="r-title">Mango Sticky Rice</div>
-                <div class="r-thai">ข้าวเหนียวมะม่วง</div>
-                <div class="r-desc">Steamed glutinous rice folded hot with salted coconut cream and pandan, ripe mango, salted cream sauce, fried mung beans. The salt is the dish — the first dessert on the hub.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~4 hrs incl. soak &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/gaeng-som/" class="recipe-card">
-                <span class="r-tag">Thailand · The Sour Curry With No Orange</span>
-                <div class="r-title">Gaeng Som</div>
-                <div class="r-thai">แกงส้ม</div>
-                <div class="r-desc">The sour curry named for its sourness: prawn meat pounded into the paste, tamarind and lime together, prawns curled to a C and no further. Southern turmeric version documented.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~40 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/khao-kha-mu/" class="recipe-card">
-                <span class="r-tag">Thailand · The Dish That's Better Tomorrow</span>
-                <div class="r-title">Khao Kha Mu</div>
-                <div class="r-thai">ข้าวขาหมู</div>
-                <div class="r-desc">Pork leg fried until the skin tightens, braised in palm-sugar caramel with cinnamon and star anise, rested overnight and reheated. Pickled mustard and sour chilli vinegar on the side.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~16 hrs incl. rest &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 6–8 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/yum-neua/" class="recipe-card">
-                <span class="r-tag">Thailand · The Salad Where the Dressing Is Everything</span>
-                <div class="r-title">Yum Neua</div>
-                <div class="r-thai">ยำเนื้อย่าง</div>
-                <div class="r-desc">Grilled sirloin, rested and sliced against the grain, dressed warm with a pounded lime-fish-chilli paste balanced in the bowl before it touches the meat. The bitter-lime lesson included.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~25 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/tom-yum-noodle-soup/" class="recipe-card">
-                <span class="r-tag">Thailand · The Noodle Bowl That Isn't a Soup</span>
-                <div class="r-title">Tom Yum Noodle Soup</div>
-                <div class="r-thai">ก๋วยเตี๋ยวต้มยำ</div>
-                <div class="r-desc">Clear pork-bone stock with pickled garlic, dressed per bowl with ground peanuts, chilli flakes, fish sauce and lime — just enough liquid to coat. The Sukhothai war documented.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~2 hrs &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/thai-iced-tea/" class="recipe-card">
-                <span class="r-tag">Thailand · The Drink With a Colour Story</span>
-                <div class="r-title">Thai Iced Tea</div>
-                <div class="r-thai">ชาไทย</div>
-                <div class="r-desc">Spiced black tea steeped strong, condensed milk, full ice, evaporated milk poured over the top. Why it's orange, and why Thailand argues about the name.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~15 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Makes 2 glasses &nbsp;·&nbsp; <i class="fas fa-book"></i> 5 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/red-curry/" class="recipe-card">
-                <span class="r-tag">Thailand · The Curry That Means "Spicy"</span>
-                <div class="r-title">Red Curry</div>
-                <div class="r-thai">แกงเผ็ด</div>
-                <div class="r-desc">Dried-chilli paste pounded from scratch, coconut cream cracked until the oil splits, pork and aubergines finished with Thai basil and kaffir lime. The older duck-and-pineapple kaeng daeng documented.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~45 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
-            </a>
-
-            <a href="/recipes/pad-kee-mao/" class="recipe-card">
-                <span class="r-tag">Thailand · The Noodles Named for a Drunk</span>
-                <div class="r-title">Pad Kee Mao</div>
-                <div class="r-thai">ผัดขี้เมา</div>
-                <div class="r-desc">Wide rice noodles, a pounded chilli-garlic-shrimp-paste relish, holy basil and fresh green peppercorns. No alcohol in the wok — and all three styles documented.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~35 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
-            </a>
+            <div class="cat-header" id="starters">
+                <h2>Starters <em>&amp; Skewers</em></h2>
+                <span class="cat-thai">อาหารเรียกน้ำย่อย</span>
+                <span class="cat-count">3 recipes</span>
+            </div>
 
             <a href="/recipes/chicken-satay/" class="recipe-card">
                 <span class="r-tag">Thailand · The Skewers That Arrived By Boat</span>
@@ -289,20 +150,102 @@ body {
                 <div class="r-meta"><i class="fas fa-clock"></i> ~40 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
             </a>
 
-            <a href="/recipes/thai-iced-coffee/" class="recipe-card">
-                <span class="r-tag">Thailand · The Sweet Black Coffee of the Old Cafés</span>
-                <div class="r-title">Thai Iced Coffee</div>
-                <div class="r-thai">กาแฟเย็น</div>
-                <div class="r-desc">The sock-brewed coffee of the old cafés — condensed milk in the glass, evaporated poured over full ice — and the café es yen built on a double shot. Both versions.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~15 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Makes 1–2 glasses &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            <a href="/recipes/moo-ping/" class="recipe-card">
+                <span class="r-tag">Thailand · The Breakfast Skewers</span>
+                <div class="r-title">Moo Ping</div>
+                <div class="r-thai">หมูปิ้ง</div>
+                <div class="r-desc">Thin pork in a coriander-root, garlic and coconut-milk marinade, charcoal-grilled and basted glossy, with the jaew chilli dip and sticky rice.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~35 min + marinade &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
             </a>
 
-            <a href="/recipes/tab-tim-grob/" class="recipe-card">
-                <span class="r-tag">Thailand · Rubies in Coconut Milk</span>
-                <div class="r-title">Tab Tim Grob</div>
-                <div class="r-thai">ทับทิมกรอบ</div>
-                <div class="r-desc">Water chestnuts dyed ruby-red, rolled in tapioca, boiled and shocked into translucent jewels with crisp hearts — served cold in scented syrup under salted coconut cream.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~50 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4–6 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            <div class="cat-header" id="soups">
+                <h2>Soups</h2>
+                <span class="cat-thai">ต้ม</span>
+                <span class="cat-count">3 recipes</span>
+            </div>
+
+            <a href="/recipes/tom-yum-goong/" class="recipe-card">
+                <span class="r-tag">Thailand · The Family-Table Soup</span>
+                <div class="r-title">Tom Yum Goong</div>
+                <div class="r-thai">ต้มยำกุ้ง</div>
+                <div class="r-desc">The real hot and sour prawn soup: clear, sour-leading, lime squeezed off the heat, prawn-head stock. Recipe from a Michelin-starred chef — plus the four documented ways Thais make it creamy.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~45 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2–3 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/tom-kha-gai/" class="recipe-card">
+                <span class="r-tag">Thailand · Named After Its Herb</span>
+                <div class="r-title">Tom Kha Gai</div>
+                <div class="r-thai">ต้มข่าไก่</div>
+                <div class="r-desc">The only Thai soup named after its ingredient: galangal poached gently in coconut milk, cream added late, lime squeezed in off the heat. No dairy, no ginger — Thai cooks mock the milk version in verse.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~35 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/tom-yum-noodle-soup/" class="recipe-card">
+                <span class="r-tag">Thailand · The Noodle Bowl That Isn't a Soup</span>
+                <div class="r-title">Tom Yum Noodle Soup</div>
+                <div class="r-thai">ก๋วยเตี๋ยวต้มยำ</div>
+                <div class="r-desc">Clear pork-bone stock with pickled garlic, dressed per bowl with ground peanuts, chilli flakes, fish sauce and lime — just enough liquid to coat. The Sukhothai war documented.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~2 hrs &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <div class="cat-header" id="salads">
+                <h2>Salads</h2>
+                <span class="cat-thai">ยำ &amp; ส้มตำ</span>
+                <span class="cat-count">4 recipes</span>
+            </div>
+
+            <a href="/recipes/som-tum-thai/" class="recipe-card">
+                <span class="r-tag">Thailand · Isaan &amp; Central</span>
+                <div class="r-title">Som Tum Thai</div>
+                <div class="r-thai">ส้มตำไทย</div>
+                <div class="r-desc">The classic green papaya salad, done properly: mortar-pounded with a four-flavour balance of sour, sweet, salty and hot. Recipe from a Michelin-recommended som tum chef — plus the whole som tum family mapped.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~15 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 1 (doubles) &nbsp;·&nbsp; <i class="fas fa-book"></i> 5 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/laab/" class="recipe-card">
+                <span class="r-tag">Isaan · The Guest-Honouring Dish</span>
+                <div class="r-title">Laab</div>
+                <div class="r-thai">ลาบ</div>
+                <div class="r-desc">The real Isaan minced meat salad: khao khua toasted rice powder (with makrut leaves, the Bib Gourmand way), hot-salty-sour balance, fresh herbs matched to the meat.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~20 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/nam-tok/" class="recipe-card">
+                <span class="r-tag">Thailand · The Salad Named for the Waterfall</span>
+                <div class="r-title">Nam Tok</div>
+                <div class="r-thai">น้ำตก</div>
+                <div class="r-desc">Grilled pork neck sliced warm, dressed in its own juices with lime, fish sauce, toasted rice and mint — the Isaan waterfall salad.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~40 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/yum-neua/" class="recipe-card">
+                <span class="r-tag">Thailand · The Salad Where the Dressing Is Everything</span>
+                <div class="r-title">Yum Neua</div>
+                <div class="r-thai">ยำเนื้อย่าง</div>
+                <div class="r-desc">Grilled sirloin, rested and sliced against the grain, dressed warm with a pounded lime-fish-chilli paste balanced in the bowl before it touches the meat. The bitter-lime lesson included.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~25 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <div class="cat-header" id="curries">
+                <h2>Curries</h2>
+                <span class="cat-thai">แกง</span>
+                <span class="cat-count">6 recipes</span>
+            </div>
+
+            <a href="/recipes/green-curry/" class="recipe-card">
+                <span class="r-tag">Thailand · The Nation's Favourite</span>
+                <div class="r-title">Thai Green Curry</div>
+                <div class="r-thai">แกงเขียวหวาน</div>
+                <div class="r-desc">The curry Thais eat more than pad thai — from scratch. A 14-ingredient pounded paste from a Michelin-starred chef, cracked coconut cream, pea aubergines, and the green colour it's named for.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~1 hour &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/red-curry/" class="recipe-card">
+                <span class="r-tag">Thailand · The Curry That Means "Spicy"</span>
+                <div class="r-title">Red Curry</div>
+                <div class="r-thai">แกงเผ็ด</div>
+                <div class="r-desc">Dried-chilli paste pounded from scratch, coconut cream cracked until the oil splits, pork and aubergines finished with Thai basil and kaffir lime. The older duck-and-pineapple kaeng daeng documented.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~45 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
             </a>
 
             <a href="/recipes/yellow-curry/" class="recipe-card">
@@ -313,12 +256,148 @@ body {
                 <div class="r-meta"><i class="fas fa-clock"></i> ~40 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
             </a>
 
+            <a href="/recipes/panang/" class="recipe-card">
+                <span class="r-tag">Thailand · The World's #1 Stew</span>
+                <div class="r-title">Panang Curry</div>
+                <div class="r-thai">พะแนง</div>
+                <div class="r-desc">The curry TasteAtlas ranked #1 stew: beef braised in coconut milk, a from-scratch paste, ground peanuts stirred into the curry as it reduces, pickled shallots on the side. No lime.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~90 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/massaman/" class="recipe-card">
+                <span class="r-tag">Thailand · The World's #1</span>
+                <div class="r-title">Massaman Curry</div>
+                <div class="r-thai">แกงมัสมั่น</div>
+                <div class="r-desc">The curry CNN ranked the world's best food: a 16-ingredient spice paste — nutmeg, mace, cardamom, cinnamon, cloves — cracked coconut cream, potatoes and tamarind. Peanuts as a finish, never a sauce.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~80 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 10 (halves) &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/gaeng-som/" class="recipe-card">
+                <span class="r-tag">Thailand · The Sour Curry With No Orange</span>
+                <div class="r-title">Gaeng Som</div>
+                <div class="r-thai">แกงส้ม</div>
+                <div class="r-desc">The sour curry named for its sourness: prawn meat pounded into the paste, tamarind and lime together, prawns curled to a C and no further. Southern turmeric version documented.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~40 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3–4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <div class="cat-header" id="stir-fries">
+                <h2>Stir-Fries <em>&amp; Eggs</em></h2>
+                <span class="cat-thai">ผัด &amp; ไข่</span>
+                <span class="cat-count">3 recipes</span>
+            </div>
+
+            <a href="/recipes/pad-krapow/" class="recipe-card">
+                <span class="r-tag">Thailand · The One-Plate Meal</span>
+                <div class="r-title">Pad Krapow</div>
+                <div class="r-thai">ผัดกะเพรา</div>
+                <div class="r-desc">Thailand's favourite one-plate meal: minced meat stir-fried at maximum heat with real holy basil, finished with a crispy runny-yolk egg over jasmine rice. Recipe from a Michelin-starred chef — plus the 1968 original.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~20 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 1 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
             <a href="/recipes/pad-prik-king/" class="recipe-card">
                 <span class="r-tag">Thailand · The Stir-Fry Named for Its Ginger</span>
                 <div class="r-title">Pad Prik King</div>
                 <div class="r-thai">ผัดพริกขิง</div>
                 <div class="r-desc">Crispy pork belly tossed with a pounded chilli-ginger paste, long beans and hair-thin kaffir lime. The salted-egg version documented.</div>
                 <div class="r-meta"><i class="fas fa-clock"></i> ~25 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 3 &nbsp;·&nbsp; <i class="fas fa-book"></i> 2 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/thai-omelette/" class="recipe-card">
+                <span class="r-tag">Thailand · The Omelette That Must Puff</span>
+                <div class="r-title">Thai Omelette</div>
+                <div class="r-thai">ไข่เจียว</div>
+                <div class="r-desc">Eggs whisked to a froth with fish sauce and minced pork, fried puffy-crisp in hot oil, over rice with the prik nam pla chilli sauce.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~10 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            </a>
+
+            <div class="cat-header" id="noodles">
+                <h2>Noodles</h2>
+                <span class="cat-thai">ก๋วยเตี๋ยว</span>
+                <span class="cat-count">4 recipes</span>
+            </div>
+
+            <a href="/recipes/pad-thai/" class="recipe-card">
+                <span class="r-tag">Thailand · The Noodle Diplomat</span>
+                <div class="r-title">Pad Thai</div>
+                <div class="r-thai">ผัดไทย</div>
+                <div class="r-desc">The dish the world knows, done right: tamarind-palm-sugar-fish-sauce balance, sen chan noodles, dried shrimp and preserved radish. No ketchup. Technique from Bib Gourmand chefs, plus the 3-star Chaiya variant.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~30 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/pad-see-ew/" class="recipe-card">
+                <span class="r-tag">Thailand · The Chef-Killer Dish</span>
+                <div class="r-title">Pad See Ew</div>
+                <div class="r-thai">ผัดซีอิ๊ว</div>
+                <div class="r-desc">Fresh wide rice noodles pre-coated in dark soy and charred in a very hot wok — the burnt edges are the point — with ice-water-marinated pork, egg and kale.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~25 min + marinating &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/pad-kee-mao/" class="recipe-card">
+                <span class="r-tag">Thailand · The Noodles Named for a Drunk</span>
+                <div class="r-title">Pad Kee Mao</div>
+                <div class="r-thai">ผัดขี้เมา</div>
+                <div class="r-desc">Wide rice noodles, a pounded chilli-garlic-shrimp-paste relish, holy basil and fresh green peppercorns. No alcohol in the wok — and all three styles documented.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~35 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/khao-soi/" class="recipe-card">
+                <span class="r-tag">Northern Thailand · Chiang Mai</span>
+                <div class="r-title">Khao Soi</div>
+                <div class="r-thai">ข้าวซอย</div>
+                <div class="r-desc">Chiang Mai's curry noodle soup: egg noodles in a coconut-cream broth with a homemade spice paste, crowned with fried noodles. The dish TasteAtlas ranked the #1 soup in the world in 2022 — done the way northern Thailand actually makes it.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~65 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 5 &nbsp;·&nbsp; <i class="fas fa-book"></i> 6 cited Thai sources</div>
+            </a>
+
+            <div class="cat-header" id="rice-dishes">
+                <h2>Rice <em>Dishes</em></h2>
+                <span class="cat-thai">ข้าวราด</span>
+                <span class="cat-count">3 recipes</span>
+            </div>
+
+            <a href="/recipes/khao-pad/" class="recipe-card">
+                <span class="r-tag">Thailand · The Dish Everyone Thinks They Can Cook</span>
+                <div class="r-title">Khao Pad</div>
+                <div class="r-thai">ข้าวผัด</div>
+                <div class="r-desc">Day-old jasmine rice fried hard in a hot wok, garlic and pork and egg, tomato folded in gently, prik nam pla on the side. Plus the crab version that put a street stall in the Michelin Guide.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~20 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/khao-man-gai/" class="recipe-card">
+                <span class="r-tag">Thailand · The Dish Three Countries Claim</span>
+                <div class="r-title">Khao Man Gai</div>
+                <div class="r-thai">ข้าวมันไก่</div>
+                <div class="r-desc">Thai chicken rice: whole chicken poached and rubbed in its own rendered fat, rice stir-fried in that fat with ginger and garlic, and the tao jiao dipping sauce that makes it Thai.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~80 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4–6 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/khao-kha-mu/" class="recipe-card">
+                <span class="r-tag">Thailand · The Dish That's Better Tomorrow</span>
+                <div class="r-title">Khao Kha Mu</div>
+                <div class="r-thai">ข้าวขาหมู</div>
+                <div class="r-desc">Pork leg fried until the skin tightens, braised in palm-sugar caramel with cinnamon and star anise, rested overnight and reheated. Pickled mustard and sour chilli vinegar on the side.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~16 hrs incl. rest &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 6–8 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <div class="cat-header" id="desserts">
+                <h2>Desserts</h2>
+                <span class="cat-thai">ขนมหวาน</span>
+                <span class="cat-count">5 recipes</span>
+            </div>
+
+            <a href="/recipes/mango-sticky-rice/" class="recipe-card">
+                <span class="r-tag">Thailand · The Coachella Dessert</span>
+                <div class="r-title">Mango Sticky Rice</div>
+                <div class="r-thai">ข้าวเหนียวมะม่วง</div>
+                <div class="r-desc">Steamed glutinous rice folded hot with salted coconut cream and pandan, ripe mango, salted cream sauce, fried mung beans. The salt is the dish.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~4 hrs incl. soak &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 4 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/tab-tim-grob/" class="recipe-card">
+                <span class="r-tag">Thailand · Rubies in Coconut Milk</span>
+                <div class="r-title">Tab Tim Grob</div>
+                <div class="r-thai">ทับทิมกรอบ</div>
+                <div class="r-desc">Water chestnuts dyed ruby-red, rolled in tapioca, boiled and shocked into translucent jewels with crisp hearts — served cold in scented syrup under salted coconut cream.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~50 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4–6 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
             </a>
 
             <a href="/recipes/thai-banana-fritters/" class="recipe-card">
@@ -336,27 +415,7 @@ body {
                 <div class="r-desc">Rice-flour batter with cooked jasmine rice and lime water, coconut cream poured on top, spring onion and corn — crisp shell, custard heart.</div>
                 <div class="r-meta"><i class="fas fa-clock"></i> ~50 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
             </a>
-            <a href="/recipes/thai-omelette/" class="recipe-card">
-                <span class="r-tag">Thailand · The Omelette That Must Puff</span>
-                <div class="r-title">Thai Omelette</div>
-                <div class="r-thai">ไข่เจียว</div>
-                <div class="r-desc">Eggs whisked to a froth with fish sauce and minced pork, fried puffy-crisp in hot oil, over rice with the prik nam pla chilli sauce.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~10 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
-            </a>
-            <a href="/recipes/nam-tok/" class="recipe-card">
-                <span class="r-tag">Thailand · The Salad Named for the Waterfall</span>
-                <div class="r-title">Nam Tok</div>
-                <div class="r-thai">น้ำตก</div>
-                <div class="r-desc">Grilled pork neck sliced warm, dressed in its own juices with lime, fish sauce, toasted rice and mint — the Isaan waterfall salad.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~40 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 2 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
-            </a>
-            <a href="/recipes/moo-ping/" class="recipe-card">
-                <span class="r-tag">Thailand · The Breakfast Skewers</span>
-                <div class="r-title">Moo Ping</div>
-                <div class="r-thai">หมูปิ้ง</div>
-                <div class="r-desc">Thin pork in a coriander-root, garlic and coconut-milk marinade, charcoal-grilled and basted glossy, with the jaew chilli dip and sticky rice.</div>
-                <div class="r-meta"><i class="fas fa-clock"></i> ~35 min + marinade &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Serves 4 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
-            </a>
+
             <a href="/recipes/kanom-tuay/" class="recipe-card">
                 <span class="r-tag">Thailand · The Dessert in Little Cups</span>
                 <div class="r-title">Kanom Tuay</div>
@@ -364,6 +423,29 @@ body {
                 <div class="r-desc">Palm sugar and pandan custard under salted coconut cream, steamed in tiny porcelain cups until the top splits into little fat eyes.</div>
                 <div class="r-meta"><i class="fas fa-clock"></i> ~55 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Makes 8–10 &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
             </a>
+
+            <div class="cat-header" id="drinks">
+                <h2>Drinks</h2>
+                <span class="cat-thai">เครื่องดื่ม</span>
+                <span class="cat-count">2 recipes</span>
+            </div>
+
+            <a href="/recipes/thai-iced-tea/" class="recipe-card">
+                <span class="r-tag">Thailand · The Drink With a Colour Story</span>
+                <div class="r-title">Thai Iced Tea</div>
+                <div class="r-thai">ชาไทย</div>
+                <div class="r-desc">Spiced black tea steeped strong, condensed milk, full ice, evaporated milk poured over the top. Why it's orange, and why Thailand argues about the name.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~15 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Makes 2 glasses &nbsp;·&nbsp; <i class="fas fa-book"></i> 5 cited Thai sources</div>
+            </a>
+
+            <a href="/recipes/thai-iced-coffee/" class="recipe-card">
+                <span class="r-tag">Thailand · The Sweet Black Coffee of the Old Cafés</span>
+                <div class="r-title">Thai Iced Coffee</div>
+                <div class="r-thai">กาแฟเย็น</div>
+                <div class="r-desc">The sock-brewed coffee of the old cafés — condensed milk in the glass, evaporated poured over full ice — and the café es yen built on a double shot. Both versions.</div>
+                <div class="r-meta"><i class="fas fa-clock"></i> ~15 min &nbsp;·&nbsp; <i class="fas fa-user-friends"></i> Makes 1–2 glasses &nbsp;·&nbsp; <i class="fas fa-book"></i> 3 cited Thai sources</div>
+            </a>
+
         </div>
     </div>
 
