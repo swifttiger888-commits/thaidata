@@ -89,6 +89,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Son-in-Law Eggs (ไข่ลูกเขย)](https://thaidata.uk/recipes/son-in-law-eggs/): Fried boiled eggs in sweet-sour tamarind sauce.
 - [Khao Na Pet (ข้าวหน้าเป็ด)](https://thaidata.uk/recipes/khao-na-pet/): Five-spice duck over rice with duck-drippings gravy.
 - [Oliang (โอเลี้ยง)](https://thaidata.uk/recipes/oliang/): Thai iced black coffee from grain-roasted beans.
+- [Guay Tiew Ruea (ก๋วยเตี๋ยวเรือ)](https://thaidata.uk/recipes/guay-tiew-ruea/): Boat noodles — dark spice broth, blood, pork and crackling.
+- [Gaeng Pa (แกงป่า)](https://thaidata.uk/recipes/gaeng-pa/): Jungle curry — water-based, no coconut milk, green peppercorns.
+- [Pad Khing (ผัดขิง)](https://thaidata.uk/recipes/pad-khing/): Ginger chicken with wood-ear and tao jiao.
+- [Pad Cha (ผัดฉ่า)](https://thaidata.uk/recipes/pad-cha/): Fingerroot, green peppercorn and kaffir seafood stir-fry.
+- [Lod Chong (ลอดช่อง)](https://thaidata.uk/recipes/lod-chong/): Pandan strands in sweet coconut milk.
+- [Cha Kiao Yen (ชาเขียวเย็น)](https://thaidata.uk/recipes/cha-kiao-yen/): Thai iced green tea with condensed milk.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
