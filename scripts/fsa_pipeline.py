@@ -125,7 +125,7 @@ def main() -> None:
     # Guard: only stage files we own. Untracked files can never be swept into
     # the commit (staging uses the explicit list below), so only *tracked*
     # changes outside our paths are a reason to stop.
-    owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap', 'functions/mcp.js', 'recipes/')
+    owned_prefixes = ('data/', 'api/', 'r/', 'cities/', 'sitemap', 'functions/mcp.js', 'recipes/', 'names.json')
     status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
     dirty_lines = [l for l in status.stdout.split('\n') if l.strip()]
     tracked_changes = [l for l in dirty_lines if not l.startswith('??')]
@@ -152,7 +152,7 @@ def main() -> None:
         return
 
     # Stage everything that changed
-    subprocess.run(['git', 'add', 'data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py', 'functions/mcp.js'], capture_output=True)
+    subprocess.run(['git', 'add', 'data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py', 'functions/mcp.js', 'names.json'], capture_output=True)
 
     commit_msg = f"Auto-refresh: FSA data update — {new_count} Thai businesses ({diff:+d})"
     result = subprocess.run(['git', 'commit', '-m', commit_msg], capture_output=True, text=True)
