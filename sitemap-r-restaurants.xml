@@ -51,6 +51,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/antrim-and-newtownabbey/royal-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/argyll-and-bute/mandarin-thai-restaurant/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -687,6 +692,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/bury/sawadee-thai-dining/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/bury/thai-corner/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1787,6 +1797,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/great-yarmouth/go-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/great-yarmouth/lek-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4401,11 +4416,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/nuneaton-and-bedworth/thai-tham-restaurant/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/oldham/asia-thai-corner/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4986,11 +4996,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/somerset/thai-elephant/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/somerset/thai-food-with-nok/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5312,11 +5317,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/swansea/thai-dee-cuisine-limited/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/swansea/thai-express/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5742,6 +5742,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/warwick/thai-kitchen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/warwickshire/bangkok-thai-food-pjj/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

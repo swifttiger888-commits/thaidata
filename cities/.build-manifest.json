@@ -1,27 +1,32 @@
 {
-  "run_date": "2026-09-25",
+  "run_date": "2026-09-28",
   "applied": true,
   "total_cities": 277,
   "generated": 251,
-  "quarantined": 18,
-  "empty_state": 6,
+  "quarantined": 24,
+  "empty_state": 0,
   "skipped": 1,
-  "empty_state_pages": [
-    "blackburn",
-    "ceredigion",
-    "derry-city-and-strabane",
-    "hampshire",
-    "stafford",
-    "torridge"
-  ],
+  "empty_state_pages": [],
   "quarantined_pages": [
     {
       "slug": "adur",
       "reason": "No restaurant data for city: Adur"
     },
     {
+      "slug": "blackburn",
+      "reason": "No restaurant data for city: Blackburn"
+    },
+    {
+      "slug": "ceredigion",
+      "reason": "No restaurant data for city: Ceredigion"
+    },
+    {
       "slug": "clacton-on-sea",
       "reason": "No restaurant data for city: Clacton On Sea"
+    },
+    {
+      "slug": "derry-city-and-strabane",
+      "reason": "No restaurant data for city: Derry City And Strabane"
     },
     {
       "slug": "east-dunbartonshire",
@@ -30,6 +35,10 @@
     {
       "slug": "east-renfrewshire",
       "reason": "No restaurant data for city: East Renfrewshire"
+    },
+    {
+      "slug": "hampshire",
+      "reason": "No restaurant data for city: Hampshire"
     },
     {
       "slug": "inverclyde",
@@ -72,6 +81,10 @@
       "reason": "No restaurant data for city: South Lanarkshire"
     },
     {
+      "slug": "stafford",
+      "reason": "No restaurant data for city: Stafford"
+    },
+    {
       "slug": "stratford-upon-avon",
       "reason": "No restaurant data for city: Stratford Upon Avon"
     },
@@ -82,6 +95,10 @@
     {
       "slug": "torquay",
       "reason": "No restaurant data for city: Torquay"
+    },
+    {
+      "slug": "torridge",
+      "reason": "No restaurant data for city: Torridge"
     },
     {
       "slug": "weston-super-mare",

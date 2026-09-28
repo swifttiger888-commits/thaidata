@@ -1,7 +1,7 @@
 {
   "name": "ThaiData UK \u2014 Restaurant Directory",
-  "updated": "2026-09-21",
-  "total": 1263,
+  "updated": "2026-09-28",
+  "total": 1264,
   "sources": [
     "FSA FHRS",
     "FSA FHIS"
@@ -45,19 +45,6 @@
       "rating_date": "2025-05-14T00:00:00",
       "longitude": "-2.366975",
       "latitude": "51.3741373"
-    },
-    {
-      "id": 235357,
-      "name": "Thai Tham Restaurant",
-      "type": "restaurant",
-      "city": "Nuneaton and Bedworth",
-      "local_authority": "Nuneaton and Bedworth",
-      "postcode": "CV11 5TJ",
-      "address": "18 Coton Road, Nuneaton",
-      "hygiene_rating": "0",
-      "rating_date": "2026-06-17T00:00:00",
-      "longitude": "-1.46772",
-      "latitude": "52.520417"
     },
     {
       "id": 1866817,
@@ -950,11 +937,11 @@
       "city": "Reading",
       "local_authority": "Reading",
       "postcode": "RG1 3EY",
-      "address": "Unit 1 Jackson's Corner 1-9 Kings Road, Reading",
+      "address": "UNIT 1 JACKSONS CORNER 1-9 KINGS ROAD, READING",
       "hygiene_rating": "5",
       "rating_date": "2025-03-17T00:00:00",
-      "longitude": "-0.9687732",
-      "latitude": "51.4551032"
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": 1747898,
@@ -1108,7 +1095,7 @@
       "postcode": "DN22 6JP",
       "address": "15 Grove Street, Retford, Nottinghamshire",
       "hygiene_rating": "5",
-      "rating_date": "2024-08-22T00:00:00",
+      "rating_date": "2026-09-09T00:00:00",
       "longitude": "-0.941255",
       "latitude": "53.322815"
     },
@@ -1176,6 +1163,19 @@
       "rating_date": "2026-07-02T00:00:00",
       "longitude": "0.6050364",
       "latitude": "51.5855427"
+    },
+    {
+      "id": 1991190,
+      "name": "THAI CORNER",
+      "type": "restaurant",
+      "city": "Bury",
+      "local_authority": "Bury",
+      "postcode": "M25 3HQ",
+      "address": "8 Clifton Road, Prestwich, Manchester",
+      "hygiene_rating": "5",
+      "rating_date": "2026-09-10T00:00:00",
+      "longitude": "-2.286245",
+      "latitude": "53.532356"
     },
     {
       "id": 19060,
@@ -1267,19 +1267,6 @@
       "rating_date": "2025-10-15T00:00:00",
       "longitude": "-3.445123",
       "latitude": "51.460854"
-    },
-    {
-      "id": 1756999,
-      "name": "Thai Elephant",
-      "type": "restaurant",
-      "city": "Somerset",
-      "local_authority": "Somerset",
-      "postcode": "BA16 0NH",
-      "address": "166 High Street, Street, Somerset",
-      "hygiene_rating": "5",
-      "rating_date": "2023-11-09T00:00:00",
-      "longitude": "-2.7447358",
-      "latitude": "51.1238356"
     },
     {
       "id": 1150583,
@@ -1808,7 +1795,7 @@
       "city": "Reading",
       "local_authority": "Reading",
       "postcode": "RG4 7AD",
-      "address": "8 Church Road, Caversham, Reading",
+      "address": "8 CHURCH ROAD, CAVERSHAM, READING",
       "hygiene_rating": "5",
       "rating_date": "2026-05-19T00:00:00",
       "longitude": "-0.9771369",
@@ -2525,7 +2512,7 @@
       "postcode": "E1 8AZ",
       "address": "Princess Of Prussia Public House, 15 Prescot Street, London",
       "hygiene_rating": "4",
-      "rating_date": "2025-03-21T00:00:00",
+      "rating_date": "2026-09-02T00:00:00",
       "longitude": "-0.0706349983811378",
       "latitude": "51.5114669799805"
     },
@@ -2593,19 +2580,6 @@
       "rating_date": "2021-07-21T00:00:00",
       "longitude": "-0.230496",
       "latitude": "51.531179"
-    },
-    {
-      "id": 333453,
-      "name": "Thai Rice",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Kensington and Chelsea",
-      "postcode": "W10 5TD",
-      "address": "303 Portobello Road, LONDON",
-      "hygiene_rating": "4",
-      "rating_date": "2025-02-12T00:00:00",
-      "longitude": "-0.207811",
-      "latitude": "51.519225"
     },
     {
       "id": 1589947,
@@ -2952,7 +2926,7 @@
       "city": "Reading",
       "local_authority": "Reading",
       "postcode": "RG1 1TT",
-      "address": "47 West Street, Reading",
+      "address": "47 WEST STREET, READING",
       "hygiene_rating": "3",
       "rating_date": "2025-12-04T00:00:00",
       "longitude": "-0.9762717",
@@ -3232,6 +3206,19 @@
       "latitude": "51.2760772705078"
     },
     {
+      "id": 1980258,
+      "name": "Lek Thai",
+      "type": "restaurant",
+      "city": "Great Yarmouth",
+      "local_authority": "Great Yarmouth",
+      "postcode": "NR30 2EJ",
+      "address": "50-51 Marine Parade, Great Yarmouth, Norfolk",
+      "hygiene_rating": "2",
+      "rating_date": "2026-08-18T00:00:00",
+      "longitude": "1.736217",
+      "latitude": "52.606873"
+    },
+    {
       "id": 855149,
       "name": "Nuki\u2019s Thai",
       "type": "restaurant",
@@ -3336,19 +3323,6 @@
       "latitude": "51.371219"
     },
     {
-      "id": 1912108,
-      "name": "Thai Express",
-      "type": "restaurant",
-      "city": "Swansea",
-      "local_authority": "Swansea",
-      "postcode": "SA1 3BH",
-      "address": "9 Picton Arcade, Swansea",
-      "hygiene_rating": "1",
-      "rating_date": "2025-09-26T00:00:00",
-      "longitude": "-3.9485974",
-      "latitude": "51.6193582"
-    },
-    {
       "id": 1607806,
       "name": "Thai Spice",
       "type": "restaurant",
@@ -3370,9 +3344,22 @@
       "postcode": "LE12 8ET",
       "address": "Thai Tunnel Restaurant, 10 Leicester Road, Quorn",
       "hygiene_rating": "1",
-      "rating_date": "2025-08-20T00:00:00",
+      "rating_date": "2026-08-20T00:00:00",
       "longitude": "-1.1695252",
       "latitude": "52.7427281"
+    },
+    {
+      "id": 333453,
+      "name": "Thai Rice",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Kensington and Chelsea",
+      "postcode": "W10 5TD",
+      "address": "303 Portobello Road, LONDON",
+      "hygiene_rating": "0",
+      "rating_date": "2026-08-19T00:00:00",
+      "longitude": "-0.207811",
+      "latitude": "51.519225"
     },
     {
       "id": 1391941,
@@ -3659,6 +3646,19 @@
       "rating_date": "2026-07-10T00:00:00",
       "longitude": "-0.265508",
       "latitude": "51.3339847"
+    },
+    {
+      "id": 1625190,
+      "name": "Cha Thai Story",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Wandsworth",
+      "postcode": "SW18 1SP",
+      "address": "366 Old York Road, London, Wandsworth",
+      "hygiene_rating": "5",
+      "rating_date": "2026-09-17T00:00:00",
+      "longitude": "-0.1895414",
+      "latitude": "51.4598342"
     },
     {
       "id": 1654950,
@@ -5905,7 +5905,7 @@
       "postcode": "BL9 0NB",
       "address": "93 The Rock, Bury",
       "hygiene_rating": "5",
-      "rating_date": "2024-06-28T00:00:00",
+      "rating_date": "2026-09-01T00:00:00",
       "longitude": "-2.294417",
       "latitude": "53.594652"
     },
@@ -7752,8 +7752,8 @@
       "address": "84-86 Market Street, Ashby De La Zouch, Leicestershire",
       "hygiene_rating": "3",
       "rating_date": "2026-01-16T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-1.469208",
+      "latitude": "52.747623"
     },
     {
       "id": 1405121,
@@ -8014,19 +8014,6 @@
       "rating_date": "2026-03-05T00:00:00",
       "longitude": "-1.772776",
       "latitude": "53.816223"
-    },
-    {
-      "id": 1625190,
-      "name": "Cha Thai Story",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Wandsworth",
-      "postcode": "SW18 1SP",
-      "address": "366 Old York Road, London, Wandsworth",
-      "hygiene_rating": "1",
-      "rating_date": "2026-08-04T00:00:00",
-      "longitude": "-0.1895414",
-      "latitude": "51.4598342"
     },
     {
       "id": 1154152,
@@ -8427,7 +8414,7 @@
       "postcode": "W6 9PH",
       "address": "58 Fulham Palace Road, London",
       "hygiene_rating": "5",
-      "rating_date": "2024-07-18T00:00:00",
+      "rating_date": "2026-09-16T00:00:00",
       "longitude": "-0.223763",
       "latitude": "51.490422"
     },
@@ -8973,7 +8960,7 @@
       "postcode": "SA13 1NR",
       "address": "87 Station Road, Port Talbot, Neath Port Talbot",
       "hygiene_rating": "5",
-      "rating_date": "2024-03-13T00:00:00",
+      "rating_date": "2026-08-13T00:00:00",
       "longitude": "-3.7826218",
       "latitude": "51.5948207"
     },
@@ -9611,8 +9598,8 @@
       "address": "187 STOKE NEWINGTON HIGH STREET, Hackney, London",
       "hygiene_rating": "2",
       "rating_date": "2026-08-21T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-0.0752559",
+      "latitude": "51.5628532"
     },
     {
       "id": 1924593,
@@ -9756,19 +9743,6 @@
       "rating_date": "2026-05-18T00:00:00",
       "longitude": "-1.548889",
       "latitude": "54.524307"
-    },
-    {
-      "id": 116697,
-      "name": "Black Stone Grill and Thai",
-      "type": "restaurant",
-      "city": "Lancaster",
-      "local_authority": "Lancaster City",
-      "postcode": "LA4 5BX",
-      "address": "271 Marine Road Central, Morecambe, Lancashire",
-      "hygiene_rating": "5",
-      "rating_date": "2024-07-25T00:00:00",
-      "longitude": "-2.865731",
-      "latitude": "54.073156"
     },
     {
       "id": 345287,
@@ -10213,6 +10187,19 @@
       "latitude": "53.3669133"
     },
     {
+      "id": 116697,
+      "name": "Black Stone Grill and Thai",
+      "type": "restaurant",
+      "city": "Lancaster",
+      "local_authority": "Lancaster City",
+      "postcode": "LA4 5BX",
+      "address": "271 Marine Road Central, Morecambe, Lancashire",
+      "hygiene_rating": "4",
+      "rating_date": "2026-08-18T00:00:00",
+      "longitude": "-2.865731",
+      "latitude": "54.073156"
+    },
+    {
       "id": 611641,
       "name": "Pearl of Samui Thai Restaurant",
       "type": "restaurant",
@@ -10538,6 +10525,19 @@
       "latitude": "51.484627"
     },
     {
+      "id": 1989334,
+      "name": "Bangkok Thai food (PJJ)",
+      "type": "restaurant",
+      "city": "Warwickshire",
+      "local_authority": "North Warwickshire",
+      "postcode": "B46 2DS",
+      "address": "The Gate Gate Lane, Nether Whitacre, Warwickshire",
+      "hygiene_rating": "5",
+      "rating_date": "2026-09-16T00:00:00",
+      "longitude": "-1.6614606",
+      "latitude": "52.5310798"
+    },
+    {
       "id": 708049,
       "name": "JP Destiny (Thai Corner)",
       "type": "restaurant",
@@ -10601,19 +10601,6 @@
       "rating_date": "2025-12-11T00:00:00",
       "longitude": "-0.3962374",
       "latitude": "54.2835023"
-    },
-    {
-      "id": 1533915,
-      "name": "Siam Corner Ma Ma Thai Restaurant",
-      "type": "restaurant",
-      "city": "Lichfield",
-      "local_authority": "Lichfield",
-      "postcode": "WS13 6PW",
-      "address": "17 Bird Street, Lichfield, Staffordshire",
-      "hygiene_rating": "5",
-      "rating_date": "2024-08-27T00:00:00",
-      "longitude": "-1.830328",
-      "latitude": "52.6827757"
     },
     {
       "id": 408187,
@@ -10796,6 +10783,19 @@
       "rating_date": "2024-11-26T00:00:00",
       "longitude": "-1.47279095649719",
       "latitude": "53.3764572143555"
+    },
+    {
+      "id": 1533915,
+      "name": "Siam Corner Ma Ma Thai Restaurant",
+      "type": "restaurant",
+      "city": "Lichfield",
+      "local_authority": "Lichfield",
+      "postcode": "WS13 6PW",
+      "address": "17 Bird Street, Lichfield, Staffordshire",
+      "hygiene_rating": "4",
+      "rating_date": "2026-08-18T00:00:00",
+      "longitude": "-1.830328",
+      "latitude": "52.6827757"
     },
     {
       "id": 519714,
@@ -11234,8 +11234,8 @@
       "local_authority": "Tower Hamlets",
       "postcode": "E2 0PG",
       "address": "Unit 03 Globe Town Food Court, 82a Roman Road, London",
-      "hygiene_rating": "1",
-      "rating_date": "2026-04-30T00:00:00",
+      "hygiene_rating": "3",
+      "rating_date": "2026-09-03T00:00:00",
       "longitude": null,
       "latitude": null
     },
@@ -11682,19 +11682,6 @@
       "latitude": null
     },
     {
-      "id": 1245348,
-      "name": "Thai Kitchen",
-      "type": "takeaway",
-      "city": "Bolton",
-      "local_authority": "Bolton",
-      "postcode": "BL2 4BQ",
-      "address": "115 Lea Gate, Bolton",
-      "hygiene_rating": "5",
-      "rating_date": "2021-12-17T00:00:00",
-      "longitude": "-2.39626",
-      "latitude": "53.605244"
-    },
-    {
       "id": 1932296,
       "name": "Thai Kitchen",
       "type": "takeaway",
@@ -11706,6 +11693,19 @@
       "rating_date": "2026-08-11T00:00:00",
       "longitude": null,
       "latitude": null
+    },
+    {
+      "id": 1245348,
+      "name": "Thai Kitchen",
+      "type": "takeaway",
+      "city": "Bolton",
+      "local_authority": "Bolton",
+      "postcode": "BL2 4BQ",
+      "address": "115 Lea Gate, Bolton",
+      "hygiene_rating": "5",
+      "rating_date": "2021-12-17T00:00:00",
+      "longitude": "-2.39626",
+      "latitude": "53.605244"
     },
     {
       "id": 271627,
@@ -12018,6 +12018,19 @@
       "rating_date": "2026-08-04T00:00:00",
       "longitude": "-0.0134339",
       "latitude": "51.5021916"
+    },
+    {
+      "id": 1982687,
+      "name": "Royal Thai",
+      "type": "takeaway",
+      "city": "Antrim and Newtownabbey",
+      "local_authority": "Antrim and Newtownabbey",
+      "postcode": "BT36 5EB",
+      "address": "377 Antrim Road, Carnmoney Bog, Newtownabbey, Antrim",
+      "hygiene_rating": "3",
+      "rating_date": "2026-08-20T00:00:00",
+      "longitude": "-5.961525",
+      "latitude": "54.673276"
     },
     {
       "id": 1657219,
@@ -13095,8 +13108,8 @@
       "address": "46 Chester Street, Chester, Cheshire",
       "hygiene_rating": "4",
       "rating_date": "2026-08-14T00:00:00",
-      "longitude": null,
-      "latitude": null
+      "longitude": "-2.9175945",
+      "latitude": "53.1799735"
     },
     {
       "id": 534794,
@@ -13913,7 +13926,7 @@
       "postcode": "BB11 5UB",
       "address": "MARKET HALL  CURZON STREET, BURNLEY",
       "hygiene_rating": "5",
-      "rating_date": "2022-06-30T00:00:00",
+      "rating_date": "2026-09-16T00:00:00",
       "longitude": null,
       "latitude": null
     },
@@ -15751,19 +15764,6 @@
       "latitude": "51.5141642"
     },
     {
-      "id": 83700,
-      "name": "Sukhothai",
-      "type": "restaurant",
-      "city": "Gravesham",
-      "local_authority": "Gravesham",
-      "postcode": "DA12 1AD",
-      "address": "6 Windmill Street, Gravesend, Kent",
-      "hygiene_rating": "5",
-      "rating_date": "2025-12-02T00:00:00",
-      "longitude": "0.369611",
-      "latitude": "51.441666"
-    },
-    {
       "id": 1221101,
       "name": "SUKHOTHAI",
       "type": "restaurant",
@@ -15775,6 +15775,19 @@
       "rating_date": "2026-02-13T00:00:00",
       "longitude": "-3.1823687",
       "latitude": "53.3675489"
+    },
+    {
+      "id": 83700,
+      "name": "Sukhothai",
+      "type": "restaurant",
+      "city": "Gravesham",
+      "local_authority": "Gravesham",
+      "postcode": "DA12 1AD",
+      "address": "6 Windmill Street, Gravesend, Kent",
+      "hygiene_rating": "5",
+      "rating_date": "2025-12-02T00:00:00",
+      "longitude": "0.369611",
+      "latitude": "51.441666"
     },
     {
       "id": 356057,
@@ -15816,19 +15829,6 @@
       "latitude": "53.9945585"
     },
     {
-      "id": 902906,
-      "name": "Sukhothai Restaurant",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Havering",
-      "postcode": "RM11 3YD",
-      "address": "155 High Street, Hornchurch",
-      "hygiene_rating": "5",
-      "rating_date": "2025-10-30T00:00:00",
-      "longitude": "0.220597",
-      "latitude": "51.562239"
-    },
-    {
       "id": 321058,
       "name": "Sukhothai Restaurant",
       "type": "restaurant",
@@ -15840,6 +15840,19 @@
       "rating_date": "2025-08-03T00:00:00",
       "longitude": "-1.537462",
       "latitude": "53.829991"
+    },
+    {
+      "id": 902906,
+      "name": "Sukhothai Restaurant",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Havering",
+      "postcode": "RM11 3YD",
+      "address": "155 High Street, Hornchurch",
+      "hygiene_rating": "5",
+      "rating_date": "2025-10-30T00:00:00",
+      "longitude": "0.220597",
+      "latitude": "51.562239"
     },
     {
       "id": 342713,
@@ -16076,19 +16089,6 @@
       "latitude": "57.143568"
     },
     {
-      "id": 1572252,
-      "name": "Banana Tree",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Wandsworth",
-      "postcode": "SW11 1HN",
-      "address": "75 - 79 Battersea Rise, London, Wandsworth",
-      "hygiene_rating": "5",
-      "rating_date": "2025-09-16T00:00:00",
-      "longitude": "-0.1666073",
-      "latitude": "51.4606509"
-    },
-    {
       "id": 663888,
       "name": "Banana Tree",
       "type": "restaurant",
@@ -16100,6 +16100,19 @@
       "rating_date": "2025-02-10T00:00:00",
       "longitude": null,
       "latitude": null
+    },
+    {
+      "id": 1572252,
+      "name": "Banana Tree",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Wandsworth",
+      "postcode": "SW11 1HN",
+      "address": "75 - 79 Battersea Rise, London, Wandsworth",
+      "hygiene_rating": "5",
+      "rating_date": "2025-09-16T00:00:00",
+      "longitude": "-0.1666073",
+      "latitude": "51.4606509"
     },
     {
       "id": 414088,

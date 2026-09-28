@@ -67,7 +67,7 @@ const EMBEDDED_DATA = {
     { name: "Glasgow", population: 635000, total_thai_businesses: 7, restaurants: 5, takeaways: 2, per_100k: 1.1, scheme: "FHIS", fhis_pass: 7, fhis_improvement: 0, fhis_exempt: 0 }
   ],
   statistics: {
-    total_uk_thai_businesses: 1263,
+    total_uk_thai_businesses: 1264,
     estimated_uk_market_size_gbp: "£2.1B",
     growth_rate_2022_2025_pct: 20.3,
     national_living_wage_april_2026: 12.71,

@@ -2,7 +2,7 @@
   "name": "ThaiData UK",
   "description": "Business intelligence and cost defense tools for UK Thai restaurant operators",
   "url": "https://thaidata.uk",
-  "last_updated": "2026-09-21",
+  "last_updated": "2026-09-28",
   "data_sources": [
     "FSA FHRS",
     "FSA FHIS",
@@ -11,9 +11,9 @@
     "UKHospitality"
   ],
   "statistics": {
-    "total_uk_thai_businesses": 1263,
+    "total_uk_thai_businesses": 1264,
     "total_full_service_restaurants": 1013,
-    "total_quick_service_takeaways": 250,
+    "total_quick_service_takeaways": 251,
     "uk_average_hygiene_rating": 4.1,
     "uk_average_per_100k_density": 2.6,
     "hygiene_rating_5_percentage": 50.4,
@@ -60,6 +60,10 @@
       "takeaways": 53,
       "per_100k": 3.2,
       "avg_hygiene_rating": 4.2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 98
     },
     {
@@ -70,6 +74,10 @@
       "takeaways": 5,
       "per_100k": 3.3,
       "avg_hygiene_rating": 4.5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 5
     },
     {
@@ -80,6 +88,10 @@
       "takeaways": 3,
       "per_100k": 11.4,
       "avg_hygiene_rating": 4.2,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 8
     },
     {
@@ -90,6 +102,10 @@
       "takeaways": 3,
       "per_100k": 3.3,
       "avg_hygiene_rating": 4.3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 10
     },
     {
@@ -99,18 +115,12 @@
       "restaurants": 12,
       "takeaways": 7,
       "per_100k": 3.5,
-      "avg_hygiene_rating": 0,
+      "avg_hygiene_rating": null,
+      "scheme": "FHIS",
+      "fhis_pass": 14,
+      "fhis_improvement": 5,
+      "fhis_exempt": 0,
       "postcode_areas": 7
-    },
-    {
-      "name": "Swansea",
-      "population": 247000,
-      "total_thai_businesses": 16,
-      "restaurants": 13,
-      "takeaways": 3,
-      "per_100k": 6.5,
-      "avg_hygiene_rating": 3.8,
-      "postcode_areas": 5
     },
     {
       "name": "Bristol",
@@ -120,7 +130,25 @@
       "takeaways": 2,
       "per_100k": 3.1,
       "avg_hygiene_rating": 4.7,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 6
+    },
+    {
+      "name": "Swansea",
+      "population": 247000,
+      "total_thai_businesses": 15,
+      "restaurants": 12,
+      "takeaways": 3,
+      "per_100k": 6.1,
+      "avg_hygiene_rating": 3.9,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 5
     },
     {
       "name": "Richmond-Upon-Thames",
@@ -130,6 +158,10 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 4
     },
     {
@@ -140,6 +172,10 @@
       "takeaways": 1,
       "per_100k": 4.3,
       "avg_hygiene_rating": 4.9,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 3
     },
     {
@@ -150,17 +186,11 @@
       "takeaways": 2,
       "per_100k": 2.1,
       "avg_hygiene_rating": 5.0,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 4
-    },
-    {
-      "name": "Somerset",
-      "population": 580000,
-      "total_thai_businesses": 11,
-      "restaurants": 9,
-      "takeaways": 2,
-      "per_100k": 1.9,
-      "avg_hygiene_rating": 4.7,
-      "postcode_areas": 6
     },
     {
       "name": "Bournemouth",
@@ -170,6 +200,10 @@
       "takeaways": 2,
       "per_100k": 2.7,
       "avg_hygiene_rating": 4.6,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 6
     },
     {
@@ -180,7 +214,25 @@
       "takeaways": 0,
       "per_100k": 5.1,
       "avg_hygiene_rating": 4.5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 2
+    },
+    {
+      "name": "Somerset",
+      "population": 580000,
+      "total_thai_businesses": 10,
+      "restaurants": 8,
+      "takeaways": 2,
+      "per_100k": 1.7,
+      "avg_hygiene_rating": 4.7,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 5
     },
     {
       "name": "Dorset",
@@ -190,6 +242,10 @@
       "takeaways": 3,
       "per_100k": 2.6,
       "avg_hygiene_rating": 4.8,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 6
     },
     {
@@ -200,6 +256,10 @@
       "takeaways": 2,
       "per_100k": 0.8,
       "avg_hygiene_rating": 4.3,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
       "postcode_areas": 5
     }
   ],

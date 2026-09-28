@@ -540,6 +540,12 @@
     "chain": "Busaba"
   },
   {
+    "fsa_id": 1760206,
+    "name": "Gurdwara Baba Sang Ji Trust",
+    "city": "Sandwell",
+    "chain": "Busaba"
+  },
+  {
     "fsa_id": 1890030,
     "name": "Khan Baba Roti House",
     "city": "Bradford",
@@ -564,15 +570,15 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1518961,
-    "name": "Nusara",
-    "city": "Dorset",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 1351786,
     "name": "Nusara",
     "city": "Bournemouth, Christchurch and Poole",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 1518961,
+    "name": "Nusara",
+    "city": "Dorset",
     "chain": "Busaba"
   },
   {

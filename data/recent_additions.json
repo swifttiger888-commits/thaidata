@@ -1,6 +1,34 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-28",
   "restaurants": [
+    {
+      "fsa_id": "1982687",
+      "name": "Royal Thai",
+      "city": "Antrim and Newtownabbey",
+      "type": "takeaway",
+      "discovered_on": "2026-09-28"
+    },
+    {
+      "fsa_id": "1989334",
+      "name": "Bangkok Thai food (PJJ)",
+      "city": "Warwickshire",
+      "type": "restaurant",
+      "discovered_on": "2026-09-28"
+    },
+    {
+      "fsa_id": "1980258",
+      "name": "Lek Thai",
+      "city": "Great Yarmouth",
+      "type": "restaurant",
+      "discovered_on": "2026-09-28"
+    },
+    {
+      "fsa_id": "1991190",
+      "name": "THAI CORNER",
+      "city": "Bury",
+      "type": "restaurant",
+      "discovered_on": "2026-09-28"
+    },
     {
       "fsa_id": "1988739",
       "name": "Busaba Covent Garden",
@@ -322,34 +350,6 @@
       "city": "London",
       "type": "takeaway",
       "discovered_on": "2026-07-06"
-    },
-    {
-      "fsa_id": "1783088",
-      "name": "Number 1 Pad Thai",
-      "city": "Stratford-on-Avon",
-      "type": "takeaway",
-      "discovered_on": "2026-07-06"
-    },
-    {
-      "fsa_id": "1956789",
-      "name": "Pick Thai Bar & Restaurant",
-      "city": "Stratford-on-Avon",
-      "type": "restaurant",
-      "discovered_on": "2026-07-06"
-    },
-    {
-      "fsa_id": "1931625",
-      "name": "Ty Thai",
-      "city": "Merthyr Tydfil",
-      "type": "restaurant",
-      "discovered_on": "2026-07-06"
-    },
-    {
-      "fsa_id": "1735989",
-      "name": "Banana Tree Stevenage",
-      "city": "Stevenage",
-      "type": "restaurant",
-      "discovered_on": "2026-06-29"
     }
   ]
 }
