@@ -100,7 +100,13 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Kluay Buat Chi (กล้วยบวชชี)](https://thaidata.uk/recipes/kluay-buat-chi/):
 - [Khao Pad Saparot (ข้าวผัดสับปะรด)](https://thaidata.uk/recipes/khao-pad-saparot/):
 - [Mee Krob (หมี่กรอบ)](https://thaidata.uk/recipes/mee-krob/):
-- [Kuay Jap (ก๋วยจั๊บ)](https://thaidata.uk/recipes/kuay-jap/): Five-spice pepper rice-sheet noodle soup with offal and crispy pork. Crispy puffed rice vermicelli in sweet-sour sauce with egg floss. Pineapple fried rice with curry powder, prawns and cashews, in the shell. Thai banana in sweet coconut milk — the warm home dessert. Thai sweet-and-sour stir-fry: vinegar and fish sauce in the original, ketchup in the modern style. Charcoal-grilled marinated chicken with jaew, the roasted-rice chilli dip. Thai iced green tea with condensed milk.
+- [Kuay Jap (ก๋วยจั๊บ)](https://thaidata.uk/recipes/kuay-jap/):
+- [Khao Pad Poo (ข้าวผัดปู)](https://thaidata.uk/recipes/khao-pad-poo/):
+- [Goong Ob Woon Sen (กุ้งอบวุ้นเส้น)](https://thaidata.uk/recipes/goong-ob-woon-sen/):
+- [Pad Phet (ผัดเผ็ด)](https://thaidata.uk/recipes/pad-phet/):
+- [Khanom Jeen Nam Ya (ขนมจีนน้ำยา)](https://thaidata.uk/recipes/khanom-jeen-nam-ya/):
+- [Sangkaya Fak Thong (สังขยาฟักทอง)](https://thaidata.uk/recipes/sangkaya-fak-thong/):
+- [Cha Manao (ชามะนาว)](https://thaidata.uk/recipes/cha-manao/): Thai iced lemon tea: pulled red tea, lime juice, sugar and a pinch of salt over ice. Thai pumpkin custard: palm sugar and coconut milk custard steamed inside a pumpkin. Fish curry noodles: pounded fish curry (with or without coconut) over rice vermicelli. Jungle-style stir-fry: curry paste, fingerroot, kaffir lime and green peppercorns; pork, catfish or trotter. Clay-pot prawns with glass noodles soaked in seasoned stock, baked under a lid. Crab fried rice: chilled rice, lump crab added in two stages, served with cucumber and lime. Five-spice pepper rice-sheet noodle soup with offal and crispy pork. Crispy puffed rice vermicelli in sweet-sour sauce with egg floss. Pineapple fried rice with curry powder, prawns and cashews, in the shell. Thai banana in sweet coconut milk — the warm home dessert. Thai sweet-and-sour stir-fry: vinegar and fish sauce in the original, ketchup in the modern style. Charcoal-grilled marinated chicken with jaew, the roasted-rice chilli dip. Thai iced green tea with condensed milk.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
