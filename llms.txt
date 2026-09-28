@@ -71,6 +71,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Gaeng Jued (แกงจืด)](https://thaidata.uk/recipes/gaeng-jued/): The soup with no chilli — clear broth, pork balls, glass noodles, tofu and toasted seaweed.
 - [Cashew Chicken (ไก่ผัดเม็ดมะม่วงหิมพานต์)](https://thaidata.uk/recipes/cashew-chicken/): The Chinese-Thai restaurant classic — fried chicken, roasted cashews, fried dried chillies, oyster-sauce gloss.
 - [Pad Pak Bung Fai Daeng (ผัดผักบุ้งไฟแดง)](https://thaidata.uk/recipes/pad-pak-bung/): The thirty-second dish — morning glory in a screaming wok with garlic, chillies and tao jiao.
+- [Tom Saap (ต้มแซ่บ)](https://thaidata.uk/recipes/tom-saap/): Isaan pork-rib soup — galangal, lemongrass and kaffir lime, soured hard, toasted rice on top.
+- [Khao Tom (ข้าวต้ม)](https://thaidata.uk/recipes/khao-tom/): The breakfast rice soup — pork and crisp fried garlic over bloomed rice.
+- [Hoy Tod (หอยทอด)](https://thaidata.uk/recipes/hoy-tod/): The crisp-edged mussel pancake — three flours, egg, bean sprouts.
+- [Yum Woon Sen (ยำวุ้นเส้น)](https://thaidata.uk/recipes/yum-woon-sen/): Glass noodle salad with lime, fish sauce, fried peanuts and dried shrimp.
+- [Pad Kana Moo Krob (คะน้าหมูกรอบ)](https://thaidata.uk/recipes/pad-kana-moo-krob/): Chinese broccoli and crispy pork belly, the ahan tam sang classic.
+- [Thai Lemon Iced Tea (ชามะนาว)](https://thaidata.uk/recipes/thai-lemon-iced-tea/): Thai tea with fresh lime over ice — cha yen without the milk.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
