@@ -83,6 +83,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Gai Tod Hat Yai (ไก่ทอดหาดใหญ่)](https://thaidata.uk/recipes/gai-tod-hat-yai/): Southern fried chicken with toasted spices and fried shallots.
 - [Nom Yen (นมเย็น)](https://thaidata.uk/recipes/nom-yen/): The pink milk — sala syrup, condensed milk, ice.
 - [Bua Loy (บัวลอย)](https://thaidata.uk/recipes/bua-loy/): Glutinous-rice balls in salted-sweet coconut milk.
+- [Khao Khluk Kapi (ข้าวคลุกกะปิ)](https://thaidata.uk/recipes/khao-khluk-kapi/): Shrimp-paste rice with sweet pork and a ring of sides.
+- [Som Tum Pu Pla Ra (ส้มตำปูปลาร้า)](https://thaidata.uk/recipes/som-tum-pu-pla-ra/): The full-Isaan papaya salad — crab, boiled pla ra.
+- [Yen Ta Fo (เย็นตาโฟ)](https://thaidata.uk/recipes/yen-ta-fo/): The pink noodle soup — fermented tofu sauce, crisp squid.
+- [Son-in-Law Eggs (ไข่ลูกเขย)](https://thaidata.uk/recipes/son-in-law-eggs/): Fried boiled eggs in sweet-sour tamarind sauce.
+- [Khao Na Pet (ข้าวหน้าเป็ด)](https://thaidata.uk/recipes/khao-na-pet/): Five-spice duck over rice with duck-drippings gravy.
+- [Oliang (โอเลี้ยง)](https://thaidata.uk/recipes/oliang/): Thai iced black coffee from grain-roasted beans.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
