@@ -77,6 +77,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Yum Woon Sen (ยำวุ้นเส้น)](https://thaidata.uk/recipes/yum-woon-sen/): Glass noodle salad with lime, fish sauce, fried peanuts and dried shrimp.
 - [Pad Kana Moo Krob (คะน้าหมูกรอบ)](https://thaidata.uk/recipes/pad-kana-moo-krob/): Chinese broccoli and crispy pork belly, the ahan tam sang classic.
 - [Thai Lemon Iced Tea (ชามะนาว)](https://thaidata.uk/recipes/thai-lemon-iced-tea/): Thai tea with fresh lime over ice — cha yen without the milk.
+- [Rad Na (ราดหน้า)](https://thaidata.uk/recipes/rad-na/): Charred wide rice noodles under silky pork gravy with tao jiao.
+- [Bamee Moo Daeng (บะหมี่หมูแดง)](https://thaidata.uk/recipes/bamee-moo-daeng/): Yellow egg noodles with lacquered red roast pork and wontons.
+- [Khao Mok Gai (ข้าวหมกไก่)](https://thaidata.uk/recipes/khao-mok-gai/): Thai-Muslim chicken biryani — yogurt marinade, butter, turmeric rice.
+- [Gai Tod Hat Yai (ไก่ทอดหาดใหญ่)](https://thaidata.uk/recipes/gai-tod-hat-yai/): Southern fried chicken with toasted spices and fried shallots.
+- [Nom Yen (นมเย็น)](https://thaidata.uk/recipes/nom-yen/): The pink milk — sala syrup, condensed milk, ice.
+- [Bua Loy (บัวลอย)](https://thaidata.uk/recipes/bua-loy/): Glutinous-rice balls in salted-sweet coconut milk.
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
