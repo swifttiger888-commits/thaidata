@@ -9,6 +9,10 @@
 /r/:city  /r/:city/  301
 /r/:city/  /cities/:city.html  200
 
+# Redirect consolidated duplicate recipe page (same dish: Lao vs Thai name)
+/recipes/yam-khao-tod/  /recipes/nam-khao-tod/  301
+/recipes/yam-khao-tod  /recipes/nam-khao-tod/  301
+
 # Redirect deleted non-Thai chain pages
 /chains/chai-green /chains/ 301
 /chains/i-chai-express /chains/ 301

@@ -181,7 +181,6 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Khao Niew Durian (ข้าวเหนียวทุเรียน)](https://thaidata.uk/recipes/khao-niew-durian/):
 - [Goong Chae Nam Pla (กุ้งแช่น้ำปลา)](https://thaidata.uk/recipes/goong-chae-nam-pla/): Goong chae nam pla (กุ้งแช่น้ำปลา): raw prawns soaked in fish sauce and lime, dressed with a searing chilli-garlic sauce — Thailand's classic drinking snack. Thai sources cited.
 - [Moo Dad Deow (หมูแดดเดียว)](https://thaidata.uk/recipes/moo-dad-deow/): Moo dad deow (หมูแดดเดียว): pork strips marinated, dried for one day of sun, then fried — crisp outside, chewy inside, served with sticky rice and jaew. Thai sources cited.
-- [Yam Khao Tod (ยำข้าวทอด)](https://thaidata.uk/recipes/yam-khao-tod/): Yam khao tod (ยำข้าวทอด): curry-paste rice balls fried crisp and tossed with naem, pork skin, ginger, shallots and a hot-sour dressing. Thai sources cited.
 - [Pad Tua Ngok (ผัดถั่วงอก)](https://thaidata.uk/recipes/pad-tua-ngok/): Pad tua ngok (ผัดถั่วงอก): the hot-wok bean sprout stir-fry — crisp sprouts, fried tofu, celery, on the table in ten minutes. Thai sources cited.
 - [Pad Tua Fak Yao (ผัดถั่วฝักยาว)](https://thaidata.uk/recipes/pad-tua-fak-yao/): Pad tua fak yao (ผัดถั่วฝักยาว): Thai long bean stir-fry — garlic fried in sesame oil, minced pork, beans dropped in last so they stay crisp; the red-curry-paste version documented too. Thai sources cited.
 - [Sen Chan Pad Poo (เส้นจันท์ผัดปู)](https://thaidata.uk/recipes/sen-chan-pad-poo/):
