@@ -335,6 +335,9 @@ def get_static_pages() -> list[dict]:
         {"loc": "https://thaidata.uk/recipes/kua-kling/", "priority": "0.7"},
         {"loc": "https://thaidata.uk/recipes/nam-khao-tod/", "priority": "0.7"},
         {"loc": "https://thaidata.uk/recipes/khao-jee/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/kaeng-kua-sapparod/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/khao-mao/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/khanom-pang-sangkaya/", "priority": "0.7"},
 
         # Tools
         {"loc": "https://thaidata.uk/tools/where-to-open-thai-restaurant-uk", "priority": "0.6"},
