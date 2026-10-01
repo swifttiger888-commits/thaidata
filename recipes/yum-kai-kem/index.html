@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yum Kai Kem (ยำไข่เค็ม) | ThaiData.uk</title>
+    <meta name="description" content="Yum Kai Kem (ยำไข่เค็ม): Thai salted duck egg salad with tangy lime dressing and crisp herbs. Simple 15-minute dish that brings together creamy salted egg yolks, zesty dressing, and fresh aromatics." />
+    <link rel="canonical" href="https://thaidata.uk/recipes/yum-kai-kem/" />
+    <meta property="og:title" content="Yum Kai Kem (ยำไข่เค็ม) Recipe | Thai Salted Duck Egg Salad" />
+    <meta property="og:description" content="Authentic Thai salted duck egg salad with tangy lime dressing. Perfect balance of creamy egg, zesty citrus, and fresh herbs in this traditional recipe." />
+    <meta property="og:url" content="https://thaidata.uk/recipes/yum-kai-kem/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ThaiData.uk" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background: #fafafa; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #d4af37 0%, #ffcc00 100%); color: white; padding: 20px 0; margin-bottom: 30px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { display: flex; align-items: center; font-size: 24px; font-weight: 700; text-decoration: none; color: white; }
+        .logo img { width: 32px; height: 32px; margin-right: 10px; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
+        
+        /* Main Content */
+        .recipe-header { text-align: center; margin-bottom: 40px; }
+        .recipe-header h1 { font-size: 2.5rem; font-weight: 700; color: #2c3e50; margin-bottom: 10px; line-height: 1.2; }
+        .recipe-header .thai-name { font-size: 1.5rem; color: #7f8c8d; margin-bottom: 15px; font-weight: 500; }
+        .byline { color: #666; margin-bottom: 20px; font-size: 0.95rem; }
+        .byline time { color: #d4af37; font-weight: 500; }
+        
+        .recipe-intro { font-size: 1.1rem; line-height: 1.7; color: #555; margin: 25px auto; max-width: 650px; }
+        
+        .recipe-meta { display: flex; justify-content: center; gap: 30px; margin: 30px 0; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .meta-item { text-align: center; }
+        .meta-item i { color: #d4af37; font-size: 1.2rem; margin-bottom: 5px; }
+        .meta-item .value { font-weight: 600; color: #2c3e50; font-size: 1.1rem; }
+        .meta-item .label { color: #7f8c8d; font-size: 0.9rem; }
+        
+        .recipe-content { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        
+        .section-title { font-size: 1.8rem; font-weight: 600; color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #d4af37; }
+        
+        .ingredients-list, .instructions-list { list-style: none; }
+        .ingredients-list li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .ingredients-list li:last-child { border-bottom: none; }
+        .ingredients-list li strong { color: #d4af37; font-weight: 600; }
+        
+        .instructions-list li { margin-bottom: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #d4af37; }
+        .step-number { background: #d4af37; color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 15px; }
+        
+        .disagreement-section { background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 20px; margin: 25px 0; }
+        .disagreement-section h3 { color: #856404; margin-bottom: 15px; font-size: 1.2rem; }
+        .disagreement-section p { color: #856404; line-height: 1.6; }
+        
+        .sources { margin-top: 40px; padding-top: 25px; border-top: 2px solid #eee; }
+        .sources h3 { color: #2c3e50; margin-bottom: 15px; font-size: 1.3rem; }
+        .sources ol { padding-left: 20px; }
+        .sources li { margin-bottom: 8px; }
+        .sources a { color: #d4af37; text-decoration: none; font-weight: 500; }
+        .sources a:hover { text-decoration: underline; }
+        
+        .affiliate-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
+        .affiliate-section h3 { color: #2c3e50; margin-bottom: 15px; font-size: 1.4rem; }
+        .affiliate-section p { color: #666; margin-bottom: 20px; }
+        .cta-button { display: inline-block; background: #d4af37; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .cta-button:hover { background: #b8941f; transform: translateY(-2px); }
+        
+        @media (max-width: 768px) {
+            .recipe-header h1 { font-size: 2rem; }
+            .recipe-meta { flex-direction: column; gap: 15px; }
+            .recipe-content { padding: 25px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">
+                <img src="/thaidata-logo.svg" alt="ThaiData.uk" />
+                ThaiData.uk
+            </a>
+            <ul class="nav-links">
+                <li><a href="/recipes/">Recipes</a></li>
+                <li><a href="/restaurants/">Restaurants</a></li>
+                <li><a href="/festivals/">Festivals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="recipe-header">
+            <h1>Yum Kai Kem</h1>
+            <div class="thai-name">ยำไข่เค็ม</div>
+            <div class="byline">
+                By <strong>Johnny Tiger</strong> • <time datetime="2026-09-30">30 September 2026</time>
+            </div>
+            <img src="yum-kai-kem.jpg" alt="Yum Kai Kem" width="820" height="550" loading="lazy" style="max-width:100%; width:820px; height:auto; border-radius:16px; margin-top:26px; border:1px solid var(--line);" />
+            
+            <p class="recipe-intro">
+                Yum Kai Kem is a beloved Thai salad that showcases the rich, creamy texture of salted duck eggs paired with a vibrant, tangy dressing. This simple yet flavourful dish combines the umami depth of salted egg yolks with fresh lime juice, fish sauce, and aromatic herbs, creating a perfect balance of salty, sour, and spicy flavours that's quintessentially Thai.
+            </p>
+        </div>
+
+        <div class="recipe-meta">
+            <div class="meta-item">
+                <div><i class="fas fa-clock"></i></div>
+                <div class="value">15</div>
+                <div class="label">minutes</div>
+            </div>
+            <div class="meta-item">
+                <div><i class="fas fa-user-friends"></i></div>
+                <div class="value">4</div>
+                <div class="label">servings</div>
+            </div>
+            <div class="meta-item">
+                <div><i class="fas fa-signal"></i></div>
+                <div class="value">Easy</div>
+                <div class="label">difficulty</div>
+            </div>
+        </div>
+
+        <div class="recipe-content">
+            <section>
+                <h2 class="section-title">Ingredients</h2>
+                <ul class="ingredients-list">
+                    <li><strong>4 salted duck eggs</strong>, boiled and peeled</li>
+                    <li><strong>3-4 shallots</strong>, thinly sliced</li>
+                    <li><strong>4-5 bird's eye chillies</strong>, finely chopped</li>
+                    <li><strong>2 tablespoons fresh lime juice</strong></li>
+                    <li><strong>1 tablespoon fish sauce</strong></li>
+                    <li><strong>2 tablespoons palm sugar</strong> (or brown sugar)</li>
+                    <li><strong>2 spring onions</strong>, chopped</li>
+                    <li><strong>Fresh coriander leaves</strong>, for garnish</li>
+                    <li><strong>Dried shrimp</strong> (optional), for extra umami</li>
+                </ul>
+            </section>
+
+            <section style="margin-top: 40px;">
+                <h2 class="section-title">Instructions</h2>
+                <ol class="instructions-list">
+                    <li>
+                        <span class="step-number">1</span>
+                        <strong>Prepare the salted eggs:</strong> Cut each salted duck egg in half lengthwise. Carefully remove the egg yolks and whites, then slice them into bite-sized pieces. Arrange on a serving plate.
+                    </li>
+                    <li>
+                        <span class="step-number">2</span>
+                        <strong>Make the dressing:</strong> In a small bowl, whisk together lime juice, fish sauce, and palm sugar until the sugar completely dissolves. Taste and adjust the balance of sour, salty, and sweet to your preference.
+                    </li>
+                    <li>
+                        <span class="step-number">3</span>
+                        <strong>Add aromatics:</strong> Stir in the chopped bird's eye chillies and sliced shallots into the dressing. Let it sit for 2-3 minutes to allow the flavours to meld.
+                    </li>
+                    <li>
+                        <span class="step-number">4</span>
+                        <strong>Assemble and serve:</strong> Pour the dressing over the arranged salted egg pieces. Garnish with chopped spring onions, fresh coriander leaves, and dried shrimp if using. Serve immediately as a side dish with rice.
+                    </li>
+                </ol>
+            </section>
+
+            <div class="disagreement-section">
+                <h3>Where Thai Sources Disagree</h3>
+                <p><strong>Dressing variations:</strong> Traditional recipes vary between using just lime juice and fish sauce versus adding palm sugar for sweetness. Some sources prefer white soy sauce instead of fish sauce for a cleaner flavour. <strong>Egg preparation:</strong> While most sources boil the eggs, some recommend steaming them for a more tender texture. <strong>Heat level:</strong> The number of chillies ranges from 2-3 for mild heat to 8-10 for those who prefer it fiery. <strong>Additional ingredients:</strong> Some regions add dried shrimp or crispy shallots for extra texture and umami depth.</p>
+            </div>
+
+            <div class="sources">
+                <h3>Sources</h3>
+                <ol>
+                    <li><a href="https://www.aroifin.com/recipe/yam-kai-kem" target="_blank">Aroi Fin - Traditional Yum Kai Kem Recipe</a></li>
+                    <li><a href="https://cookpad.com/th/recipes/9875859" target="_blank">Cookpad Thailand - Home-Style Salted Egg Salad</a></li>
+                    <li><a href="https://www.kapook.com/cooking/recipe/236847" target="_blank">Kapook Cooking - Quick Yum Kai Kem</a></li>
+                    <li><a href="https://www.pantip.com/topic/40385629" target="_blank">Pantip Community - Street Vendor Style Recipe</a></li>
+                    <li><a href="https://www.wongnai.com/recipes/yam-kai-kem" target="_blank">Wongnai Cooking - Modern Thai Kitchen Version</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="affiliate-section">
+            <h3>Need Thai Ingredients?</h3>
+            <p>Find authentic Thai ingredients for this recipe at top UK Asian grocers.</p>
+            <a href="/grocery-finder/?recipe=yum-kai-kem" class="cta-button">Find Ingredients Near You</a>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "name": "Yum Kai Kem (ยำไข่เค็ม)",
+        "description": "Thai salted duck egg salad with tangy lime dressing and fresh herbs. A simple yet flavourful dish that balances creamy salted eggs with zesty, aromatic seasonings.",
+        "author": {
+            "@type": "Person",
+            "name": "Johnny Tiger"
+        },
+        "datePublished": "2026-09-30",
+        "prepTime": "PT10M",
+        "cookTime": "PT5M",
+        "totalTime": "PT15M",
+        "recipeCategory": "Salad",
+        "recipeCuisine": "Thai",
+        "recipeYield": "4 servings",
+        "keywords": ["Thai salad", "salted duck egg", "yum kai kem", "Thai appetiser", "lime dressing"],
+        "recipeIngredient": [
+            "4 salted duck eggs, boiled and peeled",
+            "3-4 shallots, thinly sliced",
+            "4-5 bird's eye chillies, finely chopped",
+            "2 tablespoons fresh lime juice",
+            "1 tablespoon fish sauce",
+            "2 tablespoons palm sugar",
+            "2 spring onions, chopped",
+            "Fresh coriander leaves, for garnish",
+            "Dried shrimp (optional)"
+        ],
+        "recipeInstructions": [
+            {
+                "@type": "HowToStep",
+                "text": "Cut each salted duck egg in half lengthwise. Carefully remove the egg yolks and whites, then slice them into bite-sized pieces. Arrange on a serving plate."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "In a small bowl, whisk together lime juice, fish sauce, and palm sugar until the sugar completely dissolves. Taste and adjust the balance of sour, salty, and sweet to your preference."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Stir in the chopped bird's eye chillies and sliced shallots into the dressing. Let it sit for 2-3 minutes to allow the flavours to meld."
+            },
+            {
+                "@type": "HowToStep",
+                "text": "Pour the dressing over the arranged salted egg pieces. Garnish with chopped spring onions, fresh coriander leaves, and dried shrimp if using. Serve immediately as a side dish with rice."
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://thaidata.uk/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Recipes",
+                "item": "https://thaidata.uk/recipes/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Yum Kai Kem",
+                "item": "https://thaidata.uk/recipes/yum-kai-kem/"
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
