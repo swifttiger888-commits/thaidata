@@ -203,6 +203,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Pla Rad Prik (ปลาราดพริก)](https://thaidata.uk/recipes/pla-rad-prik/): A whole fish deep-fried until the skin crackles, dressed with a glossy hot sweet-sour chilli sauce of tamarind
 - [Pad Mi Korat (ผัดหมี่โคราช)](https://thaidata.uk/recipes/pad-mi-korat/): Korat's local noodle fry: dried rice vermicelli bundles stirred over low heat into a tamarind, palm sugar and 
 - [Khao Moo Daeng (ข้าวหมูแดง)](https://thaidata.uk/recipes/khao-moo-daeng/): Red roast pork over jasmine rice: pork neck marinated in five-spice, honey and soy, roasted, then sliced over 
+- [Kai Palo (ไข่พะโล้)](https://thaidata.uk/recipes/kai-palo/): Pork belly and boiled eggs braised in a sweet five-spice stew — palm sugar caramelised with garlic, coriander 
+- [Poo Pad Pong Karee (ปูผัดผงกะหรี่)](https://thaidata.uk/recipes/poo-pad-pong-karee/): Crab stir-fried in a yellow curry-powder sauce of evaporated milk, egg and roasted chilli paste, finished with
+- [Pla Sam Rod (ปลาสามรส)](https://thaidata.uk/recipes/pla-sam-rod/): Whole fish deep-fried until the skin shatters, then the three-flavour sauce — tamarind sour, palm sugar sweet,
+- [Khao Chae (ข้าวแช่)](https://thaidata.uk/recipes/khao-chae/): Parboiled jasmine rice chilled in candle-smoked jasmine water, served with shrimp-paste fritters, stuffed swee
+- [Khanom Tako (ขนมตะโก้)](https://thaidata.uk/recipes/khanom-tako/): Pandan-scented rice-flour pudding with diced water chestnuts, set in small banana-leaf cups and finished with 
+- [Nam Prik Long Ruea (น้ำพริกลงเรือ)](https://thaidata.uk/recipes/nam-prik-long-ruea/): The palace-court dip improvised for a royal boat trip: shrimp paste nam phrik fried with sweet pork, buried un
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
