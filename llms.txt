@@ -215,6 +215,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Khanom Jeen Sao Nam (ขนมจีนซาวน้ำ)](https://thaidata.uk/recipes/khanom-jeen-sao-nam/): Fresh rice noodles in lightly salted coconut cream with pineapple, young ginger, garlic, pounded dried shrimp 
 - [Khao Na Gai (ข้าวหน้าไก่)](https://thaidata.uk/recipes/khao-na-gai/): Soy-marinated chicken simmered in stock and finished with a glossy cornflour gravy, served over jasmine rice w
 - [Sarim (ซ่าหริ่ม)](https://thaidata.uk/recipes/sarim/): Mung bean flour threads pressed through a sarim press into ice water, served in sweet coconut cream over crush
+- [Kung Sarong (กุ้งโสร่ง)](https://thaidata.uk/recipes/kung-sarong/): Royal Thai starter: prawns marinated in coriander root, garlic and white pepper, wrapped in mee sua noodle thr
+- [Khao Tang Na Tang (ข้าวตังหน้าตั้ง)](https://thaidata.uk/recipes/khao-tang-na-tang/): The old Thai starter of thrift: pot-bottom rice dried and fried to a golden puff, topped with na tang — minced
+- [Kaeng Liang (แกงเลียง)](https://thaidata.uk/recipes/kaeng-liang/): Thailand's peppery vegetable soup: pumpkin, loofah, baby corn and bai maenglak leaves in a lightly cloudy brot
+- [Pla Meuk Pad Kai Kem (ปลาหมึกผัดไข่เค็ม)](https://thaidata.uk/recipes/pla-meuk-pad-kai-kem/): Squid rings stir-fried in a golden sauce of salted duck egg yolks, roasted chilli jam and oyster sauce — the m
+- [Bamee Kiao (บะหมี่เกี๊ยว)](https://thaidata.uk/recipes/bamee-kiao/): Egg noodles and hand-folded wontons in a clear pork-bone broth, topped with red barbecue pork, fried garlic an
+- [Khao Lam (ข้าวหลาม)](https://thaidata.uk/recipes/khao-lam/): Sticky rice soaked in sweet, salted coconut milk with black beans, packed into bamboo tubes and roasted uprigh
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
