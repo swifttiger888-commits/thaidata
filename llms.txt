@@ -221,6 +221,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Pla Meuk Pad Kai Kem (ปลาหมึกผัดไข่เค็ม)](https://thaidata.uk/recipes/pla-meuk-pad-kai-kem/): Squid rings stir-fried in a golden sauce of salted duck egg yolks, roasted chilli jam and oyster sauce — the m
 - [Bamee Kiao (บะหมี่เกี๊ยว)](https://thaidata.uk/recipes/bamee-kiao/): Egg noodles and hand-folded wontons in a clear pork-bone broth, topped with red barbecue pork, fried garlic an
 - [Khao Lam (ข้าวหลาม)](https://thaidata.uk/recipes/khao-lam/): Sticky rice soaked in sweet, salted coconut milk with black beans, packed into bamboo tubes and roasted uprigh
+- [Tod Mun Khao Pod (ทอดมันข้าวโพด)](https://thaidata.uk/recipes/tod-mun-khao-pod/): Thai corn fritters: sweetcorn kernels bound with red curry paste, egg and shredded kaffir lime leaves, spooned
+- [Laab Ped (ลาบเป็ด)](https://thaidata.uk/recipes/laab-ped/): Northern Thai duck laab: duck meat and offal chopped coarsely and cooked, dressed with toasted spices, lime ju
+- [Nam Prik Goong Siab (น้ำพริกกุ้งเสียบ)](https://thaidata.uk/recipes/nam-prik-goong-siap/): Dried smoked shrimp folded through a pounded paste of grilled kapi, shallots, garlic, bird's eye chillies, pal
+- [Nam Krajiab (น้ำกระเจี๊ยบ)](https://thaidata.uk/recipes/nam-krajiab/): Dried roselle calyxes simmered until the water turns deep ruby, sweetened and rounded with a pinch of salt, th
+- [Roti Sai Mai (โรตีสายไหม)](https://thaidata.uk/recipes/roti-sai-mai/): Paper-thin crepes wrapped around sai mai, hand-pulled brown-sugar threads — Ayutthaya's famous sweet, from the
+- [Khanom Kluay (ขนมกล้วย)](https://thaidata.uk/recipes/khanom-kluay/): Thailand's steamed banana and coconut cake: ripe nam wa bananas kneaded with rice flour, tapioca starch, cocon
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
