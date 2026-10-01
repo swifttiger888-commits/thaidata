@@ -209,6 +209,12 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Khao Chae (ข้าวแช่)](https://thaidata.uk/recipes/khao-chae/): Parboiled jasmine rice chilled in candle-smoked jasmine water, served with shrimp-paste fritters, stuffed swee
 - [Khanom Tako (ขนมตะโก้)](https://thaidata.uk/recipes/khanom-tako/): Pandan-scented rice-flour pudding with diced water chestnuts, set in small banana-leaf cups and finished with 
 - [Nam Prik Long Ruea (น้ำพริกลงเรือ)](https://thaidata.uk/recipes/nam-prik-long-ruea/): The palace-court dip improvised for a royal boat trip: shrimp paste nam phrik fried with sweet pork, buried un
+- [Pla Kapong Neung Manao (ปลากะพงนึ่งมะนาว)](https://thaidata.uk/recipes/pla-kapong-neung-manao/): Whole steamed seabass with a sharp lime, garlic and chilli dressing — the fish scored, the sauce poured over, 
+- [Kaeng Phed Pet Yang (แกงเผ็ดเป็ดย่าง)](https://thaidata.uk/recipes/kaeng-phed-pet-yang/): Cantonese roast duck in a red coconut curry with sour pineapple, cherry tomatoes, red grapes and pea aubergine
+- [Hoi Lai Pad Nam Prik Pao (หอยลายผัดน้ำพริกเผา)](https://thaidata.uk/recipes/hoi-lai-pad-nam-prik-pao/): Short-neck clams stir-fried in nam prik pao, Thailand's sweet-smoky roasted chilli jam, with garlic, bird's ey
+- [Khanom Jeen Sao Nam (ขนมจีนซาวน้ำ)](https://thaidata.uk/recipes/khanom-jeen-sao-nam/): Fresh rice noodles in lightly salted coconut cream with pineapple, young ginger, garlic, pounded dried shrimp 
+- [Khao Na Gai (ข้าวหน้าไก่)](https://thaidata.uk/recipes/khao-na-gai/): Soy-marinated chicken simmered in stock and finished with a glossy cornflour gravy, served over jasmine rice w
+- [Sarim (ซ่าหริ่ม)](https://thaidata.uk/recipes/sarim/): Mung bean flour threads pressed through a sarim press into ice water, served in sweet coconut cream over crush
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
