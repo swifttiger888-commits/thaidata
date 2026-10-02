@@ -1,0 +1,3035 @@
+{
+ "aab-mu": {
+  "title": "Aab Mu (แอ๊บหมู) — Northern Thai Minced Pork Grilled in Banana Leaf",
+  "thai": [
+   "แอ๊บหมู"
+  ],
+  "aliases": []
+ },
+ "bamee-haeng": {
+  "title": "Bamee Haeng (บะหมี่แห้ง) — Thai Dry Egg Noodles",
+  "thai": [
+   "บะหมี่แห้ง"
+  ],
+  "aliases": [
+   "ba mee hang",
+   "bamee hang",
+   "dry noodles",
+   "dry egg noodles",
+   "ba mee haeng"
+  ]
+ },
+ "bamee-kiao": {
+  "title": "Bamee Kiao (บะหมี่เกี๊ยว) — Egg Noodles with Wontons and Barbecue Pork",
+  "thai": [
+   "บะหมี่เกี๊ยว"
+  ],
+  "aliases": []
+ },
+ "bamee-moo-daeng": {
+  "title": "Bamee Moo Daeng (บะหมี่หมูแดง) — Red Pork Egg Noodle Soup",
+  "thai": [
+   "บะหมี่หมูแดง"
+  ],
+  "aliases": [
+   "ba mee moo daeng",
+   "bamee moo dang",
+   "bbq pork noodles",
+   "roast pork noodles",
+   "bamee moo daeng"
+  ]
+ },
+ "bua-loy": {
+  "title": "Bua Loy (บัวลอย) — Thai Rice Balls in Sweet Coconut Milk",
+  "thai": [
+   "บัวลอย"
+  ],
+  "aliases": [
+   "bua loy",
+   "bua loi",
+   "glutinous rice balls",
+   "coconut dumplings",
+   "bua loy nam khing"
+  ]
+ },
+ "cashew-chicken": {
+  "title": "Cashew Chicken (ไก่ผัดเม็ดมะม่วงหิมพานต์) — The Real Thai Gai Pad Med Mamuang",
+  "thai": [
+   "ไก่ผัดเม็ดมะม่วงหิมพานต์"
+  ],
+  "aliases": [
+   "cashew chicken",
+   "pad med mamuang",
+   "cashew nut",
+   "cashew nut stir fry",
+   "pad himmaphan",
+   "cashew",
+   "gai pad med mamuang",
+   "chicken cashew",
+   "cashew stir fry",
+   "pad med mamuang himmaphan"
+  ]
+ },
+ "cha-dum-yen": {
+  "title": "Cha Dum Yen (ชาดำเย็น) — Thai Iced Black Tea",
+  "thai": [
+   "ชาดำเย็น"
+  ],
+  "aliases": [
+   "cha dum yen",
+   "thai iced black tea",
+   "cha dam yen"
+  ]
+ },
+ "cha-kiao-yen": {
+  "title": "Cha Kiao Yen (ชาเขียวเย็น) — Thai Green Milk Tea",
+  "thai": [
+   "ชาเขียวเย็น"
+  ],
+  "aliases": [
+   "cha kiao yen",
+   "thai green tea",
+   "green milk tea",
+   "cha khiao yen",
+   "cha kiew wan"
+  ]
+ },
+ "cha-manao": {
+  "title": "Cha Manao (ชามะนาว) — Thai Iced Lemon Tea",
+  "thai": [
+   "ชามะนาว"
+  ],
+  "aliases": [
+   "cha manao",
+   "lime tea",
+   "lemon tea",
+   "iced lime tea",
+   "cha ma nao",
+   "iced lemon tea"
+  ]
+ },
+ "chicken-satay": {
+  "title": "Chicken Satay (ไก่สะเต๊ะ) — The Real Thai Recipe",
+  "thai": [
+   "ไก่สะเต๊ะ"
+  ],
+  "aliases": [
+   "chicken satay",
+   "satay gai",
+   "gai satay",
+   "satay chicken",
+   "kai satay",
+   "chicken sate"
+  ]
+ },
+ "chor-muang": {
+  "title": "Chor Muang (ช่อม่วง) — Royal Thai Purple Flower Dumplings",
+  "thai": [
+   "ช่อม่วง"
+  ],
+  "aliases": []
+ },
+ "chu-chee-pla": {
+  "title": "Chu Chee Pla (ฉู่ฉี่ปลา) — Fish in Rich Chu Chee Curry",
+  "thai": [
+   "ฉู่ฉี่ปลา"
+  ],
+  "aliases": []
+ },
+ "fak-thong-kaeng-buat": {
+  "title": "Fak Thong Kaeng Buat (ฟักทองแกงบวด) — Pumpkin in Sweet Coconut Milk",
+  "thai": [
+   "ฟักทองแกงบวด"
+  ],
+  "aliases": [
+   "fak thong kaeng buat",
+   "pumpkin in coconut milk",
+   "pumpkin coconut dessert"
+  ]
+ },
+ "foi-thong": {
+  "title": "Foi Thong (ฝอยทอง) — Golden Thread Egg-Yolk Sweet",
+  "thai": [
+   "ฝอยทอง"
+  ],
+  "aliases": [
+   "foi thong",
+   "golden threads",
+   "egg yolk threads",
+   "foy thong"
+  ]
+ },
+ "gaeng-jued": {
+  "title": "Gaeng Jued (แกงจืด) — The Real Thai Clear Soup",
+  "thai": [
+   "แกงจืด"
+  ],
+  "aliases": [
+   "gaeng jued",
+   "kaeng jued",
+   "gang jued",
+   "clear soup",
+   "glass noodle soup",
+   "gaeng jued wun sen"
+  ]
+ },
+ "gaeng-kari-gai": {
+  "title": "Gaeng Kari Gai (แกงกะหรี่ไก่) — Thai Chicken Curry with Coconut Milk and Potatoes",
+  "thai": [
+   "แกงกะหรี่ไก่"
+  ],
+  "aliases": [
+   "kari gai",
+   "kaeng kari gai",
+   "gaeng kari gai",
+   "yellow chicken curry",
+   "kang kari gai"
+  ]
+ },
+ "gaeng-khanun": {
+  "title": "Gaeng Khanun (แกงขนุน) — Northern Thai Young Jackfruit Curry with Pork &amp; Tomatoes",
+  "thai": [
+   "แกงขนุน"
+  ],
+  "aliases": [
+   "jackfruit curry",
+   "kaeng kanun",
+   "khanun curry",
+   "gaeng khanun"
+  ]
+ },
+ "gaeng-om": {
+  "title": "Gaeng Om (แกงอ่อม) — Isaan Herbal Soup-Stew",
+  "thai": [
+   "แกงอ่อม"
+  ],
+  "aliases": [
+   "gaeng om",
+   "kaeng om",
+   "northern herbal soup",
+   "gaeng om moo"
+  ]
+ },
+ "gaeng-pa": {
+  "title": "Gaeng Pa (แกงป่า) — Thai Jungle Curry",
+  "thai": [
+   "แกงป่า"
+  ],
+  "aliases": [
+   "jungle curry",
+   "kaeng pa",
+   "gang pa",
+   "country curry"
+  ]
+ },
+ "gaeng-poo": {
+  "title": "Gaeng Poo (แกงปูใบชะพลู) — Southern Thai Crab Curry with Betel Leaves",
+  "thai": [
+   "แกงปูใบชะพลู"
+  ],
+  "aliases": [
+   "crab curry",
+   "gaeng pu",
+   "kaeng pu",
+   "poo curry"
+  ]
+ },
+ "gaeng-som": {
+  "title": "Gaeng Som (แกงส้ม) — The Real Thai Sour Curry",
+  "thai": [
+   "แกงส้ม"
+  ],
+  "aliases": [
+   "gaeng som",
+   "kaeng som",
+   "gang som",
+   "sour curry",
+   "sour orange curry",
+   "gaeng som pla",
+   "gang som goong"
+  ]
+ },
+ "gaeng-som-cha-om-kai": {
+  "title": "Gaeng Som Cha-Om Kai (แกงส้มชะอมไข่) — Thai Sour Curry with Cha-Om Omelette",
+  "thai": [
+   "แกงส้มชะอมไข่"
+  ],
+  "aliases": []
+ },
+ "gai-tod-hat-yai": {
+  "title": "Gai Tod Hat Yai (ไก่ทอดหาดใหญ่) — Southern Thai Fried Chicken",
+  "thai": [
+   "ไก่ทอดหาดใหญ่"
+  ],
+  "aliases": [
+   "gai tod hat yai",
+   "hat yai chicken",
+   "hat yai fried chicken",
+   "fried chicken hat yai"
+  ]
+ },
+ "gai-yang": {
+  "title": "Gai Yang (ไก่ย่าง) — Thai Grilled Chicken with Jaew",
+  "thai": [
+   "ไก่ย่าง"
+  ],
+  "aliases": [
+   "gai yang",
+   "kai yang",
+   "grilled chicken",
+   "bbq chicken",
+   "gai yang som tam",
+   "thai grilled chicken"
+  ]
+ },
+ "goong-chae-nam-pla": {
+  "title": "Goong Chae Nam Pla (กุ้งแช่น้ำปลา) — Raw Prawns in Fish Sauce",
+  "thai": [
+   "กุ้งแช่น้ำปลา"
+  ],
+  "aliases": [
+   "goong chae nam pla",
+   "prawn sashimi",
+   "raw prawn",
+   "goong chae nam pla dip",
+   "raw prawn salad"
+  ]
+ },
+ "goong-ob-woon-sen": {
+  "title": "Goong Ob Woon Sen (กุ้งอบวุ้นเส้น) — Clay-Pot Prawns with Glass Noodles",
+  "thai": [
+   "กุ้งอบวุ้นเส้น"
+  ],
+  "aliases": [
+   "goong ob woon sen",
+   "goong op woon sen",
+   "prawn glass noodle pot",
+   "goong ob wun sen",
+   "prawns glass noodles"
+  ]
+ },
+ "goong-pad-sataw": {
+  "title": "Goong Pad Sataw (กุ้งผัดสะตอ) — Southern Prawn Stir-Fry with Stink Beans",
+  "thai": [
+   "กุ้งผัดสะตอ"
+  ],
+  "aliases": [
+   "goong pad sataw",
+   "prawn sataw",
+   "prawn stink bean",
+   "goong pad sator",
+   "pad sataw goong",
+   "prawn sator"
+  ]
+ },
+ "goong-pao": {
+  "title": "Goong Pao (กุ้งเผา) — Charcoal-Grilled River Prawns",
+  "thai": [
+   "กุ้งเผา"
+  ],
+  "aliases": []
+ },
+ "green-curry": {
+  "title": "Thai Green Curry (แกงเขียวหวาน) — From Scratch, The Real Way",
+  "thai": [
+   "แกงเขียวหวาน"
+  ],
+  "aliases": [
+   "green curry",
+   "gaeng kiew wan",
+   "kaeng khiao wan",
+   "gang keow wan",
+   "geang kheow wan",
+   "keaw wan",
+   "kiew wan",
+   "green chicken curry",
+   "green curry chicken",
+   "chicken green curry",
+   "gaeng kiew wan gai",
+   "gang kiew wan gai"
+  ]
+ },
+ "guay-tiew-ruea": {
+  "title": "Guay Tiew Ruea (ก๋วยเตี๋ยวเรือ) — Thai Boat Noodles",
+  "thai": [
+   "ก๋วยเตี๋ยวเรือ"
+  ],
+  "aliases": [
+   "boat noodle",
+   "boat noodles",
+   "kuay tiew ruea",
+   "guay tiew ruea",
+   "kway teow ruea",
+   "kuay tiew rua",
+   "boat noodle soup"
+  ]
+ },
+ "hoi-lai-pad-nam-prik-pao": {
+  "title": "Hoi Lai Pad Nam Prik Pao (หอยลายผัดน้ำพริกเผา) — Clams Stir-Fried in Roasted Chilli Jam",
+  "thai": [
+   "หอยลายผัดน้ำพริกเผา"
+  ],
+  "aliases": [
+   "hoi lai pad nam prik pao",
+   "clam chilli jam",
+   "clam stir fry"
+  ]
+ },
+ "hoi-tod": {
+  "title": "Hoi Tod (หอยทอด) — Thai Crispy Mussel &amp; Oyster Omelette",
+  "thai": [
+   "หอยทอด"
+  ],
+  "aliases": [
+   "hoi tod",
+   "hoy tod",
+   "mussel pancake",
+   "oyster omelette",
+   "hoi tod krob",
+   "mussel omelette"
+  ]
+ },
+ "hor-mok": {
+  "title": "Hor Mok (ห่อหมก) — Thai Steamed Fish Curry Custard",
+  "thai": [
+   "ห่อหมก"
+  ],
+  "aliases": [
+   "hor mok",
+   "hors mok",
+   "steamed curry custard",
+   "hor mok pla",
+   "hor mok talay",
+   "fish custard curry",
+   "fish custard",
+   "seafood custard"
+  ]
+ },
+ "hoy-tod": {
+  "title": "Hoy Tod (หอยทอด) — Crispy Thai Mussel Pancake",
+  "thai": [
+   "หอยทอด"
+  ],
+  "aliases": []
+ },
+ "itim-kathi": {
+  "title": "Itim Kathi (ไอติมกะทิ) — Thai Coconut Ice Cream",
+  "thai": [
+   "ไอติมกะทิ"
+  ],
+  "aliases": []
+ },
+ "jaew-het": {
+  "title": "Jaew Het (แจ่วเห็ด) — Isaan Mushroom Jaew with Roasted Chillies",
+  "thai": [
+   "แจ่วเห็ด"
+  ],
+  "aliases": []
+ },
+ "jeow-bong": {
+  "title": "Jeow Bong (แจ่วบอง) — Smoky Lao-Isaan Chilli Relish with Galangal",
+  "thai": [
+   "แจ่วบอง"
+  ],
+  "aliases": []
+ },
+ "jok": {
+  "title": "Jok (โจ๊ก) — Thai Rice Porridge",
+  "thai": [
+   "โจ๊ก"
+  ],
+  "aliases": [
+   "jok",
+   "congee",
+   "rice porridge",
+   "jok moo",
+   "jok gai"
+  ]
+ },
+ "kaeng-hang-lay": {
+  "title": "Kaeng Hang Lay (แกงฮังเล) — Northern Thai Burmese-Style Pork Curry",
+  "thai": [
+   "แกงฮังเล"
+  ],
+  "aliases": [
+   "hang lay",
+   "hung lay",
+   "kaeng hang ley",
+   "hang ley",
+   "burmese pork curry",
+   "gaeng hang lay",
+   "kaeng hung lay"
+  ]
+ },
+ "kaeng-ho": {
+  "title": "Kaeng Ho (แกงโฮะ) — Northern Thai \"Mix-It-All\" Curry",
+  "thai": [
+   "แกงโฮะ",
+   "Northern Thai · Curries · Also called Khua Ho (คั่วโฮะ)"
+  ],
+  "aliases": [
+   "kaeng ho",
+   "khua ho",
+   "kua ho",
+   "northern mix curry"
+  ]
+ },
+ "kaeng-khae": {
+  "title": "Kaeng Khae (แกงแค) — Northern Thai Vegetable Curry",
+  "thai": [
+   "แกงแค"
+  ],
+  "aliases": [
+   "kaeng khae",
+   "gaeng kae",
+   "northern vegetable curry",
+   "kaeng kae"
+  ]
+ },
+ "kaeng-kradang": {
+  "title": "Kaeng Kradang (แกงกระด้าง) — Northern Thai Pork Jelly Curry",
+  "thai": [
+   "แกงกระด้าง"
+  ],
+  "aliases": [
+   "kaeng kradang",
+   "pork jelly curry",
+   "kradang"
+  ]
+ },
+ "kaeng-kua-gai": {
+  "title": "Kaeng Kua Gai (แกงคั่วไก่) — Thai Coconut-Cream Dry Curry",
+  "thai": [
+   "แกงคั่วไก่"
+  ],
+  "aliases": [
+   "gaeng kua gai",
+   "kaeng kua",
+   "gang kua",
+   "chicken gaeng kua",
+   "kaeng kua chicken"
+  ]
+ },
+ "kaeng-kua-sapparod": {
+  "title": "Kaeng Kua Sapparod (แกงคั่วสับปะรด) — Southern Pineapple Curry with Prawns",
+  "thai": [
+   "แกงคั่วสับปะรด"
+  ],
+  "aliases": [
+   "pineapple curry",
+   "kaeng kua sapparot",
+   "gaeng kua sapparot",
+   "kaeng kua saparod",
+   "pineapple red curry",
+   "kang kua sapparot",
+   "pineapple prawn curry"
+  ]
+ },
+ "kaeng-liang": {
+  "title": "Kaeng Liang (แกงเลียง) — Peppery Mixed-Vegetable Soup with Prawns",
+  "thai": [
+   "แกงเลียง"
+  ],
+  "aliases": [
+   "kaeng liang",
+   "gang liang",
+   "vegetable herb soup",
+   "mixed vegetable soup",
+   "herb soup",
+   "kaeng liang pak"
+  ]
+ },
+ "kaeng-luang": {
+  "title": "Kaeng Luang (แกงเหลือง) — Southern Thai Sour Curry",
+  "thai": [
+   "แกงเหลือง"
+  ],
+  "aliases": [
+   "kaeng luang",
+   "gaeng luang",
+   "southern yellow curry",
+   "kaeng leung"
+  ]
+ },
+ "kaeng-nor-mai": {
+  "title": "Kaeng Nor Mai (แกงหน่อไม้) — Isaan Bamboo Shoot Curry",
+  "thai": [
+   "แกงหน่อไม้"
+  ],
+  "aliases": [
+   "kaeng nor mai",
+   "bamboo shoot curry",
+   "bamboo curry",
+   "gaeng nor mai"
+  ]
+ },
+ "kaeng-phed-pet-yang": {
+  "title": "Kaeng Phed Pet Yang (แกงเผ็ดเป็ดย่าง) — Red Curry with Roast Duck",
+  "thai": [
+   "แกงเผ็ดเป็ดย่าง"
+  ],
+  "aliases": [
+   "duck curry",
+   "gaeng ped ped yang",
+   "kaeng phet pet yang",
+   "gang ped ped yang",
+   "gang phed ped yang",
+   "ped yang curry",
+   "roast duck curry",
+   "duck red curry"
+  ]
+ },
+ "kaeng-tai-pla": {
+  "title": "Kaeng Tai Pla (แกงไตปลา) — Southern Fermented Fish Curry",
+  "thai": [
+   "แกงไตปลา"
+  ],
+  "aliases": [
+   "kaeng tai pla",
+   "gaeng tai pla",
+   "fermented fish kidney curry",
+   "tai pla curry"
+  ]
+ },
+ "kai-jeow-poo": {
+  "title": "Kai Jeow Poo (ไข่เจียวปู) — Thai Crab Omelette",
+  "thai": [
+   "ไข่เจียวปู"
+  ],
+  "aliases": [
+   "kai jeow poo",
+   "kai jeow pu",
+   "crab omelette",
+   "crab omelet",
+   "kai jiew pu"
+  ]
+ },
+ "kai-kratha": {
+  "title": "Kai Kratha (ไข่กระทะ) — Isaan Pan-Fried Eggs with Minced Pork and Sausage",
+  "thai": [
+   "ไข่กระทะ"
+  ],
+  "aliases": [
+   "kai kratha",
+   "kai kata",
+   "fried egg pan",
+   "kai kra ta"
+  ]
+ },
+ "kai-palo": {
+  "title": "Kai Palo (ไข่พะโล้) — Five-Spice Braised Pork Belly and Eggs in Sweet Soy Stew",
+  "thai": [
+   "ไข่พะโล้"
+  ],
+  "aliases": [
+   "kai palo",
+   "kay palo",
+   "pork belly egg stew",
+   "palo",
+   "kai phalo",
+   "egg pork stew"
+  ]
+ },
+ "kai-tod-takrai": {
+  "title": "Kai Tod Takrai (ไก่ทอดตะไคร้) — Thai Lemongrass Fried Chicken",
+  "thai": [
+   "ไก่ทอดตะไคร้"
+  ],
+  "aliases": [
+   "kai tod takrai",
+   "gai tod takrai",
+   "lemongrass chicken",
+   "lemongrass fried chicken"
+  ]
+ },
+ "kanom-chan": {
+  "title": "Kanom Chan (ขนมชั้น) — Layered Steamed Coconut Cake",
+  "thai": [
+   "ขนมชั้น"
+  ],
+  "aliases": []
+ },
+ "kanom-krok": {
+  "title": "Kanom Krok (ขนมครก) — The Real Thai Coconut Pancakes",
+  "thai": [
+   "ขนมครก"
+  ],
+  "aliases": []
+ },
+ "kanom-tan": {
+  "title": "Kanom Tan (ขนมตาล) — Steamed Palm-Fruit Cakes",
+  "thai": [
+   "ขนมตาล"
+  ],
+  "aliases": [
+   "kanom tan",
+   "palm sugar cake"
+  ]
+ },
+ "kanom-tuay": {
+  "title": "Kanom Tuay (ขนมถ้วย) — The Real Thai Coconut Custard Cups",
+  "thai": [
+   "ขนมถ้วย"
+  ],
+  "aliases": []
+ },
+ "khai-yat-sai": {
+  "title": "Khai Yat Sai (ไข่ยัดไส้) — Thai Stuffed Omelette",
+  "thai": [
+   "ไข่ยัดไส้"
+  ],
+  "aliases": [
+   "khai yat sai",
+   "kai yat sai",
+   "stuffed omelette",
+   "stuffed omelet",
+   "kai yud sai"
+  ]
+ },
+ "khanom-buang": {
+  "title": "Khanom Buang (ขนมเบื้อง) — Thai Crispy Crepes with Sweet Meringue",
+  "thai": [
+   "ขนมเบื้อง"
+  ],
+  "aliases": [
+   "khanom buang",
+   "kanom buang",
+   "thai crepes",
+   "crispy pancakes",
+   "khanom buang yuan"
+  ]
+ },
+ "khanom-chan": {
+  "title": "Khanom Chan (ขนมชั้น) — Thai Layered Pandan Cake",
+  "thai": [
+   "ขนมชั้น"
+  ],
+  "aliases": [
+   "khanom chan",
+   "kanom chan",
+   "layered dessert"
+  ]
+ },
+ "khanom-jeen-gaeng-nuea": {
+  "title": "Khanom Jeen Gaeng Nuea (ขนมจีนแกงเนื้อ) — Rice Vermicelli with Beef Curry",
+  "thai": [
+   "ขนมจีนแกงเนื้อ"
+  ],
+  "aliases": [
+   "khanom jeen gaeng nuea",
+   "kanom jeen gaeng nuea",
+   "beef curry vermicelli",
+   "gaeng nuea"
+  ]
+ },
+ "khanom-jeen-nam-ngiao": {
+  "title": "Khanom Jeen Nam Ngiao (ขนมจีนน้ำเงี้ยว) — Northern Thai Rice Noodle Curry",
+  "thai": [
+   "ขนมจีนน้ำเงี้ยว"
+  ],
+  "aliases": [
+   "khanom jeen nam ngiao",
+   "kanom jeen nam ngiao",
+   "nam ngiao",
+   "northern vermicelli curry"
+  ]
+ },
+ "khanom-jeen-nam-ya": {
+  "title": "Khanom Jeen Nam Ya (ขนมจีนน้ำยา) — Thai Fish Curry Noodles",
+  "thai": [
+   "ขนมจีนน้ำยา"
+  ],
+  "aliases": [
+   "khanom jeen nam ya",
+   "kanom jeen nam ya",
+   "khanom jin nam ya",
+   "nam ya",
+   "fish curry vermicelli",
+   "nam ya curry"
+  ]
+ },
+ "khanom-jeen-sao-nam": {
+  "title": "Khanom Jeen Sao Nam (ขนมจีนซาวน้ำ) — Summer Rice Noodles in Coconut Milk with Pineapple and Ginger",
+  "thai": [
+   "ขนมจีนซาวน้ำ"
+  ],
+  "aliases": [
+   "khanom jeen sao nam",
+   "kanom jeen sao nam",
+   "sao nam",
+   "coconut vermicelli"
+  ]
+ },
+ "khanom-jin-nam-prik": {
+  "title": "Khanom Jin Nam Phrik (ขนมจีนน้ำพริก) — Rice Noodles with Prawn Nam Phrik",
+  "thai": [
+   "ขนมจีนน้ำพริก"
+  ],
+  "aliases": [
+   "khanom jeen nam prik",
+   "kanom jin nam prik",
+   "nam prik vermicelli",
+   "khanom jin nam prik"
+  ]
+ },
+ "khanom-kluay": {
+  "title": "Khanom Kluay (ขนมกล้วย) — Thai Steamed Banana and Coconut Cake",
+  "thai": [
+   "ขนมกล้วย"
+  ],
+  "aliases": [
+   "khanom kluay",
+   "kanom kluay",
+   "banana cake",
+   "steamed banana",
+   "banana pudding",
+   "khanom gluay"
+  ]
+ },
+ "khanom-mo-kaeng": {
+  "title": "Khanom Mo Kaeng (ขนมหม้อแกง) — Thai Baked Coconut Custard",
+  "thai": [
+   "ขนมหม้อแกง"
+  ],
+  "aliases": [
+   "khanom mo kaeng",
+   "kanom mo kaeng",
+   "egg custard",
+   "mung bean custard",
+   "khanom moh kaeng"
+  ]
+ },
+ "khanom-pang-na-moo": {
+  "title": "Khanom Pang Na Moo (ขนมปังหน้าหมู) — Thai Pork Toast",
+  "thai": [
+   "ขนมปังหน้าหมู"
+  ],
+  "aliases": [
+   "khanom pang na moo",
+   "fried bread",
+   "minced pork toast",
+   "pork toast",
+   "kanom pang na moo"
+  ]
+ },
+ "khanom-pang-sangkaya": {
+  "title": "Khanom Pang Sangkaya (ขนมปังสังขยา) — Thai Custard Toast",
+  "thai": [
+   "ขนมปังสังขยา"
+  ],
+  "aliases": [
+   "khanom pang sangkaya",
+   "bread custard",
+   "kaya toast",
+   "sangkaya toast"
+  ]
+ },
+ "khanom-tako": {
+  "title": "Khanom Tako (ขนมตะโก้) — Layered Pandan and Coconut Pudding in Banana Leaf Cups",
+  "thai": [
+   "ขนมตะโก้"
+  ],
+  "aliases": [
+   "khanom tako",
+   "kanom tako",
+   "tako",
+   "pandan custard",
+   "coconut custard cups tako"
+  ]
+ },
+ "khanom-tang-taek": {
+  "title": "Khanom Tang Taek (ขนมถังแตก) — Thai Temple-Fair Pancake",
+  "thai": [
+   "ขนมถังแตก"
+  ],
+  "aliases": [
+   "khanom tang taek",
+   "kanom tang taek",
+   "crispy crepe",
+   "tang taek",
+   "thai crispy pancake"
+  ]
+ },
+ "khanom-thuai-fu": {
+  "title": "Khanom Thuai Fu (ขนมถ้วยฟู) — Thai Steamed Fermented Rice Cake",
+  "thai": [
+   "ขนมถ้วยฟู"
+  ],
+  "aliases": [
+   "khanom thuai fu",
+   "fermented rice cake",
+   "kanom tuay fu"
+  ]
+ },
+ "khao-chae": {
+  "title": "Khao Chae (ข้าวแช่) — Royal Thai Rice in Jasmine-Scented Water with Side Condiments",
+  "thai": [
+   "ข้าวแช่"
+  ],
+  "aliases": [
+   "khao chae",
+   "jasmine rice iced",
+   "songkran rice",
+   "iced rice",
+   "jasmine rice in water"
+  ]
+ },
+ "khao-jee": {
+  "title": "Khao Jee (ข้าวจี่) — Isaan Grilled Sticky Rice",
+  "thai": [
+   "ข้าวจี่"
+  ],
+  "aliases": [
+   "khao jee",
+   "khao ji",
+   "grilled sticky rice",
+   "khao jee egg"
+  ]
+ },
+ "khao-kan-jin": {
+  "title": "Khao Kan Jin (ข้าวกั๊นจิ๊น) — Northern Thai Rice Steamed with Pork Blood",
+  "thai": [
+   "ข้าวกั๊นจิ๊น"
+  ],
+  "aliases": []
+ },
+ "khao-kha-mu": {
+  "title": "Khao Kha Mu (ข้าวขาหมู) — The Real Thai Braised Pork Leg Rice",
+  "thai": [
+   "ข้าวขาหมู"
+  ],
+  "aliases": [
+   "khao kha moo",
+   "khao ka moo",
+   "kao ka moo",
+   "kha moo",
+   "pork leg rice",
+   "braised pork rice",
+   "pork knuckle rice",
+   "stewed pork knuckle",
+   "khao kha mu",
+   "ka moo"
+  ]
+ },
+ "khao-khluk-kapi": {
+  "title": "Khao Khluk Kapi (ข้าวคลุกกะปิ) — Shrimp Paste Rice",
+  "thai": [
+   "ข้าวคลุกกะปิ"
+  ],
+  "aliases": [
+   "khao kluk kapi",
+   "shrimp paste rice"
+  ]
+ },
+ "khao-kriap-pak-moh": {
+  "title": "Khao Kriap Pak Moh (ข้าวเกรียบปากหม้อ) — Steamed Rice-Skin Dumplings with Pork Filling",
+  "thai": [
+   "ข้าวเกรียบปากหม้อ"
+  ],
+  "aliases": [
+   "khao kriap pak moh",
+   "pak moh",
+   "steamed dumplings"
+  ]
+ },
+ "khao-lam": {
+  "title": "Khao Lam (ข้าวหลาม) — Sticky Rice Roasted in Bamboo with Coconut and Black Beans",
+  "thai": [
+   "ข้าวหลาม"
+  ],
+  "aliases": [
+   "khao lam",
+   "bamboo sticky rice",
+   "bamboo rice",
+   "khao laam"
+  ]
+ },
+ "khao-man-gai": {
+  "title": "Khao Man Gai (ข้าวมันไก่) — The Real Thai Chicken Rice",
+  "thai": [
+   "ข้าวมันไก่"
+  ],
+  "aliases": [
+   "khao man gai",
+   "chicken rice",
+   "hainanese chicken"
+  ]
+ },
+ "khao-man-som-tum": {
+  "title": "Khao Man Som Tum (ข้าวมันส้มตำ) — Coconut-Milk Rice with Papaya Salad",
+  "thai": [
+   "ข้าวมันส้มตำ"
+  ],
+  "aliases": [
+   "khao man som tum",
+   "khao mun som tum",
+   "coconut rice papaya salad",
+   "khao mun som tam"
+  ]
+ },
+ "khao-mao": {
+  "title": "Khao Mao (ข้าวเม่า) — Pounded Young Rice Dessert",
+  "thai": [
+   "ข้าวเม่า"
+  ],
+  "aliases": [
+   "khao mao",
+   "young rice dessert",
+   "khao mao tod"
+  ]
+ },
+ "khao-mok-gai": {
+  "title": "Khao Mok Gai (ข้าวหมกไก่) — Thai-Muslim Chicken Biryani",
+  "thai": [
+   "ข้าวหมกไก่"
+  ],
+  "aliases": [
+   "khao mok gai",
+   "thai biryani",
+   "chicken biryani",
+   "biryani",
+   "khao mok"
+  ]
+ },
+ "khao-mok-nuea": {
+  "title": "Khao Mok Nuea (ข้าวหมกเนื้อ) — Thai-Style Beef Biryani",
+  "thai": [
+   "ข้าวหมกเนื้อ"
+  ],
+  "aliases": []
+ },
+ "khao-moo-daeng": {
+  "title": "Khao Moo Daeng (ข้าวหมูแดง) — Rice with Thai Red Barbecue Pork",
+  "thai": [
+   "ข้าวหมูแดง"
+  ],
+  "aliases": [
+   "khao moo daeng",
+   "red pork rice",
+   "bbq pork rice",
+   "char siu rice",
+   "khao moo dang",
+   "roast pork rice"
+  ]
+ },
+ "khao-mun-gai-tod": {
+  "title": "Khao Mun Gai Tod (ข้าวมันไก่ทอด) — Thai Fried Chicken Rice",
+  "thai": [
+   "ข้าวมันไก่ทอด"
+  ],
+  "aliases": [
+   "khao mun gai tod",
+   "fried chicken rice",
+   "khao man gai tod",
+   "kao mun gai tod",
+   "crispy chicken rice",
+   "fried chicken khao mun gai"
+  ]
+ },
+ "khao-na-gai": {
+  "title": "Khao Na Gai (ข้าวหน้าไก่) — Chicken in Thick Gravy over Rice",
+  "thai": [
+   "ข้าวหน้าไก่"
+  ],
+  "aliases": [
+   "khao na gai",
+   "chicken on rice",
+   "khao na kai",
+   "rice topped chicken"
+  ]
+ },
+ "khao-na-pet": {
+  "title": "Khao Na Pet (ข้าวหน้าเป็ด) — Five-Spice Duck on Rice",
+  "thai": [
+   "ข้าวหน้าเป็ด"
+  ],
+  "aliases": []
+ },
+ "khao-niew-durian": {
+  "title": "Khao Niew Durian (ข้าวเหนียวทุเรียน) — Durian Sticky Rice",
+  "thai": [
+   "ข้าวเหนียวทุเรียน"
+  ],
+  "aliases": [
+   "khao niew durian",
+   "durian sticky rice",
+   "durian with sticky rice"
+  ]
+ },
+ "khao-niew-piak": {
+  "title": "Khao Niew Piak (ข้าวเหนียวเปียก) — Warm Sweet Sticky Rice with Coconut Milk",
+  "thai": [
+   "ข้าวเหนียวเปียก"
+  ],
+  "aliases": [
+   "khao niew piak",
+   "sweet sticky rice porridge",
+   "khao niao piak"
+  ]
+ },
+ "khao-niew-sangkaya": {
+  "title": "Khao Niew Sangkaya (ข้าวเหนียวสังขยา) — Sticky Rice with Pandan Custard",
+  "thai": [
+   "ข้าวเหนียวสังขยา"
+  ],
+  "aliases": [
+   "khao niew sangkaya",
+   "sticky rice custard",
+   "sangkaya sticky rice"
+  ]
+ },
+ "khao-niew-tua-dum": {
+  "title": "Khao Niew Tua Dum (ข้าวเหนียวถั่วดำ) — Black Bean Sticky Rice in Coconut Cream",
+  "thai": [
+   "ข้าวเหนียวถั่วดำ"
+  ],
+  "aliases": [
+   "khao niew tua dum",
+   "black beans sticky rice"
+  ]
+ },
+ "khao-pad": {
+  "title": "Khao Pad (ข้าวผัด) — The Real Thai Fried Rice",
+  "thai": [
+   "ข้าวผัด"
+  ],
+  "aliases": [
+   "khao pad",
+   "kao pad",
+   "fried rice",
+   "thai fried rice",
+   "khao phat",
+   "khau pad",
+   "egg fried rice",
+   "khao pad gai",
+   "khao pad moo",
+   "khao pad neua",
+   "khao pad kai",
+   "special fried rice"
+  ]
+ },
+ "khao-pad-naem": {
+  "title": "Khao Pad Naem (ข้าวผัดแหนม) — Fried Rice with Fermented Pork",
+  "thai": [
+   "ข้าวผัดแหนม"
+  ],
+  "aliases": [
+   "khao pad naem",
+   "naem fried rice",
+   "fermented pork fried rice"
+  ]
+ },
+ "khao-pad-poo": {
+  "title": "Khao Pad Poo (ข้าวผัดปู) — Thai Crab Fried Rice",
+  "thai": [
+   "ข้าวผัดปู"
+  ],
+  "aliases": [
+   "khao pad poo",
+   "khao pad pu",
+   "crab fried rice",
+   "khao phat pu",
+   "crab meat fried rice",
+   "khao pad puh"
+  ]
+ },
+ "khao-pad-saparot": {
+  "title": "Khao Pad Saparot (ข้าวผัดสับปะรด) — Pineapple Fried Rice",
+  "thai": [
+   "ข้าวผัดสับปะรด"
+  ],
+  "aliases": [
+   "khao pad saparot",
+   "pineapple fried rice",
+   "khao phat sapparot",
+   "pineapple rice",
+   "khao pad sapparot",
+   "khao pad sapparod",
+   "kao pad saparot"
+  ]
+ },
+ "khao-soi": {
+  "title": "Khao Soi (ข้าวซอย) — Authentic Northern Thai Curry Noodles",
+  "thai": [
+   "ข้าวซอย"
+  ],
+  "aliases": [
+   "khao soi",
+   "khao soy",
+   "kao soi",
+   "khao soi gai",
+   "chiang mai noodles",
+   "northern curry noodles"
+  ]
+ },
+ "khao-soi-nam-na": {
+  "title": "Khao Soi Nam Na (ข้าวซอยน้ำหน้า) — Chiang Khong's Paste-Free Khao Soi",
+  "thai": [
+   "ข้าวซอยน้ำหน้า"
+  ],
+  "aliases": [
+   "khao soi nam na",
+   "nam na",
+   "pork tomato dip noodles"
+  ]
+ },
+ "khao-tang-na-tang": {
+  "title": "Khao Tang Na Tang (ข้าวตังหน้าตั้ง) — Crisp Rice Crackers with Pork &amp; Shrimp Coconut Dip",
+  "thai": [
+   "ข้าวตังหน้าตั้ง"
+  ],
+  "aliases": [
+   "khao tang na tang",
+   "rice crackers",
+   "crispy rice dip",
+   "khao tang",
+   "na tang",
+   "crispy rice with dip"
+  ]
+ },
+ "khao-tom": {
+  "title": "Khao Tom (ข้าวต้ม) — Thai Rice Soup with Minced Pork",
+  "thai": [
+   "ข้าวต้ม"
+  ],
+  "aliases": [
+   "khao tom",
+   "rice soup",
+   "congee",
+   "jok",
+   "rice porridge",
+   "khao tom moo",
+   "khao tom gai",
+   "jok moo"
+  ]
+ },
+ "khao-tom-mat": {
+  "title": "Khao Tom Mat (ข้าวต้มมัด) — Thai Banana-Leaf Sticky Rice Parcels",
+  "thai": [
+   "ข้าวต้มมัด"
+  ],
+  "aliases": [
+   "khao tom mat",
+   "khao tom mud",
+   "banana leaf rice",
+   "sticky rice banana",
+   "khao tom mad"
+  ]
+ },
+ "khao-tom-pla": {
+  "title": "Khao Tom Pla (ข้าวต้มปลา) — Thai Rice Soup with Fish",
+  "thai": [
+   "ข้าวต้มปลา"
+  ],
+  "aliases": [
+   "khao tom pla",
+   "fish rice soup",
+   "fish congee",
+   "khao tom pla goong"
+  ]
+ },
+ "khao-yam": {
+  "title": "Khao Yam (ข้าวยำ) — Southern Thai Rice Salad",
+  "thai": [
+   "ข้าวยำ"
+  ],
+  "aliases": [
+   "khao yam",
+   "khao yum",
+   "southern rice salad",
+   "budu rice salad",
+   "khao yam pak tai"
+  ]
+ },
+ "kluay-buat-chi": {
+  "title": "Kluay Buat Chi (กล้วยบวชชี) — Banana in Coconut Milk",
+  "thai": [
+   "กล้วยบวชชี"
+  ],
+  "aliases": [
+   "kluay buat chi",
+   "kluay buat chee",
+   "banana in coconut milk",
+   "banana coconut",
+   "kluay buad chee"
+  ]
+ },
+ "koi-nuea": {
+  "title": "Koi Nuea (ก้อยเนื้อ) — Isaan Raw Beef Salad with Bile, Blood and Herbs",
+  "thai": [
+   "ก้อยเนื้อ"
+  ],
+  "aliases": []
+ },
+ "kor-moo-yang": {
+  "title": "Kor Moo Yang (คอหมูย่าง) — Thai Grilled Pork Neck",
+  "thai": [
+   "คอหมูย่าง"
+  ],
+  "aliases": [
+   "kor moo yang",
+   "kho moo yang",
+   "kaw moo yang",
+   "khor moo yang",
+   "grilled pork neck",
+   "pork neck",
+   "grilled pork jowl"
+  ]
+ },
+ "kua-kling": {
+  "title": "Kua Kling (คั่วกลิ้ง) — Southern Dry-Fried Pork Curry",
+  "thai": [
+   "คั่วกลิ้ง"
+  ],
+  "aliases": [
+   "kua kling",
+   "khua kling",
+   "kua gling",
+   "southern dry curry pork"
+  ]
+ },
+ "kuay-jap": {
+  "title": "Kuay Jap (ก๋วยจั๊บ) — Five-Spice Rice Noodle Soup",
+  "thai": [
+   "ก๋วยจั๊บ"
+  ],
+  "aliases": [
+   "guay jub",
+   "kuay jab",
+   "kway jap",
+   "guay jab",
+   "rolled rice noodles"
+  ]
+ },
+ "kuay-tiew-kai": {
+  "title": "Kuay Tiew Kai (ก๋วยเตี๋ยวไก่) — Thai Chicken Noodle Soup",
+  "thai": [
+   "ก๋วยเตี๋ยวไก่"
+  ],
+  "aliases": [
+   "kuay tiew kai",
+   "chicken noodle soup",
+   "kuay teow gai",
+   "kway teow kai"
+  ]
+ },
+ "kuay-tiew-khua-gai": {
+  "title": "Kuay Tiew Khua Gai (ก๋วยเตี๋ยวคั่วไก่) — Thai Fried Chicken Noodles",
+  "thai": [
+   "ก๋วยเตี๋ยวคั่วไก่"
+  ],
+  "aliases": [
+   "kuay tiew kua gai",
+   "kway teow kua gai",
+   "kuay tiew khua gai",
+   "stir fried noodle chicken",
+   "guay tiew kua gai",
+   "kuay teow kua gai"
+  ]
+ },
+ "kuay-tiew-lord": {
+  "title": "Kuay Tiew Lord (ก๋วยเตี๋ยวหลอด) — Steamed Rice Noodle Rolls with Pork &amp; Tofu",
+  "thai": [
+   "ก๋วยเตี๋ยวหลอด"
+  ],
+  "aliases": [
+   "kuay tiew lord",
+   "kway teow lort",
+   "kuay tiew lort",
+   "noodle rolls",
+   "kway teow lord"
+  ]
+ },
+ "kuay-tiew-lui-suan": {
+  "title": "Kuay Tiew Lui Suan (ก๋วยเตี๋ยวลุยสวน) — Fresh Rice Noodle Rolls with Minced Pork &amp; Herbs",
+  "thai": [
+   "ก๋วยเตี๋ยวลุยสวน"
+  ],
+  "aliases": [
+   "lui suan",
+   "kuay tiew lui suan",
+   "lui suan rolls",
+   "fresh rolls"
+  ]
+ },
+ "kuay-tiew-nam-tok": {
+  "title": "Kuay Tiew Nam Tok (ก๋วยเตี๋ยวน้ำตก) — Thai Waterfall Noodle Soup",
+  "thai": [
+   "ก๋วยเตี๋ยวน้ำตก"
+  ],
+  "aliases": [
+   "nam tok noodles",
+   "kuay tiew nam tok",
+   "kway teow nam tok",
+   "nam tok noodle soup"
+  ]
+ },
+ "kuay-tiew-ped": {
+  "title": "Kuay Tiew Ped (ก๋วยเตี๋ยวเป็ด) — Thai Duck Noodle Soup",
+  "thai": [
+   "ก๋วยเตี๋ยวเป็ด"
+  ],
+  "aliases": [
+   "kuay tiew ped",
+   "duck noodle soup",
+   "kway teow ped",
+   "duck noodles"
+  ]
+ },
+ "kung-sarong": {
+  "title": "Kung Sarong (กุ้งโสร่ง) — Royal Prawns in Crispy Noodle Threads",
+  "thai": [
+   "กุ้งโสร่ง"
+  ],
+  "aliases": []
+ },
+ "laab": {
+  "title": "Laab (ลาบ) — The Real Thai Minced Meat Salad",
+  "thai": [
+   "ลาบ"
+  ],
+  "aliases": [
+   "laab",
+   "laab gai",
+   "laab moo",
+   "laab neua",
+   "larb",
+   "larb gai",
+   "larb moo",
+   "laap",
+   "larb chicken",
+   "larb pork",
+   "larb beef"
+  ]
+ },
+ "laab-gai": {
+  "title": "Laab Gai (ลาบไก่) — Northern Thai Chicken Larb",
+  "thai": [
+   "ลาบไก่",
+   "Northern Thai · Salads · \"Chicken larb\""
+  ],
+  "aliases": [
+   "laab gai",
+   "larb gai",
+   "larb chicken",
+   "chicken larb",
+   "laab kai",
+   "larb kai",
+   "minced chicken salad"
+  ]
+ },
+ "laab-mu-kua": {
+  "title": "ลาบหมูคั่ว",
+  "thai": [],
+  "aliases": [
+   "laab mu kua",
+   "larb kua",
+   "northern larb",
+   "laab kua",
+   "larb mu kua"
+  ]
+ },
+ "laab-ped": {
+  "title": "Laab Ped (ลาบเป็ด) — Northern Thai Duck Laab with Toasted Spices",
+  "thai": [
+   "ลาบเป็ด"
+  ],
+  "aliases": [
+   "laab ped",
+   "larb ped",
+   "duck larb",
+   "laab pet"
+  ]
+ },
+ "laab-pla-duk": {
+  "title": "Laab Pla Duk (ลาบปลาดุก) — Isaan Catfish Larb with Toasted Rice",
+  "thai": [
+   "ลาบปลาดุก"
+  ],
+  "aliases": [
+   "laab pla duk",
+   "larb pla duk",
+   "catfish larb",
+   "laab pla dook"
+  ]
+ },
+ "laab-tod": {
+  "title": "Laab Tod (ลาบทอด) — Fried Isaan Laab Balls",
+  "thai": [
+   "ลาบทอด"
+  ],
+  "aliases": [
+   "laab tod",
+   "larb tod",
+   "crispy larb",
+   "fried larb"
+  ]
+ },
+ "larb-neua": {
+  "title": "Larb Neua (ลาบเนื้อ) — Isaan Beef Larb, Cooked or Raw",
+  "thai": [
+   "ลาบเนื้อ"
+  ],
+  "aliases": [
+   "laab neua",
+   "larb neua",
+   "larb beef",
+   "beef larb",
+   "laab nua",
+   "larb nua"
+  ]
+ },
+ "lod-chong": {
+  "title": "Lod Chong (ลอดช่อง) — Pandan Noodles in Coconut Milk",
+  "thai": [
+   "ลอดช่อง"
+  ],
+  "aliases": [
+   "lod chong",
+   "lot chong",
+   "pandan noodles",
+   "green jelly noodles",
+   "lod chong singapore",
+   "lod chong nam kati"
+  ]
+ },
+ "look-chup": {
+  "title": "Look Chup (ลูกชุบ) — Miniature Fruit-Shaped Mung Bean Sweets",
+  "thai": [
+   "ลูกชุบ"
+  ],
+  "aliases": [
+   "look chup",
+   "luk chup",
+   "look choop",
+   "mung bean sweets",
+   "luk choop"
+  ]
+ },
+ "mango-sticky-rice": {
+  "title": "Mango Sticky Rice (ข้าวเหนียวมะม่วง) — The Real Thai Coconut Dessert",
+  "thai": [
+   "ข้าวเหนียวมะม่วง"
+  ],
+  "aliases": [
+   "mango sticky rice",
+   "khao niew mamuang",
+   "sticky rice mango",
+   "mango rice"
+  ]
+ },
+ "massaman": {
+  "title": "Massaman Curry (แกงมัสมั่น) — The Real Thai Muslim Curry",
+  "thai": [
+   "แกงมัสมั่น"
+  ],
+  "aliases": [
+   "massaman",
+   "masaman",
+   "matsaman",
+   "mussaman",
+   "massaman curry",
+   "massamun",
+   "masamun"
+  ]
+ },
+ "mee-kati": {
+  "title": "Mee Kati (หมี่กะทิ) — Pink Coconut Noodles with Prawns",
+  "thai": [
+   "หมี่กะทิ"
+  ],
+  "aliases": []
+ },
+ "mee-krob": {
+  "title": "Mee Krob (หมี่กรอบ) — Crispy Noodles in Sweet-Sour Sauce",
+  "thai": [
+   "หมี่กรอบ"
+  ],
+  "aliases": []
+ },
+ "met-khanun": {
+  "title": "Met Khanun (เม็ดขนุน) — Royal Thai Jackfruit-Seed Sweets",
+  "thai": [
+   "เม็ดขนุน"
+  ],
+  "aliases": [
+   "met khanun",
+   "med kanoon",
+   "jackfruit sweets",
+   "med kanun",
+   "jackfruit seed sweets"
+  ]
+ },
+ "miang-kham": {
+  "title": "Miang Kham (เมี่ยงคำ) — Thai Betel Leaf Wraps",
+  "thai": [
+   "เมี่ยงคำ"
+  ],
+  "aliases": [
+   "miang kham",
+   "miang kam",
+   "miang kum",
+   "betel leaf wrap",
+   "leaf wrapped bites"
+  ]
+ },
+ "moo-dad-deow": {
+  "title": "Moo Dad Deow (หมูแดดเดียว) — Thai Sun-Dried Pork",
+  "thai": [
+   "หมูแดดเดียว"
+  ],
+  "aliases": []
+ },
+ "moo-hong": {
+  "title": "Moo Hong (หมูฮ้อง) — Phuket Braised Pork Belly in Sweet Soy and Pepper",
+  "thai": [
+   "หมูฮ้อง"
+  ],
+  "aliases": [
+   "moo hong",
+   "mu hong",
+   "phuket pork",
+   "pork belly sweet stew",
+   "moo hong phuket"
+  ]
+ },
+ "moo-ping": {
+  "title": "Moo Ping (หมูปิ้ง) — The Real Thai Grilled Pork Skewers",
+  "thai": [
+   "หมูปิ้ง"
+  ],
+  "aliases": [
+   "moo ping",
+   "mu ping",
+   "pork skewer",
+   "pork skewers",
+   "grilled pork skewer",
+   "grilled pork skewers"
+  ]
+ },
+ "moo-tod-kratiem": {
+  "title": "Moo Tod Kratiem (หมูทอดกระเทียม) — Thai Garlic &amp; Pepper Fried Pork",
+  "thai": [
+   "หมูทอดกระเทียม"
+  ],
+  "aliases": [
+   "moo tod kratiem",
+   "mu tod kratiem",
+   "garlic pork",
+   "garlic pepper pork",
+   "fried pork garlic",
+   "moo tod gratiem"
+  ]
+ },
+ "moo-yang": {
+  "title": "Moo Yang (หมูย่าง) — Thai Grilled Pork Collar",
+  "thai": [
+   "หมูย่าง"
+  ],
+  "aliases": [
+   "moo yang",
+   "mu yang",
+   "grilled pork",
+   "moo yang nam tok"
+  ]
+ },
+ "nam-bai-toey": {
+  "title": "Nam Bai Toey (น้ำใบเตย) — Thai Pandan Drink",
+  "thai": [
+   "น้ำใบเตย"
+  ],
+  "aliases": [
+   "nam bai toey",
+   "pandan drink",
+   "pandan juice",
+   "nam bai toei",
+   "pandan water"
+  ]
+ },
+ "nam-dok-anchan": {
+  "title": "Nam Dok Anchan (น้ำดอกอัญชัน) — Thai Butterfly Pea Drink",
+  "thai": [
+   "น้ำดอกอัญชัน"
+  ],
+  "aliases": [
+   "nam dok anchan",
+   "butterfly pea",
+   "anchan",
+   "blue tea"
+  ]
+ },
+ "nam-jim-jaew": {
+  "title": "Nam Jim Jaew (น้ำจิ้มแจ่ว) — Thai Toasted-Rice Dipping Sauce",
+  "thai": [
+   "น้ำจิ้มแจ่ว"
+  ],
+  "aliases": [
+   "nam jim jaew",
+   "nam jim jeaw",
+   "jaew",
+   "jim jaew",
+   "nam jim jao",
+   "jaew sauce",
+   "nam jim jaew sauce",
+   "dipping sauce jaew"
+  ]
+ },
+ "nam-kang-sai": {
+  "title": "Nam Kang Sai (น้ำแข็งใส) — Thai Shaved Ice with Syrup and Toppings",
+  "thai": [
+   "น้ำแข็งใส"
+  ],
+  "aliases": [
+   "nam kang sai",
+   "thai shaved ice",
+   "nam kaeng sai",
+   "shaved ice dessert",
+   "shaved ice"
+  ]
+ },
+ "nam-khao-tod": {
+  "title": "Nam Khao Tod (น้ำข้าวทอด) — Lao-Isaan Crispy Rice Ball Salad",
+  "thai": [
+   "น้ำข้าวทอด"
+  ],
+  "aliases": [
+   "nam khao tod",
+   "crispy rice salad",
+   "nam khao",
+   "lao crispy rice"
+  ]
+ },
+ "nam-krajiab": {
+  "title": "Nam Krajiab (น้ำกระเจี๊ยบ) — Roselle Hibiscus Drink",
+  "thai": [
+   "น้ำกระเจี๊ยบ"
+  ],
+  "aliases": [
+   "nam krajiab",
+   "roselle juice",
+   "hibiscus drink",
+   "nam krajieb"
+  ]
+ },
+ "nam-ma-prao-on": {
+  "title": "Nam Ma Prao On (น้ำมะพร้าวอ่อน) — Thai Young Coconut Water",
+  "thai": [
+   "น้ำมะพร้าวอ่อน"
+  ],
+  "aliases": [
+   "nam ma prao on",
+   "young coconut",
+   "coconut water drink",
+   "nam maprao"
+  ]
+ },
+ "nam-manao": {
+  "title": "Nam Manao (น้ำมะนาว) — Thai Lime Juice",
+  "thai": [
+   "น้ำมะนาว"
+  ],
+  "aliases": [
+   "nam manao",
+   "lime juice",
+   "lime soda",
+   "nam ma nao",
+   "fresh lime juice",
+   "lime drink"
+  ]
+ },
+ "nam-phrik-kapi": {
+  "title": "Nam Phrik Kapi (น้ำพริกกะปิ) — Thai Shrimp Paste Chilli Dip",
+  "thai": [
+   "น้ำพริกกะปิ"
+  ],
+  "aliases": [
+   "nam prik kapi",
+   "nam phrik kapi",
+   "shrimp paste dip",
+   "nam prik kapee"
+  ]
+ },
+ "nam-phrik-kha": {
+  "title": "Nam Phrik Kha (น้ำพริกข่า) — Northern Thai Galangal Chilli Dip",
+  "thai": [
+   "น้ำพริกข่า"
+  ],
+  "aliases": []
+ },
+ "nam-phrik-num": {
+  "title": "Nam Phrik Num (น้ำพริกหนุ่ม) — Northern Thai Grilled Green Chilli Dip",
+  "thai": [
+   "น้ำพริกหนุ่ม"
+  ],
+  "aliases": [
+   "nam prik num",
+   "nam phrik num",
+   "green chilli dip",
+   "nam prik noom"
+  ]
+ },
+ "nam-phrik-ong": {
+  "title": "Nam Phrik Ong (น้ำพริกอ่อง) — Northern Thai Tomato &amp; Minced Pork Dip",
+  "thai": [
+   "น้ำพริกอ่อง"
+  ],
+  "aliases": [
+   "nam prik ong",
+   "northern chilli dip",
+   "tomato chilli dip",
+   "nam prik ong moo",
+   "nam phrik ong"
+  ]
+ },
+ "nam-phrik-pla-too": {
+  "title": "Nam Phrik Pla Too (น้ำพริกปลาทู) — Thai Mackerel Chilli Dip",
+  "thai": [
+   "น้ำพริกปลาทู"
+  ],
+  "aliases": []
+ },
+ "nam-prik-goong-siap": {
+  "title": "Nam Prik Goong Siab (น้ำพริกกุ้งเสียบ) — Dried Shrimp Chilli Dip",
+  "thai": [
+   "น้ำพริกกุ้งเสียบ"
+  ],
+  "aliases": [
+   "nam prik goong siap",
+   "dried shrimp dip",
+   "nam prik kung siap"
+  ]
+ },
+ "nam-prik-long-ruea": {
+  "title": "Nam Prik Long Ruea (น้ำพริกลงเรือ) — Palace Nam Phrik with Sweet Pork and Salted Egg",
+  "thai": [
+   "น้ำพริกลงเรือ"
+  ],
+  "aliases": [
+   "nam prik long ruea",
+   "nam phrik long ruea",
+   "boat chilli dip"
+  ]
+ },
+ "nam-prik-pla-ra": {
+  "title": "Nam Prik Pla Ra (น้ำพริกปลาร้า) — Isaan Fermented-Fish Chilli Relish",
+  "thai": [
+   "น้ำพริกปลาร้า"
+  ],
+  "aliases": [
+   "nam prik pla ra",
+   "nam phrik pla ra",
+   "pla ra dip",
+   "nam prik pla raa"
+  ]
+ },
+ "nam-takrai": {
+  "title": "Nam Takrai (น้ำตะไคร้) — Thai Lemongrass Drink",
+  "thai": [
+   "น้ำตะไคร้"
+  ],
+  "aliases": [
+   "nam takrai",
+   "lemongrass drink",
+   "lemongrass juice",
+   "nam ta krai",
+   "lemongrass tea"
+  ]
+ },
+ "nam-tok": {
+  "title": "Nam Tok (น้ำตก) — The Real Thai Waterfall Salad",
+  "thai": [
+   "น้ำตก"
+  ],
+  "aliases": [
+   "nam tok",
+   "namtok",
+   "nam tok moo",
+   "nam tok neua",
+   "waterfall salad",
+   "nam tok beef",
+   "nam tok pork",
+   "waterfall beef",
+   "waterfall pork"
+  ]
+ },
+ "nom-yen": {
+  "title": "Nom Yen (นมเย็น) — Thai Pink Milk",
+  "thai": [
+   "นมเย็น"
+  ],
+  "aliases": [
+   "nom yen",
+   "pink milk",
+   "sala syrup",
+   "nom yen sala",
+   "pink milk drink"
+  ]
+ },
+ "nua-dad-deow": {
+  "title": "Nua Dad Deow (เนื้อแดดเดียว) — Thai Sun-Dried Beef",
+  "thai": [
+   "เนื้อแดดเดียว"
+  ],
+  "aliases": []
+ },
+ "nua-yang": {
+  "title": "Nua Yang (เนื้อย่าง) — Thai Grilled Beef with Jaew",
+  "thai": [
+   "เนื้อย่าง"
+  ],
+  "aliases": [
+   "nua yang",
+   "grilled beef",
+   "neua yang"
+  ]
+ },
+ "oliang": {
+  "title": "Oliang (โอเลี้ยง) — Thai Iced Black Coffee",
+  "thai": [
+   "โอเลี้ยง"
+  ],
+  "aliases": [
+   "o liang",
+   "oliang",
+   "thai iced coffee",
+   "o lieng",
+   "thai coffee",
+   "olieng",
+   "black coffee thai",
+   "kaffee boran"
+  ]
+ },
+ "pad-cha": {
+  "title": "Pad Cha (ผัดฉ่า) — Thai Fingerroot Stir-Fry",
+  "thai": [
+   "ผัดฉ่า"
+  ],
+  "aliases": [
+   "pad cha",
+   "pud cha",
+   "phat cha",
+   "pad cha talay",
+   "pad cha seafood"
+  ]
+ },
+ "pad-kana-moo-krob": {
+  "title": "Pad Kana Moo Krob (คะน้าหมูกรอบ) — Crispy Pork Belly &amp; Chinese Broccoli Stir-Fry",
+  "thai": [
+   "คะน้าหมูกรอบ"
+  ],
+  "aliases": [
+   "kana moo krob",
+   "crispy pork kale",
+   "crispy belly kale",
+   "pad kana moo krob",
+   "kana moo grob",
+   "crispy pork with kale",
+   "kha nah moo krob",
+   "khana moo krob",
+   "pad kana moo grob"
+  ]
+ },
+ "pad-kee-mao": {
+  "title": "Pad Kee Mao (ผัดขี้เมา) — The Real Thai Drunken Noodles",
+  "thai": [
+   "ผัดขี้เมา"
+  ],
+  "aliases": [
+   "pad kee mao",
+   "pad ki mao",
+   "kee mao",
+   "ki mao",
+   "drunken noodles",
+   "phat khi mao",
+   "drunken noodle"
+  ]
+ },
+ "pad-khing": {
+  "title": "Pad Khing (ผัดขิง) — Thai Ginger Stir-Fry",
+  "thai": [
+   "ผัดขิง"
+  ],
+  "aliases": [
+   "pad khing",
+   "pad king",
+   "phat khing",
+   "ginger stir fry",
+   "ginger pork",
+   "pad khin",
+   "ginger chicken",
+   "pad khing moo",
+   "ginger and spring onion"
+  ]
+ },
+ "pad-krapow": {
+  "title": "Pad Krapow (ผัดกะเพรา) — The Real Thai Holy Basil Stir-Fry",
+  "thai": [
+   "ผัดกะเพรา"
+  ],
+  "aliases": [
+   "pad krapow",
+   "pad krapao",
+   "pad kra pao",
+   "pad ka pao",
+   "ga prao",
+   "ka prao",
+   "krapao",
+   "krapow",
+   "gaprao",
+   "kaprao",
+   "kra pao",
+   "gra pao",
+   "pad grapow",
+   "phat kraphao",
+   "pud krapow",
+   "pad ka prao",
+   "kra prao",
+   "pad kra prao",
+   "basil stir fry",
+   "holy basil"
+  ]
+ },
+ "pad-krapow-nuea": {
+  "title": "Pad Krapow Nuea (ผัดกะเพราเนื้อ) — Thai Beef Holy Basil Stir-Fry",
+  "thai": [
+   "ผัดกะเพราเนื้อ"
+  ],
+  "aliases": [
+   "pad krapow nuea",
+   "beef basil",
+   "krapow beef",
+   "pad krapow neua",
+   "beef holy basil"
+  ]
+ },
+ "pad-mi-korat": {
+  "title": "Pad Mi Korat (ผัดหมี่โคราช) — Korat-Style Stir-Fried Rice Noodles",
+  "thai": [
+   "ผัดหมี่โคราช"
+  ],
+  "aliases": [
+   "pad mee korat",
+   "pad mi korat",
+   "phat mee korat",
+   "korat noodles",
+   "mee korat"
+  ]
+ },
+ "pad-nam-prik-pao": {
+  "title": "Pad Nam Prik Pao (ผัดน้ำพริกเผา) — Thai Roasted Chilli Paste Stir-Fry",
+  "thai": [
+   "ผัดน้ำพริกเผา"
+  ],
+  "aliases": [
+   "pad nam prik pao",
+   "chilli jam stir fry",
+   "pad nam phrik phao"
+  ]
+ },
+ "pad-pak-bung": {
+  "title": "Pad Pak Bung Fai Daeng (ผัดผักบุ้งไฟแดง) — The Real Thai Morning Glory Stir-Fry",
+  "thai": [
+   "ผัดผักบุ้งไฟแดง"
+  ],
+  "aliases": [
+   "morning glory",
+   "pad pak boong",
+   "pad pak bung",
+   "pad bung",
+   "water spinach",
+   "pad boong",
+   "stir fried morning glory"
+  ]
+ },
+ "pad-phak-ruam": {
+  "title": "Pad Phak Ruam (ผัดผักรวมมิตร) — Thai Mixed Vegetable Stir-Fry",
+  "thai": [
+   "ผัดผักรวมมิตร"
+  ],
+  "aliases": [
+   "pad pak",
+   "pad pak ruam",
+   "mixed vegetables",
+   "stir fried vegetables",
+   "mixed vegetable",
+   "pad phak ruam",
+   "pad pak ruam mit"
+  ]
+ },
+ "pad-phet": {
+  "title": "Pad Phet (ผัดเผ็ด) — Thai Jungle Stir-Fry with Curry Paste",
+  "thai": [
+   "ผัดเผ็ด"
+  ],
+  "aliases": [
+   "pad ped",
+   "pud ped",
+   "phat phet",
+   "pad pet",
+   "stir fried chilli paste",
+   "pad phed",
+   "pud phed"
+  ]
+ },
+ "pad-phrik-khing": {
+  "title": "Pad Phrik Khing (ผัดพริกขิง) — Dry Red Curry Pork Stir-Fry with Yardlong Beans",
+  "thai": [
+   "ผัดพริกขิง"
+  ],
+  "aliases": [
+   "pad phrik khing",
+   "pad prik khing",
+   "phrik khing",
+   "prik khing"
+  ]
+ },
+ "pad-priew-wan": {
+  "title": "Pad Priew Wan (ผัดเปรี้ยวหวาน) — Thai Sweet &amp; Sour Stir-Fry",
+  "thai": [
+   "ผัดเปรี้ยวหวาน"
+  ],
+  "aliases": [
+   "pad preaw wan",
+   "pad priew wan",
+   "sweet and sour",
+   "sweet sour stir fry",
+   "pad priaw wan"
+  ]
+ },
+ "pad-prik-king": {
+  "title": "Pad Prik King (ผัดพริกขิง) — The Real Thai Crispy Pork Stir-Fry",
+  "thai": [
+   "ผัดพริกขิง"
+  ],
+  "aliases": [
+   "pad prik khing",
+   "pad phrik khing",
+   "phat prik king",
+   "prik khing",
+   "phrik khing",
+   "pud prik khing",
+   "pad prick king"
+  ]
+ },
+ "pad-sator": {
+  "title": "Pad Sator (ผัดสะตอ) — Southern Stir-Fried Stink Beans with Shrimp Paste",
+  "thai": [
+   "ผัดสะตอ"
+  ],
+  "aliases": [
+   "pad sator",
+   "pad sataw",
+   "sator",
+   "sataw",
+   "stink bean",
+   "pad sataw goong"
+  ]
+ },
+ "pad-see-ew": {
+  "title": "Pad See Ew (ผัดซีอิ๊ว) — The Real Thai Stir-Fried Noodles",
+  "thai": [
+   "ผัดซีอิ๊ว"
+  ],
+  "aliases": [
+   "pad see ew",
+   "pad si ew",
+   "pad see ewe",
+   "pad see eiw",
+   "phad see ew",
+   "pad sieu",
+   "pud see ew",
+   "see ew",
+   "see ewe"
+  ]
+ },
+ "pad-thai": {
+  "title": "Pad Thai (ผัดไทย) — The Real Thai Stir-Fried Noodles",
+  "thai": [
+   "ผัดไทย"
+  ],
+  "aliases": [
+   "pad thai",
+   "phad thai",
+   "pat thai",
+   "phat thai",
+   "pad tai",
+   "pud thai"
+  ]
+ },
+ "pad-tua-fak-yao": {
+  "title": "Pad Tua Fak Yao (ผัดถั่วฝักยาว) — Thai Long Bean Stir-Fry",
+  "thai": [
+   "ผัดถั่วฝักยาว"
+  ],
+  "aliases": [
+   "pad tua fak yao",
+   "yardlong bean stir fry",
+   "pad tua",
+   "stir fried beans"
+  ]
+ },
+ "pad-tua-ngok": {
+  "title": "Pad Tua Ngok (ผัดถั่วงอก) — Thai Bean Sprout Stir-Fry",
+  "thai": [
+   "ผัดถั่วงอก"
+  ],
+  "aliases": [
+   "pad tua ngok",
+   "bean sprout stir fry",
+   "stir fried bean sprouts"
+  ]
+ },
+ "pad-woon-sen": {
+  "title": "Pad Woon Sen (ผัดวุ้นเส้น) — Thai Glass Noodle Stir-Fry",
+  "thai": [
+   "ผัดวุ้นเส้น"
+  ],
+  "aliases": [
+   "pad woon sen",
+   "pad wun sen",
+   "glass noodle stir fry",
+   "stir fried glass noodles"
+  ]
+ },
+ "panang": {
+  "title": "Panang Curry (พะแนง) — The Real Thai Thick Curry",
+  "thai": [
+   "พะแนง"
+  ],
+  "aliases": [
+   "panang",
+   "phanaeng",
+   "panaeng",
+   "penang",
+   "panang curry",
+   "panaeng curry"
+  ]
+ },
+ "patongko": {
+  "title": "Patongko (ปาท่องโก๋) — Thai Deep-Fried Dough Sticks",
+  "thai": [
+   "ปาท่องโก๋",
+   "Thai-Chinese · Desserts · \"Deep-fried dough sticks\""
+  ],
+  "aliases": []
+ },
+ "pla-goong": {
+  "title": "Pla Goong (พล่ากุ้ง) — Thai Prawn Spicy Salad",
+  "thai": [
+   "พล่ากุ้ง"
+  ],
+  "aliases": [
+   "pla goong",
+   "pla kung",
+   "spicy prawn salad",
+   "goong salad",
+   "raw prawn salad"
+  ]
+ },
+ "pla-kapong-neung-manao": {
+  "title": "Pla Kapong Neung Manao (ปลากะพงนึ่งมะนาว) — Steamed Seabass with Lime, Garlic and Chilli",
+  "thai": [
+   "ปลากะพงนึ่งมะนาว"
+  ],
+  "aliases": [
+   "pla kapong neung manao",
+   "steamed sea bass",
+   "sea bass lime",
+   "steamed fish lime",
+   "pla krapong neung manao",
+   "steamed seabass"
+  ]
+ },
+ "pla-kapong-tod-nam-pla": {
+  "title": "Pla Kapong Tod Nam Pla (ปลากะพงทอดน้ำปลา) — Deep-Fried Whole Sea Bass with Fish Sauce",
+  "thai": [
+   "ปลากะพงทอดน้ำปลา"
+  ],
+  "aliases": [
+   "pla kapong tod nam pla",
+   "fried sea bass",
+   "sea bass",
+   "pla kapong",
+   "pla krapong",
+   "sea bass fish sauce",
+   "deep fried sea bass"
+  ]
+ },
+ "pla-meuk-pad-kai-kem": {
+  "title": "Pla Meuk Pad Kai Kem (ปลาหมึกผัดไข่เค็ม) — Squid Stir-Fried with Salted Egg Yolk",
+  "thai": [
+   "ปลาหมึกผัดไข่เค็ม"
+  ],
+  "aliases": [
+   "pla meuk pad kai kem",
+   "squid salted egg",
+   "pla muk pad kai kem"
+  ]
+ },
+ "pla-meuk-yang": {
+  "title": "Pla Meuk Yang (ปลาหมึกย่าง) — Charcoal-Grilled Squid",
+  "thai": [
+   "ปลาหมึกย่าง"
+  ],
+  "aliases": [
+   "pla meuk yang",
+   "grilled squid",
+   "pla muk yang"
+  ]
+ },
+ "pla-pao": {
+  "title": "Pla Pao (ปลาเผา) — Salt-Crusted Charcoal-Grilled Fish",
+  "thai": [
+   "ปลาเผา"
+  ],
+  "aliases": [
+   "pla pao",
+   "pla pow",
+   "grilled fish",
+   "salt crusted fish",
+   "whole grilled fish",
+   "pla pao glua"
+  ]
+ },
+ "pla-ra-lon": {
+  "title": "Pla Ra Lon (ปลาร้าหลน) — Thai Fermented Fish Relish with Coconut Cream and Pork",
+  "thai": [
+   "ปลาร้าหลน"
+  ],
+  "aliases": [
+   "pla ra lon",
+   "pla ra lohn",
+   "pla ra lon dip",
+   "fermented fish dip"
+  ]
+ },
+ "pla-rad-prik": {
+  "title": "Pla Rad Prik (ปลาราดพริก) — Whole Fried Fish with Sweet-Sour Chilli Sauce",
+  "thai": [
+   "ปลาราดพริก"
+  ],
+  "aliases": [
+   "pla rad prik",
+   "pla lad prik",
+   "pla lard prig",
+   "fish with chilli sauce",
+   "pla rad prick",
+   "fried fish chilli sauce"
+  ]
+ },
+ "pla-sam-rod": {
+  "title": "Pla Sam Rod (ปลาสามรส) — Deep-Fried Fish with Three-Flavour Sauce",
+  "thai": [
+   "ปลาสามรส"
+  ],
+  "aliases": [
+   "pla sam rod",
+   "three flavour fish",
+   "three flavoured fish",
+   "sweet and sour fish",
+   "pla sam rot",
+   "3 flavour fish"
+  ]
+ },
+ "pla-tod-kamin": {
+  "title": "Pla Tod Kamin (ปลาทอดขมิ้น) — Southern Thai Turmeric-Fried Fish with Crispy Garlic",
+  "thai": [
+   "ปลาทอดขมิ้น"
+  ],
+  "aliases": [
+   "pla tod kamin",
+   "turmeric fish",
+   "fried turmeric fish",
+   "pla tod khamin"
+  ]
+ },
+ "po-pia-sot": {
+  "title": "Po Pia Sot (ปอเปี๊ยะสด) — Fresh Thai Spring Rolls",
+  "thai": [
+   "ปอเปี๊ยะสด"
+  ],
+  "aliases": [
+   "po pia sot",
+   "poh pia sot",
+   "fresh spring rolls",
+   "summer rolls",
+   "poh pia",
+   "por pia sot",
+   "fresh rolls",
+   "poh pia ped"
+  ]
+ },
+ "po-taek": {
+  "title": "Po Taek (โป๊ะแตก) — Spicy Thai Seafood Hot Pot with Lemongrass and Chilli",
+  "thai": [
+   "โป๊ะแตก"
+  ],
+  "aliases": []
+ },
+ "poo-pad-pong-karee": {
+  "title": "Poo Pad Pong Karee (ปูผัดผงกะหรี่) — Crab Stir-Fried in Yellow Curry Sauce with Egg",
+  "thai": [
+   "ปูผัดผงกะหรี่"
+  ],
+  "aliases": [
+   "poo pad pong karee",
+   "pu phat phong kari",
+   "crab curry",
+   "crab yellow curry",
+   "poo pad pong kari",
+   "stir fried crab curry"
+  ]
+ },
+ "rad-na": {
+  "title": "Rad Na (ราดหน้า) — Thai Gravy Noodles with Charred Rice Noodles",
+  "thai": [
+   "ราดหน้า"
+  ],
+  "aliases": []
+ },
+ "red-curry": {
+  "title": "Red Curry (แกงเผ็ด) — The Real Thai Red Curry",
+  "thai": [
+   "แกงเผ็ด"
+  ],
+  "aliases": [
+   "red curry",
+   "gaeng phed",
+   "kaeng phet",
+   "gang ped",
+   "gang phed"
+  ]
+ },
+ "roti-sai-mai": {
+  "title": "Roti Sai Mai (โรตีสายไหม) — Ayutthaya Sugar-Floss Roti Wraps",
+  "thai": [
+   "โรตีสายไหม"
+  ],
+  "aliases": []
+ },
+ "ruam-mit": {
+  "title": "Ruam Mit (รวมมิตร) — Thai Mixed Dessert in Coconut Milk with Syrup",
+  "thai": [
+   "รวมมิตร"
+  ],
+  "aliases": [
+   "ruam mit",
+   "mixed dessert",
+   "mixed jelly",
+   "ruam mit thai"
+  ]
+ },
+ "sai-krok-isan": {
+  "title": "Sai Krok Isan (ไส้กรอกอีสาน) — Isaan Fermented Pork Sausage",
+  "thai": [
+   "ไส้กรอกอีสาน"
+  ],
+  "aliases": []
+ },
+ "sai-ua": {
+  "title": "Sai Ua (ไส้อั่ว) — Northern Thai Herb Sausage",
+  "thai": [
+   "ไส้อั่ว"
+  ],
+  "aliases": []
+ },
+ "sakoo-sai-moo": {
+  "title": "Sakoo Sai Moo (สาคูไส้หมู) — Steamed Tapioca Dumplings with Sweet Pork Filling",
+  "thai": [
+   "สาคูไส้หมู"
+  ],
+  "aliases": [
+   "sakoo sai moo",
+   "sago pork",
+   "tapioca dumplings",
+   "sakoo sai mu"
+  ]
+ },
+ "sangkaya-fak-thong": {
+  "title": "Sangkaya Fak Thong (สังขยาฟักทอง) — Thai Pumpkin Custard",
+  "thai": [
+   "สังขยาฟักทอง"
+  ],
+  "aliases": [
+   "sangkaya fak thong",
+   "sankaya fak thong",
+   "pumpkin custard",
+   "sangkaya pumpkin"
+  ]
+ },
+ "sarim": {
+  "title": "Sarim (ซ่าหริ่ม) — Pandan Jelly Threads in Sweet Coconut Milk",
+  "thai": [
+   "ซ่าหริ่ม"
+  ],
+  "aliases": []
+ },
+ "sen-chan-pad-poo": {
+  "title": "Sen Chan Pad Poo (เส้นจันท์ผัดปู) — Chanthaburi Noodles Stir-Fried with Crab",
+  "thai": [
+   "เส้นจันท์ผัดปู"
+  ],
+  "aliases": [
+   "sen chan pad poo",
+   "chonburi crab noodles",
+   "sen chan noodles"
+  ]
+ },
+ "shrimp-cakes": {
+  "title": "Shrimp Cakes (ทอดมันกุ้ง) — The Real Thai Thod Man Kung",
+  "thai": [
+   "ทอดมันกุ้ง"
+  ],
+  "aliases": [
+   "shrimp cakes",
+   "prawn cakes",
+   "tod mun goong",
+   "tod mun kung",
+   "shrimp cake"
+  ]
+ },
+ "som-tum-mua": {
+  "title": "Som Tum Mua (ส้มตำมั่ว) — Isaan \"Everything\" Papaya Salad",
+  "thai": [
+   "ส้มตำมั่ว",
+   "Isaan · Salads · \"Mixed-up papaya salad\""
+  ],
+  "aliases": [
+   "som tum mua",
+   "som tam mua",
+   "tam mua",
+   "mixed papaya salad"
+  ]
+ },
+ "som-tum-pu-pla-ra": {
+  "title": "Som Tum Pu Pla Ra (ส้มตำปูปลาร้า) — Isaan Papaya Salad with Fermented Fish",
+  "thai": [
+   "ส้มตำปูปลาร้า"
+  ],
+  "aliases": [
+   "som tum pla ra",
+   "som tam pla ra",
+   "som tum pu",
+   "som tam pu",
+   "pla ra papaya salad",
+   "som tum pu pla ra",
+   "som tam poo pla ra"
+  ]
+ },
+ "som-tum-thai": {
+  "title": "Som Tum Thai (ส้มตำไทย) — The Real Thai Green Papaya Salad",
+  "thai": [
+   "ส้มตำไทย"
+  ],
+  "aliases": [
+   "som tum",
+   "som tam",
+   "somtum",
+   "papaya salad",
+   "som tum thai",
+   "som tam thai",
+   "som tam thai style"
+  ]
+ },
+ "son-in-law-eggs": {
+  "title": "Khai Look Keuy (ไข่ลูกเขย) — Son-in-Law Eggs",
+  "thai": [
+   "ไข่ลูกเขย"
+  ],
+  "aliases": []
+ },
+ "sue-rong-hai": {
+  "title": "Suea Rong Hai (เสือร้องไห้) — Isaan Grilled Beef Brisket with Jaew Sauce",
+  "thai": [
+   "เสือร้องไห้"
+  ],
+  "aliases": [
+   "suea rong hai",
+   "sue rong hai",
+   "seua rong hai",
+   "crying tiger",
+   "weeping tiger",
+   "suea long hai"
+  ]
+ },
+ "suki-thai": {
+  "title": "Suki Thai (สุกี้ยากี้) — Thai Hot Pot",
+  "thai": [
+   "สุกี้ยากี้"
+  ],
+  "aliases": [
+   "suki",
+   "thai suki",
+   "suki haeng",
+   "suki nam"
+  ]
+ },
+ "tab-tim-grob": {
+  "title": "Tab Tim Grob (ทับทิมกรอบ) — The Real Thai Red Rubies",
+  "thai": [
+   "ทับทิมกรอบ"
+  ],
+  "aliases": [
+   "tab tim grob",
+   "tub tim grob",
+   "red rubies",
+   "water chestnut",
+   "tub tim krob",
+   "tab tim krob",
+   "water chestnut rubies"
+  ]
+ },
+ "tao-suan": {
+  "title": "Tao Suan (เต้าส่วน) — Thai Mung Bean Dessert in Coconut Milk",
+  "thai": [
+   "เต้าส่วน"
+  ],
+  "aliases": []
+ },
+ "thai-banana-fritters": {
+  "title": "Thai Banana Fritters (กล้วยแขก) — The Real Gluay Khaek",
+  "thai": [
+   "กล้วยแขก"
+  ],
+  "aliases": [
+   "banana fritters",
+   "banana fritter",
+   "kluay khaek",
+   "fried bananas",
+   "kluay tod"
+  ]
+ },
+ "thai-fish-cakes": {
+  "title": "Thai Fish Cakes (ทอดมันปลา) — The Real Tod Mun Pla",
+  "thai": [
+   "ทอดมันปลา"
+  ],
+  "aliases": [
+   "fish cakes",
+   "fish cake",
+   "tod mun",
+   "thai fish cake"
+  ]
+ },
+ "thai-iced-coffee": {
+  "title": "Thai Iced Coffee (กาแฟเย็น) — The Real Es Yen & Oliang",
+  "thai": [
+   "กาแฟเย็น"
+  ],
+  "aliases": []
+ },
+ "thai-iced-tea": {
+  "title": "Thai Iced Tea (ชาไทย) — The Real Thai Milk Tea",
+  "thai": [
+   "ชาไทย"
+  ],
+  "aliases": []
+ },
+ "thai-lemon-iced-tea": {
+  "title": "Thai Lemon Iced Tea (ชามะนาว) — Cha Manao",
+  "thai": [
+   "ชามะนาว"
+  ],
+  "aliases": []
+ },
+ "thai-omelette": {
+  "title": "Thai Omelette (ไข่เจียว) — The Real Khai Jiao",
+  "thai": [
+   "ไข่เจียว"
+  ],
+  "aliases": []
+ },
+ "thai-spring-rolls": {
+  "title": "Thai Spring Rolls (ปอเปี๊ยะทอด) — The Real Po Pia Tod",
+  "thai": [
+   "ปอเปี๊ยะทอด"
+  ],
+  "aliases": [
+   "spring rolls",
+   "por pia tod",
+   "poh pia tod",
+   "vegetable spring rolls",
+   "poh pia thawt",
+   "spring roll",
+   "thai spring roll",
+   "chicken spring rolls",
+   "prawn spring rolls",
+   "duck spring rolls"
+  ]
+ },
+ "thong-yip": {
+  "title": "Thong Yip (ทองหยิบ) — Golden Egg-Yolk Sweet",
+  "thai": [
+   "ทองหยิบ"
+  ],
+  "aliases": [
+   "thong yip",
+   "golden egg sweets",
+   "thong yip thong yod"
+  ]
+ },
+ "thong-yod": {
+  "title": "Thong Yod (ทองหยอด) — Golden Egg-Yolk Drops",
+  "thai": [
+   "ทองหยอด"
+  ],
+  "aliases": []
+ },
+ "thung-thong": {
+  "title": "Thung Thong (ถุงทอง) — Golden Money Bags",
+  "thai": [
+   "ถุงทอง"
+  ],
+  "aliases": []
+ },
+ "tod-mun-khao-pod": {
+  "title": "Tod Mun Khao Pod (ทอดมันข้าวโพด) — Thai Corn Fritters with Red Curry Paste",
+  "thai": [
+   "ทอดมันข้าวโพด"
+  ],
+  "aliases": [
+   "tod mun khao pod",
+   "tod man khao pod",
+   "corn fritters",
+   "corn cakes",
+   "tod mun khao phot",
+   "corn cake"
+  ]
+ },
+ "tod-mun-pla": {
+  "title": "Tod Mun Pla (ทอดมันปลา) — Thai Fish Cakes with Red Curry Paste and Kaffir Lime",
+  "thai": [
+   "ทอดมันปลา"
+  ],
+  "aliases": [
+   "tod mun pla",
+   "tod man pla",
+   "fish cake",
+   "fish cakes",
+   "thai fish cake",
+   "thai fish cakes"
+  ]
+ },
+ "tom-jeud-tao-hu": {
+  "title": "Tom Jeud Tao Hu (ต้มจืดเต้าหู้หมูสับ) — Thai Clear Tofu & Minced Pork Soup",
+  "thai": [
+   "ต้มจืดเต้าหู้หมูสับ"
+  ],
+  "aliases": [
+   "tom jeud tao hu",
+   "clear tofu soup"
+  ]
+ },
+ "tom-kati-sai-bua": {
+  "title": "Tom Kati Sai Bua (ต้มกะทิสายบัว) — Thai Coconut Soup with Lotus Stems and Mackerel",
+  "thai": [
+   "ต้มกะทิสายบัว"
+  ],
+  "aliases": []
+ },
+ "tom-kha-gai": {
+  "title": "Tom Kha Gai (ต้มข่าไก่) — The Real Thai Galangal Soup",
+  "thai": [
+   "ต้มข่าไก่"
+  ],
+  "aliases": [
+   "tom kha gai",
+   "tom ka gai",
+   "tom kha chicken",
+   "tom kha",
+   "tom kah",
+   "coconut chicken soup",
+   "tom kha soup",
+   "galangal soup"
+  ]
+ },
+ "tom-kha-hed": {
+  "title": "Tom Kha Hed (ต้มข่าเห็ด) — Thai Mushroom Coconut Soup with Galangal",
+  "thai": [
+   "ต้มข่าเห็ด"
+  ],
+  "aliases": [
+   "tom kha hed",
+   "tom kha het",
+   "mushroom coconut soup",
+   "tom kha mushroom"
+  ]
+ },
+ "tom-kha-moo": {
+  "title": "Tom Kha Moo (ต้มข่าหมู) — Pork in Coconut Galangal Soup",
+  "thai": [
+   "ต้มข่าหมู"
+  ],
+  "aliases": [
+   "tom kha moo",
+   "tom kha pork",
+   "coconut pork soup",
+   "tom kha mu"
+  ]
+ },
+ "tom-klong": {
+  "title": "Tom Klong (ต้มโคล้ง) — Thai Smoked-Fish Sour Soup",
+  "thai": [
+   "ต้มโคล้ง"
+  ],
+  "aliases": [
+   "tom klong",
+   "tom khlong",
+   "tom kloang",
+   "tom klong pla"
+  ]
+ },
+ "tom-luad-mu": {
+  "title": "Tom Luad Mu (ต้มเลือดหมู) — Thai Pork Blood Soup",
+  "thai": [
+   "ต้มเลือดหมู"
+  ],
+  "aliases": []
+ },
+ "tom-saap": {
+  "title": "Tom Saap (ต้มแซ่บ) — Isaan Hot &amp; Sour Pork Bone Soup",
+  "thai": [
+   "ต้มแซ่บ"
+  ],
+  "aliases": [
+   "tom saap",
+   "tom saeb",
+   "tom sap",
+   "tom sab",
+   "tom saab",
+   "pork rib soup",
+   "spicy pork soup",
+   "spicy pork bone soup"
+  ]
+ },
+ "tom-yum-goong": {
+  "title": "Tom Yum Goong (ต้มยำกุ้ง) — The Real Thai Hot & Sour Prawn Soup",
+  "thai": [
+   "ต้มยำกุ้ง"
+  ],
+  "aliases": [
+   "tom yum goong",
+   "tom yum kung",
+   "tom yam goong",
+   "tom yam kung",
+   "tom yum koong",
+   "tom yum prawn",
+   "hot and sour prawn soup",
+   "tom yum soup",
+   "tom yum",
+   "tom yam",
+   "hot and sour soup"
+  ]
+ },
+ "tom-yum-goong-nam-khon": {
+  "title": "Tom Yum Goong Nam Khon (ต้มยำกุ้งน้ำข้น) — Creamy Thai Prawn Soup with Evaporated Milk",
+  "thai": [
+   "ต้มยำกุ้งน้ำข้น"
+  ],
+  "aliases": [
+   "creamy tom yum",
+   "tom yum nam khon",
+   "tom yum coconut",
+   "tom yum nam kon",
+   "coconut tom yum"
+  ]
+ },
+ "tom-yum-noodle-soup": {
+  "title": "Tom Yum Noodle Soup (ก๋วยเตี๋ยวต้มยำ) — The Real Thai Noodle Bowl",
+  "thai": [
+   "ก๋วยเตี๋ยวต้มยำ"
+  ],
+  "aliases": [
+   "kuay dtiao tom yum",
+   "noodle tom yum",
+   "tom yum noodles",
+   "tom yum noodle soup",
+   "kuay teow tom yum",
+   "kway teow tom yum",
+   "kuay tiew tom yum"
+  ]
+ },
+ "tom-yum-pla": {
+  "title": "Tom Yum Pla (ต้มยำปลา) — Thai Hot and Sour Fish Soup",
+  "thai": [
+   "ต้มยำปลา"
+  ],
+  "aliases": [
+   "tom yum pla",
+   "fish tom yum",
+   "tom yam pla"
+  ]
+ },
+ "tum-kha-mu": {
+  "title": "Tum Kha Mu (ตำข่าหมู) — Northern Pounded Pork Trotter Salad with Galangal and Lime",
+  "thai": [
+   "ตำข่าหมู"
+  ],
+  "aliases": []
+ },
+ "yam-khai-dao": {
+  "title": "ยำไข่ดาว",
+  "thai": [],
+  "aliases": [
+   "yam khai dao",
+   "fried egg salad",
+   "yum kai dao"
+  ]
+ },
+ "yam-khanom-jeen": {
+  "title": "Yam Khanom Jeen (ยำขนมจีน) — Rice Vermicelli Salad with Fermented Fish",
+  "thai": [
+   "ยำขนมจีน"
+  ],
+  "aliases": [
+   "yam khanom jeen",
+   "khanom jeen salad"
+  ]
+ },
+ "yam-khanun": {
+  "title": "Yam Khanun (ยำขนุน) — Northern Thai Jackfruit Salad",
+  "thai": [
+   "ยำขนุน"
+  ],
+  "aliases": [
+   "yam khanun",
+   "jackfruit salad",
+   "tam khanun",
+   "young jackfruit salad"
+  ]
+ },
+ "yam-mama": {
+  "title": "Yam Mama (ยำมาม่า) — Thai Instant Noodle Salad",
+  "thai": [
+   "ยำมาม่า"
+  ],
+  "aliases": [
+   "yam mama",
+   "yum mama",
+   "mama salad",
+   "instant noodle salad"
+  ]
+ },
+ "yam-pla-duk-foo": {
+  "title": "Yam Pla Duk Foo (ยำปลาดุกฟู) — Crispy Catfish Salad",
+  "thai": [
+   "ยำปลาดุกฟู"
+  ],
+  "aliases": [
+   "yam pla duk fu",
+   "yum pla duk foo",
+   "catfish salad",
+   "crispy catfish salad",
+   "pla duk fu"
+  ]
+ },
+ "yam-som-o": {
+  "title": "Yam Som O (ยำส้มโอ) — Thai Pomelo Salad",
+  "thai": [
+   "ยำส้มโอ"
+  ],
+  "aliases": [
+   "yam som o",
+   "pomelo salad"
+  ]
+ },
+ "yam-tua-pu": {
+  "title": "Yam Tua Pu (ยำถั่วพู) — Winged Bean Salad with Shrimp and Pork",
+  "thai": [
+   "ยำถั่วพู"
+  ],
+  "aliases": [
+   "yam tua pu",
+   "wing bean salad",
+   "yam tua poo"
+  ]
+ },
+ "yellow-curry": {
+  "title": "Yellow Curry (แกงกะหรี่) — The Real Thai Kari",
+  "thai": [
+   "แกงกะหรี่"
+  ],
+  "aliases": [
+   "yellow curry",
+   "gaeng karee",
+   "kaeng kari",
+   "gang karee",
+   "kang kari"
+  ]
+ },
+ "yen-ta-fo": {
+  "title": "Yen Ta Fo (เย็นตาโฟ) — Thai Pink Noodle Soup",
+  "thai": [
+   "เย็นตาโฟ"
+  ],
+  "aliases": [
+   "yen ta fo",
+   "yentafo",
+   "yen ta foh",
+   "pink noodles",
+   "pink noodle soup"
+  ]
+ },
+ "yum-kai-kem": {
+  "title": "Yum Kai Kem (ยำไข่เค็ม)",
+  "thai": [
+   "ยำไข่เค็ม"
+  ],
+  "aliases": [
+   "yum kai kem",
+   "yam kai kem",
+   "salted egg salad"
+  ]
+ },
+ "yum-mamuang": {
+  "title": "Yum Mamuang (ยำมะม่วง) — Green Mango Salad with Dried Shrimp and Crispy Fish",
+  "thai": [
+   "ยำมะม่วง"
+  ],
+  "aliases": [
+   "yum mamuang",
+   "mango salad",
+   "yam mamuang",
+   "green mango salad"
+  ]
+ },
+ "yum-neua": {
+  "title": "Yum Neua (ยำเนื้อย่าง) — The Real Thai Grilled Beef Salad",
+  "thai": [
+   "ยำเนื้อย่าง"
+  ],
+  "aliases": [
+   "yum neua",
+   "yam neua",
+   "beef salad",
+   "yum nua",
+   "yam nua",
+   "thai beef salad",
+   "beef salad thai"
+  ]
+ },
+ "yum-woon-sen": {
+  "title": "Yum Woon Sen (ยำวุ้นเส้น) — Thai Glass Noodle Salad",
+  "thai": [
+   "ยำวุ้นเส้น"
+  ],
+  "aliases": []
+ },
+ "yum-wun-sen": {
+  "title": "Yum Wun Sen (ยำวุ้นเส้น) — Thai Glass Noodle Salad",
+  "thai": [
+   "ยำวุ้นเส้น",
+   "Central Thai · Salads · \"Glass noodle salad\""
+  ],
+  "aliases": [
+   "yum wun sen",
+   "yam wun sen",
+   "yam woon sen",
+   "yum woon sen",
+   "glass noodle salad",
+   "wun sen salad",
+   "seafood yum wun sen",
+   "yam wunsen"
+  ]
+ }
+}

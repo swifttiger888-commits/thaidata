@@ -34,6 +34,66 @@ def money(p):
     p = re.sub(r"/(?=£)", " / ", p)
     return p
 
+
+# --- guide-recipe linking (Oct 2026) ---
+_ALIAS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "recipe_aliases.json")
+_FILLER = {"the", "a", "an", "with", "without", "and", "or", "of", "style", "fresh"}
+
+
+def _tokens(s):
+    s = s.lower()
+    s = re.sub(r"\([^)]*\)", " ", s)
+    s = re.sub(r"[^\w\s]", " ", s)
+    return [x for x in s.split() if x not in _FILLER]
+
+
+def _load_aliases():
+    try:
+        return json.load(open(_ALIAS_PATH, encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+_ALIASES = _load_aliases()
+_ALIAS_TOK = {
+    s: [_tokens(a) for a in e.get("aliases", []) if _tokens(a)]
+    for s, e in _ALIASES.items()
+}
+
+
+def recipe_slug_for(dish_name):
+    """Return the recipe slug this menu line maps to, or None. Guide links only:
+    the recipe page explains how the dish is typically made, never what this
+    specific restaurant does."""
+    if not dish_name:
+        return None
+    t = _tokens(dish_name)
+    tset = set(t)
+    joined = " ".join(t)
+    for slug, e in _ALIASES.items():
+        for th in e.get("thai", []):
+            if th and th in dish_name:
+                return slug
+    best = None
+    for slug, als in _ALIAS_TOK.items():
+        for a in als:
+            if len(a) >= 4:
+                hit = all(x in tset for x in a)
+            elif len(a) > 1:
+                hit = " ".join(a) in joined
+            else:
+                hit = a[0] in tset
+            if hit and (best is None or len(a) > best[1]):
+                best = (slug, len(a))
+    return best[0] if best else None
+
+
+def recipe_title_for(slug):
+    t = _ALIASES.get(slug, {}).get("title", "")
+    t = re.sub(r"\s*\([^)]*\)\s*", " ", t)
+    t = t.split("—")[0].split("–")[0].strip()
+    return t or slug.replace("-", " ").title()
+
 def esc(s):
     return html.escape(s or "", quote=True)
 
@@ -66,6 +126,14 @@ def dish_html(it, protein_tiers=None):
         bits.append(f'<p class="dish-desc">{esc(it["description"])}</p>')
     if it.get("price_note"):
         bits.append(f'<p class="dish-note">{esc(it["price_note"])}</p>')
+    rslug = recipe_slug_for(it.get("name") or "")
+    if rslug:
+        bits.append(
+            f'<a class="recipe-link" href="/recipes/{rslug}/">'
+            f'<img src="/recipes/{rslug}/{rslug}.jpg" alt="" loading="lazy" width="1200" height="675">'
+            f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
+            f' · how this dish is typically made</span></a>'
+        )
     bits.append("</div></li>")
     return "".join(bits)
 
@@ -319,6 +387,10 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .cta h2{{font-family:'Archivo', 'Inter', system-ui, sans-serif;font-weight: 800;font-size:var(--step-2);margin:0 0 8px}}
 .cta p{{margin:0 0 16px;color:var(--ink-secondary);font-size:var(--step--1)}}
 .btn{{display:inline-block;background:var(--green-dark);color:#fff;text-decoration:none;font-weight:600;padding:11px 22px;border-radius:999px;font-size:var(--step--1)}}
+.recipe-link{{display:flex;align-items:center;gap:10px;margin:8px 0 0;padding:7px 9px;border:1px solid var(--border);border-radius:10px;text-decoration:none;background:#fff}}
+.recipe-link img{{width:56px;height:38px;object-fit:cover;border-radius:6px;flex:0 0 auto}}
+.recipe-link .rl-text{{font-size:.8125rem;color:var(--ink-secondary);line-height:1.4}}
+.recipe-link strong{{color:var(--green-dark)}}
 footer{{border-top:1px solid var(--border);padding:22px 0 40px;font-size:.8125rem;color:var(--ink-tertiary)}}
 footer p{{margin:0 0 6px}}
 @media (max-width:640px){{
@@ -380,6 +452,7 @@ em {{ font-style: normal; font-weight: 700; }}
 
 <footer><div class="wrap">
   <p>Source: <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','restaurant menu'))}</a> · read {checked}</p>
+  <p>Recipe links show ThaiData's guide version of the dish — not this restaurant's own recipe. Restaurants' recipes vary.</p>
   <p>ThaiData UK · <a href="{listing_url}">Restaurant details &amp; food hygiene rating</a> · <a href="/">All UK Thai restaurants</a></p>
 </div></footer>
 <script>
