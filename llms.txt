@@ -226,7 +226,11 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Nam Prik Goong Siab (น้ำพริกกุ้งเสียบ)](https://thaidata.uk/recipes/nam-prik-goong-siap/): Dried smoked shrimp folded through a pounded paste of grilled kapi, shallots, garlic, bird's eye chillies, pal
 - [Nam Krajiab (น้ำกระเจี๊ยบ)](https://thaidata.uk/recipes/nam-krajiab/): Dried roselle calyxes simmered until the water turns deep ruby, sweetened and rounded with a pinch of salt, th
 - [Roti Sai Mai (โรตีสายไหม)](https://thaidata.uk/recipes/roti-sai-mai/): Paper-thin crepes wrapped around sai mai, hand-pulled brown-sugar threads — Ayutthaya's famous sweet, from the
-- [Khanom Kluay (ขนมกล้วย)](https://thaidata.uk/recipes/khanom-kluay/): Thailand's steamed banana and coconut cake: ripe nam wa bananas kneaded with rice flour, tapioca starch, cocon
+- [Khanom Kluay (ขนมกล้วย)](https://thaidata.uk/recipes/khanom-kluay/):
+- [Pad Nam Man Hoi (ผัดน้ำมันหอย)](https://thaidata.uk/recipes/pad-nam-man-hoi/):
+- [Yum Talay (ยำทะเล)](https://thaidata.uk/recipes/yum-talay/):
+- [Pla Pae Sa (ปลาแป๊ะซะ)](https://thaidata.uk/recipes/pla-pae-sa/):
+- [Yum Ped Yang (ยำเป็ดย่าง)](https://thaidata.uk/recipes/yum-ped-yang/): - [Yum Ped Yang (ยำเป็ดย่าง)](/recipes/yum-ped-yang/) - [Pla Pae Sa (ปลาแป๊ะซะ)](/recipes/pla-pae-sa/) - [Yum Talay (ยำทะเล)](/recipes/yum-talay/) - [Pad Nam Man Hoi (ผัดน้ำมันหอย)](/recipes/pad-nam-man-hoi/) Thailand's steamed banana and coconut cake: ripe nam wa bananas kneaded with rice flour, tapioca starch, cocon
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.

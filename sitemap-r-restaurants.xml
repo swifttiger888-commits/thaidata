@@ -6391,6 +6391,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/milton-keynes/royal-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/mole-valley/malai-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6442,6 +6447,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/tonbridge-and-malling/pad-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/vale-of-white-horse/yummy-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

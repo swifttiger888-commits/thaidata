@@ -73,7 +73,8 @@
    "pad med mamooang",
    "pad himmaparn",
    "pat met mamuang",
-   "pad med manuang hinnaparn"
+   "pad med manuang hinnaparn",
+   "pad med ma muang him ma parn"
   ]
  },
  "cha-dum-yen": {
@@ -291,7 +292,8 @@
    "hat yai chicken",
    "hat yai fried chicken",
    "fried chicken hat yai",
-   "thai fried chicken"
+   "thai fried chicken",
+   "gai tod"
   ]
  },
  "gai-yang": {
@@ -851,7 +853,8 @@
    "pork toast",
    "kanom pang na moo",
    "khanom pang gai",
-   "chicken toast"
+   "chicken toast",
+   "chicken on toast"
   ]
  },
  "khanom-pang-sangkaya": {
@@ -951,7 +954,8 @@
    "stewed pork knuckle",
    "khao kha mu",
    "ka moo",
-   "khao kaa moo"
+   "khao kaa moo",
+   "kaa moo"
   ]
  },
  "khao-khluk-kapi": {
@@ -1373,7 +1377,8 @@
    "kuay tiew khua gai",
    "stir fried noodle chicken",
    "guay tiew kua gai",
-   "kuay teow kua gai"
+   "kuay teow kua gai",
+   "pad kua"
   ]
  },
  "kuay-tiew-lord": {
@@ -2359,7 +2364,8 @@
   "aliases": [
    "pla meuk pad kai kem",
    "squid salted egg",
-   "pla muk pad kai kem"
+   "pla muk pad kai kem",
+   "salted egg squid"
   ]
  },
  "pla-meuk-yang": {
@@ -2469,7 +2475,11 @@
   "thai": [
    "โป๊ะแตก"
   ],
-  "aliases": []
+  "aliases": [
+   "poh taek",
+   "pad poh taek",
+   "tom poh taek"
+  ]
  },
  "poo-pad-pong-karee": {
   "title": "Poo Pad Pong Karee (ปูผัดผงกะหรี่) — Crab Stir-Fried in Yellow Curry Sauce with Egg",
@@ -2490,7 +2500,11 @@
   "thai": [
    "ราดหน้า"
   ],
-  "aliases": []
+  "aliases": [
+   "raat na",
+   "rad na",
+   "rat na"
+  ]
  },
  "red-curry": {
   "title": "Red Curry (แกงเผ็ด) — The Real Thai Red Curry",
@@ -2532,7 +2546,9 @@
   "thai": [
    "ไส้กรอกอีสาน"
   ],
-  "aliases": []
+  "aliases": [
+   "sai krok isan"
+  ]
  },
  "sai-ua": {
   "title": "Sai Ua (ไส้อั่ว) — Northern Thai Herb Sausage",
@@ -2746,7 +2762,9 @@
   "thai": [
    "ไข่เจียว"
   ],
-  "aliases": []
+  "aliases": [
+   "thai omelette"
+  ]
  },
  "thai-spring-rolls": {
   "title": "Thai Spring Rolls (ปอเปี๊ยะทอด) — The Real Po Pia Tod",
@@ -2916,7 +2934,8 @@
    "tom saab",
    "pork rib soup",
    "spicy pork soup",
-   "spicy pork bone soup"
+   "spicy pork bone soup",
+   "tom saep"
   ]
  },
  "tom-yum-goong": {
@@ -3151,6 +3170,59 @@
    "wun sen salad",
    "seafood yum wun sen",
    "yam wunsen"
+  ]
+ },
+ "pad-nam-man-hoi": {
+  "title": "Pad Nam Man Hoi",
+  "thai": [
+   "ผัดน้ำมันหอย"
+  ],
+  "aliases": [
+   "pad nam man hoi",
+   "pad num mon hoy",
+   "pad num man hoy",
+   "pad nam mon hoi",
+   "oyster sauce stir fry",
+   "num mon hoy",
+   "nam man hoy"
+  ]
+ },
+ "yum-talay": {
+  "title": "Yum Talay",
+  "thai": [
+   "ยำทะเล"
+  ],
+  "aliases": [
+   "yum talay",
+   "yam thalay",
+   "seafood yum",
+   "yum thale",
+   "yam taleh",
+   "spicy seafood salad"
+  ]
+ },
+ "pla-pae-sa": {
+  "title": "Pla Pae Sa",
+  "thai": [
+   "ปลาแป๊ะซะ"
+  ],
+  "aliases": [
+   "pla pae sa",
+   "sea bass pae sa",
+   "pla pae sah",
+   "pla pa sa"
+  ]
+ },
+ "yum-ped-yang": {
+  "title": "Yum Ped Yang",
+  "thai": [
+   "ยำเป็ดย่าง"
+  ],
+  "aliases": [
+   "yum phed yang",
+   "yam ped yang",
+   "yum ped yang",
+   "roast duck salad"
   ]
  }
 }
