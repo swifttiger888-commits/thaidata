@@ -452,7 +452,7 @@ em {{ font-style: normal; font-weight: 700; }}
 
 <footer><div class="wrap">
   <p>Source: <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','restaurant menu'))}</a> · read {checked}</p>
-  <p>Recipe links show ThaiData's guide version of the dish — not this restaurant's own recipe. Restaurants' recipes vary.</p>
+  <p>Guide recipes show how a dish is typically made — not this restaurant's own recipe. Thai names have no single English spelling, so the same dish may appear under different spellings here and elsewhere. Treat ingredients as a guideline, not a guarantee.</p>
   <p>ThaiData UK · <a href="{listing_url}">Restaurant details &amp; food hygiene rating</a> · <a href="/">All UK Thai restaurants</a></p>
 </div></footer>
 <script>
