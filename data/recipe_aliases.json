@@ -134,7 +134,13 @@
   "thai": [
    "ฉู่ฉี่ปลา"
   ],
-  "aliases": []
+  "aliases": [
+   "sea bass choo chee",
+   "chu chi pla",
+   "pla chu chee",
+   "chu chi sea bass",
+   "chu chee fish"
+  ]
  },
  "fak-thong-kaeng-buat": {
   "title": "Fak Thong Kaeng Buat (ฟักทองแกงบวด) — Pumpkin in Sweet Coconut Milk",
@@ -2237,7 +2243,16 @@
    "sea bass lime",
    "steamed fish lime",
    "pla krapong neung manao",
-   "steamed seabass"
+   "steamed seabass",
+   "sea bass neung manow",
+   "pla neung ma nao",
+   "pla kapong neung manow",
+   "steamed sea bass lime",
+   "sea bass lemon sauce",
+   "sea bass nueng ma nao",
+   "pla neung manow",
+   "lime chilli sea bass",
+   "lime and chilli sea bass"
   ]
  },
  "pla-kapong-tod-nam-pla": {
@@ -2247,12 +2262,10 @@
   ],
   "aliases": [
    "pla kapong tod nam pla",
-   "fried sea bass",
-   "sea bass",
-   "pla kapong",
    "pla krapong",
    "sea bass fish sauce",
-   "deep fried sea bass"
+   "deep fried sea bass",
+   "crispy sea bass"
   ]
  },
  "pla-meuk-pad-kai-kem": {
@@ -2314,7 +2327,9 @@
    "pla lard prig",
    "fish with chilli sauce",
    "pla rad prick",
-   "fried fish chilli sauce"
+   "fried fish chilli sauce",
+   "sea bass lad prik",
+   "sea bass lard prig"
   ]
  },
  "pla-sam-rod": {
@@ -2328,7 +2343,11 @@
    "three flavoured fish",
    "sweet and sour fish",
    "pla sam rot",
-   "3 flavour fish"
+   "3 flavour fish",
+   "pla sarm ros",
+   "three flavoured sea bass",
+   "three flavour sea bass",
+   "flavoured deep fried sea bass"
   ]
  },
  "pla-tod-kamin": {
