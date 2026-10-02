@@ -67,7 +67,13 @@
    "gai pad med mamuang",
    "chicken cashew",
    "cashew stir fry",
-   "pad med mamuang himmaphan"
+   "pad med mamuang himmaphan",
+   "pad met mamuang",
+   "pad med ma maung",
+   "pad med mamooang",
+   "pad himmaparn",
+   "pat met mamuang",
+   "pad med manuang hinnaparn"
   ]
  },
  "cha-dum-yen": {
@@ -119,7 +125,9 @@
    "gai satay",
    "satay chicken",
    "kai satay",
-   "chicken sate"
+   "chicken sate",
+   "chicken stay",
+   "chicken satah"
   ]
  },
  "chor-muang": {
@@ -142,7 +150,12 @@
    "chu chee fish",
    "shu shi",
    "sea bass shu shi",
-   "pla shu shi"
+   "pla shu shi",
+   "choo chee pla",
+   "chu chee",
+   "choo chee",
+   "chu chee curry",
+   "chu chee prawns"
   ]
  },
  "fak-thong-kaeng-buat": {
@@ -228,7 +241,10 @@
    "jungle curry",
    "kaeng pa",
    "gang pa",
-   "country curry"
+   "country curry",
+   "geang pa",
+   "gaeng pah",
+   "gang pah"
   ]
  },
  "gaeng-poo": {
@@ -274,7 +290,8 @@
    "gai tod hat yai",
    "hat yai chicken",
    "hat yai fried chicken",
-   "fried chicken hat yai"
+   "fried chicken hat yai",
+   "thai fried chicken"
   ]
  },
  "gai-yang": {
@@ -314,7 +331,8 @@
    "goong op woon sen",
    "prawn glass noodle pot",
    "goong ob wun sen",
-   "prawns glass noodles"
+   "prawns glass noodles",
+   "goong ohp wun sen"
   ]
  },
  "goong-pad-sataw": {
@@ -336,7 +354,10 @@
   "thai": [
    "กุ้งเผา"
   ],
-  "aliases": []
+  "aliases": [
+   "goong pao",
+   "goong paow"
+  ]
  },
  "green-curry": {
   "title": "Thai Green Curry (แกงเขียวหวาน) — From Scratch, The Real Way",
@@ -355,7 +376,12 @@
    "green curry chicken",
    "chicken green curry",
    "gaeng kiew wan gai",
-   "gang kiew wan gai"
+   "gang kiew wan gai",
+   "gang kiew warn",
+   "kang khiaw wan",
+   "gaeng keow wan",
+   "gaeng khian waan",
+   "kang kiew wan"
   ]
  },
  "guay-tiew-ruea": {
@@ -557,7 +583,8 @@
    "kaeng luang",
    "gaeng luang",
    "southern yellow curry",
-   "kaeng leung"
+   "kaeng leung",
+   "geang luang"
   ]
  },
  "kaeng-nor-mai": {
@@ -585,7 +612,8 @@
    "gang phed ped yang",
    "ped yang curry",
    "roast duck curry",
-   "duck red curry"
+   "duck red curry",
+   "kaeg pett ped yang"
   ]
  },
  "kaeng-tai-pla": {
@@ -680,7 +708,9 @@
   "thai": [
    "ขนมถ้วย"
   ],
-  "aliases": []
+  "aliases": [
+   "kanom tuoy"
+  ]
  },
  "khai-yat-sai": {
   "title": "Khai Yat Sai (ไข่ยัดไส้) — Thai Stuffed Omelette",
@@ -792,7 +822,8 @@
    "banana cake",
    "steamed banana",
    "banana pudding",
-   "khanom gluay"
+   "khanom gluay",
+   "kanom gluoy"
   ]
  },
  "khanom-mo-kaeng": {
@@ -818,7 +849,9 @@
    "fried bread",
    "minced pork toast",
    "pork toast",
-   "kanom pang na moo"
+   "kanom pang na moo",
+   "khanom pang gai",
+   "chicken toast"
   ]
  },
  "khanom-pang-sangkaya": {
@@ -917,7 +950,8 @@
    "pork knuckle rice",
    "stewed pork knuckle",
    "khao kha mu",
-   "ka moo"
+   "ka moo",
+   "khao kaa moo"
   ]
  },
  "khao-khluk-kapi": {
@@ -1114,7 +1148,10 @@
    "khao pad moo",
    "khao pad neua",
    "khao pad kai",
-   "special fried rice"
+   "special fried rice",
+   "khao phad khai",
+   "kaow pad kai",
+   "khao pat khai"
   ]
  },
  "khao-pad-naem": {
@@ -1139,7 +1176,8 @@
    "crab fried rice",
    "khao phat pu",
    "crab meat fried rice",
-   "khao pad puh"
+   "khao pad puh",
+   "kaow pad poo"
   ]
  },
  "khao-pad-saparot": {
@@ -1222,7 +1260,8 @@
    "khao tom mud",
    "banana leaf rice",
    "sticky rice banana",
-   "khao tom mad"
+   "khao tom mad",
+   "kao tom mud"
   ]
  },
  "khao-tom-pla": {
@@ -1319,7 +1358,8 @@
    "kuay tiew kai",
    "chicken noodle soup",
    "kuay teow gai",
-   "kway teow kai"
+   "kway teow kai",
+   "chicken noodles soup"
   ]
  },
  "kuay-tiew-khua-gai": {
@@ -1408,7 +1448,9 @@
    "laap",
    "larb chicken",
    "larb pork",
-   "larb beef"
+   "larb beef",
+   "lab gai",
+   "larp moo"
   ]
  },
  "laab-gai": {
@@ -1905,7 +1947,8 @@
    "thai coffee",
    "olieng",
    "black coffee thai",
-   "kaffee boran"
+   "kaffee boran",
+   "thai ice coffee"
   ]
  },
  "pad-cha": {
@@ -1935,7 +1978,8 @@
    "crispy pork with kale",
    "kha nah moo krob",
    "khana moo krob",
-   "pad kana moo grob"
+   "pad kana moo grob",
+   "pad kana"
   ]
  },
  "pad-kee-mao": {
@@ -1950,7 +1994,10 @@
    "ki mao",
    "drunken noodles",
    "phat khi mao",
-   "drunken noodle"
+   "drunken noodle",
+   "pad kee mow",
+   "pad khee mao",
+   "drunkard noodles"
   ]
  },
  "pad-khing": {
@@ -1967,7 +2014,12 @@
    "pad khin",
    "ginger chicken",
    "pad khing moo",
-   "ginger and spring onion"
+   "ginger and spring onion",
+   "chicken ginger",
+   "pork ginger",
+   "phad khing",
+   "pat khing",
+   "ginger garlic stir fry"
   ]
  },
  "pad-krapow": {
@@ -1995,7 +2047,11 @@
    "kra prao",
    "pad kra prao",
    "basil stir fry",
-   "holy basil"
+   "holy basil",
+   "pad kraprao",
+   "pad gra praw",
+   "pad gra poa",
+   "pad kapow"
   ]
  },
  "pad-krapow-nuea": {
@@ -2032,7 +2088,13 @@
   "aliases": [
    "pad nam prik pao",
    "chilli jam stir fry",
-   "pad nam phrik phao"
+   "pad nam phrik phao",
+   "pad nam prik paow",
+   "pad prik pao",
+   "pad prik phao",
+   "pad plik paow",
+   "nam prik pao",
+   "chillis oil stir fried"
   ]
  },
  "pad-pak-bung": {
@@ -2062,7 +2124,8 @@
    "stir fried vegetables",
    "mixed vegetable",
    "pad phak ruam",
-   "pad pak ruam mit"
+   "pad pak ruam mit",
+   "pad pham ruam"
   ]
  },
  "pad-phet": {
@@ -2077,7 +2140,8 @@
    "pad pet",
    "stir fried chilli paste",
    "pad phed",
-   "pud phed"
+   "pud phed",
+   "chilli paste stir fry"
   ]
  },
  "pad-phrik-khing": {
@@ -2102,7 +2166,12 @@
    "pad priew wan",
    "sweet and sour",
    "sweet sour stir fry",
-   "pad priaw wan"
+   "pad priaw wan",
+   "pad prew wan",
+   "priew wan",
+   "priew waan",
+   "preow wan",
+   "gai priew wan"
   ]
  },
  "pad-prik-king": {
@@ -2148,7 +2217,11 @@
    "pad sieu",
    "pud see ew",
    "see ew",
-   "see ewe"
+   "see ewe",
+   "phad sie eaw",
+   "pat see iew",
+   "pad si eul",
+   "pad si aew"
   ]
  },
  "pad-thai": {
@@ -2185,7 +2258,8 @@
   "aliases": [
    "pad tua ngok",
    "bean sprout stir fry",
-   "stir fried bean sprouts"
+   "stir fried bean sprouts",
+   "pat tua ngok"
   ]
  },
  "pad-woon-sen": {
@@ -2211,7 +2285,10 @@
    "panaeng",
    "penang",
    "panang curry",
-   "panaeng curry"
+   "panaeng curry",
+   "pa nang",
+   "pa neng",
+   "pa nang curry"
   ]
  },
  "patongko": {
@@ -2232,7 +2309,8 @@
    "pla kung",
    "spicy prawn salad",
    "goong salad",
-   "raw prawn salad"
+   "raw prawn salad",
+   "phla goong"
   ]
  },
  "pla-kapong-neung-manao": {
@@ -2255,7 +2333,9 @@
    "sea bass nueng ma nao",
    "pla neung manow",
    "lime chilli sea bass",
-   "lime and chilli sea bass"
+   "lime and chilli sea bass",
+   "pla neung ma naow",
+   "pla nung manao"
   ]
  },
  "pla-kapong-tod-nam-pla": {
@@ -2332,7 +2412,8 @@
    "pla rad prick",
    "fried fish chilli sauce",
    "sea bass lad prik",
-   "sea bass lard prig"
+   "sea bass lard prig",
+   "pla tod lad prik"
   ]
  },
  "pla-sam-rod": {
@@ -2350,7 +2431,9 @@
    "pla sarm ros",
    "three flavoured sea bass",
    "three flavour sea bass",
-   "flavoured deep fried sea bass"
+   "flavoured deep fried sea bass",
+   "plaa sam rood",
+   "fried fish 3 flavoured"
   ]
  },
  "pla-tod-kamin": {
@@ -2419,7 +2502,10 @@
    "gaeng phed",
    "kaeng phet",
    "gang ped",
-   "gang phed"
+   "gang phed",
+   "gaeng phet",
+   "kang pett",
+   "kang phet"
   ]
  },
  "roti-sai-mai": {
@@ -2571,7 +2657,8 @@
    "seua rong hai",
    "crying tiger",
    "weeping tiger",
-   "suea long hai"
+   "suea long hai",
+   "seau rong hai"
   ]
  },
  "suki-thai": {
@@ -2676,7 +2763,10 @@
    "thai spring roll",
    "chicken spring rolls",
    "prawn spring rolls",
-   "duck spring rolls"
+   "duck spring rolls",
+   "por pia tord",
+   "po pia tod",
+   "po pia thod"
   ]
  },
  "thong-yip": {
@@ -2715,7 +2805,10 @@
    "corn fritters",
    "corn cakes",
    "tod mun khao phot",
-   "corn cake"
+   "corn cake",
+   "tod man kao phod",
+   "tord mun kao phod",
+   "khao phod tod"
   ]
  },
  "tod-mun-pla": {
@@ -2729,7 +2822,9 @@
    "fish cake",
    "fish cakes",
    "thai fish cake",
-   "thai fish cakes"
+   "thai fish cakes",
+   "tord man plaa",
+   "tod mon pla"
   ]
  },
  "tom-jeud-tao-hu": {
@@ -2976,7 +3071,9 @@
    "gaeng karee",
    "kaeng kari",
    "gang karee",
-   "kang kari"
+   "kang kari",
+   "gaeng garee",
+   "gang garee"
   ]
  },
  "yen-ta-fo": {
@@ -3027,7 +3124,9 @@
    "yum nua",
    "yam nua",
    "thai beef salad",
-   "beef salad thai"
+   "beef salad thai",
+   "yum neau",
+   "yam nue"
   ]
  },
  "yum-woon-sen": {
