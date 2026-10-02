@@ -3224,5 +3224,57 @@
    "yum ped yang",
    "roast duck salad"
   ]
+ },
+ "pad-prig": {
+  "title": "Pad Prig",
+  "thai": [
+   "ผัดพริก"
+  ],
+  "aliases": [
+   "pad prig",
+   "pad prik",
+   "moo pad prik",
+   "gai pad prik",
+   "pad prick"
+  ]
+ },
+ "pad-kratiem-prik-thai": {
+  "title": "Pad Kratiem Prik Thai",
+  "thai": [
+   "ผัดกระเทียมพริกไทย"
+  ],
+  "aliases": [
+   "pad kratiem prik thai",
+   "pad gra tiem prig thai",
+   "pad gra-tiem",
+   "garlic pepper",
+   "garlic and pepper",
+   "pad kratiem"
+  ]
+ },
+ "pad-prik-gaeng-moo-krob": {
+  "title": "Pad Prik Gaeng Moo Krob",
+  "thai": [
+   "ผัดพริกแกงหมูกรอบ"
+  ],
+  "aliases": [
+   "pad prik gaeng moo krob",
+   "prig gang moo grob",
+   "prig gang moo krob",
+   "prik gaeng moo krob"
+  ]
+ },
+ "yum-pla-tod": {
+  "title": "Yum Pla Tod",
+  "thai": [
+   "ยำปลาทอด"
+  ],
+  "aliases": [
+   "yum pla tod",
+   "sea bass yum",
+   "yam pla tod",
+   "pla tod yum",
+   "pla kapong tod yum"
+  ]
  }
 }

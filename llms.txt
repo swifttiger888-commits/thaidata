@@ -230,7 +230,11 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Pad Nam Man Hoi (ผัดน้ำมันหอย)](https://thaidata.uk/recipes/pad-nam-man-hoi/):
 - [Yum Talay (ยำทะเล)](https://thaidata.uk/recipes/yum-talay/):
 - [Pla Pae Sa (ปลาแป๊ะซะ)](https://thaidata.uk/recipes/pla-pae-sa/):
-- [Yum Ped Yang (ยำเป็ดย่าง)](https://thaidata.uk/recipes/yum-ped-yang/): - [Yum Ped Yang (ยำเป็ดย่าง)](/recipes/yum-ped-yang/) - [Pla Pae Sa (ปลาแป๊ะซะ)](/recipes/pla-pae-sa/) - [Yum Talay (ยำทะเล)](/recipes/yum-talay/) - [Pad Nam Man Hoi (ผัดน้ำมันหอย)](/recipes/pad-nam-man-hoi/) Thailand's steamed banana and coconut cake: ripe nam wa bananas kneaded with rice flour, tapioca starch, cocon
+- [Yum Ped Yang (ยำเป็ดย่าง)](https://thaidata.uk/recipes/yum-ped-yang/):
+- [Pad Prik Gaeng Moo Krob (ผัดพริกแกงหมูกรอบ)](https://thaidata.uk/recipes/pad-prik-gaeng-moo-krob/):
+- [Yum Pla Tod (ยำปลาทอด)](https://thaidata.uk/recipes/yum-pla-tod/):
+- [Pad Prig (ผัดพริก)](https://thaidata.uk/recipes/pad-prig/):
+- [Pad Kratiem Prik Thai (ผัดกระเทียมพริกไทย)](https://thaidata.uk/recipes/pad-kratiem-prik-thai/): - [Pad Kratiem Prik Thai (ผัดกระเทียมพริกไทย)](/recipes/pad-kratiem-prik-thai/) - [Pad Prig (ผัดพริก)](/recipes/pad-prig/) - [Yum Pla Tod (ยำปลาทอด)](/recipes/yum-pla-tod/) - [Pad Prik Gaeng Moo Krob (ผัดพริกแกงหมูกรอบ)](/recipes/pad-prik-gaeng-moo-krob/) - [Yum Ped Yang (ยำเป็ดย่าง)](/recipes/yum-ped-yang/) - [Pla Pae Sa (ปลาแป๊ะซะ)](/recipes/pla-pae-sa/) - [Yum Talay (ยำทะเล)](/recipes/yum-talay/) - [Pad Nam Man Hoi (ผัดน้ำมันหอย)](/recipes/pad-nam-man-hoi/) Thailand's steamed banana and coconut cake: ripe nam wa bananas kneaded with rice flour, tapioca starch, cocon
 
 ## City Data
 - [London](https://thaidata.uk/cities/london.html): 280 Thai businesses. Per-capita density, hygiene ratings, dine-in/takeaway split.
