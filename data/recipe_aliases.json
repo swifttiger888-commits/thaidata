@@ -2142,14 +2142,16 @@
       "ผัดผักรวมมิตร"
     ],
     "aliases": [
+      "mixed vegetable",
+      "mixed vegetables",
       "pad pak",
       "pad pak ruam",
-      "mixed vegetables",
-      "stir fried vegetables",
-      "mixed vegetable",
-      "pad phak ruam",
       "pad pak ruam mit",
-      "pad pham ruam"
+      "pad phak ruam",
+      "pad pham ruam",
+      "pat pak ruam mit",
+      "stir fried mixed vegetables",
+      "stir fried vegetables"
     ]
   },
   "pad-phet": {
@@ -3256,12 +3258,19 @@
       "ยำทะเล"
     ],
     "aliases": [
-      "yum talay",
-      "yam thalay",
+      "hot and spicy seafood salad",
+      "mixed seafood salad",
+      "seafood salad",
       "seafood yum",
-      "yum thale",
+      "spicy seafood salad",
       "yam taleh",
-      "spicy seafood salad"
+      "yam thalay",
+      "yum ruam mit",
+      "yum ruam mit ta lay",
+      "yum ruam mit taleh",
+      "yum ruam mit thale",
+      "yum talay",
+      "yum thale"
     ]
   },
   "pla-pae-sa": {
