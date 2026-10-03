@@ -3309,13 +3309,14 @@
  "gai-chup-paeng": {
   "title": "Gai Chup Paeng (ไก่ชุบแป้งทอด) — Thai Battered Chicken & Prawns",
   "thai": [
-   "ไก่ชุบแป้งทอด", "กุ้งชุบแป้งทอด"
+   "ไก่ชุบแป้งทอด",
+   "กุ้งชุบแป้งทอด"
   ],
   "aliases": [
    "gai choop pang",
    "gai chup paeng",
    "goong tempura",
-   "gung tempura", 
+   "gung tempura",
    "chicken tempura",
    "prawn tempura",
    "battered chicken",
@@ -3358,6 +3359,71 @@
    "mixed vegetable fritters",
    "fried vegetables",
    "vegetable tempura"
+  ]
+ },
+ "yum-tofu": {
+  "title": "Yum Tofu (ยำเต้าหู้) — Thai Crispy Tofu Salad",
+  "thai": [
+   "ยำเต้าหู้"
+  ],
+  "aliases": [
+   "yum tofu",
+   "crispy tofu salad",
+   "fried tofu salad",
+   "ยำเต้าหู้กรอบ"
+  ]
+ },
+ "goong-pad-saam-sahai": {
+  "title": "Goong Pad Saam Sahai (กุ้งผัดสามสหาย) — Garlic Prawns with the Three Friends",
+  "thai": [
+   "กุ้งผัดสามสหาย"
+  ],
+  "aliases": [
+   "goong pad saam sahai",
+   "goong pad sam sahai",
+   "kung pad sam sahai",
+   "garlic prawns",
+   "prawn stir fry three friends"
+  ]
+ },
+ "gae-yang": {
+  "title": "Gae Yang (แกะย่าง) — Thai-Style Grilled Lamb",
+  "thai": [
+   "แกะย่าง"
+  ],
+  "aliases": [
+   "gae yang",
+   "grilled lamb",
+   "thai grilled lamb",
+   "lamb grill"
+  ]
+ },
+ "kuay-dtiao-neua-dtoon": {
+  "title": "Kuay Dtiao Neua Dtoon (ก๋วยเตี๋ยวเนื้อตุ๋น) — Stewed Beef Noodle Soup",
+  "thai": [
+   "ก๋วยเตี๋ยวเนื้อตุ๋น",
+   "ก๋วยเตี๋ยวหมูตุ๋น"
+  ],
+  "aliases": [
+   "kuay dtiao neua dtoon",
+   "kuay dtiao neua toon",
+   "guay tiew neua toon",
+   "stewed beef noodle soup",
+   "stewed beef noodles",
+   "beef stew noodles"
+  ]
+ },
+ "kao-lao": {
+  "title": "Kao Lao (เกาเหลา) — Thai Clear-Broth Soup, No Noodles",
+  "thai": [
+   "เกาเหลา"
+  ],
+  "aliases": [
+   "kao lao",
+   "kao lao en dtoon",
+   "kao lao beef",
+   "kao lao pork",
+   "clear broth soup no noodles"
   ]
  }
 }

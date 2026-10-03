@@ -1813,6 +1813,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/recipes/kao-lao/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/recipes/yum-tofu/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/recipes/goong-pad-saam-sahai/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/recipes/gae-yang/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/recipes/kuay-dtiao-neua-dtoon/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/tools/where-to-open-thai-restaurant-uk</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
