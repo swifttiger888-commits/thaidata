@@ -3276,5 +3276,88 @@
    "pla tod yum",
    "pla kapong tod yum"
   ]
+ },
+ "kiao-tod": {
+  "title": "Kiao Tod (เกี๊ยวทอด) — Thai Crispy Fried Wontons",
+  "thai": [
+   "เกี๊ยวทอด"
+  ],
+  "aliases": [
+   "crispy fried wonton",
+   "crispy fried wontons",
+   "fried wontons",
+   "deep-fried wonton",
+   "kiao tod",
+   "gyoza tod",
+   "wonton crispy"
+  ]
+ },
+ "si-khrong-moo-tod": {
+  "title": "Si Khrong Moo Tod (ซี่โครงหมูทอด) — Thai Fried Pork Spare Ribs",
+  "thai": [
+   "ซี่โครงหมูทอด"
+  ],
+  "aliases": [
+   "spicy pork spare ribs",
+   "fried spare ribs",
+   "pork spare ribs",
+   "si khrong moo tod",
+   "see khrong moo tod",
+   "fried ribs"
+  ]
+ },
+ "gai-chup-paeng": {
+  "title": "Gai Chup Paeng (ไก่ชุบแป้งทอด) — Thai Battered Chicken & Prawns",
+  "thai": [
+   "ไก่ชุบแป้งทอด", "กุ้งชุบแป้งทอด"
+  ],
+  "aliases": [
+   "gai choop pang",
+   "gai chup paeng",
+   "goong tempura",
+   "gung tempura", 
+   "chicken tempura",
+   "prawn tempura",
+   "battered chicken",
+   "battered prawns"
+  ]
+ },
+ "khao-kriab-gung": {
+  "title": "Khao Kriab Gung (ข้าวเกรียบกุ้ง) — Thai Prawn Crackers",
+  "thai": [
+   "ข้าวเกรียบกุ้ง"
+  ],
+  "aliases": [
+   "thai prawn crackers",
+   "prawn crackers",
+   "khao kriab gung",
+   "khaow kriab gung",
+   "shrimp crackers"
+  ]
+ },
+ "satay-hed": {
+  "title": "Satay Hed (สะเต๊ะเห็ด) — Thai Mushroom Satay",
+  "thai": [
+   "สะเต๊ะเห็ด"
+  ],
+  "aliases": [
+   "satay hed",
+   "mushroom satay",
+   "vegetarian satay",
+   "tofu satay"
+  ]
+ },
+ "pak-tod": {
+  "title": "Pak Tod (ผักทอด) — Thai Vegetable Fritters",
+  "thai": [
+   "ผักทอด"
+  ],
+  "aliases": [
+   "pak tod",
+   "vegetable fritters",
+   "mixed vegetable fritters",
+   "fried vegetables",
+   "vegetable tempura"
+  ]
  }
 }
