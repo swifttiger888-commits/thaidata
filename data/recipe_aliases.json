@@ -2574,9 +2574,13 @@
       "รวมมิตร"
     ],
     "aliases": [
-      "ruam mit",
       "mixed dessert",
       "mixed jelly",
+      "ruam mit",
+      "ruam mit dessert",
+      "ruam mit ice cream",
+      "ruam mit kanom",
+      "ruam mit nam kati",
       "ruam mit thai"
     ]
   },
@@ -2990,17 +2994,23 @@
       "ต้มยำกุ้ง"
     ],
     "aliases": [
-      "tom yum goong",
-      "tom yum kung",
+      "hot and sour mixed seafood soup",
+      "hot and sour prawn soup",
+      "hot and sour soup",
+      "mixed seafood tom yum",
+      "tom yam",
       "tom yam goong",
       "tom yam kung",
-      "tom yum koong",
-      "tom yum prawn",
-      "hot and sour prawn soup",
-      "tom yum soup",
       "tom yum",
-      "tom yam",
-      "hot and sour soup"
+      "tom yum goong",
+      "tom yum koong",
+      "tom yum kung",
+      "tom yum mixed seafood",
+      "tom yum prawn",
+      "tom yum ruam mit",
+      "tom yum ruam mit thale",
+      "tom yum soup",
+      "tom yum thale"
     ]
   },
   "tom-yum-goong-nam-khon": {
