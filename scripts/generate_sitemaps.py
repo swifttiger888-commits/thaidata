@@ -421,6 +421,16 @@ def get_static_pages() -> list[dict]:
         {"loc": "https://thaidata.uk/recipes/goong-pad-saam-sahai/", "priority": "0.7"},
         {"loc": "https://thaidata.uk/recipes/gae-yang/", "priority": "0.7"},
         {"loc": "https://thaidata.uk/recipes/kuay-dtiao-neua-dtoon/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/pepper-squid/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/gyoza/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/ka-nom-jeeb/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/sie-krong-moo-op/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/crispy-aromatic-duck/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/ped-op-nam-pueng/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/pla-nueng-see-lew/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/khao-op-ma-praow/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/pad-khao-pord-orn/", "priority": "0.7"},
+        {"loc": "https://thaidata.uk/recipes/tao-hoo-tod/", "priority": "0.7"},
 
         # Tools
         {"loc": "https://thaidata.uk/tools/where-to-open-thai-restaurant-uk", "priority": "0.6"},

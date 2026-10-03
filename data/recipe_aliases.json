@@ -3384,7 +3384,13 @@
       "chicken tempura",
       "prawn tempura",
       "battered chicken",
-      "battered prawns"
+      "battered prawns",
+      "goong choup pang tord",
+      "goong chup pang tod",
+      "kung chup paeng",
+      "gung chup paeng",
+      "breaded prawns",
+      "prawn fritters"
     ]
   },
   "khao-kriab-gung": {
@@ -3488,6 +3494,143 @@
       "kao lao beef",
       "kao lao pork",
       "clear broth soup no noodles"
+    ]
+  },
+  "pepper-squid": {
+    "title": "Pepper Squid",
+    "thai": [
+      "ปลาหมึกทอดกระเทียมพริกไทย"
+    ],
+    "aliases": [
+      "pepper squid",
+      "pla meuk tod kratiem prik thai",
+      "pla meuk tod gratium",
+      "salt and pepper squid",
+      "pla meuk thot kratiem",
+      "crispy squid"
+    ]
+  },
+  "gyoza": {
+    "title": "Gyoza",
+    "thai": [
+      "เกี๊ยวซ่า"
+    ],
+    "aliases": [
+      "gyoza",
+      "kiao sa",
+      "gyoza dumplings",
+      "gyosa"
+    ]
+  },
+  "ka-nom-jeeb": {
+    "title": "Kanom Jeeb",
+    "thai": [
+      "ขนมจีบ"
+    ],
+    "aliases": [
+      "ka nom jeeb",
+      "kanom jeeb",
+      "kanom jeep",
+      "kanom jeab",
+      "khanom jeeb",
+      "pork and prawn dumplings"
+    ]
+  },
+  "sie-krong-moo-op": {
+    "title": "Sie Krong Moo Op",
+    "thai": [
+      "ซี่โครงหมูอบ"
+    ],
+    "aliases": [
+      "sie krong moo op",
+      "si krong moo op",
+      "baked pork ribs",
+      "pork ribs",
+      "baby back ribs",
+      "honey baked ribs"
+    ]
+  },
+  "crispy-aromatic-duck": {
+    "title": "Crispy Aromatic Duck",
+    "thai": [
+      "เป็ดปักกิ่ง"
+    ],
+    "aliases": [
+      "crispy aromatic duck",
+      "aromatic duck",
+      "ped pak king",
+      "crispy duck",
+      "peking duck"
+    ]
+  },
+  "ped-op-nam-pueng": {
+    "title": "Ped Op Nam Pueng",
+    "thai": [
+      "เป็ดอบน้ำผึ้ง"
+    ],
+    "aliases": [
+      "ped op nam pueng",
+      "ped op nam peung",
+      "honey roast duck",
+      "honey duck",
+      "roast duck",
+      "ped op nam puang"
+    ]
+  },
+  "pla-nueng-see-lew": {
+    "title": "Pla Nueng See Lew",
+    "thai": [
+      "ปลานึ่งซีอิ๊ว"
+    ],
+    "aliases": [
+      "pla nueng see lew",
+      "pla neung see ew",
+      "pla nueng si ew",
+      "steamed fish",
+      "steamed sea bass",
+      "pla nueng see ew",
+      "pla nung see ew"
+    ]
+  },
+  "khao-op-ma-praow": {
+    "title": "Khao Op Ma Praow",
+    "thai": [
+      "ข้าวอบมะพร้าวอ่อน"
+    ],
+    "aliases": [
+      "khao op ma praow",
+      "khao op maprao",
+      "coconut rice",
+      "khao op maprao on",
+      "baked coconut rice"
+    ]
+  },
+  "pad-khao-pord-orn": {
+    "title": "Pad Khao Pord Orn",
+    "thai": [
+      "ผัดข้าวโพดอ่อน"
+    ],
+    "aliases": [
+      "pad khao pord orn",
+      "pad khao pod orn",
+      "pad khao pod",
+      "baby corn stir fry",
+      "pad khao pord",
+      "stir fried baby corn"
+    ]
+  },
+  "tao-hoo-tod": {
+    "title": "Tao Hoo Tod",
+    "thai": [
+      "เต้าหู้ทอด"
+    ],
+    "aliases": [
+      "tao hoo tod",
+      "tao hu tod",
+      "fried tofu",
+      "tau hu thot",
+      "tofu tod",
+      "tao hu thod"
     ]
   }
 }
