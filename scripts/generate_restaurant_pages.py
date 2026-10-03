@@ -413,24 +413,15 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # Use enrichment description if available (richer than FSA-only intro)
     schema_desc = enr_desc if enr_desc else intro_text
 
-    if enr_rating and enr_review_count:
-        enrichment_schema_parts.append(f'''        "aggregateRating": {{
-            "@type": "AggregateRating",
-            "ratingValue": {enr_rating},
-            "reviewCount": {enr_review_count},
-            "bestRating": 5
-        }}''')
+    # NOTE: aggregateRating + googleMapsUri photo removed from schema (Oct 2026)
+    # — Google Places ToS attribution fix: less un-attributed Google content.
+    # telephone / priceRange / openingHours kept (attributed on-page).
 
     if enr_phone:
         enrichment_schema_parts.append(f'        "telephone": {json.dumps(enr_phone)}')
 
     if enr_price:
         enrichment_schema_parts.append(f'        "priceRange": {json.dumps(enr_price)}')
-
-    if enr_photos and len(enr_photos) > 0:
-        first_photo_uri = enr_photos[0].get("googleMapsUri", "")
-        if first_photo_uri:
-            enrichment_schema_parts.append(f'        "image": {json.dumps(first_photo_uri)}')
 
     if enr_hours and len(enr_hours) > 0:
         enrichment_schema_parts.append(f'''        "openingHours": {json.dumps(enr_hours)}''')
@@ -549,6 +540,10 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
                 '<a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>Hours</a>'
             )
         if strip_items:
+            # Google Places ToS: attribution wherever Places content displays.
+            strip_items.append(
+                '<span class="cs-attr" translate="no" style="color:rgba(255,255,255,0.9);font-size:0.75rem;font-weight:400;white-space:nowrap;border:1px solid rgba(255,255,255,0.3);padding:1px 6px;border-radius:3px;">Google Maps</span>'
+            )
             sep = '<span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span>'
             strip = ('<div class="contact-strip" id="contact-strip" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;">'
                      + sep.join(strip_items) + '</div>')
@@ -602,7 +597,12 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     has_enrichment = any([enr_hours, enr_price, enr_phone, enr_website])
     if has_enrichment:
         html = html.replace('<!-- DYNAMIC: contact_info_open -->\n', '')
-        html = html.replace('            <!-- DYNAMIC: contact_info_close -->\n', '')
+        # Google Places ToS: per-page attribution inside the same visual container
+        # as the Google-sourced fields (hours/phone/website/price).
+        html = html.replace(
+            '            <!-- DYNAMIC: contact_info_close -->\n',
+            '            <div class="gm-attribution" style="margin-top:14px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08);font-family:Roboto,sans-serif;font-size:0.75rem;font-weight:400;color:#5e5e5e;white-space:nowrap;" translate="no">Google Maps</div>\n'
+        )
         if enr_hours and len(enr_hours) > 0:
             hours_str = '<br>'.join(enr_hours[:7])
             html = re.sub(

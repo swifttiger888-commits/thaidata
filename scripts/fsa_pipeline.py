@@ -96,7 +96,13 @@ def main() -> None:
         json.dump(recent, f, indent=2)
     print(f"  📋 Recent additions: {len(recent['restaurants'])} tracked")
 
-    # ── Step 5: regenerate pages ─────────────────────────────────────
+    # ── Step 5: freshness guard + regenerate pages ───────────────────
+    # Google ToS: enrichment JSON must be <30 days old when baked into HTML.
+    if not run([sys.executable, f'{SCRIPTS}/check_enrichment_freshness.py'],
+               'Step 5 pre-check: Google enrichment freshness'):
+        print("❌ Enrichment data stale (>25 days). Refresh before building. Aborting.")
+        sys.exit(1)
+
     if not run([sys.executable, f'{SCRIPTS}/generate_restaurant_pages.py'],
                'Step 2/6: Regenerate restaurant pages'):
         print("❌ Restaurant page generation failed. Aborting.")
