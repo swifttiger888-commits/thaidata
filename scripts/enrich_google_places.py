@@ -11,6 +11,7 @@ import sys
 import time
 import urllib.request
 import urllib.error
+from datetime import datetime, date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -126,6 +127,28 @@ def extract_photos(photos_array):
 
 
 def main():
+    # Optional: --refresh-days N re-fetches entries whose fetched_at is older
+    # than N days (Google ToS: Places content must not be retained >30 days).
+    refresh_days = None
+    if '--refresh-days' in sys.argv:
+        try:
+            refresh_days = int(sys.argv[sys.argv.index('--refresh-days') + 1])
+        except (IndexError, ValueError):
+            print("Usage: enrich_google_places.py [--refresh-days N]")
+            sys.exit(2)
+
+    def is_stale(entry):
+        if refresh_days is None:
+            return False
+        fetched = entry.get('fetched_at')
+        if not fetched:
+            return True
+        try:
+            d = datetime.strptime(fetched, '%Y-%m-%d').date()
+        except ValueError:
+            return True
+        return (date.today() - d).days > refresh_days
+
     # Load restaurants
     with open(DATA / "restaurants.json") as f:
         data = json.load(f)
@@ -151,8 +174,8 @@ def main():
     for i, r in enumerate(restaurants):
         fsa_id = r["id"]
         
-        # Skip if already done
-        if fsa_id in existing:
+        # Skip if already done (unless a --refresh-days re-fetch is due)
+        if fsa_id in existing and not is_stale(existing[fsa_id]):
             results.append(existing[fsa_id])
             skipped_existing += 1
             continue
@@ -182,10 +205,9 @@ def main():
                 "description": None,
                 "price_level": None,
                 "raw_response": None,
+                "fetched_at": date.today().isoformat(),
             })
             continue
-        
-        # Step 2: Place Details
         details = get_place_details(place_id)
         if not details:
             print("❌ details fetch failed")
@@ -202,9 +224,9 @@ def main():
                 "description": None,
                 "price_level": None,
                 "raw_response": None,
+                "fetched_at": date.today().isoformat(),
             })
             continue
-        
         # Extract fields
         desc = details.get("editorialSummary", {}).get("text", "")
         hours_data = details.get("regularOpeningHours")
@@ -224,6 +246,7 @@ def main():
             "description": desc,
             "price_level": price,
             "raw_response": json.dumps(details),
+            "fetched_at": date.today().isoformat(),
         }
         results.append(entry)
         found += 1
