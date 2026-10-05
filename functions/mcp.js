@@ -58,16 +58,16 @@ async function getRestaurants() {
 const EMBEDDED_DATA = {
   name: "ThaiData UK",
   cities: [
-    { name: "London", population: 8970000, total_thai_businesses: 284, restaurants: 231, takeaways: 53, per_100k: 3.2, avg_hygiene_rating: 4.2, scheme: "FHRS" },
+    { name: "London", population: 8970000, total_thai_businesses: 285, restaurants: 231, takeaways: 54, per_100k: 3.2, avg_hygiene_rating: 4.2, scheme: "FHRS" },
     { name: "Leeds", population: 812000, total_thai_businesses: 27, restaurants: 22, takeaways: 5, per_100k: 3.3, avg_hygiene_rating: 4.5, scheme: "FHRS" },
-    { name: "Manchester", population: 568000, total_thai_businesses: 19, restaurants: 16, takeaways: 3, per_100k: 3.3, avg_hygiene_rating: 4.3, scheme: "FHRS" },
+    { name: "Manchester", population: 568000, total_thai_businesses: 19, restaurants: 16, takeaways: 3, per_100k: 3.3, avg_hygiene_rating: 4.5, scheme: "FHRS" },
     { name: "Edinburgh", population: 548000, total_thai_businesses: 19, restaurants: 12, takeaways: 7, per_100k: 3.5, scheme: "FHIS", fhis_pass: 14, fhis_improvement: 5, fhis_exempt: 0 },
     { name: "Bristol", population: 483000, total_thai_businesses: 15, restaurants: 13, takeaways: 2, per_100k: 3.1, avg_hygiene_rating: 4.7, scheme: "FHRS" },
-    { name: "Birmingham", population: 1166000, total_thai_businesses: 6, restaurants: 6, takeaways: 0, per_100k: 0.5, avg_hygiene_rating: 4.5, scheme: "FHRS" },
+    { name: "Birmingham", population: 1166000, total_thai_businesses: 8, restaurants: 6, takeaways: 2, per_100k: 0.7, avg_hygiene_rating: 4.4, scheme: "FHRS" },
     { name: "Glasgow", population: 635000, total_thai_businesses: 7, restaurants: 5, takeaways: 2, per_100k: 1.1, scheme: "FHIS", fhis_pass: 7, fhis_improvement: 0, fhis_exempt: 0 }
   ],
   statistics: {
-    total_uk_thai_businesses: 1264,
+    total_uk_thai_businesses: 1266,
     estimated_uk_market_size_gbp: "£2.1B",
     growth_rate_2022_2025_pct: 20.3,
     national_living_wage_april_2026: 12.71,

@@ -1,5 +1,5 @@
 {
-  "run_date": "2026-09-28",
+  "run_date": "2026-10-05",
   "applied": true,
   "total_cities": 277,
   "generated": 251,
@@ -23,10 +23,6 @@
     {
       "slug": "clacton-on-sea",
       "reason": "No restaurant data for city: Clacton On Sea"
-    },
-    {
-      "slug": "derry-city-and-strabane",
-      "reason": "No restaurant data for city: Derry City And Strabane"
     },
     {
       "slug": "east-dunbartonshire",
@@ -91,6 +87,10 @@
     {
       "slug": "taunton",
       "reason": "No restaurant data for city: Taunton"
+    },
+    {
+      "slug": "thurrock",
+      "reason": "No restaurant data for city: Thurrock"
     },
     {
       "slug": "torquay",

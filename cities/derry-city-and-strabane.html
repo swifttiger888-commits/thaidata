@@ -1,30 +1,604 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+<!-- CITIES-MODE: programmatic -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- CITIES-EMPTY-STATE v1 -->
-<title>Thai Restaurants in Derry City And Strabane | ThaiData UK</title>
-<meta name="robots" content="noindex, follow">
-<meta name="description" content="We don't currently list Thai restaurants in Derry City And Strabane. Our directory is refreshed weekly from official Food Standards Agency and Food Standards Scotland data.">
-<link rel="canonical" href="https://thaidata.uk/cities/derry-city-and-strabane">
-<style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; color: #1f2937; background: #fff; }
-  main { max-width: 640px; margin: 0 auto; padding: 64px 24px; }
-  h1 { font-size: 1.6rem; margin: 0 0 16px; }
-  p { line-height: 1.6; color: #4b5563; }
-  a { color: #A3132B; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Generator substitution: city_name, HTML-escaped. -->
+  <title>Thai Restaurants in Derry City and Strabane | ThaiData</title>
+  <!-- Generator substitution: meta_description, attribute-escaped. -->
+  <meta name="description" content="Browse FSA-registered Thai restaurants in Derry City and Strabane, with restaurant listings and food hygiene information.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon-lotus.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-lotus.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Generator substitution: slug, validated URL path segment. -->
+  <link rel="canonical" href="https://thaidata.uk/cities/derry-city-and-strabane">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ThaiData">
+  <meta property="og:locale" content="en_GB">
+  <!-- Generator substitution: city_name, attribute-escaped. -->
+  <meta property="og:title" content="Thai Restaurants in Derry City and Strabane | ThaiData">
+  <!-- Generator substitution: meta_description, attribute-escaped. -->
+  <meta property="og:description" content="Browse FSA-registered Thai restaurants in Derry City and Strabane, with restaurant listings and food hygiene information.">
+  <!-- Generator substitution: slug, validated URL path segment. -->
+  <meta property="og:url" content="https://thaidata.uk/cities/derry-city-and-strabane">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #FBF7F0;
+      --dark: #FFFFFF;
+      --ink: #1A1614;
+      --ink2: #4A403C;
+      --ink3: #594D47;
+      --ink4: #594D47;
+      --c1: #A3132B;
+      --c2: #A3132B;
+      --accent: #F2B21A;
+      --line: #E7DFD5;
+    }
+
+    * { box-sizing: border-box; }
+    html {
+      font-size: 17px;
+      scroll-padding-top: 24px;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Inter", system-ui, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: anywhere;
+    }
+    h1, h2, h3 {
+      font-family: "Archivo", "Inter", system-ui, sans-serif;
+      font-weight: 800;
+      line-height: 1.18;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    em, i { font-style: normal; }
+    a {
+      color: var(--c2);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible {
+      outline: 3px solid var(--c2);
+      outline-offset: 4px;
+    }
+    img, svg { max-width: 100%; }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.025;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23n)' d='M0 0h160v160H0z'/%3E%3C/svg%3E");
+    }
+    main, .site-footer {
+      position: relative;
+      z-index: 1;
+    }
+    .wrap, .footer-inner {
+      width: 100%;
+      max-width: 1040px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+    .skip-link {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      z-index: 10;
+      padding: 12px 16px;
+      color: #FFFFFF;
+      background: var(--c2);
+      transform: translateY(-160%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+
+    .hero {
+      padding-block: 48px 24px;
+      max-width: 880px;
+    }
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--c2);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      margin-bottom: 20px;
+      font-size: clamp(2.12rem, 4.5vw, 3.3rem);
+      letter-spacing: -0.035em;
+    }
+    .hero h1 span {
+      display: block;
+      color: var(--c2);
+    }
+    .hero .intro, .hero .sub {
+      max-width: 720px;
+      color: var(--ink4);
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 20px;
+      margin-top: 24px;
+    }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: var(--c2);
+      color: #FFFFFF;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .button:hover { background: #7E0E20; }
+    .hero-actions > a:not(.button) {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    .card {
+      min-width: 0;
+      margin: 20px 0;
+      padding: 24px;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .card h2 {
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    .card h2 em { color: var(--c2); }
+    .card p {
+      color: var(--ink4);
+      margin-bottom: 12px;
+    }
+    .card > :last-child { margin-bottom: 0; }
+
+    .localities {
+      border-top: 4px solid var(--accent);
+    }
+    .locality-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 16px 0;
+      list-style: none;
+    }
+    .locality-list li {
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+
+    /* Scope these overrides to the legacy Browse card, not AUTO content. */
+    .card:has(> #browse) > div > a {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      gap: 8px 12px;
+      min-height: 76px;
+      color: var(--ink);
+      background: #FFFFFF !important;
+    }
+    .card:has(> #browse) > div > a:hover {
+      border-color: var(--c2) !important;
+      background: var(--bg) !important;
+    }
+    .card:has(> #browse) > div > a > div {
+      margin-right: 0 !important;
+    }
+    .card:has(> #browse) > div > a > span {
+      margin-right: 0 !important;
+      white-space: nowrap;
+    }
+    .card:has(> #browse) > div > a > div > span:first-child {
+      font-size: 1rem !important;
+    }
+    .card:has(> #browse) > div > a > div > span:last-child {
+      font-size: 0.85rem !important;
+    }
+    #browse { scroll-margin-top: 24px !important; }
+
+    details { background: #FFFFFF; }
+    summary {
+      min-height: 44px;
+      padding-block: 8px;
+    }
+    details[open] summary { color: var(--c2) !important; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      overflow-wrap: anywhere;
+    }
+
+    .site-footer {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding-block: 28px;
+      color: var(--ink4);
+      font-size: 0.85rem;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+    }
+    .footer-inner p { margin: 0; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    @media (max-width: 600px) {
+      .wrap, .footer-inner { padding-inline: 16px; }
+      .hero { padding-block: 32px 12px; }
+      .hero h1 { font-size: 2.12rem; }
+      .card { padding: 20px 16px; margin-block: 16px; }
+      .card h2 { font-size: 1.3rem; }
+      .card:has(> #browse) > div > a {
+        grid-template-columns: minmax(0, 1fr) auto;
+        padding: 12px !important;
+      }
+      .card:has(> #browse) > div > a > div {
+        grid-column: 1 / -1;
+      }
+      .card:has(> #browse) > div > a > span:last-of-type {
+        justify-self: end;
+      }
+    }
+
+    @media (forced-colors: active) {
+      .grain { display: none; }
+      .button { border: 1px solid ButtonText; }
+    }
+  </style>
+<style id="td-masthead-css">
+#main-nav.td-masthead,
+#main-nav.td-masthead * {
+  box-sizing: border-box;
+}
+
+#main-nav.td-masthead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: block;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  padding: 0;
+  background: #FFFFFF;
+  color: #332F2B;
+  border: 0;
+  border-bottom: 1px solid #E5DED5;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", sans-serif;
+}
+
+#main-nav.td-masthead.td-fixed {
+  position: fixed;
+}
+
+#main-nav.td-masthead .td-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  height: 71px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: transparent;
+}
+
+#main-nav.td-masthead .td-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  color: #332F2B;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+#main-nav.td-masthead .td-mark {
+  display: block;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+#main-nav.td-masthead .td-wordmark {
+  color: #332F2B;
+}
+
+#main-nav.td-masthead .td-links {
+  position: static;
+  inset: auto;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0 0 0 auto;
+  padding: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  scrollbar-width: thin;
+}
+
+#main-nav.td-masthead .td-links > a,
+#main-nav.td-masthead .td-back {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 2px;
+  color: #4A403C !important;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: none;
+}
+
+#main-nav.td-masthead .td-links > a.active,
+#main-nav.td-masthead .td-links > a[aria-current="page"],
+#main-nav.td-masthead .td-links > a:hover,
+#main-nav.td-masthead .td-back:hover {
+  color: #A61938 !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+#main-nav.td-masthead a:focus-visible {
+  outline: 2px solid #A61938;
+  outline-offset: 2px;
+}
+
+#main-nav.td-masthead .hamburger {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #main-nav.td-masthead .td-bar {
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  #main-nav.td-masthead .td-brand {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  #main-nav.td-masthead .td-links {
+    gap: 12px;
+  }
+}
 </style>
 </head>
 <body>
-<main>
-  <h1>Thai restaurants in Derry City And Strabane</h1>
-  <p>We don't currently list any Thai restaurants in Derry City And Strabane.</p>
-  <p>ThaiData UK is refreshed every week from official Food Standards Agency
-  (England, Wales &amp; Northern Ireland) and Food Standards Scotland (Scotland)
-  data &mdash; if a Thai restaurant registers here, its listing will appear
-  automatically.</p>
-  <p><a href="/cities/">Browse all UK cities</a> &nbsp;&middot;&nbsp; <a href="/">ThaiData UK home</a></p>
+  <!-- SHELL:location-v1 -->
+  <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav id="main-nav" class="td-masthead" aria-label="Primary">
+    <div class="nav-bar td-bar">
+      <a href="/" class="logo td-brand">
+        <img class="td-mark" src="/thaidata-mark-v2.svg" alt="" width="32" height="32" aria-hidden="true">
+        <span class="td-wordmark">ThaiData UK</span>
+      </a>
+      <a class="td-back" href="/thai-restaurants-city-breakdown-uk">
+        <span aria-hidden="true">←</span> All locations
+      </a>
+    </div>
+  </nav>
+
+  <main id="main" class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Local area directory</p>
+      <!-- Generator substitution: city_name, HTML-escaped. -->
+      <h1>Thai restaurants in <span>Derry City and Strabane</span></h1>
+      <p class="intro">Explore Thai restaurant listings and food hygiene information.
+        Listings are grouped under this location in the FSA data.</p>
+
+      <!-- SHELL:summary -->
+      <p class="sub">2 FSA-registered Thai businesses in this area.</p>
+    <!-- END:SHELL:summary -->
+
+      <div class="hero-actions">
+        <a class="button" href="#area-data">View area data</a>
+        <a href="/r/">UK restaurant directory</a>
+      </div>
+    </header>
+
+    <!-- SHELL:localities -->
+
+    <!-- END:SHELL:localities -->
+
+    <!-- SHELL:browse -->
+<!-- BEGIN Browse Restaurants -->
+        <div class="card" style="margin-top:20px;">
+            <h2 id="browse" style="scroll-margin-top:80px;">Browse <em>Restaurants</em> in Derry City and Strabane</h2>
+            <p style="color:var(--ink4);font-size:0.9rem;margin-bottom:16px;">View individual restaurant pages with full FSA hygiene scores, maps, and details. <a href="/r/" style="color:var(--c2);">What's this?</a></p>
+            <div>
+                    <a href="/r/derry-city-and-strabane/siam-thai/" style="display:flex;align-items:center;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;margin-bottom:8px;">
+                        <div style="flex:1;min-width:0;margin-right:10px;">
+                            <span style="font-weight:600;font-size:0.9rem;color:var(--ink);display:block;">Siam Thai</span>
+                            <span style="font-size:0.73rem;color:var(--ink4);display:block;margin-top:2px;">Londonderry • BT48</span>
+                        </div>
+                        <span style="font-size:0.8rem;color:var(--ink4);margin-right:10px;">Restaurant</span>
+                        <span style="font-size:0.8rem;color:var(--c2);margin-right:10px;">★★★★★</span>
+                        <span aria-hidden="true" style="color:var(--ink3);font-size:0.9rem;">›</span>
+                    </a>
+                    <a href="/r/derry-city-and-strabane/thai-jing-jing-street-food/" style="display:flex;align-items:center;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;margin-bottom:8px;">
+                        <div style="flex:1;min-width:0;margin-right:10px;">
+                            <span style="font-weight:600;font-size:0.9rem;color:var(--ink);display:block;">Thai Jing Jing Street Food</span>
+                            <span style="font-size:0.73rem;color:var(--ink4);display:block;margin-top:2px;">Londonderry • BT47</span>
+                        </div>
+                        <span style="font-size:0.8rem;color:var(--ink4);margin-right:10px;">Takeaway</span>
+                        <span style="font-size:0.8rem;color:var(--c2);margin-right:10px;">★★★★★</span>
+                        <span aria-hidden="true" style="color:var(--ink3);font-size:0.9rem;">›</span>
+                    </a>
+            </div>
+            <p style="margin-top:14px;text-align:center;">
+                <a href="/r/" style="color:var(--c2);font-size:0.85rem;text-decoration:none;">Browse all restaurant pages →</a>
+            </p>
+        </div>
+<!-- END Browse Restaurants -->
+
+<!-- END:SHELL:browse -->
+
+    <div id="area-data"></div>
+<!-- AUTO:schema -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thaidata.uk/"}, {"@type": "ListItem", "position": 2, "name": "Cities", "item": "https://thaidata.uk/thai-restaurants-city-breakdown-uk"}, {"@type": "ListItem", "position": 3, "name": "Derry City and Strabane", "item": "https://thaidata.uk/cities/derry-city-and-strabane"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Top Thai Restaurants in Derry City and Strabane", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Restaurant", "name": "Siam Thai", "url": "https://thaidata.uk/r/derry-city-and-strabane/siam-thai/", "servesCuisine": "Thai", "address": {"@type": "PostalAddress", "addressLocality": "Derry City and Strabane", "postalCode": "BT48 6DN", "streetAddress": "12a Shipquay Street, Londonderry, Londonderry, Londonderry"}, "additionalProperty": {"@type": "PropertyValue", "name": "FSA Hygiene Rating", "value": "5"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Restaurant", "name": "Thai Jing Jing Street Food", "url": "https://thaidata.uk/r/derry-city-and-strabane/thai-jing-jing-street-food/", "servesCuisine": "Thai", "address": {"@type": "PostalAddress", "addressLocality": "Derry City and Strabane", "postalCode": "BT47 6EE", "streetAddress": "36 Bonds Street, Clooney, Londonderry, Londonderry"}, "additionalProperty": {"@type": "PropertyValue", "name": "FSA Hygiene Rating", "value": "5"}}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many Thai restaurants are in Derry City and Strabane?", "acceptedAnswer": {"@type": "Answer", "text": "There are 2 FSA-registered Thai businesses in Derry City and Strabane — 1 dine-in restaurant and 1 takeaway."}}, {"@type": "Question", "name": "What is the top-rated Thai restaurant in Derry City and Strabane?", "acceptedAnswer": {"@type": "Answer", "text": "The highest-rated Thai restaurants in Derry City and Strabane include Siam Thai, Thai Jing Jing Street Food, all holding 5/5 FSA hygiene stars."}}, {"@type": "Question", "name": "What is the average FSA hygiene rating in Derry City and Strabane?", "acceptedAnswer": {"@type": "Answer", "text": "The average FSA hygiene rating across 2 Thai businesses in Derry City and Strabane is 5.0/5 stars."}}, {"@type": "Question", "name": "Are there more dine-in Thai restaurants or takeaways in Derry City and Strabane?", "acceptedAnswer": {"@type": "Answer", "text": "There are 1 dine-in restaurant and 1 takeaway in Derry City and Strabane, which means 50% of Thai businesses offer dine-in service."}}]}</script>
+<!-- END:AUTO:schema -->
+<!-- AUTO:market-snapshot -->
+<div class="card">
+  <h2>Market <em>Snapshot</em></h2>
+  <p>There are <strong>2</strong> FSA-registered Thai businesses in <strong>Derry City and Strabane</strong>. Average hygiene rating: ★5.0/5. 1 dine-in, 1 takeaway.</p>
+  <p style="margin-top:10px;font-size:0.88rem;">
+    <a href="/dish-prices" style="color:var(--c2);">Compare dish prices</a> &middot; <a href="/chains/" style="color:var(--c2);">Explore chain profiles</a> &middot; <a href="/thai-restaurants-city-breakdown-uk" style="color:var(--c2);">View all cities</a>
+  </p>
+</div>
+<!-- END:AUTO:market-snapshot -->
+<!-- AUTO:chain-presence -->
+<!-- END:AUTO:chain-presence -->
+<!-- AUTO:postcode-areas -->
+<div class="card">
+  <h2>Popular Dining <em>Postcodes</em></h2>
+  <p>Thai restaurants in Derry City and Strabane cluster in these postcode areas:</p>
+  <ul style="padding-left:20px;">
+<li style="padding:4px 0;color:var(--ink4);"><strong>BT48</strong> — 1 Thai food business</li>
+<li style="padding:4px 0;color:var(--ink4);"><strong>BT47</strong> — 1 Thai food business</li>
+  </ul>
+</div>
+<!-- END:AUTO:postcode-areas -->
+<!-- AUTO:faq -->
+<div class="card">
+  <h2>Frequently Asked <em>Questions</em></h2>
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
+  <summary style="cursor:pointer;font-weight:600;color: var(--ink);">How many Thai restaurants are in Derry City and Strabane?</summary>
+  <p style="margin-top:8px;color:var(--ink4);">There are 2 FSA-registered Thai businesses in Derry City and Strabane — 1 dine-in restaurant and 1 takeaway.</p>
+</details>
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
+  <summary style="cursor:pointer;font-weight:600;color: var(--ink);">What is the top-rated Thai restaurant in Derry City and Strabane?</summary>
+  <p style="margin-top:8px;color:var(--ink4);">The highest-rated Thai restaurants in Derry City and Strabane include Siam Thai, Thai Jing Jing Street Food, all holding 5/5 FSA hygiene stars.</p>
+</details>
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
+  <summary style="cursor:pointer;font-weight:600;color: var(--ink);">What is the average FSA hygiene rating in Derry City and Strabane?</summary>
+  <p style="margin-top:8px;color:var(--ink4);">The average FSA hygiene rating across 2 Thai businesses in Derry City and Strabane is 5.0/5 stars.</p>
+</details>
+<details style="margin:8px 0;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;">
+  <summary style="cursor:pointer;font-weight:600;color: var(--ink);">Are there more dine-in Thai restaurants or takeaways in Derry City and Strabane?</summary>
+  <p style="margin-top:8px;color:var(--ink4);">There are 1 dine-in restaurant and 1 takeaway in Derry City and Strabane, which means 50% of Thai businesses offer dine-in service.</p>
+</details>
+  <p style="margin-top:12px;"><a href="/faq" style="color:var(--c2);text-decoration:underline;text-underline-offset:2px;">More UK Thai restaurant FAQs</a> &mdash; hygiene ratings, pricing guides, delivery platforms, and data methodology.</p>
+</div>
+<!-- END:AUTO:faq -->
 </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>ThaiData · UK Thai restaurant directory<br>
+        Hygiene information is not a customer review score.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/thai-restaurants-city-breakdown-uk">All locations</a>
+        <a href="/about">About</a>
+        <a href="/guides">Guides</a>
+        <a href="https://www.food.gov.uk/">Food Standards Agency</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

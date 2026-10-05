@@ -1,6 +1,41 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-10-05",
   "restaurants": [
+    {
+      "fsa_id": "1983009",
+      "name": "Giggling Squid",
+      "city": "London",
+      "type": "takeaway",
+      "discovered_on": "2026-10-05"
+    },
+    {
+      "fsa_id": "1809379",
+      "name": "Thai Jing Jing Street Food",
+      "city": "Derry City and Strabane",
+      "type": "takeaway",
+      "discovered_on": "2026-10-05"
+    },
+    {
+      "fsa_id": "1890653",
+      "name": "Thai Noodle Express",
+      "city": "Birmingham",
+      "type": "takeaway",
+      "discovered_on": "2026-10-05"
+    },
+    {
+      "fsa_id": "1875566",
+      "name": "Halal Thai Kitchen",
+      "city": "Birmingham",
+      "type": "takeaway",
+      "discovered_on": "2026-10-05"
+    },
+    {
+      "fsa_id": "963465",
+      "name": "Siam Thai",
+      "city": "Derry City and Strabane",
+      "type": "restaurant",
+      "discovered_on": "2026-10-05"
+    },
     {
       "fsa_id": "1982687",
       "name": "Royal Thai",
@@ -315,41 +350,6 @@
       "city": "Eastleigh",
       "type": "restaurant",
       "discovered_on": "2026-07-13"
-    },
-    {
-      "fsa_id": "1966214",
-      "name": "Mum Likes Thai Food",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-07-13"
-    },
-    {
-      "fsa_id": "1525914",
-      "name": "Thai 2 Go",
-      "city": "Stockton On Tees",
-      "type": "restaurant",
-      "discovered_on": "2026-07-13"
-    },
-    {
-      "fsa_id": "1884758",
-      "name": "Thai Route",
-      "city": "Knowsley",
-      "type": "restaurant",
-      "discovered_on": "2026-07-13"
-    },
-    {
-      "fsa_id": "1966538",
-      "name": "Talay Thai",
-      "city": "Cornwall",
-      "type": "restaurant",
-      "discovered_on": "2026-07-13"
-    },
-    {
-      "fsa_id": "1930834",
-      "name": "IThai Noodle Bar Kiosk",
-      "city": "London",
-      "type": "takeaway",
-      "discovered_on": "2026-07-06"
     }
   ]
 }
