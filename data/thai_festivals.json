@@ -627,22 +627,22 @@
       "city": "Kings Bromley",
       "region": "West Midlands",
       "year": 2026,
-      "start_date": "2026-11-24",
-      "end_date": "2026-11-24",
-      "date_description": "24*",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-01",
+      "date_description": "1",
       "ticket_info": "Free entry",
       "description": "Midlands Loy Krathong. The temple's grounds provide a beautiful setting for the candlelit floating ceremony.",
       "tags": [
         "temple",
         "free_entry"
       ],
-      "source_url": null,
-      "source_type": null,
-      "status": "estimated",
-      "confidence": 0.4,
-      "notes": "Estimated date following Wat Buddhapadipa’s assumed date. No independent source. [verified 2026-09-07] Full moon of 12th Thai lunar month is 24 November 2026.",
+      "source_url": "https://www.facebook.com/watkingsbromley/posts/1426866959552576",
+      "source_type": "social_media",
+      "status": "confirmed",
+      "confidence": 0.95,
+      "notes": "Verified 2026-10-05 against Wat Mahathat Kings Bromley's official Facebook page (facebook.com/watkingsbromley) confirming combined Kathina ceremony and Loy Krathong Festival 2026 on Sunday 1 November 2026, 09:00\u201317:00.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-09-07"
+      "updated_at": "2026-10-05"
     },
     {
       "event_id": "loy-krathong-university-societies-2026",
