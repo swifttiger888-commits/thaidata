@@ -1,0 +1,87 @@
+{
+  "restaurant": "Nara Thai",
+  "city": "London",
+  "fsa_id": "1558152",
+  "address": "6 Turnham Green Terrace, Chiswick, London W4 1QP",
+  "source": "https://nararestaurant.co.uk/",
+  "source_label": "Nara Thai's own website menu (nararestaurant.co.uk)",
+  "checked": "2026-10-06",
+  "pricing_notes": [
+    "All dishes are 100% halal (stated on the restaurant's menu).",
+    "Nara Lunch Menu: available Monday to Friday, 12pm\u20135pm, excluding bank holidays. One course \u00a312.95, two courses \u00a315.95. Mains available vegetarian or chicken; prawns + \u00a31.50. Vegan options available. Add a soft drink (Coke, Diet Coke, Coke Zero, Fanta, Sprite) for + \u00a32.00."
+  ],
+  "categories": {
+    "Starters": [
+      {"num": "1", "name": "Bang Bang Prawns", "description": "Crispy prawns finished with a spicy creamy sauce.", "price": "\u00a39.00"},
+      {"num": "2", "name": "Black Pepper Calamari", "description": "Crispy calamari tossed with black pepper sauce.", "price": "\u00a310.50"},
+      {"num": "3", "name": "Chicken Satay", "description": "Grilled marinated chicken skewers served with peanut sauce.", "price": "\u00a37.95"},
+      {"num": "4", "name": "Edamame", "description": "Lightly salted steamed soybean pods.", "price": "\u00a36.50"},
+      {"num": "5", "name": "Prawn Crackers", "description": "Crisp prawn crackers served light and crunchy.", "price": "\u00a35.50"},
+      {"num": "6", "name": "Thai Summer Rolls", "description": "Delicate rice paper rolls filled with succulent prawns, vermicelli noodles, fresh vegetables and fresh herbs, served with a peanut dipping sauce.", "price": "\u00a39.50"},
+      {"num": "7", "name": "Spring Rolls (4pcs)", "description": "Crisp vegetable spring rolls served golden and light.", "price": "Vegetarian \u00a36.50 / Chicken \u00a37.50 / Prawns \u00a38.50"},
+      {"num": "8", "name": "Sweet Chilli Glaze Wings", "description": "Crispy fried chicken wings glazed with Thai sweet chilli sauce.", "price": "\u00a39.50"}
+    ],
+    "Soups": [
+      {"num": "1", "name": "Tom Yum", "description": "Thailand's famous hot and sour soup with fragrant herbs.", "price": "Veg (mushroom) \u00a36.50 / Prawns \u00a37.50"},
+      {"num": "2", "name": "Tom Yum Kha", "description": "Creamy coconut soup infused with galangal, lime and Thai herbs.", "price": "Veg (mushroom) \u00a36.50 / Prawns \u00a37.50"},
+      {"num": "3", "name": "Glass Noodles Soup", "description": "Delicate glass noodles in a light Thai broth with shiitake mushrooms, tofu, napa cabbage, garlic and spring onion.", "price": "\u00a37.50"}
+    ],
+    "Thai Salads": [
+      {"num": "1", "name": "Thai Green Papaya Salad", "description": "Popular Thai green papaya salad with crunchy, spicy, sweet, sour and salty flavours.", "price": "\u00a311.50"},
+      {"num": "2", "name": "Thai Pomelo Softshell Crab Salad", "description": "Crispy softshell crab with fragrant pomelo, toasted peanuts, coconut, herbs and sweet and sour dressing.", "price": "\u00a312.50"},
+      {"num": "3", "name": "Thai Green Apple Shredded Chicken Salad", "description": "Juicy fresh apple, tender shredded chicken, crunchy vegetables and fragrant herbs, tossed in a zesty lime peanut sauce.", "price": "\u00a310.95"}
+    ],
+    "Curries": [
+      {"num": "1", "name": "Green Curry", "description": "Thai green curry with herbs and coconut milk.", "price": "Veg (tofu & broccolini) \u00a313.50 / Chicken \u00a314.75 / Prawns \u00a315.50 / Beef \u00a315.50"},
+      {"num": "2", "name": "Massaman Curry", "description": "Rich mild Thai curry with beef and potato.", "price": "\u00a318.85"},
+      {"num": "3", "name": "Panang Curry", "description": "Creamy Panang curry with fragrant kaffir lime.", "price": "Veg (tofu & broccolini) \u00a313.50 / Chicken \u00a314.75 / Prawns \u00a315.50 / Beef \u00a315.50"}
+    ],
+    "Noodles": [
+      {"num": "1", "name": "Pad Thai", "description": "Thailand's classic stir fried rice noodles with egg, tamarind and peanuts.", "price": "Veg (tofu & broccolini) \u00a313.50 / Chicken \u00a314.75 / Prawns \u00a315.50"},
+      {"num": "2", "name": "Pad Kee Mao", "description": "Spicy drunken noodles with basil, chilli and vegetables.", "price": "Veg (tofu & broccolini) \u00a313.50 / Chicken \u00a314.75 / Prawns \u00a315.50"},
+      {"num": "3", "name": "Pad Mee Luang", "description": "Stir fried egg noodles with vegetables and a savoury sauce.", "price": "Veg (tofu & broccolini) \u00a313.50 / Chicken \u00a314.75 / Prawns \u00a315.50"},
+      {"num": "4", "name": "Seafood Laksa", "description": "Aromatic coconut laksa with rice noodles, bean sprouts, fresh herbs and seafood.", "price": "\u00a317.50"},
+      {"num": "5", "name": "Beef Pho Tom Yum", "description": "Slow-cooked beef in a bold hot and sour broth with lemongrass, kaffir lime, galangal and roasted chilli paste.", "price": "\u00a317.00"},
+      {"num": "6", "name": "Vegetarian Pho Bowl", "description": "A fragrant vegetarian pho with herbs, warming spices, saut\u00e9ed shiitake mushrooms and crispy tofu (vegan option available).", "price": "\u00a315.00", "vegetarian": true},
+      {"num": "7", "name": "Chicken Pho Bowl", "description": "A comforting Thai fusion pho with fragrant clear broth, rice noodles and pan-seared aromatic chicken.", "price": "\u00a316.00"}
+    ],
+    "Wok Special": [
+      {"num": "1", "name": "Stir-Fry Cashew Nuts", "description": "Wok fried with cashew nuts, peppers, mushrooms, spring onions, fresh chilli and savoury sauce.", "price": "Veg (tofu & broccolini) \u00a313.50 / Chicken \u00a314.50 / Prawns \u00a316.50 / Beef \u00a316.50"},
+      {"num": "2", "name": "Stir-Fry Thai Basil Leaves", "description": "A Thai favourite with fresh chillies, garlic, onion, long beans and bell peppers.", "price": "Veg (tofu & broccolini) \u00a313.50 / Chicken \u00a314.50 / Prawns \u00a316.50 / Beef \u00a316.50 / Mixed Seafood \u00a317.50"},
+      {"num": "3", "name": "Pad Kra Pao", "description": "Stir-fry minced chicken, basil, garlic, chilli, topped with a crispy egg and served with rice.", "price": "\u00a316.50"}
+    ],
+    "Wok Fried Rice": [
+      {"num": "1", "name": "Basil Fried Rice", "description": "Spicy fried rice with Thai basil, egg and mixed vegetables.", "price": "Vegetarian \u00a39.50 / Chicken \u00a312.00 / Prawns \u00a313.00"},
+      {"num": "2", "name": "Crab Fried Rice", "description": "Fried rice with crab, egg and aromatic seasoning.", "price": "\u00a310.50"},
+      {"num": "3", "name": "Pineapple Fried Rice", "description": "Thai fried rice with pineapple, vegetables and roasted cashews.", "price": "\u00a310.50"}
+    ],
+    "Special": [
+      {"num": "1", "name": "Crispy Fried Pomfret Fish", "description": "Crispy whole pomfret with garlic, basil, fresh coriander, crispy onion and a savoury Thai soy dressing.", "price": "\u00a316.50"},
+      {"num": "2", "name": "Lamb Shank Masaman Curry", "description": "Slow cooked lamb shank in a rich Massaman curry sauce, served with coconut rice.", "price": "\u00a323.95"},
+      {"num": "3", "name": "Sirloin Thai Steak", "description": "Sirloin steak finished with Thai herbs and savoury glaze. Served with white rice and green salad.", "price": "\u00a326.00"},
+      {"num": "4", "name": "Steam Whole Fish", "description": "Steamed fish fillet with chilli, lime and fresh herbs.", "price": "\u00a320.95"},
+      {"num": "5", "name": "King Prawns (Goon Pao)", "description": "Grilled shell-on king prawns, loosened for easy eating, served with chilli garlic butter sauce.", "price": "\u00a323.95"}
+    ],
+    "Rice": [
+      {"num": "1", "name": "Thai Jasmine Rice", "description": "Fragrant steamed jasmine rice.", "price": "\u00a34.50"},
+      {"num": "2", "name": "Brown Rice", "description": "Steamed wholesome brown rice.", "price": "\u00a34.50"},
+      {"num": "3", "name": "Sticky Rice", "description": "Traditional Thai glutinous rice served warm.", "price": "\u00a34.50"},
+      {"num": "4", "name": "Coconut Rice", "description": "Steamed jasmine rice gently cooked with coconut milk.", "price": "\u00a34.50"},
+      {"num": "5", "name": "Egg Fried Rice", "description": "Wok fried jasmine rice with egg, scallions and light soy.", "price": "\u00a34.50"}
+    ],
+    "Sides": [
+      {"num": "1", "name": "Stir Fry Morning Glory", "description": "Morning glory wok fried with garlic, chilli and savoury sauce.", "price": "\u00a35.50"},
+      {"num": "2", "name": "Stir Fried Vegetables", "description": "Seasonal vegetables wok fried with garlic and light savoury sauce.", "price": "\u00a36.50"},
+      {"num": "3", "name": "Stir Fried Broccolini", "description": "With chilli, garlic and soy sauce.", "price": "\u00a35.50"},
+      {"num": "4", "name": "Paratha", "description": "Flaky layered paratha, served warm.", "price": "\u00a34.50"},
+      {"num": "5", "name": "Sweet Potato Chips", "description": "Hand cut sweet potato chips.", "price": "\u00a36.00"}
+    ],
+    "Nara Lunch Menu (Mon\u2013Fri 12pm\u20135pm)": [
+      {"num": "1", "name": "One Course", "price": "\u00a312.95"},
+      {"num": "2", "name": "Two Courses", "price": "\u00a315.95"},
+      {"num": "3", "name": "Starters (choose one)", "description": "Chicken Satay \u00b7 Vegetarian Spring Rolls \u00b7 Tom Yum Soup \u00b7 Edamame \u00b7 Sweet Chilli Glaze Wings", "price": null},
+      {"num": "4", "name": "Main Course (choose one)", "description": "Pad Thai \u00b7 Green Curry with Jasmine Rice \u00b7 Stir Fried Thai Basil Leaves with Jasmine Rice \u00b7 Pad Kra Pao \u2014 vegetarian or chicken; prawns + \u00a31.50. Vegan options available.", "price": null},
+      {"num": "5", "name": "Add a Can Soft Drink", "description": "Coke, Diet Coke, Coke Zero, Fanta, Sprite.", "price": "+ \u00a32.00"}
+    ]
+  }
+}
