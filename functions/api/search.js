@@ -1,6 +1,8 @@
 // ThaiData UK — GET /api/search?q=X&city=Y
 // Proxy FSA API to avoid CORS, filtered to Thai restaurants only
 
+import { LISTING_URLS } from './listing_urls.js';
+
 /**
  * Handles GET /api/search — proxies FSA API to search Thai restaurants
  * @param {object} context - Cloudflare Workers function context
@@ -100,6 +102,7 @@ export async function onRequestGet(context) {
       local_authority: e.LocalAuthorityName,
       city: extractCity(e),
       url: `https://ratings.food.gov.uk/business/${e.FHRSID}`,
+      listing_url: LISTING_URLS[String(e.FHRSID)] || null,
     }));
 
     return new Response(JSON.stringify({ results, count: results.length, query: q }), {

@@ -91,6 +91,7 @@ body {
         .result-item .rname { font-weight: 600; margin-bottom: 2px; }
         .result-item .raddr { color: var(--ink4); font-size: 0.8rem; }
         .result-item .rmeta { display: flex; gap: 10px; margin-top: 4px; font-size: 0.75rem; color: var(--ink3); }
+        .result-item .rlink { display: inline-block; margin-top: 6px; color: var(--c2); font-size: 0.78rem; text-decoration: underline; text-underline-offset: 2px; }
         .result-item.selected { background: rgba(163, 19, 43, 0.12); border-left: 3px solid var(--c2); }
 
         /* Rating badge */
@@ -185,6 +186,7 @@ body {
                 <strong id="sel-name"></strong><br>
                 <span style="color:var(--ink4);font-size:0.85rem;" id="sel-addr"></span>
                 <span id="sel-rating" style="margin-left:8px;"></span>
+                <span id="sel-link"></span>
             </div>
             <label>Your Full Name *</label>
             <input type="text" id="claimer-name" placeholder="e.g. Sarah Johnson">
@@ -322,6 +324,7 @@ body {
                                 <span>${r.city || '—'}</span>
                                 ${r.rating ? `<span class="rating-badge r${r.rating}">★${r.rating}</span>` : '<span>Unrated</span>'}
                             </div>
+                            ${r.listing_url ? `<a class="rlink" href="${r.listing_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View current listing ↗</a>` : ''}
                         </div>
                     `).join('');
                 })
@@ -358,6 +361,9 @@ body {
 
         document.getElementById('sel-name').textContent = r.name;
         document.getElementById('sel-addr').textContent = [r.address, r.postcode].filter(Boolean).join(', ');
+        document.getElementById('sel-link').innerHTML = r.listing_url
+            ? `<a href="${r.listing_url}" target="_blank" rel="noopener" style="color:var(--c2);font-size:0.85rem;text-decoration:underline;text-underline-offset:2px;">View current listing ↗</a>`
+            : '';
         if (r.rating) {
             document.getElementById('sel-rating').innerHTML = `<span class="rating-badge r${r.rating}">FSA ★${r.rating}</span>`;
         }
