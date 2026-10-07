@@ -76,6 +76,9 @@ def recipe_slug_for(dish_name):
                 return slug
     best = None
     for slug, als in _ALIAS_TOK.items():
+        ex = _tokens(" ".join(_ALIASES.get(slug, {}).get("exclude") or []))
+        if ex and any(x in tset for x in ex):
+            continue
         for a in als:
             if len(a) >= 4:
                 hit = all(x in tset for x in a)
@@ -128,12 +131,19 @@ def dish_html(it, protein_tiers=None):
         bits.append(f'<p class="dish-note">{esc(it["price_note"])}</p>')
     rslug = recipe_slug_for(it.get("name") or "")
     if rslug:
-        bits.append(
-            f'<a class="recipe-link" href="/recipes/{rslug}/">'
-            f'<img src="/recipes/{rslug}/{rslug}.jpg" alt="" loading="lazy" width="1200" height="675">'
-            f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
-            f' · how this dish is typically made</span></a>'
-        )
+        if os.path.isfile(os.path.join("recipes", rslug, rslug + ".jpg")):
+            bits.append(
+                f'<a class="recipe-link" href="/recipes/{rslug}/">'
+                f'<img src="/recipes/{rslug}/{rslug}.jpg" alt="" loading="lazy" width="1200" height="675">'
+                f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
+                f' · how this dish is typically made</span></a>'
+            )
+        else:
+            bits.append(
+                f'<a class="recipe-link recipe-link-noimg" href="/recipes/{rslug}/">'
+                f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
+                f' · how this dish is typically made</span></a>'
+            )
     bits.append("</div></li>")
     return "".join(bits)
 
@@ -376,7 +386,7 @@ ul.dishes{{list-style:none;margin:0;padding:0}}
 .badge-celery{{background:var(--border-light);color:var(--ink-tertiary)}}
 .legend{{font-size:.8125rem;color:var(--ink-tertiary);margin:0 0 16px}}
 .legend .badge{{vertical-align:middle;margin:0 3px}}
-.dish-price{{font-weight:700;color:var(--green-dark);white-space:nowrap;font-variant-numeric:tabular-nums}}
+.dish-price{{font-weight:700;color:var(--green-dark);white-space:normal;text-align:right;max-width:52%;font-variant-numeric:tabular-nums}}
 .dish-desc{{margin:3px 0 0;font-size:var(--step--1);color:var(--ink-secondary);max-width:64ch}}
 .dish-note{{margin:4px 0 0;font-size:.8125rem;color:var(--ink-tertiary);font-weight:500}}
 .pricing-notes{{background:var(--green-light);border:1px solid rgba(16,185,129,.28);border-radius:var(--radius);padding:14px 18px;margin:0 0 22px}}

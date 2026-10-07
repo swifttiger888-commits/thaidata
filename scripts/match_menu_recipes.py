@@ -41,6 +41,9 @@ class Matcher:
                     return slug
         best = None
         for slug, als in self.alias_tok.items():
+            ex = tokens(" ".join(self.map.get(slug, {}).get("exclude") or []))
+            if ex and any(x in tset for x in ex):
+                continue
             for a in als:
                 # >=4-token aliases are specific enough for bag-of-words;
                 # 2-3 token aliases must match as an adjacent phrase;
