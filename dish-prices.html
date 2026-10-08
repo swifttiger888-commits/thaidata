@@ -41,7 +41,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <style>
-        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #7A6F6A; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         img,svg,video { max-width: 100%; height: auto; }
         body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
@@ -52,7 +52,7 @@
         .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 36px; width: auto; }
         .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { color: #4A403C; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
         .nav-links a:hover { color: var(--c2); }
         .hamburger { display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; padding: 8px; }
         .hamburger:hover { color: var(--c2); }
@@ -86,7 +86,7 @@
         .price-table .city-link { color: var(--c2); text-decoration: underline; text-underline-offset: 3px; }
         .price-table .city-link:hover { color: var(--ink); }
 
-        .highlight-box { background: rgba(163, 19, 43, 0.06); border: 1px solid rgba(163, 19, 43, 0.2); border-radius: 14px; padding: 24px; margin: 20px 0; }
+        .highlight-box { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.2); border-radius: 14px; padding: 24px; margin: 20px 0; }
         .highlight-box h3 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
         .highlight-box p, .highlight-box li { color: var(--ink3); font-size: 0.88rem; line-height: 1.7; }
         .highlight-box ul { padding-left: 18px; margin-top: 8px; }
@@ -113,7 +113,6 @@
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
             <div class="nav-links">
                 <a href="/guides.html">Guides</a>
-<a href="recipes/">Recipes</a>
                 <a href="/thai-restaurants-city-breakdown-uk">Cities</a>
                 <a href="/r/">Restaurants</a>
                 <a href="/chains/">Chains</a>
@@ -144,7 +143,7 @@
 
         
     <div class="section">
-        <h2>&#A3132B; Classic Noodles & Rice</h2>
+        <h2>&#127837; Classic Noodles & Rice</h2>
         <table class="price-table">
         <thead><tr><th>Dish</th><th>Dine-in</th><th>Delivery</th><th>Markup</th></tr></thead>
         <tbody><tr><td class="dish">Pad Thai (chicken)</td><td class="dine-in">&pound;12.50</td><td class="delivery">&pound;14.95</td><td class="markup">+20%</td></tr>
@@ -157,7 +156,7 @@
     </div>
     
     <div class="section">
-        <h2>&#A3132B; Curries</h2>
+        <h2>&#127798; Curries</h2>
         <table class="price-table">
         <thead><tr><th>Dish</th><th>Dine-in</th><th>Delivery</th><th>Markup</th></tr></thead>
         <tbody><tr><td class="dish">Green Curry (chicken)</td><td class="dine-in">&pound;13.00</td><td class="delivery">&pound;15.90</td><td class="markup">+22%</td></tr>
@@ -168,7 +167,7 @@
     </div>
     
     <div class="section">
-        <h2>&#A3132B; Soups & Starters</h2>
+        <h2>&#127858; Soups & Starters</h2>
         <table class="price-table">
         <thead><tr><th>Dish</th><th>Dine-in</th><th>Delivery</th><th>Markup</th></tr></thead>
         <tbody><tr><td class="dish">Tom Yum Goong</td><td class="dine-in">&pound;6.95</td><td class="delivery">&pound;8.50</td><td class="markup">+22%</td></tr>
@@ -240,7 +239,7 @@
     </div>
 
     <footer>
-        <p><a href="/">ThaiData</a> &middot; Menu Price Survey June 2026 &middot; <a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap.xml">Sitemap</a></p>
+        <p><a href="/">ThaiData</a> &middot; Menu Price Survey June 2026 &middot; <a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap-page">Sitemap</a></p>
         <p style="margin-top:6px;font-size:0.8rem;">Prices are indicative averages from surveyed restaurants. Verify with individual restaurants before relying on them.</p>
     </footer>
 

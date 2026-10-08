@@ -319,7 +319,7 @@ HTML = f"""<!DOCTYPE html>
     </div>
 
     <footer>
-        <p><a href="/">ThaiData</a> &middot; Menu Price Survey June 2026 &middot; <a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap.xml">Sitemap</a></p>
+        <p><a href="/">ThaiData</a> &middot; Menu Price Survey June 2026 &middot; <a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap-page">Sitemap</a></p>
         <p style="margin-top:6px;font-size:0.8rem;">Prices are indicative averages from surveyed restaurants. Verify with individual restaurants before relying on them.</p>
     </footer>
 

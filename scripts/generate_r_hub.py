@@ -390,7 +390,7 @@ HTML = f"""<!DOCTYPE html>
 
     <footer>
         <p>Data sourced from the <a href="https://ratings.food.gov.uk" target="_blank" rel="noopener">Food Standards Agency</a>. Last updated {data.get("updated", "2026")}.</p>
-        <p style="margin-top:6px;"><a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap.xml">Sitemap</a></p>
+        <p style="margin-top:6px;"><a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap-page">Sitemap</a></p>
     </footer>
 
     <script>function toggleMenu(){{document.querySelector('.nav-links').classList.toggle('open');}}</script>

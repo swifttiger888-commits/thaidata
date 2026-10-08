@@ -319,7 +319,7 @@ HTML = f"""<!DOCTYPE html>
     <footer>
         <div class="wrap">
             <p>Data sourced from the <a href="https://ratings.food.gov.uk" target="_blank" rel="noopener">Food Standards Agency</a>. Chain detection via FSA register name matching. Updated {data.get("updated", "2026")}.</p>
-            <p style="margin-top:6px;"><a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap.xml">Sitemap</a></p>
+            <p style="margin-top:6px;"><a href="/data-quality">Data Quality</a> &middot; <a href="/sitemap-page">Sitemap</a></p>
         </div>
     </footer>
 
