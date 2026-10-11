@@ -75,17 +75,19 @@ export async function onRequestGet(context) {
     const city = url.searchParams.get('city');
     const fsaId = url.searchParams.get('fsa_id');
 
-    let query = 'SELECT * FROM listings WHERE 1=1';
+    // Public queries — only listings whose claim is approved. Mirrors the
+    // /r/ middleware and /api/claimed; keeps dismissed/test claims invisible.
+    let query = "SELECT l.* FROM listings l JOIN claims c ON c.id = l.claim_id WHERE c.claim_status = 'approved'";
     const params = [];
 
     if (restaurant && city) {
-      query += ' AND restaurant_name = ? AND city = ?';
+      query += ' AND l.restaurant_name = ? AND l.city = ?';
       params.push(restaurant, city);
     } else if (fsaId) {
-      query += ' AND fsa_id = ?';
+      query += ' AND l.fsa_id = ?';
       params.push(fsaId);
     } else if (city) {
-      query += ' AND city = ?';
+      query += ' AND l.city = ?';
       params.push(city);
     } else {
       return new Response(JSON.stringify({ error: 'Provide restaurant+city, fsa_id, city, or auth token' }), {
