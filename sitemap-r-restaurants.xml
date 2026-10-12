@@ -2326,6 +2326,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/leeds/rambuttri/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/leeds/rosas-thai-cafe/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3802,11 +3807,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/the-great-thai-kitchen/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/london/the-great-thai-rice-and-noodle/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

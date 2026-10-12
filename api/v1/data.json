@@ -55,10 +55,10 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 283,
-      "restaurants": 229,
+      "total_thai_businesses": 282,
+      "restaurants": 228,
       "takeaways": 54,
-      "per_100k": 3.2,
+      "per_100k": 3.1,
       "avg_hygiene_rating": 4.2,
       "scheme": "FHRS",
       "fhis_pass": 0,
@@ -69,16 +69,16 @@
     {
       "name": "Leeds",
       "population": 812000,
-      "total_thai_businesses": 26,
-      "restaurants": 21,
+      "total_thai_businesses": 27,
+      "restaurants": 22,
       "takeaways": 5,
-      "per_100k": 3.2,
+      "per_100k": 3.3,
       "avg_hygiene_rating": 4.5,
       "scheme": "FHRS",
       "fhis_pass": 0,
       "fhis_improvement": 0,
       "fhis_exempt": 0,
-      "postcode_areas": 5
+      "postcode_areas": 6
     },
     {
       "name": "York",

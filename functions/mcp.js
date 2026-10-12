@@ -58,8 +58,8 @@ async function getRestaurants() {
 const EMBEDDED_DATA = {
   name: "ThaiData UK",
   cities: [
-    { name: "London", population: 8970000, total_thai_businesses: 283, restaurants: 229, takeaways: 54, per_100k: 3.2, avg_hygiene_rating: 4.2, scheme: "FHRS" },
-    { name: "Leeds", population: 812000, total_thai_businesses: 26, restaurants: 21, takeaways: 5, per_100k: 3.2, avg_hygiene_rating: 4.5, scheme: "FHRS" },
+    { name: "London", population: 8970000, total_thai_businesses: 282, restaurants: 228, takeaways: 54, per_100k: 3.1, avg_hygiene_rating: 4.2, scheme: "FHRS" },
+    { name: "Leeds", population: 812000, total_thai_businesses: 27, restaurants: 22, takeaways: 5, per_100k: 3.3, avg_hygiene_rating: 4.5, scheme: "FHRS" },
     { name: "Manchester", population: 568000, total_thai_businesses: 19, restaurants: 16, takeaways: 3, per_100k: 3.3, avg_hygiene_rating: 4.5, scheme: "FHRS" },
     { name: "Edinburgh", population: 548000, total_thai_businesses: 19, restaurants: 12, takeaways: 7, per_100k: 3.5, scheme: "FHIS", fhis_pass: 15, fhis_improvement: 4, fhis_exempt: 0 },
     { name: "Bristol", population: 483000, total_thai_businesses: 14, restaurants: 12, takeaways: 2, per_100k: 2.9, avg_hygiene_rating: 4.7, scheme: "FHRS" },

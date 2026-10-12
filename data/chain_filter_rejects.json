@@ -18,15 +18,9 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 342453,
+    "fsa_id": 1485738,
     "name": "Ali Baba",
-    "city": "Bournemouth, Christchurch and Poole",
-    "chain": "Busaba"
-  },
-  {
-    "fsa_id": 889992,
-    "name": "Ali Baba",
-    "city": "Cheshire East",
+    "city": "Barking and Dagenham",
     "chain": "Busaba"
   },
   {
@@ -36,15 +30,21 @@
     "chain": "Busaba"
   },
   {
+    "fsa_id": 889992,
+    "name": "Ali Baba",
+    "city": "Cheshire East",
+    "chain": "Busaba"
+  },
+  {
     "fsa_id": 124611,
     "name": "Ali Baba",
     "city": "Rochdale",
     "chain": "Busaba"
   },
   {
-    "fsa_id": 1485738,
+    "fsa_id": 342453,
     "name": "Ali Baba",
-    "city": "Barking and Dagenham",
+    "city": "Bournemouth, Christchurch and Poole",
     "chain": "Busaba"
   },
   {
@@ -84,15 +84,15 @@
     "chain": "Busaba"
   },
   {
-    "fsa_id": 519550,
-    "name": "Ali Baba Lounge",
-    "city": "Hillingdon",
-    "chain": "Busaba"
-  },
-  {
     "fsa_id": 604472,
     "name": "Ali Baba Lounge",
     "city": "Birmingham",
+    "chain": "Busaba"
+  },
+  {
+    "fsa_id": 519550,
+    "name": "Ali Baba Lounge",
+    "city": "Hillingdon",
     "chain": "Busaba"
   },
   {
@@ -645,12 +645,6 @@
     "fsa_id": 1843387,
     "name": "El Catala",
     "city": "Shropshire",
-    "chain": "Patara"
-  },
-  {
-    "fsa_id": 1595366,
-    "name": "Hamara Community Cafe",
-    "city": "Leeds",
     "chain": "Patara"
   },
   {

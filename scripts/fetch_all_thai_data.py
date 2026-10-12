@@ -126,6 +126,25 @@ def main() -> None:
             json.dump(rejects, f, indent=2)
         print(f"  Chain filter rejects: {len(rejects)} → data/chain_filter_rejects.json")
     print(f"  Chain additions: {chain_added}")
+
+    # ── Non-chain Thai venues without 'Thai' in the name ──
+    # e.g. Rambuttri (Leeds). Searched by full venue name; keeps full-name matches.
+    NON_CHAIN_THAI = ['Rambuttri']
+    non_chain_added = 0
+    for venue in NON_CHAIN_THAI:
+        for scheme in ['FHRS', 'FHIS']:
+            for bt in ['1', '7844']:
+                time.sleep(DELAY)
+                try:
+                    ests = fetch_all(venue, bt, scheme)
+                    venue_lower = venue.lower()
+                    for e in ests:
+                        if venue_lower in (e.get('BusinessName', '') or '').lower():
+                            all_ests.append(e)
+                            non_chain_added += 1
+                except Exception:
+                    pass
+    print(f"  Non-chain additions: {non_chain_added}")
     
     # Deduplicate by FHRSID
     seen = {}
