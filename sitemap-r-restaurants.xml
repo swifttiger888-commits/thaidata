@@ -586,11 +586,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/bristol/thai-express-kitchen-bristol/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/bristol/thai-garden/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -646,7 +641,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/buckinghamshire/giggling-squid-1020651/</loc>
+    <loc>https://thaidata.uk/r/buckinghamshire/giggling-squid-1995660/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -682,6 +677,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/buckinghamshire/the-queens-head-thai-kitchen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/buckinghamshire/urban-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1901,11 +1901,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/hartlepool/thai-pan/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/hastings/jasmine-thai-speciality-seafood/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2307,11 +2302,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/leeds/my-thai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/leeds/my-thai-at-the-old-step/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3571,11 +3561,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/london/thai-kitchen/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/london/thai-kitchen-authentic-street-food-cafe/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3782,11 +3767,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/thara-thai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/london/the-black-orchid-thai-cuisine/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4442,11 +4422,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/oldham/jing-thai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/oldham/lana-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5241,6 +5216,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/stoke-on-trent/nam-jai-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/stoke-on-trent/sawaddee-thai-taste/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5362,11 +5342,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/swansea/tongpans-thai-kitchen/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/swindon/siam-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5697,11 +5672,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/walsall/aroi-thai-takeaway/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/warrington/arroy-thai-fusions-restaurant/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

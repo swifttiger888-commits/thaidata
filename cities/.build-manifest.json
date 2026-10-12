@@ -1,12 +1,14 @@
 {
-  "run_date": "2026-10-05",
+  "run_date": "2026-10-12",
   "applied": true,
   "total_cities": 277,
   "generated": 251,
-  "quarantined": 24,
-  "empty_state": 0,
+  "quarantined": 23,
+  "empty_state": 1,
   "skipped": 1,
-  "empty_state_pages": [],
+  "empty_state_pages": [
+    "thurrock"
+  ],
   "quarantined_pages": [
     {
       "slug": "adur",
@@ -87,10 +89,6 @@
     {
       "slug": "taunton",
       "reason": "No restaurant data for city: Taunton"
-    },
-    {
-      "slug": "thurrock",
-      "reason": "No restaurant data for city: Thurrock"
     },
     {
       "slug": "torquay",

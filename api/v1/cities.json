@@ -3,15 +3,15 @@
   "version": "2.0",
   "description": "Free, open data on UK Thai restaurants. Sourced from FSA. No API key required.",
   "attribution": "Data from ThaiData.uk / Food Standards Agency",
-  "updated": "2026-10-05",
-  "total_uk": 1266,
+  "updated": "2026-10-12",
+  "total_uk": 1260,
   "cities_tracked": 252,
   "cities": [
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 285,
-      "restaurants": 231,
+      "total_thai_businesses": 283,
+      "restaurants": 229,
       "takeaways": 54,
       "per_100k": 3.2,
       "avg_hygiene_rating": 4.2,
@@ -19,15 +19,15 @@
       "fhis_pass": 0,
       "fhis_improvement": 0,
       "fhis_exempt": 0,
-      "postcode_areas": 98
+      "postcode_areas": 97
     },
     {
       "name": "Leeds",
       "population": 812000,
-      "total_thai_businesses": 27,
-      "restaurants": 22,
+      "total_thai_businesses": 26,
+      "restaurants": 21,
       "takeaways": 5,
-      "per_100k": 3.3,
+      "per_100k": 3.2,
       "avg_hygiene_rating": 4.5,
       "scheme": "FHRS",
       "fhis_pass": 0,
@@ -72,24 +72,10 @@
       "per_100k": 3.5,
       "avg_hygiene_rating": null,
       "scheme": "FHIS",
-      "fhis_pass": 14,
-      "fhis_improvement": 5,
+      "fhis_pass": 15,
+      "fhis_improvement": 4,
       "fhis_exempt": 0,
       "postcode_areas": 7
-    },
-    {
-      "name": "Bristol",
-      "population": 483000,
-      "total_thai_businesses": 15,
-      "restaurants": 13,
-      "takeaways": 2,
-      "per_100k": 3.1,
-      "avg_hygiene_rating": 4.7,
-      "scheme": "FHRS",
-      "fhis_pass": 0,
-      "fhis_improvement": 0,
-      "fhis_exempt": 0,
-      "postcode_areas": 6
     },
     {
       "name": "Swansea",
@@ -104,6 +90,20 @@
       "fhis_improvement": 0,
       "fhis_exempt": 0,
       "postcode_areas": 5
+    },
+    {
+      "name": "Bristol",
+      "population": 483000,
+      "total_thai_businesses": 14,
+      "restaurants": 12,
+      "takeaways": 2,
+      "per_100k": 2.9,
+      "avg_hygiene_rating": 4.7,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 6
     },
     {
       "name": "Richmond-Upon-Thames",
@@ -204,6 +204,20 @@
       "postcode_areas": 6
     },
     {
+      "name": "Buckinghamshire",
+      "population": 560000,
+      "total_thai_businesses": 10,
+      "restaurants": 10,
+      "takeaways": 0,
+      "per_100k": 1.8,
+      "avg_hygiene_rating": 4.5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 7
+    },
+    {
       "name": "Hertfordshire",
       "population": 1200000,
       "total_thai_businesses": 10,
@@ -286,20 +300,6 @@
       "fhis_improvement": 0,
       "fhis_exempt": 0,
       "postcode_areas": 4
-    },
-    {
-      "name": "Buckinghamshire",
-      "population": 560000,
-      "total_thai_businesses": 9,
-      "restaurants": 9,
-      "takeaways": 0,
-      "per_100k": 1.6,
-      "avg_hygiene_rating": 4.6,
-      "scheme": "FHRS",
-      "fhis_pass": 0,
-      "fhis_improvement": 0,
-      "fhis_exempt": 0,
-      "postcode_areas": 6
     },
     {
       "name": "Westmorland and Furness",
@@ -456,20 +456,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Warrington",
-      "population": 212000,
-      "total_thai_businesses": 7,
-      "restaurants": 6,
-      "takeaways": 1,
-      "per_100k": 3.3,
-      "avg_hygiene_rating": 3.6,
-      "scheme": "FHRS",
-      "fhis_pass": 0,
-      "fhis_improvement": 0,
-      "fhis_exempt": 0,
-      "postcode_areas": 4
-    },
-    {
       "name": "Central Bedfordshire",
       "population": 300000,
       "total_thai_businesses": 7,
@@ -624,6 +610,20 @@
       "postcode_areas": 3
     },
     {
+      "name": "Warrington",
+      "population": 212000,
+      "total_thai_businesses": 6,
+      "restaurants": 5,
+      "takeaways": 1,
+      "per_100k": 2.8,
+      "avg_hygiene_rating": 3.5,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 3
+    },
+    {
       "name": "North Norfolk",
       "population": null,
       "total_thai_businesses": 6,
@@ -714,7 +714,7 @@
       "restaurants": 6,
       "takeaways": 0,
       "per_100k": 1.8,
-      "avg_hygiene_rating": 4.2,
+      "avg_hygiene_rating": 4.3,
       "scheme": "FHRS",
       "fhis_pass": 0,
       "fhis_improvement": 0,
@@ -1100,20 +1100,6 @@
       "postcode_areas": 3
     },
     {
-      "name": "Oldham",
-      "population": 243000,
-      "total_thai_businesses": 4,
-      "restaurants": 1,
-      "takeaways": 3,
-      "per_100k": 1.6,
-      "avg_hygiene_rating": 3.8,
-      "scheme": "FHRS",
-      "fhis_pass": 0,
-      "fhis_improvement": 0,
-      "fhis_exempt": 0,
-      "postcode_areas": 4
-    },
-    {
       "name": "Cheltenham",
       "population": 120000,
       "total_thai_businesses": 4,
@@ -1394,6 +1380,20 @@
       "postcode_areas": 1
     },
     {
+      "name": "Oldham",
+      "population": 243000,
+      "total_thai_businesses": 3,
+      "restaurants": 1,
+      "takeaways": 2,
+      "per_100k": 1.2,
+      "avg_hygiene_rating": 4.7,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 3
+    },
+    {
       "name": "Uttlesford",
       "population": null,
       "total_thai_businesses": 3,
@@ -1596,7 +1596,7 @@
       "restaurants": 3,
       "takeaways": 0,
       "per_100k": null,
-      "avg_hygiene_rating": 3.7,
+      "avg_hygiene_rating": 3.0,
       "scheme": "FHRS",
       "fhis_pass": 0,
       "fhis_improvement": 0,
@@ -2052,20 +2052,6 @@
       "postcode_areas": 2
     },
     {
-      "name": "Hartlepool",
-      "population": null,
-      "total_thai_businesses": 2,
-      "restaurants": 1,
-      "takeaways": 1,
-      "per_100k": null,
-      "avg_hygiene_rating": 4.5,
-      "scheme": "FHRS",
-      "fhis_pass": 0,
-      "fhis_improvement": 0,
-      "fhis_exempt": 0,
-      "postcode_areas": 1
-    },
-    {
       "name": "Medway",
       "population": 285000,
       "total_thai_businesses": 2,
@@ -2087,20 +2073,6 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.5,
-      "scheme": "FHRS",
-      "fhis_pass": 0,
-      "fhis_improvement": 0,
-      "fhis_exempt": 0,
-      "postcode_areas": 1
-    },
-    {
-      "name": "Swindon",
-      "population": 236000,
-      "total_thai_businesses": 2,
-      "restaurants": 2,
-      "takeaways": 0,
-      "per_100k": 0.8,
-      "avg_hygiene_rating": 3.5,
       "scheme": "FHRS",
       "fhis_pass": 0,
       "fhis_improvement": 0,
@@ -2470,6 +2442,20 @@
       "fhis_improvement": 0,
       "fhis_exempt": 0,
       "postcode_areas": 2
+    },
+    {
+      "name": "Stoke-on-Trent",
+      "population": 260000,
+      "total_thai_businesses": 2,
+      "restaurants": 1,
+      "takeaways": 1,
+      "per_100k": 0.8,
+      "avg_hygiene_rating": 3.0,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 1
     },
     {
       "name": "East Lindsey",
@@ -2850,6 +2836,20 @@
       "postcode_areas": 1
     },
     {
+      "name": "Hartlepool",
+      "population": null,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": null,
+      "avg_hygiene_rating": 4.0,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 1
+    },
+    {
       "name": "Merthyr Tydfil",
       "population": null,
       "total_thai_businesses": 1,
@@ -3130,20 +3130,6 @@
       "postcode_areas": 1
     },
     {
-      "name": "Stoke-on-Trent",
-      "population": 260000,
-      "total_thai_businesses": 1,
-      "restaurants": 1,
-      "takeaways": 0,
-      "per_100k": 0.4,
-      "avg_hygiene_rating": 1.0,
-      "scheme": "FHRS",
-      "fhis_pass": 0,
-      "fhis_improvement": 0,
-      "fhis_exempt": 0,
-      "postcode_areas": 1
-    },
-    {
       "name": "Anglesey",
       "population": null,
       "total_thai_businesses": 1,
@@ -3249,6 +3235,20 @@
       "takeaways": 0,
       "per_100k": null,
       "avg_hygiene_rating": 4.0,
+      "scheme": "FHRS",
+      "fhis_pass": 0,
+      "fhis_improvement": 0,
+      "fhis_exempt": 0,
+      "postcode_areas": 1
+    },
+    {
+      "name": "Swindon",
+      "population": 236000,
+      "total_thai_businesses": 1,
+      "restaurants": 1,
+      "takeaways": 0,
+      "per_100k": 0.4,
+      "avg_hygiene_rating": 3.0,
       "scheme": "FHRS",
       "fhis_pass": 0,
       "fhis_improvement": 0,
