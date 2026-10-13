@@ -1,4101 +1,4101 @@
 {
-  "version": 1,
-  "generated": "2026-06-05",
-  "tiers": {
-    "bespoke": {
-      "label": "Fully editorial",
-      "mode": "manual"
-    },
-    "enriched": {
-      "label": "Enhanced schema + data content",
-      "mode": "hybrid"
-    },
-    "standard": {
-      "label": "Auto-generated basic template",
-      "mode": "programmatic"
-    }
+ "version": 1,
+ "generated": "2026-06-05",
+ "tiers": {
+  "bespoke": {
+   "label": "Fully editorial",
+   "mode": "manual"
   },
-  "cities": {
-    "london": {
-      "tier": "bespoke",
-      "mode": "manual",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 401,
-      "transitions": [
-        {
-          "from": null,
-          "to": "manual",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "leeds": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 34,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "manchester": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 29,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bournemouth": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 25,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "york": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 24,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "edinburgh": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 24,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bristol": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 19,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "birmingham": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 18,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "milton-keynes": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 18,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "leicester": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 17,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "other-uk": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 16,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cornwall": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 16,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bradford": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 15,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "oxford": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 15,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "swansea": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 15,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "richmond-upon-thames": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 14,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "sheffield": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 14,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "brighton": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 13,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "newcastle": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 13,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "huddersfield": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 13,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "watford": {
-      "tier": "enriched",
-      "mode": "hybrid",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 13,
-      "transitions": [
-        {
-          "from": null,
-          "to": "hybrid",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bath": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 12,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "swindon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 12,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "lake-district": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 12,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "shrewsbury": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 11,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "windsor-and-maidenhead": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 10,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bolton": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 10,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "torquay": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cardiff": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "herefordshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "exeter": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "taunton": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "stoke-on-trent": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "glasgow": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "central-bedfordshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "norwich": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cheltenham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cheshire-west-and-chester": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "margate": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wirral": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "derby": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "nottingham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "clacton-on-sea": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "trafford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "warrington": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "kingston-upon-thames": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "liverpool": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "blackpool": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "durham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "belfast": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "maidstone": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "st-albans-city": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "calderdale": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "southend": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "new-forest": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "oldham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "coventry": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "portsmouth": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wyre": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "plymouth": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cambridge": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wealden": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "chelmsford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "luton": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wigan": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bury": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "southampton": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "stockport": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "isle-of-wight": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "sunderland": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "aberdeen": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "mole-valley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "teignbridge": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "waverley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "sefton": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "preston": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "canterbury": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "guildford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "slough": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "neath-port-talbot": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "tameside": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "burnley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "powys": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "tandridge": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "weston-super-mare": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "reading": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "gwynedd": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "warwick": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "eastbourne": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "hull": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "north-east-lincolnshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cumberland": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "broxtowe": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "east-riding-of-yorkshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "dudley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "dacorum": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "mid-sussex": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "colchester": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "runnymede": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "vale-of-white-horse": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "gravesham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "fylde": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "west-suffolk": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "spelthorne": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "high-peak": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "east-suffolk": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "stevenage": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wakefield": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "horsham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "fermanagh-and-omagh": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 4,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "darlington": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wrexham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "uttlesford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "erewash": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rugby": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "north-northamptonshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rother": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "reigate-and-banstead": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "lancaster": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "worthing": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "basildon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wychavon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "north-kesteven": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "tunbridge-wells": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "great-yarmouth": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wokingham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cotswold": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "folkestone-and-hythe": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "nuneaton-and-bedworth": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "forest-of-dean": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "stockton-on-tees": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wolverhampton": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "barnsley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "hertsmere": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "west-northamptonshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rotherham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bedford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "redcar-and-cleveland": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "gloucester": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "worcester": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "epsom-and-ewell": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "west-lancashire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rushmoor": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "sandwell": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "blackburn": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bridgend": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "middlesbrough": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cheshire-east": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "armagh-city-banbridge-and-craigavon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "highland": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "moray": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "fife": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "south-lanarkshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "winchester-city": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "harborough": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bromsgrove": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "derry-city-and-strabane": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "ashford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "braintree": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "vale-of-glamorgan": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "thurrock": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "blaby": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "cherwell": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "hartlepool": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "medway": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "conwy": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "pendle": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "three-rivers": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "charnwood": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "swale": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "kings-lynn-and-west-norfolk": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "welwyn-hatfield": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "stratford-upon-avon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "dartford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "hastings": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "lichfield": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "broadland": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rhondda-cynon-taf": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "newark-and-sherwood": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "west-berkshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "salford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "east-lindsey": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "stafford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "carmarthenshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "north-lincolnshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "hinckley-and-bosworth": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "hart": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bracknell-forest": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "hyndburn": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "walsall": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "ceredigion": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "antrim-and-newtownabbey": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "arun": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "brentwood": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "sevenoaks": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "castle-point": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "gateshead": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "stirling": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "angus": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "falkirk": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "east-lothian": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "argyll-and-bute": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "perth": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "east-dunbartonshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rushcliffe": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "chesterfield": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "flintshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "bassetlaw": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "telford": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "huntingdonshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "ipswich": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "dover": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "tonbridge-and-malling": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "lewes": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "boston": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "st-helens": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "lincoln": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "fenland": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "fareham": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "crawley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "maldon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "mid-suffolk": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "anglesey": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "epping-forest": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "test-valley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "mansfield": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "melton": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "doncaster": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "woking": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "mid-and-east-antrim": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "pembrokeshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "babergh": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "eastleigh": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "torridge": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "wyre-forest": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "lisburn-and-castlereagh-city": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "newry-mourne-and-down": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rossendale": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "south-tyneside": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "dundee": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "north-ayrshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "scottish-borders": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "west-lothian": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "north-lanarkshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "renfrewshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "chichester": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "adur": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "north-tyneside": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "rochdale": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "knowsley": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "south-hams": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "east-renfrewshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "inverclyde": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "html_exists": true,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-05",
-          "reason": "Registry initialisation"
-        }
-      ]
-    },
-    "tendring": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "torbay": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "somerset": {
-      "tier": "enriched",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 13,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        },
-        {
-          "from": "hybrid",
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Generator run"
-        }
-      ]
-    },
-    "north-norfolk": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 7,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "dorset": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 11,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "thanet": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "staffordshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 5,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "shropshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 11,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "buckinghamshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 11,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "elmbridge": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 8,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "wiltshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 9,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "westmorland-and-furness": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 12,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "hertfordshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 12,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "stratford-on-avon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "devon": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "oxfordshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 6,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "hampshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "northumberland": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 2,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "gloucestershire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 3,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    },
-    "warwickshire": {
-      "tier": "standard",
-      "mode": "programmatic",
-      "quarantined": false,
-      "restaurant_count": 1,
-      "transitions": [
-        {
-          "from": null,
-          "to": "programmatic",
-          "date": "2026-06-08",
-          "reason": "Auto-created from new restaurant data"
-        }
-      ]
-    }
+  "enriched": {
+   "label": "Enhanced schema + data content",
+   "mode": "hybrid"
+  },
+  "standard": {
+   "label": "Auto-generated basic template",
+   "mode": "programmatic"
   }
+ },
+ "cities": {
+  "london": {
+   "tier": "bespoke",
+   "mode": "manual",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 401,
+   "transitions": [
+    {
+     "from": null,
+     "to": "manual",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "leeds": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 27,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "manchester": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 29,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bournemouth": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 25,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "york": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 24,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "edinburgh": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 24,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bristol": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 19,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "birmingham": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 18,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "milton-keynes": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 18,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "leicester": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 17,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "other-uk": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 16,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cornwall": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 16,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bradford": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 15,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "oxford": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 15,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "swansea": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 15,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "richmond-upon-thames": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 14,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "sheffield": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 14,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "brighton": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 13,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "newcastle": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 13,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "huddersfield": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 13,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "watford": {
+   "tier": "enriched",
+   "mode": "hybrid",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 13,
+   "transitions": [
+    {
+     "from": null,
+     "to": "hybrid",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bath": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 12,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "swindon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 12,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "lake-district": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 12,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "shrewsbury": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 11,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "windsor-and-maidenhead": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 10,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bolton": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 10,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "torquay": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cardiff": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "herefordshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "exeter": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "taunton": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "stoke-on-trent": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "glasgow": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "central-bedfordshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "norwich": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cheltenham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cheshire-west-and-chester": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "margate": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wirral": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "derby": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "nottingham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "clacton-on-sea": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "trafford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "warrington": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "kingston-upon-thames": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "liverpool": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "blackpool": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "durham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "belfast": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "maidstone": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "st-albans-city": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "calderdale": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "southend": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "new-forest": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "oldham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "coventry": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "portsmouth": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wyre": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "plymouth": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cambridge": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wealden": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "chelmsford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "luton": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wigan": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bury": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "southampton": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "stockport": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "isle-of-wight": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "sunderland": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "aberdeen": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "mole-valley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "teignbridge": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "waverley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "sefton": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "preston": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "canterbury": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "guildford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "slough": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "neath-port-talbot": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "tameside": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "burnley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "powys": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "tandridge": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "weston-super-mare": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "reading": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "gwynedd": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "warwick": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "eastbourne": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "hull": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "north-east-lincolnshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cumberland": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "broxtowe": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "east-riding-of-yorkshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "dudley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "dacorum": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "mid-sussex": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "colchester": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "runnymede": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "vale-of-white-horse": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "gravesham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "fylde": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "west-suffolk": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "spelthorne": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "high-peak": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "east-suffolk": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "stevenage": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wakefield": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "horsham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "fermanagh-and-omagh": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 4,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "darlington": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wrexham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "uttlesford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "erewash": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rugby": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "north-northamptonshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rother": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "reigate-and-banstead": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "lancaster": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "worthing": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "basildon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wychavon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "north-kesteven": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "tunbridge-wells": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "great-yarmouth": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wokingham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cotswold": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "folkestone-and-hythe": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "nuneaton-and-bedworth": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "forest-of-dean": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "stockton-on-tees": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wolverhampton": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "barnsley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "hertsmere": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "west-northamptonshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rotherham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bedford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "redcar-and-cleveland": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "gloucester": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "worcester": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "epsom-and-ewell": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "west-lancashire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rushmoor": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "sandwell": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "blackburn": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bridgend": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "middlesbrough": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cheshire-east": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "armagh-city-banbridge-and-craigavon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "highland": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "moray": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "fife": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "south-lanarkshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "winchester-city": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "harborough": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bromsgrove": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "derry-city-and-strabane": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "ashford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "braintree": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "vale-of-glamorgan": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "thurrock": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "blaby": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "cherwell": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "hartlepool": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "medway": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "conwy": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "pendle": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "three-rivers": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "charnwood": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "swale": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "kings-lynn-and-west-norfolk": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "welwyn-hatfield": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "stratford-upon-avon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "dartford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "hastings": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "lichfield": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "broadland": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rhondda-cynon-taf": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "newark-and-sherwood": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "west-berkshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "salford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "east-lindsey": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "stafford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "carmarthenshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "north-lincolnshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "hinckley-and-bosworth": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "hart": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bracknell-forest": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "hyndburn": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "walsall": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "ceredigion": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "antrim-and-newtownabbey": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "arun": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "brentwood": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "sevenoaks": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "castle-point": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "gateshead": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "stirling": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "angus": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "falkirk": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "east-lothian": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "argyll-and-bute": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "perth": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "east-dunbartonshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rushcliffe": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "chesterfield": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "flintshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "bassetlaw": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "telford": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "huntingdonshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "ipswich": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "dover": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "tonbridge-and-malling": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "lewes": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "boston": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "st-helens": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "lincoln": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "fenland": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "fareham": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "crawley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "maldon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "mid-suffolk": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "anglesey": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "epping-forest": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "test-valley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "mansfield": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "melton": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "doncaster": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "woking": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "mid-and-east-antrim": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "pembrokeshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "babergh": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "eastleigh": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "torridge": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "wyre-forest": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "lisburn-and-castlereagh-city": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "newry-mourne-and-down": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rossendale": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "south-tyneside": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "dundee": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "north-ayrshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "scottish-borders": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "west-lothian": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "north-lanarkshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "renfrewshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "chichester": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "adur": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "north-tyneside": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "rochdale": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "knowsley": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "south-hams": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "east-renfrewshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "inverclyde": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "html_exists": true,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-05",
+     "reason": "Registry initialisation"
+    }
+   ]
+  },
+  "tendring": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "torbay": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "somerset": {
+   "tier": "enriched",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 13,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    },
+    {
+     "from": "hybrid",
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Generator run"
+    }
+   ]
+  },
+  "north-norfolk": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 7,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "dorset": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 11,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "thanet": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "staffordshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 5,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "shropshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 11,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "buckinghamshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 11,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "elmbridge": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 8,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "wiltshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 9,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "westmorland-and-furness": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 12,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "hertfordshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 12,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "stratford-on-avon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "devon": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "oxfordshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 6,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "hampshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "northumberland": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 2,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "gloucestershire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 3,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  },
+  "warwickshire": {
+   "tier": "standard",
+   "mode": "programmatic",
+   "quarantined": false,
+   "restaurant_count": 1,
+   "transitions": [
+    {
+     "from": null,
+     "to": "programmatic",
+     "date": "2026-06-08",
+     "reason": "Auto-created from new restaurant data"
+    }
+   ]
+  }
+ }
 }
