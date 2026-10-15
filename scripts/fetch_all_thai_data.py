@@ -129,7 +129,10 @@ def main() -> None:
 
     # ── Non-chain Thai venues without 'Thai' in the name ──
     # e.g. Rambuttri (Leeds). Searched by full venue name; keeps full-name matches.
-    NON_CHAIN_THAI = ['Rambuttri']
+    # Watchlist: verified Thai venues awaiting an FSA rating auto-enter once rated
+    # (unrated venues are filtered by the ratings check below). Current watches:
+    #   - Siam Corner (Guiseley LS20 8BX, FHRSID 1917318) — awaiting inspection
+    NON_CHAIN_THAI = ['Rambuttri', 'Siam Corner']
     non_chain_added = 0
     for venue in NON_CHAIN_THAI:
         for scheme in ['FHRS', 'FHIS']:
