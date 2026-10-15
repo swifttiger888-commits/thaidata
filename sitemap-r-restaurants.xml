@@ -526,11 +526,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/bristol/beijing-chinese-thai-takeaway/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/bristol/brother-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1226,11 +1221,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/devon/honeymoon-chinese-and-thai-restaurant/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/devon/renoos-thai-food/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1361,17 +1351,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/east-lindsey/de-bao-chinese-thai-takeaway/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/east-lindsey/mams-little-thai-kitchen/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/east-lothian/chens-chinese-thai-takeaway/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1641,11 +1621,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/falkirk/one-two-chinese-thai-take-away/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/fareham/aroy-thai-limited/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1757,11 +1732,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/glasgow/thai-orchid/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/glasgow/thai-sun-chinese-take-away/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2596,11 +2566,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/london/beijing-noodles-olivia-pizza-china-town-thai-street-foods-golden-wok-meal-box-burrito-tequila-the-burrito-bowl/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/london/big-cheeks-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2947,11 +2912,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/meekhun-thai-bistro/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/london/meekhun-thai-bistro-kensington/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3781,11 +3741,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/london/the-fuchka-man-halal-thai-chinese-morog-polau/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/london/the-fusion-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3866,11 +3821,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/london/wrapswingssukhumthaiwowsticksyumyumorientalbokhao/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/london/yb-thai-street-food/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3932,11 +3882,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/manchester/changyai-thai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/manchester/golden-fields-chinese-thai-takeaway/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4531,11 +4476,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/plymouth/siam-thai-takeaway/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/plymouth/sue-sow-orginial-thai-food/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4797,11 +4737,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/rushmoor/mang-mee-thai-food/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/rushmoor/oriental-hub-kings-of-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5172,6 +5107,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/stirling/sida-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/stockport/august-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5771,7 +5711,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/wealden/thai-legacy-restaurant/</loc>
+    <loc>https://thaidata.uk/r/wealden/pusanon-thai-restaurant/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -153,6 +153,35 @@ def main() -> None:
         if fid not in seen:
             seen[fid] = e
     all_ests = list(seen.values())
+
+    # ── Moderation exclusions (authentic-Thai policy, manual curation) ──
+    # Local file primary, D1 API override — same contract as the page generators.
+    # Applied here so restaurants.json and every downstream surface (city stats,
+    # API, pages, mcp fallback, HF) agree on the same venue set.
+    excluded_ids: set[int] = set()
+    excl_path = os.path.join(REPO_DIR, 'data', 'exclusions.json')
+    if os.path.exists(excl_path):
+        try:
+            with open(excl_path) as f:
+                excluded_ids.update(json.load(f).get('excluded_fsa_ids', []))
+        except Exception:
+            pass
+    try:
+        import urllib.request as _ur
+        _req = _ur.Request('https://thaidata.uk/api/exclusions',
+                           headers={'User-Agent': 'ThaiData-Pipeline/1.0'})
+        with _ur.urlopen(_req, timeout=10) as resp:
+            api_ids = set(json.loads(resp.read()).get('excluded_ids', []))
+        if api_ids:
+            excluded_ids |= api_ids
+    except Exception:
+        pass
+    if excluded_ids:
+        before = len(all_ests)
+        all_ests = [e for e in all_ests if e['FHRSID'] not in excluded_ids]
+        print(f"  Moderation exclusions applied: {before - len(all_ests)} removed "
+              f"({len(excluded_ids)} ids in exclusion list)")
+
     print(f"  After dedup: {len(all_ests)} unique establishments\n")
     
     # ── Step 2: Process into restaurant records ──────────────────────

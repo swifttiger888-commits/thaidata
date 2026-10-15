@@ -551,6 +551,13 @@ def update_hero_stats(
         f'\\g<1>{count}\\g<2>',
         html,
     )
+    # 2b. sub paragraph tail:  "★4.4 average hygiene rating · 2.5% of UK total"
+    # These two were baked at shell-build time and never refreshed — drift on
+    # every data change.  Lookaheads keep the regexes scoped to this sentence.
+    if avg_rating:
+        html = re.sub(r'★[\d.]+(?= average hygiene rating)', f'★{avg_rating:.1f}', html)
+    if total_uk:
+        html = re.sub(r'[\d.]+%(?= of UK total)', f'{count / total_uk * 100:.1f}%', html)
     # 3. stat-row: four <div class="num"> blocks inside stat-row div
     stars = "★" * round(avg_rating) if avg_rating else ""
     # Instead of fragile count=1, replace the whole stat-row block
