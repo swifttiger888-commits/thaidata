@@ -547,7 +547,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             )
         if enr_hours:
             strip_items.append(
-                '<a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>Hours</a>'
+                '<a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>View opening hours</a>'
             )
         if strip_items:
             # Google Places ToS: attribution wherever Places content displays.
@@ -578,12 +578,15 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
 
     # ---- Hero claim CTA (closed = show closed notice) ----
     if is_closed:
-        hero_closed_notice = f'''            <p style="margin-top:12px;font-size:0.85rem;color:rgba(255,200,200,0.9);">
-                <i class="fas fa-door-closed" style="margin-right:4px;"></i>This venue has been reported as permanently closed.
+        hero_closed_notice = f'''            <p class="hero-closed-notice">
+                <strong>Listed as closed.</strong>
             </p>'''
         # Replace the marker + claim CTA paragraph
+        # Attribute-tolerant: the template's <p> carries id="hero-claim-cta" after
+        # the style attr, which the old strict regex missed — closed venues kept a
+        # dead "Claim this listing" link (found 2026-10-15).
         html = safe_sub(
-            r'<!-- DYNAMIC: hero_claim_cta -->\s*\n\s*<p style="margin-top:12px;font-size:0\.85rem;color:var\(--ink-secondary\);">.*?</p>',
+            r'<!-- DYNAMIC: hero_claim_cta -->\s*\n\s*<p style="margin-top:12px;font-size:0\.85rem;color:var\(--ink-secondary\);"[^>]*>.*?</p>',
             hero_closed_notice,
             html
         )

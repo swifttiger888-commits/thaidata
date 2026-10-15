@@ -199,6 +199,432 @@
         .breadcrumb span { color: var(--ink-tertiary); }
 
         /* ============ HERO ============ */
+/* HERO V2 — field and layout */
+.hero.hero {
+    position: relative;
+    isolation: isolate;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 380px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 4px solid var(--brand);
+    background: var(--ivory);
+    color: var(--ink);
+}
+
+.hero.hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--ivory);
+    pointer-events: none;
+}
+
+.hero.hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: none;
+    pointer-events: none;
+}
+
+/* Defensive fallback while cached templates still contain the old SVG. */
+.hero.hero .hero-watermark {
+    display: none;
+}
+
+.hero.hero .hero-content {
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+}
+
+.hero.hero .hero-identity,
+.hero.hero .hero-details {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.hero.hero .hero-details {
+    padding: 24px;
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--brand);
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* HERO V2 — optional owner-supplied photograph */
+.hero.hero .hero-photo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: var(--hero-photo-x, 50%) var(--hero-photo-y, 50%);
+    pointer-events: none;
+}
+
+.hero.hero .hero-photo ~ .hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(251, 247, 240, 1) 0%,
+        rgba(251, 247, 240, 1) 50%,
+        rgba(251, 247, 240, 0.92) 72%,
+        rgba(251, 247, 240, 0.82) 100%
+    );
+}
+
+/* HERO V2 — typography, badges and visitor information */
+.hero.hero .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 18px;
+}
+
+.hero.hero .badge {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 100%;
+    min-height: 32px;
+    padding: 6px 11px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-shadow: none;
+}
+
+/*
+ * Default source badge is FSA 5/5.
+ * No !important: generator-supplied inline rating colours remain authoritative.
+ */
+.hero.hero .badge-rating {
+    background: var(--success-light);
+    color: var(--success-dark);
+}
+
+.hero.hero .badge-type {
+    background: var(--brand-tint);
+    color: var(--brand-press);
+}
+
+.hero.hero .badge i {
+    flex: 0 0 auto;
+    margin: 0;
+    color: inherit;
+}
+
+.hero.hero h1 {
+    margin: 0;
+    font-family: 'Archivo', 'Inter', system-ui, sans-serif;
+    font-size: clamp(2.25rem, 3.4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    text-shadow: none;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: manual;
+}
+
+.hero.hero h1 em {
+    font-style: normal;
+    color: var(--brand-press);
+}
+
+.hero.hero .hero-location {
+    margin: 16px 0 0;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.hero.hero .hero-location i {
+    margin-right: 6px;
+    color: var(--brand-press);
+    font-size: 0.875rem;
+}
+
+.hero.hero #contact-strip {
+    margin-top: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+}
+
+.hero.hero #contact-strip .cs-item {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 44px;
+    padding: 9px 11px;
+    border: 1px solid var(--brand-press);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    color: var(--brand-press) !important;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4;
+    text-decoration: none !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+}
+
+.hero.hero #contact-strip .cs-item i {
+    flex: 0 0 auto;
+    color: inherit;
+}
+
+.hero.hero #contact-strip .cs-sep {
+    display: none !important;
+}
+
+.hero.hero #contact-strip .cs-attr {
+    max-width: 100%;
+    color: var(--ink-soft) !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.5;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+}
+
+.hero.hero #contact-strip a.cs-attr {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+}
+
+.hero.hero #contact-strip .cs-item:hover {
+    background: var(--brand-press);
+    color: var(--white) !important;
+}
+
+.hero.hero .intro-blurb {
+    max-width: none !important;
+    margin: 16px 0 0 !important;
+    color: var(--ink-soft) !important;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.9375rem !important;
+    font-weight: 400;
+    line-height: 1.6 !important;
+    overflow-wrap: anywhere;
+}
+
+.hero.hero .intro-blurb:first-child {
+    margin-top: 0 !important;
+}
+
+/* Visible on the ivory field, white panel and dark hover state. */
+.hero.hero a:focus-visible {
+    outline: 3px solid var(--brand-press);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--white);
+}
+
+/* HERO V2 — ownership, reporting and closed notice */
+.hero.hero #hero-claim-cta {
+    margin: 20px 0 0 !important;
+    padding-top: 12px;
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-soft) !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.5;
+}
+
+.hero.hero #hero-report-cta {
+    margin: 2px 0 0 !important;
+    color: var(--ink-soft);
+    font-size: 0.8125rem !important;
+    line-height: 1.5;
+}
+
+.hero.hero #hero-claim-cta a,
+.hero.hero #hero-report-cta a {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    min-height: 32px;
+    color: var(--ink-soft) !important;
+    font-weight: 400;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+/* Defensive fallback if an older generator still emits the icon. */
+.hero.hero #hero-claim-cta a i {
+    display: none;
+}
+
+.hero.hero #hero-claim-cta a:hover,
+.hero.hero #hero-report-cta a:hover {
+    color: var(--brand-press) !important;
+    text-decoration-thickness: 2px !important;
+}
+
+.hero.hero .hero-closed-notice {
+    margin: 20px 0 0;
+    padding: 12px 14px;
+    border-left: 3px solid var(--ink-soft);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* HERO V2 — mobile and print; insert after the other V2 blocks */
+@media (max-width: 768px) {
+    .hero.hero {
+        min-height: 472px;
+        justify-content: flex-start;
+    }
+
+    .hero.hero .hero-content {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 20px;
+        padding: 28px 24px;
+    }
+
+    .hero.hero .hero-details {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+    }
+
+    .hero.hero .badge-row {
+        gap: 8px;
+        margin: 0 0 16px;
+    }
+
+    .hero.hero .badge {
+        min-height: 32px;
+        padding: 6px 10px;
+        font-size: 0.8125rem;
+        line-height: 1.35;
+    }
+
+    .hero.hero h1 {
+        font-size: clamp(1.875rem, 8.2vw, 2.25rem);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+    }
+
+    .hero.hero .hero-location {
+        margin-top: 14px;
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+
+    .hero.hero #contact-strip {
+        gap: 8px !important;
+    }
+
+    .hero.hero #contact-strip .cs-item {
+        min-height: 44px;
+        padding: 9px 11px;
+        font-size: 0.875rem !important;
+    }
+
+    .hero.hero .intro-blurb {
+        margin-top: 14px !important;
+        font-size: 0.9375rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .hero.hero .intro-blurb:first-child {
+        margin-top: 0 !important;
+    }
+
+    .hero.hero #hero-claim-cta,
+    .hero.hero .hero-closed-notice {
+        margin-top: 16px !important;
+    }
+
+    .hero.hero #hero-claim-cta a,
+    .hero.hero #hero-report-cta a {
+        min-height: 44px;
+    }
+
+    .hero.hero #hero-report-cta {
+        margin-top: 0 !important;
+    }
+
+    /* No photograph competes with the stacked mobile content. */
+    .hero.hero .hero-photo {
+        display: none;
+    }
+
+    .hero.hero .hero-photo ~ .hero-overlay {
+        background: none;
+    }
+}
+
+@media print {
+    .hero.hero {
+        min-height: 0;
+        overflow: visible;
+        border-top: 2px solid #000;
+        background: #fff;
+        color: #000;
+    }
+
+    .hero.hero .hero-bg,
+    .hero.hero .hero-photo,
+    .hero.hero .hero-overlay,
+    .hero.hero .hero-watermark {
+        display: none;
+    }
+
+    .hero.hero .hero-content {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .hero.hero .hero-details {
+        margin-top: 20px;
+        padding: 16px;
+        border: 1px solid #777;
+        background: #fff;
+    }
+}
+
         .hero {
             position: relative;
             width: 100%;
@@ -1023,12 +1449,9 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
         <div class="hero-bg"></div>
-                <svg class="hero-watermark" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-            <path d="M11 7h2v2h-2zM7 11h2v2H7zm8 0h2v2h-2zM11 15h2v2h-2z" opacity="0.5"/>
-        </svg>
-        <div class="hero-overlay"></div>
+                <div class="hero-overlay"></div>
         <div class="hero-content">
+            <div class="hero-identity">
             <div class="badge-row">
                                 <span class="badge badge-rating">
                     <i class="fas fa-star"></i> FSA 3/5
@@ -1041,16 +1464,19 @@
                         <div class="hero-location">
                 <i class="fas fa-map-marker-alt"></i> North Norfolk
             </div>
-            <div class="contact-strip" id="contact-strip" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;"><a class="cs-item" href="tel:01603 781133" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>01603 781133</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><a class="cs-item" href="http://www.thaiubon.com/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-globe" style="margin-right:5px;"></i>Website</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>Hours</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><span class="cs-attr" translate="no" style="color:rgba(255,255,255,0.9);font-size:0.75rem;font-weight:400;white-space:nowrap;border:1px solid rgba(255,255,255,0.3);padding:1px 6px;border-radius:3px;">Google Maps</span></div>
+            </div>
+            <div class="hero-details">
+            <div class="contact-strip" id="contact-strip" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;"><a class="cs-item" href="tel:01603 781133" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>01603 781133</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><a class="cs-item" href="http://www.thaiubon.com/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-globe" style="margin-right:5px;"></i>Website</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>View opening hours</a><span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span><span class="cs-attr" translate="no" style="color:rgba(255,255,255,0.9);font-size:0.75rem;font-weight:400;white-space:nowrap;border:1px solid rgba(255,255,255,0.3);padding:1px 6px;border-radius:3px;">Google Maps</span></div>
                         <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">
                 Thai Ubon Restaurant is a Thai restaurant in Norfolk, North Norfolk. FSA hygiene rating 3/5, last inspected November 2025.
             </p>
                         <p style="margin-top:12px;font-size:0.85rem;color:var(--ink-secondary);" id="hero-claim-cta">
-                <a href="/claim/?restaurant=Thai%20Ubon%20Restaurant&amp;city=North%20Norfolk&amp;fsa_id=1155188&amp;src=hero-claim" style="color:#FFFFFF;text-decoration:none;"><i class="fas fa-check-circle" style="margin-right:4px;"></i>Owner or manager? Claim this listing for free to add photos, menus and opening hours.</a>
+                <a href="/claim/?restaurant=Thai%20Ubon%20Restaurant&amp;city=North%20Norfolk&amp;fsa_id=1155188&amp;src=hero-claim" style="color:#FFFFFF;text-decoration:none;">Owner or manager? Claim this listing</a>
             </p>
                         <p style="margin-top:6px;font-size:0.8rem;" id="hero-report-cta">
                 <a href="#report-card" style="color:rgba(255,255,255,0.92);text-decoration:underline;text-underline-offset:2px;">Spotted a mistake? Report an error</a>
             </p>
+            </div>
         </div>
     </section>
 
