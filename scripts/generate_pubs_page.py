@@ -249,6 +249,7 @@ HTML = f"""<!DOCTYPE html>
             <h2>Why <em>Separate</em>?</h2>
             <div class="info-card">
                 <p>Thai kitchens in pubs usually trade under the pub's name (for example <em>Thai Plough</em> or <em>Cricketers Thai</em>), and the FSA record is registered to the pub. That means they're invisible to standard restaurant listings and name searches for "Thai". We search the FSA register by business type to find them — so the main <a href="/r/" style="color:var(--c2);">restaurant directory</a> stays clean, and pub kitchens get their own section here.</p>
+                <p style="margin-top:10px;"><i class="fas fa-beer-mug-empty" style="color:var(--c2);"></i> Thinking of running a Thai kitchen in a pub yourself? <a href="/learn/thai-kitchen-in-a-pub" style="color:var(--c2);">Read the guide to how it works</a> — deals, registration, tax and licensing.</p>
             </div>
         </div>
 
