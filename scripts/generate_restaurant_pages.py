@@ -678,9 +678,28 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
 
     # ---- Address ----
+    # Skip city/postcode lines that merely repeat what the address already ends with
+    # (FSA records often include the town: '...Kirkgate, Leeds' + 'Leeds' line reads
+    # as 'Leeds, Leeds').
+    _addr = re.sub(r'\s+', ' ', address or '').strip()
+    _city = (city or '').strip()
+    _pc = (postcode or '').strip()
+    _addr_tail = _addr.rstrip('.,').lower()
+    _addr_norm = re.sub(r'\s+', '', _addr).lower()
+    _addr_lines = [f'<strong>{name}</strong>']
+    if _addr:
+        _addr_lines.append(_addr)
+    if _city and not (_addr_tail.endswith(', ' + _city.lower())
+                      or _addr_tail.endswith(' ' + _city.lower())
+                      or _addr_tail == _city.lower()):
+        _addr_lines.append(_city)
+    _pc_junk = _pc.lower() in {'nd', 'n/a', 'na', 'tbc', 'none', 'unknown', '-'}
+    if _pc and not _pc_junk and re.sub(r'\s+', '', _pc).lower() not in _addr_norm:
+        _addr_lines.append(_pc)
+    _addr_html = '<br>\n                        '.join(_addr_lines)
     html = html.replace(
         '<!-- DYNAMIC: address_block -->\n                        <strong>My Thai</strong><br>\n                        43 New York Street<br>\n                        Leeds<br>\n                        LS2 8NJ',
-        f'                        <strong>{name}</strong><br>\n                        {address}<br>\n                        {city}<br>\n                        {postcode}'
+        f'                        {_addr_html}'
     )
 
     # ---- Map iframe ----
@@ -695,11 +714,17 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
                     </iframe>
                 </div>'''
     else:
-        map_html = f'''                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:32px 24px;text-align:center;margin-top:16px;">
-                    <p style="color:#64748b;margin:0 0 8px;"><i class="fas fa-map-marker-alt" style="margin-right:6px;color:#94a3b8;"></i> Map coordinates unavailable for this location.</p>
-                    <p style="color:#94a3b8;font-size:0.85rem;margin:0;">Use <strong>Get Directions</strong> or <strong>View on Map</strong> above to open this address in Google Maps.</p>
-                </div>'''
-    
+        # No coordinates: show nothing in place of the map (the old fallback box
+        # apologised for missing data AND referenced Get Directions / View on Map
+        # links that don't exist anywhere on the page), and offer a working
+        # Google Maps link for the address instead.
+        import urllib.parse as _uparse
+        _q = _uparse.quote_plus(', '.join(x for x in (name, _addr) if x))
+        map_html = f'''                <p style="margin-top:14px;">
+                    <a href="https://www.google.com/maps/search/?api=1&query={_q}" target="_blank" rel="noopener" style="color:var(--green);font-size:0.9rem;font-weight:600;text-decoration:none;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Open this address in Google Maps &rarr;</a>
+                </p>'''
+        html = html.replace('card-title">Location <em>&amp; Map</em></h2>', 'card-title">Location</h2>')
+
     html = safe_sub(r'<!-- DYNAMIC: map_iframe.*?-->.*?<div class="map-wrap">.*?</div>', map_html if map_html else '', html)
 
     # ---- Trust items ----
