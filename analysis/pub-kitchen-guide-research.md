@@ -28,7 +28,7 @@
 
 ### Route B — Kitchen residency / takeover (the classic Thai-in-pub model)
 - Independent food business takes over the pub kitchen: "a fully equipped commercial kitchen within a pub or bar venue, made available to an external food operator on a residency basis" `[2]`.
-- Terms: min. term typically 6 months; deposit 4–6 weeks rent; **fixed rent (£700–£1,500/mo regional; £1,500–£4,000 London) or revenue share 15–25% of dine-in sales**, sometimes lower rent + smaller % `[2]`.
+- Terms: min. term typically 6 months; deposit 4–6 weeks rent; **fixed rent — £1,000–£3,000/mo typical headline; regional cities from £700–£1,500; London £1,500–£4,000 — or revenue share 15–25% of dine-in sales**, sometimes lower rent + smaller % `[2]`.
 - Normally included: kitchen + equipment, access to the venue's licence, front-of-house dine-in space, often utilities. Not included: stock, staffing, hygiene certificates, insurance, marketing `[2]`.
 - The kitchen operator runs its own business: own food registration `[3][17]`, own insurance `[2]`, own pricing.
 - Support for the "rides on the pub's registration" nuance (Pattern 1 in our data): the FSA record can stay registered to the pub, but a **separate food business must register in its own right** `[3][17]` — the split matters for both hygiene inspections and tax.
@@ -60,7 +60,7 @@
 | Business rates | On the non-domestic property | Bill from the council; VO for rateable value queries `[14]` |
 | Insurance | Kitchen operator | Public & products liability minimum; employer's liability if staff `[2]` |
 
-**The split-business question (asked constantly):** HMRC's own policy statement lists "pubs in which the bar and catering may be artificially separated" as a case it examines — but: "truly franchised 'shop within a shop' arrangements will not normally be considered artificial" `[22]`. Practitioner thread (2012) adds the practical test: written contract, market rent, separate books/bank; a peppercorn rent with no formal contract lost at appeal `[5]`. (Label `[5]` as practitioner commentary, not law.)
+**The split-business question (asked constantly):** HMRC's own policy statement lists "pubs in which the bar and catering may be artificially separated" as a case it examines — but: "truly franchised 'shop within a shop' arrangements will not normally be considered artificial" `[22]`. Practitioner thread (2012) adds the practical test: written contract, market rent, separate books/bank; a poster reports losing an appeal with no formal contract and a peppercorn rent `[5]`. (Label `[5]` as practitioner commentary — a forum report, not a tribunal record.) HMRC's own line: they "will not advise on the VAT consequences of any proposed structure… but will give a decision when faced with an actual situation" `[22]`.
 
 ## 4. Licensing (England & Wales focus — Scotland differs)
 
@@ -81,7 +81,9 @@
 - `pubkitchens.co.uk` lead guide: 404, no archive copy — dropped; Now We Cook `[2]` carries the model detail instead.
 - Rent ranges are marketplace figures (Oct 2026) — present as indicative, "verify current listings".
 - Not legal/tax advice disclaimer + "check with your council and an accountant".
-- Evidence quotes: attach verbatim quotes for §2–§4 claims when drafting (`sources.py quote` + `verify --evidence`).
+- Evidence quotes: 15 attached (rent models, 28-day rule, free/can't-be-refused, hot-food VAT, £90k, LNR, alcohol licence, SP4 'shop within a shop', peppercorn-rent report). Remaining cited sources get quotes during drafting, then `verify --evidence --min-coverage 0.5`.
+- HMRC Statement of Practice 4 dates from 1983 but remains HMRC's published position on artificial separation (referenced by current VAT manuals): note its age in the guide's wording.
+- Ledger holds 24 ids; [1] is a dead link (dropped from use), [9] Reddit not extractable (sentiment only, uncited), [12] trade article — snippet only, extract or drop at draft stage.
 
 ## 7. Proposed article outline (for approval)
 
@@ -97,6 +99,7 @@
 
 ## Sources
 
+[1] https://pubkitchens.co.uk/guides/what-is-a-pub-residency — What Is a Pub Residency? 2026 Guide
 [2] https://nowwecook.co.uk/pub-kitchen-to-rent — Pub Kitchens To Rent UK
 [3] https://www.gov.uk/guidance/food-business-registration — Food business registration - GOV.UK
 [4] https://register.food.gov.uk — Register a Food Business
@@ -104,8 +107,10 @@
 [6] https://www.gov.uk/guidance/catering-takeaway-food-and-vat-notice-7091 — VAT Notice 709/1
 [7] https://www.gov.uk/government/publications/user-guide-to-alcohol-and-late-night-refreshment-licensing-statistics/user-guide-to-alcohol-and-late-night-refreshment-licensing-statistics-accessible-version — GOV.UK LNR stats user guide
 [8] https://www.uttlesford.gov.uk/article/5525/Late-night-refreshment-licence — Uttlesford DC LNR licence
+[9] https://www.reddit.com/r/CasualUK/comments/1ehfazf/why_do_so_many_pubs_do_only_thai_food — Reddit CasualUK: Why do so many pubs do only Thai food?
 [10] https://www.cottageinnlynton.co.uk/about-5 — Nartnapa Thai Kitchen at The Queens Pub Lynton
 [11] https://www.morningadvertiser.co.uk/Article/2026/03/26/how-wet-led-pubs-can-introduce-a-simple-food-offer — Morning Advertiser: wet-led pubs food offer
+[12] https://www.morningadvertiser.co.uk/Article/2026/08/14/why-pubcos-are-sharpening-their-food-offers — Morning Advertiser: pubcos sharpening food offers
 [13] https://www.gov.uk/register-for-vat — GOV.UK When to register for VAT
 [14] https://www.gov.uk/introduction-to-business-rates — GOV.UK Business rates
 [15] https://www.gov.uk/guidance/alcohol-licensing — GOV.UK Alcohol licensing
