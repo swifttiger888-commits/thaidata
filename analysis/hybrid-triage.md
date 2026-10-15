@@ -39,3 +39,13 @@ Method: name-scan of restaurants.json → per-venue web evidence (official site 
 - `data/exclusions.json` → `excluded_fsa_ids` (already 101 entries) — honoured by all page generators (restaurant pages, city pages, browse links, sitemaps). Reversible.
 - After adding: regenerate pages → verify removed pages pruned, city counts updated, FAQs consistent.
 - Alternative (heavy): full removal from restaurants.json like the 216 non-Thai cleanup (previous commit). Only if exclusions prove insufficient.
+
+
+---
+
+## EXECUTION STATUS (2026-10-15, final)
+- Round 1 (11 venues) — EXECUTED and deployed (commit 6ea070cf4)
+- Round 2 second-pass (7 more) — EXECUTED: 346305, 1075914, 65512, 77688, 1262709, 1874035, 1875179 (ghost-kitchen / Chinese-hybrid second-pass finds)
+- Kept after verification: Thai Dragon (Wells, genuine), Thai Siam At Purley Dragon (genuine Thai takeaway, Purley CR8)
+- Exclusions total: 119 ids. Data: 1241 venues. London 273 (223 dine-in, 50 takeaway, 151 five-star, 22.0% UK share). Leeds 26.
+- Mechanism: exclusions applied at fetch time (fetch_all_thai_data.py) so all surfaces agree; homepage + london.html manual numbers refreshed.

@@ -11,9 +11,9 @@
     "UKHospitality"
   ],
   "statistics": {
-    "total_uk_thai_businesses": 1248,
-    "total_full_service_restaurants": 1003,
-    "total_quick_service_takeaways": 245,
+    "total_uk_thai_businesses": 1241,
+    "total_full_service_restaurants": 1000,
+    "total_quick_service_takeaways": 241,
     "uk_average_hygiene_rating": 4.1,
     "uk_average_per_100k_density": 2.6,
     "hygiene_rating_5_percentage": 50.4,
@@ -55,10 +55,10 @@
     {
       "name": "London",
       "population": 8970000,
-      "total_thai_businesses": 278,
-      "restaurants": 225,
-      "takeaways": 53,
-      "per_100k": 3.1,
+      "total_thai_businesses": 273,
+      "restaurants": 223,
+      "takeaways": 50,
+      "per_100k": 3.0,
       "avg_hygiene_rating": 4.2,
       "scheme": "FHRS",
       "fhis_pass": 0,
@@ -69,16 +69,16 @@
     {
       "name": "Leeds",
       "population": 812000,
-      "total_thai_businesses": 27,
+      "total_thai_businesses": 26,
       "restaurants": 22,
-      "takeaways": 5,
-      "per_100k": 3.3,
-      "avg_hygiene_rating": 4.5,
+      "takeaways": 4,
+      "per_100k": 3.2,
+      "avg_hygiene_rating": 4.7,
       "scheme": "FHRS",
       "fhis_pass": 0,
       "fhis_improvement": 0,
       "fhis_exempt": 0,
-      "postcode_areas": 6
+      "postcode_areas": 5
     },
     {
       "name": "York",
