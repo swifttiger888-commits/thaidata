@@ -15,8 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary meta -->
-  <title>Thai Restaurants UK — Claim Your Free Listing | ThaiData UK</title>
-  <meta name="description" content="We list 1,241 Thai restaurants across the UK from official Food Standards Agency records. Find yours, claim the free listing, and control your photos, menu, opening hours and website link. No card needed." />
+  <title>Thai Restaurants UK — 1,263 Listings + Claim Yours Free | ThaiData UK</title>
+  <meta name="description" content="1,263 Thai restaurant and takeaway listings across the UK, built from official Food Standards Agency records. Browse by city — or find and claim your free listing in about 5 minutes. No card needed." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="ThaiData UK" />
   <link rel="canonical" href="https://thaidata.uk/" />
@@ -30,9 +30,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thaidata.uk/" />
   <meta property="og:site_name" content="ThaiData UK" />
-  <meta property="og:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
+  <meta property="og:title" content="Thai Restaurants UK — 1,263 Listings + Claim Yours Free | ThaiData UK" />
   <meta property="og:description"
-    content="1,241 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing — control your photos, menu, hours and website link." />
+    content="1,263 Thai restaurant listings across the UK, from official Food Standards Agency records — browse by city or claim your free listing." />
   <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -223,7 +223,7 @@
   {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
-    "name": ["Restaurants", "Guides", "Claim your listing", "FAQ"],
+    "name": ["Restaurants", "Owner tools", "Guides", "Recipes", "Claim your listing"],
     "url": [
       "https://thaidata.uk/restaurants",
       "https://thaidata.uk/guides",
@@ -2157,17 +2157,11 @@ em { font-style: normal; font-weight: 700; }
         <img class="td-mark" src="/thaidata-mark-v2.svg" alt="" width="32" height="32" aria-hidden="true"><span class="td-wordmark">ThaiData UK</span>
       </a>
       <div class="nav-r td-links">
-        <a href="#hero-q" class="nav-link" data-find-restaurant>Find my restaurant</a>
-        <a href="tools" class="nav-link">Tools</a>
+        <a href="restaurants" class="nav-link">Restaurants</a>
+        <a href="tools" class="nav-link">Owner tools</a>
         <a href="guides" class="nav-link">Guides</a>
         <a href="recipes/" class="nav-link">Recipes</a>
-        <a href="learn" class="nav-link">Learn</a>
-        <a href="restaurants" class="nav-link">Restaurants</a>
-        <a href="/claim/" class="nav-link" style="color:var(--c2);font-weight:600;">Claim your listing</a>
-        <a href="dish-prices" class="nav-link">Dish prices</a>
-        <a href="glossary" class="nav-link">Glossary</a>
-        <a href="thai-festivals-uk" class="nav-link"><i class="fas fa-calendar-alt" style="margin-right:4px;"></i>Festivals</a>
-        <a href="faq" class="nav-link">FAQ</a>
+        <a href="#claim-search" class="nav-link td-claim" style="color:var(--c2);font-weight:600;">Claim your listing</a>
       </div>
       <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
     </div>
@@ -2193,74 +2187,51 @@ em { font-style: normal; font-weight: 700; }
       <!-- ░░ LEFT: the mobile stack, unchanged on desktop ░░ -->
       <div class="hero-col">
         <div class="hero-rule" aria-hidden="true"></div>
-        <h1 class="hero-h1">Your restaurant is already listed.</h1>
-        <p class="hero-lead">1,241 UK Thai restaurants from official FSA records.</p>
+        <h1 class="hero-h1">Thai restaurants across the UK.</h1>
+        <p class="hero-lead">1,263 listings built from Food Standards Agency records.</p>
 
-        <form class="hero-form" id="hero-form" action="/claim/" method="get" role="search" autocomplete="off">
-          <label class="hero-label" for="hero-q">Restaurant name</label>
-
-          <div class="hero-field">
-            <div class="hero-inputwrap">
-              <svg class="hero-ico" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true" focusable="false">
-                <circle cx="10.5" cy="10.5" r="6.5"></circle>
-                <path d="M15.4 15.4 21 21"></path>
-              </svg>
-              <input class="hero-input" type="search" id="hero-q" name="restaurant"
-                     placeholder="Find your free listing" aria-describedby="hero-meta"
-                     enterkeyhint="search" spellcheck="false">
-              <div class="hero-ta" id="hero-ta" aria-live="polite" hidden></div>
-            </div>
-            <button class="hero-submit" type="submit">Find my restaurant</button>
-          </div>
-
-          <p class="hero-meta" id="hero-meta">Free forever. About 5 minutes. No payment card needed.</p>
-        </form>
-
-        <div class="hero-eg">
-          <p class="hero-label" id="hero-eg-label">For example</p>
-          <ul class="hero-list" aria-labelledby="hero-eg-label">
-            <li>
-              <a class="hero-row" href="/claim/?restaurant=Thai%20Aroy%20Dee">
-                <span class="hero-row-main">
-                  <span class="hero-row-name">Thai Aroy Dee</span>
-                  <span class="hero-row-sep" aria-hidden="true">&middot;</span>
-                  <span class="hero-row-town">Leeds</span>
-                </span>
-                <span class="hero-row-cta">Claim &rarr;</span>
-              </a>
-            </li>
-            <li>
-              <a class="hero-row" href="/claim/?restaurant=Churchill%20Thai">
-                <span class="hero-row-main">
-                  <span class="hero-row-name">Churchill Thai</span>
-                  <span class="hero-row-sep" aria-hidden="true">&middot;</span>
-                  <span class="hero-row-town">London</span>
-                </span>
-                <span class="hero-row-cta">Claim &rarr;</span>
-              </a>
-            </li>
-            <li>
-              <a class="hero-row" href="/claim/?restaurant=Mai%20Thai">
-                <span class="hero-row-main">
-                  <span class="hero-row-name">Mai Thai</span>
-                  <span class="hero-row-sep" aria-hidden="true">&middot;</span>
-                  <span class="hero-row-town">Bath</span>
-                </span>
-                <span class="hero-row-cta">Claim &rarr;</span>
-              </a>
-            </li>
-          </ul>
+        <div class="hero-actions">
+          <a class="btn-primary hero-browse" href="#browse-towns">Browse by city</a>
+          <a class="hero-areas" href="restaurants">View all 258 areas &rarr;</a>
         </div>
+
+        <section class="owner-entry" id="claim-search" aria-labelledby="owner-entry-h">
+          <p class="owner-entry-h" id="owner-entry-h">Own a Thai restaurant?</p>
+          <p class="owner-entry-sub">Find and claim your free listing.</p>
+
+          <form class="hero-form" id="hero-form" action="/claim/" method="get" role="search" autocomplete="off">
+            <label class="hero-label" for="hero-q">Restaurant name</label>
+
+            <div class="hero-field">
+              <div class="hero-inputwrap">
+                <svg class="hero-ico" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true" focusable="false">
+                  <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                  <path d="M15.4 15.4 21 21"></path>
+                </svg>
+                <input class="hero-input" type="search" id="hero-q" name="restaurant"
+                       placeholder="Enter restaurant name" aria-describedby="hero-meta"
+                       enterkeyhint="search" spellcheck="false">
+                <div class="hero-ta" id="hero-ta" aria-live="polite" hidden></div>
+              </div>
+              <button class="hero-submit" type="submit">Find my restaurant</button>
+            </div>
+
+            <p class="hero-meta" id="hero-meta">Free forever. About 5 minutes. No payment card needed.</p>
+          </form>
+        </section>
       </div>
 
       <!-- ░░ RIGHT: restaurant locations (>=1024px) ░░ -->
       <aside class="hero-aside" aria-label="Where the listings are">
-        <picture>
-          <source media="(min-width: 1024px)" srcset="uk-dotmap-v2.svg">
-          <img class="hero-map" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='391' height='527'/%3E" width="391" height="527"
-               alt="Map of UK Thai restaurant locations." decoding="async">
-        </picture>
-        <p class="hero-mapnote">1,157 restaurants mapped. 106 have no map coordinates.</p>
+        <figure class="hero-figure">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="uk-dotmap-v2.svg">
+            <img class="hero-map" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='391' height='527'/%3E" width="391" height="527"
+                 alt="Map of UK Thai restaurant locations." decoding="async">
+          </picture>
+          <figcaption class="hero-mapnote">1,159 of 1,263 listings have map coordinates &mdash; 104 have none.
+            <a href="#about-data">About the data</a></figcaption>
+        </figure>
       </aside>
 
     </div>
@@ -2355,70 +2326,10 @@ em { font-style: normal; font-weight: 700; }
       if (!form.contains(e.target)) close();
     });
 
-    /* design calls for autofocus at >=1024px only; never on touch keyboards */
-    if (window.matchMedia && window.matchMedia('(min-width: 1024px)').matches) {
-      input.focus({ preventScroll: true });
-    }
   })();
   </script>
 </section>
-  <!-- INSIGHT STRIP — plain English findings, not charts -->
-  <section id="getting-started" class="how-claim">
-    <div class="wrap">
-      <p class="label">Three steps</p>
-      <h2>How claiming works</h2>
-      <ol class="steps">
-        <li>
-          <span class="step-num" aria-hidden="true">1</span>
-          <h3>Find your restaurant</h3>
-          <p>Search the Food Standards Agency register. If you are trading, you are here.</p>
-        </li>
-        <li>
-          <span class="step-num" aria-hidden="true">2</span>
-          <h3>Confirm your details</h3>
-          <p>Check your address, phone number and opening hours. Correct anything wrong.</p>
-        </li>
-        <li>
-          <span class="step-num" aria-hidden="true">3</span>
-          <h3>Publish your menu</h3>
-          <p>Add your dishes and prices. It stays free, and needs no card.</p>
-        </li>
-      </ol>
-      <p class="how-claim-cta">
-        <a class="btn-primary" href="/claim/">Claim your listing free</a>
-      </p>
-    </div>
-  </section><section class="insight-strip" id="what-you-find">
-    <div class="wrap">
-      <div class="insight-strip-head">
-        <p>What Thai restaurant owners discover</p>
-        <h2>The numbers most operators <em>don't know</em></h2>
-      </div>
-      <div class="insight-cards">
-        <div class="insight-card">
-          <div class="insight-card-label">Delivery margins</div>
-          <div class="insight-finding">What is left of a £13 Pad Thai after commission, VAT and packaging? Around £7.30 — before your food cost</div>
-          <div class="insight-detail">A 30% commission, VAT treatment, packaging and your own food cost decide what actually remains. The national average will not be your number — run it against your own menu.</div>
-          <span class="insight-pill pill-red">Check your own costs</span>
-        </div>
-        <div class="insight-card">
-          <div class="insight-card-label">NLW April 2026</div>
-          <div class="insight-finding">A typical Thai restaurant with 6 staff faces £6,200–£9,400 more per year from
-            April</div>
-          <div class="insight-detail">The NLW jump from £12.21 to £12.71 hits hardest for mixed-age kitchen teams. Most
-            operators haven't modelled the exact number for their roster.</div>
-          
-        </div>
-        <div class="insight-card">
-          <div class="insight-card-label">Menu pricing</div>
-          <div class="insight-finding">£1.50 across eight dishes: what would it actually cover?</div>
-          <div class="insight-detail">Compare the extra revenue at your sales volume with the wage increase for your team. VAT and delivery fees change the answer, so the menu, not the average, is what settles it.</div>
-          <span class="insight-pill pill-green">Actionable, not just data</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- BROWSE BY CITY -->
   <section id="browse-towns" class="towns">
     <div class="wrap">
       <p class="label">By city</p>
@@ -2454,96 +2365,103 @@ em { font-style: normal; font-weight: 700; }
   </section>
 
   <!-- CLAIM CTA -->
-  <section class="final-claim">
+  <section class="tools-strip" id="owner-tools">
     <div class="wrap">
-      <h2>Find your restaurant. Make it yours.</h2>
-      <p class="final-copy">Take control of your listing — add photos, menu, hours, and more. Free for all UK Thai restaurants.</p>
-      <a href="/claim/" class="btn-primary"><i class="fas fa-check-circle" style="margin-right:8px;"></i>Claim Your Free Listing</a>
+      <p class="label">For owners</p>
+      <h2>Tools for Thai restaurant owners</h2>
+      <div class="tool-grid">
+        <a class="tool-card" href="tools/thai-restaurant-staffing-calculator.html">
+          <span class="tool-card-t">Calculate staff costs</span>
+          <span class="tool-card-d">Model April 2026 wage changes and employer NI for your roster.</span>
+          <span class="tool-card-l">Open tool &rarr;</span>
+        </a>
+        <a class="tool-card" href="tools/delivery-profit-calculator.html">
+          <span class="tool-card-t">Check delivery profit</span>
+          <span class="tool-card-d">See what a &pound;13 dish really leaves after commission and costs.</span>
+          <span class="tool-card-l">Open tool &rarr;</span>
+        </a>
+        <a class="tool-card" href="tools/thai-restaurant-break-even-calculator.html">
+          <span class="tool-card-t">Find your break-even</span>
+          <span class="tool-card-d">Work out the sales you need before profit starts.</span>
+          <span class="tool-card-l">Open tool &rarr;</span>
+        </a>
+      </div>
+      <p class="tools-foot">
+        <a class="tools-all" href="tools">All 23 owner tools &rarr;</a>
+        <span class="tools-claim">Own a Thai restaurant? <a href="#claim-search">Claim your free listing</a> &mdash; takes about 5 minutes.</span>
+      </p>
     </div>
   </section>
 
-  <!-- HELP STRIP -->
-  <section class="help-strip" style="background:#F5EFE6;border-top:1px solid #E7DFD5;padding:18px 0;">
-    <div class="wrap" style="text-align:center;">
-      <p style="margin:0;color:#4A403C;font-size:0.95rem;">Questions, corrections, or spotted something wrong?
-        <a href="/contact" style="color:#7E0E20;font-weight:600;">Visit our contact page</a> — every message is read by a human.</p>
+  <section id="getting-started" class="how-claim">
+    <div class="wrap">
+      <p class="label">Claiming your listing</p>
+      <h2>Make your listing yours.</h2>
+      <p class="how-benefits">Add photos, your menu, opening hours and links &mdash; free, and yours to keep accurate.</p>
+      <ol class="steps">
+        <li>
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Find your restaurant</h3>
+          <p>Search our directory for your restaurant by name.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Confirm your details</h3>
+          <p>Check your address, phone number and opening hours. Correct anything wrong.</p>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Publish your menu</h3>
+          <p>Add your dishes and prices. It stays free, and needs no card.</p>
+        </li>
+      </ol>
+      <p class="how-claim-cta"><a href="#claim-search">Search your restaurant &uarr;</a></p>
     </div>
   </section>
 
-  <!-- FAQ -->
-  
+  <section class="data-note" id="about-data">
+    <div class="wrap">
+      <h2>About the data</h2>
+      <p>Every listing is built from the Food Standards Agency&rsquo;s open register and refreshed weekly &mdash; 1,263 live listings across 258 areas: 1,241 restaurants and takeaways plus 22 pub kitchens. 1,159 have map coordinates.</p>
+      <p>Sourcing from the FSA does not mean FSA endorsement. Spot something wrong? <a href="/contact">Tell us</a> &mdash; every message is read by a human.</p>
+    </div>
+  </section>
+  </main>
 
-  
-
-  <!-- RECENTLY ADDED -->
-  
-</main>
-<script>
-    (function() {
-      var container = document.getElementById('recent-list');
-      fetch('/data/recent_additions.json')
-        .then(function(r) { return r.ok ? r.json() : null; })
-        .then(function(data) {
-          if (!data || !data.restaurants || !data.restaurants.length) {
-            container.innerHTML = '<p style="color: var(--ink4);">No recent additions yet — check back after our next weekly refresh.</p>';
-            return;
-          }
-          var items = data.restaurants.slice(0, 10);
-          container.innerHTML = '';
-          items.forEach(function(rest) {
-            var slug = rest.name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
-            var citySlug = rest.city.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-|-$/g, '');
-            var card = document.createElement('a');
-            card.href = '/r/' + citySlug + '/' + slug + '/';
-            card.style.cssText = 'display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--card-bg);border:1px solid var(--line);border-radius:16px;text-decoration:none;color:inherit;transition:border-color 0.2s;';
-            card.onmouseenter = function() { this.style.borderColor = 'var(--c2)'; };
-            card.onmouseleave = function() { this.style.borderColor = 'var(--line)'; };
-            var info = document.createElement('div');
-            info.style.cssText = 'flex:1;min-width:0;';
-            var nameEl = document.createElement('div');
-            nameEl.style.cssText = 'font-weight:600;font-size:0.875rem;color:var(--ink);';
-            nameEl.textContent = rest.name;
-            info.appendChild(nameEl);
-            var meta = document.createElement('div');
-            meta.style.cssText = 'font-size:0.875rem;color:var(--ink3);margin-top:2px;';
-            meta.textContent = rest.city + ' · Added ' + rest.discovered_on;
-            info.appendChild(meta);
-            card.appendChild(info);
-            var arrow = document.createElement('span');
-            arrow.style.cssText = 'color:var(--ink3);font-size:0.75rem;';
-            arrow.innerHTML = '&#10095;';
-            card.appendChild(arrow);
-            container.appendChild(card);
-          });
-        })
-        .catch(function() {
-          container.innerHTML = '<p style="color: var(--ink3);">Recent additions unavailable right now.</p>';
-        });
-    })();
-  </script>
 
   <!-- FOOTER -->
   <footer>
     <div class="wrap">
       <div class="ft-row">
-        <p class="ft-brand-line"><strong>ThaiData UK</strong> — every UK Thai
-          restaurant, from the Food Standards Agency register.</p>
-        <nav class="ft-links" aria-label="Footer">
-          <a href="/claim/">Claim your listing</a>
-          <a href="restaurants">Browse restaurants</a>
-          <a href="guides">Guides</a>
-          <a href="recipes/">Recipes</a>
-          <a href="open-thai-restaurant-uk">Opening a restaurant</a>
-          <a href="how-many-thai-restaurants-uk">Restaurant count</a>
-          <a href="thai-restaurant-menu-pricing-uk">Menu pricing</a>
-          <a href="thai-festivals-uk">Festival calendar</a>
-          <a href="tools">Tools</a>
-          <a href="nlw-report">April 2026 staff costs</a>
-          <a href="thai-delivery-profit-analysis-2026">Delivery profit analysis</a>
-          <a href="faq">FAQ</a>
-          <a href="about">About</a>
-          <a href="privacy">Privacy</a>
-          <a href="/contact">Contact</a>
+        <p class="ft-brand-line"><strong>ThaiData UK</strong> — a directory of UK Thai restaurants built from Food Standards Agency records.</p>
+        <nav class="ft-links ft-grouped" aria-label="Footer">
+          <div class="ft-col">
+            <p class="ft-h">Find and explore</p>
+            <a href="restaurants">Browse restaurants</a>
+            <a href="dish-prices">Dish prices</a>
+            <a href="recipes/">Recipes</a>
+            <a href="guides">Guides</a>
+            <a href="learn">Learn</a>
+            <a href="thai-festivals-uk">Festival calendar</a>
+            <a href="glossary">Glossary</a>
+            <a href="faq">FAQ</a>
+          </div>
+          <div class="ft-col">
+            <p class="ft-h">For owners</p>
+            <a href="/claim/">Claim your listing</a>
+            <a href="tools">Owner tools</a>
+            <a href="open-thai-restaurant-uk">Opening a restaurant</a>
+            <a href="thai-restaurant-menu-pricing-uk">Menu pricing</a>
+            <a href="nlw-report">April 2026 staff costs</a>
+            <a href="thai-delivery-profit-analysis-2026">Delivery profit analysis</a>
+          </div>
+          <div class="ft-col">
+            <p class="ft-h">About the data</p>
+            <a href="how-many-thai-restaurants-uk">Restaurant count</a>
+            <a href="about">About</a>
+            <a href="privacy">Privacy</a>
+            <a href="/contact">Contact</a>
+          </div>
         </nav>
       </div>
       <p class="ft-note">Restaurant data from the Food Standards Agency open register,
@@ -2566,8 +2484,7 @@ em { font-style: normal; font-weight: 700; }
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js" defer></script>
-  <script>
+<script>
     // Mobile menu toggle
     function toggleMenu() {
       document.querySelector('.nav-r').classList.toggle('open');
@@ -2576,7 +2493,7 @@ em { font-style: normal; font-weight: 700; }
     // Exit Intent Logic
     let exitTriggered = false;
     document.addEventListener('mouseleave', function(e) {
-        if (e.clientY < 0 && !exitTriggered && !localStorage.getItem('exitShown')) {
+        if (e.clientY < 0 && sessionStorage.getItem('ownerIntent') === '1' && document.activeElement.id !== 'hero-q' && !exitTriggered && !localStorage.getItem('exitShown')) {
             document.getElementById('exit-modal').style.display = 'flex';
             exitTriggered = true;
             localStorage.setItem('exitShown', 'true');
@@ -2591,6 +2508,16 @@ em { font-style: normal; font-weight: 700; }
             setTimeout(closeExit, 2500);
         }
     }
+
+    // The exit offer is arm only for owner-engaged visitors (claim intent, tool use).
+    function markOwnerIntent() { try { sessionStorage.setItem('ownerIntent', '1'); } catch (e) {} }
+    document.addEventListener('focusin', function (e) {
+      if (e.target && e.target.id === 'hero-q') markOwnerIntent();
+    });
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.closest && t.closest('a[href="#claim-search"], a[href*="/claim/"]')) markOwnerIntent();
+    }, true);
 
     // ── Nav scroll ──
     const nav = document.getElementById('main-nav');
@@ -2624,329 +2551,10 @@ em { font-style: normal; font-weight: 700; }
       }
     }
 
-    // ── Waitlist (CTA section) ──
-    async function submitWL(wId, oId) {
-      const emailEl = document.getElementById('cta-email');
-      const btn = document.querySelector(`#${wId} .btn-fill`);
-      const email = emailEl ? emailEl.value.trim() : '';
-      if (!email) { emailEl && (emailEl.style.borderColor = '#DC2626'); return; }
-      if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
-      const { ok, msg } = await submitEmail(email, 'cta-waitlist');
-      if (ok) {
-        document.getElementById(wId).style.display = 'none';
-        const el = document.getElementById(oId);
-        el.style.display = 'block';
-        setTimeout(() => window.location.href = '/thank-you', 1500);
-      } else {
-        if (btn) { btn.textContent = 'Get my free report'; btn.disabled = false; }
-        alert(msg || 'Something went wrong — please try again.');
-      }
-    }
 
-    // ── Hero calculator submit ──
-    async function submitHero() {
-      const emailEl = document.getElementById('hr-email');
-      const btn = document.querySelector('.hr-email-btn');
-      const email = emailEl ? emailEl.value.trim() : '';
-      if (!email) { emailEl && (emailEl.style.borderColor = 'rgba(220,38,38,0.8)'); return; }
-      if (btn) { btn.textContent = '…'; btn.disabled = true; }
-      // capture the NLW result text if already calculated
-      const annEl = document.getElementById('hr-ann');
-      const nlwResult = annEl ? annEl.textContent : '';
-      const { ok, msg } = await submitEmail(email, 'hero-nlw-calculator', { nlw_impact: nlwResult });
-      if (ok) {
-        document.getElementById('hr-form').style.display = 'none';
-        const okEl = document.getElementById('hr-ok');
-        okEl.classList.add('show');
-        setTimeout(() => window.location.href = '/thank-you', 2000);
-      } else {
-        if (btn) { btn.textContent = 'Send it'; btn.disabled = false; }
-        alert(msg || 'Something went wrong — please try again.');
-      }
-    }
-
-    // ── Tab switch ──
-    function switchTab(btn, name) {
-      document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('tab-' + name).classList.add('active');
-      btn.classList.add('active');
-    }
-
-    // ═══ HERO NLW ═══
-    const CUR = { a: 12.21, b: 10.00, c: 7.55 }, APR = { a: 12.71, b: 10.85, c: 8.00 };
-    const NI_THRESH = 5000, NI_RATE = 0.15, EMP_ALLOW = 10500;
-    
-    function calculateNI(s, h, rate) {
-      const ann = s * h * rate * 52;
-      return Math.max(0, ann - NI_THRESH) * NI_RATE;
-    }
-
-    function heroNLW(force) {
-      // The hero calculator was removed from this page (hero is now the claim search).
-      // Without this guard the DOMContentLoaded call would null-deref on every load.
-      if (!document.getElementById('h21s')) return;
-      const s1 = +document.getElementById('h21s').value || 0, h1 = +document.getElementById('h21h').value || 0;
-      const s2 = +document.getElementById('h20s').value || 0, h2 = +document.getElementById('h20h').value || 0;
-      const s3 = +document.getElementById('hAs').value || 0, h3 = +document.getElementById('hAh').value || 0;
-      
-      const wCur = s1 * h1 * CUR.a + s2 * h2 * CUR.b + s3 * h3 * CUR.c;
-      const wNew = s1 * h1 * APR.a + s2 * h2 * APR.b + s3 * h3 * APR.c;
-      
-      const niCurPot = (s1 * calculateNI(1, h1, CUR.a)) + (s2 * calculateNI(1, h2, CUR.b)) + (s3 * calculateNI(1, h3, CUR.c));
-      const niNewPot = (s1 * calculateNI(1, h1, APR.a)) + (s2 * calculateNI(1, h2, APR.b)) + (s3 * calculateNI(1, h3, APR.c));
-      
-      const niCur = Math.max(0, niCurPot - EMP_ALLOW);
-      const niNew = Math.max(0, niNewPot - EMP_ALLOW);
-      
-      const diffWage = (wNew - wCur) * 52;
-      const diffNI = niNew - niCur;
-      const totalDiff = diffWage + diffNI;
-      
-      if (!wCur || (!force && !totalDiff)) return;
-      
-      const pct = wCur > 0 ? (( (wNew - wCur) / wCur) * 100).toFixed(1) : 0;
-      const res = document.getElementById('hero-result');
-      document.getElementById('hr-ann').textContent = '+£' + Math.round(totalDiff).toLocaleString() + ' per year';
-      document.getElementById('hr-desc').textContent = `Your total cost (Wages + NI) rises by £${(totalDiff / 52).toFixed(2)}/week (${pct}% wage rise) from April 2026. Factors in £10.5k Allowance.`;
-      res.classList.add('show');
-    }
-
-    // ═══ DISH DATA ═══
-    const DISHES = [
-      // ── STARTERS ──
-      { name: "Chicken Satay", thai: "ไก่สะเต๊ะ", rom: "Gai Satay", aliases: ["satay", "chicken satay", "gai satay", "satay chicken", "skewers", "peanut sauce chicken", "ไก่สะเต๊ะ", "สะเต๊ะ"], cost: 1.65, pct: 0.195, note: "Chicken skewers, lemongrass marinade, peanut sauce, cucumber relish" },
-      { name: "Spring Rolls", thai: "ปอเปี๊ยะทอด", rom: "Por Pia Tod", aliases: ["spring rolls", "veg spring rolls", "vegetable spring rolls", "por pia", "popiah", "crispy rolls", "ปอเปี๊ยะทอด", "ปอเปี๊ยะ"], cost: 0.95, pct: 0.142, note: "Rice paper, glass vermicelli, carrot, cabbage, dipping sauce" },
-      { name: "Thai Fish Cakes", thai: "ทอดมันปลา", rom: "Tod Man Pla", aliases: ["fish cakes", "thai fish cakes", "tod man pla", "fish patties", "tod man", "ทอดมันปลา", "ทอดมัน"], cost: 2.00, pct: 0.235, note: "White fish, red curry paste, kaffir lime, snake beans, egg" },
-      { name: "Calamari", thai: "ปลาหมึกทอด", rom: "Pla Muek Tod", aliases: ["calamari", "squid", "crispy squid", "fried squid", "pla muek", "ปลาหมึกทอด", "ปลาหมึก"], cost: 2.35, pct: 0.258, note: "Squid rings, seasoned batter, sweet chilli dip" },
-      { name: "Money Bags", thai: "ถุงทอง", rom: "Thung Thong", aliases: ["money bags", "golden money bags", "thung thong", "crispy parcels", "money bag", "thai dumplings", "ถุงทอง"], cost: 1.30, pct: 0.166, note: "Crispy pastry, spiced chicken mince, water chestnuts, dipping sauce" },
-      { name: "Prawn Toast", thai: "ขนมปังหน้ากุ้ง", rom: "Khanom Pang Na Kung", aliases: ["prawn toast", "shrimp toast", "sesame prawn toast", "prawn on toast", "ขนมปังหน้ากุ้ง"], cost: 1.45, pct: 0.178, note: "Tiger prawns, sesame seeds, white bread, sweet chilli" },
-      { name: "Steamed Dumplings", thai: "ขนมจีบ", rom: "Kanom Jeeb", aliases: ["dumplings", "steamed dumplings", "kanom jeeb", "dim sum", "har gao", "thai dumplings", "gyoza", "ขนมจีบ"], cost: 1.50, pct: 0.185, note: "Pork and prawn filling, wonton wrappers, soy dipping sauce" },
-      { name: "Chicken Wings", thai: "ปีกไก่ทอด", rom: "Peek Gai Tod", aliases: ["chicken wings", "thai wings", "peek gai", "crispy wings", "spicy wings", "ปีกไก่ทอด", "ปีกไก่"], cost: 1.80, pct: 0.212, note: "Marinated chicken wings, fish sauce, garlic, coriander" },
-
-      // ── SOUPS ──
-      { name: "Tom Yum Soup", thai: "ต้มยำ", rom: "Tom Yam", aliases: ["tom yum", "tom yam", "tom yum goong", "tom yum kung", "spicy soup", "lemongrass soup", "hot sour soup", "ต้มยำ", "ต้มยำกุ้ง"], cost: 3.50, pct: 0.305, note: "Lemongrass, galangal, kaffir lime, chilli, prawns" },
-      { name: "Tom Kha", thai: "ต้มข่า", rom: "Tom Kha Gai", aliases: ["tom kha", "tom kha gai", "coconut soup", "galangal soup", "tom ka", "coconut chicken soup", "ต้มข่า", "ต้มข่าไก่"], cost: 3.10, pct: 0.287, note: "Coconut milk, galangal, lemongrass, mushrooms, chicken" },
-      { name: "Tom Yum Seafood", thai: "ต้มยำทะเล", rom: "Tom Yam Talay", aliases: ["tom yum seafood", "seafood tom yum", "tom yam talay", "tom yum mixed seafood", "ต้มยำทะเล"], cost: 4.20, pct: 0.315, note: "Mixed seafood, lemongrass, galangal, kaffir lime, mushrooms" },
-      { name: "Wonton Soup", thai: "ซุปเกี๊ยว", rom: "Sup Kiao", aliases: ["wonton soup", "wonton", "sup kiao", "dumpling soup", "clear soup", "ซุปเกี๊ยว", "เกี๊ยวน้ำ"], cost: 2.10, pct: 0.245, note: "Pork and prawn wontons, clear broth, spring onion" },
-
-      // ── SALADS ──
-      { name: "Som Tum", thai: "ส้มตำ", rom: "Som Tam", aliases: ["som tum", "som tam", "papaya salad", "green papaya salad", "spicy salad", "som tum thai", "ส้มตำ", "papaya"], cost: 2.10, pct: 0.268, note: "Green papaya, tomato, green beans, peanuts, dried shrimp, lime" },
-      { name: "Laab", thai: "ลาบ", rom: "Larb", aliases: ["laab", "larb", "larp", "laab gai", "mince salad", "spicy mince", "larb gai", "ลาบ"], cost: 2.60, pct: 0.276, note: "Minced chicken, toasted rice, lime, mint, chilli, shallots" },
-      { name: "Yum Woon Sen", thai: "ยำวุ้นเส้น", rom: "Yam Woon Sen", aliases: ["yum woon sen", "yam woon sen", "glass noodle salad", "cellophane noodle salad", "vermicelli salad", "ยำวุ้นเส้น"], cost: 2.30, pct: 0.262, note: "Glass noodles, minced pork, prawns, chilli, lime, fish sauce" },
-
-      // ── CURRIES ──
-      { name: "Green Thai Curry", thai: "แกงเขียวหวาน", rom: "Gaeng Keow Wan", aliases: ["green curry", "green thai curry", "gaeng keow wan", "gang kiew wan", "green cury", "gang kiow", "แกงเขียวหวาน", "แกงเขียว"], cost: 3.20, pct: 0.291, note: "Green curry paste, coconut milk, Thai basil, kaffir lime, bamboo" },
-      { name: "Red Thai Curry", thai: "แกงแดง", rom: "Gaeng Daeng", aliases: ["red curry", "red thai curry", "gaeng daeng", "gang daeng", "thai red curry", "แกงแดง"], cost: 3.40, pct: 0.287, note: "Red curry paste, coconut milk, bamboo shoots, kaffir lime" },
-      { name: "Massaman Curry", thai: "มัสมั่น", rom: "Matsaman", aliases: ["massaman", "massaman curry", "matsaman", "masaman", "mussaman", "mossman", "muslim curry", "มัสมั่น", "แกงมัสมั่น"], cost: 4.20, pct: 0.298, note: "Massaman paste, coconut milk, potato, cashews, beef" },
-      { name: "Panang Curry", thai: "พะแนง", rom: "Phanaeng", aliases: ["panang", "panang curry", "phanaeng", "penang curry", "panaeng", "panang chicken", "พะแนง"], cost: 3.30, pct: 0.289, note: "Panang paste, thick coconut milk, kaffir lime, roasted peanuts" },
-      { name: "Yellow Curry", thai: "แกงกะหรี่", rom: "Gaeng Kari", aliases: ["yellow curry", "gaeng kari", "gang kari", "thai yellow curry", "curry", "แกงกะหรี่", "กะหรี่"], cost: 3.00, pct: 0.278, note: "Yellow curry paste, coconut milk, potato, onion, turmeric" },
-      { name: "Jungle Curry", thai: "แกงป่า", rom: "Gaeng Pa", aliases: ["jungle curry", "gaeng pa", "gang pa", "wild curry", "no coconut curry", "แกงป่า"], cost: 3.60, pct: 0.295, note: "Spicy curry paste, no coconut milk, mixed vegetables, krachai" },
-      { name: "Chu Chi Prawns", thai: "ฉู่ฉี่กุ้ง", rom: "Chu Chi Kung", aliases: ["chu chi prawns", "chu chi", "choo chee prawns", "red curry prawns", "ฉู่ฉี่กุ้ง", "ฉู่ฉี่"], cost: 4.50, pct: 0.268, note: "King prawns, thick red curry cream, kaffir lime, coconut milk" },
-
-      // ── NOODLES ──
-      { name: "Pad Thai", thai: "ผัดไทย", rom: "Phat Thai", aliases: ["pad thai", "pad tai", "phat thai", "pat thai", "phad thai", "pad-thai", "thai noodles", "ผัดไทย"], cost: 2.80, pct: 0.284, note: "Rice noodles, egg, bean sprouts, peanuts, tamarind, chicken" },
-      { name: "Pad See Ew", thai: "ผัดซีอิ๊ว", rom: "Phat Si-Io", aliases: ["pad see ew", "pad see iw", "pad siew", "phat si io", "wide noodles", "flat noodles dark soy", "ผัดซีอิ๊ว"], cost: 2.50, pct: 0.272, note: "Wide rice noodles, Chinese broccoli, egg, dark soy sauce" },
-      { name: "Drunken Noodles", thai: "ผัดขี้เมา", rom: "Phat Khi Mao", aliases: ["drunken noodles", "pad kee mao", "pad ki mao", "phat khi mao", "spicy noodles", "ผัดขี้เมา", "ผัดขี้เมา"], cost: 2.65, pct: 0.278, note: "Flat rice noodles, chilli, holy basil, peppercorns, mixed veg" },
-      { name: "Khao Soi", thai: "ข้าวซอย", rom: "Khao Soi", aliases: ["khao soi", "kao soi", "khao soy", "chiang mai noodles", "northern thai curry noodles", "coconut noodle soup", "ข้าวซอย"], cost: 4.10, pct: 0.292, note: "Egg noodles, coconut curry broth, chicken drumstick, crispy noodles" },
-      { name: "Mee Krop", thai: "หมี่กรอบ", rom: "Mi Krop", aliases: ["mee krop", "mi krop", "crispy noodles", "crispy rice noodles", "หมี่กรอบ"], cost: 2.20, pct: 0.265, note: "Crispy rice vermicelli, sweet-sour sauce, dried shrimp, egg" },
-
-      // ── RICE & STIR FRIES ──
-      { name: "Khao Pad", thai: "ข้าวผัด", rom: "Khao Phat", aliases: ["khao pad", "fried rice", "thai fried rice", "khao phat", "egg fried rice", "kao pad", "ข้าวผัด"], cost: 2.40, pct: 0.272, note: "Jasmine rice, egg, spring onion, cucumber, lime, fish sauce" },
-      { name: "Pad Kra Pao", thai: "ผัดกระเพรา", rom: "Phat Krapao", aliases: ["pad kra pao", "pad krapao", "basil stir fry", "holy basil", "basil chicken", "kaprao", "gra pao", "pad kaprao", "ผัดกระเพรา"], cost: 2.90, pct: 0.281, note: "Holy basil, minced chicken, oyster sauce, chilli, fried egg" },
-      { name: "Cashew Chicken", thai: "ไก่ผัดเม็ดมะม่วง", rom: "Gai Pad Med Mamuang", aliases: ["cashew chicken", "gai pad med mamuang", "cashew stir fry", "chicken cashew", "ไก่ผัดเม็ดมะม่วง", "เม็ดมะม่วง"], cost: 3.10, pct: 0.285, note: "Chicken, cashew nuts, dried chilli, onion, oyster sauce" },
-      { name: "Pad Prik", thai: "ผัดพริก", rom: "Phat Phrik", aliases: ["pad prik", "pad prick", "chilli stir fry", "spicy stir fry", "ผัดพริก"], cost: 2.75, pct: 0.275, note: "Chilli paste, chicken or pork, mixed peppers, oyster sauce" },
-      { name: "Pineapple Fried Rice", thai: "ข้าวผัดสับปะรด", rom: "Khao Pad Sapparod", aliases: ["pineapple fried rice", "khao pad sapparod", "pineapple rice", "kao pad pineapple", "ข้าวผัดสับปะรด"], cost: 2.80, pct: 0.278, note: "Jasmine rice, pineapple, cashews, raisins, curry powder, prawns" },
-
-      // ── PREMIUM / SEAFOOD ──
-      { name: "Chilli Sea Bass", thai: "ปลากะพงทอดน้ำปลา", rom: "Pla Krapong Tod", aliases: ["sea bass", "chilli sea bass", "chilli lime sea bass", "whole sea bass", "steamed sea bass", "pla krapong", "ปลากะพงทอดน้ำปลา", "ปลากะพง"], cost: 4.50, pct: 0.272, note: "Whole sea bass or fillet, lemongrass, chilli, lime, fish sauce" },
-      { name: "Weeping Tiger", thai: "เสือร้องไห้", rom: "Suea Rong Hai", aliases: ["weeping tiger", "crying tiger", "suea rong hai", "tiger beef", "grilled sirloin", "thai steak", "เสือร้องไห้"], cost: 6.20, pct: 0.285, note: "8oz sirloin, oyster sauce marinade, Jaew dipping sauce" },
-      { name: "Tamarind Duck", thai: "เป็ดผัดมะขาม", rom: "Ped Pad Makham", aliases: ["tamarind duck", "duck", "crispy duck", "ped pad makham", "duck tamarind", "เป็ดผัดมะขาม", "เป็ด"], cost: 6.00, pct: 0.258, note: "Half duck, tamarind-honey glaze, ginger, spring onion" },
-      { name: "King Prawn Stir Fry", thai: "กุ้งผัด", rom: "Kung Pad", aliases: ["king prawns", "prawn stir fry", "kung pad", "garlic prawns", "chilli prawns", "king prawn", "กุ้งผัด", "กุ้ง"], cost: 3.80, pct: 0.268, note: "King prawns, garlic, chilli, spring onion, oyster sauce" },
-      { name: "Samui Seafood", thai: "อาหารทะเลผัด", rom: "Aharn Talay Pad", aliases: ["samui seafood", "mixed seafood", "seafood medley", "seafood stir fry", "aharn talay", "อาหารทะเลผัด", "อาหารทะเล"], cost: 4.80, pct: 0.278, note: "Sea bass, squid, tiger prawns, mixed vegetables, chilli" },
-      { name: "Lamb Shank Massaman", thai: "แกงมัสมั่นขาแกะ", rom: "Massaman Kha Kae", aliases: ["lamb shank", "lamb massaman", "massaman lamb", "lamb shank massaman", "แกงมัสมั่นขาแกะ", "ขาแกะ"], cost: 7.50, pct: 0.298, note: "Slow-braised lamb shank, massaman paste, coconut milk, potato" },
-
-      // ── DESSERTS ──
-      { name: "Mango Sticky Rice", thai: "ข้าวเหนียวมะม่วง", rom: "Khao Niao Mamuang", aliases: ["mango sticky rice", "khao niao mamuang", "sticky rice mango", "mango rice", "thai mango dessert", "ข้าวเหนียวมะม่วง", "ข้าวเหนียว"], cost: 2.95, pct: 0.378, note: "Thai mango, glutinous sticky rice, coconut cream, sesame seeds" },
-      { name: "Banana Fritters", thai: "กล้วยทอด", rom: "Kluay Tod", aliases: ["banana fritters", "kluay tod", "fried banana", "banana dessert", "banana fritter", "กล้วยทอด", "กล้วย"], cost: 0.85, pct: 0.122, note: "Banana, coconut batter, vanilla ice cream, honey drizzle" },
-      { name: "Coconut Ice Cream", thai: "ไอศกรีมกะทิ", rom: "Ai Sakhrim Kathi", aliases: ["coconut ice cream", "thai ice cream", "coconut icecream", "ไอศกรีมกะทิ", "ไอศกรีม"], cost: 1.20, pct: 0.175, note: "Coconut milk ice cream, peanuts, sticky rice, jackfruit" },
-      { name: "Purple Rice Pudding", thai: "ข้าวเหนียวดำ", rom: "Khao Niao Dam", aliases: ["purple rice", "black sticky rice", "purple rice pudding", "khao niao dam", "black rice", "ข้าวเหนียวดำ"], cost: 1.10, pct: 0.168, note: "Black glutinous rice, coconut cream, palm sugar" },
-    ];
-    function clearDish() { document.getElementById('dish-result').innerHTML = `<div class="result-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><p>Type a dish name to get started</p></div>` }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const fuseItems = [];
-      DISHES.forEach(d => { d.aliases.forEach(a => fuseItems.push({ alias: a, dish: d })); fuseItems.push({ alias: d.name.toLowerCase(), dish: d }); fuseItems.push({ alias: d.rom.toLowerCase(), dish: d }) });
-      const fuse = new Fuse(fuseItems, { keys: ['alias'], threshold: 0.45, includeScore: true });
-
-      window.runDish = function() {
-        const q = document.getElementById('dish-input').value.trim().toLowerCase();
-        const pl = document.getElementById('dish-platform').value;
-        const gp = parseInt(document.getElementById('dish-gp').value) / 100;
-        const el = document.getElementById('dish-result');
-        if (!q) { el.innerHTML = `<div class="result-empty"><p>Please type a dish name</p></div>`; return }
-        const res = fuse.search(q);
-        if (!res.length) { el.innerHTML = `<div class="result-empty"><p>No match for "${q}" — try another spelling</p></div>`; return }
-        const d = res[0].item.dish, conf = Math.round((1 - res[0].score) * 100);
-        const comm = { dine: 0, uber: 0.30, deliveroo: 0.32, justeat: 0.14 }[pl];
-        const vat = 0.20;
-        const minP = d.cost / ((1 - gp) * (1 - comm) * (1 / (1 + vat)));
-        const recP = Math.ceil(minP * 1.08 / 0.50) * 0.50 - 0.05;
-        const minR = Math.ceil(minP / 0.50) * 0.50 - 0.05;
-        const net = recP * (1 - comm) / (1 + vat);
-        const actGP = ((net - d.cost) / net * 100).toFixed(1);
-        const plN = { dine: 'Dine-in', uber: 'Uber Eats', deliveroo: 'Deliveroo', justeat: 'Just Eat' }[pl];
-        el.innerHTML = `
-    <div class="r-match"><div class="r-match-name">Matched: ${d.name}</div><div class="r-match-thai">${d.thai} &middot; ${d.rom}</div><div class="r-match-conf">Confidence: ${conf}% &middot; ${d.note}</div></div>
-    <div class="r-row"><span class="r-key">Food cost (database)</span><span class="r-val">£${d.cost.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Platform</span><span class="r-val">${plN}${comm ? ` (${Math.round(comm * 100)}%)` : ''}</span></div>
-    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">£${minR.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">£${recP.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Actual GP at recommended</span><span class="r-val ${parseFloat(actGP) >= 65 ? 'green' : 'amber'}">${actGP}%</span></div>`;
-      };
-      document.getElementById('dish-input').addEventListener('keydown', e => { if (e.key === 'Enter') window.runDish() });
-    });
-
-    // ═══ NLW CALCULATOR ═══
-    function runNLW() {
-      const s1 = +document.getElementById('n21s').value || 0, h1 = +document.getElementById('n21h').value || 0;
-      const s2 = +document.getElementById('n20s').value || 0, h2 = +document.getElementById('n20h').value || 0;
-      const s3 = +document.getElementById('nAs').value || 0, h3 = +document.getElementById('nAh').value || 0;
-      
-      const wCur = s1 * h1 * CUR.a + s2 * h2 * CUR.b + s3 * h3 * CUR.c;
-      const wNew = s1 * h1 * APR.a + s2 * h2 * APR.b + s3 * h3 * APR.c;
-      
-      const niCurPot = (s1 * calculateNI(1, h1, CUR.a)) + (s2 * calculateNI(1, h2, CUR.b)) + (s3 * calculateNI(1, h3, CUR.c));
-      const niNewPot = (s1 * calculateNI(1, h1, APR.a)) + (s2 * calculateNI(1, h2, APR.b)) + (s3 * calculateNI(1, h3, APR.c));
-      
-      const niCur = Math.max(0, niCurPot - EMP_ALLOW);
-      const niNew = Math.max(0, niNewPot - EMP_ALLOW);
-      
-      const diffWage = (wNew - wCur) * 52;
-      const diffNI = niNew - niCur;
-      const totalAnn = diffWage + diffNI;
-      
-      const pct = wCur > 0 ? (((wNew - wCur) / wCur) * 100).toFixed(1) : 0;
-      const el = document.getElementById('nlw-result');
-      if (!wCur) { el.innerHTML = `<div class="result-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><p>Enter your team to see results</p></div>`; return }
-      const fmt = n => n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      el.innerHTML = `
-    <div class="r-row"><span class="r-key">Total staff</span><span class="r-val">${s1 + s2 + s3}</span></div>
-    <div class="r-row"><span class="r-key">Current annual cost (inc NI)</span><span class="r-val">£${fmt(wCur * 52 + niCur)}</span></div>
-    <div class="r-row"><span class="r-key">After April 2026 (inc NI)</span><span class="r-val amber">£${fmt(wNew * 52 + niNew)}</span></div>
-    <div class="r-row"><span class="r-key">Net annual increase</span><span class="r-val red">+£${Math.round(totalAnn).toLocaleString()} (+${pct}%)</span></div>
-    <div class="impact-box"><p>This factors in the £10,500 Employment Allowance. To absorb this, you need £${(totalAnn / 52 / 7).toFixed(2)} extra GP per day.</p></div>
-    <div style="margin-top:12px; text-align:center;">
-      <a href="tools/VISA_ASSISTANT" class="nav-link" style="color:var(--c2); text-decoration:underline; font-size:0.875rem;">Launch Chef Visa Assistant (RQF-6 Check) →</a>
-    </div>`;
-    }
-
-    // ═══ STRESS TESTER ═══
-    function runStress() {
-      const food = +document.getElementById('sl-food').value / 100;
-      const lab = +document.getElementById('sl-labour').value / 100;
-      const pkg = +document.getElementById('sl-pkg').value / 100;
-      const comm = +document.getElementById('sl-comm').value / 100;
-      const gp = +document.getElementById('sl-gp').value / 100;
-      document.getElementById('sv-food').textContent = `£${food.toFixed(2)}`;
-      document.getElementById('sv-labour').textContent = `£${lab.toFixed(2)}`;
-      document.getElementById('sv-pkg').textContent = `£${pkg.toFixed(2)}`;
-      document.getElementById('sv-comm').textContent = `${Math.round(comm * 100)}%`;
-      document.getElementById('sv-gp').textContent = `${Math.round(gp * 100)}%`;
-      ['sl-food', 'sl-labour', 'sl-pkg', 'sl-comm', 'sl-gp'].forEach(id => { const e = document.getElementById(id); e.style.setProperty('--pct', ((e.value - e.min) / (e.max - e.min)) * 100 + '%') });
-      const total = food + lab + pkg, vatF = 0.20 / 1.20, denom = 1 - vatF - comm - (1 - gp);
-      const el = document.getElementById('stress-result');
-      if (denom <= 0) { el.innerHTML = `<div class="result-empty"><p>Costs too high — reduce commission or increase margin target</p></div>`; return }
-      const minP = total / denom, recP = Math.ceil(minP * 1.1 / 0.50) * 0.50 - 0.05;
-      const vatAmt = recP * vatF, net = recP - vatAmt - recP * comm, profit = net - food - lab - pkg;
-      const actGP = (profit / net * 100).toFixed(1), gpC = parseFloat(actGP) >= 65 ? 'green' : parseFloat(actGP) >= 55 ? 'amber' : 'red';
-      el.innerHTML = `
-    <div class="r-row"><span class="r-key">Total cost per dish</span><span class="r-val">£${total.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">VAT deducted</span><span class="r-val">£${vatAmt.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Net after commission</span><span class="r-val">£${net.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Minimum viable price</span><span class="r-val amber">£${minP.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Recommended price</span><span class="r-val green" style="font-size:1.125rem">£${recP.toFixed(2)}</span></div>
-    <div class="r-row"><span class="r-key">Profit per dish</span><span class="r-val ${gpC}">£${profit.toFixed(2)} (${actGP}% GP)</span></div>`;
-    }
-
-    // ── FAQ toggle ──
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    }
-
-    // Init
-    document.addEventListener('DOMContentLoaded', () => { runStress(); runNLW(); });
   </script>
   <script src="privacy-banner.js" defer></script>
 
-  <script>
-  /* Hero search — "find my restaurant".
-     Uses the existing /api/search-restaurants index, then hands off to
-     /claim/?restaurant=<name>, which prefills and auto-searches (built + verified earlier).
-     Handing off to the claim flow beats deriving /r/<city>/<slug>/ URLs: the two search
-     endpoints disagree on `city` ("Essex" vs "Clacton on Sea") and the API returns the FSA
-     URL, not ours — so a derived link could 404. No derived URLs = no broken links. */
-  (function () {
-    var form = document.getElementById('hero-search-form');
-    var input = document.getElementById('hero-search-input');
-    var box = document.getElementById('hero-search-results');
-    if (!form || !input || !box) return;
-    var timer = null, ctrl = null, current = [];
-
-    var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ESC[c]; }); }
-    function claimHref(name) { return '/claim/?restaurant=' + encodeURIComponent(name); }
-    function close() { box.hidden = true; box.innerHTML = ''; }
-    function open(html) { box.innerHTML = html; box.hidden = false; }
-
-    function render(rows) {
-      if (!rows.length) {
-        open('<div class="hres-empty">No Thai restaurant found by that name. <a href="/claim/">Search on the claim page</a>.</div>');
-        return;
-      }
-      open(rows.map(function (r) {
-        return '<a href="' + claimHref(r.name) + '"><strong>' + esc(r.name) + '</strong>' +
-               '<span class="hres-city">' + esc(r.city) + (r.pc ? ' \u00b7 ' + esc(r.pc) : '') + '</span></a>';
-      }).join(''));
-    }
-
-    function run(q) {
-      if (ctrl) { try { ctrl.abort(); } catch (e) {} }
-      ctrl = new AbortController();
-      open('<div class="hres-loading">Searching\u2026</div>');
-      fetch('/api/search-restaurants?q=' + encodeURIComponent(q), { signal: ctrl.signal })
-        .then(function (r) { return r.json(); })
-        .then(function (rows) { current = rows || []; render(current); })
-        .catch(function (e) {
-          if (e && e.name === 'AbortError') return;
-          open('<div class="hres-empty">Search unavailable \u2014 <a href="/claim/">search on the claim page</a>.</div>');
-        });
-    }
-
-    input.addEventListener('input', function () {
-      var q = input.value.trim();
-      clearTimeout(timer);
-      if (q.length < 2) { close(); return; }
-      timer = setTimeout(function () { run(q); }, 220);
-    });
-    input.addEventListener('focus', function () {
-      if (input.value.trim().length >= 2 && current.length) render(current);
-    });
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var q = input.value.trim();
-      if (current.length) { window.location.href = claimHref(current[0].name); return; }
-      if (q) window.location.href = claimHref(q);
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.hero-search')) close();
-    });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-  })();
-  </script>
 
   <style id="token-gaps">
     /* Complete the token system. These three fell outside both stylesheets:
@@ -3370,6 +2978,98 @@ em { font-style: normal; font-weight: 700; }
   }
 
   #hero-q { scroll-margin-top: 88px; }
+}
+</style>
+<style id="home-v3">
+/* ═══ HOME v3 — directory front door (Oct 2026) ═══ */
+.hero-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin: 0 0 30px; }
+.hero-browse { text-decoration: none; }
+.hero-areas { color: var(--red); font-weight: 600; font-size: 15px; }
+.hero-areas:hover { text-decoration: underline; }
+
+.owner-entry { max-width: 580px; background: var(--paper, #fff); border: 1px solid var(--hairline, #E7DFD5);
+  border-radius: 12px; padding: 20px 20px 18px; margin: 0; }
+.owner-entry .hero-field { flex-wrap: wrap; }
+.owner-entry .hero-inputwrap { flex: 1 1 300px; min-width: 0; }
+.owner-entry .hero-submit { flex: 0 1 auto; min-width: 0; white-space: nowrap; }
+.owner-entry-h { font-family: var(--display, 'Archivo', sans-serif); font-weight: 700; font-size: 1.0625rem; color: var(--ink); margin: 0 0 4px; }
+.owner-entry-sub { font-size: 15px; color: var(--ink-soft); margin: 0 0 14px; }
+.owner-entry .hero-label { display: block; margin-bottom: 6px; }
+.owner-entry .hero-meta { margin: 12px 0 0; }
+
+.hero-figure { margin: 0; }
+.hero-figure .hero-mapnote { margin-top: 12px; }
+.hero-figure .hero-mapnote a { color: var(--red); font-weight: 600; white-space: nowrap; }
+
+.tools-strip { padding: 56px 0; border-top: 1px solid var(--hairline); background: var(--ivory); }
+.tools-strip .label { font-family: var(--display, 'Archivo', sans-serif); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 10px; }
+.tools-strip h2 { font-family: var(--display, 'Archivo', sans-serif); font-size: clamp(1.625rem, 4.6vw, 2.25rem);
+  font-weight: 700; letter-spacing: -0.015em; line-height: 1.12; color: var(--ink); margin: 0 0 28px; max-width: 24ch; }
+.tool-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0 0 20px; }
+@media (min-width: 768px) { .tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+.tool-card { display: block; background: var(--paper, #fff); border: 1px solid var(--hairline, #E7DFD5);
+  border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+.tool-card:hover, .tool-card:focus-visible { border-color: var(--red); }
+.tool-card-t { display: block; font-family: var(--display, 'Archivo', sans-serif); font-weight: 700;
+  font-size: 1.125rem; color: var(--ink); margin: 0 0 6px; }
+.tool-card-d { display: block; font-size: 15px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 12px; }
+.tool-card-l { display: block; font-size: 14px; font-weight: 700; color: var(--red); }
+.tools-foot { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: baseline; margin: 0;
+  font-size: 15px; color: var(--ink-soft); }
+.tools-all { font-weight: 700; color: var(--red); }
+.tools-claim a { color: var(--red); font-weight: 600; }
+
+.how-benefits { font-size: 17px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 28px; max-width: 52ch; }
+
+.data-note { padding: 48px 0; border-top: 1px solid var(--hairline); background: var(--paper, #fff); }
+.data-note h2 { font-family: var(--display, 'Archivo', sans-serif); font-size: 1.5rem; font-weight: 700;
+  color: var(--ink); margin: 0 0 14px; }
+.data-note p { font-size: 15px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 10px; max-width: 78ch; }
+.data-note a { color: var(--red); font-weight: 600; }
+
+.ft-grouped { display: grid; grid-template-columns: 1fr; gap: 26px; }
+@media (min-width: 768px) { .ft-grouped { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; } }
+.ft-h { font-family: var(--display, 'Archivo', sans-serif); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin: 0 0 10px; }
+.ft-col a { display: block; padding: 3px 0; }
+
+/* Nav — mobile bar: logo + Claim + menu, never clipped */
+@media (max-width: 768px) {
+  #main-nav.td-masthead .td-links { overflow: visible; max-width: none; }
+  #main-nav .nav-r { overflow: visible; }
+  #main-nav .nav-r > a { display: none; }
+  #main-nav .nav-r > a.td-claim { display: inline-flex; align-items: center; white-space: nowrap; }
+  #main-nav .nav-r.open > a, #main-nav .nav-r.is-open > a, #main-nav .nav-r.active > a { display: block; }
+}
+@media (max-width: 420px) {
+  #main-nav .td-wordmark { display: none; }
+}
+
+/* Mobile rhythm */
+@media (max-width: 768px) {
+  .hero-actions { margin-bottom: 22px; gap: 12px 16px; }
+  .hero-actions .hero-browse { width: 100%; text-align: center; justify-content: center; }
+  .owner-entry { padding: 16px; }
+  .tools-strip, .data-note { padding: 40px 0; }
+  .hero-h1 { font-size: 2.125rem; }
+}
+
+/* Review pass 3 */
+@media (min-width: 768px) {
+  .hero-actions { align-items: flex-start; text-align: left; }
+}
+.towns { padding-bottom: 32px; }
+.tools-strip { padding: 40px 0 48px; }
+.owner-entry .hero-inputwrap { border: 1px solid var(--line, #E7DFD5); box-shadow: none; height: 56px; }
+.owner-entry .hero-field { border: 0; box-shadow: none; background: transparent; padding: 0; }
+.owner-entry .hero-submit { height: 56px; }
+.owner-entry .hero-input { font-size: 17px; }
+.owner-entry .hero-inputwrap:focus-within { border-color: var(--ink, #1A1614); outline: 3px solid var(--turmeric, #F2B21A); outline-offset: 2px; }
+@media (max-width: 768px) {
+  #main-nav .hamburger { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  #main-nav .nav-r > a.td-claim { min-height: 44px; }
+  #main-nav.td-masthead .td-links { gap: 12px; }
 }
 </style>
 </body>
