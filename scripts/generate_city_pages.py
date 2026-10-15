@@ -285,12 +285,16 @@ def get_postcode_areas(restaurants: list[dict[str, Any]]) -> dict[str, int]:
 
 def compute_city_stats(restaurants: list[dict[str, Any]]) -> dict[str, Any]:
     """Compute statistics for a city."""
-    count = len(restaurants)
-    dine_in = sum(1 for r in restaurants if r.get("type") == "restaurant")
-    takeaway = count - dine_in
+    # Pubs with Thai kitchens sit outside the restaurant/takeaway totals and get their
+    # own count — they are listed in the separate pubs section, never mixed in.
+    pubs = [r for r in restaurants if r.get("type") == "pub"]
+    core = [r for r in restaurants if r.get("type") != "pub"]
+    count = len(core)
+    dine_in = sum(1 for r in core if r.get("type") == "restaurant")
+    takeaway = sum(1 for r in core if r.get("type") == "takeaway")
 
     ratings = []
-    for r in restaurants:
+    for r in core:
         try:
             val = int(r.get("hygiene_rating", "0") or "0")
             if 1 <= val <= 5:
@@ -301,7 +305,7 @@ def compute_city_stats(restaurants: list[dict[str, Any]]) -> dict[str, Any]:
     # FHIS (Scotland): Pass / Improvement Required / Exempt are statuses, not
     # scores. A city is FHIS-rated when none of its businesses carry a numeric
     # score; the numeric helpers stay at 0 and FHIS counts take over.
-    fhis_rows = [r for r in restaurants if r.get("hygiene_rating") in FHIS_STATUSES]
+    fhis_rows = [r for r in core if r.get("hygiene_rating") in FHIS_STATUSES]
     scheme = "FHIS" if (fhis_rows and not ratings) else "FHRS"
     fhis_pass = sum(1 for r in fhis_rows if r.get("hygiene_rating") == "Pass")
     fhis_improvement = sum(1 for r in fhis_rows if r.get("hygiene_rating") == "Improvement Required")
@@ -325,12 +329,12 @@ def compute_city_stats(restaurants: list[dict[str, Any]]) -> dict[str, Any]:
             return 1  # Non-numeric ratings at end
 
     sorted_restaurants = sorted(
-        restaurants,
+        core,
         key=lambda r: (rating_sort_key(r), r.get("name", "").lower()),
     )
 
-    chains = detect_chains(restaurants)
-    postcode_areas = get_postcode_areas(restaurants)
+    chains = detect_chains(core)
+    postcode_areas = get_postcode_areas(core)
 
     # Clean restaurant names (collapse double spaces from source data)
     def _clean_name(name: str) -> str:
@@ -340,6 +344,7 @@ def compute_city_stats(restaurants: list[dict[str, Any]]) -> dict[str, Any]:
         "count": count,
         "dine_in": dine_in,
         "takeaway": takeaway,
+        "pubs": len(pubs),
         "avg_rating": round(avg_rating, 1),
         "min_rating": min_rating,
         "max_rating": max_rating,
@@ -1102,14 +1107,17 @@ def process_city(
     rank = compute_national_rank(by_city, city_name)
 
     # Compute totals needed for hero-stat updates
-    total_uk = len(all_data["raw"].get("restaurants", []))
-    london_restaurants = by_city.get("London", [])
+    total_uk = sum(1 for r in all_data["raw"].get("restaurants", [])
+                   if r.get("type") != "pub")
+    london_restaurants = [r for r in by_city.get("London", [])
+                          if r.get("type") != "pub"]
     stats["_london_count"] = len(london_restaurants)
     # Raw count including excluded (for city-stats div which shows FSA total)
-    raw_city = [r for r in all_data["raw"].get("restaurants", []) if r.get("city") == city_name]
+    raw_city = [r for r in all_data["raw"].get("restaurants", [])
+                if r.get("city") == city_name and r.get("type") != "pub"]
     stats["_raw_count"] = len(raw_city)
     stats["_raw_dine_in"] = sum(1 for r in raw_city if r.get("type") == "restaurant")
-    stats["_raw_takeaway"] = stats["_raw_count"] - stats["_raw_dine_in"]
+    stats["_raw_takeaway"] = sum(1 for r in raw_city if r.get("type") == "takeaway")
 
     # Build schema
     schemas = build_all_schema(city_name, slug, stats, rank)

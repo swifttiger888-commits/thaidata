@@ -34,6 +34,9 @@ if excl_path.exists():
 
 # Filter out excluded restaurants before any grouping/counting
 active_restaurants = [r for r in restaurants if r["id"] not in excluded_ids]
+# Pubs with Thai kitchens live in their own section (/pubs/) — keep them out of all counts
+pubs = [r for r in active_restaurants if r.get("type") == "pub"]
+active_restaurants = [r for r in active_restaurants if r.get("type") != "pub"]
 total = len(active_restaurants)
 
 # Group by city
@@ -57,6 +60,7 @@ five_star = sum(1 for r in all_ratings if r == 5)
 five_pct = round(five_star / total * 100, 1)
 dine_in_total = sum(1 for r in active_restaurants if r["type"] == "restaurant")
 takeaway_total = total - dine_in_total
+pubs_total = len(pubs)
 cities_count = len(by_city)
 
 # Top 10 by city
@@ -283,6 +287,7 @@ HTML = f"""<!DOCTYPE html>
             <div class="nav-links">
                 <a href="/index.html">Home</a>
                 <a href="/guides.html">Guides</a>
+                <a href="/pubs/">Pub Kitchens</a>
                 <a href="/thai-restaurants-city-breakdown-uk">Cities</a>
                 <a href="/claim/">Claim Listing</a>
             </div>
@@ -303,6 +308,7 @@ HTML = f"""<!DOCTYPE html>
             <div class="stat-pill"><div class="num">{five_star}</div><div class="lbl">{five_pct}% Five-Star</div></div>
             <div class="stat-pill"><div class="num">{dine_in_total:,}</div><div class="lbl">Dine-in</div></div>
             <div class="stat-pill"><div class="num">{takeaway_total:,}</div><div class="lbl">Takeaways</div></div>
+            <div class="stat-pill"><div class="num">{pubs_total}</div><div class="lbl">Pub Kitchens</div></div>
         </div>
 
         <div class="intro">
@@ -369,6 +375,15 @@ HTML = f"""<!DOCTYPE html>
             </div>
         </div>
 
+        <!-- Thai kitchens in pubs -->
+        <div class="section">
+            <h2>Thai <em>Kitchens</em> in Pubs</h2>
+            <p class="subtitle">{pubs_total} Thai kitchens cook inside UK pubs — registered under the pub's own name, so they never show up in a normal restaurant search. We track them separately.</p>
+            <div class="browse-grid">
+                <a href="/pubs/" class="browse-card"><span class="bc-name">All pub kitchens</span><span class="bc-count">{pubs_total}</span></a>
+            </div>
+        </div>
+
         <!-- Data freshness -->
         <div class="section">
             <h2>About This <em>Directory</em></h2>
@@ -412,4 +427,4 @@ print(f"  Top cities linked: {len(top_cities)}")
 print(f"  Top-rated restaurants linked: {len(top_rated[:12])}")
 print(f"  Chains linked: {len(chain_restaurants)}")
 print(f"  London neighbourhoods: {len(london_hood_counts[:8])}")
-print(f"  Stats row: {total:,} restaurants, {cities_count} cities")
+print(f"  Stats row: {total:,} restaurants, {cities_count} cities, {pubs_total} pub kitchens")

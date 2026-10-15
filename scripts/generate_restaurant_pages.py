@@ -74,13 +74,21 @@ def build_intro(r: dict[str, Any]) -> str:
     rating_date = format_date(r.get('rating_date', ''))
     address = r.get('address', '')
 
-    type_word = 'restaurant' if rtype == 'restaurant' else 'takeaway'
-
-    neighbourhood = extract_neighbourhood(address, city)
-    if neighbourhood:
-        location = f'{neighbourhood}, {city}'
+    if rtype == 'pub':
+        type_word = 'kitchen in a pub'
     else:
+        type_word = 'restaurant' if rtype == 'restaurant' else 'takeaway'
+
+    if rtype == 'pub':
+        # Pub address lines start with the pub's own name, which the neighbourhood
+        # extractor mis-reads as an area — pubs show the plain city instead.
         location = city
+    else:
+        neighbourhood = extract_neighbourhood(address, city)
+        if neighbourhood:
+            location = f'{neighbourhood}, {city}'
+        else:
+            location = city
 
     intro = f'{name} is a Thai {type_word} in {location}.'
 
@@ -265,8 +273,9 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     rlabel = rating_label(rating)
     rcolor = rating_color(rating)
     is_fhis = rating_scheme(rating) == 'FHIS'
-    rtype_icon = 'fa-utensils' if rtype == 'restaurant' else 'fa-box'
-    rtype_label = rtype.replace('_', ' ').title()
+    rtype_icon = {'restaurant': 'fa-utensils', 'takeaway': 'fa-box',
+                  'pub': 'fa-beer-mug-empty'}.get(rtype, 'fa-utensils')
+    rtype_label = 'Pub Kitchen' if rtype == 'pub' else rtype.replace('_', ' ').title()
 
     # The rating card. A score circle when the rating is a number; a status badge when it is
     # not, because 'of 5' is only meaningful against a score.
@@ -507,7 +516,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     else:
         name_html = name
 
-    type_word_label = 'Restaurant' if rtype == 'restaurant' else 'Takeaway'
+    type_word_label = {'restaurant': 'Restaurant', 'takeaway': 'Takeaway',
+                       'pub': 'Pub Kitchen'}.get(rtype, 'Restaurant')
     name_html += f' — Thai {type_word_label} in {city}'
     
     html = html.replace(

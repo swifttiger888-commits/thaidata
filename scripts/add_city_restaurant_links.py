@@ -79,6 +79,35 @@ try:
 except Exception as e:
     print(f"Note: D1 exclusions unavailable ({e}) — using local file only")
 
+# ── Canonical page paths (collision-aware): fsa_id -> (city_slug, dir_slug) ──
+# Name-collisions get an -{fsa_id} suffix in generate_restaurant_pages; resolve
+# links against the pages actually on disk so every link lands on the right page.
+def _scan_page_paths(root: str) -> dict[str, tuple[str, str]]:
+    paths: dict[str, tuple[str, str]] = {}
+    for city_dir in os.scandir(root):
+        if not city_dir.is_dir():
+            continue
+        for page_dir in os.scandir(city_dir.path):
+            index = os.path.join(page_dir.path, 'index.html')
+            if not page_dir.is_dir() or not os.path.isfile(index):
+                continue
+            try:
+                with open(index, encoding='utf-8') as fh:
+                    m = re.search(r'fsa-id" content="(\d+)"', fh.read(4000))
+            except OSError:
+                continue
+            if m and m.group(1) not in paths:
+                paths[m.group(1)] = (city_dir.name, page_dir.name)
+    return paths
+
+page_paths = _scan_page_paths(os.path.join(REPO, 'r'))
+
+def venue_link_parts(r: dict[str, Any]) -> tuple[str, str]:
+    hit = page_paths.get(str(r['id']))
+    if hit:
+        return hit
+    return (slugify(r['city']), slugify(r['name']))
+
 from collections import defaultdict
 city_restaurants: defaultdict[str, list[dict[str, Any]]] = defaultdict(list)
 for r in data['restaurants']:
@@ -120,7 +149,11 @@ for filename in sorted(os.listdir(cities_dir)):
             city_name = city_key  # Use the actual city name from data
             break
     
-    if not matches:
+    # Split pub kitchens out — they get their own section and never mix into the main list
+    pubs_matches = [r for r in matches if r.get('type') == 'pub']
+    matches = [r for r in matches if r.get('type') != 'pub']
+
+    if not matches and not pubs_matches:
         print(f"  SKIP {filename} — no restaurant data match")
         skipped += 1
         continue
@@ -138,6 +171,15 @@ for filename in sorted(os.listdir(cities_dir)):
         stop  = html.find(END_MARKER, start)
         if stop != -1:
             html = html[:start] + html[stop + len(END_MARKER):]
+
+    # Remove any existing Thai Pubs section (avoid duplicates)
+    PUBS_BEGIN = '<!-- BEGIN Thai Pubs -->'
+    PUBS_END   = '<!-- END Thai Pubs -->'
+    if PUBS_BEGIN in html:
+        start = html.find(PUBS_BEGIN)
+        stop  = html.find(PUBS_END, start)
+        if stop != -1:
+            html = html[:start] + html[stop + len(PUBS_END):]
     
     # Remove old-format sections (boundary-based: robust against nested divs)
     OLD_MARKER = '<!-- Individual Restaurant Listings -->'
@@ -175,8 +217,7 @@ for filename in sorted(os.listdir(cities_dir)):
     displayed = matches[:MAX_DISPLAY]
     links_html = ''
     for r in displayed:
-        r_slug = slugify(r['name'])
-        r_city_slug = slugify(r['city'])
+        r_city_slug, r_slug = venue_link_parts(r)
         rating = r.get('hygiene_rating', '?')
         try:
             stars = '★' * int(rating) if rating.isdigit() else '—'
@@ -209,6 +250,40 @@ for filename in sorted(os.listdir(cities_dir)):
 {END_MARKER}
 '''
     
+    # ── Thai kitchens in pubs — separate section, separate count ──
+    if not matches:
+        section = ''  # pub-only city: no empty main card
+    if pubs_matches:
+        pubs_matches.sort(key=lambda r: (rating_sort_key(r), r.get('name', '').lower()))
+        pub_cards = ''
+        for r in pubs_matches:
+            r_city_slug, r_slug = venue_link_parts(r)
+            rating = r.get('hygiene_rating', '?')
+            try:
+                stars = '★' * int(rating) if rating.isdigit() else '—'
+            except Exception:
+                stars = '—'
+            location = build_location_label(r.get('address', ''), r['city'], r.get('postcode', ''))
+            location_html = f'<span style="font-size:0.73rem;color:var(--ink4);display:block;margin-top:2px;">{location}</span>' if location else ''
+            pub_cards += f'''                    <a href="/r/{r_city_slug}/{r_slug}/" style="display:flex;align-items:center;padding:12px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:border-color 0.2s;margin-bottom:8px;">
+                        <div style="flex:1;min-width:0;margin-right:10px;">
+                            <span style="font-weight:600;font-size:0.9rem;color:var(--ink);display:block;">{r['name']}</span>
+                            {location_html}
+                        </div>
+                        <span style="font-size:0.8rem;color:var(--ink4);margin-right:10px;">Pub</span>
+                        <span style="font-size:0.8rem;color:var(--c2);margin-right:10px;">{stars}</span>
+                        <span aria-hidden="true" style="color:var(--ink3);font-size:0.9rem;">›</span>
+                    </a>\n'''
+        section += f'''<!-- BEGIN Thai Pubs -->
+        <div class="card" style="margin-top:20px;">
+            <h2 id="pubs" style="scroll-margin-top:80px;">Thai <em>Kitchens</em> in Pubs in {city_name}</h2>
+            <p style="color:var(--ink4);font-size:0.9rem;margin-bottom:16px;">Thai kitchens operating inside pubs — often registered under the pub's own name, so they never appear in the main list above. <a href="/pubs/" style="color:var(--c2);">See all UK pub kitchens →</a></p>
+            <div>
+{pub_cards}            </div>
+        </div>
+<!-- END Thai Pubs -->
+'''
+
     # Prefer the shell's own region (county/location pages), then any <footer> element,
     # then bare </body>. The old test looked for '<footer>' exactly, which misses
     # '<footer class="site-footer">' and would strand the section after the footer.

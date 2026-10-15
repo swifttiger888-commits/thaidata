@@ -148,6 +148,23 @@ def main() -> None:
                 except Exception:
                     pass
     print(f"  Non-chain additions: {non_chain_added}")
+
+    # ── Pubs with Thai kitchens (FSA type 7843) ──
+    # Pub-typed records are invisible to the restaurant/takeaway searches (types 1/7844),
+    # so genuine Thai pub kitchens ('Cricketers Thai Ltd', 'Thai Plough') are never
+    # fetched. They enter as type 'pub' and surface in the separate pubs section.
+    pub_added = 0
+    for scheme in ['FHRS', 'FHIS']:
+        time.sleep(DELAY)
+        try:
+            ests = fetch_all('Thai', '7843', scheme)
+            for e in ests:
+                if 'thai' in (e.get('BusinessName', '') or '').lower():
+                    all_ests.append(e)
+                    pub_added += 1
+        except Exception:
+            pass
+    print(f"  Pub kitchen additions: {pub_added}")
     
     # Deduplicate by FHRSID
     seen = {}
@@ -208,12 +225,15 @@ def main() -> None:
                 addr_parts.append(line)
         
         btype = e.get('BusinessType', '')
-        is_takeaway = 'Takeaway' in btype or 'takeaway' in btype.lower()
+        btype_lower = btype.lower()
+        is_pub = 'pub' in btype_lower or 'bar' in btype_lower or 'nightclub' in btype_lower
+        is_takeaway = 'Takeaway' in btype or 'takeaway' in btype_lower
+        rtype = 'pub' if is_pub else ('takeaway' if is_takeaway else 'restaurant')
         
         record = {
             'id': e['FHRSID'],
             'name': e.get('BusinessName', 'Unknown'),
-            'type': 'takeaway' if is_takeaway else 'restaurant',
+            'type': rtype,
             'city': city,
             'local_authority': la_name,
             'postcode': e.get('PostCode', '').strip(),
@@ -231,13 +251,16 @@ def main() -> None:
     # ── Step 3: Generate city statistics ─────────────────────────────
     print("Step 3/5: Computing city statistics...")
     by_city = defaultdict(lambda: {
-        'total': 0, 'restaurants': 0, 'takeaways': 0,
+        'total': 0, 'restaurants': 0, 'takeaways': 0, 'pubs': 0,
         'ratings': [], 'postcodes': set(),
         'fhis_pass': 0, 'fhis_improvement': 0, 'fhis_exempt': 0
     })
     
     for r in restaurants:
         c = by_city[r['city']]
+        if r['type'] == 'pub':
+            c['pubs'] += 1
+            continue
         c['total'] += 1
         if r['type'] == 'restaurant':
             c['restaurants'] += 1
@@ -258,7 +281,12 @@ def main() -> None:
     
     # Build city list
     cities = []
+    pub_only = 0
     for city_name, data in sorted(by_city.items(), key=lambda x: x[1]['total'], reverse=True):
+        if data['total'] == 0:
+            # Pub-only areas: no restaurants/takeaways, so no city entry (pubs live on /pubs/)
+            pub_only += 1
+            continue
         avg_rating = sum(data['ratings']) / len(data['ratings']) if data['ratings'] else 0
         fhis_total = data['fhis_pass'] + data['fhis_improvement'] + data['fhis_exempt']
         # FHIS cities (Scotland) have no numeric scores — never average them to 0
@@ -272,6 +300,7 @@ def main() -> None:
             'total_thai_businesses': data['total'],
             'restaurants': data['restaurants'],
             'takeaways': data['takeaways'],
+            'pubs': data['pubs'],
             'per_100k': per_100k,
             'avg_hygiene_rating': round(avg_rating, 1) if not is_fhis else None,
             'scheme': 'FHIS' if is_fhis else 'FHRS',
@@ -281,11 +310,12 @@ def main() -> None:
             'postcode_areas': len(data['postcodes']),
         })
     
-    print(f"  {len(cities)} cities with Thai restaurants\n")
+    print(f"  {len(cities)} cities with Thai restaurants ({pub_only} pub-only areas skipped)\n")
     
     # ── Step 4: Save files ───────────────────────────────────────────
     today = start.strftime('%Y-%m-%d')
-    total = len(restaurants)
+    pubs_total = sum(1 for r in restaurants if r.get('type') == 'pub')
+    total = len(restaurants) - pubs_total
     
     # 4a. Save restaurants.json
     print("Step 4/5: Saving files...")
@@ -295,6 +325,7 @@ def main() -> None:
             'name': 'ThaiData UK — Restaurant Directory',
             'updated': today,
             'total': total,
+            'pubs': pubs_total,
             'sources': ['FSA FHRS', 'FSA FHIS'],
             'restaurants': restaurants
         }, f, indent=2)
@@ -337,6 +368,7 @@ def main() -> None:
     print(f"\nStep 5/5: Done in {elapsed:.1f}s")
     print(f"\n{'='*60}")
     print(f"Total restaurants: {total}")
+    print(f"Pubs with Thai kitchens: {pubs_total}")
     print(f"Cities tracked: {len(cities)}")
     print(f"Dine-in: {dine_in_total}, Takeaway: {takeaway_total}")
     print(f"\nTop 20 cities:")

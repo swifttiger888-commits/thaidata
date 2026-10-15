@@ -33,11 +33,14 @@ def parse_fsa_establishment(e: dict) -> dict | None:
         if line:
             addr_parts.append(line)
     btype = e.get('BusinessType', '')
-    is_takeaway = 'Takeaway' in btype or 'takeaway' in btype.lower()
+    btype_lower = btype.lower()
+    is_pub = 'pub' in btype_lower or 'bar' in btype_lower or 'nightclub' in btype_lower
+    is_takeaway = 'Takeaway' in btype or 'takeaway' in btype_lower
+    rtype = 'pub' if is_pub else ('takeaway' if is_takeaway else 'restaurant')
     return {
         'id': e['FHRSID'],
         'name': e.get('BusinessName', 'Unknown'),
-        'type': 'takeaway' if is_takeaway else 'restaurant',
+        'type': rtype,
         'city': city,
         'local_authority': la_name,
         'postcode': e.get('PostCode', '').strip(),
@@ -136,6 +139,13 @@ class TestFsaParsing(unittest.TestCase):
         result = parse_fsa_establishment(record)
         self.assertEqual(result['type'], 'takeaway')
 
+    def test_parse_pub_kitchen(self) -> None:
+        record = dict(MOCK_FSA_RECORD)
+        record['BusinessType'] = 'Pub/bar/nightclub'
+        record['BusinessTypeId'] = 7843
+        result = parse_fsa_establishment(record)
+        self.assertEqual(result['type'], 'pub')
+
     def test_skip_awaiting_inspection(self) -> None:
         record = dict(MOCK_FSA_RECORD)
         record['RatingValue'] = 'Awaiting Inspection'
@@ -199,10 +209,14 @@ class TestDataIntegrity(unittest.TestCase):
                 cls.data = json.load(f)
 
     def test_metadata_total_matches_count(self) -> None:
+        records = self.restaurants.get('restaurants', [])
+        pubs = sum(1 for r in records if r.get('type') == 'pub')
+        core = len(records) - pubs
         meta = self.restaurants.get('total', 0)
-        actual = len(self.restaurants.get('restaurants', []))
-        self.assertEqual(meta, actual,
-                         f"metadata total={meta} != actual records={actual}")
+        self.assertEqual(meta, core,
+                         f"metadata total={meta} != non-pub records={core}")
+        self.assertEqual(self.restaurants.get('pubs', 0), pubs,
+                         f"metadata pubs={self.restaurants.get('pubs', 0)} != actual pubs={pubs}")
 
     def test_city_total_matches_restaurant_total(self) -> None:
         meta_total = self.restaurants.get('total', 0)
@@ -228,6 +242,17 @@ class TestDataIntegrity(unittest.TestCase):
         actual_take = sum(1 for r in self.restaurants['restaurants'] if r.get('type') == 'takeaway')
         self.assertEqual(city_rest, actual_rest)
         self.assertEqual(city_take, actual_take)
+
+    def test_pub_kitchens_separate(self) -> None:
+        city_names = {c['name'] for c in self.cities['cities']}
+        city_pubs = sum(c.get('pubs', 0) for c in self.cities['cities'])
+        records = self.restaurants['restaurants']
+        actual_pubs = sum(1 for r in records if r.get('type') == 'pub')
+        # Pub-only areas have no cities.json entry (no restaurants there) — account for them
+        orphan_pubs = sum(1 for r in records
+                          if r.get('type') == 'pub' and r['city'] not in city_names)
+        self.assertEqual(city_pubs + orphan_pubs, actual_pubs,
+                         f"cities pub sum={city_pubs} + orphan {orphan_pubs} != actual pubs={actual_pubs}")
 
     def test_all_records_have_required_fields(self) -> None:
         required = ['id', 'name', 'type', 'city', 'local_authority', 'hygiene_rating']
@@ -403,8 +428,10 @@ class TestDataIntegrityEdgeCases(unittest.TestCase):
     def test_all_cities_appear_in_cities_json(self) -> None:
         """Every restaurant city value should exist in cities.json (no orphan values)."""
         known_cities = set(c['name'] for c in self.cities['cities'])
-        restaurant_cities = set(r['city'] for r in self.restaurants['restaurants'])
-        orphans = restaurant_cities - known_cities
+        # Pub-only areas legitimately have no cities.json entry — only flag
+        # orphan cities that own at least one restaurant/takeaway.
+        orphans = {r['city'] for r in self.restaurants['restaurants']
+                   if r.get('type') != 'pub'} - known_cities
         self.assertEqual(
             len(orphans), 0,
             f"Orphan city values not in cities.json: {sorted(orphans)}"

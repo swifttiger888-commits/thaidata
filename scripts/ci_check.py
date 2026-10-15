@@ -9,8 +9,12 @@ with open('api/v1/cities.json') as f:
     c: dict[str, Any] = json.load(f)
 
 errors: list[str] = []
-if r['total'] != len(r['restaurants']):
-    errors.append(f'restaurants.json: metadata total={r["total"]} != actual={len(r["restaurants"])}')
+pubs = sum(1 for rec in r['restaurants'] if rec.get('type') == 'pub')
+core = len(r['restaurants']) - pubs
+if r['total'] != core:
+    errors.append(f'restaurants.json: metadata total={r["total"]} != non-pub records={core}')
+if r.get('pubs', 0) != pubs:
+    errors.append(f'restaurants.json: metadata pubs={r.get("pubs", 0)} != actual pubs={pubs}')
 city_sum = sum(ci['total_thai_businesses'] for ci in c['cities'])
 if city_sum != r['total']:
     errors.append(f'City totals ({city_sum}) != restaurants total ({r["total"]})')

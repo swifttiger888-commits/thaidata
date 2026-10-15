@@ -2,6 +2,7 @@
   "name": "ThaiData UK \u2014 Restaurant Directory",
   "updated": "2026-10-15",
   "total": 1241,
+  "pubs": 22,
   "sources": [
     "FSA FHRS",
     "FSA FHIS"
@@ -6560,19 +6561,6 @@
       "latitude": "51.5190831"
     },
     {
-      "id": 200069,
-      "name": "Imm Thai Fusion",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Merton",
-      "postcode": "SW19 1RX",
-      "address": "162 The Broadway, Wimbledon, Merton",
-      "hygiene_rating": "4",
-      "rating_date": "2025-08-05T00:00:00",
-      "longitude": "-0.1982831",
-      "latitude": "51.4192524"
-    },
-    {
       "id": 1151714,
       "name": "Imm Thai Fusion",
       "type": "restaurant",
@@ -6584,6 +6572,19 @@
       "rating_date": "2025-12-04T00:00:00",
       "longitude": "-0.025236",
       "latitude": "51.4101241"
+    },
+    {
+      "id": 200069,
+      "name": "Imm Thai Fusion",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Merton",
+      "postcode": "SW19 1RX",
+      "address": "162 The Broadway, Wimbledon, Merton",
+      "hygiene_rating": "4",
+      "rating_date": "2025-08-05T00:00:00",
+      "longitude": "-0.1982831",
+      "latitude": "51.4192524"
     },
     {
       "id": 1995890,
@@ -15296,17 +15297,17 @@
       "latitude": "51.5024885"
     },
     {
-      "id": 1386427,
+      "id": 425017,
       "name": "Busaba Eathai",
       "type": "restaurant",
-      "city": "Kingston-Upon-Thames",
-      "local_authority": "Kingston-Upon-Thames",
-      "postcode": "KT1 1QN",
-      "address": "4 Riverside Walk, Kingston Upon Thames",
+      "city": "London",
+      "local_authority": "Camden",
+      "postcode": "WC1E 7DF",
+      "address": "22 Store Street, London",
       "hygiene_rating": "5",
-      "rating_date": "2024-06-26T00:00:00",
-      "longitude": "-0.3079778",
-      "latitude": "51.4106332"
+      "rating_date": "2023-03-14T00:00:00",
+      "longitude": "-0.1325333",
+      "latitude": "51.5195627"
     },
     {
       "id": 346455,
@@ -15322,17 +15323,17 @@
       "latitude": "51.507212"
     },
     {
-      "id": 425017,
+      "id": 1386427,
       "name": "Busaba Eathai",
       "type": "restaurant",
-      "city": "London",
-      "local_authority": "Camden",
-      "postcode": "WC1E 7DF",
-      "address": "22 Store Street, London",
+      "city": "Kingston-Upon-Thames",
+      "local_authority": "Kingston-Upon-Thames",
+      "postcode": "KT1 1QN",
+      "address": "4 Riverside Walk, Kingston Upon Thames",
       "hygiene_rating": "5",
-      "rating_date": "2023-03-14T00:00:00",
-      "longitude": "-0.1325333",
-      "latitude": "51.5195627"
+      "rating_date": "2024-06-26T00:00:00",
+      "longitude": "-0.3079778",
+      "latitude": "51.4106332"
     },
     {
       "id": 1988739,
@@ -15413,19 +15414,6 @@
       "latitude": null
     },
     {
-      "id": 990712,
-      "name": "Patara",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Merton",
-      "postcode": "SW19 5DX",
-      "address": "18 High Street, Wimbledon, Merton",
-      "hygiene_rating": "5",
-      "rating_date": "2026-09-17T00:00:00",
-      "longitude": "-0.2169039",
-      "latitude": "51.4248523"
-    },
-    {
       "id": 334777,
       "name": "Patara",
       "type": "restaurant",
@@ -15437,6 +15425,19 @@
       "rating_date": "2025-02-12T00:00:00",
       "longitude": "-0.164784",
       "latitude": "51.49776"
+    },
+    {
+      "id": 990712,
+      "name": "Patara",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Merton",
+      "postcode": "SW19 5DX",
+      "address": "18 High Street, Wimbledon, Merton",
+      "hygiene_rating": "5",
+      "rating_date": "2026-09-17T00:00:00",
+      "longitude": "-0.2169039",
+      "latitude": "51.4248523"
     },
     {
       "id": 334484,
@@ -15465,19 +15466,6 @@
       "latitude": "51.5141642"
     },
     {
-      "id": 83700,
-      "name": "Sukhothai",
-      "type": "restaurant",
-      "city": "Gravesham",
-      "local_authority": "Gravesham",
-      "postcode": "DA12 1AD",
-      "address": "6 Windmill Street, Gravesend, Kent",
-      "hygiene_rating": "5",
-      "rating_date": "2025-12-02T00:00:00",
-      "longitude": "0.369611",
-      "latitude": "51.441666"
-    },
-    {
       "id": 521984,
       "name": "Sukhothai",
       "type": "restaurant",
@@ -15491,17 +15479,17 @@
       "latitude": "53.798868"
     },
     {
-      "id": 1221101,
-      "name": "SUKHOTHAI",
+      "id": 83700,
+      "name": "Sukhothai",
       "type": "restaurant",
-      "city": "Wirral",
-      "local_authority": "Wirral",
-      "postcode": "CH48 0RB",
-      "address": "119 - 121 Banks Road, West Kirby, Wirral",
+      "city": "Gravesham",
+      "local_authority": "Gravesham",
+      "postcode": "DA12 1AD",
+      "address": "6 Windmill Street, Gravesend, Kent",
       "hygiene_rating": "5",
-      "rating_date": "2026-02-13T00:00:00",
-      "longitude": "-3.1823687",
-      "latitude": "53.3675489"
+      "rating_date": "2025-12-02T00:00:00",
+      "longitude": "0.369611",
+      "latitude": "51.441666"
     },
     {
       "id": 1994758,
@@ -15517,6 +15505,19 @@
       "latitude": "51.702382"
     },
     {
+      "id": 1221101,
+      "name": "SUKHOTHAI",
+      "type": "restaurant",
+      "city": "Wirral",
+      "local_authority": "Wirral",
+      "postcode": "CH48 0RB",
+      "address": "119 - 121 Banks Road, West Kirby, Wirral",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-13T00:00:00",
+      "longitude": "-3.1823687",
+      "latitude": "53.3675489"
+    },
+    {
       "id": 1868547,
       "name": "Sukhothai",
       "type": "restaurant",
@@ -15530,19 +15531,6 @@
       "latitude": "53.9945585"
     },
     {
-      "id": 902906,
-      "name": "Sukhothai Restaurant",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Havering",
-      "postcode": "RM11 3YD",
-      "address": "155 High Street, Hornchurch",
-      "hygiene_rating": "5",
-      "rating_date": "2025-10-30T00:00:00",
-      "longitude": "0.220597",
-      "latitude": "51.562239"
-    },
-    {
       "id": 321058,
       "name": "Sukhothai Restaurant",
       "type": "restaurant",
@@ -15554,6 +15542,19 @@
       "rating_date": "2025-08-03T00:00:00",
       "longitude": "-1.537462",
       "latitude": "53.829991"
+    },
+    {
+      "id": 902906,
+      "name": "Sukhothai Restaurant",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Havering",
+      "postcode": "RM11 3YD",
+      "address": "155 High Street, Hornchurch",
+      "hygiene_rating": "5",
+      "rating_date": "2025-10-30T00:00:00",
+      "longitude": "0.220597",
+      "latitude": "51.562239"
     },
     {
       "id": 342713,
@@ -15712,19 +15713,6 @@
       "latitude": "54.95765"
     },
     {
-      "id": 836583,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Oxford",
-      "local_authority": "Oxford City",
-      "postcode": "OX1 2BJ",
-      "address": "Unit A, Threeways House, George Street, Oxford",
-      "hygiene_rating": "4",
-      "rating_date": "2025-11-19T00:00:00",
-      "longitude": "-1.261062",
-      "latitude": "51.753851"
-    },
-    {
       "id": 437504,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -15736,6 +15724,19 @@
       "rating_date": "2025-03-12T00:00:00",
       "longitude": "-1.412476",
       "latitude": "53.413049"
+    },
+    {
+      "id": 836583,
+      "name": "Thaikhun",
+      "type": "restaurant",
+      "city": "Oxford",
+      "local_authority": "Oxford City",
+      "postcode": "OX1 2BJ",
+      "address": "Unit A, Threeways House, George Street, Oxford",
+      "hygiene_rating": "4",
+      "rating_date": "2025-11-19T00:00:00",
+      "longitude": "-1.261062",
+      "latitude": "51.753851"
     },
     {
       "id": 1817391,
@@ -16139,6 +16140,292 @@
       "rating_date": "2024-09-18T00:00:00",
       "longitude": "-1.533913",
       "latitude": "53.7968542"
+    },
+    {
+      "id": 147926,
+      "name": "Nava Thai",
+      "type": "pub",
+      "city": "Chichester",
+      "local_authority": "Chichester",
+      "postcode": "GU29 0NZ",
+      "address": "The Hamilton Arms, School Lane, Stedham, Midhurst",
+      "hygiene_rating": "5",
+      "rating_date": "2026-01-16T00:00:00",
+      "longitude": "-0.778086",
+      "latitude": "50.993245"
+    },
+    {
+      "id": 336627,
+      "name": "Thai Plough",
+      "type": "pub",
+      "city": "Cambridge",
+      "local_authority": "East Cambridgeshire",
+      "postcode": "CB6 2SX",
+      "address": "106 Main Street, Little Downham, Ely, Cambridgeshire",
+      "hygiene_rating": "5",
+      "rating_date": "2026-08-19T00:00:00",
+      "longitude": "0.23635",
+      "latitude": "52.431697"
+    },
+    {
+      "id": 1919502,
+      "name": "Cricketers Thai Ltd",
+      "type": "pub",
+      "city": "Cambridge",
+      "local_authority": "Cambridge City",
+      "postcode": "CB1 1EQ",
+      "address": "The Cricketers 18 Melbourne Place, Cambridge, Cambridgeshire",
+      "hygiene_rating": "5",
+      "rating_date": "2026-08-26T00:00:00",
+      "longitude": "0.1296071",
+      "latitude": "52.2049758"
+    },
+    {
+      "id": 1951936,
+      "name": "Seaford Thai Kitchen",
+      "type": "pub",
+      "city": "Lewes",
+      "local_authority": "Lewes",
+      "postcode": "BN25 1PP",
+      "address": "The Cinque Ports 49 High Street, Seaford, East Sussex",
+      "hygiene_rating": "4",
+      "rating_date": "2025-05-23T00:00:00",
+      "longitude": "0.10408",
+      "latitude": "50.7716598"
+    },
+    {
+      "id": 479096,
+      "name": "Drovers Thai Restaurant",
+      "type": "pub",
+      "city": "Powys",
+      "local_authority": "Powys",
+      "postcode": "LD1 5PT",
+      "address": "Howey, Llandrindod Wells, Powys",
+      "hygiene_rating": "3",
+      "rating_date": "2025-06-19T00:00:00",
+      "longitude": "-3.38979411125183",
+      "latitude": "52.2178230285645"
+    },
+    {
+      "id": 1910000,
+      "name": "Pad Thai Boys",
+      "type": "pub",
+      "city": "London",
+      "local_authority": "Westminster",
+      "postcode": "WC2R 3LD",
+      "address": "CHESHIRE CHEESE PUBLIC HOUSE 5 LITTLE ESSEX STREET, LONDON",
+      "hygiene_rating": "3",
+      "rating_date": "2026-02-25T00:00:00",
+      "longitude": "-0.113194",
+      "latitude": "51.512443"
+    },
+    {
+      "id": 1662287,
+      "name": "Thai @The Albert",
+      "type": "pub",
+      "city": "Richmond-Upon-Thames",
+      "local_authority": "Richmond-Upon-Thames",
+      "postcode": "TW2 5QB",
+      "address": "Prince Albert 30 Hampton Road, Twickenham, Richmond Upon Thames",
+      "hygiene_rating": "5",
+      "rating_date": "2026-03-14T00:00:00",
+      "longitude": "-0.3442856",
+      "latitude": "51.4421694"
+    },
+    {
+      "id": 18040,
+      "name": "The Vine Thai Cuisine",
+      "type": "pub",
+      "city": "Norwich",
+      "local_authority": "Norwich City",
+      "postcode": "NR2 1DE",
+      "address": "7 Dove Street, Norwich",
+      "hygiene_rating": "4",
+      "rating_date": "2026-04-07T00:00:00",
+      "longitude": "1.292761",
+      "latitude": "52.629478"
+    },
+    {
+      "id": 672376,
+      "name": "Aston Fields Club Thai",
+      "type": "pub",
+      "city": "Bromsgrove",
+      "local_authority": "Bromsgrove",
+      "postcode": "B60 3EG",
+      "address": "96 Stoke Road, Bromsgrove, Worcestershire",
+      "hygiene_rating": "Exempt",
+      "rating_date": "1901-01-01T00:00:00",
+      "longitude": "-2.051893",
+      "latitude": "52.322741"
+    },
+    {
+      "id": 556307,
+      "name": "Queens Head And Thai Rice Restaurant",
+      "type": "pub",
+      "city": "Newark and Sherwood",
+      "local_authority": "Newark and Sherwood",
+      "postcode": "NG24 1DU",
+      "address": "Queens Head, 8 Market Place, Newark On Trent, Nottinghamshire",
+      "hygiene_rating": "5",
+      "rating_date": "2024-08-02T00:00:00",
+      "longitude": "-0.809204999882129",
+      "latitude": "53.0766050000881"
+    },
+    {
+      "id": 1809849,
+      "name": "Thai Zaab At The Mucky Duck",
+      "type": "pub",
+      "city": "Brighton",
+      "local_authority": "Brighton and Hove",
+      "postcode": "BN2 1TF",
+      "address": "7 - 9 Manchester Street, Brighton",
+      "hygiene_rating": "5",
+      "rating_date": "2025-09-25T00:00:00",
+      "longitude": "-0.135488",
+      "latitude": "50.82071"
+    },
+    {
+      "id": 514135,
+      "name": "The North Star & Thai Kitchen",
+      "type": "pub",
+      "city": "London",
+      "local_authority": "Waltham Forest",
+      "postcode": "E11 3AR",
+      "address": "The North Star Public House 24 Browning Road, Leytonstone, London",
+      "hygiene_rating": "5",
+      "rating_date": "2025-02-06T00:00:00",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "id": 283051,
+      "name": "The Red Lion - Pad Thai",
+      "type": "pub",
+      "city": "Wokingham",
+      "local_authority": "Wokingham",
+      "postcode": "RG40 1AP",
+      "address": "The Red Lion Ph, 25 Market Place, Wokingham",
+      "hygiene_rating": "5",
+      "rating_date": "2025-02-27T00:00:00",
+      "longitude": "-0.833992",
+      "latitude": "51.409829"
+    },
+    {
+      "id": 1386274,
+      "name": "Kai's Thai Food @ The Cocoanut",
+      "type": "pub",
+      "city": "Kingston-Upon-Thames",
+      "local_authority": "Kingston-Upon-Thames",
+      "postcode": "KT1 2RF",
+      "address": "The Cocoanut, 16 Mill Street, Kingston Upon Thames",
+      "hygiene_rating": "4",
+      "rating_date": "2025-05-09T00:00:00",
+      "longitude": "-0.2985151",
+      "latitude": "51.406866"
+    },
+    {
+      "id": 1885056,
+      "name": "Thai Golden Elephant At Regency Tavern",
+      "type": "pub",
+      "city": "Brighton",
+      "local_authority": "Brighton and Hove",
+      "postcode": "BN1 2EF",
+      "address": "32 - 34 Russell Square, Brighton",
+      "hygiene_rating": "4",
+      "rating_date": "2026-01-06T00:00:00",
+      "longitude": "-0.148294",
+      "latitude": "50.822838"
+    },
+    {
+      "id": 479310,
+      "name": "Keng's Thai Kitchen At Longman Of WIlmington",
+      "type": "pub",
+      "city": "Brighton",
+      "local_authority": "Brighton and Hove",
+      "postcode": "BN1 8JH",
+      "address": "2-10 Wilmington Way, Brighton",
+      "hygiene_rating": "5",
+      "rating_date": "2025-08-09T00:00:00",
+      "longitude": "-0.140167",
+      "latitude": "50.859798"
+    },
+    {
+      "id": 1437298,
+      "name": "Lion Thai Restaurant @ The Red Lion",
+      "type": "pub",
+      "city": "Reigate and Banstead",
+      "local_authority": "Reigate and Banstead",
+      "postcode": "RH1 1DP",
+      "address": "48 Linkfield Lane, Redhill, Surrey",
+      "hygiene_rating": "5",
+      "rating_date": "2024-08-22T00:00:00",
+      "longitude": "-0.17791",
+      "latitude": "51.241116"
+    },
+    {
+      "id": 1837731,
+      "name": "Mu Ban Thai Foods At The Village",
+      "type": "pub",
+      "city": "Brighton",
+      "local_authority": "Brighton and Hove",
+      "postcode": "BN2 9SH",
+      "address": "129 Islingword Road, Brighton",
+      "hygiene_rating": "4",
+      "rating_date": "2025-10-14T00:00:00",
+      "longitude": "-0.128602",
+      "latitude": "50.831347"
+    },
+    {
+      "id": 1703936,
+      "name": "London Road Ale House / Thai Wai",
+      "type": "pub",
+      "city": "Stoke-on-Trent",
+      "local_authority": "Stoke-On-Trent",
+      "postcode": "ST4 5AA",
+      "address": "241 London Road, Stoke-On-Trent",
+      "hygiene_rating": "3",
+      "rating_date": "2026-03-24T00:00:00",
+      "longitude": "-2.189738",
+      "latitude": "52.998516"
+    },
+    {
+      "id": 1829347,
+      "name": "Fat Cat Thai Kitchen At The Dover Castle",
+      "type": "pub",
+      "city": "Brighton",
+      "local_authority": "Brighton and Hove",
+      "postcode": "BN2 9UE",
+      "address": "43 Southover Street, Brighton",
+      "hygiene_rating": "5",
+      "rating_date": "2026-01-29T00:00:00",
+      "longitude": "-0.128525",
+      "latitude": "50.827946"
+    },
+    {
+      "id": 1859525,
+      "name": "Thai Restaurant At The Old House At Home",
+      "type": "pub",
+      "city": "Basingstoke and Deane",
+      "local_authority": "Basingstoke and Deane",
+      "postcode": "RG25 3DU",
+      "address": "The Old House At Home, Station Road, Overton, Basingstoke",
+      "hygiene_rating": "5",
+      "rating_date": "2025-09-11T00:00:00",
+      "longitude": "-1.26097500324249",
+      "latitude": "51.2450485229492"
+    },
+    {
+      "id": 913301,
+      "name": "Thai Orchid & Murray Arms",
+      "type": "pub",
+      "city": "Dumfries and Galloway",
+      "local_authority": "Dumfries and Galloway",
+      "postcode": "DG11 1DS",
+      "address": "Lockerbie, Dalton",
+      "hygiene_rating": "Pass",
+      "rating_date": "2024-10-10T00:00:00",
+      "longitude": null,
+      "latitude": null
     }
   ]
 }

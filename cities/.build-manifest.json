@@ -1,9 +1,9 @@
 {
   "run_date": "2026-10-15",
   "applied": true,
-  "total_cities": 277,
+  "total_cities": 279,
   "generated": 251,
-  "quarantined": 24,
+  "quarantined": 26,
   "empty_state": 0,
   "skipped": 1,
   "empty_state_pages": [],
@@ -11,6 +11,10 @@
     {
       "slug": "adur",
       "reason": "No restaurant data for city: Adur"
+    },
+    {
+      "slug": "basingstoke-and-deane",
+      "reason": "[ItemList] Schema validation error at itemListElement: [] should be non-empty"
     },
     {
       "slug": "blackburn",
@@ -23,6 +27,10 @@
     {
       "slug": "clacton-on-sea",
       "reason": "No restaurant data for city: Clacton On Sea"
+    },
+    {
+      "slug": "dumfries-and-galloway",
+      "reason": "[ItemList] Schema validation error at itemListElement: [] should be non-empty"
     },
     {
       "slug": "east-dunbartonshire",
