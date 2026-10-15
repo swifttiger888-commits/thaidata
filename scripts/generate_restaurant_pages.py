@@ -1036,6 +1036,32 @@ def main() -> None:
         with open(os.path.join(REPO, 'functions', 'api', 'listing_urls.js'), 'w', encoding='utf-8') as f:
             f.write(out_js)
         print(f"  listing_urls.js: {len(url_map)} entries")
+
+        # ── Search index for /api/search-restaurants ──────────────────
+        # Consumers: homepage search, claim page, /listing/manage. Rebuilt from
+        # THIS run's generated records so it can never drift from the data.
+        # (The previous index was a one-off June-2026 build that went stale and
+        # hid takeaways + newer venues from claim search — fixed 2026-10-15.)
+        search_index = []
+        for r in ordered:
+            fid = str(r['id'])
+            if fid not in generated_paths:
+                continue  # excluded or failed this run — never in the index
+            search_index.append({
+                'id': r['id'],
+                'name': r['name'],
+                'city': r.get('city') or '',
+                'pc': r.get('postcode') or '',
+                'address': r.get('address') or '',
+                'rating': r.get('hygiene_rating') or '',
+                'business_type': r.get('type') or 'restaurant',
+                'listing_url': url_map.get(fid),
+            })
+        search_index.sort(key=lambda e: (e['name'].casefold(), e['city'].casefold()))
+        search_path = os.path.join(REPO, 'data', 'restaurants-search.json')
+        with open(search_path, 'w', encoding='utf-8') as f:
+            json.dump(search_index, f, ensure_ascii=False, separators=(',', ':'))
+        print(f"  restaurants-search.json: {len(search_index)} entries -> {search_path}")
     else:
         print(f"  names.json NOT written ({errors} generation errors) — "
               f"a partial index would hide restaurants from the hero search")

@@ -170,7 +170,7 @@ body {
         <div class="card" id="section-search">
             <h2>1. Find Your <em>Restaurant</em></h2>
             <p style="color:var(--ink4);font-size:0.95rem;margin-bottom:16px;">Search for your Thai restaurant by name. We pull data from the Food Standards Agency register.</p>
-            <p style="background:rgba(163, 19, 43, 0.06);border:1px solid rgba(163, 19, 43, 0.15);border-radius:10px;padding:12px 16px;font-size:0.88rem;color:rgba(255,255,255,0.8);margin-bottom:18px;"><i class="fas fa-check-circle" style="color:var(--c2);margin-right:6px;"></i><strong>1,268</strong> Thai restaurants listed across the UK. Claim yours in under 2 minutes.<br><span style="font-size:0.82rem;color: rgba(26, 22, 20, 0.55);">Be among the first Thai restaurant owners to claim your listing.</span></p>
+            <p style="background:rgba(163, 19, 43, 0.06);border:1px solid rgba(163, 19, 43, 0.15);border-radius:10px;padding:12px 16px;font-size:0.88rem;color:rgba(255,255,255,0.8);margin-bottom:18px;"><i class="fas fa-check-circle" style="color:var(--c2);margin-right:6px;"></i><strong>1,241</strong> Thai restaurants listed across the UK. Claim yours in under 2 minutes.<br><span style="font-size:0.82rem;color: rgba(26, 22, 20, 0.55);">Be among the first Thai restaurant owners to claim your listing.</span></p>
             <p style="margin-top:-12px;margin-bottom:18px;font-size:0.85rem;"><a href="/r/demo/claimed-listing/" style="color:var(--c2);text-decoration:underline;text-underline-offset:2px;">See what a claimed listing looks like →</a></p>
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="Type your restaurant name (min 3 chars)..." autocomplete="off">
@@ -309,20 +309,21 @@ body {
             if (typeof gtag === 'function') {
                 gtag('event', 'claim_search', { search_term: q });
             }
-            fetch(`/api/search?q=${encodeURIComponent(q)}&limit=10`)
+            fetch(`/api/search-restaurants?q=${encodeURIComponent(q)}`)
                 .then(r => r.json())
                 .then(data => {
-                    if (!data.results || data.results.length === 0) {
+                    const results = Array.isArray(data) ? data : (data.results || []);
+                    if (results.length === 0) {
                         searchResults.innerHTML = '<div style="padding:16px;color:var(--ink4);">No Thai restaurants found. Try a different name or <a href="mailto:hello@thaidata.uk" style="color:var(--c2);">let us know</a>.</div>';
                         return;
                     }
-                    searchResults.innerHTML = data.results.map(r => `
+                    searchResults.innerHTML = results.map(r => `
                         <div class="result-item" onclick="selectRestaurant(${JSON.stringify(r).replace(/"/g, '&quot;')})">
                             <div class="rname">${r.name}</div>
-                            <div class="raddr">${r.address}, ${r.postcode || ''}</div>
+                            <div class="raddr">${[r.address, r.postcode || r.pc].filter(Boolean).join(', ')}</div>
                             <div class="rmeta">
                                 <span>${r.city || '—'}</span>
-                                ${r.rating ? `<span class="rating-badge r${r.rating}">★${r.rating}</span>` : '<span>Unrated</span>'}
+                                ${/^[0-5]$/.test(String(r.rating ?? '')) ? `<span class="rating-badge r${r.rating}">★${r.rating}</span>` : (r.rating ? `<span>${r.rating}</span>` : '<span>Unrated</span>')}
                             </div>
                             ${r.listing_url ? `<a class="rlink" href="${r.listing_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View current listing ↗</a>` : ''}
                         </div>
@@ -364,8 +365,12 @@ body {
         document.getElementById('sel-link').innerHTML = r.listing_url
             ? `<a href="${r.listing_url}" target="_blank" rel="noopener" style="color:var(--c2);font-size:0.85rem;text-decoration:underline;text-underline-offset:2px;">View current listing ↗</a>`
             : '';
-        if (r.rating) {
+        if (/^[0-5]$/.test(String(r.rating ?? ''))) {
             document.getElementById('sel-rating').innerHTML = `<span class="rating-badge r${r.rating}">FSA ★${r.rating}</span>`;
+        } else if (r.rating) {
+            document.getElementById('sel-rating').innerHTML = `<span class="rating-badge r3">FSA ${r.rating}</span>`;
+        } else {
+            document.getElementById('sel-rating').innerHTML = '';
         }
 
         setStep(2);
