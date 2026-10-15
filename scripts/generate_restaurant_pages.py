@@ -534,7 +534,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
 
     # ---- Hero photo (HERO V2.1 photo mode): deterministic rotation from the curated set ----
-    _hero_n = (zlib.crc32(str(fsa_id).encode()) % 6) + 1
+    _hero_n = (zlib.crc32(str(fsa_id).encode()) % 12) + 1
     html = safe_sub(
         r'<!-- DYNAMIC: hero_image \(replaces gradient when claimed\) -->',
         '<!-- DYNAMIC: hero_image (replaces gradient when claimed) -->\n'
