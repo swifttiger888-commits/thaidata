@@ -265,30 +265,6 @@
     border-radius: 0 0 var(--radius) var(--radius);
 }
 
-/* HERO V2 — optional owner-supplied photograph */
-.hero.hero .hero-photo {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: var(--hero-photo-x, 50%) var(--hero-photo-y, 50%);
-    pointer-events: none;
-}
-
-.hero.hero .hero-photo ~ .hero-overlay {
-    background: linear-gradient(
-        90deg,
-        rgba(251, 247, 240, 1) 0%,
-        rgba(251, 247, 240, 1) 50%,
-        rgba(251, 247, 240, 0.92) 72%,
-        rgba(251, 247, 240, 0.82) 100%
-    );
-}
-
 /* HERO V2 — typography, badges and visitor information */
 .hero.hero .badge-row {
     display: flex;
@@ -675,6 +651,321 @@ a.cs-attr,
   color: #59534d !important;
   text-decoration: underline !important;
   text-underline-offset: 2px;
+}
+
+/* HERO V2 — photo mode
+   Append after HERO V2 — review corrections.
+*/
+@media screen {
+    .hero.hero {
+        position: relative;
+        isolation: isolate;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 380px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        border-top: 4px solid var(--brand);
+        background: var(--ivory);
+        color: var(--ink);
+    }
+
+    .hero.hero .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        display: block;
+        background: var(--ivory);
+        pointer-events: none;
+    }
+
+    .hero.hero .hero-photo {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        display: block;
+        width: 50%;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        object-fit: cover;
+        object-position: 50% 50%;
+        opacity: 1;
+        filter: none;
+        -webkit-mask-image: none;
+        mask-image: none;
+        pointer-events: none;
+    }
+
+    .hero.hero .hero-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: block;
+        background: none;
+        pointer-events: none;
+    }
+
+    /*
+       Top layer: bottom fade, independent of mask support.
+       Bottom layer: horizontal scrim with a protected identity area.
+
+       With the 1100px container and 1.55:1 grid below, the
+       identity column ends at viewport centre + 89.14px.
+       The 96px stop includes a small glyph-overhang allowance.
+    */
+    .hero.hero .hero-photo ~ .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(251, 247, 240, 0) 60%,
+                rgba(251, 247, 240, 1) 100%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(251, 247, 240, 1) 0%,
+                rgba(251, 247, 240, 1) 40%,
+                rgba(251, 247, 240, 0.88) calc(50% + 96px),
+                rgba(251, 247, 240, 0.45) 64%,
+                rgba(251, 247, 240, 0.06) 100%
+            );
+    }
+
+    .hero.hero .hero-content {
+        position: relative;
+        z-index: 3;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 56px 24px 64px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero.hero .hero-identity,
+    .hero.hero .hero-details {
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .hero.hero .hero-identity {
+        background: transparent;
+        color: var(--ink);
+    }
+
+    .hero.hero .hero-details {
+        margin-top: 0;
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        border-top: 3px solid var(--brand);
+        border-radius: 0 0 var(--radius) var(--radius);
+        color: var(--ink-soft);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+
+    .hero.hero h1 {
+        color: var(--ink);
+        text-shadow: none;
+    }
+
+    .hero.hero h1 em {
+        color: var(--brand-press);
+    }
+
+    .hero.hero .hero-location {
+        color: var(--ink-soft);
+    }
+
+    .hero.hero .hero-location i {
+        color: var(--brand-press);
+    }
+
+    /* Neutral stamp: intentionally overrides inline rating colours. */
+    .hero.hero .badge-rating {
+        background: #F1EFEB !important;
+        color: #4A403C !important;
+        border: 1px solid #DED8CE !important;
+        box-shadow: none;
+    }
+
+    .hero.hero .badge-rating i {
+        color: inherit !important;
+    }
+
+    .hero.hero .badge-type {
+        background: var(--brand-tint) !important;
+        color: var(--brand-press) !important;
+    }
+
+    .hero.hero .badge-type i {
+        color: inherit !important;
+    }
+
+    .hero.hero #contact-strip .cs-attr,
+    .hero.hero .intro-blurb,
+    .hero.hero #hero-claim-cta,
+    .hero.hero #hero-report-cta {
+        color: var(--ink-soft) !important;
+    }
+
+    .hero.hero #hero-claim-cta a,
+    .hero.hero #hero-report-cta a {
+        color: var(--ink-soft) !important;
+    }
+
+    .hero.hero #hero-claim-cta a:hover,
+    .hero.hero #hero-report-cta a:hover {
+        color: var(--brand-press) !important;
+    }
+}
+
+/* HERO V2 — photo-mode responsive treatment */
+@media screen and (width < 1150px) {
+    .hero.hero {
+        min-height: 0;
+        justify-content: flex-start;
+    }
+
+    .hero.hero .hero-photo {
+        display: none;
+    }
+
+    .hero.hero .hero-overlay,
+    .hero.hero .hero-photo ~ .hero-overlay {
+        display: none;
+        background: none;
+    }
+
+    .hero.hero .hero-content {
+        max-width: 760px;
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 28px;
+        padding: 40px 24px 48px;
+    }
+
+    .hero.hero .hero-details {
+        margin-top: 0;
+        padding: 24px;
+        background: var(--paper);
+        border: 1px solid var(--hairline);
+        border-top: 3px solid var(--brand);
+        border-radius: 0 0 var(--radius) var(--radius);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .hero.hero #hero-claim-cta a,
+    .hero.hero #hero-report-cta a {
+        min-height: 44px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero.hero .hero-content {
+        max-width: 760px;
+        gap: 24px;
+        padding: 28px 24px 40px;
+    }
+
+    .hero.hero .hero-details {
+        margin-top: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .hero.hero .badge-row {
+        gap: 8px;
+        margin: 0 0 16px;
+    }
+
+    .hero.hero .badge {
+        min-height: 32px;
+        padding: 6px 10px;
+        font-size: 0.8125rem;
+        line-height: 1.35;
+    }
+
+    .hero.hero h1 {
+        font-size: clamp(1.875rem, 8.2vw, 2.25rem);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+        overflow-wrap: anywhere;
+    }
+
+    .hero.hero .hero-location {
+        margin-top: 14px;
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+
+    .hero.hero #contact-strip {
+        gap: 8px !important;
+    }
+
+    .hero.hero #contact-strip .cs-item {
+        min-height: 44px;
+        padding: 9px 11px;
+        font-size: 0.875rem !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+    }
+
+    .hero.hero .intro-blurb {
+        margin-top: 14px !important;
+        font-size: 0.9375rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .hero.hero .intro-blurb:first-child {
+        margin-top: 0 !important;
+    }
+
+    .hero.hero #hero-claim-cta,
+    .hero.hero .hero-closed-notice {
+        margin-top: 16px !important;
+    }
+
+    .hero.hero #hero-report-cta {
+        margin-top: 0 !important;
+    }
+}
+
+
+
+/* HERO V2.1 — image delivery: breakpoint-gated background, no fetch below the photo breakpoint
+   (Astra review pass 2, ruling (b)). The element carries only a CSS custom property;
+   an unused URL-valued custom property does not fetch. */
+.hero-photo {
+    display: none;
+    background-image: none;
+}
+
+@media (min-width: 1150px) {
+    .hero-photo {
+        display: block;
+        background-image: var(--hero-image);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
         .hero {
@@ -1499,7 +1790,8 @@ a.cs-attr,
     <!-- ============ HERO ============ -->
     <section class="hero">
         <div class="hero-bg"></div>
-                <div class="hero-overlay"></div>
+                <span class="hero-photo" aria-hidden="true" style="--hero-image: url('/hero/food-4.jpg');"></span>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-identity">
             <div class="badge-row">

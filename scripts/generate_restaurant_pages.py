@@ -3,7 +3,7 @@
 Generate individual restaurant listing pages from restaurants.json
 using the Kimi-designed template v2 (cream bg, green hero, 2-col layout).
 """
-import json, os, re, sys, unicodedata, shutil
+import json, os, re, sys, unicodedata, shutil, zlib
 from datetime import datetime
 from typing import Any
 from urllib.parse import quote
@@ -532,6 +532,14 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         '<!-- DYNAMIC: location_line -->\n            <div class="hero-location">\n                <i class="fas fa-map-marker-alt"></i> Leeds, West Yorkshire\n            </div>',
         f'            <div class="hero-location">\n                <i class="fas fa-map-marker-alt"></i> {location_text}\n            </div>'
     )
+
+    # ---- Hero photo (HERO V2.1 photo mode): deterministic rotation from the curated set ----
+    _hero_n = (zlib.crc32(str(fsa_id).encode()) % 6) + 1
+    html = safe_sub(
+        r'<!-- DYNAMIC: hero_image \(replaces gradient when claimed\) -->',
+        '<!-- DYNAMIC: hero_image (replaces gradient when claimed) -->\n'
+        f'        <span class="hero-photo" aria-hidden="true" style="--hero-image: url(\'/hero/food-{_hero_n}.jpg\');"></span>',
+        html)
 
     # ---- Contact strip (mobile-first: phone/website/hours anchor in first fold) ----
     # Claimed listings get contact data from Quick Facts (middleware strips this).
