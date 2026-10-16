@@ -3071,6 +3071,16 @@ em { font-style: normal; font-weight: 700; }
   #main-nav .nav-r > a.td-claim { min-height: 44px; }
   #main-nav.td-masthead .td-links { gap: 12px; }
 }
+
+/* Mobile input sizing — flex-basis must not leak into the column axis.
+   (Desktop wants basis 300px on the ROW; mobile stacks, so basis must be auto.) */
+.owner-entry .hero-field { flex-direction: column; flex-wrap: nowrap; }
+.owner-entry .hero-inputwrap { flex: 0 0 auto; height: 56px; min-width: 0; }
+.owner-entry .hero-submit { flex: 0 0 auto; height: 56px; }
+@media (min-width: 768px) {
+  .owner-entry .hero-field { flex-direction: row; }
+  .owner-entry .hero-inputwrap { flex: 1 1 300px; }
+}
 </style>
 </body>
 
