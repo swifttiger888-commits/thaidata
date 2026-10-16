@@ -2187,7 +2187,7 @@ em { font-style: normal; font-weight: 700; }
       <!-- ░░ LEFT: the mobile stack, unchanged on desktop ░░ -->
       <div class="hero-col">
         <div class="hero-rule" aria-hidden="true"></div>
-        <h1 class="hero-h1">Thai restaurants across the UK.</h1>
+        <h1 class="hero-h1">Thai restaurants across the UK. <span class="hero-h1-owner">Own one?</span></h1>
         <p class="hero-lead">1,263 listings built from Food Standards Agency records.</p>
 
         <div class="hero-actions">
@@ -2196,8 +2196,8 @@ em { font-style: normal; font-weight: 700; }
         </div>
 
         <section class="owner-entry" id="claim-search" aria-labelledby="owner-entry-h">
-          <p class="owner-entry-h" id="owner-entry-h">Own a Thai restaurant?</p>
-          <p class="owner-entry-sub">Find and claim your free listing.</p>
+          <p class="owner-entry-h" id="owner-entry-h">Own or run a Thai restaurant?</p>
+          <p class="owner-entry-sub">Search for your restaurant by name. Claim it free to update your details, publish your menu, and be found by diners.</p>
 
           <form class="hero-form" id="hero-form" action="/claim/" method="get" role="search" autocomplete="off">
             <label class="hero-label" for="hero-q">Restaurant name</label>
@@ -3094,6 +3094,7 @@ em { font-style: normal; font-weight: 700; }
 @media (max-width: 640px) {
   .tools-strip.owner-menu-section { padding: 32px 0; }
 }
+.hero-h1-owner { display: block; color: var(--red); }
 </style>
 </body>
 
