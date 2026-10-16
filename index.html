@@ -2,17 +2,35 @@
 <html lang="en-GB">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) — deferred: loaded on first interaction, or an 8s
+       fallback. Its boot-up was the page's largest long task (~750ms) in the
+       mobile Lighthouse run. Consent defaults to denied here, before any hit;
+       the cookie banner upgrades it on accept. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
     gtag('js', new Date());
     gtag('config', 'G-B6RYQZX5QX');
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX';
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
+        window.addEventListener(ev, loadGtag, { once: true, passive: true });
+      });
+      setTimeout(loadGtag, 8000);
+    })();
   </script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary meta -->
   <title>Thai Restaurants UK — 1,263 Listings + Claim Yours Free | ThaiData UK</title>
@@ -52,9 +70,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500..800&family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500..800&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  
 
   <!-- Schema: Organization -->
   <script type="application/ld+json">
@@ -406,6 +424,38 @@
       align-items: center;
       justify-content: space-between;
       height: 72px;
+    }
+
+    /* Masthead geometry pinned BEFORE first paint. The console restyle further
+       down the page turns the nav from fixed (out of flow) to sticky (in flow);
+       without this copy the page lays out, then re-lays out ~1.8s later and main
+       jumps down 72px (measured CLS 0.134, mobile, Lighthouse 13.5). These
+       declarations mirror that block exactly, so the restyle changes nothing. */
+    #main-nav.td-masthead {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: block;
+      width: 100%;
+      height: 72px;
+      min-height: 72px;
+      padding: 0;
+    }
+
+    #main-nav.td-masthead .td-bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      max-width: 1100px;
+      height: 71px;
+      min-height: 0;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     .logo {
@@ -1937,7 +1987,7 @@
 @font-face {
   font-family: 'Archivo-fallback';
   src: local('Arial');
-  size-adjust: 100%;
+  size-adjust: 104%;
   ascent-override: 92%;
   descent-override: 24%;
   line-gap-override: 0%;
@@ -2147,13 +2197,568 @@ footer { background: var(--ink); color: var(--ivory); padding: 40px 0 32px; }
    was the least readable thing on the page. */
 em { font-style: normal; font-weight: 700; }
 </style>
+
+  <style id="hero-anchor-style">
+.hero .hero-rule {
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 0 0 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--red);
+}
+</style>
+  <style id="token-gaps">
+    /* Complete the token system. These three fell outside both stylesheets:
+       - body carried a literal rgb(15,23,42) instead of var(--ink)
+       - <h3> had no size, so it rendered at the browser default 1.17em (18.72px)
+       - buttons/inputs had no size, rendering at the control default 13.33px.
+         Setting 1rem also stops iOS zooming the viewport on input focus (<16px). */
+    body { color: var(--ink); }
+    h1, h2, h3, h4, h5, h6 { color: var(--ink); }
+    h3 { font-size: 1.125rem; }
+    h4, h5, h6 { font-size: 1rem; }
+    button, input, select, textarea { font-size: 1rem; }
+    small { font-size: 0.875rem; }
+  </style>
+<style id="td-masthead-css">
+#main-nav.td-masthead,
+#main-nav.td-masthead * {
+  box-sizing: border-box;
+}
+
+#main-nav.td-masthead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: block;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  padding: 0;
+  background: #FFFFFF;
+  color: #332F2B;
+  border: 0;
+  border-bottom: 1px solid #E5DED5;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", sans-serif;
+}
+
+#main-nav.td-masthead.td-fixed {
+  position: fixed;
+}
+
+#main-nav.td-masthead .td-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  height: 71px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: transparent;
+}
+
+#main-nav.td-masthead .td-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  color: #332F2B;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+#main-nav.td-masthead .td-mark {
+  display: block;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+#main-nav.td-masthead .td-wordmark {
+  color: #332F2B;
+}
+
+#main-nav.td-masthead .td-links {
+  position: static;
+  inset: auto;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0 0 0 auto;
+  padding: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  scrollbar-width: thin;
+}
+
+#main-nav.td-masthead .td-links > a,
+#main-nav.td-masthead .td-back {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 2px;
+  color: #4A403C !important;
+  background: transparent;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: none;
+}
+
+#main-nav.td-masthead .td-links > a.active,
+#main-nav.td-masthead .td-links > a[aria-current="page"],
+#main-nav.td-masthead .td-links > a:hover,
+#main-nav.td-masthead .td-back:hover {
+  color: #A61938 !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+#main-nav.td-masthead a:focus-visible {
+  outline: 2px solid #A61938;
+  outline-offset: 2px;
+}
+
+#main-nav.td-masthead .hamburger {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #main-nav.td-masthead .hamburger { display: block; }
+
+  /* Combo pattern: one link stays inline, the rest move into the drawer.
+     Keep the row a flex container but hide every child, then re-show the conversion link. */
+  #main-nav.td-masthead .td-links > a { display: none; }
+  #main-nav.td-masthead .td-links > a[href="/claim/"] {
+    display: inline-flex;
+    margin-left: auto;
+    padding-right: 4px;
+  }
+
+  #main-nav.td-masthead .td-links.open {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 6px 12px 12px;
+    overflow: visible;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--hairline);
+    box-shadow: 0 14px 28px rgba(28, 25, 23, 0.10);
+    z-index: 60;
+  }
+
+  #main-nav.td-masthead .td-links.open > a {
+    display: inline-flex;
+    width: 100%;
+    margin-left: 0;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  #main-nav.td-masthead .td-links.open > a:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 600px) {
+  #main-nav.td-masthead .td-bar {
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  #main-nav.td-masthead .td-brand {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  #main-nav.td-masthead .td-links {
+    gap: 12px;
+  }
+}
+</style>
+<style id="td-home-css">
+/* ── td-home ────────────────────────────────────────────────────────────────
+   The homepage's layout, spacing and type system, from openai/gpt-6-astra-pro's
+   review. One alignment rail, one spacing scale, one type scale with a job per
+   level. Loaded last so it is the final word without editing the legacy rules.
+
+   Rationale for the values is in the review: the search control's prominence is
+   not negotiable, the insight cards get MORE room than before (they are reading,
+   not a dashboard), and nothing here is a fixed height to manufacture a shorter
+   screenshot.
+   ------------------------------------------------------------------------- */
+:root {
+  --td-ink: #1C1917;
+  --td-muted: #57534E;
+  --td-paper: #FBF7F0;
+  --td-white: #FFFFFF;
+  --td-line: #D6D3D1;
+  --td-red: #A30F2D;
+}
+
+.td-home,
+.td-home * { box-sizing: border-box; }
+
+.td-home {
+  color: #1C1917;
+  font: 400 17px/26px "Inter", sans-serif;
+}
+
+:where(.td-home) :where(h1, h2, h3, p, ul, ol, figure) { margin: 0; }
+:where(.td-home) :where(input, button, select, textarea) { font-family: "Inter", sans-serif; }
+
+/* One rail: 1136px maximum, 152px of ground either side at 1440, 20px gutters at 390. */
+.td-home > section > .wrap {
+  width: calc(100% - 48px) !important;
+  max-width: 1136px !important;
+  margin-inline: auto !important;
+  padding: 0 !important;
+}
+
+/* Section rhythm. Hero breathes at the top because the masthead is now in flow. */
+.td-home .hero {
+  padding: 48px 0 64px !important;
+  background: var(--td-paper) !important;
+  border-bottom: 0 !important;
+}
+
+.td-home .insight-strip,
+.td-home .how-claim,
+.td-home .towns,
+.td-home .final-claim { padding: 64px 0 !important; }
+
+.td-home .insight-strip,
+.td-home .how-claim,
+.td-home .final-claim { background: var(--td-white); }
+
+.td-home .towns { background: var(--td-paper); }
+
+/* Type: nine roles, each with one job. */
+.td-home .hero-h1 {
+  font: 800 72px/76px "Archivo", sans-serif;
+  letter-spacing: -2px;
+}
+
+.td-home .hero-lead {
+  font: 400 20px/30px "Inter", sans-serif;
+  margin-top: 16px;
+  margin-bottom: 26px;   /* declared intent; the :where()
+     reset at byte ~115277 was winning this tie and zeroing it */
+}
+
+.td-home > section > .wrap > h2 {
+  font: 700 36px/40px "Archivo", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.td-home .insight-card h3,
+.td-home .how-claim h3,
+.td-home .step h3 {
+  font: 600 20px/28px "Archivo", sans-serif;
+}
+
+.td-home .label,
+.td-home .insight-card-label,
+.td-home .eyebrow {
+  font: 700 15px/20px "Inter", sans-serif;
+  color: var(--td-muted);
+}
+
+.td-home .insight-finding,
+.td-home .insight-detail,
+.td-home .towns p,
+.td-home .how-claim p {
+  font: 400 17px/26px "Inter", sans-serif;
+}
+
+.td-home .insight-detail,
+.td-home .towns p { color: var(--td-muted); }
+
+/* Internal relationships, as a scale rather than a set of accidents. */
+.td-home .insight-card { padding: 24px !important; }
+.td-home .insight-card-label { margin-bottom: 12px !important; }
+.td-home .insight-card h3 { margin-bottom: 12px !important; }
+.td-home .insight-card .insight-finding { margin-bottom: 12px !important; }
+.td-home .insight-card .insight-pill { margin-top: 16px; }
+.td-home .insight-strip-head { margin-bottom: 32px !important; }
+.td-home .insight-strip-head h2 { margin-top: 8px !important; }
+.td-home .how-claim .steps,
+.td-home .how-claim h2 + * { margin-top: 32px !important; }
+.td-home .how-claim h3 { margin-bottom: 8px !important; }
+.td-home .towns h2 { margin-top: 8px !important; }
+.td-home .towns .town-list { margin-top: 32px !important; }
+
+/* The final section is a left-aligned stack. Its paragraph was centred by a surviving
+   `margin: auto`, which put the copy at x=470 while the heading and button sat at x=152. */
+.td-home .final-claim h2 { text-align: left; }
+.td-home .final-copy {
+  max-width: 60ch;
+  margin: 16px 0 24px;
+  text-align: left;
+}
+
+/* The red pill was 3.95:1. It is now about 6.8:1. */
+.td-home .insight-pill {
+  display: inline-block;
+  max-width: 100%;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: normal;
+  font: 700 15px/20px "Inter", sans-serif;
+}
+
+.td-home .insight-pill.pill-red {
+  color: #991B1B;
+  background: #FEE2E2;
+}
+
+/* The search control keeps its prominence. */
+#hero-q {
+  min-height: 56px;
+  scroll-margin-top: 96px;
+}
+
+[data-find-restaurant] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+}
+
+/* Ten destinations in one row. They fit at 1440; on narrower desktops the row scrolls,
+   and a clipped final label reads as a broken character rather than as overflow. */
+@media (min-width: 768px) and (max-width: 1180px) {
+  #main-nav.td-masthead .td-links { gap: 10px; }
+  #main-nav.td-masthead .td-links > a { font-size: 14px; }
+}
+
+.td-home :where(a, button):focus-visible {
+  outline: 3px solid #1C1917;
+  outline-offset: 3px;
+}
+
+/* The search input must NOT get the ink focus ring: the field that owns it already
+   signals focus with a lacquer border, a turmeric outline and a soft red halo, and a
+   second ring painted inside the field read as a stray black box. */
+.td-home input:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .td-home > section > .wrap { width: calc(100% - 40px) !important; }
+
+  .td-home .hero { padding: 32px 0 48px !important; }
+
+  .td-home .insight-strip,
+  .td-home .how-claim,
+  .td-home .towns,
+  .td-home .final-claim { padding: 48px 0 !important; }
+
+  .td-home .hero-h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -1px;
+  }
+
+  .td-home .hero-lead {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .td-home > section > .wrap > h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  #hero-q { scroll-margin-top: 88px; }
+}
+</style>
+<style id="home-v3">
+/* ═══ HOME v3 — directory front door (Oct 2026) ═══ */
+.hero-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin: 0 0 30px; }
+.hero-browse { text-decoration: none; }
+.hero-areas { color: var(--red); font-weight: 600; font-size: 15px; }
+.hero-areas:hover { text-decoration: underline; }
+
+.owner-entry { max-width: 580px; background: var(--paper, #fff); border: 1px solid var(--hairline, #E7DFD5);
+  border-radius: 12px; padding: 20px 20px 18px; margin: 0; }
+.owner-entry .hero-field { flex-wrap: wrap; }
+.owner-entry .hero-inputwrap { flex: 1 1 300px; min-width: 0; }
+.owner-entry .hero-submit { flex: 0 1 auto; min-width: 0; white-space: nowrap; }
+.owner-entry-h { font-family: var(--display, 'Archivo', sans-serif); font-weight: 700; font-size: 1.0625rem; color: var(--ink); margin: 0 0 4px; }
+.owner-entry-sub { font-size: 15px; color: var(--ink-soft); margin: 0 0 14px; }
+.owner-entry .hero-label { display: block; margin-bottom: 6px; }
+.owner-entry .hero-meta { margin: 12px 0 0; }
+
+.hero-figure { margin: 0; }
+.hero-figure .hero-mapnote { margin-top: 12px; }
+.hero-figure .hero-mapnote a { color: var(--red); font-weight: 600; white-space: nowrap; }
+
+.tools-strip { padding: 56px 0; border-top: 1px solid var(--hairline); background: var(--ivory); }
+.tools-strip .label { font-family: var(--display, 'Archivo', sans-serif); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 10px; }
+.tools-strip h2 { font-family: var(--display, 'Archivo', sans-serif); font-size: clamp(1.625rem, 4.6vw, 2.25rem);
+  font-weight: 700; letter-spacing: -0.015em; line-height: 1.12; color: var(--ink); margin: 0 0 28px; max-width: 24ch; }
+.tool-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0 0 20px; }
+@media (min-width: 768px) { .tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+.tool-card { display: block; background: var(--paper, #fff); border: 1px solid var(--hairline, #E7DFD5);
+  border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+.tool-card:hover, .tool-card:focus-visible { border-color: var(--red); }
+.tool-card-t { display: block; font-family: var(--display, 'Archivo', sans-serif); font-weight: 700;
+  font-size: 1.125rem; color: var(--ink); margin: 0 0 6px; }
+.tool-card-d { display: block; font-size: 15px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 12px; }
+.tool-card-l { display: block; font-size: 14px; font-weight: 700; color: var(--red); }
+.tools-foot { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: baseline; margin: 0;
+  font-size: 15px; color: var(--ink-soft); }
+.tools-all { font-weight: 700; color: var(--red); }
+.tools-claim a { color: var(--red); font-weight: 600; }
+
+.how-benefits { font-size: 17px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 28px; max-width: 52ch; }
+
+.data-note { padding: 48px 0; border-top: 1px solid var(--hairline); background: var(--paper, #fff); }
+.data-note h2 { font-family: var(--display, 'Archivo', sans-serif); font-size: 1.5rem; font-weight: 700;
+  color: var(--ink); margin: 0 0 14px; }
+.data-note p { font-size: 15px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 10px; max-width: 78ch; }
+.data-note a { color: var(--red); font-weight: 600; }
+
+.ft-grouped { display: grid; grid-template-columns: 1fr; gap: 26px; }
+@media (min-width: 768px) { .ft-grouped { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; } }
+.ft-h { font-family: var(--display, 'Archivo', sans-serif); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin: 0 0 10px; }
+.ft-col a { display: block; padding: 3px 0; }
+
+/* Nav — mobile bar: logo + Claim + menu, never clipped */
+@media (max-width: 768px) {
+  #main-nav.td-masthead .td-links { overflow: visible; max-width: none; }
+  #main-nav .nav-r { overflow: visible; }
+  #main-nav .nav-r > a { display: none; }
+  #main-nav .nav-r > a.td-claim { display: inline-flex; align-items: center; white-space: nowrap; }
+  #main-nav .nav-r.open > a, #main-nav .nav-r.is-open > a, #main-nav .nav-r.active > a { display: block; }
+}
+@media (max-width: 420px) {
+  #main-nav .td-wordmark { display: none; }
+}
+
+/* Mobile rhythm */
+@media (max-width: 768px) {
+  .hero-actions { margin-bottom: 22px; gap: 12px 16px; }
+  .hero-actions .hero-browse { width: 100%; text-align: center; justify-content: center; }
+  .owner-entry { padding: 16px; }
+  .tools-strip, .data-note { padding: 40px 0; }
+  .hero-h1 { font-size: 2.125rem; }
+}
+
+/* Review pass 3 */
+@media (min-width: 768px) {
+  .hero-actions { align-items: flex-start; text-align: left; }
+}
+.towns { padding-bottom: 32px; }
+.tools-strip { padding: 40px 0 48px; }
+.owner-entry .hero-inputwrap { border: 1px solid var(--line, #E7DFD5); box-shadow: none; height: 56px; }
+.owner-entry .hero-field { border: 0; box-shadow: none; background: transparent; padding: 0; }
+.owner-entry .hero-submit { height: 56px; }
+.owner-entry .hero-input { font-size: 17px; }
+.owner-entry .hero-inputwrap:focus-within { border-color: var(--ink, #1A1614); outline: 3px solid var(--turmeric, #F2B21A); outline-offset: 2px; }
+@media (max-width: 768px) {
+  #main-nav .hamburger { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  #main-nav .nav-r > a.td-claim { min-height: 44px; }
+  #main-nav.td-masthead .td-links { gap: 12px; }
+}
+
+/* Mobile input sizing — flex-basis must not leak into the column axis.
+   (Desktop wants basis 300px on the ROW; mobile stacks, so basis must be auto.) */
+.owner-entry .hero-field { flex-direction: column; flex-wrap: nowrap; }
+.owner-entry .hero-inputwrap { flex: 0 0 auto; height: 56px; min-width: 0; }
+.owner-entry .hero-submit { flex: 0 0 auto; height: 56px; }
+@media (min-width: 768px) {
+  .owner-entry .hero-field { flex-direction: row; }
+  .owner-entry .hero-inputwrap { flex: 1 1 300px; }
+}
+
+/* Owner-menu pitch (replaces the tool cards) */
+.tools-strip.owner-menu-section { padding: 40px 0; }
+.owner-menu { max-width: 640px; }
+.owner-menu > * { margin: 0; }
+.owner-menu .label { margin: 0 0 8px; }
+.owner-menu h2 { margin: 0 0 12px; }
+.owner-menu__support { margin: 0 0 16px; font-size: 16px; line-height: 1.5; color: var(--ink-soft); }
+.owner-menu__cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--red); border-radius: 10px; color: var(--red); background: transparent; font-size: 16px; font-weight: 700; text-decoration: none; }
+.owner-menu__cta:hover { text-decoration: underline; }
+.owner-menu__reassurance { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--ink-mute); }
+.owner-menu__proof { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--ink-mute); }
+.owner-menu .tools-foot { margin: 12px 0 0; font-size: 16px; }
+.owner-menu .tools-all { text-decoration: underline; }
+#claim-search { scroll-margin-top: 96px; }
+@media (max-width: 640px) {
+  .tools-strip.owner-menu-section { padding: 32px 0; }
+}
+.hero-h1-owner { display: block; color: var(--red); }
+</style>
 <body>
   <div class="grain"></div>
 
   <!-- NAV -->
   <nav id="main-nav" class="td-masthead" aria-label="Primary">
     <div class="nav-bar td-bar">
-      <a href="/" class="logo td-brand">
+      <a href="/" class="logo td-brand" aria-label="ThaiData UK — home">
         <img class="td-mark" src="/thaidata-mark-v2.svg" alt="" width="32" height="32" aria-hidden="true"><span class="td-wordmark">ThaiData UK</span>
       </a>
       <div class="nav-r td-links">
@@ -2169,17 +2774,6 @@ em { font-style: normal; font-weight: 700; }
 
   <!-- HERO — ONE pitch: find your restaurant, claim it free -->
   <main class="td-home">
-  <style id="hero-anchor-style">
-.hero .hero-rule {
-  display: block;
-  width: 64px;
-  height: 4px;
-  margin: 0 0 16px;
-  border: 0;
-  border-radius: 0;
-  background: var(--red);
-}
-</style>
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
@@ -2551,551 +3145,8 @@ em { font-style: normal; font-weight: 700; }
   <script src="privacy-banner.js" defer></script>
 
 
-  <style id="token-gaps">
-    /* Complete the token system. These three fell outside both stylesheets:
-       - body carried a literal rgb(15,23,42) instead of var(--ink)
-       - <h3> had no size, so it rendered at the browser default 1.17em (18.72px)
-       - buttons/inputs had no size, rendering at the control default 13.33px.
-         Setting 1rem also stops iOS zooming the viewport on input focus (<16px). */
-    body { color: var(--ink); }
-    h1, h2, h3, h4, h5, h6 { color: var(--ink); }
-    h3 { font-size: 1.125rem; }
-    h4, h5, h6 { font-size: 1rem; }
-    button, input, select, textarea { font-size: 1rem; }
-    small { font-size: 0.875rem; }
-  </style>
 
-<style id="td-masthead-css">
-#main-nav.td-masthead,
-#main-nav.td-masthead * {
-  box-sizing: border-box;
-}
 
-#main-nav.td-masthead {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 200;
-  display: block;
-  width: 100%;
-  height: 72px;
-  min-height: 72px;
-  padding: 0;
-  background: #FFFFFF;
-  color: #332F2B;
-  border: 0;
-  border-bottom: 1px solid #E5DED5;
-  box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  transition: none;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", sans-serif;
-}
-
-#main-nav.td-masthead.td-fixed {
-  position: fixed;
-}
-
-#main-nav.td-masthead .td-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  width: 100%;
-  max-width: 1100px;
-  height: 71px;
-  min-height: 0;
-  margin: 0 auto;
-  padding: 0 20px;
-  background: transparent;
-}
-
-#main-nav.td-masthead .td-brand {
-  display: inline-flex;
-  align-items: center;
-  flex: 0 0 auto;
-  gap: 10px;
-  min-height: 44px;
-  margin: 0;
-  padding: 0;
-  color: #332F2B;
-  background: transparent;
-  border: 0;
-  border-radius: 2px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-#main-nav.td-masthead .td-mark {
-  display: block;
-  flex: 0 0 32px;
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-#main-nav.td-masthead .td-wordmark {
-  color: #332F2B;
-}
-
-#main-nav.td-masthead .td-links {
-  position: static;
-  inset: auto;
-  display: flex;
-  flex: 0 1 auto;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-  width: auto;
-  min-width: 0;
-  max-width: 100%;
-  height: auto;
-  max-height: none;
-  margin: 0 0 0 auto;
-  padding: 4px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  visibility: visible;
-  opacity: 1;
-  transform: none;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  scrollbar-width: thin;
-}
-
-#main-nav.td-masthead .td-links > a,
-#main-nav.td-masthead .td-back {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  min-height: 44px;
-  margin: 0;
-  padding: 10px 2px;
-  color: #4A403C !important;
-  background: transparent;
-  border: 0;
-  border-radius: 2px;
-  box-shadow: none;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: normal;
-  text-transform: none;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: none;
-}
-
-#main-nav.td-masthead .td-links > a.active,
-#main-nav.td-masthead .td-links > a[aria-current="page"],
-#main-nav.td-masthead .td-links > a:hover,
-#main-nav.td-masthead .td-back:hover {
-  color: #A61938 !important;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
-#main-nav.td-masthead a:focus-visible {
-  outline: 2px solid #A61938;
-  outline-offset: 2px;
-}
-
-#main-nav.td-masthead .hamburger {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  #main-nav.td-masthead .hamburger { display: block; }
-
-  /* Combo pattern: one link stays inline, the rest move into the drawer.
-     Keep the row a flex container but hide every child, then re-show the conversion link. */
-  #main-nav.td-masthead .td-links > a { display: none; }
-  #main-nav.td-masthead .td-links > a[href="/claim/"] {
-    display: inline-flex;
-    margin-left: auto;
-    padding-right: 4px;
-  }
-
-  #main-nav.td-masthead .td-links.open {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    gap: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: auto;
-    max-width: none;
-    margin: 0;
-    padding: 6px 12px 12px;
-    overflow: visible;
-    background: var(--ivory);
-    border-bottom: 1px solid var(--hairline);
-    box-shadow: 0 14px 28px rgba(28, 25, 23, 0.10);
-    z-index: 60;
-  }
-
-  #main-nav.td-masthead .td-links.open > a {
-    display: inline-flex;
-    width: 100%;
-    margin-left: 0;
-    padding: 12px 4px;
-    border-bottom: 1px solid var(--hairline);
-  }
-
-  #main-nav.td-masthead .td-links.open > a:last-child { border-bottom: 0; }
-}
-
-@media (max-width: 600px) {
-  #main-nav.td-masthead .td-bar {
-    gap: 16px;
-    padding: 0 12px;
-  }
-
-  #main-nav.td-masthead .td-brand {
-    gap: 8px;
-    font-size: 18px;
-  }
-
-  #main-nav.td-masthead .td-links {
-    gap: 12px;
-  }
-}
-</style>
-
-<style id="td-home-css">
-/* ── td-home ────────────────────────────────────────────────────────────────
-   The homepage's layout, spacing and type system, from openai/gpt-6-astra-pro's
-   review. One alignment rail, one spacing scale, one type scale with a job per
-   level. Loaded last so it is the final word without editing the legacy rules.
-
-   Rationale for the values is in the review: the search control's prominence is
-   not negotiable, the insight cards get MORE room than before (they are reading,
-   not a dashboard), and nothing here is a fixed height to manufacture a shorter
-   screenshot.
-   ------------------------------------------------------------------------- */
-:root {
-  --td-ink: #1C1917;
-  --td-muted: #57534E;
-  --td-paper: #FBF7F0;
-  --td-white: #FFFFFF;
-  --td-line: #D6D3D1;
-  --td-red: #A30F2D;
-}
-
-.td-home,
-.td-home * { box-sizing: border-box; }
-
-.td-home {
-  color: #1C1917;
-  font: 400 17px/26px "Inter", sans-serif;
-}
-
-:where(.td-home) :where(h1, h2, h3, p, ul, ol, figure) { margin: 0; }
-:where(.td-home) :where(input, button, select, textarea) { font-family: "Inter", sans-serif; }
-
-/* One rail: 1136px maximum, 152px of ground either side at 1440, 20px gutters at 390. */
-.td-home > section > .wrap {
-  width: calc(100% - 48px) !important;
-  max-width: 1136px !important;
-  margin-inline: auto !important;
-  padding: 0 !important;
-}
-
-/* Section rhythm. Hero breathes at the top because the masthead is now in flow. */
-.td-home .hero {
-  padding: 48px 0 64px !important;
-  background: var(--td-paper) !important;
-  border-bottom: 0 !important;
-}
-
-.td-home .insight-strip,
-.td-home .how-claim,
-.td-home .towns,
-.td-home .final-claim { padding: 64px 0 !important; }
-
-.td-home .insight-strip,
-.td-home .how-claim,
-.td-home .final-claim { background: var(--td-white); }
-
-.td-home .towns { background: var(--td-paper); }
-
-/* Type: nine roles, each with one job. */
-.td-home .hero-h1 {
-  font: 800 72px/76px "Archivo", sans-serif;
-  letter-spacing: -2px;
-}
-
-.td-home .hero-lead {
-  font: 400 20px/30px "Inter", sans-serif;
-  margin-top: 16px;
-  margin-bottom: 26px;   /* declared intent; the :where()
-     reset at byte ~115277 was winning this tie and zeroing it */
-}
-
-.td-home > section > .wrap > h2 {
-  font: 700 36px/40px "Archivo", sans-serif;
-  letter-spacing: -0.5px;
-}
-
-.td-home .insight-card h3,
-.td-home .how-claim h3,
-.td-home .step h3 {
-  font: 600 20px/28px "Archivo", sans-serif;
-}
-
-.td-home .label,
-.td-home .insight-card-label,
-.td-home .eyebrow {
-  font: 700 15px/20px "Inter", sans-serif;
-  color: var(--td-muted);
-}
-
-.td-home .insight-finding,
-.td-home .insight-detail,
-.td-home .towns p,
-.td-home .how-claim p {
-  font: 400 17px/26px "Inter", sans-serif;
-}
-
-.td-home .insight-detail,
-.td-home .towns p { color: var(--td-muted); }
-
-/* Internal relationships, as a scale rather than a set of accidents. */
-.td-home .insight-card { padding: 24px !important; }
-.td-home .insight-card-label { margin-bottom: 12px !important; }
-.td-home .insight-card h3 { margin-bottom: 12px !important; }
-.td-home .insight-card .insight-finding { margin-bottom: 12px !important; }
-.td-home .insight-card .insight-pill { margin-top: 16px; }
-.td-home .insight-strip-head { margin-bottom: 32px !important; }
-.td-home .insight-strip-head h2 { margin-top: 8px !important; }
-.td-home .how-claim .steps,
-.td-home .how-claim h2 + * { margin-top: 32px !important; }
-.td-home .how-claim h3 { margin-bottom: 8px !important; }
-.td-home .towns h2 { margin-top: 8px !important; }
-.td-home .towns .town-list { margin-top: 32px !important; }
-
-/* The final section is a left-aligned stack. Its paragraph was centred by a surviving
-   `margin: auto`, which put the copy at x=470 while the heading and button sat at x=152. */
-.td-home .final-claim h2 { text-align: left; }
-.td-home .final-copy {
-  max-width: 60ch;
-  margin: 16px 0 24px;
-  text-align: left;
-}
-
-/* The red pill was 3.95:1. It is now about 6.8:1. */
-.td-home .insight-pill {
-  display: inline-block;
-  max-width: 100%;
-  padding: 4px 12px;
-  border-radius: 999px;
-  white-space: normal;
-  font: 700 15px/20px "Inter", sans-serif;
-}
-
-.td-home .insight-pill.pill-red {
-  color: #991B1B;
-  background: #FEE2E2;
-}
-
-/* The search control keeps its prominence. */
-#hero-q {
-  min-height: 56px;
-  scroll-margin-top: 96px;
-}
-
-[data-find-restaurant] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-}
-
-/* Ten destinations in one row. They fit at 1440; on narrower desktops the row scrolls,
-   and a clipped final label reads as a broken character rather than as overflow. */
-@media (min-width: 768px) and (max-width: 1180px) {
-  #main-nav.td-masthead .td-links { gap: 10px; }
-  #main-nav.td-masthead .td-links > a { font-size: 14px; }
-}
-
-.td-home :where(a, button):focus-visible {
-  outline: 3px solid #1C1917;
-  outline-offset: 3px;
-}
-
-/* The search input must NOT get the ink focus ring: the field that owns it already
-   signals focus with a lacquer border, a turmeric outline and a soft red halo, and a
-   second ring painted inside the field read as a stray black box. */
-.td-home input:focus-visible {
-  outline: none;
-}
-
-@media (max-width: 767px) {
-  .td-home > section > .wrap { width: calc(100% - 40px) !important; }
-
-  .td-home .hero { padding: 32px 0 48px !important; }
-
-  .td-home .insight-strip,
-  .td-home .how-claim,
-  .td-home .towns,
-  .td-home .final-claim { padding: 48px 0 !important; }
-
-  .td-home .hero-h1 {
-    font-size: 40px;
-    line-height: 44px;
-    letter-spacing: -1px;
-  }
-
-  .td-home .hero-lead {
-    font-size: 17px;
-    line-height: 26px;
-  }
-
-  .td-home > section > .wrap > h2 {
-    font-size: 28px;
-    line-height: 32px;
-  }
-
-  #hero-q { scroll-margin-top: 88px; }
-}
-</style>
-<style id="home-v3">
-/* ═══ HOME v3 — directory front door (Oct 2026) ═══ */
-.hero-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin: 0 0 30px; }
-.hero-browse { text-decoration: none; }
-.hero-areas { color: var(--red); font-weight: 600; font-size: 15px; }
-.hero-areas:hover { text-decoration: underline; }
-
-.owner-entry { max-width: 580px; background: var(--paper, #fff); border: 1px solid var(--hairline, #E7DFD5);
-  border-radius: 12px; padding: 20px 20px 18px; margin: 0; }
-.owner-entry .hero-field { flex-wrap: wrap; }
-.owner-entry .hero-inputwrap { flex: 1 1 300px; min-width: 0; }
-.owner-entry .hero-submit { flex: 0 1 auto; min-width: 0; white-space: nowrap; }
-.owner-entry-h { font-family: var(--display, 'Archivo', sans-serif); font-weight: 700; font-size: 1.0625rem; color: var(--ink); margin: 0 0 4px; }
-.owner-entry-sub { font-size: 15px; color: var(--ink-soft); margin: 0 0 14px; }
-.owner-entry .hero-label { display: block; margin-bottom: 6px; }
-.owner-entry .hero-meta { margin: 12px 0 0; }
-
-.hero-figure { margin: 0; }
-.hero-figure .hero-mapnote { margin-top: 12px; }
-.hero-figure .hero-mapnote a { color: var(--red); font-weight: 600; white-space: nowrap; }
-
-.tools-strip { padding: 56px 0; border-top: 1px solid var(--hairline); background: var(--ivory); }
-.tools-strip .label { font-family: var(--display, 'Archivo', sans-serif); font-size: 13px; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 10px; }
-.tools-strip h2 { font-family: var(--display, 'Archivo', sans-serif); font-size: clamp(1.625rem, 4.6vw, 2.25rem);
-  font-weight: 700; letter-spacing: -0.015em; line-height: 1.12; color: var(--ink); margin: 0 0 28px; max-width: 24ch; }
-.tool-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0 0 20px; }
-@media (min-width: 768px) { .tool-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
-.tool-card { display: block; background: var(--paper, #fff); border: 1px solid var(--hairline, #E7DFD5);
-  border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
-.tool-card:hover, .tool-card:focus-visible { border-color: var(--red); }
-.tool-card-t { display: block; font-family: var(--display, 'Archivo', sans-serif); font-weight: 700;
-  font-size: 1.125rem; color: var(--ink); margin: 0 0 6px; }
-.tool-card-d { display: block; font-size: 15px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 12px; }
-.tool-card-l { display: block; font-size: 14px; font-weight: 700; color: var(--red); }
-.tools-foot { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: baseline; margin: 0;
-  font-size: 15px; color: var(--ink-soft); }
-.tools-all { font-weight: 700; color: var(--red); }
-.tools-claim a { color: var(--red); font-weight: 600; }
-
-.how-benefits { font-size: 17px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 28px; max-width: 52ch; }
-
-.data-note { padding: 48px 0; border-top: 1px solid var(--hairline); background: var(--paper, #fff); }
-.data-note h2 { font-family: var(--display, 'Archivo', sans-serif); font-size: 1.5rem; font-weight: 700;
-  color: var(--ink); margin: 0 0 14px; }
-.data-note p { font-size: 15px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 10px; max-width: 78ch; }
-.data-note a { color: var(--red); font-weight: 600; }
-
-.ft-grouped { display: grid; grid-template-columns: 1fr; gap: 26px; }
-@media (min-width: 768px) { .ft-grouped { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; } }
-.ft-h { font-family: var(--display, 'Archivo', sans-serif); font-size: 12px; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin: 0 0 10px; }
-.ft-col a { display: block; padding: 3px 0; }
-
-/* Nav — mobile bar: logo + Claim + menu, never clipped */
-@media (max-width: 768px) {
-  #main-nav.td-masthead .td-links { overflow: visible; max-width: none; }
-  #main-nav .nav-r { overflow: visible; }
-  #main-nav .nav-r > a { display: none; }
-  #main-nav .nav-r > a.td-claim { display: inline-flex; align-items: center; white-space: nowrap; }
-  #main-nav .nav-r.open > a, #main-nav .nav-r.is-open > a, #main-nav .nav-r.active > a { display: block; }
-}
-@media (max-width: 420px) {
-  #main-nav .td-wordmark { display: none; }
-}
-
-/* Mobile rhythm */
-@media (max-width: 768px) {
-  .hero-actions { margin-bottom: 22px; gap: 12px 16px; }
-  .hero-actions .hero-browse { width: 100%; text-align: center; justify-content: center; }
-  .owner-entry { padding: 16px; }
-  .tools-strip, .data-note { padding: 40px 0; }
-  .hero-h1 { font-size: 2.125rem; }
-}
-
-/* Review pass 3 */
-@media (min-width: 768px) {
-  .hero-actions { align-items: flex-start; text-align: left; }
-}
-.towns { padding-bottom: 32px; }
-.tools-strip { padding: 40px 0 48px; }
-.owner-entry .hero-inputwrap { border: 1px solid var(--line, #E7DFD5); box-shadow: none; height: 56px; }
-.owner-entry .hero-field { border: 0; box-shadow: none; background: transparent; padding: 0; }
-.owner-entry .hero-submit { height: 56px; }
-.owner-entry .hero-input { font-size: 17px; }
-.owner-entry .hero-inputwrap:focus-within { border-color: var(--ink, #1A1614); outline: 3px solid var(--turmeric, #F2B21A); outline-offset: 2px; }
-@media (max-width: 768px) {
-  #main-nav .hamburger { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
-  #main-nav .nav-r > a.td-claim { min-height: 44px; }
-  #main-nav.td-masthead .td-links { gap: 12px; }
-}
-
-/* Mobile input sizing — flex-basis must not leak into the column axis.
-   (Desktop wants basis 300px on the ROW; mobile stacks, so basis must be auto.) */
-.owner-entry .hero-field { flex-direction: column; flex-wrap: nowrap; }
-.owner-entry .hero-inputwrap { flex: 0 0 auto; height: 56px; min-width: 0; }
-.owner-entry .hero-submit { flex: 0 0 auto; height: 56px; }
-@media (min-width: 768px) {
-  .owner-entry .hero-field { flex-direction: row; }
-  .owner-entry .hero-inputwrap { flex: 1 1 300px; }
-}
-
-/* Owner-menu pitch (replaces the tool cards) */
-.tools-strip.owner-menu-section { padding: 40px 0; }
-.owner-menu { max-width: 640px; }
-.owner-menu > * { margin: 0; }
-.owner-menu .label { margin: 0 0 8px; }
-.owner-menu h2 { margin: 0 0 12px; }
-.owner-menu__support { margin: 0 0 16px; font-size: 16px; line-height: 1.5; color: var(--ink-soft); }
-.owner-menu__cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--red); border-radius: 10px; color: var(--red); background: transparent; font-size: 16px; font-weight: 700; text-decoration: none; }
-.owner-menu__cta:hover { text-decoration: underline; }
-.owner-menu__reassurance { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--ink-mute); }
-.owner-menu__proof { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--ink-mute); }
-.owner-menu .tools-foot { margin: 12px 0 0; font-size: 16px; }
-.owner-menu .tools-all { text-decoration: underline; }
-#claim-search { scroll-margin-top: 96px; }
-@media (max-width: 640px) {
-  .tools-strip.owner-menu-section { padding: 32px 0; }
-}
-.hero-h1-owner { display: block; color: var(--red); }
-</style>
 </body>
 
 </html>

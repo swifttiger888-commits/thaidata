@@ -136,12 +136,8 @@
         dismiss('denied');
     };
 
-    // 5. Default Consent State (Deny until accepted)
-    if (typeof gtag === 'function') {
-        gtag('consent', 'default', {
-            'analytics_storage': 'denied',
-            'ad_storage': 'denied'
-        });
-    }
+    // 5. Consent default is set inline in each page's <head> (before any gtag
+    //    hit). This script only UPGRADES it via the buttons above. Keeping the
+    //    default here duplicated it and ran it after gtag had already loaded.
 
 })();
