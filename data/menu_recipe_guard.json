@@ -1,0 +1,277 @@
+{
+ "_comment": "Step-0 hotfix (16 Oct 2026): stops recipe images/links that misrepresent menu items. plant_safe_slugs = photos verified by vision to show no animal product. denylist: {fsa_id: {normalised item name: {image, link}}}. Superseded by the v1 profile engine.",
+ "denylist": {
+  "1095723": {
+   "laab oyster mushroom salad": {
+    "image": false,
+    "link": true
+   }
+  },
+  "1203493": {
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice (v)": {
+    "image": false,
+    "link": false
+   }
+  },
+  "1289058": {
+   "prawn & chicken toasts (c)(g)(se)": {
+    "image": false,
+    "link": true
+   }
+  },
+  "1558152": {
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   }
+  },
+  "1645974": {
+   "duck spring roll": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   }
+  },
+  "1709016": {
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "sesame prawn & chicken toast": {
+    "image": false,
+    "link": true
+   }
+  },
+  "1790755": {
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "khanom pang gai (chicken toast)": {
+    "image": false,
+    "link": true
+   }
+  },
+  "1909079": {
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "sesame prawn and chicken toast": {
+    "image": false,
+    "link": true
+   },
+   "tom yam egg fried rice": {
+    "image": false,
+    "link": true
+   }
+  },
+  "194428": {
+   "duck spring roll": {
+    "image": false,
+    "link": true
+   }
+  },
+  "1966538": {
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "prawn toast": {
+    "image": false,
+    "link": true
+   },
+   "street style special egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "vegetable spring rolls": {
+    "image": false,
+    "link": false
+   }
+  },
+  "264217": {
+   "deep fried large duck spring roll": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "roast duck chow mein": {
+    "image": false,
+    "link": false
+   }
+  },
+  "330059": {
+   "chicken & prawn toast": {
+    "image": false,
+    "link": true
+   },
+   "duck spring rolls": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "vegetable spring roll (v)": {
+    "image": false,
+    "link": false
+   }
+  },
+  "333836": {
+   "spring rolls (veg-6pcs)": {
+    "image": false,
+    "link": false
+   }
+  },
+  "372004": {
+   "2 x egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "3 x egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "chu chee prawns": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice chicken": {
+    "image": false,
+    "link": true
+   },
+   "king prawn spring rolls": {
+    "image": false,
+    "link": true
+   },
+   "pork with ginger": {
+    "image": false,
+    "link": true
+   }
+  },
+  "421133": {
+   "duck spring roll": {
+    "image": false,
+    "link": true
+   },
+   "duck spring rolls": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "pad king sot (kp, du, ch, be, pork,veg)": {
+    "image": false,
+    "link": false
+   },
+   "sweet corn cakes and prawn spring rolls": {
+    "image": false,
+    "link": false
+   },
+   "tom kha king prawns or chicken": {
+    "image": false,
+    "link": true
+   }
+  },
+  "537906": {
+   "egg fried rice (s/g/e/*)": {
+    "image": false,
+    "link": true
+   },
+   "tofu pad khing (v) (s/g/se/*)": {
+    "image": false,
+    "link": false
+   }
+  },
+  "660482": {
+   "duck spring rolls": {
+    "image": false,
+    "link": true
+   },
+   "prawn toast": {
+    "image": false,
+    "link": true
+   }
+  },
+  "687502": {
+   "selection of satay chicken, vegetable spring rolls, sesame prawn toast, fried chicken wings & tiger prawns in batter": {
+    "image": false,
+    "link": false
+   }
+  },
+  "776717": {
+   "deep fried tofu satay (gf, ve, n)": {
+    "image": false,
+    "link": false
+   },
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "roast duck spring rolls": {
+    "image": false,
+    "link": true
+   },
+   "vegetable spring rolls": {
+    "image": false,
+    "link": false
+   },
+   "vegetable spring rolls (ve)": {
+    "image": false,
+    "link": false
+   }
+  },
+  "997537": {
+   "chicken on toast": {
+    "image": false,
+    "link": true
+   },
+   "chicken spring rolls": {
+    "image": false,
+    "link": true
+   },
+   "egg fried rice": {
+    "image": false,
+    "link": true
+   },
+   "larb chicken / pork (minced)": {
+    "image": false,
+    "link": true
+   },
+   "seafood yum wun sen": {
+    "image": false,
+    "link": true
+   },
+   "tom kha chicken/prawns": {
+    "image": false,
+    "link": true
+   },
+   "veg spring rolls": {
+    "image": false,
+    "link": false
+   }
+  }
+ },
+ "plant_safe_slugs": [
+  "tao-hoo-tod",
+  "yum-tofu"
+ ]
+}

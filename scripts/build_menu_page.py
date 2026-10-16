@@ -22,7 +22,7 @@ Input JSON schema:
   "addons": [ {num,name,description,price,vegetarian,heat}, ... ]
 }
 """
-import json, os, re, sys, html, datetime
+import json, os, re, sys, html, datetime, unicodedata
 from urllib.parse import quote
 
 def money(p):
@@ -59,6 +59,57 @@ _ALIAS_TOK = {
     s: [_tokens(a) for a in e.get("aliases", []) if _tokens(a)]
     for s, e in _ALIASES.items()
 }
+
+# --- recipe render guard (Step-0 hotfix, Oct 2026) ---
+# Why: the alias matcher folds protein and dietary variants into one recipe, so a
+# vegetarian item could render an image of the pork version (and similar swaps).
+# The guard decides image vs link vs nothing per item; a diet-marked item may only
+# render a recipe whose photo is on the verified plant-safe allowlist.
+# Data: data/menu_recipe_guard.json. Superseded by the v1 profile engine.
+_GUARD_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "menu_recipe_guard.json")
+try:
+    _GUARD = json.load(open(_GUARD_PATH, encoding="utf-8"))
+except Exception:
+    _GUARD = {"plant_safe_slugs": [], "denylist": {}}
+_PLANT_SAFE = set(_GUARD.get("plant_safe_slugs") or [])
+_DENY = _GUARD.get("denylist") or {}
+_DIET_RE = re.compile(r"\b(ve|vg|v|vegetarian|vegan|veg|vegetable|jay|jae)\b", re.I)
+_DIET_CAT_RE = re.compile(r"vegetarian|vegan|veggie|plant", re.I)
+
+
+def _norm_name(s):
+    s = unicodedata.normalize("NFKC", s or "").lower()
+    return re.sub(r"\s+", " ", s).strip().rstrip(" .")
+
+
+def _is_diet_item(it, name, category):
+    if it.get("vegetarian"):
+        return True
+    if _DIET_RE.search(name or ""):
+        return True
+    return bool(category and _DIET_CAT_RE.search(category))
+
+
+def recipe_render_for(it, fsa_id=None, category=None):
+    """(slug, mode) where mode is 'image' | 'link' | 'none'.
+
+    Order: no match -> nothing; diet-marked item off the plant-safe allowlist ->
+    nothing (image AND link: the linked recipe text is the meat version too);
+    curated denylist entry -> its recorded action; otherwise -> image.
+    """
+    name = it.get("name") or ""
+    slug = recipe_slug_for(name)
+    if not slug:
+        return None, "none"
+    if _is_diet_item(it, name, category) and slug not in _PLANT_SAFE:
+        return None, "none"
+    entry = (_DENY.get(str(fsa_id)) or {}).get(_norm_name(name))
+    if entry is not None:
+        if not entry.get("image") and not entry.get("link"):
+            return None, "none"
+        if not entry.get("image"):
+            return slug, "link"
+    return slug, "image"
 
 
 def recipe_slug_for(dish_name):
@@ -100,7 +151,7 @@ def recipe_title_for(slug):
 def esc(s):
     return html.escape(s or "", quote=True)
 
-def dish_html(it, protein_tiers=None):
+def dish_html(it, protein_tiers=None, fsa_id=None, category=None):
     price = money(it.get("price"))
     veg = it.get("vegetarian")
     spice = it.get("spice")
@@ -129,21 +180,20 @@ def dish_html(it, protein_tiers=None):
         bits.append(f'<p class="dish-desc">{esc(it["description"])}</p>')
     if it.get("price_note"):
         bits.append(f'<p class="dish-note">{esc(it["price_note"])}</p>')
-    rslug = recipe_slug_for(it.get("name") or "")
-    if rslug:
-        if os.path.isfile(os.path.join("recipes", rslug, rslug + ".jpg")):
-            bits.append(
-                f'<a class="recipe-link" href="/recipes/{rslug}/">'
-                f'<img src="/recipes/{rslug}/{rslug}.jpg" alt="" loading="lazy" width="1200" height="675">'
-                f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
-                f' · how this dish is typically made</span></a>'
-            )
-        else:
-            bits.append(
-                f'<a class="recipe-link recipe-link-noimg" href="/recipes/{rslug}/">'
-                f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
-                f' · how this dish is typically made</span></a>'
-            )
+    rslug, rmode = recipe_render_for(it, fsa_id=fsa_id, category=category)
+    if rslug and rmode == "image" and os.path.isfile(os.path.join("recipes", rslug, rslug + ".jpg")):
+        bits.append(
+            f'<a class="recipe-link" href="/recipes/{rslug}/">'
+            f'<img src="/recipes/{rslug}/{rslug}.jpg" alt="" loading="lazy" width="1200" height="675">'
+            f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
+            f' · how this dish is typically made</span></a>'
+        )
+    elif rslug:
+        bits.append(
+            f'<a class="recipe-link recipe-link-noimg" href="/recipes/{rslug}/">'
+            f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
+            f' · how this dish is typically made</span></a>'
+        )
     bits.append("</div></li>")
     return "".join(bits)
 
@@ -228,7 +278,7 @@ def build(data, dst=None):
     sections = []
     for c, dishes in cats.items():
         cid = re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
-        rows = "".join(dish_html(d) for d in sorted(dishes, key=dish_sort_key))
+        rows = "".join(dish_html(d, fsa_id=data.get("fsa_id"), category=c) for d in sorted(dishes, key=dish_sort_key))
         callout = tier_html if c == "Main Courses" and tier_html else ""
         sections.append(
             f'<section class="cat" id="cat-{cid}">'
@@ -236,7 +286,7 @@ def build(data, dst=None):
             f'<ul class="dishes">{rows}</ul></section>'
         )
     if data.get("addons"):
-        rows = "".join(dish_html(d) for d in data["addons"])
+        rows = "".join(dish_html(d, fsa_id=data.get("fsa_id")) for d in data["addons"])
         sections.append(
             '<section class="cat" id="cat-addons"><h2 class="cat-title">Add to any meal</h2>'
             f'<ul class="dishes">{rows}</ul></section>'
