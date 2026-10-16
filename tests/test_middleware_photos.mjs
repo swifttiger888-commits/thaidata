@@ -206,4 +206,53 @@ const SAMPLE_HTML_RATED = `<!DOCTYPE html><html><head><title>Test</title>
   console.log('PASS 13: contact strip kept on unclaimed page');
 }
 
+// 14. Menu page older than 90 days → staleness notice injected
+{
+  const old = new Date(Date.now() - 200 * 86400000).toISOString().slice(0, 10);
+  const menuHtml = `<!DOCTYPE html><html><head><meta name="thaidata-page" content="menu">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Menu","name":"Test Menu","dateModified":"${old}"}</script>
+</head><body><header class="masthead"></header>
+<main class="wrap">
+  <div class="notice">Published by ThaiData UK…</div>
+</main></body></html>`;
+  const env = makeEnv({});
+  env.ASSETS = { async fetch() { return new Response(menuHtml, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/bristol/brother-thai/menu/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(body.includes('id="menu-stale"'), 'stale notice present');
+  assert.ok(body.includes('it may have changed since'), 'notice copy');
+  console.log('PASS 14: stale menu notice injected (>90 days)');
+}
+
+// 15. Fresh menu page → no notice, page intact
+{
+  const fresh = new Date(Date.now() - 10 * 86400000).toISOString().slice(0, 10);
+  const menuHtml = `<!DOCTYPE html><html><head><meta name="thaidata-page" content="menu">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Menu","name":"Test Menu","dateModified":"${fresh}"}</script>
+</head><body><header class="masthead"></header>
+<main class="wrap">
+  <div class="notice">Published by ThaiData UK…</div>
+</main></body></html>`;
+  const env = makeEnv({});
+  env.ASSETS = { async fetch() { return new Response(menuHtml, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/bristol/brother-thai/menu/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.ok(!body.includes('id="menu-stale"'), 'no stale notice on fresh menu');
+  assert.ok(body.includes('masthead'), 'page served intact');
+  console.log('PASS 15: fresh menu unmarked');
+}
+
+// 16. A real built menu page still serves through the nested branch
+{
+  const real = readFileSync(new URL('../r/bristol/brother-thai/menu/index.html', import.meta.url), 'utf8');
+  const env = makeEnv({});
+  env.ASSETS = { async fetch() { return new Response(real, { status: 200 }); } };
+  const res = await mod.onRequest({ request: req('/r/bristol/brother-thai/menu/'), env, next: () => { throw new Error('no'); } });
+  const body = await res.text();
+  assert.equal(res.status, 200, 'served');
+  assert.ok(body.includes('thaidata-page'), 'marker present');
+  assert.ok(body.includes('masthead'), 'real page intact');
+  console.log('PASS 16: real built menu page serves via nested branch');
+}
+
 console.log('ALL MIDDLEWARE PHOTO TESTS PASSED');

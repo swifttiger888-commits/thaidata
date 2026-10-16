@@ -536,6 +536,30 @@ async function injectMenuLink(html, city, name, origin, env) {
   return html;
 }
 
+/**
+ * Menu staleness flag — a read date older than STALE_MENU_DAYS gets a notice.
+ * The builder stamps the read date into Menu schema dateModified; computing the
+ * age per request means old pages are flagged without waiting for a rebuild.
+ */
+const STALE_MENU_DAYS = 90;
+
+function injectStaleMenuNotice(html) {
+  const m = html.match(/"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})"/);
+  if (!m) return html;
+  const readMs = Date.parse(m[1] + 'T00:00:00Z');
+  if (!Number.isFinite(readMs)) return html;
+  if ((Date.now() - readMs) / 86400000 <= STALE_MENU_DAYS) return html;
+  const human = new Date(readMs).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const notice =
+    '\n  <div class="notice" id="menu-stale" style="border-color:#E7B45A;background:#FFF8EC;">\n'
+    + '    This menu was read on ' + human + ' &mdash; it may have changed since. Please confirm prices and dishes with the restaurant before ordering.\n'
+    + '  </div>';
+  if (html.includes('<main class="wrap">')) {
+    return html.replace('<main class="wrap">', '<main class="wrap">' + notice);
+  }
+  return html;
+}
+
 export async function onRequest(context) {
   const { request, env, next } = context;
   const url = new URL(request.url);
@@ -584,7 +608,15 @@ export async function onRequest(context) {
     if (nested.ok) {
       const nestedText = await nested.clone().text();
       if (nestedText.includes('name="thaidata-page"')) {
-        return new Response(nestedText, {
+        let nestedOut = nestedText;
+        if (segments[3] === 'menu') {
+          try {
+            nestedOut = injectStaleMenuNotice(nestedText);
+          } catch (e) {
+            console.warn('Stale menu notice failed:', e.message);
+          }
+        }
+        return new Response(nestedOut, {
           status: 200,
           headers: {
             'content-type': 'text/html; charset=utf-8',

@@ -445,7 +445,7 @@ em {{ font-style: normal; font-weight: 700; }}
 <main class="wrap">
   <div class="notice">
     Published by ThaiData UK from <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','the restaurant&rsquo;s own menu'))}</a>, read {checked_human}.
-    Prices are set by the restaurant — please confirm when ordering.
+    Menus change. Prices are set by the restaurant — please confirm when ordering.
   </div>
 
   <p class="legend">Symbols: <span class="badge badge-spice">🌶 4</span> spice level (1&ndash;5) &nbsp;&middot;&nbsp; <span class="badge badge-celery">C</span> celery &nbsp;&middot;&nbsp; <span class="badge badge-veg">V</span> vegetarian</p>
@@ -457,6 +457,7 @@ em {{ font-style: normal; font-weight: 700; }}
     <h2>Own {esc(rname)}?</h2>
     <p>We've published your full menu to give it a page that's actually readable on a phone and findable on Google — free. Claim your listing to correct any price, edit descriptions, or add dishes.</p>
     <a class="btn" href="/claim/?restaurant={quote(rname)}&amp;city={quote(city)}">Claim this listing — free</a>
+    <p style="margin:12px 0 0;font-size:0.9rem;opacity:0.78;">Want this menu updated or removed without claiming? <a href="/contact">Tell us</a> — every message is read by a human.</p>
   </div>
 </main>
 
