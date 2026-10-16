@@ -2365,31 +2365,26 @@ em { font-style: normal; font-weight: 700; }
   </section>
 
   <!-- CLAIM CTA -->
-  <section class="tools-strip" id="owner-tools">
+  <!-- ══ FOR OWNERS — menu pitch (replaces the tool cards, Oct 2026) ══
+       EDITOR GUARDRAILS — do not promise: guaranteed Google indexing, rankings,
+       clicks, bookings or revenue; a specific CTR; instant publication or any
+       publication deadline operations has not agreed; menu upload / a self-service
+       editor / automatic updates; that claiming a listing publishes its menu; that
+       listing pages already link to menu pages; always-current dishes, prices or
+       allergen info; publication from guessed or third-party menu content;
+       "free forever" terms. v1 promise: claim the listing, send the team the
+       venue's OWN menu, the team publishes it (source link + checked date shown). -->
+  <section class="tools-strip owner-menu-section" id="owner-menu" aria-labelledby="owner-menu-title">
     <div class="wrap">
-      <p class="label">For owners</p>
-      <h2>Tools for Thai restaurant owners</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="tools/thai-restaurant-staffing-calculator.html">
-          <span class="tool-card-t">Calculate staff costs</span>
-          <span class="tool-card-d">Model April 2026 wage changes and employer NI for your roster.</span>
-          <span class="tool-card-l">Open tool &rarr;</span>
-        </a>
-        <a class="tool-card" href="tools/delivery-profit-calculator.html">
-          <span class="tool-card-t">Check delivery profit</span>
-          <span class="tool-card-d">See what a &pound;13 dish really leaves after commission and costs.</span>
-          <span class="tool-card-l">Open tool &rarr;</span>
-        </a>
-        <a class="tool-card" href="tools/thai-restaurant-break-even-calculator.html">
-          <span class="tool-card-t">Find your break-even</span>
-          <span class="tool-card-d">Work out the sales you need before profit starts.</span>
-          <span class="tool-card-l">Open tool &rarr;</span>
-        </a>
+      <div class="owner-menu">
+        <p class="label">For owners</p>
+        <h2 id="owner-menu-title">Get your menu found online.</h2>
+        <p class="owner-menu__support">Claim your listing and send us your menu. We&rsquo;ll publish a readable, shareable menu page on ThaiData.</p>
+        <a class="owner-menu__cta" href="#claim-search">Claim my restaurant listing</a>
+        <p class="owner-menu__reassurance">Free. Our team handles publication.</p>
+        <p class="owner-menu__proof">Every menu page includes a source link and checked date.</p>
+        <p class="tools-foot"><a class="tools-all" href="tools">Explore owner tools &rarr;</a></p>
       </div>
-      <p class="tools-foot">
-        <a class="tools-all" href="tools">All 23 owner tools &rarr;</a>
-        <span class="tools-claim">Own a Thai restaurant? <a href="#claim-search">Claim your free listing</a> &mdash; takes about 5 minutes.</span>
-      </p>
     </div>
   </section>
 
@@ -3080,6 +3075,24 @@ em { font-style: normal; font-weight: 700; }
 @media (min-width: 768px) {
   .owner-entry .hero-field { flex-direction: row; }
   .owner-entry .hero-inputwrap { flex: 1 1 300px; }
+}
+
+/* Owner-menu pitch (replaces the tool cards) */
+.tools-strip.owner-menu-section { padding: 40px 0; }
+.owner-menu { max-width: 640px; }
+.owner-menu > * { margin: 0; }
+.owner-menu .label { margin: 0 0 8px; }
+.owner-menu h2 { margin: 0 0 12px; }
+.owner-menu__support { margin: 0 0 16px; font-size: 16px; line-height: 1.5; color: var(--ink-soft); }
+.owner-menu__cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--red); border-radius: 10px; color: var(--red); background: transparent; font-size: 16px; font-weight: 700; text-decoration: none; }
+.owner-menu__cta:hover { text-decoration: underline; }
+.owner-menu__reassurance { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--ink-mute); }
+.owner-menu__proof { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--ink-mute); }
+.owner-menu .tools-foot { margin: 12px 0 0; font-size: 16px; }
+.owner-menu .tools-all { text-decoration: underline; }
+#claim-search { scroll-margin-top: 96px; }
+@media (max-width: 640px) {
+  .tools-strip.owner-menu-section { padding: 32px 0; }
 }
 </style>
 </body>

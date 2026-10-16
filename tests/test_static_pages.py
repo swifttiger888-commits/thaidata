@@ -40,5 +40,7 @@ def test_contact_page_has_faq_and_form():
 
 def test_index_links_to_contact():
     html = read('index.html')
-    assert 'class="help-strip"' in html
-    assert '<a href="/contact">Contact</a>' in html
+    # Homepage contact route: the help strip folded into the About-the-data note
+    # (v3 restructure) plus the footer Contact link.
+    assert 'id="about-data"' in html
+    assert html.count('<a href="/contact">') >= 1

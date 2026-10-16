@@ -168,6 +168,9 @@ function buildMagicLinkApprovalHtml({ restaurant_name, city, magicLink }) {
                         </td>
                       </tr>
                     </table>
+                    <p style="margin:24px 0 0;color:#555;font-size:14px;line-height:1.6;">
+                      Want your menu on your page? Reply to this email with your menu &mdash; a photo, PDF or link is fine &mdash; and we&rsquo;ll publish it as a proper menu page, free.
+                    </p>
                     <p style="margin:24px 0 0;color:#999;font-size:12px;line-height:1.5;text-align:center;">
                       This link expires in 1 hour and can only be used once.<br>
                       If you didn't request this, you can safely ignore this email.
@@ -214,6 +217,9 @@ function buildMagicLinkSelfServiceHtml({ restaurant_name, city, magicLink }) {
                         </td>
                       </tr>
                     </table>
+                    <p style="margin:24px 0 0;color:#555;font-size:14px;line-height:1.6;">
+                      Want your menu on your page? Reply to this email with your menu &mdash; a photo, PDF or link is fine &mdash; and we&rsquo;ll publish it as a proper menu page, free.
+                    </p>
                     <p style="margin:24px 0 0;color:#999;font-size:12px;line-height:1.5;text-align:center;">
                       This link expires in 1 hour and can only be used once.<br>
                       If you didn't request this, you can safely ignore this email.
@@ -249,6 +255,9 @@ function buildRecoveryHtml({ restaurant_name, city, magicLink }) {
                         </td>
                       </tr>
                     </table>
+                    <p style="margin:24px 0 0;color:#555;font-size:14px;line-height:1.6;">
+                      Want your menu on your page? Reply to this email with your menu &mdash; a photo, PDF or link is fine &mdash; and we&rsquo;ll publish it as a proper menu page, free.
+                    </p>
                     <p style="margin:24px 0 0;color:#999;font-size:12px;line-height:1.5;text-align:center;">
                       This link expires in 1 hour and can only be used once.<br>
                       If you didn't request this, you can safely ignore this email.
