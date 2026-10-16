@@ -233,6 +233,26 @@ def build_nearby_section(city: str, city_slug: str, city_open: dict[str, list[di
     return nearby_html
 
 
+_TITLE_OVERRIDES: dict[str, Any] | None = None
+
+
+def title_overrides() -> dict[str, Any]:
+    """Per-listing title/meta overrides (data/title_overrides.json, keyed by FSA id).
+
+    Placeholders supported in override strings: {tail} (address + updated date),
+    {scheme_rating} (e.g. "FSA 5/5").
+    """
+    global _TITLE_OVERRIDES
+    if _TITLE_OVERRIDES is None:
+        path = os.path.join(REPO, 'data', 'title_overrides.json')
+        try:
+            with open(path, encoding='utf-8') as fh:
+                _TITLE_OVERRIDES = json.load(fh)
+        except (OSError, ValueError):
+            _TITLE_OVERRIDES = {}
+    return _TITLE_OVERRIDES
+
+
 def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dict[str, list[dict[str, Any]]] = None, enrichment: dict[str, Any] = None, rest_slug: str | None = None, canonical_url: str | None = None) -> str:
     """Fill the Kimi template with restaurant data.
     enrichment: optional dict with google_place_id, rating, review_count, phone,
@@ -300,9 +320,18 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         meta_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See hygiene, structural, and management breakdown scores.{tail}"'
         og_desc = f'content="FSA inspection data for {name}, {city}. {rating_phrase(rating)}. See the full hygiene, structural, and management breakdown.{tail}"'
     scheme_label = 'FHIS' if is_fhis else 'FSA'
+    # ---- Per-listing overrides (data/title_overrides.json) ----
+    ov = title_overrides().get(str(fsa_id), {})
+    scheme_rating = f'{scheme_label} {rating_text(rating)}'
+    title_text = ov.get('title') or f'{name} {city} · {address if address else city} · {scheme_rating} | ThaiData UK'
+    og_title_text = ov.get('og_title') or title_text
+    if ov.get('meta_desc'):
+        meta_desc = 'content="' + ov['meta_desc'].replace('{tail}', tail).replace('{scheme_rating}', scheme_rating) + '"'
+    if ov.get('og_desc'):
+        og_desc = 'content="' + ov['og_desc'].replace('{tail}', tail).replace('{scheme_rating}', scheme_rating) + '"'
     html = html.replace(
         '<!-- DYNAMIC: title -->\n    <title>My Thai, Leeds — FSA 5/5 Hygiene Rating | ThaiData</title>',
-        f'    <title>{name} {city} · {address if address else city} · {scheme_label} {rating_text(rating)} | ThaiData UK</title>'
+        f'    <title>{title_text}</title>'
     )
     html = html.replace(
         'content="FSA inspection data for My Thai, Leeds. 5/5 hygiene rating. See hygiene, structural, and management breakdown scores. 43 Wade Lane, Leeds City Centre, Leeds. Updated November 2025."',
@@ -331,7 +360,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     )
     html = html.replace(
         '<!-- DYNAMIC: og_title -->\n    <meta property="og:title" content="My Thai, Leeds — FSA 5/5 | ThaiData"',
-        f'    <meta property="og:title" content="{name} {city} · {address if address else city} · {scheme_label} {rating_text(rating)} | ThaiData UK"'
+        f'    <meta property="og:title" content="{og_title_text}"'
     )
     html = html.replace(
         '<!-- DYNAMIC: og_description -->\n    <meta property="og:description" content="FSA 5/5 hygiene rating. Thai restaurant in Leeds. View inspection scores and claim this listing."',
@@ -912,6 +941,7 @@ def main() -> None:
         for entry in closed_data:
             closed_ids.add(str(entry['fsa_id']))
         print(f"Loaded {len(closed_ids)} closed venue(s) from closed_venues.json")
+    print(f"Loaded {len(title_overrides())} title override(s)")
     
     # Build city → open restaurants map (for nearby section)
     city_open: dict[str, list[dict[str, Any]]] = {}
