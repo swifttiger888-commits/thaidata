@@ -21,19 +21,19 @@ Are in the UK?
  
  
  
- 1,557
+1,263
  FSA-Registered Thai Businesses
 (UK-wide, inspected)
  
  
- 1,172
+1,241
  Dine-in Restaurants
 (England, Wales, NI only)
  
  
- 411
+275
  In London
-(26.4% of UK total)
+(21.8% of UK total)
  
  
  
@@ -45,17 +45,17 @@ Are in the UK?
  Key Findings
 
  
- 1 in 4 Thai restaurants in the UK is in London — 411 out of 1,557
+ About 1 in 5 Thai restaurants in the UK is in London — 275 out of 1,263
 
- Giggling Squid is the largest named chain with 48 locations, followed by Rosa's Thai Cafe (32)
+ Giggling Squid is the largest named chain — see the Chain Directory for live location counts
 
- 50.4% of Thai restaurants hold a 5-star hygiene rating — far above the national average across all cuisines
+ 62.4% of Thai restaurants hold a 5-star hygiene rating — far above the national average across all cuisines
 
- Leeds (34) and Manchester (28) lead outside London
+ Leeds (26) and Manchester (18) lead outside London
 
- London has 411 Thai businesses across 32 boroughs — more than the next 10 cities combined
+ London has 275 Thai businesses across 32 boroughs — more than the next 10 cities combined
 
- Scotland's 71 Thai businesses are now fully tracked via the FHIS scheme — Edinburgh leads with 24, Glasgow has 8
+ Scotland's 56 Thai businesses are tracked via the FHIS scheme — Edinburgh leads with 19, Glasgow has 6
 
  
  
@@ -187,7 +187,7 @@ Are in the UK?
  
  ★★★★★
  573
- 5 Stars (50.4%)
+ 5 Stars (62.4%)
  
  
  ★★★★
@@ -559,7 +559,7 @@ Annual Industry Report
  State of UK Thai Food
 2026
 
- The most comprehensive analysis of Thai cuisine across the United Kingdom. 1,557 restaurants. 78 cities. One definitive report.
+ The most comprehensive analysis of Thai cuisine across the United Kingdom. 1,268 restaurants. 253 cities. One definitive report.
 
  
  June 2026
@@ -571,11 +571,11 @@ Annual Industry Report
  
  
  
- 1,557
+1,268
  Thai Businesses UK-Wide
  
  
- 78
+253
  Cities With Thai Food
  
  
@@ -583,7 +583,7 @@ Annual Industry Report
  Average Hygiene Rating
  
  
- 26.4%
+32.4%
  London's Share of Total
  
  
@@ -606,11 +606,11 @@ Annual Industry Report
  
  1. How Big Is the UK Thai Food Market?
 
- As of June 2026, there are 1,557 Thai food businesses registered with the Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS for Scotland). This covers dine-in restaurants, takeaways, and mobile vendors — any establishment classified under Thai cuisine by their local authority.
+ As of June 2026, there are 1,268 Thai food businesses registered with the Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS for Scotland). This covers dine-in restaurants, takeaways, and mobile vendors — any establishment classified under Thai cuisine by their local authority.
 
  
  
- 📊 Key figure: 1,557 businesses across 78 UK cities. London alone accounts for 411 (26.4%). The average city has 6.4 Thai businesses per 100,000 residents. The national average hygiene rating is ★4.3 out of 5.
+ 📊 Key figure: 1,268 businesses across 253 UK cities. London alone accounts for 411 (32.4%). The average city has 6.4 Thai businesses per 100,000 residents. The national average hygiene rating is ★4.3 out of 5.
 
  
  

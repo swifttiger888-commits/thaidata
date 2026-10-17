@@ -93,7 +93,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .rank-table .bar { height: 100%; background: var(--c2); border-radius: 4px; }
 
         .highlight-box { background: linear-gradient(135deg, rgba(163, 19, 43, 0.08), rgba(163, 19, 43, 0.02)); border: 1px solid rgba(163, 19, 43, 0.2); border-radius: 16px; padding: 24px 28px; margin: 24px 0; }
-        .highlight-box p { color: rgba(255,255,255,0.85); }
+        .highlight-box p { color: var(--ink); }
 
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
@@ -255,6 +255,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             <h1>State of <em>UK Thai Food</em><br>2026</h1>
             <p class="sub">The most comprehensive analysis of Thai cuisine across the United Kingdom. 1268 restaurants. 253 cities. One definitive report.</p>
 <div style="font-size:0.75rem;color:var(--ink4);margin-top:4px;"><i class="fas fa-check-circle" style="color:var(--c2);margin-right:6px;"></i>Data updated: 2026-06-08</div>
+<div style="font-size:0.85rem;color:var(--ink);background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:10px 14px;margin-top:10px;"><strong>June 2026 snapshot.</strong> This report reflects the June 2026 dataset. Live figures — <a href="/how-many-thai-restaurants-uk" style="color:var(--c2);text-decoration:underline;">1,263 Thai businesses across 254 cities (October 2026)</a> — are on the restaurant count page.</div>
             <div class="meta">
                 <span><i class="fas fa-calendar" style="margin-right:4px;"></i> June 2026</span>
                 <span><i class="fas fa-database" style="margin-right:4px;"></i> FSA/FHIS Data</span>
@@ -269,7 +270,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <div class="lbl">Thai Businesses UK-Wide</div>
             </div>
             <div class="big-stat">
-                <div class="num gold">78</div>
+                <div class="num gold">253</div>
                 <div class="lbl">Cities With Thai Food</div>
             </div>
             <div class="big-stat">
@@ -277,7 +278,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <div class="lbl">Average Hygiene Rating</div>
             </div>
             <div class="big-stat">
-                <div class="num purple">26.4%</div>
+                <div class="num purple">32.4%</div>
                 <div class="lbl">London's Share of Total</div>
             </div>
         </div>
@@ -301,7 +302,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             <p>As of June 2026, there are <strong>1268 Thai food businesses</strong> registered with the Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS for Scotland). This covers dine-in restaurants, takeaways, and mobile vendors — any establishment classified under Thai cuisine by their local authority.</p>
             
             <div class="highlight-box">
-                <p><strong>📊 Key figure:</strong> 1268 businesses across 253 UK cities. London alone accounts for 411 (26.4%). The average city has 6.4 Thai businesses per 100,000 residents. The national average hygiene rating is ★4.3 out of 5.</p>
+                <p><strong>📊 Key figure:</strong> 1268 businesses across 253 UK cities. London alone accounts for 411 (32.4%). The average city has 6.4 Thai businesses per 100,000 residents (per-city average; the national per-capita figure is 2.6). The national average hygiene rating is ★4.3 out of 5.</p>
             </div>
             
             <p>The split between dine-in and takeaway varies significantly by city. Nationally, approximately <strong>79% are dine-in restaurants</strong> and <strong>21% are takeaways</strong>, though London skews more toward takeaway (21.4%) compared to cities like Sheffield (97% dine-in).</p>
@@ -563,7 +564,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <p><strong>Scotland:</strong> Food Hygiene Information Scheme (FHIS) — separate database for Scottish establishments.</p>
                 <p><strong>Chain identification:</strong> Manual verification of major chains (Giggling Squid, Busaba, Rosa's Thai, Thaikhun, Chaophraya, etc.) to avoid double-counting.</p>
                 <p><strong>Population data:</strong> ONS mid-2024 population estimates. Per-capita calculations use city/metropolitan populations, not wider urban areas.</p>
-                <p><strong>Hygiene ratings:</strong> FSA 0-5 scale. "Pass" under FHIS (Scotland) mapped to equivalent 5-star rating.</p>
+                <p><strong>Hygiene ratings:</strong> FSA 0-5 scale. "Pass" under FHIS (Scotland) mapped to 3-star for comparison purposes (Improvement Required → 1).</p>
                 <p><strong>Menu prices:</strong> Manual collection from restaurant websites and delivery platforms (Just Eat, Deliveroo, Uber Eats), 75 data points across 5 cities. Updated quarterly.</p>
                 <p><strong>Limitations:</strong> 122 premises were excluded due to lack of inspection data. Some businesses may operate under broader "Asian" or "Oriental" categories and not appear in Thai-filtered results. The actual number of businesses serving Thai food in the UK is likely higher than 1268.</p>
                 <p><strong>Last updated:</strong> June 2026. Data refreshed weekly via automated FSA API pull.</p>
@@ -573,7 +574,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         <!-- Share bar -->
         <div class="share-bar">
             <p><strong>Found this useful?</strong> Share it with someone in the industry.</p>
-            <a href="https://twitter.com/intent/tweet?text=The%20State%20of%20UK%20Thai%20Food%202026%20%E2%80%94%201%2C557%20restaurants%2C%2078%20cities%2C%20one%20definitive%20report.&url=https%3A%2F%2Fthaidata.uk%2Fstate-of-uk-thai-food-2026" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Share on X</a>
+            <a href="https://twitter.com/intent/tweet?text=The%20State%20of%20UK%20Thai%20Food%202026%20%E2%80%94%201%2C268%20restaurants%2C%20253%20cities%2C%20one%20definitive%20report.&url=https%3A%2F%2Fthaidata.uk%2Fstate-of-uk-thai-food-2026" target="_blank" class="twitter"><i class="fab fa-twitter"></i> Share on X</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fthaidata.uk%2Fstate-of-uk-thai-food-2026&title=State%20of%20UK%20Thai%20Food%202026" target="_blank"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
             <a href="mailto:?subject=State%20of%20UK%20Thai%20Food%202026&body=Interesting%20data%20report%20on%20UK%20Thai%20restaurants%3A%20https%3A%2F%2Fthaidata.uk%2Fstate-of-uk-thai-food-2026"><i class="fas fa-envelope"></i> Email</a>
         </div>

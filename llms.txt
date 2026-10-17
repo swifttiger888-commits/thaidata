@@ -1,7 +1,7 @@
 # ThaiData UK
-> Business intelligence and cost defense tools for UK Thai restaurant operators. Market data, wage calculators, menu pricing benchmarks, and chef visa guidance — all free, no signup.
+> UK Thai restaurant directory and market data — 1,263 FSA-verified listings across 254 cities. Restaurant pages, data reports, recipes and free owner tools. No signup.
 
-UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, and HMRC. Updated June 2026.
+UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, and HMRC. Updated October 2026.
 
 ## Tools
 - [NLW Impact Calculator](https://thaidata.uk/): Calculate your April 2026 minimum wage cost increase in 60 seconds. Models all age tiers (21+, 18–20, apprentice) with NI and Employment Allowance.
@@ -16,7 +16,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 
 ## Core Guides
 - [How to Open a Thai Restaurant in the UK](https://thaidata.uk/open-thai-restaurant-uk.html): Complete 15-step roadmap. Real costs (£80k–£180k), chef visa requirements, kitchen design for wok cooking, supplier directory.
-- [UK Thai Restaurant Count](https://thaidata.uk/how-many-thai-restaurants-uk.html): 1,265 FSA-registered Thai businesses. Full regional and city breakdown. Dine-in vs takeaway splits. Updated monthly.
+- [UK Thai Restaurant Count](https://thaidata.uk/how-many-thai-restaurants-uk.html): 1,263 FSA-registered Thai businesses. Full regional and city breakdown. Dine-in vs takeaway splits. Updated weekly.
 - [Menu Pricing Guide](https://thaidata.uk/thai-restaurant-menu-pricing-uk.html): 20-dish benchmark with food costs, London vs regional pricing, and GP targets for every major Thai dish.
 - [Operating Costs](https://thaidata.uk/thai-restaurant-costs-uk.html): Real numbers on food costs, staffing (NLW 2026), rent, energy, and hidden expenses for UK Thai restaurants.
 - [Delivery Commissions](https://thaidata.uk/thai-restaurant-delivery-commissions-uk.html): Platform-by-platform breakdown of Deliveroo, Uber Eats, and Just Eat fees. True margin after commission, VAT, and packaging.
@@ -274,10 +274,10 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 - [Loy Krathong](https://thaidata.uk/loy-krathong-uk.html): Festival of Lights. UK celebrations, locations, dates.
 
 ## Chains
-- [UK Thai Restaurant Chains](https://thaidata.uk/thai-chains-uk): Data comparison of 10 UK Thai chains. Location counts, FSA hygiene ratings, geographic coverage. Giggling Squid (47), Rosa's Thai (32), Busaba (8), and more.
+- [UK Thai Restaurant Chains](https://thaidata.uk/thai-chains-uk): Data comparison of 10 UK Thai chains. Location counts, FSA hygiene ratings, geographic coverage. Giggling Squid (47), Rosa's Thai (39), Busaba (7), and more.
 
 ## Data
-- [Hugging Face Dataset](https://huggingface.co/datasets/thaidata/uk-thai-restaurants): Full dataset — 1,594 restaurants, 253 cities, geocoded. Free to use (ODbL).
+- [Hugging Face Dataset](https://huggingface.co/datasets/thaidata/uk-thai-restaurants): Full dataset — FSA records including historical and delisted venues, geocoded. Free to use (ODbL).
 - [API](https://thaidata.uk/api/v1/): Machine-readable JSON endpoint for UK Thai restaurant statistics.
 - [MCP Server](https://thaidata.uk/mcp): Model Context Protocol endpoint — AI agents can query ThaiData directly as a tool. 8 query functions.
 - [Site Map](https://thaidata.uk/sitemap-page): Full HTML site map of all pages.
