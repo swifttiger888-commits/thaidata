@@ -83,9 +83,14 @@
 
         /* on a narrow phone the copy truncates rather than growing the bar */
         @media (max-width: 560px) {
-            #cookie-banner { gap: 10px; padding: 0 12px; }
-            .cb-text { font-size: 14px; }
+            #cookie-banner { gap: 10px; padding: 10px 12px; flex-wrap: wrap; }
+            .cb-text { flex-basis: 100%; font-size: 14px; }
             .cb-btn { padding: 8px 10px; font-size: 14px; }
+        }
+        /* the bar is two rows tall on narrow phones; reserve that height so
+           it never covers page content */
+        @media (max-width: 560px) {
+            body.has-consent-bar { padding-bottom: 108px; }
         }
     `;
     const style = document.createElement('style');
