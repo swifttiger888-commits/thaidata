@@ -40,12 +40,16 @@ def extract_neighbourhood(address: str, city: str) -> str:
     """Extract neighbourhood from address. e.g. '33 Town Street, Horsforth, Leeds' -> 'Horsforth'"""
     if not address or not city:
         return ''
+    # Normalised comparison: 'Stockton-On-Tees' must match 'Stockton On Tees',
+    # otherwise the city re-appears as its own "neighbourhood".
+    def _norm(s: str) -> str:
+        return re.sub(r'[^a-z0-9]', '', (s or '').lower())
+    city_norm = _norm(city)
     # Split on commas, strip whitespace
     parts = [p.strip() for p in address.split(',')]
-    # Look for the part right before the city
-    city_lower = city.lower()
+    # Look for the part matching the city
     for i, p in enumerate(parts):
-        if p.lower() == city_lower and i > 0:
+        if _norm(p) == city_norm and i > 0:
             # Return the part before the city, stripping street numbers
             prev = parts[i-1]
             # Remove leading numbers/street prefixes
@@ -57,10 +61,12 @@ def extract_neighbourhood(address: str, city: str) -> str:
                 prev2 = parts[i-2].strip()
                 if prev2 and not prev2[0].isdigit():
                     return prev2
-    # Fallback: return the last non-city, non-postcode part
+    # Fallback: return the last non-city, non-postcode part — skipping any
+    # part that is the city under a different spelling.
     for p in reversed(parts):
         p = p.strip()
-        if p.lower() != city_lower and not any(c.isdigit() for c in p[:4]) and p and not p[0].isdigit():
+        if (_norm(p) != city_norm and p and not p[0].isdigit()
+                and not any(c.isdigit() for c in p[:4])):
             return p
     return ''
 
@@ -842,6 +848,18 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     html = html.replace(
         "                const RESTAURANT_FSA_ID = '0000000';",
         f'                const RESTAURANT_FSA_ID = {json.dumps(str(fsa_id))};'
+    )
+
+    # ---- Per-scheme source link: deep-link to the venue's own record ----
+    if is_fhis:
+        src_link = ('<a href="https://www.foodstandards.gov.scot/consumer-advice/fhis" '
+                    'target="_blank" rel="noopener">Food Standards Scotland</a>')
+    else:
+        src_link = (f'<a href="https://ratings.food.gov.uk/business/{fsa_id}" '
+                    f'target="_blank" rel="noopener">Food Standards Agency</a>')
+    html = html.replace(
+        '<!-- DYNAMIC: fsa_source_link --><a href="https://ratings.food.gov.uk" target="_blank" rel="noopener">Food Standards Agency</a>',
+        src_link
     )
 
     # ---- Nearby section (closed venues only) ----
