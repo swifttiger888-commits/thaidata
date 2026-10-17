@@ -68,8 +68,6 @@ const EMBEDDED_DATA = {
   ],
   statistics: {
     total_uk_thai_businesses: 1241,
-    estimated_uk_market_size_gbp: "£2.1B",
-    growth_rate_2022_2025_pct: 20.3,
     national_living_wage_april_2026: 12.71,
     average_delivery_commission_uber_eats_pct: 30,
     average_delivery_commission_deliveroo_pct: 32,

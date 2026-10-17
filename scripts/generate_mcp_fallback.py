@@ -20,8 +20,6 @@ FALLBACK_CITIES = ['London', 'Leeds', 'Manchester', 'Edinburgh', 'Bristol', 'Bir
 
 # Editorial statistics that do not come from the FSA data feed.
 STATIC_STATS = {
-    'estimated_uk_market_size_gbp': '"£2.1B"',
-    'growth_rate_2022_2025_pct': '20.3',
     'national_living_wage_april_2026': '12.71',
     'average_delivery_commission_uber_eats_pct': '30',
     'average_delivery_commission_deliveroo_pct': '32',

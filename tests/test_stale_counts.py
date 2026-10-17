@@ -19,6 +19,11 @@ STALE_TOKENS = [
     "Leeds (34)",
     "Manchester (28)",
     "26.4% of UK total",
+    # Unsourced stats removed Oct 2026 (never re-introduce without a citation)
+    "20.3%",
+    "£2.1B",
+    "4th fastest",
+    "284+",
 ]
 
 SNAPSHOT_PAGES = {
