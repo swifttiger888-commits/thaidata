@@ -698,6 +698,30 @@ export async function onRequest(context) {
     // Claim-specific 404 (?source=claim) — helpful state for first-time claimants
     const isClaimSource = url.searchParams.get('source') === 'claim';
 
+    // Venue no longer in the dataset (delisted, excluded or renamed): redirect
+    // to the city page instead of 404ing. Dropped venues used to leave dead
+    // URLs behind; a 301 keeps inbound links and crawl equity working and
+    // covers every future drop automatically. Claimant deep-links keep the
+    // helpful "page not ready" 404 below.
+    if (!isClaimSource) {
+      try {
+        const cityRes = await env.ASSETS.fetch(new URL('/cities/' + city, url.origin).toString());
+        if (cityRes.ok) {
+          const cityText = await cityRes.clone().text();
+          // Pages answers unmatched paths with the homepage + 200, so require
+          // the city page's own canonical before trusting the response.
+          if (cityText.includes('rel="canonical" href="https://thaidata.uk/cities/' + city + '"')) {
+            return new Response(null, {
+              status: 301,
+              headers: { 'Location': '/cities/' + city },
+            });
+          }
+        }
+      } catch (_) {
+        // Asset layer unavailable — fall through to the 404 below.
+      }
+    }
+
     if (isClaimSource) {
       const claimSubject = 'Claim help: ' + url.pathname;
       return new Response(
