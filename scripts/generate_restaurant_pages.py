@@ -8,7 +8,7 @@ from datetime import datetime
 from typing import Any
 from urllib.parse import quote
 
-REPO = '/tmp/thaidata-repo'
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(REPO, 'r')
 
 # ── Meta description: A/B test concluded (Sep 2026) ──────────────

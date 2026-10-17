@@ -3,7 +3,7 @@
 import json, os, re
 from typing import Any
 
-REPO = '/tmp/thaidata-repo'
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def slugify(s: str) -> str:
     s = s.lower().strip()

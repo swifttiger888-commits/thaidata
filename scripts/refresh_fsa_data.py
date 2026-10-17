@@ -9,7 +9,7 @@ from datetime import datetime
 
 from fsa_client import fetch_all, count_by_la
 
-REPO_DIR = '/tmp/thaidata-repo'
+REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = '/tmp/thai_fsa_latest.json'
 CHANGE_LOG = '/tmp/thai_fsa_changes.txt'
 

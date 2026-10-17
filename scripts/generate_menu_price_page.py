@@ -250,8 +250,9 @@ HTML = f'''<!DOCTYPE html>
 </html>'''
 
 # Write page
-os.makedirs('/tmp/thaidata-repo', exist_ok=True)
-with open('/opt/thaidata-repo/thai-menu-price-index-uk.html', 'w') as f:
+_REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.makedirs(_REPO, exist_ok=True)
+with open(os.path.join(_REPO, 'thai-menu-price-index-uk.html'), 'w') as f:
     f.write(HTML)
 print(f"Page generated: {len(HTML):,} bytes")
 print(f"Data: {len(all_spreads)} prices across {len(city_stats)} cities, UK avg markup: +{avg_uk_spread}%")
