@@ -46,6 +46,29 @@ def fetch_all(name: str, business_type_id: str, scheme_key: str) -> list[dict[st
     return all_ests
 
 
+def fetch_by_id(fhrisd: int) -> dict[str, Any] | None:
+    """Fetch a single establishment by FHRSID.
+
+    Used for curated allowlist IDs that keyword search coverage cannot
+    reach (renames, names with no 'hai'/'thai' substring). Returns the
+    establishment dict, or None when the FSA no longer holds it.
+    """
+    url = f'https://api.ratings.food.gov.uk/Establishments/{fhrisd}'
+    try:
+        req = urllib.request.Request(url, headers={
+            'x-api-version': '2',
+            'accept': 'application/json'
+        })
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read())
+        if not data.get('FHRSID'):
+            return None
+        return data
+    except Exception as e:
+        print(f"  ⚠️ fetch_by_id({fhrisd}) failed: {e}")
+        return None
+
+
 def count_by_la(establishments: list[dict[str, Any]]) -> dict[str, dict[str, int]]:
     """Group establishments by LocalAuthority, return counts."""
     by_la: dict[str, dict[str, int]] = defaultdict(lambda: {'total': 0, 'restaurants': 0, 'takeaways': 0})

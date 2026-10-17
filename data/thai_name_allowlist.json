@@ -6,6 +6,30 @@
       "city": "Ceredigion",
       "verified": "2026-10-17",
       "method": "FSA API (Restaurant/Cafe/Canteen, rating 4) + TripAdvisor/Wanderlog cuisine check"
+    },
+    "1199724": {
+      "name": "Khaokho",
+      "city": "Sutton",
+      "verified": "2026-10-17",
+      "method": "FSA API (restaurant, rating 5) + khaokho.co.uk (Thai & Isan)"
+    },
+    "1367117": {
+      "name": "Meekhun Thai Bistro Kensington (SAI 8 Limited)",
+      "city": "Kensington and Chelsea",
+      "verified": "2026-10-17",
+      "method": "FSA API (restaurant, rating 4) + TripAdvisor/meekhunthai.co.uk"
+    },
+    "1315835": {
+      "name": "The ThaiWay",
+      "city": "North Norfolk",
+      "verified": "2026-10-17",
+      "method": "FSA API (restaurant, rating 4); renamed from 'The Thai Way'"
+    },
+    "1004678": {
+      "name": "The Siam Zaa",
+      "city": "Newcastle upon Tyne",
+      "verified": "2026-10-17",
+      "method": "Previously allowlisted (FSA_ALLOWLIST); keyword search no longer reaches it"
     }
   },
   "blocklist": {

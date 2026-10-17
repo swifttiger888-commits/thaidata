@@ -15,7 +15,7 @@ from datetime import datetime
 from typing import Any
 
 from city_mapper import LA_TO_CITY, CITY_POPULATIONS, map_la_to_city, get_population
-from fsa_client import fetch_all
+from fsa_client import fetch_all, fetch_by_id
 
 
 def load_name_filter_lists() -> tuple[set[int], set[int]]:
@@ -203,6 +203,19 @@ def main() -> None:
             pass
     print(f"  Pub kitchen additions: {pub_added}")
     
+    # ── Direct-fetch curated IDs ────────────────────────────────────────────
+    # Keyword search coverage is not guaranteed (renames, names without
+    # 'hai'/'thai' substrings, pagination gaps). Every allowlisted FSA ID is
+    # fetched directly so curated entries never depend on search semantics.
+    for fid in sorted(allowlist):
+        est = fetch_by_id(fid)
+        if est:
+            all_ests.append(est)
+            print(f"  Direct-fetch {fid}: {est.get('BusinessName')}")
+        else:
+            print(f"  Direct-fetch {fid}: no longer on the FSA register")
+        time.sleep(DELAY)
+
     # Deduplicate by FHRSID
     seen = {}
     for e in all_ests:
