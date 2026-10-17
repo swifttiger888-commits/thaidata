@@ -14,6 +14,7 @@ def _load_module():
     """Import fetch_all_thai_data.py without running main()."""
     src = FETCH_PATH.read_text().replace("def main()", "def _main()")
     mod = types.ModuleType("fetch_mod")
+    mod.__file__ = str(FETCH_PATH)
     sys.path.insert(0, str(REPO / "scripts"))
     exec(compile(src, str(FETCH_PATH), "exec"), mod.__dict__)
     return mod

@@ -60,7 +60,10 @@ def apply_name_filter(
     return kept, dropped
 
 # ── Configuration ────────────────────────────────────────────────────
-REPO_DIR = '/tmp/thaidata-repo'
+# Resolve the repo root from this script's location (scripts/ -> repo root)
+# so the fetch works identically on the production host (where /tmp/thaidata-repo
+# symlinks here) and on CI runners with a plain checkout.
+REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESTAURANTS_FILE = os.path.join(REPO_DIR, 'data', 'restaurants.json')
 CITIES_FILE = os.path.join(REPO_DIR, 'api', 'v1', 'cities.json')
 DATA_FILE = os.path.join(REPO_DIR, 'api', 'v1', 'data.json')
