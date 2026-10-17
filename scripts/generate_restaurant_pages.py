@@ -323,7 +323,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # ---- Per-listing overrides (data/title_overrides.json) ----
     ov = title_overrides().get(str(fsa_id), {})
     scheme_rating = f'{scheme_label} {rating_text(rating)}'
-    title_text = ov.get('title') or f'{name} {city} · {address if address else city} · {scheme_rating} | ThaiData UK'
+    # SERP-facing title uses a cleaned display name: trailing legal suffixes
+    # (Ltd/Limited/PLC/LLP) read as company records in the SERP. The legal
+    # name stays in the H1, meta description, and structured data.
+    display_name = re.sub(r'\s+(?:Ltd|Limited|Plc|PLC|LLP)\.?$', '', name).strip()
+    title_text = ov.get('title') or f'{display_name} {city} · {address if address else city} · {scheme_rating} | ThaiData UK'
     og_title_text = ov.get('og_title') or title_text
     if ov.get('meta_desc'):
         meta_desc = 'content="' + ov['meta_desc'].replace('{tail}', tail).replace('{scheme_rating}', scheme_rating) + '"'
