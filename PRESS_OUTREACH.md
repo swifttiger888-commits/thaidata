@@ -12,7 +12,7 @@ Hi [Name],
 I've just published a data-driven report on the state of Thai food across the UK — thought it might be of interest given the sector's growth and the pressures from the 2026 NLW increase.
 
 Key findings:
-- 1,557 FSA-registered Thai businesses across 78 cities
+- 1,557 FSA-listed Thai businesses across 78 cities
 - London has 411 (26.4% of UK total) — but Birmingham (1.5/100k) is the biggest underserved market
 - Average hygiene rating ★4.3/5 — above the UK restaurant average
 - Delivery platforms take 14-30% commission; the average Thai dish is 22% more expensive on apps vs dine-in

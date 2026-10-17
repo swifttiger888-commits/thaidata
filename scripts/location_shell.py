@@ -130,7 +130,7 @@ def new_location_shell(city_name, slug):
         raise ValueError("Invalid location slug: " + repr(slug))
 
     description = (
-        "Browse FSA-registered Thai restaurants in "
+        "Browse FSA-listed Thai restaurants in "
         + city_name
         + ", with restaurant listings and food hygiene information."
     )
@@ -214,7 +214,7 @@ def finish_location_shell(source):
     snapshot = before["market-snapshot"].decode("utf-8")
     count = re.search(
         r"There are\s*<strong>([0-9][0-9,]*)</strong>"
-        r"\s*FSA-registered Thai businesses",
+        r"\s*FSA-listed Thai businesses",
         snapshot,
     )
     summary = ""
@@ -223,7 +223,7 @@ def finish_location_shell(source):
         summary = (
             '      <p class="sub">'
             + count.group(1)
-            + " FSA-registered Thai businesses in this area.</p>"
+            + " FSA-listed Thai businesses in this area.</p>"
         )
     source = _replace_shell_region(source, "summary", summary)
 

@@ -273,13 +273,13 @@ HTML = f"""<!DOCTYPE html>
 
         <div class="intro">
             <p>This directory covers the major UK Thai restaurant chains -- groups with multiple locations across the country. Each profile includes verified location counts from the <strong>Food Standards Agency</strong> register, city presence maps, and links to individual restaurant pages.</p>
-            <p>Chain detection is based on <strong>FSA restaurant name matching</strong>, not company ownership data. Some chains may have additional locations under different trading names not captured here. Figures reflect FSA-registered businesses only.</p>
+            <p>Chain detection is based on <strong>FSA restaurant name matching</strong>, not company ownership data. Some chains may have additional locations under different trading names not captured here. Figures reflect FSA-listed businesses only.</p>
         </div>
 
         <!-- Major chains -->
         <div class="section">
             <h2>Major <em>Chains</em></h2>
-            <p class="subtitle">Nationwide Thai restaurant groups with 10 or more FSA-registered locations.</p>
+            <p class="subtitle">Nationwide Thai restaurant groups with 10 or more FSA-listed locations.</p>
             {"".join(chain_card(c, featured=True) for c in major)}
         </div>
 
@@ -291,7 +291,7 @@ HTML = f"""<!DOCTYPE html>
         </div>
 
         <div class="data-note">
-            <strong>About the data:</strong> Chain figures are based on FSA register name matching. Some businesses listed as chains may operate independently under a common name. Numbers represent FSA-registered locations only, not the chain's total estate. Always verify with the chain's own website. Data updated {data.get("updated", "2026")}.
+            <strong>About the data:</strong> Chain figures are based on FSA register name matching. Some businesses listed as chains may operate independently under a common name. Numbers represent FSA-listed locations only, not the chain's total estate. Always verify with the chain's own website. Data updated {data.get("updated", "2026")}.
         </div>
 
         <!-- Related links -->

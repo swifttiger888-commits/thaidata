@@ -298,7 +298,7 @@ HTML = f"""<!DOCTYPE html>
 
         <div class="hero">
             <h1>UK Thai <em>Restaurant</em> Directory</h1>
-            <p class="sub">Every FSA-registered Thai restaurant in the UK, in one place. {total:,} verified listings across {cities_count} cities, with hygiene ratings from the Food Standards Agency.</p>
+            <p class="sub">Every FSA-listed Thai restaurant in the UK, in one place. {total:,} verified listings across {cities_count} cities, with hygiene ratings from the Food Standards Agency.</p>
         </div>
 
         <div class="stats-row">
@@ -312,7 +312,7 @@ HTML = f"""<!DOCTYPE html>
         </div>
 
         <div class="intro">
-            <p>This directory covers <strong>all {total:,} FSA-registered Thai restaurants and takeaways</strong> in the United Kingdom. Every listing includes an official hygiene rating from the Food Standards Agency (FHRS) or Food Standards Scotland (FHIS), along with address, postcode, and type classification.</p>
+            <p>This directory covers <strong>all {total:,} FSA-listed Thai restaurants and takeaways</strong> in the United Kingdom. Every listing includes an official hygiene rating from the Food Standards Agency (FHRS) or Food Standards Scotland (FHIS), along with address, postcode, and type classification.</p>
             <p>Each restaurant has its own page at <strong>/r/[city]/[name]/</strong> with full inspection scores, a map location, and FSA hygiene detail breakdowns. If you own one of these restaurants, you can <a href="/claim/" style="color:var(--c2);">claim the listing</a> to add photos, opening hours, and contact details.</p>
         </div>
 
@@ -390,7 +390,7 @@ HTML = f"""<!DOCTYPE html>
             <p class="subtitle">How the data is collected, verified, and kept current.</p>
             <div class="info-card">
                 <p><strong>Data source:</strong> All ratings come from the Food Standards Agency (FHRS) and Food Standards Scotland (FHIS) -- official hygiene inspection scores from local authority visits.</p>
-                <p style="margin-top:8px;"><strong>Coverage:</strong> We track every FSA-registered business in England, Wales, Scotland, and Northern Ireland that self-identifies as Thai cuisine. This includes restaurants, takeaways, cafes, and mobile caterers.</p>
+                <p style="margin-top:8px;"><strong>Coverage:</strong> We track every FSA-listed business in England, Wales, Scotland, and Northern Ireland that self-identifies as Thai cuisine. This includes restaurants, takeaways, cafes, and mobile caterers.</p>
                 <p style="margin-top:8px;"><strong>Updates:</strong> The directory refreshes weekly from the FSA API. Each restaurant page shows its inspection date, so you know exactly how fresh the rating is.</p>
                 <p style="margin-top:8px;"><strong>Accuracy:</strong> Business names and types come from the FSA register. Some businesses may have changed name or closed since their last inspection. Always call ahead.</p>
             </div>

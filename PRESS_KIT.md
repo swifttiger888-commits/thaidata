@@ -1,7 +1,7 @@
 # ThaiData UK — Press & Outreach Material
 
 ## The Stat
-**1,557 FSA-registered Thai restaurants and takeaways across 78 UK cities.**
+**1,557 FSA-listed Thai restaurants and takeaways across 78 UK cities.**
 The most authoritative count of UK Thai food businesses, sourced directly from the Food Standards Agency's official hygiene register.
 
 ## One-Line Angles (send these to journalists/bloggers)

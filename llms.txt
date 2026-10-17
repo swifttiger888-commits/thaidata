@@ -16,7 +16,7 @@ UK Thai food industry data sourced from the Food Standards Agency (FSA), ONS, an
 
 ## Core Guides
 - [How to Open a Thai Restaurant in the UK](https://thaidata.uk/open-thai-restaurant-uk.html): Complete 15-step roadmap. Real costs (£80k–£180k), chef visa requirements, kitchen design for wok cooking, supplier directory.
-- [UK Thai Restaurant Count](https://thaidata.uk/how-many-thai-restaurants-uk.html): 1,263 FSA-registered Thai businesses. Full regional and city breakdown. Dine-in vs takeaway splits. Updated weekly.
+- [UK Thai Restaurant Count](https://thaidata.uk/how-many-thai-restaurants-uk.html): 1,263 FSA-listed Thai businesses. Full regional and city breakdown. Dine-in vs takeaway splits. Updated weekly.
 - [Menu Pricing Guide](https://thaidata.uk/thai-restaurant-menu-pricing-uk.html): 20-dish benchmark with food costs, London vs regional pricing, and GP targets for every major Thai dish.
 - [Operating Costs](https://thaidata.uk/thai-restaurant-costs-uk.html): Real numbers on food costs, staffing (NLW 2026), rent, energy, and hidden expenses for UK Thai restaurants.
 - [Delivery Commissions](https://thaidata.uk/thai-restaurant-delivery-commissions-uk.html): Platform-by-platform breakdown of Deliveroo, Uber Eats, and Just Eat fees. True margin after commission, VAT, and packaging.

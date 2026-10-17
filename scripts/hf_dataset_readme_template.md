@@ -55,7 +55,7 @@ Sourced weekly from the [Food Standards Agency](https://www.food.gov.uk/) (FSA) 
 |---|---|
 | `name` | City/town name |
 | `population` | ONS 2024 mid-year estimate |
-| `total_thai_businesses` | Total FSA-registered Thai businesses |
+| `total_thai_businesses` | Total FSA-listed Thai businesses |
 | `restaurants` | Dine-in restaurants |
 | `takeaways` | Takeaway-only businesses |
 | `per_100k` | Thai restaurants per 100,000 population |

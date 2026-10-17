@@ -1,0 +1,27 @@
+{
+ "home": {
+  "url": "https://thaidata.uk/",
+  "perf": 88,
+  "a11y": 100,
+  "bp": 100,
+  "seo": 100,
+  "agentic": 100,
+  "tbt_ms": 0,
+  "cls": 0,
+  "lcp": "3.0\u00a0s",
+  "measured": "2026-10-16"
+ },
+ "talay_listing": {
+  "url": "https://thaidata.uk/r/cornwall/talay-thai/",
+  "perf": 76,
+  "a11y": 88,
+  "bp": 100,
+  "seo": 100,
+  "agentic": 100,
+  "tbt_ms": 1140,
+  "cls": 0.016,
+  "lcp": "1.9\u00a0s",
+  "measured": "2026-10-16"
+ },
+ "tool": "lighthouse 13.5 mobile, local chromium, live site"
+}

@@ -550,9 +550,9 @@ def update_hero_stats(
         f'\\g<1>{raw_count} ({raw_dine_in} dine-in, {raw_takeaway} takeaway)',
         html,
     )
-    # 2. sub paragraph:  "13 FSA-registered Thai businesses"
+    # 2. sub paragraph:  "13 FSA-listed Thai businesses"
     html = re.sub(
-        r'(<p class="sub">)\d+( FSA-registered Thai businesses)',
+        r'(<p class="sub">)\d+( FSA-listed Thai businesses)',
         f'\\g<1>{count}\\g<2>',
         html,
     )
@@ -609,7 +609,7 @@ def update_hero_stats(
         )
     if uk_total:
         html = re.sub(
-            r'(all )[\d,]+( FSA-registered Thai businesses across the UK)',
+            r'(all )[\d,]+( FSA-listed Thai businesses across the UK)',
             f'\\g<1>{uk_total}\\g<2>',
             html,
         )
@@ -619,7 +619,7 @@ def update_hero_stats(
             html,
         )
         html = re.sub(
-            r'(accounts for [\\d.]+% of all )[\\d,]+( FSA-registered Thai businesses)',
+            r'(accounts for [\\d.]+% of all )[\\d,]+( FSA-listed Thai businesses)',
             f'\\g<1>{uk_total}\\g<2>',
             html,
         )

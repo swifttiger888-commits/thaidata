@@ -235,7 +235,7 @@ HTML = f"""<!DOCTYPE html>
         </div>
 
         <div class="intro">
-            <p>Some of the UK's best Thai food is cooked <strong>inside a pub kitchen</strong> — and you'd never find it by searching for Thai restaurants, because the business is registered under the pub's own name. This page lists every FSA-registered pub with a Thai kitchen we've verified, each with its own detail page and hygiene rating.</p>
+            <p>Some of the UK's best Thai food is cooked <strong>inside a pub kitchen</strong> — and you'd never find it by searching for Thai restaurants, because the business is registered under the pub's own name. This page lists every FSA-listed pub with a Thai kitchen we've verified, each with its own detail page and hygiene rating.</p>
             <p>Know a pub with a Thai kitchen that's missing? <a href="/contact" style="color:var(--c2);">Tell us</a> and we'll check it against the FSA register.</p>
         </div>
 

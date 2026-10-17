@@ -73,7 +73,7 @@
 
 - Wet-led pubs often have no kitchen or only a back-bar; recruiting kitchen staff is the #1 challenge — food fixes both (keeps people in, raises spend per head) `[11]`.
 - Consumer sentiment (search-level only): recurring "why do so many pubs serve Thai food" threads on Reddit — couldn't extract the pages (403), so treat as unverified sentiment, not a citation.
-- ThaiData data angle: 22 FSA-registered Thai pub kitchens across 16 areas (Brighton 5; Cambridge 2; London 2 …) — name-backed examples like Cricketers Thai (Cambridge, ★5), Thai Plough, Nartnapa @ The Cottage Inn.
+- ThaiData data angle: 22 FSA-listed Thai pub kitchens across 16 areas (Brighton 5; Cambridge 2; London 2 …) — name-backed examples like Cricketers Thai (Cambridge, ★5), Thai Plough, Nartnapa @ The Cottage Inn.
 
 ## 6. Verification & gaps (be honest in the article)
 

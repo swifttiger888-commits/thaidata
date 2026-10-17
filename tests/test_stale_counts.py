@@ -24,6 +24,11 @@ STALE_TOKENS = [
     "£2.1B",
     "4th fastest",
     "284+",
+    # Phrase pass Oct 2026: the FSA "registers" nothing we hold — it lists businesses
+    "FSA-registered",
+    # Margin claims rewritten Oct 2026 to cited UK benchmarks
+    "67-72%",
+    "4–8% net profit",
 ]
 
 SNAPSHOT_PAGES = {

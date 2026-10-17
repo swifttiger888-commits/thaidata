@@ -244,7 +244,7 @@ def build_faq_html() -> str:
          f"London has {five_star_all} restaurants with a perfect 5/5 FSA hygiene rating. "
          f"Top-rated spots include {top3}."),
         ("How many Thai restaurants are in London?",
-         f"London has {total} FSA-registered Thai businesses in total -- "
+         f"London has {total} FSA-listed Thai businesses in total -- "
          f"{dine_in_total} dine-in restaurants and {takeaway_total} takeaways. "
          f"That is {total / 1594 * 100:.1f}% of all Thai businesses in the UK."),
         ("Which Thai chains operate in London?",
@@ -316,7 +316,7 @@ def build_schema() -> str:
         "name": "How many Thai restaurants are in London?",
         "acceptedAnswer": {
             "@type": "Answer",
-            "text": f"London has {total} FSA-registered Thai businesses -- {dine_in_total} dine-in restaurants and {takeaway_total} takeaways."
+            "text": f"London has {total} FSA-listed Thai businesses -- {dine_in_total} dine-in restaurants and {takeaway_total} takeaways."
         },
     })
     faq_entries.append({
@@ -533,7 +533,7 @@ LONDON_PAGE = f"""<!DOCTYPE html>
 
         <div class="hero">
             <h1>Thai Restaurants in <em>London</em> -- 2026</h1>
-            <p class="subtitle">{stats_total} FSA-registered Thai restaurants across {len(NEIGHBOURHOODS)} neighbourhoods. From Soho late-night canteens to Wimbledon family staples -- here is where to find the best Thai food in London, area by area.</p>
+            <p class="subtitle">{stats_total} FSA-listed Thai restaurants across {len(NEIGHBOURHOODS)} neighbourhoods. From Soho late-night canteens to Wimbledon family staples -- here is where to find the best Thai food in London, area by area.</p>
             <div class="hero-stats">
                 <div class="hero-stat"><div class="num">{stats_total}</div><div class="lbl">Restaurants</div></div>
                 <div class="hero-stat"><div class="num">{stats_dine_in}</div><div class="lbl">Dine-in</div></div>
@@ -548,7 +548,7 @@ LONDON_PAGE = f"""<!DOCTYPE html>
         </nav>
 
         <div class="intro">
-            <p><strong>London's Thai food scene is bigger and more diverse than any other UK city.</strong> With {stats_total} FSA-registered businesses spanning every borough from Westminster to Greenwich, it is not a single scene -- it is dozens of overlapping ones.</p>
+            <p><strong>London's Thai food scene is bigger and more diverse than any other UK city.</strong> With {stats_total} FSA-listed businesses spanning every borough from Westminster to Greenwich, it is not a single scene -- it is dozens of overlapping ones.</p>
             <p>In Soho and Chinatown, you will find late-night canteens serving green curry until midnight. In Shoreditch and Hackney, independent Thai cafes do inventive takes on classics alongside street-food stalls at weekend markets. In Kensington and Wimbledon, long-established family restaurants have been serving loyal customers for two decades. And in the outer boroughs, neighbourhood Thai takeaways quietly serve some of the best food in the city.</p>
             <p>This guide breaks London down into its dining neighbourhoods. Each section includes real FSA hygiene data, our top-rated picks, and notes on which chains operate where. The data comes from the <strong>Food Standards Agency</strong>'s most recent inspections -- every rating is verifiable and independently audited.</p>
         </div>
@@ -593,10 +593,16 @@ LONDON_PAGE = LONDON_PAGE.replace("star", "★")
 LONDON_PAGE = LONDON_PAGE.replace("&#9733;", "★").replace("★", "&#9733;")
 
 # Write
+# /cities/london.html is a curated manual page: this one-time generator has
+# already served its purpose, and re-running it destroys hand-written
+# neighbourhood copy. Require an explicit --force.
+if "--force" not in sys.argv:
+    print("Refusing to overwrite the curated manual page cities/london.html.")
+    print("Re-run with --force only if you intend to regenerate it from scratch.")
+    sys.exit(1)
 os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
 with open(OUTPUT, "w") as f:
     f.write(LONDON_PAGE)
-
 kb = len(LONDON_PAGE) // 1024
 neighbourhood_count = len(NEIGHBOURHOODS)
 faq_count = 6

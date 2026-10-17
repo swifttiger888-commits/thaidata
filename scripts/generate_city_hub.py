@@ -132,14 +132,14 @@ HTML = f"""<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UK Thai Restaurant Market: City-by-City Breakdown 2026 | ThaiData</title>
-    <meta name="description" content="Complete city-by-city analysis of {total} FSA-registered Thai restaurants across all UK cities. Per-capita density, hygiene ratings, market gaps, and full directory with links to every city guide.">
+    <meta name="description" content="Complete city-by-city analysis of {total} FSA-listed Thai restaurants across all UK cities. Per-capita density, hygiene ratings, market gaps, and full directory with links to every city guide.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/thai-restaurants-city-breakdown-uk">
 
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://thaidata.uk/thai-restaurants-city-breakdown-uk">
     <meta property="og:title" content="UK Thai Restaurant Market: City-by-City Breakdown 2026">
-    <meta property="og:description" content="{total} FSA-registered Thai businesses across all UK cities. Full directory with hygiene ratings, market gaps, and links to every city guide.">
+    <meta property="og:description" content="{total} FSA-listed Thai businesses across all UK cities. Full directory with hygiene ratings, market gaps, and links to every city guide.">
     <meta property="og:image" content="https://thaidata.uk/thaidataukhero.webp">
     <meta property="og:locale" content="en_GB">
 
@@ -148,7 +148,7 @@ HTML = f"""<!DOCTYPE html>
       "@context": "https://schema.org",
       "@type": "Dataset",
       "name": "UK Thai Restaurant City Breakdown 2026",
-      "description": "City-by-city analysis of {total} FSA-registered Thai restaurants and takeaways across {len(city_entries)} UK cities. Includes Scotland (FHIS), chain restaurants, per-capita density, and hygiene ratings.",
+      "description": "City-by-city analysis of {total} FSA-listed Thai restaurants and takeaways across {len(city_entries)} UK cities. Includes Scotland (FHIS), chain restaurants, per-capita density, and hygiene ratings.",
       "url": "https://thaidata.uk/thai-restaurants-city-breakdown-uk",
       "creator": {{ "@type": "Organization", "name": "ThaiData UK" }},
       "temporalCoverage": "2026-06-01/2026-06-30",
@@ -247,7 +247,7 @@ HTML = f"""<!DOCTYPE html>
 
         <div class="hero">
             <h1>UK Thai Restaurant Market:<br><em>City-by-City</em> Breakdown 2026</h1>
-            <p class="sub">{total} FSA-registered Thai businesses across {len(city_entries)} cities. London leads with {london_entry["count"]} restaurants. Here is the full directory with hygiene ratings, market data, and links to every city guide.</p>
+            <p class="sub">{total} FSA-listed Thai businesses across {len(city_entries)} cities. London leads with {london_entry["count"]} restaurants. Here is the full directory with hygiene ratings, market data, and links to every city guide.</p>
         </div>
 
         <div class="stats-bar">
@@ -335,7 +335,7 @@ HTML = f"""<!DOCTYPE html>
                 </div>
                 <div class="highlight-card">
                     <h3>Coverage</h3>
-                    <p>We track <strong>all FSA-registered</strong> businesses in England, Wales, Scotland, and Northern Ireland that identify as Thai cuisine. This includes restaurants, takeaways, and cafes.</p>
+                    <p>We track <strong>all FSA-listed</strong> businesses in England, Wales, Scotland, and Northern Ireland that identify as Thai cuisine. This includes restaurants, takeaways, and cafes.</p>
                 </div>
                 <div class="highlight-card">
                     <h3>Update frequency</h3>

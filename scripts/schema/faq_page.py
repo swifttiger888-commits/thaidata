@@ -114,7 +114,7 @@ def build_faq_page(
 
     # Q1: How many Thai restaurants?
     total_word = "is" if count == 1 else "are"
-    registered = "FHIS-registered" if is_fhis else "FSA-registered"
+    registered = "FHIS-registered" if is_fhis else "FSA-listed"
     qas.append({
         "@type": "Question",
         "name": f"How many Thai restaurants are in {city}?",
