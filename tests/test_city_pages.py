@@ -314,6 +314,18 @@ class TestValidator:
         position_errors = [e for e in errors if "position" in e]
         assert not position_errors, f"position should be exempt but got errors: {position_errors}"
 
+    def test_schema_file_validation_stdlib_fallback(self):
+        """The fallback type check must map dict→object (JSON type names).
+
+        On machines without jsonschema the city generator runs the fallback;
+        a naive `type(x).__name__` check quarantined every page.
+        """
+        from pathlib import Path
+        schema_file = REPO / "schemas" / "item-list.schema.json"
+        instance = {"@type": "ItemList", "itemListElement": []}
+        errors = validate_schema(instance, schema_file)
+        assert not any("Type mismatch" in e for e in errors), errors
+
     def test_strip_html_body(self):
         html = "<html><body><script>alert('x')</script><p>Hello <b>World</b></p><style>.a{color:red}</style></body></html>"
         stripped = strip_html_body(html)
@@ -473,13 +485,15 @@ class TestFhisHandling:
         assert stats["scheme"] == "FHRS"
         assert stats["avg_rating"] == 4.5
 
-    def test_market_snapshot_no_zero_rating_for_fhis(self):
+    def test_market_snapshot_links_only(self):
         from scripts.generate_city_pages import build_market_snapshot_html, compute_city_stats
         stats = compute_city_stats(FHIS_EDINBURGH)
         snap = build_market_snapshot_html("Edinburgh", stats)
-        assert "14 Pass" in snap
-        assert "0.0" not in snap
-        assert "FHIS-registered" in snap
+        # Oct 2026: card is cross-links only — no stat repetition.
+        assert "Compare dish prices" in snap
+        assert "/chains/" in snap
+        assert "View all cities" in snap
+        assert "Pass" not in snap and "0.0" not in snap and "businesses" not in snap
 
     def test_faq_fhis_has_no_numeric_claims(self):
         faq = build_faq_page(
@@ -506,7 +520,7 @@ class TestFhisHandling:
                "uk_per_city": 5.0, "uk_avg": 4.4, "data_updated": "2026-09-21"}
         out = update_hero_stats(LEGACY_BLOCK_HTML, "Edinburgh", stats, 1263, ctx)
         assert "14 of 19 Pass (FHIS)" in out
-        assert "of 1263" in out and "1268" not in out
+        assert "of 1,263 restaurants &amp; takeaways" in out and "1268" not in out
         assert "74% Pass" in out and "FHIS · Food Standards Scotland" in out
         assert "Data updated: 2026-09-21" in out
         assert "above the UK average of 2.1/100k" in out
@@ -557,4 +571,52 @@ class TestEmptyCityState:
         url = [u["loc"] for u in sm.discover_city_pages()]
         assert any("/cities/normal" in u for u in url)
         assert not any("/cities/blackburn" in u for u in url)
+
+
+# ── City-page HTML invariants (regression guards, Oct 2026) ────────────────────
+
+
+def _city_files():
+    import re
+    _ = re  # keep imports local to test file
+    return sorted((REPO / "cities").glob("*.html"))
+
+
+class TestCityPageInvariants:
+    def test_no_concat_badge_bug(self):
+        import re
+        offenders = [
+            p.name for p in _city_files()
+            if re.search(r"\b\w+ competition Competition\b", p.read_text())
+        ]
+        assert not offenders, f"concat badge bug in: {offenders[:10]}"
+
+    def test_no_bare_1241_share(self):
+        import re
+        offenders = [
+            p.name for p in _city_files()
+            if re.search(r"of 1241</span>", p.read_text())
+        ]
+        assert not offenders, f"bare 'of 1241' in: {offenders[:10]}"
+
+    def test_browse_pages_have_jump_anchor(self):
+        offenders = []
+        for p in _city_files():
+            text = p.read_text()
+            if "BEGIN Browse Restaurants" in text and "jump-to-browse" not in text:
+                # Only pages with the analysis-card wall (stat-row/city-stats)
+                # bury their listings and need the jump link. Bare legacy
+                # pages (no hero) and hand-authored manual pages are exempt.
+                if "CITIES-MODE: manual" in text:
+                    continue
+                if 'class="stat-row"' in text or 'class="city-stats"' in text:
+                    offenders.append(p.name)
+        assert not offenders, f"missing jump anchor in: {offenders[:10]}"
+
+    def test_snapshot_card_replaced(self):
+        offenders = [
+            p.name for p in _city_files()
+            if "Market <em>Snapshot</em>" in p.read_text()
+        ]
+        assert not offenders, f"old snapshot card remains in: {offenders[:10]}"
 

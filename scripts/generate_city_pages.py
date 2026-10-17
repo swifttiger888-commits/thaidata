@@ -722,7 +722,7 @@ def update_hero_stats(
     )
 
     if total_uk:
-        share_val = f"{count / total_uk * 100:.1f}% of {total_uk}"
+        share_val = f"{count / total_uk * 100:.1f}% of {total_uk:,} restaurants &amp; takeaways"
         html = re.sub(
             r'(<strong>UK Share:</strong> <span[^>]*>)[^<]*(</span>)',
             lambda m: m.group(1) + share_val + m.group(2), html,
@@ -790,31 +790,43 @@ def update_hero_stats(
             lambda m: m.group(1) + data_updated, html,
         )
 
+    # ── 7. Structural fixes applied on every pass (idempotent) ──
+    # 7a. "High competition Competition" — double-word badge bug (76 pages).
+    html = re.sub(r'\b(\w+) competition Competition\b', r'\1 competition', html)
+    # 7b. Jump-to-browse anchor: listings sit below six analysis cards; give
+    # mobile users a one-tap path. Injected once, guarded by the id. City
+    # pages carry the sub paragraph; county pages carry an intro paragraph.
+    if 'id="jump-to-browse"' not in html:
+        anchor = (
+            '<p style="margin-top:14px;"><a id="jump-to-browse" href="#browse" '
+            'style="display:inline-block;background:#A3132B;color:#fff;padding:11px 22px;'
+            'border-radius:50px;font-weight:700;text-decoration:none;">View restaurants ↓</a></p>'
+        )
+        target = r'(<p class="sub">.*?</p>)'
+        if not re.search(target, html, flags=re.DOTALL):
+            target = r'(<p class="intro">.*?</p>)'
+        html = re.sub(
+            target,
+            lambda m: m.group(1) + anchor,
+            html,
+            count=1,
+            flags=re.DOTALL,
+        )
+
     return html
 
 
 def build_market_snapshot_html(city: str, stats: dict[str, Any]) -> str:
-    """Build the market-snapshot AUTO block."""
-    businesses = stats["count"]
-    pop_word = "businesses" if businesses != 1 else "business"
-    if stats.get("scheme") == "FHIS":
-        registered = "FHIS-registered"
-        rating_line = (
-            f'FHIS ratings (Food Standards Scotland): {stats.get("fhis_pass", 0)} Pass, '
-            f'{stats.get("fhis_improvement", 0)} Improvement Required'
-            + (f', {stats["fhis_exempt"]} Exempt' if stats.get("fhis_exempt") else '')
-            + '. Scotland does not use 0–5 scores.'
-        )
-    else:
-        registered = "FSA-registered"
-        rating_line = f'Average hygiene rating: \u2605{stats["avg_rating"]}/5.'
+    """Build the market-snapshot AUTO block — cross-links only.
+
+    Counts, hygiene averages and the dine-in/takeaway split already appear in
+    the hero sub, city-stats card, stat-row and Market Overview card. This
+    card previously restated all three, a fifth repetition adding nothing.
+    It now carries only the internal-link corridor.
+    """
     return (
         '<div class="card">\n'
-        '  <h2>Market <em>Snapshot</em></h2>\n'
-        f'  <p>There {("is" if businesses == 1 else "are")} <strong>{businesses}</strong> '
-        f'{registered} Thai {pop_word} in <strong>{city}</strong>. '
-        f'{rating_line} '
-        f'{stats["dine_in"]} dine-in, {stats["takeaway"]} takeaway.</p>\n'
+        '  <h2>Explore <em>Further</em></h2>\n'
         f'  <p style="margin-top:10px;font-size:0.88rem;">\n'
         f'    <a href="/dish-prices" style="color:var(--c2);">Compare dish prices</a>'
         f' &middot; '

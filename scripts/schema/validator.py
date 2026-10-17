@@ -130,7 +130,19 @@ def _validate_against_schema(
 
     if "type" in schema:
         expected = schema["type"]
-        actual = type(instance).__name__
+        # Map Python runtime types to JSON type names — a plain `dict` is a
+        # JSON `object`, etc. Without this the fallback flags every dict as
+        # "expected object, got dict" and the city generator quarantines
+        # every page on stdlib-only machines.
+        py_to_json = {
+            dict: "object",
+            list: "array",
+            str: "string",
+            bool: "boolean",
+            int: "number",
+            float: "number",
+        }
+        actual = py_to_json.get(type(instance), type(instance).__name__)
         if actual != expected:
             errors.append(f"Type mismatch: expected {expected}, got {actual}")
 
