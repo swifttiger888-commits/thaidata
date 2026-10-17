@@ -17,6 +17,48 @@ from typing import Any
 from city_mapper import LA_TO_CITY, CITY_POPULATIONS, map_la_to_city, get_population
 from fsa_client import fetch_all
 
+
+def load_name_filter_lists() -> tuple[set[int], set[int]]:
+    """Load allowlist + blocklist of FSA IDs from data/thai_name_allowlist.json.
+
+    Returns (allowlist_ids, blocklist_ids). Empty sets when the file is
+    missing or malformed — the filter then falls back to name-only matching.
+    """
+    allowlist: set[int] = set()
+    blocklist: set[int] = set()
+    path = os.path.join(REPO_DIR, 'data', 'thai_name_allowlist.json')
+    try:
+        with open(path) as f:
+            data = json.load(f)
+        allowlist = {int(i) for i in data.get('allowlist', {})}
+        blocklist = {int(i) for i in data.get('blocklist', {})}
+    except (OSError, ValueError, TypeError):
+        print(f"  ⚠️  Could not read {path} — name filter falls back to name-only matching")
+    return allowlist, blocklist
+
+
+def apply_name_filter(
+    establishments: list[dict[str, Any]],
+    allowlist: set[int],
+    blocklist: set[int],
+) -> tuple[list[dict[str, Any]], int]:
+    """Keep venues whose name contains 'thai' (or are allowlisted);
+    drop blocklisted false positives even when their name contains 'thai'.
+    Returns (kept, dropped_count)."""
+    kept: list[dict[str, Any]] = []
+    dropped = 0
+    for e in establishments:
+        fid = e.get('FHRSID')
+        name = (e.get('BusinessName') or '').lower()
+        if fid in blocklist:
+            dropped += 1
+            continue
+        if 'thai' in name or fid in allowlist:
+            kept.append(e)
+        else:
+            dropped += 1
+    return kept, dropped
+
 # ── Configuration ────────────────────────────────────────────────────
 REPO_DIR = '/tmp/thaidata-repo'
 RESTAURANTS_FILE = os.path.join(REPO_DIR, 'data', 'restaurants.json')
@@ -50,21 +92,16 @@ def main() -> None:
     # Post-filter: the FSA API's name search is over-eager — searching for
     # "Thai" also returns businesses with "Chai", "Khai", etc. (anything
     # containing "hai").  Keep only businesses whose name actually contains
-    # "thai" (case-insensitive).  Genuine Thai restaurants without "Thai"
-    # in the name (e.g. Giggling Squid, Busaba) are covered by chain searches.
-    THAI_NAME_ALLOWLIST: set[int] = set()  # FSA IDs of verified Thai without 'thai' in name
-    filtered = []
-    dropped_non_thai = 0
-    for e in all_ests:
-        name = (e.get('BusinessName') or '').lower()
-        if 'thai' in name or e.get('FHRSID') in THAI_NAME_ALLOWLIST:
-            filtered.append(e)
-        else:
-            dropped_non_thai += 1
+    # "thai" (case-insensitive), plus FSA IDs allowlisted in
+    # data/thai_name_allowlist.json (genuine Thai without 'thai' in the
+    # name, each verified before entry). Known non-Thai false positives in
+    # the blocklist are dropped even when their name contains 'thai'.
+    allowlist, blocklist = load_name_filter_lists()
+    kept, dropped_non_thai = apply_name_filter(all_ests, allowlist, blocklist)
     if dropped_non_thai:
         print(f"  ⚠️ Dropped {dropped_non_thai} non-Thai results from core search "
-              f"(kept {len(filtered)} of {len(all_ests)})")
-    all_ests = filtered
+              f"(kept {len(kept)} of {len(all_ests)})")
+    all_ests = kept
     thai_after = len(all_ests)
     
     # Chain searches (many Thai restaurants don't have "Thai" in the name)

@@ -1,0 +1,22 @@
+{
+  "comment": "Name-filter exceptions for fetch_all_thai_data.py. The core search only keeps venues whose name contains 'thai'; genuine Thai venues without it are allowlisted here by FSA ID, each verified before entry. blocklist = known non-Thai false positives that must never re-enter the data (e.g. Chai/I-Chai venues that substring-match 'Thai' searches).",
+  "allowlist": {
+    "1790288": {
+      "name": "Khop Chai Deu",
+      "city": "Ceredigion",
+      "verified": "2026-10-17",
+      "method": "FSA API (Restaurant/Cafe/Canteen, rating 4) + TripAdvisor/Wanderlog cuisine check"
+    }
+  },
+  "blocklist": {
+    "1583716": {"name": "Zaal Indian Cuisine", "reason": "Indian — false positive"},
+    "1129821": {"name": "Zaal Indian Dining", "reason": "Indian — false positive"},
+    "1204114": {"name": "Chai Station", "reason": "Pakistani desi cafe — false positive"},
+    "1711770": {"name": "Chai Lounge", "reason": "Not Thai — false positive"},
+    "1708567": {"name": "I-Chai", "reason": "Chinese restaurant — false positive"},
+    "1618629": {"name": "I-Chai Express", "reason": "Chinese takeaway — false positive"},
+    "1823426": {"name": "I-Chai Express", "reason": "Chinese takeaway — false positive"},
+    "1730138": {"name": "I-Chai Express", "reason": "Chinese takeaway — false positive"},
+    "1910968": {"name": "I-Chai Express", "reason": "Chinese takeaway — false positive"}
+  }
+}

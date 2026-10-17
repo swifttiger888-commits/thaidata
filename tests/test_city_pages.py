@@ -572,6 +572,42 @@ class TestEmptyCityState:
         assert any("/cities/normal" in u for u in url)
         assert not any("/cities/blackburn" in u for u in url)
 
+    def test_no_data_confirmed_empty_writes_state_without_file(self, monkeypatch, tmp_path):
+        """Confirmed-empty cities must get an empty-state page even when no
+        HTML file exists yet (the old exists-guard trapped them in
+        quarantine forever)."""
+        import scripts.generate_city_pages as g
+        monkeypatch.setattr(g, "CITIES_DIR", tmp_path)
+        registry = {"cities": {"adur": {"tier": "standard", "mode": "programmatic"}}}
+        all_data = {"by_city": {}}
+        result = g.process_city(
+            "adur", "Adur", registry, all_data, None,
+            prev_cities={"Manchester"}, dry_run=True,
+        )
+        assert result["action"] == "would-empty-state"
+        # and the non-dry path creates the file
+        result = g.process_city(
+            "adur", "Adur", registry, all_data, None,
+            prev_cities={"Manchester"}, dry_run=False,
+        )
+        assert result["action"] == "empty-state"
+        assert (tmp_path / "adur.html").exists()
+        assert 'content="noindex, follow"' in (tmp_path / "adur.html").read_text()
+
+    def test_no_data_unconfirmed_stays_quarantined(self, monkeypatch, tmp_path):
+        """A single bad fetch (city still present in the previous snapshot)
+        must NOT stub out a good page — stays quarantined."""
+        import scripts.generate_city_pages as g
+        monkeypatch.setattr(g, "CITIES_DIR", tmp_path)
+        registry = {"cities": {"adur": {"tier": "standard", "mode": "programmatic"}}}
+        all_data = {"by_city": {}}
+        result = g.process_city(
+            "adur", "Adur", registry, all_data, None,
+            prev_cities={"Manchester", "Adur"}, dry_run=True,
+        )
+        assert result["action"] == "quarantined"
+        assert not (tmp_path / "adur.html").exists()
+
 
 # ── City-page HTML invariants (regression guards, Oct 2026) ────────────────────
 

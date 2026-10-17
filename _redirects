@@ -18,3 +18,12 @@
 /chains/i-chai-express /chains/ 301
 /recipes/gaeng-hung-lay/ /recipes/kaeng-hang-lay/ 301
 /recipes/khao-tom-mud/ /recipes/khao-tom-mat/ 301
+
+# Town slugs without own data -> local-authority pages (Oct 2026)
+/cities/margate  /cities/thanet  301
+/cities/clacton-on-sea  /cities/tendring  301
+/cities/shrewsbury  /cities/shropshire  301
+/cities/torquay  /cities/torbay  301
+/cities/stratford-upon-avon  /cities/stratford-on-avon  301
+/cities/taunton  /cities/somerset  301
+/cities/lake-district  /cities/westmorland-and-furness  301

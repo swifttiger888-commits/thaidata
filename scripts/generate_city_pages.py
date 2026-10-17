@@ -1075,21 +1075,18 @@ def process_city(
         result["action"] = "quarantined"
         result["errors"].append(f"No restaurant data for city: {city_name}")
         # Empty cities: once the emptiness is confirmed across two data
-        # snapshots, replace the (now stale) page with a minimal noindexed
-        # empty state. A single bad fetch can never stub out good pages.
+        # snapshots, write the minimal noindexed empty state (creating the
+        # file if the city never had one). A single bad fetch can never
+        # stub out good pages — that is what the two-snapshot check is for.
         registry_entry = registry.get("cities", {}).get(slug, {})
         confirmed_empty = prev_cities is not None and city_name not in prev_cities
         if registry_entry.get("mode") != "manual" and confirmed_empty:
             html_path = CITIES_DIR / f"{slug}.html"
-            if html_path.exists():
-                with open(html_path) as f:
-                    existing_es = f.read()
-                if not is_empty_state(existing_es):
-                    if dry_run:
-                        result["action"] = "would-empty-state"
-                    else:
-                        html_path.write_text(build_empty_state_page(city_name, slug))
-                        result["action"] = "empty-state"
+            if dry_run:
+                result["action"] = "would-empty-state"
+            else:
+                html_path.write_text(build_empty_state_page(city_name, slug))
+                result["action"] = "empty-state"
         return result
 
     # Read existing HTML (if any)
