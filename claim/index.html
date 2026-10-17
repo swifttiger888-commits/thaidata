@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claim Your Thai Restaurant Listing | ThaiData UK</title>
-    <meta name="description" content="Own a Thai restaurant in the UK? Claim your free listing on ThaiData and add your menu, photos, opening hours, and more. Free for all UK Thai restaurant.">
+    <meta name="description" content="Own a Thai restaurant in the UK? Claim your free ThaiData listing and add your menu, photos, opening hours and website. Free, no card needed.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/claim/">
 
@@ -141,9 +141,12 @@ body {
         footer a:hover { color: var(--ink); }
 
         @media (max-width: 600px) {
+            .hero { padding: 32px 0 16px; }
             .hero h1 { font-size: 1.8rem; }
             .card { padding: 20px 18px; }
-            .steps { flex-direction: column; align-items: center; gap: 8px; }
+            .steps { flex-direction: row; align-items: center; gap: 10px; }
+            .step { flex-direction: column; gap: 4px; font-size: 0.75rem; }
+            .step .num { width: 24px; height: 24px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -157,7 +160,7 @@ body {
     <div class="wrap">
         <div class="hero">
             <h1>Claim Your <em>Restaurant</em> Listing</h1>
-            <p class="sub">Own a Thai restaurant in the UK? Claim your free listing to make sure ThaiData shows the right details — your menu, photos, hours, website and more.</p>
+            <p class="sub">Own a Thai restaurant in the UK? Your restaurant is probably already on ThaiData. Claim it free, with no card, and add your menu, photos, opening hours and website.</p>
         </div>
 
         <div class="steps" id="step-indicator">
@@ -168,15 +171,16 @@ body {
 
         <!-- STEP 1: Search -->
         <div class="card" id="section-search">
-            <h2>1. Find Your <em>Restaurant</em></h2>
-            <p style="color:var(--ink4);font-size:0.95rem;margin-bottom:16px;">Search for your Thai restaurant by name. We pull data from the Food Standards Agency register.</p>
-            <p style="background:rgba(163, 19, 43, 0.06);border:1px solid rgba(163, 19, 43, 0.15);border-radius:10px;padding:12px 16px;font-size:0.88rem;color:rgba(26,22,20,0.92);margin-bottom:18px;"><i class="fas fa-check-circle" style="color:var(--c2);margin-right:6px;"></i><strong>1,263</strong> Thai listings across the UK. Claim yours in under 2 minutes.<br><span style="font-size:0.82rem;color: rgba(26, 22, 20, 0.75);">Be among the first Thai restaurant owners to claim your listing.</span></p>
-            <p style="margin-top:-12px;margin-bottom:18px;font-size:0.85rem;"><a href="/r/demo/claimed-listing/" style="color:var(--c2);text-decoration:underline;text-underline-offset:2px;">See what a claimed listing looks like →</a></p>
+            <h2>Find Your <em>Restaurant</em></h2>
+            <p style="color:var(--ink4);font-size:0.95rem;margin-bottom:16px;">Search for your Thai restaurant by name — it's on the Food Standards Agency register, so yours is probably already here.</p>
+            <label for="search-input">Restaurant name</label>
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="Type your restaurant name (min 3 chars)..." autocomplete="off">
+                <input type="text" id="search-input" placeholder="Type your restaurant name" autocomplete="off">
                 <div class="results" id="search-results"></div>
             </div>
             <p style="color:var(--ink4);font-size:0.8rem;margin-top:8px;">Can't find your restaurant? <a href="mailto:hello@thaidata.uk" style="color:var(--c2);">Let us know</a> and we'll add it.</p>
+            <p style="background:rgba(163, 19, 43, 0.06);border:1px solid rgba(163, 19, 43, 0.15);border-radius:10px;padding:12px 16px;font-size:0.88rem;color:rgba(26,22,20,0.92);margin-top:16px;"><i class="fas fa-check-circle" style="color:var(--c2);margin-right:6px;"></i><strong>1,263 Thai restaurants</strong> are already listed from official FSA records. Yours is probably one of them.<br>Find it and claim it free in about 2 minutes. No card needed.</p>
+            <p style="margin-top:12px;font-size:0.85rem;"><a href="/r/demo/claimed-listing/" style="color:var(--c2);text-decoration:underline;text-underline-offset:2px;">See an example claimed listing →</a></p>
         </div>
 
         <!-- STEP 2: Claim form -->
