@@ -15,6 +15,7 @@ STALE_TOKENS = [
     "1,265",
     "1,557",
     "253 cities",
+    "253 UK cities",
     "London leads with 411",
     "Leeds (34)",
     "Manchester (28)",

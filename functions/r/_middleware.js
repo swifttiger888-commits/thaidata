@@ -487,7 +487,7 @@ async function injectClaimedEnrichment(html, env) {
  * name="thaidata-page" marker meta tag. We cannot trust ASSETS.fetch() returning ok,
  * because Pages answers unmatched paths with the homepage and HTTP 200. If no menu
  * page exists the HTML is returned unchanged, so this is a no-op for the other
- * ~1,265 restaurants until their menus are generated.
+ * ~1,263 restaurants until their menus are generated.
  */
 async function injectMenuLink(html, city, name, origin, env) {
   if (!env.ASSETS) return html;

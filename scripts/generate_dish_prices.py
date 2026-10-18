@@ -292,7 +292,7 @@ HTML = f"""<!DOCTYPE html>
             <div class="link-grid">
                 <a href="/thai-restaurants-city-breakdown-uk" class="link-card">
                     <h3>City Breakdown</h3>
-                    <p>All 253 UK cities with Thai restaurants</p>
+                    <p>All 254 UK cities with Thai restaurants</p>
                 </a>
                 <a href="/r/" class="link-card">
                     <h3>Restaurant Directory</h3>
