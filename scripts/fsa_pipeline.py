@@ -158,8 +158,34 @@ def main() -> None:
         print(f"Done in {elapsed:.1f}s")
         return
 
+    # Menus are built by a separate batch and can be mid-flight here: a JSON
+    # without its rendered page fails test_menu_guard in CI (run #610 went red
+    # exactly this way). Rebuild pages from JSON first, then verify; if the guard
+    # still fails, commit the data refresh without menu paths instead of shipping
+    # a red build.
+    menus_ok = True
+    try:
+        subprocess.run([sys.executable, f'{SCRIPTS}/rebuild_menu_pages.py'],
+                       capture_output=True, text=True, timeout=900)
+        guard = subprocess.run([sys.executable, '-m', 'pytest', 'tests/test_menu_guard.py', '-q'],
+                               capture_output=True, text=True, timeout=900)
+        menus_ok = guard.returncode == 0
+        if menus_ok:
+            print("  ✅ Menu pages rebuilt and guard test passed")
+        else:
+            print("  ⚠️ Menu guard failed — excluding data/menus and r/*/*/menu from this commit")
+            tail = (guard.stdout or "").strip().splitlines()[-6:]
+            for line in tail:
+                print(f"     {line}")
+    except Exception as exc:  # noqa: BLE001 - never block a data refresh on this
+        menus_ok = False
+        print(f"  ⚠️ Menu verification failed ({exc}) — excluding menu paths")
+
     # Stage everything that changed
-    subprocess.run(['git', 'add', 'data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py', 'functions/mcp.js', 'names.json', 'functions/api/listing_urls.js'], capture_output=True)
+    add_paths = ['data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py', 'functions/mcp.js', 'names.json', 'functions/api/listing_urls.js']
+    if not menus_ok:
+        add_paths += [':(exclude)data/menus', ':(exclude)r/*/*/menu/**']
+    subprocess.run(['git', 'add', *add_paths], capture_output=True)
 
     commit_msg = f"Auto-refresh: FSA data update — {new_count} Thai businesses ({diff:+d})"
     result = subprocess.run(['git', 'commit', '-m', commit_msg], capture_output=True, text=True)

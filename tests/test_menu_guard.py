@@ -69,8 +69,8 @@ def test_diet_detection(name, cat, flag, want):
     # Tier 1: dietary violations -> nothing at all
     ("1966538", "Vegetable Spring Rolls", None, "none"),
     ("1966538", "Street Style Special Egg Fried Rice", "khao-pad", "link"),
-    ("537906", "TOFU PAD KHING", None, "none"),
-    ("537906", "EGG FRIED RICE", "khao-pad", "link"),
+    ("997537", "Tom Yum Tofu", None, "none"),
+    ("997537", "Egg Fried Rice", "khao-pad", "link"),
     # Tier 2: protein swap -> link only
     ("372004", "Pork with Ginger", "pad-khing", "link"),
     ("372004", "Chicken with Ginger", "pad-khing", "image"),
@@ -92,10 +92,10 @@ def test_render_matrix(fsa, name_sub, want_slug, want_mode):
 
 def test_denylist_fsa_ids_exist():
     guard = json.load(open(os.path.join(REPO, "data", "menu_recipe_guard.json"), encoding="utf-8"))
-    known = set()
-    for f in os.listdir(os.path.join(REPO, "data", "menus")):
-        d = json.load(open(os.path.join(REPO, "data", "menus", f), encoding="utf-8"))
-        known.add(str(d.get("fsa_id")))
+    # Check against the venue dataset, not data/menus: a denylisted venue having
+    # no published menu is normal (its menu may have been pruned or never built).
+    data = json.load(open(os.path.join(REPO, "data", "restaurants.json"), encoding="utf-8"))
+    known = {str(r.get("id")) for r in data["restaurants"]}
     for fsa in guard["denylist"]:
         assert fsa in known, f"denylist references unknown fsa_id {fsa}"
 
@@ -192,10 +192,8 @@ def test_every_rendered_block_matches_the_guard():
     ("cornwall/talay-thai", "Sweet & Spicy Pork Ribs", "image"),
     ("north-norfolk/bann-thai-restaurant", "Pork with Ginger", "link"),
     ("north-norfolk/bann-thai-restaurant", "Chicken with Ginger", "image"),
-    ("sefton/thai-rice", "TOFU PAD KHING", "none"),
     ("lincoln/araya-thai-restaurant", "Vegetable Spring Roll", "none"),
     ("lincoln/araya-thai-restaurant", "Deep-Fried Tofu", "image"),
-    ("warrington/thai-paragon", "PAD KING SOT", "none"),
     ("york/bamboo-thai", "Egg fried rice (V)", "none"),
 ])
 def test_built_pages(page, item_sub, want):

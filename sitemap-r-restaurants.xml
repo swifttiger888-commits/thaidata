@@ -6386,22 +6386,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/bristol/clifton-thai/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/bristol/mangosteen-thai-tapas-and-bar/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thaidata.uk/r/broadland/thailand-thai-cuisine/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/bromsgrove/maekong-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6511,11 +6501,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/dacorum/thai-cottage/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/derby/good-thai-restaurant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6596,11 +6581,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/herefordshire/thai-rama-iv/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/hertfordshire/baan-thitiya-thai-cuisine/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6626,11 +6606,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/ipswich/kwan-thai-restaurant/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/isle-of-wight/thai-journey-restaurant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6652,11 +6627,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/leeds/luck-thai-restaurant/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/leeds/sri-non-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6697,11 +6667,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/liverpool/phi-thai/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/london/angrid-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6792,11 +6757,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/sizzling-thai/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/london/thai-elephant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6906,16 +6866,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/newcastle/mantra-thai-dining/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/newcastle/thai-house/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/north-kesteven/thai-street-cafe/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6927,11 +6877,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/north-norfolk/chai-yo-thai-restaurant/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/north-norfolk/thai-ubon-restaurant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6996,16 +6941,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/sefton/sam-thai-restaurant/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/sefton/thai-rice/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/shropshire/thai-arts-restaurant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -7032,11 +6967,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/staffordshire/baan-thai-restaurant-ltd/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/staffordshire/favourite-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -7117,16 +7047,6 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/vale-of-white-horse/chaba-thai-restaurant/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/vale-of-white-horse/yummy-thai/menu/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thaidata.uk/r/warrington/thai-paragon/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
