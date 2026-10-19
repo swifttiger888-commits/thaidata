@@ -64,6 +64,8 @@ EVENT_ORDER = [
     "loy-krathong-wat-buddhapadipa-2026",
     "kathina-wat-phra-singh-2026",
     "loy-krathong-wat-phra-singh-2026",
+    "thai-business-awards-cardiff-2026",
+    "thai-business-awards-london-2026",
     "thai-national-day-wat-buddhapadipa-2026",
     "kings-birthday-2026",
     "nye-temple-ceremonies-2026",
