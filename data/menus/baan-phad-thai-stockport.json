@@ -1,0 +1,369 @@
+{
+ "restaurant": "Baan Phad Thai",
+ "city": "Stockport",
+ "fsa_id": "1090620",
+ "address": "41 Broadstone Road, North Reddish, Stockport",
+ "source": "https://www.baanphadthai.co.uk/menu",
+ "source_label": "the restaurant's own menu page",
+ "checked": "2026-10-19",
+ "categories": {
+  "Appetisers": [
+   {
+    "name": "Thai Prawn Crackers",
+    "description": "Crispy, crunch prawn crackers with sweet chilli sauce.",
+    "price": "£4.20 eat in / £3.50 takeaway"
+   },
+   {
+    "name": "Vegetarian Spring Rolls",
+    "description": "Crispy spring rolls filled with Vegetables & glass noodles. Served with sweet chilli sauce.",
+    "price": "£6.50 eat in / £6.10 takeaway"
+   },
+   {
+    "name": "Grilled Chicken Satay",
+    "description": "Grilled marinated chicken skewers. Served with peanut sauce & cucumber relish.",
+    "price": "£7.80 eat in / £7.20 takeaway"
+   },
+   {
+    "name": "Thai Style Chicken Wings",
+    "description": "Marinated chicken wings tossed in garlic, chilli & coriander.",
+    "price": "£6.95 eat in / £6.50 takeaway"
+   },
+   {
+    "name": "Chicken Toast",
+    "description": "Fried toast with seasoned minced chicken, sauce & sesame seeds. Served with sweet chilli sauce.",
+    "price": "£6.95 eat in / £6.95 takeaway"
+   },
+   {
+    "name": "Golden Money Bags",
+    "description": "Golden parcels filled with a mix of minced chicken, vegetables & Thai herbs. Served with a plum sauce.",
+    "price": "£6.95 eat in / £6.50 takeaway"
+   },
+   {
+    "name": "King Prawn Tempura",
+    "description": "King prawns fried in a tempura batter & panko breadcrumbs, and served with a plum sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Isaan Sausage",
+    "description": "Northeastern Thai pork sausage served with fresh ginger, chilli and cabbage.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Prawn Toast",
+    "description": "Fried toast with seasoned minced prawn, sauce & sesame seeds. Served with a plum sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Deep Fried Spare Ribs",
+    "description": "Pork ribs marinated in Thai spices, fried and tossed in garlic and black pepper.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Ribs In Special Thai Sauce",
+    "description": "Tender ribs in a sweet-savoury sauce & honey.",
+    "price": "£7.70"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "Thai style fish cakes with fresh herbs, spice and served with a cucumber, sweet chilli and peanut dip.",
+    "price": "£7.70"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "Tempura battered vegetables fried & tossed in chilli garlic salt, served with sweet chilli sauce.",
+    "price": "£5.60"
+   }
+  ],
+  "Soups & Salads": [
+   {
+    "name": "Thai Beef Salad",
+    "description": "Grilled marinated beef tossed with fresh herbs, lettuce, cucumber, red onion, tomatoes & a chilli lime dressing.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Special Beef Salad",
+    "description": "Grilled beef tossed in a roasted chilli paste dressing, fresh herbs, red onions, mint, lemongrass & a splash of lime juice.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Nam Tok Salad",
+    "description": "Beef steak tossed in fresh herbs, toasted rice powder, lime juice, chilli & onions.",
+    "price": "£10.50"
+   },
+   {
+    "name": "Papaya salad",
+    "description": "Thai Papaya salad, tomatoes, green beans & peanuts in a spicy lime dressing.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Tom-Yum/ Hot & Sour",
+    "description": "Spicy & Tangy Thai soup with lemongrass, kaffir lime leaves & mushrooms.",
+    "price": null
+   },
+   {
+    "name": "Tom-kha / Coconut Soup",
+    "description": "Creamy Thai coconut soup with galangal, lemongrass, kaffir lime leaves & mushrooms.",
+    "price": null
+   }
+  ],
+  "Noodles & Rice": [
+   {
+    "name": "Phad Thai",
+    "description": "Wok Fried rice noodles with tamarind twist! served with peanuts, egg, beansprouts & fresh lime wedge.",
+    "price": null
+   },
+   {
+    "name": "Pad See Ew",
+    "description": "Charred flat rice noodles with egg, Chinese cabbage, broccoli & dark soy sauce.",
+    "price": null
+   },
+   {
+    "name": "Drunken Noodles",
+    "description": "Fiery yellow egg noodles with Thai basil, garlic, broccoli, cauliflower & carrot.",
+    "price": null
+   },
+   {
+    "name": "Fried Rice Thai Style",
+    "description": "Jasmine rice with egg, garlic, Chinese cabbage, broccoli & carrot.",
+    "price": null
+   },
+   {
+    "name": "Drunken Fried Rice",
+    "description": "Jasmine rice with chilli,egg, basil, garlic, broccoli, cauliflower, carrot & onions",
+    "price": null
+   },
+   {
+    "name": "Roasted Chilli Paste Fried Rice",
+    "description": "Jasmine rice fried in roasted chilli paste, egg, green beans, onion & pepper.",
+    "price": null
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "Jasmine rice fried with pineapple, egg, onion, carrot & a touch of curry seasoning.",
+    "price": null
+   }
+  ],
+  "Stir-Fry": [
+   {
+    "name": "Pad King / Fresh Ginger",
+    "description": "Fresh garlic, garlic, mushrooms, onion & pepper.",
+    "price": null
+   },
+   {
+    "name": "Pad Ka Prow / Chilli & Basil Leaves",
+    "description": "Chilli, garlic, Thai holy basil, green beans, onions and pepper.",
+    "price": null
+   },
+   {
+    "name": "Cashew nuts",
+    "description": "Cashew nuts, pineapple, sesame oil, peppers & onions",
+    "price": null
+   },
+   {
+    "name": "Pad Kratiem Prik / Garlic & Pepper",
+    "description": "Garlic & black pepper stir-fry",
+    "price": null
+   },
+   {
+    "name": "Sweet & Sour",
+    "description": "Pineapple, onions, pepper & carrots in a sweet & sour sauce.",
+    "price": null
+   },
+   {
+    "name": "Oyster Sauce",
+    "description": "Mushrooms, peppers & peppers in a Thai Oyster sauce.",
+    "price": null
+   },
+   {
+    "name": "Mixed Vegetables",
+    "description": "A mix of fresh vegetables stir-fried with garlic & soy sauce.",
+    "price": null
+   },
+   {
+    "name": "Roasted Chilli Paste",
+    "description": "Stir-fried roasted chilli paste, green beans, onions & peppers.",
+    "price": null
+   },
+   {
+    "name": "Duck In Tamarind Sauce",
+    "description": "Crispy duck tossed in tangy tamarind sauce, topped with crispy shallots served with broccoli.",
+    "price": "£11.95"
+   }
+  ],
+  "Curries": [
+   {
+    "name": "Panang Curry",
+    "description": "Spicy rich Panang curry with green beans, peppers & Thai basil.",
+    "price": null
+   },
+   {
+    "name": "Thai Green Curry",
+    "description": "Spicy coconut green curry with courgettes, bamboo shoots & Thai basil.",
+    "price": null
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "Spicy coconut red curry with courgettes, bamboo shoots & Thai basil.",
+    "price": null
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Massaman curry with potatoes, peppers & onions in a mild creamy coconut sauce.",
+    "price": null
+   },
+   {
+    "name": "Chu Chee Fish",
+    "description": "Fried cod fish with a spicy, creamy coconut sauce.",
+    "price": "£11.50"
+   }
+  ],
+  "Sides": [
+   {
+    "name": "Jasmine Rice",
+    "description": "",
+    "price": "£2.95"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.20"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Yellow Egg Noodles",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Rice Noodles",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£3.50"
+   }
+  ]
+ },
+ "category_tiers": {
+  "Soups & Salads": [
+   [
+    "Chicken",
+    "£5.95"
+   ],
+   [
+    "King Prawns",
+    "£6.50"
+   ],
+   [
+    "Vegetables",
+    "£5.50"
+   ]
+  ],
+  "Noodles & Rice": [
+   [
+    "Chicken or Beef",
+    "£8.95"
+   ],
+   [
+    "Chicken & Beef",
+    "£9.95"
+   ],
+   [
+    "King Prawn",
+    "£10.50"
+   ],
+   [
+    "Duck",
+    "£10.50"
+   ],
+   [
+    "Vegetables",
+    "£7.50"
+   ],
+   [
+    "Vegetables & Tofu",
+    "£8.20"
+   ]
+  ],
+  "Stir-Fry": [
+   [
+    "Chicken or Beef",
+    "£8.95"
+   ],
+   [
+    "Chicken & Beef",
+    "£11.50"
+   ],
+   [
+    "King Prawn",
+    "£11.50"
+   ],
+   [
+    "Duck",
+    "£11.50"
+   ],
+   [
+    "Fish",
+    "£10.95"
+   ],
+   [
+    "Vegetables",
+    "£7.50"
+   ],
+   [
+    "Vegetables & Tofu",
+    "£8.45"
+   ]
+  ],
+  "Curries": [
+   [
+    "Chicken or Beef",
+    "£10.50"
+   ],
+   [
+    "Chicken & Beef",
+    "£10.50"
+   ],
+   [
+    "King Prawn",
+    "£11.50"
+   ],
+   [
+    "Fish",
+    "£10.50"
+   ],
+   [
+    "Duck",
+    "£11.50"
+   ],
+   [
+    "Vegetables",
+    "£8.50"
+   ],
+   [
+    "Vegetables & Tofu",
+    "£8.95"
+   ],
+   [
+    "Sauce Only",
+    "£4.50"
+   ]
+  ]
+ },
+ "pricing_notes": [
+  "Heads up! The stir-fry dishes don't come with sides! We highly recommend adding rice, noodles or chips.",
+  "Heads Up! These curries don't come with sides! We highly recommend adding rice, noodles or chips.",
+  "Prices shown are takeaway. Eat-in prices are not published online; please confirm with the restaurant."
+ ]
+}

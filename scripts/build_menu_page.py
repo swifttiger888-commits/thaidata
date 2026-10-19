@@ -251,6 +251,25 @@ def build(data, dst=None):
         )
         tier_html = f'<div class="tiers"><p class="tiers-label">Choose your protein</p><ul>{rows}</ul></div>'
 
+    # ---- per-section protein tiers ----
+    # Many Thai menus price a whole SECTION by protein ("any curry + chicken or beef
+    # £10.50") rather than pricing each dish. One global tier table cannot express
+    # that: four sections carry four different price lists. category_tiers maps a
+    # section name to its own [[proteins, price], ...] list, and the table renders
+    # inside that section only.
+    cat_tiers = data.get("category_tiers") or {}
+
+    def section_tier_html(c):
+        tier_rows = cat_tiers.get(c) or []
+        if not tier_rows:
+            return ""
+        rows = "".join(
+            f'<li><span class="tier-proteins">{esc(t[0])}</span>'
+            f'<span class="tier-price">{esc(money(t[1]))}</span></li>' for t in tier_rows
+        )
+        return (f'<div class="tiers"><p class="tiers-label">Choose your protein</p>'
+                f'<ul>{rows}</ul></div>')
+
     # ---- pricing policy callout (set-price menus, lunch deals, buffets) ----
     # Some menus price the whole meal rather than each dish ("any starter and main
     # course for 14.50"). Those dishes legitimately have no individual price, so
@@ -280,6 +299,8 @@ def build(data, dst=None):
         cid = re.sub(r"[^a-z0-9]+", "-", c.lower()).strip("-")
         rows = "".join(dish_html(d, fsa_id=data.get("fsa_id"), category=c) for d in sorted(dishes, key=dish_sort_key))
         callout = tier_html if c == "Main Courses" and tier_html else ""
+        if not callout:
+            callout = section_tier_html(c)
         sections.append(
             f'<section class="cat" id="cat-{cid}">'
             f'<h2 class="cat-title">{esc(c)}</h2>{callout}'
