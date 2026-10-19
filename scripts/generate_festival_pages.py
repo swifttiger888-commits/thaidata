@@ -29,16 +29,14 @@ MONTH_ANCHOR = {
 
 # event_id → month anchor for events without a start_date
 NULL_DATE_MONTH = {
-    "songkran-restaurant-promotions-2026": "april",
     "songkran-scotland-2026": None,  # only in songkran page
     "thailand-showcase-2026": "june",
     "magic-of-thailand-basingstoke-2026": "june",
     "magic-of-thailand-nottingham-2026": "july",
-    "asahna-bucha-khao-phansa-2026": "july",
     "magic-of-thailand-warwick-portsmouth-2026": "august",
     "kathina-2026": "october",
     "vegetarian-festival-2026": "october",
-    "loy-krathong-university-societies-2026": "november",
+    "loy-krathong-wat-phra-singh-2026": "november",
 }
 
 # special ordering within each month
@@ -48,7 +46,6 @@ EVENT_ORDER = [
     "songkran-wat-charoenbhavana-2026",
     "songkran-wat-mahathat-2026",
     "songkran-wat-sanghapadipa-2026",
-    "songkran-restaurant-promotions-2026",
     "magic-of-thailand-wimbledon-2026",
     "magic-of-thailand-poole-2026",
     "magic-of-thailand-maidstone-2026",
@@ -56,16 +53,18 @@ EVENT_ORDER = [
     "magic-of-thailand-basingstoke-2026",
     "southampton-thai-festival-2026",
     "magic-of-thailand-nottingham-2026",
-    "asahna-bucha-khao-phansa-2026",
     "magic-of-thailand-manchester-2026",
     "magic-of-thailand-warwick-portsmouth-2026",
     "magic-of-thailand-ealing-2026",
     "kathina-2026",
     "vegetarian-festival-2026",
-    "loy-krathong-wat-buddhapadipa-2026",
-    "loy-krathong-wat-phra-singh-2026",
+    "alms-giving-end-vassa-wat-buddhapadipa-2026",
     "loy-krathong-wat-mahathat-2026",
-    "loy-krathong-university-societies-2026",
+    "kathina-wat-buddhapadipa-2026",
+    "loy-krathong-wat-buddhapadipa-2026",
+    "kathina-wat-phra-singh-2026",
+    "loy-krathong-wat-phra-singh-2026",
+    "thai-national-day-wat-buddhapadipa-2026",
     "kings-birthday-2026",
     "nye-temple-ceremonies-2026",
 ]
@@ -225,9 +224,17 @@ def gen_calendar_page(events):
                    "september", "october", "november", "december"]
     grouped = {m: [] for m in month_order}
     ev_map = {e["event_id"]: e for e in events}
+    past_events = []
+    tbc_events = []
     for eid in EVENT_ORDER:
         e = ev_map.get(eid)
         if not e:
+            continue
+        if not e.get("start_date"):
+            tbc_events.append(e)
+            continue
+        if is_past(e):
+            past_events.append(e)
             continue
         m = event_month(e)
         if m is None:
@@ -246,6 +253,31 @@ def gen_calendar_page(events):
         calendar_html += f'\n            <!-- {header_label.split(" —")[0].upper()} -->\n'
         calendar_html += f'            <div class="month-header" id="{anchor}">{header_label}</div>\n'
         for e in evs:
+            calendar_html += event_card_html(e) + "\n"
+    if past_events:
+        calendar_html += '\n            <!-- EARLIER IN 2026 -->\n'
+        calendar_html += '            <div class="month-header" id="earlier-2026">Earlier in 2026 — ended</div>\n'
+        past_grouped = {}
+        for e in past_events:
+            m = event_month(e)
+            if m is None:
+                continue
+            for anchor, (_, mth) in MONTH_ANCHOR.items():
+                if mth == m:
+                    past_grouped.setdefault(anchor, []).append(e)
+                    break
+        for anchor in month_order:
+            pevs = past_grouped.get(anchor) or []
+            if not pevs:
+                continue
+            header_id = anchor if f'id="{anchor}"' not in calendar_html else f"{anchor}-past"
+            calendar_html += f'            <div class="month-header" id="{header_id}" style="opacity:0.75;font-size:0.95rem;">{MONTH_ANCHOR[anchor][0]}</div>\n'
+            for e in pevs:
+                calendar_html += event_card_html(e) + "\n"
+    if tbc_events:
+        calendar_html += '\n            <!-- DATES TO BE CONFIRMED -->\n'
+        calendar_html += '            <div class="month-header" id="dates-tbc">Dates to be confirmed</div>\n'
+        for e in tbc_events:
             calendar_html += event_card_html(e) + "\n"
 
     ld_json = generate_ld_json(events)
@@ -845,7 +877,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
     <div class="section">
         <div class="wrap">
             <h2>Where to <em>Celebrate</em> in 2026</h2>
-            <p>Estimated date: <strong style="color: var(--ink);">Tuesday 24 November 2026</strong> (full moon of the 12th Thai lunar month). UK temples usually celebrate on the nearest Sunday — confirmed dates will be published by temples from September.</p>
+            <p>The full moon of the 12th Thai lunar month falls on <strong style="color: var(--ink);">Tuesday 24 November 2026</strong>, but UK temples set their own celebration dates — Wat Buddhapadipa holds its Loy Krathong on <strong style="color: var(--ink);">Saturday 14 November 2026</strong>, and Wat Mahathat combines it with Kathina on 1 November. Always use the venue's published date below.</p>
 {venue_cards}
         </div>
     </div>
