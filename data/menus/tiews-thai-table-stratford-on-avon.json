@@ -1,0 +1,576 @@
+{
+ "restaurant": "TIEW'S THAI TABLE",
+ "city": "Stratford-on-Avon",
+ "fsa_id": "1920067",
+ "address": "Stratford-on-Avon",
+ "source": "https://pickthairestaurant.co.uk/main-menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "One Dish &amp; Two Dish": [
+   {
+    "name": "Thai Chicken Satay",
+    "description": "Chicken marinated with Thai spices served with mild peanuts sauce.",
+    "price": null
+   },
+   {
+    "name": "Thai Fish Cake",
+    "description": "Fish paste blended with spices red curry paste served with sweet chili sauce.",
+    "price": null
+   },
+   {
+    "name": "Spring Roll",
+    "description": "Deep-fried pastry wrapped with vegetables served with sweet chilli sauce.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Deep-fried squid in batter sprinkle with seasoning salt and ground black pepper served with chili sauce.",
+    "price": null
+   },
+   {
+    "name": "Golden Money Bags",
+    "description": "Crispy pastry wrapped with Thai-spiced chicken and vegetables served with chili sauce.",
+    "price": null
+   },
+   {
+    "name": "Sticky Chicken Wing",
+    "description": "Fried Marinate chicken wing cook with a sweet-sour BBQ red wine sauce topped with spring onion and chili.",
+    "price": null
+   },
+   {
+    "name": "Duck Roll",
+    "description": "Deep-fried pastry wrapped with duck, carrot, spring onion and celery served with hoisin sauce.",
+    "price": null
+   },
+   {
+    "name": "Moo Ping (Pork Skewer)",
+    "description": "Thai-style BBQ pork marinated in our special herb, served with a spicy tamarind sauce.",
+    "price": null
+   },
+   {
+    "name": "Chicken Zabb!!🌶️🌶️",
+    "description": "Deep-fried chicken with chilli, ground tossed rice, mint, shallot, spring onion and coriander",
+    "price": null
+   }
+  ],
+  "MAIN FOR ONE DISH &amp; TWO DISHES": [
+   {
+    "name": "Pad King",
+    "description": "Stir-fry with ginger, mushroom, spring onion and pepper.",
+    "price": null
+   },
+   {
+    "name": "Cashew Nut 🌶️",
+    "description": "Stir-fry with roast cashew nut, chilli paste and vegetable.",
+    "price": null
+   },
+   {
+    "name": "Pad Gra Pao 🌶️🌶️🌶️",
+    "description": "Stir-fry with spicy chilli sauce, holy basil and vegetable.",
+    "price": null
+   },
+   {
+    "name": "Pad Priew Wan",
+    "description": "Stir-fry with vegetables and pineapple in sweet and sour sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Prik Sod 🌶️🌶️",
+    "description": "Stir-fry slice of green chilli, spring onion and pepper.",
+    "price": null
+   },
+   {
+    "name": "Pad Tao See (Black Bean Sauce)",
+    "description": "Selection of vegetable stir fried with Black Bean sauce.",
+    "price": null
+   },
+   {
+    "name": "Green Curry 🌶️🌶️",
+    "description": "Aromatic curry paste with is sweet and a medium spicy and coconut milk, Thai herbs and some vegetable.",
+    "price": null
+   },
+   {
+    "name": "Red Curry 🌶️🌶️",
+    "description": "Aromatic curry paste with coconut milk vegetable and Thai herbs.",
+    "price": null
+   },
+   {
+    "name": "Panang Curry 🌶️🌶️",
+    "description": "A rich and aromatic coconut milk curry sauce with lime leaves.",
+    "price": null
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Aromatic curry coconut milk, cinnamon, Star anise, cashew nuts, Potatoes, fried shallot.",
+    "price": null
+   },
+   {
+    "name": "Singapore Noodle🌶️",
+    "description": "Singapore-style. Stir-fry vermicelli noodle with egg, bean sprout and curry powder.",
+    "price": null
+   },
+   {
+    "name": "Pad-Se-Eew",
+    "description": "Ho fun noodle stir-fry with seasons vegetables, dark soy sauce and seasoning sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Thai",
+    "description": "Thai-style, tamarind sauce, tofu, bean sprout, shred carrot and spring onion.",
+    "price": null
+   },
+   {
+    "name": "Pad Gra Pao Mince 🌶️🌶️🌶️",
+    "description": "Only Available with Chicken / Beef / Pork",
+    "price": null
+   }
+  ],
+  "TAPAS STARTER": [
+   {
+    "name": "Thai Prawn Cracker",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Chicken marinated with Thai spices served with mild peanut sauce.",
+    "price": "£5.25"
+   },
+   {
+    "name": "Pork Dumpling",
+    "description": "Streamed dough filled with marinated pork served with vinegar soy sauce.",
+    "price": "£4.70"
+   },
+   {
+    "name": "Moo Ping (BBQ Pork)",
+    "description": "Thai-style barbecued pork marinated in our special herb and served with a spicy tamarind sauce.",
+    "price": "£5.25"
+   }
+  ],
+  "MAIN TAPAS": [
+   {
+    "name": "Crispy: Beef / Chicken / King Prawn 🌶️",
+    "description": "Batter and stir-fried in chilli paste sauce, with mushroom, sesame seed and spring onion.",
+    "price": "£7.25"
+   },
+   {
+    "name": "King Prawn Tamarind",
+    "description": "Fried king prawn with sweet & sour tamarind sauce, roast cashew nut.",
+    "price": "£7.50"
+   },
+   {
+    "name": "Pak Choi & Broccoli Stem",
+    "description": "Stir- fried pak choi, broccoli stem with oyster sauce and garlic.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Egg Noodle (Extra chicken £2.50 / Prawn £4.00)",
+    "description": "Batter and stir-fried in chilli paste sauce, with mushroom, sesame seed and spring onion.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Bean sprout noodle (Extra chicken £2.50 / Prawn £4.00)",
+    "description": "Batter and stir-fried in chilli paste sauce, with mushroom, sesame seed and spring onion.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Thai Papaya Salad (Som Tam) 🌶️",
+    "description": "Traditional Thai papaya salad with lime, chili, fish sauce and roast peanut.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Yum (Thai Salad) Grilled Beef / Grilled Pork / Prawn £8.50 / Seafood £8.95 🌶️🌶️🌶️",
+    "description": "A meat of your choice mixed with onions, tomatoes, spring onion, celery and chili lime dressing.",
+    "price": null
+   },
+   {
+    "name": "Larb (E-San Salad) Beef / Pork / Chicken 🌶️🌶️🌶️",
+    "description": "Choice of minced meat mix with lime, chili, fish sauce, ground tossed rice, mint, spring onion and coriander",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tom Yum 🌶️🌶️🌶️",
+    "description": "Traditional Thai papaya salad with lime, chili, fish sauce and roast peanut.",
+    "price": "£Starting £8.50"
+   },
+   {
+    "name": "Tom Ka 🌶️",
+    "description": "Rice noodle with clear soup, bean spout, fried garlic, spring onion and coriander.",
+    "price": "£Starting £8.50"
+   },
+   {
+    "name": "Clear Noodle Soup",
+    "description": "Rice noodle with clear soup, bean spout, fried garlic, spring onion and coriander.",
+    "price": "£Starting £13.50"
+   },
+   {
+    "name": "Boat Noodle Soup",
+    "description": "Rice noodle with brown soup, bean sprout, fried garlic, spring onion and coriander.",
+    "price": "£Starting £13.50"
+   },
+   {
+    "name": "Jasmine Rice",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fired Rice",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "Chip",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Chip",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   }
+  ],
+  "DINNER  (Starter)": [
+   {
+    "name": "Prawn Cracker",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "Mix Starter (2 per person minimum order)",
+    "description": "Chicken satay, salt & pepper squid, Pandan chicken and spring roll.",
+    "price": "£8.95"
+   },
+   {
+    "name": "King Prawn Tempura",
+    "description": "Deep fried prawn coated in breadcrumbs served with plum sauce.",
+    "price": "£8.25"
+   },
+   {
+    "name": "Sweet Corn Cake",
+    "description": "Fried sweet corn blended with spices red curry, flour served with sweet chili sauce.",
+    "price": "£7.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Tofu",
+    "description": "Deep-fried tofu on top with sweet and sour chili peanut sauce.",
+    "price": "£7.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Pandan Chicken",
+    "description": "Wrapped chicken marinated in pandan leaves steamed and then deep-fried served with chili sauce.",
+    "price": "£7.70"
+   },
+   {
+    "name": "Duck Spring Roll",
+    "description": "Deep-fried pastry wrapped with duck, carrots, spring onions and celery served with hoisin sauce.",
+    "price": "£8.25"
+   },
+   {
+    "name": "Chicken Wing Zabb!!",
+    "description": "Deep-fried chicken wing with chili, ground tossed rice, mint, shallot, spring onion and coriander.",
+    "price": "£7.70"
+   },
+   {
+    "name": "Golden Money Bag",
+    "description": "Crispy pastry wrapped with Thai-spiced chicken, vegetables served with chili sauce.",
+    "price": "£7.70"
+   },
+   {
+    "name": "BBQ Pork Rib Half Rack",
+    "description": "Marinated and slow-cooked pork spareribs covered with a sweet-sour BBQ red wine sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Tom Yum 🌶️🌶️🌶️",
+    "description": "Classic Thai spicy soup with Thai herbs, lime, galangal, lemongrass, tomato and mushroom.",
+    "price": "£starting  £8.50"
+   },
+   {
+    "name": "Tom Ka🌶️",
+    "description": "Aromatic mild Thai soup with coconut milk, Thai herbs, onion, lime, galangal, lemongrass, Tomato and mushroom.",
+    "price": "£Starting £8.50"
+   }
+  ],
+  "CHEF RECOMMENDATION": [
+   {
+    "name": "Tiger Cry",
+    "description": "Marinated sirloin and grilled Thai-style served with salad tamarind dipping sauce.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Koo Moo Yang(Grilled Pork)",
+    "description": "Marinated pork and grilled Thai-style served with salad tamarind dipping sauce.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Kai Yang (Boneless Half Grilled Chicken",
+    "description": "Half chicken marinated grill Thai-style served with salad and sweet chili dipping sauce.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Lamp Shank Massaman",
+    "description": "Slow-cooked lamb shank with massaman curry sauce, topped with cashew nuts and fried shallots.",
+    "price": "£22.00"
+   },
+   {
+    "name": "Gaeng Hung Lay (Northern Thai Pork Curry)",
+    "description": "Slow-cooked pork belly marinated with Chiang Mai curry paste, ginger and peanuts served with roti.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Crispy Chicken 🌶️",
+    "description": "Batter chicken and stir-fried in chili paste sauce, with mushroom & sesame seed and spring onion.",
+    "price": "£15.50"
+   },
+   {
+    "name": "Crispy Dancing 🌶️",
+    "description": "Lightly Batter and stir-fried in chili paste sauce, with mushroom, pepper, onion, carrot and basil.",
+    "price": "£Starting £15.50"
+   },
+   {
+    "name": "Pad Gar Pao Mince Beef / Pork / Chicken 🌶️🌶️🌶️",
+    "description": "Stir-fried spicy chilli sauce, holy basil and fine bean.",
+    "price": "£14.25"
+   }
+  ],
+  "THAI SPICY SALAD": [
+   {
+    "name": "Yum (Thai Salad) Beef /Pork/Prawn/Mix Seafood🌶️🌶️🌶️",
+    "description": "The meat of your choice is mixed with onions, tomato, spring onion, celery, lime juice and chili dressing.",
+    "price": "£16.50"
+   },
+   {
+    "name": "Larb (Spicy minced salad) Beef /Pork/Chicken🌶️🌶️🌶️",
+    "description": "Choice of minced meat mixed with chili, ground tossed rice, mint, shallot, spring onion and coriander.",
+    "price": "£14.50"
+   },
+   {
+    "name": "Yum (Thai Salad) Beef /Pork🌶️🌶️🌶️",
+    "description": "Choice of meat mixed with chili, ground tossed rice, mint, shallot, spring onion and coriander.",
+    "price": "£16.50"
+   }
+  ],
+  "HALF ROAST DUCK BONELESS": [
+   {
+    "name": "Tamarind Duck",
+    "description": "Sliced roast duck with sweet & sour tamarind sauce and roast cashew nut.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Duck Red Wine Sauce",
+    "description": "Sliced roast duck with vegetables and red wine sauce.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Keang Ped Phed Yang",
+    "description": "Sliced roast duck famous Thai red curry with pineapple, lychee and tomato.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Duck Chu Chee",
+    "description": "Sliced roast duck finished with thick creamy panang curry sauce and lime leaves.",
+    "price": "£21.00"
+   }
+  ],
+  "SALMON (2EA)": [
+   {
+    "name": "Salmon Teriyaki",
+    "description": "Grill salmon finished with teriyaki sauce and broccoli stem.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Salmon Chu Chee🌶️🌶️",
+    "description": "Deep-fried salmon finished with thick creamy panang curry sauce and lime leaves.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Salmon Pad Cha 🌶️",
+    "description": "Deep-fried salmon topped aromatic spicy sauce Thai herbs.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Spicy Garden Salmon",
+    "description": "Deep-fried salmon topped with a Thai dressing chili oil Thai- herbs and roasted peanuts.",
+    "price": "£21.00"
+   }
+  ],
+  "SEA BASS FILLET (2EA)": [
+   {
+    "name": "Sea Bass Chu Chee 🌶️🌶️🌶️",
+    "description": "Thin crispy batter sea bass with Thai dressing, lime juice, chili, lemongrass, ginger and roasted peanuts.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Sea Bass Pad Cha🌶️🌶️🌶️",
+    "description": "Thin crispy batter sea bass with aromatic spicy and Thai herbs.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Sea Bass Lui Suan 🌶️",
+    "description": "Thin crispy batter sea bass with Thai dressing, lime juice, chili, lemongrass, ginger and roasted peanuts.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Sea Bass Ma Mkam",
+    "description": "Thin crispy batter sea bass topped with, caramelised tamarind sauce and roast cashew nuts.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Pla Naung Ma Nao",
+    "description": "Steamed sea bass with lime, chili the taste being sour, spicy, garlic and well balanced in taste.",
+    "price": "£21.00"
+   }
+  ],
+  "GIANT RIVER PRAWN (3EA)": [
+   {
+    "name": "Giant River Prawn Chu Chee 🌶️🌶️🌶️",
+    "description": "Giant River prawn finished with delicious thick panang curry sauce, lime leaves and Holy basil.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Giant Prawn Ma Kham",
+    "description": "Giant River prawn with sweet & sour tamarind sauce, roast cashew nuts fried shallot.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Giant River Prawn Black Pepper",
+    "description": "Giant River prawn stir-fried with garlic and ground black pepper sauce.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Giant Prawn Pad Thai",
+    "description": "Giant River prawn stir-fried rice noodle with egg, tamarind sauce, bean sprouts, spring onion and tofu.",
+    "price": "£21.00"
+   },
+   {
+    "name": "Giant River Prawn Pad Cha 🌶️🌶️🌶️",
+    "description": "Giant River prawn with aromatic spicy sauce and Thai herbs.",
+    "price": "£21.00"
+   }
+  ],
+  "THAI CURRY": [
+   {
+    "name": "Green Curry🌶️🌶️",
+    "description": "Aromatic curry paste with a medium spicy, coconut milk, Thai herbs and vegetables.",
+    "price": "£Starting £15.50"
+   },
+   {
+    "name": "Red Curry🌶️🌶️",
+    "description": "Aromatic curry paste with coconut milk, vegetables and Thai herbs.",
+    "price": "£Starting £15.50"
+   },
+   {
+    "name": "Jungle Curry 🌶️🌶️🌶️",
+    "description": "Aromatic curry past with spicy non-coconut milk, Thai herbs and vegetables",
+    "price": "£Starting £15.50"
+   }
+  ],
+  "STIR-FRY": [
+   {
+    "name": "Pad Prik Sod🌶️🌶️🌶️",
+    "description": "Stir-fried long red chilli, spring onion and pepper.",
+    "price": "£Starting £15.00"
+   },
+   {
+    "name": "Oyster Sauce",
+    "description": "Selection of vegetables stir-fried with oyster sauce.",
+    "price": "£Starting £15.00"
+   },
+   {
+    "name": "Garlic Black Pepper Sauce",
+    "description": "Selection of vegetables stir-fried with garlic black pepper sauce.",
+    "price": "£Starting £15.00"
+   }
+  ],
+  "RICE &amp; NOODLE": [
+   {
+    "name": "Pad Se Ew",
+    "description": "Ho fun noodle stir-fried with egg, vegetable, dark soy sauce and seasoning sauce.",
+    "price": "£Starting £13.95"
+   },
+   {
+    "name": ".Pad-Kee-Mao🌶️🌶️",
+    "description": "Spicy Ho fun noodle stir-fried with egg, vegetable, dark soy sauce, bamboo, garlic, basil and seasoning sauce.",
+    "price": "£Starting £13.95"
+   },
+   {
+    "name": "Special Fried Rice",
+    "description": "Stir-fried rice with egg, onion, spring onion, carrot, tomato and seasoning powder.",
+    "price": "£Starting £13.95"
+   },
+   {
+    "name": "Spicy Special Fried Rice 🌶️🌶️",
+    "description": "Stir-fried rice with egg, chilli, vegetable, dark soy sauce, bamboo, garlic and basil.",
+    "price": "£Starting £13.95"
+   },
+   {
+    "name": "Crab Meat Special Fried Rice",
+    "description": "Thai style fried rice with jumbo crab meat, eggs and Thai seasoning",
+    "price": "£17.95"
+   }
+  ],
+  "DINNER SIDE DISH": [
+   {
+    "name": "Stir-fried Morning Glory",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "Stir-fried Pak choi and Broccoli stem",
+    "description": "",
+    "price": "£8.00"
+   },
+   {
+    "name": "Vegetable Egg Noodle",
+    "description": "Egg noodles stir-fried with egg and vegetables.",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Bean Sprout Noodle",
+    "description": "Rice noodles stir-fried with egg and bean sprout. .",
+    "price": "£6.50"
+   },
+   {
+    "name": "Plain Noodle",
+    "description": "",
+    "price": "£5.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£4.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "Roti",
+    "description": "",
+    "price": "£2.50",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "ONE DISH: Choose from (Rice Already included) Vegetable / Chicken / Pork £12.95 / Beef / Prawn £13.95 TWO COUSE DISHES: Starter & Main (Rice Already included) Main choose from Vegetable / Chicken / Pork £14.95 Prawn / Beef £15.95",
+  "TAPAS STARTER: Choose 3 starter dishes for £13.00"
+ ]
+}

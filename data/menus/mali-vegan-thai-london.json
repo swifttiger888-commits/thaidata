@@ -1,0 +1,217 @@
+{
+ "restaurant": "Mali Vegan Thai",
+ "city": "London",
+ "fsa_id": "1576125",
+ "address": "London",
+ "source": "https://www.malivegan.co.uk/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "SMALL DISH": [
+   {
+    "name": "Gui Chai Krob (กุยช่ายกรอบ)",
+    "description": "Crispy Chinese chive cake served with sweet chilli soy sauce dip. Allergens: Gluten, Soy",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Gyo Grob Luk Sa Pai (เกี๋ยวกรอบลูกสะใภ้)",
+    "description": "Deep fried dumpling in sweet & sour tamarind sauce. Allergens: Soy, Gluten",
+    "price": "£9",
+    "vegetarian": true
+   },
+   {
+    "name": "Satay Hed & Tao Hoo (สะเต๊ะเห็ดกับเต้าหู้)",
+    "description": "Shitake mushroom and tofu skewers marinated with Chef Pam’s family recipe of Satay Sauce. Allergens: Peanut, Soy, Mustard & Celery",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Por Pia Krob (ปอเปี๊ยะกรอบ)",
+    "description": "Crispy Spring Roll filled with stir fried assorted vegetable & vermicelli. Allergens: Gluten & Soy",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Som Tum Thai (ส้มตำไทย)",
+    "description": "Green Papaya Salad with tomato, carrot, fine bean & peanut. Allergens: Peanut, Soy",
+    "price": "£10",
+    "vegetarian": true
+   },
+   {
+    "name": "Larb Gai Pop (ลาบไก่ป็อบ)",
+    "description": "Spicy vegan chicken popcorn salad with shimiji mushroom. Allergens: Soy & Gluten",
+    "price": "£10.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Pla Muek Tip Yang (ปลาหมึกทิพย์ย่าง)",
+    "description": "Grilled ‘imaginary calamari (king oyster mushroom)’ with thai seafood dipping sauce. Allergens: Soy & Gluten",
+    "price": "£9",
+    "vegetarian": true
+   },
+   {
+    "name": "Naem Nueng (แหนมเนือง)",
+    "description": "Grilled vegan meatball served with rice paper wrap, fresh herbs and a rich fermented soy & peanut dipping sauce. Allergens: Gluten, Soy, Sesame & Peanut",
+    "price": "£8",
+    "vegetarian": true
+   }
+  ],
+  "SOUP & CURRY": [
+   {
+    "name": "Tom Yam Hed (ต้มยำเห็ดรวม)",
+    "description": "Our favourite hot & sour tom yum soup with assorted mushroom. Allergens: Soy",
+    "price": "£11.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Kha Hed (ต้มข่าเห็ด)",
+    "description": "Spicy & sour coconut milk soup with assorted mushroom. Allergens: Soy",
+    "price": "£11.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Gaeng Keow Waan (แกงเขียวหวานไก่ทิพย์)",
+    "description": "Vegan “chicken” green curry with courgette. Allergens: Gluten, Soy",
+    "price": "£14",
+    "vegetarian": true
+   },
+   {
+    "name": "Gaeng Massaman (แกงมัสมั่นถั่วลูกไก่)",
+    "description": "Chickpea Massaman Curry with potato, red onion, carrot & pumpkin. Allergens: Soy",
+    "price": "£14",
+    "vegetarian": true
+   },
+   {
+    "name": "Panang Nuea Steak Tip (แพนงเนื้อเสต็กทิพย์)",
+    "description": "Vegan steak with red panang curry sauce. Allergens: Soy & Gluten",
+    "price": "£21",
+    "vegetarian": true
+   }
+  ],
+  "STIR FRY": [
+   {
+    "name": "Pla Tip Pad Prik (ปลาทิพย์ผัดผักบุ้ง)",
+    "description": "Vegan fish stir fried with chilli & morning glory - Please notify our team for GF version. Allergens: Soy & Gluten",
+    "price": "£16",
+    "vegetarian": true
+   },
+   {
+    "name": "Ka Prow Moo Krob Tip (กะเพราหมูกรอบทิทย์)",
+    "description": "Holy basil and vegan “crispy pork” stir fried with chilli & Mekhong Thai Spirit. Allergens: Soy, Gluten & Sesame",
+    "price": "£15",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Ma Khia Muang (ผัดมะเขือม่วงหมูสับทิพย์)",
+    "description": "Aubergine stir fried with vegan “minced pork” & sweet basil. Allergens: Soy, Gluten, Sulphites",
+    "price": "£14",
+    "vegetarian": true
+   },
+   {
+    "name": "Sam Moo Tip Kua Prik (สามหมูทิพย์คั่วพริก)",
+    "description": "Vegan crispy pork, Omni mince & vegan pork crackling stir-fried with garlic & chilli. Allergens: Soy, Gluten & Sesame",
+    "price": "£14.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Pla Salmon Rad Prik (ปลาแซลมอนทิพย์ราดพริก)",
+    "description": "Vegan salmon with fresh chilli sauce. Allergen: Gluten",
+    "price": "£15",
+    "vegetarian": true
+   }
+  ],
+  "RICE & NOODLE": [
+   {
+    "name": "Pad Thai (ผัดไทยฟองเต้าหู้กรอบ)",
+    "description": "Stir fried noodle with crispy bean curd skin in pad Thai sauce. Allergens: Soy & Peanut (as a condiment)",
+    "price": "£14",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Kee Mao (ก๋วยเตี๋ยวผัดขี้เมาเป็ดทิพย์ )",
+    "description": "Drunken noodle with vegan “duck”, holy basil, mushroom, & fresh peppercorn. Allergens: Soy & Gluten",
+    "price": "£14",
+    "vegetarian": true
+   },
+   {
+    "name": "Namtok Noodle Soup with Braised Vegan Beef (ก๋วยเตี๊ยวนำ้ตกเนื้อตุ๋น)",
+    "description": "Namtok Noodle soup with braised vegan beef, mushroom meat & vegan pork crackling. Spicy version is available. Allergens: Soy, Gluten, Mustard, Sulphites",
+    "price": "£15.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Namtok Noodle with Tofu & Mushroom (ก๋วยเตี๊ยวนำ้ตกเต้าหู้เห็ด)",
+    "description": "Namtok Noodle with fried tofu & braised shitake mushroom. Allergens: Soy, Gluten & Sulphites",
+    "price": "£13.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Mama Je Oat (มาม่าเจ๊โอ๊ต)",
+    "description": "Fiery tom yum soup with mama noodle with vegan crispy pork, Omni crab, vegan mince & special chilli paste. Allergens: Soy, Gluten, Mustard & Sesame",
+    "price": "£15.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Large Size (for 2)",
+    "description": "Large Pot for 2 (only on Tue, Wed & Thu)",
+    "price": "£29"
+   },
+   {
+    "name": "Kao Soi Nuea (ข้าวซอยเนื้อทิพย์)",
+    "description": "Northern Yellow Curry Noodle with braised 'Redefine Meat' beef frank, pickled mustard and red onion. Allergens: Soy, Mustard, Celery, Wheat & Sulphite",
+    "price": "£16.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Kao Soi (ข้าวซอย)",
+    "description": "Northern Yellow Curry Noodle with assorted tofu, shitake mushroom, pickled mustard and red onion. Allergens: Soy, Mustard, Celery, Wheat & Sulphite",
+    "price": "£14.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Kao Pad Nuea Kem Tip (ข้าวผัดเนื้อเค็มทิพย์)",
+    "description": "Stir fried rice with vegan salted beef and varieties of vegetable. Allergens: Soy & Gluten",
+    "price": "£13",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Si EW (ผัดซีอิ๋วเนื้อทิพย์)",
+    "description": "Stir fried rice noodle with vegan beef and greens. Allergens: Gluten & Soy",
+    "price": "£14.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Kao Hom Mali (ข้าวหอมมะลิ)",
+    "description": "Steamed Jasmine Rice",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Kao Riceberry (ข้าวไรซ์เบอร์รี่)",
+    "description": "ข้าวไรซ์เบอรรี่",
+    "price": "£4",
+    "vegetarian": true
+   },
+   {
+    "name": "Kao Neaw (ข้าวเหนียว)",
+    "description": "Sticky Rice",
+    "price": "£4",
+    "vegetarian": true
+   }
+  ],
+  "DESSERT": [
+   {
+    "name": "Kao Neaw I-Tim Mamuang (ข้าวเหนียวไอติมมะม่วง)",
+    "description": "Golden mango ice cream with sweet sticky rice and coconut jelly cube – GF",
+    "price": "£6"
+   },
+   {
+    "name": "Kluai Buad Chee (กล้วยบวดชี)",
+    "description": "Banana, in sweet coconut sauce, coconut meat & chips",
+    "price": "£5"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

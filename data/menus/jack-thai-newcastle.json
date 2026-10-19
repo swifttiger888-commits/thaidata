@@ -1,0 +1,332 @@
+{
+ "restaurant": "Jack Thai",
+ "city": "Newcastle",
+ "fsa_id": "1943098",
+ "address": "Newcastle",
+ "source": "https://jackthainewcastle.co.uk/menu/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Saver Menu": [
+   {
+    "name": "Hatyai Fried Chicken & Sticky Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Minced Pork Omelette & Jasmine Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Chicken with Garlic & Ginger Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Chicken Green Curry Fried Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Chicken Tom Yum Fried Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Train Fried Rice & Honey BBQ Pork",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Braised Pork Shank",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pork on Pork (Rice or Noodle)",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Fried Chicken with Garlic & Ginger Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Fried Coaled Belly Pork & Jasmine Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Chicken Pad See-Aw",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Chicken Pad Thai",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Sukhothai Noodles Soup",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Gauy Chub",
+    "description": "",
+    "price": "£12.95"
+   }
+  ],
+  "Starters": [
+   {
+    "name": "Prawn Crackers / ข้าวเกรียบกุ้ง",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Fried Chicken Wings / ปีกไก่ทอดเกลือ",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "Jack Thai Fish Cakes / ทอดมันปลา (gf)(sf)",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "Salt & Chilli Calamari / หมึกทอดพริกเกลือ (gf)(sf)",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "Crispy Rolls / บอเปียะผัก (vo)(vf)",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "Taro Rolls / เผือก (vo)(v)",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true
+   }
+  ],
+  "Spicy Salad": [
+   {
+    "name": "Som Tum Papaya Salad / ส้มตำ",
+    "description": "Shredded fresh young papaya with carrot, fine bean, tomato, fresh chilli, garlic, dried shrimp, peanut and lime juice (gf)(vf)(Nut)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Yum Woon Sen - Glass Noodle Salad / ยำวุ้นเส้น",
+    "description": "Glass noodles with orawns. sauid and pork mince in spicv lime dressing along with onion, spring onion, tomato, chilli, garlic giving more texture with roastea peanut and lime. Duck dripping gravy. (gf)(sf)(Nut)",
+    "price": "£18.95"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Tom Yum - Creamy Tom Yum / ต้มยำน้ำข้น - Chicken",
+    "description": "A rich and aromatic Thai soup made with lemongrass galangal, kaffir lime leaves, mushrooms, and chilli in a creamy, spicy broth. Finished with a touch of coconut milk for a smooth, bold flavour. (gt)(st)(Nut)",
+    "price": "£Small: £8.95 / Large: £14.95"
+   },
+   {
+    "name": "Tom Yum - Creamy Tom Yum / ต้มยำน้ำข้น - Tofu",
+    "description": "A rich and aromatic Thai soup made with lemongrass galangal, kaffir lime leaves, mushrooms, and chilli in a creamy, spicy broth. Finished with a touch of coconut milk for a smooth, bold flavour. (gt)(st)(Nut)",
+    "price": "£Small: £8.95 / Large: £14.95"
+   },
+   {
+    "name": "Tom Yum - Creamy Tom Yum / ต้มยำน้ำข้น - Prawns",
+    "description": "A rich and aromatic Thai soup made with lemongrass galangal, kaffir lime leaves, mushrooms, and chilli in a creamy, spicy broth. Finished with a touch of coconut milk for a smooth, bold flavour. (gt)(st)(Nut)",
+    "price": "£Small: £9.95 / Large: £16.95"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "Pork on Pork Noodles / บะหมี่หมูแดงหมูกรอบ",
+    "description": "Honey roast pork fillet and crispy pork belly. (Nut)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Sukhothai Noodles Soup / ก๋วยเตี๋ยวสุโขทัย",
+    "description": "Spicy and tangy broth",
+    "price": "£16.95"
+   },
+   {
+    "name": "Meat Feast Noodles / บะหมี่รวมมิตร (Nut)",
+    "description": "Egg Noodles with BBQ Pork, Crispy Pork Belly, and Roast Duck.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Bangkok Roast Duck Noodles / บะหมี่แห้เป็ด",
+    "description": "Duck dripping gravy.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Braised Beef Brisket Noodles / ก๋วยเตี๋ยวท้องวัวตุ๋น",
+    "description": "Rice noodles with braised pork shank in five spice broth.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Gauy Chub / ก๋วยจับ",
+    "description": "Trio of pork roll rice in five spices broth mined pork patty, crispy belly pork and roast pork.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Braised Pork Shank Noodles / ก๋วยเตี๋ยวขาหมู",
+    "description": "Rice noodles in five spices broth.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Khao Soi - Chaing Mai Curry Noodles Soup / ข้าวซอย - Chicken",
+    "description": "A fragrant coconut curry noodle soup with boiled eg and pickled mustard greens. (vo)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Khao Soi - Chaing Mai Curry Noodles Soup / ข้าวซอย - Beef",
+    "description": "A fragrant coconut curry noodle soup with boiled eg and pickled mustard greens. (vo)",
+    "price": "£17.95"
+   },
+   {
+    "name": "Khao Soi - Chaing Mai Curry Noodles Soup / ข้าวซอย - Seafood",
+    "description": "A fragrant coconut curry noodle soup with boiled eg and pickled mustard greens. (vo)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Thai / ผัดไทย - Chicken",
+    "description": "Rice noodles with Pad Thai sauce, chicken, crushed peanut, red onion, bean sprout and spring onion. (gf)(vo)(vf)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pad Thai / ผัดไทย - Prawns",
+    "description": "Rice noodles with Pad Thai sauce, chicken, crushed peanut, red onion, bean sprout and spring onion. (gf)(vo)(vf)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Extra Topping Noodles: Asian Meat Balls - Fish Balls",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Extra Topping Noodles: Asian Meat Balls - Beef Balls",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Boiled egg or Fried egg",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Extra Meat",
+    "description": "",
+    "price": "£3.00"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "Chicken Green Curry / แกงเขียวหวานไก่",
+    "description": "A fragrant green curry simmered in coconut milk with lemongrass and sweet basil. (gf)(vo)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Chicken Panang Curry / แกงพะแนงไก่",
+    "description": "Stir-fried in fragrant Panang curry paste with fresh Thai herbs, kaffir lime leaves, creamy coconut milk, red chillies, and sweet basil.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Beef Brisket Massaman Curry / แกงมัสมั่นเนื้อ",
+    "description": "Rich Thai curry slow-cooked in coconut milk with chillies, garlic, ginger, onion, and potatoes. (Nut)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Red Duck Curry / แกงเผ็ดเป็ดย่าง",
+    "description": "Red curry sauce with duck, bamboo shoots, chillies, and sweet basil.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Chicken Jungle Curry / แกงป่าไก่",
+    "description": "A spicy, aromatic Thai curry with mixed vegetables and herbs, simmered. (sh)(vo)",
+    "price": "£16.95"
+   }
+  ],
+  "Rice Bowls": [
+   {
+    "name": "Pork on Pork Rice / ข้าวหมูแดงหมูกรอบ",
+    "description": "Honey roast pork, crispy belly pork, peanut, sesame and asian gravy. (Nut)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Bangkok Roast Duck / ข้าวหน้าเป็ด",
+    "description": "Duck dripping gravy.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Braised Pork Shank / ข้าวขาหมู",
+    "description": "Slow-cooked pork leg in five spice broth served with boiled eggs, steamed rice and and a sweet vinegar dipping sauce",
+    "price": "£16.95"
+   },
+   {
+    "name": "Hainanese Chicken with Ginger & Garlic / ข้าวมันไก่",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Nutty Chicken / ไก่ผัดเม็ดมะม่วง",
+    "description": "Coated chicken, onion, pepper, spring onion and chilli jam sauce. (sh)(vo)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Crispy Pork with Holy Basil / กะเพราหมูกรอบ",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Crispy Coated Pork Belly / ข้าวหมูสามชั้นทอด",
+    "description": "",
+    "price": "£14.95"
+   },
+   {
+    "name": "Hat Yai Style Fried Chicken - ข้าวไก่ทอดหาดใหญ่",
+    "description": "",
+    "price": "£14.95"
+   }
+  ],
+  "Sides": [
+   {
+    "name": "Jasmine Rice",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Plain Fried Noodles",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Egg Noodles",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "Skinny Fries",
+    "description": "",
+    "price": "£4.50"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Saver Menu Only £12.95",
+  "Curry (Served with Rice or Noodles. Add on Prawns: £3)"
+ ]
+}

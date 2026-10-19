@@ -145,7 +145,7 @@
    {
     "num": "27.",
     "name": "Thai Green Curry",
-    "description": "Classic Thai green curry paste with coconut milk, bamboo shoots,\ngreen peppers, red peppers & sweet basil\nPrawns / Duck / Beef £ 12.95\nChicken / Pork £ 11.95\nTofu £ 10.95\nVegetables (V) £ 9.95\nJumbo Prawns £ 16.95",
+    "description": "Classic Thai green curry paste with coconut milk, bamboo shoots, green peppers, red peppers & sweet basil Prawns / Duck / Beef £ 12.95 Chicken / Pork £ 11.95 Tofu £ 10.95 Vegetables (V) £ 9.95 Jumbo Prawns £ 16.95",
     "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 9.95 / £ 16.95",
     "vegetarian": false,
     "heat": "2"
@@ -153,7 +153,7 @@
    {
     "num": "28.",
     "name": "Thai Red Curry",
-    "description": "Classic Thai red curry paste with coconut milk, bamboo shoots,\ngreen peppers, red peppers\nPrawns / Duck / Beef £ 12.95\nChicken / Pork £ 11.95\nTofu £ 10.95\nVegetables (V) £ 9.95\nJumbo Prawns £ 16.95",
+    "description": "Classic Thai red curry paste with coconut milk, bamboo shoots, green peppers, red peppers Prawns / Duck / Beef £ 12.95 Chicken / Pork £ 11.95 Tofu £ 10.95 Vegetables (V) £ 9.95 Jumbo Prawns £ 16.95",
     "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 9.95 / £ 16.95",
     "vegetarian": false,
     "heat": "2"
@@ -161,7 +161,7 @@
    {
     "num": "29.",
     "name": "Massaman",
-    "description": "Massaman curry paste with coconut milk, potatoes, onions & cashew nuts.\nLamp / Beef £ 12.95\nChicken £ 11.95",
+    "description": "Massaman curry paste with coconut milk, potatoes, onions & cashew nuts. Lamp / Beef £ 12.95 Chicken £ 11.95",
     "price": "£ 12.95 / £ 11.95",
     "vegetarian": false,
     "heat": "1"
@@ -169,7 +169,7 @@
    {
     "num": "32.",
     "name": "Panang",
-    "description": "Aromatic panaeng curry paste with coconut cream, green been & lime leaves.\nPrawns / Duck / Beef £ 12.95\nChicken / Pork £ 11.95\nTofu £ 10.95\nVegetables (V) £ 9.95\nJumbo Prawns £ 16.95",
+    "description": "Aromatic panaeng curry paste with coconut cream, green been & lime leaves. Prawns / Duck / Beef £ 12.95 Chicken / Pork £ 11.95 Tofu £ 10.95 Vegetables (V) £ 9.95 Jumbo Prawns £ 16.95",
     "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 9.95 / £ 16.95",
     "vegetarian": false,
     "heat": "1"
@@ -213,7 +213,7 @@
    {
     "num": "39.",
     "name": "Phad Khing ( Ginger Stir Fried )",
-    "description": "Stir fried ginger, mushrooms, onions & spring onions in oyster sauce.\nPrawns / Duck / Beef\nChicken / Pork\nTofu",
+    "description": "Stir fried ginger, mushrooms, onions & spring onions in oyster sauce. Prawns / Duck / Beef Chicken / Pork Tofu",
     "price": "£ 12.95 / £ 11.95 / £ 10.95",
     "vegetarian": false,
     "heat": null
@@ -221,7 +221,7 @@
    {
     "num": "40.",
     "name": "Pad Med Manuang Hinnaparn ( Cashew Nut Stir Fried )",
-    "description": "Stir fried cashew nut & spring onions in oyster sauce.\nPrawns / Duck / Beef\nChicken / Pork\nTofu",
+    "description": "Stir fried cashew nut & spring onions in oyster sauce. Prawns / Duck / Beef Chicken / Pork Tofu",
     "price": "£ 12.95 / £ 11.95 / £ 10.95",
     "vegetarian": false,
     "heat": null
@@ -229,7 +229,7 @@
    {
     "num": "41.",
     "name": "Pad Graprao ( Basil & Chillis Stir fried )",
-    "description": "Stir fried garlic fresh chillis & basil leaf in oyster sauce.\nPrawns / Duck / Beef\nChicken / Pork\nTofu\nFish",
+    "description": "Stir fried garlic fresh chillis & basil leaf in oyster sauce. Prawns / Duck / Beef Chicken / Pork Tofu Fish",
     "price": "£ 12.95 / £ 11.95 / £ 10.95 / £ 18.00",
     "vegetarian": false,
     "heat": "2"
@@ -237,7 +237,7 @@
    {
     "num": "42.",
     "name": "Pad Prik Khing ( Red Curry Paste Stir Fried )",
-    "description": "Stir fried red curry paste with green beans, peppers, lime leaves & Thai herb\nPrawns\nPork\nTofu",
+    "description": "Stir fried red curry paste with green beans, peppers, lime leaves & Thai herb Prawns Pork Tofu",
     "price": "£ 12.95 / £ 11.95 / £ 10.95",
     "vegetarian": false,
     "heat": "1"
@@ -247,7 +247,7 @@
    {
     "num": "43.",
     "name": "Priew Wan (Sweet & Sour Stir Fried)",
-    "description": "Stir fried cucumbers, pineapple pieces, red peppers & tomatoes in\nsweet & sour sauce.\nChicken / Pork £ 11.95\nPrawns / Duck £ 12.95\nTofu £ 9.95\nFish £ 16.00",
+    "description": "Stir fried cucumbers, pineapple pieces, red peppers & tomatoes in sweet & sour sauce. Chicken / Pork £ 11.95 Prawns / Duck £ 12.95 Tofu £ 9.95 Fish £ 16.00",
     "price": "£ 11.95 / £ 12.95 / £ 9.95 / £ 16.00",
     "vegetarian": false,
     "heat": null
@@ -255,7 +255,7 @@
    {
     "num": "45.",
     "name": "Nam Prik Pao ( Chillis Oil Stir Fried )",
-    "description": "Stir fried chillis oil with onions & red peppers .\nChicken / Pork £ 11.95\nPrawns / Beef £ 12.95\nTofu £ 10.95\nJumbo Prawns £ 16.95",
+    "description": "Stir fried chillis oil with onions & red peppers . Chicken / Pork £ 11.95 Prawns / Beef £ 12.95 Tofu £ 10.95 Jumbo Prawns £ 16.95",
     "price": "£ 11.95 / £ 12.95 / £ 10.95 / £ 16.95",
     "vegetarian": false,
     "heat": null
@@ -263,7 +263,7 @@
    {
     "num": "46.",
     "name": "Prik Thai Dam ( Black Pepper Stir Fried)",
-    "description": "Stir fried black peppers, baby corn & onions.\nChicken / Pork £ 11.95\nPrawns / Beef £ 12.95\nJumbo Prawns £ 16.95",
+    "description": "Stir fried black peppers, baby corn & onions. Chicken / Pork £ 11.95 Prawns / Beef £ 12.95 Jumbo Prawns £ 16.95",
     "price": "£ 11.95 / £ 12.95 / £ 16.95",
     "vegetarian": false,
     "heat": null
@@ -273,7 +273,7 @@
    {
     "num": "47.",
     "name": "Sa-Mon Pai",
-    "description": "Deep fried fish or jumbo prawns seasoned with fresh Thai herbs\nserved with a special Royal Thai sauce.\nJumbo Prawns £ 18.00\nFish £ 21.00",
+    "description": "Deep fried fish or jumbo prawns seasoned with fresh Thai herbs served with a special Royal Thai sauce. Jumbo Prawns £ 18.00 Fish £ 21.00",
     "price": "£ 18.00 / £ 21.00",
     "vegetarian": false,
     "heat": null

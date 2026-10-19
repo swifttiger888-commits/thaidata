@@ -1,0 +1,449 @@
+{
+ "restaurant": "B.C. Thai Restaurant",
+ "city": "Cherwell",
+ "fsa_id": "1387591",
+ "address": "Cherwell",
+ "source": "https://bcthairestaurant.com/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "MIXED STARTERS",
+    "description": "A selection of chicken satay (P)*, vegetable spring rolls, golden crispy king prawns, crispy chicken wings and prawn crackers (CR)* .",
+    "price": "£8.50 per person",
+    "num": "1"
+   },
+   {
+    "name": "TOD MUN PLA",
+    "description": "Thai fish cakes served with sweet chilli sauce & peanuts. (P)*",
+    "price": "£7.95",
+    "num": "2"
+   },
+   {
+    "name": "SATAY",
+    "description": "Marinated barbecued chicken served with peanut sauce.",
+    "price": "£7.25",
+    "num": "3"
+   },
+   {
+    "name": "PEEK GAI TOD",
+    "description": "Crispy chicken wings.",
+    "price": "£7.25",
+    "num": "4"
+   },
+   {
+    "name": "PED PED CHICKEN WINGS🌶️🌶️",
+    "description": "Spicy, hot, crispy chicken wings.",
+    "price": "£7.25",
+    "num": "5"
+   },
+   {
+    "name": "PED PED SQUID🌶️🌶️",
+    "description": "Spicy chilli crispy squid",
+    "price": "£7.50",
+    "num": "6"
+   },
+   {
+    "name": "CEE KRONG MOO🌶🌶️",
+    "description": "Slow-cooked pork spare ribs infused with garlic, ginger, Thai chilli paste.",
+    "price": "£9.90",
+    "num": "7"
+   },
+   {
+    "name": "MOO YANG",
+    "description": "Grilled marinated pork and then wok served with lemon chilli dip.",
+    "price": "£8.95",
+    "num": "8"
+   },
+   {
+    "name": "PO PIA TOD",
+    "description": "Crispy vegetable spring rolls.",
+    "price": "£7.25",
+    "vegetarian": true,
+    "num": "9"
+   },
+   {
+    "name": "PAK TOD",
+    "description": "Deep fried crispy vegetables in light battered served with sweet chilli sauce.",
+    "price": "£7.25",
+    "vegetarian": true,
+    "num": "10"
+   },
+   {
+    "name": "TOD MAN KHAO POD",
+    "description": "Crispy lightly spiced corn cakes.",
+    "price": "£7.25",
+    "vegetarian": true,
+    "num": "11"
+   },
+   {
+    "name": "PO PIA PED TOD",
+    "description": "Shredded roast duck and vegetable rolls with cashew nuts and hoi sin sauce.",
+    "price": "£7.50",
+    "num": "12"
+   },
+   {
+    "name": "CHIANG MAI SAUSAGE",
+    "description": "Popular sausages packed full of lemongrass, galangal and lime leaves.",
+    "price": "£7.25",
+    "num": "13"
+   },
+   {
+    "name": "KHA NOM JHEEP",
+    "description": "Steamed mixture of minced prawn and pork dumpling with crispy garlic oil and soy sauce.",
+    "price": "£7.25",
+    "num": "15"
+   },
+   {
+    "name": "KING PRAWN TEMPURA",
+    "description": "Golden crispy king prawns.",
+    "price": "£7.25",
+    "num": "16"
+   },
+   {
+    "name": "GOLDEN PARCELS",
+    "description": "Pieces of chicken, potatoes, spices with yellow curry.",
+    "price": "£7.25",
+    "num": "17"
+   },
+   {
+    "name": "HOI OB TA KRAI",
+    "description": "Steamed mussels with lemongrass and coconut.",
+    "price": "£8.95",
+    "num": "18"
+   }
+  ],
+  "THAI  FAMOUS SOUPS": [
+   {
+    "name": "TOM YUM🌶️🌶️",
+    "description": "In spicy hot and sour lemongrass, galangal, lime leaves, mushrooms & chilli soup.",
+    "price": null,
+    "num": "21"
+   },
+   {
+    "name": "TOM KHA",
+    "description": "Same as above but in coconut milk soup.",
+    "price": null,
+    "num": "22"
+   }
+  ],
+  "THAI SPICY SALAD": [
+   {
+    "name": "SOM TUM🌶️🌶️",
+    "description": "Papaya salad seasoned with peanuts, lime juice, palm sugar, fish sauce and chillies.",
+    "price": "£14.95",
+    "num": "23"
+   },
+   {
+    "name": "YUM WOON SEN🌶️🌶️",
+    "description": "Glass noodles salad with seafood/pork/chicken in spicy and sour dressing and topped with coriander.",
+    "price": "£15.95",
+    "num": "24"
+   },
+   {
+    "name": "YAM NUEA 🌶️🌶️",
+    "description": "(Warm dish) Slices of grilled steak salad in Thai dressing and topped with coriander.",
+    "price": "£15.95",
+    "num": "25"
+   },
+   {
+    "name": "PLAH GOONG🌶️🌶️",
+    "description": "King prawns mixed with our special dressing made with lime, lemongrass and fish sauce, tossed with chilli, shallot and topped with coriander.",
+    "price": "£15.95",
+    "num": "26"
+   },
+   {
+    "name": "LAAB 🌶️🌶️",
+    "description": "Spicy, coarsely chopped chicken or beef tossed in Thai dressing and herbs. Pork or Chicken or Beef: £14.95",
+    "price": "£14.95",
+    "num": "27"
+   },
+   {
+    "name": "NAM TOK",
+    "description": "Slices of grilled steak OR roasted breast of duck tossed in Thai dressing and coriander.",
+    "price": "£15.95",
+    "num": "28"
+   }
+  ],
+  "BEEF": [
+   {
+    "name": "WEEPING TIGER",
+    "description": "Slices of grilled steak tossed in garlic, black pepper, coriander, served with lemon chilli dip.",
+    "price": "£15.95",
+    "num": "29"
+   },
+   {
+    "name": "BEEF IN TERIYAKI SAUCE",
+    "description": "Grilled steak sliced thinly, cooked in Japanese saké , ginger and soy sauce.",
+    "price": "£15.95",
+    "num": "30"
+   },
+   {
+    "name": "BANGKOK YAOWARAJ",
+    "description": "Stir fried marinated beef in oyster sauce, chilli and celery, tossed quickly in hot oil and served over a bed of bean sprouts.",
+    "price": "£15.95",
+    "num": "31"
+   }
+  ],
+  "DUCK": [
+   {
+    "name": "PED MA KARM",
+    "description": "Roasted breast of duck in tamarind sauce.",
+    "price": "£15.95",
+    "num": "32"
+   },
+   {
+    "name": "PED TERRIYAKI",
+    "description": "Roasted breast of duck sliced and cooked in Japanese saké , ginger and soy sauce.",
+    "price": "£15.95",
+    "num": "33"
+   },
+   {
+    "name": "PED NUM PUENG",
+    "description": "Roasted breast of duck in honey, soy sauce and Grand Marnier liquor.",
+    "price": "£15.95",
+    "num": "34"
+   }
+  ],
+  "GAENG / CURRIES": [
+   {
+    "name": "GREEN CHICKEN CURRY ( GAENG KHIAO WAAN )🌶️🌶️",
+    "description": "Green curry with bamboo shoots, courgette, French beans and basil.",
+    "price": null,
+    "num": "35"
+   },
+   {
+    "name": "GAENG MASSAMA 🌶️",
+    "description": "Southern style curry, dry spices of cumin, cinnamon, coconut milk, cashew nuts, potatoes, onion, and topped with cashew nuts and fried shallots.",
+    "price": null,
+    "num": "36"
+   },
+   {
+    "name": "GAENG PET PED YANG🌶️🌶️",
+    "description": "Roast duck in red curry, pineapple , peppers, French beans, tomatoes and basil.",
+    "price": null,
+    "num": "37"
+   },
+   {
+    "name": "GAENG DANG 🌶️🌶️",
+    "description": "Red curry with bamboo shoots, courgette , French beans and basil.",
+    "price": null,
+    "num": "38"
+   },
+   {
+    "name": "GAENG PA NANG🌶️🌶️",
+    "description": "Popular dryish red curry with lime leaves.",
+    "price": null,
+    "num": "39"
+   },
+   {
+    "name": "GAENG KAHREE GAI 🌶️",
+    "description": "A mild chicken slices cooked slowly in yellow curry with potatoes, topped with crispy fried red onion.",
+    "price": null,
+    "num": "40"
+   },
+   {
+    "name": "GAENG PA🌶️🌶️🌶️",
+    "description": "Hot curry with bamboo shoots and vegetables. A popular curry without coconut milk.",
+    "price": null,
+    "num": "41"
+   },
+   {
+    "name": "CHOO CHII GUNG🌶️🌶️",
+    "description": "Stir fried king prawns in special red curry coconut sauce and sweet basil.",
+    "price": null,
+    "num": "42"
+   }
+  ],
+  "STIR FRIED DISHES": [
+   {
+    "name": "PAD NAM MUN HOI",
+    "description": "With oyster sauce, onions, mushrooms, carrots, and broccoli.",
+    "price": null,
+    "num": "45"
+   },
+   {
+    "name": "PAD GRA TIEM PRIG THAI",
+    "description": "With garlic, coriander, mangetout, peppers, and cracked black pepper.",
+    "price": null,
+    "num": "46"
+   },
+   {
+    "name": "PAD KHING",
+    "description": "With ginger, garlic, onions, carrots, mange tout and mushrooms.",
+    "price": null,
+    "num": "47"
+   },
+   {
+    "name": "PAD NAM PRIG PAO🌶️",
+    "description": "With chilli paste , French beans, lime leaves, celery.",
+    "price": null,
+    "num": "48"
+   },
+   {
+    "name": "PAD PRIG TOUR DUM 🌶️",
+    "description": "With onions, carrots, black bean and hoi sin sauce.",
+    "price": null,
+    "num": "49"
+   },
+   {
+    "name": "PAD KEY MAO (NEVER SOBER STYLE )🌶️🌶️🌶️",
+    "description": "With garlic, chillies, bamboo shoots, courgettes, and basil.",
+    "price": null,
+    "num": "50"
+   },
+   {
+    "name": "PAD PRIG KHING🌶️",
+    "description": "With a special homemade mixture of red curry paste, lime leaves.",
+    "price": null,
+    "num": "51"
+   },
+   {
+    "name": "PAD CHA 🌶️🌶️🌶️",
+    "description": "With garlic, chillies, Thai ginger and Thai herbs.",
+    "price": null,
+    "num": "52"
+   },
+   {
+    "name": "PAD GRA PRAW🌶️🌶️🌶️",
+    "description": "Stir fried chicken (£11.95 ) | beef (£12.95) | pork (£11.95) chopped coarsely with garlic, chillies and basil. (+£1.50 fried eggs.)",
+    "price": null,
+    "num": "53"
+   },
+   {
+    "name": "PAD MED MA MUANG🌶️",
+    "description": "Stir fried ...... with cashew nuts, baby corn, peppers and mushrooms.",
+    "price": null,
+    "num": "54"
+   },
+   {
+    "name": "PAD PRIAO WAAN",
+    "description": "Sweet & sour ....... Pineapple, cucumber, onion, peppers, tomatoes. ( Thai style )",
+    "price": null,
+    "num": "55"
+   },
+   {
+    "name": "PAD KAO POD",
+    "description": "Stir fried ...... with baby corn, mange tout and a touch of sesame oil.",
+    "price": null,
+    "num": "56"
+   },
+   {
+    "name": "FISHERMAN🌶️",
+    "description": "Stir fried ...... with garlic, black pepper, coriander and a touch of curry powder, and coconut milk.",
+    "price": null,
+    "num": "57"
+   },
+   {
+    "name": "THAI OMELET",
+    "description": "Stir fried egg with garlic, spring onion and soy sauce.",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "58"
+   }
+  ],
+  "FILLET OF SEA BASS": [
+   {
+    "name": "PLA NUENG MA NAO🌶️🌶️",
+    "description": "With garlic, chillies, lemongrass & lemon juice.",
+    "price": "£17.95",
+    "num": "60"
+   },
+   {
+    "name": "PLA TOD GROB RAAD PRIG🌶️🌶️",
+    "description": "Deep fried, topped with chopped garlic, chillies and sweet basil.",
+    "price": "£16.95",
+    "num": "63"
+   },
+   {
+    "name": "CHOO CHII PLA🌶️🌶️",
+    "description": "Deep fried, topped with special red curry coconut sauce and sweet basil.",
+    "price": "£16.95",
+    "num": "64"
+   }
+  ],
+  "SEAFOOD": [
+   {
+    "name": "FISHERMAN SEAFOOD",
+    "description": "Stir fried seafood with garlic, coriander, black pepper and a touch of curry powder.",
+    "price": "£15.50",
+    "num": "66"
+   },
+   {
+    "name": "NEVER SOBER SEAFOOD",
+    "description": "Stir fried seafood with garlic, chilli, bamboo shoots and holy basil.",
+    "price": "£15.50",
+    "num": "67"
+   }
+  ],
+  "NOODLES & RICE": [
+   {
+    "name": "PAD THAI",
+    "description": "Local rice noodle dish with bean sprouts, egg, spring onions, and roasted ground peanuts. Original with vegetables £10.95 With chicken or pork £12.95 With beef or king prawns £13.95",
+    "price": null,
+    "num": "80"
+   },
+   {
+    "name": "NEVER SOBER NOODLE",
+    "description": "Stir fried rice noodle with garlic, egg, chillies, bamboo shoots and sweet basil with vegetables. Chicken or Pork £12.95 Beef or King prawns £13.95",
+    "price": null,
+    "num": "81"
+   },
+   {
+    "name": "PAD SEE IEW",
+    "description": "Stir fried rice noodle with garlic, egg, yellow bean sauce and dark soy sauce. With vegetables. £10.95 Chicken or Pork £13.95 Beef or King prawns £14.95",
+    "price": null,
+    "num": "82"
+   },
+   {
+    "name": "MEE KAI - EGG NOODLES",
+    "description": "Plain with garlic oil £4.00 With bean sprouts £7 .95 With C hicken or Pork £12.95 With B eef or King prawns £13.95",
+    "price": null,
+    "num": "83"
+   },
+   {
+    "name": "KHAO SUEW",
+    "description": "Steamed Thai rice.",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "84"
+   },
+   {
+    "name": "KHAO MUN",
+    "description": "Thai rice cooked with coconut milk.",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "85"
+   },
+   {
+    "name": "KHAO NIAO",
+    "description": "Sticky rice or glutinous rice.",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "86"
+   },
+   {
+    "name": "KHAO PAD",
+    "description": "Egg fried rice.",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "87"
+   },
+   {
+    "name": "POPULAR FRIED RICE with vegetables",
+    "description": "With chicken or pork £12.95 With beef or king prawns £13.95",
+    "price": "£10.95",
+    "num": "88"
+   },
+   {
+    "name": "CHIPS",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": true,
+    "num": "89"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

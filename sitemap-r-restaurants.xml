@@ -6326,7 +6326,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/argyll-and-bute/mandarin-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/arun/thai-pan/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/ashford/tamarind-thai-tenterden-limited/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/bath/charm-oriental-bar-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/bath/mai-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/belfast/thai-village/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6341,6 +6366,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/bournemouth/nusara-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/bradford/bangkok-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/brighton/im-thai-food-factory-street-food/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/bristol/brother-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6351,7 +6391,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/bristol/mangosteen-thai-tapas-and-bar/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/broadland/thailand-thai-cuisine/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/bromsgrove/maekong-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/buckinghamshire/jasmine-thai-kitchen/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6361,7 +6416,42 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/calderdale/rim-nam-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/cambridge/eat-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/canterbury/lanna-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/cardiff/brother-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/cardiff/mango-tree/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/cardiff/moo-moo-thai-tapas/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/carmarthenshire/jasmine-thai-takeaway/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/central-bedfordshire/louises-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6371,7 +6461,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/cherwell/bc-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/cheshire-east/bkk-thai-takeaway/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/cheshire-west-and-chester/charming-thai-kitchen/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/conwy/thai-tastic/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6396,12 +6501,137 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/cotswold/thai-emerald/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/crawley/royal-thai-taste/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/dacorum/thai-cottage/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/derby/good-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/devon/tasty-thais/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/doncaster/charm-thai-cafe/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/dover/my-thai-ltd/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/dundee/rama-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/durham/chang-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/east-riding-of-yorkshire/supattra-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/edinburgh/spirit-of-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/edinburgh/thai-lemongrass-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/edinburgh/thai-street-box/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/epping-forest/koh-lanta-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/fife/udon-thai-street-food/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/glasgow/the-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/gloucester/taste-of-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/great-yarmouth/pad-thai-bangkok-restaurant-and-takeaway/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/herefordshire/riceberry-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/herefordshire/thai-rama-iv/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/hertfordshire/baan-thitiya-thai-cuisine/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/hertfordshire/khunnai-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/horsham/the-chef-thai-cuisine/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/huddersfield/tapian-thai-takeaway/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/huddersfield/thai-sarakham/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/ipswich/kwan-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/isle-of-wight/thai-journey-restaurant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6416,6 +6646,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/leeds/baanrai-thai-cafe/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/leeds/luck-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/leeds/sri-non-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/leeds/thai-aroy-dee/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6426,7 +6671,47 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/lewes/pailin-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/lichfield/siam-corner-ma-ma-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/lincoln/araya-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/liverpool/chaba-chaba-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/liverpool/mays-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/liverpool/phi-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/angrid-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/butlers-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/cher-thai-eatery/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6436,12 +6721,167 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/london/fitous-thai-and-malaysian-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/jasmine-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/kin-dee-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/little-thai-silk/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/london/lombok-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/london/love-bike-thai-cafe/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/mai-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/mali-vegan-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/muang-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/mum-likes-thai-food/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/nakhon-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/london/nara-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/nois-thai-kitchen/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/sabai-thai-kitchen-the-lemon-tree/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/sizzling-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thai-elephant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thai-house-market-place-st-pauls/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thai-kitchen-the-old-pack-horse/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thai-n-pie/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thai-pie-tripti-limited/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thai-rice/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thai-spice/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/the-forester-ealing-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/the-secret-thai-garden/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/thonglor-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/two-point-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/maidstone/thai-orchid/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/maidstone/thai-rice-club/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/manchester/thai-kitchen-no-6/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/manchester/thai-spice/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/manchester/try-thai-restaurant-cafe/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/mansfield/blue-chilli-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/mid-suffolk/thai-orchid-food/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6456,7 +6896,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/newark-and-sherwood/mama-thai-newark/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/newcastle/jack-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/newcastle/mantra-thai-dining/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/newcastle/thai-house/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6471,12 +6926,67 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/north-norfolk/chai-yo-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/north-norfolk/thai-ubon-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/norwich/thai-kitti/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/oxfordshire/suwanna-thai-cuisine/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/plymouth/mr-woks-thai-noodle-street-food-limited/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/reading/thai-corner/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/reigate-and-banstead/thai-cottage/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/richmond-upon-thames/charm-thai-dining/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/richmond-upon-thames/orange-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/richmond-upon-thames/thai-select/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/rother/thai-orchid-battle/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/rugby/rama-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/sandwell/mango-tree-bar-and-grill/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6496,12 +7006,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/shropshire/thai-arts-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/shropshire/thai-box/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/spelthorne/kinnaree-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/st-albans-city/sala-thai-kitchen/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/st-albans-city/sukawatee-thai-malay/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/staffordshire/baan-thai-restaurant-ltd/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6516,6 +7046,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/stratford-on-avon/tiews-thai-table/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/swansea/nok-nok-authentic-thai-food/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/swansea/pearl-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/swansea/thai-dee-cuisine-limited/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/tandridge/bua-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6526,12 +7076,47 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/test-valley/siam-orchid-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/thanet/mama-jinny-thai-kitchen/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/thanet/thai-village/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/tonbridge-and-malling/pad-thai-restaurant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/torbay/indian-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/trafford/hot-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/trafford/nahm-prik-thai-cuisine/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/tunbridge-wells/kaphao-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/vale-of-white-horse/chaba-thai-restaurant/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6546,12 +7131,102 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/warwick/thai-elephant-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wealden/thai-nong-khai-limited/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/west-berkshire/thai-golden-horse/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/west-lancashire/itsy-bitsy-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/westmorland-and-furness/doi-intanon-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wiltshire/jicsaw-cricklade-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wiltshire/thai-orchid/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wiltshire/the-thai-barn/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/windsor-and-maidenhead/angkana-thai-food-at-the-swan/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/windsor-and-maidenhead/thai-orchid/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wirral/bamboo-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wirral/tuk-tuk-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/worthing/siam-thai-cuisine/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wrexham/try-thai-shop-noodle-bar/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wychavon/hongs-thai-takeaway/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wychavon/thai-legend/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/wyre/mews-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/york/bamboo-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thaidata.uk/r/york/kam-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/york/thai-temptations-ltd/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

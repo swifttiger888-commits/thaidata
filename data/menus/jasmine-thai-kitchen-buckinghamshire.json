@@ -1,0 +1,395 @@
+{
+ "restaurant": "Jasmine Thai Kitchen",
+ "city": "Buckinghamshire",
+ "fsa_id": "1790672",
+ "address": "Buckinghamshire",
+ "source": "https://jasminethaichesham.co.uk/Order/Index/Order%20Now-840",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTER": [
+   {
+    "name": "Por Pia Jay V",
+    "description": "Vegetable spring rolls",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Grilled marinated chicken served with peanut sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "Prawns in Blankets",
+    "description": "Deep fried prawns in rice pastry served with sweet chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "Prawns on Toast",
+    "description": "Minced prawns on toast served with sweet chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "Golden Bags",
+    "description": "Crispy parcel filld with spicy marinated chicken served with chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "Spicy Corn Cake",
+    "description": "Sweet corn cake with Thai spices served with sweet chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "Deep Fried Vegetables V",
+    "description": "Crispy fried vegetable in light batter served with sweet chilli sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Hor Mok Talay",
+    "description": "Steamed mixed seafood in egg,flavored with lemongrass, Thai herb and coconut cream",
+    "price": "£8.95"
+   },
+   {
+    "name": "Vegetable Gyoza V",
+    "description": "Deep fried dumpling with sweet chilli sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Pork and Prawn Dumpling",
+    "description": "Steamed pork and prawns dumpling served with garlic and ginger sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "Mixed Stater for 2 Persons",
+    "description": "Chicken Satay, Vegetable Spring Rolls, Prawn on Toast, Vegetable Gyoza, Prawns in Blanket and Golden Bags.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Aromatic Crispy Duck for 2 Persons",
+    "description": "Served with pancake and plum sauce.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Salt Chili Chicken Wing",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "Salt Chili Squid Ring",
+    "description": "",
+    "price": "£8.00"
+   },
+   {
+    "name": "Salt Chili Soft Shell Crab",
+    "description": "",
+    "price": "£8.90"
+   },
+   {
+    "name": "Thai Prawn Crackers",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Mixed Starter for 3 Persons - delete",
+    "description": "",
+    "price": "£23.90"
+   },
+   {
+    "name": "Mixed Starter for 3 Persons",
+    "description": "",
+    "price": "£23.90"
+   },
+   {
+    "name": "Aromatic Crispy Duck for 3 Persons",
+    "description": "",
+    "price": "£23.90"
+   }
+  ],
+  "SOUP": [
+   {
+    "name": "Tom Yum Goong",
+    "description": "Prawns in a hot and sour rich broth with lemongrass, lime leaves and mushrooms.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tom Yum Gai",
+    "description": "Chicken in a hot and sour rich broth with lemongrass, lime leaves and mushroom",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tom Yum Hed V",
+    "description": "Mushroom in a hot and sour rich broth with lemongrass and lime leaves.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Yum Talay",
+    "description": "Mixed seafood in a hot and sour rich broth with lemongrass and lime leaves.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Tom Ka Gai",
+    "description": "Traditional Thai chicken soup in coconut milk with galangal and lemongrass.",
+    "price": "£6.95"
+   }
+  ],
+  "THAI SALAD": [
+   {
+    "name": "Beef Salad",
+    "description": "Thinly sliced prime sirloin steak flavored with coriander and tossed in a salad dressing.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pha Goong",
+    "description": "Warm prawn salad with lemongrass, lime leaves and chilli dressing.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Laab Gai",
+    "description": "Minced chicken flavored with lemongrass, lime leaves and tossed in lemon dressing (served warm)",
+    "price": "£10.95"
+   },
+   {
+    "name": "Som Tam",
+    "description": "A very popular Northeastern dish, a salad of green papaya with lemon dressing.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Yum Talay",
+    "description": "Warm mixed seafood salad with chilli dressing lime leaves and lemongrass.",
+    "price": "£13.95"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "Roasted Duck Curry",
+    "description": "Roasted duck cooked with red curry paste in coconut milk, tomatoes, pineapple and basil leaves",
+    "price": "£11.95"
+   },
+   {
+    "name": "Green Curry",
+    "description": "A delightful green curry cooked with green curry paste in coconut milk with bamboo shoots and basil leaves.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Red Curry",
+    "description": "A delightful red curry cooked with red curry paste in coconut milk with bamboo shoots and basil leaves.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Kaeng Par",
+    "description": "Mixed Thai herbs and vegetable in jungle curry paste.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Panang Curry",
+    "description": "Meat in dry red curry paste with coconut milk and lime leaves.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Massaman curry paste with potatoes, coconut milk and cashewnut.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Yellow Curry",
+    "description": "A delightful yellow curry cooked with yellow curry paste in coconut milk, potatoes, onion and carrot.",
+    "price": "£0.00"
+   }
+  ],
+  "STIR FRIED": [
+   {
+    "name": "Oyster Sauce",
+    "description": "stir fried oyster sauce with mushroom, onion, broccoli and peppers.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pad Gra Prao",
+    "description": "Stir fried with fresh chilli and basil leaves.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pad Nham Prik Pao",
+    "description": "Stir fried with chilli oil paste with long beans and basil leaves",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pad Ped",
+    "description": "Stir fried with red curry paste with bamboo shoots and basil leaves",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pad Khing Ginger",
+    "description": "Stir fried with ginger, mushroom, onion and pepper",
+    "price": "£0.00"
+   },
+   {
+    "name": "Sweet Sour",
+    "description": "Stir fried with cucumber,tomatoes, onions and pineapple in sweet and sour sauce.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pa Kratiem Priktai",
+    "description": "Stir fried with garlic, pepper and onions.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pad Med mamuang",
+    "description": "Stir fried with cashew nuts, onions and peppers",
+    "price": "£0.00"
+   }
+  ],
+  "HOUSE SPECIALS": [
+   {
+    "name": "Pad Sam Sa Hai",
+    "description": "Stir fried mixed seafood with fresh garlic and thai herbs, flavored with brandy and served with jasmine rice",
+    "price": "£16.95"
+   },
+   {
+    "name": "Gai Tord Rad Prik",
+    "description": "Fried chicken fillet in batter topped with special chilli sauce served with jasmine rice.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pla Priew Wan",
+    "description": "Crispy fried fish topped with sweet and sour sauce served with jasmine rice.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Weeping Tiger Sizzling",
+    "description": "Sizzling sirloin steak Thai style with chilli dressing served with jasmine rice.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pla Rad Prik",
+    "description": "Crispy fried fish topped with a special chilli sauce served with jasmine rice",
+    "price": "£13.95"
+   },
+   {
+    "name": "Goong Pao",
+    "description": "Charcoal King prawns marinated in our special sauce served with jasmine rice.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Ped Markham",
+    "description": "Crispy fried duck topped with tamarind sauce served jasmine rice.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Spicy Lamb",
+    "description": "Stir fried lamb with fresh chilli and Thai herbs with basil leaves served with jasmine rice.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Spicy Cripy Beef",
+    "description": "Served with jasmine rice.",
+    "price": "£13.95"
+   }
+  ],
+  "VEGETABLES SIDE DISHES": [
+   {
+    "name": "Stir Fried Mixed Vegetable with Oyster Sauce",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "Broccoli in Oyster Sauce",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "Grilled Aubergine Topeed with Garlic Sauce",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Pak Choi with Garlic Sauce",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Cripy Fried Tofu with Chilli Sauce",
+    "description": "",
+    "price": "£9.50",
+    "vegetarian": true
+   }
+  ],
+  "NOODLES": [
+   {
+    "name": "Pad Thai Noodles Mild or Spicy",
+    "description": "Thai style stir fried noodles with egg,bean sprouts, spring onion and ground peanut.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pad See Ew",
+    "description": "Stir fried rice nooodle with vegetable, egg and soya sauce.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Kuay Tiew Pad Kee Mai",
+    "description": "Stir fried rice noodle with fresh chilli and basil leaves.",
+    "price": "£0.00"
+   },
+   {
+    "name": "Pad Mee V",
+    "description": "Stir fried egg noodles with bean sprouts and spring onion.",
+    "price": "£0.00",
+    "vegetarian": true
+   }
+  ],
+  "RICE": [
+   {
+    "name": "Kao Pad",
+    "description": "",
+    "price": "£0.00"
+   },
+   {
+    "name": "Stemed Rice",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.70",
+    "vegetarian": true
+   }
+  ],
+  "SET MENU": [
+   {
+    "name": "Set menu Basil for 2 persons",
+    "description": "Starter Mix platter Main Sweet sour Duck Stir fried Chicken ginger Beef Panang curry Steamed jasmine rice",
+    "price": "£48.00"
+   },
+   {
+    "name": "Set menu Lemongrass for 2 persons",
+    "description": "Starter Aromatic duck Main Stir fried beef with broccoli Seabass in chilli sauce Pad Thai with chicken Egg rice",
+    "price": "£54.00"
+   },
+   {
+    "name": "Set menu Galangal for 2 persons",
+    "description": "Starter Mixed Vegetarian Main Massaman curry with Vegetable Tofu with cashewnut Grilled aubergine topped with garlic sauce Coconut rice",
+    "price": "£42.00",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

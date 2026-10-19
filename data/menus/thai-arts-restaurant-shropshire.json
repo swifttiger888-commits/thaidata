@@ -1,0 +1,131 @@
+{
+ "restaurant": "Thai Arts Restaurant",
+ "city": "Shropshire",
+ "fsa_id": "125198",
+ "address": "Shropshire",
+ "source": "https://www.thaiarts.co.uk/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "Prawn Cracker",
+    "description": "",
+    "price": "£2.50"
+   },
+   {
+    "name": "Salted and pepper chips",
+    "description": "",
+    "price": "£5.50",
+    "vegetarian": true
+   },
+   {
+    "name": "TOM YUM SOUP",
+    "description": "Hot and sour soup.",
+    "price": null
+   },
+   {
+    "name": "TOM KHA SOUP",
+    "description": "With coconut milk.",
+    "price": null
+   },
+   {
+    "name": "CHICKEN SATAY",
+    "description": "",
+    "price": "£5"
+   },
+   {
+    "name": "PRAWN CHEESE ROLL",
+    "description": "",
+    "price": "£5"
+   },
+   {
+    "name": "PRAWN ON TOAST",
+    "description": "",
+    "price": "£5"
+   },
+   {
+    "name": "HONEY PORK SPARE RIB",
+    "description": "",
+    "price": "£5"
+   },
+   {
+    "name": "VEGETABLE SPRING ROLL",
+    "description": "",
+    "price": "£5",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE TEMPURA STYLE",
+    "description": "",
+    "price": "£5",
+    "vegetarian": true
+   }
+  ],
+  "Main Courses": [
+   {
+    "name": "CRISPY MEAT SWEET CHILLI SAUCE WITH RICE",
+    "description": "Deep fried meat till crispy then stir fried with pepper and sweet chilli sauce.",
+    "price": null
+   },
+   {
+    "name": "OYSTER SAUCE WITH RICE",
+    "description": "Stir fried pepper, onions, mushroom, spring onions with oyster sauce.",
+    "price": null
+   },
+   {
+    "name": "GREEN CURRY WITH RICE",
+    "description": "Green curry paste cooked with coconut milk, bamboo shoot, chilli, courgette, sweet basil leaves.",
+    "price": "£7.99"
+   },
+   {
+    "name": "RED CURRY WITH RICE",
+    "description": "Red curry paste cooked with coconut milk, bamboo shoot, chilli, courgette and sweet basil leaves.",
+    "price": "£7.99"
+   },
+   {
+    "name": "PANENG CURRY WITH RICE",
+    "description": "Paneng curry cooked with coconut milk, chilli and sweet basil leaves.",
+    "price": "£7.99"
+   },
+   {
+    "name": "CASHEWNUT WITH RICE",
+    "description": "Stir fried pepper, onions, spring onions, carrot and cashew nut.",
+    "price": "£7.99"
+   },
+   {
+    "name": "CRISPY MEAT IN BLACK PEPPER SAUCE SERVED WITH RICE",
+    "description": "Stir fried select meat with black pepper sauce.",
+    "price": "£7.99"
+   },
+   {
+    "name": "PAD KRA POW (CHILLI AND BASIL LEAVE WITH RICE)",
+    "description": "Stir fried pepper, onions, garlic with fresh chilli and basil leaves.",
+    "price": null
+   },
+   {
+    "name": "SWEET AND SOUR WITH RICE",
+    "description": "Stir fried pepper, onions, spring onions, carrot, pineapple, tomato with sweet and sour sauce.",
+    "price": "£7.99"
+   },
+   {
+    "name": "PAD THAI NOODLES",
+    "description": "Stir fried traditional Thai noodles style with tamarind sauce, spring onion, carrot, beansprout, egg and crushed peanut.",
+    "price": "£7.99"
+   },
+   {
+    "name": "PAD BA ME (YELLOW NOODLES)",
+    "description": "Stir fried yellow noodles (egg noodles) with spring onion, carrot, beansprout, egg and dark soya sauce.",
+    "price": "£7.99"
+   },
+   {
+    "name": "PAD RAD NA (HOFUN NOODLE)",
+    "description": "Stir fried Hon noodle until soft and topped with pak choi and mushroom.",
+    "price": "£7.99"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Main course £7.99 or 2 courses meal for £11.99"
+ ]
+}

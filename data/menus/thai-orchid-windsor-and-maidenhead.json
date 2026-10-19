@@ -1,0 +1,129 @@
+{
+ "restaurant": "Thai Orchid",
+ "city": "Windsor and Maidenhead",
+ "fsa_id": "544329",
+ "address": "Windsor and Maidenhead",
+ "source": "https://www.thaiorchidmaidenhead.com/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Banquet Menu A": [
+   {
+    "name": "THAI ORCHID MIXED STARTERS",
+    "description": "A selection of authentic Thai starters",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "★ MASSAMAN GAI",
+    "description": "Chicken in a massaman curry with potatoes, onions and cashew nuts",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "NEUA PAD PRIG THAI DAM",
+    "description": "Stir fried beef, cooked in garlic and black pepper",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "PLA PRIEW WAN",
+    "description": "Fish with peppers, pineapple and onions, cooked in a sweet and sour sauce",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "PAD PAK NAM MAN HOI",
+    "description": "Stir fried mixed vegetables in oyster sauce",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "KHAO PAD",
+    "description": "Jasmine fried rice",
+    "price": "£30.00 per person",
+    "vegetarian": true
+   },
+   {
+    "name": "KANOM",
+    "description": "Dessert from the trolley",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "COFFEE TO FINISH",
+    "description": "",
+    "price": "£30.00 per person"
+   }
+  ],
+  "Banquet Menu B": [
+   {
+    "name": "KAENG DAENG GAI",
+    "description": "Chicken in a red curry paste with coconut milk, aubergines and basil leaves",
+    "price": "£32.50 per person"
+   },
+   {
+    "name": "PED MAKARM",
+    "description": "Duck breast marinated in Thai spices, grilled over charcoal, sliced and served with a tamarind and honey sauce",
+    "price": "£32.50 per person"
+   },
+   {
+    "name": "GOONG RAD PRIG",
+    "description": "Fried prawns coated in a mild chilli sauce",
+    "price": "£32.50 per person"
+   },
+   {
+    "name": "NEUA PAD BRANDY",
+    "description": "Beef marinated in soy sauce, stir fried with peppers, onions, tomatoes and brandy sauce",
+    "price": "£32.50 per person"
+   },
+   {
+    "name": "KHAO SUAY",
+    "description": "Steamed jasmine rice",
+    "price": "£32.50 per person",
+    "vegetarian": true
+   }
+  ],
+  "Banquet Menu C": [
+   {
+    "name": "KAENG KIEW WAN GOONG",
+    "description": "Prawns in a green curry paste with coconut milk, aubergines and bamboo shoots",
+    "price": "£36.00 per person"
+   },
+   {
+    "name": "PLA RAD PRIG",
+    "description": "Fried fish coated in a mild chilli sauce",
+    "price": "£36.00 per person"
+   },
+   {
+    "name": "HOI SHELL PAD PRIG THAI DAM",
+    "description": "Scallops stir fried with ground pepper and herbs",
+    "price": "£36.00 per person"
+   },
+   {
+    "name": "TALAY PAD KEE MAO",
+    "description": "Mixed seafood, stir fried with chilli, sweet basil, bamboo and aubergines",
+    "price": "£36.00 per person"
+   }
+  ],
+  "Banquet Menu D": [
+   {
+    "name": "KAENG DAENG PAK",
+    "description": "Fresh vegetables in a red curry paste with coconut milk and sweet basil",
+    "price": "£27.00 per person",
+    "vegetarian": true
+   },
+   {
+    "name": "HED PAD PRIEW WAN",
+    "description": "Stir fried mushrooms with onions and spring onions, in a sweet and sour sauce",
+    "price": "£27.00 per person",
+    "vegetarian": true
+   },
+   {
+    "name": "★ TAO HOO MA MUANG HIMMAPHAN",
+    "description": "Stir fried bean curd with cashew nuts, onions and peppers in shrimp paste",
+    "price": "£27.00 per person"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Banquet Menu A - £30.00 per person - minimum order for 2 people",
+  "Banquet Menu B - £32.50 per person - minimum order for 2 people",
+  "Banquet Menu C - £36.00 per person - minimum order for 2 people",
+  "Banquet Menu D - £27.00 per person - minimum order for 2 people"
+ ]
+}

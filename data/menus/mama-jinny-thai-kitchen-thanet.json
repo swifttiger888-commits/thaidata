@@ -1,0 +1,302 @@
+{
+ "restaurant": "Mama Jinny Thai Kitchen",
+ "city": "Thanet",
+ "fsa_id": "1199883",
+ "address": "Thanet",
+ "source": "https://www.mamajinnythaifood.co.uk/wp-content/uploads/2026/03/march-2026-menu.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "1 PRAWN CRACKERS (spicy and non-spicy)",
+    "description": "",
+    "price": "£4.00"
+   },
+   {
+    "name": "2 POH PIA TOD (spring rolls) 5 Pieces V Ve",
+    "description": "Mixed vegetable and glass noodle wrapped in spring roll pastry, deep fried and served with salad and chilli sauce.",
+    "price": "£8.00",
+    "vegetarian": true
+   },
+   {
+    "name": "3 TOD MAN PLA (Thai fish cake) 5 Pieces",
+    "description": "Minced fillet white fish with chilli paste and mixed with French bean, lime leaves, deep fried and served with salad and chilli sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "4 SATAY CHICKEN 5 Pieces",
+    "description": "Marinated with herbs and served with peanut sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "5 TOD MAN KHAO POD (Sweetcorn fritter) 5 Pieces V Ve",
+    "description": "Sweetcorn mixed with chilli paste and fresh Thai herbs, deep fried and served with sweet chilli sauce.",
+    "price": "£8.00",
+    "vegetarian": true
+   },
+   {
+    "name": "6 SII KRONG MUU (spare ribs)",
+    "description": "Marinated spare ribs with honey, garlic, pepper, slow-cooked and served with salad.",
+    "price": "£10.00"
+   },
+   {
+    "name": "7 KHA NOM PUNG NHA GOONG (prawn on toast) 5 Pieces",
+    "description": "Marinated minced prawn and chicken on toast, topped with sesame seed, deep fried and served with chilli sauce and salad.",
+    "price": "£9.00"
+   },
+   {
+    "name": "8 KHA NOM JEEB (dumpling or dim sum) 5 Pieces",
+    "description": "Mince prawns and chicken breast mixed with Thai herbs wrapped in wonton pastry, steamed and served with sweet and sour soy sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "9 SAI KROK ISAAN (spicy Thai sausage) 2 Pieces",
+    "description": "A traditional dish from the north east of Thailand. Minced pork mixed with garlic, chilli, Thai herbs, deep fried and served with salad.",
+    "price": "£10.00"
+   },
+   {
+    "name": "10 GOONG CHOOB PANG TOD (prawn tempura) 5 Pieces",
+    "description": "Deep fried prawn in batter and breadcrumbs, served with plum sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "11 PUK CHOOB PANG TOD (vegetable tempura) V Ve",
+    "description": "Deep-fried mixed vegetables in batter, served with sweet chilli sauce.",
+    "price": "£8.00",
+    "vegetarian": true
+   },
+   {
+    "name": "12 WING SAAB (chicken wings) 6 Pieces",
+    "description": "Deep fried chicken wing marinated in black pepper, coriander and garlic.",
+    "price": "£9.00"
+   },
+   {
+    "name": "13 MIXED STARTER FOR TWO",
+    "description": "Spring roll, Thai fish cake, prawn tempura, spicy sausage and chicken satay, served with sweet chilli, plum and satay sauce.",
+    "price": "£20.00"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "14 TOM YUM (hot and sour soup) V Ve",
+    "description": "Classic hot and sour soup with mushrooms, flavoured with lemon grass, galangal, chilli, lime leaves and lime juice.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "15 TOM KHA (coconut soup) V Ve",
+    "description": "Thai style soup cooked with coconut milk, seasoned with lemon grass, galangal, lime leaves and aromatic herbs.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "16 NOODLES SOUP (kway teow) V Ve",
+    "description": "Mama Jinny special rice noodle soup with bean sprouts, garnished with roast garlic, coriander and peppers.",
+    "price": null,
+    "vegetarian": true
+   }
+  ],
+  "Salads": [
+   {
+    "name": "17 LAAB (mince salad)",
+    "description": "A very traditional Thai salad with choice of minced pork or chicken. Full flavour with coriander, shallots and mint.",
+    "price": "£10.00"
+   },
+   {
+    "name": "18 LAAB PED (duck salad)",
+    "description": "Fillet duck salad. Full flavour Thai-style, with crispy duck skin and roast garlic.",
+    "price": "£15.00"
+   },
+   {
+    "name": "19 YUM NUA (beef salad)",
+    "description": "Grilled beef steak, thinly sliced on a bed of salad with Thai herbs and spicy dressing.",
+    "price": "£11.00"
+   },
+   {
+    "name": "20 SOM TOM (papaya salad) V Ve",
+    "description": "An amazing flavour dish of Thai green papaya, carrots, French bean dressing with cherry tomatoes, peanuts, chilli, tamarind juice and plum sugar.",
+    "price": "£13.00",
+    "vegetarian": true
+   },
+   {
+    "name": "21 YUM WOON SEN (glass noodle salad) vegetarian/vegan option available V Ve",
+    "description": "A full flavour dish of glass noodles. with a dressing of chilli, lime juice and coriander.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "22 YUM TALAY",
+    "description": "Full flavour of mixed seafood Thai style salad.",
+    "price": "£13.50"
+   }
+  ],
+  "Thai Curry": [
+   {
+    "name": "23 GANG KIEW WAN (Thai green curry) V Ve",
+    "description": "Dish cooked in coconut milk, Thai green curry paste with bamboo shoots, aubergine and fresh Thai herbs.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "24 GANG DANG (Thai red curry) V Ve",
+    "description": "Dish cooked in coconut milk, Thai red curry paste, bamboo shoots, red & green peppers and fresh Thai herbs.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "25 GANG PANANG (Panang curry) V Ve",
+    "description": "Melt in your mouth. Our creamy Panang curry is slow-cooked in coconut milk, fresh Thai herbs, chilli and lime leaves.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "26 GANG MASSAMAN (Massaman curry) V Ve",
+    "description": "A dish from southern Thailand. Mild curry, slow-cooked in coconut milk, potatoes, onions and cashew nuts. Recommended with beef or chicken.",
+    "price": null,
+    "vegetarian": true
+   }
+  ],
+  "Stir Fry Dishes": [
+   {
+    "name": "27 PAD KRATIEM PRIK TAI V Ve",
+    "description": "Stir-fried with garlic and pepper in black soya sauce.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "28 PAD MED MA-MAUNG V Ve",
+    "description": "Stir-fried with cashew nuts, onions, pepper, spring onion in soya sauce.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "29 PAD KRAPROW V Ve",
+    "description": "A hot and spicy dish, stir-fried with chilli, garlic and Thai basil.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "30 PAD KHING V Ve",
+    "description": "Stir-fried with ginger, baby sweetcorn, mushrooms, onions and spring onion.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "31 PAD PRIEW WAN V Ve",
+    "description": "Stir-fried in sweet and sour sauce with onions, pineapple, red and green peppers and spring onion.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "32 PAD NAM MAN HOI (Beef only)",
+    "description": "Stir-fried beef with garlic in oyster sauce with mushrooms and onions.",
+    "price": null
+   }
+  ],
+  "Noodle Dishes": [
+   {
+    "name": "33 PAD THAI",
+    "description": "Rice noodles stir-fried with egg, in a Pad Thai sauce, garnished with peanuts, bean sprouts and lime.",
+    "price": null
+   },
+   {
+    "name": "34 PAD SEE EW",
+    "description": "Rice noodles with garlic and egg, cooked in oyster sauce and dark soya sauce with broccoli.",
+    "price": null
+   },
+   {
+    "name": "35 PAD KEE MAOW",
+    "description": "Hot and spicy rice noodles stir-fried with baby sweetcorn, red and green peppers, bamboo shoots and fresh Thai herbs.",
+    "price": null
+   }
+  ],
+  "Rice": [
+   {
+    "name": "36 STEAMED RICE V Ve",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "37 EGG FRIED RICE",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "38 PINEAPPLE FRIED RICE for two people",
+    "description": "",
+    "price": "£10.00"
+   },
+   {
+    "name": "39 SPICY RICE for two people",
+    "description": "",
+    "price": "£10.00"
+   },
+   {
+    "name": "40 STICKY RICE V Ve",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "40a COCONUT RICE",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "40b MIXED VEGETABLE STIR-FRY V Ve",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true
+   }
+  ],
+  "Mama Jinny Special": [
+   {
+    "name": "41 STEAMED SEA BASS IN MAMA JINNY SPECIAL SAUCE",
+    "description": "",
+    "price": "£23.00"
+   },
+   {
+    "name": "42 CRAB CLAWS CURRY",
+    "description": "",
+    "price": "£25.00"
+   },
+   {
+    "name": "43 DEEP FRIED CRISPY SEA BASS WITH SWEET & SOUR DIPPING SAUCE",
+    "description": "",
+    "price": "£23.00"
+   },
+   {
+    "name": "44 MIXED SEAFOOD MEDLEY",
+    "description": "Mixed seafood stir-fried in hot Mama Jinny dipping sauce.",
+    "price": "£20.00"
+   },
+   {
+    "name": "45 WEEPING TIGER",
+    "description": "Grilled sirloin steak with Mama Jinny dipping sauce.",
+    "price": "£20.00"
+   }
+  ],
+  "Desserts": [
+   {
+    "name": "46 MANGO & STICKY RICE V Ve",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "47 KAY BAUD CHEE V Ve",
+    "description": "Banana cooked in coconut milk and served warm.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "48 BANANA FRITTER",
+    "description": "Served with honey and ice cream.",
+    "price": "£7.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

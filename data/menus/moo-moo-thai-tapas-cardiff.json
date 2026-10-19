@@ -1,0 +1,324 @@
+{
+ "restaurant": "Moo Moo Thai Tapas",
+ "city": "Cardiff",
+ "fsa_id": "1209662",
+ "address": "Cardiff",
+ "source": "http://www.moomoothaitapas.co.uk/menu/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starter": [
+   {
+    "name": "Prawn Crackers",
+    "description": "Thai spicy shrimp chips.",
+    "price": "£3.50"
+   },
+   {
+    "name": "Pbor Pbia Jay",
+    "description": "Crispy spring rolls filled with glass noodles, cabbage and black fungus mushrooms served with sweet chilli dipping sauce .",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Spring Rolls",
+    "description": "Deep fried fresh chicken rolls filled with carrots, onions and black fungus mushrooms.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Duck Spring Rolls",
+    "description": "Roasted duck filled with taro, leeks and spring onions.",
+    "price": "£7"
+   },
+   {
+    "name": "Nurh Tod Grob",
+    "description": "Crispy marinated beef strips lightly battered with dark sesame dipping sauce.",
+    "price": "£7"
+   },
+   {
+    "name": "Thai Dim Sum",
+    "description": "Steamed minced chicken and prawns wrapped in wonton pastry, served with sweet soy sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Marinated of chicken on skewer served with peanut sauce and lightly pickled vegetables.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Tod Mun Pblah",
+    "description": "Traditional style thai fish cake seasoned with curry paste and kaffir lime leaves, served with sweet chilli sauce and crushed peanut.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Prawns on Toast",
+    "description": "Minced prawns with coriander roots spread on a beguette topped with sesame seeds.",
+    "price": "£7"
+   },
+   {
+    "name": "Tempura Prawns",
+    "description": "King prawns coasted in crispy breadcrumbs served with sweet chilli sauce.",
+    "price": "£7"
+   },
+   {
+    "name": "Goong Pao",
+    "description": "Char grilled king prawns on bamboo skewer served with garlic, lime and chilli dipping sauce.",
+    "price": "£7"
+   },
+   {
+    "name": "Salt and Pepper Squid",
+    "description": "Lightly battered fried squid with pepper garlic and a touch of salt.",
+    "price": "£7"
+   },
+   {
+    "name": "Pan Fried Chicken",
+    "description": "Chicken strips pan fried with chilli and onions, served with tamarind sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Tod Mun Kow Pohd",
+    "description": "Golden deep fried corn fritters with sweet chilli dipping sauce.",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Pak Satay",
+    "description": "Grilled mixed seasonal vegetables served with peanut sauce and soy sauce.",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Tod Mun Goong",
+    "description": "Grilled mixed seasonal vegetables served with peanut sauce and soy sauce.",
+    "price": "£7"
+   },
+   {
+    "name": "Sesame Chicken",
+    "description": "Mini chicken fillets coated in breadcrumb & black sesame seeds, served with spicy tamarind sauce.",
+    "price": "£7"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Tom Yum Chicken or King Prawns",
+    "description": "Hot, sour and spicy Thai soup with lemongrass, galangal, kaffir lime leaves and fresh Thai chilli.",
+    "price": "£8 / £9"
+   },
+   {
+    "name": "Tom Kha Chicken or King Prawns",
+    "description": "Classic Thai coconut soup with lemongrass, galangal, kaffir lime leaves and coriander.",
+    "price": "£8 / £9"
+   }
+  ],
+  "Salad": [
+   {
+    "name": "Yum Nurh",
+    "description": "Char-grilled beef sirloin sliced with spring onions, cucumber, and cherry tomatoes.",
+    "price": "£9"
+   },
+   {
+    "name": "Laab Gai",
+    "description": "Traditional Thai E-saan salad of minced chicken, onions, mint, coriander & ground roasted rice.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Plah Goong",
+    "description": "Spicy king prawn salad with red onions lemongrass, kaffir lime leaves and chilli sauce.",
+    "price": "£9"
+   }
+  ],
+  "Chef&#8217;s Pick": [
+   {
+    "name": "Grilled Ribeye",
+    "description": "The “Weeping Tiger” , Thai style marinated ribeye, grilled, sliced and served with Thai chilli sauce.",
+    "price": "£17.45"
+   },
+   {
+    "name": "Pblah Nung Manow",
+    "description": "Steamed sea bass fillets with garlic, lime juice and fresh chillies.",
+    "price": "£15.45"
+   },
+   {
+    "name": "Pblah Nung Khing",
+    "description": "Steamed sea bass fillets with fresh ginger slices and spring onions.",
+    "price": "£15.45"
+   },
+   {
+    "name": "Nurh Swan",
+    "description": "The “Heavenly Beef” Thai style beef jerky topped with crispy basil.",
+    "price": "£15.45"
+   },
+   {
+    "name": "Gang Pehd Pbed Yang",
+    "description": "Deboned roasted duck in red curry sauce with pineapple, cherry tomatoes and sweet basil.",
+    "price": "£16.45"
+   },
+   {
+    "name": "Kagae Massaman",
+    "description": "Slow cooked tender lamb shank with new potatoes, carrots and onions.",
+    "price": "£17.45"
+   },
+   {
+    "name": "Panang Pbed",
+    "description": "Roasted duck breast, in creamy Panang curry sauce topped with kaffir lime leaves.",
+    "price": "£17.45"
+   },
+   {
+    "name": "Pbed Makham",
+    "description": "Roasted duck breast in tamarind sauce, topped with fried onions.",
+    "price": "£17.45"
+   },
+   {
+    "name": "Pbed Num Prig Pao",
+    "description": "Roasted duck in Thai sweet roasted chilli paste and mixed vegetables.",
+    "price": "£17.45"
+   },
+   {
+    "name": "Pblah Laahd Prig",
+    "description": "Fried fish fillets in crispy batter topped with Moo Moo Thai hot sauce and crispy basil leaves.",
+    "price": "£17.45"
+   },
+   {
+    "name": "Chu Chee Goong",
+    "description": "Grilled water king prawns topped with Chu-Chee curry sauce, chilli and shredded kafir lime leaves.",
+    "price": "£17.45"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "Gang Massaman",
+    "description": "Southern Thai aromatic nutty flavour curry with new potatoes, carrots, onions and peanuts.",
+    "price": null
+   },
+   {
+    "name": "Gang Pehd",
+    "description": "Aromatic Thai red curry cooked in coconut milk with vegetables and basil .",
+    "price": null
+   },
+   {
+    "name": "Gang Keaw Wan",
+    "description": "The famous fragrant Thai green curry cooked in coconut milk, with vegetables and sweet basil",
+    "price": null
+   },
+   {
+    "name": "Gaeng Pbah",
+    "description": "Thai spiciest curry with mixed vegetables, cooked without coconut milk.",
+    "price": null
+   }
+  ],
+  "Stir-fry": [
+   {
+    "name": "Pad Med Mamuang",
+    "description": "Stir fried of your choice of meat with cashew nuts, mushrooms and dried chilli.",
+    "price": null
+   },
+   {
+    "name": "Pad Grapao",
+    "description": "Stir fried of your choice of meat with Thai sweet basil, fresh chilli and garlic.",
+    "price": null
+   },
+   {
+    "name": "Pad Preowan",
+    "description": "Your choice protein coated in crispy batter, stir-fried with pineapple and cucumber in sweet & sour sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Nam Mun Hoy",
+    "description": "Stir fried your choice of meat with Thai oyster sauce, broccoli, bell pepper and spring onions.",
+    "price": null
+   },
+   {
+    "name": "Pad Gratiem Prig Thai",
+    "description": "Stir fried your choice of meat with garlic and black pepper sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Khing",
+    "description": "Stir fried your choice of meat with fine ginger slices, mushrooms and spring onions",
+    "price": null
+   },
+   {
+    "name": "Pad Pak",
+    "description": "Stir fried mixed vegetables with light seasoning sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Prig Sot",
+    "description": "Stir fried your choice of meat with strips of fresh chilli, onions and sweet basil.",
+    "price": null
+   },
+   {
+    "name": "Pad Kimao",
+    "description": "Stir fried your choice of meat with long beans, garlic, Thai chilli and kaffir lime leaves",
+    "price": null
+   },
+   {
+    "name": "Pad Prig Gang",
+    "description": "Stir fried your choice of meat with mixed vegetables in Thai red curry paste, coconut cream and fresh chillies.",
+    "price": null
+   }
+  ],
+  "Noodles &amp; Rice": [
+   {
+    "name": "Kao Pad",
+    "description": "Fried rice with egg, vegetables and light seasoning.",
+    "price": null
+   },
+   {
+    "name": "Kao Pad Grapao",
+    "description": "Fried rice with chilli, garlic and vegetables, lightly seasoned with dark soy sauce",
+    "price": null
+   },
+   {
+    "name": "Pad Thai Noodles",
+    "description": "Thai style fried rice noodles with beans sprouts and spring onions, served with crushed peanuts.",
+    "price": null
+   },
+   {
+    "name": "Guay-Teow Pad Kimao",
+    "description": "Stir fried rice noodles with fresh chillies, garlic and mixed vegetables",
+    "price": null
+   },
+   {
+    "name": "Guay-Teow Pad Seew",
+    "description": "Soft rice noodles stir fried with eggs, mixed vegetables and soya sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Mee Leung",
+    "description": "Yellow egg noodles stir fried with mixed vegetables and light seasoning.",
+    "price": null
+   }
+  ],
+  "Side Dishes": [
+   {
+    "name": "Steamed Rice",
+    "description": "",
+    "price": "£3",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Garlicky Broccoli and Carrots",
+    "description": "",
+    "price": "£4.80",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Choose your protein : King Prawns £13.45 | Chicken or Beef £12.45 | Vegetable or Tofu £11.45",
+  "Choose your protein : King Prawns £13.45 | Chicken or Beef £12.45 | Vegetable or Tofu £11.45",
+  "Choose your protein : King Prawns £14 | Chicken or Beef £13.45 | Vegetable or Tofu £12.45"
+ ]
+}

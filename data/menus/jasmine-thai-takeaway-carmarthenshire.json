@@ -1,0 +1,306 @@
+{
+ "restaurant": "Jasmine Thai Takeaway",
+ "city": "Carmarthenshire",
+ "fsa_id": "1694955",
+ "address": "Carmarthenshire",
+ "source": "https://jasminethairestaurant.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Prawn Crackers",
+    "description": "Light, crispy prawn crackers served with sweet chilli dip",
+    "price": "£4"
+   },
+   {
+    "name": "Spring Rolls (4)",
+    "description": "Golden, crisp vegetable spring rolls with a sweet chilli dipping sauce",
+    "price": "£7"
+   },
+   {
+    "name": "Satay Chicken (3)",
+    "description": "Grilled marinated chicken skewers served with rich, creamy peanut satay sauce",
+    "price": "£7"
+   },
+   {
+    "name": "Garlic Crispy Chicken",
+    "description": "Crunchy fried chicken tossed in fragrant Thai garlic and pepper",
+    "price": "£7.50"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Crisp-fried squid with Thai salt, pepper, chilli and spring onion",
+    "price": "£8"
+   },
+   {
+    "name": "Stir Fried Belly Pork With Garlic & Chilli",
+    "description": "Tender belly pork wok-tossed with garlic and fresh Thai chilli",
+    "price": "£8.50"
+   },
+   {
+    "name": "Thai Fishcakes (3)",
+    "description": "Springy fishcakes with red curry paste and lime leaf, served with sweet chilli",
+    "price": "£8"
+   },
+   {
+    "name": "Tom Yum Soup",
+    "description": "Hot and sour Thai soup with lemongrass, galangal, lime leaf and chilli",
+    "price": "£7.50"
+   },
+   {
+    "name": "Honey Chilli Chicken",
+    "description": "Crispy chicken glazed in a sticky sweet honey and chilli sauce",
+    "price": "£7"
+   },
+   {
+    "name": "Prawn Tempura",
+    "description": "Lightly battered prawns fried until golden and crisp",
+    "price": "£8"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "Seasonal vegetables in a light, crispy tempura batter",
+    "price": "£7.50"
+   },
+   {
+    "name": "Thai Spicy Squid",
+    "description": "Wok-fried squid with Thai chilli, garlic and aromatic herbs",
+    "price": "£8"
+   },
+   {
+    "name": "Thai Chicken Meatballs (3)",
+    "description": "Juicy Thai-spiced chicken meatballs with a tangy dipping sauce",
+    "price": "£6.50"
+   },
+   {
+    "name": "Thai Chicken Wings (3)",
+    "description": "Marinated chicken wings fried crisp with Thai seasoning",
+    "price": "£8"
+   },
+   {
+    "name": "Tom Kha Soup",
+    "description": "Creamy coconut soup with galangal, lemongrass and lime leaf",
+    "price": "£7.50"
+   },
+   {
+    "name": "Sharing Platter For 2",
+    "description": "A generous selection of our favourite Thai starters to share",
+    "price": "£17"
+   }
+  ],
+  "Thai Curry": [
+   {
+    "name": "Thai Green Curry",
+    "description": "Fragrant green curry with coconut milk, Thai basil and bamboo shoots",
+    "price": "£10.50"
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "Rich red curry simmered in coconut milk with Thai herbs and spices",
+    "price": "£10.50"
+   },
+   {
+    "name": "Phanaeng Curry",
+    "description": "Thick, mildly sweet Phanaeng curry with creamy coconut and peanut",
+    "price": "£10.50"
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Mild, aromatic southern Thai curry with potato and roasted peanuts",
+    "price": "£10.50"
+   }
+  ],
+  "Stir-Fry": [
+   {
+    "name": "Pad Thai",
+    "description": "Classic stir-fried rice noodles with egg, beansprouts, peanuts and tamarind",
+    "price": "£10.50"
+   },
+   {
+    "name": "Pad See Eiw",
+    "description": "Flat rice noodles wok-fried in dark soy with egg and Chinese broccoli",
+    "price": "£10.50"
+   },
+   {
+    "name": "Pad Med Ma Maung",
+    "description": "Stir-fried chicken with roasted cashew nuts, dried chilli and spring onion",
+    "price": "£13.50"
+   },
+   {
+    "name": "Black Pepper Beef",
+    "description": "Tender beef wok-tossed with cracked black pepper, onion and pepper",
+    "price": "£13.50"
+   },
+   {
+    "name": "Pad Gaproa Egg Noodles",
+    "description": "Egg noodles stir-fried with holy basil, chilli and garlic",
+    "price": "£13.50"
+   },
+   {
+    "name": "Chu Chee Sea Bass",
+    "description": "Crispy sea bass topped with a rich chu chee red curry sauce",
+    "price": "£20"
+   },
+   {
+    "name": "Moo Pad King",
+    "description": "Stir-fried pork with fresh ginger, mushroom and spring onion",
+    "price": "£13"
+   },
+   {
+    "name": "Plain Noodles",
+    "description": "Simple wok-fried noodles, a perfect accompaniment",
+    "price": "£5"
+   },
+   {
+    "name": "Pad Gaproa",
+    "description": "Holy basil stir-fry with chilli and garlic, a Thai street-food favourite",
+    "price": "£12"
+   },
+   {
+    "name": "Pad Gaproa Khai Dao",
+    "description": "Holy basil stir-fry topped with a crispy Thai-style fried egg",
+    "price": "£15"
+   },
+   {
+    "name": "Pad Cha Seafood",
+    "description": "Spicy stir-fried seafood with Thai herbs, green peppercorn and chilli",
+    "price": "£16"
+   },
+   {
+    "name": "Pad Kee Moa",
+    "description": "Fiery drunken noodles with holy basil, chilli and fresh vegetables",
+    "price": "£14"
+   },
+   {
+    "name": "Thai Special Fried Rice",
+    "description": "Wok-fried jasmine rice with egg, onion and Thai seasoning",
+    "price": "£10.50"
+   },
+   {
+    "name": "Stir Fried Beansprouts & Tofu",
+    "description": "Crisp beansprouts and tofu wok-tossed with garlic and soy",
+    "price": "£9.50"
+   },
+   {
+    "name": "Mixed Vegetables",
+    "description": "Seasonal mixed vegetables stir-fried in a light garlic sauce",
+    "price": "£8"
+   },
+   {
+    "name": "Stir-Fried Pak Choi",
+    "description": "Fresh pak choi wok-fried with garlic and oyster sauce",
+    "price": "£8"
+   }
+  ],
+  "North East Thai Dishes": [
+   {
+    "name": "Laab Moo",
+    "description": "Zesty Isaan minced pork salad with toasted rice, lime, chilli and mint",
+    "price": "£16"
+   },
+   {
+    "name": "Som Tam",
+    "description": "Fresh green papaya salad pounded with lime, chilli, peanuts and tomato",
+    "price": "£10"
+   }
+  ],
+  "Rices & Sides": [
+   {
+    "name": "Jasmine Rice",
+    "description": "Fragrant steamed Thai jasmine rice",
+    "price": "£3.50"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "Jasmine rice steamed in creamy coconut milk",
+    "price": "£4"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "Classic wok-fried rice with fluffy egg",
+    "price": "£4"
+   },
+   {
+    "name": "Chicken Fried Rice",
+    "description": "Wok-fried rice with tender chicken and egg",
+    "price": "£4.50"
+   },
+   {
+    "name": "Prawn Fried Rice",
+    "description": "Wok-fried rice with succulent prawns and egg",
+    "price": "£6"
+   },
+   {
+    "name": "Salt & Pepper Chips",
+    "description": "Crispy chips tossed in Thai salt, pepper and chilli",
+    "price": "£4.50"
+   }
+  ],
+  "Desserts": [
+   {
+    "name": "Chocolate Brownie & Ice Cream",
+    "description": "Warm, gooey chocolate brownie served with vanilla ice cream",
+    "price": "£7"
+   },
+   {
+    "name": "Apple Pie & Custard",
+    "description": "Classic apple pie served with warm creamy custard",
+    "price": "£7"
+   },
+   {
+    "name": "Mango Sticky Rice",
+    "description": "Sweet coconut sticky rice with fresh mango, a Thai classic",
+    "price": "£8.50"
+   }
+  ],
+  "Non-Alcoholic Beverages": [
+   {
+    "name": "Bottled Water",
+    "description": "Chilled still bottled water",
+    "price": "£1"
+   },
+   {
+    "name": "Coke",
+    "description": "Classic Coca-Cola, served chilled",
+    "price": "£2.50"
+   },
+   {
+    "name": "Coke Zero",
+    "description": "Sugar-free Coca-Cola, served chilled",
+    "price": "£2.50"
+   },
+   {
+    "name": "Fentimans Elderflower",
+    "description": "Sparkling botanically brewed elderflower",
+    "price": "£3"
+   },
+   {
+    "name": "Schweppes Lemonade",
+    "description": "Crisp, refreshing sparkling lemonade",
+    "price": "£2.25"
+   },
+   {
+    "name": "J20 (Choice of Flavours)",
+    "description": "Fruity juice blend, choice of flavours",
+    "price": "£2.40"
+   },
+   {
+    "name": "Tonic Water",
+    "description": "Refreshing Indian tonic water",
+    "price": "£2"
+   },
+   {
+    "name": "Appletiser",
+    "description": "Sparkling 100% apple juice",
+    "price": "£2.50"
+   },
+   {
+    "name": "Schweppes Orange Juice",
+    "description": "Chilled sparkling orange juice",
+    "price": "£2"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

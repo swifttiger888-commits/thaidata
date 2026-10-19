@@ -1,0 +1,589 @@
+{
+ "restaurant": "Try Thai Shop Noodle Bar",
+ "city": "Wrexham",
+ "fsa_id": "1040025",
+ "address": "Wrexham",
+ "source": "https://gettakeaway.co.uk/menu-try-thai-noodle-bar-takeaway",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "New Items": [
+   {
+    "name": "New Pad Kapraow. Holy Basil Stir-fry",
+    "description": "",
+    "price": "£12.60"
+   },
+   {
+    "name": "Thai style Sweet and Sour Chicken Bites",
+    "description": "",
+    "price": "£10.60"
+   },
+   {
+    "name": "Creamy Tom Yum Noodle Soup (New)",
+    "description": "",
+    "price": "£15.55"
+   },
+   {
+    "name": "Tapioca Pearl Pudding 115g X 2 portions",
+    "description": "",
+    "price": "£Taro £2.50"
+   },
+   {
+    "name": "Nata de Coco Pudding",
+    "description": "",
+    "price": "£Mango £0.90"
+   }
+  ],
+  "Offers": [
+   {
+    "name": "Mochi Rice Cake",
+    "description": "",
+    "price": "£Brown Sugar Mochi £1.60"
+   }
+  ],
+  "Street Food menu (New)": [
+   {
+    "name": "Pineapple Fried Rice (NEW) Regular",
+    "description": "",
+    "price": "£Regular £8.90"
+   },
+   {
+    "name": "Pineapple Fried Rice Large. (New)",
+    "description": "",
+    "price": "£Large £10.80"
+   },
+   {
+    "name": "Bangkok Street Fried rice.",
+    "description": "",
+    "price": "£8.60"
+   },
+   {
+    "name": "Green Curry Fried Rice.",
+    "description": "",
+    "price": "£8.40"
+   },
+   {
+    "name": "Tom Yum Fried rice (Hot) Regular",
+    "description": "",
+    "price": "£8.40"
+   },
+   {
+    "name": "Teriyaki Fried rice.",
+    "description": "",
+    "price": "£8.40"
+   },
+   {
+    "name": "Black Pepper Fried rice Regular",
+    "description": "",
+    "price": "£8.40"
+   },
+   {
+    "name": "TryThai Crispy Chicken",
+    "description": "",
+    "price": "£8.90"
+   },
+   {
+    "name": "Rendang Fried Rice Regular.",
+    "description": "",
+    "price": "£8.40"
+   },
+   {
+    "name": "Korean Chicken Bites",
+    "description": "",
+    "price": "£10.60"
+   },
+   {
+    "name": "Black Pepper Fried Rice Large",
+    "description": "",
+    "price": "£10.10"
+   },
+   {
+    "name": "Rendang Fried Rice Large",
+    "description": "",
+    "price": "£10.10"
+   },
+   {
+    "name": "Teriyaki Fried rice. Large",
+    "description": "",
+    "price": "£10.10"
+   },
+   {
+    "name": "Tom Yum Fried rice (Hot) Large",
+    "description": "",
+    "price": "£10.10"
+   },
+   {
+    "name": "Green Curry Fried Rice. Large",
+    "description": "",
+    "price": "£Large £10.10"
+   },
+   {
+    "name": "Bangkok Street Fried rice. Large",
+    "description": "",
+    "price": "£10.30"
+   }
+  ],
+  "Stir Fried Noodles": [
+   {
+    "name": "Spicy Udon Noodle Regular (New)",
+    "description": "",
+    "price": "£8.80"
+   },
+   {
+    "name": "Spicy Udon Noodle Large. (New)",
+    "description": "",
+    "price": "£10.60"
+   },
+   {
+    "name": "Malaysian Curry Fried Noodles. (Gluten free option.)",
+    "description": "",
+    "price": "£Regular £8.20"
+   },
+   {
+    "name": "Pad Thai Noodles",
+    "description": "",
+    "price": "£Regular £8.50"
+   },
+   {
+    "name": "Pad Thai Noodles - (Popular)",
+    "description": "",
+    "price": "£Large £10.20"
+   },
+   {
+    "name": "Black Pepper Sauce and Noodle",
+    "description": "",
+    "price": "£Regular £8.40"
+   },
+   {
+    "name": "Teriyaki Noodle",
+    "description": "",
+    "price": "£Regular £8.40"
+   },
+   {
+    "name": "Teriyaki Noodle Large",
+    "description": "",
+    "price": "£Large £10.10"
+   },
+   {
+    "name": "See Ew Noodle",
+    "description": "",
+    "price": "£Regular £7.60"
+   },
+   {
+    "name": "See Ew Noodle - Large",
+    "description": "",
+    "price": "£Large £9.10"
+   },
+   {
+    "name": "Drunken Noodle (Pad Kee Mao)",
+    "description": "",
+    "price": "£Regular £8.90"
+   },
+   {
+    "name": "Tasty Rice Stick (Kuay Tiaw Kua)",
+    "description": "",
+    "price": "£Regular £7.60"
+   },
+   {
+    "name": "Tasty Rice Stick - Large",
+    "description": "",
+    "price": "£Large £9.20"
+   },
+   {
+    "name": "Singapore Noodles Regular",
+    "description": "",
+    "price": "£Regular £8.20"
+   },
+   {
+    "name": "Singapore Noodles - Large",
+    "description": "",
+    "price": "£Large £9.80"
+   },
+   {
+    "name": "Bangkok Noodles Regular",
+    "description": "",
+    "price": "£Regular £8.80"
+   },
+   {
+    "name": "Bangkok Noodles - Large",
+    "description": "",
+    "price": "£Large £10.60"
+   },
+   {
+    "name": "Special Noodle Regular",
+    "description": "",
+    "price": "£Regular £6.80"
+   },
+   {
+    "name": "Special Noodle",
+    "description": "",
+    "price": "£Large £8.20"
+   },
+   {
+    "name": "Plain Noodle (No Vegetables)",
+    "description": "",
+    "price": "£Regular £6.50"
+   },
+   {
+    "name": "Plain Noodle (No Vegetables) - Large",
+    "description": "",
+    "price": "£Large £7.80"
+   }
+  ],
+  "Try Thai Stir Fried Rice": [
+   {
+    "name": "Malaysian Curry Fried Rice. Gluten free option.",
+    "description": "",
+    "price": "£Regular £8.20"
+   },
+   {
+    "name": "Egg Fried Rice Large",
+    "description": "",
+    "price": "£Large £7.90"
+   },
+   {
+    "name": "Spicy Fried Rice Regular",
+    "description": "",
+    "price": "£Regular £8.60"
+   },
+   {
+    "name": "Spicy Fried Rice - Large",
+    "description": "",
+    "price": "£Large £10.30"
+   },
+   {
+    "name": "Singapore Fried Rice Regular.",
+    "description": "",
+    "price": "£Regular £8.20"
+   },
+   {
+    "name": "Singapore Fried Rice - Large",
+    "description": "",
+    "price": "£Large £9.90"
+   },
+   {
+    "name": "Egg Fried Rice Regular",
+    "description": "",
+    "price": "£Regular £6.60"
+   },
+   {
+    "name": "Authentic Fried Rice - Large",
+    "description": "",
+    "price": "£Large £8.90"
+   },
+   {
+    "name": "Authentic Fried Rice",
+    "description": "",
+    "price": "£Regular £7.50"
+   }
+  ],
+  "Try Thai Noodle Soup": [
+   {
+    "name": "TryThai Noodle Soup. Kuay Tiaw Nam Large",
+    "description": "",
+    "price": "£10.30"
+   },
+   {
+    "name": "Tom Yum Noodle Soup",
+    "description": "",
+    "price": "£Regular £8.60"
+   },
+   {
+    "name": "Tom Yum Noodle Soup - Large",
+    "description": "",
+    "price": "£Large £10.30"
+   },
+   {
+    "name": "TryThai Noodle Soup (Kuay Tiaw Nam)",
+    "description": "",
+    "price": "£Regular £8.60"
+   },
+   {
+    "name": "Laksa Noodle Soup",
+    "description": "",
+    "price": "£Regular £8.80"
+   },
+   {
+    "name": "Laksa Noodle Soup - Large",
+    "description": "",
+    "price": "£Large £10.60"
+   }
+  ],
+  "Try Thai Soup": [
+   {
+    "name": "Tiparos Fish Sauce",
+    "description": "",
+    "price": "£300ml £1.20"
+   },
+   {
+    "name": "Tom Yum Soup",
+    "description": "",
+    "price": "£7.20"
+   }
+  ],
+  "Try Thai Curry": [
+   {
+    "name": "Thai Green Curry",
+    "description": "",
+    "price": "£Regular £8.30"
+   },
+   {
+    "name": "Thai Green Curry - Large",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "",
+    "price": "£Regular £8.30"
+   },
+   {
+    "name": "Thai Red Curry - Large",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Panang Curry",
+    "description": "",
+    "price": "£Regular £8.30"
+   },
+   {
+    "name": "Panang Curry - Large",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Masman Curry",
+    "description": "",
+    "price": "£Regular £8.30"
+   },
+   {
+    "name": "Masman Curry - Large",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Karee Curry",
+    "description": "",
+    "price": "£Regular £8.30"
+   },
+   {
+    "name": "Karee Curry - Large",
+    "description": "",
+    "price": "£9.95"
+   }
+  ],
+  "Sides that Can Be Mains": [
+   {
+    "name": "Sauce 'n' Pepper wings. (Thai Stile)",
+    "description": "",
+    "price": "£9.30"
+   },
+   {
+    "name": "Drunken wings.",
+    "description": "",
+    "price": "£Drunken £9.30"
+   },
+   {
+    "name": "Gyoza (Chicken)",
+    "description": "",
+    "price": "£8.90"
+   },
+   {
+    "name": "Gyoza (Veggie)",
+    "description": "",
+    "price": "£8.80"
+   },
+   {
+    "name": "Spicy Chicken Wings",
+    "description": "",
+    "price": "£9.30"
+   },
+   {
+    "name": "Thai Style Chicken Wings",
+    "description": "",
+    "price": "£9.30"
+   },
+   {
+    "name": "Thai Fish Cake 5 peaces",
+    "description": "",
+    "price": "£8.90"
+   }
+  ],
+  "Try Thai Stir Fry Veg": [
+   {
+    "name": "Singapore Veg Mix",
+    "description": "",
+    "price": "£10.50"
+   },
+   {
+    "name": "Black Pepper Veg Mix",
+    "description": "",
+    "price": "£10.90"
+   },
+   {
+    "name": "Oyster Veg Mix",
+    "description": "",
+    "price": "£10.80"
+   },
+   {
+    "name": "Teriyaki Veg Mix",
+    "description": "",
+    "price": "£10.90"
+   },
+   {
+    "name": "Drunken Veg Mix",
+    "description": "",
+    "price": "£10.90"
+   }
+  ],
+  "Dips and Side Orders": [
+   {
+    "name": "Small pot of dip",
+    "description": "",
+    "price": "£Sweet Chilli £0.80"
+   },
+   {
+    "name": "Crushed Peanuts",
+    "description": "",
+    "price": "£1.40"
+   },
+   {
+    "name": "Crushed Chillies",
+    "description": "",
+    "price": "£1.50"
+   },
+   {
+    "name": "135ml Bottle of Sweet Soy",
+    "description": "",
+    "price": "£1.00"
+   },
+   {
+    "name": "Regular Prawn Crackers",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "Prawn Crackers with a Spicy Thai Taste",
+    "description": "",
+    "price": "£3.80"
+   }
+  ],
+  "Sides": [
+   {
+    "name": "Jasmin Rice",
+    "description": "",
+    "price": "£Regular £3.00"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "",
+    "price": "£3.65"
+   },
+   {
+    "name": "Vegetable Samosa",
+    "description": "",
+    "price": "£3.65"
+   },
+   {
+    "name": "Wok Fried Egg",
+    "description": "",
+    "price": "£1.80"
+   }
+  ],
+  "Cold Drinks": [
+   {
+    "name": "Aloe Vera King. Big Bottle 1.5l",
+    "description": "",
+    "price": "£4.90"
+   },
+   {
+    "name": "Coca Cola",
+    "description": "",
+    "price": "£Can 330ml £1.50"
+   },
+   {
+    "name": "Aloe Vera Original 500ml",
+    "description": "",
+    "price": "£2.20"
+   },
+   {
+    "name": "Ginger Beer",
+    "description": "",
+    "price": "£1.20"
+   }
+  ],
+  "Thai Beer": [
+   {
+    "name": "Tsingtao Lager 330ml (Bottle on Offer)",
+    "description": "",
+    "price": "£Bottle 330ml £2.90"
+   },
+   {
+    "name": "Tiger Beer 300ml",
+    "description": "",
+    "price": "£Bottle 330ml £2.90"
+   },
+   {
+    "name": "Singha Thai Beer",
+    "description": "",
+    "price": "£Bottle 330ml £2.90"
+   }
+  ],
+  "Pilipino favourites": [
+   {
+    "name": "Aroy-D Coconut Milk 400ml",
+    "description": "",
+    "price": "£1.95"
+   },
+   {
+    "name": "BUENAS Compact Flour Sticks - Pancit Canton",
+    "description": "",
+    "price": "£227g £1.60"
+   },
+   {
+    "name": "Datu Puti Soy 1L",
+    "description": "",
+    "price": "£3.10"
+   },
+   {
+    "name": "Datu Puti Vinegar 1 L",
+    "description": "",
+    "price": "£2.25"
+   },
+   {
+    "name": "Datu Puti Soy Calamansi 1L",
+    "description": "",
+    "price": "£3.15"
+   },
+   {
+    "name": "Silver Swan Soy 1L",
+    "description": "",
+    "price": "£2.80"
+   },
+   {
+    "name": "Imperial Elephant Jasmine Rice",
+    "description": "",
+    "price": "£20kg £30.60"
+   },
+   {
+    "name": "Datu Puti Value Pack Soy and Vinegar",
+    "description": "",
+    "price": "£5.20"
+   },
+   {
+    "name": "Lucky Me Noodles",
+    "description": "",
+    "price": "£Pancit Canton Original £0.50"
+   }
+  ],
+  "TryThaiShop Retail Items.": [
+   {
+    "name": "Mae Ploy Sweet Chilli Sauce 730ml",
+    "description": "",
+    "price": "£3.35"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

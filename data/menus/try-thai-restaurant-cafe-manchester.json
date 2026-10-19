@@ -1,0 +1,131 @@
+{
+ "restaurant": "Try Thai Restaurant & Cafe",
+ "city": "Manchester",
+ "fsa_id": "1819416",
+ "address": "Manchester",
+ "source": "https://trythai.com/app/uploads/2025/08/website-A4-single-starters-_-Low-Res.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Thai Prawn Crackers",
+    "description": "ข้าวเกรียบกุ้ง / 泰式炸虾片 With sweet chilli and minced prawn & chicken coconut milk dip.",
+    "price": "£3.95"
+   },
+   {
+    "name": "Try Thai Platter (1 person)",
+    "description": "รวมอาหารว่าง (1 ท่าน) / 一人份拼盘 Fish cake, garlic pork spare rib, satay chicken, and crispy coriander beef.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Crispy Belly Pork with Tamarind Sauce",
+    "description": "หมูกรอบมะขาม / 泰式炸酥肉配罗望子酱 Crispy marinated belly pork served with tamarind sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "ทอดมันปลา / 泰式炸鱼饼 Made fresh in-house, fish cakes served with sweet chilli veggie dip.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Hot & Cold Platter (2 people)",
+    "description": "รวมอาหารว่าง (2 ท่าน) / 两人份拼盘 A combination of hot and cold items, perfect for sharing. Includes chicken wings, fried battered king prawns, vegetable spring rolls, grilled pork skewers, and mango salad.",
+    "price": "£18.50"
+   },
+   {
+    "name": "Garlic Spare Ribs",
+    "description": "ซี่โครงหมูกระเทียม / 泰式蒜香排骨 Marinated deep-fried tender pork spare ribs.",
+    "price": "£7.95"
+   },
+   {
+    "name": "King Prawn Spring Roll",
+    "description": "ปอเปี๊ยะกุ้ง / 泰式大虾春卷 King prawns wrapped in a spring roll served with plum sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Chicken Spring Roll",
+    "description": "ปอเปี๊ยะไก่ / 泰式鸡肉春卷 Chicken, vermicelli, & mixed vegetables spring roll served with plum sauce.",
+    "price": "£7.50"
+   }
+  ],
+  "Menu": [
+   {
+    "name": "Pan Fried Battered Scallops",
+    "description": "หอยเชลล์ชุบแป้งทอด / 泰式蛋煎鲜贝 Pan-fried tapioca battered scallops with beansprouts & chilli sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Steamed Mussels in Thai Herbs",
+    "description": "หอยแมลงภู่อบ / 泰式蒸青口 Mussels steamed in Thai herbs served with Thai spicy seafood sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Chicken Wings",
+    "description": "ปีกไก่ทอด / 泰式炸鸡翅 Thai marinated fried chicken wings served with sweet chilli sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Crispy Coriander Beef",
+    "description": "เนื้อสวรรค์ / 泰式香菜籽牛肉条 Fried tender pieces of beef marinated with fresh coriander seeds.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Battered King Prawn in Penang Sauce",
+    "description": "กุ้งชุบแป้งทอด-ซอสพะแนง / 泰式酥炸大虾配帕能咖喱汁 Deep-fried battered king prawns served in tasty Penang sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Crispy Battered Soft Shell Crab",
+    "description": "ปูนิ่มชุบแป้งทอด / 泰式酥炸软壳蟹 Fried tapioca battered soft shell crab served with sweet chilli sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Satay Chicken",
+    "description": "ไก่สะเต๊ะ / 泰式烤沙爹鸡串 Grilled skewers of marinated chicken breast served with peanut sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Thai Style Grilled Pork",
+    "description": "คอหมูย่าง / 泰式烤猪颈肉 Thai-style marinated tender slices of pork, freshly grilled, served with Thai tamarind and chilli sauce.",
+    "price": "£8.95"
+   }
+  ],
+  "Vegetable Starters": [
+   {
+    "name": "Sweet Corn Cakes",
+    "description": "ทอดมันข้าวโพด / 泰式玉米饼 Sweet corn, potatoes, and dry coconut bits deep-fried in breadcrumb batter, served with sweet chilli pickled vegetable dip.",
+    "price": "£7.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "ปอเปี๊ยะผัก / 泰式酥炸素春卷 Vermicelli and mixed vegetables spring roll served with plum sauce.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "ผักชุบแป้งทอด / 泰式蔬菜天妇罗 Crispy mixed vegetables in tempura batter served with sweet chilli dip.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Battered Aubergines in Penang Sauce",
+    "description": "มะเขือม่วงชุบแป้งทอด-ซอสพะแนง 泰式炸茄子配帕能咖喱汁 Deep-fried battered slice aubergines served in tasty Penang sauce.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Satay Beancurds",
+    "description": "สะเต๊ะเต้าหู้ / 泰式酥炸沙爹豆腐 Crispy beancurds on skewers served with satay peanut sauce.",
+    "price": "£6.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "10% service charge included in final bill",
+  "10% service charge included in final bill"
+ ]
+}

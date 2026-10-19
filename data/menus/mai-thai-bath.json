@@ -491,7 +491,7 @@
    {
     "num": "",
     "name": "SET MENU A",
-    "description": "(Minimum for 2 persons)\nStarter\nKai Satay\nChicken marinated and grilled, served with peanut & cucumber sauce dip.\nTod Mon Pla\nThai style spicy fish cake.\nSie Krong Moo Op\nMai Thai style spare ribs marinated with garlic & corianders.\nMain Course\nKai Pad Cha\nStir-fried chicken with chilli, wild ginger, Thai peppercorn (seasonal), lime leaves, curry paste and sweet basil leaves.\nNeua Kang Pett\nCooked in Thai red curry with beef, bamboo shoots, red peppers, green peppers, basil leaves & coconut milk.\nPat Pak Ruam Mit\nMixed vegetables stir-fried in oyster sauce.\nKhao Pat Khai\nEggs fried rice.",
+    "description": "(Minimum for 2 persons) Starter Kai Satay Chicken marinated and grilled, served with peanut & cucumber sauce dip. Tod Mon Pla Thai style spicy fish cake. Sie Krong Moo Op Mai Thai style spare ribs marinated with garlic & corianders. Main Course Kai Pad Cha Stir-fried chicken with chilli, wild ginger, Thai peppercorn (seasonal), lime leaves, curry paste and sweet basil leaves. Neua Kang Pett Cooked in Thai red curry with beef, bamboo shoots, red peppers, green peppers, basil leaves & coconut milk. Pat Pak Ruam Mit Mixed vegetables stir-fried in oyster sauce. Khao Pat Khai Eggs fried rice.",
     "price": "£31.95 per person",
     "vegetarian": false,
     "heat": null
@@ -499,7 +499,7 @@
    {
     "num": "",
     "name": "SET MENU B",
-    "description": "(Minimum for 2 persons)\nStarter\nKa Nom Pang Nah Goong\nSeasoned minced prawn and sesame seeds on toast.\nSie Krong Moo Op\nMai Thai style spare ribs marinated with garlic & corianders.\nKa Nom Jeeb\nThai style dumpling filling with minced pork, shrimp, served with sauce.\nMain Course\nNeua Pat Nam-Mon Hoy\nSliced beef stir-fried with carrots, mushrooms, broccoli, spring onion in oyster sauce.\nGoong Pad Nam Prik Paow\nStir-fried prawn with sweet-chilli paste, peppers, hot chillies, onion, lemongrass and basil leaves.\nKang Khiaw-Wan Kai\nCooked in Thai green curry with chicken bamboo shoots, red peppers, green peppers, basil leaves & coconut milk.\nPat Pak Ruam Mit\nMixed vegetables stir-fried in oyster sauce.\nKhao Op Ma Praow\nCoconut rice.",
+    "description": "(Minimum for 2 persons) Starter Ka Nom Pang Nah Goong Seasoned minced prawn and sesame seeds on toast. Sie Krong Moo Op Mai Thai style spare ribs marinated with garlic & corianders. Ka Nom Jeeb Thai style dumpling filling with minced pork, shrimp, served with sauce. Main Course Neua Pat Nam-Mon Hoy Sliced beef stir-fried with carrots, mushrooms, broccoli, spring onion in oyster sauce. Goong Pad Nam Prik Paow Stir-fried prawn with sweet-chilli paste, peppers, hot chillies, onion, lemongrass and basil leaves. Kang Khiaw-Wan Kai Cooked in Thai green curry with chicken bamboo shoots, red peppers, green peppers, basil leaves & coconut milk. Pat Pak Ruam Mit Mixed vegetables stir-fried in oyster sauce. Khao Op Ma Praow Coconut rice.",
     "price": "£34.95 per person",
     "vegetarian": false,
     "heat": null

@@ -1,0 +1,482 @@
+{
+ "restaurant": "Pailin Thai Restaurant",
+ "city": "Lewes",
+ "fsa_id": "1952272",
+ "address": "Lewes",
+ "source": "http://www.pailin-thai-lewes.co.uk/menu.html",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Menu": [
+   {
+    "name": "Yam pla muek",
+    "description": "Cooked squid mixed with onion, red and green peppers, celery, spring onion, coriander in hot and sour dressing.",
+    "price": "£15.95",
+    "num": "18"
+   },
+   {
+    "name": "Yam nue (Beef salad)",
+    "description": "Grilled beef made with onion, red and green peppers, celery, spring onion, cucumber, tomatoes in a hot and sour dressing (beef to most rare).",
+    "price": "£18.95",
+    "num": "19"
+   },
+   {
+    "name": "Plah gung",
+    "description": "Cooked prawn mixed with onion, red and green peppers, celery, spring onion, coriander in hot and sour dressing.",
+    "price": "£16.95",
+    "num": "20"
+   },
+   {
+    "name": "Salad kaek",
+    "description": "A Malaysian salad with slices of boiled egg, and green vegetables blended with peanut sauce.",
+    "price": "£10.50",
+    "num": "21"
+   },
+   {
+    "name": "Kanom cheeb",
+    "description": "Pork Dim sum served with soy sauce.",
+    "price": "£9.50",
+    "num": "9"
+   },
+   {
+    "name": "Tod man pla",
+    "description": "Cod mixed with green beans and curry paste, fried until golden brown served with vinegared cucumbers.",
+    "price": "£9.95",
+    "num": "10"
+   },
+   {
+    "name": "Kanom pang nah gung",
+    "description": "Minced prawn on toast and sesame seeds, deep fried served with vinegared cucumbers.",
+    "price": "£9.50",
+    "num": "11"
+   },
+   {
+    "name": "Peek gai tod",
+    "description": "Chicken wings sautéed in thickened soy sauce, carrot, and spring onions.",
+    "price": "£8.90",
+    "num": "12"
+   },
+   {
+    "name": "12A. Tao hou tod",
+    "description": "Fried tofu served with sweet chilli sauce.",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Sripailin",
+    "description": "Mixed variety of starters (for 2 people or more).",
+    "price": "£33.00",
+    "num": "13"
+   },
+   {
+    "name": "13A. Fried squid with salt and black pepper",
+    "description": "Tender squid lightly coated in flour then deep fried until golden brown then topped with sliced chilli and spring onions and served with sweet chilli and ground peanut.",
+    "price": "£12.50"
+   },
+   {
+    "name": "Mixed prawn crackers",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "Thai brown prawn cracker",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "Pad gratiam prikthai",
+    "description": "Stir-fry made with garlic and ground pepper, coriander, oyster sauce and soy sauce. Options: Chicken or pork £14.90 prawn or beef £16.95",
+    "price": null,
+    "num": "41"
+   },
+   {
+    "name": "​42. Ped yang pailin",
+    "description": "Pailin special roasted duck served with dark soy sauce, pickled ginger, and cucumber.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Moo daeng",
+    "description": "Tenderly roasted pork made with honey, tomato sauce served with dark soy sauce and cucumber.",
+    "price": "£14.95",
+    "num": "43"
+   },
+   {
+    "name": "Pad nam prik pao",
+    "description": "Your choice of meat sautéed in thickened sweet chilli sauce and basil leaves. Options: King prawns £16.95 Mixed seafood £25.90",
+    "price": null,
+    "num": "44"
+   },
+   {
+    "name": "N/A",
+    "description": "",
+    "price": null,
+    "num": "45"
+   },
+   {
+    "name": "Gung ob morhdin",
+    "description": "Stir-fried king prawns with grass noodles ginger, celery, red and green pepper with a touch of soy sauce.",
+    "price": "£18.90",
+    "num": "46"
+   },
+   {
+    "name": "Gung ma karm",
+    "description": "King prawns stir-fried with tamarind sauce, garnished with crispy garlic, shallot, and whole chilli fresh corianders.",
+    "price": "£16.95",
+    "num": "47"
+   },
+   {
+    "name": "​48. Kai yang",
+    "description": "Chicken marinated with coriander, garlic, and soya sauce. Then lightly barbequed, served with sweet and sour chilli sauce.",
+    "price": "£16.50"
+   },
+   {
+    "name": "Kai fai (flamed chicken)",
+    "description": "Chicken barbequed in authentic Thai spicy pineapple and sweet plum sauce.",
+    "price": "£19.50",
+    "num": "49"
+   },
+   {
+    "name": "Gung prik thai dam",
+    "description": "King prawn stir-fried with garlic, ginger, and black pepper.",
+    "price": "£16.95",
+    "num": "50"
+   },
+   {
+    "name": "Gung nueng sea-iew",
+    "description": "Steamed king prawns with soya sauce, ginger and spring onion, black peppers, and fresh coriander.",
+    "price": "£18.50",
+    "num": "51"
+   },
+   {
+    "name": "Som tum",
+    "description": "Green papaya and carrot salad mixed with our special spicy sauce and peanuts.",
+    "price": "£11.50",
+    "num": "22"
+   },
+   {
+    "name": "Num tok nue",
+    "description": "Grilled beef medium rare and then slice mixed with chopped shallot, spring onion, coriander. a truly authentic Thai dish.",
+    "price": "£18.95",
+    "num": "23"
+   },
+   {
+    "name": "Larb",
+    "description": "Minced meat of your choice cooked with chopped shallot, spring onion, coriander a truly authentic Thai dish. Options: beef £17.50 chicken/pork £13.50 tofu £12.50",
+    "price": null,
+    "num": "24"
+   },
+   {
+    "name": "Nue yang (Grilled beef)",
+    "description": "Prime tender English beef top side sirloin grilled to your order served with chilli sauce.",
+    "price": "£19.95",
+    "num": "25"
+   },
+   {
+    "name": "Kao nieu (Sticky rice)",
+    "description": "",
+    "price": "£5.50",
+    "num": "73"
+   },
+   {
+    "name": "Kao pad with meat or seafood",
+    "description": "Fried rice with egg, soy sauce, tomatoes, chopped spring onion, garlic, and coriander. Options: Chicken or pork £14.50 Prawns or beef £16.95 Vegetables (v) £12.50 Seafood £19.95",
+    "price": null,
+    "num": "74"
+   },
+   {
+    "name": "​70. Kao suay",
+    "description": "Steamed rice.",
+    "price": "£5.10"
+   },
+   {
+    "name": "Kao pad Khai",
+    "description": "Egg fried rice.",
+    "price": "£5.50",
+    "num": "71"
+   },
+   {
+    "name": "Kao krati",
+    "description": "Steam rice cooked with coconut milk.",
+    "price": "£5.50",
+    "num": "72"
+   },
+   {
+    "name": "Tom yum ta lay (mixed seafood)",
+    "description": "A seafarer soup for 2 people, prepared like 14 but with variety of seafoods squid, prawn, fish, mussel, and mushrooms topped with coriander.",
+    "price": "£14.95",
+    "num": "16"
+   },
+   {
+    "name": "Tom kha",
+    "description": "Made with coconut milk, lime leaves, lemongrass, galangal, coriander, and a final squeeze of fresh lemon. Chicken £10.50 Tofu (v) £9.50 Prawn £11.90 Vegetables (v) £8.90 Mushroom £10.50",
+    "price": null,
+    "num": "17"
+   },
+   {
+    "name": "Pla neung ma now",
+    "description": "Steamed sea bass in spicy sauce with fresh garlic, chillies, lemongrass, lime leaves, coriander, and lime juice. (whole seabass)",
+    "price": "£24.90",
+    "num": "52"
+   },
+   {
+    "name": "Pla chien",
+    "description": "Crispy fried rainbow trout topped with mixed gravy sauce, ginger, Chinese mushrooms, salted beans, spring onions, red and green peppers, and oyster sauce.",
+    "price": "£23.90",
+    "num": "53"
+   },
+   {
+    "name": "Pla sam rot",
+    "description": "rainbow trout fried until brown and crispy then topped with our special sauce.",
+    "price": "£23.90",
+    "num": "54"
+   },
+   {
+    "name": "Chu chi pla",
+    "description": "Salmon or rainbow trout fried until golden cooked in coconut milk and curry paste, lime leaves, red and green peppers, and sweet basil. Options: Salmon: £25.95 Rainbow trout: £23.90",
+    "price": null,
+    "num": "55"
+   },
+   {
+    "name": "Pad pak ruam mit",
+    "description": "Stir-fried mixed vegetables with oyster sauce. Options: with tofu £11.50",
+    "price": "£9.10",
+    "vegetarian": true,
+    "num": "59"
+   },
+   {
+    "name": "Pad thua ngork",
+    "description": "Fresh bean sprouts fried with oyster sauce. Options: with tofu £10.90",
+    "price": "£8.50",
+    "vegetarian": true,
+    "num": "60"
+   },
+   {
+    "name": "​63. Pad Thai",
+    "description": "Stir-fried rice noodles with egg, bean sprout, chopped salted turnips, coriander, spring onion and ground peanuts. Options: Chicken or pork £14.00 Tofu (v) £13.50 Vegetables (v) £12.50 Beef or prawns £16.95",
+    "price": null
+   },
+   {
+    "name": "Pad see-iew",
+    "description": "Stir-fried rice noodles with egg, vegetables, and soya sauce. Options: Chicken or pork £14.00 Tofu (v) £13.50 Vegetables (v) £12.50 Beef or prawns £16.95",
+    "price": null,
+    "num": "64"
+   },
+   {
+    "name": "Mee grob",
+    "description": "A very popular Thai dish of crispy fried noodles, marinated with sweet and sour sauce, garnished with crispy egg, orange, and red and green peppers. Options: prawns: £13.50 tofu £12.90",
+    "price": null,
+    "vegetarian": true,
+    "num": "65"
+   },
+   {
+    "name": "Pad mee lueng",
+    "description": "Stir fried egg noodle with vegetable, egg, and soya sauce. Options: chicken or pork £14.00 beef or prawn £16.95 Tofu £13.50 vegetable £12.50",
+    "price": null,
+    "num": "66"
+   },
+   {
+    "name": "Tom yum",
+    "description": "Made with mushroom our most popular dish flavoured with lemon grass, lime leaves and a final squeeze of fresh lemon and coriander before serving. Options: Mushrooms (v) £8.50 Vegetables (v) £8.50 Chicken £9.50 Tofu (v) £8.90 Prawn £11.50",
+    "price": null,
+    "num": "14"
+   },
+   {
+    "name": "Tom yum nam kon",
+    "description": "Made with cream and mushrooms our most popular dish flavoured with lemongrass, galangal. Lime leaves and a final squeeze of fresh lemon and coriander before serving. Chicken £10.50 Mushrooms (v) £8.90 Vegetables (v) £8.90 Prawn £11.90 Tofu (v) £9.50",
+    "price": null,
+    "num": "15"
+   },
+   {
+    "name": "Gaeng gung",
+    "description": "Prawns cooked in red curry paste, coconut milk, red and green peppers, pineapple, sweet basil, and lime leaves. Mild even a little sweet.",
+    "price": "£16.95",
+    "num": "29"
+   },
+   {
+    "name": "Gaeng ped yang",
+    "description": "Roasted duck cooked in red curry, coconut milk, bamboo shoots, red and green peppers, lime leaves and pineapple. mild even a little sweet.",
+    "price": "£16.95",
+    "num": "30"
+   },
+   {
+    "name": "Massaman",
+    "description": "A rich brown curry made with potatoes, onion, nuts, coconut milk. Chicken £14.50 Tofu (v) £13.50 Prawns or beef £15.95",
+    "price": null,
+    "num": "31"
+   },
+   {
+    "name": "Gaeng pha (jungle curry)",
+    "description": "Cooked in spicy jungle curry paste, vegetables, lime leaves and holy basil leaves. Option: Chicken or pork £13.95 Tofu or vegetables (v) £13.50 Beef or Prawns £15.95",
+    "price": null,
+    "num": "32"
+   },
+   {
+    "name": "Chu Chi Gung",
+    "description": "King prawns cooked with coconut milk, red curry paste, red and green pepper, sweet basil. Kaffir and lime leaves and coriander.",
+    "price": "£16.95",
+    "num": "33"
+   },
+   {
+    "name": "Satay",
+    "description": "Chicken marinated, grilled on a bamboo stick served with peanut sauce and a side dish of sweet and sour cucumber.",
+    "price": "£9.10",
+    "num": "1"
+   },
+   {
+    "name": "Tempura Gung",
+    "description": "Deep fried prawns in batter made of flour, egg, and pepper, served with sweet and sour sauce. With vegetables: £8.50",
+    "price": "£9.95",
+    "num": "2"
+   },
+   {
+    "name": "Keow grob",
+    "description": "Crispy wonton wrapped mince pork served with sweet and sour sauce.",
+    "price": "£8.50",
+    "num": "3"
+   },
+   {
+    "name": "Peek gai yad sai",
+    "description": "Chicken wings stuffed with minced pork, Golden fried and served with sweet and sour chilli sauce.",
+    "price": "£9.50",
+    "num": "4"
+   },
+   {
+    "name": "Gung gra bork",
+    "description": "Crispy wrapped king prawn served with sweet and sour sauce.",
+    "price": "£9.95",
+    "num": "5"
+   },
+   {
+    "name": "Por pia (spring roll)",
+    "description": "Typical Thai spring roll stuffed with vegetables served with sweet and sour sauce.",
+    "price": "£8.50",
+    "vegetarian": true,
+    "num": "6"
+   },
+   {
+    "name": "Roast rib of pork",
+    "description": "Tender pork spare ribs marinated in honey soya sauce, then roasted until brown.",
+    "price": "£9.10",
+    "num": "7"
+   },
+   {
+    "name": "Kung sai mai",
+    "description": "Prawns covered with thin rolled pastry and fried until crispy served with sweet chilli sauce.",
+    "price": "£11.50",
+    "num": "8"
+   },
+   {
+    "name": "Pla lad prik",
+    "description": "Salmon or rainbow trout fried until golden. Topped with our special chilli sauce. Options: Salmon: £25.95 Rainbow trout: £23.90",
+    "price": null,
+    "num": "56"
+   },
+   {
+    "name": "Pla nueng sea-iew",
+    "description": "Salmon or seabass, steamed with soya sauce, ginger, spring onion and black pepper . Options: Salmon: £26.95 Seabass: £25.95",
+    "price": null,
+    "num": "57"
+   },
+   {
+    "name": "Pla samoon prai",
+    "description": "Seabass fried until golden. Made with Thai mixed herbs and tamarind sauce.",
+    "price": "£26.95",
+    "num": "58"
+   },
+   {
+    "name": "Pad hed poad orn",
+    "description": "Stir-fried mushrooms and baby corn with oyster sauce.",
+    "price": "£9.50",
+    "vegetarian": true,
+    "num": "61"
+   },
+   {
+    "name": "Pad broccoli",
+    "description": "Stir-fried broccoli with oyster sauce. options: with mushrooms £9.50 with tofu £12.90",
+    "price": "£9.95",
+    "num": "62"
+   },
+   {
+    "name": "Pad poey sien",
+    "description": "Stir fried bean sprouts topped with seafood, dried Chinese mushroom, celery, spring onions, glass noodles, soy sauce, oyster sauce and sesame oil.",
+    "price": "£18.95",
+    "num": "67"
+   },
+   {
+    "name": "Pad ki-mao",
+    "description": "Spicy stir-fried noodles with vegetables, garlic, chillies, and your choice of meat. Options: Chicken or pork £14.00 Beef or prawns £16.95 Tofu (v) £13.50 Vegetables (v) £11.95",
+    "price": null,
+    "num": "68"
+   },
+   {
+    "name": "Pad Singapore noodles",
+    "description": "Stir fried thin noodle with egg, vegetables, and your choice of meat (medium spicy). Options: Chicken or pork £14.00 Vegetable £12.50 Beef or prawns £16.95",
+    "price": null,
+    "num": "69"
+   },
+   {
+    "name": "Gaeng keaw wan (green curry)",
+    "description": "A choice of chicken or pork or beef or prawns, or tofu or vegetables. Cooked in green curry paste, coconut milk, bamboo shoot, red and green peppers, lime leaves and Thai sweet basil. Options: Chicken or pork £13.95 Tofu or vegetables (v) £13.50 Beef or Prawns £15.95",
+    "price": null,
+    "num": "26"
+   },
+   {
+    "name": "Gaeng ped (red curry)",
+    "description": "Same as number 26 but with red curry paste. Chicken or pork £13.95 Tofu or vegetables (v) £13.50 Beef or Prawns £15.95",
+    "price": null,
+    "num": "27"
+   },
+   {
+    "name": "Gaeng panang",
+    "description": "A choice of pork or chicken or beef or prawn or lamb, or tofu or vegetable cooked in coconut milk and curry paste, kaffir and lime leaves, red and green peppers. Options: Chicken or pork £13.95 Tofu or vegetables (v) £13.50 Beef or Prawns £15.95",
+    "price": null,
+    "num": "28"
+   },
+   {
+    "name": "Pad preaw wan",
+    "description": "Stir-fried cucumber, onion, spring onion and tomatoes pineapple stir fried in sweet and sour sauce. Options: Chicken or pork £13.95 Tofu (v) £12.95 vegetables (v) £10.50 prawn £14.95",
+    "price": null,
+    "num": "34"
+   },
+   {
+    "name": "Pad med ma muang",
+    "description": "stir fry made with roasted cashew nuts, onion, red and green peppers, ginger, spring onion in our special sauce. Options: Chicken or pork £13.95 Beef or prawn or duck £14.95 Tofu (v) £12.95",
+    "price": null,
+    "num": "35"
+   },
+   {
+    "name": "Pad nam man hoi",
+    "description": "Stir-fry made with mushrooms, spring onion, red and green peppers and oyster sauce. beef/ prawn/duck £14.95 chicken/ pork £13.95 Tofu (V) £13.50",
+    "price": null,
+    "num": "36"
+   },
+   {
+    "name": "Pad prik",
+    "description": "Stir-fry made with onion, chilli, red and green peppers, and oyster sauce. Options: Pork or chicken £13.95 Tofu (v) £12.90 Prawn or beef or squid £15.95",
+    "price": null,
+    "num": "37"
+   },
+   {
+    "name": "Pad bai kra pao",
+    "description": "Typical spicy Thai stir-fry made with Garlic, fresh chillies, onion, red and green peppers, hot basil leaves and oyster sauce. Options: Mince Chicken or pork £13.95 Mixed seafood £25.90 Beef or prawns or duck £16.95 Tofu or vegetable (v) £13.95",
+    "price": null,
+    "num": "38"
+   },
+   {
+    "name": "Pad king",
+    "description": "Stir-fry made with ginger, red and green pepper, onion, spring onion and Chinese mushroom. Options: Chicken or pork £13.95 Prawns or beef or duck £16.95 Tofu (v) £13.50",
+    "price": null,
+    "num": "39"
+   },
+   {
+    "name": "Pad kao poat orn",
+    "description": "Stir-fry made with baby corns, spring onion, red and green peppers, and oyster sauce. Options: Chicken or pork £13.95 Prawns or beef £16.95",
+    "price": null,
+    "num": "40"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "10% discount applied to all takeaway orders."
+ ]
+}

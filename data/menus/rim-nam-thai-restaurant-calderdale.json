@@ -1,0 +1,443 @@
+{
+ "restaurant": "Rim Nam Thai Restaurant",
+ "city": "Calderdale",
+ "fsa_id": "1546806",
+ "address": "Calderdale",
+ "source": "https://www.rimnamthairestaurant.co.uk/wp-content/uploads/2026/08/Main-Menu.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Satay Gai",
+    "description": "Marinated chicken, grilled and served with peanut sauce and pickled vegetable relish.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Po Pia Tod Gai",
+    "description": "Spring rolls with minced chicken, glass noodles and vegetables. Served with sweet chilli sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Geow Tod",
+    "description": "Deep-fried minced pork and prawns, wrapped with wonton pastry. Served with sweet chilli sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Goong Tempura",
+    "description": "Deep-fried crispy prawns in a light tempura batter. Served with sweet chilli sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Ka Nom Pang Na Goong",
+    "description": "Deep-fried minced pork and prawns on toast. Served with sweet chilli sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Gra Duuk Moo Ob",
+    "description": "Baked, marinated pork spare ribs in chef's special sauce.",
+    "price": "£10.95"
+   },
+   {
+    "name": "Moo Ping",
+    "description": "Thai-style grilled pork skewers served with chilli tamarind sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Tod Mun Pla",
+    "description": "Thai fish cakes. Minced fish and prawns, with red curry paste, kaffir lime leaves and long green beans. Served with sweet chilli sauce, cucumber and peanut relish.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Gai Choop Pang Tod",
+    "description": "Deep-fried chicken in special batter. Served with sweet chilli sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Rim Nam Thai Special (per person)",
+    "description": "A generous selection of starters of the day e.g. chicken in batter, chicken satay, fried wontons, prawn tempura, pork and prawn on toast, spring rolls and sweet corn cakes. Served with dipping sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Peek Gai Tod",
+    "description": "Crispy chicken wings in batter. Served with sweet chilli sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Goong Yang GF",
+    "description": "Marinated prawns in gluten free sauce, grilled and served with peanut sauce and pickled vegetable relish.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Salt & Pepper Choice of: Spare Ribs",
+    "description": "",
+    "price": "£10.95"
+   },
+   {
+    "name": "Salt & Pepper Choice of: Chicken Wings",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Khanom Jeep Moo",
+    "description": "Rim Nam style pork dumplings with fried garlic sprinkled on top. Served with dark sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Satay Hed V/VG GF",
+    "description": "Shiitake mushrooms marinated in spices, skewered, char-grilled and served with peanut sauce and pickled vegetable relish.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Khao Phod Tod V/VG",
+    "description": "Deep-fried sweet corn cakes. Served with sweet chilli sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Po Pia Tod Pak V/VG",
+    "description": "Spring rolls with glass noodles and mixed vegetables. Served with sweet chilli sauce.",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Pak Tod V/VG - Vegan on request",
+    "description": "Deep-fried seasoned battered mixed vegetables. Served with sweet chilli sauce.",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Mee Grob V",
+    "description": "Crispy egg noodles, bean sprouts and spring onion, topped with sweet and sour sauce.",
+    "price": "£8.50",
+    "vegetarian": true
+   }
+  ],
+  "Soups": [
+   {
+    "name": "Tom Yum Soup GF - Vegetables V/VG",
+    "description": "Hot and sour spicy soup with galangal root, kaffir lime leaves, lemon grass, mushrooms, chilli, basil leaves and lime juice. With a choice of:",
+    "price": "£9.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Yum Soup GF - Chicken",
+    "description": "Hot and sour spicy soup with galangal root, kaffir lime leaves, lemon grass, mushrooms, chilli, basil leaves and lime juice. With a choice of:",
+    "price": "£9.95"
+   },
+   {
+    "name": "Tom Yum Soup GF - Prawn",
+    "description": "Hot and sour spicy soup with galangal root, kaffir lime leaves, lemon grass, mushrooms, chilli, basil leaves and lime juice. With a choice of:",
+    "price": "£10.95"
+   },
+   {
+    "name": "Tom Yum Soup GF - Talay (Seafood)",
+    "description": "Hot and sour spicy soup with galangal root, kaffir lime leaves, lemon grass, mushrooms, chilli, basil leaves and lime juice. With a choice of:",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tom Kha Soup GF - Vegetables V/VG",
+    "description": "Sweet and sour coconut milk soup with galangal root, kaffir lime leaves, mushrooms, chilli, lemon grass and lime juice. With a choice of:",
+    "price": "£9.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Kha Soup GF - Chicken",
+    "description": "Sweet and sour coconut milk soup with galangal root, kaffir lime leaves, mushrooms, chilli, lemon grass and lime juice. With a choice of:",
+    "price": "£9.95"
+   },
+   {
+    "name": "Tom Kha Soup GF - Prawn",
+    "description": "Sweet and sour coconut milk soup with galangal root, kaffir lime leaves, mushrooms, chilli, lemon grass and lime juice. With a choice of:",
+    "price": "£10.95"
+   }
+  ],
+  "Spicy Thai Salads": [
+   {
+    "name": "Yum Neua",
+    "description": "Spicy hot and sour warm salad with grilled sirloin steak, sliced and tossed with chilli, pounded roasted rice, red onion, cucumber, lime juice and Thai herbs.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Laap Moo / Gai GF",
+    "description": "Minced pork or chicken, spicy hot and sour warm salad with chilli, pounded roasted rice, red onion, lime juice and Thai herbs. Choice of chicken or pork.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Papaya Salad GF V/VG - Vegan on request",
+    "description": "Papaya salad with tomatoes, lime juice, chilli, garlic, nuts and with fish sauce or without. (please let us know if you prefer to not have fish sauce.)",
+    "price": "£11.95",
+    "vegetarian": true
+   }
+  ],
+  "Main Courses - Curries": [
+   {
+    "name": "Kaeng Kiew Wan (green curry) GF",
+    "description": "Green curry with bamboo shoots, vegetables, chilli, sweet basil in coconut milk, flavoured with herbs.",
+    "price": null
+   },
+   {
+    "name": "Kaeng Ped (red curry) GF",
+    "description": "Red curry with bamboo shoots, vegetables, chilli, sweet basil in coconut milk, flavoured with herbs.",
+    "price": null
+   },
+   {
+    "name": "Penang Curry GF",
+    "description": "A dry, thick, aromatic curry with coconut milk. Flavoured with herbs, long beans, chilli, sweet basil and kaffir lime leaves.",
+    "price": null
+   },
+   {
+    "name": "Kaeng Pa (jungle curry) GF",
+    "description": "Northern Thailand - hot and spicy curry without coconut milk. With Thai herbs, vegetables, bamboo shoots, chilli and hot basil leaves.",
+    "price": null
+   },
+   {
+    "name": "Massaman GF",
+    "description": "South Thai style slow cooked curry with coconut milk, potatoes, onions and cashew nuts.",
+    "price": null
+   },
+   {
+    "name": "Kaeng Ka Ree (yellow curry) GF",
+    "description": "Yellow curry with coconut milk, flavoured with herbs, potatoes and onions.",
+    "price": null
+   },
+   {
+    "name": "Kaeng Phed Yang (roasted duck red curry) GF",
+    "description": "With bamboo shoots, vegetables, pineapple, tomatoes and sweet basil in coconut milk.",
+    "price": "£14.95"
+   }
+  ],
+  "Main Courses - Stir-fried": [
+   {
+    "name": "Tod Gratiem Prik Thai",
+    "description": "In special sauce with garlic, peppers and salad.",
+    "price": null
+   },
+   {
+    "name": "Pad Gaprao",
+    "description": "With fresh chilli, hot basil leaves, mushrooms and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Pad Priew Wahn",
+    "description": "Sweet and sour sauce with mushrooms, onions, spring onion, peppers, pineapple, tomatoes and cucumber.",
+    "price": null
+   },
+   {
+    "name": "Pad Med Mamung",
+    "description": "With chilli oil paste, cashew nuts, pineapple, onions, spring onion and peppers.",
+    "price": null
+   },
+   {
+    "name": "Pad Khing",
+    "description": "With ginger, onions, spring onion, mushrooms, pepper, salted soy beans, baby corn and chilli.",
+    "price": null
+   },
+   {
+    "name": "Pad Prik",
+    "description": "With chilli, onions, spring onion, pepper and vegetables in special sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Num Mun Hoi (without oyster sauce V/VG)",
+    "description": "In oyster sauce with mushrooms, onions, spring onion, pepper and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Pad Prik Khing",
+    "description": "A dry, thick, red curry with green beans. With coconut milk, kaffir lime leaves, onions, peppers, chilli and sweet basil leaves.",
+    "price": null
+   },
+   {
+    "name": "Pad Ped Nor Mai",
+    "description": "A dry, thick red curry with bamboo. With coconut milk, kaffir lime leaves, onions, pepper, chilli and sweet basil leaves.",
+    "price": null
+   }
+  ],
+  "Main Courses - Other": [
+   {
+    "name": "Suea Rong Hai \"Tigers Tears\"",
+    "description": "Char-grilled sirloin steak in chef's special sauce. Served with chilli sauce and vegetables.",
+    "price": "£20.95"
+   },
+   {
+    "name": "Phed Pad Pak",
+    "description": "Stir-fried roasted duck in special sauce with vegetables.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Ped Phed Yang",
+    "description": "Spicy roasted duck with chilli and sweet basil in special chilli sauce and coconut milk. Flavoured with herbs, green beans, broccoli, pepper, celery and vegetables.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Volcano Roasted Duck",
+    "description": "Sizzling crispy roasted duck with lightly spicy tamarind sauce and vegetables.",
+    "price": "£21.95"
+   },
+   {
+    "name": "Pla Rad Prik",
+    "description": "Crispy fried fish fillet, coated in hot chilli, garlic and tamarind sauce.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Pla Chu Chi GF",
+    "description": "Crispy fried fish fillet, topped with aromatic red curry sauce and coconut milk. Flavoured with kaffir lime leaves, chilli and sweet basil.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Pla Pad Khing",
+    "description": "Crispy fried fish fillet in ginger sauce with onions, spring onion, mushrooms, ginger, pepper, salted soy beans, baby corn, chilli and Chinese wine.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Goong Pad Broccoli",
+    "description": "Stir-fried prawns with broccoli, carrots, shiitake mushrooms and onions in special sauce.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Chu Chi Goong GF",
+    "description": "Prawns in a dry, thick, aromatic red curry sauce and coconut milk. Flavoured with herbs, chilli, kaffir lime leaves and sweet basil.",
+    "price": "£14.95"
+   }
+  ],
+  "Rice, Noodles and Side Dishes": [
+   {
+    "name": "Khao Pad",
+    "description": "Egg fried rice, onions, spring onion and tomatoes.",
+    "price": null
+   },
+   {
+    "name": "Rim Nam Special Rice",
+    "description": "Stir fried rice with fresh chilli, basil and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Stir-fried Yellow Noodles with Vegetables",
+    "description": "(Chow mein style) stir-fried yellow noodles in chefs' sauce with vegetables.",
+    "price": null
+   },
+   {
+    "name": "Pad Thai",
+    "description": "Stir-fried rice noodles with bean sprouts, spring onion, carrots and egg. Served with minced peanut side.",
+    "price": null
+   },
+   {
+    "name": "Rim Nam Special Noodles",
+    "description": "Yellow noodles with fresh chilli, basil and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Pad See Ew",
+    "description": "Stir-fried rice noodles with vegetables and eggs in special dark sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Broccoli V/VG",
+    "description": "Stir-fried broccoli, shiitake mushrooms, carrots and onions in special sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Pak Pasom V/VG",
+    "description": "Stir-fried mixed vegetables and shiitake mushrooms in special sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Khao Suey (steamed white jasmine rice) GF VG",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Khao Pad Kai (egg fried rice)",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Khao Niaao (sticky rice) GF VG",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice GF VG",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Rice Noodles GF VG",
+    "description": "lightly coated with gluten free soy sauce and fried garlic.",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chips GF VG",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "White Prawn Crackers with Sweet Chilli Sauce",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Red Prawn Crackers with Sweet Chilli Sauce",
+    "description": "",
+    "price": "£4.95"
+   },
+   {
+    "name": "Peanut Sauce GF VG",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Sweet Chilli Sauce VG",
+    "description": "",
+    "price": "£1.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Salt & Pepper Chips V/VG",
+    "description": "",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Yellow Noodles V/VG",
+    "description": "lightly coated with soy sauce.",
+    "price": "£4.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "No. 19-23 and 25:",
+  "Choice of Vegetables V/VG or add Tofu £11.95",
+  "Chicken, Pork or Beef £13.95",
+  "Prawn or Duck £14.95",
+  "Crispy Chicken or Crispy Belly Pork £16.95",
+  "No. 26-34:",
+  "Choice of Vegetables V/VG or add Tofu £11.95",
+  "Chicken, Pork or Beef £13.95",
+  "Prawn or Duck £14.95",
+  "Crispy Chicken or Crispy Belly Pork £16.95",
+  "Choice of Vegetables V/VG - Vegan without egg on request or add Tofu £9.95",
+  "Chicken or Pork £11.00",
+  "Prawn £12.00",
+  "Crispy Chicken or Crispy Belly Pork £14.00",
+  "No. 52-54 and 91-92:",
+  "Choice of Vegetables V/VG - Vegan without egg on request or add Tofu £9.95",
+  "Chicken, Pork or Beef £11.00",
+  "Prawn or Duck £12.00",
+  "Crispy Chicken or Crispy Belly Pork £14.00",
+  "No. 58-60:",
+  "Add Chicken or Pork £12.95",
+  "Crispy Chicken or Crispy Belly Pork £14.95"
+ ]
+}

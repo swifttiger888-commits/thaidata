@@ -1,0 +1,240 @@
+{
+ "restaurant": "The Thai",
+ "city": "Glasgow",
+ "fsa_id": "1344098",
+ "address": "Glasgow",
+ "source": "https://www.thethai.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Chicken Wings",
+    "description": "Five crispy wings with sweet chilli dip.",
+    "price": "£8.80"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Three grilled skewers with house peanut sauce.",
+    "price": "£8.80"
+   },
+   {
+    "name": "Spring Rolls",
+    "description": "Three crispy rolls with sweet chilli dip.",
+    "price": "£7.90"
+   },
+   {
+    "name": "Wontons",
+    "description": "Four golden wontons with tangy dipping sauce.",
+    "price": "£7.90"
+   },
+   {
+    "name": "Fish Cakes",
+    "description": "Three fragrant Thai fish cakes with cucumber relish.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Chicken in Pandan Leaves",
+    "description": "Three parcels of marinated chicken wrapped in pandan leaves.",
+    "price": "£9.00"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "Tom Kha",
+    "description": "Coconut-based soup with coconut milk, galangal, kaffir lime leaves, lemongrass, chilli, coriander, mushrooms, onions, tomatoes, mint leaves and lime juice.",
+    "price": "£10.50"
+   },
+   {
+    "name": "Tom Yum",
+    "description": "Hot and sour broth of lemongrass, kaffir lime leaves, galangal, lime juice, tomatoes, crushed red chillies, coriander and mint leaves.",
+    "price": "£10.50"
+   }
+  ],
+  "Salads": [
+   {
+    "name": "Thai Beef Salad",
+    "description": "Mint, coriander, fresh chillies, red onion and lime juice.",
+    "price": "£26.00"
+   },
+   {
+    "name": "Laab Gai",
+    "description": "Thai salad of ground chicken with fresh herbs — mint, coriander, fresh chillies, red onions, lime juice and green onions.",
+    "price": "£20.50"
+   },
+   {
+    "name": "Stir-Fried Morning Glory",
+    "description": "Garlic, soy bean and a whisper of chilli.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Papaya Salad",
+    "description": "Som tum — green papaya, lime, chilli and fresh herbs.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Stir-Fried Vegetables",
+    "description": "Market vegetables, wok-tossed.",
+    "price": "£12.00"
+   },
+   {
+    "name": "House Salad",
+    "description": "Fresh leaves, herbs and house dressing.",
+    "price": "£9.90"
+   }
+  ],
+  "Specials": [
+   {
+    "name": "Chicken & Cashew Nuts",
+    "description": "Stir-fried chicken with sweet peppers, onion and crunchy cashew nuts. Served with jasmine rice.",
+    "price": "£20.50"
+   },
+   {
+    "name": "Sweet & Sour",
+    "description": "Sweet and sour sauce with onion, sweet peppers, fresh pineapple, cucumber and tomatoes. Served with jasmine rice.",
+    "price": "£20.50"
+   },
+   {
+    "name": "King Prawn in Tamarind",
+    "description": "Fried king prawn in sweet tangy tamarind sauce topped with fried shallots. Served with jasmine rice.",
+    "price": "£27.00"
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "Fried rice with sweet pepper, carrot, onion, curry powder, raisins, cashew nuts, oyster and soya sauce. Topped with king prawn and a fried egg.",
+    "price": "£20.50"
+   },
+   {
+    "name": "Crab Fried Rice",
+    "description": "Fried rice with shredded crab meat, onion, egg and spring onion. Topped with crab meat and a fried egg.",
+    "price": "£20.50"
+   }
+  ],
+  "Mains": [
+   {
+    "name": "Weeping Tiger Beef",
+    "description": "Grilled sirloin steak with spicy tamarind sauce. Served with jasmine rice, sticky rice or chips.",
+    "price": "£27.00"
+   },
+   {
+    "name": "Pad Thai",
+    "description": "Stir-fried noodles with crushed peanuts, egg, chives and bean sprouts in tamarind sauce with caramelised onion and pickled radish. Sweet, tangy and salty.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Thai Green Curry",
+    "description": "Kaeng Khiao Wan — coconut milk, mixed pepper, courgette, small aubergines, kaffir lime leaves and sweet basil. Served with jasmine rice.",
+    "price": "£16.00"
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "Traditional red curry with coconut milk, mixed peppers, courgette, small aubergines, kaffir lime leaves and sweet basil. Served with jasmine rice.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Penang Curry",
+    "description": "Rich red curry with red chillies, kaffir lime leaves and peanuts, topped with coconut cream. Served with jasmine rice.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Thai Yellow Curry",
+    "description": "Yellow curry in coconut milk with potato, onion and kaffir lime leaves. Served with jasmine rice.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Rich coconut curry with mixed spices, potatoes, onion, star anise and coconut milk. Served with jasmine rice.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Pad Kra Pao",
+    "description": "Minced meat stir-fried with Thai basil, bird's-eye chillies, fish sauce and garlic. Served with jasmine rice, topped with a fried egg.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Hot & Spicy Noodles",
+    "description": "Stir-fried egg noodles with sweet peppers, bean sprouts, onion, carrot and cabbage in hot and spicy sauce.",
+    "price": "£17.00"
+   }
+  ],
+  "Rice": [
+   {
+    "name": "Basil Fried Rice",
+    "description": "Wok-fried rice with Thai holy basil.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "Jasmine rice steamed in coconut milk.",
+    "price": "£5.00"
+   },
+   {
+    "name": "Jasmine Rice",
+    "description": "Steamed fragrant jasmine rice.",
+    "price": "£4.50"
+   },
+   {
+    "name": "Glutinous Steamed Rice",
+    "description": "Traditional steamed sticky rice.",
+    "price": "£5.00"
+   }
+  ],
+  "Sides": [
+   {
+    "name": "Salt & Chilli Chips",
+    "description": "Crispy chips with salt and chilli seasoning.",
+    "price": "£5.00"
+   },
+   {
+    "name": "Prawn Crackers",
+    "description": "With sweet chilli dip.",
+    "price": "£4.20"
+   },
+   {
+    "name": "Chips",
+    "description": "Crispy golden chips.",
+    "price": "£4.20"
+   }
+  ],
+  "Kids": [
+   {
+    "name": "Crispy Fish with Rice or Chips",
+    "description": "Crispy cod fillets.",
+    "price": "£9.00"
+   },
+   {
+    "name": "Crispy Chicken with Rice or Chips",
+    "description": "Golden crispy chicken.",
+    "price": "£8.80"
+   },
+   {
+    "name": "Stir-Fried Noodles with Sweet Black Sauce",
+    "description": "Kid-friendly stir-fried noodles in sweet black sauce.",
+    "price": "£8.80"
+   }
+  ],
+  "Desserts": [
+   {
+    "name": "Mango & Sweet Coconut Sticky Rice",
+    "description": "Fresh mango with aromatic coconut sticky rice. Only available June–August.",
+    "price": "£10.90"
+   },
+   {
+    "name": "Burnt Cheesecake",
+    "description": "Rich and creamy, topped with a sweet, tangy mango and passionfruit coulis.",
+    "price": "£10.90"
+   },
+   {
+    "name": "Sticky Toffee Pudding",
+    "description": "Served warm with ice cream.",
+    "price": "£10.90"
+   },
+   {
+    "name": "Ice Cream Scoop",
+    "description": "A single scoop of vanilla ice cream with cream.",
+    "price": "£3.90"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

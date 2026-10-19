@@ -1,0 +1,153 @@
+{
+ "restaurant": "Good Thai Restaurant",
+ "city": "Derby",
+ "fsa_id": "1849214",
+ "address": "Derby",
+ "source": "https://thaiboran-ic-0ip.caffeine.xyz/assets/main-menu-2.png",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "THAI BORAN MIXED PLATTER (FOR 2)",
+    "description": "A selection of chicken satay, crispy spring rolls, Thai fish cakes, prawn tempura, and steamed chicken & prawn dumplings.",
+    "price": "£18"
+   },
+   {
+    "name": "CRISPY PRAWN CRACKERS",
+    "description": "Light, airy prawn crackers served with sweet chilli sauce.",
+    "price": "£S 3.5 / L 4"
+   },
+   {
+    "name": "CHICKEN SPRING ROLLS (3 PCS)",
+    "description": "Golden rolls with glass noodles & vegetables served with hoisin sauce or sweet chilli sauce.",
+    "price": "£7.5"
+   },
+   {
+    "name": "GRILLED CHICKEN SATAY (3 PCS)",
+    "description": "Marinated chicken skewers served with peanut sauce.",
+    "price": "£7.5"
+   },
+   {
+    "name": "CHICKEN & PRAWN DUMPLINGS (4 PCS)",
+    "description": "Steamed dumplings filled with minced chicken and prawn served with sweet soya sauce.",
+    "price": "£7.5"
+   },
+   {
+    "name": "THAI FISH CAKES (4 PCS)",
+    "description": "Minced fish with Thai herbs, green beans, and kaffir lime leaves. Served with sweet chilli sauce.",
+    "price": "£7.5"
+   },
+   {
+    "name": "PRAWN TEMPURA (4 PCS)",
+    "description": "Crispy tempura prawns served with plum sauce.",
+    "price": "£8.5"
+   },
+   {
+    "name": "PRAWN HAKAO (4 PCS)",
+    "description": "Traditional Chinese-style prawn dumplings served with sweet soy sauce.",
+    "price": "£8.5"
+   },
+   {
+    "name": "THAI STYLE SPARE RIBS (3 PCS)",
+    "description": "Marinated pork spare ribs served with homemade sauce, finished with sesame seeds.",
+    "price": "£8.5"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "TOM YUM SOUP",
+    "description": "Spicy and sour soup with lemongrass, lime, and chilli. Choices:",
+    "price": "£Chicken 7.5 / Prawns 8.5 / Vegan 7.5"
+   },
+   {
+    "name": "TOM KHA SOUP",
+    "description": "Creamy coconut soup with galangal, lemongrass and mushrooms. Choices:",
+    "price": "£Chicken 7.5 / Prawns 8.5 / Vegan 7.5"
+   },
+   {
+    "name": "SPICY SEAFOOD SOUP (FOR 2)",
+    "description": "Traditional spicy Thai soup with mixed seafood, mushroom, lime leaves, lemongrass, chilli, galangal, and basil. Ideals for sharing.",
+    "price": "£17"
+   }
+  ],
+  "VEGETARIAN STARTERS": [
+   {
+    "name": "VEGETARIAN MIXED PLATTER (FOR 2)",
+    "description": "A selection of sweetcorn frltters, vegetarian spring rolls, bean curd satay, vegetable tempura, and crispy vegetables bags.",
+    "price": "£17",
+    "vegetarian": true
+   },
+   {
+    "name": "GRILLED BEAN CURD SATAY (3 PCS)",
+    "description": "Marinated bean curd skewer served with peanut sauce.",
+    "price": "£7.5",
+    "vegetarian": true
+   },
+   {
+    "name": "SWEET CORN FRITTERS (4 PCS)",
+    "description": "Crispy fritters made with sweet corn, Thai herbs, and light seasoning.",
+    "price": "£7.5",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE SPRING ROLLS (3 PCS)",
+    "description": "Golden rolls filled with vegetables and vermicelli, served with sweet chilli sauce.",
+    "price": "£7.5",
+    "vegetarian": true
+   },
+   {
+    "name": "CRISPY VEGETABLE TEMPURA",
+    "description": "Lightly battered seasonal vegetable served with sweet chilli sauce.",
+    "price": "£7.5",
+    "vegetarian": true
+   }
+  ],
+  "SALADS": [
+   {
+    "name": "SOM TUM THAI",
+    "description": "Thai salad of shredded papaya and carrot with lime juice, chilli, garlic, tomatoes, and roasted peanuts.",
+    "price": "£11"
+   },
+   {
+    "name": "NAM TOK",
+    "description": "Sliced meat of your choice with toasted rice, herbs, lime, and chilli. Chicken / Pork / Beef +1.50",
+    "price": "£12"
+   },
+   {
+    "name": "YAM WOON SEN SEAFOOD",
+    "description": "Glass noodles salad with prawns, squid, mussels, and herbs, all coated in spicy-sour dressing.",
+    "price": "£13"
+   }
+  ],
+  "RICE & NOODLES": [
+   {
+    "name": "PAD THAI",
+    "description": "Thai style rice noodles with protein, tamarind sauce, vegetables, and crushed peanuts served on the side.",
+    "price": null
+   },
+   {
+    "name": "PAD KEE MAO",
+    "description": "Spicy stir fry noodles with chilli, garlic, bell peppers, broccoli and Thai basil.",
+    "price": null
+   },
+   {
+    "name": "PAD SEE AEW",
+    "description": "Tender noodles in a rich soy sauce with egg and vegetables.",
+    "price": null
+   },
+   {
+    "name": "SPECIAL FRIED RICE",
+    "description": "Classic Thai style fried rice with egg, vegetables and choice of meat.",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "CHOOSE YOUR PROTEIN:",
+  "Chicken / Pork 13",
+  "Beef / Seafood / Prawns / Duck 14",
+  "Vegetables / Bean Curd 13",
+  "A 10% service charge will be added to your bill."
+ ]
+}

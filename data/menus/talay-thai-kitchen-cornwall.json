@@ -227,7 +227,7 @@
    {
     "num": "",
     "name": "ANCORA | GARGANEGA",
-    "description": "ITALY\nClean and crisp with citrus notes.",
+    "description": "ITALY Clean and crisp with citrus notes.",
     "price": "£6.85 / £9.50 / £27.50",
     "vegetarian": false,
     "heat": null
@@ -235,7 +235,7 @@
    {
     "num": "",
     "name": "FALSE BAY | CHENIN BLANC",
-    "description": "S. AFRICA\nBenchmark Chenin with great complexity that works really well with Thai food.",
+    "description": "S. AFRICA Benchmark Chenin with great complexity that works really well with Thai food.",
     "price": "£8 / £11 / £32",
     "vegetarian": false,
     "heat": null
@@ -243,7 +243,7 @@
    {
     "num": "",
     "name": "DOMAINE DE VEDILHAN | VIOGNIER",
-    "description": "FRANCE\nNotes of peach, citrus, and tropical fruits.",
+    "description": "FRANCE Notes of peach, citrus, and tropical fruits.",
     "price": "£8.65 / £11.65 / £34.80",
     "vegetarian": false,
     "heat": null
@@ -251,7 +251,7 @@
    {
     "num": "",
     "name": "SEEWINKEL | GRÜNER VELTLINER ORGANIC",
-    "description": "AUSTRIA\nGenerous citrus fruit flavours with a hint of spice.",
+    "description": "AUSTRIA Generous citrus fruit flavours with a hint of spice.",
     "price": "£8.50 / £11.50 / £34",
     "vegetarian": false,
     "heat": null
@@ -259,7 +259,7 @@
    {
     "num": "",
     "name": "MARLBOROUGH SAUVIGNON BLANC",
-    "description": "NEW ZEALAND\nTangy grapefruit aromas, zingy & perfectly balanced.",
+    "description": "NEW ZEALAND Tangy grapefruit aromas, zingy & perfectly balanced.",
     "price": "£9 / £12 / £36",
     "vegetarian": false,
     "heat": null
@@ -267,7 +267,7 @@
    {
     "num": "",
     "name": "PETH WETZ | RIESLING",
-    "description": "GERMANY\nElegant dry Riesling with exotic fruit intensity. Great with a Thai curry.",
+    "description": "GERMANY Elegant dry Riesling with exotic fruit intensity. Great with a Thai curry.",
     "price": "£10.50 / £14.50 / £42",
     "vegetarian": false,
     "heat": null
@@ -275,7 +275,7 @@
    {
     "num": "",
     "name": "CAVE DE TURCKHEIM | GEWÜRZTRAMINER",
-    "description": "FRANCE\nEarthy, floral & honey characters that perfectly compliment the exotic flavours of our Thai cuisine.",
+    "description": "FRANCE Earthy, floral & honey characters that perfectly compliment the exotic flavours of our Thai cuisine.",
     "price": "£11.25 / £15.25 / £45",
     "vegetarian": false,
     "heat": null
@@ -283,7 +283,7 @@
    {
     "num": "",
     "name": "MIRABELLO | PINOT GRIGIO ROSÉ",
-    "description": "ITALY\nEasy drinking crisp dry rose that is a real crowd pleaser.",
+    "description": "ITALY Easy drinking crisp dry rose that is a real crowd pleaser.",
     "price": "£6.85 / £9.50 / £27.50",
     "vegetarian": false,
     "heat": null
@@ -291,7 +291,7 @@
    {
     "num": "",
     "name": "WHISPERING ANGEL",
-    "description": "FRANCE\nClassic Provence rose with notes of peach, strawberry and grapefruit.",
+    "description": "FRANCE Classic Provence rose with notes of peach, strawberry and grapefruit.",
     "price": "£13 / £18 / £54",
     "vegetarian": false,
     "heat": null
@@ -299,7 +299,7 @@
    {
     "num": "",
     "name": "EL NINOT DE PAPER TINTO G.S.M",
-    "description": "SPAIN\nRipe berry fruit, subtle tannins & fresh juicy acidity.",
+    "description": "SPAIN Ripe berry fruit, subtle tannins & fresh juicy acidity.",
     "price": "£6.85 / £9.50 / £27.50",
     "vegetarian": false,
     "heat": null
@@ -307,7 +307,7 @@
    {
     "num": "",
     "name": "AL TESORO MONASTRELL SHIRAZ",
-    "description": "SPAIN\nRich, ripe red with a hint of spice.",
+    "description": "SPAIN Rich, ripe red with a hint of spice.",
     "price": "£8 / £11 / £32",
     "vegetarian": false,
     "heat": null
@@ -315,7 +315,7 @@
    {
     "num": "",
     "name": "TIERRA ALTA | PINOT NOIR",
-    "description": "CHILE\nPairing red wine with Thai food was always going to be a challenge but we think we've cracked it with this great Pinot Noir.",
+    "description": "CHILE Pairing red wine with Thai food was always going to be a challenge but we think we've cracked it with this great Pinot Noir.",
     "price": "£8.50 / £11.50 / £34",
     "vegetarian": false,
     "heat": null
@@ -323,7 +323,7 @@
    {
     "num": "",
     "name": "ARIA VINI | PALLADIANO DURELLO SPUMANTE",
-    "description": "ITALY\nIf you like prosecco you will love this fresh, crisp and vibrant Italian fizz.",
+    "description": "ITALY If you like prosecco you will love this fresh, crisp and vibrant Italian fizz.",
     "price": "£8.50 / £32",
     "vegetarian": false,
     "heat": null
@@ -331,7 +331,7 @@
    {
     "num": "",
     "name": "VEUVE CLICQUOT BRUT",
-    "description": "FRANCE\nNotes of green apple, lemon and brioche.",
+    "description": "FRANCE Notes of green apple, lemon and brioche.",
     "price": "£13.50 / £75",
     "vegetarian": false,
     "heat": null
@@ -375,7 +375,7 @@
    {
     "num": "",
     "name": "CORNISH ICE CREAM & SORBET",
-    "description": "• Ice Cream: Vanilla / Salted Caramel / Coconut\n• Sorbet: Mango / Passion fruit",
+    "description": "• Ice Cream: Vanilla / Salted Caramel / Coconut • Sorbet: Mango / Passion fruit",
     "price": "£7",
     "vegetarian": false,
     "heat": null

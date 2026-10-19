@@ -1,0 +1,156 @@
+{
+ "restaurant": "Siam Thai Cuisine",
+ "city": "Worthing",
+ "fsa_id": "574613",
+ "address": "Worthing",
+ "source": "http://siamthaiworthing.co.uk/uploads/1/2/0/3/120384541/published/menu-00001.jpg?1691691221",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "Siam Mixed Starter",
+    "description": "A combination of Pork Ribs, Prawns Tempura, Vegetable Spring Rolls, Prawn Toast and Fish Cakes (2 of each starter)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "BBQ Marinate Chicken Breasts with Curry and Herbs.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Fried Squid",
+    "description": "Slices of Marinated Squid, Deep Fried In A Light Batter.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Prawns Tempura",
+    "description": "4 Prawns Deep Fried In A Light Batter.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Prawn Toast",
+    "description": "Deep Fried Toast Marinated with Prawns topped with Sesame Seeds.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Thai Dim Sum",
+    "description": "Steamed Minced Pork and Prawns In Wonton Pastry.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Pork Spare Ribs",
+    "description": "Spare Ribs Marinated in BBQ Sauce and Honey.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Duck Spring Roll",
+    "description": "Deep Fried Pastry Filled with Tender Duck and Vegetables.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Thai Fish Cake",
+    "description": "Thai Style Fish Cake Served with Chilli Sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Vegetable Spring Roll",
+    "description": "Deep Fried Pastry Filled with Vegetables.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Sweet Corn Cake",
+    "description": "Deep Fried Sweet Corn Cake.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Chicken Wings",
+    "description": "Chicken Wings Marinated with Garlic Sauce and Chinese Whiskey.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "Deep Fried Vegetables in a light batter.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Kiew Tod",
+    "description": "Deep Fried Chicken & Prawns in Wonton Pastry.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Prawn Crackers",
+    "description": "",
+    "price": "£3.00"
+   }
+  ],
+  "SOUPS AND SALADS": [
+   {
+    "name": "Wonton Soup",
+    "description": "Clear Soup with Wonton Stuffed with Mince Pork.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Tom Yam - Mushroom",
+    "description": "Thai Hot and Spicy Soup with Lemongrass & Galangal Lime Leaf.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Tom Yam - Chicken",
+    "description": "Thai Hot and Spicy Soup with Lemongrass & Galangal Lime Leaf.",
+    "price": "£5.95"
+   },
+   {
+    "name": "Tom Yam - Prawns",
+    "description": "Thai Hot and Spicy Soup with Lemongrass & Galangal Lime Leaf.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Tom Kha - Mushroom",
+    "description": "Thai Hot Coconut Milk Soup with Galangal Lime Leaf.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Tom Kha - Chicken",
+    "description": "Thai Hot Coconut Milk Soup with Galangal Lime Leaf.",
+    "price": "£5.95"
+   },
+   {
+    "name": "Tom Kha - Prawns",
+    "description": "Thai Hot Coconut Milk Soup with Galangal Lime Leaf.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Sea Food Soup",
+    "description": "Thai Hot and Spicy Soup with Prawns, Mussels and Squid.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Som Tam",
+    "description": "Popular Thai Spicy Papaya Salad with Garlic, Chilli, Tomato and Nuts.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Salad Young Girl",
+    "description": "Crispy Chicken Salad with a Thai Spicy Dressing and Nuts.",
+    "price": "£10.95"
+   },
+   {
+    "name": "Yum Sea Food",
+    "description": "Sea Food Salad with Thai Spicy Dressing.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Yum Nuae",
+    "description": "Grilled Slices of Beef with Thai Spicy Dressing.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Lab Kai",
+    "description": "A Salad with Mince Chicken n Thai Spicy Dressing.",
+    "price": "£12.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

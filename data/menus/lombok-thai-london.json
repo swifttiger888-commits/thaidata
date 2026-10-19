@@ -66,7 +66,7 @@
    },
    {
     "name": "Tom Yum Soup",
-    "description": "Lemongrass, kaf r lime leaves, chilli, lime and coriander (gf)\n- prawns, chicken, only mushroom",
+    "description": "Lemongrass, kaf r lime leaves, chilli, lime and coriander (gf) - prawns, chicken, only mushroom",
     "price": "£9"
    },
    {
@@ -76,7 +76,7 @@
    },
    {
     "name": "Tom Kha Soup",
-    "description": "Coconut milk, lemongrass, lime, chilli and coriander (gf)\n- chicken, only mushroom",
+    "description": "Coconut milk, lemongrass, lime, chilli and coriander (gf) - chicken, only mushroom",
     "price": "£9"
    },
    {
@@ -87,7 +87,7 @@
    },
    {
     "name": "Papaya Salad",
-    "description": "Green Papaya, carrots, tomatoes, peanuts, lime (gf)\n- with or without sh sauce",
+    "description": "Green Papaya, carrots, tomatoes, peanuts, lime (gf) - with or without sh sauce",
     "price": "£10"
    },
    {
@@ -109,54 +109,54 @@
   "Mains": [
    {
     "name": "Green Curry",
-    "description": "Fresh green chilli, coconut milk, aubergines, bell peppers and bamboo shoots (gf)\n- prawns, chicken, pork, beef\n- tofu £12",
+    "description": "Fresh green chilli, coconut milk, aubergines, bell peppers and bamboo shoots (gf) - prawns, chicken, pork, beef - tofu £12",
     "price": "£13"
    },
    {
     "name": "Chilli & Basil (Pad Kra Pow)",
-    "description": "Chilli, garlic and basil (gfa)\n- prawns, chicken, pork, beef, duck\n- tofu (c) £12",
+    "description": "Chilli, garlic and basil (gfa) - prawns, chicken, pork, beef, duck - tofu (c) £12",
     "price": "£13"
    },
    {
     "name": "Red Curry",
-    "description": "Dry red chilli, coconut milk, bell peppers and bamboo shoots (gf)\n- prawns, chicken, pork, beef\n- tofu £12 , duck & lychee £14",
+    "description": "Dry red chilli, coconut milk, bell peppers and bamboo shoots (gf) - prawns, chicken, pork, beef - tofu £12 , duck & lychee £14",
     "price": "£13"
    },
    {
     "name": "Ginger (Pad King)",
-    "description": "Fresh Ginger, mushroom and spring onion (gfa)\n- prawns , chicken, pork\n- tofu (c) £12",
+    "description": "Fresh Ginger, mushroom and spring onion (gfa) - prawns , chicken, pork - tofu (c) £12",
     "price": "£13"
    },
    {
     "name": "Panang Curry",
-    "description": "Rich & Creamy with green beans and bell peppers (gf)\n- prawns, duck, chicken, beef\n- tofu £12 , seabass £16 (ng)",
+    "description": "Rich & Creamy with green beans and bell peppers (gf) - prawns, duck, chicken, beef - tofu £12 , seabass £16 (ng)",
     "price": "£13"
    },
    {
     "name": "Garlic (Pad Gratiem)",
-    "description": "Onions, garlic, pepper and Soy Sauce (gfa)\n- chicken, pork",
+    "description": "Onions, garlic, pepper and Soy Sauce (gfa) - chicken, pork",
     "price": "£13"
    },
    {
     "name": "Massaman Curry",
-    "description": "Southern style, slow cooked with potatoes (gf)\n- chicken, beef, lamb",
+    "description": "Southern style, slow cooked with potatoes (gf) - chicken, beef, lamb",
     "price": "£14"
    },
    {
     "name": "Black Bean",
-    "description": "Black bean sauce, garlic, spring onions and bell peppers (ng)\n- prawns, chicken, pork, beef\n- tofu £12",
+    "description": "Black bean sauce, garlic, spring onions and bell peppers (ng) - prawns, chicken, pork, beef - tofu £12",
     "price": "£13"
    }
   ],
   "Salads": [
    {
     "name": "Glass Noodle Salad",
-    "description": "Vermicelli noodles, peppers, onions, coriander, chilli and lime (gf)\n- chicken, prawn, tofu (choose up to 2)",
+    "description": "Vermicelli noodles, peppers, onions, coriander, chilli and lime (gf) - chicken, prawn, tofu (choose up to 2)",
     "price": "£13"
    },
    {
     "name": "Thai Beef Salad",
-    "description": "Beef, spicy Thai dressing, peppers, onions and coriander (gf)\n- prawn option available",
+    "description": "Beef, spicy Thai dressing, peppers, onions and coriander (gf) - prawn option available",
     "price": "£13"
    }
   ],
@@ -198,7 +198,7 @@
    },
    {
     "name": "Jungle Hotplate",
-    "description": "Bamboo, mushrooms, peppers and red curry paste (c)\n- tofu, lamb, duck, battered cod",
+    "description": "Bamboo, mushrooms, peppers and red curry paste (c) - tofu, lamb, duck, battered cod",
     "price": "£15"
    },
    {
@@ -225,17 +225,17 @@
   "Noodles": [
    {
     "name": "Pad Thai",
-    "description": "Rice noodles, egg, peanuts and beansprouts (gf)\n- tofu (c), chicken, prawn (choose up to 2)\n- no egg (vegan)",
+    "description": "Rice noodles, egg, peanuts and beansprouts (gf) - tofu (c), chicken, prawn (choose up to 2) - no egg (vegan)",
     "price": "£14"
    },
    {
     "name": "Drunken Noodles",
-    "description": "Egg noodles or Rice noodles\nChilli, garlic, basil and soy sauce (gfa)\n- tofu (c), chicken, beef, prawn",
+    "description": "Egg noodles or Rice noodles Chilli, garlic, basil and soy sauce (gfa) - tofu (c), chicken, beef, prawn",
     "price": "£14"
    },
    {
     "name": "Rice Noodles",
-    "description": "Egg & soy sauce (gfa)\n+ no egg",
+    "description": "Egg & soy sauce (gfa) + no egg",
     "price": "£5",
     "vegetarian": true
    }
@@ -243,17 +243,17 @@
   "Fried Rice": [
    {
     "name": "Thai Special Fried Rice",
-    "description": "Egg, onions, tomatoes and onions (gf)\n- prawn, chicken, veg",
+    "description": "Egg, onions, tomatoes and onions (gf) - prawn, chicken, veg",
     "price": "£14"
    },
    {
     "name": "Jungle Fried Rice",
-    "description": "Fresh chilli, peppers, onions, basil (gfa)\n- tofu (c), chicken, beef, prawns",
+    "description": "Fresh chilli, peppers, onions, basil (gfa) - tofu (c), chicken, beef, prawns",
     "price": "£14"
    },
    {
     "name": "Pineapple Fried Rice",
-    "description": "Egg, cashew nuts, onions and spring onions (gf)\n- tofu (c), prawns",
+    "description": "Egg, cashew nuts, onions and spring onions (gf) - tofu (c), prawns",
     "price": "£14"
    },
    {

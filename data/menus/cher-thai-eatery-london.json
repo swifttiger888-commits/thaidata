@@ -1,0 +1,73 @@
+{
+ "restaurant": "Cher Thai Eatery",
+ "city": "London",
+ "fsa_id": "1229769",
+ "address": "London",
+ "source": "https://www.cherthailondon.co.uk/_files/ugd/a5e154_fe6ed6f05c644406a789d80aca384857.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "DESSERT MENU": [
+   {
+    "name": "Mango Sticky Rice (Seasonal)",
+    "description": "",
+    "price": "£12.50"
+   },
+   {
+    "name": "Black glutinous rice in coconut cream",
+    "description": "served with coconut ice cream",
+    "price": "£8.95"
+   },
+   {
+    "name": "Taro Pearl in Coconut cream",
+    "description": "served with taro ice cream",
+    "price": "£8.95"
+   },
+   {
+    "name": "Taro Sticky Rice",
+    "description": "Served with Vanilla Ice Cream",
+    "price": "£5.95"
+   },
+   {
+    "name": "Banana in warm coconut cream",
+    "description": "served with toasted sesame",
+    "price": "£5.95"
+   },
+   {
+    "name": "Affogato",
+    "description": "Vanila ice cream served with espresso shot",
+    "price": "£5.95"
+   },
+   {
+    "name": "Home-Made Ice Cream / Scoop",
+    "description": "(Coconut, Mango, Thai Tea, Taro)",
+    "price": "£4.50"
+   }
+  ],
+  "Tea": [
+   {
+    "name": "Jasmin / Green / English / Camomile",
+    "description": "",
+    "price": "£3.5"
+   },
+   {
+    "name": "Fresh Lemongrass / Mint / Ginger",
+    "description": "",
+    "price": "£4.5"
+   }
+  ],
+  "Coffee": [
+   {
+    "name": "Espresso",
+    "description": "",
+    "price": "£2.5/4"
+   },
+   {
+    "name": "Americano",
+    "description": "",
+    "price": "£3.5"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

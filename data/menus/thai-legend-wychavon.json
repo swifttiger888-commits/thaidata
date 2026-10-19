@@ -1,0 +1,128 @@
+{
+ "restaurant": "Thai Legend",
+ "city": "Wychavon",
+ "fsa_id": "673887",
+ "address": "Wychavon",
+ "source": "https://www.thailegendrestaurant.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Appetizers": [
+   {
+    "name": "Bread & dips",
+    "description": "Sourdough bread accompanied by hummus, beetroot & whipped feta dips",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Green salad",
+    "description": "A garden-fresh salad with seasonal greens and roasted almonds",
+    "price": null
+   },
+   {
+    "name": "Tuna sashimi",
+    "description": "Seared fresh tuna, fresh herbs, and a touch of chili",
+    "price": "£4.50"
+   }
+  ],
+  "Mains": [
+   {
+    "name": "Hand-made ravioli",
+    "description": "Artisanal hand-made ravioli, filled with a blend of cheeses in a basil pesto sauce",
+    "price": "£6.50"
+   },
+   {
+    "name": "Tofu skewers",
+    "description": "Grilled tofu skewers, marinated in a blend of soy and sesame with seasonal roast vegetables",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Fish of the day",
+    "description": "Fresh catch of the day paired with asparagus & a cream of sweet potato",
+    "price": "£8.00"
+   },
+   {
+    "name": "Peanut crusted steak",
+    "description": "Juicy, tender steak cooked to your liking, served with steamed vegetables",
+    "price": "£8.00"
+   },
+   {
+    "name": "Classic burger",
+    "description": "Our classic burger with lettuce, pickles, heirloom tomatoes, served with a side of fries",
+    "price": null
+   },
+   {
+    "name": "Schnitzel",
+    "description": "Crisp and golden on the outside, in a herb and parmesan crumb",
+    "price": "£4.00"
+   }
+  ],
+  "Desserts": [
+   {
+    "name": "Sticky date & ice cream",
+    "description": "Served with vanilla ice cream, toffee sauce & a peanut crumble",
+    "price": "£7.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Classic cheesecake",
+    "description": "Topped with a layer of raspberry jam & sliced strawberries",
+    "price": "£6.50"
+   },
+   {
+    "name": "Lemon meringue pie",
+    "description": "Zesty lemon meringue, a pistachio crumble, served with a chantilly cream",
+    "price": "£5.50"
+   },
+   {
+    "name": "Chocolate mousse",
+    "description": "Our delicate, yet rich signature chocolate mousse dessert",
+    "price": null
+   },
+   {
+    "name": "Carrot cake",
+    "description": "Lightly spiced carrot cake layered with cream cheese frosting",
+    "price": "£5.50"
+   },
+   {
+    "name": "Brownie",
+    "description": "Fresh out the oven brownie filled with dark chocolate chips & walnuts",
+    "price": "£5.00"
+   }
+  ],
+  "Drinks": [
+   {
+    "name": "Healthy smoothie",
+    "description": "Nourish your body with our selection of healthy smoothies",
+    "price": "£3.00"
+   },
+   {
+    "name": "Fresh juice",
+    "description": "A refreshing blend of freshly squeezed orange, watermelon, carrot, and ginger",
+    "price": null
+   },
+   {
+    "name": "Wine",
+    "description": "Choice of red, white, or rosé",
+    "price": "£2.00"
+   },
+   {
+    "name": "Soft drink",
+    "description": "Soda, Sprite, Pepsi & Diet Coke",
+    "price": "£1.50"
+   },
+   {
+    "name": "Coffee",
+    "description": "Locally roasted coffee, brewed in-house",
+    "price": "£2.50"
+   },
+   {
+    "name": "Cocktails",
+    "description": "Aperol Spritz, Gin & Tonic, Mojito",
+    "price": "£1.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

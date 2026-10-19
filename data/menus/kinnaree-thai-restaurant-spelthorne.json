@@ -1,0 +1,432 @@
+{
+ "restaurant": "Kinnaree Thai Restaurant",
+ "city": "Spelthorne",
+ "fsa_id": "1847384",
+ "address": "Spelthorne",
+ "source": "https://static1.squarespace.com/static/655887ca8f6ab06f239b21fb/t/6a76f90e7a61d659a9266357/1786181902095/Kinnaree+Menu+TakeAway+R2+%283%29.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "APPERTIZERS": [
+   {
+    "name": "PRAWN CRACKERS",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "PLATTER FOR 2 PERSONS",
+    "description": "A selection of six starters: Chicken Satay, Spring Rolls, Money bags, Prawns on toast, Pattaya Rolls and Prawn Crackers",
+    "price": "£20.95"
+   },
+   {
+    "name": "SALT & PEPPER SQUID",
+    "description": "Deep-fried squid in light batter, with onion, salt, pepper, garlic, spring onions and fresh chili, served with spicy chili sauce",
+    "price": "£8.95",
+    "num": "1"
+   },
+   {
+    "name": "CRISPY AROMATIC DUCK FOR 2 PERSONS",
+    "description": "A quarter of Crispy duck, with pancakes, spring onions and cucumber, served with hoi sin sauce",
+    "price": "£15.95",
+    "num": "2"
+   },
+   {
+    "name": "SATAY",
+    "description": "Tender marinated chicken, grilled on skewers and served with our home-made peanut sauce",
+    "price": "£7.95",
+    "num": "3"
+   },
+   {
+    "name": "PRAWNS ON TOAST",
+    "description": "Deep-fried chopped prawns on toast with sesame seed topping, served with sweet chili sauce",
+    "price": "£7.95",
+    "num": "4"
+   },
+   {
+    "name": "PATTAYA ROLLS",
+    "description": "Deep-fried tiger prawns wrapped in pastry, served with sweet chili sauce",
+    "price": "£7.95",
+    "num": "5"
+   },
+   {
+    "name": "PRAWN TEMPURA",
+    "description": "Deep-fried tiger prawns in light batter, served with sweet chili sauce",
+    "price": "£7.95",
+    "num": "6"
+   },
+   {
+    "name": "TOD MUN PLA",
+    "description": "Deep-fried Thai fish cakes, served with sweet chili sauce",
+    "price": "£7.95",
+    "num": "7"
+   },
+   {
+    "name": "THAI DIMSUM",
+    "description": "Thai style steamed minced pork dumplings, with shiitake mushrooms, topped with crispy garlic and coriander, served with a dark soy sauce",
+    "price": "£7.95",
+    "num": "8"
+   },
+   {
+    "name": "SPARE RIBS",
+    "description": "Roasted pork spare ribs, marinated in herbs, honey and tomato sauce, with a dash of whisky",
+    "price": "£7.95",
+    "num": "9"
+   },
+   {
+    "name": "SPRING ROLL (V)",
+    "description": "Deep-fried vegetable spring rolls, served with sweet chili sauce",
+    "price": "£6.50",
+    "vegetarian": true,
+    "num": "10"
+   },
+   {
+    "name": "VEGETABLE TEMPURA (V)",
+    "description": "Mixed vegetables, deep-fried in a light batter served with sweet chili sauce",
+    "price": "£6.50",
+    "vegetarian": true,
+    "num": "11"
+   },
+   {
+    "name": "MOO PING",
+    "description": "Grilled marinated BBQ pork on skewers, served with fresh lime and chili sauce",
+    "price": "£8.95",
+    "num": "12"
+   },
+   {
+    "name": "MONEY BAGS",
+    "description": "Deep-fried marinated chicken mince wrapped in pastry, served with sweet chili sauce",
+    "price": "£7.95",
+    "num": "13"
+   }
+  ],
+  "SOUP": [
+   {
+    "name": "VEGETABLES",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "CHICKEN",
+    "description": "",
+    "price": "£8.95"
+   },
+   {
+    "name": "PRAWNS",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "SEAFOOD",
+    "description": "",
+    "price": "£10.95"
+   },
+   {
+    "name": "TOM YOM (V)",
+    "description": "A traditional Thai hot & sour soup, flavoured with lemon grass, lime leaves and a squeeze of fresh lemon",
+    "price": null,
+    "vegetarian": true,
+    "num": "14"
+   },
+   {
+    "name": "TOM KHA (V)",
+    "description": "Similar in taste to Tom Yum this Thai creamy soup is made with coconut milk but it has a more distinct taste of galangal to give a more mellow flavoured",
+    "price": null,
+    "vegetarian": true,
+    "num": "15"
+   }
+  ],
+  "THAI SALADS": [
+   {
+    "name": "THAI BEEF SALAD",
+    "description": "Grilled sirloin steak sliced and tossed with cucumber, tomatoes, coriander, celery, spring onions, capsicum and red onion, flavoured with fresh chili and lime juice",
+    "price": "£16.95",
+    "num": "16"
+   },
+   {
+    "name": "MIXED SEAFOOD SALAD",
+    "description": "Mixed seafood, marinated in lime juice dressing and tossed with red onion, tomato, capsicum, celery fresh chili and coriander",
+    "price": "£15.95",
+    "num": "17"
+   },
+   {
+    "name": "SOM TAM (V)",
+    "description": "The famous Thai salad made with papaya, green beans, cherry tomatoes, carrots, chilies and topped with roasted peanuts. Isaan style is available on request",
+    "price": "£11.95",
+    "vegetarian": true,
+    "num": "18"
+   }
+  ],
+  "CURRY DISHES": [
+   {
+    "name": "VEGETABLES OR TOFU",
+    "description": "",
+    "price": "£11.95",
+    "vegetarian": true
+   },
+   {
+    "name": "CHICKEN OR BEEF",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "DUCK OR PRAWNS",
+    "description": "",
+    "price": "£14.95"
+   },
+   {
+    "name": "LAMB",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "PANAENG (V)",
+    "description": "A popular thick & creamy red curry made with capsicum, coconut milk and flavoured with lime leave",
+    "price": null,
+    "vegetarian": true,
+    "num": "19"
+   },
+   {
+    "name": "MASSAMAN (V)",
+    "description": "A typical Muslim curry in a mild curry sauce made with coconut milk in a special blend of herbs, tamarind, peanuts and potatoes",
+    "price": null,
+    "vegetarian": true,
+    "num": "20"
+   },
+   {
+    "name": "GREEN CURRY (V)",
+    "description": "The famous Thai green curry made with coconut milk, capsicum, bamboo shoots, chili and aubergines",
+    "price": null,
+    "vegetarian": true,
+    "num": "21"
+   },
+   {
+    "name": "RED CURRY (V)",
+    "description": "A Spicy Thai red curry made with coconut milk, bamboo shoots, capsicum, chili and aubergines",
+    "price": null,
+    "vegetarian": true,
+    "num": "22"
+   },
+   {
+    "name": "DUCK CURRY",
+    "description": "Roasted duck in a spicy red curry made with coconut, cherry tomatoes, pineapple, black grapes, capsicum, bamboo shoots and fresh chili",
+    "price": null,
+    "num": "23"
+   }
+  ],
+  "STIR-FRIED DISHES": [
+   {
+    "name": "PAD KRA PAO (V)",
+    "description": "Stir-fried with fresh chili, onion, fine beans and capsicum",
+    "price": null,
+    "vegetarian": true,
+    "num": "24"
+   },
+   {
+    "name": "CHICKEN WITH CASHEW NUTS Normal or Crispy",
+    "description": "Stir-fried chicken with cashew nuts, onion, capsicum, mushrooms and spring onions",
+    "price": null,
+    "num": "25"
+   },
+   {
+    "name": "SWEET & SOUR (V) – Normal or Crispy",
+    "description": "Stir-fried in a Thai sweet & sour sauce with capsicum, pineapple, onion, cucumber, carrot, tomato and spring onions",
+    "price": null,
+    "vegetarian": true,
+    "num": "26"
+   },
+   {
+    "name": "STIR-FRIED WITH GINGER (V)",
+    "description": "Stir-fried in a black bean sauce with ginger, capsicum, mushrooms, onion and spring onions",
+    "price": null,
+    "vegetarian": true,
+    "num": "27"
+   },
+   {
+    "name": "STIR-FRIED WITH GARLIC SAUCE (V)",
+    "description": "Stir-fried in a fresh garlic, coriander and Thai pepper sauce",
+    "price": null,
+    "vegetarian": true,
+    "num": "28"
+   },
+   {
+    "name": "PAD PED (V)",
+    "description": "Stir-fried in a creamy red curry sauce with aubergines, bamboo shoots, fine beans, chili, krachai, peppercorns and lime leaves",
+    "price": null,
+    "vegetarian": true,
+    "num": "29"
+   },
+   {
+    "name": "DRUNKEN (V)",
+    "description": "A famous Thai dish, stir-fried in a red curry sauce with fresh chili, garlic, bamboo shoots, aubergines, onion, capsicum, fine beans and lime leaves",
+    "price": null,
+    "vegetarian": true,
+    "num": "30"
+   },
+   {
+    "name": "STIR-FRIED WITH OYSTER SAUCE (V)",
+    "description": "Stir-fried in oyster sauce with capsicum, onion, mushroom, broccoli and spring onions",
+    "price": null,
+    "vegetarian": true,
+    "num": "31"
+   },
+   {
+    "name": "PRAWNS SIAM",
+    "description": "Stir-fried king prawns with ginger, onion, mange tout, capsicum, spring onions and tomatoes",
+    "price": null,
+    "num": "32"
+   }
+  ],
+  "SPECIALITIES": [
+   {
+    "name": "GOONG PHAO",
+    "description": "Grilled huge freshwater prawns, topped with crispy garlic and served with a spicy lemon and chili dip",
+    "price": "£20.95",
+    "num": "33"
+   },
+   {
+    "name": "DUCK OR PRAWN TAMARIND",
+    "description": "Marinated roasted duck or huge freshwater prawns in a sweet tamarind sauce, topped with crispy onion, chili and cashew nuts",
+    "price": "£19.95",
+    "num": "34"
+   },
+   {
+    "name": "BEEF WEEPING TIGER",
+    "description": "Sizzling thinly sliced grilled sirloin of marinated steak served with a fresh lime and chili sauce",
+    "price": "£18.95",
+    "num": "35"
+   },
+   {
+    "name": "PLA SAMUNPAI",
+    "description": "Deep-fried seabass fillets topped with lemongrass, ginger, kaffir lime leaves, shallot, cashew nuts, dried chili and sweet palm dressing",
+    "price": "£20.95",
+    "num": "36"
+   },
+   {
+    "name": "PLA SAM ROD",
+    "description": "Deep-fried seabass, topped with garlic, in three flavours of fresh chili and sweet chili sauce",
+    "price": "£20.95",
+    "num": "37"
+   },
+   {
+    "name": "CHU-CHEE",
+    "description": "Deep-fried seabass or fresh water prawns with a thick & creamy red curry sauce, capsicum, lime leaves and chili",
+    "price": "£20.95",
+    "num": "38"
+   },
+   {
+    "name": "PLA NUENG SEE-EW",
+    "description": "Steamed whole seabass in soy sauce with fresh ginger and spring onions, recommended for sharing. Please note: This dish may contain some bone",
+    "price": "£25.95",
+    "num": "39"
+   },
+   {
+    "name": "PLA NUENG MANOW",
+    "description": "Steamed whole seabass with Thai herb topped with spicy fresh chili and lime sauce, recommended for sharing. Please note: This dish may contain some bone.",
+    "price": "£25.95",
+    "num": "40"
+   },
+   {
+    "name": "KHAO SOI BEEF, CHICKEN OR PRAWNS",
+    "description": "A famous curry noodle soup from the city of Chiang Mai in Northern Thailand with a creamy mild coconut curry base, combination of tender and crunchy noodles topped with red onion, coriander and fresh lemon",
+    "price": "£15.95",
+    "num": "41"
+   }
+  ],
+  "VEGETABLE DISHES": [
+   {
+    "name": "STIR-FRIED MIXED VEGETABLES",
+    "description": "Stir-fried seasonal mixed vegetables with a hint of garlic in oyster sauce",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "42"
+   },
+   {
+    "name": "STIR-FRIED BEANSPROUTS",
+    "description": "Stir-fried beansprouts, chili, capsicum, carrot, garlic and spring onions",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "43"
+   },
+   {
+    "name": "43A. PAK CHOI",
+    "description": "Stir-fried Pak Choi in oyster sauce with fresh chili and garlic",
+    "price": "£8.95",
+    "vegetarian": true
+   }
+  ],
+  "RICE": [
+   {
+    "name": "STEAMED THAI JASMINE RICE",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "44"
+   },
+   {
+    "name": "EGG FRIED RICE",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "45"
+   },
+   {
+    "name": "COCONUT RICE",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "46"
+   },
+   {
+    "name": "STICKY RICE",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "47"
+   },
+   {
+    "name": "SPECIAL KINNAREE FRIED RICE",
+    "description": "Thai style fried rice with prawns & chicken, spring greens, onion tomatoes, broccoli, capsicum, carrot and spring onions",
+    "price": "£13.95",
+    "num": "48"
+   }
+  ],
+  "NOODLES": [
+   {
+    "name": "PLAIN EGG NOODLE",
+    "description": "",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "SINGAPORE NOODLES (V)",
+    "description": "Stir-fried vermicelli rice noodles with egg, onion, carrot, capsicum, spring onions, bean sprouts and fresh chili with curry powder",
+    "price": null,
+    "vegetarian": true,
+    "num": "49"
+   },
+   {
+    "name": "PAD MEE (V)",
+    "description": "Stir-fried noodles with egg",
+    "price": null,
+    "vegetarian": true,
+    "num": "50"
+   },
+   {
+    "name": "PAD THAI (V)",
+    "description": "A traditional Thai dish of stir-fried rice noodles with egg, beansprouts, carrot & spring onions in our special tamarind sauce, served with a side of peanuts",
+    "price": null,
+    "vegetarian": true,
+    "num": "51"
+   },
+   {
+    "name": "PAD MEE KEE MAO (V)",
+    "description": "Stir-fried egg noodles in a spicy sauce with fresh chili, garlic, bamboo shoots, aubergines, onion, capsicum and fine beans",
+    "price": null,
+    "vegetarian": true,
+    "num": "52"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

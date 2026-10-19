@@ -1,0 +1,260 @@
+{
+ "restaurant": "Mews Thai Restaurant",
+ "city": "Wyre",
+ "fsa_id": "1625220",
+ "address": "Wyre",
+ "source": "http://www.thaimews.com/foodmenu.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTER DISHES": [
+   {
+    "name": "1 CRISPY THAI SPRING ROLLS",
+    "description": "(popia tod) VE Filled with glass noodles, carrot, white cabbage, garlic & pepper with a sweet chilli sauce.",
+    "price": "£8.00",
+    "vegetarian": true
+   },
+   {
+    "name": "2 CRISPY PORK WRAPS",
+    "description": "(kiew krob) Marinated pork with garlic in crispy pastry & accompanied with a plum sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "3 SPARE RIBS",
+    "description": "(seekroang yang) Delicious marinated pork spare ribs.",
+    "price": "£8.50"
+   },
+   {
+    "name": "4 PORK TOASTIES",
+    "description": "(nah moo) Marinated pork with garlic on crispy bread & a sweet chilli sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "5 THAI STYLE DUMPLINGS",
+    "description": "(kanom jeeb) Steamed pork dumpling’s with garlic & topped with hot chilli sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "6 CHICKEN WINGS",
+    "description": "(peek gai) Crispy salt, pepper & garlic wings served with a sweet chilli dip",
+    "price": "£8.00"
+   },
+   {
+    "name": "7 CHICKEN SATAY",
+    "description": "(gai seteh) Chicken breast marinated in turmeric, coconut milk & served with a peanut sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "8 TEMPURA KING PRAWN",
+    "description": "(kung tod) King prawn deep fried in tempura batter with a sweet chilli sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "9 CRISPY VEGETABLES IN BATTER",
+    "description": "(pak chuuk baang tod) VE Fresh seasonal vegetables deep fried in a crispy batter with a sweet chilli sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "10 MUSHROOM SATAY",
+    "description": "(het sateh) VE Mushrooms marinated in turmeric & served with peanut sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "11 MEWS COMBINATION",
+    "description": "(minimum 2 people) A beautiful combination of spring rolls, pork wraps, spare ribs, pork toasties, Thai style dumplings, chicken wings, chicken satay & a selection of three homemade sauces.",
+    "price": "£11.00 per person"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "12 HOT & SOUR SOUP",
+    "description": "(tom yam) Served with your choice of Chicken or Tofu",
+    "price": "£8.00"
+   },
+   {
+    "name": "13 HOT & SOUR SOUP WITH COCONUT MILK",
+    "description": "(tom ka) Served with Chicken or Tofu",
+    "price": "£8.00"
+   },
+   {
+    "name": "120 HOT & SOUR SOUP",
+    "description": "(tom yam) Served with King Prawn",
+    "price": "£9.00"
+   },
+   {
+    "name": "130 HOT & SOUR SOUP WITH COCONUT MILK",
+    "description": "(tom ka) Served with King Prawn",
+    "price": "£9.00"
+   }
+  ],
+  "MAIN DISHES": [
+   {
+    "name": "14 CASHEW NUTS",
+    "description": "(himmaparn) Cashew nuts lightly fried with chilli oil, oyster sauce, soy sauce, carrots, onion, mushroom, spring onion & celery.",
+    "price": "£13.50"
+   },
+   {
+    "name": "15 SWEET & SOUR",
+    "description": "(phad prow warn) The Mews special homemade sweet & sour with pineapple, tomato, carrot, red pepper & spring onion.",
+    "price": "£13.50"
+   },
+   {
+    "name": "16 OYSTER SAUCE",
+    "description": "(namman hoy) Served with mushroom, celery, carrot & spring onion.",
+    "price": "£13.50"
+   },
+   {
+    "name": "17 SIAMESE GARLIC",
+    "description": "(phad gratiem) Siamese fried garlic, broccoli, onion, spring onion & black pepper",
+    "price": "£13.50"
+   },
+   {
+    "name": "18 SWEET BASIL",
+    "description": "(phad krapao) Sweet basil, fresh chilli, garlic, green bean, red pepper, onion & soy sauce.",
+    "price": "£13.50"
+   },
+   {
+    "name": "19 GINGER",
+    "description": "(phad king) Ginger, spring onion, red pepper & fresh mushroom.",
+    "price": "£13.50"
+   },
+   {
+    "name": "20 SPICY CHILLI OIL",
+    "description": "(phad nam prik pau) Spicy chilli oil, stir fried with spring onion & crunchy fresh vegetables.",
+    "price": "£13.50"
+   }
+  ],
+  "CURRY DISHES": [
+   {
+    "name": "26 RED CURRY",
+    "description": "(gaeng deng) A sauce made from dried red chillies & coconut milk, green beans, chilli, bamboo shoots, fresh red pepper & carrot",
+    "price": "£13.50"
+   },
+   {
+    "name": "27 GREEN CURRY",
+    "description": "(gaeng keowan) A sauce made from fresh green chillies, green herbs & coconut milk, green beans, chilli, fresh red pepper, courgette & carrots",
+    "price": "£13.50"
+   },
+   {
+    "name": "28 MASSAMAM CURRY",
+    "description": "(gaeng massamam) Muslim curry with coconut milk. Served with potatoes, onions, & cashew nuts.",
+    "price": "£13.50"
+   },
+   {
+    "name": "29 JUNGLE CURRY",
+    "description": "(gaeng pa) Similar to a green or red curry but without the use of coconut milk. Served with green beans, mixed vegetables, sweet basil, carrot & fresh red pepper.",
+    "price": "£13.50"
+   },
+   {
+    "name": "30 PANANG CURRY",
+    "description": "(gaeng panang) Served with peppers, green beans, coconut milk & lime leaves",
+    "price": "£13.50"
+   }
+  ],
+  "SEAFOOD DISHES": [
+   {
+    "name": "31 THAI SWEET BASIL MIXED SEAFOOD",
+    "description": "(ahan talay krapao) A mix of king prawn, squid, mussels & seabass with basil, fresh chilli, red pepper, green beans & onions",
+    "price": "£17.00"
+   },
+   {
+    "name": "32 SIAMESE MIXED SEAFOOD",
+    "description": "(ahan talay gratiem) Siamese fried king prawn, squid, mussels & seabass with garlic, broccoli, onion & spring onion.",
+    "price": "£17.00"
+   },
+   {
+    "name": "33 CRISPY SEABASS",
+    "description": "(nam prik pau pla) Spicy chilli oil stir fried with crunchy fresh vegetables.",
+    "price": "£19.50"
+   },
+   {
+    "name": "34 LEMON SEABASS",
+    "description": "(pla nang manow) Steamed fish with lemon juice, lemon & crunchy fresh vegetables",
+    "price": "£19.50"
+   }
+  ],
+  "MEWS SPECIALS": [
+   {
+    "name": "35 ROAST DUCK IN HONEY & THAI SAUCE",
+    "description": "(phed ohb nam phuung) Homemade sauce from ginger, garlic & brown beans. Served with pickled ginger & sweet soy sauce.",
+    "price": "£14.50"
+   },
+   {
+    "name": "36 MEWS SPECIAL DRY YELLOW CURRY",
+    "description": "(phad pung galee) Stir fried yellow curry with spring onion, egg, chilli, evaporated milk, celery & mushroom.",
+    "price": "£13.50"
+   },
+   {
+    "name": "37 PHAD THAI NOODLES",
+    "description": "(phad thai) Thai fried rice noodles with chicken, king prawn, spring onion, egg, tofu, beansprout & ground peanuts. Spicy chilli sauce.",
+    "price": "£14.50"
+   }
+  ],
+  "SIDES": [
+   {
+    "name": "21 BEAUTIFUL STEAMED RICE",
+    "description": "(kow suay) VE",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "22 EGG FRIED RICE",
+    "description": "(kow pud kai) V",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "23 COCONUT STEAMED RICE",
+    "description": "(kow suay) VE",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "24 PINEAPPLE FRIED RICE",
+    "description": "(kow pud nud)",
+    "price": "£7.50"
+   },
+   {
+    "name": "25 THAI PRAWN CRACKERS",
+    "description": "(khawkeriyb kung) With homemade sweet chilli",
+    "price": "£3.50"
+   },
+   {
+    "name": "41 PAD CEE YOO NOODLES",
+    "description": "(pad cee yoo) Noodles with soy sauce, oyster sauce, spring onion, red onion, egg & bean sprouts.",
+    "price": "£7.00"
+   },
+   {
+    "name": "42 STIR FRIED MIXED VEGETABLES V",
+    "description": "(Padpak ruam)",
+    "price": "£7.00",
+    "vegetarian": true
+   },
+   {
+    "name": "43 SPICY THAI SALAD",
+    "description": "(som tami) Fresh mango or papaya (depending on what is available), cucumber, carrot, cherry tomato, spring onions, lime, fish sauce & coriander in a spicy Thai dressing.",
+    "price": "£8.00"
+   }
+  ],
+  "RICE & NOODLE DISHES": [
+   {
+    "name": "38 MEWS FRIED RICE",
+    "description": "Egg fried rice with onion, carrot & spring onion plus your choice of Chicken or Beef included in the price",
+    "price": "£12.00"
+   },
+   {
+    "name": "39 MEWS FRIED NOODLES",
+    "description": "Egg fried noodles with carrot, broccolli & cauliflower plus your choice of Chicken or Beef included in the price",
+    "price": "£12.00"
+   },
+   {
+    "name": "40 THAI FRIED RICE NOODLES",
+    "description": "(phad ke mau) Your choice of chicken or beef with chilli oil, fresh chillies, sweet basil, lime leaves, lemon grass, egg, & crunchy veg.",
+    "price": "£13.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

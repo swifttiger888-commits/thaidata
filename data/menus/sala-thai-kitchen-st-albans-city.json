@@ -13,7 +13,7 @@
    {
     "num": "",
     "name": "Fried Chicken Wings",
-    "description": "Served with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "description": "Served with your choice of: Jasmine Rice Egg Fried Rice Egg Noodles - includes Cucumber and Carrot sticks -",
     "price": "£ 7.95",
     "vegetarian": false,
     "heat": null
@@ -21,7 +21,7 @@
    {
     "num": "",
     "name": "Tofu in Breadcrumbs",
-    "description": "Served in a wrap, or with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "description": "Served in a wrap, or with your choice of: Jasmine Rice Egg Fried Rice Egg Noodles - includes Cucumber and Carrot sticks -",
     "price": "£ 7.95",
     "vegetarian": false,
     "heat": null
@@ -29,7 +29,7 @@
    {
     "num": "",
     "name": "Chicken Breast in Breadcrumbs",
-    "description": "Served in a wrap, or with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "description": "Served in a wrap, or with your choice of: Jasmine Rice Egg Fried Rice Egg Noodles - includes Cucumber and Carrot sticks -",
     "price": "£ 7.95",
     "vegetarian": false,
     "heat": null
@@ -45,7 +45,7 @@
    {
     "num": "",
     "name": "Satay Chicken",
-    "description": "Served in a wrap, or with your choice of:\nJasmine Rice\nEgg Fried Rice\nEgg Noodles\n- includes Cucumber and Carrot sticks -",
+    "description": "Served in a wrap, or with your choice of: Jasmine Rice Egg Fried Rice Egg Noodles - includes Cucumber and Carrot sticks -",
     "price": "£ 7.95",
     "vegetarian": false,
     "heat": null

@@ -1,0 +1,694 @@
+{
+ "restaurant": "Mango Tree",
+ "city": "Cardiff",
+ "fsa_id": "1893532",
+ "address": "Cardiff",
+ "source": "https://mangotreecardiff.co.uk/cardiff/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Onion Bhaji",
+    "description": "Onion mixed with lentils, flour & herbs, deep fried until golden & crisp",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Samosa",
+    "description": "Filo pastry parcels filled with aromatic spiced vegetables",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Meat Samosa",
+    "description": "Filo pastry parcels filled with mince meat",
+    "price": "£3.50"
+   },
+   {
+    "name": "Aloo Chat",
+    "description": "Potato marinated in turmeric and chaat massala sauce",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chana Chat",
+    "description": "Chickpeas in chaat massala sauce",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Garlic Mushroom",
+    "description": "Mushrooms sauteed in garlic, served in a creamy sauce",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Tikka Starter",
+    "description": "Succulent pieces of chicken marinated in yoghurt & mild spices then baked in the tandoor",
+    "price": "£3.95"
+   },
+   {
+    "name": "Lamb Tikka Starter",
+    "description": "Succulent pieces of lamb marinated in yoghurt & mild spices then baked in the tandoor",
+    "price": "£4.50"
+   },
+   {
+    "name": "Chicken Chaat",
+    "description": "Tandoori marinated chicken, sealed in chaat massala sauce",
+    "price": "£3.95"
+   },
+   {
+    "name": "Tandoori Chicken Starter",
+    "description": "on the bone - Chicken marinated in a tangy selection of spices before being baked",
+    "price": "£3.95"
+   },
+   {
+    "name": "Sheek Kebabs Starter",
+    "description": "Chargrilled minced lamb mixed with herbs & spices",
+    "price": "£4.50"
+   },
+   {
+    "name": "Mixed Kebab",
+    "description": "2 pieces chicken tikka, 2 pieces lamb tikka, 1 piece sheek kebab",
+    "price": "£4.95"
+   },
+   {
+    "name": "Lamb Chops Starter",
+    "description": "Slow braised lamb chops marinated in chilli and garlic cooked in the charcoal pit oven",
+    "price": "£5.95"
+   },
+   {
+    "name": "Prawn Puri",
+    "description": "An array of spices & tangy prawns, smoothered over a deep fried homemade bread",
+    "price": "£4.50"
+   },
+   {
+    "name": "King Prawn Puree",
+    "description": "umbo King Prawns caramelised in fenugreek, onions & tomato puree, served on leavened bread",
+    "price": "£5.95"
+   },
+   {
+    "name": "Mix Platter",
+    "description": "2 onion bhaji, 1 vegetable samosa, 2 chicken tikka",
+    "price": "£4.95"
+   },
+   {
+    "name": "Chicken Sizzler",
+    "description": "Chicken cooked in a clay oven fried with sliced onions and peppers spiced with sweet chilli sauce",
+    "price": "£5.50"
+   },
+   {
+    "name": "Shammi Kebab",
+    "description": "Marinated lamb, wrapped with omelette",
+    "price": "£5.50"
+   },
+   {
+    "name": "Chicken Cheese Sizzler",
+    "description": "Chicken cooked in a clay oven served with sliced onions topped with cheese",
+    "price": "£5.50"
+   }
+  ],
+  "Curry Dishes": [
+   {
+    "name": "Curry",
+    "description": "plain curry sauce with coriander",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Madras",
+    "description": "plain curry sauce with coriander",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Vindaloo",
+    "description": "Extra hot ground red chilli sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Pathia",
+    "description": "Ground chilli, lemon zest in a thick & flavoursome sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Dansak",
+    "description": "Lentils, chilli, lemon in a rich thick sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Bhuna",
+    "description": "Caramelised onions, tomatoes in a rich sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Dopiaza",
+    "description": "Chopped onions & sweet peppers prepared in a thick sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Rogan",
+    "description": "Chopped tomatoes, caramelised onions & coriander sauce",
+    "price": "£From £7.95"
+   }
+  ],
+  "Mild Dishes": [
+   {
+    "name": "Mango",
+    "description": "Mild spices, cream & mango",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Peshwari",
+    "description": "Cinnamon, coconut milk, infused with sweet peppers & onions",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Tikka Masala",
+    "description": "Red massala sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Korma",
+    "description": "Coconut and fresh cream, sweet, creamy & luxurious",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Pasanda",
+    "description": "A delightful Indian dish, flavoured with mild spices",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Butter",
+    "description": "Coconut milk, garnished with a light butter sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Makhani",
+    "description": "creamy sauce, cardamom, cumin & a range of mild spices",
+    "price": "£From £7.95"
+   }
+  ],
+  "House Special": [
+   {
+    "name": "Hyderabad",
+    "description": "Tender chicken/lamb with ginger & curry leaves served in Chef’s Special sauce with potatoes",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Achary",
+    "description": "Sliced onions, green peppers, green chillies",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Kolapuri",
+    "description": "Hot & spicy turmeric, cumin, coriander and green chillies",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Balti",
+    "description": "Ground spices and cooked with green peppers & red tomatoes",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Balti Saag",
+    "description": "",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Methi",
+    "description": "Fenugreek leaves in blended herbs and spices",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Naga",
+    "description": "Caramelised onion, fresh green chillies in spicy naga sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Korai",
+    "description": "Chopped onion & capsicum indelicately thick sizzling Tavah sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Tikka Bhuna",
+    "description": "Whole spices, diced onion & tomatoes",
+    "price": "£From £7.95"
+   }
+  ],
+  "Biryani": [
+   {
+    "name": "Chicken Biryani",
+    "description": "",
+    "price": "£8.95"
+   },
+   {
+    "name": "Chicken Tikka Biryani",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Lamb Biryani",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Lamb Tikka Biryani",
+    "description": "",
+    "price": "£10.95"
+   },
+   {
+    "name": "Prawn Biryani",
+    "description": "",
+    "price": "£8.95"
+   },
+   {
+    "name": "King Prawn Biryani",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tandoori King Prawn Biryani",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Mixed Vegetable Biryani",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mushroom & Paneer Biryani",
+    "description": "",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mango Tree Special Biriyani",
+    "description": "Chicken, lamb & vegetables mixed with egg",
+    "price": "£11.95"
+   }
+  ],
+  "Seafood and Tandoori": [
+   {
+    "name": "Tandoori King Prawn Saag",
+    "description": "King prawn with spinach, onion, coriander, tomatoes and herbs",
+    "price": "£12.95"
+   },
+   {
+    "name": "Fish Suka",
+    "description": "Spicy salmon cooked with green chillies, coriander and tomatoes",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tandoori King Prawn Hari",
+    "description": "King Prawn with caramelised onions and tomatoes in a rich sauce",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tandoori Fish Tikka",
+    "description": "Fish with sliced onions & coriander in a special sauce, served in a sizzler",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tandoori King Prawn Main",
+    "description": "Tandoori marinade cooked with char-grilled tandoori vegetables",
+    "price": "£12.95"
+   },
+   {
+    "name": "Tandoori Chicken Half",
+    "description": "On the bone - Chicken slow grilled in a tandoori sauce, with grilled onions & peppers",
+    "price": "£9.95"
+   },
+   {
+    "name": "Chicken Tikka Main",
+    "description": "Succulent pieces of Chicken marinated in yoghurt & mild spices then baked in the tandoor",
+    "price": "£8.95"
+   },
+   {
+    "name": "Lamb Tikka Main",
+    "description": "Succulent pieces of lamb marinated in yoghurt & mild spices then baked in the tandoor",
+    "price": "£9.95"
+   },
+   {
+    "name": "Lamb Chops Main",
+    "description": "Slow braised lamb chops marinated in chilli & garlic cooked in the tandoor",
+    "price": "£10.95"
+   },
+   {
+    "name": "Chicken Shashlick",
+    "description": "Chicken Marinated with spices then cooked in tandoor with cream, peppers and tomatoes",
+    "price": "£9.95"
+   },
+   {
+    "name": "Lamb Shashlick",
+    "description": "Lamb Marinated with spices then cooked in tandoor with cream, peppers and tomatoes",
+    "price": "£10.95"
+   },
+   {
+    "name": "Paneer Tikka Shashlick",
+    "description": "Cheese served with onions, peppers & coriander cooked in the clay oven",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken & Paneer Tikka Shashlick",
+    "description": "Chicken and cheese served with onions, peppers & coriander",
+    "price": "£10.95"
+   },
+   {
+    "name": "Tandoori Mix Grill",
+    "description": "3pcs Chicken Tikka, 3pcs Lamb Tikka, 1pc Sheek Kebab, 1 Tandoori Chicken, serves with naan and salad",
+    "price": "£12.95"
+   }
+  ],
+  "Chef Special": [
+   {
+    "name": "Chicken Sandia",
+    "description": "On the bone Tandoori Chicken, mincemeat fairy hot with bhuna sauce",
+    "price": "£9.50"
+   },
+   {
+    "name": "Shatkora",
+    "description": "Delicious chunky pieces of tender lamb cooked with onions, garlic, ginger &ground mixed spices, flavoured with Sylheti citrus fruit",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Tanga Murg",
+    "description": "Chargrilled meat tempered with mint sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Garlic Chilli",
+    "description": "Meat tempered in pan fried fresh garlic & chilli sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Garlic Massala",
+    "description": "Chicken or lamb, garlic, green chillies in a thick massala sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Murug Coriander",
+    "description": "Cooked in caramelised onion & coriander sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Flaming Goan",
+    "description": "Marinated chicken cooked with lightly beated egg with chopped green chillies ina delicate massala",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "MR India Curry",
+    "description": "Spicy, with mince sliced onions, green chilli in a spicy sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Express Balti",
+    "description": "Cooked in a hot & slightly tangy sauce with fresh green chillies, capsicum, tomatoes, onions & finished in a fairly dry sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Express Shahi",
+    "description": "Marinated meat, minced lamb & diced onions, in a rich sauce",
+    "price": "£From £7.95"
+   },
+   {
+    "name": "Rezala",
+    "description": "Cooked in a hot sauce made with fresh green chilies, capsicum, tomatoes, onions & yogurt",
+    "price": "£From £7.95"
+   }
+  ],
+  "Vegetable Dishes": [
+   {
+    "name": "Matar Paneer",
+    "description": "Indian cottage cheese & chickpeas in a subtle tomato puree creamy sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Palak Paneer",
+    "description": "Chickpeas in a subtle tomato puree creamy sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chana Masala",
+    "description": "Chickpeas sauteed in red masala puree, in a rich sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Katchuri Dansak",
+    "description": "Vegetable ball prepared with lentils, lemon & sugar in a unique sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Katchuri Jalfrezi",
+    "description": "Vegetable ball prepared with sliced onions, lemon & sugar in a unique sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   }
+  ],
+  "Vegetable Side Dishes": [
+   {
+    "name": "Saag Aloo",
+    "description": "Spinach & Potato sauteed in light spices",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Bombay Aloo",
+    "description": "Potato lightly spices",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mushroom Bhaji",
+    "description": "Mushrooms sauteed in light spices",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Saag Bhaji",
+    "description": "Spinach sauteed in light spices",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mixed Bhaji",
+    "description": "Seasonal vegetables lightly spiced",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Aloo Gobi",
+    "description": "Potato & cauliflower lightly spiced",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Cauliflower Bhaji",
+    "description": "Cauliflower in light spices",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Bindi Bhaji",
+    "description": "Okra tropical vegetable lightly spiced",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tarka Daal",
+    "description": "Lentils pan cooked with garlic",
+    "price": "£3.95",
+    "vegetarian": true
+   }
+  ],
+  "Rice Dishes": [
+   {
+    "name": "Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Pilau Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Keema Rice",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Mushroom Rice",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Lemon Rice",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Special Rice",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Mixed Veg Rice",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Garlic Coriander Rice",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   }
+  ],
+  "Naan Breads": [
+   {
+    "name": "Plain Naan",
+    "description": "",
+    "price": "£3.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Peshwari Naan",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Garlic Naan",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chilli Naan",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Cheese Naan",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Keema Naan",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Paratha",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stuffed Paratha",
+    "description": "",
+    "price": "£2.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chapati",
+    "description": "",
+    "price": "£1.95",
+    "vegetarian": true
+   }
+  ],
+  "Sundries": [
+   {
+    "name": "Green Salad",
+    "description": "",
+    "price": "£1.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Raita",
+    "description": "",
+    "price": "£1.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Plain Poppadom",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Poppadom",
+    "description": "",
+    "price": "£0.80",
+    "vegetarian": true
+   },
+   {
+    "name": "Mint Sauce",
+    "description": "",
+    "price": "£0.80",
+    "vegetarian": true
+   },
+   {
+    "name": "Onion Salad",
+    "description": "",
+    "price": "£0.80",
+    "vegetarian": true
+   },
+   {
+    "name": "Mango Chutney",
+    "description": "",
+    "price": "£0.80",
+    "vegetarian": true
+   },
+   {
+    "name": "Pickle",
+    "description": "",
+    "price": "£0.80",
+    "vegetarian": true
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   }
+  ],
+  "Set Meals": [
+   {
+    "name": "Set Meal For 1 Person",
+    "description": "1 ONION BHAJI 1 CHICKEN TIKKA MASALA 1 PILAU RICE 1 NAAN 1 POPPADUM",
+    "price": "£18.00"
+   },
+   {
+    "name": "Set Menu For 2 Persons",
+    "description": "ONION BHAJI CHICKEN TIKKA CHICKEN TIKKA BHUNA LAMB BALTI SAG ALOO PLAIN NAAN PILAU RICE MINT SAUCE + SALAD",
+    "price": "£38.00"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,252 @@
+{
+ "restaurant": "Jasmine Thai",
+ "city": "London",
+ "fsa_id": "345062",
+ "address": "London",
+ "source": "https://jasminethairestaurant.wordpress.com/wp-content/uploads/2025/12/main-menu-dec-2025_compressed.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Noodles": [
+   {
+    "name": "Pad Thai (contain peanuts)",
+    "description": "Tofu £10 | Chicken £10 | Beef £12 | Prawn £12",
+    "price": null
+   },
+   {
+    "name": "Pad See Ew (Soya Noodle)",
+    "description": "Tofu £10 | Chicken £10 | Beef £12 | Prawn £12",
+    "price": null
+   },
+   {
+    "name": "Pad Kee Mow (Spicy Noodle)",
+    "description": "Tofu £10 | Chicken £10 | Beef £12 | Prawn £12",
+    "price": null
+   }
+  ],
+  "Thai Curry": [
+   {
+    "name": "Green Curry + Jasmine Rice",
+    "description": "Tofu £12.95 | Chicken £12.95 | Beef £13.95 | Prawn £13.95",
+    "price": null
+   },
+   {
+    "name": "Penang Curry + Jasmine Rice",
+    "description": "Tofu £12.95 | Chicken £12.95 | Beef £13.95 | Prawn £13.95",
+    "price": null
+   },
+   {
+    "name": "Massaman Curry + Jasmine Rice",
+    "description": "Chicken £12.95 | Beef £13.95",
+    "price": null
+   },
+   {
+    "name": "Chuchi Salmon + Jasmine Rice",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "Roasted Duck Curry + Jasmine Rice",
+    "description": "",
+    "price": "£15.95"
+   }
+  ],
+  "Stir-fried": [
+   {
+    "name": "Kra Pao (Chilli & Basil) + Jasmine Rice",
+    "description": "Tofu £10 | Chicken £10 | Pork £10",
+    "price": null
+   },
+   {
+    "name": "Mix Vegetables with meat…",
+    "description": "Chicken £12.95 | Prawn £13.95",
+    "price": null
+   },
+   {
+    "name": "Sweet & Sour Chicken + Jasmine Rice",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Crispy Chilli Fish + Jasmine Rice",
+    "description": "",
+    "price": "£15"
+   },
+   {
+    "name": "Duck Tamarind + Jasmine Rice",
+    "description": "",
+    "price": "£15"
+   },
+   {
+    "name": "Meat Fried Rice",
+    "description": "Chicken £10 | Pork £10 | Prawn £12",
+    "price": null
+   },
+   {
+    "name": "Spicy Fried Rice",
+    "description": "Chicken £10 | Pork £10 | Prawn £12",
+    "price": null
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "Chicken £10 | Pork £10 | Prawn £12",
+    "price": null
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Small Tom Yum Soup (Prawn)",
+    "description": "",
+    "price": "£6"
+   },
+   {
+    "name": "Tom Yum Noodle Soup (Prawn)",
+    "description": "",
+    "price": "£13.95"
+   }
+  ],
+  "Side Dish": [
+   {
+    "name": "Prawn Crackers",
+    "description": "",
+    "price": "£2.5"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "",
+    "price": "£5",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Satay (contain peanuts)",
+    "description": "",
+    "price": "£6"
+   },
+   {
+    "name": "Dim Sum (pork & prawn mixed)",
+    "description": "",
+    "price": "£5"
+   },
+   {
+    "name": "Prawn Tempura",
+    "description": "",
+    "price": "£6"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "",
+    "price": "£6",
+    "vegetarian": true
+   },
+   {
+    "name": "Prawn Toast",
+    "description": "",
+    "price": "£6"
+   }
+  ],
+  "Extra": [
+   {
+    "name": "Stir-fried Mix Vegetables",
+    "description": "",
+    "price": "£8.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "£3",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Egg",
+    "description": "",
+    "price": "£1",
+    "vegetarian": true
+   }
+  ],
+  "Drinks": [
+   {
+    "name": "Pepsi",
+    "description": "",
+    "price": "£2.5"
+   },
+   {
+    "name": "Coke Zero",
+    "description": "",
+    "price": "£2.5"
+   },
+   {
+    "name": "Lemonade",
+    "description": "",
+    "price": "£2.5"
+   },
+   {
+    "name": "Fanta Orange",
+    "description": "",
+    "price": "£2.5"
+   },
+   {
+    "name": "Still Water (small)",
+    "description": "",
+    "price": "£2.5"
+   },
+   {
+    "name": "Sparkling (small)",
+    "description": "",
+    "price": "£2.5"
+   },
+   {
+    "name": "Jasmine Tea",
+    "description": "",
+    "price": "£2"
+   },
+   {
+    "name": "Green Tea",
+    "description": "",
+    "price": "£2"
+   },
+   {
+    "name": "Thai Milk Tea (Hot) / (Iced)",
+    "description": "",
+    "price": "£4"
+   },
+   {
+    "name": "Green Milk Tea (Hot) / (Iced)",
+    "description": "",
+    "price": "£4"
+   },
+   {
+    "name": "Thai Iced Co ee (with Milk)",
+    "description": "",
+    "price": "£4"
+   },
+   {
+    "name": "Thai Iced Black Co ee (no Milk)",
+    "description": "",
+    "price": "£3.5"
+   },
+   {
+    "name": "Thai Beer",
+    "description": "",
+    "price": "£4.5"
+   },
+   {
+    "name": "House Red or White Wine by Glass",
+    "description": "",
+    "price": "£4.5"
+   },
+   {
+    "name": "House Red or White Wine by Bottle",
+    "description": "",
+    "price": "£18"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

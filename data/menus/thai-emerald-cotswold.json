@@ -1,0 +1,120 @@
+{
+ "restaurant": "Thai Emerald",
+ "city": "Cotswold",
+ "fsa_id": "17370",
+ "address": "Cotswold",
+ "source": "https://www.thai-emerald.co.uk/_files/ugd/8e53b5_519b7a951662494a92125bb32be2ccdb.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "The Festive Set Lunch": [
+   {
+    "name": "SAUTÉED BEEF",
+    "description": "Chicken satay Beef sautéed with oyster sauce, onion, pepper, spring onion, mushroom",
+    "price": "£10.95"
+   },
+   {
+    "name": "CASHEW NUT CHICKEN",
+    "description": "Vegetable spring roll Chicken tossed in flour, stir-fried with cashew nut, onion, spring onion, water chestnut, dried chilli, roast chilli paste",
+    "price": "£10.95"
+   },
+   {
+    "name": "SWEET & SOUR FISH",
+    "description": "Coconut prawn Battered fish topped with onion, pepper, sweet & sour sauce",
+    "price": "£10.95"
+   },
+   {
+    "name": "GREEN CHICKEN CURRY",
+    "description": "Calamari Green chicken curry, coconut milk, pepper, mangetout, sweet basil",
+    "price": "£10.95"
+   },
+   {
+    "name": "MASSAMAN CHICKEN CURRY",
+    "description": "Pork spare rib Massaman chicken curry, onion, potato, roast peanut",
+    "price": "£10.95"
+   },
+   {
+    "name": "CHICKEN PHAD THAI",
+    "description": "Chicken satay Wok-fried rice noodles, chicken, egg, bean curd, bean sprout, chive, sweet turnip, with ground peanut",
+    "price": "£10.95"
+   },
+   {
+    "name": "SWEET & SOUR VEGETABLE",
+    "description": "Vegetable satay Vegetables stir fried with sweet & sour sauce, cashew nut",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE PHAD THAI",
+    "description": "Vegetable spring roll Wok-fried rice noodles, vegetables, bean curd, chive, sweet turnip, with ground peanut",
+    "price": "£10.95",
+    "vegetarian": true
+   }
+  ],
+  "The Christmas Banquet": [
+   {
+    "name": "MIXED STARTER",
+    "description": "Chicken satay, Coconut prawn, Vegetable spring roll, Pork spare rib",
+    "price": "£22.50 per person"
+   },
+   {
+    "name": "SAUTÉED BEEF WITH OYSTER SAUCE",
+    "description": "onion, pepper, spring onion, mushroom",
+    "price": "£22.50 per person"
+   },
+   {
+    "name": "DEEP-FRIED FISH WITH GINGER",
+    "description": "soya bean, celery, fungus mushroom, spring onion",
+    "price": "£22.50 per person"
+   },
+   {
+    "name": "STIR-FRIED VEGETABLES",
+    "description": "garlic, oyster sauce",
+    "price": "£22.50 per person"
+   },
+   {
+    "name": "EGG FRIED RICE",
+    "description": "",
+    "price": "£22.50 per person",
+    "vegetarian": true
+   }
+  ],
+  "Christmas Day": [
+   {
+    "name": "GLASS OF CHAMPAGNE",
+    "description": "",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "THAI CHRISTMAS BUFFET",
+    "description": "of more than 50 delicious dishes from all over Thailand",
+    "price": null
+   },
+   {
+    "name": "TRADITIONAL ENGLISH BUFFET",
+    "description": "including a variety of meats, roast potatoes, Yorkshire pudding, mixed vegetables and all the festive trimmings",
+    "price": null
+   },
+   {
+    "name": "SELECTION OF SWEETS",
+    "description": "",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "TEA OR FILTER COFFEE",
+    "description": "",
+    "price": null,
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "10.95",
+  "22.50 per person",
+  "(minimum 6 people)",
+  "60.00 per person",
+  "30.00 children under 12"
+ ]
+}

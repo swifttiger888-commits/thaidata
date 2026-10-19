@@ -1,0 +1,266 @@
+{
+ "restaurant": "Nusara Thai",
+ "city": "Bournemouth",
+ "fsa_id": "1402379",
+ "address": "Bournemouth",
+ "source": "https://45364ae0-072f-4bec-88ef-47788fbad5b1.filesusr.com/ugd/1a8be3_7745e48092764c4b861abe68c131562a.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Thai Tapas - อาหารว่าง": [
+   {
+    "name": "Thai Prawn Crackers g",
+    "description": "",
+    "price": "£4.5"
+   },
+   {
+    "name": "Thai Tapas Platter for Two n, g",
+    "description": "Moo ping, chicken satay, vegetable spring rolls, dim sum & prawn crackers.",
+    "price": "£16"
+   },
+   {
+    "name": "Krob Squid",
+    "description": "Crispy squid served with spicy oyster sauce.",
+    "price": "£9.5"
+   },
+   {
+    "name": "Laab Pak Salad Parcels veo",
+    "description": "Mixed vegetables served in baby gems flavoured with lime, herbs and onion. (4)",
+    "price": "£8"
+   },
+   {
+    "name": "Laab Gai Salad Parcels",
+    "description": "Thai minced chicken served in baby gems flavoured with lime, fish sauce & Thai herbs. (4)",
+    "price": "£9"
+   },
+   {
+    "name": "Duck Spring Rolls g",
+    "description": "Crispy spring rolls with shredded duck and spring onion, served with our house tamarind sauce.",
+    "price": "£9.5"
+   },
+   {
+    "name": "Pak Spring Rolls g",
+    "description": "Handmade vegetable spring rolls (4).",
+    "price": "£7.5"
+   },
+   {
+    "name": "Prawn Tempura",
+    "description": "Lightly battered prawn tempura with a sweet chilli sauce (4).",
+    "price": "£10"
+   },
+   {
+    "name": "Botmart Kanom Jeeb g",
+    "description": "Handmade Dim sum to chef Botmart’s special recipe (4).",
+    "price": "£9.5"
+   },
+   {
+    "name": "Thamm’s Slow Cooked Ribs",
+    "description": "Half a rack of Thai spiced slow cooked ribs cooked to Head Chef Thamm’s secret recipe.",
+    "price": "£14.5"
+   },
+   {
+    "name": "Moo Ping",
+    "description": "Marinated pork satay served with spicy jaew sauce (3).",
+    "price": "£9"
+   },
+   {
+    "name": "Chicken Satay n",
+    "description": "Marinated chicken skewers served with a peanut based sauce (3).",
+    "price": "£9.5"
+   },
+   {
+    "name": "Crispy Beef",
+    "description": "Beef strips, lightly battered with spicy oyster sauce.",
+    "price": "£9.5"
+   },
+   {
+    "name": "Pak Tempura veo",
+    "description": "A medley of vegetables dusted and dipped in tempura and lightly fried.",
+    "price": "£7.5"
+   },
+   {
+    "name": "Thai Fried Chicken ‘TFC’ g",
+    "description": "Chef Botmart’s secret recipe crispy chicken pieces.",
+    "price": "£8"
+   }
+  ],
+  "Grill - ปิง้ ย่าง": [
+   {
+    "name": "Duck Breast Tamarind n",
+    "description": "Succulent duck breast, served in a sweet and sticky tamarind sauce with cashew nuts and crispy seaweed.",
+    "price": "£19"
+   },
+   {
+    "name": "Grilled Sea Bass Chuchee NEW",
+    "description": "Sea bass fillet, rich chuchee sauce with spinach and basil.",
+    "price": "£24"
+   },
+   {
+    "name": "Beef Kuay Tiou g NEW",
+    "description": "Sliced rump steak over yellow noodles with a rich soy, chilli and Thai basil seasoning.",
+    "price": "£14"
+   },
+   {
+    "name": "Bangkok Sea Bass g",
+    "description": "Grilled sea bass in a nest of crispy noodles, served in rich medium spiced curry sauce.",
+    "price": "£21"
+   },
+   {
+    "name": "Rump Steak Tai Dum",
+    "description": "Sliced rump steak in a cracked black pepper stir fry sauce.",
+    "price": "£18"
+   },
+   {
+    "name": "The Boozy Duck",
+    "description": "Tender duck breast served in a fresh, spicy stir-fry sauce.",
+    "price": "£19"
+   }
+  ],
+  "Pot - หม้อ": [
+   {
+    "name": "Khao Soi Noodles g, n",
+    "description": "A rich, red, noodle curry. Served with grilled chicken thighs and topped with crispy noodles.",
+    "price": "£17"
+   },
+   {
+    "name": "Massaman Lamb Shank n",
+    "description": "Whole lamb shank served in a Massaman curry sauce.",
+    "price": "£22"
+   }
+  ],
+  "Curries - แกง": [
+   {
+    "name": "Panang Curry veo",
+    "description": "A delicious, rich, creamy and fragrant curry.",
+    "price": "£14"
+   },
+   {
+    "name": "Green Curry veo",
+    "description": "The classic Thai curry with coconut milk, lime leaf and kra chai.",
+    "price": "£14"
+   },
+   {
+    "name": "Red Curry veo",
+    "description": "Traditional red curry, rich, robust and moderate chilli heat.",
+    "price": "£14"
+   },
+   {
+    "name": "Massaman Curry n, veo",
+    "description": "Rich, creamy & aromatic Massaman curry sauce.",
+    "price": "£14"
+   },
+   {
+    "name": "Jungle Curry g",
+    "description": "A broth style, warming hot & spicy jungle curry.",
+    "price": "£14"
+   }
+  ],
+  "Wok - ผัด": [
+   {
+    "name": "Med Ma Muang veo n",
+    "description": "Wok cooked cashew stir fry, with chicken, vegetable, tofu or prawn (+£2.50).",
+    "price": "£15"
+   },
+   {
+    "name": "Thamanoon Pad Kee Mao",
+    "description": "Our famous chopped rump steak spicy noodles.",
+    "price": "£19"
+   },
+   {
+    "name": "Holy Basil Kra Pow & Khai Dao veo",
+    "description": "A spicy minced beef or chicken stir fry and a Thai style egg.",
+    "price": "£16"
+   },
+   {
+    "name": "Nusara Phad Thai n",
+    "description": "Phad Thai served to Nusara’s special recipe, with veg, chicken or prawn (+2.50).",
+    "price": "£17"
+   },
+   {
+    "name": "Pad See Ew",
+    "description": "A mild rice noodle dish, cooked in our house stir fry sauce and served with chicken breast.",
+    "price": "£17"
+   },
+   {
+    "name": "Pineapple Pad Khao n NEW",
+    "description": "Yellow fried rice with chicken, prawn, cashew nuts and pineapple chunks.",
+    "price": "£12.5"
+   },
+   {
+    "name": "Chiang Mai Spicy Fried Rice g",
+    "description": "Thai spiced rice with chilli & fragrant Thai basil with vegetable, chicken or prawn (+£2.50).",
+    "price": "£17"
+   }
+  ],
+  "Soups & Salads - ซุปและสลัด": [
+   {
+    "name": "Kao Lao g NEW",
+    "description": "Tender beef chunks, in a fragrant beef broth with star anise, beansprouts, and cherry tomatoes.",
+    "price": "£13"
+   },
+   {
+    "name": "Tom Yum g",
+    "description": "Hot and sour prawn Thai soup.",
+    "price": "£9.5"
+   },
+   {
+    "name": "Yum Neua",
+    "description": "Marinated rump steak salad with lime, chilli, and coriander.",
+    "price": "£14"
+   },
+   {
+    "name": "Land & Sea Salad NEW",
+    "description": "A refreshing glass noodle salad served with prawn, chicken and squid.",
+    "price": "£12"
+   }
+  ],
+  "Sides - เครื่องเคียง": [
+   {
+    "name": "Jasmine Rice veo",
+    "description": "",
+    "price": "£3.5"
+   },
+   {
+    "name": "Sticky Rice veo",
+    "description": "",
+    "price": "£3.5"
+   },
+   {
+    "name": "Pad Pak veo",
+    "description": "",
+    "price": "£5.5"
+   },
+   {
+    "name": "Wok-Fried Chilli Broccoli veo",
+    "description": "",
+    "price": "£6"
+   },
+   {
+    "name": "Coconut Rice veo",
+    "description": "",
+    "price": "£5.5"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.5"
+   },
+   {
+    "name": "Yellow Noodles veo,g",
+    "description": "",
+    "price": "£5.5"
+   },
+   {
+    "name": "Nu Potatoes g",
+    "description": "",
+    "price": "£5"
+   },
+   {
+    "name": "Cucumber Salad n",
+    "description": "",
+    "price": "£6.5"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -139,7 +139,7 @@
    {
     "num": "7.",
     "name": "Duck Curry",
-    "description": "Roast duck only\nSpecial roasted duck curry made from “dried red chilli” cooked in coconut milk, pineapple pieces, red and green peppers, peas, tomatoes and sweet basil leaves",
+    "description": "Roast duck only Special roasted duck curry made from “dried red chilli” cooked in coconut milk, pineapple pieces, red and green peppers, peas, tomatoes and sweet basil leaves",
     "price": "£16.00",
     "vegetarian": false,
     "heat": "1"
@@ -221,7 +221,7 @@
    {
     "num": "15",
     "name": "Pad Himmaparn (Mild or Spicy )",
-    "description": "Chicken only\nStir-fried with cashew nuts, spring onions, red and green peppers, onions",
+    "description": "Chicken only Stir-fried with cashew nuts, spring onions, red and green peppers, onions",
     "price": "£16.00",
     "vegetarian": false,
     "heat": "1 or 2"
@@ -229,7 +229,7 @@
    {
     "num": "15.",
     "name": "Pad Himmaparn (Mild or Spicy)",
-    "description": "Chicken only\nStir-fried with cashew nuts, spring onions, red and green peppers, onions in soy sauce",
+    "description": "Chicken only Stir-fried with cashew nuts, spring onions, red and green peppers, onions in soy sauce",
     "price": "£16.00",
     "vegetarian": false,
     "heat": null
@@ -237,7 +237,7 @@
    {
     "num": "17.",
     "name": "Pad Nam Man Hoi",
-    "description": "Beef only\nStir-fried with oyster sauce, onions, carrots, red and green peppers, spring onions and mushrooms",
+    "description": "Beef only Stir-fried with oyster sauce, onions, carrots, red and green peppers, spring onions and mushrooms",
     "price": "£14.00",
     "vegetarian": false,
     "heat": null
@@ -253,7 +253,7 @@
    {
     "num": "19.",
     "name": "Moo Pad Prik Khing",
-    "description": "Pork only\nTender cut of pork stir-fried with curry paste, onions, long beans, Thai herbs, red and green peppers",
+    "description": "Pork only Tender cut of pork stir-fried with curry paste, onions, long beans, Thai herbs, red and green peppers",
     "price": "£14.00",
     "vegetarian": false,
     "heat": "2"

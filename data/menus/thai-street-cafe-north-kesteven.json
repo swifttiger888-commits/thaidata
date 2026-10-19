@@ -94,7 +94,7 @@
    {
     "num": "",
     "name": "Thai Green curry (C)",
-    "description": "Vegan available\nan aromatic blend of coconut milk,abugine,green beans,courgettes and sweet basil leaves in a delicious Green curry sauce served with Jasmine rice",
+    "description": "Vegan available an aromatic blend of coconut milk,abugine,green beans,courgettes and sweet basil leaves in a delicious Green curry sauce served with Jasmine rice",
     "price": null,
     "vegetarian": false,
     "heat": null
@@ -110,7 +110,7 @@
    {
     "num": "",
     "name": "Thai Red curry (C)",
-    "description": "Vegan available\nAbugine bamboo shoots, courgettes and basil leave in red curry sauce served with Jasmine rice",
+    "description": "Vegan available Abugine bamboo shoots, courgettes and basil leave in red curry sauce served with Jasmine rice",
     "price": null,
     "vegetarian": true,
     "heat": null
@@ -136,7 +136,7 @@
    {
     "num": "",
     "name": "Ice cream ( 3 scoop)",
-    "description": "• Coconut\n• Vanilla\n• Chocolate\n• salted Caramel & Honeycomb",
+    "description": "• Coconut • Vanilla • Chocolate • salted Caramel & Honeycomb",
     "price": "£4.50",
     "vegetarian": false,
     "heat": null

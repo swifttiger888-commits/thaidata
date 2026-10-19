@@ -1,0 +1,345 @@
+{
+ "restaurant": "Thai Street Box",
+ "city": "Edinburgh",
+ "fsa_id": "1601559",
+ "address": "Edinburgh",
+ "source": "https://www.streetboxedinburgh.co.uk/menu-1",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starter": [
+   {
+    "name": "Chicken Satay",
+    "description": "Marinated chicken with herbs on a bamboo skewer, served with Peanut Sauce",
+    "price": "£6.95",
+    "num": "1"
+   },
+   {
+    "name": "Duck Spring roll",
+    "description": "Shredded duck with hoisin sauce wrapped in crispy spring roll",
+    "price": "£6.95",
+    "num": "2"
+   },
+   {
+    "name": "Marinated Pork strip",
+    "description": "Thai marinated pork shoulder strips cooked street style, served with sweet hot chilli sauce",
+    "price": "£6.95",
+    "num": "3"
+   },
+   {
+    "name": "Spare Ribs",
+    "description": "Thai Marinated spare ribs and topped with crispy garlic",
+    "price": "£7.95",
+    "num": "4"
+   },
+   {
+    "name": "King Prawn Tempura",
+    "description": "Battered deep fried King Prawn, served with our own sweet chilli dip",
+    "price": "£6.95",
+    "num": "5"
+   },
+   {
+    "name": "BBQ Hot Wings",
+    "description": "Crispy chicken wings coated with Gochujang paste, and thai sweet chilli and",
+    "price": "£6.95",
+    "num": "7"
+   },
+   {
+    "name": "Gyoza Chicken",
+    "description": "Fried chicken dumpling, served with sweet soya sauce",
+    "price": "£6.25",
+    "num": "8"
+   },
+   {
+    "name": "Vegetable Gyoza",
+    "description": "Deep fried vegetable dumpling served with sweet soya sauce",
+    "price": "£6.25",
+    "vegetarian": true,
+    "num": "9"
+   },
+   {
+    "name": "Vegetable Spring Roll",
+    "description": "Crispy Thai style vegetable spring rolls, served with homemade thai sweet chilli sauce.",
+    "price": "£6.25",
+    "vegetarian": true,
+    "num": "10"
+   },
+   {
+    "name": "Sweet Potato Fritter",
+    "description": "Sweet Potato fritters coated in sesame seeds, served with sweet sauce.",
+    "price": "£6.25",
+    "vegetarian": true,
+    "num": "11"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "Mixed Veggie tempura served with sweet chilli sauce",
+    "price": "£6.25",
+    "vegetarian": true,
+    "num": "12"
+   },
+   {
+    "name": "Tom Yum Soup",
+    "description": "A famous Thai hot and spicy creamy soup with Thai herbs & Mushroom",
+    "price": "£7",
+    "num": "13"
+   },
+   {
+    "name": "Tom Kha Soup",
+    "description": "Traditional Thai coconut milk soup similar to Tom Yum",
+    "price": "£7",
+    "num": "14"
+   },
+   {
+    "name": "Thai Spicy Salad",
+    "description": "The unmistakable Thai salad made with Swede root and carrots, garlic, lime, tomato and chilli. Topped with crush peanuts! Choose to have it with Prawn or Chicken Dare you to try with extra chilli & add fermented Fish sauce (Pla Ra) to make it Esan Style!",
+    "price": "£9.95",
+    "num": "15"
+   },
+   {
+    "name": "Prawn Cracker",
+    "description": "Non-spicy prawn cracker served with sweet chilli sauce.",
+    "price": "£4"
+   },
+   {
+    "name": "Thai Spicy Salad",
+    "description": "Shredded Swede roots, chilli, green bean, tomato, carrots, lime and thai dressing salad.",
+    "price": "£8"
+   }
+  ],
+  "Chef Special&#x27;s": [
+   {
+    "name": "Chicken Thigh with Rice",
+    "description": "Grilled Chicken Thigh served with homemade sweet &spicy sauce, jasmine rice and fried egg. Topped with Sesame seeds.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Duck and Rice",
+    "description": "Roasted Duck served with Jasmine rice, fried egg and topped with sweet dark soya sauce. Topped with Crispy Onions.",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pork Belly with Rice",
+    "description": "Stir fry Pork Belly with salted soya bean and sweet heart Cabbage. Served with Jasmine Rice and Fried Egg.",
+    "price": "£14.50"
+   },
+   {
+    "name": "Crispy Chicken",
+    "description": "Crispy Chicken Thigh with Spicy Gochujung sauce. Served with battered mixed vegetables. Topped with sesame seeds.",
+    "price": "£12.00"
+   }
+  ],
+  "Thai Stir Fry": [
+   {
+    "name": "Oyster Sauce",
+    "description": "Stir fry with Oyster sauce and mixed vegetables; peppers, onions and carrots.",
+    "price": "£10",
+    "num": "20"
+   },
+   {
+    "name": "Garlic Black Pepper",
+    "description": "Stir fry with garlic and ground black peppers",
+    "price": "£10",
+    "num": "21"
+   },
+   {
+    "name": "Cashew nut",
+    "description": "A classic Thai stir fry in oyster sauce with cashew nuts and a selection of vegetables",
+    "price": "£10",
+    "num": "22"
+   },
+   {
+    "name": "Thai Chilli Jam",
+    "description": "Medium spicy stir fry cooked with Thai chilli oil and a selection of vegetables.",
+    "price": "£10",
+    "num": "23"
+   },
+   {
+    "name": "Chilli Basil",
+    "description": "The famous street food dish of Thailand... a classic, cooked with chilli , garlic and basil. Recommend to order Pork belly in the dish!",
+    "price": "£10",
+    "num": "24"
+   }
+  ],
+  "Thai Curries": [
+   {
+    "name": "Thai Green Curry",
+    "description": "Very fragrant- thai herbs and aromatic Thai Green Chilli paste in coconut milk, bamboo shoot and basil leaf. PLEASE BE ADVISED OUR CURRIES SERVED ON ITS OWN. WE RECOMMENDED TO ORDER SOME SIDE DISHES TO ENJOY IT TOGETHER",
+    "price": "£10",
+    "num": "16"
+   },
+   {
+    "name": "Thai red curry",
+    "description": "Red chilli in curry paste to add the spice itself; cooked in coconut milk and bamboo shoot . Rich and Creamy. PLEASE BE ADVISED OUR CURRIES SERVED ON ITS OWN. WE RECOMMENDED TO ORDER SOME SIDE DISHES TO ENJOY IT TOGETHER",
+    "price": "£10",
+    "num": "17"
+   },
+   {
+    "name": "Panang Curry",
+    "description": "Rich and Creamy in coconut milk, medium spice, sweeter and drier than other curries with a hint of lime leaf",
+    "price": "£10",
+    "num": "18"
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Mild Massaman curry cooked in coconut milk with potato, peanut, carrot and sprinkle with Crispy onion",
+    "price": "£10",
+    "num": "19"
+   }
+  ],
+  "Noodle and Rice Dish": [
+   {
+    "name": "Pad Thai Noodle",
+    "description": "The super famous Thai noodle dish that is loved around the world ! Served with chilli , peanuts, chilli powder and lemon on the side for you to mix. Contains fish sauce!",
+    "price": "£11.50",
+    "num": "25"
+   },
+   {
+    "name": "Pad See Ew Noodle",
+    "description": "Stir fried Rice Noodles with oyster sauce, Spring greens, sweetheart cabbage and egg.",
+    "price": "£11.50",
+    "num": "26"
+   },
+   {
+    "name": "Spicy Drunken Noodle",
+    "description": "Spicy rice noodles. Kee Mao translated means \"drunken noodles\". This is stir fried with basil, krachai and chilli",
+    "price": "£11.50",
+    "num": "27"
+   },
+   {
+    "name": "Sriracha Fried Rice",
+    "description": "Fried rice with Sriracha sauce, peppers, onions, tomato and carrots",
+    "price": "£11.50",
+    "num": "28"
+   },
+   {
+    "name": "Thai Classic Fried Rice",
+    "description": "Fried rice with sweet dark soya sauce, oyster sauce, onions, carrots and tomato.",
+    "price": "£11.50",
+    "num": "29"
+   },
+   {
+    "name": "Tom Yum Fried Rice",
+    "description": "A very Spicy fried rice with tom yum paste and mixed thai herbs; lime leaf & basil.",
+    "price": "£11.50",
+    "num": "30"
+   }
+  ],
+  "Side Dish": [
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "Steamed jasmine rice",
+    "price": "£3",
+    "vegetarian": true,
+    "num": "31"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "Thai jasmine rice stir fried with eggs",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "32"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "33"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "Topped with Sesame Seeds",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "34"
+   },
+   {
+    "name": "Egg Noodle",
+    "description": "Stir fried egg noodles with beansprouts and carrots",
+    "price": "£3.75",
+    "vegetarian": true,
+    "num": "35"
+   }
+  ],
+  "Drinks": [
+   {
+    "name": "Coke",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Diet Coke",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Thai Iced Milk Tea",
+    "description": "Thai Iced Milk Tea is a sweet, caffeinated and creamy drink. Made with strongly Thai red tea (assam), sugar, and evaporated milk.",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Coke zero",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Sprite",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Fanta orange",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Irn - Bru",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "San Pallergrino (Orange)",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "San Pallergrino (Lemon)",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "Sparkling Water",
+    "description": "",
+    "price": "£1.50"
+   },
+   {
+    "name": "Still Water",
+    "description": "",
+    "price": "£1.50"
+   },
+   {
+    "name": "Singha Lemon soda",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "Singha Ume Lemon soda",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "Singha Red Lemon soda",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "Singha Pink Lemon soda",
+    "description": "",
+    "price": "£2.00"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

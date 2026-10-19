@@ -1,0 +1,376 @@
+{
+ "restaurant": "Thai Journey Restaurant",
+ "city": "Isle of Wight",
+ "fsa_id": "1664568",
+ "address": "Isle of Wight",
+ "source": "https://www.thaijourneyrestaurant.com/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Thai Journey Platter(for 2 people) (N)",
+    "description": "Veg spring rolls, Chicken Satay, Pork Ribs Prawn Tempura, and Prawn Toast, served with sweet chilli sauce , cucumber relish and peanuts sauce.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Crispy Prawn Toast",
+    "description": "Minced prawn on French bread toast with sesame seed, fried and served with sweet chilli sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Honey Pork Ribs",
+    "description": "Slow cooked, marinated pork spare ribs in homemade hoi sin sauce with honey and sesame seed",
+    "price": "£8.95"
+   },
+   {
+    "name": "Prawn Tempura",
+    "description": "Marinated tiger prawns in battered, deep-fried and served with sweet chilli sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Chicken Stay (N)",
+    "description": "Skewers of tender chicken breast marinated in spices, grilled and served with peanuts sauce and Thai cucumber relish.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Pork Dumpling",
+    "description": "Steamed minced pork mixed with water chestnut, carrots, black fungus, served with homemade sweet soy sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Duck Spring Rolls (N)",
+    "description": "Aromatic duck, wrapped in pastry, deep- fried and served with hoi sin sauce, topped crushed peanuts.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Light battered squid fried with spice, sea salt and black pepper, topped with chopped red chilli and spring onion. Mild",
+    "price": "£9.50"
+   },
+   {
+    "name": "Prawn Har Kau",
+    "description": "Steamed juicy prawn dumpling served with homemade soya sauce topped with crispy garlic.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "Deep- fried vegetables spring rolls, served with sweet chilli sauce.",
+    "price": "£8.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Veggie Dumpling",
+    "description": "Steamed mixed vegetables served with hoi sin sauce.",
+    "price": "£8.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetables Tempura",
+    "description": "Mixed vegetables tempura served with sweet chilli sauce.",
+    "price": "£8.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Prawn Crackers",
+    "description": "Crispy Thai prawn crackers served with homemade Thai chilli oil.",
+    "price": "£4"
+   },
+   {
+    "name": "Edamame",
+    "description": "Steamed edamame sprinkle with sea salt.",
+    "price": "£4.50",
+    "vegetarian": true
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Tom Yum Chicken",
+    "description": "Thai spicy and sour soup with lemongrass, galangal, chilli, lime leaves and mushrooms. Mild",
+    "price": "£8.50"
+   },
+   {
+    "name": "TomYum Prawns",
+    "description": "Thai spicy and sour soup with lemongrass, galangal, chilli, lime leaves and mushrooms. Mild",
+    "price": "£9.00"
+   },
+   {
+    "name": "Tom Kha Chicken",
+    "description": "Traditional creamy coconut soup with lemon juices, lemongrass, galangal, lime leaves and mushrooms.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Tom Kha Prawns",
+    "description": "Traditional creamy coconut soup with lemon juices, lemongrass, galangal, lime leaves and mushrooms.",
+    "price": "£9.00"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "Green Curry",
+    "description": "Chicken £13.95 Beef £14.95 Duck£14.95 Prawn£14.95 Lamb £14.95 Tofu £11.95 Thai green curry in coconut milk with aubergines, peppers and bambooshoot. Hot",
+    "price": null
+   },
+   {
+    "name": "Red Curry",
+    "description": "Chicken £13.95 Beef £14.95 Duck £14.95 Prawn£14.95 Lamb £14.95 Tofu £11.95 Red curry paste in coconut milk with bamboo shoot, peppers, aubergines, and Thai herbs. Hot",
+    "price": null
+   },
+   {
+    "name": "Panang Curry",
+    "description": "Chicken £13.95 Beef £14.95 Duck £14.95 Prawn£14.95 Lamb £14.95 Tofu £11.95 Aromatic Thai curry with coconut milk, fine beans, kaffir lime leaves. Hot",
+    "price": null
+   },
+   {
+    "name": "Massaman Curry (N)",
+    "description": "Chicken £13.95 Beef £14.95 Duck £14.95 Prawn£14.95 Lamb £14.95 Tofu £11.95 Southern Thai curry in coconut milk, flavoured with tamarind juice, potatoes topped with cashew nuts. Mild",
+    "price": null
+   }
+  ],
+  "Chicken": [
+   {
+    "name": "Gai Pad Priew Wan",
+    "description": "Chicken in batter stir-fried with vegetables in sweet and sour sauce.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Gai Pad Khing",
+    "description": "Tender sliced chicken stir-fried with ginger, mushrooms and spring onions.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Gai Pad Bai Gaprao",
+    "description": "Chicken stir-fried with fresh chilli, fine beans and basil leaves. Extra hot",
+    "price": "£13.95"
+   },
+   {
+    "name": "Gai Pad Himmaparn (N)",
+    "description": "Chicken in batter stir-fried with cashew nuts, mushrooms and spring onions. Mild",
+    "price": "£13.95"
+   }
+  ],
+  "BEEF": [
+   {
+    "name": "Nuea Pad Khing",
+    "description": "Tender sliced beef stir-fried with ginger, mushrooms and spring onions.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Nuea Pad Bai Gaprao",
+    "description": "Beef stir-fried with chilli, fine beans and basil leaves. Extra hot",
+    "price": "£14.95"
+   },
+   {
+    "name": "Nuea Pad Gatiem",
+    "description": "Stir-fried beef with garlic, black pepper, onions and spring onions.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Nuea Pad Nam Mun Hoi",
+    "description": "Stir-fried beef in oyster sauce, mushrooms, and spring onions.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Tiger Cry (Grilled Beef)",
+    "description": "Marinated beef sirloin, grilled, sliced, served with tamarind dipping sauce.",
+    "price": "£24.95"
+   }
+  ],
+  "DUCK": [
+   {
+    "name": "Ped Pad Khing",
+    "description": "Breast of duck stir-fried with ginger, mushrooms, and spring onions in soy sauce.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Ped Pad Gaprao",
+    "description": "Tender duck breast stir-fried with garlic, fresh chilli, fine beans and basil leaves. Extra hot",
+    "price": "£14.95"
+   },
+   {
+    "name": "Duck On Nest (Tamarind Duck)",
+    "description": "Lightly battered roasted duck, sliced and topped with homemade tamarind sauce based on crispy egg noodle.",
+    "price": "£19.95"
+   }
+  ],
+  "LAMB": [
+   {
+    "name": "Lamb Pad Cha",
+    "description": "Stir- fried tender lamb with fresh chilli, and selection of Thai herbs. Extra hot",
+    "price": "£14.95"
+   },
+   {
+    "name": "Lemongrass Lamb",
+    "description": "Stir-fried lamb with lemongrass sauce and Thai herbs. Hot",
+    "price": "£14.95"
+   },
+   {
+    "name": "Lamb in Black",
+    "description": "Tender sliced lamb stir-fried in tasty black pepper sauce.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Prik Gang Lamb",
+    "description": "Slow cooked lamb stir-fried with green beans, red chilli paste and kaffir lime leaves. Hot",
+    "price": "£14.95"
+   }
+  ],
+  "FISH & SEAFOOD": [
+   {
+    "name": "Goong Ta Khai",
+    "description": "Stir-fried tiger prawns with tangy lemongrass sauce and herbs. Hot",
+    "price": "£14.95"
+   },
+   {
+    "name": "Goong Pad Himmaparn (N)",
+    "description": "Tiger prawns stir-fried with cashew nuts, mushroom and vegetables. Mild",
+    "price": "£14.95"
+   },
+   {
+    "name": "Goong Yai Hor La Par",
+    "description": "King prawns stir-fried with garlic and fresh chilli in spicy basil sauce. Extra hot",
+    "price": "£19.95"
+   },
+   {
+    "name": "Goong Yai Chu Chi",
+    "description": "King prawns in creamy red curry sauce, peppers and kaffir lime leaves. Hot",
+    "price": "£19.95"
+   },
+   {
+    "name": "Talay Pad Cha",
+    "description": "Stir-fried mixed seafood with fresh chilli, and assorted Thai herbs. Extra hot",
+    "price": "£19.95"
+   },
+   {
+    "name": "Dusty Ocean",
+    "description": "Mixed seafood stir-fried with garlic in tasty homemade black pepper sauce.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Sea Bass Rad Prik",
+    "description": "Light battered fried fillet sea bass with sweet chilli and garlic sauce. Hot",
+    "price": "£19.95"
+   },
+   {
+    "name": "Chu Chi Pla Sea bass",
+    "description": "Fried fillet sea bass in light batter, topped with rich red curry sauce, and kaffir lime leaves. Hot",
+    "price": "£19.95"
+   }
+  ],
+  "TOFU & VEGTABLES": [
+   {
+    "name": "Pad Aubergines",
+    "description": "Stir-fried aubergines with garlic, basil, fresh chilli in oyster sauce. Mild",
+    "price": "£8.95"
+   },
+   {
+    "name": "Tofu &Cashew Nuts (N)",
+    "description": "Tofu stir-fried with cashew nuts, mushroom and vegetables. Mild",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tofu Pad Ga Prao",
+    "description": "Stir-fried firm tofu with fresh chilli, fine beans and basil leaves. Extra hot",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tofu Pad Khing",
+    "description": "Stir-fried tofu with fresh ginger, mushroom and spring onion.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad Brocoli Khing",
+    "description": "Broccoli stir-fried with garlic, ginger in oyster sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Tofu Sweet &Sour",
+    "description": "Tofu stir-fried in sweet and sour sauce and vegetables",
+    "price": "£11.95"
+   }
+  ],
+  "NOODLE": [
+   {
+    "name": "Pad Thai (N)",
+    "description": "Tofu £12.95 Chicken £13.95 Prawns £14.95 Duck £14.95 Rice noodles stir-fried with beansprouts, carrots, spring onions and egg, tamarind juice, topped with crushed peanuts.",
+    "price": null
+   },
+   {
+    "name": "Pad See Ew",
+    "description": "Tofu £12.95 Chicken £13.95 Prawns £14.95 Duck £14.95 Large flat rice noodle stir-fried with vegetables, egg and dark soy sauce.",
+    "price": null
+   },
+   {
+    "name": "Pad Khee Mao",
+    "description": "Tofu £12.95 Chicken £13.95 Prawns £14.95 Duck £14.95 Stir-fried large flat rice noodle with fresh chilli, garlic, vegetables, dark soy sauce and basil leaves. Extra hot",
+    "price": null
+   },
+   {
+    "name": "Pad Mee",
+    "description": "Tofu £12.95 Chicken £13.95 Prawns £14.95 Duck £14.95 Thin egg noodle stir-fried with egg, carrots, beansprouts, spring onion in soy sauce.",
+    "price": null
+   }
+  ],
+  "RICE & SIDE DISHES": [
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "£3.25"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Pineapple Rice (N)",
+    "description": "Fried rice with egg, prawns, pineapple, raisin, cashew nuts, a pinch of curry powder and turmeric.",
+    "price": "£10"
+   },
+   {
+    "name": "Salt& Pepper Baby Potatoes",
+    "description": "Fried baby potatoes sprinkle with salt& pepper, topped with spring onion, fried shallot and chopped chillies",
+    "price": "£5",
+    "vegetarian": true
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Egg",
+    "description": "",
+    "price": "£2"
+   },
+   {
+    "name": "Plain Noodle",
+    "description": "Sir-fried rice noodle with soy sauce.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Fresh Chillies",
+    "description": "",
+    "price": "£1",
+    "vegetarian": true
+   },
+   {
+    "name": "Curry Sauce",
+    "description": "",
+    "price": "£5"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

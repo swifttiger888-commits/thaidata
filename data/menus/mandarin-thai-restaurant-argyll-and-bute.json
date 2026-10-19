@@ -1,0 +1,480 @@
+{
+ "restaurant": "Mandarin Thai Restaurant",
+ "city": "Argyll and Bute",
+ "fsa_id": "1672617",
+ "address": "Argyll and Bute",
+ "source": "https://mandarinthai.food/menu/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "INDIVIDUAL SMALLER PLATES": [
+   {
+    "name": "Chicken Satay",
+    "description": "served with peanut satay sauce",
+    "price": "£9.90"
+   },
+   {
+    "name": "King Prawn Satay",
+    "description": "served with peanut satay sauce",
+    "price": "£9.90"
+   },
+   {
+    "name": "Grilled Pork Satay",
+    "description": "served with peanut satay sauce",
+    "price": "£9.90"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "served with your choice of mango salad or sweet chili sauce",
+    "price": "£9.90"
+   },
+   {
+    "name": "Scallop cakes",
+    "description": "served with your choice of mango salad or sweet chili sauce",
+    "price": "£9.90"
+   },
+   {
+    "name": "Homemade Vegetable Spring Rolls",
+    "description": "served with your choice of mango salad or sweet chili sauce",
+    "price": "£9.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Homemade Shanghai Style Pork Spring Rolls",
+    "description": "served with your choice of mango salad or sweet chili sauce",
+    "price": "£9.90"
+   },
+   {
+    "name": "Honey-Glazed King Prawns in Tempura",
+    "description": "served on a fresh mango salsa",
+    "price": "£12.90"
+   },
+   {
+    "name": "Seared Fresh King Scallops",
+    "description": "served in garlic butter",
+    "price": "£14.90"
+   },
+   {
+    "name": "Seared Fresh King Scallops With Stornoway Black Pudding",
+    "description": "served on a mango sauce with a hint of chili",
+    "price": "£14.90"
+   }
+  ],
+  "SINGLE PLATE MEALS": [
+   {
+    "name": "Khao Phad",
+    "description": "Fried Rice Tofu or Chicken - no extra charge, King Prawn or Scallops + £3.00",
+    "price": "£14.90"
+   },
+   {
+    "name": "Gai Yang",
+    "description": "Thai style marinaded BBQ chicken With a mango salad and Nam Jim Jeaw sauce. Served with Jasmine rice",
+    "price": "£19.90"
+   },
+   {
+    "name": "Pad Kra Pao Moo with Jasmine Rice",
+    "description": "Thai classic spicy stir-fried minced pork and holy basil with fried egg on top. Served with Jasmine rice",
+    "price": "£19.90"
+   },
+   {
+    "name": "Moo Ping",
+    "description": "Grilled pork with a mango salad and Nam Jim Jeaw sauce Served with Jasmine rice",
+    "price": "£19.90"
+   },
+   {
+    "name": "Phad Thai",
+    "description": "The Iconic Thai Noodles Stir-fried rice noodles with tamarind, tofu, bean sprouts, egg, and crushed peanuts. Tofu or Chicken (included). King Prawn or King Scallops (+£3.00)",
+    "price": "£19.90"
+   },
+   {
+    "name": "Kuay Teow Neua",
+    "description": "Thai Beef Noodle Soup Rice noodles, tender beef, and herbs. Served traditionally with chopsticks and a Chinese spoon.",
+    "price": "£22.90"
+   }
+  ],
+  "SEAFOOD mains": [
+   {
+    "name": "White Shell Clams in a Sweet Chilli & Basil Sauce",
+    "description": "Stir fried in a vibrant sweet, spicy, and aromatic sauce",
+    "price": "£16.90"
+   },
+   {
+    "name": "Pan-Seared King Scallops",
+    "description": "served with oyster sauce",
+    "price": "£24.90"
+   },
+   {
+    "name": "Scottish mussels in thai herbs in a coconut soup",
+    "description": "",
+    "price": "£15.90"
+   }
+  ],
+  "DISHES WHICH MAY REQUIRE RICE OR ROTI": [
+   {
+    "name": "Honey, Lemon & Sesame Chicken",
+    "description": "Tender chicken pieces glazed in a honey and lemon sauce, finished with toasted sesame seeds",
+    "price": "£16.90"
+   },
+   {
+    "name": "Chicken with Cashew Nuts",
+    "description": "Stir-fried chicken with roasted cashews, vegetables, and a savoury sauce",
+    "price": "£16.90"
+   },
+   {
+    "name": "Tom Kha",
+    "description": "Thai Coconut Soup as a main A fragrant and creamy soup infused with galangal, lemongrass, and kaffir lime leaves. Chicken (included), King Prawns (+£3.00)",
+    "price": "£16.90"
+   },
+   {
+    "name": "Thai Green Curry",
+    "description": "A creamy, aromatic curry with bamboo shoots, Thai aubergine, and sweet basil. Tofu or Chicken (included), King Prawn or King Scallops (+£3.00)",
+    "price": "£16.90"
+   },
+   {
+    "name": "Duck Red Curry",
+    "description": "Tender duck in a rich, aromatic Thai red curry with Red Peppers, Thai basil, cherry tomatoes and pineapple",
+    "price": "£19.90"
+   },
+   {
+    "name": "King Prawn Red Curry",
+    "description": "King prawns in a rich, aromatic Thai red curry with bamboo shoots, Thai basil, and cherry tomatoes and pineapple",
+    "price": "£19.90"
+   },
+   {
+    "name": "Rib-Eye Steak in Panang Curry Sauce",
+    "description": "Rib-eye steak in a rich, creamy, and mildly spicy Panang curry sauce",
+    "price": "£19.90"
+   }
+  ],
+  "RICE, ROTI AND SIDES": [
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "£2.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Roti",
+    "description": "Perfect for dipping in curry",
+    "price": "£2.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir-Fried Pak Choi & Tofu in Oyster Sauce",
+    "description": "Fresh pak choi and tofu wok-tossed in savoury oyster sauce and bean sprouts",
+    "price": "£8.90"
+   }
+  ],
+  "SOFT DRINKS": [
+   {
+    "name": "Highland Spring Still water",
+    "description": "small",
+    "price": "£2.90"
+   },
+   {
+    "name": "BOTTLED WATER STILL",
+    "description": "large",
+    "price": "£3.90"
+   },
+   {
+    "name": "SAN PELLINGRINO",
+    "description": "large",
+    "price": "£4.90"
+   },
+   {
+    "name": "Sprite",
+    "description": "bottle",
+    "price": "£3.90"
+   },
+   {
+    "name": "Coke",
+    "description": "bottle",
+    "price": "£3.90"
+   },
+   {
+    "name": "Coke zero",
+    "description": "bottle",
+    "price": "£3.90"
+   },
+   {
+    "name": "Ginger beer",
+    "description": "bottle",
+    "price": "£3.90"
+   },
+   {
+    "name": "Appletiser",
+    "description": "",
+    "price": "£3.90"
+   },
+   {
+    "name": "PELLINGRINO - LEMON",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "PELLINGRINO - ORANGE",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "PELLINGRINO - BLOOD ORANGE",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "PELLINGRINO - ORANGE POMEGRANATE",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Jug water",
+    "description": "",
+    "price": "£0.00"
+   },
+   {
+    "name": "ice",
+    "description": "",
+    "price": "£0.00"
+   }
+  ],
+  "COFFEES AND TEAS": [
+   {
+    "name": "Espresso",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "Cappuccino",
+    "description": "",
+    "price": "£3.90"
+   },
+   {
+    "name": "Americano",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "TEA POT FOR ONE",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "TEA POT FOR TWO",
+    "description": "",
+    "price": "£3.90"
+   }
+  ],
+  "DESSERTS": [
+   {
+    "name": "Homemade Coconut Ice Cream and crushed peanuts",
+    "description": "Served with your choice of fresh mango or lychees if you prefer",
+    "price": "£6.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Baileys Affogato",
+    "description": "Homemade Baileys ice cream drowned with a shot of Affogato. (18+)",
+    "price": "£9.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Toffee Pudding",
+    "description": "A warm, moist sponge pudding with a rich toffee sauce, served with coconut ice cream",
+    "price": "£9.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Khao Niew Mamuang",
+    "description": "Mango Sticky Rice Thailand's favourite sweet coconut rice dish with fresh mango Served with homemade coconut ice cream. Perfect for sharing.",
+    "price": "£12.90",
+    "vegetarian": true
+   }
+  ],
+  "BEERS": [
+   {
+    "name": "Bottle BEER",
+    "description": "small 330 ml",
+    "price": "£4.90"
+   },
+   {
+    "name": "SAN MIGUEL ZERO % ALC",
+    "description": "",
+    "price": "£3.90"
+   }
+  ],
+  "WINE": [
+   {
+    "name": "GLASS HOUSE WINE 175 ml",
+    "description": "red, rose, white",
+    "price": "£6.50"
+   },
+   {
+    "name": "GLASS HOUSE WINE 250 ml",
+    "description": "red, rose, white",
+    "price": "£8.50"
+   },
+   {
+    "name": "GLASS PREMIER WINE 175 ml",
+    "description": "red, white",
+    "price": "£9.50"
+   },
+   {
+    "name": "GLASS PREMIER WINE 250 ml",
+    "description": "red, white",
+    "price": "£11.50"
+   },
+   {
+    "name": "BOTTLE PROSECCO",
+    "description": "",
+    "price": "£24.00"
+   },
+   {
+    "name": "HOUSE WINE BOTTLE",
+    "description": "red, rose, white",
+    "price": "£19.00"
+   },
+   {
+    "name": "MID RANGE WINES",
+    "description": "red, white",
+    "price": "£24.00"
+   },
+   {
+    "name": "PREMIER WINES",
+    "description": "red, white",
+    "price": "£29.00"
+   }
+  ],
+  "SPIRITS": [
+   {
+    "name": "GROUSE WHISKY",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "BOMBAY SAPPHIRE GIN",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "GORDONS GIN",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "SMIRNOFF VODKA",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "CAPTAIN MORGAN DARK RUM",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "BACARDI WHITE RUM",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "JAMESON",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "JACK DANIELS",
+    "description": "25 ml",
+    "price": "£3.90"
+   },
+   {
+    "name": "MALIBU",
+    "description": "25 ml",
+    "price": "£3.90"
+   }
+  ],
+  "SCOTTISH MALTS AND LIQUERS": [
+   {
+    "name": "GLENMORANGIE",
+    "description": "25 ml",
+    "price": "£5.90"
+   },
+   {
+    "name": "LAPHROAIG",
+    "description": "25 ml",
+    "price": "£5.90"
+   },
+   {
+    "name": "TOBERMORY",
+    "description": "25 ml",
+    "price": "£5.90"
+   },
+   {
+    "name": "TALISKER",
+    "description": "25 ml",
+    "price": "£5.90"
+   },
+   {
+    "name": "BAILEYS IRISH CREAM",
+    "description": "50 ml",
+    "price": "£5.90"
+   },
+   {
+    "name": "COINTREAU",
+    "description": "25 ml",
+    "price": "£4.90"
+   },
+   {
+    "name": "GRAND MARNIER",
+    "description": "25 ml",
+    "price": "£4.90"
+   },
+   {
+    "name": "KAHLUA",
+    "description": "25 ml",
+    "price": "£4.90"
+   },
+   {
+    "name": "TIA MARIA",
+    "description": "25 ml",
+    "price": "£4.90"
+   },
+   {
+    "name": "DRAMBUIE",
+    "description": "25 ml",
+    "price": "£4.90"
+   }
+  ],
+  "MIXERS": [
+   {
+    "name": "Bottle Mix Orange",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "Bottle Mix Lemonade",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "Bottle Mix Coke",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "Bottle Mix Coke Zero",
+    "description": "",
+    "price": "£2.90"
+   },
+   {
+    "name": "TONIC WATER NORMAL -TIN",
+    "description": "",
+    "price": "£2.50"
+   },
+   {
+    "name": "TONIC WATER ZERO - TIN",
+    "description": "",
+    "price": "£2.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

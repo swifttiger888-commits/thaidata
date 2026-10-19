@@ -1,0 +1,221 @@
+{
+ "restaurant": "Tapian Thai Takeaway",
+ "city": "Huddersfield",
+ "fsa_id": "1438864",
+ "address": "Huddersfield",
+ "source": "https://tapianthaitakeaway.co.uk/menu.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "Chicken Satay",
+    "description": "Grilled chicken skewers marinated in Thai herbs served with peanut sauce and pickled vegetables relish.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Deep-fried Wonton",
+    "description": "Deep-fried wonton filled with chicken mince and served with sweet chilli sauce.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Prawn Toast",
+    "description": "Marinated chicken and prawn mince on toast, deep-fried and served with sweet chilli sauce.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Fish Cakes",
+    "description": "Thai fish cakes served with sweet chilli sauce mixed with cucumber, carrots and red onions.",
+    "price": "£6.00"
+   },
+   {
+    "name": "Vegetable Gyoza",
+    "description": "Deep-fired Japanese style dumpling filled with vegetables.",
+    "price": "£5.95"
+   },
+   {
+    "name": "Prawn Crackers",
+    "description": "Thai style spicy prawn crackers.",
+    "price": "£3.00"
+   },
+   {
+    "name": "Chicken Wings",
+    "description": "Southern Thai style deep-fried chicken wings.",
+    "price": "£5.95"
+   },
+   {
+    "name": "Deep-fried Prawn",
+    "description": "Deep-fried prawn batter with Japanese breadcrumbs served with sweet chilli sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Spring Rolls",
+    "description": "Spring roll filled with mixed vegetables and glass noodles served with sweet chilli sauce.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Deep-fried Tofu",
+    "description": "Deep-fried tofu batter with Japanese breadcrumbs served with sweet chilli sauce.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Deep-fried Vegetables",
+    "description": "Deep-fried mixed vegetables batter with Japanese breadcrumbs served with sweet chilli sauce.",
+    "price": "£5.50"
+   },
+   {
+    "name": "Deep-fried Sweet Corn",
+    "description": "Deep-fired sweet corn cakes served with sweet chilli sauce.",
+    "price": "£5.50"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "Tom Yam Soup",
+    "description": "An authentic Thai hot soup, flavoured with mushroom, lime leaf, galangal, chilli, lime juice and a splash of coconut milk.",
+    "price": null
+   },
+   {
+    "name": "Tom Kha Soup",
+    "description": "A rich, fragrant soup flavoured with coconut milk, mushroom, lime leaf, galangal, lemon glass and lime juice.",
+    "price": null
+   }
+  ],
+  "THAI STYLE SALADS": [
+   {
+    "name": "Som Tam (Papaya Salad)",
+    "description": "The most famous Thai green papaya salad tossed with cherry tomatoes, long green bean, carrots, and roasted peanut (contain fish sauce).",
+    "price": "£7.00"
+   },
+   {
+    "name": "Chicken Salad",
+    "description": "Minced chicken with crushed roasted rice, red onion, spring onions, coriander in Thai spicy dressing.",
+    "price": "£7.50"
+   },
+   {
+    "name": "Beef Salad",
+    "description": "Thinly sliced beef with crushed roasted rice, red onions, spring onions, coriander in Thai spicy dressing.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Prawn Salad",
+    "description": "Prawn salad seasoned with lime juice and tossed with lemon grass, red onions, onions, chilli paste, coriander in Thai spicy dressing.",
+    "price": "£7.95"
+   }
+  ],
+  "CURRIES": [
+   {
+    "name": "Red Curry",
+    "description": "Thai red curry with coconut milk, fresh vegetables and flavoured with sweet basil.",
+    "price": null
+   },
+   {
+    "name": "Green Curry",
+    "description": "Thai Green curry with coconut milk, fresh vegetables and flavoured with sweet basil.",
+    "price": null
+   },
+   {
+    "name": "Panang Curry",
+    "description": "A rich Panang curry with coconut milk, green beans and lime leave.",
+    "price": null
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "A rich Massaman curry with coconut milk, fried onion potatoes and cashew nuts.",
+    "price": null
+   }
+  ],
+  "STIR-FRIED DISHES": [
+   {
+    "name": "Stir-fried Grapow",
+    "description": "Spicy stir-fried with fresh chilli, onions, spring onions and flavoured with basil leaves.",
+    "price": null
+   },
+   {
+    "name": "Stir-fried Broccoli",
+    "description": "Stir-fried broccoli, fresh peppers, carrots, and mushroom in oyster sauce.",
+    "price": null
+   },
+   {
+    "name": "Stir-fried Sweet & Sour",
+    "description": "Stir-fried sweet and sour sauce with onions, pineapple, tomatoes, cucumber and spring onions.",
+    "price": null
+   },
+   {
+    "name": "Stir-fried Garlic",
+    "description": "Thai style stir-fried with garlic & pepper sauce.",
+    "price": null
+   },
+   {
+    "name": "Stir-fried Cashew Nuts",
+    "description": "Stir-fried cashew nuts with pineapple, fresh peppers, onions, and spring onions.",
+    "price": null
+   }
+  ],
+  "RICE OR NOODLES": [
+   {
+    "name": "Fried Rice",
+    "description": "Stir-fried rice with egg, mild onions, spring onions and tomatoes.",
+    "price": null
+   },
+   {
+    "name": "Pad Thai Noodles",
+    "description": "Rice noodles stir-fired in tamarind sauce with egg, bean sprouts, spring onions, tofu and garnished with crushed peanuts.",
+    "price": null
+   },
+   {
+    "name": "Pad Kee Mao (Drunken Noodles)",
+    "description": "Spicy stir-fried yellow noodles with basil, fresh chilli, and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Stir-Fried Yellow Noodles",
+    "description": "Stir-fried yellow noodles with bean sprouts, carrots, onions and spring onions.",
+    "price": null
+   }
+  ],
+  "SIDE DISHES": [
+   {
+    "name": "Pad Thai (Plain)",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Stir-fried Yellow Noodles (Plain)",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Steamed Rice",
+    "description": "",
+    "price": "£2.95"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.20"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.20"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.20"
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£2.50"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Choose from: Vegetable £6.00 Chicken £6.50 Prawn £7.00",
+  "(Include steamed rice) Choose from: Vegetable or Tofu £9.95 Chicken or Beef £10.95 Prawn £11.95",
+  "(Include steamed rice) Choose from: Vegetable or Tofu £9.95 Chicken or Beef £10.95 Prawn £11.95",
+  "Choose from: Vegetable £8.50 Chicken or Beef £9.50 Prawn £10.50"
+ ]
+}

@@ -510,7 +510,7 @@
    {
     "num": "13.",
     "name": "Mixed Starters",
-    "description": "(Minimum 2 People)\nA delightful and delicious platter of:\nChicken Satay, Spring Rolls, Na Moo, Spare Ribs and Fish Cake",
+    "description": "(Minimum 2 People) A delightful and delicious platter of: Chicken Satay, Spring Rolls, Na Moo, Spare Ribs and Fish Cake",
     "price": "£20.00 (£10.00 per person)",
     "vegetarian": false,
     "heat": null
@@ -520,7 +520,7 @@
    {
     "num": "14.",
     "name": "Tom Yum Goong",
-    "description": "Thai's famous hot and sour soup with\nPrawns, Mushrooms, flavoured with lemon grass and lime juice.",
+    "description": "Thai's famous hot and sour soup with Prawns, Mushrooms, flavoured with lemon grass and lime juice.",
     "price": "£7.95",
     "vegetarian": false,
     "heat": "1"
@@ -538,7 +538,7 @@
    {
     "num": "16.",
     "name": "Yum Woon Sen",
-    "description": "Prawns or Mixed Seafood\nVermicelli glass noodles steamed with choice of King Prawns or Mixed Seafoods seasoned with Lemon dressing, fresh chilli, onions and coriander",
+    "description": "Prawns or Mixed Seafood Vermicelli glass noodles steamed with choice of King Prawns or Mixed Seafoods seasoned with Lemon dressing, fresh chilli, onions and coriander",
     "price": "£16.50",
     "vegetarian": false,
     "heat": "1"
@@ -546,7 +546,7 @@
    {
     "num": "17.",
     "name": "Plaa Lui Suan",
-    "description": "Deep Fried Fish Fillet cooked in fresh chilli sauce, lime juice, mint,\nred onion, lemongrass and coriander",
+    "description": "Deep Fried Fish Fillet cooked in fresh chilli sauce, lime juice, mint, red onion, lemongrass and coriander",
     "price": "£15.00",
     "vegetarian": false,
     "heat": "2"
@@ -554,7 +554,7 @@
    {
     "num": "18.",
     "name": "Yum Ped Grob",
-    "description": "Crispy marinated duck tossed with lemon dressing, ground toasted rice, fresh chilli ,\nmint, salad leaf, red onion and coriander",
+    "description": "Crispy marinated duck tossed with lemon dressing, ground toasted rice, fresh chilli , mint, salad leaf, red onion and coriander",
     "price": "£15.50",
     "vegetarian": false,
     "heat": "1"
@@ -562,7 +562,7 @@
    {
     "num": "19.",
     "name": "Larb Moo",
-    "description": "Minced Pork is combined with lime juice, crunchy toasted rice,\nonions and a selection of herbs.\nLarb is another favourite dish that should be eaten with sticky rice",
+    "description": "Minced Pork is combined with lime juice, crunchy toasted rice, onions and a selection of herbs. Larb is another favourite dish that should be eaten with sticky rice",
     "price": "£15.00",
     "vegetarian": false,
     "heat": "1"

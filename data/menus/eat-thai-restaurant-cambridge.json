@@ -1,0 +1,64 @@
+{
+ "restaurant": "Eat Thai Restaurant",
+ "city": "Cambridge",
+ "fsa_id": "848168",
+ "address": "Cambridge",
+ "source": "https://www.ely-eatthai.co.uk/uploads/1/9/1/7/19172491/dessert.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Menu": [
+   {
+    "name": "Ferrero Rocher",
+    "description": "World famous rich Ferrero Rocher ice cream combined with thick chocolate sauce topped with Ferrero Rocher.",
+    "price": "£5.15"
+   },
+   {
+    "name": "Cookies and Cream",
+    "description": "A rich chocolaty cookie dunked in delicious, creamy vanilla ice cream to satisfy the milk-and-cookies kid in all of us.",
+    "price": "£5.15"
+   },
+   {
+    "name": "Punky",
+    "description": "Vanilla ice cream in a free plastic toy.",
+    "price": "£3.65"
+   },
+   {
+    "name": "Kuaky",
+    "description": "Chocolate ice cream in a free plastic toy.",
+    "price": "£3.65"
+   },
+   {
+    "name": "Coconut Supreme",
+    "description": "Cool & delicious coconut ice cream packed into real half coconut shell.",
+    "price": "£4.95"
+   },
+   {
+    "name": "Pina Colada",
+    "description": "Delicious coconut flavoured dairy ice cream with pieces of pineapple and sprinkled with chocolate flakes.",
+    "price": "£4.95"
+   },
+   {
+    "name": "Banana Fritter",
+    "description": "Deep fried banana in batter topped with vanilla ice cream",
+    "price": "£5.35"
+   },
+   {
+    "name": "Chocolate Cheesecake",
+    "description": "Made with cream cheese, rich chocolate chips and a hint of vanilla. Topped with chocolate ganache and white curls",
+    "price": "£4.95"
+   },
+   {
+    "name": "Vanilla Ice Cream",
+    "description": "Scooped Ice Cream Vanilla Flavoured",
+    "price": "£2 Scoops £3.65"
+   },
+   {
+    "name": "Eat Thai Wrapping",
+    "description": "Thai Style dedicate coconut wrapped with pandan pancake served with vanilla ice cream topped with syrup.",
+    "price": "£5.35"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

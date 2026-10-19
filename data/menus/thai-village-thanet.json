@@ -1,0 +1,432 @@
+{
+ "restaurant": "Thai Village",
+ "city": "Thanet",
+ "fsa_id": "1489166",
+ "address": "Thanet",
+ "source": "https://www.thaivillagerestaurant.co.uk/Order/Index/Order%20Now-1197",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starter": [
+   {
+    "name": "Chicken Satay",
+    "description": "Skewered Thai chicken satay, served with peanut sauce and Thai salsa pickles. Mu, S, Sd, Pn.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Deep-fried squid in salt and pepper batter, served with sweet chilli sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "Made with minced white fish, Thai red curry paste, lime leaves and long beans, served with sweet chilli sauce and tangy Thai salsa pickles.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Prawn in Breadcrumbs",
+    "description": "Prawns in crispy panko breadcrumbs, served with sweet chilli sauce. G, C.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Pork Dumplings",
+    "description": "Steamed pork dumplings, served with sweet homemade sweet vinaigrette soy sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Sweet Corn Fritters",
+    "description": "Corn kernels coated in crispy batter, served with sweet chilli sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Fried Tofu",
+    "description": "Deep fried tofu served with sweet chilli and crushed cashew nuts.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Duck Spring Roll",
+    "description": "Shredded roast duck and vegetable rolled in crispy pastry, served with sweet chilli and Hoi Sin sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Vegan Thai Crackers",
+    "description": "Vegetarian tapioca crackers made with assorted vegetables. Served with sweet chilli sauce.",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken and Prawn on Toast",
+    "description": "Fried bread topped with minced chicken, minced prawns and sesame seeds. Served with sweet chili sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Spicy Thai Crackers (C)",
+    "description": "Crackling tapioca crackers made with spices and shrimps. Served with sweet chilli sauce.",
+    "price": "£4.95"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy pastry filled with mixed vegetable. Served with sweet chilli sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Crispy Aromatic Duck",
+    "description": "Crispy Aromatic Duck Served with pancake, Spring onions, Cucumber and Hoisin sauce.",
+    "price": "£12.95"
+   }
+  ],
+  "Thai Soup": [
+   {
+    "name": "Tom Yum Soup🌶️🌶️",
+    "description": "Thai hot and sour broth with mushrooms, lime leaves, lime juice, lemongrass, fresh chillies and coriander. Spicy level 2. G, M, F. Vegetables (V) 11 .95 Tofu (V)(S) 12.95 Chicken 12.95 Prawns (C) 15.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tom Kha Soup🌶️",
+    "description": "Thai light coconut broth with mushrooms, lemongrass, galangal, kaffir lime leaves and coriander. Spicy level 1. Sd, V. Vegetables (V) 11.95 Tofu (V)(S) 12.95 Chicken 12.95 Prawns (C) 15.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Noodle Soup",
+    "description": "Vegetables (V) 11.95 Tofu (V)(S) 12.95 Chicken 13.95 Beef 15.95 Pork 14.95 King Prawns (C) 16.95 Duck 18.95",
+    "price": "£11.95"
+   }
+  ],
+  "Thai Salad": [
+   {
+    "name": "Thai Papaya Salad🌶️",
+    "description": "Northeastern, Issan Thai Food!! Sweet, sour, salty and spicy salad with green papaya, carrots, long beans, lime juice, chillies, cherry tomatoes and cashew nuts. Great with Sticky Rice!!",
+    "price": "£13.95"
+   },
+   {
+    "name": "Yum Grilled Sirloin Salad🌶️🌶️",
+    "description": "Salt and pepper sirloin, grilled and sliced, served with mixed salad, roasted cashew nuts and Thai chilli and lime dressing.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Yum Crispy Duck Salad 🌶️🌶️",
+    "description": "Half crispy duck, sliced and served with mixed salad, roasted cashew nuts and Thai chilli and lime dressing.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Thai Noodle Salad",
+    "description": "Vermicelli noodles in sweet, sour and spicy dressing with spring onions, tomatoes, chillies, coriander and red onions. (F,N) choice of chicken, Veg, prawn, Pork.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Thai Spicy Mint Salad 🌶️",
+    "description": "Northeastern, Isaan Thai food!! Meaty, sour, salty and spicy salad with mint leaves, roasted ground rice, chillies, red onions, and spring onions. Great with Sticky Rice!! Chicken 14,95 Beef 14.95 Pork 14.95",
+    "price": "£14.95"
+   }
+  ],
+  "Fried Noodles": [
+   {
+    "name": "Pad Thai Noodles",
+    "description": "Popular Thai Street Food!! Homemade Pad-Thai sauce stir-fried with rice noodles, eggs, beansprouts and spring onions. Served with crushed peanuts. G, E, F, Pn, S. Vegetable 11.95 Tofu 12.95 Chicken 13.95 Pork 14.95 Beef 15.95 King Prawns 15.95 Crispy Duck 16.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad Bah-Mee Noodles",
+    "description": "Stir-fried egg noodles with eggs, carrot, beansprouts, onions, broccoli, and mixed peppers. E, G, S. Vegetable 11.95 Tofu 12.95 Chicken 13.95 Pork 14.95 Beef 15.95 King Prawns 15.95 Crispy Duck 16.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad See Ew Noodles",
+    "description": "Stir-fried rice noodles with dark soy sauce, egg, beansprout and sweetheart cabbage. E, G, S. Vegetable 11.95 Tofu 12.95 Chicken 13.95 Pork 14.95 Beef 15.95 King Prawns 15.95 Crispy Duck 16.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Spicy Drunken Noodles🌶️",
+    "description": "Stir-fried rice noodles with egg, with fresh chillies, basil leaves, carrot, broccoli, peppers and onion. G, Mo, E, F, S. Vegetable 11.95 Tofu 12.95 Chicken 13.95 Pork 14.95 Beef 15.95 King Prawns 15.95 Crispy Duck 16.95",
+    "price": "£11.95"
+   }
+  ],
+  "Fried Rice": [
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "Stir-fried seasoned Thai rice with prawns, chicken, raisins, pineapple chunks, peppers and cashew nuts. (G)(C)(Mo)(N)(S) Vegetable 10.95 Tofu 12.95 Chicken 12.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 15.95 Mixed Beef, Chicken and Prawns 16.95",
+    "price": "£10.95"
+   },
+   {
+    "name": "Thai Village Fried Rice",
+    "description": "Seasoned fried rice with eggs and vegetable, topped with crispy duck breast slices. E, G, S. Vegetable 10.95 Tofu 12.95 Chicken 12.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 15.95 Mixed Beef, Chicken and Prawns 16.95",
+    "price": "£10.95"
+   },
+   {
+    "name": "Chilli and Basil Fried Rice🌶️",
+    "description": "Spicy fried rice with fresh chillies, eggs, sweet basil leaves and seasonal vegetable. G, Mo, S. Vegetable 10.95 Tofu 12.95 Chicken 12.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 15.95 Mixed Beef, Chicken and Prawns 16.95",
+    "price": "£10.95"
+   }
+  ],
+  "Thai Stir-Fry": [
+   {
+    "name": "Ginger and Mushroom",
+    "description": "Stir-fried fine ginger slices with oyster sauce, mushrooms, bell peppers and spring onions. G, Mo, S. Vegetable 10 .95 Tofu 11.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£10.95"
+   },
+   {
+    "name": "Stir-fried with Cashew Nuts",
+    "description": "Stir-fried cashew nuts with sweet roasted Thai chilli paste, spring onions, carrots, bell peppers, broccoli and mushrooms. Vegetable 10 .95 Tofu 11.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£10.95"
+   },
+   {
+    "name": "Oyster Sauce with Vegetable",
+    "description": "Comforting savory dish with broccoli, carrots, onions and mushrooms stir-fried in oyster sauce. G, Mo, S. Vegetable 10 .95 Tofu 11.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£10.95"
+   },
+   {
+    "name": "Chilli and Basil 🌶️🌶️",
+    "description": "A classic Thai street food! A punch of chillies and full aroma of basil leaves and garlic. Spicy level 2. G, Mo, S. Vegetable 10 .95 Tofu 11.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£10.95"
+   },
+   {
+    "name": "Stir-fried Sweet & Pepper",
+    "description": "A sweet and sour stir-fry with pineapple chunks, cherry tomatoes, onion and mixed peppers. G, Mo, S. Vegetable 10 .95 Tofu 11.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£10.95"
+   },
+   {
+    "name": "Bamboo, Chilli and Basil 🌶️🌶️",
+    "description": "Stir-fried bamboo shoots with fresh chillies and sweet basil leaves. Spicy level 2. G, Mo, S. Vegetable 10 .95 Tofu 11.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£10.95"
+   }
+  ],
+  "Thai Village Specials": [
+   {
+    "name": "Steamed Sea Bass with Ginger",
+    "description": "Steamed sea bass fillet cooked with soy sauce, sesame oil, fresh ginger and spring onions.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Chilli Crispy Duck🌶️",
+    "description": "Roasted duck breast slices and dressed in roasted chilli paste sauce with onions and mixed peppers. Spicy level 1. F, Pn.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Chu Chee Sea Bass🌶️🌶️",
+    "description": "Crispy seabass fillet in creamy Thai red curry sauce with lime leaves, mixed peppers, onions and basil leaves.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Weeping Thai-ger Sizzler",
+    "description": "Grilled sirloin steak slices with garlic and black pepper sauce. Served with a choice of peppercorn sauce (G,M) or 🌶️ Thai hot sauce (F). How do you like your steak: Required Well done Medium Medium Rare Choose your sauce : Required Chilli Sauce Peppercorn Sauce",
+    "price": "£23.95"
+   },
+   {
+    "name": "Sirloin Noodle Soup",
+    "description": "Egg noodles or rice noodles cooked in beef broth with vegetables, topped with grilled sirloin steak slices. How do you like your steak: Required Well done Medium Medium Rare Noodles choice : Required Rice Noodles (V) Egg Noodles (E)(G)",
+    "price": "£21.95"
+   },
+   {
+    "name": "Thai Grilled Sirloin with Chips and Mixed Leaf Salad",
+    "description": "Marinated grilled sirloin with chips and mixed-leaf salad. Served with a choice of peppercorn sauce (G,M) or 🌶️ Thai hot sauce (F) How do you like your steak: Required Well done Medium Medium Rare Choose your sauce : Required Chilli Sauce Peppercorn Sauce",
+    "price": "£24.95"
+   },
+   {
+    "name": "Steamed Sea Bass with Lime Sauce🌶️",
+    "description": "Steamed sea bass fillet cooked with lime juice, coriander, onions, garlic, chillies and spring onions.",
+    "price": "£18.95"
+   }
+  ],
+  "Thai Curry": [
+   {
+    "name": "Thai Green Curry",
+    "description": "Coconut milk infused with Thai green curry paste, cooked with basil leaves, bamboo shoots and vegetables. Spicy level 1. C, Sd. Vegetable 11.95 Tofu 13.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Thai Red Curry 🌶️🌶️",
+    "description": "Coconut milk infused with Thai red curry paste, cooked with basil leaves, bamboo shoots and vegetables. Spicy level 2. C, Sd. Vegetable 11.95 Tofu 13.95 Chicken 13.95 Pork 14.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Thai Yellow Curry",
+    "description": "Coconut milk infused with Thai yellow curry paste cooked with potatoes and onions. Vegetable 11.95 Tofu 13.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "A Southern Thai curry of mild warm spices with coconut milk, onions, potatoes and cashew nuts. Vegetable 11.95 Tofu 13.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Thai Panang Curry🌶️🌶️",
+    "description": "A Southern Thai red curry variant, salt and sweet, with fennel, coriander seeds, zesty kaffir lime leaves, coconut milk, green beans, peppers and onions. Vegetable 11.95 Tofu 13.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Thai Chu-chee Curry 🌶️",
+    "description": "A creamy Thai Red curry variant with coconut milk, kaffir lime leaves, chilies and peppers. A mellow taste, slightly sweet, not too spicy. Vegetable 11.95 Tofu 13.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£11.95"
+   },
+   {
+    "name": "Thai Jungle Curry 🌶️🌶️🌶️",
+    "description": "Fiery Thai curried broth, a famous dish from the mountain city of Chiang Mai, usually made with ingredient found in the jungles of Thailand. Here we cooked with bamboo shoot and vegetables. Vegetable 11.95 Tofu 13.95 Chicken 13.95 Pork 13.95 Beef 14.95 King Prawns 14.95 Crispy Duck 14.95",
+    "price": "£11.95"
+   }
+  ],
+  "Vegetable Delight": [
+   {
+    "name": "Stir-fried Mixed Vegetables",
+    "description": "Stir-fried seasonal vegetable with mushroom sauce. V, S, G",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Garlicky Broccoli",
+    "description": "Sauteed broccoli florets, sprinkles with crispy fried garlic. G, S, V",
+    "price": "£7.95",
+    "vegetarian": true
+   }
+  ],
+  "Extras": [
+   {
+    "name": "Thai Peanut Sauce",
+    "description": "A perfect pairing with chicken satay. Our rich, creamy and savory sauce made from a combination of peanut butter, coconut milk, coconut sugar and Thai curry paste. C, Mu, S, Sd, Pn",
+    "price": "£0.42"
+   },
+   {
+    "name": "Thai Hot Sauce🌶️🌶️",
+    "description": "For Weeping Thai-ger or Fried Whole Sea Bass. (F) A combination of dried chilli flakes with lime juice and Thai fish sauce.",
+    "price": "£0.42"
+   },
+   {
+    "name": "Thai Salsa Pickles",
+    "description": "Pickled small, bite-sized pieces of cucumber, carrots, peppers and shallots in a sweet and tangy vinegar-based solution. Deliciously bright and fresh sweet and sour condiment. (V, Sd)",
+    "price": "£0.42",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Sweet Chilli Sauce",
+    "description": "A popular condiment in Thai cuisine that add a spicy and sweet kick to almost any dish.",
+    "price": "£0.42"
+   },
+   {
+    "name": "Thai Sweet Vinaigrette Soy Sauce",
+    "description": "A unique flavor dipping sauce of sweet, salty and sour flavors, a perfect paring sauce for Thai dumplings or use as a dressing for salads. (S, Sd)",
+    "price": "£0.42"
+   },
+   {
+    "name": "Chilli Flakes 🌶️🌶️",
+    "description": "",
+    "price": "£0.42"
+   },
+   {
+    "name": "Chopped Fresh Chilies 🌶️🌶️",
+    "description": "",
+    "price": "£0.42"
+   },
+   {
+    "name": "Thai Fish Sauce",
+    "description": "",
+    "price": "£0.42"
+   },
+   {
+    "name": "Mayo, Ketchup, Salt and Pepper Sachets",
+    "description": "",
+    "price": "£0.42"
+   },
+   {
+    "name": "Soya Sauce",
+    "description": "",
+    "price": "£0.42"
+   }
+  ],
+  "Kids Meal": [
+   {
+    "name": "Kids' Chicken Nuggets Meal",
+    "description": "6 pcs Golden chicken bites with chips. G E",
+    "price": "£8.95"
+   },
+   {
+    "name": "Kids' Fish Fingers Meal",
+    "description": "4 pcs Golden fish fingers coated in breadcrumbs, served with chips. (G, M)",
+    "price": "£8.95"
+   }
+  ],
+  "Drinks": [
+   {
+    "name": "Fanta Orange 330ml",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Dr Pepper 330ml",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Still Water 500ml",
+    "description": "",
+    "price": "£2.50"
+   },
+   {
+    "name": "Fanta Fruit Twist 330ml",
+    "description": "",
+    "price": "£1.85"
+   },
+   {
+    "name": "Sparkling Water 500ml",
+    "description": "",
+    "price": "£2.50"
+   }
+  ],
+  "Desserts": [
+   {
+    "name": "Mango Sticky Rice",
+    "description": "Steamed sticky rice infused in sweet and salty coconut cream served with perfectly ripe yellow sweet mango slices. Topped with toasted sesame seeds. Served with coconut sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Chocolate Fudge Cake with Chocolate Sauce Dessert",
+    "description": "",
+    "price": "£8.00"
+   },
+   {
+    "name": "Vanilla Cheese Cake with Salted Caramel Sauce Dessert",
+    "description": "",
+    "price": "£8.00"
+   }
+  ],
+  "Sides": [
+   {
+    "name": "Steamed Rice",
+    "description": "Steamed white rice. (V)",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "with spring onion. (E)(G*)(S*)(V)",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "(V)(GF)",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken & Egg Fried Rice",
+    "description": "",
+    "price": "£8.95"
+   },
+   {
+    "name": "Finger Chips",
+    "description": "Fried potatoes chips, served with mayo, ketchup and salt & pepper sachets.",
+    "price": "£4.95"
+   },
+   {
+    "name": "Mixed Leaves Salad",
+    "description": "Fresh salad leaves with red onions, cherry tomatoes and cucumber. Served with Thai salsa pickles on the side.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Coconut rice",
+    "description": "Thai riceCooked with Thai coconut milk",
+    "price": "£4.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

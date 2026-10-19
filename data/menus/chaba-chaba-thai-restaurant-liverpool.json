@@ -1,0 +1,340 @@
+{
+ "restaurant": "Chaba Chaba Thai Restaurant",
+ "city": "Liverpool",
+ "fsa_id": "498226",
+ "address": "Liverpool",
+ "source": "http://www.chabachaba.co.uk/assets/ChaBaChaBa_Menu_CB006.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "THAI PRAWN CRACKERS",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "CHICKEN SATAY GFO",
+    "description": "SERVED WITH PEANUT SAUCE ALLERGENS : PEANUTS & DAIRY",
+    "price": "£7.95"
+   },
+   {
+    "name": "THAI FISH CAKES GFO",
+    "description": "SERVED WITH GROUND PEANUT & CUCUMBER RELISH ALLERGENS : PEANUTS",
+    "price": "£7.95"
+   },
+   {
+    "name": "SWEETCORN CAKES",
+    "description": "SERVED WITH SWEET CHILLI SAUCE",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "SESAME PRAWN ON TOAST",
+    "description": "SERVED WITH SWEET CHILLI SAUCE ALLERGENS : SESAME SEEDS",
+    "price": "£7.95"
+   },
+   {
+    "name": "PRAWN SPRING ROLLS",
+    "description": "MARINATED IN GARLIC & CORIANDER AND SERVED WITH HOT CHILLI SAUCE ALLERGENS : DAIRY",
+    "price": "£7.95"
+   },
+   {
+    "name": "VEGETABLE SPRING ROLLS",
+    "description": "FILLED WITH VERMICELLI NOODLES WRAPPED IN SPRING ROLL PAPER AND SERVED WITH SWEET CHILLI SAUCE ALLERGENS : DAIRY",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "FRESH VEGETABLE ROLLS (SERVED COLD) GFO",
+    "description": "FILLED WITH FRESH VEGETABLES WRAPPED IN RICE PAPER AND SERVED WITH SWEET CHILLI SAUCE",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "SWEET POTATO TEMPURA",
+    "description": "SERVED WITH SWEET CHILLI SAUCE",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "STEAMED MUSSELS GFO",
+    "description": "COOKED IN COCONUT MILK, GALANGAL, LEMONGRASS AND SERVED WITH CHILLI LIME & GARLIC SAUCE",
+    "price": "£8.95"
+   },
+   {
+    "name": "THAI GARLIC SAUSAGE",
+    "description": "NORTH-EASTERN STYLE PORK SAUSAGES AND SERVED WITH PEANUTS, GINGER & HOT CHILLI SAUCE ALLERGENS : PEANUTS",
+    "price": "£8.95"
+   },
+   {
+    "name": "CHABA CHABA PLATTER (MINIMUM FOR TWO)",
+    "description": "CHICKEN SATAY, FISH CAKES, SESAME PRAWN ON TOAST & PRAWN SPRING ROLLS ALLERGENS : PEANUTS & SESAME SEEDS & DAIRY OR SWEETCORN CAKES, VEGETABLE SPRING ROLLS, FRESH VEGETABLE ROLLS & SWEET POTATO TEMPURA ALLERGENS : PEANUTS & DAIRY",
+    "price": "£16.95"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "TOM YUM GFO",
+    "description": "SPICY & SOUR SOUP WITH CORIANDER, GALANGAL, LIME LEAVES, LEMONGRASS, MUSHROOMS & CHERRY TOMATOES ALLERGENS : DAIRY",
+    "price": null
+   },
+   {
+    "name": "TOM KHA GFO",
+    "description": "COCONUT SOUP WITH CORIANDER, GALANGAL, LIME LEAVES, LEMONGRASS, CHILLI, MUSHROOMS & CHERRY TOMATOES",
+    "price": null
+   },
+   {
+    "name": "CHICKEN TURMERIC SOUP GFO",
+    "description": "CLEAR SOUP WITH FRESH TURMERIC & LEMONGRASS",
+    "price": "£7.95"
+   },
+   {
+    "name": "VERMICELLI NOODLE SOUP GFO",
+    "description": "CLEAR SOUP WITH SPRING ONIONS & GARLIC OIL CHICKEN 7.95 TOFU 7.95",
+    "price": "£7.95"
+   }
+  ],
+  "SALADS": [
+   {
+    "name": "ESARN SALAD GFO",
+    "description": "WITH RED ONIONS, MINT LEAVES, THAI PARSLEY, GROUND ROASTED CHILLI & LIME DRESSING MINCED CHICKEN / PORK 8.95 MUSHROOM 8.95",
+    "price": "£8.95"
+   },
+   {
+    "name": "NAM TOK BEEF SALAD GFO",
+    "description": "TOSSED IN RED ONIONS, ROASTED RICE, MINT LEAVES, THAI PARSLEY, ROASTED CHILLI & LIME DRESSING",
+    "price": "£9.95"
+   },
+   {
+    "name": "KING PRAWN SALAD GFO",
+    "description": "TOSSED IN ONIONS, LEMONGRASS, THAI CHILLI PASTE AND CHILLI & LIME DRESSING ALLERGENS : DAIRY",
+    "price": "£9.95"
+   },
+   {
+    "name": "CRISPY TOFU SALAD GFO",
+    "description": "WITH CHERRY TOMATOES, CUCUMBER, CARROTS, ONIONS IN CHILLI & LIME DRESSING",
+    "price": "£8.95"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "RED CURRY GFO",
+    "description": "WITH BUTTERNUT SQUASH, BAMBOO SHOOTS, BELL PEPPERS, CHILLI & SWEET BASIL",
+    "price": null
+   },
+   {
+    "name": "GREEN CURRY GFO",
+    "description": "WITH COURGETTE (OR MARROW - SEASONAL), BAMBOO SHOOTS, BELL PEPPERS, CHILLI & SWEET BASIL",
+    "price": null
+   },
+   {
+    "name": "YELLOW CURRY GFO",
+    "description": "A RICH MILD COCONUT CURRY - COOKED WITH POTATOES & ONIONS",
+    "price": null
+   },
+   {
+    "name": "PANANG BEEF CURRY GFO",
+    "description": "A DRY & SPICY SOUTHERN CURRY - COOKED IN COCONUT MILK & LIME LEAVES ALLERGENS : DAIRY",
+    "price": null
+   },
+   {
+    "name": "RED PRAWN & PINEAPPLE CURRY GFO",
+    "description": "WITH COCONUT MILK, BELL PEPPERS & LIME LEAVES",
+    "price": "£9.95"
+   },
+   {
+    "name": "MASSAMAN CURRY GFO",
+    "description": "A MILD CURRY WITH POTATOES & ONIONS, AND TOPPED WITH PEANUTS & CRISPY SHALLOTS ALLERGENS : PEANUTS",
+    "price": "£9.95"
+   },
+   {
+    "name": "RED DUCK CURRY GFO",
+    "description": "WITH PINEAPPLE, GRAPES, CHERRY TOMATOES, CHILLI & SWEET BASIL",
+    "price": "£9.95"
+   }
+  ],
+  "HOT WOK": [
+   {
+    "name": "KRATA RORN GFO",
+    "description": "LEMONGRASS SAUCE WITH BELL PEPPERS, LIME LEAVES, CHILLI & BLACK PEPPER CHICKEN / PORK 10.95 DUCK / BEEF / KING PRAWN / SQUID 11.95",
+    "price": null
+   },
+   {
+    "name": "CRYING TIGER",
+    "description": "GRILLED SIRLOIN STEAK - TOPPED WITH CRISPY SHALLOTS SERVED CHILLI & LIME DIPPING SAUCE",
+    "price": "£15.95"
+   },
+   {
+    "name": "PHAD CHAA GFO",
+    "description": "WITH LESSER GINGER, BELL PEPPERS, CHILLI, GARLIC, FRESH GREEN PEPPERCORNS & HOLY BASIL",
+    "price": "£11.95"
+   },
+   {
+    "name": "TAMARIND DUCK",
+    "description": "BATTERED BREAST OF DUCK - TOPPED WITH A SWEET & SOUR SPICY SAUCE",
+    "price": "£14.95"
+   }
+  ],
+  "STIR-FRY": [
+   {
+    "name": "HOLY BASIL & CHILLI GFO",
+    "description": "WITH LONG BEANS, BAMBOO SHOOTS, BELL PEPPERS, ONIONS & HOLY BASIL",
+    "price": null
+   },
+   {
+    "name": "THAI CHILLI PASTE GFO",
+    "description": "WITH ONIONS, RED CHILLI, BELL PEPPERS & SWEET BASIL",
+    "price": null
+   },
+   {
+    "name": "RED CURRY PASTE GFO",
+    "description": "WITH GREEN BEANS, BAMBOO SHOOTS, FRESH PEPPERCORNS, LESSER GINGER, BELL PEPPERS, COCONUT MILK & LIME LEAVES",
+    "price": null
+   },
+   {
+    "name": "GARLIC & PEPPER GFO",
+    "description": "WITH CORIANDER, BELL PEPPERS & TOPPED WITH CRISPY GARLIC",
+    "price": null
+   },
+   {
+    "name": "CASHEW NUTS GFO",
+    "description": "WITH ONIONS, BELL PEPPERS, CARROTS, MUSHROOMS, SPRING ONIONS & ROASTED CHILLI ALLERGENS : CASHEW NUTS",
+    "price": null
+   },
+   {
+    "name": "OYSTER SAUCE GFO",
+    "description": "WITH ONIONS, BELL PEPPERS, CARROTS, MUSHROOMS, SPRING ONIONS",
+    "price": null
+   },
+   {
+    "name": "SWEET & SOUR GFO",
+    "description": "WITH PINEAPPLES, ONIONS, BELL PEPPERS, TOMATOES, CUCUMBER & SPRING ONIONS",
+    "price": null
+   }
+  ],
+  "FISH": [
+   {
+    "name": "STEAMED SEA BASS",
+    "description": "WITH SPECIAL GARLIC, CHILLI & LIME SAUCE",
+    "price": "£19.95"
+   },
+   {
+    "name": "GRILLED STUFFED SEA BASS",
+    "description": "WITH LEMONGRASS, LIME LEAVES & SWEET BASIL, WRAPPED IN BANANA LEAF AND SERVED WITH CHILLI & LIME SAUCE",
+    "price": "£19.95"
+   },
+   {
+    "name": "CHILLI & GARLIC SEA BASS",
+    "description": "BATTERED & TOPPED WITH TAMARIND, CHILLI & GARLIC SAUCE",
+    "price": "£19.95"
+   },
+   {
+    "name": "SWEET & SOUR SEA BASS",
+    "description": "BATTERED & TOPPED WITH PINEAPPLES, BELL PEPPERS, TOMATOES, CUCUMBER & SPRING ONIONS",
+    "price": "£19.95"
+   },
+   {
+    "name": "CHU CHEE SEA BASS",
+    "description": "BATTERED & TOPPED WITH AROMATIC DRY RED CURRY & SHREDDED KAFFIR LIME LEAVES",
+    "price": "£19.95"
+   }
+  ],
+  "RICE & NOODLES": [
+   {
+    "name": "PHAD THAI NOODLES",
+    "description": "WITH EGG, CARROTS, BEAN SPROUTS & SPRING ONIONS IN PHAD THAI SAUCE SERVED WITH GROUND PEANUTS ON THE SIDE ALLERGENS : PEANUTS & EGGS",
+    "price": null
+   },
+   {
+    "name": "HOLY BASIL & CHILLI NOODLES",
+    "description": "STIR-FRIED RICE NOODLES WITH EGG, GARLIC & CHILLI, BAMBOO SHOOTS, BELL PEPPERS & HOLY BASIL ALLERGENS : EGGS",
+    "price": null
+   },
+   {
+    "name": "SOY SAUCE NOODLES",
+    "description": "STIR-FRIED RICE NOODLES WITH EGG, BABY SWEET CORN, BROCCOLI & DARK SOY SAUCE ALLERGENS : EGGS",
+    "price": null
+   },
+   {
+    "name": "EGG NOODLES",
+    "description": "STIR-FRIED WITH ONIONS, CARROTS, BEAN SPROUTS & SPRING ONIONS ALLERGENS : EGGS",
+    "price": null
+   },
+   {
+    "name": "HOLY BASIL & CHILLI FRIED RICE",
+    "description": "WITH EGG, GARLIC & CHILLI, BAMBOO SHOOTS, BELL PEPPERS & HOLY BASIL ALLERGENS : EGGS",
+    "price": null
+   },
+   {
+    "name": "FRIED RICE",
+    "description": "WITH EGG, BELL PEPPERS, ONIONS, SPRING ONIONS & SOY SAUCE ALLERGENS : EGGS",
+    "price": null
+   }
+  ],
+  "SIDES": [
+   {
+    "name": "SOM TAM SALAD",
+    "description": "SHREDDED GREEN PAPAYA & CARROTS, PEANUTS, TOMATOES, GREEN BEAN SALAD IN LIME JUICE AND CHILLI DRESSING ALLERGENS : PEANUTS",
+    "price": "£9.95"
+   },
+   {
+    "name": "MORNING GLORY (WATER SPINACH)",
+    "description": "STIR-FRIED WITH GARLIC & CHILLI IN YELLOW BEAN PASTE & OYSTER SAUCE",
+    "price": "£7.95"
+   },
+   {
+    "name": "PAK CHOI",
+    "description": "STIR-FRIED WITH GARLIC & OYSTER SAUCE",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "MIXED SEASONAL VEGETABLES",
+    "description": "STIR-FRIED WITH GARLIC IN OYSTER SAUCE",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "STEAMED RICE",
+    "description": "",
+    "price": "£2.95"
+   },
+   {
+    "name": "EGG FRIED RICE",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "COCONUT RICE",
+    "description": "ALLERGENS : SESAME SEEDS",
+    "price": "£3.50"
+   },
+   {
+    "name": "STICKY RICE",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "PLAIN RICE NOODLES",
+    "description": "STIR-FRIED WITH EGG, BEAN SPROUTS, CARROTS & PHAD THAI SAUCE ALLERGENS : EGGS",
+    "price": "£4.95"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "CHICKEN 7.95",
+  "KING PRAWN 8.95",
+  "MUSHROOM 7.95",
+  "CHICKEN / PORK 8.95",
+  "DUCK / BEEF / KING PRAWN 9.95",
+  "CRISPY TOFU 8.95",
+  "CHICKEN / PORK 8.95",
+  "DUCK / BEEF / KING PRAWN / SQUID 9.95",
+  "CRISPY TOFU 8.95",
+  "2 FILLETS 19.95",
+  "CHICKEN / PORK 12.95",
+  "DUCK / BEEF / KING PRAWN / SQUID 13.95",
+  "CRISPY TOFU 11.95"
+ ]
+}

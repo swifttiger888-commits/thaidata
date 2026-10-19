@@ -1,0 +1,346 @@
+{
+ "restaurant": "Sabai Thai Kitchen @ The Lemon Tree",
+ "city": "London",
+ "fsa_id": "1814381",
+ "address": "London",
+ "source": "https://www.lemontreecoventgarden.com/food",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "Prawn Crackers",
+    "description": "Light and crispy prawn crackers, served with sweet chilli dipping sauce.",
+    "price": "£4.95",
+    "num": "1"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy golden rolls filled with seasonal vegetables, served with sweet chilli sauce.",
+    "price": "£7.50",
+    "num": "2"
+   },
+   {
+    "name": "Crispy Tofu",
+    "description": "Golden-fried tofu served with sweet chilli dipping sauce, topped with ground peanuts.",
+    "price": "£7.50",
+    "num": "3"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Char-grilled chicken skewers served with our homemade peanut butter sauce.",
+    "price": "£8.50",
+    "num": "4"
+   },
+   {
+    "name": "Chicken Dumplings",
+    "description": "Tender chicken dumplings served with a savoury dipping sauce.",
+    "price": "£8.50",
+    "num": "5"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "Traditional Thai fish cakes blended with red curry paste and spices, served with sweet chilli sauce, and topped with small cubes of cucumber, carrot and ground peanuts.",
+    "price": "£8.50",
+    "num": "6"
+   },
+   {
+    "name": "Sesame Prawn on Toast",
+    "description": "Crispy sesame minced prawn spread over toast, served with sweet chilli dipping sauce.",
+    "price": "£8.50",
+    "num": "7"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Crispy fried squid seasoned with aromatic salt, pepper, chilli and fresh herbs, served with Sriracha chilli sauce.",
+    "price": "£9.00",
+    "num": "8"
+   },
+   {
+    "name": "Thai Fried Chicken Wing",
+    "description": "Crispy fried chicken wings seasoned with aromatic salt, pepper, chilli and fresh herbs, served with sweet chilli dipping sauce.",
+    "price": "£8.50",
+    "num": "9"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "Tom Yum",
+    "description": "A classic Thai hot and sour soup with fragrant lemon grass, galangal, kaffir lime and fresh chilli.",
+    "price": null,
+    "num": "10"
+   },
+   {
+    "name": "Tom Kha",
+    "description": "A rich and aromatic Thai coconut soup with lemon grass, galangal, kaffir lime and fresh herbs.",
+    "price": null,
+    "num": "11"
+   }
+  ],
+  "THAI CURRIES": [
+   {
+    "name": "Thai Green Curry",
+    "description": "A rich and aromatic Thai green curry simmered with coconut milk, fresh herbs, spices and seasonal vegetables.",
+    "price": null,
+    "num": "12"
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "A fragrant Thai red curry with coconut milk, fresh herbs, aromatic spices and seasonal vegetables.",
+    "price": null,
+    "num": "13"
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "A mild, rich and aromatic Thai curry with coconut milk, potatoes and onions, topped with crispy fried shallots and roasted peanuts.",
+    "price": null,
+    "num": "14"
+   },
+   {
+    "name": "Yellow Curry",
+    "description": "A mild curry with yellow curry paste, coconut milk, potatoes and onions, topped with crispy fried shallots.",
+    "price": null,
+    "num": "15"
+   },
+   {
+    "name": "Jungle Curry",
+    "description": "A fiery Thai curry packed with fresh herbs, vegetables and aromatic spices, traditionally prepared without coconut milk.",
+    "price": null,
+    "num": "16"
+   },
+   {
+    "name": "Panang Curry",
+    "description": "A rich, creamy Thai curry with coconut milk, fragrant spices and distinctive Panang curry flavour.",
+    "price": null,
+    "num": "17"
+   }
+  ],
+  "RICE DISHES": [
+   {
+    "name": "Special Fried Rice",
+    "description": "Wok-fried jasmine rice with egg and vegetables, seasoned with aromatic Thai flavours.",
+    "price": null,
+    "num": "18"
+   },
+   {
+    "name": "Thai Basil Fried Rice / Kaow Pad Krapaow",
+    "description": "Fragrant wok-fried rice with Thai basil, chilli and egg, with our signature Pad Kra Paow sauce.",
+    "price": null,
+    "num": "19"
+   },
+   {
+    "name": "Singapore Fried Rice",
+    "description": "Wok-fried rice with egg, vegetables and aromatic curry powder.",
+    "price": null,
+    "num": "20"
+   },
+   {
+    "name": "Seafood Tom Yum Fried Rice",
+    "description": "Wok-fried rice infused with the bold flavours of Tom Yum, fresh chilli, herbs and mixed seafood.",
+    "price": "£18.95",
+    "num": "21"
+   }
+  ],
+  "STIR-FRIED NOODLES": [
+   {
+    "name": "Pad Thai",
+    "description": "Thailand’s famous stir-fried rice noodles with egg, bean sprouts, crushed peanuts and our signature Pad Thai sauce.",
+    "price": null,
+    "num": "22"
+   },
+   {
+    "name": "Stir-Fried Soy Noodles",
+    "description": "Wide rice noodles wok-fried with egg, seasonal vegetables and rich dark soy sauce.",
+    "price": null,
+    "num": "23"
+   },
+   {
+    "name": "Drunken Noodles",
+    "description": "Bold and aromatic stir-fried noodles with fresh chilli, Thai basil, garlic and seasonal vegetables.",
+    "price": null,
+    "num": "24"
+   },
+   {
+    "name": "Singapore Noodles",
+    "description": "Fine noodles stir-fried with egg, vegetables and aromatic signature stir-fried sauce.",
+    "price": null,
+    "num": "25"
+   }
+  ],
+  "STIR-FRIED DISHES": [
+   {
+    "name": "Garlic & Pepper",
+    "description": "Wok-fried with fresh garlic, cracked black pepper and our signature stir-fried sauce.",
+    "price": null,
+    "num": "26"
+   },
+   {
+    "name": "Pad Krapow",
+    "description": "Wok-fried with fragrant Thai basil, fresh chilli, garlic and our signature spicy sauce.",
+    "price": null,
+    "num": "27"
+   },
+   {
+    "name": "Pad Cashew Nut",
+    "description": "Wok-fried with roasted cashew nuts, vegetables and our signature stir-fried sauce.",
+    "price": null,
+    "num": "28"
+   },
+   {
+    "name": "Pad Pak Ruam",
+    "description": "Seasonal vegetables flash-fried in our signature stir-fried sauce.",
+    "price": null,
+    "num": "29"
+   },
+   {
+    "name": "Seafood on Fire",
+    "description": "A fiery wok-fried combination of fresh seafood, vegetables, chilli, garlic and Thai basil, finished with our signature spicy sauce.",
+    "price": null,
+    "num": "30"
+   }
+  ],
+  "FISH DISHES": [
+   {
+    "name": "Pla Chu Chee",
+    "description": "Crispy fried fish topped with a rich, thick and aromatic Thai Panang curry sauce.",
+    "price": "£18.95",
+    "num": "31"
+   },
+   {
+    "name": "Pla Kratiem",
+    "description": "Crispy fried fish served with fragrant garlic, cracked black pepper and a savoury Thai sauce.",
+    "price": "£18.95",
+    "num": "32"
+   }
+  ],
+  "THAI SPICY SALADS - YUM": [
+   {
+    "name": "Pla Goong",
+    "description": "Succulent prawns tossed with fresh herbs, chilli, lime, sweet chilli oil and our signature spicy dressing.",
+    "price": "£18.95",
+    "num": "33"
+   },
+   {
+    "name": "Seafood Salad",
+    "description": "A vibrant combination of seafood, fresh herbs, chilli and lime in our signature spicy dressing.",
+    "price": "£18.95",
+    "num": "34"
+   },
+   {
+    "name": "Thai Beef Salad",
+    "description": "Sliced beef tossed with fresh herbs, chilli, red onion and lime in our signature spicy dressing.",
+    "price": "£16.50",
+    "num": "35"
+   }
+  ],
+  "PUB CLASSICS": [
+   {
+    "name": "Chicken Burger",
+    "description": "Crispy chicken patty topped with fresh lettuce, sliced tomatoes, white onions, and pickles, slathered with our burger sauce. Served with a side of crispy chips.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Beef Burger",
+    "description": "Juicy beef burger served in a toasted bun topped with fresh lettuce, sliced tomatoes, white onions, and pickles, slathered with our burger sauce. Served with a side of crispy chips.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Fish & Chips",
+    "description": "Crispy battered fish served with golden chips and classic accompaniments.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Bowl of Chips",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "Cheesy Chips",
+    "description": "Golden chips topped with melted cheese.",
+    "price": "£6.50"
+   }
+  ],
+  "SIDES & EXTRAS": [
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Egg Fried Rice",
+    "description": "Wok-fried jasmine rice with egg and aromatic Thai seasoning.",
+    "price": "£5.95"
+   },
+   {
+    "name": "Fried Egg",
+    "description": "",
+    "price": "£2.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Prik Nam Pla",
+    "description": "",
+    "price": "£1.50"
+   },
+   {
+    "name": "Homemade Chilli Oil",
+    "description": "",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Sriracha Hot Sauce",
+    "description": "",
+    "price": "£1.50",
+    "vegetarian": true
+   }
+  ],
+  "KIDS’ MENU": [
+   {
+    "name": "Chicken Satay",
+    "description": "Grilled chicken skewers served with a mild, sweet peanut dipping sauce on the side and a bowl of rice.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Chicken Tom Kha",
+    "description": "A rich and aromatic Thai coconut soup with lemongrass, galangal, kaffir lime and fresh herbs.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Thai Omelette with Rice",
+    "description": "Thai-style omelette served with steamed jasmine rice.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Chicken Fried Rice",
+    "description": "Jasmine rice wok-tossed with chicken, scrambled egg, carrot and spring onions. Completely non-spicy.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Stir-Fried Soy Noodles with Chicken or Mixed Vegetables",
+    "description": "Pad See Eew - wide rice noodles wok-fried with egg, seasonal vegetables and rich dark soy sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Mild Massaman Curry with Chicken or Mixed Vegetables",
+    "description": "Mild and creamy Massaman curry served with rice.",
+    "price": "£9.95"
+   }
+  ],
+  "THAI BUFFET": [
+   {
+    "name": "Build Your Own Thai Feast",
+    "description": "",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Choose from: Chicken £8.00 Prawn £8.50",
+  "Served with steamed jasmine rice. Upgrade to Thai egg-fried rice for an extra £2.50. Choose from: Vegetable / Tofu £14.50 Chicken £15.50 Beef £16.50 Prawn £18.50",
+  "Choose from: Vegetable / Tofu £14.50 Chicken £15.50 Beef £16.50 Prawn £18.50",
+  "Served with steamed jasmine rice. Upgrade to Thai egg-fried rice for an extra £2.50. Choose from: Vegetable / Tofu £14.50 Chicken £15.50 Beef £16.50 Prawn £18.50",
+  "Add an extra patty for £4.50/ cheese or a fried egg for £2.00"
+ ]
+}

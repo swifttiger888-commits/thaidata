@@ -1,0 +1,231 @@
+{
+ "restaurant": "Two Point Thai Restaurant",
+ "city": "London",
+ "fsa_id": "412418",
+ "address": "London",
+ "source": "https://www.twopointthai.co.uk/_files/ugd/b9d2e9_364fec24f9c9450e8ad4d676e40e5f5a.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTER": [
+   {
+    "name": "THAI E-SAAN SAUSAGES",
+    "description": "Deep-fried homemade minced pork & rice Thai Northeastern style sausage.",
+    "price": "£8.00"
+   },
+   {
+    "name": "CRISPY WONTON",
+    "description": "Deep-fried crispy wontons, stuffed with chicken & prawn, served with sweet chilli sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "PRAWN & CHICKEN ON TOAST",
+    "description": "Deep-fried minced chicken & prawn on toast, served with sweet chilli sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "THAI FISH CAKES",
+    "description": "Deep-fried Thai fish cakes, served with crushed peanuts & sweet chilli sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "CHICKEN SATAY",
+    "description": "Grilled marinated chicken satay skewers, served with homemade satay peanut sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "THAI DIM SUM",
+    "description": "Steamed minced pork dumplings with sweet soy sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "PRAWN TEMPURA",
+    "description": "Deep-fried prawns in batter, served with sweet chilli sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "DUCK SPRING ROLL",
+    "description": "Deep-fried duck spring rolls, served with hoisin sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "PORK RIBS",
+    "description": "Deep-fried marinated pork spare ribs, topped with sesame and served with homemade sweet soy sauce.",
+    "price": "£8.00"
+   }
+  ],
+  "SOUP": [
+   {
+    "name": "WONTON SOUP",
+    "description": "Seasoned chicken broth with minced chicken and prawn wrapped in wonton parcels.",
+    "price": "£7.90"
+   },
+   {
+    "name": "TOM KHA SOUP",
+    "description": "Mild coconut soup cooked with galangal, lemongrass and kaffir-lime leaves.",
+    "price": null
+   },
+   {
+    "name": "TOM YUM SOUP",
+    "description": "*Popular* Spicy and sour soup cooked with lemongrass and kaffir-lime leaves.",
+    "price": null
+   }
+  ],
+  "SALAD": [
+   {
+    "name": "SOM-TUM (PAPAYA SALAD)",
+    "description": "Shredded green papaya and carrot tossed with tomato, green beans, and roasted peanuts in a spicy and sour Thai dressing. *Most popular* **Thai Beauty Queen Favourite**",
+    "price": "£13.80"
+   },
+   {
+    "name": "LARB SALAD",
+    "description": "MINCED CHICKEN OR MINCED PORK Traditional spicy salad with dried chilli flakes and lime juice, roasted ground rice, shallots, and house seasoning.",
+    "price": "£12.80"
+   },
+   {
+    "name": "YUM WOON SEN",
+    "description": "Spicy glass noodles salad with prawns and minced chicken.",
+    "price": "£13.80"
+   },
+   {
+    "name": "LARB TOFU",
+    "description": "Fried tofu with ground dried chilli flakes, roasted ground rice, shallots, and house seasonings.",
+    "price": "£12.00"
+   }
+  ],
+  "SPECIAL": [
+   {
+    "name": "CRAB MEAT OMELETTE",
+    "description": "Golden, crispy omelettes, packed with sweet crab meat, served with spicy chili sauce.",
+    "price": "£15.50"
+   },
+   {
+    "name": "NAAM TOK",
+    "description": "Grilled pork loin or beef sirloin, tossed with roasted ground rice, dried chilli flakes and seasonings",
+    "price": "£21.70"
+   },
+   {
+    "name": "KRA DOOK MU OB (SOUP)",
+    "description": "Braised pork spare ribs with sweet basil leaves, fresh chilli, and aromatic herbs, served in a traditional clay pot.",
+    "price": "£15.20"
+   },
+   {
+    "name": "TAMARIND DUCK",
+    "description": "A quarter of crispy duck topped with homemade tamarind sauce.",
+    "price": "£15.70"
+   },
+   {
+    "name": "SALMON SAM ROD",
+    "description": "Grilled salmon fillet with a sweet, sour, and spicy sauce.",
+    "price": "£15.50"
+   },
+   {
+    "name": "CHU CHI SALMON",
+    "description": "Grilled salmon fillet topped with a spicy, creamy Panang curry sauce infused with kaffir lime leaves.",
+    "price": "£15.50"
+   },
+   {
+    "name": "SALMON NUENG KHING",
+    "description": "Steamed salmon fillet with fresh ginger slices and chilli.",
+    "price": "£15.50"
+   },
+   {
+    "name": "SALTED AND PEPPER PRAWNS",
+    "description": "Stir-fry crispy battered prawns with garlic and fresh chilli.",
+    "price": "£15.20"
+   },
+   {
+    "name": "SALTED AND PEPPER CALAMARI",
+    "description": "Stir-fry crispy battered squid with garlic and fresh chilli.",
+    "price": "£15.20"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "KAENG KIEW WAAN",
+    "description": "Thai Green curry with coconut milk, sweet basil leaves, bamboo shoot and chilli.",
+    "price": null
+   },
+   {
+    "name": "KAENG PHED",
+    "description": "Thai Red curry with coconut milk, sweet basil leaves, bamboo shoot and chilli.",
+    "price": null
+   },
+   {
+    "name": "KAENG PANANG",
+    "description": "Thick and creamy Panang red curry with coconut milk, peppers, and fine beans, topped with kaffir lime leaves and chilli.",
+    "price": null
+   },
+   {
+    "name": "KAENG MASSAMAN",
+    "description": "Mild Massaman curry with coconut milk, potato, peanuts and onion.",
+    "price": null
+   },
+   {
+    "name": "KAENG PA",
+    "description": "Spicy red curry with mixed vegetables, cooked *without coconut milk*.",
+    "price": null
+   },
+   {
+    "name": "KAENG PED YANG (SPECIAL ROAST DUCK)",
+    "description": "Special red curry with roasted duck, coconut milk, pineapple and tomato.",
+    "price": "£15.50"
+   }
+  ],
+  "STIR-FRY": [
+   {
+    "name": "PAD KRA PROW",
+    "description": "Stir-fry with holy basil leaves, fresh chilli, pepper, fine bean and onion.",
+    "price": null
+   },
+   {
+    "name": "PAD NAM PRIG PAOW",
+    "description": "Stir-Fry with onion, mushroom and bamboo shoot in homemade garlic and chilli paste.",
+    "price": null
+   },
+   {
+    "name": "PAD KRATIAM PRIG THAI",
+    "description": "Stir-fry with garlic and pepper, carrot, and onion.",
+    "price": null
+   },
+   {
+    "name": "PAD KHING",
+    "description": "Stir-fry with fresh ginger, mushroom, carrot and onion.",
+    "price": null
+   },
+   {
+    "name": "PAD NHAM MAN HOI",
+    "description": "Stir-fry with oyster sauce, mushroom, carrot and onion.",
+    "price": null
+   },
+   {
+    "name": "PAD MED MANUANG",
+    "description": "Stir-fry with cashew nut, mushroom, carrot and onion.",
+    "price": null
+   },
+   {
+    "name": "PAD PAK BUNG",
+    "description": "Stir-fry morning glory (Chinese water spinach) with oyster sauce, garlic, and fresh chilli.",
+    "price": "£12.70"
+   },
+   {
+    "name": "PAD BROCCOLI",
+    "description": "Stir-fry fresh broccoli with oyster sauce, garlic and fresh chilli.",
+    "price": "£11.70"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "• Add one extra person £9.75",
+  "• Add one extra person £9.25",
+  "• MUSHROOMS £7.50",
+  "• CHICKEN £7.80",
+  "• PRAWNS £8.00",
+  "• CURRY & STIR-FRY CHOICES •",
+  "• VEGETABLE / TOFU £13.00",
+  "• SOY PROTEIN £13.50",
+  "• CHICKEN / PORK £14.00",
+  "• BEEF / DUCK / PRAWNS / SQUID £15.20",
+  "• MIXED SEAFOOD (PRAWNS, SQUID AND MUSSEL) £16.95"
+ ]
+}

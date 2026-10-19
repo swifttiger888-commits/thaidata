@@ -1,0 +1,584 @@
+{
+ "restaurant": "Butlers Thai",
+ "city": "London",
+ "fsa_id": "1719989",
+ "address": "London",
+ "source": "https://www.butlersthai.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starter": [
+   {
+    "name": "Veg Spring rolls (v)",
+    "description": "Rice pancake filled with cabbage, carrot & vermicelli",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "1"
+   },
+   {
+    "name": "Duck Rolls",
+    "description": "Rice pancake filled with shredded duck in hoi sin sauce",
+    "price": "£7.95",
+    "num": "2"
+   },
+   {
+    "name": "Spicy Pork Spring Rolls (h)",
+    "description": "Minced pork with chilli & herbs in lime dressing",
+    "price": "£9.95",
+    "num": "3"
+   },
+   {
+    "name": "Veg Tempura (v)",
+    "description": "Vegetables in batter served with sweet chilli dip",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "4"
+   },
+   {
+    "name": "Sweetcorn Cake (v)",
+    "description": "Sweetcorn in batter served with sweet chilli dip",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "5"
+   },
+   {
+    "name": "Chicken Satay (n)",
+    "description": "Grilled skewered marinated chicken fillet and served with peanut sauce",
+    "price": "£9.95",
+    "num": "7"
+   },
+   {
+    "name": "Calamari",
+    "description": "Deep fried squid rings in batter served with chilli dip",
+    "price": "£9.95",
+    "num": "8"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Deep fried squid dusted with salt and pepper",
+    "price": "£9.95",
+    "num": "9"
+   },
+   {
+    "name": "Ribs",
+    "description": "Spare ribs marinated with spices coated with Thai barbeque sauce",
+    "price": "£9.95",
+    "num": "10"
+   },
+   {
+    "name": "Crispy Chicken Wings",
+    "description": "Deep fried crispy wings coated with juicy garlic sauce",
+    "price": "£9.95",
+    "num": "11"
+   },
+   {
+    "name": "Prawn on Toast",
+    "description": "Sesame prawn on toast",
+    "price": "£9.95",
+    "num": "12"
+   },
+   {
+    "name": "Prawn Torpedo",
+    "description": "Prawn in breadcrumbs served with sweet chilli dip",
+    "price": "£9.95",
+    "num": "13"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "",
+    "price": "£9.95",
+    "num": "14"
+   },
+   {
+    "name": "Salt and Pepper Tofu (v)",
+    "description": "Honey glazed BBQ pork skewers served with chilli & lime dip",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "15"
+   },
+   {
+    "name": "Tao Hu Tord (v) (n)",
+    "description": "Fried bean curd served with sweet chilli sauce & peanuts",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "16"
+   },
+   {
+    "name": "Crispy Aromatic Duck",
+    "description": "Quarter duck served with pancake, cucumber, spring onion & hoi sin sauce",
+    "price": "£17.95",
+    "num": "17"
+   },
+   {
+    "name": "Butlers special",
+    "description": "Prawn torpedo, crispy chicken wings, spring rolls, chicken satay, fishcakes & calamari",
+    "price": "£19.95",
+    "num": "18"
+   },
+   {
+    "name": "Steamed Edamame Beans",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "19"
+   },
+   {
+    "name": "Spicy Prawn Crackers (h)",
+    "description": "",
+    "price": "£4.95",
+    "num": "20"
+   },
+   {
+    "name": "Moo Ping",
+    "description": "Grilled marinated pork skewers",
+    "price": "£9.95"
+   },
+   {
+    "name": "Crispy wings Southern style",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Salt &Pepper Ribs",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Salt &peper chicken wings",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Crispy pork rolls",
+    "description": "Savory pork roll wrapped and fried until crisp served with sweet chilli vinaigrette",
+    "price": "£9.95"
+   },
+   {
+    "name": "Spicy seaweed rolls (v)",
+    "description": "Crispy seaweed rolls filled with glass noodles ,deep fried and served with garlic soya sauce",
+    "price": "£9.95",
+    "vegetarian": true
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Tom Yum (h)",
+    "description": "Hot & sour soup with mushrooms and lemongrass",
+    "price": "£7.50",
+    "num": "21"
+   },
+   {
+    "name": "Tom Kha",
+    "description": "A coconut soup tangy & sweet with mushrooms",
+    "price": "£7.50",
+    "num": "22"
+   }
+  ],
+  "Yum (Spicy Thai Salad)": [
+   {
+    "name": "Papaya salad (h) (n)",
+    "description": "Papaya, green beans, tomatoes, grounded peanut with chillies & lime dressing",
+    "price": "£13.95",
+    "num": "23"
+   },
+   {
+    "name": "Yum Neur (Beef Salad) (h)",
+    "description": "Classic Thai salad with slices of beef, tomatoes, cucumber, lime juice, chillies & coriander",
+    "price": "£14.95",
+    "num": "24"
+   },
+   {
+    "name": "Lemongrass Prawns Salad (h) (n)",
+    "description": "Prawns in mixed herbs, cashew nuts & lemongrass in chilli & lime dressing",
+    "price": "£14.95",
+    "num": "25"
+   },
+   {
+    "name": "Larb Moo",
+    "description": "Minced pork in mixed herbs & onion in Thai salad dressing",
+    "price": "£14.95",
+    "num": "26"
+   },
+   {
+    "name": "Vermicelli Squid & prawns Salad (h) (n)",
+    "description": "Glass noodles & seafood in chilli lime dressing",
+    "price": "£14.95",
+    "num": "27"
+   },
+   {
+    "name": "Roasted Duck Salad",
+    "description": "Sliced duck in grounded aromatic rice Thai dressing",
+    "price": "£14.95"
+   },
+   {
+    "name": "Prawns summer rolls",
+    "description": "",
+    "price": "£11.95"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "Panang Curry (h)",
+    "description": "Creamy panang curry with kaffir lime leaves in coconut milk",
+    "price": "£13.95",
+    "num": "28"
+   },
+   {
+    "name": "Dry Jungle Curry (h)",
+    "description": "A stir-fried spicy curry with Thai herbs & vegetables",
+    "price": "£13.95",
+    "num": "29"
+   },
+   {
+    "name": "Masaman Curry (h)",
+    "description": "A mild curry with onions & potatoes in coconut milk",
+    "price": "£13.95",
+    "num": "30"
+   },
+   {
+    "name": "Jungle Curry (h)",
+    "description": "A spicy curry with Thai herbs and vegetables",
+    "price": "£13.95",
+    "num": "31"
+   },
+   {
+    "name": "Red Curry (h)",
+    "description": "Red curry with coconut milk & bamboo shoots",
+    "price": "£13.95",
+    "num": "32"
+   },
+   {
+    "name": "Green Curry (h)",
+    "description": "Green curry with coconut milk and bamboo shoots",
+    "price": "£13.95",
+    "num": "33"
+   },
+   {
+    "name": "Roast Duck Curry (h)",
+    "description": "Roast duck curry with pineapple, tomatoes, peppers in coconut milk",
+    "price": "£15.95",
+    "num": "34"
+   }
+  ],
+  "Stir-Fried Dishes": [
+   {
+    "name": "Pad Gra-Pow (h)",
+    "description": "Stir-fried green beans, onions, garlic, chilli & basil leaves",
+    "price": "£13.95",
+    "num": "35"
+   },
+   {
+    "name": "Pad Ma-Kear (h)",
+    "description": "Stir-fried Aubergine, onions, chilli and peppers",
+    "price": "£13.95",
+    "num": "36"
+   },
+   {
+    "name": "Pad Himaparn (h) (n)",
+    "description": "Stir-fried cashew nuts, garlic, onions, mushroom & dried chilli",
+    "price": "£13.95",
+    "num": "37"
+   },
+   {
+    "name": "Pad Khing",
+    "description": "Fresh ginger, garlic, onions & Chinese mushroom",
+    "price": "£13.95",
+    "num": "38"
+   },
+   {
+    "name": "Sweet and Sour",
+    "description": "Stir-fried onions, tomatoes, cucumbers, pineapples with sweet and sour sauce",
+    "price": "£13.95",
+    "num": "39"
+   },
+   {
+    "name": "Pad Nam Prik Pao",
+    "description": "Stir-Fried vegetables in Thai style chilli paste",
+    "price": "£13.95",
+    "num": "40"
+   }
+  ],
+  "Fish Dishes": [
+   {
+    "name": "Jungle Fish (h) (n)",
+    "description": "Crispy fried fish on a bed of salad with a topping of cashew nuts, onions, peppers & Thai style dressing",
+    "price": "£23.95",
+    "num": "41"
+   },
+   {
+    "name": "Garlic & Ginger",
+    "description": "Fresh ginger, garlic, onions & Chinese mushrooms",
+    "price": "£23.95",
+    "num": "42"
+   },
+   {
+    "name": "Sweet Chilli Fish (h)",
+    "description": "Crispy fried fish with onions, peppers & sweet chilli sauce",
+    "price": "£23.95",
+    "num": "43"
+   },
+   {
+    "name": "Fish Curry (h)",
+    "description": "Crispy Fried fish with curry sauce & kaffir lime leaves",
+    "price": "£23.95",
+    "num": "44"
+   },
+   {
+    "name": "Garlic & Lime Fish (h)",
+    "description": "Steamed fish in chilli & lime dressing",
+    "price": "£23.95",
+    "num": "45"
+   },
+   {
+    "name": "Tamarind Fish",
+    "description": "Crispy fried fish in tangy tamarind sauce",
+    "price": "£23.95",
+    "num": "46"
+   },
+   {
+    "name": "Lap Pla fillet",
+    "description": "",
+    "price": "£19.95"
+   }
+  ],
+  "Chef's Recommendations": [
+   {
+    "name": "Tamarind Duck",
+    "description": "Crispy whole duck breast in tangy Tamarind sauce",
+    "price": "£17.95",
+    "num": "47"
+   },
+   {
+    "name": "Sweet chilli Duck (h)",
+    "description": "Crispy whole duck breast in sweet chilli sauce",
+    "price": "£17.95",
+    "num": "48"
+   },
+   {
+    "name": "Sizzling seafood",
+    "description": "Mixed seafood in hot holy basil sauce",
+    "price": "£17.95",
+    "num": "49"
+   },
+   {
+    "name": "Vermicelli Prawns (h)",
+    "description": "King prawns cooked in aromatic garlic & ginger vermicelli hot pot",
+    "price": "£17.95",
+    "num": "50"
+   },
+   {
+    "name": "Lamb Massaman Curry",
+    "description": "Slow cooked succulent lamb Massaman curry",
+    "price": "£18.95",
+    "num": "51"
+   },
+   {
+    "name": "Pad Prik khing",
+    "description": "Stir-fried crispy belly pork with green beans in chilli paste",
+    "price": "£17.95"
+   },
+   {
+    "name": "Kha Moo",
+    "description": "Popular slow cooked juicy pork leg served with pickled cabbage",
+    "price": "£17.95"
+   },
+   {
+    "name": "Krapow Moo Korb",
+    "description": "Stir-fried crispy belly pork with basil leaves in Chilli paste",
+    "price": "£17.95"
+   },
+   {
+    "name": "Stir fried Clams in Roasted chilli paste",
+    "description": "",
+    "price": "£17.95"
+   },
+   {
+    "name": "Seafood Tom yum Hot pot",
+    "description": "",
+    "price": "£18.95"
+   }
+  ],
+  "Stir-fry Vegetables": [
+   {
+    "name": "Mixed Vegetables with Oyster Sauce",
+    "description": "",
+    "price": "£12.95",
+    "num": "52"
+   },
+   {
+    "name": "Broccoli with Garlic with Oyster Sauce",
+    "description": "",
+    "price": "£12.95",
+    "num": "53"
+   },
+   {
+    "name": "Sweet and Sour Mixed Vegetables",
+    "description": "",
+    "price": "£12.95",
+    "num": "54"
+   },
+   {
+    "name": "Mixed Vegetables with Chilli and Basil (h)",
+    "description": "",
+    "price": "£12.95",
+    "num": "55"
+   },
+   {
+    "name": "Mixed Vegetables with Cashew Nuts (n)",
+    "description": "",
+    "price": "£12.95",
+    "num": "56"
+   },
+   {
+    "name": "Aubergine with Chilli and Basil (h)",
+    "description": "",
+    "price": "£12.95",
+    "num": "57"
+   },
+   {
+    "name": "Morning glory",
+    "description": "",
+    "price": "£12.95"
+   }
+  ],
+  "Rice and Noodle Dishes": [
+   {
+    "name": "Fried Rice",
+    "description": "Thai style with egg & mixed vegetables",
+    "price": "£13.95",
+    "num": "58"
+   },
+   {
+    "name": "Pad Thai (n)",
+    "description": "Stir-fried rice noodles with egg, bean sprouts, carrots, spring onion and peanuts",
+    "price": "£13.95",
+    "num": "59"
+   },
+   {
+    "name": "Soya Noodle",
+    "description": "Stir-fried rice noodles with soy sauce, egg and vegetables",
+    "price": "£13.95",
+    "num": "60"
+   },
+   {
+    "name": "Pad Kee Mao (h)",
+    "description": "Stir-fried rice noodles with fresh chillies & vegetables in special spicy Thai sauce",
+    "price": "£13.95",
+    "num": "61"
+   },
+   {
+    "name": "Steamed Rice",
+    "description": "",
+    "price": "£4.95",
+    "vegetarian": true,
+    "num": "62"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£5.95",
+    "vegetarian": true,
+    "num": "63"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£5.95",
+    "vegetarian": true,
+    "num": "64"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4.95",
+    "vegetarian": true,
+    "num": "65"
+   },
+   {
+    "name": "Plain Noodles",
+    "description": "Stir-fried egg noodles with bean sprouts and spring onions",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "66"
+   }
+  ],
+  "Thai Steet food": [
+   {
+    "name": "Krapow Moo Korb (rice+egg)",
+    "description": "Stir-fried crispy belly pork with basil leaves in Chilli paste served with fried egg and rice",
+    "price": "£15.95"
+   },
+   {
+    "name": "Minced pork Krapow (rice+egg)",
+    "description": "Served with rice and fried egg",
+    "price": "£16.95"
+   },
+   {
+    "name": "Minced beef Krapow (rice+egg)",
+    "description": "Served with rice and fried egg",
+    "price": "£16.95"
+   },
+   {
+    "name": "Kao kha Moo served with rice",
+    "description": "Slow cooked juicy pork leg served with rice pickled cabbage and boiled egg",
+    "price": "£16.95"
+   },
+   {
+    "name": "Prawn wonton noodles soup",
+    "description": "Served with rice noodles",
+    "price": "£14.95"
+   },
+   {
+    "name": "Beef noodle soup",
+    "description": "Served with rice noodles",
+    "price": "£15.95"
+   },
+   {
+    "name": "Roasted Duck Noodle soup",
+    "description": "Served with rice noodle",
+    "price": "£16.95"
+   },
+   {
+    "name": "Khao Soy",
+    "description": "Chicken curry noodle traditional Northern style served with egg noodles",
+    "price": "£16.95"
+   },
+   {
+    "name": "Minced pork Krapow (rice+fried egg)",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Moo ping &sticky rice",
+    "description": "Marinated pork skewered and grilled served with sticky rice",
+    "price": "£15.95"
+   },
+   {
+    "name": "Tom yum Minced pork noodle soup",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "Creamy Tom Yum seafood noodles soup",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pad prik Khing Fish served with rice &fried egg",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Tamarind fish served with rice and fried egg",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Chill basil fish served with rice and fried egg",
+    "description": "",
+    "price": "£16.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

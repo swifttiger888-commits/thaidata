@@ -1,0 +1,194 @@
+{
+ "restaurant": "Noi's Thai Kitchen",
+ "city": "London",
+ "fsa_id": "1274704",
+ "address": "London",
+ "source": "https://www.noisthai-kitchen.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Mains": [
+   {
+    "name": "Chicken Massaman Curry",
+    "description": "Slow cooked Chicken with coconut milk, fish sauce, tamarind, bay leaves, gingers, cardamom, cinnamon stick, peanuts, onion, carrots, potatoes and massaman curry paste.",
+    "price": "£10.99"
+   },
+   {
+    "name": "Cashew nuts stir fried",
+    "description": "Stir fried with red pepper, green pepper, onion, chilli, garlic, cashew nuts and spring onion.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Thai Green Curry",
+    "description": "Famous Thai curry with coconut milk, kaffir lime leaves, lemongrass, fish sauce, Thai basil and vegetables.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Jungle Curry",
+    "description": "Spicy red curry with no coconut milk, mushrooms, aubergines, bamboo shoot, vegetables, basil, kaffir lime leaves, Thai herbs, and green peppers corn.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Panang Curry",
+    "description": "Red curry, coconut milk, Thai basil, lemongrass, ginger, fish sauce, kaffir lime leaves, chilli, and vegetables.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Chu Chi Pla",
+    "description": "Crispy sea bass topping with thick red curry sauce, basil, coconut, lime leaves.",
+    "price": "£11.50"
+   },
+   {
+    "name": "Special Egg Fried Rice",
+    "description": "Simply delicious egg fried rice and some vegetables.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Garlic and Pepper stir fried",
+    "description": "Stir fried with garlic, soy sauce, oyster sauce, coriander and pepper.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Chilli and Basil Stir Fried",
+    "description": "Stir fried with soy sauce, sugar, garlic, onion, Thai basil, chilli and vegetables.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Pad See Eiw",
+    "description": "Stir Fried rice vermicelli noodles with dark soy sauce, carrots, onion, spring onion, spring green, and bean sprouts.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Grilled Beef Salad with vegetables and chilli",
+    "description": "Grilled beef salad with lime, chilli, fish sauce, cucumber, celery, tomatoes, and garlic.",
+    "price": "£10.50"
+   },
+   {
+    "name": "Somtum Papaya Salad",
+    "description": "Fresh green papaya salad with lime, fish sauce, garlic, peanuts, tomatoes, dried shrimps, and green beans.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Pad Thai Noodles",
+    "description": "Rice stick noodles with tofu, tamarind, fish sauce, sugar, peanuts, beansprouts, onion, garlic, soy sauce, and lime.",
+    "price": "£9.99"
+   },
+   {
+    "name": "Minced Chicken Salad",
+    "description": "Minced chicken, with fish sauce, lemongrass, lime, shallots, rice powder, mint, and spring onion.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "Steamed jasmine rice",
+    "price": "£2.50"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "Egg Fried Rice with Egg and Spring onion and seasoning.",
+    "price": "£2.99"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "Thai Sticky Rice",
+    "price": "£2.99"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "Coconut mixed with steamed rice and sugar, salt, and desiccated coconut.",
+    "price": "£2.99"
+   }
+  ],
+  "Starters": [
+   {
+    "name": "Tom Yum Soup",
+    "description": "Famous Tom Yum soup with lime, lemongrass, galangal, chilli, onion, sugar, roasted chiili, kaffir lime leaves, spring onion, fish sauce, tomatoes, coriander and spring onion.",
+    "price": "£7.50"
+   },
+   {
+    "name": "Chicken Satay Skewers",
+    "description": "Chicken satay skewers served with peanut sauce.",
+    "price": "£6.99"
+   },
+   {
+    "name": "Summer Rolls with Prawns",
+    "description": "Served with sweet chilli sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "Fish Cakes with sweet chilli sauce",
+    "description": "Fish, red curry paste, garlic, onions, kaffir lime leaves, green bean, fish sauce, sugar and chilli.",
+    "price": "£6.99"
+   },
+   {
+    "name": "Tom Ka Soup",
+    "description": "Creamy, sweet and sour soup with fish sauce, kaffir lime leaves, lemongrass, mushrooms, tomatoes, tamarind, spring onion and lime.",
+    "price": "£7.50"
+   },
+   {
+    "name": "Sesame Chicken and Prawn Toast",
+    "description": "Crispy fried chicken and prawn, mixed with garlic, coriander, peppers, sesame seeds, seasoning, bread.served with sweet chilli sauce.",
+    "price": "£6.99"
+   },
+   {
+    "name": "Summer Rolls with Vegetables",
+    "description": "Served with sweet chilli sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Steamed Chicken Dumplings",
+    "description": "Steamed chicken dumplings served with tamarind, sugar and dark soy sauce.",
+    "price": "£6.99"
+   },
+   {
+    "name": "Vegetable Spring Rolls served with sweet chilli sauce",
+    "description": "Handmade vegetable spring rolls with carrots, cabbage, grass noodles, beansprouts, onion, soy sauce, and sweet chilli sauce.",
+    "price": "£6.99",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Sweetcorn Fritters",
+    "description": "Crispy fried sweetcorn with red curry paste, eggs, rice flour, seasoning, kaffir lime leaves.",
+    "price": "£6.99"
+   },
+   {
+    "name": "Thai Calamari",
+    "description": "Deep fried calamari with garlic, herbs, served with sweet chilli sauce.",
+    "price": "£7.50"
+   },
+   {
+    "name": "Chicken Wings",
+    "description": "Deep fried wings with seasoning, herbs, flours, and red curry paste, served with sweet chilli sauce.",
+    "price": "£6.99"
+   },
+   {
+    "name": "Thai Spicy Prawn Crackers",
+    "description": "Snacks with sweet chilli sauce.",
+    "price": "£2.99"
+   },
+   {
+    "name": "Chips with Thai herbs",
+    "description": "Deep fried chips with seasoning and Thai herbs with seasoning served with sweet chilli sauce.",
+    "price": "£3.99",
+    "vegetarian": true
+   },
+   {
+    "name": "Ribs",
+    "description": "Slow cooked Ribs with honey, soy sauce, ketchup, seasoning, garlic and coriander.",
+    "price": "£6.99"
+   },
+   {
+    "name": "Fish and Chips",
+    "description": "Battered Cod, served mushy peas, ketchup, and tartar sauce.",
+    "price": "£13.50"
+   },
+   {
+    "name": "Mixed Platters",
+    "description": "Mixed starters including Satay, Dumplings, toast, spring rolls, and fish cakes, served with chillies sauce, tamarind sauce and peanut sauce.",
+    "price": "£13.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,166 @@
+{
+ "restaurant": "Nok Nok Authentic Thai Food",
+ "city": "Swansea",
+ "fsa_id": "1800730",
+ "address": "Swansea",
+ "source": "https://8a6ad509-aafc-4b6d-aa22-6bfa25068ed2.filesusr.com/ugd/beb9f5_14fd826820cc4686b6c9185fdcb6fa1b.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "VEGAN STARTERS": [
+   {
+    "name": "VEGAN THAI STARTER PLATTER FOR 2 จานผสม",
+    "description": "Nuts, soya, sesame, celery, mustard, wheat, celery A delightful selection of vegan Thai favourites including 2 Chick'n satay, 2 spring rolls, 2 crispy tofu satay, vegetable tempura and vegan crackers served with a refreshing Thai salad. Perfect for sharing!",
+    "price": "£20.95",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGAN CHICK'N SATAY ไก่สะเต๊ะ",
+    "description": "GF, nuts, soya, celery, mustard Marinated skewers of vegan chick'n grilled and served with satay peanut sauce and Thai salad.",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "CRISPY TOFU SATAY สะเต๊ะ เต้าหู้กรอบ",
+    "description": "Nuts, soya, sesame, celery, mustard, wheat Marinated skewers of crispy fried tofu served with satay peanut sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE SPRING ROLLS ปอเปี๊ยะผัก",
+    "description": "Soya, celery, sesame, mustard, wheat Crispy golden rolls filled with a colorful mix of cabbage, carrots, glass noodles, and aromatic Thai herbs. Light, crunchy, and bursting with flavor, served with a sweet chilli dipping sauce for the perfect balance of sweet and heat.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE TEMPURA ผักชุปแป้งทอด",
+    "description": "GF, Sesame, soya, celery, mustard Lightly battered and delicately fried to golden perfection. Crisp seasonal vegetables served with a tangy Thai-style dipping sauce, this dish is a perfect harmony of crunch, flavour, and elegance.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "WAKAME SEAWEED SALAD สลัดสาหร่ายวากาเมะ",
+    "description": "Soya, wheat, sesame A light and refreshing salad made with tender wakame seaweed, tossed in a tangy sesame-soy dressing. Delicately seasoned and naturally rich in minerals, this vegan-friendly dish offers a clean, ocean-fresh taste with a hint of nuttiness.",
+    "price": "£4.40",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGAN THAI CRACKERS ข้าวเกรียบทอดมังสวิรัติ",
+    "description": "GF Colourful, crisp & savoury Thai crackers, perfect with our sweet chilli dip",
+    "price": "£4.40",
+    "vegetarian": true
+   }
+  ],
+  "CURRIES": [
+   {
+    "name": "THAI GREEN CURRY แกงเขียวหวาน",
+    "description": "CHICK’N GF, Celery, soya, mustard | TOFU GF, celery, soya, mustard | VEGETABLE GF, celery, soya, mustard Spicy green curry made with green chilli paste, chillies, kaffir lime leaves, sweet basil, sweet potato, seasonal vegetables and simmered in coconut milk.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95 | VEG 12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "THAI RED CURRY แกงแดง",
+    "description": "CHICK’N GF, celery, soya, mustard | MOCK DUCK Wheat, soya, mustard | TOFU GF, celery, soya, mustard VEG GF, celery, soya, mustard Spicy red curry made with red chilli paste, chillies, kaffir lime leaves, sweet basil, sweet potato, seasonal vegetables and simmered in coconut milk.",
+    "price": "£CHICK’N 14.95 | MOCK DUCK 14.95 | TOFU 13.95 | VEG 12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "THAI YELLOW CURRY แกงกะหรี่",
+    "description": "CHICK’N GF, celery, soya, mustard | TOFU GF, celery, soya, mustard A rich and aromatic Thai yellow curry made with your choice of chick'n or tofu, simmered in coconut milk with tomatoes, pineapple, and tender vegetables. Mildly spiced, slightly sweet, and bursting with vibrant flavour.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95",
+    "vegetarian": true
+   },
+   {
+    "name": "THAI MASSAMAN CURRY แกงมัสมั่น",
+    "description": "CHICK’N *GF, celery, soya, peanuts, mustard | TOFU *GF, celery, soya, peanuts, mustard A rich and aromatic Thai curry with potatoes, onions and roasted peanuts in a creamy coconut milk and Massaman spice blend. *Let us know if you're gluten-free, the garnish for this dish contains gluten, but we're happy to make adjustments to suit your needs.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95",
+    "vegetarian": true
+   },
+   {
+    "name": "PANANG CURRY แกงแพนง",
+    "description": "CHICK’N GF, celery, soya, mustard | TOFU GF, celery, soya, mustard A rich red chilli paste mixed with green and red peppers, cooked in a coconut milk and garnished with herbs and Kaffir lime leaves.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95",
+    "vegetarian": true
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "TOM YUM ต้มยำ",
+    "description": "CHICK’N GF, celery, soya, mustard | TOFU GF, celery, soya, mustard A spicy, sour soup infused with lemongrass, kaffir lime leaves, galangal, with fresh chilli and lime.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95 | + NOODLES 2.00",
+    "vegetarian": true
+   },
+   {
+    "name": "TOM KHA ต้มข่า",
+    "description": "CHICK’N GF, soya, celery, mustard | TOFU GF, soya, celery, mustard Thai coconut soup with a creamy, aromatic broth made from coconut milk, lemongrass, galangal, and lime. Tom Kha is great with a little spice, but we won't add it unless you ask.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95",
+    "vegetarian": true
+   }
+  ],
+  "NOODLES": [
+   {
+    "name": "PAD THAI ผัดไทย",
+    "description": "CHICK’N GF, nuts, celery, soya, mustard | TOFU GF, nuts, celery, soya, mustard Rice noodles, beansprouts and spring onions, mildly spiced and served with crushed peanuts and a wedge of lime. With or without spice, let us know what you prefer.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95"
+   },
+   {
+    "name": "PAD KEE MAO ผัดขี้เมา",
+    "description": "CHICK’N GF, celery, soya, mustard | TOFU Celery, soya, mustard Pad Kee Mao, or \"Drunken Noodles,\" is a Thai stir-fried noodle dish with wide rice noodles, fresh basil, and vegetables, tossed in a savoury, spicy sauce, offering bold, aromatic flavours.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95"
+   }
+  ],
+  "STIR FRY": [
+   {
+    "name": "PAD KRAPOW ผัดกระเพรา",
+    "description": "CHICK’N Celery, soya, mustard | TOFU Celery, soya, mustard Chick'n or tofu with holy basil, fresh chillies, garlic in a savoury sauce.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95"
+   },
+   {
+    "name": "CHICK’N CASHEW NUT ผัดเม็ดมะม่วงหินมะพาน",
+    "description": "Nuts, celery, soya, sesame, mustard With vibrant bell peppers, onions, and dried chillies, all tossed in a rich and savoury Thai sauce.",
+    "price": "£14.95"
+   },
+   {
+    "name": "THAI STICKY CHICK’N OR TOFU ผัดสามรส เจ",
+    "description": "CHICK’N Celery, soya, mustard | TOFU Celery, soya, mustard A sweet, savoury, and slightly spicy dish with tender crispy chicken or tofu coated in sauce made from soy, garlic, Thai chilli and fresh herbs.",
+    "price": "£CHICK’N 14.95 | TOFU 13.95"
+   }
+  ],
+  "HOUSE SPECIALS": [
+   {
+    "name": "VEGAN LARB ลาบเจ",
+    "description": "CHICK’N GF, soya, celery, mustard | MOCK DUCK Soya, celery, mustard, wheat | MUSHROOM GF, soya, celery, mustard TOFU GF, soya, celery, mustard Chick'n, mock duck, mushroom or tofu with mixed Thai herbs, mint, ground rice, chilli powder, vegan fish sauce and lime juice.",
+    "price": "£CHICK’N 14.95 | MOCK DUCK 14.95 | MUSHROOM 13.95 | TOFU 13.95",
+    "vegetarian": true
+   },
+   {
+    "name": "PAPAYA SALAD WITH THAI GRILLED CHICK’N ส้มตำไก่ย่างเจ",
+    "description": "GF, fish, peanuts, crustaceans, celery, mustard, soy Fresh green papaya salad with chilli, lime, and roasted peanuts, served with Thai grilled chick'n. A vibrant balance of spicy, sweet, sour, and savoury. Please let us know how spicy you'd like it.",
+    "price": "£17.95"
+   }
+  ],
+  "VEGAN SIDES": [
+   {
+    "name": "JASMINE RICE ข้าวสวย",
+    "description": "GF Soft, fragrant Thai rice — a comforting side for one, perfect with any curry or stir-fry.",
+    "price": "£3.90",
+    "vegetarian": true
+   },
+   {
+    "name": "STICKY RICE ข้าวเหนียว",
+    "description": "GF Fragrant Thai sticky rice, the perfect side for bold spicy flavours.",
+    "price": "£3.90",
+    "vegetarian": true
+   },
+   {
+    "name": "COCONUT RICE ข้าวคลุกกะทิ",
+    "description": "GF Soft jasmine rice infused with rich coconut milk for a delicately sweet, aromatic finish.",
+    "price": "£4.75",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "A discretionary service charge of 12.5% will be added to your bill. 100% of this goes directly to our team in recognition of their amazing service"
+ ]
+}

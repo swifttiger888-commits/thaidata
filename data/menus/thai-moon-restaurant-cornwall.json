@@ -20,7 +20,7 @@
    {
     "num": "43.",
     "name": "LABB",
-    "description": "Thai herbs, chilli, onion and lemon juice.\nWith: Chicken £11.10\n: Pork £11.10\n: Beef £11.10",
+    "description": "Thai herbs, chilli, onion and lemon juice. With: Chicken £11.10 : Pork £11.10 : Beef £11.10",
     "price": "£11.10",
     "vegetarian": false,
     "heat": null
@@ -28,7 +28,7 @@
    {
     "num": "44.",
     "name": "GUNG PHAA",
-    "description": "A salad of prawn with Thai herbs, spring onion,\ncorriander, chilli and lemon juice.",
+    "description": "A salad of prawn with Thai herbs, spring onion, corriander, chilli and lemon juice.",
     "price": "£11.10",
     "vegetarian": false,
     "heat": null
@@ -36,7 +36,7 @@
    {
     "num": "45.",
     "name": "PHAA TODD KRATIUM",
-    "description": "Deep fried Sea bass with vegetables\ntopped with deep fried garlic.",
+    "description": "Deep fried Sea bass with vegetables topped with deep fried garlic.",
     "price": "£13.25",
     "vegetarian": false,
     "heat": null
@@ -46,7 +46,7 @@
    {
     "num": "32.",
     "name": "PLAA NEUNG MA NOW",
-    "description": "Sea bass steamed with soy sauce\nand topped with a chilli, garlic,\nand lemon juice sauce",
+    "description": "Sea bass steamed with soy sauce and topped with a chilli, garlic, and lemon juice sauce",
     "price": "£13.25",
     "vegetarian": false,
     "heat": null
@@ -54,7 +54,7 @@
    {
     "num": "33.",
     "name": "PLAA NEUNG SEE-IEW",
-    "description": "Sea bass steamed with soy sauce\nand topped with spring onion, ginger,\nmushrooms and peppers.",
+    "description": "Sea bass steamed with soy sauce and topped with spring onion, ginger, mushrooms and peppers.",
     "price": "£13.25",
     "vegetarian": false,
     "heat": null
@@ -62,7 +62,7 @@
    {
     "num": "34.",
     "name": "PLAA SAM ROOD",
-    "description": "Sea bass pan fried\nand topped with chilli sauce,\npineapple and tomato.",
+    "description": "Sea bass pan fried and topped with chilli sauce, pineapple and tomato.",
     "price": "£13.25",
     "vegetarian": false,
     "heat": null
@@ -72,7 +72,7 @@
    {
     "num": "25.",
     "name": "GAENG KHIAN WAAN",
-    "description": "A Thai green curry with coconut milk, mixed vegetables,\npeppers and bamboo shoots.\nWith: Chicken £11.10\nPork £11.10\nBeef £11.10\nPrawn £11.25\nVegetables £9.95",
+    "description": "A Thai green curry with coconut milk, mixed vegetables, peppers and bamboo shoots. With: Chicken £11.10 Pork £11.10 Beef £11.10 Prawn £11.25 Vegetables £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -80,7 +80,7 @@
    {
     "num": "26.",
     "name": "GAENG PHET",
-    "description": "A Thai red curry with coconut milk, mixed vegetables, peppers\nand bamboo shoots.\nWith: Chicken £11.10\nPork £11.10\nBeef £11.10\nPrawn £11.25\nVegetables £9.95",
+    "description": "A Thai red curry with coconut milk, mixed vegetables, peppers and bamboo shoots. With: Chicken £11.10 Pork £11.10 Beef £11.10 Prawn £11.25 Vegetables £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -88,7 +88,7 @@
    {
     "num": "2 7.",
     "name": "GAENG PANAENG",
-    "description": "A curry with coconut milk, onion, peppers, spring onion and\nbamboo shoots topped with kaffir lime leaves\nWith: Chicken £11.10\nPork £11.10\nBeef £11.10\nPrawn £11.25\nFish £11.25\nVegetables £9.95",
+    "description": "A curry with coconut milk, onion, peppers, spring onion and bamboo shoots topped with kaffir lime leaves With: Chicken £11.10 Pork £11.10 Beef £11.10 Prawn £11.25 Fish £11.25 Vegetables £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -96,7 +96,7 @@
    {
     "num": "27A.",
     "name": "PAT PIK GAENG",
-    "description": "A Thai red curry with coconut milk ,onion, long beans, and\npeppers cooked in a chilli oil.\nWith: Chicken ,Pork or Beef £11.10\nSeafood £11.25\nVegetables £9.95",
+    "description": "A Thai red curry with coconut milk ,onion, long beans, and peppers cooked in a chilli oil. With: Chicken ,Pork or Beef £11.10 Seafood £11.25 Vegetables £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -104,7 +104,7 @@
    {
     "num": "28.",
     "name": "GAENG MASSAMAN",
-    "description": "A curry with carrot, onion,tomato,nuts and potato in coconut\nmilk\nWith: Chicken £11.10\nBeef £11.10",
+    "description": "A curry with carrot, onion,tomato,nuts and potato in coconut milk With: Chicken £11.10 Beef £11.10",
     "price": "£11.10",
     "vegetarian": false,
     "heat": null
@@ -112,7 +112,7 @@
    {
     "num": "29.",
     "name": "PAD PO TAK",
-    "description": "Prawn, squid and mussels stir fried with onion, peppers and\nmixed vegetables in a red curry sauce",
+    "description": "Prawn, squid and mussels stir fried with onion, peppers and mixed vegetables in a red curry sauce",
     "price": "£11.25",
     "vegetarian": false,
     "heat": null
@@ -154,7 +154,7 @@
    {
     "num": "(26)",
     "name": "Gaeng phet (Chicken)",
-    "description": "Main course\nA Selection of :-",
+    "description": "Main course A Selection of :-",
     "price": null,
     "vegetarian": true,
     "heat": null
@@ -162,7 +162,7 @@
    {
     "num": "(17)",
     "name": "Priaw waan (Pork)",
-    "description": "Main course\nA Selection of :-",
+    "description": "Main course A Selection of :-",
     "price": null,
     "vegetarian": true,
     "heat": null
@@ -170,7 +170,7 @@
    {
     "num": "(21)",
     "name": "Pat pak (Vegetarian)",
-    "description": "Main course\nA Selection of :-",
+    "description": "Main course A Selection of :-",
     "price": null,
     "vegetarian": true,
     "heat": null
@@ -186,7 +186,7 @@
    {
     "num": "(19)",
     "name": "Pat Met Mamuang (Chicken)",
-    "description": "Main course\nA Selection of :-",
+    "description": "Main course A Selection of :-",
     "price": null,
     "vegetarian": false,
     "heat": null
@@ -310,7 +310,7 @@
    {
     "num": "12A.",
     "name": "A SELECTION OF:-",
-    "description": "Khanom Pang Na Gai (3)\nSateh Gai (1)\nSpring Rolls (2)\nTord Mun Khow Phode (6)",
+    "description": "Khanom Pang Na Gai (3) Sateh Gai (1) Spring Rolls (2) Tord Mun Khow Phode (6)",
     "price": "£7.10",
     "vegetarian": false,
     "heat": null
@@ -318,7 +318,7 @@
    {
     "num": "12B.",
     "name": "A SELECTION OF:- (Vegetarian)",
-    "description": "Spring Rolls (2)\nTord Man Khao Pood (6)\nVegetable Tempura (9)",
+    "description": "Spring Rolls (2) Tord Man Khao Pood (6) Vegetable Tempura (9)",
     "price": "£6.95",
     "vegetarian": true,
     "heat": null
@@ -328,7 +328,7 @@
    {
     "num": "13.",
     "name": "TOM YAM",
-    "description": "Thai style mushroom soup flavoured with lemon grass, lime leaves, tomato and galangal.\nWith: Chicken £7.10\n: Prawn £8.50",
+    "description": "Thai style mushroom soup flavoured with lemon grass, lime leaves, tomato and galangal. With: Chicken £7.10 : Prawn £8.50",
     "price": "£5.65/£7.10/£8.50",
     "vegetarian": false,
     "heat": null
@@ -336,7 +336,7 @@
    {
     "num": "14.",
     "name": "TOM KHA",
-    "description": "Thai style soup flavoured with Lemon grass, lime leaves, Tomato, mushrooms and coconut milk\nWith: Chicken £7.10\n: Beef £7.10\n: Pork £7.10\n: Prawn £8.50",
+    "description": "Thai style soup flavoured with Lemon grass, lime leaves, Tomato, mushrooms and coconut milk With: Chicken £7.10 : Beef £7.10 : Pork £7.10 : Prawn £8.50",
     "price": "£5.95/£7.10/£8.50",
     "vegetarian": false,
     "heat": null
@@ -354,7 +354,7 @@
    {
     "num": "16.",
     "name": "YUM SAM ROOD",
-    "description": "A chopped salad with spring onion, soy sauce, tomato, lemon juice, chilli and garlic.\nWith: Beef £8.75\n: Seafood £10.30",
+    "description": "A chopped salad with spring onion, soy sauce, tomato, lemon juice, chilli and garlic. With: Beef £8.75 : Seafood £10.30",
     "price": "£6.75/£8.75/£10.30",
     "vegetarian": false,
     "heat": null
@@ -390,7 +390,7 @@
    {
     "num": "17.",
     "name": "PRIAW WAAN",
-    "description": "A traditional sweet and sour.\nStir fried tomatoes, onion, peppers, pineapple and cucumber in a sweet and sour sauce.\nWith Chicken, Pork or Beef £11.10\n: Prawn £11.25\n: Vegetables £9.95",
+    "description": "A traditional sweet and sour. Stir fried tomatoes, onion, peppers, pineapple and cucumber in a sweet and sour sauce. With Chicken, Pork or Beef £11.10 : Prawn £11.25 : Vegetables £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -398,7 +398,7 @@
    {
     "num": "18.",
     "name": "PAT NAM MAN HOI",
-    "description": "Choose from below to be stir-fried with carrots, Mushrooms and spring onions in an oyster sauce.\nWith Chicken, Pork or Beef £11.10\n: Prawn £11.25\n: Vegetables £9.95",
+    "description": "Choose from below to be stir-fried with carrots, Mushrooms and spring onions in an oyster sauce. With Chicken, Pork or Beef £11.10 : Prawn £11.25 : Vegetables £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -414,7 +414,7 @@
    {
     "num": "20.",
     "name": "PAT BAI GRAPOW",
-    "description": "A stir-fry with peppers,onion,mushrooms and longbeans with a special blend of garlic,oyster sauce and sweet Basil.\nWith Chicken, Pork or Beef £11.10\n: Prawn £11.25\n: Duck £11.25",
+    "description": "A stir-fry with peppers,onion,mushrooms and longbeans with a special blend of garlic,oyster sauce and sweet Basil. With Chicken, Pork or Beef £11.10 : Prawn £11.25 : Duck £11.25",
     "price": "£11.10/£11.25",
     "vegetarian": false,
     "heat": null
@@ -438,7 +438,7 @@
    {
     "num": "23.",
     "name": "PAT KHING",
-    "description": "A stir fry of shredded ginger, mushrooms, spring onion and peppers in an oyster sauce.\nWith Duck £11.25\n: Beef, Chicken or Pork £11.10\n: Prawn £11.25",
+    "description": "A stir fry of shredded ginger, mushrooms, spring onion and peppers in an oyster sauce. With Duck £11.25 : Beef, Chicken or Pork £11.10 : Prawn £11.25",
     "price": "£11.25/£11.10",
     "vegetarian": false,
     "heat": null
@@ -446,7 +446,7 @@
    {
     "num": "24.",
     "name": "GA TA RON",
-    "description": "Stir fry with mushrooms, carrots, onion, cauliflower, broccoli and green beans in a mandarin sauce.\nWith Duck £11.25\n: Beef, Chicken or Pork £11.10\n: Prawn £11.25",
+    "description": "Stir fry with mushrooms, carrots, onion, cauliflower, broccoli and green beans in a mandarin sauce. With Duck £11.25 : Beef, Chicken or Pork £11.10 : Prawn £11.25",
     "price": "£11.25/£11.10",
     "vegetarian": false,
     "heat": null
@@ -464,7 +464,7 @@
    {
     "num": "35.",
     "name": "PAT THAI",
-    "description": "Stir fried rice noodles and egg with bean sprouts, spring onions, crushed peanuts and tamarind sauce.\nWith Chicken £11.10\n: Beef £11.10\n: Pork £11.10\n: Prawn £11.25\n: Vegetarian £9.95",
+    "description": "Stir fried rice noodles and egg with bean sprouts, spring onions, crushed peanuts and tamarind sauce. With Chicken £11.10 : Beef £11.10 : Pork £11.10 : Prawn £11.25 : Vegetarian £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -472,7 +472,7 @@
    {
     "num": "36.",
     "name": "PAT SEE IEW",
-    "description": "Stir fried rice noodles and egg with vegetables and oyster sauce.\nWith Chicken £11.10\n: Beef £11.10\n: Pork £11.10\n: Prawn £11.25\n: Vegetarian £9.95",
+    "description": "Stir fried rice noodles and egg with vegetables and oyster sauce. With Chicken £11.10 : Beef £11.10 : Pork £11.10 : Prawn £11.25 : Vegetarian £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null
@@ -480,7 +480,7 @@
    {
     "num": "37.",
     "name": "RAAD NAH",
-    "description": "Stir fried rice noodles with vegetables, Potato flour and oyster sauce.\nWith Chicken £11.10\n: Beef £11.10\n: Pork £11.10\n: Prawn £11.25\n: Vegetarian £9.95",
+    "description": "Stir fried rice noodles with vegetables, Potato flour and oyster sauce. With Chicken £11.10 : Beef £11.10 : Pork £11.10 : Prawn £11.25 : Vegetarian £9.95",
     "price": "£11.10/£11.25/£9.95",
     "vegetarian": false,
     "heat": null

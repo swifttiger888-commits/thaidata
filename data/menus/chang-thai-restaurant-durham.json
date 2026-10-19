@@ -1,0 +1,662 @@
+{
+ "restaurant": "Chang Thai Restaurant",
+ "city": "Durham",
+ "fsa_id": "303904",
+ "address": "Durham",
+ "source": "http://changthairestaurantbishop.co.uk/Order/Index/Order%20Now-679",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Beef Dish": [
+   {
+    "name": "RedCurry Beef",
+    "description": "red curry with coconut milk,mixed Peppers,Gourgette,chilli and basil",
+    "price": "£11.95"
+   },
+   {
+    "name": "GreenCurry Beef",
+    "description": "Green Curry with coconut Milk,Courgette,Green Beans and Basil",
+    "price": "£11.95"
+   },
+   {
+    "name": "Massaman Beef",
+    "description": "Coconut Milk,Potato,Carrot onoins,Crisspy Challot, and Cushew nuts",
+    "price": "£11.95"
+   },
+   {
+    "name": "KariCury Beef",
+    "description": "Yellow Curry with Coconut milk, Carrot, potato and onions",
+    "price": "£11.95"
+   },
+   {
+    "name": "Panang Beef",
+    "description": "Panang Curry with Coconut Milk,Mixed Peppers,Chilli Basil and Kaffir Lime leaves",
+    "price": "£11.95"
+   },
+   {
+    "name": "JungleCurry Beef",
+    "description": "jungle Curry with Courgette,Green beans,Mixed Peppers, Chilli and Basil",
+    "price": "£11.95"
+   },
+   {
+    "name": "Beef ChiliBasil",
+    "description": "Stir -fried with Onion,Mixed Pepers,Green Beans,chilli and Basil",
+    "price": "£11.95"
+   },
+   {
+    "name": "Cashew Beef",
+    "description": "Stir-fried with Onion, Mushrooms, Carrot, Broccoli, Spring Onions and Cashew Nut and Pineapple",
+    "price": "£11.95"
+   },
+   {
+    "name": "OysterS Beef",
+    "description": "Stir-fried with Peppers, Onion, Mushrooms, Carrot and Spring Onions in Oyster Sauce",
+    "price": "£11.95"
+   },
+   {
+    "name": "SweetSour Beef",
+    "description": "Stir-fried with Sweet & Souir Sauce, Onion, Mushrooms, Mixed Peppers, Carrot and Spring Onions",
+    "price": "£11.95"
+   },
+   {
+    "name": "Garlic Beef",
+    "description": "Stir-fried with Garlic and Black Pepper on a Bed of Vegetables",
+    "price": "£11.95"
+   },
+   {
+    "name": "Ginger Beef",
+    "description": "Stir-fried with Ginger, Onion, Mushrooms and Spring Onions",
+    "price": "£11.95"
+   },
+   {
+    "name": "MixedVeg Beef",
+    "description": "Stir-fried with Mixed Seasonal Vegetables",
+    "price": "£11.95"
+   }
+  ],
+  "Chicken Dish": [
+   {
+    "name": "RedCurry Chicken",
+    "description": "Red Curry with Coconut Milk, Mixed Peppers, Courgette, Chilli, and Basil",
+    "price": "£11.95"
+   },
+   {
+    "name": "GreenCurry Chicken",
+    "description": "Green Curry with Coconut Milk, Courgette, Green beans and Basil",
+    "price": "£11.95"
+   },
+   {
+    "name": "Massaman Chicken",
+    "description": "Coconut Milk, Potato, Carrot, Onions, Crispy Shallot, and Cashew Nuts",
+    "price": "£11.95"
+   },
+   {
+    "name": "KariCury Chicken",
+    "description": "Yellow Curry with Coconut Milk, Carrot, Potato and Onions",
+    "price": "£11.95"
+   },
+   {
+    "name": "Panang Chicken",
+    "description": "Panang Curry with Coconut Milk, Mixed Peppers, Spring Onions, Chilli, Basil and Kaffir Lime Leaves",
+    "price": "£11.95"
+   },
+   {
+    "name": "JungleCurry Chicken",
+    "description": "jungle curry with courgette greenbeans mixs peppers chilli and basill",
+    "price": "£11.95"
+   },
+   {
+    "name": "ChiliBasil Chicken",
+    "description": "stir -fried with onion,Mixs peppers,green beans, chilli and Basil",
+    "price": "£11.95"
+   },
+   {
+    "name": "Cashew Chicken",
+    "description": "stir - fried with onion,mushrooms Carrot,Broccoli,springonion and cashewnut and pineapple",
+    "price": "£11.95"
+   },
+   {
+    "name": "Oyster S Chicken",
+    "description": "stir - fried with Peppers,onion, Mushrooms, Carrot,Springonion, in Oyster sauce",
+    "price": "£11.95"
+   },
+   {
+    "name": "SwSour Chicken",
+    "description": "Stir -fried with Sweet&Sour Sauce,Onion,Mushrooms,Mixed Peppers,Carrot and spring onions",
+    "price": "£11.95"
+   },
+   {
+    "name": "Chicken Satay mains 5 pcs",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Garlic Chicken",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Ginger Chicken",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "MixedVeg Chicken",
+    "description": "",
+    "price": "£11.95"
+   }
+  ],
+  "Duck Dish": [
+   {
+    "name": "RedCurry Duck",
+    "description": "Red Curry with Coconut Milk, Mixed Peppers, Courgette, Chilli and Basil",
+    "price": "£12.95"
+   },
+   {
+    "name": "GreenCurry Duck",
+    "description": "Green Curry with Coconut Milk, Courgette, Green Beans and Basil",
+    "price": "£12.95"
+   },
+   {
+    "name": "Massaman Duck",
+    "description": "Coconut Milche, Potato, Carrot, Onions, Crispy Shallot and Cashew Nuts",
+    "price": "£12.95"
+   },
+   {
+    "name": "KariCury Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Panang Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "JungleCurry Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Cashew Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "OysterS Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "ChilliBasil Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "SwSour Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Garlic Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Ginger Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "MixedVeg Duck",
+    "description": "",
+    "price": "£12.95"
+   }
+  ],
+  "Fried Rice": [
+   {
+    "name": "Special FriedRice",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pineapple FriedRice",
+    "description": "",
+    "price": "£12.50"
+   },
+   {
+    "name": "Chicken FriedRice",
+    "description": "",
+    "price": "£11.50"
+   },
+   {
+    "name": "Beef FriedRice",
+    "description": "",
+    "price": "£11.50"
+   },
+   {
+    "name": "Lamb FriedRice",
+    "description": "",
+    "price": "£11.50"
+   },
+   {
+    "name": "Prawn FriedRice",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "Duck FriedRice",
+    "description": "",
+    "price": "£13.95"
+   }
+  ],
+  "King Prawn Dish": [
+   {
+    "name": "RedCurry Prawn",
+    "description": "Red Curry with Coconut Milk, Mixed Peppers, Courgette, Chilli and Basil",
+    "price": "£13.95"
+   },
+   {
+    "name": "GreenCurry Prawn",
+    "description": "Coconut milk Courgette green beans mixed peppers and basil",
+    "price": "£13.95"
+   },
+   {
+    "name": "Massaman Prawn",
+    "description": "Coconut Milk Potato CARROT Onions crispy shallot and Cushewnuts",
+    "price": "£13.95"
+   },
+   {
+    "name": "KariCurry Prawn",
+    "description": "yellow curry with coconut milk carrot potato and onions",
+    "price": "£13.95"
+   },
+   {
+    "name": "Panang Prawn",
+    "description": "Panang Curry with Coconut Milk, Mixed Peppers, Spring Onions, Chilli, Basil and Kaffir Lime Leaves panang curry with coconut milk mixed peppers basil and kaffir lime leaves",
+    "price": "£13.95"
+   },
+   {
+    "name": "JungleCury Prawn",
+    "description": "jungle curry with courgette,green beans,mixed peppers,chilli and basil",
+    "price": "£13.95"
+   },
+   {
+    "name": "ChilliBasil Prawn",
+    "description": "stir-fried with onions mixed peppers,green beans chilli and basil",
+    "price": "£13.95"
+   },
+   {
+    "name": "Cashew Prawn",
+    "description": "stir-fried with onions, mixed peppers mushroom,carrot,broccoli spring onions cashewnut and pineapple",
+    "price": "£13.95"
+   },
+   {
+    "name": "OysterS Prawn",
+    "description": "Stir-fried with Peppers, Onion, Mushrooms, Carrot and Spring Onions in Oyster Sauce",
+    "price": "£13.95"
+   },
+   {
+    "name": "SwSour Prawn",
+    "description": "Stir-fried with Sweet & Sour Sauce, Onion, Mushrooms, Mixed Peppers, Carrot, and Spring Onion",
+    "price": "£13.95"
+   },
+   {
+    "name": "Garlic Prawn",
+    "description": "Stir-fried with Garlic and Black Pepper, on a Bed of Vegtables",
+    "price": "£13.95"
+   },
+   {
+    "name": "Ginger Prawn",
+    "description": "Stir-fried with Ginger, Onion, Mushrooms, and Spring Onion",
+    "price": "£13.95"
+   },
+   {
+    "name": "MixedVeg Prawn",
+    "description": "Stir-fried with Mixed Seasonal Vegetables",
+    "price": "£13.95"
+   },
+   {
+    "name": "Tamarind Prawn",
+    "description": "",
+    "price": "£13.95"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "PadThai Noodle king prawns",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "PadKee Mow Seafood",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "Chicken Noodle",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Prawn Noodle",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Duck Noodle",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Chicken pad thai",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad thai veg",
+    "description": "",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Beef Padthai",
+    "description": "",
+    "price": "£11.95"
+   }
+  ],
+  "Side Dish": [
+   {
+    "name": "Thai Prawn Cracker",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Chinese Prawn Cracker",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Steamed Rice",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Plain Noodles",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Rice",
+    "description": "",
+    "price": "£3.20",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Curry Sauce",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Peanut Satay Sauce",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": true
+   },
+   {
+    "name": "chips Salt Peper",
+    "description": "",
+    "price": "£3.20",
+    "vegetarian": true
+   },
+   {
+    "name": "sticky rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "coconut rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   }
+  ],
+  "Starter Soup Salad": [
+   {
+    "name": "Veg Spring Rolls",
+    "description": "",
+    "price": "£5.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Prawn Toast",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "Prawn Spring Rolls",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Thai Fish Cake",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "Tempura Prawn",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "Mixed Starter 2pp",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "TomYam Prwn",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "TomYam Chik",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "TomYam Mshrm",
+    "description": "",
+    "price": "£5.90",
+    "vegetarian": true
+   },
+   {
+    "name": "TomKha Prwn",
+    "description": "",
+    "price": "£6.90"
+   },
+   {
+    "name": "TomKha Chik",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "TomKha Mshrm",
+    "description": "",
+    "price": "£5.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Beef Salad",
+    "description": "",
+    "price": "£10.50"
+   },
+   {
+    "name": "Seafood Salad",
+    "description": "",
+    "price": "£11.90"
+   },
+   {
+    "name": "Papaya Salad",
+    "description": "",
+    "price": "£10.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Larb Gai",
+    "description": "",
+    "price": "£10.90"
+   },
+   {
+    "name": "Tofu Tod",
+    "description": "",
+    "price": "£5.45",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken salt pepper",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Tofu",
+    "description": "",
+    "price": "£5.45",
+    "vegetarian": true
+   },
+   {
+    "name": "Munchie Box",
+    "description": "",
+    "price": "£12.50"
+   },
+   {
+    "name": "Fish Chips",
+    "description": "",
+    "price": "£8.95"
+   },
+   {
+    "name": "Thai spiced Chainese prawn Crackers",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "VEG TEMPURA",
+    "description": "",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "SquidSalt",
+    "description": "",
+    "price": "£6.90"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "",
+    "price": "£6.90"
+   }
+  ],
+  "Veggie Dish": [
+   {
+    "name": "Veg Cashew",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Rice Veg",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Veg SwSour",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Veg Garlic",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Veg Chilli basil",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Veg Ba Mee",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Veg Red Curry",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Veg Green Curry",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   },
+   {
+    "name": "Veg Massaman",
+    "description": "",
+    "price": "£10.90",
+    "vegetarian": true
+   }
+  ],
+  "Seafood Specials": [
+   {
+    "name": "Pla Raad Prik",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "Prik KaPrao Seafood",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Pho Taek SEAFOOD",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "Prik THAI DUM SeaFood",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "JARN RON SEAFOOD",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "PLA NUENG MANOW",
+    "description": "",
+    "price": "£15.95"
+   },
+   {
+    "name": "Steamed SeaBass",
+    "description": "",
+    "price": "£15.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

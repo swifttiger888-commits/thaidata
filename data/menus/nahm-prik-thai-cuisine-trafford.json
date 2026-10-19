@@ -1,0 +1,196 @@
+{
+ "restaurant": "Nahm Prik Thai Cuisine",
+ "city": "Trafford",
+ "fsa_id": "759297",
+ "address": "Trafford",
+ "source": "https://www.nahmprik.co.uk/_files/ugd/dbbf50_d61f2e5ab1f949f9923b143ae53dca0b.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Dessert Menu": [
+   {
+    "name": "Americano",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Cappuccino",
+    "description": "",
+    "price": "£3.70"
+   },
+   {
+    "name": "Caffe Latte",
+    "description": "",
+    "price": "£3.70"
+   },
+   {
+    "name": "Decaf Coffee",
+    "description": "",
+    "price": "£3.20"
+   },
+   {
+    "name": "Espresso",
+    "description": "",
+    "price": "£2.25"
+   },
+   {
+    "name": "Double Espresso",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Floater Coffee",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Jasmine Tea",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "Green Tea",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "English Tea",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Fresh Mint Tea",
+    "description": "",
+    "price": "£2.00"
+   },
+   {
+    "name": "Chocolate Spring Rolls with IceCream",
+    "description": "Contains Nuts",
+    "price": "£5.95"
+   },
+   {
+    "name": "Pineapple Fritters with IceCream",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Banana Fritters with IceCream",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Deep Fried IceCream",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Sticky Toffee Pudding",
+    "description": "Home Made Sponge Cake covered with toffee sauce and served with vanilla ice-cream.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Banana Split",
+    "description": "Mixed 3 scoops of Vanilla, Chocolate, Strawberry Ice Cream nestled between a fresh, split Banana.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Taro Sticky Rice with sesame & Vanilla Icecream",
+    "description": "A well-loved dessert of taro sticky rice sprinkled with sesame topped with coconut milk and a scoop of delicious ice cream.",
+    "price": "£6.45"
+   },
+   {
+    "name": "Brownie Arctic Slice",
+    "description": "Luxurious Brownie Ice Cream with a Rich Chocolate Sponge",
+    "price": "£4.95"
+   },
+   {
+    "name": "Cherry & Chocolate Arctic Slice",
+    "description": "Amarena Cherry Ice Cream with a Rich Chocolate Sponge",
+    "price": "£4.95"
+   },
+   {
+    "name": "Raspberry Ripple Arctic Slice",
+    "description": "Creamy Raspberry Ripple Ice Cream with a Classic Vanilla Sponge",
+    "price": "£4.95"
+   }
+  ],
+  "Selection of Liqueur Coffee": [
+   {
+    "name": "Tia Maria",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Ameretto",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Baileys",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Jamesons",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Drambuie",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Cointreau",
+    "description": "",
+    "price": "£6.95"
+   }
+  ],
+  "Selection of 2 IceCreams": [
+   {
+    "name": "Vanilla",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Strawberry",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Mint Choc Chip",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Chocolate",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Coconut",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Honeycomb",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Lemon Sorbet",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Vanilla (Vegan)",
+    "description": "",
+    "price": "£5.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "(Per Cup)"
+ ]
+}

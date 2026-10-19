@@ -1,0 +1,127 @@
+{
+ "restaurant": "Thai Nong Khai Limited",
+ "city": "Wealden",
+ "fsa_id": "1796543",
+ "address": "Wealden",
+ "source": "https://thainongkhai.co.uk/wp-content/uploads/2024/10/menupage1-scaled.webp",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "Khao Kriap (GF)",
+    "description": "mixed prawn and spicy crackers",
+    "price": "£3.95"
+   },
+   {
+    "name": "Edamame (GF)",
+    "description": "steamed edamame beans lightly tickled with salt & chilli flakes",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pla Muek Tod (GF)",
+    "description": "crispy, golden calamari served with mayo and wasabi dip",
+    "price": "£8.95"
+   },
+   {
+    "name": "Kanom Jeeb",
+    "description": "steamed minced pork & prawn dumplings topped with fried garlic, served with sweet soy sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Sa Lai Dim Sum",
+    "description": "steamed prawn dumplings wrapped in seaweed, served with sweet soy sauce & chilli oil",
+    "price": "£8.95"
+   },
+   {
+    "name": "Por Pia Ped ***",
+    "description": "duck spring rolls stuffed with spring onions & cucumber, with hoisin sauce dip",
+    "price": "£8.95"
+   },
+   {
+    "name": "Giew Tod",
+    "description": "crispy won ton stuffed with minced pork served with sweet chilli dip",
+    "price": "£7.95"
+   },
+   {
+    "name": "Peek Gai Tod Nam Pla (GF) ***",
+    "description": "fish sauce fried chicken wings topped with crispy shallots, with sweet chilli dip",
+    "price": "£8.95"
+   },
+   {
+    "name": "Sai Krok Isaan ***",
+    "description": "fermented & slightly sour sausage from Isaan, served with a crunchy cabbage, spicy ginger slices & fresh chilli",
+    "price": "£8.95"
+   },
+   {
+    "name": "Satay Gai (PN)",
+    "description": "grilled chicken satay skewers, served with peanut sauce and cucumber relish",
+    "price": "£7.95"
+   },
+   {
+    "name": "Si Khrong Mu (GF)",
+    "description": "ribs glazed in special bbq sauce topped with crispy shallots - finger licking!",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tofu Tord (SS, VG, GF) ***",
+    "description": "fried tofu having a sriracha party, topped with spring onions, chilli and sesame seeds - veggies vibes!",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Gong Hom Pha",
+    "description": "crispy prawn blanket, served with sweet chilli dip",
+    "price": "£7.95"
+   },
+   {
+    "name": "Kanom Pang Na Goong (SS)",
+    "description": "sesame prawn & pork toast, served with sweet chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tempura Goong (GF)",
+    "description": "crispy prawn tempura, served with sweet chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tempura Prak (VG, GF)",
+    "description": "crispy mixed vegetables tempura, served with sweet chilli sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Poh Pia Tord (VG)",
+    "description": "vegetable spring rolls with vermicelli, served with plum sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tod Mun Pla",
+    "description": "fish cakes mix with red curry paste, kaffir lime leaves, sliced green beans, spices & herbs, serve with a sweet chilli sauce & tangy cucumber elixir",
+    "price": "£7.95"
+   },
+   {
+    "name": "Mixed starter (minimum of 2 people) (SS, PN)",
+    "description": "A selection of goodies: chicken satay, veggie spring rolls, prawn tempura, prawns on bread, and fish cakes",
+    "price": "£9.50 per person"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "Tom Yum (GF)",
+    "description": "Thai superstar! Spicy and sour soup, fragrant with chilli, lemongrass, kaffir lime leave",
+    "price": null
+   },
+   {
+    "name": "Tom Kha (GF)",
+    "description": "creamy and aromatic goodness mix of coconut milk, galangal, lemongrass, and kaffir lime leaves",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "mushroom £6.95/ chicken £7.50/ prawn £7.95"
+ ]
+}

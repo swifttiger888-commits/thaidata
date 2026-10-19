@@ -1,0 +1,321 @@
+{
+ "restaurant": "Hong's Thai Takeaway",
+ "city": "Wychavon",
+ "fsa_id": "1651641",
+ "address": "Wychavon",
+ "source": "https://hongsthaitakeaway.co.uk/wp-content/uploads/sites/229/2024/11/LCP37397-Hongs-Thai-Takeaway-Web.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "NOODLES": [
+   {
+    "name": "Phad Thai - Prawn",
+    "description": "Thai noodles with bean sprouts served with spring onions.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Phad Thai - Beef",
+    "description": "Thai noodles with bean sprouts served with spring onions.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Phad Thai - Chicken / Pork",
+    "description": "Thai noodles with bean sprouts served with spring onions.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Phad Thai - Vegetable",
+    "description": "Thai noodles with bean sprouts served with spring onions.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Plain Noodles",
+    "description": "Contains eggs.",
+    "price": "£4.95",
+    "vegetarian": true
+   }
+  ],
+  "RICE": [
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Fried Rice",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Fried Rice",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "King Prawn Fried Rice",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": true
+   }
+  ],
+  "KIDS MENU": [
+   {
+    "name": "6 Battered Chicken Nuggets & Chips",
+    "description": "",
+    "price": "£4.95"
+   },
+   {
+    "name": "4 Crispy Chicken Fillet & Chips",
+    "description": "",
+    "price": "£4.95"
+   }
+  ],
+  "SOFT DRINKS": [
+   {
+    "name": "7up / Coke / Diet Coke / Fanta",
+    "description": "",
+    "price": "£1.30"
+   }
+  ],
+  "SET MENU THAI • A": [
+   {
+    "name": "Chicken Satay",
+    "description": "Succulent marinated chicken on skewers. Served with peanut sauce.",
+    "price": null
+   },
+   {
+    "name": "Chicken on Toast",
+    "description": "Minced chicken with coriander and garlic, put on toast with sesame seed and chilli sauce.",
+    "price": null
+   },
+   {
+    "name": "Spring Roll",
+    "description": "Crispy spring rolls filled with shredded mixed vegetable.",
+    "price": null
+   },
+   {
+    "name": "Fish Cake",
+    "description": "Spices and red curry give a slightly hot flavour to this popular delicacy.",
+    "price": null
+   },
+   {
+    "name": "Thai Green Curry with Chicken",
+    "description": "With bamboo shoots and fine bean flavoured with chilli, sweet basil and coconut milk.",
+    "price": null
+   },
+   {
+    "name": "Pad Gra Pao with Beef",
+    "description": "Stir fried with onion, green and red peppers, bamboo shoot and fine bean, Thai sweet basil and fresh red chilli.",
+    "price": null
+   },
+   {
+    "name": "Mixed Vegetable Stir",
+    "description": "Beansprout, carrot, broccoli, spring onion and mushroom stir fried with oyster sauce.",
+    "price": null
+   }
+  ],
+  "SET MENU THAI • B": [
+   {
+    "name": "Duck Spring Rolls",
+    "description": "An alternative treat from the usual spring rolls. Shredded rich duck, shredded carrot and spring roll pastry.",
+    "price": null
+   },
+   {
+    "name": "Crispy Wanton",
+    "description": "Minced pork wrapped in a crispy wanton crepe with sweet chilli sauce.",
+    "price": null
+   },
+   {
+    "name": "Thai Red Curry with Chicken",
+    "description": "With bamboo shoots and fine bean flavoured with sweet basil and coconut milk.",
+    "price": null
+   },
+   {
+    "name": "Pad Khing Pork",
+    "description": "A savoury combination of shredded ginger, spring onion, mixed pepper and mushroom.",
+    "price": null
+   },
+   {
+    "name": "Sweet and Sour with Prawn",
+    "description": "Stir fried pineapples, tomatoes, cucumber and mixed peppers in sweet and sour.",
+    "price": null
+   }
+  ],
+  "STARTERS": [
+   {
+    "name": "Prawn Crackers",
+    "description": "Good to have while your food is being cooked.",
+    "price": "£3.00"
+   },
+   {
+    "name": "Prawn Tempura",
+    "description": "Deep fried prawn in batter with sweet chilli sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Fish Cakes",
+    "description": "Spices and red curry give a slightly hot flavour to this popular delicacy.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Pork Dumpling Savoury",
+    "description": "Steamed dumpling served with light soy and rice vinegar dip.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "Slices of red pepper, onion, broccoli, fine bean and mushroom.",
+    "price": "£5.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Gadoog Moo Yang",
+    "description": "Grilled marinated spare ribs topped with barbecue sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Gung Hom Pa",
+    "description": "Deep fried king prawn wrapped in pastry served with sweet chilli sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Chicken Wing",
+    "description": "Deep fried chicken wing served with sweet chilli sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "A massively popular, lightly floured coated squid deep-fried until it fluffs up. The moreish flavour comes from a scattering of salt, ground black pepper, spring onion and sliced chilli.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Sharing Golden Hong's Thai (Serves 2)",
+    "description": "Chicken on toast, prawn tempura, duck spring roll, crispy wanton.",
+    "price": "£12.95"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "Thai Green Curry",
+    "description": "With bamboo shoots and fine beans flavoured with chillies, sweet basil and coconut milk.",
+    "price": null
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "With bamboo shoots and fine beans flavoured with sweet basil and coconut milk.",
+    "price": null
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Authentic ground peanut curry with potatoes and onions, flavoured with tamarind juice.",
+    "price": null
+   },
+   {
+    "name": "Paneang Curry",
+    "description": "Paneang is another form of red curry. The difference is that it's thicker with coconut milk. Also Panaeng has stronger fragrance from finely sliced lime leaves.",
+    "price": null
+   },
+   {
+    "name": "Yellow Curry",
+    "description": "Thai yellow curry with potatoes, onion, mixed peppers, tomatoes and coconut milk.",
+    "price": null
+   }
+  ],
+  "STIR FRIED": [
+   {
+    "name": "Pad Khing",
+    "description": "A savoury combination of shredded ginger, spring onion, mixed pepper and mushroom.",
+    "price": null
+   },
+   {
+    "name": "Pad Gra Pao",
+    "description": "Stir fried with onion, green, red peppers, bamboo shoot and fine bean, Thai sweet basil and fresh red chilli.",
+    "price": null
+   },
+   {
+    "name": "Cashew Nut Stir Fry",
+    "description": "Stir fried mixed peppers, onion, spring onion, carrots and cashew nuts.",
+    "price": null
+   },
+   {
+    "name": "Mixed Vegetable Stir Fry",
+    "description": "Beansprout, carrot, broccoli, spring onion and mushroom, stir fried with oyster sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Sweet and Sour",
+    "description": "Stir fried pineapples, tomatoes, cucumber and mixed peppers in sweet and sour sauce.",
+    "price": null
+   },
+   {
+    "name": "Oyster Sauce",
+    "description": "Stir fried onions, peppers, mushrooms, broccoli, carrots and spring onions in oyster sauce.",
+    "price": null
+   }
+  ],
+  "DUCK": [
+   {
+    "name": "Tamarind Duck",
+    "description": "A sweet and sour tamarind sauce makes a perfect complement to rich duck, served on griddle hot plate.",
+    "price": "£11.50"
+   },
+   {
+    "name": "Red Duck Curry",
+    "description": "Slices of juicy duck breast in famous Thai curry. Mixed peppers and pineapple softens the spiciness of the red curry.",
+    "price": "£11.50"
+   }
+  ],
+  "FISH DISHES": [
+   {
+    "name": "Sea Bass Pad Khing",
+    "description": "A crispy sea bass fillet with a savoury combination of shredded ginger, spring onion, mixed peppers and mushroom.",
+    "price": "£12.50"
+   },
+   {
+    "name": "Sea Bass Pad Gra Pao",
+    "description": "A crispy sea bass fillet stir-fried with onion, green and red peppers, Bamboo shoots, fine beans, Thai sweet basil and fresh red chilli.",
+    "price": "£12.50"
+   },
+   {
+    "name": "Steamed Sea Bass Fillet",
+    "description": "Steamed sea bass with stir-fried onions, peppers, mushrooms, broccoli, carrots and spring onions in oyster sauce.",
+    "price": "£12.50"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "(MINIMUM OF TWO PEOPLE - £18.95 PER PERSON)",
+  "(MINIMUM OF TWO PEOPLE - £19.95 PER PERSON)",
+  "Prawn £10.50 Chicken / Pork £9.50",
+  "Beef £10.50 Vegetable £8.95",
+  "Duck £11.50 Chicken / Pork £9.50",
+  "Prawn / Beef £10.50 Vegetable £8.95",
+  "Duck £11.50 Chicken / Pork £9.50",
+  "Prawn £10.50 Vegetable £8.95",
+  "Beef £10.50"
+ ]
+}

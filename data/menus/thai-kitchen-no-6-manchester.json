@@ -1,0 +1,356 @@
+{
+ "restaurant": "Thai Kitchen No. 6",
+ "city": "Manchester",
+ "fsa_id": "1821234",
+ "address": "Manchester",
+ "source": "https://www.thaikitchenno6.co.uk/food-menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Gai Satay",
+    "description": "Chicken satay",
+    "price": "£6.95"
+   },
+   {
+    "name": "Paw Pia Tod (V)",
+    "description": "Vegetable crispy spring rolls",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Jeeb Koong",
+    "description": "Prawn&pork steamed wontons",
+    "price": "£6.95"
+   },
+   {
+    "name": "Fried Tofu & Dipping Sauce (V)",
+    "description": "Crispy fried tofu",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Chinese Dumplings",
+    "description": "Crispy dumplings mixed with prawn & pork",
+    "price": "£6.95"
+   },
+   {
+    "name": "Peek Gai",
+    "description": "Fried chicken wings",
+    "price": "£6.95"
+   },
+   {
+    "name": "Moo Yang",
+    "description": "Grilled pork with homemade sauce",
+    "price": "£6.95"
+   },
+   {
+    "name": "Esan Sausages",
+    "description": "Deep fried thai sour pork sausage served with cabbage & chilli",
+    "price": "£6.95"
+   },
+   {
+    "name": "Mixed starters",
+    "description": "Choose 3 from above",
+    "price": "£17"
+   }
+  ],
+  "Salads - Zapp Thai": [
+   {
+    "name": "Yum Woon Sen",
+    "description": "Glass noodles mixed with minced pork, prawn, squid, onion & coriander in a spicy lime dressing",
+    "price": "£14.95"
+   },
+   {
+    "name": "Larb Moo",
+    "description": "Minced pork with onion & thai herbs in a spicy lime dressing",
+    "price": "£14.95"
+   },
+   {
+    "name": "Moo-Moo",
+    "description": "Sliced BBQ pork mixed with red onion, rice powder, chili powder, basil leaves in spicy lime dressing",
+    "price": "£14.95"
+   },
+   {
+    "name": "Larb Salmon",
+    "description": "Salmon spicy salad",
+    "price": "£14.95"
+   },
+   {
+    "name": "Hoi Tod",
+    "description": "Crispy fried mussel pancakes",
+    "price": "£14.95"
+   },
+   {
+    "name": "Yum Pla duk foo",
+    "description": "Crispy fried fish salad with sliced green apple",
+    "price": "£14.95"
+   },
+   {
+    "name": "Sashimi Gung",
+    "description": "Prawn sashimi with special spicy fish sauce",
+    "price": "£14.95"
+   }
+  ],
+  "Papaya Salad": [
+   {
+    "name": "Somtam Thai (V)",
+    "description": "Sliced green papaya, string beans, tomatoes, carrots & peanuts tossed in a spicy lime dressing",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tum Ta-lay",
+    "description": "Papaya salad with seafood",
+    "price": "£14.95"
+   },
+   {
+    "name": "Som tum Pla Ra",
+    "description": "Sliced green papaya, string beans, tomatoes, carrots in spicy fermented fish dressing",
+    "price": "£12.95"
+   },
+   {
+    "name": "Turn Tard",
+    "description": "A combo set of special papaya salad served in a tray, surrounded by fresh vegetables, boiled egg, fned chicken & Thai sausage",
+    "price": "£18.95"
+   }
+  ],
+  "Stir Fried": [
+   {
+    "name": "Muk Pud Kai Kem",
+    "description": "Stir fried squid with salted eggs",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Pong Curry (V)",
+    "description": "Thai herb yellow curry accompanied with egg, prawns, squid, bell peppers and celery",
+    "price": "£14.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pla Lard Prik",
+    "description": "Deep fried fish with sweet Thai chilli sauce",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pla Nung Ma Now",
+    "description": "Steamed fish with spicy chilli sauce",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pad Pak Boong (V)",
+    "description": "Stir fried Chinese morning glory",
+    "price": "£11.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Ka Paw (V)",
+    "description": "Your choice of chicken, mince pork or seafood sauteed with bell peppefs and fresh basil leaves in a spicy chili garlic sauce.",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pa Nang (V)",
+    "description": "Your choice of chicken or pork in a pa-nang curry peanut sauce.",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Moo Kra Tiem",
+    "description": "Your choice of chicken or pork with a touch of garlic and white pepper.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Puk Ruam (V)",
+    "description": "Mixed vegetables in a light garlic sauce.",
+    "price": "£10.95",
+    "vegetarian": true
+   }
+  ],
+  "Soup & Curry": [
+   {
+    "name": "Green Curry (V)",
+    "description": "Your choice of chicken or pork in a green coconut curry with bamboo shoots, bell peppers & basil leaves",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Yum Koong",
+    "description": "Spicy broth with prawn in lemongrass, galangal roots, kaffir lime leaves with mushrooms & tomatoes",
+    "price": "£14.95"
+   },
+   {
+    "name": "Red Curry (V)",
+    "description": "Your choice of chicken or pork in a red coconut curry with bamboo shoots, bell peppers & basil leaves",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Special Duck Red Curry",
+    "description": "Special roasted duck in red curry with pineapple, tomato, grapes & thai herbs",
+    "price": "£15.95"
+   },
+   {
+    "name": "Tom-Kha",
+    "description": "Spicy coconut broth with chicken, lemongrass, gaiangal roots, kaffir lime leaves, mushrooms & tomatoes",
+    "price": "£13.95"
+   },
+   {
+    "name": "Massaman (V)",
+    "description": "Tender pork or chicken slowly cooked in creamy coconut massaman curry with onions, potatoes & peanuts",
+    "price": "£12.95",
+    "vegetarian": true
+   }
+  ],
+  "A LA CARTE - Noodles": [
+   {
+    "name": "Classic Pad Thai (V)",
+    "description": "Stir-fry thin rice noodles with egg, bean sprout & scallions seasoned with tamarind & crushed peanuts (Prawn/ chicken/ tofu/pork)",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad See Eew (V)",
+    "description": "Stir-fry wide rice noodles, egg and choi sum in soy sauce",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Lard Na (V)",
+    "description": "Your choice of chicken/pork/seafood with choi sum, baby corn, carrot in a light black bean gravy sauce over pan-fried wide rice noodles",
+    "price": "£13.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Kuay Teaw Tom Yum Moo",
+    "description": "Authentic Spicy Noodles Soup with minced pork, sliced pork, minced pork, choi sum seasoned with vinegar, chili, ground peanut, green oinion, coriander, fried garlic & pepper",
+    "price": "£13.95"
+   },
+   {
+    "name": "Ba Mee Moo Dang",
+    "description": "Egg noodles with BBQ pork, wontons, choi sum, coriander, fried garlic & pepper",
+    "price": "£12.95"
+   },
+   {
+    "name": "Ba Mee Ped Yang",
+    "description": "Shredded roasted duck served with egg noodles, choi sum and coriander in a tasty duck broth",
+    "price": "£12.95"
+   },
+   {
+    "name": "Ba Mee Moo Krob",
+    "description": "Egg noodles with crispy pork belly, choi sum, coriander, fried garlic & pepper",
+    "price": "£13.95"
+   },
+   {
+    "name": "Tom yum koong noodles",
+    "description": "An exotic coconut tom yum soup with egg noodle, prawn, squid, fish balls and crispy wontons",
+    "price": "£14.95"
+   },
+   {
+    "name": "Yen Ta Fo",
+    "description": "Rice noodles with squid, fish ball, prawn, crispy wontons in fermented soy bean sauce, topped with fried garlic",
+    "price": "£12.95"
+   }
+  ],
+  "Rice": [
+   {
+    "name": "Kao Mun Gai",
+    "description": "Hainanese poached chicken & seasoned white rice",
+    "price": "£11.95"
+   },
+   {
+    "name": "Kao Pad Sapparot",
+    "description": "Thai Royal pineapple fried rice with prawns, pineapple, raisin, bell peppers and onions",
+    "price": "£14.95"
+   },
+   {
+    "name": "Kao Pad Tom Yum Koong",
+    "description": "Prawns stir-fry with tom yum chilli paste, steamed rice, onions, tomatoes, lemongrass, mushroom and spring onions",
+    "price": "£13.95"
+   },
+   {
+    "name": "Kao Moo Dang",
+    "description": "BBQ pork in homemade sweet sauce with rice",
+    "price": "£11.95"
+   },
+   {
+    "name": "Kao Moo Krob",
+    "description": "Crispy pork with rice serve with homemade sauce",
+    "price": "£13.95"
+   },
+   {
+    "name": "Kao Na Ped",
+    "description": "Homemade roasted duck with steamed rice",
+    "price": "£11.95"
+   },
+   {
+    "name": "Kao Ka Paw (V)",
+    "description": "Steamed rice topped with stir-fry minced pork/sliced chicken, onions, holy basil, bell peppers in spicy oyster sauce",
+    "price": "£11.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Kao Ka Moo",
+    "description": "Stewed pork leg with steamed rice, serve with spicy homemade sauce",
+    "price": "£14.95"
+   },
+   {
+    "name": "Kao Pad (V)",
+    "description": "Thai style fried rice with egg, onions, tomatoes, spring onions and choi sum. Your choice of pork, chicken, prawns or tofu",
+    "price": "£11.95",
+    "vegetarian": true
+   }
+  ],
+  "Sides": [
+   {
+    "name": "Steamed Rice",
+    "description": "-",
+    "price": "£3.25"
+   },
+   {
+    "name": "Thai Rice Noodles",
+    "description": "-",
+    "price": "£3.25"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "-",
+    "price": "£3.95"
+   },
+   {
+    "name": "Fried Rice with Egg",
+    "description": "-",
+    "price": "£3.95"
+   },
+   {
+    "name": "Chips",
+    "description": "-",
+    "price": "£3.95"
+   },
+   {
+    "name": "Fried Egg",
+    "description": "-",
+    "price": "£1.80"
+   },
+   {
+    "name": "Coconut rice",
+    "description": "-",
+    "price": "£3.95"
+   }
+  ],
+  "Children's Meals": [
+   {
+    "name": "Chicken Nuggets & Chips",
+    "description": "-",
+    "price": "£7.50"
+   },
+   {
+    "name": "Fish Fingers & Chips",
+    "description": "-",
+    "price": "£7.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

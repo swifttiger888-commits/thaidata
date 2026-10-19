@@ -1,0 +1,154 @@
+{
+ "restaurant": "Chai-Yo Thai Restaurant",
+ "city": "North Norfolk",
+ "fsa_id": "281604",
+ "address": "North Norfolk",
+ "source": "https://chai-yo.co.uk/Lunchtime_Menu_26.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Lunch Express": [
+   {
+    "name": "Pad Thai Noodle",
+    "description": "Stir fried rice noodle with egg, bean sprouts, carrots, crushed peanut and spring onions. Flavoured with Pad Thai sauce and lime juice.",
+    "price": null,
+    "num": "92"
+   },
+   {
+    "name": "Stir fried Egg Noodle",
+    "description": "Egg noodle stir fried with carrots, broccoli, spring green, onions, cauliflower and bean sprouts.",
+    "price": null,
+    "num": "97"
+   },
+   {
+    "name": "Ginger and Vegetables (Pad Khing)",
+    "description": "Slices of ginger stir fried with mushrooms, onions,carrots, sweet peppers, spring onion and touch of garlic. Served with steamed jasmine rice",
+    "price": null,
+    "num": "27"
+   },
+   {
+    "name": "Chilli and Garlic (Pad Kra Praw)",
+    "description": "Stir fried crushed chilli, garlic & basil leaves, with onions, mushrooms, sweet peppers and carrots. Served with steamed jasmine rice.",
+    "price": null,
+    "num": "26"
+   },
+   {
+    "name": "Cashew Nuts and Vegetable (Pad Med Ma Muang)",
+    "description": "Stir fried chilli oil paste with roasted cashew nuts, pineapple chunks and mixed vegetables. Served with steamed jasmine rice.",
+    "price": null,
+    "num": "25"
+   },
+   {
+    "name": "Garlic and Pepper Sauce (Pad Kratiam Prig Thai)",
+    "description": "Stir fried ground pepper,crushed garlic and onions with oyster sauce topped with corianders. Served with steamed jasmine rice.",
+    "price": null,
+    "num": "28"
+   },
+   {
+    "name": "Sweet and Sour Sauce ( Pad Priew Wan )",
+    "description": "Stir fried pineapple chunks,cucumbers,tomato,onions and carrots in home made sweet&sour sauce. ServedFwith steamed jasmine rice.",
+    "price": null,
+    "num": "29"
+   },
+   {
+    "name": "Thai Green Curry",
+    "description": "Green curry paste cooked in coconut milk with bamboo strips, vegetables and basil leaves. Served with steamed jasmine rice.",
+    "price": null,
+    "num": "32"
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "Red curry paste cooked in coconut milk with bamboo strips, vegetables and basil leaves. Served with steamed jasmine rice.",
+    "price": null,
+    "num": "33"
+   },
+   {
+    "name": "Pa Nang Curry",
+    "description": "A creamy curry, panang curry pasted cooked in coconut milk with sweet peppers, carrots, green beans and basil leaves. Served with rice.",
+    "price": null,
+    "num": "31"
+   }
+  ],
+  "Starter": [
+   {
+    "name": "Chicken Satay",
+    "description": "Grilled slices of chicken breast on bamboo skewers. Served with peanut sauce & pickle salad.",
+    "price": "£4.95",
+    "num": "1"
+   },
+   {
+    "name": "Minced Pork on Toast",
+    "description": "Minced pork with herbs on toast. Deep fried with a crispy egg coating. Served with sweet chilli sauce.",
+    "price": "£4.95",
+    "num": "5"
+   },
+   {
+    "name": "Tom Yum Chicken Soup",
+    "description": "Hot & sour soup,with chicken, tomato, mushroom, onion, Thai herbs and lime juice.",
+    "price": "£4.95",
+    "num": "3"
+   },
+   {
+    "name": "Spare Ribs",
+    "description": "Deep fried tender meaty spare ribs in sweet chilli sauce.",
+    "price": "£4.95",
+    "num": "6"
+   },
+   {
+    "name": "Duck in Crispy pastry",
+    "description": "Roasted duck shreded and wrapped in rice pastry,deep fried, served with hoisin sauce.",
+    "price": "£4.95",
+    "num": "8"
+   },
+   {
+    "name": "King Prawn in Breadcrumbs",
+    "description": "Deep fried king prawn dusted with breadcrumbs. Served with sweet chilli sauce.",
+    "price": "£4.95",
+    "num": "11"
+   },
+   {
+    "name": "2A. Cheese Golden bags",
+    "description": "Deep fried, mozzarella, cheddar wrapped in rice pastry. Served with sweet chilli sauce.",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Spring Rolls (V)",
+    "description": "Stir fried mixed vegetables, clear noodle wrapped in rice pastry and deep fried.",
+    "price": "£4.95",
+    "vegetarian": true,
+    "num": "22"
+   },
+   {
+    "name": "Thai Sweet Corn Cake (V)",
+    "description": "Deep fried sweet corn mixed with red curry paste and plain flour. Served with sweet chilli sauce.",
+    "price": "£4.95",
+    "vegetarian": true,
+    "num": "19"
+   },
+   {
+    "name": "Tom Yum Mushroom Soup (V)",
+    "description": "Hot & sour soup,with tomato, mushroom, onion, Thai herbs and lime juice.",
+    "price": "£4.95",
+    "vegetarian": true,
+    "num": "23"
+   }
+  ],
+  "Lunch Special": [
+   {
+    "name": "Tom Yum Seafood Noodle",
+    "description": "( Hot & sour mixed seafood noodle soup ) Rice noodle in hot & sour coconut milk soup with Thai herbs, king prawns, mussels, squids, mushrooms, onions, tomato, lime juice and garnish with corianders.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Khao soi",
+    "description": "A northern Thai curry noodle soup featuring soft egg noodles submerged in a rich, curry soup and topped with crispy fried noodles and is served with a toppings such as pickled cabbage, red onions, lemon and chili oil for a perfect balance of savory, tangy, sweet, and spicy flavors. #1 \"Best Soup in the World\" (TasteAtlas, 2022) Choice of - Beef ( Solf and tender ) 16.95 - King prawn ( Crispy breaded king prawn ) 16.95 - Chicken ( Crispy breaded chicken breast ) 15.95",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Choice of : Chicken, Pork, Tofu or Vegetables 10.50 (Two Course for 15.00)",
+  "Beef or King Prawns 11.50 (Two Course for 16.00)"
+ ]
+}

@@ -197,7 +197,7 @@
    {
     "num": "",
     "name": "Chocolate Fudge Brownie",
-    "description": "(Gluten Free option)\nServed warm with cream or ice cream",
+    "description": "(Gluten Free option) Served warm with cream or ice cream",
     "price": "£8.95",
     "vegetarian": false,
     "heat": null
@@ -391,7 +391,7 @@
    {
     "num": "S15",
     "name": "Mixed Vegetarian Starters (Serves 2)",
-    "description": "(V, Ve option, N)\nVegetable Tempura, Veg Spring Rolls, Corn Cakes & Crispy Vegetable Bags",
+    "description": "(V, Ve option, N) Vegetable Tempura, Veg Spring Rolls, Corn Cakes & Crispy Vegetable Bags",
     "price": "£18.95",
     "vegetarian": true,
     "heat": null
@@ -409,7 +409,7 @@
    {
     "num": "S17",
     "name": "Hot and Sour Soup",
-    "description": "a) Chicken £8.45\nd) King Prawn £8.95\nv) Vegetable (Ve) £8.45",
+    "description": "a) Chicken £8.45 d) King Prawn £8.95 v) Vegetable (Ve) £8.45",
     "price": "£8.45/£8.95",
     "vegetarian": false,
     "heat": "1"
@@ -417,7 +417,7 @@
    {
     "num": "S18",
     "name": "Thai Soup in Coconut Milk",
-    "description": "a) Chicken £8.95\nd) King Prawn £9.45\nv) Vegetable (Ve) £8.95",
+    "description": "a) Chicken £8.95 d) King Prawn £9.45 v) Vegetable (Ve) £8.95",
     "price": "£8.95/£9.45",
     "vegetarian": false,
     "heat": "1"
@@ -509,7 +509,7 @@
    {
     "num": "M30",
     "name": "Tiger Prawns",
-    "description": "in Tamarind or Honey Sauce\nin Sweet Chilli Sauce",
+    "description": "in Tamarind or Honey Sauce in Sweet Chilli Sauce",
     "price": "£20.95",
     "vegetarian": false,
     "heat": null
@@ -533,7 +533,7 @@
    {
     "num": "M35",
     "name": "Crispy Aromatic Duck",
-    "description": "a) Quarter £12.95\nb) Half £22.95\nc) Whole £40.95",
+    "description": "a) Quarter £12.95 b) Half £22.95 c) Whole £40.95",
     "price": "£12.95/£22.95/£40.95",
     "vegetarian": false,
     "heat": null
@@ -823,7 +823,7 @@
    {
     "num": "R6",
     "name": "Special Fried Rice (Serves 2)",
-    "description": "(a) Chicken £13.95\n(b) Beef £14.95\n(c) Pork £13.95\n(d) King Prawn £14.95\n(f) Duck £14.95\n(v) Vegetable (Ve Option) £12.95\n(t) Tofu (Ve Option) £13.95",
+    "description": "(a) Chicken £13.95 (b) Beef £14.95 (c) Pork £13.95 (d) King Prawn £14.95 (f) Duck £14.95 (v) Vegetable (Ve Option) £12.95 (t) Tofu (Ve Option) £13.95",
     "price": "£12.95/£13.95/£14.95",
     "vegetarian": false,
     "heat": null
@@ -831,7 +831,7 @@
    {
     "num": "R8",
     "name": "Spicy Fried Rice with Aromatic Thai Chilli Paste (Serves 2)",
-    "description": "(a) Chicken £14.45\n(b) Beef £15.45\n(c) Pork £14.45\n(d) King Prawn £15.45\n(f) Duck £14.95\n(v) Vegetable (Ve Option) £13.95\n(t) Tofu (Ve Option) £14.45",
+    "description": "(a) Chicken £14.45 (b) Beef £15.45 (c) Pork £14.45 (d) King Prawn £15.45 (f) Duck £14.95 (v) Vegetable (Ve Option) £13.95 (t) Tofu (Ve Option) £14.45",
     "price": "£13.95/£14.45/£14.95/£15.45",
     "vegetarian": false,
     "heat": null

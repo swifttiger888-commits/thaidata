@@ -1,0 +1,271 @@
+{
+ "restaurant": "Im Thai Food Factory (Street Food)",
+ "city": "Brighton",
+ "fsa_id": "1085397",
+ "address": "Brighton",
+ "source": "https://www.siamsiambrighton.com/menus-1",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "Our very own recipe for spring rolls, deep fried and served with our homemade sweet chilli sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Summer Rolls",
+    "description": "A selection of raw fresh julienned vegetables, herbs and rice noodles wrapped in a rice paper wrap served with a sweet rice vinegar dipping sauce containing finely chopped vegetables and topped with crushed nuts.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Sliced chicken breast marinated and grilled on skewers served with our homemade peanut sauce",
+    "price": "£8.00"
+   },
+   {
+    "name": "Spare Ribs",
+    "description": "Honey roasted spare ribs coated with Mair Kim’s own BBQ Hoi Sin sauce and sprinkled with white sesame seeds and a drizzle of honey.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "A favourite Thai street snack, blended white fish, herbs and spices and a hint of chilli, fried and served with our homemade sweet chilli dipping sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Prawns Tempura",
+    "description": "Deep fried tiger prawn coasted with batter and bread crumb, served with a sweet chilli dip.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Kanom Jeeb",
+    "description": "Pork and Prawn steamed dumplings served with a dark soy sauce and then topped with crispy garlic.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "A selection of seasonal vegetables, coated in a light batter and bread crumbs, deep fried then served with our homemade sweet chilli sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "BBQ Chicken Wings",
+    "description": "Another great street food snack, deep fried chicken wing coasted with batter and Mair Kim’s own BBQ Hoi Sin sauce and sprinkled with white sesame seeds and a drizzle of honey",
+    "price": "£8.00"
+   },
+   {
+    "name": "Tofu Satay",
+    "description": "Tofu deep fried and served with homemade peanut dipping sauce.",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Prawn Crackers",
+    "description": "Thai spicy prawn cracker served with homemade sweet chilli dip",
+    "price": "£3.95"
+   },
+   {
+    "name": "Siam Siam Feast",
+    "description": "Prawns Tempura, Chicken Satay, Spring Rolls and Spare Ribs,. Served with homemade peanut and sweet chilli dipping sauces.",
+    "price": "£18.50"
+   },
+   {
+    "name": "Siam Veggie Feast",
+    "description": "Spring Rolls, Siam Summer roll, Vegetable Tempura and Tofu satay, Served with homemade peanut and sweet chilli dipping sauces.",
+    "price": "£18.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Crispy Aromatic Duck",
+    "description": "Shredded 1/4 crispy aromatic duck, served with julienne cucumbers, carrots and spring onions, with a Hoi sin sauce and steamed pancakes.",
+    "price": "£18.00"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "Tom Yum",
+    "description": "Thailand’s world renowned hot and sour soup, flavoured with lemon grass, chillies, galangal (wild ginger) kaffir lime leaves, tomatoes, mushrooms, and fresh lime juice.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tom Kha",
+    "description": "A coconut based hot and sour soup (Not as spicy as Tom Yum, but still has a slight kick of chilli.) Flavoured with lemongrass, chillies, lime juice, kaffir lime leaves, galangal, tomatoes and mushrooms.",
+    "price": "£7.95",
+    "vegetarian": true
+   }
+  ],
+  "Salads": [
+   {
+    "name": "Spicy beef salad (Also available with Pork)",
+    "description": "Slices of prime beef grilled and mixed with lime leaves, chillies, shallots, fresh mint, fresh coriander, ground roasted rice, and lime juice served on a bed of salad leaves.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Som Tum (Papaya Salad",
+    "description": "A Simply fantastic salad, sweet, sour and spicy salad of shredded papaya tossed and pounded with carrots, fresh chillies, garlic, cherry tomatoes, green beans, lime juice, fish sauce and topped with peanuts.",
+    "price": "£10.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Cucumber Salad",
+    "description": "A Simply sweet and sour salad of shreded cucumber tossed and pounded with fresh chillies, garlic, cherry tomatoes, shallot and lime juice base on bed of salad leave.",
+    "price": "£10.00",
+    "vegetarian": true
+   }
+  ],
+  "Stir Fried": [
+   {
+    "name": "Fresh Chilli Stir Fry",
+    "description": "A fresh chilli stir fry mixed with Thai chillies, red and green peppers, green beans, garlic and onions.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Oyster Sauce Stir Fry",
+    "description": "A fresh chilli stir fry mixed with Thai chillies, red and green peppers, green beans, garlic and onions.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Cashew Nut Stir Fry",
+    "description": "Cashew nuts stir fry with mushrooms, mixed peppers, chunks of fresh pineapple and onions in an oyster sauce",
+    "price": "£13.00"
+   },
+   {
+    "name": "Thai Sweet and Sour",
+    "description": "Thai style sweet and sour stir fried with cucumber, pineapple, tomatoes, mixed peppers, onions and spring onion",
+    "price": "£13.00"
+   },
+   {
+    "name": "Roasted Duck with Po Ku",
+    "description": "Slices of duck breast, Po Ku mushrooms, and bamboo shoots, red and green peppers, and ginger stir fried in an oyster and Chinese wine sauce.",
+    "price": "£18.00"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "Green Curry",
+    "description": "A classic aromatic spicy green curry, flavoured with a curry paste made from green chilli, kaffir lime leaves, coconut milk and sweet basil.",
+    "price": "£13.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Red Curry",
+    "description": "Another classic Thai curry with slightly milder taste made with a red curry paste, red chillies, lime leaves, coconut and sweet basil leafs.",
+    "price": "£13.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Roast Duck Red Curry",
+    "description": "Roasted duck curry, cooked in a homemade red curry sauce with additional flavours coming from, lime leaves, pineapple,grape, cherry tomatoes and coconut milk.",
+    "price": "£18.50"
+   },
+   {
+    "name": "Pa nang Curry",
+    "description": "A rich creamy simi- dry coconut curry, made with onion, carrots, green bean and peppers flavoured with chilli, kaffir lime leaves and coriander.",
+    "price": "£13.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "A southern Thai curry, influenced by Indian traders, but given a Thai twist. Tenderised pieces of meat or fried",
+    "price": "£13.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Beef RangDang",
+    "description": "A classic slow cooked beef curry in a rich gravy from the borders of Thailand and Malaysia flavoured with red chilli, sweet basil, lemon grass, coconut cream, and crushed cashew nuts.",
+    "price": "£19.50"
+   },
+   {
+    "name": "Jungle Curry",
+    "description": "A rich earthy traditional curry from the North East of Thailand, originally cooked after a day foraging in the jungle, flavoured with red curry paste, green beans, holy basil, grachai (wild ginger.) and fresh chillies. This is a healthy choice for a curry as it does not contain coconut milk.",
+    "price": "£13.50"
+   }
+  ],
+  "Seafoods": [
+   {
+    "name": "Steamed Fish Topped with Fresh Chili and Lime",
+    "description": "Locally sourced sea bass fillet steamed on a bed of green leaf vegetables with finely chopped garlic, chilli and limes.",
+    "price": "£19.50"
+   },
+   {
+    "name": "Deep Fried Sea Bass Fillet Topped with Sweet Chilli Oil",
+    "description": "A locally sourced sea bass fillet, breaded with panko bread crumbs and topped with a Mair Kim’s homemade chilli oil.",
+    "price": "£20.50"
+   }
+  ],
+  "Sizzling": [
+   {
+    "name": "Honey Roasted Duck Breast",
+    "description": "Prime sliced 8oz sirloin steak grilled served on a bed of wok fired onion, asparagus and mixed pepper in oyster sauce and rice wine and top with lime juice, soya sauce and a hint of dry chilli flakes.",
+    "price": "£19.50"
+   },
+   {
+    "name": "Suer Rong Haey",
+    "description": "Prime sliced 8oz sirloin steak grilled served on a bed of wok fired onion, asparagus and mixed pepper in oyster sauce and rice wine and top with lime juice, soya sauce and a hint of dry chilli flakes.",
+    "price": "£23.00"
+   }
+  ],
+  "Noodles &amp; Rices": [
+   {
+    "name": "Pad Thai Noodles",
+    "description": "Probably the world best known noodle dish, and certainly one of our most popular dishes, great on its own or to share. Stir fried rice noodles with egg, carrots, spring onions, and bean sprouts in a sweet tamarind sauce garnished with peanuts and fresh lime.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Pad See Ew Noodles",
+    "description": "A simple but full of flavour dish. Wok fried flat rice noodles with egg, seasonal vegetavles, sweet dark soy sauce and sesame oil.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Siam Special Fried Rice",
+    "description": "Its our very own special fried rice with dice carrots, peppers, onion, spring onions, and seasonal vegetables and egg flavoured with soy sauce and garlic",
+    "price": "£14.00"
+   },
+   {
+    "name": "Drunken Stir Fried Noodles",
+    "description": "A mouth-watering, exciting, spicy noodle dish. Wok fried flat rice noodles with fresh chillies, garlic, and Thai Holy Basil.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "This dish is exotic, colourful, and bursting with flavour. Stir fried rice with fresh pineapple, cashew nut, raisin and spices served in a hollowed out pineapple.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Jasmin Rice",
+    "description": "",
+    "price": "£3.55"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4.35"
+   },
+   {
+    "name": "Roti Bread",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "Plain Rice Noodle",
+    "description": "",
+    "price": "£4.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,479 @@
+{
+ "restaurant": "Louise's Thai",
+ "city": "Central Bedfordshire",
+ "fsa_id": "1734581",
+ "address": "Central Bedfordshire",
+ "source": "https://www.ricethairestaurant.co.uk/wp-content/uploads/2026/01/RiceThai-MainMenu-2026-single-pages-double-sided-PR_compressed.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Menu": [
+   {
+    "name": "Spiced Prawn Cracker (GF)",
+    "description": "Served with sweet chilli dip.",
+    "price": "£4.50"
+   },
+   {
+    "name": "Chicken Satay (GF)",
+    "description": "Muddled with coriander, tumeric & coconut milk with spiced peanut sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Tofu and Vegetable Satay (GF) (v) (Ve)",
+    "description": "Skewered tofu and vegetables grilled, served with peanut sauce.",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Moo Ping (GF)",
+    "description": "Pork skewers, marinated in soy and oyster sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Thai Spiced Fish Cakes (GF)",
+    "description": "Blended white ﬁsh, mixed herbs & Thai curry paste, sweet chilli sauce and cucumber, crushed peanuts.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Soft Shell Crab (GF)",
+    "description": "Blue soft shell swimming crab deep-fried in tempura batter served with a spicy seafood dip and sweet chilli sauce.",
+    "price": "£12.50"
+   },
+   {
+    "name": "Grilled Giant Tiger Prawns (GF)",
+    "description": "Slowly grilled in their shells and served with a spicy seafood dip and sweet chilli sauce.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Spicy Steamed Tiger Prawns (GF)",
+    "description": "Steamed with lemon-grass, mint and chilli.",
+    "price": "£9.50"
+   },
+   {
+    "name": "Tiger Prawns Tempura (GF)",
+    "description": "Deep fried tiger prawns in our own batter recipe.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Spicy Whitebait (GF)",
+    "description": "Crispy whitebait tossed with fresh green chilli, garlic, lemon juice, coriander and spring onion.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Prawns on Toast",
+    "description": "Minced marinated tiger prawns on toast, sesame seed.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Vegetable Tempura (GF) (v) (Ve)",
+    "description": "Selection of mixed vegetables in our crispy batter.",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Spring Rolls (v) (Ve)",
+    "description": "Seasoned vegetables wrapped in crispy pastry, with plum dip.",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Pumpkin & Sweetcorn Cakes(GF) (v) (Ve)",
+    "description": "Lightly spiced pumpkin & sweetcorn cakes served with sweet chilli sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Squid or Tofu (GF)",
+    "description": "Deep fried succulent pieces of squid or tofu in our own special crispy potato ﬂour batter and homemade spicy sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Seafood Platter Ideal for Two",
+    "description": "Giant grilled prawn, whole soft shell crab tempura, spicy whitebait, spicy squid, garlic mussels, prawn crackers, salad garnish, hot and spicy seafood dip, sweet chilli.",
+    "price": "£27.95"
+   },
+   {
+    "name": "Mixed Platter Ideal for Two",
+    "description": "Chicken satay, vegetable spring rolls, tiger prawn tempura, vegetable tempura, spicy squid, Thai ﬁsh cake, prawns on toast, prawn crackers, salad garnish, hot and spicy seafood dip, sweet chilli.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Vegetarian Platter Ideal for Two (v) (Ve)",
+    "description": "Vegetable spring rolls, sweetcorn cakes, vegetables and tofu satay, vegetable tempura, served with sweet chilli sauce and peanut sauce.",
+    "price": "£15.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Yum (GF) (v) (Ve)",
+    "description": "Classic clear soup, fresh Thai herbs & spices, mushrooms, cherry tomato, chilli, with mixed vegetables, chicken or tiger prawns.",
+    "price": "£8.50 (Chicken & Veg)\n8.95 (Prawns)",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Kha (GF) (v) (Ve)",
+    "description": "Fresh Thai herbs & spices, mushrooms,cherry tomato & coconut milk, with mixed vegetables, chicken or tiger prawn.",
+    "price": "£8.50 (Chicken & Veg)\n8.95 (Prawns)",
+    "vegetarian": true
+   },
+   {
+    "name": "Ka Nom Jeeb",
+    "description": "Steamed minced pork and prawn dumplings, topped with garlic, soy and fresh coriander, crispy salad.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Garlic Ribs (GF)",
+    "description": "Whole rack of baby pork ribs with crispy garlic sauce and homemade sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Grilled Okra (GF) (v) (Ve)",
+    "description": "Grilled okra with chilli and garlic.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chu Chee (GF)",
+    "description": "Crispy fried large ﬁllet of sea bass or giant prawns topped with a creamy coconut red curry sauce.",
+    "price": "£19.95 / 21.95"
+   },
+   {
+    "name": "Pla Nung (GF)",
+    "description": "Steamed large ﬁllet of Sea bass, topped with, ginger, mixed vegetables.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Seafood Curry (GF)",
+    "description": "Tiger Prawns, Squid, Mussels in Thai chilli paste, coconut cream and egg.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Pat Pong Boo Garee (GF)",
+    "description": "Crab claw, prawn and squid curry cooked in Thai curry pow sliced chilli and egg.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Tamarind Duck (GF)",
+    "description": "Grilled duck breast in a homemade sweet and sour Tamarind sauce, Served on a bed of pak choi.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Weeping Tiger",
+    "description": "Grilled marinated strips of 10oz extra mature sirloin steak served with a very spicy ﬁsh sauce hot enough to make a tiger weep.",
+    "price": "£23.95"
+   },
+   {
+    "name": "Dry Meat Curry (GF)",
+    "description": "Minced chicken or extra mature 10oz sirloin (strips) cooked in a very spicy Southern Thailand chilli paste.",
+    "price": "£15.95 / 23.95"
+   },
+   {
+    "name": "Moo Gob Krappow (GF)",
+    "description": "Crispy chopped belly pork, with mixed vegetables, crushed chilli, garlic & holy basil.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Lemon Grass Chicken or Prawns (GF)",
+    "description": "Tender strips of chicken or tiger prawns steamed with fresh lemon grass, mixed vegetables, Thai herbs.",
+    "price": "£15.95 / 17.95"
+   },
+   {
+    "name": "Jungle Curry (GF)",
+    "description": "A spicy rustic blend of crushed fresh herbs and spices cooked in a clear broth with mixed vegetables either with a large ﬁllet of sea bass, chicken or beef.",
+    "price": "£15.95 / 19.95"
+   },
+   {
+    "name": "Krappow Gai (GF)",
+    "description": "Minced breast of chicken, hot holy basil, crushed fresh chill, garlic and a Thai style fried egg on top of jasmine rice.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Glass Noodles (GF)",
+    "description": "Tiger prawns and chicken stir-fried with egg, spring onion, onion, carrots, white cabbage, dry chilli ﬂakes on side.",
+    "price": "£17.95"
+   },
+   {
+    "name": "Yellow Peril",
+    "description": "Sliced breast of chicken marinated in cumin, galangal, lemon grass, mixed veg, Thai herbs.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Prik Thai Dam (GF)",
+    "description": "Stir fried topside of beef with crushed black peppercorn, mixed vegetables.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pla Nung Manow",
+    "description": "Thai famous sea bass ﬁllet steam with Thai herbs, topped with garlic, chilli, lemon juice and coriander.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Khua Pad Sapparod (GF)",
+    "description": "Stir fried rice with prawn, chicken, egg, pineapple, cashew nut, carrot, onion, touch of curry powder, garnished with bell peppers andcorianderr leaves. Served in a fresh pineapple shell with salad.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Grilled Salmon (GF)",
+    "description": "Grilled salmon with lemongrass and sour mango salad.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Lamb Chops Phad Kra Phero (GF)",
+    "description": "Grilled lamb chops stir-fried with fresh chilli garlic, fresh young peppercorns, basil.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Egg Noodles",
+    "description": "With chicken or prawns, served with dry chilli ﬂakes on side.",
+    "price": "£14.95 / 17.95"
+   },
+   {
+    "name": "Red Curry (GF) (v) (Ve)",
+    "description": "A blend of red chillies, fresh herbs & spices cooked in coconut milk, sliced bamboo, peppers.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Green Curry (GF) (v) (Ve)",
+    "description": "A blend of green chillies, fresh herbs & spices cooked in coconut milk, sliced bamboo, peppers.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Massaman (GF) (v) (Ve)",
+    "description": "Rich blend of herbs & dry spices with Malaysian inﬂuences cooked in coconut milk, potato, peanuts, star anise & tamarind pulp.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Penang Curry (GF) (v) (Ve)",
+    "description": "A blend of red penang chilli paste, fresh lime leaf, peppers in coconut sauce.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Yellow Curry (GF) (v) (Ve)",
+    "description": "Mild blend of herbs & spices, cooked in coconut sauce, turmeric & potatoes.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Bangkok Bad Boy (GF) (v) (Ve)",
+    "description": "Wok fried with mixed vegetables, crushed chilli, garlic & holy basil.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Nam Man Hoy (GF) (v) (Ve)",
+    "description": "Wok fried with mixed peppers, mushrooms, spring onion & Thai oyster sauce.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Ginger Spice (GF) (v) (Ve)",
+    "description": "Stir fried fresh ginger with mushrooms, carrots, spring onions.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Roasted Cashew Nuts (GF) (v) (Ve)",
+    "description": "Stir fried cashew nuts, mushrooms, mixed vegetables & a hint of chilli.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Vampire’s Nightmare (GF) (v) (Ve)",
+    "description": "Garlic, coriander, spring onion, crushed white peppercorn & more garlic.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Black Bean (GF) (v) (Ve)",
+    "description": "Stir fried with Thai black beans, onion, peppers and mixed vegetables.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Thai Noodles (GF) (v) (Ve)",
+    "description": "Wok fried ﬂat rice noodles, egg, peanuts, shredded vegetables in a classic Thai tamarind & palm sugar sauce, dry chilli ﬂakes on side.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Drunken Noodles (GF) (v) (Ve)",
+    "description": "Wok fried ﬂat rice noodles with crushed chillies, basil, garlic & mixed vegetables, dry chilli ﬂakes on side.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Yum Fried Noodles (GF) (v) (Ve)",
+    "description": "Rice Noodles fried with Tom Yum paste, dry chilli ﬂakes on side.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Si Eiw (GF) (v) (Ve)",
+    "description": "Flat rice noodles wok fried with mixed vegetables and dark soy sauce, dry chilli ﬂakes on side.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Rice (GF) (v) (Ve)",
+    "description": "Full meal fried rice with your choice of meat or vegetarian.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Krapow Fried Rice (GF) (v) (Ve)",
+    "description": "Spicy fried rice with Krapow (Thai holy basil) and chilli.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Jasmine Rice (GF)",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Egg Fried Rice (GF)",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Coconut Rice (GF) (v) (Ve)",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice(GF) (v) (Ve)",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Garlic Rice (GF) (v) (Ve)",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Mushroom Fried Rice (GF)",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Roti (Thai Pan Fried Roti Bread) (v) (Ve)",
+    "description": "",
+    "price": "£2.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Rice Stick Noodles & Soy, Spring Onion (GF) (v) (Ve)",
+    "description": "",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Style Fried Egg (GF)",
+    "description": "",
+    "price": "£2.50"
+   },
+   {
+    "name": "Prik Nam Pla",
+    "description": "",
+    "price": "£2.50"
+   },
+   {
+    "name": "Wok Fried Mixed Vegetables (GF) (v) (Ve)",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Pak Choi (GF) (v) (Ve)",
+    "description": "",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Kai Jeaw (minced pork Thai Omelette) (GF)",
+    "description": "",
+    "price": "£8.95"
+   },
+   {
+    "name": "Yum Ped Yang (Duck Salad) (GF)",
+    "description": "Sliced crispy duck, tossed with fresh herbs, Thai chilli dressings, mixed leaf salad.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Yum Talay (Seafood Salad) (GF)",
+    "description": "Mixed seafood in a spicy mint salad.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Larb Gai or Moo (GF)",
+    "description": "Minced chicken breast or pork with mint and Thai herbs.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Som Tam (GF) (v) (Ve)",
+    "description": "Spicy papaya salad.",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Ma-Khea (GF) (v) (Ve)",
+    "description": "Sauteed aubergines with chilli, onions, peppers and Thai herbs.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mushroom Tofu (GF) (v) (Ve)",
+    "description": "Stir fried mushrooms with tofu, chilli and basil leaves.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Pak Kom (GF) (v) (Ve)",
+    "description": "Fried spinach with garlic and yellow beans.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Broccoli (GF) (v) (Ve)",
+    "description": "Stir fried broccoli with soya sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Morning Glory (GF) (v) (Ve)",
+    "description": "Stir fried morning glory with black bean sauce, garlic and chilli.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Okra (GF) (v) (Ve)",
+    "description": "Stir fried okra with garlic and chilli.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mixed Platter",
+    "description": "Chicken satay, vegetable spring rolls, tiger prawn tempura, vegetable tempura, spicy squid, Th",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Vegetable or Tofu ........................................................................................................................................... 11.95",
+  "Chicken ........................................................................................................................................................... 13.95",
+  "Beef ................................................................................................................................................................. 14.95",
+  "Duck, Tiger Prawns or Mixed Seafood ....................................................................................................... 16.95",
+  "Lamb or Ostrich ............................................................................................................................................. 16.95",
+  "Vegetable or Tofu ............................................................................................................................................................ 11.95",
+  "Chicken ............................................................................................................................................................................. 13.95",
+  "Beef ................................................................................................................................................................................... 14.95",
+  "Duck, Tiger Prawns or Mixed Seafood ......................................................................................................................... 16.95",
+  "Lamb or Ostrich ............................................................................................................................................................... 16.95"
+ ]
+}

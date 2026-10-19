@@ -65,7 +65,7 @@
    {
     "num": "6.",
     "name": "Prawn Tempura",
-    "description": "Succulent prawns battered and deep-fried. Served with sweet plum sauce.\ncoriander.",
+    "description": "Succulent prawns battered and deep-fried. Served with sweet plum sauce. coriander.",
     "price": "£9.50",
     "vegetarian": false,
     "heat": null
@@ -463,7 +463,7 @@
    {
     "num": "76.",
     "name": "Khao Pad Sab Pa Rod (N)",
-    "description": "Jasmine rice stir-fried with aromatic curry powder. Loaded with flavours from juicy pineapple, cashew nuts, onion, and sweet peppers. Don't also forget to choose your protein!\nChicken £16.95\nPork £16.95\nKing prawn £17.95",
+    "description": "Jasmine rice stir-fried with aromatic curry powder. Loaded with flavours from juicy pineapple, cashew nuts, onion, and sweet peppers. Don't also forget to choose your protein! Chicken £16.95 Pork £16.95 King prawn £17.95",
     "price": "16.95/£17.95",
     "vegetarian": false,
     "heat": null
@@ -471,7 +471,7 @@
    {
     "num": "77.",
     "name": "Guay Tiew Ruea",
-    "description": "Rice noodles in strong herby broth with pork and liver.\nBeef £16.95\nPork £15.95",
+    "description": "Rice noodles in strong herby broth with pork and liver. Beef £16.95 Pork £15.95",
     "price": "16.95/£15.95",
     "vegetarian": false,
     "heat": null
@@ -479,7 +479,7 @@
    {
     "num": "78.",
     "name": "Pad Udon Tom Yum",
-    "description": "Ready for a perfect fusion? Here is our soft Japanese Udon stir-fried with Thai signature Tom Yam sauce.\nChicken or Pork £14.95\nKing prawn or Roasted duck £16.95\nBeef £15.95\nSeabass £17.95\nMixed vegetables and Tofu £14.95\nCrispy pork belly £17.95",
+    "description": "Ready for a perfect fusion? Here is our soft Japanese Udon stir-fried with Thai signature Tom Yam sauce. Chicken or Pork £14.95 King prawn or Roasted duck £16.95 Beef £15.95 Seabass £17.95 Mixed vegetables and Tofu £14.95 Crispy pork belly £17.95",
     "price": "14.95/16.95/15.95/£17.95",
     "vegetarian": false,
     "heat": "2"
@@ -561,7 +561,7 @@
    {
     "num": "89A.",
     "name": "Dips",
-    "description": "Sweet Chilli\nPeanut\nPlum",
+    "description": "Sweet Chilli Peanut Plum",
     "price": "£0.50",
     "vegetarian": false,
     "heat": null

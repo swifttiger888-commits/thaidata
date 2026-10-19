@@ -1,0 +1,913 @@
+{
+ "restaurant": "Love Bike Thai Cafe",
+ "city": "London",
+ "fsa_id": "1202972",
+ "address": "London",
+ "source": "https://www.lovebikethaikitchen.com/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "Prawn Crackers",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Mixed Platter",
+    "description": "A combination of chicken satay, prawn on toast, spring rolls, fish cakes, vegetable spring rolls and corn cakes.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Vegetarian Mixed Platter",
+    "description": "Vegetable samosa, vegetable spring rolls, corn cakes, vegetable tempura and sweet potato sesame.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Tempura",
+    "description": "Thin slices or strips of mixed vegetables dipped in the batter, then briefly deep fried served with sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Sweet Potato Sesame",
+    "description": "Deep fried sweet potatoes coated in sesame batter, served with sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Satay Chicken",
+    "description": "A famous skewered of chicken marinated and char grilled served with satay peanut sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "Our filled spring rolls will be stir fried mixed glass noodles, carrots, cabbage and mushroom.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Gyoza",
+    "description": "Deep fried Japanese vegetable gyoza.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Gyoza",
+    "description": "Deep fried Japanese chicken gyoza.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Duck Spring Roll",
+    "description": "Marinated aromatic crispy duck spring rolls served with sweet duck sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Quarter Aromatic Crispy Duck",
+    "description": "Crispy aromatic duck served with steam pancakes, cucumber, spring onion and hoi sin sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Salt and Pepper Squid",
+    "description": "Deep fried squid with garlic, salt and pepper seasoning.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Streamed Dim Sum",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "Thai Fish Cake",
+    "description": "A spicy fish cakes seasoned with curry and kaffirlime leaves, served with ground peanuts and sweet chilli sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Prawn on Toast",
+    "description": "Deep fried saricated minced prawn on toast with sweet chilli sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Thai Style Chicken Wings",
+    "description": "Deep fried chicken wings with sweet chilli sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Edamame",
+    "description": "Steamed green bean with sea salt.",
+    "price": "£5.95",
+    "vegetarian": true
+   }
+  ],
+  "THAI CURRIES": [
+   {
+    "name": "Green Curry - Vegetable",
+    "description": "Green curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Green Curry - Beef",
+    "description": "Green curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Green Curry - Chicken",
+    "description": "Green curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Green Curry - Duck",
+    "description": "Green curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Green Curry - Prawn",
+    "description": "Green curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Green Curry - Seafood",
+    "description": "Green curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Red Curry - Vegetable",
+    "description": "Red curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Red Curry - Beef",
+    "description": "Red curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Red Curry - Chicken",
+    "description": "Red curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Red Curry - Duck",
+    "description": "Red curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Red Curry - Prawn",
+    "description": "Red curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Red Curry - Seafood",
+    "description": "Red curry paste cooked in coconut milk, bamboo shoots and sweet basil leaves, aubergine and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Massaman Curry - Vegetable",
+    "description": "Wild curry from the south of thailand cooked with rich coconut milk with massaman paste, onions, potatoes and topped with cashew nuts and thai basil leaves.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Massaman Curry - Beef",
+    "description": "Wild curry from the south of thailand cooked with rich coconut milk with massaman paste, onions, potatoes and topped with cashew nuts and thai basil leaves.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Massaman Curry - Chicken",
+    "description": "Wild curry from the south of thailand cooked with rich coconut milk with massaman paste, onions, potatoes and topped with cashew nuts and thai basil leaves.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Massaman Curry - Duck",
+    "description": "Wild curry from the south of thailand cooked with rich coconut milk with massaman paste, onions, potatoes and topped with cashew nuts and thai basil leaves.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Massaman Curry - Prawn",
+    "description": "Wild curry from the south of thailand cooked with rich coconut milk with massaman paste, onions, potatoes and topped with cashew nuts and thai basil leaves.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Massaman Curry - Seafood",
+    "description": "Wild curry from the south of thailand cooked with rich coconut milk with massaman paste, onions, potatoes and topped with cashew nuts and thai basil leaves.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Massaman Curry - Lamb",
+    "description": "Wild curry from the south of thailand cooked with rich coconut milk with massaman paste, onions, potatoes and topped with cashew nuts and thai basil leaves.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Duck Curry",
+    "description": "Slices of roast duck cooked with coconut milk with pineapple, cherry tomatoes, red peppers, lychee and thai basil leaves.",
+    "price": "£12.95"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "Tom Yum - Mushrooms",
+    "description": "The famous thai spicy and sour soup with lemon grass, fresh herbs and chilli paste.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Yum - Chicken",
+    "description": "The famous thai spicy and sour soup with lemon grass, fresh herbs and chilli paste.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tom Yum - Prawn",
+    "description": "The famous thai spicy and sour soup with lemon grass, fresh herbs and chilli paste.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Tom Kha - Mushroom",
+    "description": "The famous coconut soup with lemon grass and fresh herbs.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Kha - Chicken",
+    "description": "The famous coconut soup with lemon grass and fresh herbs.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Tom Kha - Prawn",
+    "description": "The famous coconut soup with lemon grass and fresh herbs.",
+    "price": "£8.95"
+   }
+  ],
+  "SALADS": [
+   {
+    "name": "Green Papaya Salad",
+    "description": "Northern east style, green papaya salad is a spicy salad made from shredded unripe papaya with palm sugar, tomatoes, fresh chilli and lime juice",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Sirloin Beef Salad",
+    "description": "Sirloin beef slices with fresh variety of thai herbs, red onions, mint leaves, ground rice, fish sauce, lime juice and chilli powder",
+    "price": "£13.95"
+   },
+   {
+    "name": "Chicken Salad",
+    "description": "Minced chicken with a fresh variety of thai herbs, red onions, mint leaves, ground rice, fish sauce, lime juice and chilli powder.",
+    "price": "£10.95"
+   },
+   {
+    "name": "Mixed Salad",
+    "description": "Thai house salad.",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Seafood Salad (medium Hot)",
+    "description": "Seafood with fresh variety of Thai herbs, red onions, mint leaves, ground rice, fish sauce, lime juice and chilli powder.",
+    "price": "£12.95"
+   }
+  ],
+  "MEAL DEALS": [
+   {
+    "name": "Meal Deal A",
+    "description": "1 x salt and pepper squid, 1 x prawn on toast, 1 x massaman curry chicken, 1 x pad Thai prawn, 1 x broccoli and 1 x coconut rice.",
+    "price": "£39.95"
+   },
+   {
+    "name": "Meal Deal Veggie",
+    "description": "2 x vegetarian mixed platter, 1 x green curry veg, 1 x cashew nut veg and 2 x coconut rice.",
+    "price": "£35.99",
+    "vegetarian": true
+   }
+  ],
+  "CHEFS RECOMMENDED": [
+   {
+    "name": "Jantaburi Pad Thai",
+    "description": "Stir fried rice noodles with prawn, spicy dry chillies in house sauce mix of sweet prawns, spring onions, shredded apple, lime and peanut on the side. Spicy Dish.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Green Curry Fried Rice with Grilled Chicken",
+    "description": "Stir fried rice cooked in green curry sauce served with grilled chicken.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Basil Chilli Fried Rice with Grilled Chicken",
+    "description": "Stir fried rice with onion, basil leaves, long green beans and fresh chillies served with grilled chicken.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Sea Bass with Chilli and Basil",
+    "description": "Deep fried sea bass on top with house sauce mix of onions, basil leaves, long green beans and fresh chillies.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Sea Bass with Ginger",
+    "description": "Steamed sea bass with soya sauce, spring onion and ginger.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Sea Bass with Chu Chee Curry",
+    "description": "Deep fried sea bass. Served with steamed broccoli topped with homemade tamarind sauce, cashew nut and fried shallot.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Ped Makahm Duck",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Sea Bass Pla Makham",
+    "description": "",
+    "price": "£13.95"
+   }
+  ],
+  "STIR FRIED": [
+   {
+    "name": "Chilli Lamb Stir Fried",
+    "description": "Medium hot stir fried lamb slices with wild ginger root, peppercorns, fresh chillies, basil leaves, aubergine, green beans and red peppers.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Stir Fried Bamboo Sauce - Vegetable",
+    "description": "",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Bamboo Sauce - Beef",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Bamboo Sauce - Chicken",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Bamboo Sauce - Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Bamboo Sauce - Prawn",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Bamboo Sauce - Seafood",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Broccoli Oyster Sauce - Vegetable",
+    "description": "",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Broccoli Oyster Sauce - Beef",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Broccoli Oyster Sauce - Chicken",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Broccoli Oyster Sauce - Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Broccoli Oyster Sauce - Prawn",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Broccoli Oyster Sauce - Seafood",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Oyster Sauce - Vegetable",
+    "description": "Stir fried vegetable mix with onions, spring onions, red paper and mushroom.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Oyster Sauce - Beef",
+    "description": "Stir fried vegetable mix with onions, spring onions, red paper and mushroom.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Oyster Sauce - Chicken",
+    "description": "Stir fried vegetable mix with onions, spring onions, red paper and mushroom.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Oyster Sauce - Duck",
+    "description": "Stir fried vegetable mix with onions, spring onions, red paper and mushroom.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Oyster Sauce - Prawn",
+    "description": "Stir fried vegetable mix with onions, spring onions, red paper and mushroom.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Oyster Sauce - Seafood",
+    "description": "Stir fried vegetable mix with onions, spring onions, red paper and mushroom.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Vegetable",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Beef",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Chicken",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Batter Chicken",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Duck",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Prawn",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Batter Prawn",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Cashew Nut - Seafood",
+    "description": "Stir fried in dry sweet oyster sauce with cashew nuts, chopped chilli, red peppers, extended with dried chilli, pineapple.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Chilli and Basil - Vegetable",
+    "description": "Stir fried with onion, basil leaves, paprika chilli and fresh chilli with vegetable stir fried.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Chilli and Basil - Beef",
+    "description": "Stir fried with onion, basil leaves, paprika chilli and fresh chilli with vegetable stir fried.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Chilli and Basil - Chicken",
+    "description": "Stir fried with onion, basil leaves, paprika chilli and fresh chilli with vegetable stir fried.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Chilli and Basil - Duck",
+    "description": "Stir fried with onion, basil leaves, paprika chilli and fresh chilli with vegetable stir fried.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Chilli and Basil - Prawn",
+    "description": "Stir fried with onion, basil leaves, paprika chilli and fresh chilli with vegetable stir fried.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Chilli and Basil - Seafood",
+    "description": "Stir fried with onion, basil leaves, paprika chilli and fresh chilli with vegetable stir fried.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Ginger - Vegetable",
+    "description": "A light stir fried with shredded ginger, spring onions and red peppers.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Ginger - Beef",
+    "description": "A light stir fried with shredded ginger, spring onions and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Ginger - Chicken",
+    "description": "A light stir fried with shredded ginger, spring onions and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Ginger - Duck",
+    "description": "A light stir fried with shredded ginger, spring onions and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Ginger - Prawn",
+    "description": "A light stir fried with shredded ginger, spring onions and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Ginger - Seafood",
+    "description": "A light stir fried with shredded ginger, spring onions and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Thai Chilli Oil Paste - Vegetable",
+    "description": "Stir fried vegetable stir fried with onion, spring onions and red peppers.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Thai Chilli Oil Paste - Beef",
+    "description": "Stir fried vegetable stir fried with onion, spring onions and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Thai Chilli Oil Paste - Chicken",
+    "description": "Stir fried vegetable stir fried with onion, spring onions and red peppers.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Stir Fried Thai Chilli Oil Paste - Duck",
+    "description": "Stir fried vegetable stir fried with onion, spring onions and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Thai Chilli Oil Paste - Prawn",
+    "description": "Stir fried vegetable stir fried with onion, spring onions and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stir Fried Thai Chilli Oil Paste - Seafood",
+    "description": "Stir fried vegetable stir fried with onion, spring onions and red peppers.",
+    "price": "£12.95"
+   }
+  ],
+  "NOODLE &amp; SPECIAL FRIED RICE": [
+   {
+    "name": "Pad Thai - Vegetable",
+    "description": "Stir fried rice noodles with bean sprouts, spring onions in house sauce, lime and peanut on the side.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Thai - Beef",
+    "description": "Stir fried rice noodles with bean sprouts, spring onions in house sauce, lime and peanut on the side.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad Thai - Chicken",
+    "description": "Stir fried rice noodles with bean sprouts, spring onions in house sauce, lime and peanut on the side.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad Thai - Duck",
+    "description": "Stir fried rice noodles with bean sprouts, spring onions in house sauce, lime and peanut on the side.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Thai - Prawn",
+    "description": "Stir fried rice noodles with bean sprouts, spring onions in house sauce, lime and peanut on the side.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Thai - Seafood",
+    "description": "Stir fried rice noodles with bean sprouts, spring onions in house sauce, lime and peanut on the side.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad See Ew - Vegetable",
+    "description": "Stir fried flat noodles, seasoned with egg, dark soya sauce, broccoli, carrot and vegetable.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad See Ew - Beef",
+    "description": "Stir fried flat noodles, seasoned with egg, dark soya sauce, broccoli, carrot and vegetable.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad See Ew - Chicken",
+    "description": "Stir fried flat noodles, seasoned with egg, dark soya sauce, broccoli, carrot and vegetable.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad See Ew - Duck",
+    "description": "Stir fried flat noodles, seasoned with egg, dark soya sauce, broccoli, carrot and vegetable.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad See Ew - Prawn",
+    "description": "Stir fried flat noodles, seasoned with egg, dark soya sauce, broccoli, carrot and vegetable.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad See Ew - Seafood",
+    "description": "Stir fried flat noodles, seasoned with egg, dark soya sauce, broccoli, carrot and vegetable.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Udon Pad See Ew - Vegetable",
+    "description": "Japanese udon stir fried that style with broccoli, carrot and vegetable.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Udon Pad See Ew - Beef",
+    "description": "Japanese udon stir fried that style with broccoli, carrot and vegetable.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Udon Pad See Ew - Chicken",
+    "description": "Japanese udon stir fried that style with broccoli, carrot and vegetable.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Udon Pad See Ew - Duck",
+    "description": "Japanese udon stir fried that style with broccoli, carrot and vegetable.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Udon Pad See Ew - Prawn",
+    "description": "Japanese udon stir fried that style with broccoli, carrot and vegetable.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Udon Pad See Ew - Seafood",
+    "description": "Japanese udon stir fried that style with broccoli, carrot and vegetable.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Singapore Noodle - Vegetable",
+    "description": "Stir fried thin rice noodles, seasoned with egg, powder curry, red pepper, beansprouts and spring onions.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Singapore Noodle - Beef",
+    "description": "Stir fried thin rice noodles, seasoned with egg, powder curry, red pepper, beansprouts and spring onions.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Singapore Noodle - Chicken",
+    "description": "Stir fried thin rice noodles, seasoned with egg, powder curry, red pepper, beansprouts and spring onions.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Singapore Noodle - Duck",
+    "description": "Stir fried thin rice noodles, seasoned with egg, powder curry, red pepper, beansprouts and spring onions.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Singapore Noodle - Prawn",
+    "description": "Stir fried thin rice noodles, seasoned with egg, powder curry, red pepper, beansprouts and spring onions.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Singapore Noodle - Seafood",
+    "description": "Stir fried thin rice noodles, seasoned with egg, powder curry, red pepper, beansprouts and spring onions.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Kee Mao - Vegetable",
+    "description": "Stir fried flat rice noodles with basil leaves and chillies.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Kee Mao - Beef",
+    "description": "Stir fried flat rice noodles with basil leaves and chillies.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad Kee Mao - Chicken",
+    "description": "Stir fried flat rice noodles with basil leaves and chillies.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad Kee Mao - Duck",
+    "description": "Stir fried flat rice noodles with basil leaves and chillies.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Kee Mao - Prawn",
+    "description": "Stir fried flat rice noodles with basil leaves and chillies.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Kee Mao - Seafood",
+    "description": "Stir fried flat rice noodles with basil leaves and chillies.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Udon Pad Kee Mao - Vegetable",
+    "description": "Fried Japanese Udon noodles with basil leaves and chillies.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Udon Pad Kee Mao - Beef",
+    "description": "Fried Japanese Udon noodles with basil leaves and chillies.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Udon Pad Kee Mao - Chicken",
+    "description": "Fried Japanese Udon noodles with basil leaves and chillies.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Udon Pad Kee Mao - Duck",
+    "description": "Fried Japanese Udon noodles with basil leaves and chillies.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Udon Pad Kee Mao - Prawn",
+    "description": "Fried Japanese Udon noodles with basil leaves and chillies.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Udon Pad Kee Mao - Seafood",
+    "description": "Fried Japanese Udon noodles with basil leaves and chillies.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Special Fried Rice - Vegetable",
+    "description": "Stir fried with egg, spring onions, onions, tomatoes and green cabbage.",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Special Fried Rice - Beef",
+    "description": "Stir fried with egg, spring onions, onions, tomatoes and green cabbage.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Special Fried Rice - Chicken",
+    "description": "Stir fried with egg, spring onions, onions, tomatoes and green cabbage.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Special Fried Rice - Duck",
+    "description": "Stir fried with egg, spring onions, onions, tomatoes and green cabbage.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Special Fried Rice - Prawn",
+    "description": "Stir fried with egg, spring onions, onions, tomatoes and green cabbage.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Special Fried Rice - Seafood",
+    "description": "Stir fried with egg, spring onions, onions, tomatoes and green cabbage.",
+    "price": "£12.95"
+   }
+  ],
+  "VEGETABLE DISHES": [
+   {
+    "name": "Stir Fried Aubergine",
+    "description": "Stir fried aubergine with oyster sauce.",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Stir Fried Broccoli",
+    "description": "Stir fried broccoli with oyster sauce.",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mix Vegetable",
+    "description": "Stir fried mix vegetable with oyster sauce.",
+    "price": "£9.95",
+    "vegetarian": true
+   }
+  ],
+  "SIDE DISHES": [
+   {
+    "name": "Steamed Rice",
+    "description": "Thai Jasmine Rice.",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "Jasmine rice mixed with coconut milk.",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "Egg fried rice with egg.",
+    "price": "£3.95",
+    "vegetarian": true
+   }
+  ],
+  "SAUCES": [
+   {
+    "name": "Peanut Sauce",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Sweet Chilli Sauce",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Dim Sum Sauce",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Hoisin Sauce",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Fish Sauce",
+    "description": "",
+    "price": "£1.00"
+   },
+   {
+    "name": "Basil Chilli Sauce",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Fresh Chopped Chillies",
+    "description": "",
+    "price": "£1.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Fresh Chopped Chillies + Fish Sauce",
+    "description": "",
+    "price": "£1.50"
+   },
+   {
+    "name": "Pancake",
+    "description": "",
+    "price": "£2.50",
+    "vegetarian": true
+   }
+  ],
+  "DRINKS": [
+   {
+    "name": "Coka Cola (330ml)",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Diet Coke (330ml)",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Coke Zero (330ml)",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Fanta (330ml)",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Sprite (330ml)",
+    "description": "",
+    "price": "£2.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Water - Still (500ml)",
+    "description": "",
+    "price": "£1.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

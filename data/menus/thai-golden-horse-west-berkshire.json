@@ -1,0 +1,423 @@
+{
+ "restaurant": "Thai Golden Horse",
+ "city": "West Berkshire",
+ "fsa_id": "1112102",
+ "address": "West Berkshire",
+ "source": "https://www.thaigoldenhorse.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Chef Recommended": [
+   {
+    "name": "Weeping Tiger",
+    "description": "Grilled marinated sirloin beef with spicy deeping sauce",
+    "price": "£16.95"
+   },
+   {
+    "name": "Kung Yai Gang Keaw",
+    "description": "Grilled king prawns topped with thick green curry sauce mixed with sliced bamboo shoots, aubergine and sweet basil",
+    "price": "£16.95"
+   },
+   {
+    "name": "Spiced King Prawn",
+    "description": "Grilled king prawn with chilli in sweet and sour home-made sauce",
+    "price": "£16.95"
+   },
+   {
+    "name": "Ka Prao Moo Sub",
+    "description": "Stir fried mince pork with chilli, basil, peppers, green beans and onions.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Stewed Pork",
+    "description": "Bangkok Style Slow cooked Pork leg",
+    "price": "£13.95"
+   }
+  ],
+  "Crispy Belly Pork Dishes": [
+   {
+    "name": "Moo Krob",
+    "description": "Thai Style crispy belly pork",
+    "price": "£13.50"
+   },
+   {
+    "name": "Ka Prao Moo Krob",
+    "description": "Stir fried crispy belly porks with chilli, basil, peppers, green beans and onions",
+    "price": "£14.50"
+   },
+   {
+    "name": "Panang Moo Krob",
+    "description": "Traditional Thai style thick panang curry with crispy belly pork and coconut milk",
+    "price": "£15.50"
+   },
+   {
+    "name": "Preaw Wan Moo Krob",
+    "description": "Stir-fried crispy belly pork, vegetables and pineapple with sweet and sour sauce",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pad Thai Moo Krob",
+    "description": "Stir-fried Thai rice noodle with crispy belly pork, sweet and sour tamarind and lemon sauce, egg, peanuts, bean sprout, and spring onion.",
+    "price": "£17.95"
+   }
+  ],
+  "Starters": [
+   {
+    "name": "PRAWN CRACKER",
+    "description": "*ข้าวเกรียบ",
+    "price": "£3.00"
+   },
+   {
+    "name": "Vegetable Spring Roll",
+    "description": "Crispy Spring roll filled with mixed vegetables, served with sweet chill sauce",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "CRISPY TOFU",
+    "description": "Deep fried Crispy tofu served with homemade sweet chilli sauce and peanut sauce",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "CORN FRITTERS",
+    "description": "Deep fried mixed sweet corn with red curry paste and aromatic lime leaves.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE TEMPURA",
+    "description": "Deep fried mixed vegetable in tempura batter served with homemade sweet chilli sauce",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "CHICKEN WING",
+    "description": "Deep fried marinated chicken wing served with sweet chilli sauce",
+    "price": "£7.50"
+   },
+   {
+    "name": "PORK RIBS",
+    "description": "Marinated spare ribs with honey sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "CHICKEN SATAY",
+    "description": "Marinated Chicken and Grilled on skewers.",
+    "price": "£8.5"
+   },
+   {
+    "name": "GRILLED PORK",
+    "description": "Grilled marinated pork on skewers with tamarind dipping sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "FISH CAKE",
+    "description": "A popular local delicacy, Thai style fish cake served with homemade sweet chilli sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Prawn On Toast",
+    "description": "Minced prawns on bread topped with sesame seeds, deep fried and served with sweet chilli sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "PRAWNS TEMPURA",
+    "description": "Deep fried king prawns in tempura batter served with homemade sweet chilli sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Salt Pepper Tofu",
+    "description": "Deep fried tofu in batter garnished with chili and fried garlic served with sweet chili dipping sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "SALT AND PEPPER SQUID",
+    "description": "Tender squid lightly coated in batter then deep fried until fluffs up. Massively Popular. Sprinkled with sea salt, pepper powder and spring onion.",
+    "price": "£8.95"
+   },
+   {
+    "name": "SALT AND PEPPER Seafoods",
+    "description": "Tender squid, prawns and mussels lightly coated in batter then deep fried until fluffs up. Massively Popular. Sprinkled with sea salt,pepper, pepper powder and spring onion.",
+    "price": "£10.95"
+   },
+   {
+    "name": "DUCK SPRING ROLLS",
+    "description": "An alternative treats the usual spring rolls. Braised Shredded duck mixed with Shredded carrot, leek and celery wrapped in Thai pastry.",
+    "price": "£8.50"
+   },
+   {
+    "name": "THAI DUMPLING",
+    "description": "Steamed Thai dumpling stuffed with pork and prawns.",
+    "price": "£8.50"
+   },
+   {
+    "name": "SPICY CHILLI OIL DUMPLING",
+    "description": "Prawn and Pork dumplings with spicy chili oil sauce",
+    "price": "£8.50"
+   },
+   {
+    "name": "AROMATIC DUCK PANCAKE",
+    "description": "¼ Crispy aromatic duck served with pancakes, hoi-sin sauce, spring onion and cucumber",
+    "price": "£14.95"
+   },
+   {
+    "name": "MIXED STARTER",
+    "description": "A selection of Grilled chicken satays,Vegetable spring rolls, Prawns on toasts, Corn fritters, Chicken Wings",
+    "price": "£16.00"
+   }
+  ],
+  "SALAD": [
+   {
+    "name": "SOM TUM",
+    "description": "*ส้มตำไทย Thailand street food. Fresh, shredded papaya pounded and mixed with chilli, garlic Tomato, long beans, lime juice, fish sauce, peanuts and shredded carrot.",
+    "price": "£9.95"
+   },
+   {
+    "name": "SOM TUM & GRILLED CHICKEN",
+    "description": "*ข้าวเหนียวไก่ย่างส้มตำ Thailand street food. Fresh, shredded papaya pounded and mixed with chilli, garlic Tomato, long beans, lime juice, fish sauce, peanuts and shredded carrot. Or Pickle Thai Small crabs and Thai gourami fish.",
+    "price": "£17.95"
+   },
+   {
+    "name": "SOM TUM & GRILLED PORK",
+    "description": "*ข้าวเหนียวหมูปิ้งส้มตำ Thailand street food. Fresh, shredded papaya pounded and mixed with chilli, garlic Tomato, long beans, lime juice, fish sauce, peanuts and shredded carrot. Or Pickle Thai Small crabs and Thai gourami fish.",
+    "price": "£16.95"
+   },
+   {
+    "name": "MINCED PORK SALAD",
+    "description": "*ลาบหมู Bangkok version of the street food staple “Laab” hot and spicy minced pork salad",
+    "price": "£10.95"
+   },
+   {
+    "name": "FISHING VILLAGE",
+    "description": "* ยำทะเล Mixed seafood Salad with spicy chilli, tomato, lime, Celery and garlic dressing.",
+    "price": "£14.50"
+   }
+  ],
+  "SOUP": [
+   {
+    "name": "THAI TOM YUM SOUP",
+    "description": "*ต้มยำซุป Hot and spicy creamy soup flavour from lemongrass, galangal and lime leaves, mushroom, chilli and cream evaporated milk.",
+    "price": "£6.95"
+   },
+   {
+    "name": "COCONUT MILK SOUP",
+    "description": "*ต้มข่าซุป Coconut milk makes it deliciously creamy mushroom. The spiciness and fragrance of the Thai herbs is addictive",
+    "price": "£6.95"
+   },
+   {
+    "name": "Wonton Soup",
+    "description": "Delicate wontons filled with minced pork and prawns, simmered in a rich broth, served with cabbage, beansprouts and garnished with spring onions, coriander, and crispy fried garlic",
+    "price": "£8.95"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "Thai Green Curry",
+    "description": "Traditional Thai Green Curry. Combination of delicious Thai flavour blended with silky smooth coconut milk.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "Famous of Thai cooking. Lovely aromatic red curry sauce Made by using coconut milk.",
+    "price": "£11.95"
+   },
+   {
+    "name": "MASSAMAN CURRY",
+    "description": "A Muslim style curry from Southern Thailand, made with Coconut milk and mixed spices topped with peanuts.",
+    "price": "£11.95"
+   },
+   {
+    "name": "PANANG CURRY",
+    "description": "Traditional Thai style Thick Curry with Chicken and coconut milk.",
+    "price": "£11.95"
+   },
+   {
+    "name": "DUCK CURRY",
+    "description": "A special red curry with pineapple, tomatoes, basil and slices of roasted duck",
+    "price": "£13.95"
+   },
+   {
+    "name": "Jungle Curry",
+    "description": "Traditional Thai Curry Spicy Strong fresh flavors and herbs with Clear stock based.",
+    "price": "£11.95"
+   }
+  ],
+  "STIR-FRIED": [
+   {
+    "name": "CHILLI & BASIL (Pad Kaprow) *ผัดกะเพรา",
+    "description": "Thai stir-fried dish using fresh chilli, garlic and basil. One of the most Common dished to eat on the street of Thailand",
+    "price": "£11.95"
+   },
+   {
+    "name": "CHILLI OIL STIR-FRY *ผัดน้ำพริกเผา",
+    "description": "Stir-fried homemade chilli paste in oil Thai style with choice of.",
+    "price": "£11.95"
+   },
+   {
+    "name": "SWEET AND SOUR *ผัดเปรี้ยวหวาน",
+    "description": "Stir-fried vegetables and pineapple with sweet and sour sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "CASHEW NUT *ผัดเม็ดมะม่วง",
+    "description": "Stir-fried roasted cashew nut, mushroom, pepper Onion and Roasted dried chilli.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Ginger *ผัดขิง",
+    "description": "Stir-fried with ginger, mushrooms and spring onions",
+    "price": "£11.95"
+   },
+   {
+    "name": "Beef oyster sauce*เนื้อน้ำมันหอย",
+    "description": "",
+    "price": "£13.50"
+   }
+  ],
+  "FISH DISHES": [
+   {
+    "name": "Pla Nung See Eiw *ปลานึ่งซีอิ๊ว",
+    "description": "Steamed sea bass with soya, Ginger and spring onion.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pla Nung Manow *ปลานึ่งมะนาว",
+    "description": "Steamed sea bass fillets with spicy dressing, chilli, garlic and fresh lime juice",
+    "price": "£15.95"
+   },
+   {
+    "name": "CHU CHI Pla *ปลาฉู่ฉี่",
+    "description": "Crispy fried Sea bass fillet topped with aromatic spicy sauce",
+    "price": "£15.95"
+   },
+   {
+    "name": "SWEET AND SOUR Pla *ปลาเปรี้ยวหวาน",
+    "description": "A Crispy Golden fillet of sea bass topped With sweet &sour sauce.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pla Sam Rod *ปลาสามรส",
+    "description": "Fried sebass with chilli in sweet and sour home-made sauce",
+    "price": "£15.95"
+   }
+  ],
+  "NOODLES": [
+   {
+    "name": "PHAD MEE *ผัดบะหมีเหลือง",
+    "description": "Stir-fried wheat noodle, bean sprout, spring onion, onions peppers and carrot.",
+    "price": "£12.50"
+   },
+   {
+    "name": "PHAD THAI *ผัดไทย",
+    "description": "Stir-fried Thai rice noodle with sweet and sour tamarind and lemon sauce Egg, peanuts, bean sprout, and spring onion.",
+    "price": "£12.50"
+   },
+   {
+    "name": "PHAD SEE EIW *ผัดซีอิ๊ว",
+    "description": "Stir-fried flat rice noodle with egg, mixed Vegetable, soya bean and Spring onion",
+    "price": "£12.50"
+   },
+   {
+    "name": "PHAD KEE MAO *ผัดขี้เมา",
+    "description": "",
+    "price": "£12.50"
+   }
+  ],
+  "SPECIAL FRIED RICE": [
+   {
+    "name": "KHAO PHAD *ข้าวผัด",
+    "description": "",
+    "price": "£12.50"
+   },
+   {
+    "name": "SPICY KHAO PHAD *ข้าวคลุกกระเพรา",
+    "description": "",
+    "price": "£12.50"
+   }
+  ],
+  "SIDE DISH": [
+   {
+    "name": "STEAMED THAI JASMINE RICE *ข้าวสวย",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "STEAMED STICKY RICE*ข้าวเหนียว",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "EGG FRIED RICE*ข้าวผัดไข่",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "COCONUT RICE *ข้าวกะทิ",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "STIR-FRIED RICE NOODLE WITH BEAN SPROUT *",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "STIR-FRIED YELLOW NOODLE",
+    "description": "",
+    "price": "£5.95"
+   }
+  ],
+  "Extra Sauce": [
+   {
+    "name": "Sweet Chilli Sauce",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Chilli Oil",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Hoi Sin Sauce",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Chopped Fresh Chilli",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Chilli Fish Sauce",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Soy Sauce",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Sweet Soy Sauce",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Peanut Sauce",
+    "description": "",
+    "price": "£1"
+   },
+   {
+    "name": "Extra Pancake (For Aromatic Duck)",
+    "description": "",
+    "price": "£2"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "*All Fish Dishes Served with Steamed Jasmine Rice* (Add £2 for Noodle)"
+ ]
+}

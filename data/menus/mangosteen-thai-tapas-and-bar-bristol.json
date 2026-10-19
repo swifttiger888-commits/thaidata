@@ -1,0 +1,193 @@
+{
+ "restaurant": "Mangosteen Thai Tapas and Bar",
+ "city": "Bristol",
+ "fsa_id": "1783296",
+ "address": "Bristol",
+ "source": "https://mangosteenbristol.co.uk/wp-content/uploads/Food-Menu-May-2026.jpg",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "SMALL PLATES": [
+   {
+    "name": "TOM YAM SOUP *",
+    "description": "Spicy & sour soup with lemongrass & galangal (Vegetable/Chicken/Prawn + £1) (d - dairy free option available)",
+    "price": "£6"
+   },
+   {
+    "name": "SOM TAM SALAD *",
+    "description": "Spicy papaya salad with peanuts & Chef's hot & tangy fish sauce dressing (n - nut free and vegan options available)",
+    "price": "£7"
+   },
+   {
+    "name": "LARB GAI SALAD*",
+    "description": "Classic Thai minced chicken salad with fresh lime juice, chilli, red onion & aromatic herbs.",
+    "price": "£8"
+   },
+   {
+    "name": "SPRING ROLLS *",
+    "description": "Crispy filo spring rolls made in house, served with plum sauce (Vegetable (v, g, d) OR Chicken +£1 (g, d)",
+    "price": "£6"
+   },
+   {
+    "name": "STIR FRIED CHOY SUM *",
+    "description": "Traditional Thai green stem vegetable with roasted garlic(vg)",
+    "price": "£8",
+    "vegetarian": true
+   },
+   {
+    "name": "CHICKEN SATAY *",
+    "description": "Chicken skewers with homemade peanut sauce (n, d)",
+    "price": "£8"
+   },
+   {
+    "name": "STIR FRIED TOFU *",
+    "description": "Tofu tossed with peppers in a stir fry garlic sauce (vg)",
+    "price": "£8",
+    "vegetarian": true
+   },
+   {
+    "name": "SWEET & SOUR AUBERGINE *",
+    "description": "Fried aubergine with peppers, onion & pineapple (vg)",
+    "price": "£9",
+    "vegetarian": true
+   },
+   {
+    "name": "THAI STIR FRY *",
+    "description": "Wok-fried with cashew nuts, mushroom, spring onion, peppers & roasted chilli in a rich, spicy Thai sauce (Chicken or Beef) (n, g - nut and gluten free options available)",
+    "price": "£10"
+   },
+   {
+    "name": "MINCED CHICKEN WITH THAI HOLY BASIL",
+    "description": "Minced chicken stir-fried with garlic, chillies and Thai basil in a savoury sauce. (G)",
+    "price": "£10"
+   },
+   {
+    "name": "CRISPY HONEY CHILLI BEEF",
+    "description": "Crispy beef strips wok-fried in a fiery honey chilli glaze",
+    "price": "£10"
+   },
+   {
+    "name": "THAI GRILLED BEEF",
+    "description": "Chargrilled beef tenderloin with chef's special spicy sauce",
+    "price": "£10"
+   },
+   {
+    "name": "THAI GRILLED PORK",
+    "description": "Chargrilled pork loin marinated in a Thai tamarind sauce",
+    "price": "£10"
+   }
+  ],
+  "SEAFOOD": [
+   {
+    "name": "GOLDEN PRAWN BAGS *",
+    "description": "Garlic and herb marinated shrimp & prawn, hand-filled in-house into filo pastry, served with sweet chilli relish (g, d)",
+    "price": "£8"
+   },
+   {
+    "name": "CRISPY CHILLI SQUID *",
+    "description": "Deep fried battered squid with sweet chilli sauce",
+    "price": "£8"
+   },
+   {
+    "name": "BUTTER CHILLI PRAWNS",
+    "description": "Fried king prawns, tossed in a wok with white pepper and served with chilli & curry leaves (d)",
+    "price": "£9"
+   },
+   {
+    "name": "GRILLED LEMONGRASS PRAWN SKEWER",
+    "description": "Smoky grilled prawn skewers with a hint of lemongrass",
+    "price": "£10"
+   },
+   {
+    "name": "THAI PRAWN STIR FRY",
+    "description": "Wok-fried prawns with cashew nuts, mushroom, spring onion, peppers & roasted chilli in a rich, spicy Thai sauce (n, g - nut and gluten free options available)",
+    "price": "£10"
+   },
+   {
+    "name": "SOFT SHELL CRAB",
+    "description": "Fried freshly caught soft-shell crab from the Cornish coast, tossed in aromatic spices.",
+    "price": "£13"
+   },
+   {
+    "name": "GRILLED SEA BASS",
+    "description": "Sea bass fillet caught off the Cornish coast, wrapped in banana leaves & served with our homemade spicy sauce",
+    "price": "£14"
+   }
+  ],
+  "NOODLES & RICE": [
+   {
+    "name": "JASMINE RICE *",
+    "description": "Steamed Thai jasmine rice (vg)",
+    "price": "£4",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE FRIED RICE *",
+    "description": "Steamed Thai jasmine rice fried with vegetables , soy sauce & spring onion (vg, g - gluten free option available)",
+    "price": "£6",
+    "vegetarian": true
+   },
+   {
+    "name": "EGG FRIED RICE *",
+    "description": "Steamed Thai jasmine rice fried with eggs, soy sauce & spring onion (v, g - gluten free option available)",
+    "price": "£6.5",
+    "vegetarian": true
+   },
+   {
+    "name": "CHICKEN FRIED RICE *",
+    "description": "Steamed Thai jasmine rice fried with egg, chicken, soy sauce & spring onion (g - gluten free option available)",
+    "price": "£7"
+   },
+   {
+    "name": "MINCED CHICKEN BASIL FRIED RICE",
+    "description": "Wok-tossed jasmine rice with minced chicken, French beans & crispy Thai basil",
+    "price": "£9"
+   },
+   {
+    "name": "NASI GORENG *",
+    "description": "Indonesian fried rice with chicken, prawn, vegetables & a fried egg (g - gluten free option available)",
+    "price": "£8"
+   },
+   {
+    "name": "MIE GORENG *",
+    "description": "Indonesian noodles in a rich, salty shellfish blend with vegetables, chicken or prawn (+£1) (G)",
+    "price": "£7"
+   },
+   {
+    "name": "PAD THAI NOODLES *",
+    "description": "Thai rice noodles in a spicy, tangy sauce (Vegetable/Chicken/Prawn + £1) (n, g - nut free, gluten free, and vegan options available)",
+    "price": "£8"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "THAI GREEN CURRY",
+    "description": "Fragrant spicy coconut curry with aubergine, lime leaves & Thai basil (Vegetable (vg) / Chicken +£2 / Prawn +£3)",
+    "price": "£9"
+   },
+   {
+    "name": "THAI MASSAMAN CURRY",
+    "description": "Rich, mild coconut curry with potatoes, peanuts & onion, infused with aromatic Thai herbs(Tofu (v) / Beef +£1) (n, g - nut and gluten free options available)",
+    "price": "£10"
+   },
+   {
+    "name": "PANANG CURRY",
+    "description": "Rich, creamy coconut curry with fragrant lime leaves, red chilli & a hint of sweetness. (CHOICES OF CHICKEN OR PORK)",
+    "price": "£11"
+   },
+   {
+    "name": "THAI HOT YELLOW CURRY",
+    "description": "House-made Thai hot yellow curry fragrant with lemongrass, turmeric & creamy evaporated milk (v,d) (Aubergine / prawn +1)",
+    "price": "£11"
+   },
+   {
+    "name": "THAI DUCK RED CURRY",
+    "description": "Roast duck with bamboo shoots, pineapple, Thai basil & chilli",
+    "price": "£12"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Choose any 4 dishes marked *, and mix and match any 2 drinks (soft drinks/glass of Singha/glass of house wine) £35 Or choose a cocktail as your drink for £3 extra! Available for lunch service (1pm-4pm, Fri-Sun). 125ml glass of wine."
+ ]
+}

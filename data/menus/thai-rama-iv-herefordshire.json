@@ -1,0 +1,62 @@
+{
+ "restaurant": "Thai Rama IV",
+ "city": "Herefordshire",
+ "fsa_id": "487718",
+ "address": "Herefordshire",
+ "source": "https://www.thai-rama-iv.co.uk/seafood-menu22.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "SEAFOOD DISHES": [
+   {
+    "name": "GOONG PHAD PRIEW WAN",
+    "description": "Stir fried king prawns with pepper, onion, mushroom and pineapple pieces in sweet and sour sauce.",
+    "price": "£(Restaurant Price) £11.50 (Take Away Price) £10.50",
+    "num": "70"
+   },
+   {
+    "name": "GOONG PHAD NUMPRIK PAO #",
+    "description": "King prawns stir fried with prawn paste, pepper, mushrooms and spring onions.",
+    "price": "£(Restaurant Price) £11.50 (Take Away Price) £10.50",
+    "num": "71"
+   },
+   {
+    "name": "GOONG PAD NOR MAI FA RANG SOD",
+    "description": "Stir fried king prawns with fresh asparagus in oyster sauce.",
+    "price": "£(Restaurant Price) £10.50 (Take Away Price) £9.50",
+    "num": "72"
+   },
+   {
+    "name": "PHAD PHED TALAY ###",
+    "description": "Mixed seafood stir fried with bamboo shoots, chilli, garlic, fresh Thai aubergines and Thai herbs.",
+    "price": "£(Restaurant Price) £12.50 (Take Away Price) £11.50",
+    "num": "73"
+   },
+   {
+    "name": "PLA SAM ROD ##",
+    "description": "Deep fried monkfish pieces coated with sweet and sour sauce.",
+    "price": "£(Restaurant Price) £11.95 (Take Away Price) £10.95",
+    "num": "74"
+   },
+   {
+    "name": "PLA RAD PRIK ##",
+    "description": "Crispy fried fillet of sea bream topped with sweet chilli and vegetable sauce.",
+    "price": "£(Restaurant Price) £14.50 (Take Away Price) £13.50",
+    "num": "75"
+   },
+   {
+    "name": "GOONG PHAD PONG-GARI #",
+    "description": "Stir fried king prawns with egg, yellow curry paste, pepper and spring onions.",
+    "price": "£(Restaurant Price) £11.95 (Take Away Price) £10.95",
+    "num": "76"
+   },
+   {
+    "name": "PLA PHAD KING #",
+    "description": "Stir fried cod with ginger, garlic, spring onions and mushrooms.",
+    "price": "£(Restaurant Price) £11.95 (Take Away Price) £10.95",
+    "num": "77"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

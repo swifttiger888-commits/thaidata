@@ -127,7 +127,7 @@
    {
     "num": "14.",
     "name": "DRUNKEN NOODLES",
-    "description": "Spicy Thai rice noodles stir fried with mixed vegetables, basil leaves, chili and soy sauce.\nChoice of Chicken, Barbequed Pork, Beef, Prawn or Mixed Vegetables",
+    "description": "Spicy Thai rice noodles stir fried with mixed vegetables, basil leaves, chili and soy sauce. Choice of Chicken, Barbequed Pork, Beef, Prawn or Mixed Vegetables",
     "price": "16.55 | Mixed Seafood £19.95",
     "vegetarian": false,
     "heat": "3"
@@ -135,7 +135,7 @@
    {
     "num": "15.",
     "name": "PAD THAI - A famous Thai dish CN VE",
-    "description": "Stir fried rice noodles with egg, bean sprouts, carrot, ground peanut and spring onion.\nChoice of Prawn, Chicken, Barbequed Pork or Mixed Vegetables",
+    "description": "Stir fried rice noodles with egg, bean sprouts, carrot, ground peanut and spring onion. Choice of Prawn, Chicken, Barbequed Pork or Mixed Vegetables",
     "price": "£16.55",
     "vegetarian": true,
     "heat": null
@@ -143,7 +143,7 @@
    {
     "num": "16.",
     "name": "PAD MEE VE",
-    "description": "Stir fried egg noodles with egg, bean sprouts, onion, carrot, and spring onion.\nChoice of Chicken, Barbequed Pork, Prawn or Mixed Vegetables",
+    "description": "Stir fried egg noodles with egg, bean sprouts, onion, carrot, and spring onion. Choice of Chicken, Barbequed Pork, Prawn or Mixed Vegetables",
     "price": "£16.55",
     "vegetarian": true,
     "heat": null
@@ -151,7 +151,7 @@
    {
     "num": "17.",
     "name": "PAD SEE EAW - A famous Thai dish",
-    "description": "Stir fried rice noodles with vegetables and egg.\nChoice of Chicken, Barbequed Pork, Beef, Prawn or Mixed Vegetables",
+    "description": "Stir fried rice noodles with vegetables and egg. Choice of Chicken, Barbequed Pork, Beef, Prawn or Mixed Vegetables",
     "price": "16.55 | Mixed Seafood £19.95",
     "vegetarian": true,
     "heat": null
@@ -159,7 +159,7 @@
    {
     "num": "18.",
     "name": "KOEW TIEW TUM YAM - Noodle Soup",
-    "description": "A spicy hot and sour soup with rice noodles, lemon grass,\nThai herbs and fresh chilli. Choice of Chicken, Beef, Prawn or Mixed Seafood",
+    "description": "A spicy hot and sour soup with rice noodles, lemon grass, Thai herbs and fresh chilli. Choice of Chicken, Beef, Prawn or Mixed Seafood",
     "price": "Chicken 16.55 | Beef 17.95\nPrawn 18.95 | Mixed Seafood £19.95",
     "vegetarian": false,
     "heat": null
@@ -169,7 +169,7 @@
    {
     "num": "19.",
     "name": "GANG KIEW WAN",
-    "description": "A spicy green curry with coconut milk, mixed vegetables, sweet basil and Thai herbs.\nWith a choice of Chicken, Beef, Prawn or Mixed Vegetable",
+    "description": "A spicy green curry with coconut milk, mixed vegetables, sweet basil and Thai herbs. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
     "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "2"
@@ -177,7 +177,7 @@
    {
     "num": "20.",
     "name": "MASSAMAN CN",
-    "description": "A medium spiced curry with a special blend of red curry paste,\ncoconut milk, roasted cashew and potato.",
+    "description": "A medium spiced curry with a special blend of red curry paste, coconut milk, roasted cashew and potato.",
     "price": "Vegetable 15.95 | Chicken 16.95 | Beef 18.95 | Prawn £19.95",
     "vegetarian": false,
     "heat": null
@@ -185,7 +185,7 @@
    {
     "num": "21.",
     "name": "PANANG",
-    "description": "A medium spiced thicker red curry with coconut milk, flavoured with lime leaves,\nred pepper & sweet basil. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
+    "description": "A medium spiced thicker red curry with coconut milk, flavoured with lime leaves, red pepper & sweet basil. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
     "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "2"
@@ -193,7 +193,7 @@
    {
     "num": "22.",
     "name": "GANG DANG",
-    "description": "A spicy red curry with coconut milk, mixed vegetables and sweet basil.\nWith a choice of Chicken, Beef, Prawn or Mixed Vegetable",
+    "description": "A spicy red curry with coconut milk, mixed vegetables and sweet basil. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
     "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "2"
@@ -201,7 +201,7 @@
    {
     "num": "23.",
     "name": "GANG GAREE",
-    "description": "A mild yellow curry with potato tomato and coconut milk.\nWith a choice of Chicken, Beef, Prawn or Mixed Vegetable",
+    "description": "A mild yellow curry with potato tomato and coconut milk. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
     "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": null
@@ -209,7 +209,7 @@
    {
     "num": "24.",
     "name": "GANG PA - Jungle Curry",
-    "description": "The ultimate Thai jungle curry with bamboo shoots, baby corn, lime leaves, sweet basil,\nThai herbs & red pepper. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
+    "description": "The ultimate Thai jungle curry with bamboo shoots, baby corn, lime leaves, sweet basil, Thai herbs & red pepper. With a choice of Chicken, Beef, Prawn or Mixed Vegetable",
     "price": "16.55 | Prawn £18.95",
     "vegetarian": true,
     "heat": "3"

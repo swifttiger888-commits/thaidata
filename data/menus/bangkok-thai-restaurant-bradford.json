@@ -1,0 +1,441 @@
+{
+ "restaurant": "Bangkok Thai Restaurant",
+ "city": "Bradford",
+ "fsa_id": "328481",
+ "address": "Bradford",
+ "source": "https://www.bangkokthai.uk/menu/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "1 CHICKEN SATAY",
+    "description": "Marinated chicken on skewers, grilled and served with peanut sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "2 FRIED CHICKEN BALL",
+    "description": "Deep fried chicken ball in batter, served with sweet chilli sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "3 PRAWN TEMPURA",
+    "description": "Tiger prawns in crispy batter, served with sweet chilli sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "4 SCALLOP GARLIC & PEPPER",
+    "description": "Char-Grilled scallop with garlic and pepper, served with seafood sauce",
+    "price": "£12.00"
+   },
+   {
+    "name": "5 CHICKEN WING",
+    "description": "Marinated chicken wings dusted in flour, deep fried, served with sweet chilli sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "6 THAI FISH CAKE",
+    "description": "Thai fish cake – mixed of fish and trace amount of mince chicken, blended with red curry paste, fine beans and lime leaves served with ground peanut and sweet chilli sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "7 BBQ MUTTON CHOP",
+    "description": "Marinated lamb chops with Bangkok BBQ sauce.",
+    "price": "£12.00"
+   },
+   {
+    "name": "9 PRAWN SATAY",
+    "description": "Marinated tiger prawns, grilled and served with peanut sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "10 DUCK SPRING ROLL",
+    "description": "Shredded duck with taro, cabbage and mushroom, served with sweet chilli sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "11 CHICKEN ON TOAST",
+    "description": "Minced chicken sprinkled with sesame seeds served on toast with sweet chilli sauce",
+    "price": "£9.00"
+   },
+   {
+    "name": "12 STREAMED MUSSEL with Thai herbs",
+    "description": "Steamed mussels with cooked with Thai herbs, spring onion, basil and chilli served with a spicy seafood sauce",
+    "price": "£12.00"
+   },
+   {
+    "name": "13 CRISPY WONTON",
+    "description": "Deep fried wonton filled with minced chicken, served with sweet chilli sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "14 PRAWN CRACKERS",
+    "description": "Deep-fried prawn crackers, served with sweet chilli sauce",
+    "price": "£3.50"
+   },
+   {
+    "name": "15 BANGKOK PLATTER ( minimum 2 person )",
+    "description": "An assortment of delicious starters, including, Chicken Spring Roll, Chicken on Toast, Chicken Satay, Crispy Wonton and and Prawn Tempura (2 pieces of each starter per person)",
+    "price": "£15per person"
+   },
+   {
+    "name": "V1 SWEET CORN CAKE",
+    "description": "Deep-fried corn cake served with sweet chilli sauce topped with ground peanut",
+    "price": "£9.00",
+    "vegetarian": true
+   },
+   {
+    "name": "V3 VEGETABLES TEMPURA",
+    "description": "Deep-fried mixed vegetables in light batter, served with sweet chilli sauce",
+    "price": "£9.00",
+    "vegetarian": true
+   },
+   {
+    "name": "V4 VEGETABLE SPRING ROLL",
+    "description": "Thai spring rolls with mixed vegetables, served with sweet chilli sauce",
+    "price": "£9.00",
+    "vegetarian": true
+   },
+   {
+    "name": "V6 DEEP-FRIED TOFU",
+    "description": "Deep-fried golden chunks of tofu served with sweet chilli sauces topped with ground peanut",
+    "price": "£9.00",
+    "vegetarian": true
+   }
+  ],
+  "THAI SPICY SALADS": [
+   {
+    "name": "16 YUM",
+    "description": "Traditional Thai-style spicy salad with your choice of chicken or beef",
+    "price": "£12.00"
+   },
+   {
+    "name": "17 YUM TA-LE",
+    "description": "Traditional Thai-style spicy salad with mixed seafood",
+    "price": "£13.50"
+   },
+   {
+    "name": "18 SOM TUM (V)",
+    "description": "Spicy Thai salad with shredded papaya, carrot, tomato, chilli and peanuts",
+    "price": "£13.50",
+    "vegetarian": true
+   },
+   {
+    "name": "19 LARB",
+    "description": "Minced chicken or beef mixed with chilli, ground rice, red onion, spring onion, and basil.",
+    "price": "£12.00"
+   },
+   {
+    "name": "X21 LARB TOFU",
+    "description": "Deep fried golden chunks of bean curd mixed with chilli, ground rice, red onion, spring onion, mint and carrot.",
+    "price": "£12.00",
+    "vegetarian": true
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "20 TOM YUM Chicken/Prawn/Mixed",
+    "description": "Spicy hot and sour soup flavoured with galangal, lemon grass, lime leaves, mushroom and spring onion.",
+    "price": "£9.00/£10.00\n/£12.00"
+   },
+   {
+    "name": "21 TOM KHA Chicken/Prawn/Mixed",
+    "description": "Creamy soup flavoured with galangal, lemon grass, lime leaves, light coconut milk, mushroom and spring onion",
+    "price": "£9.0\n0/£10.00\n/£12.00"
+   },
+   {
+    "name": "22 POH TAEK",
+    "description": "Mixed seafood in spicy hot and sour soup flavoured with galangal, lemon grass, lime leaves, mushroom and spring onion.",
+    "price": "£13.00"
+   },
+   {
+    "name": "23 CHICKEN WONTON SOUP",
+    "description": "Thai clear soup with chicken wrapped in wonton pastry, Chinese leaf, carrot, finished with a sprinkle of fried garlic and fresh spring onion",
+    "price": "£9.00"
+   },
+   {
+    "name": "V8 TOM YUM HED",
+    "description": "Spicy hot and sour mushroom soup flavoured with galangal, lemon grass, lime leaves, mushroom and spring onion",
+    "price": "£9.00",
+    "vegetarian": true
+   },
+   {
+    "name": "V9 TOM KHA HED",
+    "description": "Creamy mushrooms and galangal flavour soup with lemon grass, lime leaves, light coconut milk and spring onion",
+    "price": "£9.00",
+    "vegetarian": true
+   }
+  ],
+  "MAIN COURSES": [
+   {
+    "name": "24 MASSAMAN CURRY",
+    "description": "Medium spicy massaman curry with coconut milk, onion, carrot, potatoes topped with peanut and crispy shallots",
+    "price": null
+   },
+   {
+    "name": "25 THAI GREEN CURRY",
+    "description": "Thai green curry with coconut milk, fine bean, carrot, bamboo shoots, basil, bell peppers and courgette",
+    "price": null
+   },
+   {
+    "name": "26 THAI RED CURRY",
+    "description": "Thai red curry with coconut milk and bamboo shoots, fine bean, carrot, bell pepper and basil",
+    "price": null
+   },
+   {
+    "name": "28 THAI PINEAPPLE CURRY",
+    "description": "Thai red curry with coconut milk, bell pepper, tomato, basil and pineapple",
+    "price": null
+   },
+   {
+    "name": "29 PA-NANG CURRY",
+    "description": "Rich red curry with coconut milk, bell pepper and lime leaves",
+    "price": null
+   },
+   {
+    "name": "30 THAI JUNGLE CURRY",
+    "description": "Thai spicy clear curry with mixed vegetables (no coconut milk)",
+    "price": null
+   },
+   {
+    "name": "31 PAD PRIK",
+    "description": "Stir-fried with fresh chilli, spring onion, bamboo shoots, carrot and onion",
+    "price": null
+   },
+   {
+    "name": "32 PAD KHING",
+    "description": "Stir-fried with ginger, carrot, spring onion and mushroom",
+    "price": null
+   },
+   {
+    "name": "33 GA PRAO",
+    "description": "Stir-fried with fine bean, onion, carrot, fresh chilli and basil",
+    "price": null
+   },
+   {
+    "name": "34 GRATIUM",
+    "description": "Stir-fried with garlic and pepper",
+    "price": null
+   },
+   {
+    "name": "35 MED MAMUANG",
+    "description": "Stir-fried with cashew nuts, onion, carrot, mushroom, pineapple and spring onion",
+    "price": null
+   },
+   {
+    "name": "36 PREW WAN",
+    "description": "Stir-fried with carrot, mushroom, spring onion, bell pepper, onion and tomato in a sweet and sour sauce",
+    "price": null
+   },
+   {
+    "name": "37 PAD BROCCOLI",
+    "description": "Stir-fried with broccoli, carrot and onion",
+    "price": null
+   },
+   {
+    "name": "38 BLACK BEAN SAUCE",
+    "description": "Stir-fried with bell pepper, carrot and onion in a black bean sauce",
+    "price": null
+   },
+   {
+    "name": "39 PRIK GANG",
+    "description": "Stir-fried with a creamy red curry, green beans, mushroom, bell pepper, carrot, basil and lime leaves",
+    "price": null
+   },
+   {
+    "name": "40 NAM MUN HOI",
+    "description": "Stir-fried with oyster sauce, carrot, mushroom, and onion",
+    "price": null
+   },
+   {
+    "name": "41 NAM PRIK PAO",
+    "description": "Stir-fried with a creamy chilli oil, basil, mushroom, spring onion, carrot, onion and bell pepper",
+    "price": null
+   }
+  ],
+  "SPECIAL MENU": [
+   {
+    "name": "42 GAI TOD PRIK GANG",
+    "description": "Sliced chicken breast, dusted in flour, deep-fried and smothered with a creamy red curry sauce, basil, bell pepper, and lime leaf",
+    "price": "£15.50"
+   },
+   {
+    "name": "X51 MASSAMAN MUTTON CHOPS",
+    "description": "Marinated lamb chops cooked in a Massaman sauce becoming meltingly tender & the spices blend in with the mutton.",
+    "price": "£20*"
+   },
+   {
+    "name": "51 PLA NEUNG MANOW (Hot)",
+    "description": "Steamed sea bass with Chinese leaf, chilli, coriander, lemon and garlic",
+    "price": "£20*"
+   },
+   {
+    "name": "X71 YUM PLA PARK LAD",
+    "description": "Deep-fried crispy sea bass fillet, a Thai traditional recipe from central region of Thailand, the sea bass is wonderfully seasoned with fish sauce, fresh chilli, lemon juice & an assortment of fresh herbs to bring it altogether",
+    "price": "£20*"
+   },
+   {
+    "name": "56 GOONG PRIK GLUEA",
+    "description": "Shell-on Giant prawns, dusted in flour, deep-fried and smothered red chilli, a pinch of salt, onion, carrot, bell pepper and black pepper",
+    "price": "£20*"
+   },
+   {
+    "name": "57 GOONG OP WUNSEN",
+    "description": "Casseroled Giant prawns with bean thread noodles, ginger, spring onion, Chinese leaves, carrot, celery and pepper",
+    "price": "£20*"
+   },
+   {
+    "name": "59 GOONG PRIK GANG (Hot)",
+    "description": "Shell-on Giant prawns, dusted in flour, deep-fried, with a creamy red curry, green beans, mushroom, bell pepper, carrot and lime leaves",
+    "price": "£20*"
+   },
+   {
+    "name": "60 GOONG YAI BANGKOK",
+    "description": "Casseroled Giant prawns with hot and sour sauce, flavoured with Thai herbs, celery, red onion, chilli, spring onion, and basil",
+    "price": "£20*"
+   },
+   {
+    "name": "X41 GIANT PRAWN GRATIUM",
+    "description": "Deep fried Shell-on Giant prawns, topped with garlic and pepper",
+    "price": "£20*"
+   },
+   {
+    "name": "X42 GIANT PRAWN GANG KIEW WAN",
+    "description": "Grilled, Shell-on Giant prawns, in Thai green curry with coconut milk, fine bean, bamboo shoots, bell pepper, carrot and courgette",
+    "price": "£20*"
+   },
+   {
+    "name": "X31 MA KHAM a choice of Chicken/Duck/Giant Prawn",
+    "description": "Deep-fried crispy a choice of meat in a light batter with streamed vegetables, topped with Bangkok Thai recipe tamarind sauce",
+    "price": "£20*"
+   },
+   {
+    "name": "X32 SAM ROD a choice of Chicken/Duck/Giant Prawn/Fish",
+    "description": "Deep-fried crispy a choice of meat in a light batter, topped with Bangkok Thai sauce, with pineapple, bell pepper, onion, carrot and tomato",
+    "price": "£20*"
+   },
+   {
+    "name": "X33 PED GA REANG",
+    "description": "Deep-fried crispy duck breast in a light batter and smothered with a creamy red curry sauce, basil, bell pepper, and lime leaf",
+    "price": "£20*"
+   }
+  ],
+  "CHAR GRILLED": [
+   {
+    "name": "61 WEEPING TIGER",
+    "description": "Grilled marinated sirloin steak accompanied with salad, served with Bangkok’s gravy sauce and special spicy sauce",
+    "price": "£25.00"
+   },
+   {
+    "name": "62 GAI YANG",
+    "description": "Grilled marinated chicken breast, accompanied with salad, served with Bangkok’s gravy sauce and special spicy sauce",
+    "price": "£20.00"
+   },
+   {
+    "name": "63 GOONG YANG",
+    "description": "Grilled shell on Giant prawn, accompanied with salad, topped with crispy shallot, served with Bangkok seafood sauce",
+    "price": "£20.00"
+   }
+  ],
+  "NOODLES AND RICE": [
+   {
+    "name": "64 PAD THAI",
+    "description": "Stir-fried Thai rice stick with eggs, bean sprouts, carrot, spring onion, crushed peanuts (on requested).",
+    "price": null
+   },
+   {
+    "name": "65 PAD KEE MAO (Hot)",
+    "description": "Spicy stir-fried Thai rice stick with basil, carrot, bamboo shoots, mushroom, spring onion and chilli.",
+    "price": null
+   },
+   {
+    "name": "66 PAD MEE BANGKOK",
+    "description": "Stir-fried vermicelli with eggs, bell pepper, bean sprouts, carrot, onion and spring onion.",
+    "price": null
+   },
+   {
+    "name": "67 KHAO PAD",
+    "description": "Fried rice with eggs, carrot, onion, tomato, spring onion.",
+    "price": null
+   },
+   {
+    "name": "68 PINEAPPLE FRIED RICE",
+    "description": "Fried rice with egg, pineapple, raisin, carrot, bell pepper and onion.",
+    "price": null
+   }
+  ],
+  "SIDE PORTION": [
+   {
+    "name": "69 KHAO PAD KHAI",
+    "description": "Egg fried rice.",
+    "price": "£4.50"
+   },
+   {
+    "name": "70 KHAO SUAY",
+    "description": "Boiled Thai jasmine rice",
+    "price": "£4.00"
+   },
+   {
+    "name": "71 KHAO NIEW",
+    "description": "Thai sticky rice",
+    "price": "£4.50"
+   },
+   {
+    "name": "72 NOODLES",
+    "description": "Rice noodles with egg, carrot spring onion and bean sprouts.",
+    "price": "£4.50"
+   },
+   {
+    "name": "73 STEAMED MIXED VEGETABLES",
+    "description": "Side portion of in-season steamed fresh vegetables.",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "74 CHIPS",
+    "description": "ADD SALT AND PEPPER WITH CARROT, ONION AND BELL PEPPER £5.50",
+    "price": "£4.50"
+   },
+   {
+    "name": "75 COCONUT RICE",
+    "description": "Thai Jasmine rice steamed with coconut milk.",
+    "price": "£4.50"
+   }
+  ],
+  "SET MENU": [
+   {
+    "name": "Set A",
+    "description": "Minimum For TWO people Starters CHICKEN SATAY Marinated chicken on skewers, grilled and served with peanut sauce CHICKEN ON TOAST Minced chicken sprinkled with sesame seeds served on toast with sweet chilli sauce PRAWN TEMPURA Tiger prawns in crispy batter, served with sweet and chilli sauce Main Courses CHICKEN IN THAI GREEN CURRY Chicken in Thai green curry with coconut milk, bamboo shoots, carrot, bell pepper, basil and courgette BEEF BLACK BEAN SAUCE Stir-fried beef with bell pepper, carrot and onion in a black bean sauce KHAO PAD KHAI / KHAO SUAY Egg fried rice or boiled jasmine rice Coffee / Jasmine Tea",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "Set B",
+    "description": "Minimum For TWO people Starters CHICKEN SATAY Marinated chicken on skewers, grilled and served with peanut sauce VEGETABLE SPRING ROLL Thai-style spring rolls with bean thread noodles and vegetables, served with sweet chilli sauce THAI FISH CAKE Thai fish cake – mixed of fish and trace amount of mince chicken, blended with red curry paste, fine beans and lime leaves served with ground peanut and sweet chilli sauce Main Courses CHICKEN RED CURRY Chicken in Thai red curry with coconut milk and bamboo shoots, fine bean, bell pepper, carrot and basil STIR FRIED DUCK IN CASHEW NUTS Stir-fried duck with cashew nuts, pineapple, mushroom, carrot, onion and spring onion KHAO PAD KHAI / KHAO SUAY Egg fried rice or boiled jasmine rice Coffee / Jasmine Tea",
+    "price": "£30.00 per person"
+   },
+   {
+    "name": "Set C",
+    "description": "Minimum For TWO people Starters CHICKEN SATAY Marinated chicken on skewers, grilled and served with peanut sauce VEGETABLE SPRING ROLL Thai-style spring rolls with bean thread noodles and vegetables, served with sweet chilli sauce CHICKEN ON TOAST Minced chicken sprinkled with sesame seeds served on toast with sweet chilli sauce Soups CHICKEN TOM YUM Spicy hot and sour chicken soup flavoured with galangal, lemon grass, lime leaves, mushroom and spring onion Main Courses CHICKEN MASSAMAN Chicken in medium spicy massaman curry with coconut milk, onion, carrot, potatoes topped with peanut and fried shallots STIR FRIED PRAWNS WITH FRESH CHILLI Stir-fried prawns with fresh chilli, spring onion, bamboo shoots, carrot and onion KHAO PAD KHAI / KHAO SUAY Egg fried rice or boiled jasmine rice Coffee / Jasmine Tea",
+    "price": "£35.00 per person"
+   },
+   {
+    "name": "Set V",
+    "description": "Vegetarian Menu Minimum For TWO people Starters VEGETABLE SPRING ROLL Thai spring rolls with mixed vegetables, served with sweet chilli sauce. VEGETABLE TEMPURA Deep-fried mixed vegetables in light batter, served with sweet chilli sauce SWEET CORN CAKE Deep-fried corn cake, served with sweet chilli sauces, topped with ground peanut Main Courses VEGETABLES AND TOFU GREEN CURRY Thai green curry with coconut milk, bamboo shoots, tofu, bell pepper, courgette and mixed vegetables STIR- FRIED MIXED VEGETABLES AND TOFU WITH FRESH CHILLI Spicy stir-fried mixed vegetable with fresh chilli, basil, and tofu KHAO PAD KHAI / KHAO SUAY Egg fried rice or boiled jasmine rice Coffee / Jasmine Tea",
+    "price": "£30.00 per person",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "CHOOSE FROM A SELECTION OF",
+  "CHICKEN/ BEEF/TOFU £13.50",
+  "DUCK/PRAWN £15.50",
+  "CRISPY SEABASS £19.50",
+  "£3 Extra for Mixed Meat Chicken/Beef/Prawn",
+  "Special Menu £20*",
+  "*except no. 42",
+  "(£3.00 For Extra Sauce)",
+  "CHICKEN/ BEEF/PRAWN/TOFU £13.50",
+  "£15.50 For Mixed Meat Chicken/Beef/Prawn"
+ ]
+}

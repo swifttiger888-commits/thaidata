@@ -1,0 +1,327 @@
+{
+ "restaurant": "Siam Corner Ma Ma Thai Restaurant",
+ "city": "Lichfield",
+ "fsa_id": "1533915",
+ "address": "Lichfield",
+ "source": "https://siamcornermamathai.co.uk/wp-content/uploads/2024/01/Ma-Ma-Thai-Menu-Lunch-Menu_.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Appetiser": [
+   {
+    "name": "Vegetable Spring Rolls ปอเจ",
+    "description": "Exquisitely seasoned onions, carrots, cabbage, wild mushroom and glass noodles meticulously wrapped in a crispy hand-rolled pastry, served with a side of sweet chilli sauce.",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Satay ไก่สะเต๊ะ",
+    "description": "Tender, char-grilled chicken infused with a blend of turmeric, Thai herbs & spices and coconut milk, accompanied by a side of crushed peanuts and ajard sauce.",
+    "price": "£3.50"
+   },
+   {
+    "name": "Chicken and Prawn on Toast ขนมปังหน้าไก่",
+    "description": "Delight in the crispiness of our minced Chicken and Prawn toast, covered in sesame perfectly complemented by our special Thai sweet chilli sauce.",
+    "price": "£3.50"
+   },
+   {
+    "name": "Thai Golden Parscels ถุงทอง",
+    "description": "Hand wrapped golden bags stuffed with dice potato, peas, sweet corn, onions, carrots and a blend of curry powder delivered with sweet chilli sauce.",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai-Style Grilled Pork Skewers หมูปิ้ ง",
+    "description": "Succulent pork, marinated in a delightful blend of savoury and sweet flavors, and expertly grilled to a charred perfection served with spicy tamarind sauce.",
+    "price": "£3.50"
+   },
+   {
+    "name": "Vegetable Tempura ผักทอด",
+    "description": "Enjoy a delightful assortment of vegetables, each delicately coated in a perfectly seasoned batter, and served with a side of sweet chilli sauce.",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Sweet Corn Cake ทอดมันข้าวโพด",
+    "description": "A crisp blend of sweet corn, peas, and a secret mixture of Thai spices and herbs, accompanied by a side of sweet chilli sauce.",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Kai Gaew ไก่แก้ว",
+    "description": "Tender chicken goujons freshly coated in panko and sesame seeds served with a side of sweet chilli sauce.",
+    "price": "£3.50"
+   }
+  ],
+  "Wok": [
+   {
+    "name": "Minced Pork Chilli & Basil ผัดกระเพราหมูสับ",
+    "description": "Exciting flavours from Minced Pork with aromatic basil, onions, green & red peppers, bamboo, green beans, and the perfect balance of chilli and herbs. Add Thai style Fried Egg just like in Thailand for only £1.50",
+    "price": "£11.95"
+   },
+   {
+    "name": "Beef Chilli & Basil ผัดกระเพราเนื้อ",
+    "description": "Delight in the captivating blend of Sliced Beef with aromatic basil, onions, green & red peppers, bamboo, green beans, and the perfect balance of chilli and herbs. Add Thai style Fried Egg just like in Thailand for only £1.50",
+    "price": "£11.95"
+   },
+   {
+    "name": "Chicken Cashew nuts ไก่ผัดเม็ดมะม่วง",
+    "description": "Our tantalising battered chicken with onion, green & red peppers, mushroom generously coated in Ma Ma Thai's signature sauce, topped with dried chilli and cashew nuts.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Thai Sweet & Sour Chicken ไก่เปรี้ยวหวาน",
+    "description": "Savour the goodness of battered chicken with onion, spring onion, red & green peppers, pineapple, tomato, lychee coated in our own sweet & sour sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Aromatic Ginger With Pork หมูผัดขิง",
+    "description": "A the delightful blend of aromatic pork, infused with the fresh essence of ginger.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tofu Chilli & Basil ผัดกระเพราเต้าหู้",
+    "description": "Our tempting Tofu, bursting with aromatic basil, onions, green & red peppers, bamboo, green beans, and the perfect balance of chilli and herbs.",
+    "price": "£11.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Sweet & Sour Tofu เปรี้ยวหวานเต้าหู้",
+    "description": "Savour the goodness of Tofu in sweet & sour sauce with a delightful mix of onions, pineapple, lychees, and assorted vegetables.",
+    "price": "£11.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetables In Soy Sauce ผัดผักรวม",
+    "description": "Enjoy the delightful taste of mixed vegetables sautéed to perfection with fresh garlic and soy sauce.",
+    "price": "£11.95",
+    "vegetarian": true
+   }
+  ],
+  "Thai Curry": [
+   {
+    "name": "Green Curry Chicken แกงเขียวหวานไก่",
+    "description": "Experience the fame of this aromatic Thai Green Curry, with creamy smooth coconut milk base and the heat of Thai Green chilli, cooked with aubergines, bamboo, courgette, carrot, and fragrant Thai basil.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Red Curry Chicken แกงแดงไก่",
+    "description": "Harmonious layers of rich & savoury flavours from the red chillies simmered with creamy coconut milk, cooked with aubergines, bamboo, courgette, carrot, and fragrant Thai basil.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Massaman Beef แกงมัสมั่นเนื้อ",
+    "description": "Taste the rich and aromatic flavour of our curry paste, with a creamy blend of coconut milk, diced potatoes, onions topped with roasted peanuts.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Yellow Curry Chicken แกงกระหรี่ไก่",
+    "description": "Indulge in a delightful balance of creamy, sweet, tart, savoury, and spiciness in our yellow curry. Cooked with potato, onion and crowned with crispy fried shallots.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Tofu Green Curry แกงเขียวหวานเต้าหู้",
+    "description": "Thai Green Curry, bursting with creamy smooth coconut milk base and the fiery heat of Thai Green chilli enhanced with tofu, aubergines, bamboo shoots, courgette, carrot, and fresh Thai basil.",
+    "price": "£11.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Red Curry แกงแดงผัก",
+    "description": "Harmonious layers of rich & savoury flavours from the red chillies simmered with creamy coconut milk, cooked with aubergines, bamboo, courgette, carrot, and fragrant Thai basil.",
+    "price": "£11.95",
+    "vegetarian": true
+   }
+  ],
+  "Extra": [
+   {
+    "name": "Jasmine Rice",
+    "description": "",
+    "price": "£3.20",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fired Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Style Fried Egg",
+    "description": "",
+    "price": "£1.50",
+    "vegetarian": true
+   }
+  ],
+  "Sun Dried": [
+   {
+    "name": "Crushed sundried Thai chillies.",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai chilli pastes infused in oil.",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Fresh Thai chilli in fish sauce and lime juice",
+    "description": "",
+    "price": "£1.00"
+   },
+   {
+    "name": "Fresh Thai chilli in soy sauce and lime juice",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Sweet chilli Sauce",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   }
+  ],
+  "Street Noodles": [
+   {
+    "name": "Pad Thai Chicken OR Pork ผัดไทยไก่หรือหมู",
+    "description": "Experience Thailand on your plate with our mouthwatering blend of rice noodles, bean sprouts, spring onions, red onions, diced tofu, dried radish, egg and crushed peanuts, all coated in our signature tamarind-infused sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Pad See Eew Chicken ผัดซีอิ๊วไก่",
+    "description": "Taste the popular Thai rice noodles with dark soy suace, egg and vegetables straight from the streets of Thailand, with a delightful complexity of sweet, nutty flavours, and wonderful chargrilled essence.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Spicy Noodle With Beef ผัดขี้เมาเนื้อ",
+    "description": "Satisfy your craving with our Thai spicy large noodles, featuring tender Beef, green beans, bamboo, onions, cauliflower, carrots, chilli, and fresh Thai basil.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Vegetable Pad Thai ผัดไทยผัก",
+    "description": "Experience Thailand on your plate with our mouthwatering blend of rice noodles, bean sprouts, spring onions, red onions, diced tofu, dried radish, egg and crushed peanuts, all coated in our signature tamarind-infused sauce.",
+    "price": "£11.95",
+    "vegetarian": true
+   }
+  ],
+  "Flaming Hot Pot": [
+   {
+    "name": "Tom Yum Chicken ต้มยำไก่",
+    "description": "A burst of flavours with our spicy chicken soup! Savor the perfect broth blend with the richness of the Fish Sauce, the zing of Lime Juice, and a hint of Lemongrass.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Tom Yum King Prawns ต้มยำกุ้ง",
+    "description": "Thailand's renowned masterpiece, a flawless blend of spicy and sour lemongrass broth with succulent King Prawns and Thai herbs.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Tom Kha Chicken ต้มข่าไก่",
+    "description": "Try a rich, creamy, and tangy soup! This soup features Coconut Milk, lemongrass, and galangal-infused broth with an array of authentic Thai herbs with chicken.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Fisherman's Soup โป๊ะแตก",
+    "description": "Tangy delight! Our soup features lemongrass-infused broth with an array of authentic Thai herbs and mixed seafood.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Tom Yum Mushroom ต้มยำเห็ด",
+    "description": "Immerse yourself in a tangy delight! Our soup features lemongrass-infused broth with an array of authentic Thai herbs and mushrooms.",
+    "price": "£13.95",
+    "vegetarian": true
+   }
+  ],
+  "Finger Snack": [
+   {
+    "name": "Pork Skewer",
+    "description": "Chargrilled marinated pork neck end with Thai herbs, garlic, ground white pepper, soy sauce, oyster sauce and milk served with sweet tamarind sace",
+    "price": "£3.50"
+   },
+   {
+    "name": "Chicken and Prawn Toast",
+    "description": "Delight in the crispiness of our minced chicken and prawn on toast, sereved with sweet chilli sauce.",
+    "price": "£3.50"
+   },
+   {
+    "name": "Chicken Goujons",
+    "description": "Crispy chicken goujons incrusted in golden-brown bread crumbs and sesame seeds with sweet chilli sauce.",
+    "price": "£3.50"
+   }
+  ],
+  "Main Dish": [
+   {
+    "name": "Sweet & Sour Chicken",
+    "description": "Savour the goodness of battered chicken with onion, spring onion, red & green peppers, pineapple, tomato, lychee coated in our own sweet & sour sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Pad See Eew Chicken",
+    "description": "Thick rice noodles with dark soy suace, egg, and vegetables.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Chicken & Broccoli in Oyster Sauce",
+    "description": "Chicken stirred well in oyster and soy sauce with broccoli, carrot and spring green.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Chicken Fried Rice",
+    "description": "Stir-fried rice with chicken, egg and vegetables in soy sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Stir Fried Egg Noodles With Chicken",
+    "description": "Savour the exquisite flavours of Stir-Fried Egg Noodles with Chicken! Tender chicken, wholesome egg noodles, and a delightful blend of carrots, bean sprouts, and spring onions.",
+    "price": "£8.95"
+   }
+  ],
+  "Cocktails": [
+   {
+    "name": "Siam Ruby",
+    "description": "Ma Ma Thai's own cocktail with Barcardi, Dark Rum, triple sec, orange, pineapple, lime juice and grenadine",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Green Lagoon",
+    "description": "Sip into paradise with a refreshing Malibu, Vodka, Blue curacao, Pineapple juice and lime",
+    "price": "£8.50",
+    "vegetarian": true
+   }
+  ],
+  "Mocktail": [
+   {
+    "name": "Green Mango",
+    "description": "Effortlessly capture the essence of a refreshing summer with mango, lime juine and blue curacao.",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Sunshine Breeze",
+    "description": "Refresing taste of tropical pineapple, orange juice and grenaadine",
+    "price": "£4.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Enjoy a two-course meal with one Appertiser and one Wok Dish for only 13.95",
+  "Or try one Appertiser, one Wok Dish with a Thai Beer or House Wine for just 15.95",
+  "A selection of 1 Finger Snack + Main for 10.95"
+ ]
+}

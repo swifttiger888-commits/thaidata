@@ -52,7 +52,7 @@
    {
     "num": "54.",
     "name": "PHAD THAI (N)",
-    "description": "Fried Thai noodles with egg, beansprouts & tamarind sauce\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Fried Thai noodles with egg, beansprouts & tamarind sauce Tiger Prawns Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£10.95/£9.95/£8.95",
     "vegetarian": false,
     "heat": null
@@ -60,7 +60,7 @@
    {
     "num": "55.",
     "name": "PHAD SIE EAW",
-    "description": "Stir fried rice noodles with vegetables and soya sauce with egg\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Stir fried rice noodles with vegetables and soya sauce with egg Tiger Prawns Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£10.95/£9.95/£8.95",
     "vegetarian": false,
     "heat": null
@@ -68,7 +68,7 @@
    {
     "num": "56.",
     "name": "PHAD KEE MAOW",
-    "description": "Stir fried rice noodles with vegetables, garlic & chillies with egg\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Stir fried rice noodles with vegetables, garlic & chillies with egg Tiger Prawns Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£10.95/£9.95/£8.95",
     "vegetarian": false,
     "heat": "2"
@@ -76,7 +76,7 @@
    {
     "num": "57.",
     "name": "PHAD MEE",
-    "description": "Stir fried egg noodles with vegetables with egg\nTiger Prawns\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Stir fried egg noodles with vegetables with egg Tiger Prawns Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£10.95/£9.95/£8.95",
     "vegetarian": false,
     "heat": null
@@ -414,7 +414,7 @@
    {
     "num": "11.",
     "name": "VEGETARIAN HORS D'OEUVRES (V) (N)",
-    "description": "(For a minimum of 2 people)\nGrilled mushrooms satay, vegetable spring rolls, fried\nbattered mixed vegetables per person",
+    "description": "(For a minimum of 2 people) Grilled mushrooms satay, vegetable spring rolls, fried battered mixed vegetables per person",
     "price": "£7.50",
     "vegetarian": true,
     "heat": null
@@ -422,7 +422,7 @@
    {
     "num": "12.",
     "name": "SPRING ROLLS",
-    "description": "Thai vegetarian spring rolls stuffed with mixed vegetables\n& glass noodles with sweet chilli sauce",
+    "description": "Thai vegetarian spring rolls stuffed with mixed vegetables & glass noodles with sweet chilli sauce",
     "price": "£6.50",
     "vegetarian": false,
     "heat": null
@@ -448,7 +448,7 @@
    {
     "num": "15.",
     "name": "YUM TALAY (Seafood Salad)",
-    "description": "Spicy mixed seafood topped in fresh Thai herbs,\nspicy lime dressing",
+    "description": "Spicy mixed seafood topped in fresh Thai herbs, spicy lime dressing",
     "price": "£16.95",
     "vegetarian": false,
     "heat": "2"
@@ -456,7 +456,7 @@
    {
     "num": "16.",
     "name": "YUM NEAU YANG (Beef Salad)",
-    "description": "Marinated grilled beef sirloin topped in fresh Thai herbs,\nspicy lime dressing",
+    "description": "Marinated grilled beef sirloin topped in fresh Thai herbs, spicy lime dressing",
     "price": "£13.95",
     "vegetarian": false,
     "heat": "2"
@@ -474,7 +474,7 @@
    {
     "num": "18.",
     "name": "TOM YUM",
-    "description": "Traditional spicy and sour soup with lemon grass, mushrooms,\nkaffir lime leaves, galangal & chili in oil\nMushroom or Vegetables (V)\nPrawns £7.95\nChicken £6.95",
+    "description": "Traditional spicy and sour soup with lemon grass, mushrooms, kaffir lime leaves, galangal & chili in oil Mushroom or Vegetables (V) Prawns £7.95 Chicken £6.95",
     "price": "£5.95/£7.95/£6.95",
     "vegetarian": false,
     "heat": "2"
@@ -482,7 +482,7 @@
    {
     "num": "19.",
     "name": "TOM KHA",
-    "description": "Traditional sour and spicy soup with Thai herbs and coconut milk\nMushroom or Vegetables (V)\nPrawns\nChicken",
+    "description": "Traditional sour and spicy soup with Thai herbs and coconut milk Mushroom or Vegetables (V) Prawns Chicken",
     "price": "£5.95/£7.95/£6.95",
     "vegetarian": false,
     "heat": "1"
@@ -490,7 +490,7 @@
    {
     "num": "20.",
     "name": "PO TAK",
-    "description": "Spicy & sour mixed seafood with lemon grass, kaffir\nleaves & holly basil leaves",
+    "description": "Spicy & sour mixed seafood with lemon grass, kaffir leaves & holly basil leaves",
     "price": "£9.50",
     "vegetarian": false,
     "heat": "2"
@@ -500,7 +500,7 @@
    {
     "num": "21.",
     "name": "GREEN CURRY (GEANG KEAW WAN)",
-    "description": "Famous Thai green curry with Thai herbs & coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Famous Thai green curry with Thai herbs & coconut milk Tiger Prawns Duck Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£15.95/£14.50/£11.95/£9.50",
     "vegetarian": false,
     "heat": "1"
@@ -508,7 +508,7 @@
    {
     "num": "22.",
     "name": "RED CURRY (GEANG DANG)",
-    "description": "Famous Thai red curry with Thai coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Famous Thai red curry with Thai coconut milk Tiger Prawns Duck Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£15.95/£14.50/£11.95/£9.50",
     "vegetarian": false,
     "heat": "2"
@@ -516,7 +516,7 @@
    {
     "num": "23.",
     "name": "MASSAMAN CURRY (N)",
-    "description": "Traditional style curry with peanuts, potato and coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Traditional style curry with peanuts, potato and coconut milk Tiger Prawns Duck Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£15.95/£14.50/£11.95/£9.50",
     "vegetarian": false,
     "heat": "1"
@@ -524,7 +524,7 @@
    {
     "num": "24.",
     "name": "PANANG CURRY",
-    "description": "Aromatic smooth curry with coconut milk & kaffir lime leaves\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Aromatic smooth curry with coconut milk & kaffir lime leaves Tiger Prawns Duck Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£15.95/£14.50/£11.95/£9.50",
     "vegetarian": false,
     "heat": "2"
@@ -532,7 +532,7 @@
    {
     "num": "25.",
     "name": "YELLOW CURRY",
-    "description": "Thai curry in mild coconut milk\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Thai curry in mild coconut milk Tiger Prawns Duck Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£15.95/£14.50/£11.95/£9.50",
     "vegetarian": false,
     "heat": "1"
@@ -540,7 +540,7 @@
    {
     "num": "26.",
     "name": "GEANG PA",
-    "description": "Thai clear curry in ‘jungle” style with mixed vegetables & fresh Thai herbs\nTiger Prawns\nDuck\nChicken, Beef, Lamb\nVegetables or Tofu (V)",
+    "description": "Thai clear curry in ‘jungle” style with mixed vegetables & fresh Thai herbs Tiger Prawns Duck Chicken, Beef, Lamb Vegetables or Tofu (V)",
     "price": "£15.95/£14.50/£11.95/£9.50",
     "vegetarian": false,
     "heat": "3"

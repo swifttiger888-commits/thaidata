@@ -1,0 +1,392 @@
+{
+ "restaurant": "Rama Thai",
+ "city": "Dundee",
+ "fsa_id": "187082",
+ "address": "Dundee",
+ "source": "https://rama-thai.co.uk/images/RamaTakeawaymenuPrintready.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "RAMA WOK DISHES": [
+   {
+    "name": "Pad Neuah",
+    "description": "Beef marinated in sesame oil, stir-fried with mushrooms, onions, green and red peppers, spring onions, and finished with a touch of brandy and served on a sizzler platter.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pad Nammanhoi",
+    "description": "Selected vegetables and oyster sauce cooked with your choice of main ingredients.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Pad King",
+    "description": "Selected vegetables cooked with ginger and yellow bean.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Pad Preow Wan",
+    "description": "Selected vegetables cooked in Thai style sweet and sour sauce.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Pad Medmamamung",
+    "description": "Selected vegetables cooked with chilli oil and cashew nuts.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Pad Nam Prig Pow",
+    "description": "Selected vegetables cooked in a mild chilli sauce.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95\nMixed Seafood £11.95"
+   },
+   {
+    "name": "Gratium Prig Thai",
+    "description": "A choice of the following stir fried in garlic and black pepper. Served on a bed of lettuce.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95\nMixed Seafood £11.95"
+   },
+   {
+    "name": "Pad Kraprao",
+    "description": "Classic spicy Isaan dish of fresh chillies with sweet basil and selected vegetables.",
+    "price": "£Chicken / Beef /Pork £ 7.95\nKing Prawn £ 9.95\nMixed Seafood £11.95"
+   },
+   {
+    "name": "Pad Makeoh Jaow",
+    "description": "Aubergine and sweet basil cooked with a mild chilli and garlic base.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Pad Prig King",
+    "description": "Stir fried green beans in a red curry coconut sauce and lime leaves.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   }
+  ],
+  "RICE & NOODLE DISHES": [
+   {
+    "name": "Pad Thai",
+    "description": "Rice flour noodles with beansprouts, spring onions, peanuts, lemon, chilli and egg.",
+    "price": "£Vegetarian £ 7.95\nChicken, Beef, Pork £ 8.95\nKing Prawn £10.95"
+   },
+   {
+    "name": "Pad Mee",
+    "description": "Slightly spicy fried egg noodles with beansprouts and spring onion.",
+    "price": "£Vegetarian £ 7.95\nChicken, Beef, Pork £ 8.95\nKing Prawn £10.95"
+   },
+   {
+    "name": "Pad Keo Maow",
+    "description": "Rice flour noodles stir fried with chili, garlic and sweet basil.",
+    "price": "£Vegetarian £ 7.95\nChicken, Beef, Pork £ 8.95\nKing Prawn £10.95"
+   },
+   {
+    "name": "Pad See Ewe",
+    "description": "Rice flour noodles stir fried in soy sauce and mixed vegetables.",
+    "price": "£Vegetarian £ 7.95\nChicken, Beef, Pork £ 8.95\nKing Prawn £10.95"
+   },
+   {
+    "name": "Koa Pad",
+    "description": "Thai fried rice with vegetables.",
+    "price": "£Vegetarian £ 7.95\nChicken, Beef, Pork £ 8.95\nKing Prawn £10.95"
+   }
+  ],
+  "SIDE DISHES": [
+   {
+    "name": "Kao Pad Kai",
+    "description": "Egg fried rice",
+    "price": "£ 2.60"
+   },
+   {
+    "name": "Kao Man Krati",
+    "description": "Coconut rice",
+    "price": "£ 2.70"
+   },
+   {
+    "name": "Kao Prao",
+    "description": "Boiled jasmine rice",
+    "price": "£ 2.20"
+   },
+   {
+    "name": "Kao Neow",
+    "description": "Plain sticky rice",
+    "price": "£ 2.60"
+   }
+  ],
+  "DESSERTS": [
+   {
+    "name": "Banana/ Pineapple Fritter",
+    "description": "Banana or pineapple fritter in crispy coconut batter with ice cream.",
+    "price": "£ 3.85"
+   },
+   {
+    "name": "Gluay Baat Chee",
+    "description": "Hot dessert with your choice of banana or lychees cooked in coconut milk and sprinkled with sesame seeds.",
+    "price": "£ 3.85"
+   }
+  ],
+  "BANQUET MENU": [
+   {
+    "name": "Banquet 1",
+    "description": "Minimum 2 people STARTERS: A Selection of the chef's choice MAIN COURSE: Yum - Chicken, Gaeng Massaman - Beef, Pad King - King Prawn Pad Mee & Jasmine Rice DESSERT: Banana fritter",
+    "price": "£ 22.95 (per person)"
+   },
+   {
+    "name": "Banquet 2",
+    "description": "Minimum 2 people STARTERS: A Selection of the chef's choice SOUP: Tom Yum Goong MAIN COURSE: Pla Rad Prig, Chu Chi Goong, Pad Kraprao, Pad Mee & Jasmine Rice. DESSERT: Banana fritter",
+    "price": "£ 28.95 (per person)"
+   },
+   {
+    "name": "Banquet 3",
+    "description": "Minimum 2 people STARTERS: A Selection of the chef's choice SOUP: Tom Yum Goong MAIN COURSE: Gaeng Keow Wan - Chicken, Gratium Prig Thai - King prawn ,Pad Kraprao, Pad Mee & Jasmine Rice or Coconut Rice or Egg Fried Rice. DESSERT: Banana fritter",
+    "price": "£ 24.95 (per person)"
+   },
+   {
+    "name": "Banquet 4",
+    "description": "Minimum 2 people Vegetarian / Vegan STARTERS: A Selection of Vegetarian or Vegan Starters. SOUP: Tom Yum Goong MAIN COURSE: Gaeng Massaman, Pad Preow Wan, Gratium Prig Thai, Pad Mee and Jasmine Rice or Coconut Rice or Sticky Rice. DESSERT: Banana fritter",
+    "price": "£ 22.95 (per person)",
+    "vegetarian": true
+   }
+  ],
+  "STARTERS": [
+   {
+    "name": "Chicken Satays",
+    "description": "Marinated chicken skewered on bamboo, chargrilled and served with a peanut sauce.",
+    "price": "£4 Sticks £ 5.50\n6 Sticks £ 6.95"
+   },
+   {
+    "name": "Peek Gai Tod",
+    "description": "Chicken wings served with a sweet Thai sauce.",
+    "price": "£ 4.50"
+   },
+   {
+    "name": "See Krong Moe Tod",
+    "description": "Pork ribs marinated with garlic and black pepper and served with Thai sauce.",
+    "price": "£ 4.95"
+   },
+   {
+    "name": "Toong Tong",
+    "description": "Minced chicken and vegetables stuffed in pastry parcels served with sweet chilli sauce.",
+    "price": "£ 4.95"
+   },
+   {
+    "name": "Popia Tod",
+    "description": "Thai spring rolls with chicken or vegetable filling, served with sweet chilli sauce.",
+    "price": "£Vegetarian £ 4.20\nChicken £ 4.95"
+   },
+   {
+    "name": "Curry Puffs",
+    "description": "Spicy minced chicken with selected vegetables, wrapped in pastry and deep fried.",
+    "price": "£Chicken £ 4.20\nVegetarian £ 4.95"
+   },
+   {
+    "name": "Tod Mun Pla",
+    "description": "Famous Thai fish cakes, served with a sweet chilli sauce.",
+    "price": "£ 5.95"
+   },
+   {
+    "name": "Tod Mun Gai",
+    "description": "Chicken and mixed vegetable fritter served with a sweet chilli sauce.",
+    "price": "£ 4.95"
+   },
+   {
+    "name": "Tod Mun Pak",
+    "description": "Mixed vegetable and Sweetcorn fritter served with a sweet chilli sauce.",
+    "price": "£ 4.20",
+    "vegetarian": true
+   },
+   {
+    "name": "Kanom Pang Na Gai",
+    "description": "Minced chicken toasts with sesame seeds, deep fried until golden brown.",
+    "price": "£ 4.50"
+   },
+   {
+    "name": "Goong Hom Pa",
+    "description": "King prawns marinated in Thai spices, wrapped in pastry.",
+    "price": "£ 6.50"
+   },
+   {
+    "name": "Goong Tod Tempura",
+    "description": "King prawns cooked in tempura style batter served with Thai sweet chilli sauce.",
+    "price": "£ 5.95"
+   },
+   {
+    "name": "Sai Oua",
+    "description": "Made in Rama- Spicy Pork sausage with Lemongrass, coriander and chilli. Served with choice of sweet chilli sauce or a taste surprise.",
+    "price": "£ 5.50"
+   },
+   {
+    "name": "Somtum",
+    "description": "A classic raw vegetable dish with ground peanuts and chilli from the north of Thailand.",
+    "price": "£ 4.40"
+   },
+   {
+    "name": "Pak Chub Pang Tod",
+    "description": "Tempura style vegetables served with a sweet chilli dip.",
+    "price": "£ 4.20",
+    "vegetarian": true
+   },
+   {
+    "name": "Mon Tod",
+    "description": "Sweet potato fritter served with a sweet chilli sauce and peanuts.",
+    "price": "£ 4.20",
+    "vegetarian": true
+   },
+   {
+    "name": "Taster Selection",
+    "description": "Chefs selection of chicken starters - Minimum two people",
+    "price": "£11.95"
+   },
+   {
+    "name": "Ocean Mix",
+    "description": "Chefs selection of Seafood starters - Minimum two people",
+    "price": "£12.95"
+   },
+   {
+    "name": "Vegetarian Selection",
+    "description": "Chefs selection of Vegetarian starters - Minimum two people",
+    "price": "£10.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai prawn crackers with chilli sauce",
+    "description": "",
+    "price": "£2.75"
+   }
+  ],
+  "SOUP": [
+   {
+    "name": "Tom Yum",
+    "description": "The famous Thai soup, flavoured with lemongrass, galangal and lime leaves to create a hot, sour and spicy taste.",
+    "price": "£Vegetarian £ 4.20\nChicken £ 4.95\nKing prawn £ 5.95\nMix seafood £ 5.95"
+   },
+   {
+    "name": "Tom Kah",
+    "description": "A version of Tom Yum with chicken and coconut milk to mellow the flavour / Vegetarian option available.",
+    "price": "£Vegetarian £ 4.20\nChicken £ 4.95"
+   }
+  ],
+  "RAMA SPECIAL": [
+   {
+    "name": "Sua Rong Hai",
+    "description": "Marinated chargrilled sirloin steak accompanied with Som Tum (Thai style salad), sticky / coconut rice & a hot and spicy chilli dip.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Sizzlers",
+    "description": "Marinated meats or stir fried seafood in oriental spices produce a flavour unique to Thai cuisine. Served on a sizzler platter.",
+    "price": "£Breast of chicken £10.95\nMixed seafood £13.95\nSirloin steak £14.95\nGinger duck £13.95"
+   },
+   {
+    "name": "Moe Yang Gratium PrigThai",
+    "description": "Chargrilled pork marinated with garlic & black pepper, accompanied with Som Tum (Thai style salad), sticky / coconut rice & a hot and spicy chilli dip.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Chef's Special Combination COMBINATION 1",
+    "description": "Grilled chicken, beef massaman curry, coconut / sticky rice with a side serving of tempura vegetables.",
+    "price": "£15.95"
+   },
+   {
+    "name": "COMBINATION 2",
+    "description": "Roast duck with plum sauce, Chu Chi chicken, coconut / sticky rice with a side serving of vegetable fritter.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Yum",
+    "description": "A spicy traditional Thai salad with your choice of chargrilled main ingredient.",
+    "price": "£Loin of pork £ 8.95\nBreast of chicken £ 8.95\nKing prawn £11.95\nSirloin steak £13.95"
+   },
+   {
+    "name": "Laab Isaan",
+    "description": "Spicy North East Thai salad with your choice of main ingredient.",
+    "price": "£Loin of pork £ 8.95\nBreast of chicken £11.95\nKing prawn £11.95"
+   }
+  ],
+  "RAMA SEAFOOD": [
+   {
+    "name": "Pla Rad Prig",
+    "description": "Sea Bass deep fried with an infussion of chilli. garlic and fresh lemon juice.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pla Sam Rod",
+    "description": "Salmon steak marinated and cooked in garlic chilli and tamarind.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pla Preow Wan",
+    "description": "Seabass with Thai style sweet & sour sauce and mixed vegetables.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Chu Chi",
+    "description": "Your choice of Trout fillet / Seabass fillets or King prawn cooked in a traditional red curry lightly flavoured with lime leaves.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pla Yang Bai Tong",
+    "description": "Char grilled sea bass marinated in sweet basil and yellow beans then char grilled in a banana leaf wrap.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pla Nung Buay",
+    "description": "Steamed sea bass with spring onion, ginger and sour plum in a light soy sauce.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pla Nung Manou",
+    "description": "Steamed sea bass with spicy fresh lime and chilli sauce.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Goong Pad Pang Gareeh",
+    "description": "King prawns, stir-fried with egg, curry powder, milk, celery, spring onions, green and red peppers.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Goong Ohb Woon Sen",
+    "description": "King prawns and glass noodles with classic Thai taste of lime leaves, corrander and lemongrass served with a green chilli dip.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Haw Mok",
+    "description": "A traditional red curry with coconut milk whole basil leaves and egg with mixed seafood.",
+    "price": "£12.95"
+   }
+  ],
+  "RAMA CURRIES": [
+   {
+    "name": "Gaeng Ped Pedyang",
+    "description": "Roast duck, grapes, pineapple, cherry tomatoes and sweet basil create this unique Thai curry.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Gaeng Ped",
+    "description": "A hot red curry dish with bamboo shoots and red peppers.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Gaeng Keowan",
+    "description": "The popular Thai green curry with aubergine and selected vegetables.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Gaeng Sapparod",
+    "description": "The ever popular pineapple red curry.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Gaeng Massaman",
+    "description": "The mildest curry with potatoes, onion, carrots and peanuts.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Gaeng Gari",
+    "description": "A medium hot yellow curry with potatoes, onions and carrot.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   },
+   {
+    "name": "Gaeng Panang",
+    "description": "Red curry flavoured through with lime leaves and added green beans and peppers.",
+    "price": "£Vegetarian £ 7.95\nChicken / Beef / Pork £ 9.95\nKing Prawn £11.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,689 @@
+{
+ "restaurant": "Fitou's Thai And Malaysian Restaurant",
+ "city": "London",
+ "fsa_id": "333961",
+ "address": "London",
+ "source": "https://www.fitourestaurant.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "PRAWN CRACKERS",
+    "description": "Served with sweet chilli sauce.",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "MIXED STARTER",
+    "description": "Sharing platter for two to three persons.",
+    "price": "£ 13.50"
+   },
+   {
+    "name": "GOONG CHOOB",
+    "description": "King prawns in a tempura batter with sweet chilli sauce.",
+    "price": "£ 6.95",
+    "num": "1"
+   },
+   {
+    "name": "GOONG HOM PHA",
+    "description": "Marinated king prawns in rice skin with sweet chilli sauce.",
+    "price": "£ 6.95",
+    "num": "2"
+   },
+   {
+    "name": "CHICKEN SATAY",
+    "description": "Grilled marinated chicken skewers with homemade peanut sauce.",
+    "price": "£ 6.95",
+    "num": "3"
+   },
+   {
+    "name": "LARB GAI TORD",
+    "description": "Deep fried larb chicken cakes with lime leaves & spices.",
+    "price": "£ 7.95",
+    "num": "4"
+   },
+   {
+    "name": "NAH GOONG",
+    "description": "Savoury minced chicken, prawn & coriander toasts topped with sesame seeds. Served with sweet chilli sauce.",
+    "price": "£ 5.95",
+    "num": "5"
+   },
+   {
+    "name": "KHANOM JEEB",
+    "description": "Steamed home made chicken and prawn dumplings.",
+    "price": "£ 6.95",
+    "num": "6"
+   },
+   {
+    "name": "PEEK GAI TORD",
+    "description": "Fried chicken wings topped in a garlic & black pepper sauce, one of our best sellers!",
+    "price": "£ 6.95",
+    "num": "7"
+   },
+   {
+    "name": "POPIA TORD",
+    "description": "Deep fried spring rolls with vegetables & glass noodles with sweet chilli sauce.",
+    "price": "£ 5.95",
+    "num": "9"
+   },
+   {
+    "name": "TORD MUN KHAOPOD",
+    "description": "Sweet corn fritters with coriander & black pepper with sweet chilli sauce.",
+    "price": "£ 6.95",
+    "num": "10"
+   },
+   {
+    "name": "SQUID CHILLI TORD",
+    "description": "Fried with tapioca batter, garlic, chilli, salt & shallots.",
+    "price": "£ 7.50",
+    "num": "11"
+   },
+   {
+    "name": "STEAMED SCALLOP",
+    "description": "Single scallop served with soy sauce or seafood chilli sauce.",
+    "price": "£ 4.50",
+    "num": "12"
+   },
+   {
+    "name": "AROMATIC DUCK",
+    "description": "Shredded duck served with pancakes, cucumber, spring onion & hoisin sauce.",
+    "price": "£ 13.95 Quarter / £ 25.90 Half",
+    "num": "13"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "POTEK",
+    "description": "Mussels, prawns & squid in a spicy hot & sour soup. EH",
+    "price": "£ 8.95",
+    "num": "14"
+   },
+   {
+    "name": "TOM YUM",
+    "description": "Famous hot & sour soup with lemon grass, galangal & chilli. EH",
+    "price": "£prawn £7.95 / chicken £5.95 / seafood £8.95 / mushroom £5.25",
+    "num": "15"
+   },
+   {
+    "name": "TOM KHA",
+    "description": "Coconut milk soup with galangal,lemongrass and lime leaves.",
+    "price": "£prawn £7.95 / chicken £5.95 / seafood £8.95 / mushroom £5.25",
+    "num": "16"
+   },
+   {
+    "name": "GAENG JERD",
+    "description": "Clear soup with glass noodles, garlic & Chinese leaf.",
+    "price": "£ck £5.95 / veg £5.50",
+    "num": "17"
+   }
+  ],
+  "Thai salads": [
+   {
+    "name": "LARB GAI",
+    "description": "Spicy minced chicken with lemon juice, coriander, mint, shallots and fresh chilli. H",
+    "price": "£ 11.95",
+    "num": "18"
+   },
+   {
+    "name": "YUM NUER",
+    "description": "Grilled sirloin steak mixed with onion, lemon juice, coriander, mint, shallots and fresh chilli. EH",
+    "price": "£ 14.95",
+    "num": "19"
+   },
+   {
+    "name": "WEEPING TIGER",
+    "description": "Grilled sirloin steak served on a sizzling hot plate with spring greens and specially mixed sauce. H",
+    "price": "£ 14.95",
+    "num": "20"
+   },
+   {
+    "name": "YUM WOONSEN",
+    "description": "Steamed glass noodles, prawns and squid with onion. lemon juice, coriander and fresh chilli. H",
+    "price": "£ 14.95",
+    "num": "21"
+   },
+   {
+    "name": "YUM TALAY",
+    "description": "Prawns, squid & mussels with onion, lemon juice, coriander and fresh chilli. EH",
+    "price": "£ 13.95",
+    "num": "22"
+   },
+   {
+    "name": "SOM TUM",
+    "description": "Famous young papaya salad with fresh chilli, peanuts, lemon juice & coriander. EH",
+    "price": "£ 10.95",
+    "num": "23"
+   }
+  ],
+  "Mains": [
+   {
+    "name": "GA PROW",
+    "description": "Stir-fried with holy basil, fresh chillies, onion and peppers. H",
+    "price": null,
+    "num": "24"
+   },
+   {
+    "name": "PAD HIMMAPHAN",
+    "description": "Stir-fried with peppers, onion & cashew nuts.",
+    "price": null,
+    "num": "25"
+   },
+   {
+    "name": "PIEW WAN",
+    "description": "Specially mixed sweet & sour sauce with tomato, peppers and onion.",
+    "price": null,
+    "num": "26"
+   },
+   {
+    "name": "NAMMAN HOY",
+    "description": "Stir-fried peppers, onion & mushroom in oyster sauce.",
+    "price": null,
+    "num": "27"
+   },
+   {
+    "name": "GRATIEM PRIG THAI",
+    "description": "Stir-fried with specially mixed garlic and black pepper sauce.",
+    "price": null,
+    "num": "29"
+   },
+   {
+    "name": "PLA PIEW WAN",
+    "description": "Deep fried fish of your choice with a specially mixed sweet & sour sauce with tomato, peppers and onion.",
+    "price": null,
+    "num": "30"
+   },
+   {
+    "name": "PLA LARD PRIG",
+    "description": "Deep fried fish of your choice with a specially mixed spicy, sweet and sour sauce. H",
+    "price": null,
+    "num": "31"
+   },
+   {
+    "name": "SEABASS NEURNG MANAU",
+    "description": "Steamed seabass topped with a chilli, garlic and lemon dressing. EH",
+    "price": "£ 20.00",
+    "num": "32"
+   },
+   {
+    "name": "GOONG PAO",
+    "description": "Grilled large fresh water prawns served with a specially mixed seafood sauce. H",
+    "price": "£ 16.00",
+    "num": "33"
+   },
+   {
+    "name": "PAD PAK PHASSOM",
+    "description": "Stir-fried mixed vegetables in either oyster sauce or soy sauce.",
+    "price": "£ 7.50",
+    "num": "34"
+   },
+   {
+    "name": "PED TEKRAI",
+    "description": "Stir-fried roasted duck with chilli, onion, peppers and lemon grass. EH",
+    "price": "£ 13.95",
+    "num": "37"
+   },
+   {
+    "name": "PED MAKARM",
+    "description": "Stir-fried roasted duck in a tamarind sauce topped with fresh shallots.",
+    "price": "£ 13.95",
+    "num": "38"
+   },
+   {
+    "name": "LAMB PAD PRIG",
+    "description": "Stir-fried lamb with red and green peppers, curry paste, onion and chilli. H",
+    "price": "£ 13.95",
+    "num": "39"
+   },
+   {
+    "name": "PAD TALAY",
+    "description": "Stir-fried prawn, squid and mussels with long bean in a special chilli sauce. H",
+    "price": "£ 13.95",
+    "num": "40"
+   },
+   {
+    "name": "GOONG SAM ROD",
+    "description": "Deep fried bread crumbed prawns with a spicy sweet and sour sauce. H",
+    "price": "£11.95",
+    "num": "41"
+   },
+   {
+    "name": "GOONG NAMPRIG PAO",
+    "description": "Stir-fried prawns with peppers, onion and chilli oil. H",
+    "price": "£ 13.95",
+    "num": "42"
+   },
+   {
+    "name": "PRIG THAI SOD",
+    "description": "Prawn, squid and mussels stir fried with chilli, krachai, fresh young peppercorn, kaffir lime leaves, peppers and holy basil. EH",
+    "price": "£ 13.95",
+    "num": "48"
+   }
+  ],
+  "Curries": [
+   {
+    "name": "GAENG KEOW WAN",
+    "description": "The famous Thai green curry with coconut milk, long beans, aubergine and bamboo shoots. M",
+    "price": null,
+    "num": "43"
+   },
+   {
+    "name": "GAENG DAENG",
+    "description": "The famous Thai red curry with coconut milk, long beans, aubergine and bamboo shoots. H",
+    "price": null,
+    "num": "44"
+   },
+   {
+    "name": "GAENG PANANG",
+    "description": "Thick panang curry with coconut milk, lime leaves and fresh chilli. H",
+    "price": null,
+    "num": "45"
+   },
+   {
+    "name": "GAENG PHET PED YANG",
+    "description": "Roasted duck in red curry, tomato, pineapple and green beans. EH",
+    "price": "£ 13.95",
+    "num": "46"
+   },
+   {
+    "name": "GAENG MASSAMAN",
+    "description": "Sweeter southern Thailand curry with tomato and potato. H",
+    "price": "£ 13.95",
+    "num": "47"
+   },
+   {
+    "name": "LAMB CURRY",
+    "description": "Specially mixed lamb curry with potato. H",
+    "price": "£ 13.95",
+    "num": "49"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "PAD THAI",
+    "description": "Rice noodles with egg, beansprouts and spring onion in a tamarind sauce with peanuts and lime.",
+    "price": null,
+    "num": "51"
+   },
+   {
+    "name": "PAD SEE YEW",
+    "description": "Broad rice noodles with egg & spring greens with soy sauce and oyster sauce.",
+    "price": null,
+    "num": "52"
+   },
+   {
+    "name": "PAD KEE MAO",
+    "description": "My favourite! Broad rice noodles with mushroom, long beans, young pepper corn, chilli, krachai, oyster sauce and soy sauce",
+    "price": null,
+    "num": "53"
+   },
+   {
+    "name": "CHOW MEIN",
+    "description": "Stir-fried yellow noodles with broccoli and egg in a thin soy sauce.",
+    "price": null,
+    "num": "54"
+   },
+   {
+    "name": "NO.1 NOODLES",
+    "description": "Stir-fried rice vermicelli with chicken, prawns, spring onion, yellow bean, oyster sauce, soy, egg and chilli. H",
+    "price": "£ 13.95",
+    "num": "55"
+   },
+   {
+    "name": "MEE HOON SOUP",
+    "description": "Rice vermicelli in a clear soup with chicken, prawns, spring onion, garlic & beansprout.",
+    "price": "£ 13.95",
+    "num": "56"
+   },
+   {
+    "name": "KUEY TEOW SOUP",
+    "description": "Broad rice noodles in a clear soup with chicken, prawns, spring onion, garlic & beansprout.",
+    "price": "£ 13.95",
+    "num": "57"
+   },
+   {
+    "name": "PLAIN NOODLES",
+    "description": "Stir-fried yellow noodles with a dash of soy sauce.",
+    "price": "£ 3.75",
+    "num": "66"
+   }
+  ],
+  "Rice": [
+   {
+    "name": "KHAOPAD",
+    "description": "Special fried rice with chicken, prawns, egg, tomato, soy sauce and spr ing onion.",
+    "price": "£ 13.95",
+    "num": "59"
+   },
+   {
+    "name": "NASI GORENG",
+    "description": "Malaysian special fried rice with chicken, prawns, egg, chilli, tomato, soy sauce and spring onion. M",
+    "price": "£ 13.95",
+    "num": "60"
+   },
+   {
+    "name": "KHAO SUEY",
+    "description": "Steamed jasmine rice.",
+    "price": "£ 2.75",
+    "num": "62"
+   },
+   {
+    "name": "KHAO KAI",
+    "description": "Egg fried rice.",
+    "price": "£ 3.25",
+    "num": "63"
+   },
+   {
+    "name": "KHAO NEOW",
+    "description": "Steamed sticky rice.",
+    "price": "£ 3.75",
+    "num": "64"
+   },
+   {
+    "name": "RICEBERRY RICE",
+    "description": "Steamed nutritious purple rice.",
+    "price": "£ 4.00",
+    "num": "67"
+   }
+  ],
+  "Specials": [
+   {
+    "name": "GOONG GATA",
+    "description": "Large freshwater prawns served on a sizzling hot plate with garlic, chilli and onion. EH",
+    "price": "£ 16.00"
+   },
+   {
+    "name": "SEABASS NEURNG BOY",
+    "description": "Steamed seabass with a plum and ginger sauce.",
+    "price": "£ 20.00"
+   },
+   {
+    "name": "SILKEN TOFU",
+    "description": "Flash fried pieces of Age tofu with ginger and soy.",
+    "price": "£ 12.95"
+   },
+   {
+    "name": "LAKSA",
+    "description": "Spicy curried noodle soup with prawn, chicken, squid and tofu. H",
+    "price": "£ 14.95"
+   },
+   {
+    "name": "SEABASS PLA BOORAN",
+    "description": "Deep fried seabass with chilli, tamarind, shallots and mint. EH",
+    "price": "£ 20.00"
+   },
+   {
+    "name": "NUER PRIG THAI DAM",
+    "description": "Grilled sirloin with chilli and fresh black pepper. EH",
+    "price": "£ 14.95"
+   }
+  ],
+  "Desserts": [
+   {
+    "name": "BANANA FRITTER",
+    "description": "Deep fried banana served with ice cream.",
+    "price": "£ 3.95"
+   },
+   {
+    "name": "THAI PANCAKE",
+    "description": "Rolled pandan pancakes filled with coconut and palm sugar served with ice cream.",
+    "price": "£ 3.95"
+   },
+   {
+    "name": "MANGO STICKY RICE",
+    "description": "Fresh mango served with coconut infused sticky rice.",
+    "price": "£ 10"
+   }
+  ],
+  "Drinks": [
+   {
+    "name": "FRESH PINEAPPLE JUICE",
+    "description": "",
+    "price": "£ 5"
+   },
+   {
+    "name": "FRESH CARROT JUICE",
+    "description": "",
+    "price": "£ 4"
+   },
+   {
+    "name": "FRESH APPLE JUICE",
+    "description": "",
+    "price": "£ 4"
+   },
+   {
+    "name": "FRESH ORANGE JUICE",
+    "description": "",
+    "price": "£ 4"
+   },
+   {
+    "name": "FRESH WATERMELON FRAPPE",
+    "description": "",
+    "price": "£ 5"
+   },
+   {
+    "name": "THAI ICE TEA",
+    "description": "Sweet Thai ice tea with milk.",
+    "price": "£ 4.95"
+   },
+   {
+    "name": "THAI ICE LEMON TEA",
+    "description": "Sweet Thai ice lemon tea with lime and lemon juice.",
+    "price": "£ 4.95"
+   },
+   {
+    "name": "COKE",
+    "description": "",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "DIET COKE",
+    "description": "",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "COKE ZERO",
+    "description": "",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "SPRITE",
+    "description": "",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "FANTA",
+    "description": "",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "SPARKLING WATER (S)",
+    "description": "",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "SPARKLING WATER (L)",
+    "description": "",
+    "price": "£ 3.95"
+   },
+   {
+    "name": "STILL WATER (S)",
+    "description": "",
+    "price": "£ 2.95"
+   },
+   {
+    "name": "STILL WATER (L)",
+    "description": "",
+    "price": "£ 3.95"
+   },
+   {
+    "name": "FRESH MINT TEA",
+    "description": "",
+    "price": "£ 2.50"
+   },
+   {
+    "name": "GREEN TEA",
+    "description": "",
+    "price": "£ 2.50"
+   },
+   {
+    "name": "JASMINE TEA",
+    "description": "",
+    "price": "£ 2.50"
+   },
+   {
+    "name": "IMPERIAL JASMINE TEA",
+    "description": "",
+    "price": "£ 3.25"
+   },
+   {
+    "name": "ESPRESSO (S)",
+    "description": "",
+    "price": "£ 1.75"
+   },
+   {
+    "name": "ESPRESSO (D)",
+    "description": "",
+    "price": "£ 2.50"
+   },
+   {
+    "name": "LATTE",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "CAPPUCINNO",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "AMERICANO",
+    "description": "",
+    "price": "£ 3"
+   }
+  ],
+  "Alcohol": [
+   {
+    "name": "SINGHA DRAUGHT (abv 5%)",
+    "description": "",
+    "price": "£H pint £4.50 W pint £8"
+   }
+  ],
+  "Bottled beers": [
+   {
+    "name": "LEO LAGER (abv 5%)",
+    "description": "",
+    "price": null
+   },
+   {
+    "name": "SINGHA LAGER (abv 5%)",
+    "description": "",
+    "price": null
+   },
+   {
+    "name": "ASAHI SUPER DRY (abv 5.2%)",
+    "description": "",
+    "price": "£ 5.50"
+   },
+   {
+    "name": "ASAHI ALCOHOL FREE",
+    "description": "",
+    "price": "£ 5.50"
+   }
+  ],
+  "Cocktails": [
+   {
+    "name": "APEROL SPRITZ",
+    "description": "Aperol, prosecco, orange slices & Soda water",
+    "price": "£ 9"
+   },
+   {
+    "name": "ST GERMAIN SPRITZ",
+    "description": "St Germain elderflower liqueur, prosecco, lemon slice & Soda water",
+    "price": "£ 9"
+   },
+   {
+    "name": "CAMPARI SPRITZ",
+    "description": "Campari, prosecco, lemon & soda water",
+    "price": "£ 9"
+   },
+   {
+    "name": "LIMONCELLO SPRITZ",
+    "description": "Limencello, prosecco, lemon & soda water",
+    "price": "£ 9"
+   },
+   {
+    "name": "GIN & TONIC",
+    "description": "Gin, tonic water",
+    "price": "£ 7"
+   },
+   {
+    "name": "NEGRONI",
+    "description": "Campari, Gin, Vermouth rosso",
+    "price": "£ 7"
+   },
+   {
+    "name": "NEGRONI SBAGLIATO",
+    "description": "Campari, Vermouth rosso, Prosecco",
+    "price": "£ 7"
+   }
+  ],
+  "White Wine": [
+   {
+    "name": "MOREAU BLANC HOUSE France 2025",
+    "description": "Fresh grapefruit and citrus rind notes with a hint of fennel. Light-medium-bodied with a tangy, clean finish",
+    "price": "£glass £7 / btl £19"
+   },
+   {
+    "name": "LA SCALA PINOT GRIGIO Italy 2025",
+    "description": "La Scala Pinot Grigio is a crisp, light Italian white wine from the Veneto or Friuli regions, typically featuring bright citrus, green apple, and pear flavours",
+    "price": "£btl £26"
+   },
+   {
+    "name": "KORREL RIESLING DRY Germany 2020",
+    "description": "Intense aromas of passion fruit and red apple, together with refreshing pink grapefruit and freshly grated lemon zest",
+    "price": "£btl £29"
+   },
+   {
+    "name": "SILENI SAUVIGNON BLANC New Zealand 2025",
+    "description": "The Cellar Selection Sauvignon Blanc has ripe tropical and gooseberry fruit flavours with a zingy finish and impeccable balance",
+    "price": "£btl £33"
+   }
+  ],
+  "Red Wine": [
+   {
+    "name": "MOREAU ROUGE HOUSE France 2025",
+    "description": "Juicy, aromatic red with gently spiced crushed red fruits alongside hints of damson and black pepper",
+    "price": "£glass £7 / btl £19"
+   },
+   {
+    "name": "GRACIA DE CHILE RESERVA MERLOT Chile 2024",
+    "description": "Features rich notes of dark plums, berries, and a smooth oak finish",
+    "price": "£btl £24"
+   },
+   {
+    "name": "CASTELLI THE SUM PINOT NOIR Australia 2018",
+    "description": "Ripe red cherry, strawberry, subtle spice, and light earthy notes",
+    "price": "£btl £29"
+   }
+  ],
+  "Rosé": [
+   {
+    "name": "PÉCHÉ COQUIN ROSÉ France 2025",
+    "description": "Dry, light and pretty, an elegant and refreshing rosé from Domaine de la Provenquière in the Languedoc",
+    "price": "£btl £25"
+   }
+  ],
+  "Sparkling": [
+   {
+    "name": "CANTI PROSECCO DOC Millesimato italy 2024",
+    "description": "Bouquet and taste of green apples and flowers. Excellent with lightly salted dishes",
+    "price": "£glass £7 / btl £25"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Choice of protein prawn £13.95 /chicken £11.95 /beef £11.95 /tofu £11.95 /squid £12.95 /seafood £13.95 /lamb £13.95 /vegetable £11.95 /salmon steak £13.95 /seabass £20.00 /colley chunk in breadcrumb £13.95",
+  "Choice of protein prawn £13.95 /chicken £11.95 /beef £11.95 /tofu £11.95 /squid £12.95 /seafood £13.95 /lamb £13.95 /vegetable £11.95",
+  "prawn £13.95 /chicken £11.95 /beef £11.95 /tofu £11.95 /squid £12.95 /seafood £13.95 /vegetable £11.95 /chicken & prawn £13.95"
+ ]
+}

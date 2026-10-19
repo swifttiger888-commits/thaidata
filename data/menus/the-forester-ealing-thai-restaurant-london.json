@@ -1,0 +1,309 @@
+{
+ "restaurant": "The Forester Ealing (Thai Restaurant)",
+ "city": "London",
+ "fsa_id": "1206245",
+ "address": "London",
+ "source": "https://www.foresterealing.co.uk/-/media/sites/pubs-and-hotels/f/the-forester-_-p276/files/global-menu-files/forester-main-menu-jan-2026.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "Forester special mixed starter",
+    "description": "a selection of spring rolls, prawn filos, chicken satay, steamed dumplings & prawn on toast.",
+    "price": "£For two £14 - For three £21"
+   },
+   {
+    "name": "Crispy aromatic duck",
+    "description": "shredded crispy fried duck served with pancake, cucumber, spring onions & hoisin sauce.",
+    "price": "£Quarter £13 - Half £18"
+   },
+   {
+    "name": "Thai calamari",
+    "description": "fried squid rings with Thai spices.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Prawn on toast",
+    "description": "minced prawn and chicken on toast with sesame seeds.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Vegetable spring rolls",
+    "description": "rice pancakes filled with vegetables and vermicelli.",
+    "price": "£5.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy fish cakes",
+    "description": "with sweet chilli sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Prawn tempura",
+    "description": "prawns in seasoned batter and breadcrumbs.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Vegetable tempura",
+    "description": "vegetables in seasoned batter.",
+    "price": "£5.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Dumplings",
+    "description": "steamed pork and prawn dumpling topped with crispy garlic and sweet soy sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Corn cakes",
+    "description": "sweet corn cake with Thai spice.",
+    "price": "£5.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy chicken wings",
+    "description": "served with spicy Thai special sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Edamame beans",
+    "description": "served with salt.",
+    "price": "£5.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai spare ribs",
+    "description": "pork ribs marinated with exotic spices and Thai barbecue sauce.",
+    "price": "£6.50"
+   },
+   {
+    "name": "Prawn crackers",
+    "description": "a choice of spicy, plain or mixed.",
+    "price": "£4"
+   },
+   {
+    "name": "Chicken satay",
+    "description": "marinated chicken served with peanut sauce.",
+    "price": "£6.50"
+   }
+  ],
+  "CHEF‘S SIGNATURES": [
+   {
+    "name": "Weeping tiger",
+    "description": "grilled sirloin steak served with spicy Thai chilli dressing.",
+    "price": "£13"
+   },
+   {
+    "name": "Bangkok fish",
+    "description": "fried seabass topped with spicy Thai dressing.",
+    "price": "£13"
+   },
+   {
+    "name": "Sizzling beef",
+    "description": "Sliced beef in Thai barbecue sauce, with mixed vegetables.",
+    "price": "£13"
+   },
+   {
+    "name": "Sizzling seafood",
+    "description": "king prawns and squid with Thai barbecue sauce and mixed vegetables.",
+    "price": "£13"
+   },
+   {
+    "name": "Fish Chu-Chee",
+    "description": "fried seabass topped with Panang sauce.",
+    "price": "£13"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "Tom Yum",
+    "description": "Hot and sour soup with Thai herbs & chilli",
+    "price": null
+   },
+   {
+    "name": "Tom Kha",
+    "description": "Hot and sour soup in coconut milk with Thai herbs & chilli",
+    "price": null
+   }
+  ],
+  "SALADS": [
+   {
+    "name": "Som Tum",
+    "description": "papaya salad, carrot, green beans, grilled prawns & a spicy lime dressing.",
+    "price": "£11"
+   },
+   {
+    "name": "Larb Moo",
+    "description": "Minced pork salad with a spicy, sun-dried chilli dressing.",
+    "price": "£10.50"
+   },
+   {
+    "name": "Spicy beef salad",
+    "description": "Grilled beef salad with spicy Thai dressing.",
+    "price": "£11.50"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "Thai green",
+    "description": "with coconut milk, bamboo shoots and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Thai red",
+    "description": "with coconut milk, bamboo shoots and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Panang",
+    "description": "authentic thick Thai curry with coconut milk",
+    "price": null
+   },
+   {
+    "name": "Massaman",
+    "description": "traditional Southern curry with potatoes in coconut milk, topped with crispy shallots.",
+    "price": null
+   }
+  ],
+  "STIR FRY": [
+   {
+    "name": "Pad Nam Man Hoi",
+    "description": "stir fry broccoli with Oyster sauce and garlic.",
+    "price": null
+   },
+   {
+    "name": "Pad KraPow",
+    "description": "stir fry with chilli, basil, garlic, onion and long beans.",
+    "price": null
+   },
+   {
+    "name": "Cashew",
+    "description": "stir fry cashew nuts with onion, garlic, mushrooms and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Black bean",
+    "description": "stir fry vegetables in black bean sauce.",
+    "price": null
+   }
+  ],
+  "NOODLES & RICE": [
+   {
+    "name": "Pad Thai",
+    "description": "Stir fry rice noodles with egg, beansprouts and spring onion.",
+    "price": null
+   },
+   {
+    "name": "Pad Kee Mao",
+    "description": "Stir fry rice noodle with chilli and vegetables.",
+    "price": null
+   },
+   {
+    "name": "Pad See Ewe",
+    "description": "Stir fry rice noodle with egg and vegetables in sweet soy sauce.",
+    "price": null
+   },
+   {
+    "name": "Chow mein",
+    "description": "Stir fry egg noodle with beansprouts and spring onion.",
+    "price": null
+   },
+   {
+    "name": "Special fried rice",
+    "description": "Stir fry rice with egg and vegetables.",
+    "price": null
+   }
+  ],
+  "PUB MENU": [
+   {
+    "name": "Fish & chips",
+    "description": "Cod served with chips, garden peas and tartare sauce.",
+    "price": "£Adults - £13.50 Kids - £8.50"
+   },
+   {
+    "name": "Sausage & mash",
+    "description": "Cumberland sausages served with creamy mash, garden peas and gravy.",
+    "price": "£Adults - £11.50 Kids - £7.50"
+   },
+   {
+    "name": "Beef burger & chips",
+    "description": "Homemade beef patty, with bacon, cheese, lettuce and tomato.",
+    "price": "£Adults - £13.50 Kids - £8.50"
+   },
+   {
+    "name": "Chicken nuggets & chips",
+    "description": "Fried chicken nuggets served with chips",
+    "price": "£Adults - £11 Kids - £8"
+   },
+   {
+    "name": "Scampi & chips",
+    "description": "Served with garden peas and tartare sauce.",
+    "price": "£Adults - £12 Kids - £8"
+   }
+  ],
+  "SIDES": [
+   {
+    "name": "Jasmine rice",
+    "description": "",
+    "price": "£3.00"
+   },
+   {
+    "name": "Coconut rice",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Egg fried rice",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Sticky rice",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£4.00"
+   },
+   {
+    "name": "Cheesy chips",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Cheesy chips with bacon bits",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Sweet potato fries",
+    "description": "",
+    "price": "£4.50"
+   }
+  ],
+  "DESSERTS": [
+   {
+    "name": "Waffle and ice cream",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "Ice cream",
+    "description": "A choice of vanilla, chocolate or strawberry",
+    "price": "£1.25 per scoop"
+   },
+   {
+    "name": "Brownie and ice cream",
+    "description": "",
+    "price": "£5.50"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Choose from vegetable £5.50, chicken £5.50 or prawns £6.50",
+  "Choose from Chicken, pork, vegetables or tofu - £11 Beef or duck - £12 Prawns or seafood - £13"
+ ]
+}

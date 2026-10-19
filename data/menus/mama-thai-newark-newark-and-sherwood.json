@@ -1,0 +1,366 @@
+{
+ "restaurant": "Mama Thai Newark",
+ "city": "Newark and Sherwood",
+ "fsa_id": "1431254",
+ "address": "Newark and Sherwood",
+ "source": "https://mamathainewark.com/wp-content/uploads/2025/01/Newark-Takeaway-Menu_2025.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starter": [
+   {
+    "name": "MAMA THAI PLATTER (N)",
+    "description": "Minimum of two people Chicken Satay | Veg spring rolls | Honey Pork | Prawn on toast | Prawn dumplings served with sweet chilli sauce.",
+    "price": "£11.95 PER PERSON.",
+    "num": "1"
+   },
+   {
+    "name": "CHICKEN SATAY (N)",
+    "description": "Grilled chicken on skewers topped with peanut sauce & Thai sweet relish.",
+    "price": "£7.50",
+    "num": "2"
+   },
+   {
+    "name": "SALT & PEPPER SQUID",
+    "description": "Fresh squid coated in a light crispy batter fried and seasoned in salt and pepper.",
+    "price": "£7.95",
+    "num": "3"
+   },
+   {
+    "name": "HONEY PORK",
+    "description": "Famous on the streets of Thailand. Pork marinated with Coriander | Garlic | Palm sugar | Honey | Soy and Oyster sauce.",
+    "price": "£7.95",
+    "num": "4"
+   },
+   {
+    "name": "SPARE RIBS 🌶",
+    "description": "(BBQ) OR (Salt & Pepper) Tender spare ribs with your selected sauce.",
+    "price": "£8.50",
+    "num": "5"
+   },
+   {
+    "name": "PRAWN DUMPLINGS",
+    "description": "Homemade dumplings stuffed with prawns | minced Chicken topped with crispy Garlic & sweet Soy sauce.",
+    "price": "£8.50",
+    "num": "6"
+   },
+   {
+    "name": "CHICKEN WINGS SALT AND PEPPER",
+    "description": "Chicken wings tossed in Thai-style salt and pepper.",
+    "price": "£7.50",
+    "num": "7"
+   },
+   {
+    "name": "SPRING ROLLS (V)",
+    "description": "Our homemade crispy vegetable spring rolls served with sweet chili sauce.",
+    "price": "£6.95",
+    "vegetarian": true,
+    "num": "8"
+   },
+   {
+    "name": "VEGETABLE SATAY (V) (N)",
+    "description": "Broccoli | Onions | Peppers | Peanut sauce.",
+    "price": "£7.50",
+    "vegetarian": true,
+    "num": "9"
+   },
+   {
+    "name": "GYOZA",
+    "description": "Crispy vegetable Gyoza topped with fried Garlic served with sweet soy sauce.",
+    "price": "£7.50",
+    "vegetarian": true,
+    "num": "10"
+   },
+   {
+    "name": "DUCK SPRING ROLL (N)",
+    "description": "Shredded duck with Carrots | Cabbage | Celery wrapped in Thai pastry topped with Hoi Sin sauce.",
+    "price": "£8.50",
+    "num": "11"
+   },
+   {
+    "name": "TOFU SKEWER",
+    "description": "Fried tofu servered with tamarind chilli peanut sauce.",
+    "price": "£6.95",
+    "vegetarian": true,
+    "num": "12"
+   },
+   {
+    "name": "PRAWN ON TOAST",
+    "description": "Fried marinated minced prawns & Chicken on toast topped with sesame seeds, served with sweet chilli sauce.",
+    "price": "£7.50",
+    "num": "13"
+   },
+   {
+    "name": "THAI PRAWN CRACKER",
+    "description": "",
+    "price": "£4.50",
+    "num": "14"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "TOM YUM SOUP 🌶🌶",
+    "description": "Spicy & sour broth with Lemongrass | Galangal | Lime Leaves | Mushrooms and chilli paste.",
+    "price": "£Prawns £8.95 | Chicken £7.95 | Mushrooms £ 6.95 | Seafood £9.50",
+    "num": "15"
+   },
+   {
+    "name": "TOM KHA 🌶",
+    "description": "Coconut milk broth with sour & fragrant hint made with Galangal | Lemongrass | Mushrooms | Lime leaves and Coconut Milk.",
+    "price": "£Prawns £8.95 | Chicken £7.95 | Mushrooms £6.95",
+    "num": "16"
+   }
+  ],
+  "Salad": [
+   {
+    "name": "SEAFOOD SALAD 🌶🌶🌶",
+    "description": "Seafood | Onions | Celery | Cherry Tomatoes with chilli and Lime dressing.",
+    "price": "£15.95",
+    "num": "17"
+   },
+   {
+    "name": "SPICY BEEF SALAD 🌶🌶🌶",
+    "description": "Thinly sliced grilled beef tossed in herbs and seasoned with Lime Juice | Onion | Tomato and fresh Chillies",
+    "price": "£15.95",
+    "num": "18"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "PANANG CURRY 🌶",
+    "description": "2023 world number one curry with a smooth aromatic coconut milk sauce with Lime Leaves | Green Beans | Chilli",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seabass £19.95 | Tofu & Veg £12.95",
+    "num": "20"
+   },
+   {
+    "name": "RED CURRY 🌶🌶",
+    "description": "Thai red curry with Coconut milk | Aubergine | Courgette | Bamboo shoots, and Basil.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seabass £19.95 | Tofu & Veg £12.95",
+    "num": "21"
+   },
+   {
+    "name": "GREEN CURRY 🌶🌶",
+    "description": "Coconut milk | Aubergine | Courgette | Bamboo shoots and Basil.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seabass £19.95 | Tofu & Veg £12.95",
+    "num": "22"
+   },
+   {
+    "name": "MASSAMAN CURRY (N)",
+    "description": "An exceptional curry crafted with Coconut milk | Potato | Carrots | Onions | Cashew Nuts and crispy Shallots.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seabass £19.95 | Tofu & Veg £12.95",
+    "num": "23"
+   },
+   {
+    "name": "JUNGLE CURRY 🌶🌶🌶",
+    "description": "Hearty clear broth curry with Thai herbs and Vegetables.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seabass £19.95 | Tofu & Veg £12.95",
+    "num": "24"
+   }
+  ],
+  "Stir-fry": [
+   {
+    "name": "CHILLI & BASIL STIR-FRY 🌶🌶",
+    "description": "A Thai classic! Stir-fried with fresh chilli | Garlic | Fine Beans | Onion | Peppers and Basil.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seafood £19.95 | Tofu & Veg £12.95",
+    "num": "25"
+   },
+   {
+    "name": "PAD PRIK PAO 🌶🌶",
+    "description": "Thai chilli paste stir-fried with Onions | Spring Onion | Basil and Peppers.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seafood £19.95 | Tofu & Veg £12.95",
+    "num": "26"
+   },
+   {
+    "name": "CASHEW NUTS STIR-FRY (N) 🌶",
+    "description": "Wok-fried Cashew Nuts with Peppers | Onions and Mushrooms with our homemade spical sauce.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seafood £19.95 | Tofu & Veg £12.95",
+    "num": "27"
+   },
+   {
+    "name": "STIR-FRY BLACK PEPPER SAUCE",
+    "description": "Stir-fried protein with cracked black Pepper sauce | Garlic | Onions and bell Peppers.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seafood £19.95 | Tofu & Veg £12.95",
+    "num": "28"
+   },
+   {
+    "name": "THAI SWEET & SOUR SAUCE",
+    "description": "Lightly battered with Onions | Peppers, Carrots | Pineapple and Cherry Tomato in Thai sweet & sour sauce.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Duck £15.95 | Seafood £19.95 | Tofu & Veg £12.95",
+    "num": "29"
+   }
+  ],
+  "Street Food": [
+   {
+    "name": "PAD THAI (N)",
+    "description": "Pad Thai a renowned Thai dish featuring stir-fried Noodles | Egg | Beansprouts | Spring Onion | Tamarind sauce and Crushed Peanuts.",
+    "price": "£Chicken £12.95 |Beef £13.50 | Prawns £14.50 | Tofu & Veg £12.50",
+    "num": "40"
+   },
+   {
+    "name": "KING PRAWNS PINEAPPLE FRIED RICE (N)",
+    "description": "Add Honey pork on top for £2 King Prawns Fried Rice with Pineapple | Onions | Carrots | Egg | Raisins and Turmeric powder served in a pineapple boat and topped with Cashew Nuts and crispy Shallots.",
+    "price": "£14.50",
+    "num": "41"
+   },
+   {
+    "name": "CHICKEN KATSU (N)",
+    "description": "Crispy Chicken breast, Jasmine rice topped with Thai twist Katsu sauce.",
+    "price": "£14.95",
+    "num": "42"
+   },
+   {
+    "name": "PAD SEE-EW",
+    "description": "Pan-fried wide Rice noodles with Soy sauce | Egg and mix Vegetables.",
+    "price": "£Chicken £12.95 | Beef £13.50 | Prawns £14.50 | Tofu & Veg £12.50",
+    "num": "43"
+   },
+   {
+    "name": "SPICY UDON NOODLE 🌶🌶🌶",
+    "description": "Stir-fried Udon noodles with fresh Chilli | Basil and mixed Vegetables.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Seafood £16.50 | Tofu & Veg £12.50",
+    "num": "44"
+   },
+   {
+    "name": "CURRY NOODLES",
+    "description": "Delicious red curry sauce served with Thai Rice noodle and Vegetables.",
+    "price": "£Chicken £13.95 | Beef £14.50 | Prawns £15.50 | Tofu & Veg £12.50",
+    "num": "45"
+   },
+   {
+    "name": "Jasmine rice",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": true,
+    "num": "50"
+   },
+   {
+    "name": "Coconut rice",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "51"
+   },
+   {
+    "name": "Plain Rice Noodles",
+    "description": "",
+    "price": "£3.00",
+    "vegetarian": true,
+    "num": "52"
+   },
+   {
+    "name": "Egg fried Rice",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true,
+    "num": "53"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "54"
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "55"
+   },
+   {
+    "name": "Stir-fried broccoli",
+    "description": "Stir fried broccoli with garlic chilli oyster sauce",
+    "price": "£7.95",
+    "num": "56"
+   },
+   {
+    "name": "Chilli Oil",
+    "description": "",
+    "price": "£1",
+    "vegetarian": true,
+    "num": "57"
+   },
+   {
+    "name": "Crushed Chilli Flakes",
+    "description": "",
+    "price": "£1",
+    "vegetarian": true,
+    "num": "58"
+   },
+   {
+    "name": "Fresh Chili in Fish Sauce",
+    "description": "",
+    "price": "£1",
+    "num": "59"
+   },
+   {
+    "name": "Peanut Sauce",
+    "description": "",
+    "price": "£2",
+    "vegetarian": true,
+    "num": "60"
+   }
+  ],
+  "Chef Choice": [
+   {
+    "name": "SIZZLING RIB EYE STEAK",
+    "description": "Grilled Rib Eye Steak sliced with Onion | Peppers | Carrot | cracked black Pepper sauce.",
+    "price": "£19.95",
+    "num": "30"
+   },
+   {
+    "name": "TAMARIND CHILLI SAUCE 🌶🌶",
+    "description": "Broccoli in tangy Tamarind Chilli sauce.",
+    "price": "£Seabass £19.95 | Jumbo Prawns £21.95",
+    "num": "31"
+   },
+   {
+    "name": "CHOO CHEE",
+    "description": "Aromatic curry sauce in Coconut milk & Lime leaves.",
+    "price": "£Seabass £19.95 | Jumbo Prawns £21.95",
+    "num": "32"
+   },
+   {
+    "name": "CRISPY CHICKEN RED CURRY 🌶🌶",
+    "description": "Creamy red curry sauce with Courgette | Fine beans | Peppers.",
+    "price": "£16.95",
+    "num": "33"
+   },
+   {
+    "name": "HONEY DUCK FIVE SPICE",
+    "description": "Roasted half duck with pickled Ginger and Honey soy.",
+    "price": "£19.95",
+    "num": "34"
+   },
+   {
+    "name": "DUCK TAMARIND (N)",
+    "description": "Roasted half duck with Broccoli | Tamarind sauce | Cashew Nuts.",
+    "price": "£19.95 | Tofu & Aubergine £13.50",
+    "num": "35"
+   }
+  ],
+  "Set Menu": [
+   {
+    "name": "BANGKOK SET",
+    "description": "➢ Chicken Satay ➢ Veg Spring Rolls ➢ Honey Pork ➢ Prawn on toast ➢ Prawn Dumplings MAIN COURSE ➢ Green curry chicken 🌶🌶 Coconut Milk | Aubergine | Courgette | Bamboo Shoots and Basil. ➢ Beef Black pepper sauce. Onions | Peppers | Carrots | Mushrooms | black Peppers sauce. ➢ Tamarind Chilli Seabass 🌶🌶 Deep-fried fillet Seabass topped with Tamarind and Chilli sauce. ➢ Jasmine Rice.",
+    "price": "£34.00 PER PERSON (N)"
+   },
+   {
+    "name": "PHUKET SET",
+    "description": "➢ Chicken Satay ➢ Veg Spring Rolls ➢ Honey Pork ➢ Prawn on toast ➢ Prawn Dumplings MAIN COURSE ➢ Honey Duck Five spice Roasted half duck | Broccoli | Pickled ginger | Honey soy sauce. ➢ Panang Chicken Thick aromatic smooth coconut milk sauce with lime leaves. ➢ Prawns broccoli oyster sauce Chicken stirred fried in Oyster with Soy sauce | Broccoli | Carrot | Spring green ➢ Egg-fried Rice",
+    "price": "£40.00 PER PERSON (N)"
+   },
+   {
+    "name": "CHAING MAI SET",
+    "description": "➢ Mama Thai Platter Chicken Satay | Veg spring rolls | Honey Pork | Prawn on toast | Prawn dumplings",
+    "price": "£28.00 PER PERSON (N)"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "£34.00 PER PERSON (N)",
+  "£40.00 PER PERSON (N)",
+  "£28.00 PER PERSON (N)"
+ ]
+}

@@ -375,7 +375,7 @@
    {
     "num": "2.",
     "name": "AROMATIC DUCK (MIN 2 PERSON, £11.00 PER PERSON)",
-    "description": "Twice cooked duck with Thai herbs served with 6 pieces of pancakes in basket, Leeks, iceberg lettuce, cucumbers and hoi-sin sauce. (G/S/Se*)\n(Extra pancakes - charge £2.50 per basket)",
+    "description": "Twice cooked duck with Thai herbs served with 6 pieces of pancakes in basket, Leeks, iceberg lettuce, cucumbers and hoi-sin sauce. (G/S/Se*) (Extra pancakes - charge £2.50 per basket)",
     "price": "£22.00",
     "vegetarian": false,
     "heat": null
@@ -465,7 +465,7 @@
    {
     "num": "13.",
     "name": "MIXED VEGETARIAN PLATTERS (V)",
-    "description": "(MIN 2 PERSON, £10.00 EACH)\nA supreme mixed platter of vegetable spring rolls, sweet corn cakes, mushroom satays, green curry samosa, vegetables tempura served with variety of sauce. (GP/S/NCSe*)",
+    "description": "(MIN 2 PERSON, £10.00 EACH) A supreme mixed platter of vegetable spring rolls, sweet corn cakes, mushroom satays, green curry samosa, vegetables tempura served with variety of sauce. (GP/S/NCSe*)",
     "price": "£20.00",
     "vegetarian": true,
     "heat": null
@@ -515,7 +515,7 @@
    {
     "num": "19.",
     "name": "SEAFOOD SOUP (Poh Taek)",
-    "description": "(Recommended 2 People)\nA very special spicy soup with a combination of prawns, squid, green mussels, mushrooms, tomatoes, lemongrass and single cream. (F/Mo/M/C/*)",
+    "description": "(Recommended 2 People) A very special spicy soup with a combination of prawns, squid, green mussels, mushrooms, tomatoes, lemongrass and single cream. (F/Mo/M/C/*)",
     "price": "£25.00",
     "vegetarian": false,
     "heat": null

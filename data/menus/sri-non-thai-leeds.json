@@ -1,0 +1,63 @@
+{
+ "restaurant": "Sri Non Thai",
+ "city": "Leeds",
+ "fsa_id": "1860817",
+ "address": "Leeds",
+ "source": "https://srinonthai.co.uk/static/LunchDealMenu-a6b1fe73cd3db7d71e12b54d41283dd8.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Lunch Box": [
+   {
+    "name": "Sweet Chilli Box",
+    "description": "Choice of Crispy Chicken or Crispy Tofu served with Boiled rice and sweet chilli sauce finished with spring onions on top.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Sriracha Box",
+    "description": "Choice of Crispy Chicken or Crispy Tofu served with Boiled rice and spicy sriracha sauce topped with spring onions.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Salt and Pepper Box",
+    "description": "Stir fried salt and pepper with the choice of Crispy Chicken or Crispy Tofu served with Boiled rice.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Panang Curry Box",
+    "description": "Choice of Crispy Chicken or Crispy Tofu served with rich and creamy Panang curry sauce and kaffir lime leaves on top. Served with boiled rice.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Green Curry Box",
+    "description": "Green Thai curry with green curry paste in coconut milk. Served with boiled rice. Choice of Chicken or Tofu.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Box",
+    "description": "Stir fried chilli, garlic and basil choices of Minced Chicken or Tofu. Served with Rice.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Singapore Box",
+    "description": "Stir fried rice in Singapore sauce with carrot, egg, spring onions and onions seasoned. Choices of Chicken or Tofu.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Thai Box",
+    "description": "Stir fried rice noodles with egg, bean sprouts, chives in our secret srinon Pad Thai Sauce. Served with crushed peanuts slice of lime. Choices of Chicken or Tofu.",
+    "price": "£8.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Upgrade rice to egg fried rice £1.00",
+  "Upgrade rice to rice noodles £1.00",
+  "Upgrade rice to chip £1.00"
+ ]
+}

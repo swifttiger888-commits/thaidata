@@ -1,0 +1,141 @@
+{
+ "restaurant": "Indian Thai",
+ "city": "Torbay",
+ "fsa_id": "1826268",
+ "address": "Torbay",
+ "source": "http://www.torquaybiz.com/takeaways/tq5/indian-thai/menu_0002.jpg",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Plain Pappadom",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Samosa (meat or veg)",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Chicken Tikka",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Sheek Kebab",
+    "description": "",
+    "price": "£5.95"
+   },
+   {
+    "name": "Chicken Chatt",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "Onion Bhaji",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Tandoori Chicken",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Chicken Pakora",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "Chutney (per tray)",
+    "description": "",
+    "price": "£1.90",
+    "vegetarian": true
+   }
+  ],
+  "Traditional Favourites": [
+   {
+    "name": "Vegetable Masala",
+    "description": "",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Tikka Masala",
+    "description": "Marinated diced chicken cooked in mild masala sauce",
+    "price": "£11.95"
+   },
+   {
+    "name": "Lamb Tikka Masala",
+    "description": "",
+    "price": "£14.95"
+   },
+   {
+    "name": "Tandoori King Prawn Masala",
+    "description": "",
+    "price": "£14.95"
+   },
+   {
+    "name": "Butter Chicken",
+    "description": "Marinated diced chicken cooked in a very mild cream butter sauce",
+    "price": "£11.95"
+   },
+   {
+    "name": "Chicken Passanda",
+    "description": "Cooked in almond, coconut and red wine sauce",
+    "price": "£11.95"
+   },
+   {
+    "name": "Lamb Passanda",
+    "description": "Cooked in almond, coconut and red wine sauce",
+    "price": "£14.95"
+   },
+   {
+    "name": "Chicken Jalfrezi",
+    "description": "Cooked with onions, garlic, peppers, tomato and green chilli. Madras strength.",
+    "price": "£11.95"
+   },
+   {
+    "name": "Lamb or Duck Jalfrezi",
+    "description": "",
+    "price": "£14.95"
+   },
+   {
+    "name": "Monkfish (Brixham) Jalfrezi",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Chicken Chilli Masala",
+    "description": "Mouth watering tender meat with green chilli, garlic, onion, tomato, coriander, methi leaves. Hot",
+    "price": "£11.95"
+   },
+   {
+    "name": "Lamb or Duck Chilli Masala",
+    "description": "",
+    "price": "£14.95"
+   },
+   {
+    "name": "Monkfish (Brixham) Chilli Masala",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Mint Ghoosth",
+    "description": "Marinated lamb with fresh mint and yoghurt in garlic, onion and tomato sauce",
+    "price": "£14.95"
+   },
+   {
+    "name": "Paneer Jalfrezi",
+    "description": "Cooked with onions, garlic, peppers, tomato and green chilli. Madras strength.",
+    "price": "£10.50",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

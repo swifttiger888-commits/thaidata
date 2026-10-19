@@ -1,0 +1,421 @@
+{
+ "restaurant": "Khunnai Thai Restaurant",
+ "city": "Hertfordshire",
+ "fsa_id": "744443",
+ "address": "Hertfordshire",
+ "source": "https://khunnai.uk/wp-content/uploads/2025/12/Khunnaiithai-A4-8pp-Oct-25-finalproof.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Appetisers": [
+   {
+    "name": "SPICY THAI PRAWN CRACKERS (GF, C) j️",
+    "description": "",
+    "price": "£3.50",
+    "num": "1"
+   },
+   {
+    "name": "ELLE’S PLATTER (CE, C, E, G, M, MO, MU, P, SE, S, SD)",
+    "description": "(MINIMUM FOR 2 PEOPLE) Chicken satay, vegetable spring rolls, chicken and prawn on toast, sweetcorn cakes and golden bag. Served with homemade three distinct sauces.",
+    "price": "£16.95",
+    "num": "2"
+   },
+   {
+    "name": "VEGETABLE SPRING ROLLS (G, M, MU, S, V)",
+    "description": "Deep-fried mixed vegetables and vermicelli rolls. Served with sweet chilli sauce.",
+    "price": "£6.95",
+    "vegetarian": true,
+    "num": "3"
+   },
+   {
+    "name": "CHICKEN SATAY (C, P, S, SD) µ",
+    "description": "Marinated chicken seasoned with Thai spices, skewered and chargrilled. Served with peanut sauce.",
+    "price": "£7.95",
+    "num": "4"
+   },
+   {
+    "name": "CHICKEN & PRAWN ON TOAST (CE, C, E, G, M, MO, MU, SE, S)",
+    "description": "A mixture of minced prawn and chicken on toast, topped with sesame seeds and deep-fried. Served with homemade sweet chilli sauce.",
+    "price": "£7.95",
+    "num": "5"
+   },
+   {
+    "name": "CHICKEN WONTON (CE, C, E, G, M, MU, S)",
+    "description": "Minced chicken in wonton skin and deep-fried. Served with sweet chilli sauce.",
+    "price": "£7.95",
+    "num": "6"
+   },
+   {
+    "name": "SPICY SWEETCORN CAKE (C, E, G, V) j️",
+    "description": "With Thai spices. Served with sweet chilli sauce.",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "7"
+   },
+   {
+    "name": "THAI DUMPLINGS (CE, SE, C, E, G, M, MU, S) µ",
+    "description": "Minced chicken and prawns encased in wonton pastry, steamed to perfection. Served with a delectable sauce made from sweet and sour dark soy sauce and fragrant dried shallots.",
+    "price": "£7.95",
+    "num": "8"
+   },
+   {
+    "name": "QUACKING DUCK ROLLIES (G, M, SE, S)",
+    "description": "Five spiced confit duck meat toasted with mixed vegetables and rolled in an oriental style crispy pastry. Served with hoisin sauce.",
+    "price": "£7.95",
+    "num": "9"
+   },
+   {
+    "name": "THAI FISH CAKE (P, C, E, F, G, S) j",
+    "description": "Traditional spicy Thai fish cakes. Served with a sauce made from fresh cucumbers and ground peanuts.",
+    "price": "£7.95",
+    "num": "10"
+   },
+   {
+    "name": "CRISPY TOFU (GF, P, S, V)",
+    "description": "Garnished with crushed peanuts. Served with sweet and sour dipping sauce.",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "11"
+   },
+   {
+    "name": "CHICKEN CAKE (P, C, E, F, G, S) j️",
+    "description": "Minced chicken cake and deep-fried. Served with a sauce made from fresh cucumbers and ground peanuts.",
+    "price": "£7.95",
+    "num": "12"
+   },
+   {
+    "name": "CRAB CAKE (SE, C, E, F, G, S) j️",
+    "description": "Chicken, prawns and crab meat. Served with sweet chilli sauce.",
+    "price": "£7.95",
+    "num": "13"
+   },
+   {
+    "name": "GOLDEN BAGS (CE, C, E, G, M, MO, MU, S)",
+    "description": "Crispy parcel filled with marinated minced prawn and chicken. Served with our homemade sweet chilli sauce.",
+    "price": "£7.95",
+    "num": "14"
+   },
+   {
+    "name": "SALTED AND CHILLI SQUID (CE, E, G, M, MO, MU) j️",
+    "description": "Deep fried squids with garlic in a spicy salt and pepper mixture (dry).",
+    "price": "£10.95",
+    "num": "15"
+   },
+   {
+    "name": "PORK SPARE RIBS (G, SE, S)",
+    "description": "Spare ribs marinated and grilled, topped with Thai BBQ sauce and sesame seed.",
+    "price": "£7.95",
+    "num": "16"
+   },
+   {
+    "name": "TEMPURA (C, E, G)",
+    "description": "Fried prawns or vegetables coated in batter. Served with sweet chilli sauce.",
+    "price": "£Prawns (C) 7.95 | Veg (G, V) 6.95",
+    "num": "17"
+   },
+   {
+    "name": "GYOZA (E, G, M, MO, SE, S)",
+    "description": "Popular deep-fried Japanese starter dish. Served with soya sauce.",
+    "price": "£Chicken 7.95 | Veg V 6.95",
+    "num": "18"
+   },
+   {
+    "name": "THAI AROMATIC CRISPY DUCK (FOR 2) (G, SE, S)",
+    "description": "Shredded slow-cooked duck. Served with six pancakes, cucumbers, leeks and hoisin sauce.",
+    "price": "£15.95",
+    "num": "19"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "TOM YUM SOUP (GF, F, C) jj️",
+    "description": "With lemongrass, kaffir lime leaves, chillies, fresh lemon and mushrooms.",
+    "price": "£Chicken 7.50 | Prawns (C) 7.95 | Mushrooms V 6.50",
+    "num": "20"
+   },
+   {
+    "name": "COCONUT SOUP (GF, F, C)",
+    "description": "With coconut milk, galangal, lemongrass, fresh lemon, mushrooms and corianders.",
+    "price": "£Chicken 7.50 | Prawns (C) 7.95 | Mushrooms V 6.50",
+    "num": "21"
+   }
+  ],
+  "Thai Salads (Warm)": [
+   {
+    "name": "SEAFOOD SALAD (CE, C, E, F, G, M, MO, MU) jj",
+    "description": "Mixed seafoods in a spicy dressing sauce with lemongrass and mixed vegetables.",
+    "price": "£12.95",
+    "num": "22"
+   },
+   {
+    "name": "BEEF SALAD (CE, E, F, G, M, MU) jj µ",
+    "description": "Grilled beef in a spicy dressing sauce with mixed vegetables.",
+    "price": "£12.95",
+    "num": "23"
+   },
+   {
+    "name": "DUCK SALAD (CE, E, F, G, M, MU) jj",
+    "description": "Duck slices in a spicy dressing sauce with celery, tomatoes and coriander.",
+    "price": "£12.95",
+    "num": "24"
+   },
+   {
+    "name": "PRAWN SALAD (CE, C, E, F, G, M, MU) jj",
+    "description": "Grilled prawns flavoured with Elle’s spicy lemon and chilli sauce with Thai herbs.",
+    "price": "£12.95",
+    "num": "25"
+   },
+   {
+    "name": "LARB (CE, E, F, G, M, MU) jj",
+    "description": "Meat of your choice and wonderfully seasoned with chilli, fresh lemon, ground toasted sticky rice, red onion, spring onion and fresh herbs.",
+    "price": "£Chicken or Pork 11.95 | Tofu V 11.95",
+    "num": "26"
+   }
+  ],
+  "Curries": [
+   {
+    "name": "GREEN CURRY (CE, C, E, M, MU, SD) jj️",
+    "description": "Thai Green Curry in creamy coconut milk, aubergine, bamboo shoots, red and green peppers, lime leaves and fragrant sweet basil leaves.",
+    "price": "£Chicken/Beef/Tofu 13.45 | Prawns (C) 14.95 | Veg V 10.95",
+    "num": "27"
+   },
+   {
+    "name": "RED CURRY (CE, C, E, M, MU, SD) jj",
+    "description": "Spicy curry with tender aubergine, coconut milk, red and green peppers, bamboo shoots, lime leaves and sweet basil.",
+    "price": "£Chicken/Beef/Tofu 13.45 | Prawns (C) 14.95 | Veg V 10.95",
+    "num": "28"
+   },
+   {
+    "name": "PANANG CURRY (CE, C, E, M, MU, SD) jj",
+    "description": "A popular red thick and creamy coconut milk with kaffir lime leaves, carrots and peppers.",
+    "price": "£Chicken/Beef/Tofu 13.45 | Prawns (C) 14.95 | Veg V 10.95",
+    "num": "29"
+   },
+   {
+    "name": "MASSAMAN CURRY (CE, C, E, M, MU, P, SD) j µ",
+    "description": "A popular massaman curry with potatoes and onions topped with roasted peanuts and fried shallots.",
+    "price": "£Chicken/Beef/Tofu 13.45 | Lamb 14.95 | Veg V 10.95",
+    "num": "30"
+   },
+   {
+    "name": "DUCK CURRY (CE, C, E, M, MU, SD) jj️",
+    "description": "Roasted duck in a red curry sauce with pineapples, lychees and tomatoes topped with fragrant sweet basil leaves.",
+    "price": "£13.95",
+    "num": "31"
+   },
+   {
+    "name": "JUNGLE CURRY (CE, C, E, M, MU) jjj",
+    "description": "A very spicy clear curry with bamboo shoots, mangetouts, aubergine, mushrooms, carrots, green peppercorns and fresh Thai herbs.",
+    "price": "£Chicken/Beef/Tofu 13.95 | Prawns (C) 14.95 | Veg V 10.95",
+    "num": "32"
+   }
+  ],
+  "Stir-fried": [
+   {
+    "name": "SWEET & SOUR (G, S)",
+    "description": "A homemade sweet and sour sauce with your choice of stir-fried meat, pineapples, tomatoes, spring onions and cucumbers.",
+    "price": "£Chicken/Beef/Pork/Tofu 12.95 | Prawns (C) 13.95 | Veg V 10.95",
+    "num": "33"
+   },
+   {
+    "name": "CHILLI & BASIL (CE, E, G, M, MO, MU, S) jjj µ",
+    "description": "Stir-fried with fresh chillies, mixed vegetables, garlic and fragrant basil leaves.",
+    "price": "£Chicken/Beef/Pork/Tofu 12.95 | Prawns (C) 13.95\nCrispy Pork 15.95 | Veg V 10.95 | Aubergine V 10.95",
+    "num": "34"
+   },
+   {
+    "name": "GARLIC & PEPPER (CE, E, G, M, MO, MU, S) j️",
+    "description": "Stir-fried with mixed vegetables, garlic and pepper sauce.",
+    "price": "£Chicken/Beef/Pork/Tofu 12.95 | Prawns (C) 13.95 | Veg V 10.95",
+    "num": "35"
+   },
+   {
+    "name": "BEEF or CHICKEN WITH OYSTER SAUCE (CE, E, G, M, MO, MU, S)",
+    "description": "Stir-fried meat with oyster sauce. Mixed with crunchy vegetables.",
+    "price": "£12.95",
+    "num": "36"
+   },
+   {
+    "name": "PAD MED MAMUANG (GF, G, S, N, MO)",
+    "description": "Stir-fried with cashew nuts, red and green peppers and spring onions in oyster sauce.",
+    "price": "£Chicken 12.95 | Prawns (C) 13.95 | Mushrooms V 10.95",
+    "num": "37"
+   },
+   {
+    "name": "PAD PRIK SOD (with chillies) (CE, E, G, M, MO, MU, S) jj️",
+    "description": "Stir-fried fresh chilli is added with bamboo shoots and carrots with Elle’s special sauce.",
+    "price": "£Chicken/Beef/Pork/Tofu 12.95 | Prawns (C) 13.95 | Veg V 10.95",
+    "num": "38"
+   },
+   {
+    "name": "PAD KHING (with ginger) (CE, E, G, M, MO, MU, S)",
+    "description": "Stir-fried with light soy sauce, fresh ginger, mushrooms, spring onions and carrots.",
+    "price": "£Chicken/Beef/Pork/Tofu 12.95 | Prawns (C) 13.95 | Veg V 10.95",
+    "num": "39"
+   },
+   {
+    "name": "BEEF WITH BLACKBEAN SAUCE (CE, E, G, M, MO, MU, S)",
+    "description": "Stir-fried beef with a sauce made from black beans and mixed vegetables.",
+    "price": "£12.95",
+    "num": "40"
+   },
+   {
+    "name": "BEEF KEE MOW (CE, E, G, M, MO, MU, S) jjj️️",
+    "description": "Oh my goodness, have you tried the spicy stir-fried beef with fresh chillies, garlic sauce, bamboo shoots, vegetables, Thai herbs and basil leaves? It’s absolutely delicious but very spicy!",
+    "price": "£12.95",
+    "num": "41"
+   },
+   {
+    "name": "CHILLI BEEF (Chinese Style) (CE, E, G, M, MO, MU, S) jjj",
+    "description": "Tender beef strips sautéed with a delectable sweet chilli sauce accompanied by crispy carrots and celery.",
+    "price": "£14.95",
+    "num": "42"
+   }
+  ],
+  "Seafoods": [
+   {
+    "name": "GOONG MA KAM (C, F, G) µ️",
+    "description": "Stir-fried giant prawns served on crispy rice noodles, garnished with an exotic sweet and sour tamarind sauce.",
+    "price": "£18.95",
+    "num": "43"
+   },
+   {
+    "name": "GIGGLING PRAWNS (CE, C, E, F, G, M, MU, S)",
+    "description": "A stir-fried giant prawns dish with garlic - perfect for garlic enthusiasts.",
+    "price": "£18.95",
+    "num": "44"
+   },
+   {
+    "name": "HOT & SOUR CHILLI FISH (F, G, S) j️",
+    "description": "Deep-fried fish coated in batter. Served with a hot and sour chilli and garlic sauce.",
+    "price": "£17.95",
+    "num": "45"
+   },
+   {
+    "name": "SALMON PANANG (CE, C, E, F, G, M, MU, SD) jj️",
+    "description": "Deep-fried salmon fillets topped with a rich, dark panang creamy sauce, mixed vegetables and kaffir lime leaves.",
+    "price": "£16.95",
+    "num": "46"
+   },
+   {
+    "name": "LEMON FISH (CE, E, F, G, M, MU) jj µ",
+    "description": "Steamed seabass served in a delectable sauce infused with chilli and lemon flavours",
+    "price": "£21.95",
+    "num": "47"
+   },
+   {
+    "name": "PRAWNS WITH BABY CORNS (CE, C, E, G, M, MO, MU, S)",
+    "description": "Stir-fried prawns, baby corns and mangetouts in a fragrant mushroom sauce.",
+    "price": "£13.95",
+    "num": "48"
+   },
+   {
+    "name": "THAI ROASTED CHILLI OIL (C, F, G, S) jj",
+    "description": "Delicious stir-fried in Thai roasted chilli oils and mixed vegetables.",
+    "price": "£Prawn 13.95 | Crispy Pork 15.95 ️",
+    "num": "49"
+   },
+   {
+    "name": "PAD PLED TALAY (CE, C, E, G, M, MO, MU, SD) jjj",
+    "description": "Stir-fried mix seafood with fresh chillies, garlic, basil leaves and vegetables.",
+    "price": "£16.95 ️",
+    "num": "50"
+   },
+   {
+    "name": "CRISPY FISH WITH CURRY SAUCE (CE, C, E, F, G, M, MU, SD) jj️",
+    "description": "Crispy red tilapia topped with light curry sauce, coconut milk and lime leaves.",
+    "price": "£17.95",
+    "num": "51"
+   }
+  ],
+  "Signature Dishes": [
+   {
+    "name": "CRISPY PORK BELLY with Chilli & Basil (CE, E, G, M, MO, MU, S) jj️",
+    "description": "Homemade crispy pork belly stir-fried with fresh chillies and mixed vegetables.",
+    "price": "£16.95",
+    "num": "52"
+   },
+   {
+    "name": "CRISPY PORK BELLY with Salt & Pepper (Dry) (CE, E, G, M, MO, MU, S)",
+    "description": "Homemade crispy pork belly with salt and pepper, red and green peppers and spring onions.",
+    "price": "£16.95",
+    "num": "53"
+   },
+   {
+    "name": "SEAFOOD PANANG (CE, C, E, G, M, MO, MU, SD) jj",
+    "description": "Mixed seafood in a dark rich panang sauce with red and green peppers, kaffir lime leaves and sweet basil.",
+    "price": "£18.95",
+    "num": "54"
+   },
+   {
+    "name": "KING PRAWN CURRY (CE, C, E, G, M, MU, SD) jj️",
+    "description": "Giant king prawns topped with light curry sauce, coconut milk and lime leaves.",
+    "price": "£18.95",
+    "num": "55"
+   },
+   {
+    "name": "GOONG POW (CE, C, E, F, M, MU) j️",
+    "description": "Grilled giant prawns. Served with spicy chilli sauce.",
+    "price": "£18.95",
+    "num": "56"
+   },
+   {
+    "name": "WEEPING TIGER (CE, E, F, G, M, MU) j µ️",
+    "description": "Grilled sirloin beef steaks marinated in Thai herbs topped with special Thai sauce served in a hot sizzling plate with our special hot chilli sauce.",
+    "price": "£17.95",
+    "num": "57"
+   },
+   {
+    "name": "SOM TAM (P, CE, C, E, F, G, M, MU, N) jj µ️",
+    "description": "Well known, popular traditional papaya salad with little bit of carrots topped with peanuts and small dry shrimps.",
+    "price": "£10.95",
+    "num": "58"
+   },
+   {
+    "name": "CRISPY PORK BELLY (CE, E, G, M, MO, MU, S) µ️",
+    "description": "Thick crunchy, crackling pork served with steamed chinese cabbages along with oyster sauce.",
+    "price": "£16.95",
+    "num": "59"
+   },
+   {
+    "name": "LEMON CHICKEN (CE, E, F, G, M, MU) jj️",
+    "description": "Steamed slice chicken breasts in Elle’s special lemon sauce and Thai herbs.",
+    "price": "£13.95",
+    "num": "60"
+   },
+   {
+    "name": "NUTTY CHICKEN (C, G, P, S, SD)",
+    "description": "Nutty chicken in a special creamy peanut sauce bedded on steamed vegetables.",
+    "price": "£13.95",
+    "num": "61"
+   }
+  ],
+  "Duck": [
+   {
+    "name": "TAMARIND DUCK (F, G, MO, S) µ",
+    "description": "Roasted duck slices bedded on crispy thin rice noodles topped with exotic sweet and sour tamarind sauce.",
+    "price": "£16.95",
+    "num": "62"
+   },
+   {
+    "name": "DUCK WITH CASHEW NUTS (CE, E, G, M, MO, MU, N, S)",
+    "description": "Stir-fried duck with cashew nuts, mixed vegetables and spring onions in oyster sauce.",
+    "price": "£15.95",
+    "num": "63"
+   },
+   {
+    "name": "DRUNKEN DUCK (CE, E, G, M, MO, MU, S) jj️",
+    "description": "Stir-fried duck with fresh chillies, mixed vegetables, garlic and basil leaves.",
+    "price": "£15.95",
+    "num": "64"
+   },
+   {
+    "name": "DUCK WITH GINGER (CE, E, G, M, MO, MU, S)",
+    "description": "Stir-fried duck with fresh ginger, mixed vegetables",
+    "price": "£15.95",
+    "num": "65"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,381 @@
+{
+ "restaurant": "Thai Rice",
+ "city": "London",
+ "fsa_id": "444722",
+ "address": "London",
+ "source": "https://www.thairicegroup.com/thai-rice-menu/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Special Menu": [
+   {
+    "name": "S01 Ped Ma Kham",
+    "description": "Crispy duck served with steamed broccoli topped with homemade tamarind sauce & fried shallot",
+    "price": "£15.95"
+   },
+   {
+    "name": "S02 Krapow Ped Krob",
+    "description": "very very hot Crispy duck (quarter) topped with traditional stir fried basil & chilli sauce",
+    "price": "£15.95"
+   },
+   {
+    "name": "S03 Goong Ob Woon Sen",
+    "description": "Baked marinated river pawn with stirfried glass noodle (vermicelli), ginger, garlic, spring onion served in a clay pot",
+    "price": "£18.95"
+   },
+   {
+    "name": "S04 Choo Chee Goong Yai",
+    "description": "hot Dry red curry cooked with River Prawn coconut milk, Green and red pepper & sweet basil leaves",
+    "price": "£18.95"
+   },
+   {
+    "name": "S05 Kai Yang",
+    "description": "Grilled marinated chicken skin on leg served with Thai spicy sauce with chip or rice + mixed salad",
+    "price": "£18.95"
+   },
+   {
+    "name": "S06 Moo Yang",
+    "description": "Grilled marinated pork chop sliced served with Thai spicy sauce with chip or rice + mixed salad",
+    "price": "£18.95"
+   },
+   {
+    "name": "S07 Suer Rong Hai (Weeping Tiger)",
+    "description": "Grilled marinated Sirloin steak served with Thai spicy sauce with chip or rice + mixed salad",
+    "price": "£20.95"
+   },
+   {
+    "name": "S08 Goong Yai Pao",
+    "description": "Grilled marinated River prawn served with Thai spicy sauce with chip or rice + mixed salad",
+    "price": "£20.95"
+   },
+   {
+    "name": "S09 Lamb Yang",
+    "description": "Grilled marinated lamb rack served with Thai spicy sauce with chip or rice + mixed salad",
+    "price": "£21.95"
+   },
+   {
+    "name": "S17 Prawn Udon Pad Thai",
+    "description": "Udon noodle stir-fried in Pad Thai style with prawn",
+    "price": "£17.95"
+   },
+   {
+    "name": "S18 Prawns Udon Pad Kee Mao",
+    "description": "very very hot Udon noodle stir fried with basil, bamboo shoots, onion & chilli with prawn",
+    "price": "£17.95"
+   }
+  ],
+  "STARTER": [
+   {
+    "name": "101 Prawn Crackers",
+    "description": "",
+    "price": "£4.95"
+   },
+   {
+    "name": "102 Thai Rice Platter",
+    "description": "Serves for two. A combination of chicken satay, sesame prawn toast, spring roll, Thai dim sum, prawn tempura & vegetable tempura",
+    "price": "£16.95"
+   },
+   {
+    "name": "103 Aromatic Duck (quarter size)",
+    "description": "Oriental style crispy duck served with hoisin sauce, spring onions, cucumber, and steamed pancakes.",
+    "price": "£15.95"
+   },
+   {
+    "name": "104 Edamame",
+    "description": "steamed soya bean",
+    "price": "£7.25",
+    "vegetarian": true
+   },
+   {
+    "name": "105 Duck Spring Roll",
+    "description": "Deep fried spring roll stuffed with aromatic duck, vegetable & Hoi sin sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "106 Fresh Spring Roll",
+    "description": "Spring roll stuffed & rolled with mixed minced pork, crab meat, prawn & mixed vegetable served with sweet chilli sauce",
+    "price": "£9.95"
+   },
+   {
+    "name": "107 Spring Roll",
+    "description": "Deep fried spring roll stuffed & rolled with vegetable & vermicelli, served with sweet chilli sauce",
+    "price": "£7.25",
+    "vegetarian": true
+   },
+   {
+    "name": "108 Tofu Salad",
+    "description": "Deep fried tofu & steamed bean sprouts, served with peanut sauce",
+    "price": "£7.25",
+    "vegetarian": true
+   },
+   {
+    "name": "109 Goong Ob Noey",
+    "description": "Baked prawns with butter & topped with crispy fried onion & spring onion on bed of salad",
+    "price": "£8.95"
+   },
+   {
+    "name": "110 Prawn Tempura",
+    "description": "Deep fried king prawn in tempura batter served with sweet chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "111 Vegetable Tempura",
+    "description": "A selection of vegetable deep fried in tempura batter served with sweet chilli sauce",
+    "price": "£7.25",
+    "vegetarian": true
+   },
+   {
+    "name": "112 Thai Dim Sum",
+    "description": "Dumpling of mixed minced pork, prawn served with sweet soya sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "113 Sesame Prawn Toast",
+    "description": "Deep fried prawn on toast topped with sesame seeds and served with sweet chilli sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "114 Tord Mun Pla (Thai Fish Cake)",
+    "description": "Deep fried spicy fish cake made of feather back fish served with sweet chilli sauce & ground peanut",
+    "price": "£7.95"
+   },
+   {
+    "name": "115 Chicken Satay",
+    "description": "Grilled marinated chicken in satay sauce skew in wooden sticks and served with peanut sauce",
+    "price": "£7.95"
+   },
+   {
+    "name": "116 Crispy Chicken Wing",
+    "description": "Deep fried chicken wing served with sweet chilli sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "117 Fried Crispy Squid",
+    "description": "Deep fried squid in tempura batter served with sweet chilli sauce",
+    "price": "£9.95"
+   },
+   {
+    "name": "118 Gyoza",
+    "description": "Pan-fried Japanese chicken dumpling served with dipping sauce",
+    "price": "£7.95"
+   }
+  ],
+  "SOUP": [
+   {
+    "name": "201 Tom Yum",
+    "description": "Very Hot Spicy and sour soup made of lemongrass, lime leaves, and mushrooms £2 Surcharge are applied if you’d like to add noodle in a soup as main course",
+    "price": "£Mushroom (v) £8.95, Chicken + Mushroom £9.95, Prawns + Mushroom £10.95"
+   },
+   {
+    "name": "202 Tom Kha",
+    "description": "Hot Traditional Thai soup with coconut milk, galangal, lemongrass, lime leaves, and mushrooms. £2 Surcharge are applied if you’d like to add noodle in a soup as main course",
+    "price": "£Mushroom (v) £8.95, Chicken + Mushroom £9.95, Prawns + Mushroom £10.95"
+   }
+  ],
+  "THAI SALADS": [
+   {
+    "name": "301 Som Tum",
+    "description": "Very Hot Traditional Thai spicy & sour made of crunchy green papaya, ground peanut, long bean, cherry tomato, lime juice & fresh chilli",
+    "price": "£10.95"
+   },
+   {
+    "name": "302 Yum Neur",
+    "description": "very hot Tender sirloin steak spicy salad",
+    "price": "£15.95"
+   },
+   {
+    "name": "303 Larb Salad",
+    "description": "very hot Finely minced meat cooked with dried chilli and tossed in bed of spicy salad. Served with your choice of protein.",
+    "price": "£Chicken, Pork or Beef £12.95, Prawn or Duck £14.95"
+   },
+   {
+    "name": "304 Som Tum Goong Sod Salad",
+    "description": "very hot Traditional Thai spicy and sour salad made of crunchy green papaya, lime juice, fresh chilli, and prawn.",
+    "price": "£12.95"
+   }
+  ],
+  "STIR FRIED": [
+   {
+    "name": "401 Pad Kraprow",
+    "description": "Very Very Hot Traditional stir fried with holy basil leaves & chilli",
+    "price": "£Vegetables, Chicken, Pork or Beef £11.95, Prawn or Duck £12.95, Grilled River Prawns or Crab Meat £16.95"
+   },
+   {
+    "name": "402 Pad King",
+    "description": "Stir fried with fresh ginger, onion & spring onion",
+    "price": "£Vegetables, Chicken, Pork or Beef £11.95, Prawn or Duck £12.95, Grilled River Prawns or Crab Meat £16.95"
+   },
+   {
+    "name": "403 Pad Med Mamuang",
+    "description": "Hot Stir fried cashew nut , dried chilli, onion, pepper & spring onion",
+    "price": "£Vegetables, Chicken, Pork or Beef £11.95, Prawn or Duck £12.95, Grilled River Prawns or Crab Meat £16.95"
+   },
+   {
+    "name": "404 Pad Kratiem Priktai",
+    "description": "Stir fried garlic & black pepper topped with spring onion",
+    "price": "£Vegetables, Chicken, Pork or Beef £11.95, Prawn or Duck £12.95, Grilled River Prawns or Crab Meat £16.95"
+   },
+   {
+    "name": "405 Pad Priew Wan",
+    "description": "Thai style sweet & sour sauce with cherry tomato, pepper & onion",
+    "price": "£Vegetables, Chicken, Pork or Beef £11.95, Prawn or Duck £12.95, Grilled River Prawns or Crab Meat £16.95"
+   },
+   {
+    "name": "406 Pad Nam Mun Hoi",
+    "description": "Stir fried in oyster sauce with crunchy broccoli, mushroom, and onion",
+    "price": "£Vegetables, Chicken, Pork or Beef £11.95, Prawn or Duck £12.95, Grilled River Prawns or Crab Meat £16.95"
+   }
+  ],
+  "CURRY": [
+   {
+    "name": "501 Green Curry",
+    "description": "very hot Green curry cooked with coconut milk, bamboo shoot, aubergine, green and red pepper, and sweet basil leaves.",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £11.95,\nPrawn or Duck  £12.95, Grilled River Prawns or Crab Meat £16.95,\nGrilled Lamb £21.95"
+   },
+   {
+    "name": "502 Red Curry",
+    "description": "very hot Red curry cooked with coconut milk, bamboo shoot, aubergine, green and red pepper, and sweet basil leaves.",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £11.95,\nPrawn or Duck  £12.95, Grilled River Prawns or Crab Meat £16.95,\nGrilled Lamb £21.95"
+   },
+   {
+    "name": "503 Panaeng Curry",
+    "description": "hot Dry red curry paste cooked with coconut milk, lime leaves, green and red pepper, and sweet basil leaves.",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £11.95,\nPrawn or Duck  £12.95, Grilled River Prawns or Crab Meat £16.95,\nGrilled Lamb £21.95"
+   },
+   {
+    "name": "504 Massamun Curry",
+    "description": "hot Massamun curry paste cooked with coconut milk, potato, and topped with cashew nuts .",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £11.95,\nPrawn or Duck  £12.95, Grilled River Prawns or Crab Meat £16.95,\nGrilled Lamb £21.95"
+   },
+   {
+    "name": "505 Yellow Curry",
+    "description": "hot Yellow curry made with coconut milk and potato.",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £11.95,\nPrawn or Duck  £12.95, Grilled River Prawns or Crab Meat £16.95,\nGrilled Lamb £21.95"
+   },
+   {
+    "name": "506 Duck Curry",
+    "description": "very hot Red curry cooked in coconut milk with roasted duck, pineapple, cherry tomato, and sweet basil leaves.",
+    "price": "£12.95"
+   },
+   {
+    "name": "507 Jungle Curry",
+    "description": "very very hot Traditional northern style hot and spicy cooked without coconut milk",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £11.95,\nPrawn or Duck  £12.95, Grilled River Prawns or Crab Meat £16.95,\nGrilled Lamb £21.95"
+   }
+  ],
+  "NOODLES": [
+   {
+    "name": "601 Pad Thai",
+    "description": "Classic well-known stir-fried thin rice noodle with bean sprout, egg, spring onion, ground peanut served with fresh lime",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £13.95,\nPrawn or Duck  £15.95,\nGrilled River Prawn or Crab Meat £18.95"
+   },
+   {
+    "name": "602 Pad See Eiw",
+    "description": "Stir-fried flat rice noodle with soya sauce, egg & vegetable",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £13.95,\nPrawn or Duck  £15.95,\nGrilled River Prawn or Crab Meat £18.95"
+   },
+   {
+    "name": "603 Pad Kee Mao (Drunken Noodle)",
+    "description": "very very hot Stir-fried spicy flat rice noodle with basil leaves, bamboo shoot, onion & chilli",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £13.95,\nPrawn or Duck  £15.95,\nGrilled River Prawn or Crab Meat £18.95"
+   },
+   {
+    "name": "604 Pad Mee",
+    "description": "Stir-fried egg noodle with soya sauce with egg & vegetable",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £13.95,\nPrawn or Duck  £15.95,\nGrilled River Prawn or Crab Meat £18.95"
+   },
+   {
+    "name": "605 Kuey Teow Kua Gai",
+    "description": "Stir fried flat noodle with chicken, lettuce, spring onion served with fresh lime, and ground peanut",
+    "price": "£13.95"
+   },
+   {
+    "name": "606 Yellow Curry Noodles",
+    "description": "Thai style curry noodle soup cooked with coconut milk & egg noodle, bean sprout, spring onion, fried shallot, lime juice & crispy wonton Change to Udon noodle add £2.00, add tofu £2.00",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £13.95,\nPrawn or Duck  £15.95,\nGrilled River Prawn or Crab Meat £18.95"
+   }
+  ],
+  "VEGETABLES": [
+   {
+    "name": "701 Pad Puk",
+    "description": "Stir-fried mixed seasonal vegetable with soya sauce & oyster sauce",
+    "price": "£10.95"
+   },
+   {
+    "name": "702 Pad Broccoli",
+    "description": "Stir-fried broccoli with soya & oyster sauce",
+    "price": "£10.95"
+   },
+   {
+    "name": "703 Pad Puk Bung Fai Dang",
+    "description": "very hot Stir-fried water spinach or Morning Glory with garlic & fresh chillies in soya bean & oyster sauce",
+    "price": "£12.95"
+   }
+  ],
+  "RICE": [
+   {
+    "name": "800 Brown Rice",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "801 Steamed Jasmine Rice",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "802 Coconut Rice",
+    "description": "",
+    "price": "£4.75"
+   },
+   {
+    "name": "803 Egg Fried Rice",
+    "description": "",
+    "price": "£4.75"
+   },
+   {
+    "name": "804 Sticky Rice",
+    "description": "",
+    "price": "£4.75"
+   },
+   {
+    "name": "805 Kao Pad",
+    "description": "Stir-fried rice with egg, onion & vegetables + fried egg",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £13.95,\nPrawn  or Duck £15.95\nGrilled River Prawns £18.95"
+   },
+   {
+    "name": "806 Kao Kee Mao",
+    "description": "VERY VERY HOT Stir-fried rice with chillies, garlic, bamboo shoot onion & vegetables",
+    "price": "£Vegetables, Chicken, Pork, or Beef  £13.95,\nPrawn  or Duck £15.95\nGrilled River Prawns £18.95"
+   },
+   {
+    "name": "807 Kao Pad Pu & Kai Daw",
+    "description": "Stir-fried rice with crab meat, egg, spring onion, served with fresh lime, and cucumber, fried egg on top.",
+    "price": "£18.95"
+   },
+   {
+    "name": "808 Kao Nha Ped + Boiled Egg",
+    "description": "Rice Topped crispy duck and boiled egg on top",
+    "price": "£18.50"
+   }
+  ],
+  "SIDE": [
+   {
+    "name": "901 Chip",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "902 Mixed salad (wasabi dressing)",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "903 Steam Mixed Vegetable",
+    "description": "",
+    "price": "£8.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,596 @@
+{
+ "restaurant": "Thai Cottage",
+ "city": "Reigate and Banstead",
+ "fsa_id": "19060",
+ "address": "Reigate and Banstead",
+ "source": "https://www.thaicottagetadworth.co.uk/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Siam Platter (for two persons)",
+    "description": "A various selection from our starters including: Sateh, Spring rolls, Prawns in the blanket, Chicken on toast & Toong Torng",
+    "price": "£17.50",
+    "num": "1"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Grilled marinated chicken on bamboo skewers, served with peanut sauce",
+    "price": "£7.95",
+    "num": "2"
+   },
+   {
+    "name": "Tord Mun (Fish Cakes)",
+    "description": "Deep fried spicy Thai fish-cakes, served with a sweet and sour chilli cucumber relish, topped with ground peanuts",
+    "price": "£7.50",
+    "num": "3"
+   },
+   {
+    "name": "Kanom Pang Na Guy (Chicken on Toast)",
+    "description": "Deep fried minced chicken and egg on toast, served with a sweet and sour cucumber relish",
+    "price": "£7.50",
+    "num": "4"
+   },
+   {
+    "name": "See Krong (Spare Ribs)",
+    "description": "Deep fried spare ribs with garlic and soya sauce",
+    "price": "£7.50",
+    "num": "5"
+   },
+   {
+    "name": "Kanom Jeeb (Steamed Dumplings)",
+    "description": "Steamed dumplings filled with minced pork, water chestnuts, topped with garlic and soya sauce (please allow 20-25 minutes)",
+    "price": "£7.95",
+    "num": "6"
+   },
+   {
+    "name": "Popia Tord (Spring Rolls)",
+    "description": "Thai spring rolls filled with vermicelli and mixed vegetables, served with plum sauce",
+    "price": "£7.00",
+    "vegetarian": true,
+    "num": "7"
+   },
+   {
+    "name": "Kung Hom Pah (Prawns in Blankets)",
+    "description": "Deep fried whole king prawns wrapped in pastry, served with plum sauce",
+    "price": "£8.50",
+    "num": "8"
+   },
+   {
+    "name": "Toong Torng (Crispy Minced Pork Dumplings)",
+    "description": "Deep fried minced pork wrapped in pastry, served with plum sauce",
+    "price": "£7.50",
+    "num": "9"
+   },
+   {
+    "name": "Tempura Prawns",
+    "description": "Deep fried king prawns wrapped in tempura batter, served with plum sauce",
+    "price": "£8.50",
+    "num": "10"
+   },
+   {
+    "name": "Hoy Op (Steamed Mussels)",
+    "description": "Steamed mussels with lemon grass and basil leaves, served with chilli sauce",
+    "price": "£8.50",
+    "num": "11"
+   },
+   {
+    "name": "Crispy Aromatic Duck (Quarter, Half or Whole)",
+    "description": "Served with steamed pancakes, sliced cucumbers, sliced spring onions, and dipping sauce",
+    "price": null
+   },
+   {
+    "name": "Quarter",
+    "description": "",
+    "price": "£16.50"
+   },
+   {
+    "name": "Half",
+    "description": "",
+    "price": "£24.95"
+   },
+   {
+    "name": "Extra Pancakes",
+    "description": "",
+    "price": "£2.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Prawn Crackers",
+    "description": "Sweet chilli sauce / £1.00",
+    "price": "£3.95",
+    "num": "14"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "Tom Yum 🌶 (Hot & Sour Soup)",
+    "description": "A traditional Thai, hot and sour soup with roasted chilli oil, seasoned with lemon grass and kaffir lime leaves",
+    "price": null,
+    "num": "15"
+   },
+   {
+    "name": "Chicken",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "Prawns",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "Mixed seafood",
+    "description": "",
+    "price": "£9.50"
+   },
+   {
+    "name": "Tom Kha 🌶 (Hot & Sour Coconut Milk Soup)",
+    "description": "A traditional Thai, spicy and sour soup cooked in coconut milk, seasoned with lemon grass, kaffir lime leaves with roasted chilli oil",
+    "price": null,
+    "num": "16"
+   }
+  ],
+  "Salads": [
+   {
+    "name": "Laab Gai 🌶 (Chicken Salad)",
+    "description": "Finely chopped chicken cooked with roasted ground rice, lime leaves, coriander, spring onions, chilli powder and lemon juice",
+    "price": "£11.95",
+    "num": "17"
+   },
+   {
+    "name": "Yum Neau 🌶 (Beef Salad)",
+    "description": "Slices of grilled steak with tomatoes, cucumbers, onions, chilli, coriander and lemon juice",
+    "price": "£12.95",
+    "num": "18"
+   },
+   {
+    "name": "Yum Bla Muek 🌶 (Squid Salad)",
+    "description": "Squid cooked with lemon grass, lime leaves, onions, chilli garlic and spring onions",
+    "price": "£12.95",
+    "num": "19"
+   },
+   {
+    "name": "Plah Kung 🌶 (Prawn Salad)",
+    "description": "Prawns cooked with lemon grass, lime leaves, chilli garlic and spring onions",
+    "price": "£12.95",
+    "num": "20"
+   }
+  ],
+  "Curries": [
+   {
+    "name": "21 Gaeng Daeng 🌶🌶 (Red Curry)",
+    "description": "Red curry paste cooked in coconut milk, with dried red chillies, bamboo shoots, carrots, mixed peppers, and fresh basil leaves",
+    "price": null
+   },
+   {
+    "name": "Beef",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pork",
+    "description": "",
+    "price": "£11.95"
+   },
+   {
+    "name": "Roast Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Gaeng Keaw 🌶🌶 (Green Curry)",
+    "description": "Green curry paste cooked in coconut milk, with fresh green chillies, bamboo shoots, green beans, mixed peppers, and fresh basil leaves.",
+    "price": null,
+    "num": "22"
+   },
+   {
+    "name": "Gaeng Ped Yang 🌶🌶 (Red Duck Curry)",
+    "description": "Roasted duck curry in red curry paste with coconut milk, tomatoes, pineapples, chilli and fresh basil leaves",
+    "price": "£12.95",
+    "num": "23"
+   },
+   {
+    "name": "Gaeng Massaman 🌶",
+    "description": "A rich, sweet and mildly spicy curry with coconut milk, peanuts, onions, and potatoes (can be cooked without peanuts upon request)",
+    "price": null,
+    "num": "24"
+   },
+   {
+    "name": "Roasted Duck",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Gaeng Garee 🌶 (Yellow Curry)",
+    "description": "A mildly spicy yellow curry with coconut milk, potatoes, and onions",
+    "price": null,
+    "num": "25"
+   },
+   {
+    "name": "Gaeng Panang 🌶🌶 (Thick Red Curry)",
+    "description": "A dry, thick red curry with coconut milk, lime leaves and fresh basil leaves",
+    "price": null,
+    "num": "26"
+   }
+  ],
+  "Meat and Poultry": [
+   {
+    "name": "Pad Ma-muang (Cashew Nut Stir-fry with Meat)",
+    "description": "Stir-fried meat with cashew nuts, mixed peppers, carrots, onions and spring onions",
+    "price": null,
+    "num": "27"
+   },
+   {
+    "name": "Pad Kratiem (Garlic Stir-fry with Meat)",
+    "description": "Stir-fried meat with garlic and pepper",
+    "price": null,
+    "num": "28"
+   },
+   {
+    "name": "Pad Pineapple (Pineapple Stir-fry with Meat)",
+    "description": "Stri fried meat with pineapple, onions ,carrots and mixed peppers.",
+    "price": null,
+    "num": "29"
+   },
+   {
+    "name": "Tiger Cry (Grilled Steak)",
+    "description": "Slices of grilled marinated beef served with chilli sauce",
+    "price": "£15.95",
+    "num": "30"
+   },
+   {
+    "name": "Pineapple Duck (Pineapple Stir-fry with Duck)",
+    "description": "Stir-fried roasted duck with pineapple, onions and mixed peppers",
+    "price": "£12.95",
+    "num": "31"
+   },
+   {
+    "name": "Ped Ma Kham (Tamarind Duck)",
+    "description": "Roasted duck breast slices, topped with tamarind sauce",
+    "price": "£14.95",
+    "num": "32"
+   },
+   {
+    "name": "Pad Tra Kai 🌶🌶 (Lemongrass & Chilli-Garlic Stir-fry with Meat)",
+    "description": "Stir-fried meat with lemongrass, chilli-garlic, onions, peppers, lime leaves and fresh basil leaves",
+    "price": null,
+    "num": "33"
+   },
+   {
+    "name": "Pad Kra Pow 🌶🌶 (Basil & Chilli-Garlic Stir-fry with Meat)",
+    "description": "Stir-fried meat with chilli-garlic, onions and fresh basil leaves",
+    "price": null,
+    "num": "34"
+   },
+   {
+    "name": "Pad Naman Hoy (Oyster-Sauce Stir-fry with Meat)",
+    "description": "Stir-fried meat with oyster sauce, onions, peppers, mushrooms, carrots and spring onions",
+    "price": null,
+    "num": "35"
+   },
+   {
+    "name": "Pad Khing (Ginger Stir-fry with Meat)",
+    "description": "Stir-fried meat with ginger, onions, mushrooms and spring onions",
+    "price": null,
+    "num": "36"
+   },
+   {
+    "name": "Pad Pik Pow 🌶 (Roasted Chilli Oil Stir-fry with Meat)",
+    "description": "Stir-fried meat with roasted chilli oil, onions, peppers and fresh basil leaves",
+    "price": null,
+    "num": "37"
+   },
+   {
+    "name": "Pad Priew Warn (Sweet & Sour Stir-fry with Meat)",
+    "description": "Stir-fried meat with onions, cucumbers and tomatoes in a sweet and sour sauce",
+    "price": null,
+    "num": "38"
+   }
+  ],
+  "Seafood": [
+   {
+    "name": "Pad Kratiem (Garlic Stir-fry with Prawns or Squid)",
+    "description": "Stir-fried Prawns OR Squid with garlic sauce and black pepper",
+    "price": "£13.95",
+    "num": "39"
+   },
+   {
+    "name": "Kung Priew Warn (Sweet & Sour Prawns Stir-fry)",
+    "description": "Thai style sweet and sour prawns with peppers, onions, carrots and pineapple",
+    "price": "£12.95",
+    "num": "40"
+   },
+   {
+    "name": "Pad Kra Pow 🌶🌶 (Basil & Chilli-Garlic Prawns or Squid Stir-fry)",
+    "description": "Stir-fried Prawns OR Squid with chilli garlic, onions and fresh basil leaves",
+    "price": null,
+    "num": "41"
+   },
+   {
+    "name": "Squid",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Kung Ma Kham (Tamarind Prawns)",
+    "description": "Golden-brown deep fried king prawns in batter, topped with tamarind sauce",
+    "price": "£12.95",
+    "num": "42"
+   },
+   {
+    "name": "Kung Loui Fai 🌶🌶 (Crispy Prawns with Chilli-Garlic)",
+    "description": "Golden brown deep fried king prawns in batter, topped with chilli garlic sauce and fresh basil leaves",
+    "price": "£12.95",
+    "num": "43"
+   },
+   {
+    "name": "Kung Paow (Grilled Giant Prawns)",
+    "description": "Large grilled prawns with garlic and pepper sauce, served with a chilli dip",
+    "price": "£18.95",
+    "num": "44"
+   },
+   {
+    "name": "Pad Ped Talay 🌶🌶 (Mixed Seafood Stir-fry)",
+    "description": "Stir-fried mixed seafood with lemon grass, lime leaves, onions, chilli garlic and fresh basil leaves",
+    "price": "£18.95",
+    "num": "45"
+   },
+   {
+    "name": "Bla Paow (Grilled Sea Bass)",
+    "description": "Grilled filleted sea bass with Thai herbs, served with chilli sauce (please allow 20-25 minutes)",
+    "price": "£18.95",
+    "num": "46"
+   },
+   {
+    "name": "Bla Neung (Steamed Sea Bass)",
+    "description": "Steamed filleted sea bass with ginger, lemon, black mushrooms and soya sauce (please allow 20-25 minutes)",
+    "price": "£18.95",
+    "num": "47"
+   },
+   {
+    "name": "Bla Sarm Ros (Sea Bass Three Flavours)",
+    "description": "Deep fried filleted sea bass, topped with a three-part sauce, consisting of chilli garlic, tamarind, palm sugar and fresh basil leaves",
+    "price": "£18.95",
+    "num": "48"
+   },
+   {
+    "name": "Bla Loui Fai 🌶🌶 (Sea Bass with Chilli-Garlic and Basil)",
+    "description": "Deep fried filleted sea bass, topped with chilli garlic sauce and fresh basil leaves",
+    "price": "£18.95",
+    "num": "49"
+   },
+   {
+    "name": "Bla Chu Chee 🌶 (Sea Bass with Red Curry Sauce)",
+    "description": "Deep fried filleted sea bass, topped with red curry sauce, lime leaves, coconut milk and fresh basil leaves",
+    "price": "£18.95",
+    "num": "50"
+   }
+  ],
+  "Rice": [
+   {
+    "name": "Kaow Swouy",
+    "description": "Steamed Thai jasmine rice",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "51"
+   },
+   {
+    "name": "Kaow Neow",
+    "description": "Thai sticky rice",
+    "price": "£3.95",
+    "vegetarian": true,
+    "num": "52"
+   },
+   {
+    "name": "Kaow Pad Kai",
+    "description": "Egg fried rice",
+    "price": "£4.50",
+    "vegetarian": true,
+    "num": "53"
+   },
+   {
+    "name": "Kaow Mapraow",
+    "description": "Coconut rice",
+    "price": "£4.50",
+    "vegetarian": true,
+    "num": "54"
+   },
+   {
+    "name": "Kaow Kratiem",
+    "description": "Garlic rice",
+    "price": "£4.50",
+    "vegetarian": true,
+    "num": "55"
+   },
+   {
+    "name": "Special Fried Rice",
+    "description": "Stir-fried chicken and prawns rice with egg, onions, tomatoes and vegetables",
+    "price": "£13.95",
+    "num": "56"
+   },
+   {
+    "name": "Kaow Pad Nam Prik Paow 🌶",
+    "description": "Stir-fried chicken and prawns rice with chilli oil, vegetables and fresh basil leaves",
+    "price": "£13.95",
+    "num": "57"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "Pad Kee Mao 🌶🌶 (Thick Spicy Noodles)",
+    "description": "Stir-fried wide, flat rice noodles with fresh chilli garlic, vegetables and basil leaves",
+    "price": null,
+    "num": "58"
+   },
+   {
+    "name": "Vegetarian",
+    "description": "",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Thai (Thin Noodles)",
+    "description": "Stir-fried thin rice noodles, with egg, bean sprouts, spring onions.",
+    "price": null,
+    "num": "59"
+   },
+   {
+    "name": "Pad See-Ew (Thick Noodles)",
+    "description": "Stir-fried wide, flat rice noodles with egg, mixed vegetables and soya sauce",
+    "price": null,
+    "num": "60"
+   },
+   {
+    "name": "Pad Mee (Yellow Noodles)",
+    "description": "Stir-fried yellow noodles with egg and mixed vegetables",
+    "price": null,
+    "num": "61"
+   },
+   {
+    "name": "Vegetables",
+    "description": "",
+    "price": "£9.95",
+    "vegetarian": true
+   }
+  ],
+  "Vegetarian Starters & Soups": [
+   {
+    "name": "Poh Piah Tord (Spring Rolls)",
+    "description": "Thai spring rolls, filled with vermicelli and mixed vegetables, served with plum sauce",
+    "price": "£7.00",
+    "vegetarian": true,
+    "num": "62"
+   },
+   {
+    "name": "Tempura Puck (Vegetable Tempura)",
+    "description": "Deep fried mixed vegetables in tempura batter, served plum sauce",
+    "price": "£7.00",
+    "vegetarian": true,
+    "num": "63"
+   },
+   {
+    "name": "Yum Makeur Tord (Salad) 🌶 (Crispy Aubergine Salad)",
+    "description": "Deep fried aubergines in tempura batter, topped with chilli garlic, onions, spring onions, coriander and lime juice",
+    "price": "£7.50",
+    "vegetarian": true,
+    "num": "64"
+   },
+   {
+    "name": "Tord Mun Kaow Pord (Sweet Corn Cakes)",
+    "description": "Deep fried sweet corn in a curry paste, served sweet and sour sauce topped with ground peanuts",
+    "price": "£7.00",
+    "vegetarian": true,
+    "num": "65"
+   },
+   {
+    "name": "Tom Yum Hed 🌶 (Hot & Sour Mushroom Soup)",
+    "description": "A traditional Thai, hot and sour mushroom soup, flavoured with roasted chilli oil",
+    "price": "£7.00",
+    "vegetarian": true,
+    "num": "66"
+   },
+   {
+    "name": "Tom Kha Hed (Soup) 🌶 (Hot & Sour Coconut Milk Mushroom Soup)",
+    "description": "A traditional Thai, spicy and sour mushroom soup in coconut milk flavoured with roasted chilli oil",
+    "price": "£7.00",
+    "vegetarian": true,
+    "num": "67"
+   }
+  ],
+  "Vegetarian Main Courses": [
+   {
+    "name": "Pad Puck Kee Mao 🌶🌶 (Vegetables with Chilli-Garlic and Basil Stir-fry)",
+    "description": "Stir-fried mixed vegetables with chilli garlic and fresh basil leaves",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "68"
+   },
+   {
+    "name": "Pad Puck Ruam (Vegetables with Oyster and Soya Sauce Stir-fry)",
+    "description": "Stir-fried mixed vegetables with oyster and soya sauce",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "69"
+   },
+   {
+    "name": "Pad Priew Warn (Sweet & Sour Stir-fry)",
+    "description": "Stir-fried sweet and sour vegetables",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "70"
+   },
+   {
+    "name": "Pad Woon Sen (Vegetable Glass Noodles Stir-fry)",
+    "description": "Stir-fried vermicelli (glass noodles) with egg, black mushrooms, onions and spring onions",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "71"
+   },
+   {
+    "name": "Pad Normai Kai (Bamboo Shoots Stir-fry)",
+    "description": "Stir-fried bamboo shoots with eggs and spring onions",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "72"
+   },
+   {
+    "name": "Tofu Pad Khing (Tofu with Ginger Stir-fry)",
+    "description": "Stir-fried bean curd with ginger, mushrooms and spring onions",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "73"
+   },
+   {
+    "name": "Tofu Pad Priew Warn (Sweet & Sour Tofu Stir-fry)",
+    "description": "Stir-fried bean curd with mixed vegetables in sweet and sour sauce",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "74"
+   },
+   {
+    "name": "Tofu Pad Kra Pow 🌶🌶 (Tofu with Chilli-Garlic and Basil Stir-dry)",
+    "description": "Stir-fried bean curd with chilli garlic, onions and basil leaves",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "75"
+   },
+   {
+    "name": "Pad Makeur 🌶🌶 (Aubergines Stir-fry)",
+    "description": "Stir-fried aubergines with soya bean paste, chilli garlic and fresh basil leaves",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "76"
+   },
+   {
+    "name": "Gaeng Keaw Puck 🌶🌶 (Green Curry with Vegetables)",
+    "description": "Green curry with vegetables and coconut milk",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "77"
+   },
+   {
+    "name": "Gaeng Daeng Puck 🌶🌶 (Red Curry with Vegetables)",
+    "description": "Red curry with vegetables and coconut milk",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "78"
+   },
+   {
+    "name": "Gaeng Garee Puck 🌶 (Yellow Curry with Vegetables)",
+    "description": "Yellow curry with mixed vegetables",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "79"
+   },
+   {
+    "name": "Extra Sauce: Sweet Chilli, Plum, Peanut, Hoi Sin, Chilli Oil 60ml £1.00 12ml £1.50",
+    "description": "",
+    "price": "£1.50",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,64 @@
+{
+ "restaurant": "Thai Elephant Restaurant",
+ "city": "Warwick",
+ "fsa_id": "242515",
+ "address": "Warwick",
+ "source": "https://thaielephantrestaurant.co.uk/menu/seafood/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Seafood": [
+   {
+    "name": "70 Seafood Pad Phed",
+    "description": "Mixed seafood stir fried with red curry paste, fine beans and Thai herbs; topped with coconut cream.",
+    "price": "£18.95"
+   },
+   {
+    "name": "71 Goong Pad Phed",
+    "description": "King prawns stir fried with fresh chillies, aubergines, bamboo shoots and fresh Thai herbs.",
+    "price": "£18.95"
+   },
+   {
+    "name": "72 Goong Priew Wan",
+    "description": "King prawn stir fried with fresh tomatoes, pineapple, and a selection of vegetables in a sweet and sour sauce, served on a sizzling dish.",
+    "price": "£18.95"
+   },
+   {
+    "name": "73 Goong Pad Hed",
+    "description": "King prawns stir fried with mushrooms and soy sauce.",
+    "price": "£18.95"
+   },
+   {
+    "name": "74 Goong Chu Chee",
+    "description": "King prawns in Chu Chee sauce with coconut cream and Thai spices.",
+    "price": "£18.95"
+   },
+   {
+    "name": "75 Pla Priew Wan",
+    "description": "White fish pieces in a sweet and sour sauce.",
+    "price": "£17.95"
+   },
+   {
+    "name": "76 Pla Rad Prik",
+    "description": "Deep fried whole fish topped with peppers and fresh chilli, sweet basil leaves and Thai herbs in a very mild sweet and sour sauce.",
+    "price": "£25.00"
+   },
+   {
+    "name": "77 Pla Tod",
+    "description": "Fresh sea bass marinated in a lightly spiced sauce, crispy fried and served separately with sweet and sour sauce.",
+    "price": "£23.00"
+   },
+   {
+    "name": "78 Pla Meuk Pad Ped",
+    "description": "Squid marinated in fish sauce, stir fried with fresh chilli, garlic, bamboo shoots, and sweet basil leaves.",
+    "price": "£18.95"
+   },
+   {
+    "name": "79 Pla Neaung See-iew",
+    "description": "Fresh sea bass steamed in soy sauce, garnished with ginger, chillies, spring onions.",
+    "price": "£25.00"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

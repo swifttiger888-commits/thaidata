@@ -1,0 +1,61 @@
+{
+ "restaurant": "Angrid Thai",
+ "city": "London",
+ "fsa_id": "1822314",
+ "address": "London",
+ "source": "https://www.angridthai.com/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Side": [
+   {
+    "name": "Vegetable Crackers",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Spring Rolls",
+    "description": "",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Duck Roll",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "Prawn on Toast",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "Spare Ribs",
+    "description": "",
+    "price": "£7.50"
+   },
+   {
+    "name": "Squid Salt & Pepper",
+    "description": "",
+    "price": "£7.95"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "Moo Ping",
+    "description": "Grilled Pork Skewers",
+    "price": "£8.50"
+   },
+   {
+    "name": "Dim Sum",
+    "description": "",
+    "price": "£7.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

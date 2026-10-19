@@ -1,0 +1,92 @@
+{
+ "restaurant": "Rama Thai",
+ "city": "Rugby",
+ "fsa_id": "210696",
+ "address": "Rugby",
+ "source": "https://www.ramathai.net/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "‘RAMA’ PLATTER (N)\t(For two or more)",
+    "description": "(A mixed starter, £11.25 per person minimum for 2 people) Consists of chicken satay, prawns tempura, vegetable spring rolls, pork spare ribs and prawn on toast served with spicy carrot, swede and fine bean salad. Mild",
+    "price": "£22.50",
+    "num": "1"
+   },
+   {
+    "name": "SEAFOOD PLATTER (For two or more)",
+    "description": "(A selection of charcoal grilled, £17.25 per person minimum for 2 people) Consists of king prawns, grilled sea bass fillet, steamed mussels, salt & pepper squid served with spicy carrot, swede and fine bean salad and spicy homemade sauce Mild",
+    "price": "£34.50",
+    "num": "2"
+   },
+   {
+    "name": "AROMATIC DUCK",
+    "description": "Shredded aromatic duck, served with warm pancake, shredded cucumber, carrots, leek and Hoi - Sin sauce.",
+    "price": "£7.90",
+    "num": "3"
+   },
+   {
+    "name": "POA PIAH PED",
+    "description": "Deep fried shredded duck spring roll, stuffed with carrot, leek rolled with rice paper, served with hoi-sin sauce.",
+    "price": "£7.90",
+    "num": "4"
+   },
+   {
+    "name": "CHICKEN SATAY (N)",
+    "description": "Strips of chicken marinated in Thai spices and grilled over charcoal served with a lightly spiced peanut sauce Gluten free",
+    "price": "£7.90",
+    "num": "5"
+   },
+   {
+    "name": "KANOM PANG NAR GOONG",
+    "description": "Deep-fried minced prawns and chicken on toast, topped with sesame seeds served with sweet chilli sauce",
+    "price": "£7.50",
+    "num": "6"
+   },
+   {
+    "name": "GADOOK MOO OBB",
+    "description": "Thai style honey roasted pork spare ribs served on a bed of lettuce",
+    "price": "£7.50",
+    "num": "7"
+   },
+   {
+    "name": "TORD MUN PLA (N)",
+    "description": "Deep-fried home-made Thai fish cakes spiced with red curry paste, fine bean and kaffir lime leaves served with ground peanuts, cucumber, carrot, shallot and sweet chilli sauce Mild",
+    "price": "£8.50",
+    "num": "8"
+   },
+   {
+    "name": "GOONG TEMPURA",
+    "description": "Deep-fried prawns in tempura batter served with sweet chilli sauce",
+    "price": "£8.50",
+    "num": "9"
+   },
+   {
+    "name": "SALT & PEPPER SQUID",
+    "description": "Deep fried squid in thin batter with salt, garlic and chilli served with mayo and sweet chilli sauce. Mild",
+    "price": "£7.90",
+    "num": "10"
+   },
+   {
+    "name": "HOY OBB",
+    "description": "Steamed green lipped mussels with chilli, garlic and fresh basil Mild",
+    "price": "£8.50",
+    "num": "11"
+   },
+   {
+    "name": "‘RAMA’ CAKE",
+    "description": "Deep fried minced chicken and prawns mixed with garlic and pepper in egg and bread crumbs, served with sweet chilli sauce.",
+    "price": "£7.90",
+    "num": "12"
+   },
+   {
+    "name": "KOAW GREAB",
+    "description": "Thai spicy prawn cracker, served with sweet chilli sauce Mild",
+    "price": "£3.90",
+    "num": "14"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

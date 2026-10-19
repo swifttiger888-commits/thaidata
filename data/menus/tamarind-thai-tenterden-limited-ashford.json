@@ -1,0 +1,360 @@
+{
+ "restaurant": "Tamarind Thai Tenterden Limited",
+ "city": "Ashford",
+ "fsa_id": "1786899",
+ "address": "Ashford",
+ "source": "https://www.tamarindthai.co.uk/_files/ugd/de2a9d_17b10ec0d1c045df976bf61071b098a4.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Chicken Satay (Gai Satay)",
+    "description": "Marinated and char grilled on bamboo skewers & served with slightly spicy peanut sauce.",
+    "price": "£7.95",
+    "num": "1"
+   },
+   {
+    "name": "Spring Rolls (Por Pheir Tod)",
+    "description": "Filled with vermicelli, carrot, white cabbage, and onion. Served with sweet chilli sauce.",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "2"
+   },
+   {
+    "name": "Thai Fish Cake (Tod Mun Pla)",
+    "description": "Marinated minced white fish with red curry paste, green bean, kaffir lime leaf and Thai herb. Served with sweet chilli sauce.",
+    "price": "£7.95",
+    "num": "3"
+   },
+   {
+    "name": "Sweetcorn Cake (Tod Mun Khao Pod)",
+    "description": "Sweetcorn mixed with red pepper and carrot. Deep fried, served with sweet chilli sauce.",
+    "price": "£7.95",
+    "vegetarian": true,
+    "num": "4"
+   },
+   {
+    "name": "Vegetable Tempura (Pak Tod)",
+    "description": "Mixed vegetables deep fried in Tempura batter, served with sweet chilli sauce.",
+    "price": "£9.95",
+    "vegetarian": true,
+    "num": "5"
+   },
+   {
+    "name": "Prawn Tempura (Kung Tempura)",
+    "description": "4 King Prawn in Tempura batter with onion ring and long bean, served with sweet chilli sauce.",
+    "price": "£10.95",
+    "num": "6"
+   },
+   {
+    "name": "Duck Spring Roll (Poh Pia Ped)",
+    "description": "Filled with roast duck, celeriac, carrot, and leak, served with homemade dipping sauce.",
+    "price": "£9.95",
+    "num": "7"
+   },
+   {
+    "name": "Thai Dim Sum (Kha Nom Jeep)",
+    "description": "Classic Thai style, steamed parcels filled with minced prawn, pork, and water chestnut, served with homemade sauce.",
+    "price": "£8.95",
+    "num": "8"
+   },
+   {
+    "name": "Scallops (Hoy shell)",
+    "description": "Chef special steamed scallops with fresh chilli, garlic, ginger, spring onion and lime juice.",
+    "price": "£11.95",
+    "num": "9"
+   },
+   {
+    "name": "Spare Ribs",
+    "description": "Marinated with hoi sin sauce, garlic, coriander roots, ginger, syrup and light soy sauce",
+    "price": "£8.95",
+    "num": "10"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Deep fried in light flour then coated with salt, pepper, spring onion and sliced chilli",
+    "price": "£9.95",
+    "num": "11"
+   },
+   {
+    "name": "Chicken Wings",
+    "description": "Deep fried in light batter, seasoned with salt, pepper, chopped spring onion and sliced chilli",
+    "price": "£7.95",
+    "num": "12"
+   },
+   {
+    "name": "Prawn Toast",
+    "description": "Minced prawn and chicken, marinated in light soy sauce, garlic, pepper, coriander roots, served with sweet chilli sauce.",
+    "price": "£8.95",
+    "num": "13"
+   },
+   {
+    "name": "Gyoza",
+    "description": "Filled with tofu, soybean, onion, spring onion, white cabbage, dried radish, glass noodle, garlic, and chives. Shallow fried, served with soy sauce",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "14"
+   },
+   {
+    "name": "House Platter",
+    "description": "2 chicken satay, 2 vegetable spring rolls, 2 prawn toast, 2 Thai fish cakes",
+    "price": "£16.50 for two to share.",
+    "num": "15"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "Tom Yum (Thai classic)",
+    "description": "Spicy and sour soup, made of fresh lemon grass, mushroom, onion, kaffir lime leaves, spring onion, and garnished with coriander & fresh mint.",
+    "price": "£(16C) Chicken £8.50 (16P) Prawn £9.95 (16V) Mushroom £7.00 (V)",
+    "num": "16"
+   },
+   {
+    "name": "Tom Kar",
+    "description": "Made with coconut milk, galangal, lemongrass, mushroom, spring onion, kaffir lime leaves, and garnished with coriander & fresh mint.",
+    "price": "£(17C) Chicken £8.95 (17P) Prawn £9.95 (17V) Mushroom £7.50 (V)",
+    "num": "17"
+   }
+  ],
+  "Salads and Yam": [
+   {
+    "name": "Papaya Salad (Som Tum Thai)",
+    "description": "Green Papaya with cherry tomato, fine bean, carrot, peanuts, garlic, fresh chilli, and lime juice.",
+    "price": "£12.00 (18V) Vegetarian/Vegan option",
+    "num": "18"
+   },
+   {
+    "name": "Mixed Seafood Salad (Yam Ta le)",
+    "description": "Mixed seafood with tomato, spring onion, spanish onion, grated carrot, celery, fresh chilli, and lime juice.",
+    "price": "£14.00",
+    "num": "19"
+   },
+   {
+    "name": "Grilled Beef Salad (Yam Nuae Yang)",
+    "description": "Grilled and sliced, mixed with onion, cucumber, tomato, carrot spring onion garlic fresh chilli and lime juice.",
+    "price": "£14.50",
+    "num": "20"
+   },
+   {
+    "name": "Minced Chicken (21C) or Pork (21Pk) Salad (Larb)",
+    "description": "Mixed with roasted ground rice, spring onion, fresh coriander, fresh mint, dried dust chilli, and lime juice.",
+    "price": "£9.95",
+    "num": "21"
+   }
+  ],
+  "Grilled Dishes": [
+   {
+    "name": "Weeping Tiger (Seu Rong Hai)",
+    "description": "21-day matured Sirloin steak, marinated in special sauce, grilled, and sliced, served with a home-made spicy complementing sauce.",
+    "price": "£17.50",
+    "num": "23"
+   },
+   {
+    "name": "Grilled Chicken (Gai Yang)",
+    "description": "Grilled chicken marinated in Thai herbs, sliced, and served with a spicy homemade complementing sauce.",
+    "price": "£11.50",
+    "num": "24"
+   },
+   {
+    "name": "Grilled Pork (Moo Yang Kha Tha)",
+    "description": "This dish is well loved with Thai’s. Sliced Pork loin marinated with garlic, pepper, coriander root, sweet soy sauce, palm sugar, oyster sauce, grilled in a shallow pan.",
+    "price": "£11.50",
+    "num": "25"
+   }
+  ],
+  "Fish and Seafood": [
+   {
+    "name": "Steamed Seabass (Pla Nueng Manao)",
+    "description": "Thai famous steamed spicy dish with fresh chilli, garlic, lime juice, spring onion and a hint of ginger.",
+    "price": "£16.00",
+    "num": "27"
+   },
+   {
+    "name": "Deep fried Seabass topped with three flavours sauce (Pla Sam Rot)",
+    "description": "This dish is served with artistic chef special. Highly recommended. Deep fried fileted Seabass parcels, topped with slightly spicy, three flavours sauce, with green & red pepper, onion, pineapple.",
+    "price": "£16.00",
+    "num": "28"
+   },
+   {
+    "name": "Chu Chi (29Sm) Salmon, (29Sb) Seabass, or (29P) Prawn",
+    "description": "This mild creamy Chu Chi curry is made with coconut milk, much loved in Thailand.",
+    "price": "£16.00",
+    "num": "29"
+   },
+   {
+    "name": "Seabass topped with spicy chilli sauce (Pla Rad Prik)",
+    "description": "Deep fried Seabass fillet, topped with fresh chilli, garlic, pepper, onion, green & red pepper.",
+    "price": "£16.00",
+    "num": "30"
+   }
+  ],
+  "Stir Fried dishes": [
+   {
+    "name": "Pad Kra Pao",
+    "description": "A Thai classic staple, stir fried with fresh chilli, garlic, fine green bean, red & green pepper, onion, and basil leaves. Vegetarian (32V) £9.95 and (32VT) with Tofu £10.50",
+    "price": "£(32C) Chicken, or (32Pk) Pork £12.50 (32P) Prawn £14.50",
+    "num": "32"
+   },
+   {
+    "name": "Pad Prik Khing Moo",
+    "description": "Stir fried pork belly with red curry paste, green bean, red pepper and kaffir lime leaves.",
+    "price": "£13.50",
+    "num": "33"
+   },
+   {
+    "name": "Chicken and Cashew nut",
+    "description": "Stir fried with cashew nut, mushrooms, onion, green & red pepper, and spring onion.",
+    "price": "£12.95",
+    "num": "34"
+   },
+   {
+    "name": "Pad Khing",
+    "description": "Stir fried with fresh ginger, mushroom, onion, green & red pepper, spring onion and garlic. Vegetarian (35V) £9.95 and (35VT) with Tofu £10.95",
+    "price": "£(35C) Chicken, or (35Pk) Pork £12.95 (35P) Prawn £14.50",
+    "num": "35"
+   },
+   {
+    "name": "Duck in Tamarind sauce",
+    "description": "Sliced roast duck stir-fried with special homemade tamarind sauce, with onion, red & green pepper, and spring onion.",
+    "price": "£14.95",
+    "num": "36"
+   },
+   {
+    "name": "Talay Pad Chao",
+    "description": "Mixed Seafood stir fried with fresh chilli, garlic, onion, finger roots, kaffir lime leaves and basil.",
+    "price": "£16.50",
+    "num": "37"
+   },
+   {
+    "name": "Sweet & Sour (Pad Priew Wan)",
+    "description": "Thai style sweet & sour home-made sauce. Stir fried with pineapple, cherry tomato, onion, green & red pepper. Vegetarian (38V) £9.95 and (38VT) with Tofu £10.95",
+    "price": "£(38C) Chicken, or (38Pk) Pork £12.00 (38P) Prawn £14.95",
+    "num": "38"
+   }
+  ],
+  "Thai Curry dishes": [
+   {
+    "name": "Massamun (Gaeng Massamun)",
+    "description": "This popular dish is from south of Thailand, cooked in a mild curry and coconut milk with potato and peanut.",
+    "price": "£(40B) Beef, or (40L) Lamb £14.95 (40C) Chicken £11.95 (40V) Tofu £10.95 (V)",
+    "num": "40"
+   },
+   {
+    "name": "Red Curry (Gaeng Dang)",
+    "description": "Cooked in coconut milk, bamboo shoots, green bean, red & green pepper, courgette. Vegetarian option (41V) £9.95 or with Tofu (41VT) £10.95",
+    "price": "£(41C) Chicken £11.95 (41D) Duck or (41P) Prawn £14.50",
+    "num": "41"
+   },
+   {
+    "name": "Green Curry (Gaeng Kio Wan)",
+    "description": "Cooked in coconut milk, green bean, bamboo shoots, courgette, green & red pepper. Vegetarian option (42V) £9.95 with Tofu (42VT) £10.95",
+    "price": "£(42C) Chicken £11.95 (42P) Prawn £14.50",
+    "num": "42"
+   },
+   {
+    "name": "Panang Curry (Gaeng Panang)",
+    "description": "Cooked with coconut milk, red pepper, carrot, and kaffir lime leaves. Vegetarian option (43V) £9.95 or with Tofu (43VT) £10.95",
+    "price": "£(43C) Chicken or (43Pk) Pork £12.00 (43P) Prawn £14.50",
+    "num": "43"
+   },
+   {
+    "name": "Jungle Curry",
+    "description": "Cooked with Thai herbs and plants found in the jungle. This healthy dish is cooked with bamboo shoots, green beans, green and red pepper, finger roots, chilli, and kaffir lime leaves. Vegetarian option (44V) £9.95 or with Tofu (44VT) £10.95",
+    "price": "£(44C) Chicken or (44Pk) Pork £12.00 (44B) Beef £12.95 (44P) Prawn £14.50",
+    "num": "44"
+   }
+  ],
+  "Side dishes": [
+   {
+    "name": "Stir Fried Mixed Vegetables (Pad Pak Ruam)",
+    "description": "With spring green, carrot, green bean, bean sprout, stir fried with garlic and oyster sauce.",
+    "price": "£7.95 (47V) Vegetarian option.",
+    "num": "47"
+   },
+   {
+    "name": "Stir Fried Broccoli with Prawn",
+    "description": "Stir fried with oyster sauce.",
+    "price": "£12.50 (48V) without Prawn (V) £7.95",
+    "num": "48"
+   },
+   {
+    "name": "Stir Fried Beansprouts",
+    "description": "Stir fried beansprout with carrot and spring onion.",
+    "price": "£7.95 (49V) Vegetarian option",
+    "num": "49"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "Pad Thai",
+    "description": "Pad Thai is the signature dish of Thailand. Stir fried rice noodles in tamarind sauce with spring onion, carrot, beansprout, and egg. Served with crushed peanut on the side. Vegetarian (52V) and Vegan (52VN) £9.95 or with Tofu £10.95 (52VT) (52VNT)",
+    "price": "£(52C) Chicken £12.00 (52P) Prawn £14.50",
+    "num": "52"
+   },
+   {
+    "name": "Pad Kee Mao (Drunken noodles)",
+    "description": "Stir fried noodle with spring green, green and red pepper, finger root, fresh chilli, garlic, pepper, basil leaves and kaffir lime leaves. Vegetarian (53V) £9.95 or with Tofu (53VT) £10.95",
+    "price": "£(53C) Chicken, or (53Pk) Pork £12.00 (53B) Beef or (53P) Prawn £14.50",
+    "num": "53"
+   },
+   {
+    "name": "Singapore Noodle",
+    "description": "Stir fried rice vermicelli noodle with curry powder, onion, spring onion, carrot, beansprout, green & red pepper, and egg. Vegetarian (54V) £9.95 or with Tofu (54VT) £10.95",
+    "price": "£(54C) Chicken £12.00 (54P) Prawn £14.50",
+    "num": "54"
+   },
+   {
+    "name": "Egg Noodle",
+    "description": "Stir fried egg noodles with beansprout, carrot, and spring onion. Vegetarian (55V) £9.95 or with Tofu (55VT) £10.95",
+    "price": "£(55C) Chicken £12.00 (55P) Prawn £14.50",
+    "num": "55"
+   }
+  ],
+  "Rice": [
+   {
+    "name": "House Special Fried Rice",
+    "description": "House special fried rice, cooked with egg, tomato, onion, and spring onion",
+    "price": "£(57C) Chicken £11.00 (57P) Prawn £14.50 (57V) Vegetarian and (57VN) Vegan £9.95",
+    "num": "57"
+   },
+   {
+    "name": "Pineapple Fried Rice (Kao Pad Saparoad)",
+    "description": "Pineapple fried rice comes with, egg, onion, cashew nuts, raisins, and curry powder.",
+    "price": "£Chicken and Prawn £14.95 (58V) Vegetarian and (58VN) Vegan £9.95",
+    "num": "58"
+   },
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "All our Rice is the finest Hom Mali from Thailand.",
+    "price": "£3.95",
+    "num": "59"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£4.95",
+    "num": "60"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4.95",
+    "num": "61"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.95",
+    "num": "62"
+   },
+   {
+    "name": "Thai Prawn crackers",
+    "description": "complementary with meal.",
+    "price": "£Additional serving £4.50",
+    "num": "70"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

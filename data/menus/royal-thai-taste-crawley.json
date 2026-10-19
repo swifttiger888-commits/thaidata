@@ -1,0 +1,348 @@
+{
+ "restaurant": "Royal Thai Taste",
+ "city": "Crawley",
+ "fsa_id": "190617",
+ "address": "Crawley",
+ "source": "https://royalthaitaste.co.uk/menu/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Bangkok platter (Min 2 people) ชุดกรุงเทพอุ่นท้อง",
+    "description": "Chicken satay, spring rolls, steamed tiger prawn, chicken wings and prawn on toast.",
+    "price": "£25.95",
+    "num": "01"
+   },
+   {
+    "name": "Thai fish cakes ทอดมันปลา",
+    "description": "Deep fried fish cakes, served with cucumber, peanuts and sweet chilli sauce. [N]",
+    "price": "£9.59",
+    "num": "02"
+   },
+   {
+    "name": "Thai dumpling ขนมจีบ",
+    "description": "Prawn, crab meat and chicken mixed, steamed in a wanton wrapper and topped with fried garlic and a sweet soy sauce. [SH]",
+    "price": "£9.99",
+    "num": "03"
+   },
+   {
+    "name": "Steamed tiger prawn กุ้งอบ",
+    "description": "Steamed tiger prawn in a special spicy fresh chilli sauce and coriander",
+    "price": "£9.59",
+    "num": "04"
+   },
+   {
+    "name": "Prawns on toast กุ้งชุบแป้งทอด",
+    "description": "Minced prawn and chicken on toast served with sweet chilli sauce. [G, S]",
+    "price": "£9.59",
+    "num": "05"
+   },
+   {
+    "name": "Prawn tempura กุ้งชุปแป้งทอด",
+    "description": "Deep fried marinated king prawn in a bread crumbs served with sweet chilli sauce. [G]",
+    "price": "£10.59",
+    "num": "06"
+   },
+   {
+    "name": "Chicken satay ไก่สะเต๊ะ",
+    "description": "Grilled marinated chicken bamboo skewers served with peanut sauce. [N]",
+    "price": "£10.59",
+    "num": "07"
+   },
+   {
+    "name": "Spring roll ปอเปี๊ยะเจ",
+    "description": "Vermicelli and mixed vegetables in crispy spring rolls. [G]",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "08"
+   },
+   {
+    "name": "Tempura vegetables ผักชุบแป้งทอด",
+    "description": "Mixed vegetables in light crispy batter served with sweet chilli sauce. [G]",
+    "price": "£9.59",
+    "vegetarian": true,
+    "num": "09"
+   },
+   {
+    "name": "Sweet corn cake ทอดมันข้าวโพด",
+    "description": "Deep fried sweet corn in batter served with sweet chilli sauce. [G]",
+    "price": "£8.95",
+    "vegetarian": true,
+    "num": "10"
+   },
+   {
+    "name": "Salt squid ปลาหมึกทอดเกลือ",
+    "description": "Fried crispy salt and pepper squid, served with chilli sauce. Simple and delicious. [G]",
+    "price": "£10.59",
+    "num": "11"
+   },
+   {
+    "name": "Duck spring roll ปอเปี๊ยะเป็ด",
+    "description": "Aromatic duck, shredded carrot, spring onion and leek wrapped in crispy pastry served with peking duck sauce. [G]",
+    "price": "£10.59",
+    "num": "12"
+   },
+   {
+    "name": "Chicken wings BBQ ปีกไก่ราดซอสบาร์บีคิว",
+    "description": "Thai style lightly marinated chicken wing cooked in BBQ sauce.",
+    "price": "£9.59",
+    "num": "13"
+   },
+   {
+    "name": "Prawn crackers ข้าวเกรียบกุ้ง",
+    "description": "Deep fried crackers made from starch and prawn that serve as flavouring.",
+    "price": "£6.25",
+    "num": "14"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "Tom yum ต้มยำ",
+    "description": "Hot and sour soup with lemongrass, lime leaves, chilli, galangal.",
+    "price": "£8.95/£9.95",
+    "num": "15"
+   },
+   {
+    "name": "Tom kha ต้มข่า",
+    "description": "The ingredients are almost identical to tom yum but this one is creamier with coconut milk",
+    "price": "£9.25/£9.99",
+    "num": "16"
+   },
+   {
+    "name": "Thai fisherman’s soup ต้มยำโป๊ะแตก",
+    "description": "Prawn and squid in a clear hot and sour soup flavoured with mushroom and aromatic Thai herbs",
+    "price": "£9.50",
+    "num": "17"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "Green curry แกงเขียวหวาน",
+    "description": "Classic thai green curry paste cooked in coconut milk with fine bean, courgette and bamboo shoot.",
+    "price": null,
+    "num": "18"
+   },
+   {
+    "name": "Red curry แกงแดง",
+    "description": "Thai favourite curry with red curry paste cooked in coconut milk with bamboo shoot, fine bean and courgette.",
+    "price": null,
+    "num": "19"
+   },
+   {
+    "name": "Pa-neang curry แกงแพนง",
+    "description": "Pa-neang is another curry from of red curry, but it’s thicker with coconut milk, fine bean and finely sliced lime leaves.",
+    "price": null,
+    "num": "20"
+   },
+   {
+    "name": "Massaman curry แกงมัสมั่น",
+    "description": "Emphatically the king of curries, curry paste with peanuts, potatoes and onions in coconut milk. [N]",
+    "price": null,
+    "num": "21"
+   },
+   {
+    "name": "Jungle curry (This dish is healthy.) แกงป่า",
+    "description": "A refreshing non coconut creamy curry, you can taste and smell the fragrance of fresh thai herbs.",
+    "price": null,
+    "num": "22"
+   }
+  ],
+  "Special Curry": [
+   {
+    "name": "Crispy duck Pa-neang curry เแพนงเป็ดกรอบ",
+    "description": "Very tasty and popular dish, crispy stir-fried aromatic duck thicker with pa-neang curry paste cooked in coconut milk, fine bean and green & red pepper. [G]",
+    "price": "£19.59",
+    "num": "23"
+   },
+   {
+    "name": "Roast duck curry แกงเผ็ดเป็ดย่าง",
+    "description": "Crispy slices of aromatic duck in thai red curry, pineapple and tomatoes. [G]",
+    "price": "£19.59",
+    "num": "24"
+   },
+   {
+    "name": "Lamb shank massaman แกงมัสมั่นแกะ",
+    "description": "One of the favourite dishes, lamb shank stewed with massaman paste, coconut milk, potatoes, onion and cashew nuts. [N]",
+    "price": "£21.59",
+    "num": "25"
+   }
+  ],
+  "Chef Special": [
+   {
+    "name": "Lamb shank prik Thai dam แกะอบราดซอสพริกไทยดำ",
+    "description": "Stewed lamb shank with ground black pepper sauce with mushroom, carrots, broccoli and lightly brown crispy garlic.",
+    "price": "£21.59",
+    "num": "26"
+   },
+   {
+    "name": "Weeping tiger เสือร้องไห้",
+    "description": "Grilled marinated slices of sirloin steak served on a hot plate with thai spicy dressing.",
+    "price": "£20.59",
+    "num": "27"
+   },
+   {
+    "name": "Tamarind duck เป็ดมะขาม",
+    "description": "Slice of aromatic duck, topped with exotic tamarind sauce make a perfect complement to rich duck with crispy fried shallots & cashew nut. [G,N]",
+    "price": "£19.95",
+    "num": "28"
+   },
+   {
+    "name": "Honey duck with salad เป็ดน้ำผึ้งและสลัด",
+    "description": "Aromatic duck with special honey glaze sauce, served with an salad side dish. [G,N]",
+    "price": "£19.95",
+    "num": "29"
+   },
+   {
+    "name": "Pla rad prik (Sea bass) ปลาราดพริก",
+    "description": "Lightly floured and deep fried sea bass fillet with home made sweet chilli and spicy sauce. [G] £",
+    "price": "£19.95",
+    "num": "30"
+   },
+   {
+    "name": "Pla see-iew (Sea bass) ปลานึ่งซีอิ๊ว",
+    "description": "Fresh sea bass fillet steamed with soy sauce, fresh ginger and spring onion. [S]",
+    "price": "£19.95",
+    "num": "31"
+   },
+   {
+    "name": "Pla ma-now (Sea bass) ปลานึ่งมะนาว",
+    "description": "Sea bass fillet steamed with fresh chilli and lime dressing.",
+    "price": "£19.95",
+    "num": "32"
+   },
+   {
+    "name": "Crispy beef เนื้อทอดกรอบราดซอสพิเศษ",
+    "description": "Deep fried beef in a lightly crispy batter cooked in special red sauce, topped with coriander and sesame seed. [G]",
+    "price": "£18.95",
+    "num": "33"
+   }
+  ],
+  "Stir Fried Dishes": [
+   {
+    "name": "Gra pao (Holy basil) ผัดกระเพรา",
+    "description": "Tender meat slices stir fried with fresh chilli and holy basil, simple and authentic.",
+    "price": null,
+    "num": "34"
+   },
+   {
+    "name": "Ginger stir fried ผัดขิง",
+    "description": "A savoury combination of shredded ginger, spring onion, green & red pepper and mushroom.",
+    "price": null,
+    "num": "35"
+   },
+   {
+    "name": "Cashew nut stir fried ผัดมะม่วงหิมพานต์",
+    "description": "Crispy meat in a lighty batter, stir fried with green & red pepper, mushroom, spring onion, and cashew nuts. [N,G]",
+    "price": null,
+    "num": "36"
+   },
+   {
+    "name": "Sweet and sour ผัดเปรี้ยวหวาน",
+    "description": "Crispy meat in a lightly batter, stir fried in thai sweet and sour sauce with pineapple, onion and green & red pepper. [G]",
+    "price": null,
+    "num": "37"
+   },
+   {
+    "name": "Gra-tiem prik-thai (Black pepper) ผัดพริกไทยดำ",
+    "description": "Stir fried with garlic, ground black peppers sauce with mushroom, carrots and onion",
+    "price": null,
+    "num": "38"
+   },
+   {
+    "name": "Oyster sauce ผัดน้ำมันหอย",
+    "description": "Stir fried with oyster sauce, mushroom, onion, carrot and green & red pepper",
+    "price": null,
+    "num": "39"
+   }
+  ],
+  "Noodles & Rice": [
+   {
+    "name": "Phad Thai ผัดไทย",
+    "description": "Classic thailand’s national phad Thai dish, our phad thai sauce has chef secret recipe you’re sure to taste the difference. [N]",
+    "price": null,
+    "num": "40"
+   },
+   {
+    "name": "Spicy Noodles ก๋วยเตี๋ยวผัดขี้เมา",
+    "description": "Stir fried rice noodles with mixed vegetables, fresh chilli and basil leaves",
+    "price": null,
+    "num": "41"
+   },
+   {
+    "name": "Thai fried rice ข้าวผัด",
+    "description": "Choice of meat cooked with carrots, spring onion, egg and Thai seasoning sauce.",
+    "price": null,
+    "num": "42"
+   },
+   {
+    "name": "Green curry fried rice ข้าวผัดแกงเขียวหวาน",
+    "description": "Fried rice is one of favorite dishes cooked with green curry paste, bamboo shoot, courgette, fine bean and sweet basil.",
+    "price": null,
+    "num": "43"
+   },
+   {
+    "name": "Hot and sour fried rice ข้าวผัดต้มยำ",
+    "description": "Thai food is all about 4 flavours - spicy, sour, sweet and salt. Fried rice with egg, mushrooms, carrots, spring onion and thai herbs.",
+    "price": null,
+    "num": "44"
+   },
+   {
+    "name": "Fried rice with pineapple ข้าวผัดสัปปะรด",
+    "description": "Slices of meat in a turmeric fried rice with pineapple, green & red pepper, spring onion and carrots.",
+    "price": null,
+    "num": "45"
+   }
+  ],
+  "Side Dishes": [
+   {
+    "name": "Jasmine rice (Hom Ma Li) ข้าวหอมมะลิ",
+    "description": "Thai Jasmine rice",
+    "price": "£5.95",
+    "num": "46"
+   },
+   {
+    "name": "Egg fried rice ข้าวผัดไข่",
+    "description": "Thai Style Egg fried rice",
+    "price": "£6.25",
+    "num": "47"
+   },
+   {
+    "name": "Coconut rice ข้าวกะทิ",
+    "description": "Thai Style Coconut rice",
+    "price": "£6.25",
+    "num": "48"
+   },
+   {
+    "name": "Sticky rice ข้าวเหนียว",
+    "description": "Thai Sticky rice",
+    "price": "£6.25",
+    "num": "49"
+   },
+   {
+    "name": "Plain Noodles",
+    "description": "Thai Plain Noodles",
+    "price": "£7.95",
+    "num": "50"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Lamb Shank £21.59",
+  "Crispy Duck £19.95",
+  "Chicken £15.59",
+  "Beef £17.59",
+  "Vegetable or Tofu £15.59",
+  "King Prawns £17.59",
+  "Seabass £17.95",
+  "Beef £17.59",
+  "Crispy Duck £19.95",
+  "Lamb Shank £21.59",
+  "Chicken, Tofu, Vegetable £15.59",
+  "King Prawns £17.59",
+  "Seabass £19.95",
+  "Chicken, Veg, Tofu £15.95",
+  "Beef £16.95",
+  "King Prawns £16.95"
+ ]
+}

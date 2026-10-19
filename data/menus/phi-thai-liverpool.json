@@ -1,0 +1,553 @@
+{
+ "restaurant": "Phi Thai",
+ "city": "Liverpool",
+ "fsa_id": "1243780",
+ "address": "Liverpool",
+ "source": "https://phi-thai-restaurant-liverpool.co.uk/wp-content/uploads/2024/09/pdf_20220815_152109_0000-1new-menu-22.09.24.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Appetizers": [
+   {
+    "name": "Thai Prawn Crackers",
+    "description": "Crispy thai crackers with thai spices and served with sweet chilli sauce",
+    "price": "£2.95"
+   },
+   {
+    "name": "Mixed Starter for 2",
+    "description": "A selection of spring rolls, chicken satay, fishcakes, Thai ribs & prawn toast",
+    "price": "£14.50"
+   },
+   {
+    "name": "Mixed Vegetarian Starter for 2",
+    "description": "A selection of spring roll, mushroom skewers, sweetcorn cake & vegetarian tempura, salt pepper tofu",
+    "price": "£12.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Veg Spring Rolls",
+    "description": "Golden crispy rolls filled with carrot, cabbage & vermicelli served with sweet chilli sauce",
+    "price": "£4.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken / Duck Spring Rolls",
+    "description": "Golden crispy rolls filled with (chicken), carrot cabbage & vermicelli served with sweet chilli sauce",
+    "price": "£5.5"
+   },
+   {
+    "name": "Thai Chicken Satay",
+    "description": "Marinated chicken strips served with a peanut sauce",
+    "price": "£5.95"
+   },
+   {
+    "name": "Chicken in Teriyaki",
+    "description": "Marinated chicken strips served with teriyaki sauce, & salad",
+    "price": "£5.95"
+   },
+   {
+    "name": "Crispy Won Tons",
+    "description": "Deep fried Won Ton which are stuffed with a mix of chicken and prawn served with sweet chill sauce",
+    "price": "£5.5"
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "description": "Blended fish mixed with green beans & zingy lime leaves served with sweet chilli",
+    "price": "£5.95"
+   },
+   {
+    "name": "Thai Style Prawn Toast",
+    "description": "A mix of deep fried minced prawns and coriander on crusty French bread served with sweet chilli sauce",
+    "price": "£5.5"
+   },
+   {
+    "name": "Prawn Wrap",
+    "description": "Deep marinated king prawn wrapped in white pepper served with sweet chilli sauce",
+    "price": "£6"
+   },
+   {
+    "name": "Moo Ping",
+    "description": "Skewers of delicious pork marinated in sweet & savoury Thai sauce",
+    "price": "£6.5"
+   },
+   {
+    "name": "Battered Mushrooms",
+    "description": "Lightly battered mushrooms fried until crisp",
+    "price": "£5.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Battered Onion Rings",
+    "description": "Bowl of crispy battered onion rings",
+    "price": "£5.5",
+    "vegetarian": true
+   },
+   {
+    "name": "King Prawn Tempura",
+    "description": "King Prawns in crispy tempura batter served with sweet chilli sauce",
+    "price": "£7.5"
+   },
+   {
+    "name": "Salt & Pepper Ribs",
+    "description": "Deep fried ribs in batter served with salt & pepper and onions",
+    "price": "£6.5"
+   },
+   {
+    "name": "Thai BBQ Ribs",
+    "description": "Thai ribs marinated with Thai barbecue Sauce",
+    "price": "£6.5"
+   },
+   {
+    "name": "Seaweed Rolls",
+    "description": "Crispy seaweed rolls with vegetable filling in batter with teriyaki sauce",
+    "price": "£6.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai BBQ Wings",
+    "description": "Thai wings marinated with Thai barbecue Sauce",
+    "price": "£6.5"
+   },
+   {
+    "name": "Thai Special Ribs",
+    "description": "Tender spare ribs marinated with Thai herbs & Thai sauce",
+    "price": "£6.5"
+   },
+   {
+    "name": "Salt & Pepper Wings",
+    "description": "Deep fried chicken wings in batter with salt & pepper seasoning",
+    "price": "£6.5"
+   },
+   {
+    "name": "Salt & Pepper Chicken",
+    "description": "Deep fried chicken in batter with salt, pepper & onion",
+    "price": "£6.5"
+   },
+   {
+    "name": "Salt & Pepper Prawns",
+    "description": "Deep fried king prawns in batter with salt, pepper & onion",
+    "price": "£8.5"
+   },
+   {
+    "name": "Salt & Pepper Squid",
+    "description": "Deep fried squid in batter with salt, pepper & onion",
+    "price": "£6.5"
+   },
+   {
+    "name": "Salt & Chilli pepper Soft Shell Crab",
+    "description": "Deep fried soft shell-crabs in batter with salt & pepper seasoning & spring onion",
+    "price": "£9.5"
+   },
+   {
+    "name": "King Prawn Satay",
+    "description": "Grilled skewers of marinated king prawns served with peanut sauce",
+    "price": "£8.5"
+   },
+   {
+    "name": "Mushroom Skewers",
+    "description": "Skewers of mushroom & vegetable served with a peanut sauce",
+    "price": "£5.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Salt & Pepper Tofu (v)",
+    "description": "Deep fried tofu with salt, pepper and onion",
+    "price": "£5.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Sweetcorn Cakes (v)",
+    "description": "Deep fried sweetcorn cakes served with a sweet sauce",
+    "price": "£5.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Vegetable Tempura (v)",
+    "description": "Mixed vegetables in batter, fried until crispy served with sweet chilli dip",
+    "price": "£5.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Salt & Pepper Sui Mai",
+    "description": "Steamed sui mai with salt, pepper & onions",
+    "price": "£6.5"
+   },
+   {
+    "name": "Sui Mai (Chicken & Prawn or Pork)",
+    "description": "Steamed sui mai dumplings with either mixed meat or pork.",
+    "price": "£6.5"
+   },
+   {
+    "name": "Baked Mussels (Hoi Op Mor Din)",
+    "description": "Baked New Zealand green shell mussels in a earthen pot with galangal, lemon grass and herbs s and Cheese.",
+    "price": "£9.5"
+   },
+   {
+    "name": "Aromatic Duck (Quarter)",
+    "description": "Boneless crispy duck served with steamed pancake spring onion, cucumber and hoisin sauce",
+    "price": "£8.5"
+   },
+   {
+    "name": "Aromatic Duck (Half)",
+    "description": "",
+    "price": "£16"
+   }
+  ],
+  "Soup Dishes": [
+   {
+    "name": "Tom Yum (Hot & Sour Soup)",
+    "description": "Famous Thai soup, spicy with lemongrass, chill, tomato, mushroom and lime juice",
+    "price": null
+   },
+   {
+    "name": "Tom Kha",
+    "description": "Creamy coconut based soup combined with mushrooms, tasty lemongrass & juicy tomatoes.",
+    "price": null
+   },
+   {
+    "name": "Mushroom Tom kla",
+    "description": "Assorted mushrooms with creamy coconut soup",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Won Ton noodle Soup",
+    "description": "Won tons stuffed with a mix of cooked chicken and prawn seasoned with soy sauce",
+    "price": "£5.5"
+   },
+   {
+    "name": "Chicken Sweetcorn Soup",
+    "description": "A clear sweetcorn soup with chicken",
+    "price": "£5"
+   },
+   {
+    "name": "Thai Hot & Sour Soup with Chicken",
+    "description": "Traditional style soup with carrot, bamboo shoots & garlic oil",
+    "price": "£5"
+   }
+  ],
+  "Thai Salads": [
+   {
+    "name": "Som Tom (Thai Papaya Salad)",
+    "description": "Spicy green papaya salad with chilli, garlic, tomato, sugar, lemon juice & fish sauce",
+    "price": "£8.5"
+   },
+   {
+    "name": "Char - Grilled Chicken Salad",
+    "description": "Chicken breast fillets marinated & grilled with teriyaki sauce and mixed salad",
+    "price": "£9.5"
+   },
+   {
+    "name": "Spicy Beef Salad",
+    "description": "Spicy salad lightly garnished with lemon grass, fresh chilli, spring onion and tomato, cooked in a hot & sour stock.",
+    "price": "£9.5"
+   },
+   {
+    "name": "Vegan Fillet Pieces Salad",
+    "description": "Fried vegan fillet pieces with mixed salad in olives oil and balsamic sauce",
+    "price": "£8.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Pacific Seafood Salad",
+    "description": "Spicy seafood salad mixed with lemongrass, fresh chilli, spring onions and tomato",
+    "price": "£10.5"
+   },
+   {
+    "name": "Seabass Salad",
+    "description": "Pan fried sea bass with mixed salad and Thai dressing or teriyaki sauce",
+    "price": "£12.5"
+   }
+  ],
+  "Popular Main Dishes": [
+   {
+    "name": "Chargrilled Chicken with Sticky Rice",
+    "description": "Grilled chicken breast fillets served on a sizzling plate",
+    "price": "£14.5"
+   },
+   {
+    "name": "Weeping Tiger",
+    "description": "Grilled steak, sliced and served with teriyaki sauce on a sizzling plate",
+    "price": "£16.5"
+   },
+   {
+    "name": "Green Curry Weeping Tiger",
+    "description": "Grilled steak sliced and served with creamy coconut green curry on a sizzling plate",
+    "price": "£16.5"
+   },
+   {
+    "name": "Drunken Tiger",
+    "description": "Grilled steak slices stir-fried with fresh mixed Thai herbs, fresh chilli, garlic, fine bean,bamboo, baby corn and hot basil on a sizzling plate",
+    "price": "£16.5"
+   },
+   {
+    "name": "Spicy Roasted Duck",
+    "description": "Roast duck with fresh mixed Thai herbs consist of chilli garlic, finger galangal, fresh pepper corn, basil, fine bean and bamboo shoots",
+    "price": "£14.5"
+   },
+   {
+    "name": "Pan Fried Seabass with Curry",
+    "description": "Crispy sea bass served with creamy green, red or penang curry creamy coconut sauce.",
+    "price": "£13.5"
+   },
+   {
+    "name": "Choo Chee Duck",
+    "description": "Crispy tender roast duck served with creamy red curry sauce, that has the flavours of coconut milk",
+    "price": "£14.5"
+   },
+   {
+    "name": "Tamarind Duck (Ped Ma Kham)",
+    "description": "Fillet of tender crispy roast duck served in an aromatic tamarind sauce, topped with crispy shallot on a sizzling plate",
+    "price": "£13.5"
+   },
+   {
+    "name": "Tamarind King Prawn",
+    "description": "Grilled king prawns in the shell served in an aromatic tamarind sauce, topped with crispy shallot.",
+    "price": "£15.5"
+   },
+   {
+    "name": "Grilled Garlic Butter Prawns with Thai sauce",
+    "description": "Thai grilled Prawns (shrimps) in garlic butter, in the shell served with Thai style sauce.",
+    "price": "£15.5"
+   },
+   {
+    "name": "Seafood Pad Char with Thai Herbs",
+    "description": "Prawns,mussels and calamari stir fried with Thai herbs chill garlic,bamboo on a sizzling plate",
+    "price": "£15.5"
+   },
+   {
+    "name": "Garlic Butter Lamb chops",
+    "description": "Grilled lamb chops in garlic butter served with teriyaki sauce and chips",
+    "price": "£16.5"
+   },
+   {
+    "name": "Pla Nueng Ma Nao (Steam Sea Bass)",
+    "description": "Steamed sea bass fillet with lemongrass & garlic topped with fresh chilli, lime juice & garnished with a slice of lemon served with hot seafood sauce",
+    "price": "£14.5"
+   },
+   {
+    "name": "Pla Sam Rod (Sea Bass)",
+    "description": "Crispy seabass fillet in batter, served with spicy sweet & tangy chilli sauce",
+    "price": "£14.5"
+   },
+   {
+    "name": "Pla Nueng Se-Eew",
+    "description": "Steamed seabass fillet with herbs, lemongrass and soya sauce with hints of ginger",
+    "price": "£14.5"
+   },
+   {
+    "name": "Pla Pad Char with Thai Herbs",
+    "description": "Crispy seabass fillet in batter, stir-fried with fresh mixed Thai herbs; chilli garlic, galangal, fresh young pepper corn and basil, fine bean and bamboo shoot on a sizzling plate",
+    "price": "£14.5"
+   },
+   {
+    "name": "Soy Seared Salmon",
+    "description": "Pan fried salmon fillet stir fried with teriyaki sauce and noodles",
+    "price": "£17.5"
+   }
+  ],
+  "Stir Fry Dishes": [
+   {
+    "name": "Holy Basil &chilli (Pad kra pow)",
+    "description": "Stir fried with fresh chilli, garlic, green beans, bamboo and holy basil",
+    "price": null
+   },
+   {
+    "name": "Pad Med Mamuang (stir fried cashew nuts)",
+    "description": "Stir fried with cashew nuts, mushrooms, spring onion, mixed peppers and onion",
+    "price": null
+   },
+   {
+    "name": "Pad Naman Hoi (Oyster Sauce Stir Fry)",
+    "description": "Stir fried oyster sauce with onion, mushrooms, spring onion and carrot",
+    "price": null
+   },
+   {
+    "name": "Sweet and Sour (Pad prea wan)",
+    "description": "stir fried sweet and sour with pineapple, mixed peppers, onion and spring onion",
+    "price": null
+   },
+   {
+    "name": "Pad Khing (Ginger)",
+    "description": "Stir fried with onion mixed peppers, julienne ginger cooked in a light soy sauce",
+    "price": null
+   },
+   {
+    "name": "Black pepper Sauce Stir Fry",
+    "description": "Stir fried with black pepper sauce ,onion & spring onion and mixed peppers",
+    "price": null
+   },
+   {
+    "name": "Black Bean Sauce Stir Fry",
+    "description": "Stir fried black bean sauce with onion spring onion and mixed peppers",
+    "price": null
+   },
+   {
+    "name": "Pad Char with Thai Herbs",
+    "description": "Stir fried with fresh mixed Thai herbs of chilli garlic, finger galangal, fresh young pepper corn and basil, fine bean & bamboo shoots",
+    "price": null
+   },
+   {
+    "name": "Pad Pong Garee",
+    "description": "Stirfried together with a curry sauce made of yellow curry paste, egg, milk and Thai sweet & savoury onions",
+    "price": null
+   },
+   {
+    "name": "Crispy Chicken in Thai Sauce",
+    "description": "Flash stir fried crispy chicken in batter, mixed peppers, onion and spring onion",
+    "price": "£11.95"
+   },
+   {
+    "name": "Crispy Beef in Thai Sauce",
+    "description": "Deep fried beef in batter flash stir fried with mixed peppers, onion and spring onion",
+    "price": "£11.95"
+   },
+   {
+    "name": "Mixed Meat Stir Fry",
+    "description": "Stir fried mixed vegetables and mixed meat cooked with garlic in shao shin wine sauce",
+    "price": "£11.95"
+   },
+   {
+    "name": "Sweet Chilli Vegan Stir Fry",
+    "description": "Stir fried garden gourmet fillet pieces with mixed vegetables in a sweet chilli sauce",
+    "price": "£9.95",
+    "vegetarian": true
+   }
+  ],
+  "Curry Dishes": [
+   {
+    "name": "Thai Green Curry",
+    "description": "A Thai classic. Green curry bamboo shoots, green beans, courgettes, mixed peppers and sweet basil leaves",
+    "price": null
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "A firm Thai favourite. Red curry, bamboo shoots, green beans, courgettes, mixed peppers and sweet basil leaves",
+    "price": null
+   },
+   {
+    "name": "Thai Yellow Curry",
+    "description": "Yellow curry paste cooked with coconut milk potato & onion",
+    "price": null
+   },
+   {
+    "name": "Thai Jungle Curry",
+    "description": "The hottest of curries, cooked with bamboo shoots, green beans, courgettes, mixed pepper, finger root ginger and holy basil",
+    "price": null
+   },
+   {
+    "name": "Thai Penang Curry",
+    "description": "Creamy Penang curry with lime leaves, coconut milk , fine beans and basil leaves",
+    "price": null
+   },
+   {
+    "name": "Thai Massaman Curry",
+    "description": "Traditionally a Thai dish with potato, onion, carrot and cashew nuts",
+    "price": null
+   },
+   {
+    "name": "Gang Ped Phed Yang (Duck)",
+    "description": "Roast duck in coconut milk and red curry with green beans, Thai herbs, courgettes, pepper, tomato and pineapple",
+    "price": "£13.50"
+   }
+  ],
+  "Noodle Dishes": [
+   {
+    "name": "Pad Thai",
+    "description": "One of Thailand's national dishes, thin rice noodle stir fried with bean sprouts, carrots, spring onion, egg, peanuts, in a special homemade sauce",
+    "price": null
+   },
+   {
+    "name": "Pad See Ew",
+    "description": "Stir fried thick rice noodles with egg and green vegetables in dark soy sauce",
+    "price": null
+   },
+   {
+    "name": "Chow Mein",
+    "description": "Stir fried egg noodles with spring onion carrot and bean sprouts",
+    "price": null
+   },
+   {
+    "name": "Pad Kee Mao",
+    "description": "Stir fried thick rice noodles with chilli, garlic, lime leaf, onion, mixed peppers and baby corn",
+    "price": null
+   },
+   {
+    "name": "Pad Kee Mao (Udon)",
+    "description": "Stir fried Udon noodles with onion, mixed peppers, basil, garlic & crushed chilli all cooked together in sauce",
+    "price": null
+   },
+   {
+    "name": "Singapore Noodles",
+    "description": "Stir fried vermicelli noodles,mixed pepper, spring onion, beansprouts, carrot cooked in Singapore sauce",
+    "price": null
+   }
+  ],
+  "Fried Rice Dishes": [
+   {
+    "name": "Special Fried Rice",
+    "description": "",
+    "price": "£9.5"
+   },
+   {
+    "name": "Chicken Fried Rice",
+    "description": "",
+    "price": "£9.5"
+   },
+   {
+    "name": "King Prawn Fried Rice",
+    "description": "",
+    "price": "£9.95"
+   },
+   {
+    "name": "Nasi Goreng Fried Rice",
+    "description": "",
+    "price": "£9.95"
+   }
+  ],
+  "Side Dishes": [
+   {
+    "name": "Plain Jasmine Rice",
+    "description": "Fragrant Thai steamed rice with slight aroma of vanilla",
+    "price": "£3",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "Freshly fried rice tossed with egg and soy sauce",
+    "price": "£3.5"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "Thai jasmine rice mixed with creamy coconut milk",
+    "price": "£3.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.5",
+    "vegetarian": true
+   },
+   {
+    "name": "Plain Chow Me",
+    "description": "",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Chicken/Beef/Pork £6.50",
+  "Prawn £7.00",
+  "Seafood £7.00",
+  "Mushroom / Veg £5.50",
+  "Chicken/Pork/Beef £10.95",
+  "Seafood/King Prawn /Duck £12.95",
+  "Tofu and Mixed Vegetables £9.95",
+  "Chicken/Pork/Beef £10.95",
+  "Seafood/King Prawn /Duck £12.95",
+  "Tofu and Mixed Vegetables £9.50",
+  "Mixed Meat £10.50",
+  "Chicken/Pork/Beef £10.95 l Seafood/King Prawn /Duck £12.95 l Tofu and Mixed Vegetables £9.95"
+ ]
+}

@@ -1,0 +1,233 @@
+{
+ "restaurant": "Kin Dee Thai Restaurant",
+ "city": "London",
+ "fsa_id": "518792",
+ "address": "London",
+ "source": "http://www.kindee.co.uk/images/menus/kindee-menu-apr26-p2.jpg",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "MIX PLATTERS (min. 2 people) per person",
+    "description": "A selection of Chicken satay, Corn cake, Vegetable spring roll, Fish cakeand Dim Sum.",
+    "price": "£9.75"
+   },
+   {
+    "name": "SPICY WING STICKS",
+    "description": "Deep-fried chicken wing marinated with Thai spices, tossed with garlic, spring onion and chilli.",
+    "price": "£7.25"
+   },
+   {
+    "name": "CHICKEN SATAY (N)",
+    "description": "Char-grilled marinated chicken breast, served with peanut sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "THAI COCONUT PRAWNS",
+    "description": "Deep-fried black tiger prawns coated with coconut flake, served with sweet chilli sauce.",
+    "price": "£8.25"
+   },
+   {
+    "name": "FISH CAKE",
+    "description": "Authentic Thai fish cake mixed with Thai red curry paste and kiffir lime leaves served with sweet chilli sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "CRISPY DUCK SPRING ROLLS",
+    "description": "Deep-fried Thai style spring rolls stuffed with aromatic duck, spring onion, cucumber and carrot served with hoi sin sauce.",
+    "price": "£8.45"
+   },
+   {
+    "name": "PRAWN TEMPURA",
+    "description": "Deep-fried prawn with tempura batter served with sweet chilli sauce.",
+    "price": "£8.45"
+   },
+   {
+    "name": "PRAWN AND CHICKEN ON TOAST",
+    "description": "Minced prawns and chicken mixed topped with sesame seeds and deep fried, served with sweet chilli sauce.",
+    "price": "£7.25"
+   },
+   {
+    "name": "PORK SPARE RIBS",
+    "description": "Char-grilled spare ribs marinated with chef's special sauce.",
+    "price": "£8.75"
+   },
+   {
+    "name": "VEGETABLE SPRING ROLL (V)",
+    "description": "Crispy spring roll filled with vermicelli, shiitake mushroom and mixed vegetable served with sweet chilli sauce.",
+    "price": "£7.25",
+    "vegetarian": true
+   },
+   {
+    "name": "THAI DIM SUM",
+    "description": "Steamed minced chicken and prawn jumbo dumpling served with sweet dark soy sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "THAI CALAMARI",
+    "description": "Deep fried squid with ginger and peppercorn.",
+    "price": "£8.75"
+   },
+   {
+    "name": "SWEET CORN CAKE",
+    "description": "Thai style sweet corn cakes flavoured with curry paste, egg and selection of Thai herbs served with sweet chili sauce.",
+    "price": "£7.45"
+   },
+   {
+    "name": "DUCK PANCAKE",
+    "description": "Crispy aromatic duck served with 6 pancakes, spring onions, cucumber, carrot and hoisin sauce.",
+    "price": "£13.95"
+   },
+   {
+    "name": "THAI SPICY PRAWN CRACKER",
+    "description": "",
+    "price": "£3.45"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "TOM YUM",
+    "description": "Traditional Thai hot and sour clear soup with mushrooms, lemongrass, galangal, kaffir lime leaves, coriander and fresh chilli. Chicken £7.95 Prawn £8.45 Mushroom £7.25",
+    "price": null
+   },
+   {
+    "name": "TOM KHA",
+    "description": "Thai coconut soup with mushrooms, galangal, lemongrass and kaffir lime leaves. Chicken £7.95 Prawn £8.45 Mushroom £7.25",
+    "price": null
+   }
+  ],
+  "SALADS": [
+   {
+    "name": "SOM TAM (N)",
+    "description": "Spicy green papaya salad with cherry tomatoes, fine bean, carrot and chillies topped with peanuts",
+    "price": "£9.75"
+   },
+   {
+    "name": "YUM NEUA",
+    "description": "Sliced grilled beef mixed with cucumber, onion, tomato and coriander in a hot and sour dressing.",
+    "price": "£11.25"
+   },
+   {
+    "name": "YUM WOONSEN SEAFOOD",
+    "description": "Vermicelli and mixed seafood salad seasoned with chilies, lime juice and fish sauce.",
+    "price": "£12.45"
+   }
+  ],
+  "MAIN COURSES": [
+   {
+    "name": "GREEN CURRY",
+    "description": "A traditional Thai green curry with a coconut milk, aubergines, fresh chillies, sliced bamboo shoots and fresh basil leaves.",
+    "price": null
+   },
+   {
+    "name": "RED CURRY",
+    "description": "A traditional Thai red curry with a coconut milk, aubergines, red chillies, sliced bamboo shoots and fresh basil leaves.",
+    "price": null
+   },
+   {
+    "name": "JUNGLE CURRY",
+    "description": "A spicy, clear Thai curry with bamboo shoots, green and red pepper, carrot, aubergines, baby corns, wild ginger and holy basil leaves.",
+    "price": null
+   },
+   {
+    "name": "MASSAMUN CURRY (N)",
+    "description": "A typical massamun curry simmered with sweet potato and onion, topped with cashew nuts and sweet potato chips.",
+    "price": null
+   },
+   {
+    "name": "PANANG CURRY",
+    "description": "A creamy Thai curry with coconut milk and kaffir lime leaves.",
+    "price": null
+   },
+   {
+    "name": "PAD NUM MAN HOI",
+    "description": "Stir fried a choice of meat with oyster sauce, mushroom, red & green peppers, onions and spring onions.",
+    "price": null
+   },
+   {
+    "name": "PAD TAKRAI",
+    "description": "Stir fried a choice of meat with lemongrass, onion, carrot, chilli, green and red pepper.",
+    "price": null
+   },
+   {
+    "name": "PAD KAPROW",
+    "description": "Stir-fried a choice of meat with chillies, onion, bamboo shoots, red & green peppers and fresh basil leaves.",
+    "price": null
+   },
+   {
+    "name": "SWEET AND SOUR",
+    "description": "Stir fried a choice of meat in a sweet and sour sauce with cucumber, onion, cherry tomatoes, peppers and pineapple.",
+    "price": null
+   },
+   {
+    "name": "PAD KHING",
+    "description": "Stir fried a choice of meat with fresh ginger, mushroom, spring onion and red & green peppers.",
+    "price": null
+   },
+   {
+    "name": "PAD PRIG PAO",
+    "description": "Stir fried a choice of meat with Thai style chilli oil, carrot, onion, red & green peppers and sweet basil leaves.",
+    "price": null
+   },
+   {
+    "name": "PAD MED MA MUANG (N)",
+    "description": "Stir fried a choice of meat with cashew nuts, spring onion, onion, peppers, and mushroom.",
+    "price": null
+   },
+   {
+    "name": "PAD PRIK THAI DUM",
+    "description": "Stir fried a choice of meat with black pepper, garlic, carrot, spring onion, onion, green and red pepper.",
+    "price": null
+   }
+  ],
+  "CHEF'S RECOMMENDATIONS": [
+   {
+    "name": "PLA NUNG SE-EW",
+    "description": "Steamed sea bass fillets with ginger, spring onions, shiitake, coriander, red pepper and soy sauce.",
+    "price": "£18.25"
+   },
+   {
+    "name": "PLA CHUCHEE",
+    "description": "Crispy sea bass filets with Thai red curry sauce.",
+    "price": "£18.25"
+   },
+   {
+    "name": "GOONG CHU CHEE",
+    "description": "Special deep-fried river king prawns, shell-on, top with Thai red curry sauce.",
+    "price": "£19.25"
+   },
+   {
+    "name": "MOO YANG",
+    "description": "Char-grilled marinated pork flavoured with honey and Thai herbs served with spicy tamarind sauce.",
+    "price": "£16.25"
+   },
+   {
+    "name": "PHED MAKAM",
+    "description": "Special deep-fried boneless roast duck with tamarind sauce and fried shallot.",
+    "price": "£16.25"
+   },
+   {
+    "name": "WEEPING TIGER",
+    "description": "Char-grilled marinated sirloin steak served with chef's special sauce.",
+    "price": "£18.25"
+   },
+   {
+    "name": "PLA SAM ROD",
+    "description": "Deep-fried whole sea bass top with three flavours, spicy, sweet and sour.",
+    "price": "£21.45"
+   },
+   {
+    "name": "SEAFOOD PAD CHA",
+    "description": "Stir fried mixed seafood with chef's special sauce, chillies, wild ginger, sweet basil leaves, fine bean, onion, baby corn and carrot.",
+    "price": "£16.45"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Chicken £7.95 Prawn £8.45 Mushroom £7.25",
+  "All dishes can be cooked with a choice of :",
+  "Vegetable or Tofu £11.95 Chicken or Pork £12.95",
+  "Prawn or Beef £13.95 Duck £14.95"
+ ]
+}

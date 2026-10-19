@@ -1,0 +1,675 @@
+{
+ "restaurant": "Lanna Thai",
+ "city": "Canterbury",
+ "fsa_id": "1102691",
+ "address": "Canterbury",
+ "source": "http://lannathai-canterbury.co.uk/wp-content/uploads/LannaThai-Menu-2024.10-1.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Hors-d’ Oeuvres": [
+   {
+    "name": "A MIXED STARTER FOR 2",
+    "description": "(Kanom Pang Na Gung, Tod Man Pla, Popia Tod, Chicken Sateh)",
+    "price": "£16.95"
+   },
+   {
+    "name": "B MIXED STARTER FOR 4",
+    "description": "(Gung Hom Pha, Popia Tod, Chicken Sateh, Tod Man Pla, Khanom Jeep Tod, Keow Grob)",
+    "price": "£28.00"
+   },
+   {
+    "name": "C THAI PRAWN CRACKERS",
+    "description": "",
+    "price": "£3.70"
+   },
+   {
+    "name": "D DUCK LANNA",
+    "description": "Served with 6 pancakes, cucumber, spring onions & plum sauce",
+    "price": "£18.50"
+   },
+   {
+    "name": "1 PORK BALL",
+    "description": "Minced pork ball served with sweet chilli sauce (gluten)",
+    "price": "£7.15"
+   },
+   {
+    "name": "5 TOD MAN PLA",
+    "description": "Thai style spicy fish cakes mixed with green runner beans curry paste deep fried, served with peanut sauce.",
+    "price": "£ 7.50"
+   },
+   {
+    "name": "2 SAI KROG PU",
+    "description": "Deep fried minced pork & crab meat served with plum sauce.",
+    "price": "£ 7.50"
+   },
+   {
+    "name": "6 SATEH (CHICKEN)",
+    "description": "Barbecued chicken marinated, put on sticks, served with a traditional peanut sauce & pickled cucumber.",
+    "price": "£7.50"
+   },
+   {
+    "name": "3 POPIA TOD",
+    "description": "Thai spring rolls filled with water chestnuts and transparent noodles served with sauce.",
+    "price": "£7.15"
+   },
+   {
+    "name": "7 ROAST RIBS OF PORK",
+    "description": "Tender pork spare ribs marinated in honey, soya sauce & special spices then roasted until brown.",
+    "price": "£7.50"
+   },
+   {
+    "name": "4 KHANOM JEEP",
+    "description": "Steamed dumplings with pork, water chestnuts & minced prawns, served with soya sauce & fried garlic.",
+    "price": "£ 7.15"
+   },
+   {
+    "name": "8 GUNG HOM PHA",
+    "description": "Crispy wrapped king prawns served, with sweet chilli sauce.",
+    "price": "£ 7.95"
+   },
+   {
+    "name": "9 PEAK GAI YAD SAI",
+    "description": "Chicken wings stuffed with minced pork breadcrumbs deep fried served with sweet & sour sauce.",
+    "price": "£ 7.15"
+   },
+   {
+    "name": "10 KEOW GROB",
+    "description": "Crispy wrapped-up pork served with sweet & sour sauce.",
+    "price": "£7.15"
+   },
+   {
+    "name": "10A KANOM PANG NAGUNG",
+    "description": "Minced prawns on crispy toast and deep fried, served with vinegared cucumbers.",
+    "price": "£7.50"
+   },
+   {
+    "name": "10B PLA MURK TOD GROB",
+    "description": "Tiny rings of squid fried in batter served with sweet & sour sauce.",
+    "price": "£ 7.50"
+   },
+   {
+    "name": "10D NUA YANG",
+    "description": "Grilled beef served with chilli sauce.",
+    "price": "£7.95"
+   }
+  ],
+  "Vegetarian Starters": [
+   {
+    "name": "11 PAK CHOOP PANG",
+    "description": "Deep fried vegetables in batter with sweet & sour sauce.",
+    "price": "£Small £6.95          Large £ 7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "12 TOFU TOD",
+    "description": "Deep fried beancurd served with sweet & sour sauce and ground peanuts.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "13 TOM KA HED",
+    "description": "(Medium hot) Mushroom in spice soup &lemon grass, lime leaves COCONUT MILK flavoured.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "13A TOM YUM HED",
+    "description": "(Medium Hot) Mushrooms in spice soup hot & sour, lemon grass & lime leaves.",
+    "price": "£6.95",
+    "vegetarian": true
+   }
+  ],
+  "Thai Hot & Sour Soup Tom Yum": [
+   {
+    "name": "14 TOM YUM GUNG",
+    "description": "Prawns & mushrooms soup",
+    "price": "£ 7.95"
+   },
+   {
+    "name": "14A TOM YUM GAI",
+    "description": "Chicken & mushrooms soup",
+    "price": "£ 6.95"
+   },
+   {
+    "name": "15 TOM YAM POH TEK",
+    "description": "Mixed seafood soup",
+    "price": "£ 9.95"
+   },
+   {
+    "name": "16 TOM KHA GAI",
+    "description": "Chicken & mushrooms in coconut milk",
+    "price": "£ 6.95"
+   }
+  ],
+  "Thai Clear Soup": [
+   {
+    "name": "17 TOM BA CHAW",
+    "description": "Minced pork balls soup",
+    "price": "£ 6.50"
+   },
+   {
+    "name": "18 WANTON SOUP",
+    "description": "A soup of wanton pastry stuffed with minced pork.",
+    "price": "£ 6.95"
+   }
+  ],
+  "Yum - Spicy Thai Salad (cold)": [
+   {
+    "name": "19 YUM NUA",
+    "description": "Grilled Beef Salad",
+    "price": "£ 10.50"
+   },
+   {
+    "name": "20 YUM PLA MURK",
+    "description": "Squid Spicy Salad",
+    "price": "£ 10.95"
+   },
+   {
+    "name": "21 YUM WOONSEN",
+    "description": "Clear noodles with minced pork salad",
+    "price": "£ 9.95"
+   },
+   {
+    "name": "22 PLA GUNG",
+    "description": "Prawns Spicy Salad",
+    "price": "£ 11.95"
+   },
+   {
+    "name": "23 GREEN SALAD",
+    "description": "A plain salad of green vegetables with homemade dressing.",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "24 SALAD KAEK",
+    "description": "vegetables salad with slices of boiled eggs and blended thai peanut sauce.",
+    "price": "£ 8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "25 CARROT SALAD",
+    "description": "Spicy Thai salad with carrot & peanuts.",
+    "price": "£ 8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "25A SOMTUM",
+    "description": "Spicy papaya salad with peanut garlic and dried shrimp.",
+    "price": "£ 9.95"
+   }
+  ],
+  "MAIN COURSE": [
+   {
+    "name": "26 PREAW WAN",
+    "description": "Sweet & Sour in tomato sauce with pineapple, pepper, onions and cucumber with your Choice of meat with choice of meat.",
+    "price": "£• Chicken • Pork     £ 10.50           • Fish • Prawn     £ 11.95"
+   },
+   {
+    "name": "27 GROB PREAW WAN CHICKEN",
+    "description": "Sweet & Sour sauce, carrot & spring onions with crispy shredded • chicken",
+    "price": "£ 10.50"
+   },
+   {
+    "name": "29 PAD PRIK DISHES",
+    "description": "Stir fried onion & green pepper of chillies with choice of:",
+    "price": "£• Chicken • Beef • Pork    £ 10.50\n• Prawn • Squid            £ 11.95"
+   },
+   {
+    "name": "30 PAD KHAPRAO DISHES",
+    "description": "typical Thai dish with your choice being stir fried onions,pepper with sweet basil & chillies with choice of :",
+    "price": "£• Chicken • Beef • Pork £ 10.50\n• Prawn • Squid            £ 11.95"
+   },
+   {
+    "name": "31 PAD KHING DISHES",
+    "description": "Stir fry fresh ginger with onions, spring onions, peppers and black fungus with choice of:",
+    "price": "£• Chicken • Beef • Pork         £ 10.50\n• Prawn • Duck             £ 11.95"
+   },
+   {
+    "name": "32 TOD KRA TIEM DISHES",
+    "description": "Stir fried with your choice of meat mixed up well with a special blend of garlic & pepper sauce then shallow fried with choice of:",
+    "price": "£• Chicken • Beef • Pork             £ 10.90\n• Prawn • Squid            £ 11.95"
+   },
+   {
+    "name": "33 MOO PAD PRIK KHING",
+    "description": "(Medium Hot) Pork fried with curry paste, lime leaves & French bean.",
+    "price": "£10.50"
+   },
+   {
+    "name": "34 LANNA GAI HIMMAPAN",
+    "description": "Chicken stir fried onions with cashew nuts.",
+    "price": "£11.50"
+   },
+   {
+    "name": "36 GAI PAD KAO POTE OAN",
+    "description": "Chicken stir fried with spring onions & baby corns.",
+    "price": "£ 10.50"
+   },
+   {
+    "name": "37 PEAK GAI TOD",
+    "description": "Chicken wings fried with garlic & pepper.",
+    "price": "£ 10.50"
+   },
+   {
+    "name": "38 GAI GROB MAKAM",
+    "description": "Chicken fillet deep fried in light batter topped with Tamarind sauce and crispy shallots",
+    "price": "£ 10.95"
+   },
+   {
+    "name": "39 NUA PAD BROCCOLI",
+    "description": "Beef stir fried with broccoli and oyster sauce.",
+    "price": "£ 10.50"
+   },
+   {
+    "name": "39a NUA PAD NAMMAN HOY",
+    "description": "Beef stir fried with mushrooms, spring onions and oyster sauce.",
+    "price": "£ 10.50"
+   }
+  ],
+  "Lanna Thai Curries": [
+   {
+    "name": "40 GANG KEOW WAN (Green Curry)",
+    "description": "The famous Thai ‘‘green curry’’ in coconut milk (medium hot) with choice of:",
+    "price": "£• Chicken • Beef • Pork £ 10.90\n• Prawn   £ 11.95"
+   },
+   {
+    "name": "41 GANG PED (Red Curry)",
+    "description": "Thai red curry paste, spices & herbs cooked in coconut milk (medium hot) with choice of:",
+    "price": "£• Chicken • Beef • Pork £10.90\n• Scallop • Prawn • Duck £ 11.95"
+   },
+   {
+    "name": "41a GANG PED SUBPAROT",
+    "description": "Thai red curry paste with coconut milk with pineapple & peppers with choice of : Pork or Chicken.",
+    "price": "£10.90"
+   },
+   {
+    "name": "42 GANG PHA (Jungle Curry)",
+    "description": "Traditional Thai style curry paste, spices & herbs with choice of:",
+    "price": "£Chicken • Beef • Pork £ 10.90                • Prawn £ 11.95"
+   },
+   {
+    "name": "43 PANANG (Dry Curry)",
+    "description": "Dry curry paste with lime leaves & peppers cooked in coconut milk with choice of:",
+    "price": "£• Chicken • Beef • Pork £ 10.95"
+   },
+   {
+    "name": "44 CHU CHI (Dry Curry)",
+    "description": "Special curry paste with lime leaves & peppers cooked in coconut milk with choice of:",
+    "price": "£• Prawn • Fish         £ 11.95"
+   },
+   {
+    "name": "45 RENDANG (Dry Curry Indonesian Style)",
+    "description": "beef cooked with special curry paste & lemon grass in coconut milk",
+    "price": "£ 10.95"
+   }
+  ],
+  "Lanna Stir Fried Sea Food": [
+   {
+    "name": "46 GUNG PAO (King Prawn)",
+    "description": "Grilled king prawn served with chilli sauce.",
+    "price": "£18.00"
+   },
+   {
+    "name": "47 GUNG CHOOP PANG TOD",
+    "description": "Deep fried prawn in batter made of flour served with sweet and sour sauce.",
+    "price": "£ 11.95"
+   },
+   {
+    "name": "48 GUNG PAD ASPARAGUS",
+    "description": "Prawn fried with spring onions & asparagus.",
+    "price": "£ 11.95"
+   },
+   {
+    "name": "49 GUNG PAD KAO POTE OAN",
+    "description": "Prawn stir fried with spring onions and baby corns.",
+    "price": "£ 11.95"
+   },
+   {
+    "name": "50 GUNG SAM ROT",
+    "description": "Prawn with peas, carrots and water chestnuts fried with sweet and sour spices sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "51 GUNG PAD HED",
+    "description": "Prawn stir fried with spring onions and mushrooms.",
+    "price": "£ 11.95"
+   },
+   {
+    "name": "52 GUNG PAO MAKHAM (King Prawn )",
+    "description": "Grilled king prawn topped with tamarind sauce and onion",
+    "price": "£18.00"
+   },
+   {
+    "name": "53 PLA TOD",
+    "description": "Cod deep fried until brown and served with fish sauce.",
+    "price": "£ 11.95"
+   },
+   {
+    "name": "54 PLA LAD PRIK",
+    "description": "Fish deep fried well topped with sweet chillies (Trout may contain bones).",
+    "price": "£• Cod £ 11.95           • sea bass £ 14.50"
+   },
+   {
+    "name": "55 PLA JEANT",
+    "description": "Deep fried fish with mushroom, ginger, minced pork, spring onions in a tamarind sauce (Trout may contain bones) .",
+    "price": "£• Cod £ 11.95      • sea bass £14.50"
+   },
+   {
+    "name": "56 PLA SAM ROT",
+    "description": "Deep fried fish until brown then topped with minced pork and three flavour sauce (Trout may contain bones).",
+    "price": "£• Cod £ 11.95       • sea bass £14.50"
+   }
+  ],
+  "EGG": [
+   {
+    "name": "61 KHAI YAD SAI",
+    "description": "Omelette stuffed with minced pork & vegetables.",
+    "price": "£ 9.50"
+   },
+   {
+    "name": "62 KHAI LUK KUEY (Son in law egg)",
+    "description": "Deep fried eggs to golden brown, topped with tamarind sauce and crispy shallots",
+    "price": "£ 8.95"
+   },
+   {
+    "name": "63 KHAI GHEOW MUH SAB",
+    "description": "Omelette with minced pork.",
+    "price": "£ 8.95"
+   },
+   {
+    "name": "64 KHAI JA",
+    "description": "Crispy fried eggs topped with peas, carrots & water chestnuts with sweet & sour sauce.",
+    "price": "£8.95"
+   }
+  ],
+  "LANNA THAI SPECIAL DISHES": [
+   {
+    "name": "65 PAD TALAY NAM PRIK POW (Medium Hot)",
+    "description": "Stir fried mixed seafood in chilli paste with onions, peppers and mushrooms.",
+    "price": "£12.50"
+   },
+   {
+    "name": "66 PAD TALAY KHAPRAO (Mixed Seafood)",
+    "description": "Very typical Thai stir fried mixed seafood with onions, peppers, basil leaves and chillies.",
+    "price": "£12.50"
+   },
+   {
+    "name": "68 TALAY TOD",
+    "description": "Stir fried mixed seafood with garlic, pepper and spring onions.",
+    "price": "£12.50"
+   },
+   {
+    "name": "69 TALAY GAH TAH",
+    "description": "Stir fried mixed seafood with baby corns, asparagus, sugar snap served sizzling on a hot plate.",
+    "price": "£12.50"
+   },
+   {
+    "name": "70 TALAY BLACK BEAN SAUCE",
+    "description": "Stir fried mussel with black bean and chillies.",
+    "price": "£12.50"
+   },
+   {
+    "name": "73 PED YANG",
+    "description": "roasted duck served with soya sauce & pickled ginger, cucumber and vegetables.",
+    "price": "£12.95"
+   },
+   {
+    "name": "74 PED YANG MAKAM",
+    "description": "Roast duck topped with onion and tamarind sauce.",
+    "price": "£ 12.95"
+   },
+   {
+    "name": "75 PED PAD HIMMAPAN",
+    "description": "Roast duck fried with cashew nuts, mushrooms, onions",
+    "price": "£12.95"
+   },
+   {
+    "name": "76 NUA GAH TAH",
+    "description": "Beef marinated with oyster sauce fried with mushrooms, baby corns, spring onions, asparagus, sugar snap served sizzling on a hot plate.",
+    "price": "£12.50"
+   }
+  ],
+  "Noodle Dishes": [
+   {
+    "name": "77 PAD THAI",
+    "description": "A traditional Thai rice noodle fried with prawn, bean sprouts, egg and ground peanut.",
+    "price": "£11.95"
+   },
+   {
+    "name": "78 PAD LANNA UDON",
+    "description": "Fried udon noodle with bean sprouts, egg and ground peanut with prawn.",
+    "price": "£12.50"
+   },
+   {
+    "name": "79 PAD SEE IEW (With choice of Chicken or Beef or Pork)",
+    "description": "Stir fried rice noodles with egg, soya sauce and vegetables.",
+    "price": "£9.95"
+   },
+   {
+    "name": "80 PAD KEE MOW (With choice of Chicken or Beef or Pork)",
+    "description": "Stir fried rice noodles with onions, green peppers, mushrooms and chillies.",
+    "price": "£9.95"
+   },
+   {
+    "name": "81 KUAYTIO RAD NAH (With choice of Chicken or Beef or Pork)",
+    "description": "Fried rice noodle with vegetables topped with Thai gravy sauce.",
+    "price": "£9.95"
+   },
+   {
+    "name": "82 MEE GROB",
+    "description": "a classic Thai dish of crispy rice noodle & tamarind sauce & prawn.",
+    "price": "£ 10.95"
+   }
+  ],
+  "Vegetable Dishes": [
+   {
+    "name": "83 PUD PUK",
+    "description": "A selection of fresh vegetables stir fried in oyster sauce.",
+    "price": "£ 8.95"
+   },
+   {
+    "name": "84 PUD THUANG NGORK",
+    "description": "Stir fried bean sprouts in oyster sauce.",
+    "price": "£ 7.95"
+   }
+  ],
+  "Rice Dishes - Lanna Thai Special": [
+   {
+    "name": "85 KAO PAD KHAPWEW (Spicy Fried Rice)",
+    "description": "A traditional fried rice with Lanna Thai chillies, onion, green peppers, basil leaves with choice of :",
+    "price": "£• Chicken • Beef • Pork £ 9.95\n• Prawn • Squid       £ 11.95"
+   },
+   {
+    "name": "86 KAO PAD SUBPAROT (Pineapple Rice)",
+    "description": "Fried rice with pineapple, sausages, chicken, prawns.",
+    "price": "£ 11.95"
+   },
+   {
+    "name": "87 KAO PAD",
+    "description": "Fried rice with tomato , onion, spring onion with a choice of:",
+    "price": "£• Chicken • Beef • Pork £ 9.95\n• Prawn or Squid         £ 11.95"
+   },
+   {
+    "name": "88 KAO RAH NAH",
+    "description": "Rice topped with bamboo shoots veg, fried with a choice of:",
+    "price": "£• Chicken • Beef • Pork £ 9.95\n• Prawn                  £ 11.95"
+   },
+   {
+    "name": "89 KAO RAD PLIK (Spicy Kao Rad )",
+    "description": "Rice topped with green peppers & chillies ,veg with choice of:",
+    "price": "£• Chicken • Beef • Pork £9.95     • Prawn £ 11.95"
+   },
+   {
+    "name": "90 KAO NAH PHED (Duck Rice)",
+    "description": "Roasted duck topped with rice served with pickled ginger,veg and fresh cucumbers.",
+    "price": "£ 12.95"
+   },
+   {
+    "name": "91 KAO PAD KAI",
+    "description": "Fried rice with eggs.",
+    "price": "£ 4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "92 KAO SUAY",
+    "description": "Steamed rice.",
+    "price": "£ 4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "93 KAO KATI",
+    "description": "Coconut rice.",
+    "price": "£ 4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "93A STICKY RICE",
+    "description": "",
+    "price": "£ 4.95",
+    "vegetarian": true
+   }
+  ],
+  "Lanna Thai Vegetarian Dishes": [
+   {
+    "name": "94 TOFU PUD KHING",
+    "description": "Tofu stir fried with fresh ginger, onions and special mushrooms.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "95 TOFU PUD HIMMAPAN",
+    "description": "Tofu stir fried with cashew nuts, onions, green peppers ,mushrooms.",
+    "price": "£9.50",
+    "vegetarian": true
+   },
+   {
+    "name": "96 TOFU PUD PLIK",
+    "description": "Tofu stir fried with green peppers & chillies.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "97 PREAW WAN TOFU",
+    "description": "Stir fried beancurd with sweet & sour sauce with vegetables.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "98 PUD TOFU THUA NGORK",
+    "description": "Stir fry beancurd with bean sprouts.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "99 PUD TOFU PAK",
+    "description": "Stir fried mixed vegetables with beancurd.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "100 PREAW WAN PAK",
+    "description": "Sweet & sour with a mixture of vegetables.",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "101 PUD PAK",
+    "description": "Stir fried mixed vegetables with soya sauce.",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "102 PUD THUA NGORK",
+    "description": "Stir fried bean sprouts with soya sauce.",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "103 PUD BROCCOLI",
+    "description": "Stir fried broccoli with soya sauce.",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "104 PUD KAO POTE-HED",
+    "description": "Stir fried baby corns and mushrooms .",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "105 KHAI YAD SAI PAK",
+    "description": "Omelette stuffed with a mixture of vegetables.",
+    "price": "£8.95",
+    "vegetarian": true
+   }
+  ],
+  "Vegetarian Curry Dishes": [
+   {
+    "name": "106 GANG KEOWAN PAK",
+    "description": "The famous Thai green curry in coconut milk with mixture of vegetables.",
+    "price": "£ 8.50      Add tofu   £10.50",
+    "vegetarian": true
+   },
+   {
+    "name": "107 GANG PED PAK",
+    "description": "Thai red curry paste, spices and herbs cooked with coconut milk and vegetables.",
+    "price": "£ 8.50         Add tofu     £10.50",
+    "vegetarian": true
+   },
+   {
+    "name": "108 GANG SUBPAROT",
+    "description": "Thai red curry paste, cooked in coconut milk with pineapple.",
+    "price": "£8.50        Add Tofu       £ 10.50",
+    "vegetarian": true
+   }
+  ],
+  "Vegetarian Noodle Dishes": [
+   {
+    "name": "109 PUD THAI PAK",
+    "description": "A traditional Thai noodles fried with bean sprouts, egg and ground peanut.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "110 PUD SEE IEW PAK",
+    "description": "Rice noodles fried with eggs, soya sauce & vegetables.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "111 PUD THANG TAK",
+    "description": "Rice noodles fried with vegetables in soya sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "112 PUD MEE",
+    "description": "Stir fried egg noodles with bean sprouts, onions & spring onions.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "113 SINGAPORE NOODLE",
+    "description": "Vermicelli rice noodle fried with bean sprouts, egg, carrot, ground peanut & spices sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   }
+  ],
+  "Lanna Thai Set Menu": [
+   {
+    "name": "SET FOR 1",
+    "description": "• Mixed Starter (b) for 1 • Green curry with chicken • Beef marinated in oyster sauce with",
+    "price": "£ 23.95"
+   },
+   {
+    "name": "SET FOR 2",
+    "description": "• Mixed Starter (b) for 2 • Prawns stir fried with sweet & sour sauce • Green",
+    "price": "£ 45.90"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "SET FOR 1 £ 23.95",
+  "SET FOR 2 £ 45.90"
+ ]
+}

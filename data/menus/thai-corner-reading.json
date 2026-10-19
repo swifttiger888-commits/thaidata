@@ -19,7 +19,7 @@
     "price": "£8.00"
    },
    {
-    "name": "Poh Pia Tod (Spring Rolls)  (V)",
+    "name": "Poh Pia Tod (Spring Rolls) (V)",
     "description": "Bean vermicelli, dried mushrooms, shredded cabbage and carrots in rice paper.",
     "price": null,
     "vegetarian": true
@@ -40,7 +40,7 @@
     "price": "£8.50"
    },
    {
-    "name": "Peek  Gai  Tra  Krai",
+    "name": "Peek Gai Tra Krai",
     "description": "Crispy fried chicken wings with lemongrass",
     "price": "£8.50"
    },
@@ -104,9 +104,10 @@
     "price": "£7.50–£8.50"
    },
    {
-    "name": "18. Poh Tak Soup",
+    "name": "Poh Tak Soup",
     "description": "Spicy mixed seafood soup flavoured with mushrooms, lemon grass, kaffir lime leaves, fresh chilli and basil leaves.",
-    "price": "£9.00"
+    "price": "£9.00",
+    "num": "18"
    }
   ],
   "Curry Dishes": [
@@ -205,7 +206,7 @@
     "price": "£19.00"
    },
    {
-    "name": "Pla  Kra Pong Lui Suan",
+    "name": "Pla Kra Pong Lui Suan",
     "description": "Deep fried whole sea bass with lemongrass, cashew nuts and chilli paste",
     "price": "£24.00"
    },
@@ -367,7 +368,7 @@
     "price": "£14.00"
    },
    {
-    "name": "Kwaitie  Kee  Mow  Tofu",
+    "name": "Kwaitie Kee Mow Tofu",
     "description": "Stir-fried flat noodles with bean curd, vegetables, fresh chilli, garlic and basil leaves.",
     "price": "£14.00"
    }

@@ -1,0 +1,491 @@
+{
+ "restaurant": "Taste Of Thai",
+ "city": "Gloucester",
+ "fsa_id": "920273",
+ "address": "Gloucester",
+ "source": "https://www.taste-of-thai.co.uk/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Thai Prawn Crackers",
+    "description": "Spiced Thai prawn crackers, served with sweet chilli sauce. (crustaceans, wheat)",
+    "price": "£2.95",
+    "num": "1"
+   },
+   {
+    "name": "Chicken Satay (GF)",
+    "description": "Home-made marinated chicken Satay on a skewer, served with peanut sauce. (nuts, shrimp)",
+    "price": "£7.50",
+    "num": "2"
+   },
+   {
+    "name": "Duck Spring Rolls",
+    "description": "Home-made crispy rice pastry filled with shredded Thai style roasted duck, oyster sauce, white cabbage, onion, served with Hoisin sauce. (wheat, molluscs)",
+    "price": "£7.50",
+    "num": "3"
+   },
+   {
+    "name": "Ribs in Rice Wine Sauce",
+    "description": "Meaty pork spare ribs, wok cooked with home-made rice wine sauce. (wheat, shrimp, alcohol)",
+    "price": "£7.50",
+    "num": "4"
+   },
+   {
+    "name": "Chicken Sesame Toast",
+    "description": "Deep fried home-made chicken spread on toast sesame seeds topping, served with sweet chilli sauce. (wheat, sesame, molluscs)",
+    "price": "£6.95",
+    "num": "5"
+   },
+   {
+    "name": "Prawn Sarong",
+    "description": "Deep fried home-made marinated king prawn wrapped in rice pastry, served with sweet chilli sauce. (wheat, molluscs, crustaceans)",
+    "price": "£7.50",
+    "num": "6"
+   },
+   {
+    "name": "King Prawn Tempura",
+    "description": "Deep fried home-made king prawn in tempura batter, served with sweet chilli sauce. (wheat, crustaceans)",
+    "price": "£7.50",
+    "num": "7"
+   },
+   {
+    "name": "Rips Garlic Pepper Sauce",
+    "description": "Home-made meaty pork spare rips, wok cooked with garlic and white pepper sauce. (molluscs, wheat)",
+    "price": "£7.50",
+    "num": "8"
+   },
+   {
+    "name": "Thai Fish Cakes (GF)",
+    "description": "Deep fried home-made Traditional Thai fish cakes, green beans, kaffir lime leaves, served with cucumber in sweet chilli sauce. (eggs, fish, crustaceans)",
+    "price": "£7.50",
+    "num": "9"
+   },
+   {
+    "name": "V10.Thai Spring Rolls",
+    "description": "Home-made crispy vegetarian spring rolls (white cabbage, carrot, black fungus, garlic), served with sweet chilli sauce. (wheat)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "V11.Deep Fried Tofu",
+    "description": "Deep fried fresh firm tofu, served with crushed peanuts in sweet chilli sauce. (soybeans, nuts)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "V12.Vegetables Tempura",
+    "description": "Deep fried selection of home-made vegetables tempura batter, served with sweet chilli sauce. (wheat)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "V13.Golden Bags",
+    "description": "Deep fried home-made vegetarians stuffing (sweet corn, peas, carrot) in crispy rice pastry, served with sweet chilli sauce. (wheat, soybeans)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "V14.Thai Sweet Corn Cakes",
+    "description": "Deep fried home-made sweet corn mixed with flour, Thai yellow curry paste, served with sweet chilli sauce. (wheat)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "V15.Vegetarian Platter (for 2 people)",
+    "description": "Thai spring rolls, vegetables tempura, deep fried tofu, Thai sweet corn cakes, golden bags. Served with sweet chilli sauce and sweet plum sauce.",
+    "price": "£15.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Yummy Platter (for 2 people)",
+    "description": "Chicken Satays, chicken sesame toasts, prawn Sarongs, Thai spring rolls, golden bags. Served with sweet chilli sauce and peanuts sauce.",
+    "price": "£16.95",
+    "num": "16"
+   }
+  ],
+  "Thai soups": [
+   {
+    "name": "Chicken Tom Yum Soup (GF)",
+    "description": "Chicken hot and sour soup, flavoured with lime juice, fish sauce, tomato, mushrooms, galangal, lemongrass, lime leaves and corianders. (crustaceans, fish sauce)",
+    "price": "£7.95",
+    "num": "17"
+   },
+   {
+    "name": "King Prawns Tom Yum Soup (GF)",
+    "description": "King prawns hot and sour soup, flavoured with lime juice, fish sauce, tomato, mushrooms, galangal, lemongrass, lime leaves and corianders. (crustaceans, fish sauce)",
+    "price": "£8.95",
+    "num": "18"
+   },
+   {
+    "name": "Mushrooms Tom Yum Soup (GF)",
+    "description": "Mushrooms hot and sour soup, flavoured with lime juice, fish sauce, tomato, galangal, lemongrass, lime leaves and corianders. (crustaceans, fish sauce)",
+    "price": "£6.95",
+    "num": "19"
+   },
+   {
+    "name": "Chicken Tom Kha Soup (GF)",
+    "description": "Chicken Thai coconut milk soup, flavoured with lime juice, tomato, mushrooms, galangal, lemongrass, lime leaves and corianders.",
+    "price": "£8.50",
+    "num": "20"
+   },
+   {
+    "name": "V21.Mushrooms Tom Kha Soup (GF)",
+    "description": "Mushrooms Thai coconut milk soup, flavoured with lime juice, tomato, galangal, lemongrass, lime leaves and corianders.",
+    "price": "£7.50",
+    "vegetarian": true
+   }
+  ],
+  "Thai Curry dishes": [
+   {
+    "name": "Chicken Thai Green Curry (GF)",
+    "description": "A wonderful blend of herbal green curry paste cooked in coconut milk with chicken, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (crustaceans, fish)",
+    "price": "£11.95",
+    "num": "22"
+   },
+   {
+    "name": "Beef Thai Green Curry (GF)",
+    "description": "A wonderful blend of herbal green curry paste cooked in coconut milk with beef, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (crustaceans, fish)",
+    "price": "£12.95",
+    "num": "23"
+   },
+   {
+    "name": "King Prawns Thai Green Curry (GF)",
+    "description": "A wonderful blend of herbal green curry paste cooked in coconut milk with king prawns, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (crustaceans, fish)",
+    "price": "£13.95",
+    "num": "24"
+   },
+   {
+    "name": "Tofu Thai Green Curry (GF)",
+    "description": "A wonderful blend of herbal green curry paste cooked in coconut milk with tofu, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (soybeans, crustaceans, fish)",
+    "price": "£11.50",
+    "num": "25"
+   },
+   {
+    "name": "Chicken Thai Red Curry (GF)",
+    "description": "A typical Thai dish using herbal Thai red curry paste cooked in coconut milk with chicken, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (crustaceans, fish)",
+    "price": "£11.95",
+    "num": "26"
+   },
+   {
+    "name": "Beef Thai Red Curry (GF)",
+    "description": "A typical Thai dish using herbal Thai red curry paste cooked in coconut milk with beef, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (crustaceans, fish)",
+    "price": "£12.95",
+    "num": "27"
+   },
+   {
+    "name": "King Prawns Thai Red Curry (GF)",
+    "description": "A typical Thai dish using herbal Thai red curry paste cooked in coconut milk with king prawns, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (crustaceans, fish)",
+    "price": "£13.95",
+    "num": "28"
+   },
+   {
+    "name": "Tofu Thai Red Curry (GF)",
+    "description": "A typical Thai dish using herbal Thai red curry paste cooked in coconut milk with tofu, fresh courgette, peppers, bamboo shoots, green peas and basil leaves. (soybeans, crustaceans, fish)",
+    "price": "£11.50",
+    "num": "29"
+   },
+   {
+    "name": "Chicken Thai Yellow Curry (GF)",
+    "description": "A mild yellow curry gently cooked in coconut milk with herbal Thai yellow curry paste, chicken breast, carrot and peeled potatoes.",
+    "price": "£11.95",
+    "num": "30"
+   },
+   {
+    "name": "Chicken Thai Massaman Curry (GF)",
+    "description": "A delicate cooking gently cooked in coconut milk and Thai Massaman curry paste, chicken breast, peeled tomatoes, onion, topped with salted peanuts. (crustaceans, nuts)",
+    "price": "£11.95",
+    "num": "31"
+   },
+   {
+    "name": "Chicken Panang Curry (GF)",
+    "description": "Creamy curry cooked in coconut cream with herbal Panang curry paste, chicken, green beans, peppers, garnished with finely chopped kaffir lime leaves. (crustaceans, fish)",
+    "price": "£11.95",
+    "num": "32"
+   },
+   {
+    "name": "Beef Panang Curry (GF)",
+    "description": "Creamy curry cooked in coconut cream with herbal Panang curry paste, beef, green beans, peppers garnished with finely chopped kaffir lime leaves. (crustaceans, fish)",
+    "price": "£12.95",
+    "num": "33"
+   },
+   {
+    "name": "Chicken Jungle Curry (GF)",
+    "description": "A hotter style curry cooked with herbal jungle curry paste, chicken, wild ginger, peppers, courgette, bamboo shoots, basil leaves, cooked without coconut milk. (crustaceans, fish)",
+    "price": "£11.95",
+    "num": "34"
+   },
+   {
+    "name": "Beef Jungle Curry (GF)",
+    "description": "A hotter style curry cooked with herbal jungle curry paste, beef, wild ginger, peppers, courgette, bamboo shoots, basil leaves, cooked without coconut milk. (crustaceans, fish)",
+    "price": "£12.95",
+    "num": "35"
+   },
+   {
+    "name": "Vegetables Jungle Curry (GF)",
+    "description": "A hotter style curry cooked with herbal jungle curry paste, mixed vegetables, wild ginger, peppers, courgette, bamboo shoots, basil leaves, cooked without coconut milk. (crustaceans, fish)",
+    "price": "£11.50",
+    "num": "36"
+   }
+  ],
+  "Stir-fry dishes": [
+   {
+    "name": "Chicken Cashew Nuts",
+    "description": "Stir fried oyster sauce with chicken, fresh carrot, peppers, onion, spring onion, roasted cashew nuts on top. (nuts, wheat, molluscs)",
+    "price": "£10.95",
+    "num": "37"
+   },
+   {
+    "name": "Beef Cashew nuts",
+    "description": "Stir fried oyster sauce with beef, fresh carrot, peppers, onion, spring onion, roasted cashew nuts on top. (nuts, wheat, molluscs)",
+    "price": "£11.95",
+    "num": "38"
+   },
+   {
+    "name": "Chicken Oyster sauce",
+    "description": "Stir fried oyster sauce with chicken, mushrooms, fresh carrot, peppers, onion, spring onion, a dash of sesame oil. (wheat, sesame, molluscs)",
+    "price": "£10.95",
+    "num": "39"
+   },
+   {
+    "name": "Beef Oyster Sauce",
+    "description": "Stir fried oyster sauce with beef, mushrooms, fresh carrot, peppers, onion, spring onion, a dash of sesame oil. (wheat, sesame, molluscs)",
+    "price": "£11.95",
+    "num": "40"
+   },
+   {
+    "name": "Mixed Vegetables Oyster sauce",
+    "description": "Stir fried oyster sauce with selection of fresh vegetables, beansprouts, onion, spring onion. (wheat, molluscs)",
+    "price": "£5.95",
+    "num": "41"
+   },
+   {
+    "name": "Chicken Thai Sweet and Sour (GF)",
+    "description": "Stir fried home-made Thai style sweet and sour sauce with chicken, fresh tomato, sweet pineapple, cucumber, onion, pepper and spring onion.",
+    "price": "£10.95",
+    "num": "42"
+   },
+   {
+    "name": "King Prawn Thai Sweet and Sour sauce (GF)",
+    "description": "Stir fried home-made Thai style sweet and sour sauce with king prawns, fresh tomato, sweet pineapple, cucumber, onion, pepper and spring onion.",
+    "price": "£12.95",
+    "num": "43"
+   },
+   {
+    "name": "V44.Tofu Sweet and Sour Sauce (GF)",
+    "description": "Stir fried home-made Thai style sweet and sour sauce with tofu, fresh tomato, sweet pineapple, cucumber, onion, pepper and spring onion. (soy beans)",
+    "price": "£10.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Ginger Soy Beans Sauce",
+    "description": "Stir fried Thai style yellow soy beans sauce with chicken, fresh ginger, peppers, carrot, black fungus, onion and spring onion. (soy beans, wheat, molluscs)",
+    "price": "£10.95",
+    "num": "45"
+   },
+   {
+    "name": "Beef Ginger Soy Beans Sauce",
+    "description": "Stir fried Thai style yellow soy beans sauce with beef, fresh ginger, peppers, carrot, black fungus, onion and spring onion. (soy beans, wheat, molluscs)",
+    "price": "£11.95",
+    "num": "46"
+   },
+   {
+    "name": "Duck Ginger Soy Beans Sauce",
+    "description": "Stir fried Thai style yellow soybeans sauce with Thai style roasted duck, fresh ginger, peppers, carrot, black fungus, onion and spring onion. (soybeans, wheat, molluscs)",
+    "price": "£15.95",
+    "num": "47"
+   },
+   {
+    "name": "Tofu Ginger Soy Beans Sauce",
+    "description": "Stir fried Thai style yellow soy beans sauce with tofu, fresh ginger, peppers, carrot, black fungus, onion and spring onion. (soy beans, wheat, molluscs)",
+    "price": "£10.50",
+    "num": "48"
+   },
+   {
+    "name": "Chicken Thai Basil Leaves",
+    "description": "The most popular dish in Thailand. Stir fried chicken with oyster sauce, a dash of dark soy sauce, fresh chilli, green bean, peppers, carrot, onion and basil leaves. (soy beans, wheat, molluscs)",
+    "price": "£10.95",
+    "num": "49"
+   },
+   {
+    "name": "Beef Thai Basil Leaves",
+    "description": "The most popular dish in Thailand. Stir fried beef with oyster sauce, a dash of dark soy sauce, fresh chilli, green bean, peppers, carrot, onion and basil leaves. (soy beans, wheat, molluscs)",
+    "price": "£11.95",
+    "num": "50"
+   },
+   {
+    "name": "Duck Thai Basil Leaves",
+    "description": "The most popular dishes in Thailand. Stir fried Thai style roasted duck with oyster sauce, a dash of dark soysauce, fresh chilli, garlic, green bean, peppers, carrot, onion and basil leaves. (soybeans, wheat, molluscs)",
+    "price": "£15.95",
+    "num": "51"
+   },
+   {
+    "name": "King Prawns Thai Basil Leaves",
+    "description": "The most popular dish in Thailand. Stir fried king prawns with oyster sauce, a dash of dark soy sauce, fresh chilli, green bean, peppers, carrot, onion and basil leaves. (soy beans, wheat, molluscs)",
+    "price": "£12.95",
+    "num": "52"
+   },
+   {
+    "name": "Tofu Thai Basil Leaves",
+    "description": "The most popular dish in Thailand. Stir fried tofu with oyster sauce, a dash of dark soy sauce, fresh chilli, green beans, peppers, carrot, onion and basil leaves. (soy beans, wheat, molluscs)",
+    "price": "£10.50",
+    "num": "53"
+   },
+   {
+    "name": "Chicken Garlic Pepper Sauce",
+    "description": "Stir fried chicken with mushrooms, garlic and peppers sauce, served on top of fresh lettuce, garnished with fresh coriander, tomato and cucumber. (wheat, molluscs)",
+    "price": "£10.95",
+    "num": "54"
+   },
+   {
+    "name": "Beef Garlic Pepper Sauce",
+    "description": "Stir fried beef with mushrooms, garlic and peppers sauce, served on top of fresh lettuce, garnished with fresh coriander, tomato and cucumber. (wheat, molluscs)",
+    "price": "£11.95",
+    "num": "55"
+   },
+   {
+    "name": "King Prawns Garlic Pepper sauce",
+    "description": "Stir fried king prawns with mushrooms, garlic and peppers sauce, served on top of fresh lettuce, garnished with fresh coriander, tomato and cucumber. (wheat, molluscs, crustaceans)",
+    "price": "£12.95",
+    "num": "56"
+   }
+  ],
+  "Thai Chef's Special": [
+   {
+    "name": "King Prawns Chu Chee Curry (GF)",
+    "description": "Great creamy of red curry cooked with king prawns, coconut cream, peppers, garnished with finely chopped kaffir lime leaves. (crustaceans, fish)",
+    "price": "£15.95",
+    "num": "57"
+   },
+   {
+    "name": "Sea bass Fillet Chu Chee Curry (GF)",
+    "description": "Deep fried Sea Bass fillet topped with creamy red curry cooked in coconut cream, peppers, garnished with finely chopped kaffir lime leaves. (crustaceans, fish)",
+    "price": "£19.95",
+    "num": "58"
+   },
+   {
+    "name": "Sea bass Fillet Three Flavours Sauce (GF)",
+    "description": "Deep fried Sea Bass fillet topped with chopped onion. peppers, cooked with our home-made sauce. Garnished with fresh coriander. (fish)",
+    "price": "£18.95",
+    "num": "59"
+   },
+   {
+    "name": "Sea Bass Fillet Sweet and Sour Sauce (GF)",
+    "description": "Deep fried Sea Bass fillet topped with stir-fry Thai style sweet and sauce, fresh tomato, sweet pineapple, cucumber, onion and spring onion. (fish)",
+    "price": "£18.95",
+    "num": "60"
+   },
+   {
+    "name": "Duck Thai Red Curry (GF)",
+    "description": "Thai style roasted duck red curry cooked with coconut milk, sweet pineapple, fresh tomato, courgette and basil leaves. (crustaceans, fish)",
+    "price": "£16.95",
+    "num": "61"
+   },
+   {
+    "name": "Duck Tamarind Sauce",
+    "description": "Thai style roasted duck wok stir-fry with onion, broccoli and carrot in our home-made tamarind sauce. (molluscs, wheat)",
+    "price": "£15.95",
+    "num": "62"
+   }
+  ],
+  "Noodles Dishes": [
+   {
+    "name": "Chicken Pad Thai Noodles (GF)",
+    "description": "A popular Pad Thai, rice noodles stir fried with chicken, eggs, home-made Pad Thai sauce, fresh beansprouts, spring onion, crushed salted peanuts on the side. (eggs, nuts)",
+    "price": "£12.95",
+    "num": "63"
+   },
+   {
+    "name": "King Prawns Pad Thai Noodles (GF)",
+    "description": "A popular Pad Thai, rice noodles stir fried with king prawns, eggs, home-made Pad Thai sauce, fresh beansprouts, spring onion, crushed salted peanuts on the side. (eggs, nuts)",
+    "price": "£14.95",
+    "num": "64"
+   },
+   {
+    "name": "V65.Tofu Pad Thai Noodles (GF)",
+    "description": "A popular Pad Thai, rice noodles stir fried with tofu, eggs, home-made Pad Thai sauce, fresh beansprouts, spring onion, crushed salted peanuts on the side. (eggs, nuts, soy beans)",
+    "price": "£12.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Dark Soy Sauce Noodles",
+    "description": "Stir-fry flat rice noodles cooked with chicken, eggs, a dash of dark soy sauce, fresh cabbage, broccoli and carrot. (eggs, soy beans, wheat)",
+    "price": "£12.95",
+    "num": "66"
+   },
+   {
+    "name": "V67.Tofu Dark Soy Sauce Noodles",
+    "description": "Stir-fry flat rice noodles cooked with tofu, eggs, a dash of dark soy sauce, fresh cabbage, broccoli and carrot. (eggs, soy beans, wheat)",
+    "price": "£12.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Drunken Noodles",
+    "description": "Spicy stir-fry flat rice noodles with chicken, fresh chilli, oyster sauce, a dash of dark soy sauce, fresh cabbage, broccoli, carrot and basil leaves. (soy beans, wheat, molluscs)",
+    "price": "£12.95",
+    "num": "68"
+   },
+   {
+    "name": "Beef Drunken Noodles",
+    "description": "Spicy stir-fry flat rice noodles with beef, fresh chilli, oyster sauce, a dash of dark soy sauce, fresh cabbage, broccoli, carrot and basil leaves. (soy beans, wheat, molluscs)",
+    "price": "£13.95",
+    "num": "69"
+   },
+   {
+    "name": "Tofu Drunken Noodles",
+    "description": "Spicy stir-fry flat rice noodles with tofu, fresh chilli, oyster sauce, a dash of dark soy sauce, fresh cabbage, broccoli, carrot and basil leaves. (soy beans, wheat, molluscs)",
+    "price": "£12.50",
+    "num": "70"
+   },
+   {
+    "name": "V71.Eggs Noodles",
+    "description": "Stir fried eggs noodles with eggs, light and dark soy sauce, fresh beansprouts and spring onion. (eggs, soy beans, wheat)",
+    "price": "£6.50",
+    "vegetarian": true
+   }
+  ],
+  "Thai Rice Dishes": [
+   {
+    "name": "Chicken Special Fried Rice",
+    "description": "Chicken special fried rice cooked with eggs, light and dark soy sauce. fresh tomato, onion and spring onion. (eggs, soy beans, wheat)",
+    "price": "£12.95",
+    "num": "72"
+   },
+   {
+    "name": "King Prawns Special Fried Rice",
+    "description": "King prawns special fried rice cooked with eggs, light and dark soy sauce. fresh tomato, onion and spring onion. (eggs, soy beans, wheat)",
+    "price": "£14.95",
+    "num": "73"
+   },
+   {
+    "name": "V74.Vegetables Special Fried Rice",
+    "description": "Fresh vegetables special fried rice cooked with eggs, light and dark soy sauce, fresh tomato, onion and spring onion. (eggs, soy beans, wheat)",
+    "price": "£12.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Jasmine Fragrant Rice",
+    "description": "Plain 100% Thai fragrant rice",
+    "price": "£3",
+    "vegetarian": true,
+    "num": "75"
+   },
+   {
+    "name": "Eggs Fried Rice",
+    "description": "Wok-fry 100% Thai fragrant rice with eggs, light soy sauce. (eggs, soy beans, wheat)",
+    "price": "£3.90",
+    "vegetarian": true,
+    "num": "76"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "100% Thai fragrant rice cooked with our home-made coconut cream.",
+    "price": "£3.90",
+    "vegetarian": true,
+    "num": "77"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

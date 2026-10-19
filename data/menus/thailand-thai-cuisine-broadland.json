@@ -1,0 +1,216 @@
+{
+ "restaurant": "Thailand Thai Cuisine",
+ "city": "Broadland",
+ "fsa_id": "1606470",
+ "address": "Broadland",
+ "source": "https://www.thailandnorwich.co.uk/wp-content/uploads/2026/06/Thailand-Restaurant-Main-Menu-2026.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "1 Chicken Satay",
+    "description": "Chicken morsels on a bamboo chargrilled stick. Served with peanut sauce and salad with Thai sweet vinegar dressing. Cru I F I N I Milk I Soy",
+    "price": "£9.95"
+   },
+   {
+    "name": "2 Goong Chup Pang Tod",
+    "description": "King Prawn and vegetables deep-fried in tempura batter. Served with plum and sweet chilli sauce. C I Cru",
+    "price": "£9.95"
+   },
+   {
+    "name": "3 Namoo",
+    "description": "Segments of minced pork contained within a bread base, deep fried to a crisp finish. Served with plum and sweet chilli Sauce. C I E I Soy",
+    "price": "£8.95"
+   },
+   {
+    "name": "4 Kratong Tong",
+    "description": "A mixture of chicken, prawn and sweet corn, lightly sautéed. Served in edible baskets. C I Cru I E I M I Sem I Soy",
+    "price": "£8.95"
+   },
+   {
+    "name": "5 Thailand Spring Rolls",
+    "description": "Onuma’s special recipe. Fried chicken and pork bean sprouts, clear noodles. Served with Plum and sweet chilli sauce. C I E I M I Soy",
+    "price": "£8.95"
+   },
+   {
+    "name": "6 Tiger Prawn Spring Rolls",
+    "description": "Tiger prawns wrapped in minced pork, deep fried. Served with plum and sweet chilli sauce. C I Cru I E I M I Soy",
+    "price": "£8.95"
+   }
+  ],
+  "THAILAND SOUPS": [
+   {
+    "name": "7 Tom Ka Gai",
+    "description": "Chicken pieces, cooked in fresh coconut milk, Thai herbs, mushroom and chopped coriander. F",
+    "price": "£8.95"
+   },
+   {
+    "name": "8 Tom Yum Goong (Hot and Sour Soup)",
+    "description": "The most popular of all Thai soups. King Prawn cooked with tom yum herbs, mushroom and chopped coriander. Cru I F I",
+    "price": "£8.95"
+   }
+  ],
+  "PORK DISHES": [
+   {
+    "name": "9 Chilli Pork",
+    "description": "Prime-cut pork fried with fresh chillies, onions, spring onions, mushrooms, green & red peppers and basil leaves. C I F I M I Soy I",
+    "price": "£17.95"
+   },
+   {
+    "name": "10 Ginger Pork",
+    "description": "Prime-cut pork fried with fresh ginger, onions, spring onions, black mushrooms and green & red peppers. C I M I Soy",
+    "price": "£17.95"
+   },
+   {
+    "name": "11 Pad Thai",
+    "description": "Prime cut pork fried with Thai rice sticks, egg, crushed peanuts, bean sprouts and spring onions. C I E I F I M I N I Soy I",
+    "price": "£(Pork or Chicken) £17.95 I (King Prawn) £20.95"
+   },
+   {
+    "name": "12 Spare Ribs Northern Style",
+    "description": "Pork ribs marinated in an original northern style paste. C I Cru I F I M I Soy I",
+    "price": "£17.95"
+   },
+   {
+    "name": "12a Sweet and Sour Pork",
+    "description": "Crispy brown slices of pork cooked with tomatoes, cucumber, onions, spring onions, green & red peppers and pineapple. C I Soy",
+    "price": "£17.95"
+   },
+   {
+    "name": "S-12 Pork Ribs Heaven",
+    "description": "Slow cooked pork ribs with homemade heaven sauce and chopped coriander. C I F I M I Soy I",
+    "price": "£17.95"
+   },
+   {
+    "name": "S-16 Sweet Pork",
+    "description": "Prime cut pork marinated and fried with fresh garlic, chilli and chopped coriander. C I M I Soy I",
+    "price": "£17.95"
+   }
+  ],
+  "CHICKEN DISHES": [
+   {
+    "name": "13 Panang Gai",
+    "description": "Chicken breast, cooked with Panang curry paste, coconut milk, string beans, green & red peppers and basil leaves. Cru I F I",
+    "price": "£17.95"
+   },
+   {
+    "name": "14 Ginger Chicken",
+    "description": "Chicken breast fried with fresh ginger, onions, spring onions, black mushrooms and green & red peppers. C I M I Soy",
+    "price": "£17.95"
+   },
+   {
+    "name": "15 Corny Chicken",
+    "description": "Chicken breast fried with baby corns, onions, spring onions, black mushrooms, green & red peppers and cashew nuts. C I M I N I Soy",
+    "price": "£17.95"
+   },
+   {
+    "name": "16 Garlic Chicken",
+    "description": "Chicken breast fried with fresh crushed garlic and chopped coriander. C I M I Soy",
+    "price": "£17.95"
+   },
+   {
+    "name": "17 Gang Keow Wan (Green Chicken Curry)",
+    "description": "Chicken breast cooked with green curry paste in coconut milk, bamboo shoots, string beans, green & red peppers and basil leaves. Cru I F I",
+    "price": "£17.95"
+   },
+   {
+    "name": "18 Sweet & Sour Chicken",
+    "description": "Crispy brown slices of chicken breast cooked with tomatoes, cucumber, onions, spring onions, green & red peppers and pineapple. C I Soy",
+    "price": "£17.95"
+   },
+   {
+    "name": "19 Hot & Spicy Chicken",
+    "description": "Chicken breast fried in chilli paste in oil with onions, green & red peppers and basil leaves. C I Cru I F I M I Soy I",
+    "price": "£17.95"
+   },
+   {
+    "name": "S-2 BBQ Chicken",
+    "description": "Chicken breast lightly coated with flour, fried with onions, green & red peppers in a Thailand BBQ Sauce. C I Sem I Soy I",
+    "price": "£17.95"
+   },
+   {
+    "name": "S-5 Krapao Gai Krob",
+    "description": "Chicken breast lightly coated with flour, fried with fresh garlic, chilli, onions, green & red peppers and basil leaves. C I F I M I Soy I",
+    "price": "£17.95"
+   },
+   {
+    "name": "B Crispy Chicken Black Pepper Sauce",
+    "description": "C I F I M I Soy I",
+    "price": "£17.95"
+   }
+  ],
+  "BEEF DISHES": [
+   {
+    "name": "20 Beef in Oyster Sauce",
+    "description": "Prime cut rump, fried in oyster sauce, fresh ginger, black mushrooms and spring onions. C I M I Soy",
+    "price": "£17.95"
+   },
+   {
+    "name": "21 Chilli Beef",
+    "description": "Prime cut rump, fried with fresh chilli, onions, spring onions, mushrooms, green & red peppers and basil leaves. C I F I M I Soy I",
+    "price": "£17.95"
+   },
+   {
+    "name": "22 Gang Pa Neur (Beef Curry Village Style)",
+    "description": "A typical village dish. Prime cut rump cooked with red curry paste in chicken stock, vegetables and basil leaves. C I Cru I F I M I",
+    "price": "£17.95"
+   },
+   {
+    "name": "23 Garlic Beef",
+    "description": "Prime cut rump steak marinated in oyster sauce and fried with fresh crushed garlic and chopped coriander. C I M I Soy",
+    "price": "£17.95"
+   }
+  ],
+  "KING PRAWNS": [
+   {
+    "name": "26 Sweet & Sour King Prawns",
+    "description": "King Prawns cooked with tomatoes, cucumber, onions, spring onions, green & red peppers and pineapple. C I Cru I Soy",
+    "price": "£21.95"
+   },
+   {
+    "name": "27 Hot & Spicy King Prawns",
+    "description": "King Prawns fried in chilli in oil paste with onions, spring onions, green & red peppers, and basil leaves. C I Cru I F I M I Soy I",
+    "price": "£21.95"
+   },
+   {
+    "name": "28 Garlic King Prawns",
+    "description": "King Prawns fried with fresh crushed garlic and chopped coriander. C I Cru I M I Soy",
+    "price": "£21.95"
+   },
+   {
+    "name": "29 Chilli King Prawns",
+    "description": "King Prawns fried with fresh chillies, onions, spring onions, mushrooms, green & red peppers and basil leaves. C I Cru I F I M I Soy I",
+    "price": "£21.95"
+   },
+   {
+    "name": "30 King Prawn Curry",
+    "description": "King Prawns cooked with red curry paste, coconut milk with green & red peppers and basil leaves. Cru I F I",
+    "price": "£21.95"
+   },
+   {
+    "name": "31 King Prawn BBQ",
+    "description": "Grilled King Prawns, garlic butter, crispy noodle nest, glazed with Tamarind sauce. C I Cru I F I M I Milk I Soy",
+    "price": "£22.95"
+   },
+   {
+    "name": "C King Prawn Black Pepper Sauce",
+    "description": "C I Cru I F I M I Soy I",
+    "price": "£22.95"
+   }
+  ],
+  "DUCK DISHES": [
+   {
+    "name": "32 Pineapple Duck",
+    "description": "Roasted duck breast fried with pineapple chunks, onions, spring onions, green & red peppers and cashew nuts. C I Cru I M I N I Soy I",
+    "price": "£20.95"
+   },
+   {
+    "name": "33 Duck Curry",
+    "description": "",
+    "price": "£20.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

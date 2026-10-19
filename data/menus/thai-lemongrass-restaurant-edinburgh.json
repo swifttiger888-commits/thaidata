@@ -1,0 +1,75 @@
+{
+ "restaurant": "Thai Lemongrass Restaurant",
+ "city": "Edinburgh",
+ "fsa_id": "127256",
+ "address": "Edinburgh",
+ "source": "https://www.thailemongrass.net/edinburgh/kids-menu-edinburgh/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starter": [
+   {
+    "name": "K1 Vegetables spring rolls with plum sauce ( W,G)",
+    "description": "",
+    "price": "£4.60",
+    "vegetarian": true
+   },
+   {
+    "name": "K2 Grilled chicken satay with peanut sauce (N,D)",
+    "description": "",
+    "price": "£5.20"
+   }
+  ],
+  "Main Course": [
+   {
+    "name": "K3 Thai fried rice with chicken (W,G,E)",
+    "description": "",
+    "price": "£8.90"
+   },
+   {
+    "name": "K4 Stir fried rice noodles with chicken, vegetables and eggs",
+    "description": "",
+    "price": "£8.90"
+   },
+   {
+    "name": "K5 Deep fried crispy sea bass and chips with lime mayonnaise (W,G,E)",
+    "description": "",
+    "price": "£10.80"
+   },
+   {
+    "name": "K6 Deep fried prawns tempura with plum sauce (3pcs) (W,G,E)",
+    "description": "",
+    "price": "£10.80"
+   }
+  ],
+  "Side Dishes": [
+   {
+    "name": "K7 Steamed Fragrant Rice",
+    "description": "",
+    "price": "£3.25",
+    "vegetarian": true
+   },
+   {
+    "name": "K8 Egg Fried Rice (W,G,E)",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "K9 French Fries (W,G,E)",
+    "description": "",
+    "price": "£3.80",
+    "vegetarian": true
+   }
+  ],
+  "Dessert": [
+   {
+    "name": "K10 Ice-cream",
+    "description": "(Ice-cream with choice of vanilla, mango, coconut or sorbet)",
+    "price": "£2.80",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

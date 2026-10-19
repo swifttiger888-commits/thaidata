@@ -1,0 +1,386 @@
+{
+ "restaurant": "Doi Intanon Thai Restaurant",
+ "city": "Westmorland and Furness",
+ "fsa_id": "299508",
+ "address": "Westmorland and Furness",
+ "source": "https://doiintanon.co.uk/wp-content/uploads/2026/03/Main-Menu-2026.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "COMBINATIONS:": [
+   {
+    "name": "Combination Starter",
+    "description": "Servings of Poh Piah Gai, Gai Satay, Goong Hom Pa, Pork on Sesame Toast and Thai Crackers.",
+    "price": "£Per Person - £9.25"
+   },
+   {
+    "name": "Combinaton Starter Vegetarian Suitable for Vegans",
+    "description": "Servings of mixed vegetables in batter, Curry Puffs, Vegetable spring rolls and Money Bags.",
+    "price": "£Per Person - £8.85",
+    "vegetarian": true
+   },
+   {
+    "name": "Doi Suthaep – Set Menu for Two",
+    "description": "Combination starter for Two, followed by either Gaeng Ped or Gaeng Keow Warn with Gai or Neua, and Gai Himmaparn with Phad Pak Ruam. Rice Options (Per Person): Jasmine Rice / Egg Fried / Coconut",
+    "price": "£Per Person - £34.95"
+   },
+   {
+    "name": "Doi Intanon – Set Menu for Four",
+    "description": "Combination starter for 4 followed by, Phad Khing Neua, Goong Phad Pong Garee, Panang Gai and Gaeng Keow Warn gai, accomopanied with Phad Pak Ruam & Fried Noodles. Rice Options (Per Person): Jasmine Rice / Egg Fried / Coconut",
+    "price": "£Per Person - £38.50"
+   }
+  ],
+  "STARTERS:": [
+   {
+    "name": "Thai Prawn Crackers GF",
+    "description": "Served with a sweet chilli sauce.",
+    "price": "£3.90"
+   },
+   {
+    "name": "Poh Piah Gai W",
+    "description": "Chicken & Vegetable Spring rolls with Plum sauce",
+    "price": "£8.50"
+   },
+   {
+    "name": "Gai Satay GF, N Nae Nam!",
+    "description": "Grilled marinated Chicken, served with our Peanut Satay sauce.",
+    "price": "£8.85"
+   },
+   {
+    "name": "Goong Hom Pa W",
+    "description": "King Prawns marinated in Soy, hand-rolled in Filo-Pastry, deep-fried and served with Plum sauce.",
+    "price": "£9.15"
+   },
+   {
+    "name": "Poh Piah Bet W Nae Nam!",
+    "description": "Freshly made Duck Spring Rolls with herbs, glass noodles & vegetables, served with Hoisin sauce.",
+    "price": "£9.15"
+   },
+   {
+    "name": "Pork on Sesame Toast W, E, SS",
+    "description": "Hand made using premium pork, with a crispy egg and sesame coating.",
+    "price": "£8.25"
+   },
+   {
+    "name": "“Bangkok Bangers” (Sai Oua) GF Nae Nam!",
+    "description": "These are Northern Thai Pork Sausages, freshly made by our chef and created using premium Pork, Lemongrass, Galangal, Kaffir Lime leaves, Coriander, Turmeric & Chilli. Experience the flavour of Thailand in a Banger!",
+    "price": "£9.65"
+   }
+  ],
+  "THAI SALADS: **": [
+   {
+    "name": "Yum Neua GF,CF",
+    "description": "A spicy hot & sour Thai salad of tender strips of Starter: £10.65 premium Beef with Shallot, Coriander, Tomato, Garlic, Cucumber & Chilli.",
+    "price": "£Main size:             £15.65"
+   },
+   {
+    "name": "Laab Neua GF,CF",
+    "description": "Traditional Thai herb salad with minced Beef, Starter: £10.65 flavoured with Mint, ground roasted rice, Lemon juice & Chilli.",
+    "price": "£Main size:             £15.65"
+   },
+   {
+    "name": "Yum Gai GF,CF",
+    "description": "The same spicy, hot and sour Thai salad, prepared instead Starter: £9.65 with strips of chicken.",
+    "price": "£Main size:             £14.65"
+   },
+   {
+    "name": "Laab Gai GF,CF Nae Nam!",
+    "description": "Traditional Thai herb salad with minced Chicken, Starter: £9.65 flavoured with Mint, ground roasted rice, Lemon juice & Chilli.",
+    "price": "£Main size:             £14.65"
+   },
+   {
+    "name": "Neua Namtok GF,CF Nae Nam!",
+    "description": "Traditional Thai herb salad with tender strips of premium Beef, Starter: £11.55 flavoured with Mint, ground roasted rice, Lemon juice & Chilli.",
+    "price": "£Main size:                         £15.95"
+   },
+   {
+    "name": "Pla Goong GF,CF (Starter Size only)",
+    "description": "Our spiciest salad with Tiger Prawns, lots of Lemongrass, Shallot, Chilli, Coriander & Chilli paste.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pla Gai GF,CF Nae Nam! (Starter Size only)",
+    "description": "Our spiciest salad with slightly crispy Chicken, lots of Lemongrass, Shallot, Chilli, Coriander & Chilli paste.",
+    "price": "£8.95"
+   }
+  ],
+  "GRILLED - SIZZLING - DISHES:": [
+   {
+    "name": "Weeping Tiger SS,GFO,CF",
+    "description": "Grilled marinated slices of tender Beef Sirloin served sizzling on a very hot iron dish and accompanied by a side of spicy Tamarind sauce.",
+    "price": "£23.75"
+   }
+  ],
+  "SOUPS:": [
+   {
+    "name": "Tom Yum GF,CF",
+    "description": "Authentic Hot & Sour Lemongrass soup with Mushrooms, Galangal, Chilli & Coriander.",
+    "price": "£Gai:     £8.15           Goong: £10.85"
+   },
+   {
+    "name": "Tom Kah GF,CF Nae Nam!",
+    "description": "Lemongrass soup with Galangal, Mushroom, Coconut cream, Kaffir Lime leaf, Coriander & Chilli",
+    "price": "£Gai: £8.25              Goong: £10.95"
+   }
+  ],
+  "FISH + SEAFOOD DISHES:": [
+   {
+    "name": "Bla Sam Rot GF",
+    "description": "Fried fresh Salmon Supreme or Seabass Fillet with our home-made sweet, sour & spicy sauce",
+    "price": "£Salmon: £24.45                  Seabass: £21.25"
+   },
+   {
+    "name": "Bla Neung Manao GF,CF",
+    "description": "Steamed fresh Salmon Supreme or fresh Seabass Fillet with Garlic, Lemon, Chilli & root of Coriander. A Flavourful Option!",
+    "price": "£Salmon: £24.45                 Seabass: £21.25"
+   },
+   {
+    "name": "Bla Neung Seeyu, GFO Nae Nam!",
+    "description": "Fillet de-boned Seabass steamed with Ginger, Spring Onion, Soya sauce & mild chilli. One of the Many Favourites.",
+    "price": "£Seabass: £21.45"
+   },
+   {
+    "name": "Bla Chu Chi CF, GF Nae Nam!",
+    "description": "Fried Salmon Fillet coated with Smooth and Rich Red Curry sauce, Coconut cream and sliced Kaffir Lime Leaves.",
+    "price": "£Salmon: £24.45                 Seabass: £21.25"
+   }
+  ],
+  "CURRY DISHES:": [
+   {
+    "name": "Gaeng Kheow Warn GF",
+    "description": "Traditional Thai Green Curry with mixed Vegetables.",
+    "price": "£Gai: £15.65             Neua: £16.15\n                                                        Goong: £17.60"
+   },
+   {
+    "name": "Gaeng Ped GF",
+    "description": "Traditional Thai Red Curry with mixed Vegetables.",
+    "price": "£Gai: £15.65               Neua: £16.15\n                                                                Goong: £17.60"
+   },
+   {
+    "name": "Gaeng Ped Bet Yarng W",
+    "description": "A beautiful red curry prepared with Roast Duck Breast, Pineapple, Grapes and Cherry Tomatoes.",
+    "price": "£17.10"
+   },
+   {
+    "name": "Gaeng Panang GF Nae Nam!",
+    "description": "A Smoother, Sweeter, Mild Curry dish, Excellent for beginner.",
+    "price": "£Gai: £15.65             Neua: £16.15\n                                                         Goong: £17.60"
+   },
+   {
+    "name": "Jungle Curry GF",
+    "description": "Our hottest curry with Krachai (aromatic ginger), Fresh Peppercorn & mixed vegetables.",
+    "price": "£Gai: £15.65            Neua: £16.15\n                                                                Goong: £17.60"
+   }
+  ],
+  "STIR-FRIES:": [
+   {
+    "name": "Beef with Oyster Sauce GFO",
+    "description": "Stir-fried Beef with Ginger, Mushrooms, Spring Onion & Oyster Sauce.",
+    "price": "£16.15"
+   },
+   {
+    "name": "Sweet & Sour GFO",
+    "description": "Fresh Tomatoes, Peppers, Cucumber, Onions and Spring Onions",
+    "price": "£Gai: £15.30          Goong: £17.60"
+   },
+   {
+    "name": "Pad Himmaparn N, GFO Nae Nam!",
+    "description": "Traditional stir fry with Cashew nuts, served with Onions, mixed Peppers, Mushrooms, carrots & mild, sweet toasted Chilli paste.",
+    "price": "£Gai: £15.30          Goong:    £17.60"
+   },
+   {
+    "name": "Phad Krapow GFO",
+    "description": "Classic Thai Home stir fry with Minced Meat of your choice, Garlic, Chilli and Basil.",
+    "price": "£Gai: £15.30         Neua:     £16.15"
+   },
+   {
+    "name": "Phad Khing GFO",
+    "description": "Stir fry with Onions, Ginger, Spring Onions, Goong: £17.60 Chilli and Garlic. Very Fresh & Healthy!",
+    "price": "£Gai: £15.65         Neua:     £16.55"
+   },
+   {
+    "name": "Drunken Duck Nae Nam!",
+    "description": "A flavourful combination of roast duck breast, fried Garlic, Chilli, Basil & Fine beans. A combination you need to try!",
+    "price": "£17.10"
+   },
+   {
+    "name": "Phad Pong Garee E, GFO",
+    "description": "This delicious slightly spicy stir-fry with Eggs, Onions, Turmeric & Spring onions is a favourite.",
+    "price": "£Gai: £15.65          Goong: £17.05"
+   },
+   {
+    "name": "Phad Ped GF, CF Nae Nam!",
+    "description": "An Intensely delicious stir-fried Curry dish with Fine Beans, Goong: £17.70 Basil, Kaffir lime Leaves and Coconut milk.",
+    "price": "£Gai: £15.40          Neua: £16.15"
+   }
+  ],
+  "V.STARTERS:": [
+   {
+    "name": "Vegetables in batter W",
+    "description": "Broccoli, Baby Corn etc in a light batter, Served with Plum sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Poh Piah Jay W",
+    "description": "Vegetable spring rolls Prepared with glass noodles, Served with Plum sauce.",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Money Bags W Nae Nam!",
+    "description": "Lightly curried diced vegetables hand wrapped in filo pastry, Served with Plum Sauce",
+    "price": "£8.95",
+    "vegetarian": true
+   }
+  ],
+  "V.SOUPS:": [
+   {
+    "name": "Tom Yum Hed GF",
+    "description": "Mushroom, Lemongrass spicy soup with Coriander & Chillies",
+    "price": "£7.85",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Kha Hed GF",
+    "description": "Mushroom, Lemongrass & Galangal soup with Coconut cream, Chilli & Coriander.",
+    "price": "£8.05",
+    "vegetarian": true
+   }
+  ],
+  "V.CURRIES:": [
+   {
+    "name": "Gaeng Kheow Warn Jay GFO",
+    "description": "Green Curry with mixed veg, Mushrooms, Bamboo shoot, Tofu & Basil.",
+    "price": "£14.65",
+    "vegetarian": true
+   },
+   {
+    "name": "Gaeng Ped Jay GFO",
+    "description": "Red Curry with mixed vegetables, Mushrooms, Bamboo shoot, Tofu & Basil.",
+    "price": "£14.65",
+    "vegetarian": true
+   },
+   {
+    "name": "Gaeng Panang Jay GFO Nae Nam!",
+    "description": "A smoother curry with mixed vegetables, Mushrooms & Tofu. A Vegi Favourite!",
+    "price": "£14.65",
+    "vegetarian": true
+   }
+  ],
+  "V.SALADS:": [
+   {
+    "name": "Yum Tawai W, N, GFO",
+    "description": "Mixed blanched vegetables in a spicy dressing, topped with Cashew nuts.",
+    "price": "£14.30",
+    "vegetarian": true
+   },
+   {
+    "name": "Yum Touy W, N, GFO Nae Nam!",
+    "description": "Blanched Fine Beans in a Spicy, Sweet and Sour dressing with Coconut milk, ground peanuts, fine Shallots and Chilli Paste.",
+    "price": "£14.30",
+    "vegetarian": true
+   },
+   {
+    "name": "Pla Tofu W, GFO Nae Nam!",
+    "description": "Lightly fried shredded Tofu in a Spicy Thai dressing with shallots, Lemongrass, Kaffir Lime leaves and Chilli Oil.",
+    "price": "£14.30",
+    "vegetarian": true
+   }
+  ],
+  "VEGETARIAN STIR-FRIES:": [
+   {
+    "name": "Hed Himmaparn N,",
+    "description": "Mushrooms, Onions, Carrots, Peppers, Spring Onions and Cashew nuts, prepared Thai style.",
+    "price": "£Main Course £14.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Brio Warhn Jay GFO",
+    "description": "Sweet & Sour mixed Vegetables and Tofu.",
+    "price": "£Main Course £14.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Phad Khing Hed GFO",
+    "description": "Ginger stir fried with Onions, Garlic, Mushrooms & Spring Onions and Chilli.",
+    "price": "£Main Course £14.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Makeur GFO Nae Nam!",
+    "description": "Diced Aubergine with Mushroom, Carrots, Yellow Bean paste, Basil & Chilli.",
+    "price": "£Side: £8.95       Main Course £14.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Drunken Jay GFO Nae Nam!",
+    "description": "A flavourful combination of fried Garlic, Chilli, Basil, Fine beans, Broccoli, Mushrooms, Baby Corn and Tofu!",
+    "price": "£Side: £8.95       Main Course £14.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Phad Pak Ruam Mit GFO",
+    "description": "A mix of Broccoli, Carrots, Beansprouts, Chinese Leaves, Baby Corn and Mushrooms, Stir fried with Garlic.",
+    "price": "£Side: £8.95 Main Course £14.95",
+    "vegetarian": true
+   }
+  ],
+  "NOODLES & RICE:": [
+   {
+    "name": "Phad Thai N,E,GFO, Nae Nam!",
+    "description": "Stir-fried white Noodles in a sweet and sour tomato and Jay: £14.85 Tamarind sauce with Eggs, Shallots, Bean Sprouts, Fried Tofu. An Authentic common Street food of Thailand!",
+    "price": "£Gai: £15.85   Goong: £17.95"
+   },
+   {
+    "name": "Phad Seyu E,GFO, Nae Nam!",
+    "description": "Stir-fried white flat Noodles with Soy Sauce, Eggs, Broccoli, Goong: £18.05 Carrots, Bean Sprouts. Jay: £14.90",
+    "price": "£Gai: £15.95   Neua: £16.85"
+   },
+   {
+    "name": "Tiger Prawn Fried Rice CR,E, GFO",
+    "description": "Stir fried with Eggs, Carrots, Onions, Tomatoes and Tiger Prawns",
+    "price": "£17.15"
+   },
+   {
+    "name": "Chicken Fried Rice E, GFO",
+    "description": "Stir fried with Eggs, Carrots, Onions, Tomatoes and Sliced Chicken",
+    "price": "£15.65"
+   },
+   {
+    "name": "Plain Noodles GF",
+    "description": "Boil white flat Noodles.",
+    "price": "£3.85"
+   },
+   {
+    "name": "Vermicelli Noodles GFO",
+    "description": "Prepared with Bean sprouts & Spring Onions and Soy Sauce.",
+    "price": "£6.45"
+   },
+   {
+    "name": "Sticky Rice GF – suitable with salads, Weeping Tiger",
+    "description": "Thailand’s North-eastern traditional Sticky Rice",
+    "price": "£4.80"
+   },
+   {
+    "name": "Coconut Rice GF – suitable with curries",
+    "description": "White rice cooked with Coconut Cream",
+    "price": "£4.30"
+   },
+   {
+    "name": "Egg Fried Rice E, GFO – suitable with stir fries",
+    "description": "Fried rice with Egg, Carrot & Spring Onion",
+    "price": "£4.70"
+   },
+   {
+    "name": "Steamed Jasmine Rice GF, - Suitable with curries and stir fries",
+    "description": "Aromatic Thai white Rice",
+    "price": "£3.40"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Doi Suthaep – Set Menu for Two Per Person - £34.95",
+  "Doi Intanon – Set Menu for Four Per Person - £38.50"
+ ]
+}

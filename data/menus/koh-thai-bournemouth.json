@@ -46,7 +46,7 @@
   "Sharing Small Plates (Starters)": [
    {
     "name": "Chicken Satay GF N",
-    "description": "Chargrilled chicken skewers with peanut satay dipping sauce\n3 Skewers 6.95\n6 Skewers 12.95",
+    "description": "Chargrilled chicken skewers with peanut satay dipping sauce 3 Skewers 6.95 6 Skewers 12.95",
     "price": null
    },
    {
@@ -71,7 +71,7 @@
    },
    {
     "name": "Teriyaki Skewers GF",
-    "description": "Chargrilled chicken Teriyaki skewers dipped in a sweet Teriyaki sauce\n3 Skewers 6.95\n6 Skewers 12.95",
+    "description": "Chargrilled chicken Teriyaki skewers dipped in a sweet Teriyaki sauce 3 Skewers 6.95 6 Skewers 12.95",
     "price": null
    },
    {
@@ -154,7 +154,7 @@
   "Stir-fries": [
    {
     "name": "Drunken Rice",
-    "description": "Pork or chicken. Chillies, peppers and pak choi all stir fried with fragrant Thai basil and special stir fry sauce. The perfect tonic for a bad day 16.95\nAdd prawns +2.00",
+    "description": "Pork or chicken. Chillies, peppers and pak choi all stir fried with fragrant Thai basil and special stir fry sauce. The perfect tonic for a bad day 16.95 Add prawns +2.00",
     "price": "£16.95"
    },
    {
@@ -192,7 +192,7 @@
   "Noodles": [
    {
     "name": "Pad Thai GF N",
-    "description": "The nations favourite, rice noodles, beansprouts, tamarind sauce and peanuts\nVegetable 14.95\nPrawn 16.95\nChicken 15.95",
+    "description": "The nations favourite, rice noodles, beansprouts, tamarind sauce and peanuts Vegetable 14.95 Prawn 16.95 Chicken 15.95",
     "price": null
    },
    {
@@ -214,7 +214,7 @@
   "Soup": [
    {
     "name": "Tom Yum/Tom Kha GF",
-    "description": "Thailand’s best loved soup, aromatic, sharp and sweet\nAdd Egg or Rice Noodles +2.75\nAdd Chicken or Prawns +2.95\nPlease let your server know if you want it Thai hot",
+    "description": "Thailand’s best loved soup, aromatic, sharp and sweet Add Egg or Rice Noodles +2.75 Add Chicken or Prawns +2.95 Please let your server know if you want it Thai hot",
     "price": "£10.45"
    },
    {
@@ -477,52 +477,52 @@
   "Wines": [
    {
     "name": "Bantry Bay Chenin Blanc",
-    "description": "Delicate floral notes and subtle pineapple\n175ml 6.95 250ml 8.95 bottle 24.95",
+    "description": "Delicate floral notes and subtle pineapple 175ml 6.95 250ml 8.95 bottle 24.95",
     "price": null
    },
    {
     "name": "Crescendo Pinot Grigio",
-    "description": "Dry crisp with citrus and ripe pear\n175ml 7.45 250ml 9.45 bottle 26.95",
+    "description": "Dry crisp with citrus and ripe pear 175ml 7.45 250ml 9.45 bottle 26.95",
     "price": null
    },
    {
     "name": "Terra Vega Chardonnay",
-    "description": "Ripe banana, vanilla and apple\n175ml 7.50 250ml 9.75 bottle 28.95",
+    "description": "Ripe banana, vanilla and apple 175ml 7.50 250ml 9.75 bottle 28.95",
     "price": null
    },
    {
     "name": "NZ Fernlands Sauvignon Blanc",
-    "description": "Beautifully balanced and tropical\n175ml 10.45 250ml 12.45 bottle 34.95",
+    "description": "Beautifully balanced and tropical 175ml 10.45 250ml 12.45 bottle 34.95",
     "price": null
    },
    {
     "name": "Prosecco Bel Canto Italy",
-    "description": "Delicate and aromatic with fine bubbles\n125ml 6.95 bottle 29.95",
+    "description": "Delicate and aromatic with fine bubbles 125ml 6.95 bottle 29.95",
     "price": null
    },
    {
     "name": "Hillville Road Shiraz",
-    "description": "Raspberries and black cherries\n175ml 6.95 250ml 8.95 bottle 24.95",
+    "description": "Raspberries and black cherries 175ml 6.95 250ml 8.95 bottle 24.95",
     "price": null
    },
    {
     "name": "Five Ravons Pinot Noir",
-    "description": "Delicious with red fruity flavours\n175ml 7.45 250ml 9.45 bottle 26.95",
+    "description": "Delicious with red fruity flavours 175ml 7.45 250ml 9.45 bottle 26.95",
     "price": null
    },
    {
     "name": "Vina Carrasco Merlot",
-    "description": "Soft plummy with hits of vanilla\n175ml 8.45 250ml 10.45 bottle 29.95",
+    "description": "Soft plummy with hits of vanilla 175ml 8.45 250ml 10.45 bottle 29.95",
     "price": null
    },
    {
     "name": "Ombrellino Pinot Grigio Rosé",
-    "description": "Rich floral red fruits\n175ml 7.45 250ml 9.45 bottle 26.95",
+    "description": "Rich floral red fruits 175ml 7.45 250ml 9.45 bottle 26.95",
     "price": null
    },
    {
     "name": "Nicolas Rouzet Provence Rosé",
-    "description": "Strawberry, raspberry, redcurrents\n175ml 10.45 250ml 13.45 bottle 38.45",
+    "description": "Strawberry, raspberry, redcurrents 175ml 10.45 250ml 13.45 bottle 38.45",
     "price": null
    },
    {
@@ -581,7 +581,7 @@
   "Soft Drinks": [
    {
     "name": "Coke / Diet Icon",
-    "description": "330ml 3.75\nPint 473ml 4.75",
+    "description": "330ml 3.75 Pint 473ml 4.75",
     "price": null
    },
    {

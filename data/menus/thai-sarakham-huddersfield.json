@@ -1,0 +1,270 @@
+{
+ "restaurant": "Thai Sarakham",
+ "city": "Huddersfield",
+ "fsa_id": "1794672",
+ "address": "Huddersfield",
+ "source": "https://www.thaisarakham.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Rice &amp; Sides": [
+   {
+    "name": "Plain Noodles (GF) (VE)",
+    "description": "Boiled Thin Rice Noodles Topped with Garlic",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Jasmine Rice (GF) (VE)",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice (GF) (VE)",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice (GF) (VE)",
+    "description": "",
+    "price": "£4.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Chicken Nuggets",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Chicken Fried Rice",
+    "description": "",
+    "price": "£10.75"
+   },
+   {
+    "name": "Curry Chicken Rice",
+    "description": "Stir Fried Chicken and Rice with Peas, Pepper, Cauliflower, Onion and Curry Powder",
+    "price": "£6.50"
+   }
+  ],
+  "Small Plates": [
+   {
+    "name": "Prawn Crackers",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Sweetcorn Fritters (V) (VE) (GFO)",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Tofu & Vegetable Gyozas (V) (VE)",
+    "description": "",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken Gyozas",
+    "description": "",
+    "price": "£8.00"
+   },
+   {
+    "name": "Vegetable Spring Rolls (V)",
+    "description": "",
+    "price": "£8.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Duck Spring Rolls",
+    "description": "",
+    "price": "£9.00"
+   },
+   {
+    "name": "Thai Fish Cakes (GF)",
+    "description": "",
+    "price": "£9.00"
+   },
+   {
+    "name": "Vegetable Tempura (V)",
+    "description": "",
+    "price": "£8.00",
+    "vegetarian": true
+   },
+   {
+    "name": "King Prawn Tempura",
+    "description": "",
+    "price": "£9.50"
+   },
+   {
+    "name": "Chicken Satay (N)",
+    "description": "",
+    "price": "£9.50"
+   },
+   {
+    "name": "Esan Sausages",
+    "description": "",
+    "price": "£9.50"
+   },
+   {
+    "name": "Crispy Halloumi (V)",
+    "description": "",
+    "price": "£9.25",
+    "vegetarian": true
+   },
+   {
+    "name": "Calamari",
+    "description": "",
+    "price": "£9.25"
+   },
+   {
+    "name": "Chicken Wings",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "Satay Sauce (Extra) (N)",
+    "description": "",
+    "price": "£0.85"
+   }
+  ],
+  "Salads": [
+   {
+    "name": "Larb 🌶️🌶️🌶️",
+    "description": "Thai Salad Flavoured with Chilli, Onion, Coriander, Rice Powder, Mint & Thai Herbs in a Spicy Lime Dressing",
+    "price": null
+   },
+   {
+    "name": "Nam Tok Moo 🌶️🌶️🌶️",
+    "description": "Sliced BBQ Pork, Mixed with Onion, Rice Powder & Basil Leaves in a Spicy Lime Dressing",
+    "price": "£13.75"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "Tom Yum (GF) 🌶️🌶️",
+    "description": "Thailand's Favourite Spicy Hot & Sour Soup. Flavoured With Lemon Grass, Lime Leaves, Galangal & A Squeeze Of Fresh Lemon Juice, Mushrooms, Tomatoes & Fresh Chilli",
+    "price": null
+   },
+   {
+    "name": "Tom Kha (GF)",
+    "description": "Traditional Thai Soup With Coconut Milk, Mushrooms, Tomatoes, Lemon Grass & Thai Herbs",
+    "price": null
+   }
+  ],
+  "Stir Fry": [
+   {
+    "name": "Pad Krapao 🌶️🌶️",
+    "description": "Stir Fried With Whole Basil In Oyster & Soy Sauce, Combinations Of Chillies, Onions, Carrots, Green Beans & Garlic, Topped With Fried Egg (optional £1)",
+    "price": null
+   },
+   {
+    "name": "Pad Num Mon Hoy",
+    "description": "Stir Fried With Oyster Sauce, Peppers & Mushrooms",
+    "price": null
+   },
+   {
+    "name": "Pad Khing",
+    "description": "Stir Fried With Ginger, Mushrooms, Onions, Spring Onions & Carrots, In Soya Bean Sauce",
+    "price": null
+   },
+   {
+    "name": "Sweet & Sour",
+    "description": "Crispy Batter, Colourful Veggies Fried In Home Made Tangy Sweet Chilli Sauce, Bursting With Flavour",
+    "price": null
+   },
+   {
+    "name": "Pad Garlic Pepper",
+    "description": "Sauteed Meat or Tofu With Fresh Garlic, Black Pepper & Vibrant Veggies, In A Savoury Thai Sauce",
+    "price": null
+   }
+  ],
+  "Curry Dishes": [
+   {
+    "name": "Panang (GF) 🌶️🌶️",
+    "description": "A Smooth Taste Of Panang Curry Paste Mixed In Thick Coconut Milk, With Green Beans, Onions & Lime Leaves",
+    "price": null
+   },
+   {
+    "name": "Green (GF)(VE) 🌶️",
+    "description": "Authentic Thai Green Curry, With Bamboo Shoots, Courgette, Green Beans & Basil Leaves In Creamy Coconut Milk",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Red (GF)(VE)🌶️🌶️",
+    "description": "Thai Red Curry Paste With Peppers, Onions, Bamboo Shoots & Basil Leaves In Creamy Coconut Milk",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Massaman (N) (GF)(VE) 🌶️",
+    "description": "Mild Curry Cooked With Coconut Milk, Onions, Potatoes & Roasted Peanuts",
+    "price": null,
+    "vegetarian": true
+   }
+  ],
+  "Noodle Dishes": [
+   {
+    "name": "Pad Thai (N) (GFO)",
+    "description": "Stir Fried Rice Noodles With Eggs, Onions, Spring Onions & Bean Sprouts In Tamarind Sauce, Served With Crushed Chopped Peanuts & Lime",
+    "price": null
+   },
+   {
+    "name": "Chow Mein",
+    "description": "Stir Fried Egg Noodles With Onions, Carrots, Bean Sprouts & Spring Onions In Special Homemade Sauce",
+    "price": null
+   }
+  ],
+  "Sarakham Specials": [
+   {
+    "name": "Guay Tiew Ruea (Boat Noodles)",
+    "description": "One of the most iconic dishes in Thailand is Guay Tiew Ruea or Boat Noodles. It is a Thai style Noodle Dish with Beef. Homemade Beef Balls & Seasoning Flavour, Served with Pork Crackers, Bean Sprouts, Holy Basil & Sprinkled with Fried Garlic",
+    "price": "£14.50"
+   },
+   {
+    "name": "Honey Chicken",
+    "description": "Chicken Thigh, Marinated With Coriander, Garlic, Pepper, Honey & Oyster Sauce.",
+    "price": "£12.50"
+   },
+   {
+    "name": "Spare Ribs",
+    "description": "Slow Baked Marinated Spare Ribs in Light BBQ & Honey Sauce",
+    "price": "£12.00"
+   },
+   {
+    "name": "ChuChee Salmon (GF)",
+    "description": "Salmon Fillets are pan fried until golden brown, then simmered in a fragrant and thick red curry sauce",
+    "price": "£17.50"
+   },
+   {
+    "name": "Slow Braised Lamb Shank Massaman Curry (N)",
+    "description": "Slow simmered in a rich velvety massaman curry. Infused with aromatic spices, creamy coconut milk and earthy roasted peanuts.",
+    "price": "£16.00"
+   },
+   {
+    "name": "Braised Belly Pork",
+    "description": "Braised Belly Pork with BBQ Sauce",
+    "price": "£14.50"
+   },
+   {
+    "name": "Hoisin Duck Leg",
+    "description": "Two Succulent Duck Legs with a Hoisin Sauce",
+    "price": "£14.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

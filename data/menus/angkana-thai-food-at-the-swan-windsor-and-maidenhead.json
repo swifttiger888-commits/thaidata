@@ -1,0 +1,96 @@
+{
+ "restaurant": "Angkana Thai Food  At The Swan",
+ "city": "Windsor and Maidenhead",
+ "fsa_id": "1810035",
+ "address": "Windsor and Maidenhead",
+ "source": "https://theswanwindsor.co.uk/wp-content/uploads/2026/04/Thai-Menu.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STIR-FRIED DISHES": [
+   {
+    "name": "Angkana's Pad Thai (N,S ) - Chicken",
+    "description": "Stir fry original pad Thai sauce with rice noodles, egg, bean sprouts, spring onions , with ground peanuts,",
+    "price": "£13"
+   },
+   {
+    "name": "Angkana's Pad Thai (N,S ) - Prawn",
+    "description": "Stir fry original pad Thai sauce with rice noodles, egg, bean sprouts, spring onions , with ground peanuts,",
+    "price": "£14"
+   },
+   {
+    "name": "Angkana's Pad Thai (N,S ) - Mixed vegetables",
+    "description": "Stir fry original pad Thai sauce with rice noodles, egg, bean sprouts, spring onions , with ground peanuts,",
+    "price": "£11",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Pad krapow ( S,F) - Chicken",
+    "description": "The best stir fry dish on street fresh chilli, garlic, green bean, pepper, Thai basil leaves served with jasmine rice.",
+    "price": "£13"
+   },
+   {
+    "name": "Spicy Pad krapow ( S,F) - Pork minced",
+    "description": "The best stir fry dish on street fresh chilli, garlic, green bean, pepper, Thai basil leaves served with jasmine rice.",
+    "price": "£14"
+   },
+   {
+    "name": "Spicy Pad krapow ( S,F) - Prawn",
+    "description": "The best stir fry dish on street fresh chilli, garlic, green bean, pepper, Thai basil leaves served with jasmine rice.",
+    "price": "£14"
+   },
+   {
+    "name": "Spicy Pad krapow ( S,F) - Mixed vegetables",
+    "description": "The best stir fry dish on street fresh chilli, garlic, green bean, pepper, Thai basil leaves served with jasmine rice.",
+    "price": "£11",
+    "vegetarian": true
+   }
+  ],
+  "STARTER": [
+   {
+    "name": "Chicken gyoza with spicy soy sauce.",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "Prawn on toast with sesame seeds.",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "Crispy squid (🌶)",
+    "description": "",
+    "price": "£8.50"
+   },
+   {
+    "name": "fish cake (🌶) 4pcs",
+    "description": "",
+    "price": "£8.00"
+   },
+   {
+    "name": "vegetables spring rolls 4 pcs",
+    "description": "",
+    "price": "£7.00",
+    "vegetarian": true
+   }
+  ],
+  "CURRY DISHES": [
+   {
+    "name": "Gang Kiew Wan (Green Curry) 🌶",
+    "description": "Green curry paste with coconut milk, bamboo shoots, mixed vegetables and sweet basil leaves.served with jasmine rice .",
+    "price": null
+   },
+   {
+    "name": "Gang Dang (Red Curry) 🌶🌶",
+    "description": "Red curry paste with coconut milk, bamboo shoots, mixed vegetables and sweet basil leaves.served with jasmine rice.",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Minimum card payment is £10",
+  "Chicken £13",
+  "Prawn £14",
+  "Mixed vegetables £11"
+ ]
+}

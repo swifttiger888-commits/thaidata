@@ -1,0 +1,420 @@
+{
+ "restaurant": "Siam Orchid Thai Restaurant",
+ "city": "Test Valley",
+ "fsa_id": "19001",
+ "address": "Test Valley",
+ "source": "https://www.siamorchid.co.uk/food.html",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "starters": [
+   {
+    "name": "Siam Orchid Platter (Minimum Two People)",
+    "description": "Spring roll, chicken satay, spare ribs, toong thong, kanom pang na gai and somosa.",
+    "price": "£11.95",
+    "num": "1"
+   },
+   {
+    "name": "Spring Rolls",
+    "description": "Deep fried spring rolls filled with stir fried mixed vegetables and clear vermicelli noodles.",
+    "price": "£5.45",
+    "num": "2"
+   },
+   {
+    "name": "Satay Gai",
+    "description": "Marinated Chicken strips on skewers served with peanut sauce.",
+    "price": "£5.45",
+    "num": "3"
+   },
+   {
+    "name": "KANOM PANG NA GAI",
+    "description": "Deep fried mince chicken & prawn on toast topped with sesame seeds served with sweet chilli sauce.",
+    "price": "£5.45",
+    "num": "4"
+   },
+   {
+    "name": "KANOM JEEB",
+    "description": "Steamed dumplings of chicken, prawns and water chestnuts.",
+    "price": "£5.45",
+    "num": "5"
+   },
+   {
+    "name": "PU NIM RAJ KA TIAN",
+    "description": "Deep fried crispy soft shell crab topped with garlic and pepper sauce.",
+    "price": "£5.95",
+    "num": "6"
+   },
+   {
+    "name": "VEGETABLE SATAY",
+    "description": "Grilled selected vegetables and Tofu on skewers.",
+    "price": "£5.45",
+    "vegetarian": true,
+    "num": "7"
+   },
+   {
+    "name": "TEMPURA PAK",
+    "description": "Deep fried mixed vegetables in batter served with a sweet chili sauce.",
+    "price": "£5.45",
+    "vegetarian": true,
+    "num": "8"
+   },
+   {
+    "name": "CEE KRONG MOO KRA TIEM PRIK TAI",
+    "description": "Pork Chop spare rib marinated with Thai herbs and garlic sauce.",
+    "price": "£5.45",
+    "num": "9"
+   },
+   {
+    "name": "TOONG THONG",
+    "description": "Deep fried Golden bag with chicken, water chestnut, carrot and sweet corn fillings, served with sweet chilli sauce.",
+    "price": "£5.45",
+    "num": "10"
+   },
+   {
+    "name": "VEGETABLE SOMOSA",
+    "description": "Deep fried curry somosa served with sweet chilli sauce",
+    "price": "£5.45",
+    "vegetarian": true,
+    "num": "11"
+   },
+   {
+    "name": "CHILLI SQUID",
+    "description": "Deep fried squid in batter served with a sweet chilli sauce.",
+    "price": "£5.95",
+    "num": "12"
+   },
+   {
+    "name": "CRISPY AROMATIC DUCK",
+    "description": "Peking style aromatic duck served with steamed pancakes, cucumber, spring onions and hoi sin sauce.",
+    "price": "£Quarter £7.95   Half £14.00   Whole £25.00"
+   }
+  ],
+  "Thai salads": [
+   {
+    "name": "LARP GAI / NEUA",
+    "description": "Minced Chicken or Beef tossed with Thai spices and lemon juice",
+    "price": "£9.25"
+   },
+   {
+    "name": "GOONG PAOW",
+    "description": "Marinated grilled Jumbo King Prawns served with Thai Salad",
+    "price": "£9.25",
+    "num": "13"
+   },
+   {
+    "name": "PLA GOONG",
+    "description": "Spicy King Prawn salad with lemongrass, onion, chili oil and lime juice.",
+    "price": "£9.25",
+    "num": "14"
+   },
+   {
+    "name": "YUM TULAY",
+    "description": "Spicy mixed seafood salad in homemade spicy lime sauce.",
+    "price": "£9.95",
+    "num": "15"
+   }
+  ],
+  "soup": [
+   {
+    "name": "TOM YAM",
+    "description": "Traditional Thai hot and sour soup with Chicken, Prawns Or Mushroom.",
+    "price": "£5.45",
+    "num": "16"
+   },
+   {
+    "name": "TOM KHA",
+    "description": "Mild Coconut soup and galangal with Chicken, Prawns Or Mushroom.",
+    "price": "£5.45",
+    "num": "17"
+   },
+   {
+    "name": "POH TAEK",
+    "description": "Mixed Seafood, prawns, crab and mussels in spicy hot and sour soup, flavored with mushrooms galangal, lemon grass, lime leaf and hot chili basil.",
+    "price": "£5.45",
+    "num": "18"
+   }
+  ],
+  "seafood": [
+   {
+    "name": "PLA NAM TOK",
+    "description": "Deep Fried Crispy Sea bass cooked North-East style topped with kaffir lime leaves and coriander",
+    "price": "£12.95",
+    "num": "19"
+   },
+   {
+    "name": "PLA PREAW WAN",
+    "description": "Deep Fried Crispy Sea bass topped with sweet and sour sauce.",
+    "price": "£12.95",
+    "num": "20"
+   },
+   {
+    "name": "HOI SHELL CHU CHI",
+    "description": "Stir Fried Scallops in red curry sauce with lime leaves and coconut milk.",
+    "price": "£11.95",
+    "num": "21"
+   },
+   {
+    "name": "CHU CHI PLA",
+    "description": "Pan Fried Cod Topped with Medium Chu Chi Curry sauce.",
+    "price": "£10.95",
+    "num": "22"
+   },
+   {
+    "name": "HOI SHELL PED PAK",
+    "description": "Stir fried spicy Scallop with garlic, chilli mixed vegetables and light soya sauce.",
+    "price": "£10.95",
+    "num": "23"
+   },
+   {
+    "name": "GOONG PREAW WAN",
+    "description": "Crispy Tiger Prawns with vegetables in sweet and sour sauce.",
+    "price": "£10.95",
+    "num": "24"
+   },
+   {
+    "name": "GOONG PAD GRATIAM PRIG THAI",
+    "description": "Stir Fried King Prawns with Garlic and pepper served on bed of lettuce.",
+    "price": "£10.95",
+    "num": "25"
+   },
+   {
+    "name": "CHU CHI GOONG",
+    "description": "King Prawns in red curry sauce with lime leaves and coconut milk.",
+    "price": "£10.95",
+    "num": "26"
+   }
+  ],
+  "curry dishes": [
+   {
+    "name": "JUNGLE CURRY - GAENG PA",
+    "description": "Hot Thai curry cooked with wild ginger, mushroom, bamboo shoots, and basil leaves with Chicken Beef or Prawn",
+    "price": "£8.95"
+   },
+   {
+    "name": "GANG KIEW WAN",
+    "description": "Thai Green Curry cooked in coconut milk with an aromatic selection of Thai herbs with Chicken, Beef or Prawn.",
+    "price": "£8.95",
+    "num": "27"
+   },
+   {
+    "name": "GAENG DAENG",
+    "description": "Thai Red Curry cooked with bamboo shoots, pepper and sweet basil in coconut milk, with Chicken, Beef or Prawn.",
+    "price": "£8.95",
+    "num": "28"
+   },
+   {
+    "name": "GAENG MASSAMAN",
+    "description": "Tender strips of lamb slowly cooked in coconut milk with potato and peanuts.",
+    "price": "£8.95",
+    "num": "29"
+   },
+   {
+    "name": "GAENG PANANG",
+    "description": "Consisting of Red curry paste kaffir lime leaves and coconut milk with Chicken, Beef or Prawns.",
+    "price": "£8.95",
+    "num": "30"
+   },
+   {
+    "name": "KENG PHED PEF YANG",
+    "description": "Slices of roasted duck cooked red curry with coconut milk, tomatoes and lychee.",
+    "price": "£9.25",
+    "num": "31"
+   }
+  ],
+  "chef's specials": [
+   {
+    "name": "PLA SAM ROD",
+    "description": "Pan fried Sea bass topped with sweet chilli sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "PLA MA NOW",
+    "description": "Steamed Whole Sea bass with hot and spicy fresh chilli sauce in lemon and lime dressing.",
+    "price": "£12.95",
+    "num": "32"
+   },
+   {
+    "name": "GAENG SII RUEDUE",
+    "description": "A taste of Four Seasons with the combination of tomatoes, pineapple, grape and red apple, this curry has a touch fruit sweetness and creamy Thai curry sauce with a choice of Duck or Prawns.",
+    "price": "£10.95",
+    "num": "33"
+   },
+   {
+    "name": "PED / GUNG MAKAM",
+    "description": "Grilled Duck breast Or Prawn with tamarind sauce, topped with deep fried shallot, red pepper and dried chillies",
+    "price": "£10.95",
+    "num": "34"
+   }
+  ],
+  "stir fried dishes": [
+   {
+    "name": "NEUA PAD YEE RA",
+    "description": "Stir fried beef fillet with chili, garlic and wild basil leaves.",
+    "price": "£10.95",
+    "num": "35"
+   },
+   {
+    "name": "NEUA PAD KING",
+    "description": "Stir fried beef with vegetables, mushroom, fresh ginger and yellow bean.",
+    "price": "£10.95",
+    "num": "36"
+   },
+   {
+    "name": "PAD GRATIAM PRIG THAI",
+    "description": "Stir fried Beef or Chicken with garlic & pepper sauce served on bed of lettuce.",
+    "price": "£8.95",
+    "num": "37"
+   },
+   {
+    "name": "NUA PAD NAM MAN HOI",
+    "description": "Stir fried Beef or Chicken with mixed vegetables and oyster sauce",
+    "price": "£8.95",
+    "num": "38"
+   },
+   {
+    "name": "PAD MED MED MAMUAN HIMAPAN",
+    "description": "Stir fried Chicken, Beef or Prawn, with cashew nuts, spring onions and dried chillies.",
+    "price": "£8.95",
+    "num": "39"
+   },
+   {
+    "name": "WEEPING TIGER",
+    "description": "Stir fried strips of Beef fillet served with hot chilli sauce",
+    "price": "£8.95",
+    "num": "40"
+   },
+   {
+    "name": "PAD PREW WAN",
+    "description": "Stir fried Chicken, Beef or Prawn in sweet and sour sauce with pineapple and vegetables",
+    "price": "£8.95",
+    "num": "41"
+   },
+   {
+    "name": "PHAD BAI HO-LA-PA",
+    "description": "Stir fried Chicken, Beef or Prawn with fresh chillies, garlic, mushrooms and basil.",
+    "price": "£8.95",
+    "num": "42"
+   },
+   {
+    "name": "PAD GRA PAOW SEAFOOD",
+    "description": "Assorted seafood stir fried with Aromatic Thai herbs and fresh chilli and basil",
+    "price": "£10.95",
+    "num": "43"
+   },
+   {
+    "name": "PREAW WAN PED",
+    "description": "Deep fried Duck breast in sweet and sour sauce with pineapple and vegetables",
+    "price": "£9.95",
+    "num": "44"
+   }
+  ],
+  "vegetarian dishes": [
+   {
+    "name": "GAENG DANG PAK",
+    "description": "Thai Red Curry with mixed vegetables and sweet basil leaves.",
+    "price": "£7.45",
+    "vegetarian": true,
+    "num": "45"
+   },
+   {
+    "name": "GAENG KAEW WAN PAK",
+    "description": "Thai Green Curry with mixed vegetables and sweet basil leaves.",
+    "price": "£7.45",
+    "vegetarian": true,
+    "num": "46"
+   },
+   {
+    "name": "PAD GRA PAOW",
+    "description": "Stir fried bean curd with fresh chillies, garlic mushrooms and basil.",
+    "price": "£6.95",
+    "vegetarian": true,
+    "num": "47"
+   },
+   {
+    "name": "PAD PAK RUAM",
+    "description": "Stir fried mixed vegetables with oyster sauce.",
+    "price": "£6.95",
+    "vegetarian": true,
+    "num": "48"
+   },
+   {
+    "name": "PAD BROCCOLI",
+    "description": "Stir Fried broccoli with oyster sauce.",
+    "price": "£6.95",
+    "vegetarian": true,
+    "num": "49"
+   }
+  ],
+  "noodles": [
+   {
+    "name": "PAD THAI",
+    "description": "A popular Thai dish, stir fried rice noodles with egg, bean sprouts, spring onions and ground peanuts, with Chicken, Beef, Prawn or Vegetables in tamarind sauce.",
+    "price": "£8.95",
+    "num": "50"
+   },
+   {
+    "name": "PAD KEE MAU",
+    "description": "Stir fried spicy rice noodles with Chicken, or Beef with chilli and sweet basil leaves.",
+    "price": "£8.95",
+    "num": "51"
+   },
+   {
+    "name": "GPAD MEE LUANG",
+    "description": "Stir fried egg noodles with vegetables and spring onion.",
+    "price": "£5.95",
+    "num": "52"
+   }
+  ],
+  "rice": [
+   {
+    "name": "KAO SUY",
+    "description": "Steamed fragrant rice",
+    "price": "£2.75",
+    "vegetarian": true,
+    "num": "53"
+   },
+   {
+    "name": "KAO KRA TI",
+    "description": "Steamed Coconut rice.",
+    "price": "£3.15",
+    "vegetarian": true,
+    "num": "54"
+   },
+   {
+    "name": "KAO PAD KAI",
+    "description": "Egg fried rice.",
+    "price": "£3.15",
+    "num": "55"
+   },
+   {
+    "name": "KAO PAD SUPARAT",
+    "description": "Thai style rice with Prawns, pineapple, vegetables topped with cashew nut.",
+    "price": "£6.95",
+    "num": "56"
+   }
+  ],
+  "Set Menus": [
+   {
+    "name": "SET MENU A",
+    "description": "Starter SIAM ORCHID PLATTER TOM YAM  Traditional Thai hot and sour soup with Chicken, Prawns Or Mushroom. Main Course Pad Prew Wan  Stir fried Chicken with sweet and sour sauce. GAENG PANANG NUEA  Thai Panang Curry with Beef and sliced limes leaves. PAD PAK RUAM  Stir fried mixed vegetables with oyster sauce. PAD THAI  Stir fried rice noodles with egg, bean sprouts, spring onions and ground peanuts with Chicken in tamarind sauce Rice KAO SUY  Steamed fragrant rice. Dessert LYCHEE or BANNANA FRITTER",
+    "price": "£21.95 per person"
+   },
+   {
+    "name": "SET MENU B",
+    "description": "Starter CRISPY AROMATIC DUCK Peking style aromatic duck, served with steamed pancakes, cucumber, spring onions & hoi sin sauce. TOM KHA Mild Coconut soup and galangal with Chicken, Prawns Or Mushroom. Main Course GOONG PHAD BAI HO-LA-PA Stir fried Tiger prawns with sweet basil leaves. GAENG KAEW WAN GAI Thai Green curry with chicken and vegetables. PHAD PAK RUAM Stir fried mixed vegetables with oyster sauce. PHAD MEE Fried egg noodle with vegetables and bean sprout. Rice KAO SUY Steamed fragrant rice. Dessert LYCHEE or BANNANA FRITTER",
+    "price": "£21.95 per person"
+   },
+   {
+    "name": "SET MENU C",
+    "description": "Starter TEMPURA PAK & SPRINGS Deep fried mixed vegetables in batter served with a sweet chili sauce & Deep fried spring rolls filled with stir fried mixed vegetables and clear vermicelli noodles Main Course TOW HU PAD KING Stir fried bean curd with fresh ginger, mushrooms and vegetables. GAENG KEAW WAN PHAK Thai Green Curry with vegetables. PHAD PEK RUAM Stir fried mixed vegetables with soya sauce. PHAD MEE Fried egg noodle with vegetables and bean sprout. Rice KAO SUY Steamed fragrant rice. Dessert LYCHEE or BANNANA FRITTER",
+    "price": "£17.95 per person",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Minimum of 2 people",
+  "£21.95 per person",
+  "£17.95 per person"
+ ]
+}
