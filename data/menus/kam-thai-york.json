@@ -1,0 +1,576 @@
+{
+ "restaurant": "Kam Thai",
+ "city": "York",
+ "fsa_id": "1879869",
+ "address": "York",
+ "source": "https://www.khaosanroadyork.co.uk/_files/ugd/251202_d4b8146f1f4e484a9ca933eefc2fe3d8.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "PAD THAI": [
+   {
+    "name": "PAD THAI *",
+    "description": "PAD THAI NOODLES WITH EGG, BEANSPROUTS & CHIVES",
+    "price": "£11.50",
+    "vegetarian": true
+   },
+   {
+    "name": "PAD THAI MOO GROP *",
+    "description": "PAD THAI WITH CRISPY PORK BELLY",
+    "price": "£12.95"
+   },
+   {
+    "name": "PAD THAI GOONG *",
+    "description": "PAD THAI WITH KING PRAWNS",
+    "price": "£13.50"
+   },
+   {
+    "name": "PAD THAI GEAW GROP *",
+    "description": "PAD THAI CRISPY NOODLES WITH EGG, BEANSPROUTS & CHIVES",
+    "price": "£11.95",
+    "vegetarian": true
+   },
+   {
+    "name": "PAD THAI WUUNSEN GAI *",
+    "description": "PAD THAI WITH GLASS NOODLES & CHICKEN",
+    "price": "£11.95"
+   }
+  ],
+  "JUST GREENS": [
+   {
+    "name": "POR PIA PAK",
+    "description": "VEGETABLE SPRING ROLLS",
+    "price": "£9.20",
+    "vegetarian": true
+   },
+   {
+    "name": "BROCCOLI PAD PRIK **",
+    "description": "CRUNCHY BROCCOLI WITH SOY SAUCE & CHILLI",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "YUM TAO HOO ***",
+    "description": "CRISPY TOFU WITH AROMATIC HERBS & SPICY DRESSING",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "MAKUA RAD PRIK **",
+    "description": "BATTERED AUBERGINE WITH SWEET & SOUR CHILLI SAUCE",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "HED KUA GLUA",
+    "description": "ASSORTED MUSHROOMS SALT & PEPPER",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "MAKUA FREN FRI *",
+    "description": "AUBERGINE & COURGETTE FRITES",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "MAKUA PAD PRIK HORAPA ***",
+    "description": "AUBERGINE WITH CHILLI, BASIL & SOY SAUCE",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "TOD MUN KOW PODE *",
+    "description": "SWEET CORN FRITTERS",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "LAAB HED TOD **",
+    "description": "BATTERED ASSORTED MUSHROOMS SEASONED WITH HERBS\n& SPICES",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "LAAB TAO HOO **",
+    "description": "CRISPY TOFU WITH THAI HERBS & LIME DRESSING",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "GANG KEAW WAN PAK ***",
+    "description": "VEGETABLES GREEN CURRY",
+    "price": "£10.50"
+   },
+   {
+    "name": "PANANG TAO HOO **",
+    "description": "THAI THICK RED CURRY WITH VEGETABLES & TOFU",
+    "price": "£10.50"
+   },
+   {
+    "name": "PHLA TAO HOO **",
+    "description": "CRISPY TOFU WITH SPICES, LIME & CHILLI PASTE DRESSING",
+    "price": "£8.50"
+   },
+   {
+    "name": "PAD TUA NGOG",
+    "description": "GARLIC BEAN SPROUTS",
+    "price": "£6.50",
+    "vegetarian": true
+   }
+  ],
+  "SIDES": [
+   {
+    "name": "EGG FRIED RICE",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "STICKY RICE",
+    "description": "",
+    "price": "£4.20",
+    "vegetarian": true
+   },
+   {
+    "name": "STEAMED RICE",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "STEAMED RICE VERMICCELLI NOODLES",
+    "description": "",
+    "price": "£4.20",
+    "vegetarian": true
+   },
+   {
+    "name": "CHIPS WITH CURRY SAUCE & CRISPY BACON *",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "ROTI BREAD",
+    "description": "",
+    "price": "£5.50",
+    "vegetarian": true
+   },
+   {
+    "name": "CUCUMBER & TOMATO WITH CHILLI & LIME SAUCE **",
+    "description": "",
+    "price": "£5.50"
+   }
+  ],
+  "FIRST BITES": [
+   {
+    "name": "PRAWN CRACKERS WITH 3 DIPS",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "ROTI WITH CURRY DIP **",
+    "description": "",
+    "price": "£6.95"
+   },
+   {
+    "name": "MA HOR *",
+    "description": "A TRADITIONAL THAI APPETIZER FEATURING SWEET AND\nSAVOURY MINCED PORK & PEANUTS, SERVED ON FRESH\nPINEAPPLE SLICE",
+    "price": "£2 PER PIECE"
+   }
+  ],
+  "SEAFOOD LOVERS": [
+   {
+    "name": "POO NAHM DANG",
+    "description": "THAI HOT AND SOUR SOUP WITH CRAB MEAT",
+    "price": "£12.50"
+   },
+   {
+    "name": "TOM YUM GOONG ***",
+    "description": "TOM YUM SOUP WITH WHOLE PRAWNS",
+    "price": "£11.50"
+   },
+   {
+    "name": "GOONG PRIK GLUA **",
+    "description": "WHOLE PRAWNS WITH GARLIC & CHILLI",
+    "price": "£11.50"
+   },
+   {
+    "name": "GOONG KAI KEM **",
+    "description": "WHOLE PRAWNS WITH SALTED EGG YOLK SAUCE",
+    "price": "£11.50"
+   },
+   {
+    "name": "GOONG GRATIEM",
+    "description": "GARLIC PRAWNS WITH PEPPER & SOY SAUCE, SERVED WITH\nROTI BREAD",
+    "price": "£12.50"
+   },
+   {
+    "name": "GOONG GRAPRAW ***",
+    "description": "PRAWNS WITH CHILLI & HOLY BASIL",
+    "price": "£11.50"
+   },
+   {
+    "name": "GOONG SAUCE MAKARM *",
+    "description": "BATTERED PRAWNS WITH SPICY TAMARIND SAUCE",
+    "price": "£11.50"
+   },
+   {
+    "name": "TOD MUN GOONG",
+    "description": "PRAWN & PORK CAKES",
+    "price": "£10.50"
+   },
+   {
+    "name": "GEAW GOONG TOD",
+    "description": "CRISPY PRAWN & PORK DUMPLINGS",
+    "price": "£9.95"
+   },
+   {
+    "name": "LON TOW JEAW *",
+    "description": "PRAWNS & PORK WITH SHALLOTS & COCONUT MILK",
+    "price": "£10.50"
+   },
+   {
+    "name": "MEE GROP GOONG",
+    "description": "SWEET & SOUR CRISPY NOODLES WITH KING PRAWNS",
+    "price": "£10.50"
+   },
+   {
+    "name": "PU NIM TOD",
+    "description": "CRISPY SOFT SHELL CRAB WITH CHILLI MAYO",
+    "price": "£12.95"
+   },
+   {
+    "name": "PU NIM GRAPAW **",
+    "description": "CRISPY SOFT SHELL CRAB WITH CHILLI & BASIL SAUCE",
+    "price": "£12.95"
+   },
+   {
+    "name": "PU NIM PAD PONG KAREE",
+    "description": "SOFT SHELL CRAB WITH CURRY POWDER SAUCE",
+    "price": "£12.95"
+   },
+   {
+    "name": "PLAMEUK PRIK GLUA **",
+    "description": "CRISPY SQUID WITH CHILLI & GARLIC",
+    "price": "£10.95"
+   }
+  ],
+  "MEAT EATERS": [
+   {
+    "name": "GAI SATAY",
+    "description": "CHICKEN SATAY WITH PEANUT SAUCE",
+    "price": "£9.95"
+   },
+   {
+    "name": "GAI TOD HAT YAI",
+    "description": "THAI SOUTHERN FRIED CHICKEN",
+    "price": "£10.50"
+   },
+   {
+    "name": "GAI RUAN KEM",
+    "description": "CRISPY CHICKEN GLAZED WITH SWEET GARLIC &\nGINGER SAUCE",
+    "price": "£9.95"
+   },
+   {
+    "name": "GAI PAD MED MAMUANG *",
+    "description": "CHICKEN WITH CASHEW NUTS",
+    "price": "£9.95"
+   },
+   {
+    "name": "GAI SAUCE MANOW",
+    "description": "BREADED CHICKEN FILLET WITH CREAMY LIME SAUCE",
+    "price": "£10.50"
+   },
+   {
+    "name": "PEEK GAI TOD NHAM PLA",
+    "description": "CRISPY CHICKEN WINGS WITH SWEETENED FISH SAUCE",
+    "price": "£9.95"
+   },
+   {
+    "name": "PEEK GAI TOD *",
+    "description": "CRUNCHY CHICKEN WINGS COATED WITH SOY SAUCE,\nGARLIC & CHILLI GRAZE",
+    "price": "£9.95"
+   },
+   {
+    "name": "PED MAKARM **",
+    "description": "CRISPY DUCK LEG WITH SPICY TAMARIND SAUCE",
+    "price": "£13.50"
+   },
+   {
+    "name": "POR PIA PED",
+    "description": "DUCK & MUSHROOM SPRING ROLLS",
+    "price": "£10.95"
+   },
+   {
+    "name": "NUE FOY TAH TIEN",
+    "description": "CRISPY BEEF FLOSS WITH SWEET & SALTY GLAZE, SERVED WITH\nSTICKY RICE",
+    "price": "£10.50"
+   },
+   {
+    "name": "NUA PAD PRIK TAI DUM *",
+    "description": "SAUTÉED BEEF WITH BLACK PEPPER",
+    "price": "£10.50"
+   },
+   {
+    "name": "NUA PAD HORAPA ***",
+    "description": "SAUTÉED BEEF WITH CHILLI & SWEET BASIL",
+    "price": "£10.50"
+   },
+   {
+    "name": "NUA PAD GRAPAW *****",
+    "description": "SAUTÉED CHOPPED BEEF WITH GARLIC CHILLI & THAI BASIL",
+    "price": "£10.50"
+   }
+  ],
+  "PORK ADDICTS": [
+   {
+    "name": "KOR MOO YANG KOW NIEW *",
+    "description": "GRILLED MARINATED PORK SHOULDER, SERVED WITH\nSTICKY RICE",
+    "price": "£11.50"
+   },
+   {
+    "name": "MEANG MOO GROP *",
+    "description": "CRISPY PORK BELLY IN PANCAKE WITH CUCUMBER,\nSPRING ONION & HOISIN SAUCE",
+    "price": "£10.95"
+   },
+   {
+    "name": "GRA DOOK MOO NHAM PUNG",
+    "description": "HONEY GLAZED RIBS",
+    "price": "£10.50"
+   },
+   {
+    "name": "MOO GROP PRIK GLUA ***",
+    "description": "CRISPY PORK BELLY WITH GARLIC & CHILLI",
+    "price": "£10.50"
+   },
+   {
+    "name": "MOO GROP GRAPAW **",
+    "description": "CRISPY PORK BELLY WITH CHILLI & BASIL SAUCE",
+    "price": "£10.50"
+   },
+   {
+    "name": "MOO GROP GRATIEM",
+    "description": "CRISPY PORK BELLY WITH GARLIC & PEPPER SAUCE",
+    "price": "£10.50"
+   },
+   {
+    "name": "MOO GROP SAUCE NHAM PRIK POW **",
+    "description": "CRISPY PORK BELLY WITH CHILLI OIL SAUCE",
+    "price": "£10.50"
+   },
+   {
+    "name": "LAAB MOO TOD **",
+    "description": "CRISPY PORK BELLY WITH THAI HERBS & SPICY LIME\nDRESSING",
+    "price": "£10.50"
+   },
+   {
+    "name": "HUNGLAY **",
+    "description": "SLOW COOKED PORK BELLY IN CHIANG MAI STYLE CURRY",
+    "price": "£12.50"
+   },
+   {
+    "name": "GYOZA*",
+    "description": "HOUSE PORK AND PRAWN GYOZA WITH CHIVE SERVED\nWITH VINEGAR , GINGER & CHILLI OIL SAUCE",
+    "price": "£11.50"
+   },
+   {
+    "name": "MOO PAD HOI SIN",
+    "description": "MARINATED PORK WITH HOI SIN SAUCE",
+    "price": "£10.50"
+   }
+  ],
+  "FISH CLUBS": [
+   {
+    "name": "MEANG PLA TOD *",
+    "description": "CRISPY SEA BASS SERVED ON LETTUCE WITH SWEETEN\nCOCONUT SAUCE",
+    "price": "£10.50"
+   },
+   {
+    "name": "PLA LUI SUAN ***",
+    "description": "CRISPY SEA BASS WITH LEMONGRASS, PEANUTS & SPICY\nCHILLI OIL DRESSING",
+    "price": "£10.95"
+   },
+   {
+    "name": "PAD CHA PLA SALMON ***",
+    "description": "SAUTÉED SALMON WITH PEPPERCORN & CHILLI",
+    "price": "£10.95"
+   },
+   {
+    "name": "PAD PED PLA MONK ***",
+    "description": "SAUTÉED MONKFISH WITH CHILLI PASTE & HERBS",
+    "price": "£12.50"
+   },
+   {
+    "name": "GANG LUANG PLA MONK ****",
+    "description": "SOUTHERN STYLE YELLOW CURRY & COCONUT MILK\nWITH MONKFISH",
+    "price": "£12.50"
+   },
+   {
+    "name": "CHU CHEE PLA SEA BASS ***",
+    "description": "SLIGHTLY BATTERED WHOLE SEA BASS IN THICK RED\nCURRY & COCONUT MILK SAUCE",
+    "price": "£27.95"
+   },
+   {
+    "name": "PLA RAD PRIK GANG ***",
+    "description": "CRISPY WHOLE SEA BASS TOPPED WITH THICK CURRY\nSAUCE",
+    "price": "£27.95"
+   },
+   {
+    "name": "PLA GANG KEAW WAN HANG ***",
+    "description": "CRISPY WHOLE SEA BASS TOPPED WITH THICKEN THAI\nGREEN CURRY & COCONUT MILK SAUCE",
+    "price": "£27.95"
+   }
+  ],
+  "CURRIES": [
+   {
+    "name": "GANG KEAW WAN GAI ***",
+    "description": "CHICKEN GREEN CURRY",
+    "price": "£10.50"
+   },
+   {
+    "name": "MUSSAMAN LAMB",
+    "description": "THAI SOUTHERN STYLE BRAISED LAMB CURRY WITH\nPEANUTS",
+    "price": "£12.95"
+   },
+   {
+    "name": "JAW RANG **",
+    "description": "KING PRAWNS WITH COCONUT MILK, FRESH TUMERIC,\nLEMONGRASS & CHILLI",
+    "price": "£11.50"
+   },
+   {
+    "name": "GANG KUA SAPPAROD GOONG **",
+    "description": "RED CURRY WITH FRESH WHOLE PRAWNS & PINEAPPLE",
+    "price": "£12.50"
+   },
+   {
+    "name": "GANG PED YANG **",
+    "description": "GRILLED DUCK BREAST WITH TROPICAL FRUIT RED\nCURRY",
+    "price": "£13.50"
+   },
+   {
+    "name": "GANG PANANG NUA **",
+    "description": "THAI THICK RED CURRY WITH BEEF",
+    "price": "£11.00"
+   },
+   {
+    "name": "GANG RAWANG NUA ****",
+    "description": "BRAISED BEEF SHORT RIBS CURRY WITH FRESH\nTUMERIC, LEMONGRASS & COCONUT MILK",
+    "price": "£13.50"
+   }
+  ],
+  "NOODLES & RICE DISHES": [
+   {
+    "name": "MEE KHAO SAN MOO GROP ***",
+    "description": "KHAOSAN VERMICELLI WITH ASPARAGUS & CRISPY BELLY PORK",
+    "price": "£12.95"
+   },
+   {
+    "name": "GOONG OP WUUN SEN",
+    "description": "STEAMED FRESH WHOLE PRAWNS WITH GLASS NOODLES &\nCRISPY BACON",
+    "price": "£12.95"
+   },
+   {
+    "name": "KUAY TEAW KUA GAI YAW WA RAD",
+    "description": "DRY FRIED RICE NOODLES WITH CHICKEN, EGG & SOY SAUCE",
+    "price": "£12.50"
+   },
+   {
+    "name": "KUAY TEAW KEE MOW NUA ***",
+    "description": "STIR-FRIED THICK NOODLES WITH BEEF, CHILLI & HOLY BASIL",
+    "price": "£12.95"
+   },
+   {
+    "name": "MEE GRATI",
+    "description": "VERMICELLI TOPPED WITH KING PRAWNS & PORK IN COCONUT\nMILK SAUCE",
+    "price": "£12.50"
+   },
+   {
+    "name": "SEN MEE NHAM YA PU ***",
+    "description": "VERMICELLI NOODLES WITH CRAB MEAT IN SPICY COCONUT\nSAUCE",
+    "price": "£13.50"
+   },
+   {
+    "name": "SUKI HANG PAK & TAO HOO ***",
+    "description": "GLASS NOODLES WITH VEGETABLES & TOFU & SPICY SUKIYAKI\nSAUCE",
+    "price": "£11.95"
+   },
+   {
+    "name": "KOW PAD NHAM PRIK POW GOONG **",
+    "description": "FRIED RICE WITH CHILLI PASTE & KING PRAWNS",
+    "price": "£12.95"
+   },
+   {
+    "name": "KOW PAD SAPPAROD TALAY",
+    "description": "PINEAPPLE FRIED RICE WITH EGG, MIXED SEAFOOD & CASHEW\nNUTS",
+    "price": "£12.95"
+   },
+   {
+    "name": "SPAGHETTI PRIK HANG HORAPA **",
+    "description": "SPAGHETTI WITH PRAWNS, DRIED CHILLI & THAI BASIL",
+    "price": "£13.50"
+   },
+   {
+    "name": "MEE GANG PU ***",
+    "description": "VERMICELLI NOODLES WITH CRAB MEAT IN SOUTHERN STYLE\nCURRY SAUCE",
+    "price": "£13.50"
+   },
+   {
+    "name": "SPAGHETTI PU KAI GOONG **",
+    "description": "SPAGHETTI WITH CRAB MEAT, CHILLI & FISH ROE (TOBIKO)",
+    "price": "£13.50"
+   },
+   {
+    "name": "RAD NAA MOO NOOM",
+    "description": "CRISPY NOODLES WITH PORK , VEGETABLES, EGG & GRAVY",
+    "price": "£12.50"
+   }
+  ],
+  "YUM YUMS": [
+   {
+    "name": "NHAM TOK GAI TOD ***",
+    "description": "CRISPY CHICKEN WITH SPICES & HERBS",
+    "price": "£9.95"
+   },
+   {
+    "name": "PHLA GAI GROP ***",
+    "description": "CRISPY CHICKEN WITH SPICES, LIME & CHILLI PASTE",
+    "price": "£9.95"
+   },
+   {
+    "name": "LAAB PED ***",
+    "description": "ROASTED DUCK BREAST WITH THAI HERBS & LIME DRESSING",
+    "price": "£13.50"
+   },
+   {
+    "name": "NHAM TOK MOO YANG ***",
+    "description": "GRILLED PORK WITH THAI HERBS & LIME DRESSING",
+    "price": "£9.95"
+   },
+   {
+    "name": "YUM WUUNSEN TALAY ***",
+    "description": "MIXED SEAFOOD WITH GLASS NOODLES & SPICY DRESSING",
+    "price": "£11.50"
+   },
+   {
+    "name": "YUM KHAI DAO ***",
+    "description": "FRIED EGG SPICY SALAD WITH CRUNCHY VEGETABLES",
+    "price": "£9.50"
+   },
+   {
+    "name": "YUM GOONG SOD ***",
+    "description": "KING PRAWNS WITH CHILLI, ONION, APPLE, PEANUTS &\nTOASTED COCONUT",
+    "price": "£10.50"
+   },
+   {
+    "name": "SOM TUM ***",
+    "description": "THAI SPICY PAPAYA SALAD WITH PEANUTS",
+    "price": "£11.50"
+   },
+   {
+    "name": "YUM NUA YANG ***",
+    "description": "GRILLED STEAK SALAD WITH CHILLI & LIME DRESSING",
+    "price": "£12.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -921,6 +921,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/ceredigion/khop-chai-deu/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/charnwood/rins-thai-kitchen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1367,6 +1372,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/dudley/sommai-thai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/dudley/tuk-tuk-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2221,11 +2231,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/kingston-upon-thames/busaba-eathai/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/kingston-upon-thames/giggling-squid/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2786,11 +2791,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/london/imm-thai-fusion-1151714/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/london/ing-thai-restaurant/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2852,6 +2852,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/khanoon-thai-restaurant-at-three-cranes/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/khaokho/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3382,6 +3387,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/sabai-thai-kitchen-the-lemon-tree/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/sai-8-limited/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4326,6 +4336,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/north-norfolk/the-thaiway/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/north-northamptonshire/so-thai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4667,6 +4682,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/richmond-upon-thames/khao-thai-restaurant/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/richmond-upon-thames/lanna-thai-kitchen-by-chef-pat/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -6031,11 +6051,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://thaidata.uk/r/windsor-and-maidenhead/thai-thai-street-food/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://thaidata.uk/r/windsor-and-maidenhead/thai-warung/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6316,7 +6331,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/bournemouth/kala-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/bournemouth/koh-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/bristol/brother-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/bristol/clifton-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6331,12 +6361,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/cardiff/brother-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/central-bedfordshire/woburn-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thaidata.uk/r/cheshire-east/bkk-thai-takeaway/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/cornwall/piran-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6366,6 +6406,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/kingston-upon-thames/nay-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/kingston-upon-thames/ploys-thai-bistro/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6387,6 +6432,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/london/churchill-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/london/lombok-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6466,7 +6516,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/tandridge/bua-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/tendring/aroy-thai-modern-thai-cuisine/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/tonbridge-and-malling/pad-thai-restaurant/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/trafford/hot-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -6482,6 +6547,11 @@
   </url>
   <url>
     <loc>https://thaidata.uk/r/york/bamboo-thai/menu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thaidata.uk/r/york/kam-thai/menu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

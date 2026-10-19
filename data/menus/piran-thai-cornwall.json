@@ -1,0 +1,188 @@
+{
+ "restaurant": "Piran Thai",
+ "city": "Cornwall",
+ "fsa_id": "1025055",
+ "address": "Cornwall",
+ "source": "https://www.piranthai.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "STARTERS": [
+   {
+    "name": "1. Thai Prawn Crackers",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "2. Satay Gai (X3)",
+    "description": "Barbecued marinaded chicken served with peanut sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "3. Si-Krong moo tod (X4)",
+    "description": "Spare ribs with special Thai sauce",
+    "price": "£6.95"
+   },
+   {
+    "name": "4. Spring Rolls (vegetarian) (X3)",
+    "description": "Vegetables and glass noodles wrapped in spring roll pastry served with a plum sauce.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "5. TEMPURA PRAWNS (X3)",
+    "description": "Deep fried prawn in batter served with sweet chilli sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "8. TOD MUN PLA (THAI FISH CAKE) (X3)",
+    "description": "Deep fried haddock fish cake, served with sweet chilli sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "9. KKANON JEEP (X4)",
+    "description": "Steamed dumpling of minced chicken and water chestnut, topped with garlic and dark soy sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "10. MOO YANG (X3)",
+    "description": "Marinated pork barbecued and served with spicy chilli sauce.",
+    "price": "£6.95"
+   }
+  ],
+  "Soups": [
+   {
+    "name": "14. TOM YUM GUNG",
+    "description": "Hot and sour prawn soup with mushrooms, lemon grass, galangal and lime leaves (with or without coconut milk as preferred).",
+    "price": "£13.95"
+   }
+  ],
+  "Curries": [
+   {
+    "name": "20. KANG DANG (RED CURRY)",
+    "description": "Meat cooked in coconut milk, red chilli paste, sliced bamboo shoots and sweet basil.",
+    "price": null
+   },
+   {
+    "name": "21. KANG KEOWAN (GREEN CURRY)",
+    "description": "Meat cooked in coconut milk, green chilli paste, sliced bamboo shoots and sweet basil.",
+    "price": null
+   },
+   {
+    "name": "24. MASSAMAN",
+    "description": "Meat or veg  in aromatic curry cooked in massaman curry paste, with potato in coconut milk.",
+    "price": null
+   },
+   {
+    "name": "25. PANANG",
+    "description": "Meat or veg  cooked in coconut milk, panang curry paste, diced lime leaves and sweet basil.",
+    "price": null
+   }
+  ],
+  "Stir fry": [
+   {
+    "name": "26. PAD BROCCOLI",
+    "description": "Broccoli stir fried in garlic and oyster sauce.",
+    "price": null
+   },
+   {
+    "name": "28. PAD MED MAO-MUANG HIM MA-PAAN",
+    "description": "Beef stir fried with cashew nuts, spring onion and red and green peppers.",
+    "price": null
+   },
+   {
+    "name": "30. GUNG PIK PAOW",
+    "description": "Stir fried king prawns with sweet chilli oil, super snap peas, red and green pepper and sweet basil.",
+    "price": "£12.95"
+   },
+   {
+    "name": "33. PAD KRA PAOW",
+    "description": "Meat stir fried with chilli and holly leaf basil.",
+    "price": null
+   },
+   {
+    "name": "35. PAD PAK RUAM",
+    "description": "Meat or veg stir fried with garlic and oyster sauce.",
+    "price": null
+   },
+   {
+    "name": "37. PAD TALAY",
+    "description": "Stir fried squid and prawns with fresh chilli, lime leaves, lemon grass and sweet basil.",
+    "price": "£13.95"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "40. PAD THAI",
+    "description": "Meat or veg and rice noodles stir fried with eggs, bean sprouts, Thai sauce and spring onion.",
+    "price": null
+   },
+   {
+    "name": "41. PAD SEE IEW",
+    "description": "Meat or veg with thick rice noodles stir fried with eggs and vegetables in a dark soy sauce.",
+    "price": null
+   },
+   {
+    "name": "42. PLAIN EGG NOODLES",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "43. PLAIN RICE NOODLES",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   }
+  ],
+  "Rice": [
+   {
+    "name": "45. KAO SUEY",
+    "description": "Thai jasmine steamed rice.",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "46. KAO PAD KHAI",
+    "description": "Thai style egg fried rice.",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "47. KAO KA-TI",
+    "description": "Coconut rice",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "48. CHEF&#x27;S SPECIAL CHILLI RICE",
+    "description": "Jasmine rice cooked with garlic, chilli and dark soy",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "50. PIRAN THAI FRIED RICE",
+    "description": "Special fried rice, egg, tomatoes, spring greens and onions.",
+    "price": null
+   },
+   {
+    "name": "51. TOFU",
+    "description": "Deep fried tofu.",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "52. Chips",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "53. Chicken bites",
+    "description": "",
+    "price": "£5.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

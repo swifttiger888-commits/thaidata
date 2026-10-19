@@ -1,0 +1,627 @@
+{
+ "restaurant": "Koh Thai",
+ "city": "Bournemouth",
+ "fsa_id": "1352690",
+ "address": "Bournemouth",
+ "source": "https://www.koh-thai.co.uk/_files/ugd/ed554a_3d0df403eee444168a2434cef61c932f.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Nibbles": [
+   {
+    "name": "Prawn Crackers GF",
+    "description": "Served with sweet chilli dipping sauce",
+    "price": "£4.95"
+   },
+   {
+    "name": "Steamed Edamame GF VG",
+    "description": "Crunchy fresh Edamame sprinkled with sea salt",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Padron Peppers GF VG",
+    "description": "Wok fried till lightly blistered, with lime and soy",
+    "price": "£6.95",
+    "vegetarian": true
+   }
+  ],
+  "Sharing Platters": [
+   {
+    "name": "Crispy Duck Pancake Rolls",
+    "description": "Half a crispy shredded roast duck, served with steamed pancakes, spring onions, crunchy cucumber and glossy Hoisin sauce",
+    "price": "£21.95"
+   },
+   {
+    "name": "Premium Platter N",
+    "description": "Thainamite prawns, Chicken Satay, Pork Belly bites, Edamame beans, Vegetable Gyoza and salad garnish. Served with Satay, Nam Jim Jaew and Soy garlic sauce",
+    "price": "£29.95"
+   },
+   {
+    "name": "Sawaddee Skewers N",
+    "description": "A street food favourite: 6 Chicken satay skewers and 6 Teriyaki skewers with peanut dipping sauce and sweet Teriyaki. You will argue over the last one",
+    "price": "£22.95"
+   }
+  ],
+  "Sharing Small Plates (Starters)": [
+   {
+    "name": "Chicken Satay GF N",
+    "description": "Chargrilled chicken skewers with peanut satay dipping sauce\n3 Skewers 6.95\n6 Skewers 12.95",
+    "price": null
+   },
+   {
+    "name": "Pork Belly Bites GF",
+    "description": "Succulent pork belly pieces with salted crackling and Nam Jim Jaew dipping sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Crispy Chilli Squid GF",
+    "description": "Fried squid accompanied by a green peppercorn dipping sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Duck Rolls",
+    "description": "Shredded duck rolled with spring onion. Served with a Hoisin dipping sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Pork Bao Bun",
+    "description": "Thinly sliced pork belly with cucumber and Nam Jim Jaew sauce",
+    "price": "£6.95"
+   },
+   {
+    "name": "Teriyaki Skewers GF",
+    "description": "Chargrilled chicken Teriyaki skewers dipped in a sweet Teriyaki sauce\n3 Skewers 6.95\n6 Skewers 12.95",
+    "price": null
+   },
+   {
+    "name": "Thainamite Prawns",
+    "description": "Battered prawns drizzled with Sriracha dipping sauce",
+    "price": "£9.45"
+   },
+   {
+    "name": "Vegetable Spring Rolls VG",
+    "description": "Crunchy vegetables freshly rolled in a crispy wrap with a traditional sweet chilli sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Crispy Beef",
+    "description": "“Banging” crispy beef with sticky dipping sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Quackless Duck Bao Bun VG",
+    "description": "Vegan duck smothered in Hoisin sauce with cucumber and spring onion",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Crunchy Aubergine VG",
+    "description": "Aubergine cubes fried in Panko breadcrumbs and drizzled with a sticky Tamarind sauce",
+    "price": "£7.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Red Dragon Wings GF",
+    "description": "Seasoned crispy wings with a sweet Sriracha dipping sauce",
+    "price": "£8.75"
+   },
+   {
+    "name": "Prawn Dim Sum",
+    "description": "Premium steamed prawn and pork dim sum, accompanied by a mild chilli citrus sauce and garlic sprinkles",
+    "price": "£8.95"
+   },
+   {
+    "name": "Vegetable Gyoza VG",
+    "description": "Crispy vegetable dumplings served with a soy garlic dipping sauce",
+    "price": "£6.95",
+    "vegetarian": true
+   }
+  ],
+  "Thai Curries": [
+   {
+    "name": "Green VG GF",
+    "description": "The classic: Coconut milk, lemongrass, chilli and galangal",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Penang VG GF",
+    "description": "Deliciously rich, creamy and fragrant",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Massaman VG GF N",
+    "description": "Mild with peanuts, potato and spices",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Red VG GF",
+    "description": "Rich and robust with moderate chilli heat",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Chicken / Vegetable Katsu Curry VG N",
+    "description": "Coated in Panko breadcrumbs and served with Jasmine rice",
+    "price": "£17.95",
+    "vegetarian": true
+   }
+  ],
+  "Stir-fries": [
+   {
+    "name": "Drunken Rice",
+    "description": "Pork or chicken. Chillies, peppers and pak choi all stir fried with fragrant Thai basil and special stir fry sauce. The perfect tonic for a bad day 16.95\nAdd prawns +2.00",
+    "price": "£16.95"
+   },
+   {
+    "name": "Koh Basil",
+    "description": "Chicken or pork belly with aromatic Thai basil, crunchy vegetables and a chilli kick. Served with Jasmine rice and a fried egg",
+    "price": "£16.45"
+   },
+   {
+    "name": "Beef Cashew Stir Fry N",
+    "description": "Beef, chilli, peppers, spring onion, mushrooms, carrot and cashew nuts. Served with Jasmine rice",
+    "price": "£17.95"
+   },
+   {
+    "name": "Spicy Chicken Fried Rice GF",
+    "description": "Jasmine rice, stir fried chicken, birds eye chilli, mangetout, green beans, spring onions seasoned with Krachai and Thai basil",
+    "price": "£15.95"
+   },
+   {
+    "name": "Nasi Goreng",
+    "description": "A very popular smokey, salty, sweet fried rice with chicken, carrot and red onions. Best served with an egg",
+    "price": "£15.95"
+   },
+   {
+    "name": "Vegetable Nasi Goreng V",
+    "description": "",
+    "price": "£14.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Broccoli Phad Kung",
+    "description": "King prawns, broccoli, mushrooms and carrots lightly stir fried with special seasoning sauce. Served with Jasmine rice",
+    "price": "£16.95"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "Pad Thai GF N",
+    "description": "The nations favourite, rice noodles, beansprouts, tamarind sauce and peanuts\nVegetable 14.95\nPrawn 16.95\nChicken 15.95",
+    "price": null
+   },
+   {
+    "name": "Thai Singapore Noodles",
+    "description": "Noodles, prawns, Cha siu pork, spring onions, red peppers and beansprouts . Wok fried with a hint of Singapore spice mix. Choice of: Egg or Rice Noodles",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad See Ew",
+    "description": "Thick rice noodles, stir fried with chicken and pak choi in a slightly sweet stir fry sauce. Alternative to Pad Thai",
+    "price": "£15.95"
+   },
+   {
+    "name": "Spicy Seafood Udon",
+    "description": "Prawns, salmon and squid with fragrant Thai basil. Wok fried with udon noodles and crunchy vegetables",
+    "price": "£17.95"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Tom Yum/Tom Kha GF",
+    "description": "Thailand’s best loved soup, aromatic, sharp and sweet\nAdd Egg or Rice Noodles +2.75\nAdd Chicken or Prawns +2.95\nPlease let your server know if you want it Thai hot",
+    "price": "£10.45"
+   },
+   {
+    "name": "Khao Soi N",
+    "description": "A rich comforting northern Thai coconut dish, served with egg noodles, coriander, red onions and chicken satay",
+    "price": "£15.95"
+   }
+  ],
+  "Chef Specialities": [
+   {
+    "name": "Tamarind Duck",
+    "description": "Half a roast duck served with sweet and sour Tamarind sauce. A must for every table. Served with Jasmine rice",
+    "price": "£19.95"
+   },
+   {
+    "name": "Crispy Sea Bass",
+    "description": "Sea Bass fillets lightly battered and served in a spicy lemon grass, chilli,coriander sauce. Served with Jasmine rice",
+    "price": "£20.00"
+   },
+   {
+    "name": "Gai Yang (Grilled Chicken) N",
+    "description": "Grilled marinated chicken thighs served with coconut rice, Penang dipping sauce and salad",
+    "price": "£18.50"
+   },
+   {
+    "name": "A Sigh of Relief GLP-1 friendly",
+    "description": "A choice chicken breast, salmon or tofu lightly stir fried with mangetout, peppers, fine beans and beansprouts. Served with cauliflower rice and a lemon ginger dressing on the side",
+    "price": "£15.95"
+   },
+   {
+    "name": "Crying Tiger Steak GF",
+    "description": "A traditional Thai steak, 8oz Sirloin, served with Nam Jim Jaew dipping sauce, salad garnish and Koh Potatoes",
+    "price": "£23.95"
+   },
+   {
+    "name": "Moo Krob Moo Dang",
+    "description": "Crispy and Cha siu pork served on Jasmine rice with a fried egg and Thai BBQ sauce",
+    "price": "£18.50"
+   }
+  ],
+  "Side Dishes": [
+   {
+    "name": "Koh potatoes GF VG",
+    "description": "Baby potatoes fried with onions and spices",
+    "price": "£5.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Seasonal Greens VG GF",
+    "description": "Pak choi, courgette, fine beans and mangetout. Stir fried with garlic and soy sauce",
+    "price": "£5.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Bangkok Broccoli VG N",
+    "description": "Tender stem broccoli, coated in peanut sauce and drizzled with Sriracha",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Black Bean Mushrooms VG",
+    "description": "Wok fried with black bean sauce",
+    "price": "£5.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Rotis (2) V",
+    "description": "Crispy and highly addictive",
+    "price": "£4.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Kimchi Fried Rice N",
+    "description": "Best with a fried egg +1.95",
+    "price": "£6.95"
+   }
+  ],
+  "Extras": [
+   {
+    "name": "Jasmine Rice GF VG",
+    "description": "",
+    "price": "£3.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice V",
+    "description": "",
+    "price": "£4.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice GF VG",
+    "description": "",
+    "price": "£4.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Cauliflower Rice GF VG",
+    "description": "",
+    "price": "£4.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Cauli Rice GF V",
+    "description": "",
+    "price": "£5.75",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Noodles V",
+    "description": "",
+    "price": "£4.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Chillies GF VG",
+    "description": "",
+    "price": "£1.00",
+    "vegetarian": true
+   },
+   {
+    "name": "Fried Egg GF V",
+    "description": "",
+    "price": "£1.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Kimchi",
+    "description": "",
+    "price": "£4.95"
+   },
+   {
+    "name": "Curry Sauce VG",
+    "description": "",
+    "price": "£4.95",
+    "vegetarian": true
+   }
+  ],
+  "Favourite Cocktails": [
+   {
+    "name": "Bye Bye Samurai",
+    "description": "Copious amounts of rum combined with passionfruit, pinapple and lime",
+    "price": "£10.95 each or 2 for 19*"
+   },
+   {
+    "name": "Mai Thai N",
+    "description": "Lashings of rum, orange liqueur, and almond syrup with a wink of lime",
+    "price": "£10.95 each or 2 for 19*"
+   },
+   {
+    "name": "Daiquiri",
+    "description": "White rum and orange liqueur muddled with choice of flavour",
+    "price": "£10.95 each or 2 for 19*"
+   },
+   {
+    "name": "Summer Daze",
+    "description": "A favourite of ours, gin, passionfruit, soda and Midori melon liqueur",
+    "price": "£10.95 each or 2 for 19*"
+   },
+   {
+    "name": "Pina Colada",
+    "description": "Creamy coconut, pineapple, rum cocktail; Tropical, sweet, fruity",
+    "price": "£10.95 each or 2 for 19*"
+   },
+   {
+    "name": "Thais to Mexico",
+    "description": "A dazzlingly good tequila and lychee liqueur blend, with passionfruit and lime",
+    "price": "£10.95 each or 2 for 19*"
+   },
+   {
+    "name": "Blushing Lotus N",
+    "description": "Chambord liqueur, vodka,pineapple and raspberries with a hit of almond",
+    "price": "£10.95 each or 2 for 19*"
+   },
+   {
+    "name": "Dragons Ruin",
+    "description": "Passionfruit and raspberries with citrus fruits and apple juice over vodka",
+    "price": "£10.95 each or 2 for 19*"
+   }
+  ],
+  "Classic Cocktails": [
+   {
+    "name": "Margarita",
+    "description": "Tequila, lime, orange liqueur; salted rim, tangy, refreshing, zesty",
+    "price": "£11.95 each"
+   },
+   {
+    "name": "Espresso Martini",
+    "description": "Fresh double espresso, shaken with vodka and a hint of vanilla",
+    "price": "£11.95 each"
+   },
+   {
+    "name": "Mojito",
+    "description": "White rum, lime, mint, sugar, soda; bright, refreshing, minty",
+    "price": "£11.95 each"
+   },
+   {
+    "name": "Old Fashioned",
+    "description": "Whiskey, sugar, bitters, orange twist; smooth, timeless, smoky",
+    "price": "£11.95 each"
+   },
+   {
+    "name": "Pornstar Martini",
+    "description": "Vanilla vodka, passionfruit, lime; Sweet, tropical, Prosecco",
+    "price": "£11.95 each"
+   },
+   {
+    "name": "Cosmopolitan",
+    "description": "Vodka, cranberry, orange liqueur, lime; Tart, chic, pink, vibrant",
+    "price": "£11.95 each"
+   },
+   {
+    "name": "Negroni",
+    "description": "Gin, vermouth rosso, Campari; Bitter, bold, aromatic, balanced, iconic",
+    "price": "£11.95 each"
+   },
+   {
+    "name": "Hugo Spritz",
+    "description": "Prosecco, elderflower liqueur, soda mint and lime",
+    "price": "£11.95 each"
+   }
+  ],
+  "Mocktails": [
+   {
+    "name": "Sunrise",
+    "description": "The illusion of a Thai sunset, orange juice, lemon juice, soda and grenadine over crushed ice",
+    "price": "£6.95 each or 2 for 12*"
+   },
+   {
+    "name": "Pineapple Colada",
+    "description": "Fresh sweet pineapple, coconut milk, and a squeeze of lime",
+    "price": "£6.95 each or 2 for 12*"
+   },
+   {
+    "name": "Samurai",
+    "description": "Passionfruit and pineapple delight, served over crushed ice",
+    "price": "£6.95 each or 2 for 12*"
+   },
+   {
+    "name": "Strawberry Basil Fizz",
+    "description": "Muddled strawberries, lime and basil topped with chilled lemonade",
+    "price": "£6.95 each or 2 for 12*"
+   },
+   {
+    "name": "Dragons Really Ruined",
+    "description": "Raspberries and oranges muddled with apple juice",
+    "price": "£6.95 each or 2 for 12*"
+   },
+   {
+    "name": "Shy Lotus",
+    "description": "A distinguished drink of raspberries, almond syrup, grenadine and pineapple",
+    "price": "£6.95 each or 2 for 12*"
+   },
+   {
+    "name": "Minty Nojito",
+    "description": "Muddled fresh mint leaves, lime and sugar syrup. Topped with soda",
+    "price": "£6.95 each or 2 for 12*"
+   }
+  ],
+  "Wines": [
+   {
+    "name": "Bantry Bay Chenin Blanc",
+    "description": "Delicate floral notes and subtle pineapple\n175ml 6.95 250ml 8.95 bottle 24.95",
+    "price": null
+   },
+   {
+    "name": "Crescendo Pinot Grigio",
+    "description": "Dry crisp with citrus and ripe pear\n175ml 7.45 250ml 9.45 bottle 26.95",
+    "price": null
+   },
+   {
+    "name": "Terra Vega Chardonnay",
+    "description": "Ripe banana, vanilla and apple\n175ml 7.50 250ml 9.75 bottle 28.95",
+    "price": null
+   },
+   {
+    "name": "NZ Fernlands Sauvignon Blanc",
+    "description": "Beautifully balanced and tropical\n175ml 10.45 250ml 12.45 bottle 34.95",
+    "price": null
+   },
+   {
+    "name": "Prosecco Bel Canto Italy",
+    "description": "Delicate and aromatic with fine bubbles\n125ml 6.95 bottle 29.95",
+    "price": null
+   },
+   {
+    "name": "Hillville Road Shiraz",
+    "description": "Raspberries and black cherries\n175ml 6.95 250ml 8.95 bottle 24.95",
+    "price": null
+   },
+   {
+    "name": "Five Ravons Pinot Noir",
+    "description": "Delicious with red fruity flavours\n175ml 7.45 250ml 9.45 bottle 26.95",
+    "price": null
+   },
+   {
+    "name": "Vina Carrasco Merlot",
+    "description": "Soft plummy with hits of vanilla\n175ml 8.45 250ml 10.45 bottle 29.95",
+    "price": null
+   },
+   {
+    "name": "Ombrellino Pinot Grigio Rosé",
+    "description": "Rich floral red fruits\n175ml 7.45 250ml 9.45 bottle 26.95",
+    "price": null
+   },
+   {
+    "name": "Nicolas Rouzet Provence Rosé",
+    "description": "Strawberry, raspberry, redcurrents\n175ml 10.45 250ml 13.45 bottle 38.45",
+    "price": null
+   },
+   {
+    "name": "Premium Champagne",
+    "description": "Ask server for details",
+    "price": "£69.95"
+   }
+  ],
+  "Beer": [
+   {
+    "name": "Singha Thailand 5%",
+    "description": "Pint 6.95 Half 3.75",
+    "price": null
+   },
+   {
+    "name": "Singha Tower",
+    "description": "A unique ice cooled beer tower. Your personal 5 pint beer tap",
+    "price": "£29.95"
+   },
+   {
+    "name": "Beavertown - Gamma Ray",
+    "description": "An American Pale Ale, enhances the lime and aromatic herbs in dishes such as Pad Thai 5.4% 330ml",
+    "price": "£5.95"
+   },
+   {
+    "name": "Asahi",
+    "description": "A quick crisp finish and no lingering bitterness 5% 330ml",
+    "price": "£5.25"
+   },
+   {
+    "name": "BrewDog - Hazy Jane",
+    "description": "A smooth fruity IPA, with notes of pineapple and mango. Perfect for spicy curries 5.0% 330ml",
+    "price": "£5.95"
+   },
+   {
+    "name": "Jubel Peach Beer GF",
+    "description": "This gluten-free beer is deliciously juicy with thirst quenching peachy flavours 4% 330ml",
+    "price": "£5.45"
+   },
+   {
+    "name": "Orchard Pig Cider 4.5% 500ml",
+    "description": "",
+    "price": "£6.50"
+   },
+   {
+    "name": "Peroni Libera 0% 330ml",
+    "description": "",
+    "price": "£4.25"
+   },
+   {
+    "name": "Guinness 0% 500ml",
+    "description": "",
+    "price": "£4.95"
+   }
+  ],
+  "Soft Drinks": [
+   {
+    "name": "Coke / Diet Icon",
+    "description": "330ml 3.75\nPint 473ml 4.75",
+    "price": null
+   },
+   {
+    "name": "Sprite",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Still Mineral",
+    "description": "750ml",
+    "price": "£4.75"
+   },
+   {
+    "name": "Sparkling Mineral",
+    "description": "750ml",
+    "price": "£4.75"
+   },
+   {
+    "name": "Ginger Beer",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Juices",
+    "description": "Ask server for flavours Pint 4.50",
+    "price": "£2.50"
+   },
+   {
+    "name": "Elderflower Sparkle",
+    "description": "",
+    "price": "£3.75"
+   },
+   {
+    "name": "Raspberry Sparkle",
+    "description": "",
+    "price": "£3.75"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "39.95pp"
+ ]
+}

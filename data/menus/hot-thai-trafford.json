@@ -1,0 +1,801 @@
+{
+ "restaurant": "Hot Thai",
+ "city": "Trafford",
+ "fsa_id": "1805046",
+ "address": "Trafford",
+ "source": "https://www.hotthaiuk.co.uk/menu",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Appetizers": [
+   {
+    "name": "Prawn Crackers",
+    "description": "Light and crispy prawn crackers served with a sweet chilli dip. (Contains: Crustaceans)",
+    "price": "£3.95"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy pastry rolls filled with mixed vegetables, served with sweet chilli sauce. (Contains: Sesame, Soya, Gluten)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Duck Spring Rolls",
+    "description": "Aromatic duck and vegetable filling wrapped in crispy pastry, served with hoisin sauce. (Contains: Sesame oil, Soya, Gluten)",
+    "price": "£7.50"
+   },
+   {
+    "name": "Satay Chicken Skewers",
+    "description": "Grilled chicken skewers marinated in Thai spices, served with creamy peanut sauce. (Contains: Sesame oil, Soya, Peanut (sauce)",
+    "price": "£7.50"
+   },
+   {
+    "name": "Mushroom with Satay Sauce(V)",
+    "description": "Skewered mushrooms marinated in satay spices, served with peanut sauce. (Contains: Sesame oil, Soya, Peanut (sauce)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Tao Huu Tod (Deep Fried Tofu) (V)",
+    "description": "Crispy golden tofu, served with a sweet chilli dip. (Contains: Soya, Gluten)",
+    "price": "£7",
+    "vegetarian": true
+   },
+   {
+    "name": "Salt and Pepper Tofu (V)",
+    "description": "Crispy tofu tossed with Thai salt and pepper seasoning. (Contains: Soya, Gluten)",
+    "price": "£7.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Fish Cake 🌶",
+    "description": "Traditional Thai fish cakes with aromatic spices, served with a tangy dipping sauce. (Contains: Fish, Soya, Egg) Homemade",
+    "price": "£8.95"
+   },
+   {
+    "name": "Deep Fried Chicken Wings",
+    "description": "Crispy golden-fried chicken wings, served with sweet chilli sauce. (Contains: Soya)",
+    "price": "£7.95"
+   },
+   {
+    "name": "Lab Gai (Thai Chicken Salad) 🌶",
+    "description": "Spicy minced chicken salad with lime, chilli, and herbs. (Contains: Fish sauce)",
+    "price": "£9.95"
+   },
+   {
+    "name": "Lab Tofu (Thai Tofu Salad) (V) 🌶",
+    "description": "A refreshing, spicy tofu salad with Thai herbs and lime dressing",
+    "price": "£9.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Crispy Prawns with Tamarind Sauce",
+    "description": "Juicy prawns deep-fried and coated in a tangy tamarind sauce. (Contains: Crustaceans, Gluten)",
+    "price": "£8.95"
+   },
+   {
+    "name": "Gung Krob (Crispy King Prawn)",
+    "description": "Crunchy battered king prawns served with a sweet chilli dip. (Contains: Crustaceans, Gluten)",
+    "price": "£8.95"
+   },
+   {
+    "name": "Vegetable Tempura (V)",
+    "description": "Lightly battered and deep-fried seasonal vegetables, served with a dipping sauce. (Contains: Gluten)",
+    "price": "£6.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Cauliflower Bang Bang (V)",
+    "description": "Crispy cauliflower bites tossed in a spicy Thai sauce. (Contains: Gluten)",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Beef Salad 🌶",
+    "description": "A refreshing, spicy tofu salad with Thai herbs and lime dressing",
+    "price": "£11.95"
+   },
+   {
+    "name": "Som Tum Thai (Papaya Salad) 🌶",
+    "description": "A classic Thai salad with shredded green papaya, peanuts, and a tangy chilli-lime dressing. (Contains: Crustaceans)",
+    "price": "£11.95"
+   },
+   {
+    "name": "Som Tum Pla Rar (Papaya Salad with Spicy Fermented Fish) 🌶",
+    "description": "A bold and pungent variation of the traditional papaya salad. (Contains: Crustaceans)",
+    "price": "£11.95"
+   },
+   {
+    "name": "Sweetcorn Cake 🌶",
+    "description": "Deep-fried sweetcorn fritters with a hint of spice. (Contains: Crustaceans)",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Mixed Starter (per person)",
+    "description": "A variety platter including chicken satay, Thai fish cake, duck spring roll, Gung Krob, and cauliflower Bang Bang.",
+    "price": "£9.95"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Tom Yum Soup 🌶 Chicken",
+    "description": "A hot and sour broth with lemongrass, lime leaves, and Thai spices.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Tom Yum Soup 🌶 Tofu",
+    "description": "A hot and sour broth with lemongrass, lime leaves, and Thai spices.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Tom Yum Soup 🌶 Prawns",
+    "description": "A hot and sour broth with lemongrass, lime leaves, and Thai spices.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Tom Khar Soup Chicken",
+    "description": "A creamy coconut-based soup with galangal, lemongrass, and a delicate balance of sweet and sour flavours.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Tom Khar Soup Tofu",
+    "description": "A creamy coconut-based soup with galangal, lemongrass, and a delicate balance of sweet and sour flavours.",
+    "price": "£9.95"
+   },
+   {
+    "name": "Tom Khar Soup Prawns",
+    "description": "A creamy coconut-based soup with galangal, lemongrass, and a delicate balance of sweet and sour flavours.",
+    "price": "£9.95"
+   }
+  ],
+  "Curry": [
+   {
+    "name": "Thai Green Curry 🌶 Chicken",
+    "description": "Traditional Thai green curry with coconut milk, Lime Leaves, Vegetable, and sweet basil\n(Contain: Crustaceans)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Thai Green Curry 🌶 Beef",
+    "description": "Traditional Thai green curry with coconut milk, Lime Leaves, Vegetable, and sweet basil\n(Contain: Crustaceans)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Thai Green Curry 🌶 Tofu",
+    "description": "Traditional Thai green curry with coconut milk, Lime Leaves, Vegetable, and sweet basil\n(Contain: Crustaceans)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Thai Green Curry 🌶 Prawns",
+    "description": "Traditional Thai green curry with coconut milk, Lime Leaves, Vegetable, and sweet basil\n(Contain: Crustaceans)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Thai Green Curry 🌶 Fish",
+    "description": "Traditional Thai green curry with coconut milk, Lime Leaves, Vegetable, and sweet basil\n(Contain: Crustaceans)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Thai Green Curry 🌶 Duck",
+    "description": "Traditional Thai green curry with coconut milk, Lime Leaves, Vegetable, and sweet basil\n(Contain: Crustaceans)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Thai Red Curry 🌶🌶 Chicken",
+    "description": "A bold and spicy red curry with fresh herbs and coconut milk. (Contains: Crustaceans)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Thai Red Curry 🌶🌶 Beef",
+    "description": "A bold and spicy red curry with fresh herbs and coconut milk. (Contains: Crustaceans)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Thai Red Curry 🌶🌶 Tofu",
+    "description": "A bold and spicy red curry with fresh herbs and coconut milk. (Contains: Crustaceans)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Thai Red Curry 🌶🌶 Prawns",
+    "description": "A bold and spicy red curry with fresh herbs and coconut milk. (Contains: Crustaceans)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Thai Red Curry 🌶🌶 Fish",
+    "description": "A bold and spicy red curry with fresh herbs and coconut milk. (Contains: Crustaceans)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Thai Red Curry 🌶🌶 Duck",
+    "description": "A bold and spicy red curry with fresh herbs and coconut milk. (Contains: Crustaceans)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Thai Panang Curry 🌶 Chicken",
+    "description": "A creamy, slightly sweet Panang curry with lemongrass and coconut milk. (Contains: Crustaceans, Gluten)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Thai Panang Curry 🌶 Beef",
+    "description": "A creamy, slightly sweet Panang curry with lemongrass and coconut milk. (Contains: Crustaceans, Gluten)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Thai Panang Curry 🌶 Tofu",
+    "description": "A creamy, slightly sweet Panang curry with lemongrass and coconut milk. (Contains: Crustaceans, Gluten)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Thai Panang Curry 🌶 Prawns",
+    "description": "A creamy, slightly sweet Panang curry with lemongrass and coconut milk. (Contains: Crustaceans, Gluten)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Thai Panang Curry 🌶 Fish",
+    "description": "A creamy, slightly sweet Panang curry with lemongrass and coconut milk. (Contains: Crustaceans, Gluten)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Thai Panang Curry 🌶 Duck",
+    "description": "A creamy, slightly sweet Panang curry with lemongrass and coconut milk. (Contains: Crustaceans, Gluten)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Massaman Curry Chicken",
+    "description": "A mild and rich curry with potatoes, carrots, and coconut milk. (Contains: Crustaceans)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Massaman Curry Beef",
+    "description": "A mild and rich curry with potatoes, carrots, and coconut milk. (Contains: Crustaceans)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Massaman Curry Tofu",
+    "description": "A mild and rich curry with potatoes, carrots, and coconut milk. (Contains: Crustaceans)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Fish Chu-Chi Curry 🌶",
+    "description": "A traditional red coconut curry with lime leaves and fish. (Contains: Crustaceans, Gluten)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Roast Duck Red Curry 🌶",
+    "description": "A decadent red curry with tender roast duck and Thai basil. (Contains: Crustaceans)",
+    "price": "£15.95"
+   }
+  ],
+  "Stir Fry": [
+   {
+    "name": "Pad Ka Praw 🌶🌶 Chicken",
+    "description": "Spicy stir-fry with garlic, sweet basil, and fresh chilli. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Ka Praw 🌶🌶 Beef",
+    "description": "Spicy stir-fry with garlic, sweet basil, and fresh chilli. (Contains: Soya)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pad Ka Praw 🌶🌶 Tofu",
+    "description": "Spicy stir-fry with garlic, sweet basil, and fresh chilli. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Ka Praw 🌶🌶 Prawns",
+    "description": "Spicy stir-fry with garlic, sweet basil, and fresh chilli. (Contains: Soya)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Ka Praw 🌶🌶 Fish",
+    "description": "Spicy stir-fry with garlic, sweet basil, and fresh chilli. (Contains: Soya)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Ka Praw 🌶🌶 Duck",
+    "description": "Spicy stir-fry with garlic, sweet basil, and fresh chilli. (Contains: Soya)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Ta Krai 🌶🌶 Chicken",
+    "description": "Lemongrass-infused stir-fry with black pepper and fresh Thai herbs. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Ta Krai 🌶🌶 Beef",
+    "description": "Lemongrass-infused stir-fry with black pepper and fresh Thai herbs. (Contains: Soya)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pad Ta Krai 🌶🌶 Tofu",
+    "description": "Lemongrass-infused stir-fry with black pepper and fresh Thai herbs. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Ta Krai 🌶🌶 Prawns",
+    "description": "Lemongrass-infused stir-fry with black pepper and fresh Thai herbs. (Contains: Soya)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Ta Krai 🌶🌶 Fish",
+    "description": "Lemongrass-infused stir-fry with black pepper and fresh Thai herbs. (Contains: Soya)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Ta Krai 🌶🌶 Duck",
+    "description": "Lemongrass-infused stir-fry with black pepper and fresh Thai herbs. (Contains: Soya)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Med Mamaung 🌶 Chicken",
+    "description": "Cashew nut stir-fry with Thai chilli paste. (Contains: Soya, Cashew nut)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Med Mamaung 🌶 Beef",
+    "description": "Cashew nut stir-fry with Thai chilli paste. (Contains: Soya, Cashew nut)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Med Mamaung 🌶 Tofu",
+    "description": "Cashew nut stir-fry with Thai chilli paste. (Contains: Soya, Cashew nut)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Med Mamaung 🌶 Prawns",
+    "description": "Cashew nut stir-fry with Thai chilli paste. (Contains: Soya, Cashew nut)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Med Mamaung 🌶 Fish",
+    "description": "Cashew nut stir-fry with Thai chilli paste. (Contains: Soya, Cashew nut)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Med Mamaung 🌶 Duck",
+    "description": "Cashew nut stir-fry with Thai chilli paste. (Contains: Soya, Cashew nut)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Nahmman Hoy (Oyster Sauce) Chicken",
+    "description": "A rich and savoury stir-fry with garlic and vegetables. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Nahmman Hoy (Oyster Sauce) Beef",
+    "description": "A rich and savoury stir-fry with garlic and vegetables. (Contains: Soya)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pad Nahmman Hoy (Oyster Sauce) Tofu",
+    "description": "A rich and savoury stir-fry with garlic and vegetables. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Nahmman Hoy (Oyster Sauce) Prawns",
+    "description": "A rich and savoury stir-fry with garlic and vegetables. (Contains: Soya)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Nahmman Hoy (Oyster Sauce) Fish",
+    "description": "A rich and savoury stir-fry with garlic and vegetables. (Contains: Soya)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Nahmman Hoy (Oyster Sauce) Duck",
+    "description": "A rich and savoury stir-fry with garlic and vegetables. (Contains: Soya)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Kra Tiem Chicken",
+    "description": "A simple yet flavourful stir-fry with garlic and black pepper. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Kra Tiem Beef",
+    "description": "A simple yet flavourful stir-fry with garlic and black pepper. (Contains: Soya)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pad Kra Tiem Tofu",
+    "description": "A simple yet flavourful stir-fry with garlic and black pepper. (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Kra Tiem Prawns",
+    "description": "A simple yet flavourful stir-fry with garlic and black pepper. (Contains: Soya)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Kra Tiem Fish",
+    "description": "A simple yet flavourful stir-fry with garlic and black pepper. (Contains: Soya)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Kra Tiem Duck",
+    "description": "A simple yet flavourful stir-fry with garlic and black pepper. (Contains: Soya)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Khing Chicken",
+    "description": "A fragrant ginger stir-fry with garlic and fresh vegetables. (Contains: Soya, Sesame oil)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Khing Beef",
+    "description": "A fragrant ginger stir-fry with garlic and fresh vegetables. (Contains: Soya, Sesame oil)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pad Khing Tofu",
+    "description": "A fragrant ginger stir-fry with garlic and fresh vegetables. (Contains: Soya, Sesame oil)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Khing Prawns",
+    "description": "A fragrant ginger stir-fry with garlic and fresh vegetables. (Contains: Soya, Sesame oil)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Khing Fish",
+    "description": "A fragrant ginger stir-fry with garlic and fresh vegetables. (Contains: Soya, Sesame oil)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Khing Duck",
+    "description": "A fragrant ginger stir-fry with garlic and fresh vegetables. (Contains: Soya, Sesame oil)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Satay Sauce Chicken",
+    "description": "Stir-fry with creamy Thai satay sauce. (Contains: Soya, Sesame oil, Peanut)",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pad Satay Sauce Beef",
+    "description": "Stir-fry with creamy Thai satay sauce. (Contains: Soya, Sesame oil, Peanut)",
+    "price": "£15.50"
+   },
+   {
+    "name": "Pad Satay Sauce Tofu",
+    "description": "Stir-fry with creamy Thai satay sauce. (Contains: Soya, Sesame oil, Peanut)",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pad Satay Sauce Prawns",
+    "description": "Stir-fry with creamy Thai satay sauce. (Contains: Soya, Sesame oil, Peanut)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Satay Sauce Fish",
+    "description": "Stir-fry with creamy Thai satay sauce. (Contains: Soya, Sesame oil, Peanut)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Satay Sauce Duck",
+    "description": "Stir-fry with creamy Thai satay sauce. (Contains: Soya, Sesame oil, Peanut)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pad Preiw Wan Chicken",
+    "description": "Thai sweet and sour stir fried with vegetable and deep fried selected meat (Soya sauce)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Preiw Wan Beef",
+    "description": "Thai sweet and sour stir fried with vegetable and deep fried selected meat (Soya sauce)",
+    "price": "£14.50"
+   },
+   {
+    "name": "Pad Preiw Wan Tofu",
+    "description": "Thai sweet and sour stir fried with vegetable and deep fried selected meat (Soya sauce)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Preiw Wan Prawns",
+    "description": "Thai sweet and sour stir fried with vegetable and deep fried selected meat (Soya sauce)",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pad Preiw Wan Fish",
+    "description": "Thai sweet and sour stir fried with vegetable and deep fried selected meat (Soya sauce)",
+    "price": "£18.95"
+   },
+   {
+    "name": "Pad Preiw Wan Duck",
+    "description": "Thai sweet and sour stir fried with vegetable and deep fried selected meat (Soya sauce)",
+    "price": "£15.95"
+   }
+  ],
+  "Noodles & Rice Dishes": [
+   {
+    "name": "Pad Thai Chicken",
+    "description": "Stir-fried rice noodles with garlic, bean sprouts, egg, and crushed peanuts. (Contains: Peanut, Egg)",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pad Thai Beef",
+    "description": "Stir-fried rice noodles with garlic, bean sprouts, egg, and crushed peanuts. (Contains: Peanut, Egg)",
+    "price": "£15.50"
+   },
+   {
+    "name": "Pad Thai Tofu",
+    "description": "Stir-fried rice noodles with garlic, bean sprouts, egg, and crushed peanuts. (Contains: Peanut, Egg)",
+    "price": "£13.95"
+   },
+   {
+    "name": "Pad Thai Prawns",
+    "description": "Stir-fried rice noodles with garlic, bean sprouts, egg, and crushed peanuts. (Contains: Peanut, Egg)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Pad Thai Duck",
+    "description": "Stir-fried rice noodles with garlic, bean sprouts, egg, and crushed peanuts. (Contains: Peanut, Egg)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Thai Fried Rice Chicken",
+    "description": "Fragrant fried rice with garlic, egg, and fresh vegetables. (Contains: Egg, Soya)",
+    "price": "£13.95"
+   },
+   {
+    "name": "Thai Fried Rice Beef",
+    "description": "Fragrant fried rice with garlic, egg, and fresh vegetables. (Contains: Egg, Soya)",
+    "price": "£15.50"
+   },
+   {
+    "name": "Thai Fried Rice Tofu",
+    "description": "Fragrant fried rice with garlic, egg, and fresh vegetables. (Contains: Egg, Soya)",
+    "price": "£13.95"
+   },
+   {
+    "name": "Thai Fried Rice Prawns",
+    "description": "Fragrant fried rice with garlic, egg, and fresh vegetables. (Contains: Egg, Soya)",
+    "price": "£15.95"
+   },
+   {
+    "name": "Thai Fried Rice Duck",
+    "description": "Fragrant fried rice with garlic, egg, and fresh vegetables. (Contains: Egg, Soya)",
+    "price": "£16.95"
+   },
+   {
+    "name": "Udon Pad Thai Chicken",
+    "description": "Udon noodle stir fried with Pad Thai sauce, bean sprouts, and meat optional.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Udon Pad Thai Beef",
+    "description": "Udon noodle stir fried with Pad Thai sauce, bean sprouts, and meat optional.",
+    "price": "£15.50"
+   },
+   {
+    "name": "Udon Pad Thai Tofu",
+    "description": "Udon noodle stir fried with Pad Thai sauce, bean sprouts, and meat optional.",
+    "price": "£13.95"
+   },
+   {
+    "name": "Udon Pad Thai Prawns",
+    "description": "Udon noodle stir fried with Pad Thai sauce, bean sprouts, and meat optional.",
+    "price": "£15.95"
+   },
+   {
+    "name": "Udon Pad Thai Duck",
+    "description": "Udon noodle stir fried with Pad Thai sauce, bean sprouts, and meat optional.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Udon Pad Thai Choice",
+    "description": "",
+    "price": null
+   }
+  ],
+  "Accompaniments": [
+   {
+    "name": "Steamed Jasmine Rice (V)",
+    "description": "",
+    "price": "£3.50",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice (V)",
+    "description": "",
+    "price": "£3.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice (Contains: Crustaceans, Egg)",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Salt and Pepper Chips",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "Chips",
+    "description": "",
+    "price": "£4.50"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Stir-fried Plain Rice Noodle",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Plain Soft Noodle",
+    "description": "Stir-fried Plain Yellow Noodle",
+    "price": "£3.95"
+   }
+  ],
+  "Kids Menu": [
+   {
+    "name": "Deep Fried Chicken & Chips (Contains: Gluten)",
+    "description": "",
+    "price": "£7"
+   },
+   {
+    "name": "Chicken Nuggets & Chips (Contains: Gluten)",
+    "description": "",
+    "price": "£7"
+   },
+   {
+    "name": "Fish & Chips (Contains: Fish, Gluten)",
+    "description": "",
+    "price": "£9"
+   }
+  ],
+  "Desserts": [
+   {
+    "name": "Roti served with condensed milk (Contains: Gluten, Milk)",
+    "description": "",
+    "price": "£5.50"
+   },
+   {
+    "name": "Banana Fritters served with maple syrup and condensed milk (Contains: Gluten, Milk)",
+    "description": "",
+    "price": "£5.50"
+   }
+  ],
+  "SPECIAL MENU": [
+   {
+    "name": "Crispy Chicken served with Hat Yai Chili Sweet Sauce and Rice or Sticky Rice Jasmine Rice",
+    "description": "Top with Hat Yai Deep Fried Onions.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Crispy Chicken served with Hat Yai Chili Sweet Sauce and Rice or Sticky Rice Sticky Rice",
+    "description": "Top with Hat Yai Deep Fried Onions.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Crispy Chicken Thigh with Hat Yai Sauce",
+    "description": "",
+    "price": null
+   },
+   {
+    "name": "Pineapple Fried Rice with Prawns",
+    "description": "",
+    "price": "£16.95"
+   },
+   {
+    "name": "Lobster Chu Chi Curry",
+    "description": "",
+    "price": "£29.95"
+   },
+   {
+    "name": "Thai Boat Noodle Chicken",
+    "description": "",
+    "price": "£15.50"
+   },
+   {
+    "name": "Thai Boat Noodle Beef",
+    "description": "",
+    "price": "£16.50"
+   },
+   {
+    "name": "Thai Boat Noodle Tofu",
+    "description": "",
+    "price": "£15.50"
+   },
+   {
+    "name": "Crispy Duck with Tamarind Sauce",
+    "description": "Deep fried crispy duck served with Thai tamarind sauce and vegetable",
+    "price": "£17.95"
+   },
+   {
+    "name": "Crispy Seabass with Sweet Chilli Sauce",
+    "description": "Deep fried Seabass served with Thai Sweet chili sauce and vegetable",
+    "price": "£18.95"
+   },
+   {
+    "name": "Crispy Duck Chu Chi Curry",
+    "description": "Deep fried duck topped with Thai Chu chi curry sauce and vegetable",
+    "price": "£17.95"
+   }
+  ],
+  "Vegetalian  Menu": [
+   {
+    "name": "Vegetable Mixed Starter (per person)",
+    "description": "Vegetable spring Rolls, Deep Fried Tofu, Vegetabel Tempura, Cauliflower Bang Bang, Mushroom Satay",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tom Yum Soup",
+    "description": "",
+    "price": "£8.95"
+   },
+   {
+    "name": "Tom Khar Soup",
+    "description": "",
+    "price": "£8.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Vegetable Green Curry with Tofu",
+    "description": "Traditional Thai green curry with coconut milk, bamboo shoot, Lime leaves, vegetable, sweet basil, and Tofu",
+    "price": "£12.95"
+   },
+   {
+    "name": "Thai Vegetable Red Curry with Tofu",
+    "description": "Traditional Thai red curry with coconut milk, bamboo shoot, lime leaves, vegetable, sweet basil, and tofu",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Massaman Curry with Tofu",
+    "description": "Thai Muslim curry with coconut milk, tofu, potato, and carrot",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Ka Praw with Tofu 🌶🌶",
+    "description": "Spicy stir fried with garlic, sweet basil, chili, vegetable, and Tofu (Contains: Soya)",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Ta Krai with Tofu 🌶🌶",
+    "description": "Spicy stir fried, lemongrass, garlic, chili, lime leaves, black pepper, vegetable, and Tofu (Contains: Soya)",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Med Mamaung with Tofu 🌶",
+    "description": "Thai Stir Fry style with vegetable cashew nut, Thai chili paste, and Tofu (Contains: Soya, cashew nut)",
+    "price": "£12.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Pad Khing with Tofu",
+    "description": "Stir fried with ginger, garlic, vegetable, and Tofu (Contains: Soya)",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Mushroom Sauce with Tofu",
+    "description": "",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad Thai with Tofu",
+    "description": "Rice noodle stir fried with garlic, shallot, bean sprouts, egg, peanut with traditional Pad Thai sauce",
+    "price": "£13.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Fried Rice with Tofu",
+    "description": "Fried rice with garlic, egg, and vegetable (Contains: egg, soya)",
+    "price": "£13.95",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,103 @@
+{
+ "restaurant": "Bua Thai",
+ "city": "Tandridge",
+ "fsa_id": "1245417",
+ "address": "Tandridge",
+ "source": "https://buathaicaterham.com/wp-content/uploads/2026/06/Set-Menu-Page-2-Free-beer-1024x696.jpg",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Soft Drinks": [
+   {
+    "name": "Coke",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Diet Coke",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Lemonade",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Apple Juice",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Orange Juice",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Pineapple Juice",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Cranberry Juice",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Mango Juice",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "English Tea",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Jasmine Tea",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Green Tea",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Peppermint Tea",
+    "description": "",
+    "price": "£ 3"
+   },
+   {
+    "name": "Filter Coffee",
+    "description": "",
+    "price": "£ 3"
+   }
+  ],
+  "Wine": [
+   {
+    "name": "House Red/White/Rosé",
+    "description": "175ml",
+    "price": "£7"
+   }
+  ],
+  "Beer": [
+   {
+    "name": "Singha",
+    "description": "",
+    "price": "£ 4.50"
+   },
+   {
+    "name": "Tiger",
+    "description": "",
+    "price": "£ 4.50"
+   },
+   {
+    "name": "Alcohol Free Beer",
+    "description": "",
+    "price": "£ 4.50"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

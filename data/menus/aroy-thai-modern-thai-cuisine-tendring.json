@@ -1,0 +1,400 @@
+{
+ "restaurant": "Aroy Thai Modern Thai Cuisine",
+ "city": "Tendring",
+ "fsa_id": "1931059",
+ "address": "Tendring",
+ "source": "https://aroythaiclacton.co.uk/menu/",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Sharing Platters": [
+   {
+    "name": "Prawn Cracker",
+    "description": "Let’s get you walking street nibbling!",
+    "price": "£3.95"
+   },
+   {
+    "name": "Aroy Thai Platter (Served 2)",
+    "description": "Thai Spring Rolls, Crispy Salt & Pepper Chicken, Chicken Satay & Crispy Fried Mushrooms",
+    "price": "£17.95"
+   },
+   {
+    "name": "Bangkok Bites (Served 2)",
+    "description": "Crispy Fried Shredded Chicken Chili paste, Duck Spring Rolls, Crunchy Calamari and Prawns with Tamarind Sauce.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Thai Seafood Duo – Som Tum Poo Nim & Tod Mun Talay (Served 2)",
+    "description": "Spicy Green Papaya Salad with Crispy Soft-Shell Crab & Thai Seafood Cakes Fresh green papaya salad tossed with chilli, lime, palm sugar and fish sauce, served with crispy soft-shell crab and Thai-style deep-fried seafood cakes.",
+    "price": "£20.95"
+   },
+   {
+    "name": "Crispy Fried Chicken Chili Oil",
+    "description": "The best crispy shredded Chicken, made with fried chicken strips tossed with delicious chili oil, roasted white sesame seed.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Salt and Pepper Chicken",
+    "description": "Crispy tender chicken seasoned with salt and pepper served with Sriracha sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Chicken Thai Satay",
+    "description": "Chicken thigh satay served with traditional condiments, peanut sauce, and fluffy toast.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Hat Yai Fried Chicken (Gai Tod Hat Yai)",
+    "description": "Crispy Southern Thai-style fried chicken, served with crispy fried shallots and sweet chilli sauce.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Larb Gai – Thai Spiced Chicken & Herb Salad",
+    "description": "Wok-tossed minced chicken with fresh herbs, fresh mint, red onion, chilli and toasted rice powder, finished with a vibrant lime and spicy Thai dressing.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Duck Spring Rolls",
+    "description": "A crispy spring roll wrapper encases duck breast and crunchy vegetables; A Hoisin sauce is the perfect complement on the side.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Crunchy Calamari",
+    "description": "The squid is coated in batter and quickly deep fried to golden perfection. It is usually with a splash of salt and pepper, and Sriracha spicy dips.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Moo Dad Deaw – Thai-Style Sun-Dried Pork with Jaew dip",
+    "description": "Marinated pork, traditionally inspired by Thai Sun-drying, fried until tender with lightly crisp edges and served with a spicy, tangy Isaan-stryle Jaew dipping sauce",
+    "price": "£8.95"
+   },
+   {
+    "name": "Pork Dumpling",
+    "description": "Steamed dumplings filled with tender pork and served with a gingery light soy and rice vinegar dipping.",
+    "price": "£7.95"
+   },
+   {
+    "name": "Crispy Fried Mushroom (V)",
+    "description": "These salt and pepper crunchy fried mushrooms are juicy on the inside and super crispy on the outside.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Sweet Corn Fritters (V)",
+    "description": "Thai corn fritters recipe (Tod Man Khao Pod) It’s a tasty finger food perfect for sharing as a tasty appetizer.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Thai Spring Rolls (V)",
+    "description": "Thai vegetable spring rolls are crunchy and a crowd pleaser! The full flavour with sweet chili dipping.",
+    "price": "£6.95",
+    "vegetarian": true
+   },
+   {
+    "name": "Tod Mun Talay (Thai Seafood Cakes)",
+    "description": "Traditional Thai-style deep-fried seafood cakes, made with a delicious blend of seafood, herbs and aromatic Thai spices. Crispy and golden on the outside, tender and flavourful inside, served with a sweet chilli dipping sauce.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Crispy Chilli & Garlic Soft-Shell Crab",
+    "description": "Golden crispy soft-shell crab tossed with fresh chilli, garlic and spring onions.",
+    "price": "£8.95"
+   },
+   {
+    "name": "Thai papaya Salad (Som Tum)",
+    "description": "Known as “Som Tam.” The salad combines crunchy strips of unripe green papaya with fresh chiles, pungent garlic, roasted peanuts, fine beans and tomatoes",
+    "price": "£8.95"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Creamy Tom – Yum",
+    "description": "Thai Tom Yum soup, full flavour such as lemongrass, lime, cream, onion, and chili combined with a stock base. Highly recommend!",
+    "price": "£Prawn £8.95 / Chicken £7.25 / Mushroom £6.95"
+   },
+   {
+    "name": "Tom – Kha",
+    "description": "Tom Kha!! this comforting Thai coconut soup is infused with the classic Thai herbs: lemongrass, galangal, and makrut (kaffir) lime leaves.",
+    "price": "£Prawn £8.95 / Chicken £7.25 / Mushroom £6.95"
+   },
+   {
+    "name": "Seafood Hot & Sour Soup",
+    "description": "Traditional Thai clear sour soup known for its tangy, spicy, and fragrant profile.it is distinct for its reliance on ginger and a paste made from shallots, making it an intensely aromatic.",
+    "price": "£12.95"
+   }
+  ],
+  "Thai Curry": [
+   {
+    "name": "Thai Panang Curry",
+    "description": "Panang is one that is unique. Instead of having plenty of sauce that is creamy like Thai green curry, Panang comes in a small amount of curry thick and rich sauce.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Thai Red Curry",
+    "description": "Aromatic blend of iconic Thai spices - red chillies, lemongrass, lime leaf and galangal - simmered in rich coconut milk. Fiery colour and slightly less spicy than Thai Green Curry.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Thai Green Curry",
+    "description": "Thai food is all about getting the right flavours. You want a good mix of sweet, sour, savoury, and spicy. This Thai green curry recipe will get the results that you’re looking for.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Thai Massaman Curry",
+    "description": "The bird’s eye chiles are a signature ingredient of curries from Thailand and turmeric gives it a yellow colour. The use of whole spices (coriander, cumin, and cardamom).",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   }
+  ],
+  "Thai Stir-Fry": [
+   {
+    "name": "Stir Fry Hot Thai Basil Leave",
+    "description": "Thai basil leaves stir fry, well known in Thai as “Pad Gra-Pao”, is a contender for the most popular dish, and the most beloved Thai street food dish of all times.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Stir fry Cashew Nuts",
+    "description": "A classic Thai favourite stir fry (Pad Med Mamuang) the dish defined by its savory, slightly sweet and tangy sauce. It’s the perfect balance of textures, combining the softness of the meat and snap of nuts.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Ginger Stir Fry",
+    "description": "Fresh ginger in a flavour packed sauce tossed in a simple yet bold our homemade Thai stir fry sauce.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Thai Sweet & Sour Sauce",
+    "description": "A vibrant, tangy-sweet sauce with pineapple, tomato, and a delicate balance of sugar and vinegar.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Pad - Cha",
+    "description": "Aromatic Thai stir-fry with your choice of meat, fresh peppercorns, chilli, garlic, Thai basil and fragrant herbs.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   }
+  ],
+  "Beef & Lamb": [
+   {
+    "name": "Surf & Turf",
+    "description": "A perfectly cooked sirloin and juicy marinated King Prawn, grilled to perfection on the barbecue, is a brilliant combo with Panang Curry Sauce.",
+    "price": "£20.95"
+   },
+   {
+    "name": "Thai Holy Basil Sirloin",
+    "description": "Spicy Holy Basil Fried Rice. Their heat combined with the fragrance of Thai basil to tie it all together on top of fried rice and served accompanied with sunny egg and Grilled Sirloin steak.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Weeping Tiger",
+    "description": "E-San style (North-East of Thailand). Grilled Sirloin steak with a chilli and E-San herbs sauce. It’s perfectly married with the sweet, tart, and spicy Herbs served and Thai Pepper sauce.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Grilled Sirloin Beef Yum (Yum Nua Yang)",
+    "description": "Tender grilled sirloin beef tossed with fresh herbs, red onion, tomatoes, chilli and lime in a spicy and tangy Thai dressing.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Slow Cooked Beef with Black Pepper",
+    "description": "Tender slow-cooked beef with fresh vegetables, garlic and cracked black pepper in a rich Thai-style savoury sauce.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Slow Cook Beef Thai Massaman Curry",
+    "description": "Indulge in melt-in-your-mouth beef, slow-braised for many hours until tender, and submerged in a rice, velvety red curry sauce. Infused with the Massaman curry with coconut milk, potatoes and roasted cashew nuts. Gentle spiced with warm Thai aromatics.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Slow Cook Lamb Shank Massaman",
+    "description": "Lamb Massaman curry is a truly luxurious dish. Cooked in a Massaman sauce until meltingly tender and the spices blend so harmoniously with the lamb curry.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Slow Cook Lamb Cuts in Southern Thai Red Curry",
+    "description": "Slow braised for two hours until Lamb dice are soft and melting texture. Cooked with our homemade Southern Thai curry paste infused with the turmeric and dried chiles and a generous amount of black pepper.",
+    "price": "£18.95"
+   }
+  ],
+  "From The Sea": [
+   {
+    "name": "Fishing Villages",
+    "description": "Whole sea bass, two giant king prawns, baby squid and mussels, flame-grilled top perfection and served with our vibrant Thai seafood dipping sauce, bursting with fresh lime, cilli, garlice and coriander.",
+    "price": "£23.95"
+   },
+   {
+    "name": "Thai Tom – Yum Seafood Bouillabaisse",
+    "description": "Sea bass fillet, two giant king prawns, tender squid and mussels, gently cooked in a rich and aromatic Tom Yum broth, infused with lemongrass, galangal, kaffir lime and a touch of coconut milk.",
+    "price": "£23.95"
+   },
+   {
+    "name": "Seafood Pad – Cha",
+    "description": "Hot and spicy stir-fried king prawns, mussels and squid a fiery PadCha sauce, a bold medicinal of fresh fingerroot (krachai), kaffir lime lives and Thai chilies.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pan- Seared Cod Loin Pannang Curry",
+    "description": "Succulent cod loin, gently pan-seared and served with a rich, creamy Panang curry, infused with aromatic Thai spices, coconut milk and a hint of Kaffir lime.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Seared Cod Loin – Thai Basil & Roasted Pepper",
+    "description": "Pan-seared cod loin served with a rich roasted red pepper & Thai basil sauce, seasonal vegetables.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Grilled Salmon Green Thai Curry",
+    "description": "Perfectly seared salmon fillet, featuring a delicate, flaky texture and smoky char, served submerged in a vibrant and aromatic green curry sauce, crafted from fresh green chiles, coconut milk and fragrant Thai herbs.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Pan – Seared Sea Bass Tom Kha Coconut Sauce",
+    "description": "Pan-seared sea bass fillet served in a fragrant Tom Kha coconut sauce, infused with lemongrass, galangal, kaffir lime, finish with fresh herbs and chilli oils.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Som- Tum Pla Yang",
+    "description": "Green Papaya Salad with whole grilled Sea Bass. Classic Thai green papaya salad with cherry tomatoes, green beans, chilli and lime and roasted pea nuts. Served with a whole sea bass grilled with aromantic lemongrass and kaffir lime leaves.",
+    "price": "£19.95"
+   },
+   {
+    "name": "Chili & Lime Sea bass",
+    "description": "Sea bass steamed to perfection and dressed to impress with fresh Thai herbs and a fiery, chilies and lime sauce.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Grilled Mackerel ‘Miang Kham’",
+    "description": "Grilled mackerel served with rice vermicelli noodle, fresh vegetables, herbs and our homemade Thai hot and sour sauce.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Giant King Prawns with Thai Curry Powder",
+    "description": "Giant king prawn’s wok-fried with aromatic curry powder, egg, onions, peppers and spring onions, fished in s rich and creamy Thai style sauce.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Chu Chee Tiger Prawn",
+    "description": "Delicious Tiger prawns are cooking with our homemade basic red curry together with light coconut milk, giving a rich and thick texture flavours infused with lemongrass, galangal, coriander root, and kaffir lime.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Tiger Prawn with Hot Thai Basil sauce",
+    "description": "Spicy Holy Basil Fried Rice. Their heat combined with the fragrance of Thai basil to tie it all together on top of fried rice and served accompanied with sunny egg and Grilled Tiger Prawns.",
+    "price": "£18.95"
+   }
+  ],
+  "Duck & Chicken": [
+   {
+    "name": "Roasted Barbary Duck Red Curry",
+    "description": "Roasted Duck Curry, Red curry paste can go well together with coconut milk. Add crispy duck with sweet and sour pineapple, cherry tomato.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Duck Stir Fry with Ginger Sauce",
+    "description": "Marinated duck breast with ginger stir fry sauce. The dish stir fried with a vegetable, mix pepper, broccoli, black fungus and spring onions.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Honey Glazed Roast Barbary Duck",
+    "description": "Crispy and tender roasted duck with a little sweetness from the honey and orange and a hint of sweet chili sauce and fresh green peas.",
+    "price": "£18.95"
+   },
+   {
+    "name": "Slow Braised Chicken Massaman",
+    "description": "Whole chicken leg slow-braised until tender in a rich, aromatic Massaman curry with creamy coconut milk, war Thai spices, roasted cashew nuts, fried shallots and potatoes.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Crispy Chicken with Thai Curry Powder",
+    "description": "Crispy fried chicken stir-fried with aromatic Thai Curry Powder, egg, onion, peppers and spring onion in rich, savoury curry sauce.",
+    "price": "£16.95"
+   },
+   {
+    "name": "Santa Chicken",
+    "description": "The best crispy shredded chicken tossed with delicious chili oil, roasted white sesame seed and top with green spring onion.",
+    "price": "£16.95"
+   }
+  ],
+  "Rice & Noodles": [
+   {
+    "name": "Pad Thai",
+    "description": "Indulge in Thailand’s most iconic noodle dish, featuring perfectly stir-fried rice noodles tossed in our signature tangy-sweet tamarind sauce.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Kuaw Teow Pad Kra Pao",
+    "description": "Stir-fried rice noodles with fresh Thai basil, chilli and garlic, with your choice of meat.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "“Kee Mao” Rice Noodle",
+    "description": "Authentic Kee Mao Rice Noodles, a bold and spicy stir-fry that is truly a labor of love. We toss wide, chewy rice noodles in high-heat wok with robust sauce of dark soy, garlic and fiery bird’s eye chilies.",
+    "price": "£Prawn £13.95 / Chicken £12.95 / Beef £12.95 / Vegetable & Tofu £11.95"
+   },
+   {
+    "name": "Garlic Seafood Fried Rice",
+    "description": "Thai style fried rice with mixed seafood, egg and aromatic garlic.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "Taste buds to the tropics with our Pineapple Fried Rice, This vibrant dish features fragrant jasmine rice wok-tossed with cashew nuts, sweet pineapple chunks and a hint of aromatic curry powder. Top up with Thai chicken satay, tamarind-glazed prawns and Prawn crackers.",
+    "price": "£14.95"
+   },
+   {
+    "name": "Giant Butterfly King Prawn Pad Thai",
+    "description": "The “Giant Kind Prawn” indulge in Thailand’s most iconic noodle dish, featuring perfectly stir-fried rice noodles tossed in our signature tangy-sweet tamarind sauce.",
+    "price": "£16.95"
+   }
+  ],
+  "Goodies To Share": [
+   {
+    "name": "Garlic Steamed Noodles",
+    "description": "Delicious Thai noodles wok-fried with our homemade garlic and pepper stir fry sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Garlic Egg noodle",
+    "description": "Wok-tosses egg noodles with garlic and light soy sauce.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Naan Bread",
+    "description": "Light, golden-brown Naan Bread - the perfect side for dipping up with Thai curries.",
+    "price": "£4.95"
+   },
+   {
+    "name": "Broccoli & Fine Bean",
+    "description": "Fresh greens stir-fried with crushed garlic and our homemade stir fry sauce, garnish.",
+    "price": "£6.95"
+   },
+   {
+    "name": "Spicy Aubergine",
+    "description": "Chewy and soft Aubergine stir-fry with garlic, red chilli and soya bean paste, the delicious flavour to share.",
+    "price": "£6.95"
+   }
+  ],
+  "Rice / Side Dishes": [
+   {
+    "name": "Thai Jasmine Rice",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Thai Coconut Rice",
+    "description": "",
+    "price": "£3.95"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£3.95"
+   }
+  ]
+ },
+ "pricing_notes": []
+}

@@ -1,0 +1,306 @@
+{
+ "restaurant": "Lombok thai",
+ "city": "London",
+ "fsa_id": "1061970",
+ "address": "London",
+ "source": "https://static1.squarespace.com/static/5994291d1e5b6c02f8e3bd0b/t/6a7350505f9a8842e41acb27/1785942096552/Main+Menu+2026.pdf",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters & Small Plates": [
+   {
+    "name": "Mixed Starters",
+    "description": "Chef’s Selection (min 2 people) (ng)",
+    "price": "£9 (per person)"
+   },
+   {
+    "name": "Island Calamari",
+    "description": "Sweet chilli sauce (ng)",
+    "price": "£9"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Chargrilled chicken, peanut sauce (ng)",
+    "price": "£8"
+   },
+   {
+    "name": "Spicy Calamari",
+    "description": "Chilli & garlic (ng)",
+    "price": "£9"
+   },
+   {
+    "name": "Prawn Satay",
+    "description": "Chargrilled prawns, peanut sauce (gf)",
+    "price": "£9"
+   },
+   {
+    "name": "Spicy Soft Shell Crab",
+    "description": "Chilli & garlic (ng)",
+    "price": "£9"
+   },
+   {
+    "name": "Crispy Tofu",
+    "description": "Sweet chilli and peanut sauce (c)",
+    "price": "£8",
+    "vegetarian": true
+   },
+   {
+    "name": "Spicy Crispy Prawns",
+    "description": "Chilli & garlic (c)",
+    "price": "£9"
+   },
+   {
+    "name": "Spicy Chicken Wings",
+    "description": "Crispy wings, chilli & garlic (c)",
+    "price": "£8"
+   },
+   {
+    "name": "Breaded Prawn Tempura",
+    "description": "Panko, Sweet chilli sauce (ng)",
+    "price": "£9"
+   },
+   {
+    "name": "Honey Chicken Wings",
+    "description": "Crispy wings, honey glaze (c)",
+    "price": "£8"
+   },
+   {
+    "name": "Tom Yum Soup",
+    "description": "Lemongrass, kaf r lime leaves, chilli, lime and coriander (gf)\n- prawns, chicken, only mushroom",
+    "price": "£9"
+   },
+   {
+    "name": "Honey Spare Ribs",
+    "description": "Sticky ribs, spring onion and sesame (ng)",
+    "price": "£8"
+   },
+   {
+    "name": "Tom Kha Soup",
+    "description": "Coconut milk, lemongrass, lime, chilli and coriander (gf)\n- chicken, only mushroom",
+    "price": "£9"
+   },
+   {
+    "name": "Vegetable Spring Rolls",
+    "description": "Sweet chilli sauce (ng)",
+    "price": "£8",
+    "vegetarian": true
+   },
+   {
+    "name": "Papaya Salad",
+    "description": "Green Papaya, carrots, tomatoes, peanuts, lime (gf)\n- with or without sh sauce",
+    "price": "£10"
+   },
+   {
+    "name": "Duck Spring Rolls",
+    "description": "Hoisin sauce (ng)",
+    "price": "£8"
+   },
+   {
+    "name": "Dim Sum",
+    "description": "Pork Dumplings, garlic & sweet soy (ng)",
+    "price": "£8"
+   },
+   {
+    "name": "Prawn Crackers",
+    "description": "(c)",
+    "price": "£3"
+   }
+  ],
+  "Mains": [
+   {
+    "name": "Green Curry",
+    "description": "Fresh green chilli, coconut milk, aubergines, bell peppers and bamboo shoots (gf)\n- prawns, chicken, pork, beef\n- tofu £12",
+    "price": "£13"
+   },
+   {
+    "name": "Chilli & Basil (Pad Kra Pow)",
+    "description": "Chilli, garlic and basil (gfa)\n- prawns, chicken, pork, beef, duck\n- tofu (c) £12",
+    "price": "£13"
+   },
+   {
+    "name": "Red Curry",
+    "description": "Dry red chilli, coconut milk, bell peppers and bamboo shoots (gf)\n- prawns, chicken, pork, beef\n- tofu £12 , duck & lychee £14",
+    "price": "£13"
+   },
+   {
+    "name": "Ginger (Pad King)",
+    "description": "Fresh Ginger, mushroom and spring onion (gfa)\n- prawns , chicken, pork\n- tofu (c) £12",
+    "price": "£13"
+   },
+   {
+    "name": "Panang Curry",
+    "description": "Rich & Creamy with green beans and bell peppers (gf)\n- prawns, duck, chicken, beef\n- tofu £12 , seabass £16 (ng)",
+    "price": "£13"
+   },
+   {
+    "name": "Garlic (Pad Gratiem)",
+    "description": "Onions, garlic, pepper and Soy Sauce (gfa)\n- chicken, pork",
+    "price": "£13"
+   },
+   {
+    "name": "Massaman Curry",
+    "description": "Southern style, slow cooked with potatoes (gf)\n- chicken, beef, lamb",
+    "price": "£14"
+   },
+   {
+    "name": "Black Bean",
+    "description": "Black bean sauce, garlic, spring onions and bell peppers (ng)\n- prawns, chicken, pork, beef\n- tofu £12",
+    "price": "£13"
+   }
+  ],
+  "Salads": [
+   {
+    "name": "Glass Noodle Salad",
+    "description": "Vermicelli noodles, peppers, onions, coriander, chilli and lime (gf)\n- chicken, prawn, tofu (choose up to 2)",
+    "price": "£13"
+   },
+   {
+    "name": "Thai Beef Salad",
+    "description": "Beef, spicy Thai dressing, peppers, onions and coriander (gf)\n- prawn option available",
+    "price": "£13"
+   }
+  ],
+  "Signature Dishes": [
+   {
+    "name": "Honey Grilled Chicken",
+    "description": "Chargrilled thighs, sweet chilli (ng)",
+    "price": "£13"
+   },
+   {
+    "name": "Weeping Tiger",
+    "description": "Sizzling beef, spicy lime sauce (gf)",
+    "price": "£15"
+   },
+   {
+    "name": "Coconut Prawns",
+    "description": "Onions, peppers, creamy coconut (gf)",
+    "price": "£13"
+   },
+   {
+    "name": "Cashew Nut Chicken",
+    "description": "Cashew, peppers, pineapple and spring onions, tofu option available (gfa)",
+    "price": "£13"
+   },
+   {
+    "name": "Beef Flambé",
+    "description": "Sizzling beef, onions, tamarind glaze (gf)",
+    "price": "£15"
+   },
+   {
+    "name": "Chilli Cod",
+    "description": "Battered cod, red curry paste with bell peppers (c)",
+    "price": "£13"
+   },
+   {
+    "name": "Pineapple Duck",
+    "description": "Spring onions, carrots and sweet oyster sauce (gfa)",
+    "price": "£13"
+   },
+   {
+    "name": "Jungle Hotplate",
+    "description": "Bamboo, mushrooms, peppers and red curry paste (c)\n- tofu, lamb, duck, battered cod",
+    "price": "£15"
+   },
+   {
+    "name": "Prawn Hotpot",
+    "description": "Battered prawns, vermicelli noodles, celery, onions, ginger and soy sauce (c)",
+    "price": "£14"
+   },
+   {
+    "name": "Siam Honey Beef",
+    "description": "Sticky honey glaze, ginger, spring onions and sesame (ng)",
+    "price": "£14"
+   },
+   {
+    "name": "Sizzling Prawns (Honey/Garlic)",
+    "description": "Battered prawns, sauce of choice (c)",
+    "price": "£14"
+   },
+   {
+    "name": "Steamed Sea-bass",
+    "description": "Fillet, ginger and vegetables (gfa)",
+    "price": "£16"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "Pad Thai",
+    "description": "Rice noodles, egg, peanuts and beansprouts (gf)\n- tofu (c), chicken, prawn (choose up to 2)\n- no egg (vegan)",
+    "price": "£14"
+   },
+   {
+    "name": "Drunken Noodles",
+    "description": "Egg noodles or Rice noodles\nChilli, garlic, basil and soy sauce (gfa)\n- tofu (c), chicken, beef, prawn",
+    "price": "£14"
+   },
+   {
+    "name": "Rice Noodles",
+    "description": "Egg & soy sauce (gfa)\n+ no egg",
+    "price": "£5",
+    "vegetarian": true
+   }
+  ],
+  "Fried Rice": [
+   {
+    "name": "Thai Special Fried Rice",
+    "description": "Egg, onions, tomatoes and onions (gf)\n- prawn, chicken, veg",
+    "price": "£14"
+   },
+   {
+    "name": "Jungle Fried Rice",
+    "description": "Fresh chilli, peppers, onions, basil (gfa)\n- tofu (c), chicken, beef, prawns",
+    "price": "£14"
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "Egg, cashew nuts, onions and spring onions (gf)\n- tofu (c), prawns",
+    "price": "£14"
+   },
+   {
+    "name": "Chilli Oil",
+    "description": "",
+    "price": "£1",
+    "vegetarian": true
+   }
+  ],
+  "Sides": [
+   {
+    "name": "Bok Choy",
+    "description": "Oyster Sauce or Steamed (gfa)",
+    "price": "£9",
+    "vegetarian": true
+   },
+   {
+    "name": "Mixed Vegetables",
+    "description": "Oyster sauce or Ginger Sauce (gfa)",
+    "price": "£9",
+    "vegetarian": true
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4",
+    "vegetarian": true
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£4",
+    "vegetarian": true
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4",
+    "vegetarian": true
+   },
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "£3",
+    "vegetarian": true
+   }
+  ]
+ },
+ "pricing_notes": []
+}

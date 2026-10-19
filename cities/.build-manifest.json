@@ -1,15 +1,14 @@
 {
-  "run_date": "2026-10-17",
+  "run_date": "2026-10-19",
   "applied": true,
   "total_cities": 279,
-  "generated": 253,
-  "quarantined": 0,
-  "empty_state": 24,
+  "generated": 252,
+  "quarantined": 2,
+  "empty_state": 23,
   "skipped": 1,
   "empty_state_pages": [
     "adur",
     "blackburn",
-    "ceredigion",
     "clacton-on-sea",
     "east-dunbartonshire",
     "east-renfrewshire",
@@ -32,5 +31,14 @@
     "torridge",
     "weston-super-mare"
   ],
-  "quarantined_pages": []
+  "quarantined_pages": [
+    {
+      "slug": "basingstoke-and-deane",
+      "reason": "[ItemList] Schema validation error at itemListElement: [] should be non-empty"
+    },
+    {
+      "slug": "dumfries-and-galloway",
+      "reason": "[ItemList] Schema validation error at itemListElement: [] should be non-empty"
+    }
+  ]
 }

@@ -1,6 +1,48 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-19",
   "restaurants": [
+    {
+      "fsa_id": "1367117",
+      "name": "SAI 8 Limited",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-10-19"
+    },
+    {
+      "fsa_id": "1315835",
+      "name": "The ThaiWay",
+      "city": "North Norfolk",
+      "type": "restaurant",
+      "discovered_on": "2026-10-19"
+    },
+    {
+      "fsa_id": "1199724",
+      "name": "Khaokho",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-10-19"
+    },
+    {
+      "fsa_id": "1949823",
+      "name": "Lanna Thai Kitchen by chef Pat",
+      "city": "Richmond-Upon-Thames",
+      "type": "takeaway",
+      "discovered_on": "2026-10-19"
+    },
+    {
+      "fsa_id": "1790288",
+      "name": "Khop Chai Deu",
+      "city": "Ceredigion",
+      "type": "restaurant",
+      "discovered_on": "2026-10-19"
+    },
+    {
+      "fsa_id": "1970308",
+      "name": "Tuk Tuk Thai",
+      "city": "Dudley",
+      "type": "restaurant",
+      "discovered_on": "2026-10-19"
+    },
     {
       "fsa_id": "1994758",
       "name": "Sukhothai",
@@ -308,48 +350,6 @@
       "city": "London",
       "type": "restaurant",
       "discovered_on": "2026-08-17"
-    },
-    {
-      "fsa_id": "1976103",
-      "name": "The Great Thai Rice and Noodle",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-08-10"
-    },
-    {
-      "fsa_id": "1956864",
-      "name": "Maisie Thai Restaurant",
-      "city": "Elmbridge",
-      "type": "restaurant",
-      "discovered_on": "2026-08-10"
-    },
-    {
-      "fsa_id": "1956454",
-      "name": "Waewien Thai Kitchen",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-08-10"
-    },
-    {
-      "fsa_id": "330059",
-      "name": "Araya Thai Restaurant",
-      "city": "Lincoln",
-      "type": "restaurant",
-      "discovered_on": "2026-08-10"
-    },
-    {
-      "fsa_id": "902906",
-      "name": "Sukhothai Restaurant",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-07-28"
-    },
-    {
-      "fsa_id": "1410461",
-      "name": "Giggling Squid",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-07-28"
     }
   ]
 }

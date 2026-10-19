@@ -1,0 +1,420 @@
+{
+ "restaurant": "Nay Thai",
+ "city": "Kingston-Upon-Thames",
+ "fsa_id": "1385325",
+ "address": "Kingston-Upon-Thames",
+ "source": "https://www.naythai.co.uk/menus",
+ "source_label": "the restaurant's own menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "NIBBLES": [
+   {
+    "name": "PRAWN CRACKERS",
+    "description": "With a sweet chilli dipping sauce.",
+    "price": "£3.50"
+   }
+  ],
+  "SHARING STARTERS": [
+   {
+    "name": "MIXED STARTER",
+    "description": "Perfect for sharing. A combination of our skewered chicken satay, khanom jeeb (steamed dumplings), prawn tempura, and vegetable spring rolls. Served with a selection of sauces and relishes.",
+    "price": "£9.50"
+   },
+   {
+    "name": "AROMATIC DUCK",
+    "description": "Crispy duck served with pancakes, and julienned cucumber, carrot, and spring onion. Comes with hoisin sauce.",
+    "price": "£10.50"
+   },
+   {
+    "name": "MIXED VEGETARIAN",
+    "description": "Combination of vegetable spring roll, vegetable pocket, vegetable tempura, and deep-fried tofu. Served with sauce and relish selection.",
+    "price": "£9.00",
+    "vegetarian": true
+   }
+  ],
+  "STARTERS": [
+   {
+    "name": "PHO PIA",
+    "description": "Spring roll made with vegetables, vermicelli, and carrot, served with sweet chilli sauce.",
+    "price": "£8.25",
+    "vegetarian": true
+   },
+   {
+    "name": "VEGETABLE TEMPURA",
+    "description": "Fried mixed vegetables coated in a crispy batter, served with sweet chilli sauce.",
+    "price": "£8.25",
+    "vegetarian": true
+   },
+   {
+    "name": "THAI VEGETABLE POCKET",
+    "description": "A parcel of crispy pastry filled with vegetables, served with sweet chilli sauce.",
+    "price": "£8.50",
+    "vegetarian": true
+   },
+   {
+    "name": "CHICKEN SATAY",
+    "description": "Skewered chicken breast marinated with lemongrass and other Thai herbs, served with a rich and crunchy peanut sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "PRAWN ON TOAST",
+    "description": "Fried French bread, brushed with eggs, and coated with seasoned minced shrimp, coated with sesame seeds.",
+    "price": "£9.50"
+   },
+   {
+    "name": "PRAWN TEMPURA",
+    "description": "Prawns coated and deep-fried in a crispy batter, served with a sweet chilli dipping sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "SEE KRONG MOO OB",
+    "description": "Tender, fall-off-the-bone pork spare ribs coated in a rich barbecue sauce, topped with sesame seeds and spring onions.",
+    "price": "£9.50"
+   },
+   {
+    "name": "KHANOM JEEB",
+    "description": "Steamed Thai dumplings filled with pork, prawns, and water chestnut. Garnished with spring onions, crispy garlic, and served with sweet soya sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "PHO PIA PED",
+    "description": "Crispy roasted duck inside a spring roll with vegetables, comes with hoisin sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "TOD MUN PLA",
+    "description": "Thai fish cakes, fried until crispy, made from red curry paste, fragrant lime leaves, and green beans, served with a crunchy, sweet dipping sauce.",
+    "price": "£9.50"
+   },
+   {
+    "name": "GAI GRUB GROB",
+    "description": "Crispy fried chicken breast bites, drizzled in sweet plum sauce and hot sriracha.",
+    "price": "£9.50"
+   },
+   {
+    "name": "BPUU NIM",
+    "description": "Battered soft-shell crab, fried until crispy. Garnished with slices of fresh chilli, spring onion, and coriander. Served with a hot sriracha sauce.",
+    "price": "£11.95"
+   },
+   {
+    "name": "CHILLI SQUID",
+    "description": "Our Thai calamari – squid coated in a light, crispy batter. Garnished with slices of fresh chilli, spring onion, and coriander. Served with a hot sriracha sauce.",
+    "price": "£9.95"
+   }
+  ],
+  "SOUPS": [
+   {
+    "name": "TOM YUM",
+    "description": "A traditional and popular spicy, sour, and clear soup, flavoured with lemongrass, galangal, and lime leaves, served with mushrooms and tomatoes in a fragrant Tom Yum paste.",
+    "price": null
+   },
+   {
+    "name": "TOM KHA",
+    "description": "A mild and creamy coconut soup, flavoured with various aromatics including lemongrass, galangal, mushroom, and lime leaves.",
+    "price": null
+   },
+   {
+    "name": "PO TAK (mixed seafood)",
+    "description": "A sour and spicy mixed seafood soup containing squid, mussels, and prawns in a broth infused with fresh chilli, lemongrass, galangal, and zesty lime leaves.",
+    "price": "£10.95"
+   }
+  ],
+  "THAI SALAD": [
+   {
+    "name": "SOM TAM THAI (papaya)",
+    "description": "Our signature shredded green papaya salad with carrots, green beans, tomatoes, chilli, crushed garlic, and ground peanuts. Hand pounded in a mortar and pestle with a tangy lime and fish sauce dressing.",
+    "price": "£12.50"
+   },
+   {
+    "name": "YUM NEUA (beef)",
+    "description": "Strips of grilled sirloin steak on top of a salad with our dressing seasoned with lemongrass, shallots, cherry tomato, pepper, spring onions, mint, and celery.",
+    "price": "£16.95"
+   },
+   {
+    "name": "YUM TALAY (seafood)",
+    "description": "Our seafood salad comprising king prawns, mussels, and squid, with our house dressing infused with lemongrass, shallots, cherry tomato, pepper, mint, and celery.",
+    "price": "£17.55"
+   },
+   {
+    "name": "SOM TAM PLA RA (papaya with fermented fish sauce)",
+    "description": "Our spicy shredded green papaya salad made North-Eastern (Isaan) style with a spicy dressing and pla ra (fermented fish sauce). Note: We do not recommend ordering this mild, as the spice is essential to balance the intense flavour of the fermented fish.",
+    "price": "£14.50"
+   },
+   {
+    "name": "GOONG CHAE NAM PLA (raw prawns)",
+    "description": "Fresh raw prawns coated in a spicy and tangy fish sauce and lime dressing. Garnished with fresh mint. Note: This dish features 100% raw seafood cured in citrus. Only recommended for those who are accustomed to raw shellfish.",
+    "price": "£17.55"
+   },
+   {
+    "name": "Laab (minced meat)",
+    "description": "A North-Eastern minced meat salad tossed with fresh mint, chilli, coriander, lime juice, and toasted rice powder. Served cold with lettuce.",
+    "price": null
+   }
+  ],
+  "CURRIES": [
+   {
+    "name": "GAENG DAENG (red curry)",
+    "description": "A medium curry with bamboo shoots, courgette, and fresh chilli. Made from curry paste flavoured with dried red chilli and Thai herbs, offering a sweet, earthy taste, cooked in coconut milk.",
+    "price": null
+   },
+   {
+    "name": "GAENG KIEW WAAN (green curry)",
+    "description": "A traditional medium curry with bamboo shoots and courgette, garnished with sweet basil. Made from curry paste infused with Thai aromatics, and fresh green chilli, cooked in coconut milk.",
+    "price": null
+   },
+   {
+    "name": "GAENG PANAENG",
+    "description": "A medium, thick curry with green beans, topped with shredded makrut lime leaves. Made from a herby, aromatic paste cooked in coconut milk offering a creamy, mild flavour.",
+    "price": null
+   },
+   {
+    "name": "GAENG PA (jungle curry)",
+    "description": "A spicy and herbaceous curry cooked without coconut milk in a clear and fiery red broth with bamboo shoots and baby corn, seasoned with lemongrass and galangal.",
+    "price": null
+   },
+   {
+    "name": "GAENG MASSAMAN",
+    "description": "A sweet, mild, Southern Thai curry. It's cooked with coconut milk, potato, onion, dry spices, and garnished with crispy shallots. The popular beef option is served tender and slow cooked.",
+    "price": null
+   }
+  ],
+  "STIR-FRIED DISHES": [
+   {
+    "name": "PAD KRA PAO (chilli and basil)",
+    "description": "A Thai favourite: fried chilli and garlic in savoury sauce with green beans and onion, topped with aromatic holy basil.",
+    "price": null
+   },
+   {
+    "name": "PAD KHING (ginger)",
+    "description": "A mild stir-fry with julienned fresh ginger, onion, shitake mushroom, and sliced spring onion, in savoury sauce.",
+    "price": null
+   },
+   {
+    "name": "PAD PRIEW WAAN (sweet and sour)",
+    "description": "Our Thai-style thick sweet and sour sauce with courgette, onion, tomatoes, pineapple, and spring onion.",
+    "price": null
+   },
+   {
+    "name": "PAD NUMMAN HOI (oyster sauce)",
+    "description": "Stir-fry in oyster sauce with black pepper, baby corn, onion, mushroom, and spring onion.",
+    "price": null
+   },
+   {
+    "name": "PAD MED MA-MUANG (cashew nut)",
+    "description": "Stir-fried toasted cashew nuts with onion, carrot, and dried chilli, in a savoury and nutty sauce.",
+    "price": null
+   }
+  ],
+  "VEGETABLE DISHES": [
+   {
+    "name": "PAD PAK RUAM MIT",
+    "description": "Seasonal vegetables in garlic, including carrot, mushroom, mangetout, and baby corn.",
+    "price": null
+   },
+   {
+    "name": "PAD BROCOLLI",
+    "description": "Stir-fried broccoli with soy sauce, oyster sauce, and garlic.",
+    "price": null
+   },
+   {
+    "name": "PAD PAK KIEW",
+    "description": "Seasonal green vegetables in garlic, including spring greens, broccoli, and mangetout.",
+    "price": null
+   }
+  ],
+  "CHEF'S RECOMMENDATIONS": [
+   {
+    "name": "SUA RONG HAI (weeping tiger steak)",
+    "description": "Our signature Thai-style grilled strips of sirloin steak served with onion and our house sauce on a sizzling hot plate.",
+    "price": "£20.95"
+   },
+   {
+    "name": "PED MA KHAM",
+    "description": "Roasted duck in a sweet tamarind sauce served on a bed of spring greens and topped with crispy shallots on a hot plate.",
+    "price": "£20.95"
+   },
+   {
+    "name": "GAENG PHED PED YANG (duck curry)",
+    "description": "Tender slices of roasted duck cooked in red curry with pineapple, tomatoes and sweet lychee.",
+    "price": "£20.95"
+   },
+   {
+    "name": "GOONG PAOW",
+    "description": "Our sizzling charcoal grilled king prawns, served with a chilli, garlic, and lime dipping sauce.",
+    "price": "£21.55"
+   },
+   {
+    "name": "GOONG MAKHAM",
+    "description": "Grilled king prawns served sizzling with a sweet tamarind sauce, and garnished with crispy shallots.",
+    "price": "£21.55"
+   },
+   {
+    "name": "GOONG PAD PHONG KAREE",
+    "description": "King prawns with curry powder, celery, eggs, onion, and tomatoes in a mild yellow curry sauce.",
+    "price": "£21.55"
+   },
+   {
+    "name": "PLA NUNG MANOW",
+    "description": "Soft and flaky steamed seabass in our fresh garlic, lime, and chilli sauce.",
+    "price": "£20.95"
+   },
+   {
+    "name": "PLA NUNG SIEW",
+    "description": "Steamed seabass in soya sauce, topped with fresh ginger, shiitake mushroom, julienned spring onion, and chopped coriander.",
+    "price": "£20.95"
+   },
+   {
+    "name": "CHU CHEE PLA",
+    "description": "Crispy battered seabass topped with a thick and creamy red curry and coconut sauce, shredded lime leaves, and sweet basil.",
+    "price": "£20.95"
+   },
+   {
+    "name": "PLA MAKHAM",
+    "description": "Battered seabass drizzled in a sweet tamarind sauce and garnished with crispy fried shallots.",
+    "price": "£21.55"
+   },
+   {
+    "name": "PLA SAM ROD",
+    "description": "“Three-flavour fish” – our battered seabass in our signature sweet, sour, and mildly spicy sauce containing crushed chilli and garlic, diced bell peppers, and topped with sweet Horapha basil.",
+    "price": "£21.55"
+   },
+   {
+    "name": "PAD CHAO LAY",
+    "description": "Our spicy mixed seafood stir-fry with fresh Thai herbs, chillies, garlic, and peppercorns. Enquire for current seafood availability.",
+    "price": "£21.55"
+   }
+  ],
+  "NOODLES AND RICE MAINS": [
+   {
+    "name": "PAD THAI",
+    "description": "Surbiton's favourite! Our very popular and traditional stir-fried rice noodles with eggs, bean sprouts, spring onion, stir-fried in a sweet radish and tamarind sauce, and served with crushed peanut.",
+    "price": null
+   },
+   {
+    "name": "PAD KI-MAO",
+    "description": "(drunken noodles) Stir-fried wide Hofun rice noodle with chilli, green beans, bamboo shoots, pepper, onions, and basil leaves, in a savoury sauce.",
+    "price": null
+   },
+   {
+    "name": "PAD BA-MI",
+    "description": "(egg noodles) Stir-fried egg noodles with beansprouts, spring onions, eggs, and soy sauce.",
+    "price": null
+   },
+   {
+    "name": "PAD SIEW",
+    "description": "Stir-fried wide Hofun rice noodle with eggs and spring greens in a sweetened dark soy sauce.",
+    "price": null
+   },
+   {
+    "name": "KHAO PAD ROD FAI",
+    "description": "(special fried rice) – 1 day old jasmine rice cooked and browned in a wok, with dark soy sauce, spring greens, onion, tomato, and egg.",
+    "price": null
+   },
+   {
+    "name": "KHAO PAD SAPPAROD",
+    "description": "Pineapple fried rice cooked with dried raisins, cashew nut, onion, pineapple, and curry powder.",
+    "price": null
+   }
+  ],
+  "SIDE DISHES": [
+   {
+    "name": "KHAO GATI",
+    "description": "Steamed jasmine rice cooked in coconut milk, topped with coconut flakes.",
+    "price": "£4.95"
+   },
+   {
+    "name": "KHAO KAI",
+    "description": "Egg fried rice.",
+    "price": "£4.95"
+   },
+   {
+    "name": "KHAO NIEW",
+    "description": "Steamed sticky rice.",
+    "price": "£4.95"
+   },
+   {
+    "name": "KHAO SUAY",
+    "description": "Steamed plain jasmine rice.",
+    "price": "£4.25"
+   },
+   {
+    "name": "PLAIN NOODLE",
+    "description": "Boiled thin rice noodles, topped with beansprouts and crispy garlic.",
+    "price": "£4.25"
+   }
+  ],
+  "DESSERTS": [
+   {
+    "name": "ICE CREAM",
+    "description": "Choose from Coconut, Thai Tea, or Green Tea flavour",
+    "price": "£6.95"
+   },
+   {
+    "name": "BLOOD ORANGE SORBET",
+    "description": "Made using blood oranges, with a balance of sweetness and bitterness.",
+    "price": "£6.95"
+   },
+   {
+    "name": "MINT CHOCOLATE BOMB",
+    "description": "Mint ice cream with a chocolate centre and coating with mint pieces.",
+    "price": "£6.95"
+   },
+   {
+    "name": "MANGO STICKY RICE",
+    "description": "SUBJECT TO AVAILABILITY. Classic Thai dessert with sticky rice infused with sweetened coconut milk, served alongside fresh mango slices topped with toasted sesame seeds.",
+    "price": "£8.95"
+   }
+  ],
+  "SET MENU A": [
+   {
+    "name": "Starter: Nay Thai Mixed Starter",
+    "description": "A combination of our skewered chicken satay, khanom jeeb (steamed dumplings), prawn tempura, and vegetable spring rolls. Served with a selection of sauces and relishes.",
+    "price": null
+   },
+   {
+    "name": "Main Course: Chicken Green Curry",
+    "description": "cooked in coconut milk with bamboo shoots and courgette, garnished with sweet basil.",
+    "price": null
+   },
+   {
+    "name": "Main Course: Stir-fried Beef in Oyster Sauce",
+    "description": "with black pepper, baby corn, onion, mushroom, and spring onion.",
+    "price": null
+   },
+   {
+    "name": "Main Course: Prawn Pad Thai",
+    "description": "with thin rice noodles, eggs, bean sprouts, spring onion, stir-fried in a sweet radish and tamarind sauce, and served with crushed peanut.",
+    "price": null
+   }
+  ],
+  "SET MENU B": [
+   {
+    "name": "Starter: Aromatic Duck",
+    "description": "Crispy duck served with pancakes, and julienned cucumber, carrot, and spring onion. Comes with hoisin sauce.",
+    "price": null
+   },
+   {
+    "name": "Main Course: Chicken Massaman Curry",
+    "description": "A sweet, mild, Southern Thai curry. It's cooked with coconut milk, potato, onion, dry spices, and garnished with crispy shallots.",
+    "price": null
+   },
+   {
+    "name": "Main Course: Pad Chao Lay",
+    "description": "Our spicy mixed seafood stir-fry with fresh Thai herbs, chillies, garlic, and peppercorns.",
+    "price": null
+   }
+  ],
+  "SET MENU C": [
+   {
+    "name": "Starter: Tom Yum Soup with Prawns",
+    "description": "A traditional and popular spicy, sour, and clear soup, flavoured with lemongrass, galangal, and lime leaves, served with mushrooms and tomatoes in a fragrant Tom Yum paste.",
+    "price": null
+   }
+  ]
+ },
+ "pricing_notes": [
+  "£33.95 per person. Minimum of two people for each menu. Served with Steamed Jasmine Rice, and a Choice of Tea or Coffee.",
+  "£37.95 per person. Minimum of two people for each menu. Served with Egg Fried Rice, and a Choice of Tea or Coffee.",
+  "£44.95 per person. Minimum of two people for each menu. Served with Steamed Jasmine Rice with Coconut, and a Choice of Tea or Coffee."
+ ]
+}
