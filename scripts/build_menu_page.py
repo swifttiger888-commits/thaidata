@@ -200,6 +200,7 @@ def dish_html(it, protein_tiers=None, fsa_id=None, category=None):
 def build(data, dst=None):
     rname = data["restaurant"]
     city = data["city"]
+    menu_label = (data.get("menu_label") or "").strip()
     # The canonical URL and the breadcrumb link to the listing page must point at
     # where the file ACTUALLY lives. Deriving the slug from the restaurant name
     # diverges from the live listing pages as soon as a name contains punctuation:
@@ -371,7 +372,7 @@ def build(data, dst=None):
      the homepage with HTTP 200 for any unmatched path). Do not remove. -->
 <meta name="thaidata-page" content="menu">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{esc(rname)} Menu — Full Prices &amp; Dishes | ThaiData UK</title>
+<title>{esc(rname)}{(" " + esc(menu_label)) if menu_label else " Menu"} — Full Prices &amp; Dishes | ThaiData UK</title>
 <meta name="description" content="The full {esc(rname)} menu in {esc(city)} — {total} dishes with current prices, taken from the restaurant's own menu. First published online by ThaiData UK.">
 <link rel="canonical" href="https://thaidata.uk/r/{slug_city}/{slug_name}/menu/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -519,7 +520,7 @@ em {{ font-style: normal; font-weight: 700; }}
 <body>
 <header class="masthead"><div class="wrap">
   <p class="crumb"><a href="/">ThaiData</a> › <a href="/r/{slug_city}/">{esc(city)}</a> › <a href="{listing_url}">{esc(rname)}</a></p>
-  <h1>{esc(rname)} — <em>Full Menu</em></h1>
+  <h1>{esc(rname)} — <em>{esc(menu_label) if menu_label else "Full Menu"}</em></h1>
   <p class="meta">
     <span>{esc(data.get("address",""))}</span>
     <span><b>{total}</b> dishes</span>

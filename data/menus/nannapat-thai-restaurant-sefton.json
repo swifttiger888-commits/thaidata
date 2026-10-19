@@ -1,0 +1,131 @@
+{
+ "restaurant": "Nannapat Thai Restaurant & Bar",
+ "city": "Sefton",
+ "fsa_id": "508320",
+ "address": "108 Liverpool Road South, Maghull",
+ "source": "https://nannapat.co.uk/",
+ "source_label": "the restaurant's own lunch menu images",
+ "checked": "2026-10-19",
+ "menu_label": "Lunch Menu",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Chicken satay",
+    "description": "(chicken skewers served with our special peanut sauce)",
+    "price": "£4.95"
+   },
+   {
+    "name": "Vegetable spring roll",
+    "description": "",
+    "price": "£4.95"
+   },
+   {
+    "name": "Vegetable tempura",
+    "description": "",
+    "price": "£4.95"
+   },
+   {
+    "name": "King prawn tempura",
+    "description": "(Additional £2)",
+    "price": "£4.95"
+   },
+   {
+    "name": "Pork dim sum",
+    "description": "",
+    "price": "£4.95"
+   },
+   {
+    "name": "Pork rib",
+    "description": "(Additional £2)",
+    "price": "£4.95"
+   },
+   {
+    "name": "Savoury Thai toast",
+    "description": "",
+    "price": "£4.95"
+   }
+  ],
+  "Noodles & Fried Rice": [
+   {
+    "name": "Pad thai",
+    "description": "Thailand's popular street food dish. Stir fried rice noodles with tamarind sauce, egg and mixed vegetables. Serve with peanut sprinkles.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Pad mee",
+    "description": "Thai Stir fried egg noodles with soy sauce and vegetables.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Drunken noodle",
+    "description": "Richly flavoured, stir fried spicy noodles with bamboo shoot, vegetable and chili.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Bangkok fried rice(Pad kra pao)",
+    "description": "Spicy Thai basil fried rice with garlic, chili, onions and green beans.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Nanna fried rice",
+    "description": "Original Thai Fried rice with eggs, tomato and onions.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Tom yam fried rice.",
+    "description": "Spicy fried rice with lime and aromatic herbs. Serve with mushrooms, tomatoes and onions",
+    "price": "£12.95"
+   }
+  ],
+  "Mains": [
+   {
+    "name": "Green curry",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "Red curry",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "Massaman",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "Oyster sauce",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "garlic&pepper",
+    "description": "",
+    "price": "£13.95"
+   },
+   {
+    "name": "sweet&sour",
+    "description": "",
+    "price": "£13.95"
+   }
+  ],
+  "Chef Recommended": [
+   {
+    "name": "Ped makam Bao buns",
+    "description": "Crispy duck slices with spring onion and tamarind sauce.",
+    "price": "£12.95"
+   },
+   {
+    "name": "Basil stir fried ( Pad krapao )",
+    "description": "Stir fried Thai basil with garlic & chili, onions and green beans.",
+    "price": "£13.95"
+   }
+  ]
+ },
+ "pricing_notes": [
+  "Lunch combo: starter plus noodles or fried rice £15.",
+  "Noodle and main dishes come with tofu & vegetables or chicken; beef +£2, king prawn +£3.",
+  "Mains are served with steamed jasmine rice. Egg fried rice, coconut rice or chips +£1; stir-fried egg noodles +£3.",
+  "Starter and main are served together on one plate."
+ ]
+}
