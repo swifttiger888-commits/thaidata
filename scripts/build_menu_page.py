@@ -297,9 +297,26 @@ def build(data, dst=None):
         o = {"@type": "MenuItem", "name": it["name"]}
         if it.get("description"):
             o["description"] = it["description"]
-        if money(it.get("price")):
-            o["offers"] = {"@type": "Offer", "price": re.sub(r"[^0-9.]", "", money(it["price"]).split(" / ")[0]),
-                           "priceCurrency": "GBP"}
+        _p = money(it.get("price"))
+        if _p:
+            _m = re.search(r"(\d+(?:\.\d{1,2})?)", _p)
+            if _m:
+                _lo = float(_m.group(1))
+                _nums = [float(x) for x in re.findall(r"£\s?(\d+(?:\.\d{1,2})?)", _p)]
+                _hi = max(_nums) if _nums else _lo
+                if _hi > _lo:
+                    o["offers"] = {
+                        "@type": "Offer",
+                        "priceCurrency": "GBP",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "minPrice": f"{_lo:.2f}",
+                            "maxPrice": f"{_hi:.2f}",
+                            "priceCurrency": "GBP",
+                        },
+                    }
+                else:
+                    o["offers"] = {"@type": "Offer", "price": f"{_lo:.2f}", "priceCurrency": "GBP"}
         if it.get("vegetarian"):
             o["suitableForDiet"] = "https://schema.org/VegetarianDiet"
         return o

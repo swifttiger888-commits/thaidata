@@ -316,6 +316,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
                        f'                    </div>')
     fsa_id = r['id']
     canonical = canonical_url or f'https://thaidata.uk/r/{city_slug}/{rest_slug}/'
+    menu_path = os.path.join(OUT_DIR, city_slug, rest_slug, 'menu', 'index.html')
+    has_menu_page = os.path.exists(menu_path)
 
     # ---- Head replacements ----
     tail = f'{ " " + address + "." if address else "" } Updated {format_date(r.get("rating_date", ""))}.'
@@ -593,6 +595,10 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # Claimed listings get contact data from Quick Facts (middleware strips this).
     if not is_closed:
         strip_items = []
+        if has_menu_page:
+            strip_items.append(
+                f'<a class="cs-item" href="/r/{city_slug}/{rest_slug}/menu/" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:600;white-space:nowrap;"><i class="fas fa-utensils" style="margin-right:5px;"></i>Full menu</a>'
+            )
         if enr_phone:
             strip_items.append(
                 '<a class="cs-item" href="tel:' + enr_phone + '" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>' + enr_phone + '</a>'

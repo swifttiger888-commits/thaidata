@@ -1,0 +1,376 @@
+{
+ "restaurant": "Thai Corner",
+ "city": "Reading",
+ "fsa_id": "280596",
+ "address": "47 West Street, Reading",
+ "source": "https://thaicornerreading.co.uk/takeaway-menu",
+ "source_label": "the restaurant's own online takeaway menu",
+ "checked": "2026-10-19",
+ "categories": {
+  "Starters": [
+   {
+    "name": "Mixed starter",
+    "description": "A selection of chicken satay, spring rolls, prawn on toast and crispy squid. (minimum 2 people)",
+    "price": "£9.00"
+   },
+   {
+    "name": "Chicken Satay",
+    "description": "Marinated and char-grilled chicken served with peanut sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Poh Pia Tod (Spring Rolls)  (V)",
+    "description": "Bean vermicelli, dried mushrooms, shredded cabbage and carrots in rice paper.",
+    "price": null,
+    "vegetarian": true
+   },
+   {
+    "name": "Prawn on Toast",
+    "description": "Minced prawn mixed with garlic, pepper and coriander spread on bread triangles.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Kanom Jeeb (Thai Dim Sum)",
+    "description": "Steamed minced pork and prawn dumplings topped with fried garlic and sweet soy sauce.",
+    "price": "£8.00"
+   },
+   {
+    "name": "Moo Ping",
+    "description": "Grilled marinated strips of pork with garlic, coriander and special sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Peek  Gai  Tra  Krai",
+    "description": "Crispy fried chicken wings with lemongrass",
+    "price": "£8.50"
+   },
+   {
+    "name": "Giant Duck Spring Roll",
+    "description": "Shredded duck with glass noodles in crispy roll, served with Hoi Sin sauce",
+    "price": "£8.50"
+   },
+   {
+    "name": "Tod Mun Pla",
+    "description": "Spicy Thai fish cakes served with sweet chilli sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "Tempura Goong",
+    "description": "Deep fried prawn in batter served with sweet chilli sauce.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Sai Oua",
+    "description": "Authentic spicy Thai sausage from northern of Thailand.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Pla Meuk Tord",
+    "description": "Crispy squid with salt and pepper.",
+    "price": "£8.50"
+   },
+   {
+    "name": "Spicy Prawn Crackers",
+    "description": "",
+    "price": "£4.00"
+   }
+  ],
+  "Salad": [
+   {
+    "name": "Som Tum",
+    "description": "Papaya salad seasoned with peanuts, lime juice, palm sugar, fish sauce and chilli.",
+    "price": "£10.00"
+   },
+   {
+    "name": "Larb Gai",
+    "description": "Minced chicken freshly cooked with Thai herbs, ground rice, chilli and lemon juice.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Yum Woon Sen",
+    "description": "Glass noodle salad with seafood in spicy & sour dressing.",
+    "price": "£13.00"
+   }
+  ],
+  "Soup": [
+   {
+    "name": "Tom Yum",
+    "description": "Hot and sour soup flavoured with mushrooms, lemon grass, kaffir lime leaves and lemon juice.",
+    "price": "£7.50–£8.50"
+   },
+   {
+    "name": "Tom Kha",
+    "description": "Coconut soup flavoured with mushrooms, galangal, lemon grass and fresh coriander.",
+    "price": "£7.50–£8.50"
+   },
+   {
+    "name": "18. Poh Tak Soup",
+    "description": "Spicy mixed seafood soup flavoured with mushrooms, lemon grass, kaffir lime leaves, fresh chilli and basil leaves.",
+    "price": "£9.00"
+   }
+  ],
+  "Curry Dishes": [
+   {
+    "name": "Gang Kiew Wan (Green Curry)",
+    "description": "Green curry paste with coconut milk, bamboo shoots, aubergine and sweet basil leaves.",
+    "price": "£13.00–£15.00"
+   },
+   {
+    "name": "Gang Ped (Red Curry)",
+    "description": "Red curry paste with coconut milk, bamboo shoots, aubergine and sweet basil leaves.",
+    "price": "£13.00–£15.00"
+   },
+   {
+    "name": "Gang Panang",
+    "description": "Dry red curry paste with coconut milk and kaffir lime leaves.",
+    "price": "£13.00–£15.00"
+   },
+   {
+    "name": "Gang Massaman",
+    "description": "Massaman curry paste with coconut milk, potatoes, peanuts and onions",
+    "price": "£13.00–£15.00"
+   },
+   {
+    "name": "Gang Ped Yang",
+    "description": "Roasted duck with red curry paste, coconut milk, tomatoes, pineapple and sweet basil leaves.",
+    "price": "£15.00"
+   }
+  ],
+  "Stir-Fried Dishes": [
+   {
+    "name": "Gai Bai Kha Prow",
+    "description": "Stir-fried chicken with fresh chilli, garlic and basil leaves.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Gai Priew Wan (Sweet and Sour)",
+    "description": "Stir-fried chicken with pineapple, cucumber, and tomato in Thai sweet and sour sauce.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Gai Med Mamung",
+    "description": "Stir-fried chicken with cashew nuts, pineapple cooked in a dry sweet oyster sauce.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Nua Nam Mun Hoi",
+    "description": "Stir-fried beef with oyster sauce and vegetables.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Nua Tra Krai",
+    "description": "Stir-fried beef with lemon grass, fresh chilli and long beans.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Ped Kee Mao (Drunken Duck)",
+    "description": "Stir-fried duck with aubergine, fresh chilli, garlic and basil leaves.",
+    "price": "£15.00"
+   },
+   {
+    "name": "Ped Med Mamung",
+    "description": "Stir-fried duck with cashew nuts and pineapple cooked in a dry sweet oyster sauce.",
+    "price": "£15.00"
+   },
+   {
+    "name": "Chilli Lamb",
+    "description": "Stir-fried sliced lamb with long beans, fresh chilli, lemon grass and basil leaves.",
+    "price": "£15.00"
+   },
+   {
+    "name": "Kra Praw Moo Grob",
+    "description": "Stir-fried pork belly with chilli and basil leaves",
+    "price": "£15.00"
+   }
+  ],
+  "Seafood Dishes": [
+   {
+    "name": "Pla Chuchi",
+    "description": "Crispy fried salmon steak topped with red curry paste and coconut milk.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Pad Po Tak",
+    "description": "Mixed seafood (prawns, squid, mussels) with chilli, garlic and Thai herbs.",
+    "price": "£16.00"
+   },
+   {
+    "name": "Ho Mok Talay",
+    "description": "Steamed red curry with mixed seafood, coconut milk and sweet basil leaves.",
+    "price": "£17.00"
+   },
+   {
+    "name": "Goong Chuchi",
+    "description": "Char-grilled river prawns topped with red curry paste and coconut milk.",
+    "price": "£19.00"
+   },
+   {
+    "name": "Pla  Kra Pong Lui Suan",
+    "description": "Deep fried whole sea bass with lemongrass, cashew nuts and chilli paste",
+    "price": "£24.00"
+   },
+   {
+    "name": "Goong Ob Woon Sen",
+    "description": "Baked glass noodles with river prawns, ginger, garlic and coriander",
+    "price": "£20.00"
+   }
+  ],
+  "Special Dishes": [
+   {
+    "name": "Sua Rong Hai (Weeping Tiger)",
+    "description": "Char-grilled sirloin beef with garlic, pepper and coriander sauce accompanied with chilli dip.",
+    "price": "£22.00"
+   },
+   {
+    "name": "Panang Beef Sirloin",
+    "description": "Grilled beef sirloin topped with a rich red curry sauce",
+    "price": "£22.00"
+   },
+   {
+    "name": "Kor Moo Yang",
+    "description": "Grilled marinated pork neck served with tamarind and chilli sauce.",
+    "price": "£16.00"
+   },
+   {
+    "name": "Ped Makham",
+    "description": "Roasted duck confit topped with tamarind sauce and crispy shallots.",
+    "price": "£16.00"
+   },
+   {
+    "name": "Panang Nong Gae",
+    "description": "Tender lamb shank in panang red coconut curry sauce scented by kaffir lime leaves served with Pak Choi and new potatoes.",
+    "price": "£20.00"
+   }
+  ],
+  "Noodles": [
+   {
+    "name": "Pad Thai",
+    "description": "Special Thai rice noodles with egg, bean sprouts and crushed peanuts.",
+    "price": "£14.00–£15.00"
+   },
+   {
+    "name": "Pad See Iew kai",
+    "description": "Stir-fried flat noodles with chicken, vegetables, egg and soy sauce.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Kwaitie Kee Mow Nua",
+    "description": "Stir-fried flat noodles with beef, vegetables, fresh chilli, garlic and basil leaves.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Kwaitie Pad",
+    "description": "Stir-fried egg noodles.",
+    "price": "£4.00"
+   }
+  ],
+  "Rice": [
+   {
+    "name": "Steamed Jasmine Rice",
+    "description": "",
+    "price": "£3.50"
+   },
+   {
+    "name": "Egg Fried Rice",
+    "description": "",
+    "price": "£4.00"
+   },
+   {
+    "name": "Sticky Rice",
+    "description": "",
+    "price": "£4.00"
+   },
+   {
+    "name": "Coconut Rice",
+    "description": "",
+    "price": "£4.00"
+   },
+   {
+    "name": "Kao Pad",
+    "description": "Special fried rice with chicken or prawns, egg, vegetables and soy sauce.",
+    "price": "£13.00–£15.00"
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "description": "With chicken, prawns and cashew nuts.",
+    "price": "£15.00"
+   }
+  ],
+  "Vegetables": [
+   {
+    "name": "Pad Puk",
+    "description": "Stir-fried mixed vegetables with oyster sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "Pad Boccoli",
+    "description": "Stir-fried broccoli with oyster sauce.",
+    "price": "£9.00"
+   },
+   {
+    "name": "Puk Boong Fai Dang",
+    "description": "Stir-fried water spinach with garlic, chilli and black bean sauce.",
+    "price": "£10.00"
+   }
+  ],
+  "Starter (V)": [
+   {
+    "name": "Poh Pia Tod (Spring Rolls)",
+    "description": "Bean vermicelli, dried mushrooms, shredded cabbage and carrots in rice paper.",
+    "price": "£7.00"
+   },
+   {
+    "name": "Tod Man Khow Pod",
+    "description": "Thai style deep fried sweet corn cakes served with sweet chilli sauce.",
+    "price": "£7.00"
+   },
+   {
+    "name": "Laab Tofu",
+    "description": "Spicy tofu salad with herbs in lime chilli vinaigrette.",
+    "price": "£10.00"
+   }
+  ],
+  "Main Dishes (V)": [
+   {
+    "name": "Tofu Pad Med Mamung",
+    "description": "Stir-fried bean curd with vegetables and cashew nuts.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Priew Wan Pak",
+    "description": "Stir-fried mixed vegetables in Thai sweet and sour sauce.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Tofu Bai Kha Prow",
+    "description": "Stir-fried bean curd with fresh chilli, garlic and basil leaves.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Gang Kiew Wan Pak",
+    "description": "Green curry paste with coconut milk, mixed vegetables and sweet basil leaves.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Mussaman Pak",
+    "description": "Mixed vegetables cooked in coconut curry sauce with potatoes, peanuts and onions.",
+    "price": "£13.00"
+   },
+   {
+    "name": "Pad Thai Tofu",
+    "description": "Special Thai rice noodles with bean curd, egg, peanuts and bean sprouts.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Pad See Iew Tofu",
+    "description": "Stir-fried flat noodles with bean curd, vegetables, egg and soy sauce.",
+    "price": "£14.00"
+   },
+   {
+    "name": "Kwaitie  Kee  Mow  Tofu",
+    "description": "Stir-fried flat noodles with bean curd, vegetables, fresh chilli, garlic and basil leaves.",
+    "price": "£14.00"
+   }
+  ]
+ }
+}
