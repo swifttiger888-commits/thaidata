@@ -31,5 +31,25 @@ for ci in c['cities']:
 if errors:
     for e in errors:
         print(f'ERROR: {e}')
+
+# Self-hosted webfonts: every /assets/fonts/*.woff2 referenced by shipped HTML must
+# exist on disk. A missing file is invisible in text/diff checks — the metric-matched
+# fallback renders instead — so it has to be asserted here.
+import glob, os, re
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+refs = set()
+for path in glob.glob(os.path.join(REPO, '**', '*.html'), recursive=True):
+    with open(path, encoding='utf-8', errors='ignore') as f:
+        refs.update(re.findall(r'/assets/fonts/[A-Za-z0-9._-]+\.woff2', f.read()))
+for ref in sorted(refs):
+    if not os.path.isfile(os.path.join(REPO, ref.lstrip('/'))):
+        errors.append(f'missing font asset referenced by HTML: {ref}')
+if refs:
+    print(f'Font references checked: {len(refs)}')
+
+if errors:
+    for e in errors:
+        print(f'ERROR: {e}')
     sys.exit(1)
 print('All JSON consistency checks passed')
