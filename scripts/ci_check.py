@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Quick CI consistency check — exits non-zero if data is inconsistent."""
-import json, sys
+import glob, json, os, re, sys
 from typing import Any
 
 with open('data/restaurants.json') as f:
@@ -47,6 +47,42 @@ for ref in sorted(refs):
         errors.append(f'missing font asset referenced by HTML: {ref}')
 if refs:
     print(f'Font references checked: {len(refs)}')
+
+# Font Awesome is gone: icons are inline <symbol> sprites. Two failure modes are
+# invisible — a leftover <i class="fa..."> renders nothing (the stylesheet is gone),
+# and a <use href="#id"> with no matching symbol renders nothing either. Both are
+# asserted here, plus the sprite source and its mapping.
+import json as _json
+_icon_pages = 0
+for path in glob.glob(os.path.join(REPO, '**', '*.html'), recursive=True):
+    with open(path, encoding='utf-8', errors='ignore') as f:
+        html = f.read()
+    rel = os.path.relpath(path, REPO)
+    if 'font-awesome' in html.lower():
+        errors.append(f'Font Awesome stylesheet still linked: {rel}')
+    if re.search(r'<i class="[^"]*\bfa-', html):
+        errors.append(f'Font Awesome <i> icon markup left in: {rel}')
+    uses = {u for u in re.findall(r'<use href="#([^"]+)"', html) if '$' not in u}
+    # a ${...} id is a JS template literal, filled in at runtime
+    if uses:
+        _icon_pages += 1
+        missing = uses - set(re.findall(r'<symbol id="([^"]+)"', html))
+        if missing:
+            errors.append(f'{rel}: <use> without an inline symbol: {sorted(missing)[:3]}')
+for needed in ('assets/icons.svg', 'data/icon_map.json'):
+    if not os.path.isfile(os.path.join(REPO, needed)):
+        errors.append(f'missing icon asset: {needed}')
+else:
+    if os.path.isfile(os.path.join(REPO, 'assets', 'icons.svg')):
+        with open(os.path.join(REPO, 'assets', 'icons.svg'), encoding='utf-8') as f:
+            _sprite = f.read()
+        _map = _json.load(open(os.path.join(REPO, 'data', 'icon_map.json'), encoding='utf-8'))
+        _ids = {'i-%s--%s' % (v['style'], v['name']) for v in _map.values()}
+        _absent = _ids - set(re.findall(r'<symbol id="([^"]+)"', _sprite))
+        if _absent:
+            errors.append(f'icon_map entries with no symbol in assets/icons.svg: {sorted(_absent)[:5]}')
+        print(f'Icon pages checked: {_icon_pages} ({len(_ids)} mapped icons)')
+
 
 if errors:
     for e in errors:

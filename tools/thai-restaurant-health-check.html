@@ -7,8 +7,7 @@
     <meta name="description" content="10-question diagnostic for your Thai restaurant. Score your margins, hygiene, staffing, delivery strategy, and marketing. Get a personalised action plan.">
     <link rel="canonical" href="https://thaidata.uk/tools/thai-restaurant-health-check">
     <meta property="og:type" content="article"><meta property="og:title" content="Thai Restaurant Health Check"><meta property="og:description" content="How healthy is your Thai restaurant? 10 questions, instant score, action plan.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root{--c1: #A3132B;--c2: #A3132B;--dark: #FFFFFF;--ink2: #4A403C;--ink3: #7A6F6A;--ink4: #7A6F6A;--line: #E7DFD5;--bg: #FBF7F0}
 :focus-visible {
@@ -53,8 +52,9 @@ body{font-family:'Inter',system-ui,sans-serif;color: var(--ink);background:var(-
         footer{text-align:center;padding:40px 0;border-top:1px solid var(--line);color:var(--ink4);font-size:0.85rem;margin-top:40px}
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Thai Restaurant Health Check","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://thaidata.uk/tools/thai-restaurant-health-check","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script>
+<style>.ic{display:inline-block;width:1em;height:1em;fill:currentColor;vertical-align:-0.125em;flex-shrink:0}</style>
 </head>
-<body>
+<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--clipboard-list" viewBox="0 0 384 512"><path d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z"/></symbol></svg>
     <nav><div class="nav-bar"><a href="../index.html" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="100" height="36"></a><a href="../#tools" style="color: rgba(26, 22, 20, 0.6);font-size:0.9rem;text-decoration:none;">&larr; Tools</a></div></nav>
     <div class="container">
         <header><h1>Restaurant <em>Health Check</em></h1><p style="color:var(--ink4);">10 questions. 2 minutes. See where your operation is strong — and where it's bleeding.</p></header>
@@ -119,7 +119,7 @@ body{font-family:'Inter',system-ui,sans-serif;color: var(--ink);background:var(-
                     <div class="ss-bar"><div class="ss-bar-bg"><div class="ss-bar-fill" style="width:${catScores[k]}%;background:${catScores[k]>=75?'var(--c2)':catScores[k]>=50?'#F59E0B':'#EF4444'}"></div></div></div>
                 </div>
             `).join('')}
-            <div class="actions"><h3><i class="fas fa-clipboard-list"></i> Your Action Plan</h3><ul>${actions.map(a=>`<li>${a}</li>`).join('')}</ul></div>`;
+            <div class="actions"><h3><svg class="ic" aria-hidden="true"><use href="#i-solid--clipboard-list"></use></svg> Your Action Plan</h3><ul>${actions.map(a=>`<li>${a}</li>`).join('')}</ul></div>`;
     }
     </script>
 </body>

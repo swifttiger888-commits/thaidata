@@ -6,6 +6,7 @@ Preserves all editorial content, cross-links, anchors, and LD+JSON schema.
 import json
 from datetime import datetime
 from pathlib import Path
+import site_icons  # noqa: E402  (same-dir module, replaces Font Awesome)
 
 REPO = Path(__file__).resolve().parent.parent
 DATA_FILE = REPO / "data" / "thai_festivals.json"
@@ -952,9 +953,9 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
 
 def main():
     events = load_events()
-    (REPO / "thai-festivals-uk.html").write_text(gen_calendar_page(events))
-    (REPO / "songkran-uk.html").write_text(gen_songkran_page(events))
-    (REPO / "loy-krathong-uk.html").write_text(gen_loy_krathong_page(events))
+    (REPO / "thai-festivals-uk.html").write_text(site_icons.transform(gen_calendar_page(events)))
+    (REPO / "songkran-uk.html").write_text(site_icons.transform(gen_songkran_page(events)))
+    (REPO / "loy-krathong-uk.html").write_text(site_icons.transform(gen_loy_krathong_page(events)))
     print("Generated 3 festival pages OK.")
 
 

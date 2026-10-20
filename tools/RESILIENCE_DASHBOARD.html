@@ -54,7 +54,7 @@
     </script>
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+<noscript></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     
@@ -155,7 +155,7 @@ body {
         footer { text-align: center; margin-top: 100px; padding: 40px; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.9rem; }
     </style>
 
-<body>
+<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--calendar-check" viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"/></symbol><symbol id="i-solid--circle-question" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></symbol><symbol id="i-solid--circle-right" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM294.6 135.1l99.9 107.1c3.5 3.8 5.5 8.7 5.5 13.8s-2 10.1-5.5 13.8L294.6 376.9c-4.2 4.5-10.1 7.1-16.3 7.1C266 384 256 374 256 361.7l0-57.7-96 0c-17.7 0-32-14.3-32-32l0-32c0-17.7 14.3-32 32-32l96 0 0-57.7c0-12.3 10-22.3 22.3-22.3c6.2 0 12.1 2.6 16.3 7.1z"/></symbol><symbol id="i-solid--microchip" viewBox="0 0 512 512"><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></symbol></svg>
     <div class="grain"></div>
     <nav>
         <div class="nav-bar">
@@ -225,9 +225,9 @@ body {
                         <h2 style="margin-top:15px;" id="statusTitle">Structural Survival Likely</h2>
                         <p id="statusDesc">Based on your 10% price buffer, your model can absorb the NLW hike with a moderate margin compression of 2.1%.</p>
                         <div style="display:flex; gap:10px; font-size:0.9rem; color:var(--ink4);">
-                            <span><i class="fas fa-calendar-star"></i> <span data-i18n="forecast_label">Forecast:</span> <strong>Apr 2026</strong></span>
+                            <span><svg class="ic" aria-hidden="true"><use href="#i-solid--calendar-check"></use></svg> <span data-i18n="forecast_label">Forecast:</span> <strong>Apr 2026</strong></span>
                             <span>&bull;</span>
-                            <span><i class="fas fa-microchip"></i> <span data-i18n="confidence_label">Confidence:</span> <strong>94%</strong></span>
+                            <span><svg class="ic" aria-hidden="true"><use href="#i-solid--microchip"></use></svg> <span data-i18n="confidence_label">Confidence:</span> <strong>94%</strong></span>
                         </div>
                     </div>
                 </div>
@@ -268,7 +268,7 @@ body {
     </div>
 
         <div class="card" style="margin-top: 40px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 20px; padding: 30px;">
-            <h2 data-i18n="faq_heading" style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size:1.8rem; margin-bottom: 20px;"><i class="fas fa-question-circle"></i> 2026 Restaurant Survival FAQ</h2>
+            <h2 data-i18n="faq_heading" style="font-family:'Archivo','Inter',system-ui,sans-serif; font-size:1.8rem; margin-bottom: 20px;"><svg class="ic" aria-hidden="true"><use href="#i-solid--circle-question"></use></svg> 2026 Restaurant Survival FAQ</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                 <div>
                     <h2 data-i18n="q1" style="font-size: 1.1rem; color: var(--c2); margin-bottom: 10px;">Will my restaurant survive the 2026 NLW increase?</h2>
@@ -475,7 +475,7 @@ body {
 
             list.innerHTML = recs.map(r => `
                 <div class="rec-item">
-                    <div class="rec-icon"><i class="fas fa-arrow-alt-circle-right"></i></div>
+                    <div class="rec-icon"><svg class="ic" aria-hidden="true"><use href="#i-solid--circle-right"></use></svg></div>
                     <div class="rec-text">
                         <h5>${r.title}</h5>
                         <p>${r.desc}</p>

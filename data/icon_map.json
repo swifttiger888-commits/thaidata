@@ -1,0 +1,578 @@
+{
+ "apple-whole": {
+  "name": "apple-whole",
+  "style": "solid"
+ },
+ "arrow-left": {
+  "name": "arrow-left",
+  "style": "solid"
+ },
+ "arrow-right": {
+  "name": "arrow-right",
+  "style": "solid"
+ },
+ "arrow-rotate-left": {
+  "name": "arrow-rotate-left",
+  "style": "solid"
+ },
+ "arrow-up": {
+  "name": "arrow-up",
+  "style": "solid"
+ },
+ "bars": {
+  "name": "bars",
+  "style": "solid"
+ },
+ "beer-mug-empty": {
+  "name": "beer-mug-empty",
+  "style": "solid"
+ },
+ "bolt": {
+  "name": "bolt",
+  "style": "solid"
+ },
+ "book": {
+  "name": "book",
+  "style": "solid"
+ },
+ "book-open": {
+  "name": "book-open",
+  "style": "solid"
+ },
+ "bowl-food": {
+  "name": "bowl-food",
+  "style": "solid"
+ },
+ "bowl-rice": {
+  "name": "bowl-rice",
+  "style": "solid"
+ },
+ "box": {
+  "name": "box",
+  "style": "solid"
+ },
+ "boxes-stacked": {
+  "name": "boxes-stacked",
+  "style": "solid"
+ },
+ "bread-slice": {
+  "name": "bread-slice",
+  "style": "solid"
+ },
+ "building": {
+  "name": "building",
+  "style": "solid"
+ },
+ "bullhorn": {
+  "name": "bullhorn",
+  "style": "solid"
+ },
+ "cake-candles": {
+  "name": "cake-candles",
+  "style": "solid"
+ },
+ "calculator": {
+  "name": "calculator",
+  "style": "solid"
+ },
+ "calendar": {
+  "name": "calendar",
+  "style": "solid"
+ },
+ "calendar-check": {
+  "name": "calendar-check",
+  "style": "solid"
+ },
+ "calendar-days": {
+  "name": "calendar-days",
+  "style": "solid"
+ },
+ "camera": {
+  "name": "camera",
+  "style": "solid"
+ },
+ "car": {
+  "name": "car",
+  "style": "solid"
+ },
+ "carrot": {
+  "name": "carrot",
+  "style": "solid"
+ },
+ "chart-bar": {
+  "name": "chart-bar",
+  "style": "solid"
+ },
+ "chart-line": {
+  "name": "chart-line",
+  "style": "solid"
+ },
+ "chart-pie": {
+  "name": "chart-pie",
+  "style": "solid"
+ },
+ "chart-simple": {
+  "name": "chart-simple",
+  "style": "solid"
+ },
+ "check": {
+  "name": "check",
+  "style": "solid"
+ },
+ "chevron-down": {
+  "name": "chevron-down",
+  "style": "solid"
+ },
+ "chevron-right": {
+  "name": "chevron-right",
+  "style": "solid"
+ },
+ "circle-check": {
+  "name": "circle-check",
+  "style": "solid"
+ },
+ "circle-dot": {
+  "name": "circle-dot",
+  "style": "solid"
+ },
+ "circle-exclamation": {
+  "name": "circle-exclamation",
+  "style": "solid"
+ },
+ "circle-info": {
+  "name": "circle-info",
+  "style": "solid"
+ },
+ "circle-notch": {
+  "name": "circle-notch",
+  "style": "solid"
+ },
+ "circle-question": {
+  "name": "circle-question",
+  "style": "solid"
+ },
+ "circle-right": {
+  "name": "circle-right",
+  "style": "solid"
+ },
+ "circle-xmark": {
+  "name": "circle-xmark",
+  "style": "solid"
+ },
+ "city": {
+  "name": "city",
+  "style": "solid"
+ },
+ "clipboard-check": {
+  "name": "clipboard-check",
+  "style": "solid"
+ },
+ "clipboard-list": {
+  "name": "clipboard-list",
+  "style": "solid"
+ },
+ "clock": {
+  "name": "clock",
+  "style": "solid"
+ },
+ "code": {
+  "name": "code",
+  "style": "solid"
+ },
+ "coins": {
+  "name": "coins",
+  "style": "solid"
+ },
+ "comment-dots": {
+  "name": "comment-dots",
+  "style": "solid"
+ },
+ "crown": {
+  "name": "crown",
+  "style": "solid"
+ },
+ "database": {
+  "name": "database",
+  "style": "solid"
+ },
+ "door-closed": {
+  "name": "door-closed",
+  "style": "solid"
+ },
+ "drumstick-bite": {
+  "name": "drumstick-bite",
+  "style": "solid"
+ },
+ "earth-europe": {
+  "name": "earth-europe",
+  "style": "solid"
+ },
+ "egg": {
+  "name": "egg",
+  "style": "solid"
+ },
+ "envelope": {
+  "name": "envelope",
+  "style": "solid"
+ },
+ "eye": {
+  "name": "eye",
+  "style": "solid"
+ },
+ "file-contract": {
+  "name": "file-contract",
+  "style": "solid"
+ },
+ "file-invoice": {
+  "name": "file-invoice",
+  "style": "solid"
+ },
+ "file-lines": {
+  "name": "file-lines",
+  "style": "solid"
+ },
+ "file-pdf": {
+  "name": "file-pdf",
+  "style": "solid"
+ },
+ "fingerprint": {
+  "name": "fingerprint",
+  "style": "solid"
+ },
+ "fire": {
+  "name": "fire",
+  "style": "solid"
+ },
+ "fire-burner": {
+  "name": "fire-burner",
+  "style": "solid"
+ },
+ "fish": {
+  "name": "fish",
+  "style": "solid"
+ },
+ "flask": {
+  "name": "flask",
+  "style": "solid"
+ },
+ "gauge-high": {
+  "name": "gauge-high",
+  "style": "solid"
+ },
+ "gem": {
+  "name": "gem",
+  "style": "solid"
+ },
+ "gift": {
+  "name": "gift",
+  "style": "solid"
+ },
+ "glass-water": {
+  "name": "glass-water",
+  "style": "solid"
+ },
+ "globe": {
+  "name": "globe",
+  "style": "solid"
+ },
+ "google": {
+  "name": "google",
+  "style": "brands"
+ },
+ "hand-sparkles": {
+  "name": "hand-sparkles",
+  "style": "solid"
+ },
+ "handshake": {
+  "name": "handshake",
+  "style": "solid"
+ },
+ "heart": {
+  "name": "heart",
+  "style": "solid"
+ },
+ "heart-pulse": {
+  "name": "heart-pulse",
+  "style": "solid"
+ },
+ "horse-head": {
+  "name": "horse-head",
+  "style": "solid"
+ },
+ "house": {
+  "name": "house",
+  "style": "solid"
+ },
+ "ice-cream": {
+  "name": "ice-cream",
+  "style": "solid"
+ },
+ "id-card": {
+  "name": "id-card",
+  "style": "solid"
+ },
+ "inbox": {
+  "name": "inbox",
+  "style": "solid"
+ },
+ "info": {
+  "name": "info",
+  "style": "solid"
+ },
+ "key": {
+  "name": "key",
+  "style": "solid"
+ },
+ "kitchen-set": {
+  "name": "kitchen-set",
+  "style": "solid"
+ },
+ "leaf": {
+  "name": "leaf",
+  "style": "solid"
+ },
+ "lemon": {
+  "name": "lemon",
+  "style": "solid"
+ },
+ "lightbulb": {
+  "name": "lightbulb",
+  "style": "solid"
+ },
+ "linkedin": {
+  "name": "linkedin",
+  "style": "brands"
+ },
+ "list": {
+  "name": "list",
+  "style": "solid"
+ },
+ "list-check": {
+  "name": "list-check",
+  "style": "solid"
+ },
+ "location-dot": {
+  "name": "location-dot",
+  "style": "solid"
+ },
+ "lock": {
+  "name": "lock",
+  "style": "solid"
+ },
+ "magnifying-glass": {
+  "name": "magnifying-glass",
+  "style": "solid"
+ },
+ "magnifying-glass-location": {
+  "name": "magnifying-glass-location",
+  "style": "solid"
+ },
+ "map-location-dot": {
+  "name": "map-location-dot",
+  "style": "solid"
+ },
+ "map-pin": {
+  "name": "map-pin",
+  "style": "solid"
+ },
+ "martini-glass-citrus": {
+  "name": "martini-glass-citrus",
+  "style": "solid"
+ },
+ "microchip": {
+  "name": "microchip",
+  "style": "solid"
+ },
+ "money-bill-wave": {
+  "name": "money-bill-wave",
+  "style": "solid"
+ },
+ "moon": {
+  "name": "moon",
+  "style": "solid"
+ },
+ "motorcycle": {
+  "name": "motorcycle",
+  "style": "solid"
+ },
+ "mug-hot": {
+  "name": "mug-hot",
+  "style": "solid"
+ },
+ "paper-plane": {
+  "name": "paper-plane",
+  "style": "solid"
+ },
+ "passport": {
+  "name": "passport",
+  "style": "solid"
+ },
+ "pen-to-square": {
+  "name": "pen-to-square",
+  "style": "solid"
+ },
+ "pepper-hot": {
+  "name": "pepper-hot",
+  "style": "solid"
+ },
+ "percent": {
+  "name": "percent",
+  "style": "solid"
+ },
+ "phone": {
+  "name": "phone",
+  "style": "solid"
+ },
+ "phone-flip": {
+  "name": "phone-flip",
+  "style": "solid"
+ },
+ "plus": {
+  "name": "plus",
+  "style": "solid"
+ },
+ "puzzle-piece": {
+  "name": "puzzle-piece",
+  "style": "solid"
+ },
+ "receipt": {
+  "name": "receipt",
+  "style": "solid"
+ },
+ "robot": {
+  "name": "robot",
+  "style": "solid"
+ },
+ "route": {
+  "name": "route",
+  "style": "solid"
+ },
+ "satellite-dish": {
+  "name": "satellite-dish",
+  "style": "solid"
+ },
+ "scale-balanced": {
+  "name": "scale-balanced",
+  "style": "solid"
+ },
+ "scroll": {
+  "name": "scroll",
+  "style": "solid"
+ },
+ "seedling": {
+  "name": "seedling",
+  "style": "solid"
+ },
+ "shield-halved": {
+  "name": "shield-halved",
+  "style": "solid"
+ },
+ "shrimp": {
+  "name": "shrimp",
+  "style": "solid"
+ },
+ "signal": {
+  "name": "signal",
+  "style": "solid"
+ },
+ "skull": {
+  "name": "skull",
+  "style": "solid"
+ },
+ "sliders": {
+  "name": "sliders",
+  "style": "solid"
+ },
+ "spinner": {
+  "name": "spinner",
+  "style": "solid"
+ },
+ "spoon": {
+  "name": "spoon",
+  "style": "solid"
+ },
+ "star": {
+  "name": "star",
+  "style": "solid"
+ },
+ "sterling-sign": {
+  "name": "sterling-sign",
+  "style": "solid"
+ },
+ "store": {
+  "name": "store",
+  "style": "solid"
+ },
+ "table": {
+  "name": "table",
+  "style": "solid"
+ },
+ "tags": {
+  "name": "tags",
+  "style": "solid"
+ },
+ "trash": {
+  "name": "trash",
+  "style": "solid"
+ },
+ "triangle-exclamation": {
+  "name": "triangle-exclamation",
+  "style": "solid"
+ },
+ "trophy": {
+  "name": "trophy",
+  "style": "solid"
+ },
+ "truck": {
+  "name": "truck",
+  "style": "solid"
+ },
+ "truck-fast": {
+  "name": "truck-fast",
+  "style": "solid"
+ },
+ "twitter": {
+  "name": "twitter",
+  "style": "brands"
+ },
+ "up-right-from-square": {
+  "name": "up-right-from-square",
+  "style": "solid"
+ },
+ "upload": {
+  "name": "upload",
+  "style": "solid"
+ },
+ "user-group": {
+  "name": "user-group",
+  "style": "solid"
+ },
+ "user-tie": {
+  "name": "user-tie",
+  "style": "solid"
+ },
+ "users": {
+  "name": "users",
+  "style": "solid"
+ },
+ "utensils": {
+  "name": "utensils",
+  "style": "solid"
+ },
+ "vial": {
+  "name": "vial",
+  "style": "solid"
+ },
+ "wand-magic": {
+  "name": "wand-magic",
+  "style": "solid"
+ },
+ "wand-magic-sparkles": {
+  "name": "wand-magic-sparkles",
+  "style": "solid"
+ },
+ "water": {
+  "name": "water",
+  "style": "solid"
+ }
+}

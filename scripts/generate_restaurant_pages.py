@@ -13,6 +13,7 @@ OUT_DIR = os.path.join(REPO, 'r')
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import site_fonts  # noqa: E402  — self-hosted webfont swap (SELF_HOST_FONTS=1)
+import site_icons  # noqa: E402  — inline SVG icons instead of Font Awesome
 
 # ── Meta description: A/B test concluded (Sep 2026) ──────────────
 # The name-first variant showed no lift over 2 weeks and has been
@@ -1103,7 +1104,7 @@ def main() -> None:
             out_path = os.path.join(dir_path, 'index.html')
 
             with open(out_path, 'w') as f:
-                f.write(html)
+                f.write(site_icons.transform(html))
 
             generated_ids.add(str(r['id']))
             generated_paths[str(r['id'])] = dir_path

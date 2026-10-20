@@ -7,6 +7,7 @@ Run this AFTER collect_menu_prices.py has been filled in and saved to
 import json, os, html
 from statistics import mean
 from typing import Any
+import site_icons  # noqa: E402  (same-dir module, replaces Font Awesome)
 
 # Load data
 data_path = '/tmp/thai_menu_prices.json'
@@ -253,7 +254,7 @@ HTML = f'''<!DOCTYPE html>
 _REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.makedirs(_REPO, exist_ok=True)
 with open(os.path.join(_REPO, 'thai-menu-price-index-uk.html'), 'w') as f:
-    f.write(HTML)
+    f.write(site_icons.transform(HTML))
 print(f"Page generated: {len(HTML):,} bytes")
 print(f"Data: {len(all_spreads)} prices across {len(city_stats)} cities, UK avg markup: +{avg_uk_spread}%")
 print("Page saved to /opt/thaidata-repo/thai-menu-price-index-uk.html")
