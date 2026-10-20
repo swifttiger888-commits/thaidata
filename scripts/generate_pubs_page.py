@@ -13,6 +13,7 @@ import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
+import site_icons  # noqa: E402  (same-dir module, replaces Font Awesome)
 
 REPO = Path(__file__).resolve().parent.parent
 OUTPUT = REPO / "pubs" / "index.html"
@@ -272,7 +273,7 @@ HTML = f"""<!DOCTYPE html>
 
 os.makedirs(OUTPUT.parent, exist_ok=True)
 with open(OUTPUT, "w") as f:
-    f.write(HTML)
+    f.write(site_icons.transform(HTML))
 
 print(f"Generated pub kitchens index: {OUTPUT}")
 print(f"  {n_pubs} pub kitchens, {n_cities} areas, avg {STAR}{avg}, {five} five-star")

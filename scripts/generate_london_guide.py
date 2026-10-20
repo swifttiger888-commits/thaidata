@@ -13,6 +13,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
+import site_icons  # noqa: E402  (same-dir module, replaces Font Awesome)
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
@@ -602,7 +603,7 @@ if "--force" not in sys.argv:
     sys.exit(1)
 os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
 with open(OUTPUT, "w") as f:
-    f.write(LONDON_PAGE)
+    f.write(site_icons.transform(LONDON_PAGE))
 kb = len(LONDON_PAGE) // 1024
 neighbourhood_count = len(NEIGHBOURHOODS)
 faq_count = 6

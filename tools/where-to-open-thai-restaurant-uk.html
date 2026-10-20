@@ -11,8 +11,7 @@
     <meta property="og:title" content="Where Should I Open a Thai Restaurant? City Opportunity Scorer">
     <meta property="og:description" content="Plug in your priorities — budget, competition tolerance, target market — and see which UK city scores highest for your Thai restaurant.">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #7A6F6A; --line: #E7DFD5; --bg: #FBF7F0; }
 :focus-visible {
@@ -84,8 +83,9 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         footer a { color: var(--ink4); text-decoration: none; }
     </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://thaidata.uk/#tools"},{"@type":"ListItem","position":3,"name":"Where Should I Open a Thai Restaurant? — City Opportun......"}]}</script>
+<style>.ic{display:inline-block;width:1em;height:1em;fill:currentColor;vertical-align:-0.125em;flex-shrink:0}</style>
 </head>
-<body>
+<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--lightbulb" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></symbol><symbol id="i-solid--map-pin" viewBox="0 0 320 512"><path d="M16 144a144 144 0 1 1 288 0A144 144 0 1 1 16 144zM160 80c8.8 0 16-7.2 16-16s-7.2-16-16-16c-53 0-96 43-96 96c0 8.8 7.2 16 16 16s16-7.2 16-16c0-35.3 28.7-64 64-64zM128 480V317.1c10.4 1.9 21.1 2.9 32 2.9s21.6-1 32-2.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32z"/></symbol></svg>
     <div class="grain"></div>
     <nav><div class="nav-bar">
         <a href="../index.html" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
@@ -94,7 +94,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 
     <div class="container">
         <header>
-            <div class="badge"><i class="fas fa-map-pin"></i> Interactive Tool</div>
+            <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-solid--map-pin"></use></svg> Interactive Tool</div>
             <h1>Where Should I Open<br>a <em>Thai Restaurant?</em></h1>
             <p>Adjust the sliders to match your priorities. Each UK city gets scored on market gap, population, competition, and costs. Find your best opening city.</p>
         </header>
@@ -139,7 +139,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <div id="resultsList"></div>
                 
                 <div class="explain-box" id="topExplain" style="display:none;">
-                    <h4><i class="fas fa-lightbulb"></i> Why <span id="topCityName">this city</span>?</h4>
+                    <h4><svg class="ic" aria-hidden="true"><use href="#i-solid--lightbulb"></use></svg> Why <span id="topCityName">this city</span>?</h4>
                     <p id="topCityReason"></p>
                 </div>
             </div>

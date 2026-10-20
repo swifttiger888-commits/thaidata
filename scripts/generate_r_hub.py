@@ -13,6 +13,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
+import site_icons  # noqa: E402  (same-dir module, replaces Font Awesome)
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
@@ -418,7 +419,7 @@ HTML = HTML.replace("&#128717;", "&#128717;")  # takeaway emoji entity
 
 os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
 with open(OUTPUT, "w") as f:
-    f.write(HTML)
+    f.write(site_icons.transform(HTML))
 
 kb = len(HTML) // 1024
 print(f"Generated restaurant directory hub: {OUTPUT}")

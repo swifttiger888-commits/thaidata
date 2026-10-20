@@ -51,7 +51,7 @@
     </script>
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+<noscript></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
         :root {
@@ -154,7 +154,7 @@ body {
         }
     </style>
 
-<body>
+<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--circle-info" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></symbol><symbol id="i-solid--spinner" viewBox="0 0 512 512"><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></symbol><symbol id="i-solid--wand-magic" viewBox="0 0 512 512"><path d="M14.1 463.3c-18.7-18.7-18.7-49.1 0-67.9L395.4 14.1c18.7-18.7 49.1-18.7 67.9 0l34.6 34.6c18.7 18.7 18.7 49.1 0 67.9L116.5 497.9c-18.7 18.7-49.1 18.7-67.9 0L14.1 463.3zM347.6 187.6l105-105L429.4 59.3l-105 105 23.3 23.3z"/></symbol></svg>
     <div class="grain"></div>
     <nav>
         <div class="nav-bar">
@@ -183,11 +183,11 @@ body {
                         <textarea class="textarea" id="menuInput" placeholder="Pad Thai - £13.50&#10;Green Curry - £14.95&#10;Massaman Beef - £18.00"></textarea>
                     </div>
                     <button class="btn-magic" onclick="generateSchema()" id="genBtn">
-                        <i class="fas fa-magic"></i> Generate AI Code
+                        <svg class="ic" aria-hidden="true"><use href="#i-solid--wand-magic"></use></svg> Generate AI Code
                     </button>
                     
                     <div class="hint">
-                        <i class="fas fa-info-circle"></i>
+                        <svg class="ic" aria-hidden="true"><use href="#i-solid--circle-info"></use></svg>
                         <div>This tool creates a "Menu" type structured data object that Google Gemini and ChatGPT use to display your prices in search results.</div>
                     </div>
                 </div>
@@ -233,7 +233,7 @@ body {
             const output = document.getElementById('schemaOutput');
             
             btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Neural Parsing...';
+            btn.innerHTML = '<svg class="ic" aria-hidden="true"><use href="#i-solid--spinner"></use></svg> Neural Parsing...';
             output.innerHTML = '<span style="color:var(--c2)">[MATCHING NEURAL PATTERNS...]</span>';
             
             setTimeout(() => {
@@ -274,7 +274,7 @@ body {
                 };
 
                 output.textContent = JSON.stringify(schema, null, 4);
-                btn.innerHTML = '<i class="fas fa-magic"></i> Generate AI Code';
+                btn.innerHTML = '<svg class="ic" aria-hidden="true"><use href="#i-solid--wand-magic"></use></svg> Generate AI Code';
                 btn.disabled = false;
                 document.getElementById('outputWrapper').classList.add('pulse-success');
                 setTimeout(() => document.getElementById('outputWrapper').classList.remove('pulse-success'), 1000);
