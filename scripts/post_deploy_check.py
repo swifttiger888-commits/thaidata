@@ -24,6 +24,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -47,16 +48,21 @@ SMOKE = [
 failures: list[str] = []
 
 
-def get(url, method='GET'):
-    req = urllib.request.Request(url, method=method, headers={'User-Agent': UA})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            body = r.read()
-            return r.status, dict(r.headers), body
-    except urllib.error.HTTPError as e:
-        return e.code, dict(e.headers), e.read()
-    except Exception as e:  # noqa: BLE001
-        return None, {}, str(e).encode()
+def get(url, method='GET', retries=2, settle=5):
+    """GET with a short retry: a fresh Pages deployment can 404 for a few seconds while
+    the edge populates, which otherwise reads as a broken page."""
+    for attempt in range(retries + 1):
+        req = urllib.request.Request(url, method=method, headers={'User-Agent': UA})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.status, dict(r.headers), r.read()
+        except urllib.error.HTTPError as e:
+            status, headers, body = e.code, dict(e.headers), e.read()
+        except Exception as e:  # noqa: BLE001
+            status, headers, body = None, {}, str(e).encode()
+        if status == 200 or attempt == retries:
+            return status, headers, body
+        time.sleep(settle)
 
 
 def check_identity() -> None:
