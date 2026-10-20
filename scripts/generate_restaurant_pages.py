@@ -11,6 +11,9 @@ from urllib.parse import quote
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(REPO, 'r')
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import site_fonts  # noqa: E402  — self-hosted webfont swap (SELF_HOST_FONTS=1)
+
 # ── Meta description: A/B test concluded (Sep 2026) ──────────────
 # The name-first variant showed no lift over 2 weeks and has been
 # removed — every page uses the standard FSA-first description.
@@ -20,7 +23,7 @@ OUT_DIR = os.path.join(REPO, 'r')
 # page tree so regeneration can never overwrite it and poison the
 # DYNAMIC placeholders. NEVER write to this file from generate_page.)
 with open(os.path.join(REPO, 'templates', 'restaurant.html')) as f:
-    TEMPLATE = f.read()
+    TEMPLATE = site_fonts.inject(f.read())
 
 def slugify(s: str) -> str:
     s = unicodedata.normalize('NFC', s.lower().strip())
