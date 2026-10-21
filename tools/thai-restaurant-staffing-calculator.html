@@ -13,7 +13,7 @@
 
 <noscript></noscript>
     <style>
-        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #7A6F6A; --line: #E7DFD5; --bg: #FBF7F0; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #7A6F6A; --line: #E7DFD5; --bg: #FBF7F0;--ink: #1A1614;}
 :focus-visible {
             outline: 2px solid #A3132B;
             outline-offset: 2px;
@@ -87,13 +87,41 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/tool-forms.css">
+<link rel="stylesheet" href="/css/tool-shell.css">
 </head>
-<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--fire" viewBox="0 0 24 24"><path d="M12 10.941c2.333 -3.308 .167 -7.823 -1 -8.941c0 3.395 -2.235 5.299 -3.667 6.706c-1.43 1.408 -2.333 3.294 -2.333 5.588c0 3.704 3.134 6.706 7 6.706c3.866 0 7 -3.002 7 -6.706c0 -1.712 -1.232 -4.403 -2.333 -5.588c-2.084 3.353 -3.257 3.353 -4.667 2.235" /></symbol><symbol id="i-solid--user-tie" viewBox="0 0 24 24"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /> <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" /> <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138" /></symbol><symbol id="i-solid--users" viewBox="0 0 24 24"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /> <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol></svg>
+<body class="tool-shell"><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--arrow-right" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol><symbol id="i-solid--bars" viewBox="0 0 24 24"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></symbol><symbol id="i-solid--fire" viewBox="0 0 24 24"><path d="M12 10.941c2.333 -3.308 .167 -7.823 -1 -8.941c0 3.395 -2.235 5.299 -3.667 6.706c-1.43 1.408 -2.333 3.294 -2.333 5.588c0 3.704 3.134 6.706 7 6.706c3.866 0 7 -3.002 7 -6.706c0 -1.712 -1.232 -4.403 -2.333 -5.588c-2.084 3.353 -3.257 3.353 -4.667 2.235" /></symbol><symbol id="i-solid--user-tie" viewBox="0 0 24 24"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /> <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" /> <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138" /></symbol><symbol id="i-solid--users" viewBox="0 0 24 24"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /> <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol></svg>
     <div class="grain"></div>
-    <nav><div class="nav-bar">
-        <a href="../index.html" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
-        <a href="../guides.html" style="color: rgba(26, 22, 20, 0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
-    </div></nav>
+    <!-- SITE-NAV -->
+    <nav class="nav" id="nav"><div class="nav-inner">
+            <a href="/index.html" class="logo">
+                <img src="/thaidata-mark-v2.svg" alt="ThaiData" class="logo-icon" width="32" height="32">
+                ThaiData
+            </a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg class="ic" aria-hidden="true"><use href="#i-solid--bars"></use></svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/thai-restaurants-city-breakdown-uk">All Cities</a></li>
+                <li><a href="/claim/?src=city-page">Claim or list your restaurant</a></li>
+            </ul>
+</div></nav>
+<style>/* SITE-NAV: shared with listing pages */
+nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; height: auto; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.35rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.nav .logo-icon { width: 32px; height: 32px; }
+.nav .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav .nav-links a { color: var(--ink2); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; transition: all 0.2s; }
+.nav .nav-links a:hover { color: var(--c2); background: #F7E8EB; }
+.nav .hamburger { display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; padding: 6px; }
+@media (max-width: 768px) {
+  .nav .hamburger { display: block; }
+  .nav .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px; gap: 4px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+  .nav .nav-links.open { display: flex; }
+  .nav .nav-links a { width: 100%; padding: 12px 16px; }
+}</style>
+<script>if (typeof toggleMenu !== 'function') { function toggleMenu() { var l = document.getElementById('navLinks'); if (l) l.classList.toggle('open'); } }</script>
+
 
     <div class="container">
         <header>
@@ -175,7 +203,12 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 </div>
             </div>
         </div>
-    </div>
+    
+        <div class="next-step">
+            <p>Staffing is your biggest fixed cost.</p>
+            <a href="/tools/thai-restaurant-break-even-calculator">See what those hours cost you in covers<svg class="ic" aria-hidden="true"><use href="#i-solid--arrow-right"></use></svg></a>
+        </div>
+</div>
 
     <footer><p>&copy; 2026 ThaiData.uk · Rates at April 2026 NLW (£12.71/hr) · <a href="../nlw-report.html">NLW Report</a></p></footer>
 
