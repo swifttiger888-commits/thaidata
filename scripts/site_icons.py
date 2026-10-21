@@ -150,9 +150,15 @@ def inject_css(html: str) -> str:
         return html
     if '.ic{display:inline-block;width:1em' in html:
         return html
-    if '</head>' not in html:
-        return html
-    return html.replace('</head>', '<style>' + ICON_CSS + '</style>\n</head>', 1)
+    block = '<style>' + ICON_CSS + '</style>\n'
+    # Some generated shells (city pages, tools) omit </head> entirely, so fall back
+    # to the <body> tag. Without a width/height rule an inline <svg> defaults to
+    # 300x150 CSS px and the icon dwarfs the text around it.
+    for anchor in ('</head>', '<body>', '<body '):
+        idx = html.find(anchor)
+        if idx != -1:
+            return html[:idx] + block + html[idx:]
+    return block + html
 
 
 def transform(html: str) -> str:

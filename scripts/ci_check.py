@@ -69,6 +69,10 @@ for path in glob.glob(os.path.join(REPO, '**', '*.html'), recursive=True):
         missing = uses - set(re.findall(r'<symbol id="([^"]+)"', html))
         if missing:
             errors.append(f'{rel}: <use> without an inline symbol: {sorted(missing)[:3]}')
+    # An inline <svg> with no sizing rule falls back to 300x150 px, so the icon
+    # dwarfs the text. Generated shells that omit </head> used to skip the rule.
+    if 'class="ic"' in html and '.ic{display:inline-block;width:1em' not in html:
+        errors.append(f'{rel}: <svg class="ic"> without the .ic sizing rule')
 for needed in ('assets/icons.svg', 'data/icon_map.json'):
     if not os.path.isfile(os.path.join(REPO, needed)):
         errors.append(f'missing icon asset: {needed}')
