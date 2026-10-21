@@ -1,0 +1,92 @@
+/* Shared form affordances for /tools/*.
+ *
+ * The 21 tools were built separately, several with a dark-theme form style that
+ * was later dropped onto a light page (or vice versa). Measured on the live site,
+ * three of them had typed text at 1.0-1.6:1 against their own field background,
+ * and two had no visible field boundary at all (1.02:1).
+ *
+ * Loaded last in <head> and deliberately !important: these are corrections, not
+ * a theme. Pages whose fields sit on a dark panel get body.tool-dark.
+ */
+
+input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=color]):not([type=file]),
+select,
+textarea {
+  background: #ffffff !important;
+  color: #1A1614 !important;
+  border: 1px solid #9A928D !important;   /* 3.0:1 against the ivory page */
+  border-radius: 8px;
+  caret-color: #A3132B;
+}
+
+input::placeholder,
+textarea::placeholder { color: #6B625C !important; opacity: 1; }
+
+body.tool-dark input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=color]):not([type=file]),
+body.tool-dark select,
+body.tool-dark textarea {
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: #F5F1EA !important;
+  border: 1px solid rgba(255, 255, 255, 0.38) !important;  /* 3.5:1 on near-black */
+}
+
+body.tool-dark input::placeholder,
+body.tool-dark textarea::placeholder { color: rgba(245, 241, 234, 0.6) !important; }
+
+/* Focus: one visible ring everywhere, on light or dark. */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #A3132B;
+  outline-offset: 2px;
+}
+body.tool-dark input:focus-visible,
+body.tool-dark select:focus-visible,
+body.tool-dark textarea:focus-visible { outline-color: #F2B21A; }
+
+/* Range sliders: nine of them across three tools had appearance:none with an
+ * 8%-white track and an invisible thumb, i.e. no visible handle at all. */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(74, 64, 60, 0.35);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: #A3132B;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(74, 64, 60, 0.35);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #A3132B;
+  border: 2px solid #ffffff;
+}
+body.tool-dark input[type="range"]::-webkit-slider-runnable-track { background: rgba(255, 255, 255, 0.28); }
+body.tool-dark input[type="range"]::-moz-range-track { background: rgba(255, 255, 255, 0.28); }
+
+/* Touch targets: measured at 25-38px tall on five pages. */
+button,
+.btn,
+a.btn { min-height: 40px; }

@@ -108,6 +108,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 <style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tool-forms.css">
 </head>
 <body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--file-lines" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4" /> <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /> <path d="M9 9l1 0" /> <path d="M9 13l6 0" /> <path d="M9 17l6 0" /></symbol><symbol id="i-solid--map-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" /></symbol></svg>
     <div class="grain"></div>
@@ -124,7 +125,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         </header>
 
         <div class="city-picker">
-            <select id="citySelect" onchange="generateReport()">
+            <select id="citySelect" onchange="generateReport()" aria-label="City">
                 <option value="">— Select a city —</option>
             </select>
             <button onclick="generateReport()">Generate Report</button>

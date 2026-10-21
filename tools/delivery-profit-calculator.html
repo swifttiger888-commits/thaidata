@@ -90,6 +90,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 <style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tool-forms.css">
 </head>
 <body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--calculator" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -14" /> <path d="M8 8a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1l0 -1" /> <path d="M8 14l0 .01" /> <path d="M12 14l0 .01" /> <path d="M16 14l0 .01" /> <path d="M8 17l0 .01" /> <path d="M12 17l0 .01" /> <path d="M16 17l0 .01" /></symbol><symbol id="i-solid--circle-check" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /> <path d="M9 12l2 2l4 -4" /></symbol><symbol id="i-solid--skull" viewBox="0 0 24 24"><path d="M12 4c4.418 0 8 3.358 8 7.5c0 1.901 -.755 3.637 -2 4.96l0 2.54a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-2.54c-1.245 -1.322 -2 -3.058 -2 -4.96c0 -4.142 3.582 -7.5 8 -7.5" /> <path d="M10 17v3" /> <path d="M14 17v3" /> <path d="M8 11a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M14 11a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></symbol><symbol id="i-solid--triangle-exclamation" viewBox="0 0 24 24"><path d="M12 9v4" /> <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" /> <path d="M12 16h.01" /></symbol></svg>
     <div class="grain"></div>
@@ -110,15 +111,15 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <h3>Your Dish</h3>
                 <div class="input-group unit">
                     <label>Dine-in menu price</label>
-                    <input type="number" id="priceInput" value="13.50" step="0.50" min="5" oninput="calc()">
+                    <input type="number" id="priceInput" value="13.50" step="0.50" min="5" oninput="calc()" aria-label="Dine-in menu price">
                 </div>
                 <div class="input-group">
                     <label>Food cost %</label>
-                    <input type="number" id="costInput" value="28" min="10" max="60" oninput="calc()">
+                    <input type="number" id="costInput" value="28" min="10" max="60" oninput="calc()" aria-label="Food cost %">
                 </div>
                 <div class="input-group">
                     <label>Delivery price markup</label>
-                    <input type="number" id="markupInput" value="15" min="0" max="50" oninput="calc()">
+                    <input type="number" id="markupInput" value="15" min="0" max="50" oninput="calc()" aria-label="Delivery price markup">
                     <div class="desc" style="font-size:0.7rem;color:var(--ink3);margin-top:4px;">% you add to delivery menu price</div>
                 </div>
                 <p style="font-size:0.75rem;color:var(--ink4);margin-top:16px;">Platform commissions: Deliveroo 32%, Uber Eats 30%, Just Eat 14%. VAT at 20% on all.</p>

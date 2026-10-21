@@ -85,6 +85,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 <style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tool-forms.css">
 </head>
 <body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--magnifying-glass" viewBox="0 0 24 24"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></symbol><symbol id="i-solid--spinner" viewBox="0 0 24 24"><path d="M12 6l0 -3" /> <path d="M16.25 7.75l2.15 -2.15" /> <path d="M18 12l3 0" /> <path d="M16.25 16.25l2.15 2.15" /> <path d="M12 18l0 3" /> <path d="M7.75 16.25l-2.15 2.15" /> <path d="M6 12l-3 0" /> <path d="M7.75 7.75l-2.15 -2.15" /></symbol><symbol id="i-solid--utensils" viewBox="0 0 24 24"><path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12m0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" /></symbol></svg>
     <div class="grain"></div>
@@ -101,7 +102,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         </header>
 
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="e.g. Rosa's Thai, Giggling Squid, Thai Edge..." onkeydown="if(event.key==='Enter')search()">
+            <input type="text" id="searchInput" placeholder="e.g. Rosa's Thai, Giggling Squid, Thai Edge..." onkeydown="if(event.key==='Enter')search()" aria-label="Restaurant name, city or postcode">
             <button id="searchBtn" onclick="search()">Search</button>
         </div>
 

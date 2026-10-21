@@ -157,6 +157,7 @@ body {
 <style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tool-forms.css">
 <body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--circle-info" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol><symbol id="i-solid--spinner" viewBox="0 0 24 24"><path d="M12 6l0 -3" /> <path d="M16.25 7.75l2.15 -2.15" /> <path d="M18 12l3 0" /> <path d="M16.25 16.25l2.15 2.15" /> <path d="M12 18l0 3" /> <path d="M7.75 16.25l-2.15 2.15" /> <path d="M6 12l-3 0" /> <path d="M7.75 7.75l-2.15 -2.15" /></symbol><symbol id="i-solid--wand-magic" viewBox="0 0 24 24"><path d="M6 21l15 -15l-3 -3l-15 15l3 3" /> <path d="M15 6l3 3" /> <path d="M9 3a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" /> <path d="M19 13a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" /></symbol></svg>
     <div class="grain"></div>
     <nav>
@@ -178,12 +179,12 @@ body {
                 <div class="tool-sidebar">
                     <div class="input-group">
                         <label class="label">Restaurant Name</label>
-                        <input type="text" class="input-text" id="resName" placeholder="e.g. Lime & Chilli London">
+                        <input type="text" class="input-text" id="resName" placeholder="e.g. Lime & Chilli London" aria-label="Restaurant Name">
                     </div>
                     <div class="input-group">
                         <label class="label">Paste Your Menu Here</label>
                         <p style="font-size:0.85rem; color:var(--ink4); margin-bottom:10px;">Paste dish names and prices. One per line works best.</p>
-                        <textarea class="textarea" id="menuInput" placeholder="Pad Thai - £13.50&#10;Green Curry - £14.95&#10;Massaman Beef - £18.00"></textarea>
+                        <textarea class="textarea" id="menuInput" placeholder="Pad Thai - £13.50&#10;Green Curry - £14.95&#10;Massaman Beef - £18.00" aria-label="Paste dish names and prices. One per line works best."></textarea>
                     </div>
                     <button class="btn-magic" onclick="generateSchema()" id="genBtn">
                         <svg class="ic" aria-hidden="true"><use href="#i-solid--wand-magic"></use></svg> Generate AI Code

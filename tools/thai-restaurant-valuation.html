@@ -79,6 +79,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 <style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tool-forms.css">
 </head>
 <body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--circle-info" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol><symbol id="i-solid--sterling-sign" viewBox="0 0 24 24"><path d="M17 18.5a6 6 0 0 1 -5 0a6 6 0 0 0 -5 .5a3 3 0 0 0 2 -2.5v-7.5a4 4 0 0 1 7.45 -2m-2.55 6h-7" /></symbol></svg>
     <div class="grain"></div>
@@ -99,15 +100,15 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <h3>Your Numbers</h3>
                 <div class="input-group">
                     <label>Annual turnover (£)</label>
-                    <input type="number" id="turnover" value="350000" min="50000" step="10000" oninput="calc()">
+                    <input type="number" id="turnover" value="350000" min="50000" step="10000" oninput="calc()" aria-label="Annual turnover (£)">
                 </div>
                 <div class="input-group">
                     <label>Net profit (£) — after all costs, before tax</label>
-                    <input type="number" id="profit" value="25000" min="0" step="1000" oninput="calc()">
+                    <input type="number" id="profit" value="25000" min="0" step="1000" oninput="calc()" aria-label="Net profit (£) — after all costs, before tax">
                 </div>
                 <div class="input-group">
                     <label>Location</label>
-                    <select id="location" onchange="calc()">
+                    <select id="location" onchange="calc()" aria-label="Location">
                         <option value="london">London (Zone 1-2)</option>
                         <option value="london-outer">London (Outer)</option>
                         <option value="city-large" selected>Large city (Manchester, Birmingham, Leeds, etc.)</option>
@@ -117,7 +118,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 </div>
                 <div class="input-group">
                     <label>Lease remaining</label>
-                    <select id="lease" onchange="calc()">
+                    <select id="lease" onchange="calc()" aria-label="Lease remaining">
                         <option value="long">10+ years</option>
                         <option value="medium" selected>5-10 years</option>
                         <option value="short">2-5 years</option>
@@ -126,7 +127,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 </div>
                 <div class="input-group">
                     <label>Google rating (★)</label>
-                    <select id="rating" onchange="calc()">
+                    <select id="rating" onchange="calc()" aria-label="Google rating (★)">
                         <option value="4.5" selected>4.5+</option>
                         <option value="4.0">4.0-4.4</option>
                         <option value="3.5">3.5-3.9</option>
@@ -135,7 +136,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 </div>
                 <div class="input-group">
                     <label>Freehold or leasehold?</label>
-                    <select id="tenure" onchange="calc()">
+                    <select id="tenure" onchange="calc()" aria-label="Freehold or leasehold?">
                         <option value="leasehold" selected>Leasehold</option>
                         <option value="freehold">Freehold (includes property)</option>
                     </select>
