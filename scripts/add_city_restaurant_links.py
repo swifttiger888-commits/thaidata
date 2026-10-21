@@ -287,7 +287,12 @@ for filename in sorted(os.listdir(cities_dir)):
     # Prefer the shell's own region (county/location pages), then any <footer> element,
     # then bare </body>. The old test looked for '<footer>' exactly, which misses
     # '<footer class="site-footer">' and would strand the section after the footer.
-    if '<!-- SHELL:browse -->' in html and '<!-- END:SHELL:browse -->' in html:
+    if '<!-- BROWSE-SLOT -->' in html:
+        # Pages whose directory sits directly under the hero mark the slot; without
+        # this the section would drift back below the market analysis on every run.
+        slot = html.index('<!-- BROWSE-SLOT -->') + len('<!-- BROWSE-SLOT -->')
+        html = html[:slot] + '\n' + section + '\n' + html[slot:]
+    elif '<!-- SHELL:browse -->' in html and '<!-- END:SHELL:browse -->' in html:
         start = html.index('<!-- SHELL:browse -->') + len('<!-- SHELL:browse -->')
         stop = html.index('<!-- END:SHELL:browse -->', start)
         html = html[:start] + '\n' + section + '\n' + html[stop:]
