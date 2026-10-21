@@ -24,6 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'scripts'))
 from apply_city_nav import CSS as NAV_CSS, NAV, SCRIPT as NAV_SCRIPT  # noqa: E402
+from head_anchor import head_end  # noqa: E402
 
 LINK = '<link rel="stylesheet" href="/css/tool-shell.css">'
 
@@ -50,14 +51,42 @@ BATCH = {
         'Test what a price change does to order volume'),
 }
 
+# Batch 2: the lookup and report tools. Same frame, no result-template changes.
+BATCH2 = {
+    'thai-restaurant-hygiene-lookup.html': (
+        'Found your rating?',
+        '/claim/',
+        'Claim your listing and keep it accurate'),
+    'thai-competitor-radar.html': (
+        'See the whole market, not just the competition.',
+        '/tools/thai-restaurant-market-report',
+        'Run a full market entry report for the city'),
+    'thai-restaurant-market-report.html': (
+        'Now compare the cities on cost and demand.',
+        '/tools/where-to-open-thai-restaurant-uk',
+        'Rank every city against your priorities'),
+    'thai-restaurant-health-check.html': (
+        'Gaps cost money quietly.',
+        '/tools/thai-restaurant-break-even-calculator',
+        'See what they mean in covers per day'),
+    'NAP_CHECKER.html': (
+        'Inconsistent details lose you customers.',
+        '/claim/',
+        'Claim your listing and fix it at the source'),
+}
+
 
 def add_link(text: str) -> str:
-    if LINK in text:
+    end = head_end(text)
+    if end > 0 and LINK in text[:end]:
         return text
     anchor = '<link rel="stylesheet" href="/css/tool-forms.css">'
-    if anchor in text:
-        return text.replace(anchor, anchor + '\n' + LINK, 1)
-    return text.replace('</head>', LINK + '\n</head>', 1)
+    if end > 0 and anchor in text[:end]:
+        i = text.find(anchor) + len(anchor)
+        return text[:i] + '\n' + LINK + text[i:]
+    if end > 0:
+        return text[:end] + LINK + '\n' + text[end:]
+    return text
 
 
 def swap_nav(text: str) -> str:
@@ -113,7 +142,7 @@ def next_step(text: str, prompt: str, href: str, label: str) -> str:
 
 def main(apply_changes: bool) -> None:
     touched = 0
-    for name, (prompt, href, label) in BATCH.items():
+    for name, (prompt, href, label) in {**BATCH, **BATCH2}.items():
         page = ROOT / 'tools' / name
         original = page.read_text()
         text = original
@@ -126,7 +155,7 @@ def main(apply_changes: bool) -> None:
             touched += 1
             if apply_changes:
                 page.write_text(text)
-    print(f'{"rewrote" if apply_changes else "would rewrite"} {touched} of {len(BATCH)} pages')
+    print(f'{"rewrote" if apply_changes else "would rewrite"} {touched} of {len(BATCH) + len(BATCH2)} pages')
     if not apply_changes:
         print('dry run — pass --apply')
 

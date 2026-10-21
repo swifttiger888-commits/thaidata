@@ -30,6 +30,8 @@ import argparse
 import json
 import pathlib
 import re
+
+from head_anchor import head_end
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -161,8 +163,12 @@ def inject_css(html: str) -> str:
     block = '<style>' + ICON_CSS + '</style>\n'
     # Some generated shells (city pages, tools) omit </head> entirely, so fall back
     # to the <body> tag. Without a width/height rule an inline <svg> defaults to
-    # 300x150 CSS px and the icon dwarfs the text around it.
-    for anchor in ('</head>', '<body>', '<body '):
+    # 300x150 CSS px and the icon dwarfs the text around it. The head anchor must be
+    # the last </head> before <body>: an inline script may carry a stray one.
+    end = head_end(html)
+    if end > 0:
+        return html[:end] + block + html[end:]
+    for anchor in ('<body>', '<body '):
         idx = html.find(anchor)
         if idx != -1:
             return html[:idx] + block + html[idx:]

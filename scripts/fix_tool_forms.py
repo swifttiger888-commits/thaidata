@@ -22,6 +22,8 @@ import re
 import sys
 from pathlib import Path
 
+from head_anchor import head_end
+
 ROOT = Path(__file__).resolve().parent.parent
 TOOLS = ROOT / 'tools'
 LINK = '<link rel="stylesheet" href="/css/tool-forms.css">'
@@ -54,10 +56,11 @@ def first_body_level(text: str, start: int = 0) -> int:
 
 
 def add_link(text: str) -> str:
-    if LINK in text:
+    end = head_end(text)
+    if end > 0 and LINK in text[:end]:
         return text
-    if '</head>' in text:
-        return text.replace('</head>', LINK + '\n</head>', 1)
+    if end > 0:
+        return text[:end] + LINK + '\n' + text[end:]
     i = first_body_level(text, text.lower().find('<head'))
     if i < 0:
         return text

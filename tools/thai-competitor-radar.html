@@ -74,18 +74,48 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink4); font-size: 0.85rem; margin-top: 40px; }
         footer a { color: var(--ink4); text-decoration: none; }
     </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://thaidata.uk/#tools"},{"@type":"ListItem","position":3,"name":"Thai Restaurant Competitor Radar — Hygiene Ratings <style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://thaidata.uk/tools"},{"@type":"ListItem","position":3,"name":"Competitor Radar","item":"https://thaidata.uk/tools/thai-competitor-radar"}]}
+</script>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/tool-forms.css">
-</head> M......"}]}</script>
+<link rel="stylesheet" href="/css/tool-shell.css">
+<style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
 </head>
-<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--chart-line" viewBox="0 0 24 24"><path d="M4 19l16 0" /> <path d="M4 15l4 -6l4 2l4 -5l4 4" /></symbol><symbol id="i-solid--lightbulb" viewBox="0 0 24 24"><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" /> <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" /> <path d="M9.7 17l4.6 0" /></symbol><symbol id="i-solid--satellite-dish" viewBox="0 0 24 24"><path d="M3.707 6.293l2.586 -2.586a1 1 0 0 1 1.414 0l5.586 5.586a1 1 0 0 1 0 1.414l-2.586 2.586a1 1 0 0 1 -1.414 0l-5.586 -5.586a1 1 0 0 1 0 -1.414" /> <path d="M6 10l-3 3l3 3l3 -3" /> <path d="M10 6l3 -3l3 3l-3 3" /> <path d="M12 12l1.5 1.5" /> <path d="M14.5 17a2.5 2.5 0 0 0 2.5 -2.5" /> <path d="M15 21a6 6 0 0 0 6 -6" /></symbol></svg>
+<body class="tool-shell"><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--arrow-right" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol><symbol id="i-solid--bars" viewBox="0 0 24 24"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></symbol><symbol id="i-solid--chart-line" viewBox="0 0 24 24"><path d="M4 19l16 0" /> <path d="M4 15l4 -6l4 2l4 -5l4 4" /></symbol><symbol id="i-solid--lightbulb" viewBox="0 0 24 24"><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" /> <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" /> <path d="M9.7 17l4.6 0" /></symbol><symbol id="i-solid--satellite-dish" viewBox="0 0 24 24"><path d="M3.707 6.293l2.586 -2.586a1 1 0 0 1 1.414 0l5.586 5.586a1 1 0 0 1 0 1.414l-2.586 2.586a1 1 0 0 1 -1.414 0l-5.586 -5.586a1 1 0 0 1 0 -1.414" /> <path d="M6 10l-3 3l3 3l3 -3" /> <path d="M10 6l3 -3l3 3l-3 3" /> <path d="M12 12l1.5 1.5" /> <path d="M14.5 17a2.5 2.5 0 0 0 2.5 -2.5" /> <path d="M15 21a6 6 0 0 0 6 -6" /></symbol></svg>
     <div class="grain"></div>
-    <nav><div class="nav-bar">
-        <a href="../index.html" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
-        <a href="../guides.html" style="color: rgba(26, 22, 20, 0.6);font-size:0.9rem;text-decoration:none;">← Tools</a>
-    </div></nav>
+    <!-- SITE-NAV -->
+    <nav class="nav" id="nav"><div class="nav-inner">
+            <a href="/index.html" class="logo">
+                <img src="/thaidata-mark-v2.svg" alt="ThaiData" class="logo-icon" width="32" height="32">
+                ThaiData
+            </a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg class="ic" aria-hidden="true"><use href="#i-solid--bars"></use></svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/thai-restaurants-city-breakdown-uk">All Cities</a></li>
+                <li><a href="/claim/?src=city-page">Claim or list your restaurant</a></li>
+            </ul>
+</div></nav>
+<style>/* SITE-NAV: shared with listing pages */
+nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; height: auto; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.35rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.nav .logo-icon { width: 32px; height: 32px; }
+.nav .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav .nav-links a { color: var(--ink2); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; transition: all 0.2s; }
+.nav .nav-links a:hover { color: var(--c2); background: #F7E8EB; }
+.nav .hamburger { display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; padding: 6px; }
+@media (max-width: 768px) {
+  .nav .hamburger { display: block; }
+  .nav .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px; gap: 4px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+  .nav .nav-links.open { display: flex; }
+  .nav .nav-links a { width: 100%; padding: 12px 16px; }
+}</style>
+<script>if (typeof toggleMenu !== 'function') { function toggleMenu() { var l = document.getElementById('navLinks'); if (l) l.classList.toggle('open'); } }</script>
+
 
     <div class="container">
         <header>
@@ -102,7 +132,12 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         </div>
 
         <div id="radar" class="radar"></div>
-    </div>
+    
+        <div class="next-step">
+            <p>See the whole market, not just the competition.</p>
+            <a href="/tools/thai-restaurant-market-report">Run a full market entry report for the city<svg class="ic" aria-hidden="true"><use href="#i-solid--arrow-right"></use></svg></a>
+        </div>
+</div>
 
     <footer><p>&copy; 2026 ThaiData.uk · Ratings from FSA · Historical tracking coming with weekly data refresh</p></footer>
 

@@ -246,6 +246,45 @@ body > .container > .controls {
   line-height: 1.3;
 }
 
+
+/* ---------- quiz / option buttons ---------- */
+
+.tool-shell .q {
+  background: #FFFFFF;
+  border: 1px solid var(--shell-line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 0 0 12px;
+}
+
+.tool-shell .q h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--shell-ink);
+}
+
+.tool-shell .opt {
+  background: #FFFFFF;
+  border: 1px solid #C9C1B8;
+  color: var(--shell-ink2);
+  border-radius: 999px;
+  padding: 9px 16px;
+  min-height: 40px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.tool-shell .opt:hover { border-color: var(--shell-red); }
+
+.tool-shell .opt.sel {
+  background: #F7E8EB;
+  border-color: var(--shell-red);
+  color: var(--shell-red);
+  font-weight: 600;
+}
+
 /* ---------- next step ---------- */
 
 .tool-shell .next-step {

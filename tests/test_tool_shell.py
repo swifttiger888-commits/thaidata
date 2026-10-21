@@ -18,6 +18,11 @@ BATCH = [
     'thai-restaurant-staffing-calculator.html',
     'thai-restaurant-valuation.html',
     'delivery-profit-calculator.html',
+    'thai-restaurant-hygiene-lookup.html',
+    'thai-competitor-radar.html',
+    'thai-restaurant-market-report.html',
+    'thai-restaurant-health-check.html',
+    'NAP_CHECKER.html',
 ]
 
 
@@ -38,7 +43,8 @@ def test_batch_pages_have_one_next_step():
     for name in BATCH:
         html = text_of(name)
         assert html.count('class="next-step"') == 1, name
-        assert 'href="/tools/' in html.split('class="next-step"')[1][:400], name
+        block = html.split('class="next-step"')[1][:400]
+        assert 'href="/' in block, name
 
 
 def test_no_tool_ships_a_malformed_declaration():
@@ -69,3 +75,31 @@ def test_shell_keeps_the_result_list_variant_safe():
     # the grid treatment must only apply to stat strips, not to label/value lists
     assert '.tool-shell .breakdown:has(.bd-item)' in css
     assert '.tool-shell .break-row' in css
+
+
+def test_no_markup_inside_json_ld():
+    """A stylesheet link injected into a JSON-LD string never loads.
+
+    thai-competitor-radar shipped with its fonts, form styles and .ic rules inside
+    a breadcrumb string because its inline JSON-LD carried a stray '</head>'.
+    """
+    bad = []
+    for page in REPO.rglob('*.html'):
+        if '.git' in page.parts:
+            continue
+        text = page.read_text(errors='ignore')
+        for m in re.finditer(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', text, re.S):
+            block = m.group(1)
+            if '<link' in block or '<style' in block or '</head>' in block:
+                bad.append(str(page.relative_to(REPO)))
+                break
+    assert not bad, bad
+
+
+def test_stylesheets_are_in_the_head_not_a_string():
+    for name in BATCH:
+        html = text_of(name)
+        body_at = html.lower().find('<body')
+        head = html[:body_at] if body_at > 0 else html
+        for needle in ('/css/fonts.css', '/css/tool-forms.css', '/css/tool-shell.css'):
+            assert needle in head, (name, needle)
