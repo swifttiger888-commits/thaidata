@@ -14,7 +14,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 TOOLS = REPO / 'tools'
 PAGES = sorted(TOOLS.glob('*.html'))
-DARK = {'AI_AUDITOR.html', 'WHOLESALE_BENCHMARKER.html',
+DARK = {'AI_AUDITOR.html',
         'PROFIT_MARGIN_DEFENDER.html', 'VISA_ASSISTANT.html'}
 
 

@@ -52,6 +52,34 @@ BATCH = {
         'Test what a price change does to order volume'),
 }
 
+# Batch 4: the last six — reports, dashboards and the two dark tools.
+BATCH4 = {
+    'BENCHMARKS.html': (
+        'Benchmarks tell you the price. Location tells you the market.',
+        '/tools/where-to-open-thai-restaurant-uk',
+        'Rank the cities before you sign a lease'),
+    'RESILIENCE_DASHBOARD.html': (
+        'Survival is a margin question.',
+        '/tools/thai-restaurant-market-report',
+        'Read the market before the next renewal'),
+    'WHOLESALE_BENCHMARKER.html': (
+        'Now compare that against the suppliers you actually use.',
+        '/tools/thai-supplier-price-tracker',
+        'Check current wholesale prices by ingredient'),
+    'where-to-open-thai-restaurant-uk.html': (
+        'The shortlist is only half the decision.',
+        '/tools/thai-restaurant-market-report',
+        'Model the market for your chosen city'),
+    'PROFIT_MARGIN_DEFENDER.html': (
+        'Fixed costs do not move. Covers do.',
+        '/tools/thai-restaurant-break-even-calculator',
+        'Work out the covers you need each day'),
+    'VISA_ASSISTANT.html': (
+        'A sponsored chef changes your wage bill.',
+        '/tools/thai-restaurant-staffing-calculator',
+        'Price the rota with the new salary in it'),
+}
+
 # Batch 2: the lookup and report tools. Same frame, no result-template changes.
 BATCH2 = {
     'thai-restaurant-hygiene-lookup.html': (
@@ -103,6 +131,9 @@ BATCH3 = {
 
 def add_link(text: str) -> str:
     end = head_end(text)
+    if end < 0:
+        # no </head>: the head runs up to the first body-level element
+        end = first_body_level(text, text.lower().find('<head'))
     if end > 0 and LINK in text[:end]:
         return text
     anchor = '<link rel="stylesheet" href="/css/tool-forms.css">'
@@ -111,17 +142,13 @@ def add_link(text: str) -> str:
         return text[:i] + '\n' + LINK + text[i:]
     if end > 0:
         return text[:end] + LINK + '\n' + text[end:]
-    # pages with no </head> at all: put it immediately before the body starts
-    i = first_body_level(text, text.lower().find('<head'))
-    if i > 0:
-        return text[:i] + LINK + '\n' + text[i:]
     return text
 
 
 def swap_nav(text: str) -> str:
     if '<!-- SITE-NAV -->' in text:
         return text
-    m = re.search(r'<nav>.*?</nav>', text, re.S | re.I)
+    m = re.search(r'<nav[^>]*>.*?</nav>', text, re.S | re.I)
     if not m:
         return text
     block = NAV + NAV_CSS + NAV_SCRIPT
@@ -171,7 +198,7 @@ def next_step(text: str, prompt: str, href: str, label: str) -> str:
 
 def main(apply_changes: bool) -> None:
     touched = 0
-    for name, (prompt, href, label) in {**BATCH, **BATCH2, **BATCH3}.items():
+    for name, (prompt, href, label) in {**BATCH, **BATCH2, **BATCH3, **BATCH4}.items():
         page = ROOT / 'tools' / name
         original = page.read_text()
         text = original
@@ -184,7 +211,7 @@ def main(apply_changes: bool) -> None:
             touched += 1
             if apply_changes:
                 page.write_text(text)
-    total = len(BATCH) + len(BATCH2) + len(BATCH3)
+    total = len(BATCH) + len(BATCH2) + len(BATCH3) + len(BATCH4)
     print(f'{"rewrote" if apply_changes else "would rewrite"} {touched} of {total} pages')
     if not apply_changes:
         print('dry run — pass --apply')

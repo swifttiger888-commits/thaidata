@@ -12,6 +12,10 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 TOOLS = REPO / 'tools'
+SHARED_VARS = set()
+for _sheet in (REPO / 'css').glob('*.css'):
+    SHARED_VARS |= set(re.findall(r'(--[a-z0-9-]+)\s*:', _sheet.read_text(errors='ignore')))
+
 FONT_EXEMPT = {'VISA_ASSISTANT.html'}   # self-contained, ships no site fonts
 HEAD_EXEMPT = {'VISA_ASSISTANT.html'}   # no <head>/<body> structure to speak of
 BATCH = [
@@ -30,6 +34,12 @@ BATCH = [
     'AI_AUDITOR.html',
     'thai-ingredient-price-tracker.html',
     'thai-supplier-price-tracker.html',
+    'BENCHMARKS.html',
+    'RESILIENCE_DASHBOARD.html',
+    'WHOLESALE_BENCHMARKER.html',
+    'where-to-open-thai-restaurant-uk.html',
+    'PROFIT_MARGIN_DEFENDER.html',
+    'VISA_ASSISTANT.html',
 ]
 
 
@@ -71,6 +81,7 @@ def test_custom_properties_are_declared_before_use():
     for page in TOOLS.glob('*.html'):
         css = '\n'.join(re.findall(r'<style[^>]*>(.*?)</style>', page.read_text(errors='ignore'), re.S))
         defined = set(re.findall(r'(--[a-z0-9-]+)\s*:', css))
+        defined |= SHARED_VARS
         used = set(re.findall(r'var\((--[a-z0-9-]+)', css))
         missing = used - defined
         if missing:

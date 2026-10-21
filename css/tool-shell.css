@@ -97,6 +97,9 @@ body > .container > header p {
   color: var(--shell-red);
 }
 
+.tool-shell .wrap { text-align: left; }
+.tool-shell .wrap p { margin-left: 0; margin-right: auto; }
+
 .tool-shell .auditor-header {
   text-align: left;
   max-width: 720px;
@@ -332,6 +335,89 @@ body > .container > .controls {
   color: var(--shell-red);
   font-weight: 600;
 }
+
+
+/* the shared header carries its own tokens: tool pages do not define them */
+.tool-shell .nav {
+  --ink: #1A1614;
+  --ink2: #3D3733;
+  --line: #E7DFD5;
+  --c2: #A3132B;
+}
+
+/* the site header keeps its own colours on tools with a themed page palette */
+.tool-shell .nav .logo,
+.tool-shell .nav .nav-links a,
+.tool-shell .nav .hamburger { color: #1A1614 !important; }
+
+.tool-shell .nav .logo img { display: block; }
+
+/* ---------- dark tools ---------- */
+
+body.tool-shell.tool-dark {
+  --shell-ink: #F7F3EC;
+  --shell-ink2: #E6DED4;
+  --shell-mute: #BCB2A7;
+  --shell-line: rgba(255, 255, 255, 0.16);
+  --shell-red: #F2B21A;
+}
+
+body.tool-shell.tool-dark h1,
+body.tool-shell.tool-dark h2,
+body.tool-shell.tool-dark h3 { color: var(--shell-ink); }
+
+body.tool-shell.tool-dark .next-step {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--shell-line);
+}
+
+body.tool-shell.tool-dark .next-step p { color: var(--shell-mute); }
+
+body.tool-shell.tool-dark .next-step a {
+  background: var(--shell-red);
+  color: #1A1614;
+}
+
+/* ---------- data tables ---------- */
+
+.tool-shell table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: #FFFFFF;
+  border: 1px solid var(--shell-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tool-shell thead th {
+  text-align: left;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--shell-mute);
+  background: #FAF7F2;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--shell-line);
+  white-space: nowrap;
+}
+
+.tool-shell tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #EFE8DF;
+  color: var(--shell-ink2);
+  vertical-align: top;
+}
+
+.tool-shell tbody tr:last-child td { border-bottom: 0; }
+.tool-shell tbody tr:hover td { background: #FBF7F0; }
+
+.tool-shell .table-wrap { overflow-x: auto; }
+
+body.tool-shell.tool-dark table { background: rgba(255, 255, 255, 0.04); }
+body.tool-shell.tool-dark thead th { background: rgba(255, 255, 255, 0.06); color: var(--shell-mute); }
+body.tool-shell.tool-dark tbody td { border-bottom-color: rgba(255, 255, 255, 0.1); color: var(--shell-ink2); }
+body.tool-shell.tool-dark tbody tr:hover td { background: rgba(255, 255, 255, 0.05); }
 
 /* ---------- next step ---------- */
 

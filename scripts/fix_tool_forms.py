@@ -28,8 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TOOLS = ROOT / 'tools'
 LINK = '<link rel="stylesheet" href="/css/tool-forms.css">'
 
-DARK = {'AI_AUDITOR.html', 'WHOLESALE_BENCHMARKER.html',
-        'PROFIT_MARGIN_DEFENDER.html', 'VISA_ASSISTANT.html'}
+DARK = {'AI_AUDITOR.html', 'PROFIT_MARGIN_DEFENDER.html', 'VISA_ASSISTANT.html'}
 
 # where the automatic extraction picked up a page heading or a stale value
 OVERRIDES = {
