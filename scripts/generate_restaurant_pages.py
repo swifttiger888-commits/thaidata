@@ -294,6 +294,19 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         """re.sub that doesn't interpret backslashes in replacement (safe for names with smart quotes)."""
         return re.sub(pattern, lambda m: replacement, text, flags=re.DOTALL)
 
+    def replace_block(label: str, pattern: str, replacement: str, text: str) -> str:
+        """Replace one DYNAMIC block and fail loudly if its anchor has drifted.
+
+        A str.replace() whose anchor no longer exists is a silent no-op: the template
+        default ships instead (this is how every listing kept 'Leeds, West Yorkshire'
+        after the icon markup changed). Anchor on the marker + element class, never on
+        the inner icon markup.
+        """
+        new, n = re.subn(pattern, lambda m: replacement, text, count=1, flags=re.DOTALL)
+        if n != 1:
+            raise ValueError(f'{label} anchor drifted — check templates/restaurant.html ({name}, {city})')
+        return new
+
     name = r['name']
     city = r['city']
     city_slug = slugify(city)
@@ -541,10 +554,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     html = safe_sub(r'<!-- DYNAMIC: schema_breadcrumb -->.*?</script>', schema_breadcrumb, html)
 
     # ---- Nav / Breadcrumb ----
-    html = html.replace(
-        '<!-- DYNAMIC: nav_back_link -->\n                <li><a href="/cities/leeds"><i class="fas fa-arrow-left" style="font-size:0.75em;margin-right:4px;"></i>Leeds</a></li>',
-        f'                <li><a href="/cities/{city_slug}"><i class="fas fa-arrow-left" style="font-size:0.75em;margin-right:4px;"></i>{city}</a></li>'
-    )
+    html = replace_block(
+        'nav_back_link',
+        r'<!-- DYNAMIC: nav_back_link -->\s*\n\s*<li><a href="/cities/[^"]*">.*?</a></li>',
+        f'                <li><a href="/cities/{city_slug}"><i class="fas fa-arrow-left" style="font-size:0.75em;margin-right:4px;"></i>{city}</a></li>',
+        html)
     html = html.replace(
         '<!-- DYNAMIC: breadcrumb -->\n        <a href="/">Home</a>\n        <span> › </span>\n        <a href="/cities/leeds">Leeds</a>\n        <span> › </span>\n        <span>My Thai</span>',
         f'        <a href="/">Home</a>\n        <span> › </span>\n        <a href="/cities/{city_slug}">{city}</a>\n        <span> › </span>\n        <span>{name}</span>'
@@ -561,14 +575,16 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         html = html.replace('<!-- DYNAMIC: closed_banner -->\n', '')
 
     # ---- Hero badges ----
-    html = html.replace(
-        '<!-- DYNAMIC: badge_rating -->\n                <span class="badge badge-rating">\n                    <i class="fas fa-star"></i> FSA 5/5\n                </span>',
-        f'                <span class="badge badge-rating">\n                    <i class="fas {"fa-star" if rating_is_scored(rating) else "fa-clipboard-check"}"></i> {scheme_label} {rating_text(rating)}\n                </span>'
-    )
-    html = html.replace(
-        '<!-- DYNAMIC: badge_type -->\n                <span class="badge badge-type">\n                    <i class="fas fa-utensils"></i> Restaurant\n                </span>',
-        f'                <span class="badge badge-type">\n                    <i class="fas {rtype_icon}"></i> {rtype_label}\n                </span>'
-    )
+    html = replace_block(
+        'badge_rating',
+        r'<!-- DYNAMIC: badge_rating -->\s*\n\s*<span class="badge badge-rating">.*?</span>',
+        f'                <span class="badge badge-rating">\n                    <i class="fas {"fa-star" if rating_is_scored(rating) else "fa-clipboard-check"}"></i> {scheme_label} {rating_text(rating)}\n                </span>',
+        html)
+    html = replace_block(
+        'badge_type',
+        r'<!-- DYNAMIC: badge_type -->\s*\n\s*<span class="badge badge-type">.*?</span>',
+        f'                <span class="badge badge-type">\n                    <i class="fas {rtype_icon}"></i> {rtype_label}\n                </span>',
+        html)
 
     # ---- Restaurant name (keep "<em>last word</em>" style, add type + city suffix) ----
     # Kimi italicized the last word. Let's keep it simple: wrap last word in <em> if multi-word
@@ -590,10 +606,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     location_text = f'{city}'
     if region:
         location_text += f', {region}'
-    html = html.replace(
-        '<!-- DYNAMIC: location_line -->\n            <div class="hero-location">\n                <i class="fas fa-map-marker-alt"></i> Leeds, West Yorkshire\n            </div>',
-        f'            <div class="hero-location">\n                <i class="fas fa-map-marker-alt"></i> {location_text}\n            </div>'
-    )
+    html = replace_block(
+        'location_line',
+        r'<!-- DYNAMIC: location_line -->\s*\n\s*<div class="hero-location">.*?</div>',
+        f'            <div class="hero-location">\n                <i class="fas fa-location-dot"></i> {location_text}\n            </div>',
+        html)
 
     # ---- Hero photo (HERO V2.1 photo mode): deterministic rotation from the curated set ----
     _hero_n = (zlib.crc32(str(fsa_id).encode()) % 12) + 1
@@ -613,7 +630,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             )
         if enr_phone:
             strip_items.append(
-                '<a class="cs-item" href="tel:' + enr_phone + '" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-alt" style="margin-right:5px;"></i>' + enr_phone + '</a>'
+                '<a class="cs-item" href="tel:' + enr_phone + '" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-flip" style="margin-right:5px;"></i>' + enr_phone + '</a>'
             )
         if enr_website:
             strip_items.append(
@@ -712,7 +729,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             details_str = '\n                        '.join(detail_items)
             html = re.sub(
                 r'<!-- DYNAMIC: contact_details -->.*?\n                    </div>',
-                '<!-- DYNAMIC: contact_details -->\n                    <div class="contact-block">\n                        <h4 class="contact-block-title"><i class="fas fa-phone-alt" style="margin-right:6px;"></i> Contact</h4>\n                        ' + details_str + '\n                    </div>',
+                '<!-- DYNAMIC: contact_details -->\n                    <div class="contact-block">\n                        <h4 class="contact-block-title"><i class="fas fa-phone-flip" style="margin-right:6px;"></i> Contact</h4>\n                        ' + details_str + '\n                    </div>',
                 html, flags=re.DOTALL
             )
         else:
@@ -798,7 +815,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         import urllib.parse as _uparse
         _q = _uparse.quote_plus(', '.join(x for x in (name, _addr) if x))
         map_html = f'''                <p style="margin-top:14px;">
-                    <a href="https://www.google.com/maps/search/?api=1&query={_q}" target="_blank" rel="noopener" style="color:var(--green);font-size:0.9rem;font-weight:600;text-decoration:none;"><i class="fas fa-map-marker-alt" style="margin-right:5px;"></i>Open this address in Google Maps &rarr;</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query={_q}" target="_blank" rel="noopener" style="color:var(--green);font-size:0.9rem;font-weight:600;text-decoration:none;"><i class="fas fa-location-dot" style="margin-right:5px;"></i>Open this address in Google Maps &rarr;</a>
                 </p>'''
         html = html.replace('card-title">Location <em>&amp; Map</em></h2>', 'card-title">Location</h2>')
 
@@ -808,7 +825,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     trust_strong = 'FHIS Verified' if is_fhis else 'FSA Verified'
     trust_sub = 'Food Standards Scotland inspection data' if is_fhis else 'Government inspection data'
     trust_items = f'''                    <li class="trust-item">
-                        <i class="fas fa-shield-check"></i>
+                        <i class="fas fa-shield-halved"></i>
                         <div><strong>{trust_strong}</strong>{trust_sub}</div>
                     </li>
                     <li class="trust-item">
@@ -827,10 +844,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     html = safe_sub(r'<!-- DYNAMIC: trust_items -->.*?</ul>', trust_items + '\n                </ul>', html)
 
     # ---- Related links ----
-    html = html.replace(
-        '<!-- DYNAMIC: related_city_link -->\n            <h3>Explore More</h3>\n            <a href="/cities/leeds">\n                <i class="fas fa-arrow-left"></i> All Thai restaurants in Leeds',
-        f'            <a href="/cities/{city_slug}#browse">\n                <i class="fas fa-arrow-left"></i> All Thai restaurants in {city}'
-    )
+    html = replace_block(
+        'related_city_link',
+        r'<!-- DYNAMIC: related_city_link -->.*?All Thai restaurants in [^<]*',
+        f'            <a href="/cities/{city_slug}#browse">\n                <i class="fas fa-arrow-left"></i> All Thai restaurants in {city}',
+        html)
 
     # ---- Claim link (prefill context — the owner lands on /claim/ already searching) ----
     claim_url = (f'/claim/?restaurant={quote(name)}&amp;city={quote(city)}'
