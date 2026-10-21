@@ -181,10 +181,14 @@ def dish_html(it, protein_tiers=None, fsa_id=None, category=None):
     if it.get("price_note"):
         bits.append(f'<p class="dish-note">{esc(it["price_note"])}</p>')
     rslug, rmode = recipe_render_for(it, fsa_id=fsa_id, category=category)
-    if rslug and rmode == "image" and os.path.isfile(os.path.join("recipes", rslug, rslug + ".jpg")):
+    # prefer the WebP copy (roughly half the bytes); the JPEG stays as a fallback
+    img_ext = ".jpg"
+    if rslug and os.path.isfile(os.path.join("recipes", rslug, rslug + ".webp")):
+        img_ext = ".webp"
+    if rslug and rmode == "image" and os.path.isfile(os.path.join("recipes", rslug, rslug + img_ext)):
         bits.append(
             f'<a class="recipe-link" href="/recipes/{rslug}/">'
-            f'<img src="/recipes/{rslug}/{rslug}.jpg" alt="" loading="lazy" width="1200" height="675">'
+            f'<img src="/recipes/{rslug}/{rslug}{img_ext}" alt="" loading="lazy" width="1200" height="675">'
             f'<span class="rl-text">Guide recipe — <strong>{esc(recipe_title_for(rslug))}</strong>'
             f' · how this dish is typically made</span></a>'
         )
