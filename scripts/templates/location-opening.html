@@ -1,19 +1,22 @@
-<body>
+<style>.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.125em;flex-shrink:0}</style>
+<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--bars" viewBox="0 0 24 24"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></symbol></svg>
   <!-- SHELL:location-v1 -->
   <div class="grain" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <nav id="main-nav" class="td-masthead" aria-label="Primary">
-    <div class="nav-bar td-bar">
-      <a href="/" class="logo td-brand">
-        <img class="td-mark" src="/thaidata-mark-v2.svg" alt="" width="32" height="32" aria-hidden="true">
-        <span class="td-wordmark">ThaiData UK</span>
-      </a>
-      <a class="td-back" href="/thai-restaurants-city-breakdown-uk">
-        <span aria-hidden="true">←</span> All locations
-      </a>
-    </div>
-  </nav>
+<!-- SITE-NAV -->
+    <nav class="nav" id="nav"><div class="nav-inner">
+            <a href="/index.html" class="logo">
+                <img src="/thaidata-mark-v2.svg" alt="ThaiData" class="logo-icon" width="32" height="32">
+                ThaiData
+            </a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg class="ic" aria-hidden="true"><use href="#i-solid--bars"></use></svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/thai-restaurants-city-breakdown-uk">All Cities</a></li>
+                <li><a href="/claim/?src=city-page">Claim or list your restaurant</a></li>
+            </ul>
+</div></nav>
 
   <main id="main" class="wrap">
     <header class="hero">

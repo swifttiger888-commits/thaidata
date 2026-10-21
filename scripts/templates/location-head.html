@@ -34,8 +34,8 @@
       --dark: #FFFFFF;
       --ink: #1A1614;
       --ink2: #4A403C;
-      --ink3: #594D47;
-      --ink4: #594D47;
+      --ink3: #5B534C;
+      --ink4: #5B534C;
       --c1: #A3132B;
       --c2: #A3132B;
       --accent: #F2B21A;
@@ -461,4 +461,19 @@
   }
 }
 </style>
+<style id="site-nav-css">/* SITE-NAV: shared with listing pages */
+nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; height: auto; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.35rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.nav .logo-icon { width: 32px; height: 32px; }
+.nav .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav .nav-links a { color: var(--ink2); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; transition: all 0.2s; }
+.nav .nav-links a:hover { color: var(--c2); background: #F7E8EB; }
+.nav .hamburger { display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; padding: 6px; }
+@media (max-width: 768px) {
+  .nav .hamburger { display: block; }
+  .nav .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px; gap: 4px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+  .nav .nav-links.open { display: flex; }
+  .nav .nav-links a { width: 100%; padding: 12px 16px; }
+}</style>
 </head>

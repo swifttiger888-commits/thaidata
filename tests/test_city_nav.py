@@ -42,3 +42,17 @@ def test_listing_header_matches_city_header():
     listing = (REPO / 'r' / 'leeds' / 'chao-phraya-thai-restaurant' / 'index.html').read_text()
     for needle in ('class="nav-inner"', 'id="navLinks"', 'thaidata-mark-v2.svg', 'Toggle menu'):
         assert needle in listing, needle
+
+
+def test_county_pages_are_wrapped_in_the_shell():
+    """These 23 pages were bare fragments: no head chrome, nav, h1 or footer."""
+    county = [p for p in city_pages()
+              if 'CITIES-MODE: programmatic' in p.read_text(errors='ignore')
+              and '<!-- SHELL:location-v1 -->' in p.read_text(errors='ignore')]
+    assert len(county) >= 23, len(county)
+    for page in county:
+        text = page.read_text(errors='ignore')
+        assert text.count('class="nav" id="nav"') == 1, page.name
+        assert '<h1' in text, f'{page.name}: no h1'
+        assert '<footer' in text, f'{page.name}: no footer'
+        assert '<main' in text, f'{page.name}: no main landmark'
