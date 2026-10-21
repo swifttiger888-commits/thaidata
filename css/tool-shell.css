@@ -68,6 +68,54 @@ body > .container > header p {
   margin-bottom: 14px;
 }
 
+/* tools whose hero is a <div class="header"> rather than a <header> element */
+.tool-shell .header,
+.tool-shell .hero {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 0 28px;
+}
+
+/* tools whose hero is not a <header> element */
+.tool-shell h1 {
+  font-family: 'Archivo', 'Inter', system-ui, sans-serif;
+  /* some tools fade the last word of the h1 into white via a gradient; on the
+     ivory page that word disappears, so the shell uses a solid ink headline */
+  background: none !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: var(--shell-ink);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
+  margin: 0 0 10px;
+}
+
+.tool-shell h1 em {
+  font-style: normal;
+  color: var(--shell-red);
+}
+
+.tool-shell .auditor-header {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 0 28px;
+}
+
+.tool-shell .auditor-header p {
+  color: var(--shell-mute);
+  font-size: 1.05rem;
+  max-width: 62ch;
+  margin: 0;
+}
+
+/* dark input panels inside light tool pages */
+.tool-shell .input-section p { color: rgba(245, 241, 234, 0.76) !important; }
+
+/* an empty results column must not hold half the card open */
+.tool-shell .auditor-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
 /* ---------- two-column working area ---------- */
 
 .tool-shell .layout,

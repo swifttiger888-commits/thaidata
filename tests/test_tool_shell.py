@@ -13,6 +13,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 TOOLS = REPO / 'tools'
 FONT_EXEMPT = {'VISA_ASSISTANT.html'}   # self-contained, ships no site fonts
+HEAD_EXEMPT = {'VISA_ASSISTANT.html'}   # no <head>/<body> structure to speak of
 BATCH = [
     'thai-restaurant-break-even-calculator.html',
     'thai-menu-price-elasticity-tester.html',
@@ -24,6 +25,11 @@ BATCH = [
     'thai-restaurant-market-report.html',
     'thai-restaurant-health-check.html',
     'NAP_CHECKER.html',
+    'MENU_SCHEMA_GENERATOR.html',
+    'MENU_REVIEWER.html',
+    'AI_AUDITOR.html',
+    'thai-ingredient-price-tracker.html',
+    'thai-supplier-price-tracker.html',
 ]
 
 
@@ -34,7 +40,8 @@ def text_of(name: str) -> str:
 def test_batch_pages_use_the_shell():
     for name in BATCH:
         html = text_of(name)
-        assert 'class="tool-shell"' in html, name
+        body_tag = re.search(r'<body[^>]*>', html)
+        assert body_tag and 'tool-shell' in body_tag.group(0), name
         assert 'href="/css/tool-shell.css"' in html, name
         assert '<!-- SITE-NAV -->' in html, name
         assert 'class="nav-bar"' not in html, f'{name} still has the local bar'
@@ -103,8 +110,29 @@ def test_stylesheets_are_in_the_head_not_a_string():
         html = text_of(name)
         body_at = html.lower().find('<body')
         head = html[:body_at] if body_at > 0 else html
-        needles = ('/css/tool-forms.css',) if name in FONT_EXEMPT else ('/css/fonts.css', '/css/tool-forms.css')
-        for needle in needles:
+        if name in HEAD_EXEMPT:
+            continue          # VISA_ASSISTANT gets rebuilt in the dark-tools batch
+        for needle in ('/css/fonts.css', '/css/tool-forms.css'):
             assert needle in head, (name, needle)
         if name in BATCH:
             assert '/css/tool-shell.css' in head, name
+
+
+def test_no_tool_depends_on_the_implicit_event_global():
+    """showIngredient() read event.target, so the first render threw before drawing.
+
+    The supplier price tracker therefore shipped empty until you clicked a tab.
+    """
+    offenders = []
+    for page in TOOLS.glob('*.html'):
+        text = page.read_text(errors='ignore')
+        code = '\n'.join(re.findall(r'<script[^>]*>(.*?)</script>', text, re.S))
+        if re.search(r'\bevent\.(target|currentTarget)', code):
+            offenders.append(page.name)
+    assert not offenders, offenders
+
+
+def test_supplier_tracker_tabs_carry_their_key():
+    html = text_of('thai-supplier-price-tracker.html')
+    assert 'data-key="coconut"' in html
+    assert html.count('data-key=') >= 6

@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'scripts'))
 from apply_city_nav import CSS as NAV_CSS, NAV, SCRIPT as NAV_SCRIPT  # noqa: E402
 from head_anchor import head_end  # noqa: E402
+from fix_tool_forms import first_body_level  # noqa: E402
 
 LINK = '<link rel="stylesheet" href="/css/tool-shell.css">'
 
@@ -75,6 +76,30 @@ BATCH2 = {
         'Claim your listing and fix it at the source'),
 }
 
+# Batch 3: generators and price trackers.
+BATCH3 = {
+    'MENU_SCHEMA_GENERATOR.html': (
+        'Schema is half the job — crawlers still have to reach it.',
+        '/tools/AI_AUDITOR',
+        'Check whether AI assistants can read your menu'),
+    'MENU_REVIEWER.html': (
+        'Better dish copy deserves the markup to match.',
+        '/tools/MENU_SCHEMA_GENERATOR',
+        'Generate the menu schema for your page'),
+    'AI_AUDITOR.html': (
+        'Fix the markup once your menu is readable.',
+        '/tools/MENU_SCHEMA_GENERATOR',
+        'Generate schema the crawlers can parse'),
+    'thai-ingredient-price-tracker.html': (
+        'Compare what you pay against the trade price.',
+        '/tools/WHOLESALE_BENCHMARKER',
+        'Benchmark your supplier against the region'),
+    'thai-supplier-price-tracker.html': (
+        'Now check the region, not just your own invoices.',
+        '/tools/WHOLESALE_BENCHMARKER',
+        'See how your prices compare locally'),
+}
+
 
 def add_link(text: str) -> str:
     end = head_end(text)
@@ -86,6 +111,10 @@ def add_link(text: str) -> str:
         return text[:i] + '\n' + LINK + text[i:]
     if end > 0:
         return text[:end] + LINK + '\n' + text[end:]
+    # pages with no </head> at all: put it immediately before the body starts
+    i = first_body_level(text, text.lower().find('<head'))
+    if i > 0:
+        return text[:i] + LINK + '\n' + text[i:]
     return text
 
 
@@ -142,7 +171,7 @@ def next_step(text: str, prompt: str, href: str, label: str) -> str:
 
 def main(apply_changes: bool) -> None:
     touched = 0
-    for name, (prompt, href, label) in {**BATCH, **BATCH2}.items():
+    for name, (prompt, href, label) in {**BATCH, **BATCH2, **BATCH3}.items():
         page = ROOT / 'tools' / name
         original = page.read_text()
         text = original
@@ -155,7 +184,8 @@ def main(apply_changes: bool) -> None:
             touched += 1
             if apply_changes:
                 page.write_text(text)
-    print(f'{"rewrote" if apply_changes else "would rewrite"} {touched} of {len(BATCH) + len(BATCH2)} pages')
+    total = len(BATCH) + len(BATCH2) + len(BATCH3)
+    print(f'{"rewrote" if apply_changes else "would rewrite"} {touched} of {total} pages')
     if not apply_changes:
         print('dry run — pass --apply')
 

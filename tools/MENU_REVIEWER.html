@@ -169,14 +169,40 @@ body {
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
 
 <link rel="stylesheet" href="/css/tool-forms.css">
-<body><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--arrow-rotate-left" viewBox="0 0 24 24"><path d="M9 14l-4 -4l4 -4" /> <path d="M5 10h11a4 4 0 1 1 0 8h-1" /></symbol><symbol id="i-solid--check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10" /></symbol><symbol id="i-solid--circle-info" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol><symbol id="i-solid--robot" viewBox="0 0 24 24"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4" /> <path d="M12 2v2" /> <path d="M9 12v9" /> <path d="M15 12v9" /> <path d="M5 16l4 -2" /> <path d="M15 14l4 2" /> <path d="M9 18h6" /> <path d="M10 8v.01" /> <path d="M14 8v.01" /></symbol><symbol id="i-solid--wand-magic-sparkles" viewBox="0 0 24 24"><path d="M6 21l15 -15l-3 -3l-15 15l3 3" /> <path d="M15 6l3 3" /> <path d="M9 3a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" /> <path d="M19 13a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" /></symbol></svg>
+<link rel="stylesheet" href="/css/tool-shell.css">
+<body class="tool-shell"><svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-solid--arrow-right" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol><symbol id="i-solid--arrow-rotate-left" viewBox="0 0 24 24"><path d="M9 14l-4 -4l4 -4" /> <path d="M5 10h11a4 4 0 1 1 0 8h-1" /></symbol><symbol id="i-solid--bars" viewBox="0 0 24 24"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></symbol><symbol id="i-solid--check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10" /></symbol><symbol id="i-solid--circle-info" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 9h.01" /> <path d="M11 12h1v4h1" /></symbol><symbol id="i-solid--robot" viewBox="0 0 24 24"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4" /> <path d="M12 2v2" /> <path d="M9 12v9" /> <path d="M15 12v9" /> <path d="M5 16l4 -2" /> <path d="M15 14l4 2" /> <path d="M9 18h6" /> <path d="M10 8v.01" /> <path d="M14 8v.01" /></symbol><symbol id="i-solid--wand-magic-sparkles" viewBox="0 0 24 24"><path d="M6 21l15 -15l-3 -3l-15 15l3 3" /> <path d="M15 6l3 3" /> <path d="M9 3a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" /> <path d="M19 13a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" /></symbol></svg>
     <div class="grain"></div>
-    <nav>
-        <div class="nav-bar">
-            <a href="../index.html" class="logo"><img src="/thaidata-lockup.svg" alt="ThaiData" class="logo-icon" width="111" height="40"></a>
-            <a href="../index.html" style="color: rgba(26, 22, 20, 0.6); font-size:0.9rem; text-decoration:none;">&larr; Back to Home</a>
-        </div>
-    </nav>
+    <!-- SITE-NAV -->
+    <nav class="nav" id="nav"><div class="nav-inner">
+            <a href="/index.html" class="logo">
+                <img src="/thaidata-mark-v2.svg" alt="ThaiData" class="logo-icon" width="32" height="32">
+                ThaiData
+            </a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <svg class="ic" aria-hidden="true"><use href="#i-solid--bars"></use></svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/thai-restaurants-city-breakdown-uk">All Cities</a></li>
+                <li><a href="/claim/?src=city-page">Claim or list your restaurant</a></li>
+            </ul>
+</div></nav>
+<style>/* SITE-NAV: shared with listing pages */
+nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; height: auto; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.35rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.nav .logo-icon { width: 32px; height: 32px; }
+.nav .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav .nav-links a { color: var(--ink2); text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; transition: all 0.2s; }
+.nav .nav-links a:hover { color: var(--c2); background: #F7E8EB; }
+.nav .hamburger { display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; padding: 6px; }
+@media (max-width: 768px) {
+  .nav .hamburger { display: block; }
+  .nav .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--line); flex-direction: column; padding: 16px; gap: 4px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+  .nav .nav-links.open { display: flex; }
+  .nav .nav-links a { width: 100%; padding: 12px 16px; }
+}</style>
+<script>if (typeof toggleMenu !== 'function') { function toggleMenu() { var l = document.getElementById('navLinks'); if (l) l.classList.toggle('open'); } }</script>
+
 
     <div class="container">
         <header>
@@ -248,7 +274,12 @@ body {
                 </div>
             </div>
         </div>
-    </div>
+    
+        <div class="next-step">
+            <p>Better dish copy deserves the markup to match.</p>
+            <a href="/tools/MENU_SCHEMA_GENERATOR">Generate the menu schema for your page<svg class="ic" aria-hidden="true"><use href="#i-solid--arrow-right"></use></svg></a>
+        </div>
+</div>
 
     <footer>
         <p>&copy; 2026 ThaiData.uk | Sensory Optimization Engine v1.4</p>
