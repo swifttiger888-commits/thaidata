@@ -44,7 +44,13 @@
             align-items: center;
             gap: 16px;
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            /* hidden until it is safe to show — see reveal() below */
+            transform: translateY(100%);
+            visibility: hidden;
+            transition: transform .22s ease;
         }
+
+        #cookie-banner.cb-visible { transform: none; visibility: visible; }
 
         /* reserve the bar's height so nothing underneath is ever covered */
         body.has-consent-bar { padding-bottom: 56px; }
@@ -112,7 +118,20 @@
         </div>
     `;
     document.body.appendChild(banner);
-    document.body.classList.add('has-consent-bar');
+
+    // A fixed bar at the bottom of a 390x844 phone covers the hero's primary
+    // button (measured: banner y=735-844, submit y=698-754). Hold it back until
+    // the hero has been scrolled past; on tall desktop viewports the bar cannot
+    // reach the hero button, so show it immediately.
+    function reveal() {
+        if (window.scrollY > 320 || window.innerHeight >= 900) {
+            banner.classList.add('cb-visible');
+            document.body.classList.add('has-consent-bar');
+            window.removeEventListener('scroll', reveal);
+        }
+    }
+    window.addEventListener('scroll', reveal, { passive: true });
+    reveal();
 
     function dismiss(value) {
         localStorage.setItem('thaidata_consent', value);

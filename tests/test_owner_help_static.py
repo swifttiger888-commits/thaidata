@@ -19,9 +19,12 @@ def read(path):
 
 def test_open_page_claim_links_have_context():
     html = read(OPEN_PAGE)
-    assert 'src=restaurant-card' in html
+    # Single owner action: the hero CTA, prefilled with this venue.
     assert 'src=hero-claim' in html
     assert '/claim/?restaurant=My%20Thai&amp;city=Leeds&amp;fsa_id=' in html
+    # The old sidebar card duplicated the CTA beside the phone/hours block.
+    assert 'src=restaurant-card' not in html
+    assert 'class="claim-card"' not in html
 
 
 def test_open_page_report_card_present():
@@ -32,10 +35,13 @@ def test_open_page_report_card_present():
     assert 'name="website" class="hp-field"' in html
 
 
-def test_open_page_claim_card_faq():
+def test_open_page_has_one_owner_cta():
     html = read(OPEN_PAGE)
-    assert 'Is it free?' in html
-    assert 'How long does approval take?' in html
+    # Exactly one claim link in the page body (the nav's generic "Claim or list
+    # your restaurant" link is separate and not venue-prefilled).
+    assert html.count('src=hero-claim') == 1
+    assert 'Is it free?' not in html          # sidebar FAQ removed with the card
+    assert 'How long does approval take?' not in html
 
 
 def test_fsa_const_matches_meta_tag():

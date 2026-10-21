@@ -667,6 +667,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             replacement = f'{anchor}\n            <p class="intro-blurb" style="margin-top:10px;font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.5;max-width:650px;">\n                {intro_text}\n            </p>'
             html = html[:anchor_idx] + replacement + html[end_idx:]
 
+    hero_claim_url = (f'/claim/?restaurant={quote(name)}&amp;city={quote(city)}'
+                      f'&amp;fsa_id={str(fsa_id)}&amp;src=hero-claim')
     # ---- Hero claim CTA (closed = show closed notice) ----
     if is_closed:
         hero_closed_notice = f'''            <p class="hero-closed-notice">
@@ -692,10 +694,7 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         html = html.replace('<!-- DYNAMIC: hero_report_cta -->\n', '')
         if '<a href="#claim"' not in html:
             raise ValueError(f'hero claim anchor missing for {name} ({city})')
-        html = html.replace(
-            '<a href="#claim"',
-            f'<a href="/claim/?restaurant={quote(name)}&amp;city={quote(city)}&amp;fsa_id={str(fsa_id)}&amp;src=hero-claim"',
-        )
+        html = html.replace('<a href="#claim"', f'<a href="{hero_claim_url}"')
 
     # ---- Contact & Info section (replaces action bar + quick-info) ----
     has_enrichment = any([enr_hours, enr_price, enr_phone, enr_website])
@@ -850,15 +849,6 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         f'            <a href="/cities/{city_slug}#browse">\n                <i class="fas fa-arrow-left"></i> All Thai restaurants in {city}',
         html)
 
-    # ---- Claim link (prefill context — the owner lands on /claim/ already searching) ----
-    claim_url = (f'/claim/?restaurant={quote(name)}&amp;city={quote(city)}'
-                 f'&amp;fsa_id={str(fsa_id)}&amp;src=restaurant-card')
-    claim_link_old = ('<!-- DYNAMIC: claim_link -->\n'
-                      '                <a href="/claim/?src=restaurant-card" class="btn">')
-    if claim_link_old not in html:
-        raise ValueError(f'claim_link marker/anchor drifted — check template ({name}, {city})')
-    html = html.replace(claim_link_old, f'                <a href="{claim_url}" class="btn">')
-
     # ---- Sidebar claim CTA (closed = replace with closed notice) ----
     if is_closed:
         sidebar_closed = f'''            <div class="closed-notice-card">
@@ -871,7 +861,13 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             html
         )
     else:
-        html = html.replace('<!-- DYNAMIC: sidebar_claim_cta -->\n', '')
+        # One claim CTA per listing. The hero button (approved Oct 2026) is the
+        # primary; the sidebar duplicate competed with the phone/hours block.
+        html = safe_sub(
+            r'<!-- DYNAMIC: sidebar_claim_cta -->.*?<!-- DYNAMIC: report_card -->',
+            '<!-- DYNAMIC: report_card -->',
+            html
+        )
 
     # ---- Report card (owner-help): closed venues don't offer reporting ----
     if is_closed:
@@ -927,8 +923,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     if not is_closed:
         if f'RESTAURANT_FSA_ID = {json.dumps(str(fsa_id))}' not in html:
             raise ValueError(f'FSA id const missing ({name}, {city})')
-        if claim_url not in html:
-            raise ValueError(f'claim link not prefilled ({name}, {city})')
+        if hero_claim_url not in html:
+            raise ValueError(f'hero claim link not prefilled ({name}, {city})')
         if 'id="report-card"' not in html:
             raise ValueError(f'report card missing ({name}, {city})')
         if 'id="hero-report-cta"' not in html:
