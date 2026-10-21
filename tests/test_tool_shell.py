@@ -12,6 +12,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 TOOLS = REPO / 'tools'
+FONT_EXEMPT = {'VISA_ASSISTANT.html'}   # self-contained, ships no site fonts
 BATCH = [
     'thai-restaurant-break-even-calculator.html',
     'thai-menu-price-elasticity-tester.html',
@@ -97,9 +98,13 @@ def test_no_markup_inside_json_ld():
 
 
 def test_stylesheets_are_in_the_head_not_a_string():
-    for name in BATCH:
+    for page in sorted(TOOLS.glob('*.html')):
+        name = page.name
         html = text_of(name)
         body_at = html.lower().find('<body')
         head = html[:body_at] if body_at > 0 else html
-        for needle in ('/css/fonts.css', '/css/tool-forms.css', '/css/tool-shell.css'):
+        needles = ('/css/tool-forms.css',) if name in FONT_EXEMPT else ('/css/fonts.css', '/css/tool-forms.css')
+        for needle in needles:
             assert needle in head, (name, needle)
+        if name in BATCH:
+            assert '/css/tool-shell.css' in head, name
