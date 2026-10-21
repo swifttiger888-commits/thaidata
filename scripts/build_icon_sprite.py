@@ -27,10 +27,13 @@ import sys
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 CACHE = ROOT / 'assets' / 'icon-src'
 SPRITE = ROOT / 'assets' / 'icons.svg'
 MAP = ROOT / 'data' / 'icon_map.json'
 FA_VERSION = '6.4.0'
+TABLER_VERSION = '3.49.0'
+TABLER_CACHE = CACHE / 'tabler'
 CDN = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@' + FA_VERSION + '/svgs/'
 
 # Icons used on the site that do not exist in Font Awesome Free. They rendered as
@@ -127,6 +130,23 @@ def symbol(sid, style, name):
     return '<symbol id="%s" viewBox="%s">%s</symbol>' % (sid, view_box.group(1), inner)
 
 
+def tabler_symbol(sid, fa_name):
+    """One <symbol> from a vendored Tabler outline svg.
+
+    Ids keep the Font Awesome name (``i-solid--location-dot``) so the 1,778 pages
+    that reference them need no markup change; only the drawing swaps.
+    """
+    from icon_map_tabler import TABLER
+    tb = TABLER[fa_name]
+    raw = (TABLER_CACHE / (tb + '.svg')).read_text(encoding='utf-8')
+    inner = re.sub(r'^.*?<svg[^>]*>', '', raw, flags=re.S)
+    inner = re.sub(r'</svg>\s*$', '', inner, flags=re.S)
+    # drop Tabler's transparent bounding path; it is not part of the drawing
+    inner = re.sub(r'<path stroke="none" d="M0 0h24v24H0z"[^>]*/>', '', inner)
+    inner = re.sub(r'\s+', ' ', inner).strip()
+    return '<symbol id="%s" viewBox="0 0 24 24">%s</symbol>' % (sid, inner)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--download', action='store_true',
@@ -168,25 +188,31 @@ def main():
     MAP.write_text(json.dumps(icon_map, indent=1, sort_keys=True) + '\n')
 
     symbols, seen = [], set()
-    pairs = {(v['style'], v['name']) for v in icon_map.values()}
-    for style, name in sorted(pairs):
-        sid = 'i-%s--%s' % (style, name)
+    unmapped = []
+    for original, entry in sorted(icon_map.items()):
+        sid = 'i-%s--%s' % (entry['style'], entry['name'])
         if sid in seen:
             continue
         seen.add(sid)
-        symbols.append(symbol(sid, style, name))
+        try:
+            symbols.append(tabler_symbol(sid, original))
+        except KeyError:
+            unmapped.append(original)
+    if unmapped:
+        raise SystemExit('no Tabler mapping for: %s' % ', '.join(sorted(unmapped)))
 
     sprite = (
         # No display:none on the root: an external sprite referenced through <use>
         # renders nothing if the file's root is hidden. <symbol> alone never paints.
         '<svg xmlns="http://www.w3.org/2000/svg">'
-        '<!-- Icons: Font Awesome Free ' + FA_VERSION + ' by @fontawesome, CC BY 4.0 '
-        '(https://fontawesome.com/license/free); extracted as SVG symbols, unmodified paths. -->'
+        '<!-- Icons: Tabler Icons ' + TABLER_VERSION + ' (https://tabler.io/icons), MIT licence; '
+        'converted to symbols, paths unmodified. Ids keep the old Font Awesome names so '
+        'existing <use> references keep working. -->'
         + ''.join(symbols) + '</svg>'
     )
     SPRITE.write_text(sprite + '\n')
-    print('icons used: %d  symbols: %d  sprite: %.1f KB  map: %d entries'
-          % (len(counts), len(symbols), len(sprite) / 1024, len(icon_map)))
+    print('symbols: %d  sprite: %.1f KB  map: %d entries  source: Tabler %s'
+          % (len(symbols), len(sprite) / 1024, len(icon_map), TABLER_VERSION))
 
 
 if __name__ == '__main__':

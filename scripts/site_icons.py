@@ -36,10 +36,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MAP_FILE = ROOT / 'data' / 'icon_map.json'
 SPRITE = ROOT / 'assets' / 'icons.svg'
 
+# Tabler icons are stroke drawings: fill:none + stroke:currentColor. Keep the 1em
+# box so every icon still scales with the text it sits in.
 ICON_CSS = (
-    '.ic{display:inline-block;width:1em;height:1em;fill:currentColor;'
+    '.ic{display:inline-block;width:1em;height:1em;fill:none;stroke:currentColor;'
+    'stroke-width:2;stroke-linecap:round;stroke-linejoin:round;'
     'vertical-align:-0.125em;flex-shrink:0}'
 )
+EXISTING_IC_CSS = re.compile(r'\.ic\{[^}]*\}')
 
 STYLE_TOKENS = {'fas': 'solid', 'far': 'regular', 'fab': 'brands',
                 'fa-solid': 'solid', 'fa-regular': 'regular', 'fa-brands': 'brands'}
@@ -148,8 +152,12 @@ def inject_sprite(html: str, used, symbols) -> str:
 def inject_css(html: str) -> str:
     if 'class="ic"' not in html:
         return html
-    if '.ic{display:inline-block;width:1em' in html:
+    if ICON_CSS in html:
         return html
+    if '.ic{' in html:
+        # Migrate the old fill-based rule in place; appending a second .ic rule
+        # would leave the earlier fill:currentColor winning on specificity order.
+        return EXISTING_IC_CSS.sub(ICON_CSS, html, count=1)
     block = '<style>' + ICON_CSS + '</style>\n'
     # Some generated shells (city pages, tools) omit </head> entirely, so fall back
     # to the <body> tag. Without a width/height rule an inline <svg> defaults to
@@ -190,6 +198,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--all', action='store_true', help='rewrite every checked-in *.html in place')
     ap.add_argument('--check', action='store_true', help='report pages still on Font Awesome')
+    ap.add_argument('--refresh', action='store_true',
+                    help='re-inline the sprite and current CSS on every icon page')
     args = ap.parse_args()
 
     pages = [p for p in ROOT.rglob('*.html') if not ({'node_modules', '.git'} & set(p.parts))]
@@ -207,7 +217,10 @@ def main():
     changed = 0
     for p in pages:
         html = p.read_text(encoding='utf-8', errors='ignore')
-        if 'font-awesome' not in html.lower() and not leftover_icons(html):
+        if args.refresh:
+            if 'class="ic"' not in html and 'id="icon-sprite"' not in html:
+                continue
+        elif 'font-awesome' not in html.lower() and not leftover_icons(html):
             continue
         new = transform(html)
         if new != html:
