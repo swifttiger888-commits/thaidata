@@ -40,7 +40,7 @@ FAMILIES: dict[str, dict[str, str]] = {
         'cream': 'var(--ivory)',
         'ink': SHARED['ink'],
         'ink-soft': '#4A403C',
-        'ink-mute': '#7A6F6A',
+        'ink-mute': '#5B534C',
         'hairline': SHARED['hairline'],
         'border': 'var(--hairline)',
         'border-light': '#F2EDE6',
@@ -68,9 +68,9 @@ FAMILIES: dict[str, dict[str, str]] = {
         'shadow-md': '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)',
         'shadow-lg': '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
         'radius-sm': '8px',
-        'radius': '12px',
-        'radius-lg': '16px',
-        'radius-xl': '24px',
+        'radius': '10px',
+        'radius-lg': '10px',
+        'radius-xl': '10px',
         'radius-full': '9999px',
     },
     'city': {
@@ -82,25 +82,10 @@ FAMILIES: dict[str, dict[str, str]] = {
         'dark': '#FFFFFF',
         'ink': '#1A1614',
         'ink2': '#4A403C',
-        'ink3': '#7A6F6A',
-        'ink4': '#7A6F6A',
+        'ink3': '#5B534C',
+        'ink4': '#5B534C',
         'line': '#E7DFD5',
     },
-}
-
-
-# Five city shells carry a darker muted ink and a turmeric accent. They are pinned
-# as a named variant rather than quietly rewriting their text colour to match the
-# majority; unifying them is a rendered before/after decision.
-CITY_DARK_INK_PAGES = {
-    'basingstoke-and-deane.html', 'buckinghamshire.html', 'ceredigion.html',
-    'derry-city-and-strabane.html', 'dumfries-and-galloway.html',
-}
-FAMILIES['city-dark'] = {
-    **FAMILIES['city'],
-    'ink3': '#594D47',
-    'ink4': '#594D47',
-    'accent': '#F2B21A',
 }
 
 

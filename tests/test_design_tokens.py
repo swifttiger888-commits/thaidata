@@ -51,7 +51,6 @@ def test_city_pages_share_one_token_block():
     pages = sorted((REPO / 'cities').glob('*.html'))
     assert pages, 'no city pages found'
     standard = as_expected('city')
-    variant = as_expected('city-dark')
     drifted, no_root = [], []
     for page in pages:
         decls = root_decls(page.read_text(errors='ignore'))
@@ -59,7 +58,7 @@ def test_city_pages_share_one_token_block():
             no_root.append(page.name)      # minimal noindex empty-state pages
             continue
         live = resolve(decls)
-        expected = variant if page.name in design_tokens.CITY_DARK_INK_PAGES else standard
+        expected = standard
         # Extra names (e.g. London's --card-bg, the variant's --accent) are allowed;
         # the shared names must all match.
         if any(live.get(k) != v for k, v in expected.items()):

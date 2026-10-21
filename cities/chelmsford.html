@@ -22,7 +22,7 @@
 <noscript></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" /></noscript>
     <style>
-        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #7A6F6A; --line: #E7DFD5; --bg: #FBF7F0; }
+        :root { --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #5B534C; --ink4: #5B534C; --line: #E7DFD5; --bg: #FBF7F0; }
 :focus-visible {
             outline: 2px solid #A3132B;
             outline-offset: 2px;
@@ -56,18 +56,18 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 
         .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 30px 0; }
         @media (max-width: 600px) { .stat-row { grid-template-columns: 1fr 1fr; } }
-        .stat { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 22px; text-align: center; }
+        .stat { background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 22px; text-align: center; }
         .stat .num { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; color: var(--c2); line-height: 1.2; font-weight: 800;}
         .stat .lbl { color: var(--ink4); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; }
 
-        .card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
+        .card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 28px 32px; margin: 24px 0; }
         .card h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
         .card h2 em { font-style: normal; color: var(--c2); }
         .card p { color: var(--ink4); font-size: 0.95rem; line-height: 1.7; margin-bottom: 12px; }
 
         .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
         @media (max-width: 500px) { .comparison { grid-template-columns: 1fr; } }
-        .comp-item { background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+        .comp-item { background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
         .comp-item .label { color: var(--ink4); font-size: 0.8rem; margin-bottom: 6px; }
         .comp-item .value { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.5rem; font-weight: 800;}
         .comp-item .value.good { color: var(--c2); }
@@ -184,10 +184,10 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             </div>
         </div>
 
-<div class="city-stats" style="background:white;border-radius:12px;padding:20px 24px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><h3 style="margin:0 0 12px;font-size:1.1rem;color: var(--ink);">📊 Market Snapshot</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;font-size:0.9rem;"><div style="color: var(--ink);"><strong>Thai businesses:</strong> <span style="color:#A3132B;">5 (4 dine-in, 1 takeaway)</span></div><div style="color: var(--ink);"><strong>Population:</strong> <span style="color:#A3132B;">184,000</span></div><div style="color: var(--ink);"><strong>Avg Hygiene Rating:</strong> <span style="color:#A3132B;">★★★★★ 4.8/5 (FSA data)</span></div><div style="color: var(--ink);"><strong>UK Share:</strong> <span style="color:#A3132B;">0.4% of 1,244 restaurants &amp; takeaways</span></div><div style="color: var(--ink);"><strong>Market:</strong> Moderate — balanced</div></div></div>
+<div class="city-stats" style="background:white;border-radius: 10px;padding:20px 24px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><h3 style="margin:0 0 12px;font-size:1.1rem;color: var(--ink);">📊 Market Snapshot</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;font-size:0.9rem;"><div style="color: var(--ink);"><strong>Thai businesses:</strong> <span style="color:#A3132B;">5 (4 dine-in, 1 takeaway)</span></div><div style="color: var(--ink);"><strong>Population:</strong> <span style="color:#A3132B;">184,000</span></div><div style="color: var(--ink);"><strong>Avg Hygiene Rating:</strong> <span style="color:#A3132B;">★★★★★ 4.8/5 (FSA data)</span></div><div style="color: var(--ink);"><strong>UK Share:</strong> <span style="color:#A3132B;">0.4% of 1,244 restaurants &amp; takeaways</span></div><div style="color: var(--ink);"><strong>Market:</strong> Moderate — balanced</div></div></div>
 
 <div class="card" style="margin-top:16px;">
-      <h2>Market <em>Position</em> <span style="font-size:0.7rem;background:#6b7280;color:white;padding:2px 10px;border-radius:12px;margin-left:8px;vertical-align:middle;">Moderate competition</span></h2>
+      <h2>Market <em>Position</em> <span style="font-size:0.7rem;background:#6b7280;color:white;padding:2px 10px;border-radius: 10px;margin-left:8px;vertical-align:middle;">Moderate competition</span></h2>
       <ul style="color:var(--ink4);font-size:0.95rem;line-height:1.8;list-style:none;padding:0;">
         <li style="padding:4px 0;">• <strong>vs London:</strong> Chelmsford has 1.5% of London's 274 Thai businesses, with 2.05% of London's 8.97M population.</li>
         <li style="padding:4px 0;">• <strong>vs UK Average:</strong> Chelmsford has 5 Thai businesses — the UK average is 5 per city.</li>
