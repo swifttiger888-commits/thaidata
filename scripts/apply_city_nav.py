@@ -55,6 +55,28 @@ SCRIPT = '''<script>if (typeof toggleMenu !== 'function') { function toggleMenu(
 '''
 
 
+def apply_shell(text: str) -> str:
+    """County/location shells: swap the td-masthead nav for the shared bar."""
+    if MARK in text:
+        return text
+    m = re.search(r'<nav id="main-nav".*?</nav>', text, re.S)
+    if not m:
+        raise ValueError('no td-masthead nav')
+    text = text[:m.start()] + NAV.strip() + text[m.end():]
+    # a separate style block late in <head> so it wins over the shell's own rules
+    block = '<style id="site-nav-css">' + CSS.split('<style>', 1)[1].rsplit('</style>', 1)[0] + '</style>\n'
+    if '</head>' in text:
+        text = text.replace('</head>', block + '</head>', 1)
+    else:
+        text = text.replace('<body>', block + '<body>', 1)
+    if 'function toggleMenu' not in text:
+        text = text.replace('</body>', SCRIPT + '</body>', 1)
+    # one muted ink everywhere
+    text = re.sub(r'(--ink3:\s*)#594D47', r'\g<1>#5B534C', text)
+    text = re.sub(r'(--ink4:\s*)#594D47', r'\g<1>#5B534C', text)
+    return text
+
+
 def apply(text: str) -> str:
     if MARK in text:
         return text
@@ -80,7 +102,19 @@ def main(apply_changes: bool) -> None:
         text = page.read_text(errors='ignore')
         if MARK in text:
             continue
-        if '<nav' not in text or len(text) < 5000:      # empty-state stubs have no nav
+        if len(text) < 5000:                            # empty-state stubs
+            skipped.append(page.name)
+            continue
+        if '<nav id="main-nav"' in text:                # county/location shell
+            try:
+                new = apply_shell(text)
+                changed.append(page.name)
+                if apply_changes:
+                    page.write_text(new)
+            except ValueError as exc:
+                skipped.append(f'{page.name}: {exc}')
+            continue
+        if '<nav' not in text:
             skipped.append(page.name)
             continue
         try:
