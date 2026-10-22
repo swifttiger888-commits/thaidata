@@ -901,12 +901,16 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                     ? 'rgba(245, 158, 11, 0.3)' 
                     : 'rgba(163, 19, 43, 0.3)';
                     
-                const shockIcon = shockFactor.querySelector('i');
-                shockIcon.className = shockColor === 'danger' 
-                    ? 'fas fa-exclamation-triangle' 
-                    : shockColor === 'warning' 
-                    ? 'fas fa-exclamation-circle' 
-                    : 'fas fa-check-circle';
+                // the page migrated from Font Awesome <i> to an inline sprite;
+                // querySelector('i') returned null and threw on every calculate
+                const shockIcon = shockFactor.querySelector('svg use');
+                if (shockIcon) {
+                    shockIcon.setAttribute('href', shockColor === 'danger'
+                        ? '#i-solid--circle-question'
+                        : shockColor === 'warning'
+                        ? '#i-solid--circle-info'
+                        : '#i-solid--bolt');
+                }
                     
                 shockFactor.querySelector('h3').style.color = shockColor === 'danger' 
                     ? 'var(--danger)' 

@@ -283,6 +283,15 @@ body {
             margin-top: 20px;
         }
 
+        /* the narrow-width rules for this grid were declared before it, so the
+           4-column base rule above won at every size on source order */
+        @media (max-width: 900px) {
+            .heatmap-container { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .heatmap-container { grid-template-columns: 1fr; }
+        }
+
         .heatmap-item {
             background-color: #1A1614;
             border-radius: 8px;
