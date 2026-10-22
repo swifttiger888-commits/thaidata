@@ -51,7 +51,7 @@ const DEMO_LISTING_HTML = `<!DOCTYPE html>
     <meta property="og:type" content="website">
     <meta property="og:title" content="Example Claimed Listing — ThaiData UK">
     <meta property="og:description" content="See what a claimed ThaiData listing looks like: photos, hours, price range, features and owner description.">
-    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.8b83823b.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" /><noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
     <style>
@@ -170,7 +170,7 @@ const DEMO_LISTING_HTML = `<!DOCTYPE html>
     <nav class="nav">
         <div class="nav-inner">
             <a href="/index.html" class="logo">
-                <img src="/thaidata-mark-v2.svg" alt="" width="32" height="32" style="width:32px;height:32px;">
+                <img src="/thaidata-mark-v2.b8f0bcad.svg" alt="" width="32" height="32" style="width:32px;height:32px;">
                 ThaiData
             </a>
             <a href="/claim/" class="nav-back"><i class="fas fa-arrow-left"></i> Back to claiming</a>

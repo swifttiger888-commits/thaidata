@@ -120,9 +120,9 @@ HTML = f"""<!DOCTYPE html>
     <meta property="og:title" content="Thai Kitchens in Pubs — {n_pubs} UK Pub Kitchens | ThaiData">
     <meta property="og:description" content="{n_pubs} Thai kitchens inside UK pubs, with FSA hygiene ratings and addresses.">
     <meta property="og:locale" content="en_GB">
-    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.8b83823b.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-lotus.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.28780c9a.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><!-- fa --></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
