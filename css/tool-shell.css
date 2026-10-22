@@ -469,6 +469,27 @@ body.tool-shell.tool-dark tbody tr:hover td { background: rgba(255, 255, 255, 0.
   }
 }
 
+/* 8 nav links need more room than the 2-link city nav this CSS came from;
+   between 769 and 900px they ran past the right edge instead of collapsing */
+@media (max-width: 900px) {
+  body.tool-shell .nav .hamburger { display: block; }
+  body.tool-shell .nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--shell-line);
+    flex-direction: column;
+    padding: 16px;
+    gap: 4px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  body.tool-shell .nav .nav-links.open { display: flex; }
+  body.tool-shell .nav .nav-links a { width: 100%; padding: 12px 16px; }
+}
+
 /* ---------- footer ---------- */
 
 .tool-shell footer,

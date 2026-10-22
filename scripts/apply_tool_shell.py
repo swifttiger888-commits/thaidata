@@ -155,6 +155,28 @@ def swap_nav(text: str) -> str:
     return text[:m.start()] + block + text[m.end():]
 
 
+# The city-page nav carries two links; the tools hub carries the full site
+# set. Tool pages showing a different header from the hub they were reached
+# from reads as leaving the site.
+SITE_LINKS = (
+    '<li><a href="/guides">Guides</a></li>\n'
+    '                <li><a href="/recipes/">Recipes</a></li>\n'
+    '                <li><a href="/restaurants">Restaurants</a></li>\n'
+    '                <li><a href="/claim/">Claim Listing</a></li>\n'
+    '                <li><a href="/dish-prices">Dish prices</a></li>\n'
+    '                <li><a href="/glossary">Glossary</a></li>\n'
+    '                <li><a href="/thai-festivals-uk">Festivals</a></li>\n'
+    '                <li><a href="/faq">FAQ</a></li>'
+)
+
+
+def site_links(text: str) -> str:
+    m = re.search(r'(<ul class="nav-links" id="navLinks">)(.*?)(</ul>)', text, re.S)
+    if not m or 'href="/guides"' in m.group(2):
+        return text
+    return text[:m.start(2)] + '\n                ' + SITE_LINKS + '\n            ' + text[m.end(2):]
+
+
 def body_shell(text: str) -> str:
     m = re.search(r'<body([^>]*)>', text, re.I)
     if not m:
@@ -219,6 +241,7 @@ def main(apply_changes: bool) -> None:
         text = add_link(text)
         text = body_shell(text)
         text = swap_nav(text)
+        text = site_links(text)
         text = repair_css(text)
         text = next_step(text, prompt, href, label)
         if text != original:
