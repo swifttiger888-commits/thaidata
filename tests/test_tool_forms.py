@@ -61,4 +61,6 @@ def test_inputs_that_were_unlabelled_now_have_a_name():
 def test_hub_has_no_card_pointing_at_the_homepage():
     hub = (REPO / 'tools.html').read_text()
     assert 'href="index.html" class="tool-card"' not in hub
-    assert 'tools/AI_AUDITOR.html' in hub, 'AI auditor still orphaned'
+    assert 'href="/tools/AI_AUDITOR"' in hub, 'AI auditor still orphaned'
+    # cards use the extensionless canonical path, not a .html that 308s
+    assert 'href="tools/' not in hub, 'card link still relative and .html-suffixed'
