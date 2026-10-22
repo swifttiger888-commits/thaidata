@@ -143,6 +143,20 @@ def test_no_tool_depends_on_the_implicit_event_global():
     assert not offenders, offenders
 
 
+def test_next_step_is_markup_not_a_template_literal():
+    """The injector anchored on the last </div> when a page had no footer, so
+    AI_AUDITOR and VISA_ASSISTANT shipped the card inside a JS template and
+    rendered it once per result row."""
+    bad = []
+    for page in sorted(TOOLS.glob('*.html')):
+        text = page.read_text(errors='ignore')
+        for m in re.finditer(r'<script[^>]*>(.*?)</script>', text, re.S):
+            if 'class="next-step"' in m.group(1):
+                bad.append(page.name)
+                break
+    assert not bad, bad
+
+
 def test_supplier_tracker_tabs_carry_their_key():
     html = text_of('thai-supplier-price-tracker.html')
     assert 'data-key="coconut"' in html

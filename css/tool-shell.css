@@ -456,6 +456,19 @@ body.tool-shell.tool-dark tbody tr:hover td { background: rgba(255, 255, 255, 0.
 
 .tool-shell .next-step a:hover { background: #F7E8EB; }
 
+/* the pill is nowrap by design, but several CTAs are longer than a 390px
+   viewport and were clipped at the right edge */
+@media (max-width: 640px) {
+  .tool-shell .next-step {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tool-shell .next-step a {
+    white-space: normal;
+    justify-content: space-between;
+  }
+}
+
 /* ---------- footer ---------- */
 
 .tool-shell footer,

@@ -162,7 +162,10 @@ body {
             padding: 25px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--border);
+            min-width: 0; /* grid item must be allowed to shrink below its content */
         }
+
+        .threshold-display { min-width: 0; }
         
         .section-title {
             font-size: 1.4rem;
@@ -870,12 +873,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             sampleDataSection.innerHTML = `
                 <div style="width:100%; margin-bottom:10px; color:var(--text-secondary); font-size:0.9rem;">
                     <svg class="ic" aria-hidden="true"><use href="#i-solid--vial"></use></svg> Test with sample data:
-                
-        <div class="next-step">
-            <p>A sponsored chef changes your wage bill.</p>
-            <a href="/tools/thai-restaurant-staffing-calculator">Price the rota with the new salary in it<svg class="ic" aria-hidden="true"><use href="#i-solid--arrow-right"></use></svg></a>
-        </div>
-</div>
+                </div>
                 <button class="sample-btn" data-type="new-hire" data-salary="45000" style="background:transparent; border:1px solid var(--accent); color:var(--accent); padding:8px 15px; border-radius:5px; cursor:pointer; font-size:0.9rem;">New Hire Pass</button>
                 <button class="sample-btn" data-type="new-hire" data-salary="40000" style="background:transparent; border:1px solid var(--error); color:var(--error); padding:8px 15px; border-radius:5px; cursor:pointer; font-size:0.9rem;">New Hire Fail</button>
                 <button class="sample-btn" data-type="new-entrant" data-salary="34000" style="background:transparent; border:1px solid var(--accent); color:var(--accent); padding:8px 15px; border-radius:5px; cursor:pointer; font-size:0.9rem;">New Entrant Pass</button>
@@ -906,5 +904,11 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             });
         });
     </script>
+    <div class="container" style="padding-top:0; padding-bottom:48px;">
+        <div class="next-step">
+            <p>A sponsored chef changes your wage bill.</p>
+            <a href="/tools/thai-restaurant-staffing-calculator">Price the rota with the new salary in it<svg class="ic" aria-hidden="true"><use href="#i-solid--arrow-right"></use></svg></a>
+        </div>
+    </div>
 </body>
 </html>

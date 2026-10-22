@@ -190,10 +190,24 @@ def next_step(text: str, prompt: str, href: str, label: str) -> str:
         '<svg class="ic" aria-hidden="true"><use href="#i-solid--arrow-right"></use></svg></a>\n'
         '        </div>\n'
     )
-    i = text.rfind('</div>', 0, text.find('<footer'))
-    if i < 0:
+    footer = text.find('<footer')
+    if footer != -1:
+        i = text.rfind('</div>', 0, footer)
+        if i > 0:
+            return text[:i] + block + text[i:]
+    # No footer on the dark and generator tools. Inserting at the last </div>
+    # in the file put the block inside a JavaScript template literal, where it
+    # rendered once per result row. Anchor on </body> instead, and wrap it so
+    # it keeps the container width.
+    body = text.rfind('</body>')
+    if body < 0:
         return text
-    return text[:i] + block + text[i:]
+    wrapped = (
+        '\n    <div class="container" style="padding-top:0; padding-bottom:48px;">'
+        + block
+        + '    </div>\n'
+    )
+    return text[:body] + wrapped + text[body:]
 
 
 def main(apply_changes: bool) -> None:

@@ -825,7 +825,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 noResultsSection.style.display = 'none';
             }
             
-            function updateResults(menuPrice, vat, commission, ingredientCost, packagingCost, netProfit, profitPercent) {
+            function updateResults(menuPrice, vat, commission, ingredientCost, packagingCost, laborNet, netProfit, profitPercent) {
                 // Format currency values
                 const formatCurrency = (value) => `£${value.toFixed(2)}`;
                 const formatPercent = (value) => `${value.toFixed(1)}%`;
