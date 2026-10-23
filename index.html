@@ -75,7 +75,7 @@
     "@type": "Organization",
     "name": "ThaiData UK",
     "url": "https://thaidata.uk",
-    "logo": "https://thaidata.uk/thaidata-lockup.svg",
+    "logo": "https://thaidata.uk/thaidata-lockup.b89c5cf2.png",
     "foundingDate": "2025",
     "description": "Business Intelligence and cost defense tools for the UK Thai hospitality sector.",
     "knowsAbout": ["Thai restaurant industry", "UK hospitality", "Thai cuisine", "Restaurant cost intelligence"],
@@ -2292,6 +2292,18 @@ em { font-style: normal; font-weight: 700; }
   object-fit: contain;
 }
 
+/* Horizontal lockup carries its own wordmark, so the header stops pairing a
+   mark with live text and shows the artwork as drawn. */
+#main-nav.td-masthead .td-lockup {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 560px) {
+  #main-nav.td-masthead .td-lockup { height: 30px; }
+}
+
 #main-nav.td-masthead .td-wordmark {
   color: #332F2B;
 }
@@ -2755,7 +2767,7 @@ em { font-style: normal; font-weight: 700; }
   <nav id="main-nav" class="td-masthead" aria-label="Primary">
     <div class="nav-bar td-bar">
       <a href="/" class="logo td-brand" aria-label="ThaiData UK — home">
-        <img class="td-mark" src="/thaidata-emblem.e4619b91.png" alt="" width="32" height="32" aria-hidden="true"><span class="td-wordmark">ThaiData UK</span>
+        <img class="td-lockup" src="/thaidata-lockup.b89c5cf2.png" alt="ThaiData UK" width="162" height="40">
       </a>
       <div class="nav-r td-links">
         <a href="restaurants" class="nav-link">Restaurants</a>

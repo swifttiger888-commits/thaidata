@@ -40,7 +40,7 @@ def test_home_keeps_its_masthead():
 
 def test_listing_header_matches_city_header():
     listing = (REPO / 'r' / 'leeds' / 'chao-phraya-thai-restaurant' / 'index.html').read_text()
-    for needle in ('class="nav-inner"', 'id="navLinks"', 'thaidata-emblem.e4619b91.png', 'Toggle menu'):
+    for needle in ('class="nav-inner"', 'id="navLinks"', 'thaidata-lockup.b89c5cf2.png', 'Toggle menu'):
         assert needle in listing, needle
 
 
