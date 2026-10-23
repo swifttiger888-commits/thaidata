@@ -38,6 +38,9 @@ NULL_DATE_MONTH = {
     "kathina-2026": "october",
     "vegetarian-festival-2026": "october",
     "loy-krathong-wat-phra-singh-2026": "november",
+    "songkran-wat-buddharam-2027": "april",
+    "loy-krathong-wat-buddharam-2027": "november",
+    "songkran-wat-phra-srisanphet-2027": "april",
 }
 
 # special ordering within each month
@@ -61,6 +64,7 @@ EVENT_ORDER = [
     "vegetarian-festival-2026",
     "alms-giving-end-vassa-wat-buddhapadipa-2026",
     "loy-krathong-wat-mahathat-2026",
+    "kathina-loykrathong-wat-phra-srisanphet-2026",
     "kathina-wat-buddhapadipa-2026",
     "loy-krathong-wat-buddhapadipa-2026",
     "kathina-wat-phra-singh-2026",

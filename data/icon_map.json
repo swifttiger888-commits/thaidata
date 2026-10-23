@@ -574,5 +574,17 @@
  "water": {
   "name": "water",
   "style": "solid"
+ },
+ "map-marker-alt": {
+  "name": "location-dot",
+  "style": "solid"
+ },
+ "calendar-alt": {
+  "name": "calendar-days",
+  "style": "solid"
+ },
+ "phone-alt": {
+  "name": "phone",
+  "style": "solid"
  }
 }

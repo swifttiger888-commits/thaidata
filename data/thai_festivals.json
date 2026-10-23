@@ -584,9 +584,9 @@
       "source_type": "social_media",
       "status": "confirmed",
       "confidence": 0.95,
-      "notes": "Verified 2026-10-05 against Wat Mahathat Kings Bromley's official Facebook page (facebook.com/watkingsbromley) confirming combined Kathina ceremony and Loy Krathong Festival 2026 on Sunday 1 November 2026, 09:00–17:00.",
+      "notes": "Verified 2026-10-05 against Wat Mahathat Kings Bromley's official Facebook page (facebook.com/watkingsbromley) confirming combined Kathina ceremony and Loy Krathong Festival 2026 on Sunday 1 November 2026, 09:00–17:00.\nVerified 2026-10-23 against the temple Facebook announcement confirming 1 Nov 2026.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-10-05"
+      "updated_at": "2026-10-23"
     },
     {
       "event_id": "kings-birthday-2026",
@@ -721,9 +721,9 @@
       "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.95,
-      "notes": "Verified 2026-10-19 against Wat Phra Singh UK's monthly newsletter (watphrasinghuk.org) confirming Kathina on 15 November 2026.",
+      "notes": "Verified 2026-10-19 against Wat Phra Singh UK's monthly newsletter (watphrasinghuk.org) confirming Kathina on 15 November 2026.\nVerified 2026-10-23 against watphrasinghuk.org monthly newsletter confirming 15 Nov 2026.",
       "created_at": "2026-10-19",
-      "updated_at": "2026-10-19"
+      "updated_at": "2026-10-23"
     },
     {
       "event_id": "thai-national-day-wat-buddhapadipa-2026",
@@ -807,6 +807,115 @@
       "notes": "Verified 2026-10-19 against the Onzon Thai Festival Thai Business Awards 2026 page (onzonthaifestival.co.uk) confirming Cardiff on 28 November and London on 29 November 2026.",
       "created_at": "2026-10-19",
       "updated_at": "2026-10-19"
+    },
+    {
+      "event_id": "kathina-loykrathong-wat-phra-srisanphet-2026",
+      "festival_id": "kathina-wat-phra-srisanphet",
+      "festival_type": "kathina",
+      "event_name": "Kathina Robe Offering & Loy Krathong Festival",
+      "organiser": "Wat Phra Srisanphet UK",
+      "venue_name": "Fear Hall",
+      "address": "30 High Street, Keynsham BS31 1DQ",
+      "city": "Keynsham",
+      "region": "South West",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-08",
+      "date_description": "8",
+      "ticket_info": "Free entry. Free parking all day at Ashton Way car park.",
+      "description": "Wat Phra Srisanphet UK (Bristol) holds its Kathina robe-offering ceremony (10:00-15:00) at Fear Hall, Keynsham, followed by a Loy Krathong festival with cultural performances from 17:00. Proceeds support the temple.",
+      "source_url": "https://www.srisanphetuk.org/news-and-events/",
+      "source_type": "venue",
+      "status": "confirmed",
+      "confidence": 0.9,
+      "notes": "Verified 2026-10-23 against Wat Phra Srisanphet UK events calendar confirming 8 Nov 2026 at Fear Hall, Keynsham BS31 1DQ.",
+      "tags": [
+        "temple",
+        "free_entry"
+      ],
+      "year": 2026,
+      "created_at": "2026-10-23",
+      "updated_at": "2026-10-23"
+    },
+    {
+      "event_id": "songkran-wat-buddharam-2027",
+      "festival_id": "songkran-wat-buddharam",
+      "festival_type": "songkran",
+      "event_name": "Songkran (Thai New Year)",
+      "organiser": "Wat Buddharam",
+      "venue_name": "Wat Buddharam",
+      "address": "45 Cliff Road, Leeds LS6 2ET",
+      "city": "Leeds",
+      "region": "Yorkshire",
+      "start_date": null,
+      "end_date": null,
+      "date_description": "Date TBC",
+      "ticket_info": null,
+      "description": null,
+      "source_url": "http://www.watbuddharamleeds.com/",
+      "source_type": "venue",
+      "status": "tbc",
+      "confidence": 0.3,
+      "notes": "Venue added 2026-10-23 (research); 2027 Songkran date unannounced.",
+      "tags": [
+        "temple"
+      ],
+      "year": 2027,
+      "created_at": "2026-10-23",
+      "updated_at": "2026-10-23"
+    },
+    {
+      "event_id": "loy-krathong-wat-buddharam-2027",
+      "festival_id": "loy-krathong-wat-buddharam",
+      "festival_type": "loy_krathong",
+      "event_name": "Loy Krathong",
+      "organiser": "Wat Buddharam",
+      "venue_name": "Wat Buddharam",
+      "address": "45 Cliff Road, Leeds LS6 2ET",
+      "city": "Leeds",
+      "region": "Yorkshire",
+      "start_date": null,
+      "end_date": null,
+      "date_description": "Date TBC",
+      "ticket_info": null,
+      "description": null,
+      "source_url": "http://www.watbuddharamleeds.com/",
+      "source_type": "venue",
+      "status": "tbc",
+      "confidence": 0.3,
+      "notes": "Venue added 2026-10-23 (research); 2027 Loy Krathong date unannounced.",
+      "tags": [
+        "temple"
+      ],
+      "year": 2027,
+      "created_at": "2026-10-23",
+      "updated_at": "2026-10-23"
+    },
+    {
+      "event_id": "songkran-wat-phra-srisanphet-2027",
+      "festival_id": "songkran-wat-phra-srisanphet",
+      "festival_type": "songkran",
+      "event_name": "Songkran (Thai New Year)",
+      "organiser": "Wat Phra Srisanphet UK",
+      "venue_name": "Wat Phra Srisanphet UK",
+      "address": "Fear Hall, Keynsham BS31 1DQ",
+      "city": "Bristol",
+      "region": "South West",
+      "start_date": null,
+      "end_date": null,
+      "date_description": "Date TBC",
+      "ticket_info": null,
+      "description": null,
+      "source_url": "https://www.srisanphetuk.org/news-and-events/",
+      "source_type": "venue",
+      "status": "tbc",
+      "confidence": 0.3,
+      "notes": "Venue verified 2026-10-23; 2027 Songkran date unannounced.",
+      "tags": [
+        "temple"
+      ],
+      "year": 2027,
+      "created_at": "2026-10-23",
+      "updated_at": "2026-10-23"
     }
   ],
   "pages": {}
