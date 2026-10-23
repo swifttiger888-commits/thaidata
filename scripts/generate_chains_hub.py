@@ -144,9 +144,8 @@ HTML = f"""<!DOCTYPE html>
     <meta name="description" content="Complete directory of {total_chains} UK Thai restaurant chains verified from FSA data. {major[0]['count']} locations for {major[0]['label']}, plus {major[1]['label']}, {major[2]['label']} and more. City presence, hygiene ratings, and location maps.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/chains/">
-    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.8b83823b.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-lotus.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.28780c9a.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-emblem.3a4d8ed8.png">
+<link rel="apple-touch-icon" href="/apple-touch-emblem.1bde2e82.png">
 
     <meta property="og:title" content="UK Thai Restaurant Chains — Complete Directory 2026 | ThaiData">
     <meta property="og:description" content="{total_chains} UK Thai restaurant chains with FSA-verified location data. City presence breakdowns, hygiene ratings, and sample location maps.">

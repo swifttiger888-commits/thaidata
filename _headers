@@ -28,9 +28,7 @@
 # (/*.png is a 7-day cache, which is wrong for an icon we iterate on)
 /favicon.ico
   Cache-Control: public, max-age=600, must-revalidate
-/favicon-lotus.8b83823b.svg
+/favicon-emblem.3a4d8ed8.png
   Cache-Control: public, max-age=600, must-revalidate
-/favicon-lotus.png
-  Cache-Control: public, max-age=600, must-revalidate
-/apple-touch-icon.28780c9a.png
+/apple-touch-emblem.1bde2e82.png
   Cache-Control: public, max-age=600, must-revalidate

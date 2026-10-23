@@ -187,9 +187,8 @@ HTML = f"""<!DOCTYPE html>
     <meta property="og:title" content="UK Thai Restaurant Directory — {total:,} Verified Listings">
     <meta property="og:description" content="{total:,} Thai restaurants across {cities_count} UK cities. FSA hygiene ratings, inspection scores, and free business listings.">
     <meta property="og:locale" content="en_GB">
-    <link rel="icon" type="image/svg+xml" href="/favicon-lotus.8b83823b.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-lotus.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.28780c9a.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-emblem.3a4d8ed8.png">
+<link rel="apple-touch-icon" href="/apple-touch-emblem.1bde2e82.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><!-- fa --></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
