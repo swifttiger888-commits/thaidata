@@ -72,7 +72,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .section h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 10px; }
 
         /* Event Cards */
-        .event-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 24px 28px; margin: 14px 0; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; }
+        .event-card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 24px 28px; margin: 14px 0; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; position: relative; }
         .event-card:hover { border-color: var(--c2); }
         .event-date { flex-shrink: 0; width: 80px; text-align: center; }
         .event-date .month { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--c2); letter-spacing: 0.1em; }
@@ -81,6 +81,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .event-info .ev-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
         .event-info .ev-title .ev-title-link { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--gold); }
         .event-info .ev-title .ev-title-link:hover { color: var(--gold); }
+        .event-info .ev-title .ev-title-link::after { content: ""; position: absolute; inset: 0; }
         .event-info .ev-location { color: var(--ink3); font-size: 0.85rem; margin-bottom: 4px; }
         .event-info .ev-location i { margin-right: 6px; color: var(--ink4); }
         .event-info .ev-desc { color: var(--ink4); font-size: 0.85rem; line-height: 1.6; }
