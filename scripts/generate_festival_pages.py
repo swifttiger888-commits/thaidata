@@ -17,6 +17,9 @@ MONTH_ABBR = {4: "Apr", 5: "May", 6: "Jun", 7: "Jul",
               8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
 
 MONTH_ANCHOR = {
+    "january": ("January — New Year & Fight Nights", 1),
+    "february": ("February — Makha Bucha", 2),
+    "march": ("March — Spring Events & Muay Thai", 3),
     "april": ("April — Songkran (Thai New Year) 🎉", 4),
     "may": ("May — Festival Season Begins", 5),
     "june": ("June — Embassy + More Festivals", 6),
@@ -241,8 +244,8 @@ def generate_ld_json(events):
 
 def gen_calendar_page(events):
     """Full main calendar page with all events."""
-    month_order = ["april", "may", "june", "july", "august",
-                   "september", "october", "november", "december"]
+    month_order = ["january", "february", "march", "april", "may", "june",
+                   "july", "august", "september", "october", "november", "december"]
     grouped = {m: [] for m in month_order}
     ev_map = {e["event_id"]: e for e in events}
     past_events = []
@@ -308,8 +311,8 @@ def gen_calendar_page(events):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thai Festivals UK 2026: Calendar & Events | ThaiData</title>
-    <meta name="description" content="The only complete UK Thai events calendar. Songkran, Loy Krathong, food festivals, temple celebrations — every Thai cultural event across the UK, all in.">
+    <title>Thai Festivals UK 2026–27: Calendar & Events | ThaiData</title>
+    <meta name="description" content="The only complete UK Thai events calendar. Songkran, Loy Krathong, food festivals, Muay Thai, temple celebrations — every Thai cultural event across the UK, all in.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/thai-festivals-uk">
 
