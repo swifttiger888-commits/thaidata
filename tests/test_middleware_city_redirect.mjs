@@ -42,6 +42,10 @@ function makeEnv({ cityExists = true, throwOnAssets = false } = {}) {
         if (href.includes('thai-2-go')) {
           return new Response(VENUE_HTML, { status: 200 });
         }
+        // Mantra Thai Dining: parent listing exists, its /menu/ page does not.
+        if (href.includes('mantra-thai-dining') && !href.includes('/menu/')) {
+          return new Response(VENUE_HTML, { status: 200 });
+        }
         return new Response(FALLBACK_HTML, { status: 200 });
       },
     },
@@ -122,6 +126,18 @@ const next = () => { throw new Error('should not fall through to next()'); };
   assert.equal(res.status, 301);
   assert.equal(res.headers.get('Location'), '/r/leeds/test-thai/');
   console.log('PASS 6: trailing-slash redirect intact');
+}
+
+// 7. Stale /menu/ URL with a live parent → 301 to the parent listing, not the city
+{
+  const res = await mod.onRequest({
+    request: req('/r/newcastle/mantra-thai-dining/menu/'),
+    env: makeEnv({ cityExists: true }),
+    next,
+  });
+  assert.equal(res.status, 301);
+  assert.equal(res.headers.get('Location'), '/r/newcastle/mantra-thai-dining/');
+  console.log('PASS 7: stale menu URL → 301 parent listing');
 }
 
 console.log('ALL MIDDLEWARE CITY-REDIRECT TESTS PASSED');

@@ -703,6 +703,26 @@ export async function onRequest(context) {
     // covers every future drop automatically. Claimant deep-links keep the
     // helpful "page not ready" 404 below.
     if (!isClaimSource) {
+      // Stale /menu/ URLs: a menu page that no longer exists (removed, or
+      // never generated) must 301 to its parent listing, not the city index.
+      // Google holds impressions for dead menu URLs for months (e.g.
+      // /r/newcastle/mantra-thai-dining/menu/ — 57 impressions), and the
+      // parent carries the menu CTA when a real menu page exists.
+      if (segments.length > 3 && segments[3] === 'menu') {
+        try {
+          const parentPath = '/r/' + segments[1] + '/' + segments[2] + '/';
+          const parentRes = await env.ASSETS.fetch(new URL(parentPath, url.origin).toString());
+          if (parentRes.ok) {
+            const parentText = await parentRes.clone().text();
+            if (parentText.includes('Hygiene')) {
+              return new Response(null, {
+                status: 301,
+                headers: { 'Location': parentPath },
+              });
+            }
+          }
+        } catch (_) {}
+      }
       try {
         const cityRes = await env.ASSETS.fetch(new URL('/cities/' + city, url.origin).toString());
         if (cityRes.ok) {

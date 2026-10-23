@@ -562,7 +562,7 @@ def gen_songkran_page(events):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songkran (Thai New Year) UK Events, Dates & Where to C | ThaiData</title>
+    <title>Songkran 2026 UK — Thai New Year Events &amp; Dates | ThaiData</title>
     <meta name="description" content="Every UK Songkran celebration in 2026. Temple water ceremonies, food festivals, restaurant specials. London, Manchester, Birmingham, Swansea — find.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/songkran-uk">
@@ -646,7 +646,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
             .event-card .ev-city {{ width: 100%; }}
         }}
     </style>
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"}},{{"@type":"ListItem","position":2,"name":"Guides","item":"https://thaidata.uk/guides"}},{{"@type":"ListItem","position":3,"name":"Songkran (Thai New Year) UK Events, Dates  Where to C......"}}]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"}},{{"@type":"ListItem","position":2,"name":"Guides","item":"https://thaidata.uk/guides"}},{{"@type":"ListItem","position":3,"name":"Songkran (Thai New Year) UK Events, Dates & Where to Celebrate"}}]}}</script>
 </head>
 <body>
     <div class="grain"></div>
@@ -761,7 +761,7 @@ def gen_loy_krathong_page(events):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loy Krathong UK Festival of Lights Events & Where to C | ThaiData</title>
+    <title>Loy Krathong 2026 UK — Events, Dates &amp; Thai Food | ThaiData</title>
     <meta name="description" content="UK Loy Krathong celebrations in 2026. Float your krathong at temple lakes, enjoy lantern displays and Thai food. Events in London, Manchester, Birmingham.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/loy-krathong-uk">
@@ -845,7 +845,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
             .event-card .ev-city {{ width: 100%; }}
         }}
     </style>
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"}},{{"@type":"ListItem","position":2,"name":"Guides","item":"https://thaidata.uk/guides"}},{{"@type":"ListItem","position":3,"name":"Loy Krathong UK Festival of Lights Events  Where to C......"}}]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://thaidata.uk/"}},{{"@type":"ListItem","position":2,"name":"Guides","item":"https://thaidata.uk/guides"}},{{"@type":"ListItem","position":3,"name":"Loy Krathong UK Festival of Lights Events & Where to Celebrate"}}]}}</script>
 </head>
 <body>
     <div class="grain"></div>

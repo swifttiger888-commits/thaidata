@@ -60,6 +60,21 @@ _ALIAS_TOK = {
     for s, e in _ALIASES.items()
 }
 
+_MENU_TITLE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "menu_title_overrides.json")
+
+
+def _menu_title_override(fsa_id):
+    """Per-venue SERP title override (data/menu_title_overrides.json, keyed by FSA id).
+
+    Used when two venues share a brand and the default "{name} Menu — Full
+    Prices & Dishes" title would be indistinguishable in the SERP."""
+    try:
+        with open(_MENU_TITLE_PATH, encoding="utf-8") as f:
+            ov = json.load(f)
+        return ov.get(str(fsa_id))
+    except Exception:
+        return None
+
 # --- recipe render guard (Step-0 hotfix, Oct 2026) ---
 # Why: the alias matcher folds protein and dietary variants into one recipe, so a
 # vegetarian item could render an image of the pork version (and similar swaps).
@@ -376,7 +391,7 @@ def build(data, dst=None):
      the homepage with HTTP 200 for any unmatched path). Do not remove. -->
 <meta name="thaidata-page" content="menu">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{esc(rname)}{(" " + esc(menu_label)) if menu_label else " Menu"} — Full Prices &amp; Dishes | ThaiData UK</title>
+<title>{_menu_title_override(data.get("fsa_id")) or f'{esc(rname)}{(" " + esc(menu_label)) if menu_label else " Menu"} — Full Prices &amp; Dishes | ThaiData UK'}</title>
 <meta name="description" content="The full {esc(rname)} menu in {esc(city)} — {total} dishes with current prices, taken from the restaurant's own menu. First published online by ThaiData UK.">
 <link rel="canonical" href="https://thaidata.uk/r/{slug_city}/{slug_name}/menu/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
