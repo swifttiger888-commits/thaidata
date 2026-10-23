@@ -63,6 +63,11 @@ EVENT_ORDER = [
     "kathina-2026",
     "vegetarian-festival-2026",
     "alms-giving-end-vassa-wat-buddhapadipa-2026",
+    "yokkao-53-london-2026",
+    "combat-fight-series-39-2026",
+    "rumble-at-the-racecourse-5-2026",
+    "enigma-fight-series-6-2026",
+    "welsh-cup-muaythai-2026",
     "loy-krathong-wat-mahathat-2026",
     "kathina-loykrathong-wat-phra-srisanphet-2026",
     "kathina-wat-buddhapadipa-2026",
@@ -71,9 +76,14 @@ EVENT_ORDER = [
     "loy-krathong-wat-phra-singh-2026",
     "thai-business-awards-cardiff-2026",
     "thai-business-awards-london-2026",
+    "mtgp-fight-night-liverpool-2026",
     "thai-national-day-wat-buddhapadipa-2026",
     "kings-birthday-2026",
     "nye-temple-ceremonies-2026",
+    "rodtang-super-seminar-2027",
+    "muaythai-world-open-saenchai-buakaw-2027",
+    "burmese-days-opera-2027",
+    "yokkao-52-manchester-2027",
 ]
 
 
@@ -117,6 +127,10 @@ def tag_html(tags, ticket_info):
             parts.append(("tag-food", "Food"))
         elif t == "embassy":
             parts.append(("tag-embassy", "Embassy"))
+        elif t == "muay_thai":
+            parts.append(("tag-muay", "Muay Thai"))
+        elif t == "performance":
+            parts.append(("tag-culture", "Cultural"))
         elif t == "free_entry":
             parts.append(("tag-free", "Free Entry"))
         elif t == "free":
@@ -380,6 +394,8 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
         .tag-embassy {{ background: rgba(16,185,129,0.15); color: var(--c2); }}
         .tag-free {{ background: rgba(34,197,94,0.15); color: #22C55E; }}
         .tag-paid {{ background: rgba(236,72,153,0.15); color: var(--pink); }}
+        .tag-muay {{ background: rgba(59,130,246,0.15); color: #60A5FA; }}
+        .tag-culture {{ background: rgba(16,185,129,0.15); color: #34D399; }}
 
         /* Past events */
         .event-card.event-past {{ opacity: 0.55; }}
