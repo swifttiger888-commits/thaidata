@@ -174,10 +174,18 @@ def event_card_html(e):
     past = is_past(e)
     past_cls = " event-past" if past else ""
     ended = '<span class="ev-ended">Ended</span>' if past else ""
+    src = (e.get("source_url") or "").strip()
+    if src:
+        title_html = (
+            f'<a class="ev-title-link" href="{src}" target="_blank" '
+            f'rel="noopener noreferrer">{e["event_name"]} ↗</a>'
+        )
+    else:
+        title_html = e["event_name"]
     return f'''            <div class="event-card{past_cls}">
                 <div class="event-date"><div class="month">{month_label}</div><div class="day">{day_label}</div></div>
                 <div class="event-info">
-                    <div class="ev-title">{e["event_name"]}{ended}</div>
+                    <div class="ev-title">{title_html}{ended}</div>
                     <div class="ev-location"><i class="fas fa-map-marker-alt"></i>{loc}</div>
                     <div class="ev-desc">{e["description"]}</div>
                     <div class="event-tags">{tags}</div>
@@ -387,6 +395,8 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
         .event-date .day {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.4rem; line-height: 1; color: var(--ink); font-weight: 800;}}
         .event-info {{ flex: 1; }}
         .event-info .ev-title {{ font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }}
+        .event-info .ev-title .ev-title-link {{ color: inherit; text-decoration: none; border-bottom: 1px dotted var(--gold); }}
+        .event-info .ev-title .ev-title-link:hover {{ color: var(--gold); }}
         .event-info .ev-location {{ color: var(--ink3); font-size: 0.85rem; margin-bottom: 4px; }}
         .event-info .ev-location i {{ margin-right: 6px; color: var(--ink4); }}
         .event-info .ev-desc {{ color: var(--ink4); font-size: 0.85rem; line-height: 1.6; }}
