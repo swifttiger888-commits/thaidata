@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Thai Restaurants UK — Claim Your Free Listing | ThaiData UK" />
   <meta name="twitter:description"
-    content="1,241 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing in minutes." />
+    content="1,244 Thai restaurants across the UK, from official FSA records. Find yours and claim the free listing in minutes." />
   <meta name="twitter:image" content="https://thaidata.uk/thaidataukhero.webp" />
 
   <!-- Hero image removed: light hero, no decorative LCP image -->
@@ -3152,8 +3152,32 @@ em { font-style: normal; font-weight: 700; }
   </script>
   <script src="privacy-banner.js" defer></script>
 
-
-
+  <!-- Owner-tool event tracking (consent-gated).
+       Fires only after the cookie banner is accepted (thaidata_consent =
+       'granted'). These three events feed the GA4 MCP reports on owner
+       behaviour. Add events here, never outside this script. -->
+  <script>
+    (function () {
+      function send(name, params) {
+        try {
+          if (localStorage.getItem('thaidata_consent') !== 'granted') return;
+          if (typeof gtag === 'function') gtag('event', name, params || {});
+        } catch (e) { /* analytics must never break the page */ }
+      }
+      var toolsLink = document.querySelector('a.tools-all[href="tools"]');
+      if (toolsLink) toolsLink.addEventListener('click', function () {
+        send('owner_tools_click', { event_category: 'owner_tools' });
+      });
+      var claimCta = document.querySelector('.owner-menu__cta');
+      if (claimCta) claimCta.addEventListener('click', function () {
+        send('owner_cta_click', { event_category: 'owner_tools' });
+      });
+      var claimForm = document.getElementById('hero-form');
+      if (claimForm) claimForm.addEventListener('submit', function () {
+        send('claim_search', { event_category: 'claim' });
+      });
+    })();
+  </script>
 
 </body>
 

@@ -38,8 +38,16 @@ if errors:
 import glob, os, re
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def _skippable(path):
+    """Test fixtures and vendored dirs are not deployable site pages."""
+    rel = os.path.relpath(path, REPO).replace(os.sep, '/')
+    return rel.startswith(('tests/', '.venv/', 'node_modules/'))
+
 refs = set()
 for path in glob.glob(os.path.join(REPO, '**', '*.html'), recursive=True):
+    if _skippable(path):
+        continue
     with open(path, encoding='utf-8', errors='ignore') as f:
         refs.update(re.findall(r'/assets/fonts/[A-Za-z0-9._-]+\.woff2', f.read()))
 for ref in sorted(refs):
@@ -55,6 +63,8 @@ if refs:
 import json as _json
 _icon_pages = 0
 for path in glob.glob(os.path.join(REPO, '**', '*.html'), recursive=True):
+    if _skippable(path):
+        continue
     with open(path, encoding='utf-8', errors='ignore') as f:
         html = f.read()
     rel = os.path.relpath(path, REPO)
