@@ -27,15 +27,3 @@
 /cities/stratford-upon-avon  /cities/stratford-on-avon  301
 /cities/taunton  /cities/somerset  301
 /cities/lake-district  /cities/westmorland-and-furness  301
-
-# Block internal/development paths from being served (repo root is published as-is)
-/docs/* /404.html 404
-/analysis/* /404.html 404
-/.hermes/* /404.html 404
-/tests/* /404.html 404
-/scripts/* /404.html 404
-/schemas/* /404.html 404
-/.deploy-backups/* /404.html 404
-/wrangler.toml /404.html 404
-/requirements.txt /404.html 404
-/AGENTS.md /404.html 404

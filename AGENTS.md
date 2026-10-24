@@ -4,7 +4,7 @@ Repo for thaidata.uk, a static Thai-restaurant directory on Cloudflare Pages (au
 
 ## Hard rules
 
-- **The whole repo root is published as-is.** Never commit anything internal unless it can be public. Internal paths (docs/, analysis/, tests/, scripts/, schemas/, .hermes/, wrangler.toml, requirements.txt) are 404'd on the site via `_redirects` — add new internal directories there. Secrets go in `secrets/` (gitignored, never committed).
+- **The whole repo root is published as-is.** Pages serves any committed file directly (static files beat `_redirects`, so blocking does not work — verified Oct 2026). Never commit anything internal unless it can be public: docs/, tests/, scripts/, analysis/ and .hermes/ are all reachable on the live domain. Secrets go in `secrets/` (gitignored, never committed). If an internal file must never be public, it must not be committed.
 - **Never run `git clean -x`.** It wiped `secrets/` once.
 - **`data/restaurants.json` is the single source of truth** for counts, ratings, cities and venue lists. Never hand-edit generated pages (`r/`, `cities/`) — regenerate with the scripts in `scripts/`. Counts appear on hand-maintained pages too (index, faq, about, guides, learn, restaurants, llms.txt); update them together when data changes.
 - **Run `pytest tests/` and `python scripts/ci_check.py` before pushing.** The tests guard against stale counts and JSON drift; CI runs them on every push.
