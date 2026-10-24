@@ -95,13 +95,14 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
         <div class="layout">
             <div class="controls">
                 <div class="field"><label>Monthly Rent (£)</label><input type="number" id="rent" value="3500" oninput="calc()" aria-label="Monthly Rent (£)"></div>
-                <div class="field"><label>Monthly Staff Costs (£)</label><input type="number" id="staff" value="12000" oninput="calc()" aria-label="Monthly Staff Costs (£)"></div>
+                <div class="field"><label>Monthly Staff Costs (£ incl. employer NI &amp; pension)</label><input type="number" id="staff" value="12000" oninput="calc()" aria-label="Monthly Staff Costs (£)"></div>
                 <div class="field"><label>Monthly Utilities (£)</label><input type="number" id="utils" value="1800" oninput="calc()" aria-label="Monthly Utilities (£)"></div>
                 <div class="field"><label>Other Monthly Costs (£)</label><input type="number" id="other" value="2500" oninput="calc()" aria-label="Other Monthly Costs (£)"></div>
-                <div class="field"><label>Average Dish Price (£)</label><input type="number" id="price" value="13.50" step="0.50" oninput="calc()" aria-label="Average Dish Price (£)"></div>
-                <div class="field"><label>Food Cost %</label><input type="number" id="foodpct" value="28" oninput="calc()" aria-label="Food Cost %"></div>
+                <div class="field"><label>Average Dish Price (£ incl. VAT)</label><input type="number" id="price" value="13.50" step="0.50" oninput="calc()" aria-label="Average Dish Price (£)"></div>
+                <div class="field"><label>Food Cost % (of net, ex-VAT sales)</label><input type="number" id="foodpct" value="28" oninput="calc()" aria-label="Food Cost %"></div>
             </div>
             <div class="results" id="results"><p style="color:var(--ink4)">Enter your numbers to see the break-even</p></div>
+            <p style="font-size:0.75rem;color:var(--ink4);margin-top:10px;">Estimates only — VAT at 20% is removed from the dish price before contribution is calculated, and the model assumes a 26-day (6-day-week) operating month. Outputs are planning figures, not a substitute for your accountant.</p>
         </div>
     
         <div class="next-step">
@@ -119,7 +120,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
         const price=parseFloat(document.getElementById('price').value)||0;
         const fp=parseFloat(document.getElementById('foodpct').value)||0;
         const monthly=rent+staff+utils+other;
-        const gpPerDish=price*(1-fp/100);
+        const gpPerDish=(price/1.2)*(1-fp/100);
         const coversMonth=gpPerDish>0?Math.ceil(monthly/gpPerDish):0;
         const coversDay=Math.ceil(coversMonth/26);
         const weeklyRev=(coversDay*price*6).toFixed(0);

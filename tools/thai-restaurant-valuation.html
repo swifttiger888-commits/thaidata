@@ -125,7 +125,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
         <header>
             <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-solid--sterling-sign"></use></svg> Valuation Tool</div>
             <h1>What's Your Thai<br>Restaurant <em>Worth?</em></h1>
-            <p>Estimator based on real UK hospitality transaction data. Input your numbers — get a valuation range and multiple.</p>
+            <p>Illustrative model built from typical hospitality valuation heuristics — it is <strong>not</strong> based on transaction data and is not a substitute for a professional valuation. Input your numbers to get an indicative range and multiple.</p>
         </header>
 
         <div class="layout">
@@ -136,7 +136,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                     <input type="number" id="turnover" value="350000" min="50000" step="10000" oninput="calc()" aria-label="Annual turnover (£)">
                 </div>
                 <div class="input-group">
-                    <label>Net profit (£) — after all costs, before tax</label>
+                    <label>Net profit (£) — after all costs incl. a fair market salary for working owners, before tax</label>
                     <input type="number" id="profit" value="25000" min="0" step="1000" oninput="calc()" aria-label="Net profit (£) — after all costs, before tax">
                 </div>
                 <div class="input-group">
@@ -186,6 +186,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 <div class="breakdown">
                     <h4>Valuation Breakdown</h4>
                     <div class="break-row"><span class="break-label">Base multiple (turnover)</span><span class="break-val" id="baseMult"></span></div>
+                <div id="freeholdNote" style="display:none;font-size:0.75rem;color:var(--ink4);margin-top:10px;">Freehold selected: this range values the <strong>business only</strong>. Get the property valued separately by a commercial surveyor — its value depends on the property market, not your turnover.</div>
                     <div class="break-row"><span class="break-label">Location adjustment</span><span class="break-val" id="locAdj"></span></div>
                     <div class="break-row"><span class="break-label">Lease adjustment</span><span class="break-val" id="leaseAdj"></span></div>
                     <div class="break-row"><span class="break-label">Reputation adjustment</span><span class="break-val" id="repAdj"></span></div>
@@ -258,17 +259,17 @@ function calc() {
     let highVal = Math.round(turnover * baseMult * 1.15);
     let midVal = Math.round((lowVal + highVal) / 2);
 
-    // Freehold adjustment
-    if (tenure === 'freehold') {
-        lowVal += Math.round(turnover * 0.5);
-        highVal += Math.round(turnover * 1.0);
-        midVal = Math.round((lowVal + highVal) / 2);
+    // Freehold: the property has its own market value, which this tool cannot
+    // estimate from turnover — the range below values the business only.
+    const freeholdNote = document.getElementById('freeholdNote');
+    if (freeholdNote) {
+        freeholdNote.style.display = tenure === 'freehold' ? 'block' : 'none';
     }
 
     const format = n => '£' + n.toLocaleString();
 
     document.getElementById('valRange').textContent = format(lowVal) + ' – ' + format(highVal);
-    document.getElementById('valMultiple').textContent = `Midpoint: ${format(midVal)} · ${baseMult.toFixed(2)}× turnover${tenure === 'freehold' ? ' + property' : ''} · ${margin.toFixed(1)}% net margin`;
+    document.getElementById('valMultiple').textContent = `Midpoint: ${format(midVal)} · ${baseMult.toFixed(2)}× turnover· ${margin.toFixed(1)}% net margin`;
     
     document.getElementById('baseMult').textContent = '0.80×';
     document.getElementById('locAdj').textContent = locLabel;

@@ -1,25 +1,40 @@
 """Guard: no stale national/city counts on live surfaces.
 
 Single source of truth: data/restaurants.json. Pages presenting CURRENT data
-must not carry the old June-2026 figures (1,268 / 1,265 / 1,557 / 253 cities).
-The two June-2026 snapshot pages (state-of-uk-thai-food-2026.html and
-how-many-thai-restaurants-uk.html) legitimately keep June numbers and are
-excluded — they carry a visible snapshot banner pointing at the live count.
+must not carry old figures (1,263/1,268/1,265/1,557, 253/254 cities, London
+275/411, Leeds 34, hygiene 56.7%). The two June-2026 snapshot pages
+(state-of-uk-thai-food-2026.html and how-many-thai-restaurants-uk.html)
+legitimately keep June numbers in their labelled tables and are excluded —
+they carry a visible snapshot banner pointing at the live count (1,266).
 """
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 STALE_TOKENS = [
+    "1,263",
     "1,268",
     "1,265",
     "1,557",
     "253 cities",
     "253 UK cities",
+    "254 UK cities",
+    "254 cities",
+    "254 areas",
     "London leads with 411",
+    "London leads with 275",
     "Leeds (34)",
     "Manchester (28)",
+    "1,000 dine-in",
+    "241 takeaways",
+    "1,241 restaurants and takeaways",
+    "1,159 of",
     "26.4% of UK total",
+    # Hygiene: 56.7% was a wrong-denominator June figure (all rows, incl.
+    # unrated). Live rate is 62.3% of rated venues (Oct 2026).
+    "56.7%",
+    # Stale London references
+    "London has 282",
     # Unsourced stats removed Oct 2026 (never re-introduce without a citation)
     "20.3%",
     "£2.1B",
@@ -70,4 +85,4 @@ def test_snapshot_pages_point_at_live_count():
     report = (ROOT / "state-of-uk-thai-food-2026.html").read_text(encoding="utf-8")
     assert "June 2026 snapshot" in how_many
     assert "June 2026 snapshot" in report
-    assert "1,263" in how_many and "1,263" in report
+    assert "1,266" in how_many and "1,266" in report

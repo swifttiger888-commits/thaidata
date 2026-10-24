@@ -341,11 +341,11 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             document.getElementById('staffVal').innerText = staff;
             document.getElementById('priceVal').innerText = priceInc;
 
-            // 2026 Economic Constants
-            const CUR_NLW = 11.44;
-            const CUR_NI_RATE = 0.138;
-            const CUR_NI_THRESH = 9100;
-            const CUR_EMP_ALLOW = 5000;
+            // April 2025 baseline constants (the true pre-April-2026 state)
+            const CUR_NLW = 12.21;
+            const CUR_NI_RATE = 0.15;
+            const CUR_NI_THRESH = 5000;
+            const CUR_EMP_ALLOW = 10500;
 
             const APR26_NI_RATE = 0.15;
             const APR26_NI_THRESH = 5000;
@@ -354,7 +354,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             const avgRev = 15000; 
             const hoursPerStaff = 40;
             
-            // 1. Calculate Payroll Costs (Current 2024 Base)
+            // 1. Calculate Payroll Costs (Current April 2025 Base)
             const annWageCur = CUR_NLW * staff * hoursPerStaff * 52;
             const annNiCurPot = Math.max(0, (CUR_NLW * hoursPerStaff * 52) - CUR_NI_THRESH) * CUR_NI_RATE * staff;
             const annNiCur = Math.max(0, annNiCurPot - CUR_EMP_ALLOW);

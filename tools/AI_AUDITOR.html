@@ -6,7 +6,7 @@
 
     <meta name="robots" content="index, follow">
     <title>AI Visibility Audit for Thai Restaurants | ThaiData.uk</title>
-    <meta name="description" content="Test your restaurant website's visibility for AI search engines like ChatGPT and Gemini. Find and fix PDF menu traps.">
+    <meta name="description" content="Check the site issues that most affect visibility in AI and web search — PDF menu traps, missing JSON-LD, slow pages. Heuristic checks with practical fixes.">
     <link rel="canonical" href="https://thaidata.uk/tools/AI_AUDITOR.html">
     
     <!-- JSON-LD Entity Schema for AEO -->
@@ -18,7 +18,7 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Any",
       "description": "Diagnostic tool for UK hospitality businesses to measure discoverability by Large Language Models (LLMs) and search agents.",
-      "featureList": "Neural crawler simulation, PDF menu trap detection, JSON-LD Schema validation, AI discoverability scoring",
+      "featureList": "Heuristic page checks (no real crawler), PDF menu trap detection, JSON-LD schema validation, discoverability scoring",
       "softwareRequirements": "HTML5 Browser",
       "softwareVersion": "2026.1",
       "targetCountry": "GB"
@@ -254,13 +254,13 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             { text: "Testing for 'The PDF Trap'...", duration: 1000 },
             { text: "Validating JSON-LD Organization Schema...", duration: 1200 },
             { text: "Validating JSON-LD Menu Schema...", duration: 1500 },
-            { text: "Checking Mobile-First Neural UI...", duration: 900 },
+            { text: "Checking mobile-first layout...", duration: 900 },
             { text: "Estimating Discovery Velocity...", duration: 1100 }
         ];
 
         const auditorFindings = [
             { id: "mobile", title: "Mobile Optimized", success: "Your site is responsive. AI crawlers favor this.", error: "Site is hard to read on mobile. AI penalty applied." },
-            { id: "pdf", title: "HTML Menu Format", success: "HTML Menu detected. AI can read your prices.", error: "PDF-only menu detected. You are invisible to AI search." },
+            { id: "pdf", title: "HTML Menu Format", success: "HTML Menu detected. AI can read your prices.", error: "PDF-only menu detected. Search engines and AI assistants can't reliably read a PDF menu." },
             { id: "schema", title: "Structured Data", success: "Menu Schema found. You'll appear in 'near me' searches.", error: "Missing JSON-LD Menu Schema. AI bots can't confidently index your dishes." }
         ];
 

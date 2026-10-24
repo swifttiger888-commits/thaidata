@@ -6,7 +6,7 @@
 
     <meta name="robots" content="index, follow">
     <title>2026 Restaurant Profit Calculator: Delivery Fee Impact | ThaiData</title>
-    <meta name="description" content="See your true 2026 net profit. Model Just Eat/Deliveroo/Uber Eats fees against the latest National Insurance and £10,500 Employment Allowance. Make.">
+    <meta name="description" content="Per-dish net profit calculator for UK Thai restaurants: menu price minus VAT, platform commission, ingredients, packaging and labour. Commission and VAT assumptions are editable.">
     <link rel="canonical" href="https://thaidata.uk/tools/PROFIT_MARGIN_DEFENDER.html">
 
     <!-- JSON-LD Entity Schema for AEO -->
@@ -17,12 +17,12 @@
       "name": "Profit Margin Defender 2026",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Any",
-      "description": "Dynamic calculator for UK Thai restaurants to model the net profit impact of third-party delivery platform fees against 2026 National Insurance contributions and Employment Allowance.",
-      "featureList": "Multi-platform fee calculator (Just Eat, Deliveroo, Uber Eats), 2026 National Insurance impact simulator, Employment Allowance (£10,500) optimizer, Break-even analysis by dish, Net profit projection dashboard",
+      "description": "Per-dish net profit calculator for UK Thai restaurants: menu price minus VAT, delivery platform commission, ingredients, packaging and labour costs.",
+      "featureList": "Editable VAT and platform commission, ingredient presets from ThaiData dish-price tracking, per-dish net profit and margin vs a cited UK hospitality benchmark",
       "softwareRequirements": "HTML5 Browser",
       "softwareVersion": "2026.1",
       "countryOfAssembly": "United Kingdom",
-      "processorRequirements": "Calculates net profit after all platform fees and employment taxes for 2026",
+      "processorRequirements": "Calculates per-dish net profit after VAT, commission, ingredients, packaging and labour (estimates only — not a substitute for your accountant)",
       "memoryRequirements": "Stores current and projected UK tax and allowance rates",
       "countriesSupported": "GB"
     }
@@ -503,7 +503,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 <svg class="ic" aria-hidden="true" style="font-size: 3rem; color: #A3132B;"><use href="#i-solid--chart-line"></use></svg>
                 <div>
                     <h1 style="font-family:'Archivo', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight:400; line-height:1.2;">Profit Margin <em>Defender</em></h1>
-                    <p class="subtitle">NI & Platform Fee Simulation (2026 Projections)</p>
+                    <p class="subtitle">Per-dish net profit, VAT and commission — with editable assumptions</p>
                 </div>
             </div>
         </header>
@@ -565,15 +565,23 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                     </div>
                     
                     <div class="input-group">
+                        <label for="commissionRate">Platform Commission (%)</label>
+                        <input type="number" id="commissionRate" step="0.1" min="0" max="100" value="30" aria-label="Platform Commission (%)">
+                        <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:5px;">
+                            Example rate only — check your contract. Deliveroo and Uber Eats commonly charge ~30% (marketing tiers vary); Just Eat ~14% plus a service fee.
+                        </div>
+                    </div>
+
+                    <div class="input-group">
                         <label for="packagingCost">Packaging Cost (£)</label>
                         <input type="number" id="packagingCost" step="0.01" min="0" value="0.50" aria-label="Packaging Cost (£)">
                     </div>
 
                     <div class="input-group">
-                        <label for="laborCost">Est. Labor Cost per Dish (£)</label>
+                        <label for="laborCost">Est. Labour Cost per Dish (£) — incl. employer NI &amp; on-costs</label>
                         <input type="number" id="laborCost" step="0.01" min="0" value="2.50" aria-label="Est. Labor Cost per Dish (£)">
                         <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:5px;">
-                            <svg class="ic" aria-hidden="true"><use href="#i-solid--circle-info"></use></svg> Avg Thai restaurant: £2.20 - £3.50
+                            <svg class="ic" aria-hidden="true"><use href="#i-solid--circle-info"></use></svg> ThaiData estimate based on our dish-price and staffing data
                         </div>
                     </div>
                     
@@ -593,8 +601,8 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                     
                     <div class="results" id="results">
                         <div class="profit-display">
-                            <div class="profit-amount" id="profitAmount">£2.83</div>
-                            <div class="profit-percentage" id="profitPercentage">22.6%</div>
+                            <div class="profit-amount" id="profitAmount">£0.47</div>
+                            <div class="profit-percentage" id="profitPercentage">3.7%</div>
                             <div>Net Profit Per Dish</div>
                         </div>
                         
@@ -609,7 +617,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                                 <span id="vatAmount">£2.08</span>
                             </div>
                             <div class="cost-item">
-                                <span>Platform Commission (30%)</span>
+                                <span>Platform Commission</span>
                                 <span id="commissionAmount">£3.75</span>
                             </div>
                             <div class="cost-item">
@@ -626,7 +634,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                             </div>
                             <div class="cost-item">
                                 <span>Net Profit</span>
-                                <span id="netProfitDisplay">£2.83</span>
+                                <span id="netProfitDisplay">£0.47</span>
                             </div>
                         </div>
                         
@@ -645,7 +653,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                         
                         <div class="shock-factor" id="shockFactor">
                             <h3><svg class="ic" aria-hidden="true"><use href="#i-solid--bolt"></use></svg> Shock Factor</h3>
-                            <p id="shockText">Your profit margin is <strong>5.4x higher</strong> than the industry average! You're defending your margins effectively.</p>
+                            <p id="shockText">Your profit margin is <strong>below</strong> the 4.2% UK hospitality benchmark — delivery commissions are consuming the dish margin.</p>
                         </div>
                     </div>
                     
@@ -658,7 +666,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             </div>
             
             <div class="disclaimer">
-                <p><strong>Note:</strong> This tool assumes 20% VAT (1/6 of menu price) and 30% delivery platform commission as standard rates in the UK. Packaging cost defaults to £0.50 but can be adjusted. Industry benchmark of 4.2% net margin is based on UKHospitality 2024 data.</p>
+                <p><strong>Note:</strong> Outputs are estimates for planning, not a substitute for your accountant. VAT is assumed at 20% included in the price (1/6 of menu price) — the standard rate for hot food. Platform commission is charged on the order value; VAT on commission is generally recoverable for VAT-registered businesses and is not modelled here. Commission and packaging defaults are editable. Labour should include employer NI, pension and holiday on-costs. Industry benchmark of 4.2% net margin: UKHospitality 2024.</p>
             </div>
         </main>
         
@@ -772,7 +780,8 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             calculateBtn.addEventListener('click', calculateProfit);
             
             // Also calculate when inputs change (for real-time updates)
-            [ingredientCostInput, menuPriceInput, packagingCostInput].forEach(input => {
+            [ingredientCostInput, menuPriceInput, packagingCostInput,
+             document.getElementById('commissionRate'), document.getElementById('laborCost')].forEach(input => {
                 input.addEventListener('input', calculateProfit);
             });
             
@@ -787,11 +796,10 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 const packagingCost = parseFloat(packagingCostInput.value) || 0;
                 const laborCostBase = parseFloat(document.getElementById('laborCost').value) || 0;
                 
-                // 2026 logic: Factor in NI (15%) but also the £10,500 Allowance offset
-                // For a per-dish tool, we assume a small per-dish NI hit that is partially 
-                // absorbed by the business-wide allowance.
-                const estNiHit = Math.max(0, (laborCostBase * 0.15) - 0.20); // Assumes allowance covers first 20p of NI per dish
-                const laborNet = laborCostBase + estNiHit;
+                // Labour is entered gross of employer on-costs (NI, pension, holiday)
+                // — the input label says so, and no per-dish allowance maths is
+                // fabricated on top of it.
+                const laborNet = laborCostBase;
                 
                 // Validate inputs
                 if (menuPrice <= 0) {
@@ -804,8 +812,10 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 // Calculate VAT (20% included in price, so 1/6 of menu price)
                 const vat = menuPrice / 6;
                 
-                // Calculate commission (30% of menu price)
-                const commission = menuPrice * 0.30;
+                // Commission: editable rate, applied to the VAT-inclusive order
+                // value (how the major platforms charge).
+                const commissionRate = parseFloat(document.getElementById('commissionRate').value) || 0;
+                const commission = menuPrice * (commissionRate / 100);
                 
                 // Calculate net profit
                 const netProfit = menuPrice - vat - commission - ingredientCost - packagingCost - laborNet;

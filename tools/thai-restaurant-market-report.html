@@ -181,35 +181,35 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
 
 <script>
 const CITIES = [
-    {"name":"London","pop":8970000,"total":411,"restaurants":323,"takeaways":88,"rating":4.1,"per100k":4.6,"region":"London","rent":"£3,000–£8,000/mo","wage":"£12.71/hr (NLW)","fitout":"£80k–£180k"},
-    {"name":"Leeds","pop":812000,"total":34,"restaurants":27,"takeaways":7,"rating":4.4,"per100k":4.2,"region":"Yorkshire","rent":"£1,500–£3,500/mo","wage":"£12.71/hr","fitout":"£60k–£120k"},
-    {"name":"Manchester","pop":568000,"total":28,"restaurants":24,"takeaways":4,"rating":4.1,"per100k":4.9,"region":"North West","rent":"£1,800–£4,000/mo","wage":"£12.71/hr","fitout":"£65k–£130k"},
-    {"name":"Edinburgh","pop":548000,"total":24,"restaurants":15,"takeaways":9,"rating":4.2,"per100k":4.4,"region":"Scotland","rent":"£1,800–£4,000/mo","wage":"£12.71/hr","fitout":"£65k–£130k"},
-    {"name":"Bristol","pop":483000,"total":19,"restaurants":15,"takeaways":4,"rating":4.6,"per100k":3.9,"region":"South West","rent":"£1,500–£3,500/mo","wage":"£12.71/hr","fitout":"£60k–£120k"},
-    {"name":"Birmingham","pop":1166000,"total":17,"restaurants":15,"takeaways":2,"rating":4.4,"per100k":1.5,"region":"West Midlands","rent":"£1,500–£3,000/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
-    {"name":"Bradford","pop":547000,"total":15,"restaurants":10,"takeaways":5,"rating":3.8,"per100k":2.7,"region":"Yorkshire","rent":"£1,000–£2,500/mo","wage":"£12.71/hr","fitout":"£50k–£100k"},
-    {"name":"Leicester","pop":374000,"total":15,"restaurants":10,"takeaways":5,"rating":4.5,"per100k":4.0,"region":"East Midlands","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
-    {"name":"Bournemouth","pop":401000,"total":14,"restaurants":11,"takeaways":3,"rating":4.7,"per100k":3.5,"region":"South West","rent":"£1,500–£3,200/mo","wage":"£12.71/hr","fitout":"£60k–£120k"},
-    {"name":"Swansea","pop":247000,"total":14,"restaurants":12,"takeaways":2,"rating":4.0,"per100k":5.7,"region":"Wales","rent":"£900–£2,000/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
-    {"name":"Brighton","pop":277000,"total":13,"restaurants":12,"takeaways":1,"rating":4.8,"per100k":4.7,"region":"South East","rent":"£1,800–£3,800/mo","wage":"£12.71/hr","fitout":"£65k–£130k"},
-    {"name":"Sheffield","pop":584000,"total":13,"restaurants":12,"takeaways":1,"rating":4.6,"per100k":2.2,"region":"Yorkshire","rent":"£1,300–£3,000/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
-    {"name":"Newcastle","pop":307000,"total":11,"restaurants":9,"takeaways":2,"rating":4.1,"per100k":3.6,"region":"North East","rent":"£1,100–£2,500/mo","wage":"£12.71/hr","fitout":"£50k–£100k"},
-    {"name":"York","pop":211000,"total":10,"restaurants":8,"takeaways":2,"rating":4.6,"per100k":4.7,"region":"Yorkshire","rent":"£1,400–£3,000/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
-    {"name":"Glasgow","pop":635000,"total":8,"restaurants":5,"takeaways":3,"rating":5.0,"per100k":1.3,"region":"Scotland","rent":"£1,300–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
-    {"name":"Liverpool","pop":500000,"total":7,"restaurants":7,"takeaways":0,"rating":4.0,"per100k":1.4,"region":"North West","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
-    {"name":"Cardiff","pop":372000,"total":7,"restaurants":7,"takeaways":0,"rating":4.3,"per100k":1.9,"region":"Wales","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"London","pop":8970000,"total":274,"restaurants":224,"takeaways":50,"rating":4.2,"per100k":3.1,"region":"London","rent":"£3,000–£8,000/mo","wage":"£12.71/hr (NLW)","fitout":"£80k–£180k"},
+    {"name":"Leeds","pop":812000,"total":26,"restaurants":22,"takeaways":4,"rating":4.7,"per100k":3.2,"region":"Yorkshire","rent":"£1,500–£3,500/mo","wage":"£12.71/hr","fitout":"£60k–£120k"},
+    {"name":"Manchester","pop":568000,"total":18,"restaurants":16,"takeaways":2,"rating":4.5,"per100k":3.2,"region":"North West","rent":"£1,800–£4,000/mo","wage":"£12.71/hr","fitout":"£65k–£130k"},
+    {"name":"Edinburgh","pop":548000,"total":19,"restaurants":12,"takeaways":7,"rating":null,"per100k":3.5,"region":"Scotland","rent":"£1,800–£4,000/mo","wage":"£12.71/hr","fitout":"£65k–£130k"},
+    {"name":"Bristol","pop":483000,"total":13,"restaurants":12,"takeaways":1,"rating":4.8,"per100k":2.7,"region":"South West","rent":"£1,500–£3,500/mo","wage":"£12.71/hr","fitout":"£60k–£120k"},
+    {"name":"Birmingham","pop":1166000,"total":8,"restaurants":6,"takeaways":2,"rating":4.4,"per100k":0.7,"region":"West Midlands","rent":"£1,500–£3,000/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Bradford","pop":547000,"total":6,"restaurants":4,"takeaways":2,"rating":4.0,"per100k":1.1,"region":"Yorkshire","rent":"£1,000–£2,500/mo","wage":"£12.71/hr","fitout":"£50k–£100k"},
+    {"name":"Leicester","pop":374000,"total":7,"restaurants":4,"takeaways":3,"rating":4.4,"per100k":1.9,"region":"East Midlands","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Bournemouth","pop":401000,"total":11,"restaurants":9,"takeaways":2,"rating":4.6,"per100k":2.7,"region":"South West","rent":"£1,500–£3,200/mo","wage":"£12.71/hr","fitout":"£60k–£120k"},
+    {"name":"Swansea","pop":247000,"total":15,"restaurants":12,"takeaways":3,"rating":3.9,"per100k":6.1,"region":"Wales","rent":"£900–£2,000/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
+    {"name":"Brighton","pop":277000,"total":12,"restaurants":11,"takeaways":1,"rating":4.9,"per100k":4.3,"region":"South East","rent":"£1,800–£3,800/mo","wage":"£12.71/hr","fitout":"£65k–£130k"},
+    {"name":"Sheffield","pop":584000,"total":9,"restaurants":9,"takeaways":0,"rating":4.6,"per100k":1.5,"region":"Yorkshire","rent":"£1,300–£3,000/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Newcastle","pop":307000,"total":7,"restaurants":7,"takeaways":0,"rating":4.7,"per100k":2.3,"region":"North East","rent":"£1,100–£2,500/mo","wage":"£12.71/hr","fitout":"£50k–£100k"},
+    {"name":"York","pop":211000,"total":24,"restaurants":21,"takeaways":3,"rating":4.2,"per100k":11.4,"region":"Yorkshire","rent":"£1,400–£3,000/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Glasgow","pop":635000,"total":6,"restaurants":5,"takeaways":1,"rating":null,"per100k":0.9,"region":"Scotland","rent":"£1,300–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Liverpool","pop":500000,"total":6,"restaurants":6,"takeaways":0,"rating":4.3,"per100k":1.2,"region":"North West","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Cardiff","pop":372000,"total":7,"restaurants":7,"takeaways":0,"rating":4.6,"per100k":1.9,"region":"Wales","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
     {"name":"Belfast","pop":345000,"total":7,"restaurants":6,"takeaways":1,"rating":3.6,"per100k":2.0,"region":"NI","rent":"£900–£2,000/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
-    {"name":"Nottingham","pop":328000,"total":8,"restaurants":7,"takeaways":1,"rating":4.9,"per100k":2.4,"region":"East Midlands","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Nottingham","pop":328000,"total":2,"restaurants":2,"takeaways":0,"rating":5.0,"per100k":0.6,"region":"East Midlands","rent":"£1,200–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
     {"name":"Norwich","pop":148000,"total":8,"restaurants":6,"takeaways":2,"rating":4.5,"per100k":5.4,"region":"East of England","rent":"£1,000–£2,200/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
-    {"name":"Southampton","pop":271000,"total":3,"restaurants":1,"takeaways":2,"rating":4.3,"per100k":1.1,"region":"South East","rent":"£1,300–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Southampton","pop":271000,"total":4,"restaurants":2,"takeaways":2,"rating":4.5,"per100k":1.6,"region":"South East","rent":"£1,300–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
     {"name":"Portsmouth","pop":208000,"total":5,"restaurants":5,"takeaways":0,"rating":4.4,"per100k":2.4,"region":"South East","rent":"£1,100–£2,500/mo","wage":"£12.71/hr","fitout":"£50k–£100k"},
-    {"name":"Plymouth","pop":267000,"total":6,"restaurants":4,"takeaways":2,"rating":4.7,"per100k":2.2,"region":"South West","rent":"£1,000–£2,200/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
-    {"name":"Coventry","pop":370000,"total":6,"restaurants":1,"takeaways":5,"rating":4.7,"per100k":1.6,"region":"West Midlands","rent":"£1,100–£2,500/mo","wage":"£12.71/hr","fitout":"£50k–£100k"},
-    {"name":"Milton Keynes","pop":292000,"total":6,"restaurants":4,"takeaways":2,"rating":4.7,"per100k":2.1,"region":"South East","rent":"£1,300–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
-    {"name":"Hull","pop":268000,"total":5,"restaurants":4,"takeaways":1,"rating":4.0,"per100k":1.9,"region":"Yorkshire","rent":"£900–£2,000/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
+    {"name":"Plymouth","pop":267000,"total":5,"restaurants":4,"takeaways":1,"rating":4.8,"per100k":1.9,"region":"South West","rent":"£1,000–£2,200/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
+    {"name":"Coventry","pop":370000,"total":3,"restaurants":1,"takeaways":2,"rating":5.0,"per100k":0.8,"region":"West Midlands","rent":"£1,100–£2,500/mo","wage":"£12.71/hr","fitout":"£50k–£100k"},
+    {"name":"Milton Keynes","pop":292000,"total":6,"restaurants":5,"takeaways":1,"rating":4.7,"per100k":2.1,"region":"South East","rent":"£1,300–£2,800/mo","wage":"£12.71/hr","fitout":"£55k–£110k"},
+    {"name":"Hull","pop":268000,"total":4,"restaurants":3,"takeaways":1,"rating":5.0,"per100k":1.5,"region":"Yorkshire","rent":"£900–£2,000/mo","wage":"£12.71/hr","fitout":"£45k–£90k"},
 ];
 
-const AVG_PER_100K = 3.0;
+const AVG_PER_100K = 2.1; // UK average, R+T businesses per 100k (Oct 2026)
 
 // Populate dropdown
 const select = document.getElementById('citySelect');
@@ -234,7 +234,7 @@ function generateReport() {
     // Opportunity score (0-100)
     const gapScore = Math.min(100, Math.round((AVG_PER_100K / Math.max(c.per100k, 0.5)) * 40));
     const popScore = Math.min(30, Math.round((c.pop / 8970000) * 30));
-    const qualityGap = c.rating <= 4.2 ? 20 : c.rating <= 4.5 ? 10 : 0;
+    const qualityGap = c.rating == null ? 10 : c.rating <= 4.2 ? 20 : c.rating <= 4.5 ? 10 : 0;
     const densityBonus = c.per100k <= 2.5 ? 10 : 0;
     const totalScore = gapScore + popScore + qualityGap + densityBonus;
 
@@ -245,17 +245,17 @@ function generateReport() {
 
     // Competitive density comparison
     const ukDensityPct = Math.round((c.per100k / AVG_PER_100K) * 100);
-    const londonPct = Math.round((c.total / 411) * 100);
+    const londonPct = Math.round((c.total / 274) * 100);
 
     // Verdict generation
     let verdictText = '';
     if (totalScore >= 65) {
         verdictText = `${c.name} shows strong potential for a new Thai restaurant. With ${c.total} existing Thai businesses serving ${(c.pop/1000).toFixed(0)}k people (${c.per100k}/100k vs UK avg ${AVG_PER_100K}/100k), there's a clear market gap. `;
-        if (c.rating <= 4.0) verdictText += `The average hygiene rating of ★${c.rating} suggests an opportunity to compete on quality — a well-run kitchen could quickly become the top-rated Thai restaurant in the city. `;
+        if (c.rating != null && c.rating <= 4.0) verdictText += `The average hygiene rating of ★${c.rating} suggests an opportunity to compete on quality — a well-run kitchen could quickly become the top-rated Thai restaurant in the city. `;
         verdictText += `Estimated startup: ${c.fitout}. Get our full opening guide and timeline at thaidata.uk.`;
     } else if (totalScore >= 40) {
         verdictText = `${c.name} is a moderate opportunity. With ${c.total} Thai businesses and ${c.per100k}/100k density, the market has room but isn't wide open. `;
-        if (c.rating >= 4.5) verdictText += `Competition is high-quality (avg ★${c.rating}) — you'd need to match that standard from day one. `;
+        if (c.rating != null && c.rating >= 4.5) verdictText += `Competition is high-quality (avg ★${c.rating}) — you'd need to match that standard from day one. `;
         verdictText += `Consider a differentiated concept (premium, street-food casual, delivery-focused) rather than competing head-to-head. Estimated startup: ${c.fitout}.`;
     } else {
         verdictText = `${c.name} is a challenging market for a new Thai entrant. With ${c.total} existing businesses and ${c.per100k}/100k density (${ukDensityPct}% of UK average), the market is well-served. `;
@@ -273,7 +273,7 @@ function generateReport() {
         <div class="metric-grid">
             <div class="metric"><div class="m-num">${c.total}</div><div class="m-label">Thai Businesses</div></div>
             <div class="metric"><div class="m-num">${c.per100k}</div><div class="m-label">Per 100k Pop</div></div>
-            <div class="metric"><div class="m-num">★${c.rating}</div><div class="m-label">Avg Hygiene</div></div>
+            <div class="metric"><div class="m-num">${c.rating != null ? '★' + c.rating : 'FHIS'}</div><div class="m-label">Avg Hygiene</div></div>
             <div class="metric"><div class="m-num">${c.restaurants}/${c.takeaways}</div><div class="m-label">Dine-in / Takeaway</div></div>
         </div>
 
@@ -299,7 +299,7 @@ function generateReport() {
             <h3>Competition <em>Landscape</em></h3>
             <ul>
                 <li><strong>${c.total} existing Thai businesses</strong> — ${c.restaurants} dine-in, ${c.takeaways} takeaways</li>
-                <li><strong>Average hygiene rating: ★${c.rating}</strong> — ${c.rating >= 4.5 ? 'High standards — you need to match this' : c.rating >= 4.0 ? 'Decent — room to compete on quality' : 'Below average — opportunity to become the best-rated'}</li>
+                <li><strong>Average hygiene rating: ${c.rating != null ? '★' + c.rating : 'FHIS (no star ratings in Scotland)'}</strong> — ${c.rating != null && c.rating >= 4.5 ? 'High standards — you need to match this' : c.rating >= 4.0 ? 'Decent — room to compete on quality' : 'Below average — opportunity to become the best-rated'}</li>
                 <li><strong>Market type:</strong> ${c.takeaways > c.restaurants ? 'Takeaway-dominant' : c.restaurants > c.takeaways * 2 ? 'Dine-in dominant' : 'Balanced dine-in and takeaway'}</li>
             </ul>
         </div>

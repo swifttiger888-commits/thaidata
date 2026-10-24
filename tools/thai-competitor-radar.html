@@ -144,25 +144,25 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
         </div>
 </div>
 
-    <footer><p>&copy; 2026 ThaiData.uk · Ratings from FSA · Historical tracking coming with weekly data refresh</p></footer>
+    <footer><p>&copy; 2026 ThaiData.uk · Ratings from FSA data, snapshot 19 October 2026 · Scotland uses FHIS (Pass/Improvement Required), not star ratings</p></footer>
 
 <script>
 const CITY_RATINGS = {
-    'London': { total: 411, avg: 4.1, stars: {5:206, 4:98, 3:58, 2:28, 1:21}, note: 'Massive spread — 50% are 5-star, but 12% are 1-2 star. Weak players exist in every borough.' },
-    'Leeds': { total: 34, avg: 4.4, stars: {5:18, 4:10, 3:4, 2:1, 1:1}, note: 'Strong market. 82% are 4+ stars. To compete, you need to hit ★4 minimum from day one.' },
-    'Manchester': { total: 28, avg: 4.1, stars: {5:14, 4:7, 3:4, 2:2, 1:1}, note: '50% 5-star, but 11% are 1-2 star. There\'s a quality gap at the bottom you could exploit.' },
-    'Edinburgh': { total: 24, avg: 4.2, stars: {5:11, 4:7, 3:4, 2:1, 1:1}, note: 'Scottish FHIS scheme. Solid ratings across the board — differentiation needed.' },
-    'Bristol': { total: 19, avg: 4.6, stars: {5:12, 4:5, 3:1, 2:1, 1:0}, note: 'Exceptional market. 89% are 4+ stars. Hard to stand out on hygiene alone.' },
-    'Birmingham': { total: 17, avg: 4.4, stars: {5:9, 4:5, 3:2, 2:1, 1:0}, note: 'Well-rated but underserved. Low competition + decent ratings = strong opportunity.' },
-    'Bradford': { total: 15, avg: 3.8, stars: {5:5, 4:4, 3:3, 2:2, 1:1}, note: 'Below-average market. 27% are 1-2 star. A well-run kitchen could quickly become #1.' },
-    'Leicester': { total: 15, avg: 4.5, stars: {5:9, 4:3, 3:2, 2:1, 1:0}, note: 'High standards. You\'d need to match ★4+ from opening.' },
-    'Swansea': { total: 14, avg: 4.0, stars: {5:5, 4:4, 3:3, 2:1, 1:1}, note: 'Mixed bag. Room at the top for a quality operator.' },
-    'Brighton': { total: 13, avg: 4.8, stars: {5:10, 4:2, 3:1, 2:0, 1:0}, note: 'Elite market. Hardest city to compete on hygiene — almost everyone is ★4-5.' },
-    'Sheffield': { total: 13, avg: 4.6, stars: {5:8, 4:3, 3:2, 2:0, 1:0}, note: 'Strong ratings. No weak players to exploit.' },
-    'Glasgow': { total: 8, avg: 5.0, stars: {5:8, 4:0, 3:0, 2:0, 1:0}, note: 'Perfect scores across the board. Scottish FHIS — "Pass" = ★5 equivalent.' },
-    'Liverpool': { total: 7, avg: 4.0, stars: {5:3, 4:2, 3:1, 2:0, 1:1}, note: 'Small market with room at the top. One 1-star player is vulnerable.' },
-    'Cardiff': { total: 7, avg: 4.3, stars: {5:3, 4:3, 3:1, 2:0, 1:0}, note: 'Consistent quality. Hard to differentiate on ratings alone.' },
-    'Newcastle': { total: 11, avg: 4.1, stars: {5:4, 4:4, 3:2, 2:1, 1:0}, note: 'Average market. One 2-star player creates an opening.' },
+    'London': { total: 274, avg: 4.2, stars: {5:151, 4:57, 3:43, 2:12, 1:9}, note: '76% are 4–5 star, 8% are 1–2 star (rated venues, 19 Oct 2026). Weak players at the bottom — an opening for a quality operator.' },
+    'Leeds': { total: 26, avg: 4.7, stars: {5:17, 4:9, 3:0, 2:0, 1:0}, note: '100% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Manchester': { total: 18, avg: 4.5, stars: {5:11, 4:5, 3:2, 2:0, 1:0}, note: '89% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Edinburgh': { total: 19, fhis: {pass: 15, improvement: 4}, note: 'Scottish FHIS scheme — 15 Pass, 4 Improvement Required. No 0–5 star scores exist in Scotland; FHIS results are not comparable with FHRS star ratings.' },
+    'Bristol': { total: 13, avg: 4.8, stars: {5:10, 4:3, 3:0, 2:0, 1:0}, note: '100% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Birmingham': { total: 8, avg: 4.4, stars: {5:5, 4:2, 3:0, 2:1, 1:0}, note: '88% are 4–5 star, 12% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Bradford': { total: 6, avg: 4.0, stars: {5:4, 4:0, 3:0, 2:2, 1:0}, note: '67% are 4–5 star, 33% are 1–2 star (rated venues, 19 Oct 2026). Weak players at the bottom — an opening for a quality operator.' },
+    'Leicester': { total: 7, avg: 4.4, stars: {5:4, 4:2, 3:1, 2:0, 1:0}, note: '86% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Swansea': { total: 15, avg: 3.9, stars: {5:6, 4:4, 3:4, 2:0, 1:1}, note: '67% are 4–5 star, 7% are 1–2 star (rated venues, 19 Oct 2026). Mid-table market — quality beats saturation here.' },
+    'Brighton': { total: 12, avg: 4.9, stars: {5:11, 4:1, 3:0, 2:0, 1:0}, note: '100% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Sheffield': { total: 9, avg: 4.6, stars: {5:6, 4:2, 3:1, 2:0, 1:0}, note: '89% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Glasgow': { total: 6, fhis: {pass: 6, improvement: 0}, note: 'Scottish FHIS scheme — 6 Pass, 0 Improvement Required. No 0–5 star scores exist in Scotland; FHIS results are not comparable with FHRS star ratings.' },
+    'Liverpool': { total: 6, avg: 4.3, stars: {5:3, 4:2, 3:1, 2:0, 1:0}, note: '83% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Cardiff': { total: 7, avg: 4.6, stars: {5:5, 4:1, 3:1, 2:0, 1:0}, note: '86% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
+    'Newcastle': { total: 7, avg: 4.7, stars: {5:6, 4:0, 3:1, 2:0, 1:0}, note: '86% are 4–5 star, 0% are 1–2 star (rated venues, 19 Oct 2026). Very high standards — hard to stand out on hygiene alone.' },
 };
 
 const select = document.getElementById('citySelect');
@@ -170,7 +170,7 @@ Object.keys(CITY_RATINGS).sort().forEach(name => {
     const d = CITY_RATINGS[name];
     const opt = document.createElement('option');
     opt.value = name;
-    opt.textContent = `${name} (${d.total} restaurants, ★${d.avg})`;
+    opt.textContent = d.fhis ? `${name} (${d.total} businesses, FHIS)` : `${name} (${d.total} businesses, ★${d.avg})`;
     select.appendChild(opt);
 });
 
@@ -182,36 +182,49 @@ function showRadar() {
     const radar = document.getElementById('radar');
     radar.classList.add('active');
 
-    const maxStars = Math.max(...Object.values(d.stars));
+    const isFhis = !!d.fhis;
+    const maxStars = isFhis ? Math.max(d.fhis.pass, d.fhis.improvement) : Math.max(...Object.values(d.stars));
     const colors = {5: 'var(--c2)', 4: '#84CC16', 3: 'var(--amber)', 2: '#F97316', 1: 'var(--red)'};
 
-    let bars = '';
-    [5,4,3,2,1].forEach(star => {
-        const count = d.stars[star] || 0;
-        const pct = maxStars > 0 ? (count / maxStars * 100) : 0;
-        const pctOfTotal = d.total > 0 ? Math.round(count / d.total * 100) : 0;
-        bars += `<div class="rating-bar">
-            <div class="rating-star">★${star}</div>
-            <div class="rating-track"><div class="rating-fill" style="width:${pct}%;background:${colors[star]};">${pctOfTotal}%</div></div>
-            <div class="rating-count">${count}</div>
-        </div>`;
-    });
+        let bars = '';
+    if (isFhis) {
+        [['Pass', d.fhis.pass, 'var(--c2)'], ['Improvement Required', d.fhis.improvement, 'var(--red)']].forEach(([label, count, col]) => {
+            const pct = maxStars > 0 ? (count / maxStars * 100) : 0;
+            const pctOfTotal = d.total > 0 ? Math.round(count / d.total * 100) : 0;
+            bars += `<div class="rating-bar">
+                <div class="rating-star">${label}</div>
+                <div class="rating-track"><div class="rating-fill" style="width:${pct}%;background:${col};">${pctOfTotal}%</div></div>
+                <div class="rating-count">${count}</div>
+            </div>`;
+        });
+    } else {
+        [5,4,3,2,1].forEach(star => {
+            const count = d.stars[star] || 0;
+            const pct = maxStars > 0 ? (count / maxStars * 100) : 0;
+            const pctOfTotal = d.total > 0 ? Math.round(count / d.total * 100) : 0;
+            bars += `<div class="rating-bar">
+                <div class="rating-star">★${star}</div>
+                <div class="rating-track"><div class="rating-fill" style="width:${pct}%;background:${colors[star]};">${pctOfTotal}%</div></div>
+                <div class="rating-count">${count}</div>
+            </div>`;
+        });
+    }
 
-    const weakCount = (d.stars[1] || 0) + (d.stars[2] || 0);
-    const strongCount = (d.stars[4] || 0) + (d.stars[5] || 0);
+    const weakCount = isFhis ? 0 : (d.stars[1] || 0) + (d.stars[2] || 0);
+    const strongCount = isFhis ? d.fhis.pass : (d.stars[4] || 0) + (d.stars[5] || 0);
     const strongPct = d.total > 0 ? Math.round(strongCount / d.total * 100) : 0;
     const weakPct = d.total > 0 ? Math.round(weakCount / d.total * 100) : 0;
 
     let opportunity = '';
     if (weakCount >= 3) opportunity = `<span class="stat-mini good">🎯 ${weakCount} weak players — opportunity to be the best</span>`;
     if (strongPct >= 80) opportunity += `<span class="stat-mini warn">🏰 ${strongPct}% high-rated — tough to stand out</span>`;
-    if (d.avg <= 4.0) opportunity += `<span class="stat-mini good">📈 Below-avg ratings — easy to beat</span>`;
+    if (!isFhis && d.avg <= 4.0) opportunity += `<span class="stat-mini good">📈 Below-avg ratings — easy to beat</span>`;
     if (d.total <= 10) opportunity += `<span class="stat-mini bad">⚠️ Small market — limited growth ceiling</span>`;
 
     radar.innerHTML = `
         <div style="text-align:center;margin-bottom:20px;">
             <div style="font-family:'Archivo','Inter',system-ui,sans-serif;font-size:2rem;">${name}</div>
-            <div style="color:var(--ink4);">${d.total} restaurants · Avg ★${d.avg}</div>
+            <div style="color:var(--ink4);">${d.total} businesses${isFhis ? ' · FHIS (no star ratings)' : ` · Avg ★${d.avg}`}</div>
             <div style="margin-top:12px;">${opportunity}</div>
         </div>
 
@@ -221,14 +234,14 @@ function showRadar() {
             <h3><svg class="ic" aria-hidden="true"><use href="#i-solid--lightbulb"></use></svg> Market Intelligence</h3>
             <p>${d.note}</p>
             <p style="margin-top:12px;">
-                <strong>Weak players (★1-2):</strong> ${weakCount} (${weakPct}%) · 
-                <strong>Strong players (★4-5):</strong> ${strongCount} (${strongPct}%)
+                <strong>${isFhis ? 'FHIS Pass:' : 'Weak players (★1-2):'}</strong> ${weakCount} (${weakPct}%) · 
+                <strong>${isFhis ? 'Improvement Required:' : 'Strong players (★4-5):'}</strong> ${strongCount} (${strongPct}%)
             </p>
         </div>
 
         <div class="insight-card">
             <h3><svg class="ic" aria-hidden="true"><use href="#i-solid--chart-line"></use></svg> How to Use This</h3>
-            <p>Check back weekly. Our auto-refresh pulls new FSA data every Monday. When a restaurant drops from ★5 to ★3, that's your signal — their customers are reading those reviews. A new ★5 player entering the market is competition to watch. Historical tracking coming soon.</p>
+            <p>This page is refreshed with each ThaiData FSA data update (latest: 19 October 2026). When a restaurant drops from ★5 to ★3, that's your signal — their customers are reading those ratings. A new ★5 player entering the market is competition to watch.</p>
         </div>
     `;
 }

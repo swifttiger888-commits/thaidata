@@ -587,10 +587,10 @@ def update_hero_stats(
         '        </div>'
     )
     html = re.sub(
-        r'<div class="stat-row">.*?</div>\s*</div>\s*\n\s*<div class="card">',
-        stat_row_html + '\n\n        <div class="card">',
+        r'<div class="stat-row">(?:(?!<div class="(?:stat-row|city-stats|card)")[\s\S])*</div>\s*</div>',
+        stat_row_html,
         html,
-        flags=re.DOTALL,
+        count=1,
     )
     # 4. Market Overview:  "13 Thai food businesses"
     html = re.sub(
@@ -678,6 +678,72 @@ def update_hero_stats(
                       lambda m: m.group(1) + f"{raw_count:,}" + m.group(2) + meta_stars + m.group(3), html)
     html = re.sub(r"(<title>[^<]*? — )[\d,]+( Businesses)",
                   lambda m: m.group(1) + f"{raw_count:,}" + m.group(2), html)
+
+    # ── 6b. Legacy lines the older refresh passes never touched:
+    # og:title count/stars, vs-London share percentages, dine-in split ──
+    scheme_here = stats.get("scheme", "FHRS")
+    if scheme_here == "FHIS":
+        html = re.sub(
+            r'(property="og:title" content="[^"]*? — )[\d,]+( Businesses)(?:, [^"]* Avg Rating)?"',
+            lambda m: m.group(1) + f"{raw_count:,}" + m.group(2) + ', FHIS Rated"',
+            html,
+        )
+    elif avg_rating:
+        n_full = int(avg_rating + 0.5)
+        meta_stars = "★" * n_full + "☆" * (5 - n_full)
+        html = re.sub(
+            r'(property="og:title" content="[^"]*? — )[\d,]+( Businesses)(?:, [^"]* Avg Rating)?"',
+            lambda m: m.group(1) + f"{raw_count:,}" + m.group(2) + f", {meta_stars} Avg Rating" + '"',
+            html,
+        )
+
+    # vs London: recompute business-share and population-share percentages
+    london_count = stats.get("_london_count", 0)
+    london_pop = stats.get("_london_pop")
+    pop_vs = ctx.get("population")
+    if london_count:
+        biz = f"{city} has {count / london_count * 100:.1f}% of London's {london_count:,} Thai businesses"
+        if pop_vs and london_pop:
+            pop_pct = f"{pop_vs / london_pop * 100:.1f}%"
+            london_pop_txt = f"{london_pop / 1e6:.2f}M" if london_pop >= 1e6 else f"{london_pop:,}"
+            html = re.sub(
+                r"vs London:</strong> [^<]*? has [\d.]+% of London's [\d,]+ Thai businesses, with [\d.]+% of London's [\d.M,]+ population\.</li>",
+                f"vs London:</strong> {biz}, with {pop_pct} of London's {london_pop_txt} population.</li>",
+                html,
+            )
+            html = re.sub(
+                r"vs London:</strong> [^<]*? has [\d.]+% of London's [\d,]+ Thai businesses, despite having [\d.]+% of London's population\.",
+                f"vs London:</strong> {biz}, despite having {pop_pct} of London's population.",
+                html,
+            )
+            html = re.sub(
+                r"vs London:</strong> [^<]*? has [\d.]+% of London's [\d,]+ Thai businesses\.",
+                f"vs London:</strong> {biz}.",
+                html,
+            )
+        else:
+            html = re.sub(
+                r"vs London:</strong> [^<]*? has [\d.]+% of London's [\d,]+ Thai businesses[^.]*\.",
+                f"vs London:</strong> {biz}. Population data not available for ratio.",
+                html,
+            )
+
+    # dine-in / takeaway split paragraph + "With N dine-in restaurants" line
+    dine_in = stats.get("dine_in", 0)
+    takeaway = stats.get("takeaway", 0)
+    if count:
+        dine_pct = round(dine_in / count * 100)
+        html = re.sub(
+            r"\d+% of Thai food businesses in [^<]*? are dine-in restaurants \(\d+\), while \d+% are takeaways \(\d+\)\.",
+            f"{dine_pct}% of Thai food businesses in {city} are dine-in restaurants ({dine_in}), "
+            f"while {100 - dine_pct}% are takeaways ({takeaway}).",
+            html,
+        )
+        html = re.sub(
+            r"With \d+ dine-in restaurants",
+            f"With {dine_in} dine-in restaurants",
+            html,
+        )
 
     # FHIS mapping note → scheme-accurate wording
     html = re.sub(
@@ -1121,6 +1187,16 @@ def process_city(
     london_restaurants = [r for r in by_city.get("London", [])
                           if r.get("type") != "pub"]
     stats["_london_count"] = len(london_restaurants)
+    # London population for vs-London share lines (same source as city pages)
+    london_pop = None
+    cities_path = REPO / "api" / "v1" / "cities.json"
+    if cities_path.exists():
+        with open(cities_path) as f:
+            for _c in json.load(f).get("cities", []):
+                if _c.get("name") == "London":
+                    london_pop = _c.get("population")
+                    break
+    stats["_london_pop"] = london_pop
     # Raw count including excluded (for city-stats div which shows FSA total)
     raw_city = [r for r in all_data["raw"].get("restaurants", [])
                 if r.get("city") == city_name and r.get("type") != "pub"]

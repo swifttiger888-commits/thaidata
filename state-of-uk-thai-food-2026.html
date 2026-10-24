@@ -49,7 +49,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
         .logo-icon { height: 40px; width: auto; display: inline-block; }
         .nav-links { display: flex; gap: 16px; }
-        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; }
+        .nav-links a { color: var(--ink2); text-decoration: none; font-size: 0.85rem; }
         .nav-links a:hover { color: var(--c2); }
 
         /* Hero */
@@ -76,9 +76,9 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .section { margin: 40px 0; }
         .section h2 { font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
         .section h2 em { font-style: normal; color: var(--c2); }
-        .section h3 { font-weight: 700; font-size: 1.05rem; margin: 28px 0 12px; color: rgba(255,255,255,0.9); }
+        .section h3 { font-weight: 700; font-size: 1.05rem; margin: 28px 0 12px; color: var(--ink); }
         .section p { color: var(--ink4); font-size: 0.95rem; line-height: 1.75; margin-bottom: 14px; }
-        .section p strong { color: rgba(255,255,255,0.85); }
+        .section p strong { color: var(--ink2); }
 
         .card { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }
         
@@ -122,7 +122,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         /* Horizontal bar rows */
         .viz-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
         .viz-row:last-child { margin-bottom: 0; }
-        .viz-label { min-width: 90px; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.85); }
+        .viz-label { min-width: 90px; font-size: 0.85rem; font-weight: 600; color: var(--ink2); }
         .viz-track { flex: 1; height: 28px; background: #FFFFFF; border-radius: 6px; overflow: hidden; position: relative; }
         .viz-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding: 0 10px; font-size: 0.75rem; font-weight: 700; color: var(--ink); transition: width 0.6s ease; min-width: fit-content; }
         .viz-fill.green { background: linear-gradient(90deg, rgba(163, 19, 43, 0.6), var(--c2)); }
@@ -135,7 +135,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .pair-row { margin-bottom: 16px; }
         .pair-row:last-child { margin-bottom: 0; }
         .pair-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-        .pair-head .dish-name { font-weight: 600; font-size: 0.85rem; color: rgba(255,255,255,0.85); }
+        .pair-head .dish-name { font-weight: 600; font-size: 0.85rem; color: var(--ink2); }
         .pair-head .markup-badge { font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; background: rgba(245,158,11,0.15); color: var(--gold); }
         .pair-bars { display: flex; gap: 4px; height: 22px; }
         .pair-bar { height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding: 0 6px; font-size: 0.65rem; font-weight: 700; color: var(--ink); min-width: fit-content; position: relative; }
@@ -208,14 +208,14 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"How many Thai restaurants are there in the UK in 2026?","acceptedAnswer":{"@type":"Answer","text":"The live figure is 1,263 Thai food businesses listed in Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS, Scotland) data across 254 UK areas (October 2026). This report's tables show the June 2026 snapshot; dine-in restaurants, takeaways and pub kitchens are all included."}},
-  {"@type":"Question","name":"Which UK city has the most Thai restaurants?","acceptedAnswer":{"@type":"Answer","text":"London dominates with 411 Thai businesses, accounting for 32.4% of all UK Thai restaurants (June 2026 snapshot). Leeds is second with 34, followed by Manchester (28), Edinburgh (24), and Bristol (19). London has 12 times more Thai businesses than second-place Leeds."}},
-  {"@type":"Question","name":"What is the average hygiene rating for UK Thai restaurants?","acceptedAnswer":{"@type":"Answer","text":"The national average hygiene rating for Thai establishments is 4.3 out of 5 \u2014 slightly above the UK restaurant industry average. The highest-rated cities are Bristol (4.6), Leeds (4.4), Leicester (4.4), and Birmingham (4.4)."}},
-  {"@type":"Question","name":"Which UK cities are underserved for Thai food?","acceptedAnswer":{"@type":"Answer","text":"The biggest gaps are Birmingham (1.5 Thai businesses per 100,000 residents despite 1.1 million people), Sheffield (2.1/100k), Cardiff, Coventry, and Hull \u2014 all large populations with disproportionately few Thai options. The UK average is 2.6 per 100,000 residents."}},
+  {"@type":"Question","name":"How many Thai restaurants are there in the UK in 2026?","acceptedAnswer":{"@type":"Answer","text":"The live figure is 1,266 Thai food businesses listed in Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS, Scotland) data across 255 UK areas (October 2026). This report's tables show the June 2026 snapshot; dine-in restaurants, takeaways and pub kitchens are all included."}},
+  {"@type":"Question","name":"Which UK city has the most Thai restaurants?","acceptedAnswer":{"@type":"Answer","text":"London dominates with 278 Thai businesses, accounting for 21.9% of all UK Thai restaurants (June 2026 snapshot). Leeds is second with 27, followed by York (24) and Edinburgh (20). London has 10.3 times more Thai businesses than second-place Leeds."}},
+  {"@type":"Question","name":"What is the average hygiene rating for UK Thai restaurants?","acceptedAnswer":{"@type":"Answer","text":"The national average hygiene rating for Thai establishments is 4.4 out of 5 \u2014 slightly above the UK restaurant industry average. The highest-rated cities are Cornwall (5.0), Brighton (4.8), Birmingham (4.8), and Bristol (4.6)."}},
+  {"@type":"Question","name":"Which UK cities are underserved for Thai food?","acceptedAnswer":{"@type":"Answer","text":"The biggest gaps are Birmingham (0.7/100k despite 1.17 million people), Coventry (0.8/100k), and Nottingham (0.9/100k) \u2014 large populations with disproportionately few Thai options. The UK average is 2.0 per 100,000 residents."}},
   {"@type":"Question","name":"What commission do delivery platforms charge UK Thai restaurants?","acceptedAnswer":{"@type":"Answer","text":"Just Eat charges 14% plus \u00a30.50 per order, while Deliveroo and Uber Eats both charge 25-30%. On a \u00a350 order, Just Eat takes \u00a37.50 whereas Deliveroo and Uber Eats take \u00a312.50-\u00a315.00. The average Thai menu price is 22% higher on delivery platforms than dine-in."}},
   {"@type":"Question","name":"How much does a Thai meal cost in the UK in 2026?","acceptedAnswer":{"@type":"Answer","text":"Based on menu price tracking across 5 cities, Pad Thai (chicken) averages \u00a312.50 dine-in and \u00a314.95 delivery. Green Curry (chicken) is \u00a313.00 dine-in and \u00a315.90 delivery. Massaman Curry averages \u00a313.95 dine-in and \u00a316.90 delivery. London prices run approximately 15% above the national average."}},
-  {"@type":"Question","name":"What is the split between dine-in and takeaway Thai restaurants in the UK?","acceptedAnswer":{"@type":"Answer","text":"Nationally, approximately 79% are dine-in restaurants and 21% are takeaways, though this varies significantly by city. London skews more toward takeaway at 21.4% takeaway, compared to cities like Sheffield where 97% are dine-in."}},
-  {"@type":"Question","name":"How will the 2026 National Living Wage increase affect Thai restaurants?","acceptedAnswer":{"@type":"Answer","text":"The April 2026 National Living Wage increase to \u00a312.71/hr (up from \u00a311.44) will raise annual staff costs by approximately \u00a322,000-\u00a328,000 for a typical Thai restaurant with 6 front-of-house and 4 kitchen staff on minimum wage. For restaurants operating on 8-12% net margins, this is the difference between profit and loss."}},
+  {"@type":"Question","name":"What is the split between dine-in and takeaway Thai restaurants in the UK?","acceptedAnswer":{"@type":"Answer","text":"Nationally, approximately 80% are dine-in restaurants and 20% are takeaways, though this varies significantly by city. London is 17.3% takeaway, compared to cities like Sheffield where 100% are dine-in."}},
+  {"@type":"Question","name":"How will the 2026 National Living Wage increase affect Thai restaurants?","acceptedAnswer":{"@type":"Answer","text":"The April 2026 National Living Wage increase to \u00a312.71/hr (up from \u00a312.21 in April 2025, and \u00a311.44 in 2024) will raise annual staff costs by approximately \u00a322,000-\u00a328,000 for a typical Thai restaurant with 6 front-of-house and 4 kitchen staff on minimum wage. For restaurants operating on 8-12% net margins, this is the difference between profit and loss."}},
   {"@type":"Question","name":"What visa options are available for hiring Thai chefs in the UK?","acceptedAnswer":{"@type":"Answer","text":"The Skilled Worker visa is the primary route, requiring a minimum salary of \u00a338,700 (or going rate, whichever is higher), a sponsorship licence, and English language proficiency. In practice, only established restaurants can afford to sponsor Thai chefs."}},
   {"@type":"Question","name":"Where does the data for the UK Thai food industry report come from?","acceptedAnswer":{"@type":"Answer","text":"The primary source is the Food Standards Agency (FSA) FHRS API for all UK establishments registered with local authorities, filtered for Thai cuisine. Scotland uses the separate Food Hygiene Information Scheme (FHIS). Menu prices are collected manually from restaurant websites and delivery platforms. Population data comes from ONS mid-2024 estimates."}}
 ]}
@@ -227,7 +227,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         "@context": "https://schema.org",
         "@type": "Dataset",
         "name": "State of UK Thai Food 2026",
-        "description": "Comprehensive data on UK Thai restaurants including counts by city, hygiene ratings, delivery platform economics, and menu price analysis. Based on FSA data for 1,268 Thai food businesses across 253 UK cities.",
+        "description": "Comprehensive data on UK Thai restaurants including counts by city, hygiene ratings, delivery platform economics, and menu price analysis. Based on FSA data for 1,268 Thai food businesses across 254 UK cities.",
         "url": "https://thaidata.uk/state-of-uk-thai-food-2026",
         "creator": {"@type": "Organization", "name": "ThaiData UK", "url": "https://thaidata.uk"},
         "datePublished": "2026-06-04",
@@ -258,7 +258,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             <h1>State of <em>UK Thai Food</em><br>2026</h1>
             <p class="sub">The most comprehensive analysis of Thai cuisine across the United Kingdom. Every UK area with a Thai listing. One data-driven report.</p>
 <div style="font-size:0.75rem;color:var(--ink4);margin-top:4px;"><svg class="ic" aria-hidden="true" style="color:var(--c2);margin-right:6px;"><use href="#i-solid--circle-check"></use></svg>Data updated: 2026-06-08</div>
-<div style="font-size:0.85rem;color:var(--ink);background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:10px 14px;margin-top:10px;"><strong>June 2026 snapshot.</strong> This report reflects the June 2026 dataset. Live figures — <a href="/how-many-thai-restaurants-uk" style="color:var(--c2);text-decoration:underline;">1,263 Thai businesses across 254 cities (October 2026)</a> — are on the restaurant count page.</div>
+<div style="font-size:0.85rem;color:var(--ink);background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:10px 14px;margin-top:10px;"><strong>June 2026 snapshot.</strong> This report reflects the June 2026 dataset. Live figures — <a href="/how-many-thai-restaurants-uk" style="color:var(--c2);text-decoration:underline;">1,266 Thai businesses across 255 cities (October 2026)</a> — are on the restaurant count page.</div>
             <div class="meta">
                 <span><svg class="ic" aria-hidden="true" style="margin-right:4px;"><use href="#i-solid--calendar"></use></svg> June 2026</span>
                 <span><svg class="ic" aria-hidden="true" style="margin-right:4px;"><use href="#i-solid--database"></use></svg> FSA/FHIS Data</span>
@@ -277,11 +277,11 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <div class="lbl">Cities With Thai Food</div>
             </div>
             <div class="big-stat">
-                <div class="num green">★4.3</div>
+                <div class="num green">★4.4</div>
                 <div class="lbl">Average Hygiene Rating</div>
             </div>
             <div class="big-stat">
-                <div class="num purple">32.4%</div>
+                <div class="num purple">21.9%</div>
                 <div class="lbl">London's Share of Total</div>
             </div>
         </div>
@@ -302,13 +302,13 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         <!-- SECTION 1 -->
         <div class="section" id="size">
             <h2>1. How Big Is the <em>UK Thai Food</em> Market?</h2>
-            <p>As of June 2026, there are <strong>1268 Thai food businesses</strong> registered with the Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS for Scotland). This covers dine-in restaurants, takeaways, and mobile vendors — any establishment classified under Thai cuisine by their local authority.</p>
+            <p>As of June 2026, there are <strong>1268 Thai food businesses</strong> registered with the Food Standards Agency (FSA) and Food Hygiene Information Scheme (FHIS for Scotland). This covers dine-in restaurants and takeaways — any establishment classified under Thai cuisine by their local authority.</p>
             
             <div class="highlight-box">
-                <p><strong>📊 Key figure:</strong> 1268 businesses across 253 UK cities. London alone accounts for 411 (32.4%). The average city has 6.4 Thai businesses per 100,000 residents (per-city average; the national per-capita figure is 2.6). The national average hygiene rating is ★4.3 out of 5.</p>
+                <p><strong>📊 Key figure:</strong> 1,268 businesses across 254 UK cities. London alone accounts for 278 (21.9%). The average city has 2.1 Thai businesses per 100,000 residents (per-city average; the national per-capita figure is 2.0). The national average hygiene rating is ★4.4 out of 5.</p>
             </div>
             
-            <p>The split between dine-in and takeaway varies significantly by city. Nationally, approximately <strong>79% are dine-in restaurants</strong> and <strong>21% are takeaways</strong>, though London skews more toward takeaway (21.4%) compared to cities like Sheffield (97% dine-in).</p>
+            <p>The split between dine-in and takeaway varies significantly by city. Nationally, approximately <strong>80% are dine-in restaurants</strong> and <strong>20% are takeaways</strong>, though London skews more toward takeaway (17.3%) compared to cities like Sheffield (100% dine-in).</p>
         </div>
 
         <!-- SECTION 2 -->
@@ -320,33 +320,33 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
                 <table class="rank-table">
                     <thead><tr><th>#</th><th>City</th><th>Businesses</th><th>Per 100k</th><th>Hygiene</th><th>Density</th></tr></thead>
                     <tbody>
-                        <tr><td class="rank">1</td><td class="city">London</td><td class="num">411</td><td>4.6</td><td>★4.1</td><td><div class="bar-wrap"><div class="bar" style="width:100%"></div></div></td></tr>
-                        <tr><td class="rank">2</td><td class="city">Leeds</td><td class="num">34</td><td>4.2</td><td>★4.4</td><td><div class="bar-wrap"><div class="bar" style="width:8.3%"></div></div></td></tr>
-                        <tr><td class="rank">3</td><td class="city">Manchester</td><td class="num">28</td><td>4.9</td><td>★4.1</td><td><div class="bar-wrap"><div class="bar" style="width:6.8%"></div></div></td></tr>
-                        <tr><td class="rank">4</td><td class="city">Edinburgh</td><td class="num">24</td><td>4.4</td><td>★4.2</td><td><div class="bar-wrap"><div class="bar" style="width:5.8%"></div></div></td></tr>
-                        <tr><td class="rank">5</td><td class="city">Bristol</td><td class="num">19</td><td>3.9</td><td>★4.6</td><td><div class="bar-wrap"><div class="bar" style="width:4.6%"></div></div></td></tr>
-                        <tr><td class="rank">6</td><td class="city">Birmingham</td><td class="num">17</td><td>1.5</td><td>★4.4</td><td><div class="bar-wrap"><div class="bar" style="width:4.1%"></div></div></td></tr>
-                        <tr><td class="rank">7</td><td class="city">Brighton</td><td class="num">13</td><td>4.7</td><td>★4.2</td><td><div class="bar-wrap"><div class="bar" style="width:3.2%"></div></div></td></tr>
-                        <tr><td class="rank">8</td><td class="city">Sheffield</td><td class="num">12</td><td>2.1</td><td>★4.0</td><td><div class="bar-wrap"><div class="bar" style="width:2.9%"></div></div></td></tr>
-                        <tr><td class="rank">9</td><td class="city">Leicester</td><td class="num">10</td><td>2.8</td><td>★4.4</td><td><div class="bar-wrap"><div class="bar" style="width:2.4%"></div></div></td></tr>
-                        <tr><td class="rank">10</td><td class="city">Bournemouth</td><td class="num">9</td><td>4.6</td><td>★4.0</td><td><div class="bar-wrap"><div class="bar" style="width:2.2%"></div></div></td></tr>
-                    </tbody>
+<tr><td class="rank">1</td><td class="city">London</td><td class="num">278</td><td>3.1</td><td>★4.2</td><td><div class="bar-wrap"><div class="bar" style="width:100%"></div></div></td></tr>
+<tr><td class="rank">2</td><td class="city">Leeds</td><td class="num">27</td><td>3.3</td><td>★4.5</td><td><div class="bar-wrap"><div class="bar" style="width:9.7%"></div></div></td></tr>
+<tr><td class="rank">3</td><td class="city">York</td><td class="num">24</td><td>11.4</td><td>★4.3</td><td><div class="bar-wrap"><div class="bar" style="width:8.6%"></div></div></td></tr>
+<tr><td class="rank">4</td><td class="city">Edinburgh</td><td class="num">20</td><td>3.6</td><td>FHIS</td><td><div class="bar-wrap"><div class="bar" style="width:7.2%"></div></div></td></tr>
+<tr><td class="rank">5</td><td class="city">Manchester</td><td class="num">19</td><td>3.3</td><td>★4.3</td><td><div class="bar-wrap"><div class="bar" style="width:6.8%"></div></div></td></tr>
+<tr><td class="rank">6</td><td class="city">Bristol</td><td class="num">14</td><td>2.9</td><td>★4.6</td><td><div class="bar-wrap"><div class="bar" style="width:5.0%"></div></div></td></tr>
+<tr><td class="rank">7</td><td class="city">Richmond-Upon-Thames</td><td class="num">14</td><td>—</td><td>★4.4</td><td><div class="bar-wrap"><div class="bar" style="width:5.0%"></div></div></td></tr>
+<tr><td class="rank">8</td><td class="city">Swansea</td><td class="num">14</td><td>5.7</td><td>★3.9</td><td><div class="bar-wrap"><div class="bar" style="width:5.0%"></div></div></td></tr>
+<tr><td class="rank">9</td><td class="city">Brighton</td><td class="num">13</td><td>4.7</td><td>★4.8</td><td><div class="bar-wrap"><div class="bar" style="width:4.7%"></div></div></td></tr>
+<tr><td class="rank">10</td><td class="city">Cornwall</td><td class="num">12</td><td>2.1</td><td>★5.0</td><td><div class="bar-wrap"><div class="bar" style="width:4.3%"></div></div></td></tr>
+</tbody>
                 </table>
             </div>
 
-            <p>The drop-off after London is stark: the capital has <strong>12× more Thai businesses than second-place Leeds</strong>. For context, London has 8.8× Leeds' population — meaning Thai food is actually slightly <em>more</em> concentrated in London relative to population than the raw numbers suggest.</p>
+            <p>The drop-off after London is stark: the capital has <strong>10.3× more Thai businesses than second-place Leeds</strong> — but also 11× the population, so per head Leeds actually has slightly more Thai food (3.3 vs 3.1 per 100,000 residents).</p>
         </div>
 
         <!-- SECTION 3 -->
         <div class="section" id="density">
             <h2>3. Where Are the <em>Underserved</em> Markets?</h2>
-            <p>Per-capita density is the metric that matters for operators looking to expand. The UK average is <strong>2.6 Thai businesses per 100,000 residents</strong>. Cities above this line are more competitive; cities below it represent opportunity.</p>
+            <p>Per-capita density is the metric that matters for operators looking to expand. The UK average is <strong>2.0 Thai businesses per 100,000 residents</strong>. Cities above this line are more competitive; cities below it represent opportunity.</p>
 
             <div class="highlight-box">
-                <p><strong>🔍 Biggest gaps (high population, low Thai density):</strong> Birmingham (1.5/100k — 1.1M people but only 17 Thai businesses), Sheffield (2.1/100k), Cardiff, Coventry, and Hull all have large populations with disproportionately few Thai options.</p>
+                <p><strong>🔍 Biggest gaps (high population, low Thai density):</strong> Birmingham (0.7/100k — 1.17M people but only 8 Thai businesses), Coventry (0.8/100k), and Nottingham (0.9/100k) all have large populations with disproportionately few Thai options.</p>
             </div>
 
-            <p>Manchester leads the density rankings at <strong>4.9/100k</strong>, followed closely by Brighton (4.7) and London (4.6). These are the most competitive markets — but also the ones with proven demand.</p>
+            <p>York leads the density rankings at <strong>11.4/100k</strong>, followed by Swansea (5.7) and Brighton (4.7). These are the most competitive markets — but also the ones with proven demand.</p>
 
             <p>Use our free <a href="tools/where-to-open-thai-restaurant-uk.html" style="color:var(--c2);">City Opportunity Scorer</a> to weight population, competition, and costs for any UK city.</p>
         </div>
@@ -354,34 +354,34 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         <!-- SECTION 4 -->
         <div class="section" id="hygiene">
             <h2>4. How Clean Are UK <em>Thai</em> Restaurants?</h2>
-            <p>The national average hygiene rating for Thai establishments is <strong>★4.3 out of 5</strong> — slightly above the UK restaurant industry average. The highest-rated cities are Bristol (★4.6), Leeds (★4.4), and Leicester (★4.4).</p>
+            <p>The national average hygiene rating for Thai establishments is <strong>★4.4 out of 5</strong> — slightly above the UK restaurant industry average. The highest-rated cities are Cornwall (★5.0), Brighton (★4.8), and Birmingham (★4.8).</p>
 
             <div class="viz-card" style="margin-top:18px;">
                 <h4><svg class="ic" aria-hidden="true" style="margin-right:6px;"><use href="#i-solid--chart-bar"></use></svg> Hygiene Rating Distribution</h4>
                 <div class="hygiene-bars">
                     <div class="hygiene-row">
                         <div class="hygiene-stars" style="color:var(--c2);">★★★★★</div>
-                        <div class="hygiene-track"><div class="hygiene-fill s5" style="width:56.7%">56.7%</div></div>
+                        <div class="hygiene-track"><div class="hygiene-fill s5" style="width:61.9%">61.9%</div></div>
                         <div class="hygiene-pct" style="color:var(--c2);">5-star</div>
                     </div>
                     <div class="hygiene-row">
                         <div class="hygiene-stars" style="color:#84CC16;">★★★★</div>
-                        <div class="hygiene-track"><div class="hygiene-fill s4" style="width:28%">28%</div></div>
+                        <div class="hygiene-track"><div class="hygiene-fill s4" style="width:21.3%">21.3%</div></div>
                         <div class="hygiene-pct">4-star</div>
                     </div>
                     <div class="hygiene-row">
-                        <div class="hygiene-stars" style="color:#FACC15;">★★★</div>
-                        <div class="hygiene-track"><div class="hygiene-fill s3" style="width:10%">10%</div></div>
+                        <div class="hygiene-stars" style="color:#B45309;">★★★</div>
+                        <div class="hygiene-track"><div class="hygiene-fill s3" style="width:11.9%">11.9%</div></div>
                         <div class="hygiene-pct">3-star</div>
                     </div>
                     <div class="hygiene-row">
                         <div class="hygiene-stars" style="color:#FB923C;">★★</div>
-                        <div class="hygiene-track"><div class="hygiene-fill s2" style="width:4%">4%</div></div>
+                        <div class="hygiene-track"><div class="hygiene-fill s2" style="width:3.1%">3.1%</div></div>
                         <div class="hygiene-pct">2-star</div>
                     </div>
                     <div class="hygiene-row">
                         <div class="hygiene-stars" style="color:var(--red);">★</div>
-                        <div class="hygiene-track"><div class="hygiene-fill s1" style="width:1.3%">1.3%</div></div>
+                        <div class="hygiene-track"><div class="hygiene-fill s1" style="width:1.8%">1.8%</div></div>
                         <div class="hygiene-pct">1-star</div>
                     </div>
                 </div>
@@ -390,11 +390,11 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             <div class="two-col" style="margin-top:4px;">
                 <div class="card" style="margin:0;">
                     <h3 style="font-size:1rem;font-weight:600;">🏆 Highest Hygiene</h3>
-                    <p style="font-size:0.9rem;">Bristol ★4.6<br>Leeds ★4.4<br>Leicester ★4.4<br>Birmingham ★4.4</p>
+                    <p style="font-size:0.9rem;">Cornwall ★5.0<br>Brighton ★4.8<br>Birmingham ★4.8<br>Bristol ★4.6</p>
                 </div>
                 <div class="card" style="margin:0;">
                     <h3 style="font-size:1rem;font-weight:600;">⚠️ Room to Improve</h3>
-                    <p style="font-size:0.9rem;">Sheffield ★4.0<br>Bournemouth ★4.0<br>London ★4.1<br>Manchester ★4.1</p>
+                    <p style="font-size:0.9rem;">Central Bedfordshire ★3.6<br>Swansea ★3.9<br>Huddersfield ★4.0<br>Hertfordshire ★4.1</p>
                 </div>
             </div>
 
@@ -544,7 +544,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
             <h2>7. 2026 <em>Outlook</em>: Minimum Wage, Margins & Migration</h2>
             
             <h3>National Living Wage: £12.71/hr</h3>
-            <p>The April 2026 NLW increase to £12.71/hr (up from £11.44) hits hospitality harder than most sectors. A typical Thai restaurant with 6 front-of-house staff and 4 kitchen staff on minimum wage will see annual staff costs rise by approximately <strong>£22,000-£28,000</strong>. For a restaurant operating on 8-12% net margins, this is the difference between profit and loss.</p>
+            <p>The April 2026 NLW increase to £12.71/hr (up from £12.21 in April 2025, and £11.44 in 2024) hits hospitality harder than most sectors. A typical Thai restaurant with 6 front-of-house staff and 4 kitchen staff on minimum wage will see annual staff costs rise by approximately <strong>£22,000-£28,000</strong>. For a restaurant operating on 8-12% net margins, this is the difference between profit and loss.</p>
             <p>Use our free <a href="index.html#tools" style="color:var(--c2);">Minimum Wage Calculator</a> to model your exact increase.</p>
 
             <h3>Chef Shortages & Visa Rules</h3>

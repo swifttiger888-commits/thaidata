@@ -192,45 +192,45 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
 <script>
 // City data — loaded from FSA
 const CITIES = [
-    {"name":"London","pop":8970000,"total":411,"restaurants":323,"takeaways":88,"rating":4.1,"per100k":4.6},
-    {"name":"Leeds","pop":812000,"total":34,"restaurants":27,"takeaways":7,"rating":4.4,"per100k":4.2},
-    {"name":"Manchester","pop":568000,"total":28,"restaurants":24,"takeaways":4,"rating":4.1,"per100k":4.9},
-    {"name":"Edinburgh","pop":548000,"total":24,"restaurants":15,"takeaways":9,"rating":4.2,"per100k":4.4},
-    {"name":"Bristol","pop":483000,"total":19,"restaurants":15,"takeaways":4,"rating":4.6,"per100k":3.9},
-    {"name":"Birmingham","pop":1166000,"total":17,"restaurants":15,"takeaways":2,"rating":4.4,"per100k":1.5},
-    {"name":"Bradford","pop":547000,"total":15,"restaurants":10,"takeaways":5,"rating":3.8,"per100k":2.7},
-    {"name":"Leicester","pop":374000,"total":15,"restaurants":10,"takeaways":5,"rating":4.5,"per100k":4.0},
-    {"name":"Bournemouth","pop":401000,"total":14,"restaurants":11,"takeaways":3,"rating":4.7,"per100k":3.5},
-    {"name":"Swansea","pop":247000,"total":14,"restaurants":12,"takeaways":2,"rating":4.0,"per100k":5.7},
-    {"name":"Brighton","pop":277000,"total":13,"restaurants":12,"takeaways":1,"rating":4.8,"per100k":4.7},
-    {"name":"Sheffield","pop":584000,"total":13,"restaurants":12,"takeaways":1,"rating":4.6,"per100k":2.2},
-    {"name":"Huddersfield","pop":437000,"total":13,"restaurants":10,"takeaways":3,"rating":3.2,"per100k":3.0},
-    {"name":"Newcastle","pop":307000,"total":11,"restaurants":9,"takeaways":2,"rating":4.1,"per100k":3.6},
-    {"name":"York","pop":211000,"total":10,"restaurants":8,"takeaways":2,"rating":4.6,"per100k":4.7},
-    {"name":"Bath","pop":196000,"total":10,"restaurants":9,"takeaways":1,"rating":4.1,"per100k":5.1},
-    {"name":"Bolton","pop":300000,"total":10,"restaurants":5,"takeaways":5,"rating":3.6,"per100k":3.3},
+    {"name":"London","pop":8970000,"total":274,"restaurants":224,"takeaways":50,"rating":4.2,"per100k":3.1},
+    {"name":"Leeds","pop":812000,"total":26,"restaurants":22,"takeaways":4,"rating":4.7,"per100k":3.2},
+    {"name":"Manchester","pop":568000,"total":18,"restaurants":16,"takeaways":2,"rating":4.5,"per100k":3.2},
+    {"name":"Edinburgh","pop":548000,"total":19,"restaurants":12,"takeaways":7,"rating":null,"per100k":3.5},
+    {"name":"Bristol","pop":483000,"total":13,"restaurants":12,"takeaways":1,"rating":4.8,"per100k":2.7},
+    {"name":"Birmingham","pop":1166000,"total":8,"restaurants":6,"takeaways":2,"rating":4.4,"per100k":0.7},
+    {"name":"Bradford","pop":547000,"total":6,"restaurants":4,"takeaways":2,"rating":4.0,"per100k":1.1},
+    {"name":"Leicester","pop":374000,"total":7,"restaurants":4,"takeaways":3,"rating":4.4,"per100k":1.9},
+    {"name":"Bournemouth","pop":401000,"total":11,"restaurants":9,"takeaways":2,"rating":4.6,"per100k":2.7},
+    {"name":"Swansea","pop":247000,"total":15,"restaurants":12,"takeaways":3,"rating":3.9,"per100k":6.1},
+    {"name":"Brighton","pop":277000,"total":12,"restaurants":11,"takeaways":1,"rating":4.9,"per100k":4.3},
+    {"name":"Sheffield","pop":584000,"total":9,"restaurants":9,"takeaways":0,"rating":4.6,"per100k":1.5},
+    {"name":"Huddersfield","pop":437000,"total":8,"restaurants":6,"takeaways":2,"rating":4.0,"per100k":1.8},
+    {"name":"Newcastle","pop":307000,"total":7,"restaurants":7,"takeaways":0,"rating":4.7,"per100k":2.3},
+    {"name":"York","pop":211000,"total":24,"restaurants":21,"takeaways":3,"rating":4.2,"per100k":11.4},
+    {"name":"Bath","pop":196000,"total":10,"restaurants":10,"takeaways":0,"rating":4.5,"per100k":5.1},
+    {"name":"Bolton","pop":300000,"total":5,"restaurants":1,"takeaways":4,"rating":3.2,"per100k":1.7},
     {"name":"Norwich","pop":148000,"total":8,"restaurants":6,"takeaways":2,"rating":4.5,"per100k":5.4},
-    {"name":"Glasgow","pop":635000,"total":8,"restaurants":5,"takeaways":3,"rating":5.0,"per100k":1.3},
-    {"name":"Liverpool","pop":500000,"total":7,"restaurants":7,"takeaways":0,"rating":4.0,"per100k":1.4},
-    {"name":"Cardiff","pop":372000,"total":7,"restaurants":7,"takeaways":0,"rating":4.3,"per100k":1.9},
+    {"name":"Glasgow","pop":635000,"total":6,"restaurants":5,"takeaways":1,"rating":null,"per100k":0.9},
+    {"name":"Liverpool","pop":500000,"total":6,"restaurants":6,"takeaways":0,"rating":4.3,"per100k":1.2},
+    {"name":"Cardiff","pop":372000,"total":7,"restaurants":7,"takeaways":0,"rating":4.6,"per100k":1.9},
     {"name":"Blackpool","pop":142000,"total":7,"restaurants":3,"takeaways":4,"rating":4.4,"per100k":4.9},
     {"name":"Belfast","pop":345000,"total":7,"restaurants":6,"takeaways":1,"rating":3.6,"per100k":2.0},
-    {"name":"Coventry","pop":370000,"total":6,"restaurants":1,"takeaways":5,"rating":4.7,"per100k":1.6},
-    {"name":"Sunderland","pop":278000,"total":6,"restaurants":3,"takeaways":3,"rating":3.5,"per100k":2.2},
-    {"name":"Milton Keynes","pop":292000,"total":6,"restaurants":4,"takeaways":2,"rating":4.7,"per100k":2.1},
-    {"name":"Luton","pop":228000,"total":6,"restaurants":3,"takeaways":3,"rating":3.8,"per100k":2.6},
+    {"name":"Coventry","pop":370000,"total":3,"restaurants":1,"takeaways":2,"rating":5.0,"per100k":0.8},
+    {"name":"Sunderland","pop":278000,"total":4,"restaurants":1,"takeaways":3,"rating":3.8,"per100k":1.4},
+    {"name":"Milton Keynes","pop":292000,"total":6,"restaurants":5,"takeaways":1,"rating":4.7,"per100k":2.1},
+    {"name":"Luton","pop":228000,"total":1,"restaurants":1,"takeaways":0,"rating":5.0,"per100k":0.4},
     {"name":"Warrington","pop":212000,"total":6,"restaurants":5,"takeaways":1,"rating":3.5,"per100k":2.8},
-    {"name":"Stockport","pop":295000,"total":6,"restaurants":2,"takeaways":4,"rating":4.7,"per100k":2.0},
-    {"name":"Oldham","pop":243000,"total":6,"restaurants":3,"takeaways":3,"rating":4.3,"per100k":2.5},
+    {"name":"Stockport","pop":295000,"total":7,"restaurants":3,"takeaways":4,"rating":4.3,"per100k":2.4},
+    {"name":"Oldham","pop":243000,"total":3,"restaurants":1,"takeaways":2,"rating":4.7,"per100k":1.2},
     {"name":"Wigan","pop":333000,"total":6,"restaurants":4,"takeaways":2,"rating":4.7,"per100k":1.8},
-    {"name":"Chelmsford","pop":184000,"total":6,"restaurants":5,"takeaways":1,"rating":4.8,"per100k":3.3},
+    {"name":"Chelmsford","pop":184000,"total":5,"restaurants":4,"takeaways":1,"rating":4.8,"per100k":2.7},
     {"name":"Portsmouth","pop":208000,"total":5,"restaurants":5,"takeaways":0,"rating":4.4,"per100k":2.4},
-    {"name":"Cheltenham","pop":120000,"total":5,"restaurants":5,"takeaways":0,"rating":5.0,"per100k":4.2},
-    {"name":"Slough","pop":164000,"total":5,"restaurants":5,"takeaways":0,"rating":3.8,"per100k":3.0}
+    {"name":"Cheltenham","pop":120000,"total":4,"restaurants":4,"takeaways":0,"rating":5.0,"per100k":3.3},
+    {"name":"Slough","pop":164000,"total":1,"restaurants":1,"takeaways":0,"rating":4.0,"per100k":0.6},
 ];
 
 // UK averages for normalization
-const AVG_PER_100K = 3.0;
+const AVG_PER_100K = 2.1; // UK average, R+T businesses per 100k (Oct 2026)
 const MAX_POP = 8970000;
 const MIN_POP = 50000;
 
@@ -257,11 +257,14 @@ function calcPopScore(city) {
 
 function calcCompScore(city) {
     // Higher = less competition (fewer total Thai restaurants)
-    return Math.max(0, Math.round((1 - city.total / 411) * 100));
+    return Math.max(0, Math.round((1 - city.total / LONDON_TOTAL) * 100));
 }
 
 function calcHygScore(city) {
     // Higher existing hygiene = better area. But low hygiene = easier to beat.
+    // Scotland uses FHIS (Pass/Improvement Required) — no numeric score exists,
+    // so FHIS cities get a neutral 50 rather than a fabricated star value.
+    if (city.rating == null) return 50;
     return Math.round((city.rating / 5.0) * 100);
 }
 
@@ -317,7 +320,7 @@ function recalc() {
                     Pop: <strong>${(c.pop/1000).toFixed(0)}k</strong> · 
                     Thai: <strong>${c.total}</strong> · 
                     /100k: <strong>${c.per100k}</strong> · 
-                    ★${c.rating}
+                    ${c.rating != null ? '★' + c.rating : 'FHIS'}
                 </div>
             </div>
             <div class="score-bar-wrap">
@@ -338,7 +341,7 @@ function recalc() {
     if (top.per100k <= 2.5) reasons.push(`significant market gap — only ${top.per100k} Thai businesses per 100k people (UK avg: ${AVG_PER_100K})`);
     if (top.pop >= 400000) reasons.push(`large population of ${(top.pop/1000).toFixed(0)}k to draw from`);
     if (top.total <= 10) reasons.push(`only ${top.total} existing competitors — room for a quality entrant`);
-    if (top.rating <= 4.0) reasons.push(`existing restaurants average ★${top.rating} — a well-run kitchen could quickly become the best-rated in the city`);
+    if (top.rating != null && top.rating <= 4.0) reasons.push(`existing restaurants average ★${top.rating} — a well-run kitchen could quickly become the best-rated in the city`);
     if (top.pop < 300000 && top.per100k <= 3) reasons.push(`smaller city with low competition — lower rent and easier to become "the" Thai place`);
     if (reasons.length === 0) reasons.push(`balanced market — good population with moderate competition`);
     

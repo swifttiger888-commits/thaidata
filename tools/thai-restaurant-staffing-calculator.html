@@ -200,7 +200,8 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
 
                 <div class="total-bar">
                     <div class="big-number" id="weeklyWage">—</div>
-                    <div class="label">Estimated total weekly wage bill (incl. NI & pension)</div>
+                    <div class="label">Estimated total weekly wage bill (incl. NI & pension, before any Employment Allowance)</div>
+                    <div style="font-size:0.75rem;color:var(--ink4);margin-top:6px;">Estimates only. Most small restaurants claim the Employment Allowance (£10,500/year off employer NI, April 2026) — the NI element above is shown before that offset. Rates assume all staff are 21+; younger staff cost less. Excludes holiday-cover overtime and agency fees.</div>
                 </div>
                 <div class="total-bar" style="margin-top: 10px; background: rgba(245,158,11,0.04); border-color: rgba(245,158,11,0.15);">
                     <div class="big-number" id="annualWage" style="color:#F59E0B;">—</div>
@@ -222,7 +223,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
 const NLW = 12.71;        // 21+
 const YOUNG = 10.85;      // 18-20
 const APPRENTICE = 8.00;  // 16-17 / apprentice
-const NI_RATE = 0.15;
+const NI_RATE = 0.15; // employer NI, 2025-26 and 2026-27 rate
 const PENSION_RATE = 0.03;
 const EMPLOYER_MULT = 1.18; // NI + pension on top of gross
 

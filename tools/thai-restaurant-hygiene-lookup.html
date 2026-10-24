@@ -64,7 +64,7 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgroun
         .rating-3 { background: rgba(245,158,11,0.15); color: #B45309; }
         .rating-2 { background: rgba(239,68,68,0.1); color: #B91C1C; }
         .rating-1 { background: rgba(239,68,68,0.15); color: #B91C1C; }
-        .rating-0 { background: rgba(100,116,139,0.1); color: #64748B; }
+        .rating-fhis { background: #eef2ff; color: #4338ca; font-size:0.7rem; font-weight:700; }\n        .rating-0 { background: rgba(100,116,139,0.1); color: #64748B; }
         .result-info { flex: 1; }
         .result-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
         .result-detail { color: var(--ink4); font-size: 0.8rem; }
@@ -188,8 +188,10 @@ async function search() {
             thaiEstablishments.forEach(e => {
                 const rating = e.RatingValue || '—';
                 const isNum = /^\d$/.test(rating);
-                const ratingClass = isNum ? `rating-${rating}` : 'rating-0';
-                const displayRating = isNum ? rating : '?';
+                const isFhis = ['Pass', 'Improvement Required', 'Exempt'].includes(rating);
+                const isPending = ['Awaiting Inspection', 'AwaitingInspection', ''].includes(rating);
+                const ratingClass = isNum ? `rating-${rating}` : (isFhis ? 'rating-fhis' : 'rating-0');
+                const displayRating = isNum ? rating : (isFhis ? (rating === 'Improvement Required' ? 'IR' : rating) : (isPending ? '—' : rating));
                 const date = e.RatingDate ? new Date(e.RatingDate).toLocaleDateString('en-GB', {year:'numeric', month:'short'}) : 'Unknown';
                 const address = [e.AddressLine2, e.AddressLine3].filter(Boolean).join(', ') || e.AddressLine1 || '';
                 
@@ -200,7 +202,7 @@ async function search() {
                         <div class="result-detail">
                             <strong>Inspected:</strong> ${date} · 
                             <strong>Type:</strong> ${e.BusinessType || 'Restaurant'} · 
-                            <strong>Authority:</strong> ${e.LocalAuthorityName || 'Unknown'}
+                            <strong>Authority:</strong> ${e.LocalAuthorityName || 'Unknown'}${isFhis ? ' · FHIS (Scotland — no star rating; Pass ≠ 5 stars)' : ''}
                         </div>
                         ${address ? `<div class="result-city">📍 ${address}</div>` : ''}
                     </div>

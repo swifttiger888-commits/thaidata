@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thai Restaurant Delivery Profit Calculator — Don't Los......</title>
-    <meta name="description" content="See exactly how much you profit (or lose) on every delivery order. Compare Deliveroo, Uber Eats, and Just Eat side by side. Calculate the markup you need.">
+    <meta name="description" content="Estimate the contribution margin per delivery order after VAT and editable platform commission. Compare Deliveroo, Uber Eats and Just Eat side by side.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/tools/delivery-profit-calculator">
     <meta property="og:type" content="article">
@@ -155,35 +155,35 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                     <input type="number" id="markupInput" value="15" min="0" max="50" oninput="calc()" aria-label="Delivery price markup">
                     <div class="desc" style="font-size:0.7rem;color:var(--ink3);margin-top:4px;">% you add to delivery menu price</div>
                 </div>
-                <p style="font-size:0.75rem;color:var(--ink4);margin-top:16px;">Platform commissions: Deliveroo 32%, Uber Eats 30%, Just Eat 14%. VAT at 20% on all.</p>
+                <p style="font-size:0.75rem;color:var(--ink4);margin-top:16px;">Commission rates are editable examples below (typical June 2026). Platforms charge commission on the VAT-inclusive order value; the 20% VAT goes to HMRC, not you.</p>
             </div>
 
             <div class="results">
                 <div class="dinein-card">
-                    <div class="di-label">Dine-in Profit Per Dish</div>
+                    <div class="di-label">Dine-in Contribution Per Dish (net of VAT)</div>
                     <div class="di-profit" id="dineinProfit">—</div>
                 </div>
 
                 <div class="platform-cards">
                     <div class="plat-card">
                         <div class="plat-name">Deliveroo</div>
-                        <div class="plat-commission">32% commission</div>
+                        <label class="plat-commission" style="display:flex;align-items:center;gap:6px;">Commission <input type="number" id="rooComm" value="32" min="0" max="50" step="0.5" oninput="calc()" aria-label="Deliveroo commission %" style="width:58px;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink);font-size:0.8rem;"> %</label>
                         <div class="plat-profit" id="rooProfit">—</div>
-                        <div class="plat-label">profit per order</div>
+                        <div class="plat-label">contribution per order (net of VAT)</div>
                         <div class="plat-revenue" id="rooRevenue"></div>
                     </div>
                     <div class="plat-card">
                         <div class="plat-name">Uber Eats</div>
-                        <div class="plat-commission">30% commission</div>
+                        <label class="plat-commission" style="display:flex;align-items:center;gap:6px;">Commission <input type="number" id="uberComm" value="30" min="0" max="50" step="0.5" oninput="calc()" aria-label="Uber Eats commission %" style="width:58px;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink);font-size:0.8rem;"> %</label>
                         <div class="plat-profit" id="uberProfit">—</div>
-                        <div class="plat-label">profit per order</div>
+                        <div class="plat-label">contribution per order (net of VAT)</div>
                         <div class="plat-revenue" id="uberRevenue"></div>
                     </div>
                     <div class="plat-card">
                         <div class="plat-name">Just Eat</div>
-                        <div class="plat-commission">14% commission</div>
+                        <label class="plat-commission" style="display:flex;align-items:center;gap:6px;">Commission <input type="number" id="jeComm" value="14" min="0" max="50" step="0.5" oninput="calc()" aria-label="Just Eat commission %" style="width:58px;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink);font-size:0.8rem;"> %</label>
                         <div class="plat-profit" id="jeProfit">—</div>
-                        <div class="plat-label">profit per order</div>
+                        <div class="plat-label">contribution per order (net of VAT)</div>
                         <div class="plat-revenue" id="jeRevenue"></div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
         </div>
 </div>
 
-    <footer><p>&copy; 2026 ThaiData.uk · Commission rates verified June 2026 · <a href="../thai-restaurant-delivery-commissions-uk.html">Full Delivery Guide</a></p></footer>
+    <footer><p>&copy; 2026 ThaiData.uk · Commission rates are editable examples (typical June 2026) · Outputs are estimates — VAT, card processing, delivery fees and other on-costs are not modelled · <a href="../thai-restaurant-delivery-commissions-uk.html">Full Delivery Guide</a></p></footer>
 
 <script>
 function calc() {
@@ -207,32 +207,34 @@ function calc() {
     const foodCostPct = parseFloat(document.getElementById('costInput').value) / 100 || 0.28;
     const markupPct = parseFloat(document.getElementById('markupInput').value) / 100 || 0.15;
 
-    const foodCost = dineInPrice * foodCostPct;
-    const dineInProfit = dineInPrice - foodCost;
+    // dineInPrice is the VAT-inclusive menu price the customer pays.
+    const dineInNet = dineInPrice / 1.2;
+    const foodCost = dineInNet * foodCostPct;
+    const dineInProfit = dineInNet - foodCost;
 
-    // Delivery price = dine-in + markup
+    // Delivery price (VAT-inclusive, customer-facing) = dine-in + markup
     const deliveryPrice = dineInPrice * (1 + markupPct);
-    const deliveryPriceWithVat = deliveryPrice * 1.20; // customer sees this
 
     const platforms = [
-        { name: 'Deliveroo', commission: 0.32, el: 'roo' },
-        { name: 'Uber Eats', commission: 0.30, el: 'uber' },
-        { name: 'Just Eat', commission: 0.14, el: 'je' },
+        { name: 'Deliveroo', commission: (parseFloat(document.getElementById('rooComm').value) || 0) / 100, el: 'roo' },
+        { name: 'Uber Eats', commission: (parseFloat(document.getElementById('uberComm').value) || 0) / 100, el: 'uber' },
+        { name: 'Just Eat', commission: (parseFloat(document.getElementById('jeComm').value) || 0) / 100, el: 'je' },
     ];
 
     document.getElementById('dineinProfit').textContent = '£' + dineInProfit.toFixed(2);
 
     let anyLoss = false;
     platforms.forEach(p => {
+        // Commission is charged on the VAT-inclusive order value.
         const commissionAmount = deliveryPrice * p.commission;
-        const yourRevenue = deliveryPrice - commissionAmount;
+        const yourRevenue = deliveryPrice / 1.2 - commissionAmount;
         const profit = yourRevenue - foodCost;
 
         const profEl = document.getElementById(p.el + 'Profit');
         const revEl = document.getElementById(p.el + 'Revenue');
 
         profEl.textContent = '£' + profit.toFixed(2);
-        revEl.textContent = 'You receive £' + yourRevenue.toFixed(2) + ' (customer pays £' + deliveryPriceWithVat.toFixed(2) + ')';
+        revEl.textContent = 'You receive £' + yourRevenue.toFixed(2) + ' (customer pays £' + deliveryPrice.toFixed(2) + ' incl. VAT)';
 
         profEl.className = 'plat-profit';
         if (profit >= dineInProfit * 0.9) profEl.classList.add('good');
@@ -241,11 +243,13 @@ function calc() {
     });
 
     // Markup advice
-    const rooCommission = deliveryPrice * 0.32;
-    const rooProfit = (deliveryPrice - rooCommission) - foodCost;
+    const rooRate = platforms[0].commission;
+    const uberRate = platforms[1].commission;
+    const rooCommission = deliveryPrice * rooRate;
+    const rooProfit = (deliveryPrice / 1.2 - rooCommission) - foodCost;
     const markupNeededRoo = rooProfit < dineInProfit ? 
-        Math.ceil(((dineInProfit + foodCost) / (1 - 0.32) / dineInPrice - 1) * 100) : 0;
-    const markupNeededUber = Math.ceil(((dineInProfit + foodCost) / (1 - 0.30) / dineInPrice - 1) * 100);
+        Math.ceil(((dineInProfit + foodCost) / (1 - rooRate) / dineInNet - 1) * 100) : 0;
+    const markupNeededUber = Math.ceil(((dineInProfit + foodCost) / (1 - uberRate) / dineInNet - 1) * 100);
 
     let advice = '';
     if (markupNeededRoo > markupPct * 100) {

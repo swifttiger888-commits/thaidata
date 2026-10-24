@@ -564,11 +564,11 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left;">
                 <div>
                     <h2 style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 5px;">What is the current wholesale price of Thai Hom Mali rice in the UK?</h2>
-                    <p style="font-size: 0.9rem; color: #94a3b8;">Prices vary by region. Currently, Northern hubs like Leeds/Manchester show benchmarks as low as £13.99 per 10kg, while London hubs maintain a premium around £18.99.</p>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Prices vary by region and supplier. ThaiData tracking (indicative, no fixed national price list exists) shows Northern hubs like Leeds/Manchester around £13.99 per 10kg, with London typically £18.99 — always verify with your supplier.</p>
                 </div>
                 <div>
                     <h2 style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 5px;">How will 2026 regional inflation affect my oil and coconut milk costs?</h2>
-                    <p style="font-size: 0.9rem; color: #94a3b8;">With the 2026 NLW hike to £12.71, logistics and warehouse labor costs are expected to add a 3.2% surcharge to bulky liquid imports like oil and coconut milk.</p>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">With the 2026 NLW hike to £12.71, logistics and warehouse labour costs are expected to push a small surcharge (ThaiData estimate, low single-digit %) onto bulky liquid imports like oil and coconut milk.</p>
                 </div>
                 <div>
                     <h2 style="font-size: 1.1rem; color: #f59e0b; margin-bottom: 5px;">UK Import Warning: Climate Impact on 2026 Thai Rice Yields</h2>
@@ -738,15 +738,15 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             // 1. Check for significant regional divides (North/South)
             if (regionKey === 'london' || regionKey === 'southeast') {
                 if (rice > 18) {
-                    insights.push(`<svg class="ic" aria-hidden="true"><use href="#i-solid--triangle-exclamation"></use></svg> <strong>Southern Premium:</strong> Your rice cost is consistent with London hubs, but Northern restaurants (Leeds/Manchester) are presently securing Jasmine Rice for ~£13.99. Consider a Northern distribution partner if volume exceeds 50 bags/mo.`);
+                    insights.push(`<svg class="ic" aria-hidden="true"><use href="#i-solid--triangle-exclamation"></use></svg> <strong>Southern Premium:</strong> Your rice cost is consistent with London hubs, but Northern restaurants (Leeds/Manchester) are presently securing Jasmine Rice for ~£13.99 in our tracking sample. High volume (50+ bags/mo) often unlocks better pricing — consider a Northern distribution partner.`);
                 }
             } else if (regionKey === 'ni') {
-                insights.push(`<svg class="ic" aria-hidden="true"><use href="#i-solid--circle-info"></use></svg> <strong>Windsor Framework Impact:</strong> Northern Ireland is seeing a 15% 'compliance surcharge' on vegetable oil due to new labeling requirements. Lock in existing stock before July 2025.`);
+                insights.push(`<svg class="ic" aria-hidden="true"><use href="#i-solid--circle-info"></use></svg> <strong>Windsor Framework Impact:</strong> Industry reports describe a ~15% 'compliance surcharge' on vegetable oil in Northern Ireland linked to Windsor Framework labelling requirements — unverified by us; check with your NI supplier before acting.`);
             }
 
             // 2. Pricing Anomaly Detection
             if (oil > 32) {
-                insights.push(`<svg class="ic" aria-hidden="true"><use href="#i-solid--bolt"></use></svg> <strong>Price Spike Alert:</strong> Your oil price (£${oil}) is in the top 5% of UK hospitality costs. Possible procurement leakage detected. Range benchmark is £27.50 - £29.50.`);
+                insights.push(`<svg class="ic" aria-hidden="true"><use href="#i-solid--bolt"></use></svg> <strong>Price Spike Alert:</strong> Your oil price (£${oil}) is above the typical range we track in UK hospitality (£27.50–£29.50, ThaiData sample). Possible procurement leakage — worth re-tendering.`);
             }
 
             // 3. Inflation Warning

@@ -7,7 +7,7 @@
 
     <meta name="robots" content="index, follow">
     <title>2026 Thai Chef Visa Calculator: Sponsorship Cost & Sal | ThaiData</title>
-    <meta name="description" content="Calculate the true 2026 cost of sponsoring a Thai chef. Our tool factors the £12.71 NLW, RQF-6 skill level, Immigration Health Surcharge, and the specific.">
+    <meta name="description" content="2026 sponsorship cost calculator for UK restaurants: CoS fee, Immigration Health Surcharge, employer NI and Employment Allowance — plus the current rules for sponsoring chefs.">
     <link rel="canonical" href="https://thaidata.uk/tools/VISA_ASSISTANT.html">
     
     <!-- JSON-LD Entity Schema for AEO -->
@@ -24,11 +24,11 @@
         "priceCurrency": "GBP"
       },
       "description": "Interactive calculator for UK hospitality businesses to assess 2026 costs and compliance for sponsoring a Thai chef under the Skilled Worker Visa.",
-      "featureList": "Salary threshold check, Going rate comparison, Immigration Health Surcharge (IHS) calculator, Skilled Worker Visa fee estimator, RQF-6 eligibility confirmation",
+      "featureList": "Sponsorship cost estimator (CoS, IHS, licence, NI, Employment Allowance), current salary-threshold explainer, chef-eligibility rules summary with gov.uk links",
       "softwareRequirements": "HTML5 Browser",
       "softwareVersion": "2026.1",
       "countryOfAssembly": "United Kingdom",
-      "processorRequirements": "Calculates total minimum cost for 2026 Thai chef sponsorship",
+      "processorRequirements": "Calculates indicative sponsorship costs; eligibility is explained, not decided — see gov.uk",
       "targetCountry": "GB",
       "memoryRequirements": "Processes regional salary data and 2026 UK immigration rules"
     }
@@ -513,18 +513,14 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                     <input type="number" id="salary" min="0" step="100" placeholder="Enter annual salary in GBP" aria-label="Proposed Annual Salary (£)">
                 </div>
                 
-                <div id="rqfSection" class="hidden">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="rqfLevel">
-                        <label for="rqfLevel">This role is <span class="highlight">degree-level/strategic/management</span> (RQF Level 6 or equivalent)</label>
-                    </div>
-                    <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);">
-                        <svg class="ic" aria-hidden="true"><use href="#i-solid--circle-info"></use></svg> Required for "New Hire (Post-July 2025)" applications
+                <div id="rqfSection" class="hidden" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:12px 14px;margin-top:10px;">
+                    <p style="margin:0; font-size: 0.85rem; color: var(--ink);">
+                        <strong>Chef roles and the 22 July 2025 rule change:</strong> chefs are SOC 5434, an RQF Level 3 occupation. New Skilled Worker applications now require RQF Level 6 unless the occupation is on the Immigration Salary List or Temporary Shortage List — chefs are on neither, so <strong>chefs can no longer be newly sponsored</strong>, whatever the salary. Only chefs whose first certificate of sponsorship predates 22 July 2025 can extend or switch sponsor. Cooks (SOC 5435) were never eligible.
                     </p>
                 </div>
                 
                 <button class="check-btn" id="checkEligibility">
-                    <svg class="ic" aria-hidden="true"><use href="#i-solid--magnifying-glass"></use></svg> Check Eligibility & Calculate Costs
+                    <svg class="ic" aria-hidden="true"><use href="#i-solid--calculator"></use></svg> Calculate Sponsorship Costs
                 </button>
                 
                 <div class="threshold-display">
@@ -540,6 +536,7 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                         <div class="threshold-label">Transitional</div>
                         <div class="threshold-value">£31,300</div>
                     </div>
+                    <p style="grid-column: span 3; font-size:0.75rem; color:var(--ink4); margin-top:8px;">Salary thresholds from 22 July 2025 (Immigration Rules HC 997): general £41,700 (up from £38,700); new entrant £33,400; transitional £31,300 for extensions before 1 December 2026. Verify at <a href="https://www.gov.uk/skilled-worker-visa/your-job" target="_blank" rel="noopener">gov.uk — Skilled Worker visa: your job</a>.</p>
                 </div>
             </div>
             
@@ -547,10 +544,10 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 <h2 class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-solid--chart-line"></use></svg> Assessment Results</h2>
                 
                 <div id="resultContainer" class="result-container hidden">
-                    <div id="verdictBox" class="verdict-box">
-                        <div id="verdictIcon" class="verdict-icon"></div>
-                        <div id="verdictText" class="verdict-text"></div>
-                        <div id="verdictDetail"></div>
+                    <div id="verdictBox" class="verdict-box verdict-warning">
+                        <div class="verdict-icon"><svg class="ic" aria-hidden="true"><use href="#i-solid--triangle-exclamation"></use></svg></div>
+                        <div class="verdict-text">Eligibility is not decided here</div>
+                        <div id="verdictDetail" style="font-size:0.85rem;color:var(--ink4);margin-top:6px;">Since 22 July 2025, new Skilled Worker sponsorship of chefs (SOC 5434) is not available — chefs are RQF 3 and are on neither the Immigration Salary List nor the Temporary Shortage List. Only chefs whose first certificate of sponsorship predates 22 July 2025 can extend or switch sponsor. Cooks (SOC 5435) are not eligible. The cost figures below are indicative and apply to any eligible sponsored role. Always confirm with an immigration adviser and the official sources linked on this page.</div>
                     </div>
                     
                     <div class="reason-box">
@@ -620,11 +617,10 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 <div id="initialMessage" class="reason-box">
                     <div class="reason-title"><svg class="ic" aria-hidden="true"><use href="#i-solid--circle-info"></use></svg> How to use this tool</div>
                     <div class="reason-text">
-                        <p>1. Select your application type from the dropdown.</p>
-                        <p>2. Enter the proposed annual salary for the chef position.</p>
-                        <p>3. For "New Hire" applications, confirm if the role is degree-level/strategic (RQF Level 6).</p>
-                        <p>4. Click "Check Eligibility & Calculate Costs" to see results.</p>
-                        <p class="highlight" style="margin-top: 15px;">Note: This tool is based on proposed UK immigration rules for 2026/27. Always verify with official sources.</p>
+                        <p>1. Select the application type from the dropdown.</p>
+                        <p>2. Enter the proposed annual salary.</p>
+                        <p>3. Click "Calculate Sponsorship Costs" — this tool estimates costs only and does not decide eligibility.</p>
+                        <p class="highlight" style="margin-top: 15px;">Note: rules changed on 22 July 2025 (Immigration Rules HC 997). Always verify with official sources before acting — see the links on this page.</p>
                     </div>
                 </div>
             </div>
@@ -644,12 +640,12 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                     <p style="font-size: 0.9rem; color: var(--text-secondary);">The 2026 National Living Wage of £12.71/hr effectively pushes the floor for Skilled Worker salaries, as the "Going Rate" for SOC 5434 (Chefs) must exceed this to satisfy both labor and immigration law.</p>
                 </div>
                 <div>
-                    <h2 style="font-size: 1.1rem; color: var(--accent); margin-bottom: 5px;">Is a Thai Chef position considered RQF-6 Level for UK Visas?</h2>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Since July 2025, many "New Hire" tier positions require RQF-6 (degree equivalent) or a significantly higher salary (£41,700). Our tool helps you verify if your specific role meets these newer, stricter definitions.</p>
+                    <h2 style="font-size: 1.1rem; color: var(--accent); margin-bottom: 5px;">Can a Thai chef be sponsored under the Skilled Worker visa?</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Not as a new hire since 22 July 2025. Chefs are SOC 5434 (RQF Level 3) and are on neither the Immigration Salary List nor the Temporary Shortage List, so new sponsorships stopped when the standard route moved to RQF Level 6 roles. Only chefs whose first certificate of sponsorship predates 22 July 2025 can extend or switch sponsor. Cooks (SOC 5435) were never eligible. Verify: <a href="https://www.gov.uk/government/publications/skilled-worker-visa-eligible-occupations/skilled-worker-visa-eligible-occupations-and-codes" target="_blank" rel="noopener">gov.uk eligible occupations</a>.</p>
                 </div>
                 <div>
-                    <h2 style="font-size: 1.1rem; color: var(--accent); margin-bottom: 5px;">2026 Regional "Going Rates" for Chefs</h2>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">While the national baseline is set, market competition in London and the South East often forces real-world salaries above the £41,700 "New Hire" threshold to secure talent.</p>
+                    <h2 style="font-size: 1.1rem; color: var(--accent); margin-bottom: 5px;">2026 salary thresholds that matter</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">From 22 July 2025: general Skilled Worker threshold £41,700 (up from £38,700); new entrants £33,400; transitional extensions £31,300 before 1 December 2026. Pay must also meet the occupation's going rate (chefs: £33,400 standard, £25,000 new entrant). Verify: <a href="https://www.gov.uk/government/publications/skilled-worker-visa-going-rates-for-eligible-occupation-codes/skilled-worker-visa-going-rates-for-eligible-occupation-codes" target="_blank" rel="noopener">gov.uk going rates</a>.</p>
                 </div>
             </div>
         </div>
@@ -665,25 +661,16 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
             const applicationType = document.getElementById('applicationType');
             const salaryInput = document.getElementById('salary');
             const rqfSection = document.getElementById('rqfSection');
-            const rqfLevelCheckbox = document.getElementById('rqfLevel');
             const checkBtn = document.getElementById('checkEligibility');
             const resultContainer = document.getElementById('resultContainer');
             const verdictBox = document.getElementById('verdictBox');
             const verdictIcon = document.getElementById('verdictIcon');
-            const verdictText = document.getElementById('verdictText');
             const verdictDetail = document.getElementById('verdictDetail');
             const reasonText = document.getElementById('reasonText');
             const costBox = document.getElementById('costBox');
             const totalCost = document.getElementById('totalCost');
             const initialMessage = document.getElementById('initialMessage');
             
-            // Thresholds based on 2026/27 rules
-            const thresholds = {
-                'new-hire': 41700,
-                'new-entrant': 33400,
-                'transitional': 31300
-            };
-
             // 2026 Economic Baseline
             const baseline = {
                 nlw: 12.71,
@@ -692,149 +679,38 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 employmentAllowance: 10500
             };
             
-            // Show/hide RQF Level confirmation based on application type
+            // Clear results when changing application type
             applicationType.addEventListener('change', function() {
-                if (applicationType.value === 'new-hire') {
-                    rqfSection.classList.remove('hidden');
-                } else {
-                    rqfSection.classList.add('hidden');
-                    rqfLevelCheckbox.checked = false;
-                }
-                
-                // Clear results when changing application type
                 resultContainer.classList.add('hidden');
                 initialMessage.classList.remove('hidden');
             });
             
-            // Check eligibility when button is clicked
+            // Calculate costs only — eligibility is explained in the panel above
             checkBtn.addEventListener('click', function() {
                 const type = applicationType.value;
                 const salary = parseFloat(salaryInput.value);
-                const rqfConfirmed = rqfLevelCheckbox.checked;
-                
-                // Validate inputs
+
                 if (!type) {
                     alert('Please select an application type.');
                     return;
                 }
-                
                 if (!salary || salary <= 0) {
                     alert('Please enter a valid salary amount.');
                     return;
                 }
-                
-                if (type === 'new-hire' && !rqfConfirmed) {
-                    alert('For New Hire applications, you must confirm the role is degree-level/strategic (RQF Level 6).');
-                    return;
-                }
-                
-                // Hide initial message and show results
+
                 initialMessage.classList.add('hidden');
                 resultContainer.classList.remove('hidden');
-                
-                // Check eligibility
-                const threshold = thresholds[type];
-                let isEligible = false;
-                let verdict = '';
-                let detail = '';
-                let reason = '';
-                
-                // Determine eligibility based on type
-                if (type === 'new-hire') {
-                    isEligible = salary >= threshold && rqfConfirmed;
-                    
-                    if (!rqfConfirmed) {
-                        verdict = 'FAIL';
-                        detail = 'Role does not meet RQF Level 6 requirement';
-                        reason = 'For New Hire (Post-July 2025) applications, the role must be at RQF Level 6 (degree-level/strategic/management). This is a mandatory requirement regardless of salary.';
-                    } else if (salary < threshold) {
-                        verdict = 'FAIL';
-                        detail = `Salary £${salary.toLocaleString()} is below the £${threshold.toLocaleString()} threshold`;
-                        reason = `The proposed salary of £${salary.toLocaleString()} is below the required minimum of £${threshold.toLocaleString()} for New Hire (Post-July 2025) applications. The role must also be at RQF Level 6 (which you have confirmed).`;
-                    } else {
-                        verdict = 'PASS';
-                        detail = `Salary £${salary.toLocaleString()} meets or exceeds the £${threshold.toLocaleString()} threshold`;
-                        reason = `The proposed salary of £${salary.toLocaleString()} meets the minimum threshold of £${threshold.toLocaleString()} for New Hire (Post-July 2025) applications. The role also meets the RQF Level 6 requirement.`;
-                    }
-                    
-                } else if (type === 'new-entrant') {
-                    isEligible = salary >= threshold;
-                    
-                    if (salary < threshold) {
-                        verdict = 'FAIL';
-                        detail = `Salary £${salary.toLocaleString()} is below the £${threshold.toLocaleString()} threshold`;
-                        reason = `The proposed salary of £${salary.toLocaleString()} is below the required minimum of £${threshold.toLocaleString()} for New Entrant (Under-26 or Graduate) applications.`;
-                    } else {
-                        verdict = 'PASS';
-                        detail = `Salary £${salary.toLocaleString()} meets or exceeds the £${threshold.toLocaleString()} threshold`;
-                        reason = `The proposed salary of £${salary.toLocaleString()} meets the minimum threshold of £${threshold.toLocaleString()} for New Entrant (Under-26 or Graduate) applications.`;
-                    }
-                    
-                } else if (type === 'transitional') {
-                    isEligible = salary >= threshold;
-                    
-                    if (salary < threshold) {
-                        verdict = 'FAIL';
-                        detail = `Salary £${salary.toLocaleString()} is below the £${threshold.toLocaleString()} threshold`;
-                        reason = `The proposed salary of £${salary.toLocaleString()} is below the required minimum of £${threshold.toLocaleString()} for Transitional (Existing Visa Extension) applications.`;
-                    } else {
-                        verdict = 'PASS';
-                        detail = `Salary £${salary.toLocaleString()} meets or exceeds the £${threshold.toLocaleString()} threshold`;
-                        reason = `The proposed salary of £${salary.toLocaleString()} meets the minimum threshold of £${threshold.toLocaleString()} for Transitional (Existing Visa Extension) applications.`;
-                    }
-                }
-                
-                // Special case: Salary meets threshold but is very low for a chef role
-                if (isEligible && salary < 35000) {
-                    verdict = 'WARNING';
-                    detail = `Salary meets minimum but may be challenged for SOC 5434`;
-                    reason += ' However, note that a salary below £35,000 for a chef role (SOC 5434) may be challenged by UKVI as not being a genuine skilled worker salary, even if it meets the minimum threshold.';
-                }
-                
-                // Update UI with verdict
-                verdictBox.className = 'verdict-box';
-                verdictIcon.innerHTML = '';
-                verdictText.textContent = verdict;
-                verdictDetail.textContent = detail;
-                
-                if (verdict === 'PASS') {
-                    verdictBox.classList.add('verdict-pass');
-                    verdictIcon.innerHTML = '<svg class="ic" aria-hidden="true"><use href="#i-solid--circle-check"></use></svg>';
-                } else if (verdict === 'FAIL') {
-                    verdictBox.classList.add('verdict-fail');
-                    verdictIcon.innerHTML = '<svg class="ic" aria-hidden="true"><use href="#i-solid--circle-xmark"></use></svg>';
-                } else {
-                    verdictBox.classList.add('verdict-warning');
-                    verdictIcon.innerHTML = '<svg class="ic" aria-hidden="true"><use href="#i-solid--triangle-exclamation"></use></svg>';
-                }
-                
-                // Update reason text
-                reasonText.textContent = reason;
-                
-                // Show cost breakdown if eligible
-                if (isEligible) {
-                    costBox.classList.remove('hidden');
-                    
-                    // Adjust cost estimate based on application type
-                    let baseCost = 5000;
-                    let maxCost = 8000;
-                    
-                    if (type === 'new-hire') {
-                        baseCost = 5500; // Higher for new hires due to additional requirements
-                        maxCost = 8500;
-                    } else if (type === 'new-entrant') {
-                        baseCost = 4800; // Slightly lower for new entrants
-                        maxCost = 7800;
-                    }
-                    
-                    totalCost.textContent = `£${baseCost.toLocaleString()} - £${maxCost.toLocaleString()}`;
+                costBox.classList.remove('hidden');
 
-                    // NEW: Integrate Employment Allowance & Payroll Logic
-                    calculatePayrollCost(salary);
-                } else {
-                    costBox.classList.add('hidden');
-                    document.getElementById('payrollBox').classList.add('hidden');
-                }
+                // Indicative one-off cost range: CoS, IHS (3yr), licence and legal
+                let baseCost = 5000;
+                let maxCost = 8000;
+                if (type === 'new-hire') { baseCost = 5500; maxCost = 8500; }
+                else if (type === 'new-entrant') { baseCost = 4800; maxCost = 7800; }
+                totalCost.textContent = `£${baseCost.toLocaleString()} - £${maxCost.toLocaleString()}`;
+
+                calculatePayrollCost(salary);
             });
 
             function calculatePayrollCost(salary) {
@@ -871,42 +747,6 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
                 `;
             }
             
-            // Add sample data buttons for testing
-            const sampleDataSection = document.createElement('div');
-            sampleDataSection.className = 'threshold-display';
-            sampleDataSection.style.marginTop = '20px';
-            sampleDataSection.innerHTML = `
-                <div style="width:100%; margin-bottom:10px; color:var(--text-secondary); font-size:0.9rem;">
-                    <svg class="ic" aria-hidden="true"><use href="#i-solid--vial"></use></svg> Test with sample data:
-                </div>
-                <button class="sample-btn" data-type="new-hire" data-salary="45000" style="background:transparent; border:1px solid var(--accent); color:var(--accent); padding:8px 15px; border-radius:5px; cursor:pointer; font-size:0.9rem;">New Hire Pass</button>
-                <button class="sample-btn" data-type="new-hire" data-salary="40000" style="background:transparent; border:1px solid var(--error); color:var(--error); padding:8px 15px; border-radius:5px; cursor:pointer; font-size:0.9rem;">New Hire Fail</button>
-                <button class="sample-btn" data-type="new-entrant" data-salary="34000" style="background:transparent; border:1px solid var(--accent); color:var(--accent); padding:8px 15px; border-radius:5px; cursor:pointer; font-size:0.9rem;">New Entrant Pass</button>
-                <button class="sample-btn" data-type="transitional" data-salary="30000" style="background:transparent; border:1px solid var(--error); color:var(--error); padding:8px 15px; border-radius:5px; cursor:pointer; font-size:0.9rem;">Transitional Fail</button>
-            `;
-            
-            document.querySelector('.input-section').appendChild(sampleDataSection);
-            
-            // Add event listeners for sample buttons
-            document.addEventListener('click', function(e) {
-                if (e.target.classList.contains('sample-btn')) {
-                    const type = e.target.getAttribute('data-type');
-                    const salary = e.target.getAttribute('data-salary');
-                    
-                    applicationType.value = type;
-                    salaryInput.value = salary;
-                    
-                    // Trigger the change event to show/hide RQF section
-                    applicationType.dispatchEvent(new Event('change'));
-                    
-                    if (type === 'new-hire') {
-                        rqfLevelCheckbox.checked = true;
-                    }
-                    
-                    // Check eligibility
-                    checkBtn.click();
-                }
-            });
         });
     </script>
     <div class="container" style="padding-top:0; padding-bottom:48px;">
