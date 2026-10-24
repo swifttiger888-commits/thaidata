@@ -8,7 +8,7 @@ import re
 
 REPO = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
 OPEN_PAGE = os.path.join(REPO, 'r', 'leeds', 'my-thai', 'index.html')
-CLOSED_PAGE = os.path.join(REPO, 'r', 'leeds', 'thai-edge', 'index.html')
+CLOSED_PAGE = os.path.join(REPO, 'tests', 'fixtures', 'closed_venue.html')
 
 
 def read(path):
