@@ -1,8 +1,8 @@
 # ThaiData UK — Cloudflare Pages Functions + D1
 # Deploys with: git push → Cloudflare Pages auto-build
 
-name = "thaidata-uk"
-compatibility_date = "2026-06-01"
+name = "thaidata"
+compatibility_date = "2026-03-09"  # matches the dashboard value used by git builds
 
 # D1 Database binding (must be created in Cloudflare Dashboard first)
 # wrangler d1 create thaidata-db
@@ -20,5 +20,6 @@ database_id = "1905002a-1739-4a06-b6c2-f08d1c0d77a8"
 [ai]
 binding = "AI"
 
-[vars]
-SITE_URL = "https://thaidata.uk"
+# NOTE: [vars] is NOT applied to git builds — set env vars via the Cloudflare
+# dashboard (Pages > thaidata > Settings) or `wrangler pages secret put`.
+# Example vars: ADMIN_PASSWORD, MAGIC_LINK_SECRET, SITE_URL
