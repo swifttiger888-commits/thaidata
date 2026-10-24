@@ -273,7 +273,7 @@ def title_overrides() -> dict[str, Any]:
 
 def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dict[str, list[dict[str, Any]]] = None, enrichment: dict[str, Any] = None, rest_slug: str | None = None, canonical_url: str | None = None) -> str:
     """Fill the Kimi template with restaurant data.
-    enrichment: optional dict with google_place_id, rating, review_count, phone,
+    enrichment: deprecated (Google Places enrichment removed Oct 2026; ignored),
                 website, opening_hours, photos, description, price_level.
                 Keyed by fsa_id string.
     rest_slug: resolved slug for this page (may include an -{fsa_id} suffix for
@@ -418,34 +418,11 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     cuisine = build_serves_cuisine(rtype)
     intro_text = build_intro(r)
 
-    # ---- Google Places enrichment (auto-populated, separate from D1 listings) ----
-    enr = enrichment.get(str(fsa_id)) or {}
-    enr_rating = enr.get('rating')
-    enr_review_count = enr.get('review_count')
-    enr_phone = enr.get('phone')
-    enr_website = enr.get('website')
-    enr_desc = enr.get('description')
-    enr_price = enr.get('price_level')
-    enr_hours_raw = enr.get('opening_hours')  # JSON string of weekdayDescriptions
-    enr_photos_raw = enr.get('photos')  # JSON string of photo references
-
-    # Attribution target for Google-sourced fields (Maps ToS 3.2.3(a)).
-    # Prefer the canonical place link; fall back to a Maps search.
-    _place_id = enr.get('google_place_id')
-    if _place_id:
-        maps_attr_url = 'https://www.google.com/maps/place/?q=place_id:' + str(_place_id)
-    else:
-        maps_attr_url = ('https://www.google.com/maps/search/?api=1&query='
-                         + quote(f'{r["name"]} {r["city"]}'))
-    # Parse JSON strings from enrichment file
-    try:
-        enr_hours = json.loads(enr_hours_raw) if isinstance(enr_hours_raw, str) else enr_hours_raw
-    except (json.JSONDecodeError, TypeError):
-        enr_hours = None
-    try:
-        enr_photos = json.loads(enr_photos_raw) if isinstance(enr_photos_raw, str) else enr_photos_raw
-    except (json.JSONDecodeError, TypeError):
-        enr_photos = None
+    # ---- Google Places enrichment: REMOVED (Oct 2026) ----
+    # Places API (New) ToS prohibit long-term storage of Place content and building
+    # a Places-derived database. Contact data now comes only from FSA records and
+    # owner-submitted claims (D1, injected by r/_middleware.js).
+    enr = {}
 
     # dateModified as ISO date string from rating_date
     date_modified = ''
@@ -491,28 +468,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     # Only include dateModified if we have it, otherwise omit
     date_line = f',\n        "dateModified": {json.dumps(date_modified)}' if date_modified else ''
 
-    # ---- Enrichment schema fields ----
-    enrichment_schema_parts = []
-
-    # Use enrichment description if available (richer than FSA-only intro)
-    schema_desc = enr_desc if enr_desc else intro_text
-
-    # NOTE: aggregateRating + googleMapsUri photo removed from schema (Oct 2026)
-    # — Google Places ToS attribution fix: less un-attributed Google content.
-    # telephone / priceRange / openingHours kept (attributed on-page).
-
-    if enr_phone:
-        enrichment_schema_parts.append(f'        "telephone": {json.dumps(enr_phone)}')
-
-    if enr_price:
-        enrichment_schema_parts.append(f'        "priceRange": {json.dumps(enr_price)}')
-
-    if enr_hours and len(enr_hours) > 0:
-        enrichment_schema_parts.append(f'''        "openingHours": {json.dumps(enr_hours)}''')
-
+    schema_desc = intro_text
     enrichment_block = ''
-    if enrichment_schema_parts:
-        enrichment_block = ',\n' + ',\n'.join(enrichment_schema_parts)
 
     schema_restaurant = f'''    <script type="application/ld+json">
     {{
@@ -628,23 +585,6 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             strip_items.append(
                 f'<a class="cs-item" href="/r/{city_slug}/{rest_slug}/menu/" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:600;white-space:nowrap;"><i class="fas fa-utensils" style="margin-right:5px;"></i>Full menu</a>'
             )
-        if enr_phone:
-            strip_items.append(
-                '<a class="cs-item" href="tel:' + enr_phone + '" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-phone-flip" style="margin-right:5px;"></i>' + enr_phone + '</a>'
-            )
-        if enr_website:
-            strip_items.append(
-                '<a class="cs-item" href="' + enr_website + '" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="fas fa-globe" style="margin-right:5px;"></i>Website</a>'
-            )
-        if enr_hours:
-            strip_items.append(
-                '<a class="cs-item" href="#contact" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:500;white-space:nowrap;"><i class="far fa-clock" style="margin-right:5px;"></i>View opening hours</a>'
-            )
-        if strip_items:
-            # Google Places ToS: linked attribution wherever Places content displays.
-            strip_items.append(
-                '<a class="cs-attr" href="' + maps_attr_url + '" target="_blank" rel="noopener" translate="no" style="color:rgba(255,255,255,0.9);font-size:0.75rem;font-weight:400;white-space:nowrap;border:1px solid rgba(255,255,255,0.3);padding:1px 6px;border-radius:3px;text-decoration:none;">Google Maps</a>'
-            )
             sep = '<span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span>'
             strip = ('<div class="contact-strip" id="contact-strip" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;">'
                      + sep.join(strip_items) + '</div>')
@@ -696,45 +636,8 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             raise ValueError(f'hero claim anchor missing for {name} ({city})')
         html = html.replace('<a href="#claim"', f'<a href="{hero_claim_url}"')
 
-    # ---- Contact & Info section (replaces action bar + quick-info) ----
-    has_enrichment = any([enr_hours, enr_price, enr_phone, enr_website])
-    if has_enrichment:
-        html = html.replace('<!-- DYNAMIC: contact_info_open -->\n', '')
-        # Google Places ToS: per-page attribution inside the same visual container
-        # as the Google-sourced fields (hours/phone/website/price).
-        html = html.replace(
-            '            <!-- DYNAMIC: contact_info_close -->\n',
-            '            <a class="gm-attribution" href="' + maps_attr_url + '" target="_blank" rel="noopener" translate="no" style="display:inline-block;margin-top:14px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08);font-family:Roboto,sans-serif;font-size:0.75rem;font-weight:400;color:#5e5e5e;white-space:nowrap;text-decoration:underline;">Data from Google</a>\n'
-        )
-        if enr_hours and len(enr_hours) > 0:
-            hours_str = '<br>'.join(enr_hours[:7])
-            html = re.sub(
-                r'<!-- DYNAMIC: contact_hours -->.*?\n                    </div>',
-                '<!-- DYNAMIC: contact_hours -->\n                    <div class="contact-block">\n                        <h4 class="contact-block-title"><i class="far fa-clock" style="margin-right:6px;"></i> Opening Hours</h4>\n                        <div class="contact-hours-text">' + hours_str + '</div>\n                    </div>',
-                html, flags=re.DOTALL
-            )
-        else:
-            html = re.sub(r'<!-- DYNAMIC: contact_hours -->.*?\n                    </div>', '', html, flags=re.DOTALL)
-
-        detail_items = []
-        if enr_phone:
-            detail_items.append('<div class="contact-detail"><a href="tel:' + enr_phone + '">' + enr_phone + '</a></div>')
-        if enr_website:
-            detail_items.append('<div class="contact-detail"><a href="' + enr_website + '" target="_blank" rel="noopener">Visit website →</a></div>')
-        if enr_price:
-            detail_items.append('<div class="contact-detail"><span class="price-label">Price: ' + enr_price + '</span></div>')
-
-        if detail_items:
-            details_str = '\n                        '.join(detail_items)
-            html = re.sub(
-                r'<!-- DYNAMIC: contact_details -->.*?\n                    </div>',
-                '<!-- DYNAMIC: contact_details -->\n                    <div class="contact-block">\n                        <h4 class="contact-block-title"><i class="fas fa-phone-flip" style="margin-right:6px;"></i> Contact</h4>\n                        ' + details_str + '\n                    </div>',
-                html, flags=re.DOTALL
-            )
-        else:
-            html = re.sub(r'<!-- DYNAMIC: contact_details -->.*?\n                    </div>', '', html, flags=re.DOTALL)
-    else:
-        html = re.sub(r'<!-- DYNAMIC: contact_info_open -->.*?<!-- DYNAMIC: contact_info_close -->\n', '', html, flags=re.DOTALL)
+    # ---- Contact & Info section: FSA + owner-claim data only (Places enrichment removed Oct 2026) ----
+    html = re.sub(r'<!-- DYNAMIC: contact_info_open -->.*?<!-- DYNAMIC: contact_info_close -->\n', '', html, flags=re.DOTALL)
 
     # ---- Hygiene rating card ----
     html = html.replace(
@@ -1021,28 +924,12 @@ def main() -> None:
     for city in city_open:
         city_open[city].sort(key=lambda r: (-int(r.get('hygiene_rating', '0') or '0') if (r.get('hygiene_rating', '') or '').isdigit() else 0, r['name']))
     
-    # ---- Load Google Places enrichment ----
     enrichment_lookup: dict[str, dict[str, Any]] = {}
-    enrichment_path = os.path.join(REPO, 'data', 'google_enrichment.json')
-    if os.path.exists(enrichment_path):
-        with open(enrichment_path) as f:
-            enrichment_data = json.load(f)
-        # Include entries with usable data: a successful Places lookup
-        # (google_place_id) OR a manually-maintained entry that carries at
-        # least one rendered field. Empty shells (all fields None) stay out.
-        for entry in enrichment_data:
-            if entry.get('google_place_id') or any(
-                entry.get(k) for k in ('phone', 'website', 'opening_hours', 'price_level', 'description')
-            ):
-                enrichment_lookup[str(entry['fsa_id'])] = entry
-        print(f"Loaded {len(enrichment_lookup)} enrichment entries")
-    else:
-        print("No enrichment data found — pages will use FSA-only content")
     total = len(restaurants)
     generated = 0
     errors = 0
 
-    print(f"Generating {total} restaurant pages with Kimi v2 template...")
+    print(f"Generating {total} restaurant pages...")
 
     # Pre-scan existing pages: which record currently owns each clean slug.
     # Preserves the live URL -> restaurant mapping across regeneration runs
