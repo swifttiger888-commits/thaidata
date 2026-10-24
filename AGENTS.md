@@ -12,7 +12,7 @@ Repo for thaidata.uk, a static Thai-restaurant directory on Cloudflare Pages (au
 
 ## Where things live
 
-- `data/` — datasets (restaurants, exclusions, festivals, menus, enrichment)
+- `data/` — datasets (restaurants, exclusions, festivals, menus)
 - `scripts/` — data fetch + page generators; `functions/` — Pages Functions (admin, search, middleware)
 - `tests/` — pytest suite incl. the stale-count guard
 - `docs/thaidata-environment-overview.md` — full environment, tokens, API and deployment notes
