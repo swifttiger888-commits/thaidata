@@ -2386,6 +2386,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thaidata.uk/r/leeds/thai-edge/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thaidata.uk/r/leeds/thai-sun/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

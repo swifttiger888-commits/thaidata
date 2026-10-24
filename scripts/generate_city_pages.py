@@ -1106,7 +1106,7 @@ def build_empty_state_page(city: str, slug: str) -> str:
   (England, Wales &amp; Northern Ireland) and Food Standards Scotland (Scotland)
   data &mdash; if a Thai restaurant registers here, its listing will appear
   automatically.</p>
-  <p><a href="/cities/">Browse all UK cities</a> &nbsp;&middot;&nbsp; <a href="/">ThaiData UK home</a></p>
+  <p><a href="/r/">Browse all UK cities</a> &nbsp;&middot;&nbsp; <a href="/">ThaiData UK home</a></p>
 </main>
 </body>
 </html>
