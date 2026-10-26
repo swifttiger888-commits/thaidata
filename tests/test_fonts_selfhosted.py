@@ -38,6 +38,21 @@ def test_pages_that_use_the_typefaces_load_our_stylesheet():
     assert len(HTML) - len(missing) > 2000
 
 
+def test_generators_do_not_emit_google_fonts():
+    """A generator that still emits Google Fonts re-hotlinks every page it writes.
+
+    Eight manual generators carried the hosted link long after the output pages had
+    been patched, so re-running any of them silently undid the self-hosting. The
+    two scripts that name the hosts in order to rewrite them are excluded.
+    """
+    exempt = {'selfhost_fonts.py', 'site_fonts.py'}
+    offenders = [p.name for p in (REPO / 'scripts').glob('*.py')
+                 if p.name not in exempt
+                 and ('fonts.googleapis.com' in p.read_text(errors='ignore')
+                      or 'fonts.gstatic.com' in p.read_text(errors='ignore'))]
+    assert not offenders, offenders
+
+
 def test_font_stylesheet_is_complete_and_files_exist():
     css = FONTS_CSS.read_text()
     faces = re.findall(r'@font-face\s*{([^}]*)}', css)
