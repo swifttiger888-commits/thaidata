@@ -1,7 +1,7 @@
 {
   "name": "ThaiData UK \u2014 Restaurant Directory",
-  "updated": "2026-10-19",
-  "total": 1244,
+  "updated": "2026-10-26",
+  "total": 1245,
   "pubs": 22,
   "sources": [
     "FSA FHRS",
@@ -639,11 +639,11 @@
       "city": "Mole Valley",
       "local_authority": "Mole Valley",
       "postcode": "KT22 7SP",
-      "address": "The Plough (Ph), 93 Kingston Road, Leatherhead",
+      "address": "The Plough (Ph), 93 Kingston Road, Leatherhead, Surrey",
       "hygiene_rating": "5",
       "rating_date": "2025-11-17T00:00:00",
-      "longitude": "-0.329981",
-      "latitude": "51.30297"
+      "longitude": "-0.3298729",
+      "latitude": "51.3029166"
     },
     {
       "id": 1682797,
@@ -940,7 +940,7 @@
       "postcode": "KT1 1EY",
       "address": "4 - 6 High Street, Kingston Upon Thames",
       "hygiene_rating": "5",
-      "rating_date": "2024-10-31T00:00:00",
+      "rating_date": "2026-10-12T00:00:00",
       "longitude": "-0.3066224",
       "latitude": "51.4088719"
     },
@@ -1268,19 +1268,6 @@
       "rating_date": "2025-08-08T00:00:00",
       "longitude": "-1.1811294",
       "latitude": "52.5999532"
-    },
-    {
-      "id": 1150583,
-      "name": "Thai Express",
-      "type": "restaurant",
-      "city": "Birmingham",
-      "local_authority": "Birmingham",
-      "postcode": "B2 4BF",
-      "address": "Unit 36, Grand Central, Stephenson Place, Birmingham",
-      "hygiene_rating": "5",
-      "rating_date": "2025-12-05T00:00:00",
-      "longitude": "-1.89858603477478",
-      "latitude": "52.4778709411621"
     },
     {
       "id": 488767,
@@ -1736,19 +1723,6 @@
       "rating_date": "2024-04-19T00:00:00",
       "longitude": "-0.1181344",
       "latitude": "51.5114999"
-    },
-    {
-      "id": 544446,
-      "name": "Thai Square",
-      "type": "restaurant",
-      "city": "Windsor and Maidenhead",
-      "local_authority": "Windsor and Maidenhead",
-      "postcode": "SL4 1PR",
-      "address": "29 Thames Street, Windsor",
-      "hygiene_rating": "5",
-      "rating_date": "2025-11-06T00:00:00",
-      "longitude": "-0.607573",
-      "latitude": "51.484573"
     },
     {
       "id": 1885124,
@@ -2212,11 +2186,11 @@
       "city": "Mole Valley",
       "local_authority": "Mole Valley",
       "postcode": "RH4 1QT",
-      "address": "274-276 High Street, Dorking",
+      "address": "274-276, High Street, Dorking, Surrey",
       "hygiene_rating": "4",
       "rating_date": "2026-02-11T00:00:00",
-      "longitude": "-0.327991",
-      "latitude": "51.233734"
+      "longitude": "-0.327838",
+      "latitude": "51.2338102"
     },
     {
       "id": 429274,
@@ -2292,7 +2266,7 @@
       "postcode": "HP4 3HH",
       "address": "Thai Cottage, 149 High Street, Berkhamsted, Hertfordshire",
       "hygiene_rating": "4",
-      "rating_date": "2025-03-14T00:00:00",
+      "rating_date": "2026-09-17T00:00:00",
       "longitude": "-0.56325",
       "latitude": "51.759713"
     },
@@ -2334,6 +2308,32 @@
       "rating_date": "2025-07-23T00:00:00",
       "longitude": "-1.541585",
       "latitude": "53.800193"
+    },
+    {
+      "id": 17370,
+      "name": "Thai Emerald",
+      "type": "restaurant",
+      "city": "Cotswold",
+      "local_authority": "Cotswold",
+      "postcode": "GL7 1QH",
+      "address": "Thai Emerald  Restaurant, 36 Castle Street, Cirencester, Gloucestershire",
+      "hygiene_rating": "4",
+      "rating_date": "2026-09-20T00:00:00",
+      "longitude": "-1.97061",
+      "latitude": "51.716428"
+    },
+    {
+      "id": 1150583,
+      "name": "Thai Express",
+      "type": "restaurant",
+      "city": "Birmingham",
+      "local_authority": "Birmingham",
+      "postcode": "B2 4BF",
+      "address": "Unit 36, Grand Central, Stephenson Place, Birmingham",
+      "hygiene_rating": "4",
+      "rating_date": "2026-09-15T00:00:00",
+      "longitude": "-1.89858603477478",
+      "latitude": "52.4778709411621"
     },
     {
       "id": 1717094,
@@ -2399,6 +2399,19 @@
       "rating_date": "2025-10-27T00:00:00",
       "longitude": "-2.7193161",
       "latitude": "51.3296183"
+    },
+    {
+      "id": 1999060,
+      "name": "Thai Kitchen",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Barnet",
+      "postcode": "N12 8NR",
+      "address": "Elephant Inn 283 Ballards Lane London",
+      "hygiene_rating": "4",
+      "rating_date": "2026-09-22T00:00:00",
+      "longitude": "-0.179861",
+      "latitude": "51.611398"
     },
     {
       "id": 559395,
@@ -2607,6 +2620,19 @@
       "rating_date": "2024-03-08T00:00:00",
       "longitude": "-0.1041771",
       "latitude": "51.5349081"
+    },
+    {
+      "id": 544446,
+      "name": "Thai Square",
+      "type": "restaurant",
+      "city": "Windsor and Maidenhead",
+      "local_authority": "Windsor and Maidenhead",
+      "postcode": "SL4 1PR",
+      "address": "29 Thames Street, Windsor",
+      "hygiene_rating": "4",
+      "rating_date": "2026-09-18T00:00:00",
+      "longitude": "-0.607573",
+      "latitude": "51.484573"
     },
     {
       "id": 1875949,
@@ -2932,19 +2958,6 @@
       "rating_date": "2025-04-02T00:00:00",
       "longitude": "-0.868139",
       "latitude": "51.4773434"
-    },
-    {
-      "id": 17370,
-      "name": "Thai Emerald",
-      "type": "restaurant",
-      "city": "Cotswold",
-      "local_authority": "Cotswold",
-      "postcode": "GL7 1QH",
-      "address": "Thai Emerald  Restaurant, 36 Castle Street, Cirencester, Gloucestershire",
-      "hygiene_rating": "3",
-      "rating_date": "2025-01-13T00:00:00",
-      "longitude": "-1.97061",
-      "latitude": "51.716428"
     },
     {
       "id": 1095529,
@@ -3480,19 +3493,6 @@
       "latitude": "51.3826999"
     },
     {
-      "id": 328916,
-      "name": "Araya Thai Restaurant",
-      "type": "restaurant",
-      "city": "Westmorland and Furness",
-      "local_authority": "Westmorland and Furness",
-      "postcode": "LA9 4EN",
-      "address": "101 Highgate, Kendal",
-      "hygiene_rating": "5",
-      "rating_date": "2024-09-17T00:00:00",
-      "longitude": "-2.747232",
-      "latitude": "54.324596"
-    },
-    {
       "id": 587398,
       "name": "Araya Thai Restaurant",
       "type": "restaurant",
@@ -3517,6 +3517,19 @@
       "rating_date": "2026-07-31T00:00:00",
       "longitude": "-0.538197994232178",
       "latitude": "53.2358016967773"
+    },
+    {
+      "id": 328916,
+      "name": "Araya Thai Restaurant",
+      "type": "restaurant",
+      "city": "Westmorland and Furness",
+      "local_authority": "Westmorland and Furness",
+      "postcode": "LA9 4EN",
+      "address": "101 Highgate, Kendal",
+      "hygiene_rating": "5",
+      "rating_date": "2026-09-24T00:00:00",
+      "longitude": "-2.747232",
+      "latitude": "54.324596"
     },
     {
       "id": 1656201,
@@ -4351,7 +4364,7 @@
       "latitude": "51.4158698"
     },
     {
-      "id": 1695512,
+      "id": 2004840,
       "name": "Nid's Thai Kitchen",
       "type": "restaurant",
       "city": "West Northamptonshire",
@@ -4970,7 +4983,7 @@
       "postcode": "B3 3AX",
       "address": "2B Chamberlain Square, Birmingham",
       "hygiene_rating": "5",
-      "rating_date": "2020-10-15T00:00:00",
+      "rating_date": "2020-09-27T00:00:00",
       "longitude": "-1.9049466",
       "latitude": "52.4797533"
     },
@@ -5129,19 +5142,6 @@
       "rating_date": "2025-08-12T00:00:00",
       "longitude": "-3.0685197",
       "latitude": "52.9724071"
-    },
-    {
-      "id": 1755237,
-      "name": "Sala Thai Kitchen",
-      "type": "restaurant",
-      "city": "St Albans City",
-      "local_authority": "St Albans City",
-      "postcode": "AL3 4ED",
-      "address": "5A High Street, St Albans, Hertfordshire",
-      "hygiene_rating": "5",
-      "rating_date": "2024-09-26T00:00:00",
-      "longitude": "-0.3405188",
-      "latitude": "51.7506347"
     },
     {
       "id": 410427,
@@ -5326,7 +5326,7 @@
       "latitude": "53.853314"
     },
     {
-      "id": 1345752,
+      "id": 2004507,
       "name": "Sukanda's Thai Kitchen",
       "type": "restaurant",
       "city": "West Northamptonshire",
@@ -5503,7 +5503,7 @@
       "postcode": "TQ12 2AQ",
       "address": "13 Queen Street Newton Abbot Devon",
       "hygiene_rating": "5",
-      "rating_date": "2023-10-19T00:00:00",
+      "rating_date": "2026-10-20T00:00:00",
       "longitude": "-3.60824",
       "latitude": "50.530969"
     },
@@ -6073,11 +6073,11 @@
       "city": "Mole Valley",
       "local_authority": "Mole Valley",
       "postcode": "KT21 1AA",
-      "address": "61a The Street, Ashtead",
+      "address": "61a, The Street, Ashtead, Surrey",
       "hygiene_rating": "5",
       "rating_date": "2025-09-25T00:00:00",
-      "longitude": "-0.298615",
-      "latitude": "51.310099"
+      "longitude": "-0.2980673",
+      "latitude": "51.3103591"
     },
     {
       "id": 630711,
@@ -6387,7 +6387,7 @@
       "postcode": "PO33 2DU",
       "address": "4 Union Street, Ryde, Isle Of Wight",
       "hygiene_rating": "4",
-      "rating_date": "2025-02-27T00:00:00",
+      "rating_date": "2026-09-14T00:00:00",
       "longitude": "-1.1610038",
       "latitude": "50.732299"
     },
@@ -6912,6 +6912,19 @@
       "latitude": "51.4686664"
     },
     {
+      "id": 1755237,
+      "name": "Sala Thai Kitchen",
+      "type": "restaurant",
+      "city": "St Albans City",
+      "local_authority": "St Albans City",
+      "postcode": "AL3 4ED",
+      "address": "5A High Street, St Albans, Hertfordshire",
+      "hygiene_rating": "4",
+      "rating_date": "2026-09-17T00:00:00",
+      "longitude": "-0.3405188",
+      "latitude": "51.7506347"
+    },
+    {
       "id": 427518,
       "name": "Siam Thai Restaurant",
       "type": "restaurant",
@@ -7037,7 +7050,7 @@
       "postcode": "WV16 4DR",
       "address": "69 St Marys Street, Bridgnorth, Shropshire",
       "hygiene_rating": "4",
-      "rating_date": "2024-10-18T00:00:00",
+      "rating_date": "2026-09-16T00:00:00",
       "longitude": "-2.420419",
       "latitude": "52.5352897"
     },
@@ -7393,19 +7406,6 @@
       "latitude": "53.819184"
     },
     {
-      "id": 1019753,
-      "name": "Camile Thai Ballyhackamore",
-      "type": "restaurant",
-      "city": "Belfast",
-      "local_authority": "Belfast City",
-      "postcode": "BT4 3EX",
-      "address": "Unit 3, 322 Upper Newtownards Road, Belfast",
-      "hygiene_rating": "3",
-      "rating_date": "2025-05-23T00:00:00",
-      "longitude": "-5.86896991729736",
-      "latitude": "54.5953559875488"
-    },
-    {
       "id": 931458,
       "name": "Chang Thai Diner",
       "type": "restaurant",
@@ -7549,6 +7549,19 @@
       "latitude": "51.4983023"
     },
     {
+      "id": 1981929,
+      "name": "Noi's Thai Tapas",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Ealing",
+      "postcode": "W7 2DG",
+      "address": "7 Boston Parade, Boston Road, Hanwell",
+      "hygiene_rating": "3",
+      "rating_date": "2026-09-15T00:00:00",
+      "longitude": "-0.325712",
+      "latitude": "51.496913"
+    },
+    {
       "id": 703572,
       "name": "O's Thai Cafe",
       "type": "restaurant",
@@ -7560,19 +7573,6 @@
       "rating_date": "2026-02-14T00:00:00",
       "longitude": "-0.123806",
       "latitude": "51.580256"
-    },
-    {
-      "id": 1747915,
-      "name": "Pearl Thai Restaurant",
-      "type": "restaurant",
-      "city": "Swansea",
-      "local_authority": "Swansea",
-      "postcode": "SA1 3UL",
-      "address": "400 Oystermouth Road, City Centre",
-      "hygiene_rating": "3",
-      "rating_date": "2025-03-25T00:00:00",
-      "longitude": "-3.9589876",
-      "latitude": "51.6127285"
     },
     {
       "id": 184870,
@@ -7874,6 +7874,19 @@
       "latitude": "52.7604560852051"
     },
     {
+      "id": 1019753,
+      "name": "Camile Thai Ballyhackamore",
+      "type": "restaurant",
+      "city": "Belfast",
+      "local_authority": "Belfast City",
+      "postcode": "BT4 3EX",
+      "address": "Unit 3, 322 Upper Newtownards Road, Belfast",
+      "hygiene_rating": "2",
+      "rating_date": "2026-09-18T00:00:00",
+      "longitude": "-5.86896991729736",
+      "latitude": "54.5953559875488"
+    },
+    {
       "id": 126874,
       "name": "Castle Thai Restaurant",
       "type": "restaurant",
@@ -8015,19 +8028,6 @@
       "rating_date": "2026-01-12T00:00:00",
       "longitude": null,
       "latitude": null
-    },
-    {
-      "id": 1517207,
-      "name": "Pranee's Thai Shop",
-      "type": "restaurant",
-      "city": "West Northamptonshire",
-      "local_authority": "West Northamptonshire",
-      "postcode": "NN1 1SR",
-      "address": "13a Marefair, Northampton, NN1 1SR",
-      "hygiene_rating": "1",
-      "rating_date": "2026-03-18T00:00:00",
-      "longitude": "-0.9015493",
-      "latitude": "52.2366395"
     },
     {
       "id": 140096,
@@ -8725,11 +8725,11 @@
       "city": "Mole Valley",
       "local_authority": "Mole Valley",
       "postcode": "KT22 8AJ",
-      "address": "36-38 High Street, Leatherhead",
+      "address": "36-38, High Street, Leatherhead, Surrey",
       "hygiene_rating": "5",
       "rating_date": "2025-06-11T00:00:00",
-      "longitude": "-0.326871",
-      "latitude": "51.295372"
+      "longitude": "-0.3271251",
+      "latitude": "51.2953014"
     },
     {
       "id": 1414341,
@@ -9395,19 +9395,6 @@
       "latitude": "51.499441"
     },
     {
-      "id": 1425857,
-      "name": "Ramruay Chang Thai Cuisine",
-      "type": "restaurant",
-      "city": "Swansea",
-      "local_authority": "Swansea",
-      "postcode": "SA1 5NW",
-      "address": "33 Walter Road, City Centre",
-      "hygiene_rating": "3",
-      "rating_date": "2026-01-29T00:00:00",
-      "longitude": "-3.956502",
-      "latitude": "51.619229"
-    },
-    {
       "id": 1644377,
       "name": "River Moon Thai Restaurant",
       "type": "restaurant",
@@ -9458,6 +9445,19 @@
       "rating_date": "2026-07-14T00:00:00",
       "longitude": "-0.1607475",
       "latitude": "51.5197836"
+    },
+    {
+      "id": 1949629,
+      "name": "Auntie Suki Thai Cafe",
+      "type": "restaurant",
+      "city": "Worthing",
+      "local_authority": "Worthing",
+      "postcode": "BN11 3LA",
+      "address": "127A Rowlands Road, Worthing, West Sussex",
+      "hygiene_rating": "2",
+      "rating_date": "2026-09-15T00:00:00",
+      "longitude": "-0.3848376",
+      "latitude": "50.8097693"
     },
     {
       "id": 1703011,
@@ -10472,6 +10472,19 @@
       "rating_date": "2026-06-25T00:00:00",
       "longitude": "-5.0542219",
       "latitude": "50.264927"
+    },
+    {
+      "id": 1998500,
+      "name": "My Thai At The Old Steps",
+      "type": "restaurant",
+      "city": "Leeds",
+      "local_authority": "Leeds",
+      "postcode": "LS1 2EY",
+      "address": "26 York Place, Leeds",
+      "hygiene_rating": "5",
+      "rating_date": "2026-08-04T00:00:00",
+      "longitude": "-1.554127",
+      "latitude": "53.797248"
     },
     {
       "id": 1879580,
@@ -12892,19 +12905,6 @@
       "latitude": "51.7565304"
     },
     {
-      "id": 1275467,
-      "name": "Ploy's Thai Kitchen",
-      "type": "takeaway",
-      "city": "Leicester",
-      "local_authority": "North West Leicestershire",
-      "postcode": "DE12",
-      "address": "",
-      "hygiene_rating": "4",
-      "rating_date": "2021-03-05T00:00:00",
-      "longitude": null,
-      "latitude": null
-    },
-    {
       "id": 1608094,
       "name": "SAR LA THAI",
       "type": "takeaway",
@@ -12942,6 +12942,19 @@
       "rating_date": "2025-11-24T00:00:00",
       "longitude": "-0.128284",
       "latitude": "51.430368"
+    },
+    {
+      "id": 1560146,
+      "name": "Thai & Pie",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Barking and Dagenham",
+      "postcode": "RM6 6NX",
+      "address": "108 High Road, Chadwell Heath",
+      "hygiene_rating": "4",
+      "rating_date": "2026-10-13T00:00:00",
+      "longitude": "0.135093",
+      "latitude": "51.571425"
     },
     {
       "id": 1209041,
@@ -13254,19 +13267,6 @@
       "rating_date": "2026-03-31T00:00:00",
       "longitude": "-2.3145226",
       "latitude": "52.3763251"
-    },
-    {
-      "id": 1560146,
-      "name": "Thai & Pie",
-      "type": "takeaway",
-      "city": "London",
-      "local_authority": "Barking and Dagenham",
-      "postcode": "RM6 6NX",
-      "address": "108 High Road, Chadwell Heath",
-      "hygiene_rating": "1",
-      "rating_date": "2026-09-12T00:00:00",
-      "longitude": "0.135093",
-      "latitude": "51.571425"
     },
     {
       "id": 1597781,
@@ -13841,19 +13841,6 @@
       "latitude": "53.0454329"
     },
     {
-      "id": 148714,
-      "name": "YOUSUF'S Indian and Thai Kitchen",
-      "type": "takeaway",
-      "city": "Plymouth",
-      "local_authority": "Plymouth City",
-      "postcode": "PL2 3BL",
-      "address": "67 Wolseley Road, Plymouth",
-      "hygiene_rating": "5",
-      "rating_date": "2024-08-15T00:00:00",
-      "longitude": "-4.16387",
-      "latitude": "50.387176"
-    },
-    {
       "id": 1657087,
       "name": "Eat Traditional Thai Street Food",
       "type": "takeaway",
@@ -13891,6 +13878,19 @@
       "rating_date": "2026-03-03T00:00:00",
       "longitude": "-2.234824",
       "latitude": "52.187565"
+    },
+    {
+      "id": 148714,
+      "name": "YOUSUF'S Indian and Thai Kitchen",
+      "type": "takeaway",
+      "city": "Plymouth",
+      "local_authority": "Plymouth City",
+      "postcode": "PL2 3BL",
+      "address": "67 Wolseley Road, Plymouth",
+      "hygiene_rating": "4",
+      "rating_date": "2026-09-29T00:00:00",
+      "longitude": "-4.16387",
+      "latitude": "50.387176"
     },
     {
       "id": 1949823,
@@ -14322,19 +14322,6 @@
       "latitude": "55.9467589"
     },
     {
-      "id": 1501430,
-      "name": "Thai Express Kitchen",
-      "type": "restaurant",
-      "city": "Edinburgh",
-      "local_authority": "Edinburgh (City of)",
-      "postcode": "EH1 3AD",
-      "address": "101-103 St James Crescent, Edinburgh",
-      "hygiene_rating": "Improvement Required",
-      "rating_date": "2026-04-01T00:00:00",
-      "longitude": "-3.1884319",
-      "latitude": "55.9548286"
-    },
-    {
       "id": 1318186,
       "name": "Gratitude Thai Lounge Bar",
       "type": "restaurant",
@@ -14595,6 +14582,19 @@
       "latitude": "55.958931"
     },
     {
+      "id": 868040,
+      "name": "THANTAWAN THAI TAKEAWAY",
+      "type": "takeaway",
+      "city": "Edinburgh",
+      "local_authority": "Edinburgh (City of)",
+      "postcode": "EH3 9JT",
+      "address": "25 Brougham Street, Edinburgh",
+      "hygiene_rating": "Pass",
+      "rating_date": "2024-10-03T00:00:00",
+      "longitude": "-3.2018969",
+      "latitude": "55.9428107"
+    },
+    {
       "id": 1083897,
       "name": "Ting Thai HQ",
       "type": "takeaway",
@@ -14660,409 +14660,6 @@
       "latitude": "57.7227003"
     },
     {
-      "id": 1658010,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Bracknell Forest",
-      "local_authority": "Bracknell Forest",
-      "postcode": "RG12 1DP",
-      "address": "62 High Street, Bracknell, Bracknell Forest",
-      "hygiene_rating": "5",
-      "rating_date": "2025-08-18T00:00:00",
-      "longitude": "-0.7512417",
-      "latitude": "51.4167637"
-    },
-    {
-      "id": 1181202,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Oxford",
-      "local_authority": "Oxford City",
-      "postcode": "OX2 6AE",
-      "address": "55 Walton Street, Oxford, Oxfordshire",
-      "hygiene_rating": "5",
-      "rating_date": "2025-07-24T00:00:00",
-      "longitude": "-1.266551",
-      "latitude": "51.760216"
-    },
-    {
-      "id": 1869637,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "York",
-      "local_authority": "North Yorkshire",
-      "postcode": "HG1 1JZ",
-      "address": "Units 1 And 2 John Street, Harrogate",
-      "hygiene_rating": "5",
-      "rating_date": "2025-01-14T00:00:00",
-      "longitude": "-1.541058",
-      "latitude": "53.9920172"
-    },
-    {
-      "id": 1804340,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Leeds",
-      "local_authority": "Leeds",
-      "postcode": "LS1 5QB",
-      "address": "26 - 27 Park Row, Leeds",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-23T00:00:00",
-      "longitude": "-1.5472211",
-      "latitude": "53.7988556"
-    },
-    {
-      "id": 1069260,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Cheltenham",
-      "local_authority": "Cheltenham",
-      "postcode": "GL50 1SX",
-      "address": "6 Montpellier Street, Cheltenham, Gloucestershire",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-10T00:00:00",
-      "longitude": "-2.082872",
-      "latitude": "51.894963"
-    },
-    {
-      "id": 980256,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Brentwood",
-      "local_authority": "Brentwood",
-      "postcode": "CM14 4RG",
-      "address": "23 High Street, Brentwood, Essex",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-09T00:00:00",
-      "longitude": "0.304717004299164",
-      "latitude": "51.6213264465332"
-    },
-    {
-      "id": 997546,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Bath",
-      "local_authority": "Bath and North East Somerset",
-      "postcode": "BA1 1EY",
-      "address": "Bluecoat House, Sawclose, Bath, Bath And North East Somerset",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-23T00:00:00",
-      "longitude": null,
-      "latitude": null
-    },
-    {
-      "id": 331875,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Tunbridge Wells",
-      "local_authority": "Tunbridge Wells",
-      "postcode": "TN1 2UY",
-      "address": "57 - 59 Calverley Road, Royal Tunbridge Wells, Kent",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-17T00:00:00",
-      "longitude": "0.267779",
-      "latitude": "51.133294"
-    },
-    {
-      "id": 930755,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Warwick",
-      "local_authority": "Warwick",
-      "postcode": "CV32 4QE",
-      "address": "7 Satchwell Court, Royal Priors",
-      "hygiene_rating": "5",
-      "rating_date": "2025-07-22T00:00:00",
-      "longitude": "-1.53434",
-      "latitude": "52.290738"
-    },
-    {
-      "id": 1432464,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Welwyn Hatfield",
-      "local_authority": "Welwyn Hatfield",
-      "postcode": "AL8 6BQ",
-      "address": "4-6 Howardsgate, Welwyn Garden City, Hertfordshire",
-      "hygiene_rating": "5",
-      "rating_date": "2023-12-01T00:00:00",
-      "longitude": "-0.207794",
-      "latitude": "51.801464"
-    },
-    {
-      "id": 1381200,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Birmingham",
-      "local_authority": "Birmingham",
-      "postcode": "B17 9QE",
-      "address": "183 High Street, Harborne, Birmingham",
-      "hygiene_rating": "5",
-      "rating_date": "2022-03-08T00:00:00",
-      "longitude": "-1.94977",
-      "latitude": "52.458717"
-    },
-    {
-      "id": 1056774,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Windsor and Maidenhead",
-      "local_authority": "Windsor and Maidenhead",
-      "postcode": "SL4 1PR",
-      "address": "30 Thames Street, Windsor",
-      "hygiene_rating": "5",
-      "rating_date": "2022-02-21T00:00:00",
-      "longitude": "-0.607573",
-      "latitude": "51.484573"
-    },
-    {
-      "id": 262531,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Wiltshire",
-      "local_authority": "Wiltshire",
-      "postcode": "SP1 1TL",
-      "address": "32 MARKET PLACE, SALISBURY",
-      "hygiene_rating": "5",
-      "rating_date": "2024-11-21T00:00:00",
-      "longitude": "-1.7968331",
-      "latitude": "51.0695625"
-    },
-    {
-      "id": 731445,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Bristol",
-      "local_authority": "Bristol",
-      "postcode": "BS8 4BZ",
-      "address": "34 Princess Victoria Street, Clifton, Bristol",
-      "hygiene_rating": "5",
-      "rating_date": "2024-11-14T00:00:00",
-      "longitude": "-2.621447",
-      "latitude": "51.454376"
-    },
-    {
-      "id": 1667606,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Shropshire",
-      "local_authority": "Shropshire",
-      "postcode": "SY1 1SJ",
-      "address": "24 - 25 High Street, Shrewsbury, Shropshire",
-      "hygiene_rating": "5",
-      "rating_date": "2024-01-25T00:00:00",
-      "longitude": "-2.7539548",
-      "latitude": "52.7080311"
-    },
-    {
-      "id": 933485,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Wokingham",
-      "local_authority": "Wokingham",
-      "postcode": "RG40 2LD",
-      "address": "3 The Plaza, Denmark Street, Wokingham",
-      "hygiene_rating": "5",
-      "rating_date": "2024-11-20T00:00:00",
-      "longitude": "-0.835925",
-      "latitude": "51.409605"
-    },
-    {
-      "id": 661460,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Horsham",
-      "local_authority": "Horsham",
-      "postcode": "RH12 1HH",
-      "address": "Giggling Squid, 1B East Street, Horsham",
-      "hygiene_rating": "5",
-      "rating_date": "2024-12-02T00:00:00",
-      "longitude": "-0.3275121",
-      "latitude": "51.0619511"
-    },
-    {
-      "id": 241731,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Warwick",
-      "local_authority": "Warwick",
-      "postcode": "CV34 4AP",
-      "address": "1-3 High Street, Warwick",
-      "hygiene_rating": "5",
-      "rating_date": "2025-01-16T00:00:00",
-      "longitude": "-1.588192",
-      "latitude": "52.281139"
-    },
-    {
-      "id": 1580333,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Winchester City",
-      "local_authority": "Winchester City",
-      "postcode": "SO23 9ES",
-      "address": "12 - 13 The Square, Winchester, Hampshire",
-      "hygiene_rating": "5",
-      "rating_date": "2025-02-07T00:00:00",
-      "longitude": "-1.314951",
-      "latitude": "51.061975"
-    },
-    {
-      "id": 1472701,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Cambridge",
-      "local_authority": "Cambridge City",
-      "postcode": "CB2 3QB",
-      "address": "The Old Library Wheeler Street, Cambridge, Cambridgeshire",
-      "hygiene_rating": "5",
-      "rating_date": "2025-05-22T00:00:00",
-      "longitude": "0.119622563716718",
-      "latitude": "52.2044548595096"
-    },
-    {
-      "id": 206970,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Brighton",
-      "local_authority": "Brighton and Hove",
-      "postcode": "BN3 2AE",
-      "address": "129 Church Road, Hove, Brighton & Hove",
-      "hygiene_rating": "5",
-      "rating_date": "2025-06-03T00:00:00",
-      "longitude": "-0.173032",
-      "latitude": "50.828211"
-    },
-    {
-      "id": 1766834,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Hull",
-      "local_authority": "Solihull",
-      "postcode": "B93 0JU",
-      "address": "1632 - 1634 High Street, Knowle, Solihull",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-04T00:00:00",
-      "longitude": "-1.7350555",
-      "latitude": "52.3890377"
-    },
-    {
-      "id": 202194,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Dacorum",
-      "local_authority": "Dacorum",
-      "postcode": "HP4 1AH",
-      "address": "296-298 High Street, Berkhamsted, Hertfordshire",
-      "hygiene_rating": "5",
-      "rating_date": "2024-12-13T00:00:00",
-      "longitude": "-0.568399",
-      "latitude": "51.761844"
-    },
-    {
-      "id": 207365,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Brighton",
-      "local_authority": "Brighton and Hove",
-      "postcode": "BN1 1HH",
-      "address": "11 Market Street, Brighton",
-      "hygiene_rating": "5",
-      "rating_date": "2024-12-18T00:00:00",
-      "longitude": "-0.139774",
-      "latitude": "50.821471"
-    },
-    {
-      "id": 915725,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Norwich",
-      "local_authority": "Norwich City",
-      "postcode": "NR3 1RF",
-      "address": "24 Tombland, Norwich",
-      "hygiene_rating": "5",
-      "rating_date": "2025-10-25T00:00:00",
-      "longitude": "1.299285",
-      "latitude": "52.631114"
-    },
-    {
-      "id": 1856080,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "York",
-      "local_authority": "York",
-      "postcode": "YO1 8AA",
-      "address": "18 Lendal, York",
-      "hygiene_rating": "5",
-      "rating_date": "2025-08-28T00:00:00",
-      "longitude": "-1.0854921",
-      "latitude": "53.9602074"
-    },
-    {
-      "id": 1219720,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Leicester",
-      "local_authority": "Leicester City",
-      "postcode": "LE1 5DF",
-      "address": "3 - 5 St Martins Square, Leicester",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-18T00:00:00",
-      "longitude": "-1.13542",
-      "latitude": "52.634698"
-    },
-    {
-      "id": 952068,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Waverley",
-      "local_authority": "Waverley",
-      "postcode": "GU9 7LN",
-      "address": "67 - 68 Castle Street, Farnham, Surrey",
-      "hygiene_rating": "5",
-      "rating_date": "2025-10-13T00:00:00",
-      "longitude": "-0.7994915",
-      "latitude": "51.2159572"
-    },
-    {
-      "id": 44326,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Basildon",
-      "local_authority": "Basildon",
-      "postcode": "CM12 9BY",
-      "address": "120 High Street, Billericay, Essex",
-      "hygiene_rating": "5",
-      "rating_date": "2026-01-19T00:00:00",
-      "longitude": "0.41655",
-      "latitude": "51.623989"
-    },
-    {
-      "id": 1715232,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "St Albans City",
-      "local_authority": "St Albans City",
-      "postcode": "AL5 2BS",
-      "address": "Victoria Works, Amenbury Lane, Harpenden, Hertfordshire",
-      "hygiene_rating": "5",
-      "rating_date": "2026-02-07T00:00:00",
-      "longitude": "-0.356248",
-      "latitude": "51.814351"
-    },
-    {
-      "id": 1414692,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Chelmsford",
-      "local_authority": "Chelmsford",
-      "postcode": "CM1 1GD",
-      "address": "The Giggling Squid (Chokdee Ltd), 109 - 111 Bond Street, Chelmsford",
-      "hygiene_rating": "5",
-      "rating_date": "2026-02-20T00:00:00",
-      "longitude": "0.4759207",
-      "latitude": "51.7344717"
-    },
-    {
       "id": 1614005,
       "name": "Giggling Squid",
       "type": "restaurant",
@@ -15113,19 +14710,6 @@
       "rating_date": "2026-01-15T00:00:00",
       "longitude": "-0.364778",
       "latitude": "51.369682"
-    },
-    {
-      "id": 1513210,
-      "name": "Giggling Squid",
-      "type": "restaurant",
-      "city": "Maidstone",
-      "local_authority": "Maidstone",
-      "postcode": "ME14 1PF",
-      "address": "31-33 Earl Street, Maidstone, Kent",
-      "hygiene_rating": "5",
-      "rating_date": "2026-01-27T00:00:00",
-      "longitude": "0.520815",
-      "latitude": "51.274539"
     },
     {
       "id": 1695396,
@@ -15193,6 +14777,396 @@
       "latitude": "52.933572"
     },
     {
+      "id": 952068,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Waverley",
+      "local_authority": "Waverley",
+      "postcode": "GU9 7LN",
+      "address": "67 - 68 Castle Street, Farnham, Surrey",
+      "hygiene_rating": "5",
+      "rating_date": "2025-10-13T00:00:00",
+      "longitude": "-0.7994915",
+      "latitude": "51.2159572"
+    },
+    {
+      "id": 44326,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Basildon",
+      "local_authority": "Basildon",
+      "postcode": "CM12 9BY",
+      "address": "120 High Street, Billericay, Essex",
+      "hygiene_rating": "5",
+      "rating_date": "2026-01-19T00:00:00",
+      "longitude": "0.41655",
+      "latitude": "51.623989"
+    },
+    {
+      "id": 1513210,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Maidstone",
+      "local_authority": "Maidstone",
+      "postcode": "ME14 1PF",
+      "address": "31-33 Earl Street, Maidstone, Kent",
+      "hygiene_rating": "5",
+      "rating_date": "2026-01-27T00:00:00",
+      "longitude": "0.520815",
+      "latitude": "51.274539"
+    },
+    {
+      "id": 1715232,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "St Albans City",
+      "local_authority": "St Albans City",
+      "postcode": "AL5 2BS",
+      "address": "Victoria Works, Amenbury Lane, Harpenden, Hertfordshire",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-07T00:00:00",
+      "longitude": "-0.356248",
+      "latitude": "51.814351"
+    },
+    {
+      "id": 1414692,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Chelmsford",
+      "local_authority": "Chelmsford",
+      "postcode": "CM1 1GD",
+      "address": "The Giggling Squid (Chokdee Ltd), 109 - 111 Bond Street, Chelmsford",
+      "hygiene_rating": "5",
+      "rating_date": "2026-02-20T00:00:00",
+      "longitude": "0.4759207",
+      "latitude": "51.7344717"
+    },
+    {
+      "id": 1219720,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Leicester",
+      "local_authority": "Leicester City",
+      "postcode": "LE1 5DF",
+      "address": "3 - 5 St Martins Square, Leicester",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-18T00:00:00",
+      "longitude": "-1.13542",
+      "latitude": "52.634698"
+    },
+    {
+      "id": 1766834,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Hull",
+      "local_authority": "Solihull",
+      "postcode": "B93 0JU",
+      "address": "1632 - 1634 High Street, Knowle, Solihull",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-04T00:00:00",
+      "longitude": "-1.7350555",
+      "latitude": "52.3890377"
+    },
+    {
+      "id": 1472701,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Cambridge",
+      "local_authority": "Cambridge City",
+      "postcode": "CB2 3QB",
+      "address": "The Old Library Wheeler Street, Cambridge, Cambridgeshire",
+      "hygiene_rating": "5",
+      "rating_date": "2025-05-22T00:00:00",
+      "longitude": "0.119622563716718",
+      "latitude": "52.2044548595096"
+    },
+    {
+      "id": 1580333,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Winchester City",
+      "local_authority": "Winchester City",
+      "postcode": "SO23 9ES",
+      "address": "12 - 13 The Square, Winchester, Hampshire",
+      "hygiene_rating": "5",
+      "rating_date": "2025-02-07T00:00:00",
+      "longitude": "-1.314951",
+      "latitude": "51.061975"
+    },
+    {
+      "id": 1667606,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Shropshire",
+      "local_authority": "Shropshire",
+      "postcode": "SY1 1SJ",
+      "address": "24 - 25 High Street, Shrewsbury, Shropshire",
+      "hygiene_rating": "5",
+      "rating_date": "2024-01-25T00:00:00",
+      "longitude": "-2.7539548",
+      "latitude": "52.7080311"
+    },
+    {
+      "id": 1056774,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Windsor and Maidenhead",
+      "local_authority": "Windsor and Maidenhead",
+      "postcode": "SL4 1PR",
+      "address": "30 Thames Street, Windsor",
+      "hygiene_rating": "5",
+      "rating_date": "2022-02-21T00:00:00",
+      "longitude": "-0.607573",
+      "latitude": "51.484573"
+    },
+    {
+      "id": 933485,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Wokingham",
+      "local_authority": "Wokingham",
+      "postcode": "RG40 2LD",
+      "address": "3 The Plaza, Denmark Street, Wokingham",
+      "hygiene_rating": "5",
+      "rating_date": "2024-11-20T00:00:00",
+      "longitude": "-0.835925",
+      "latitude": "51.409605"
+    },
+    {
+      "id": 262531,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Wiltshire",
+      "local_authority": "Wiltshire",
+      "postcode": "SP1 1TL",
+      "address": "32 MARKET PLACE, SALISBURY",
+      "hygiene_rating": "5",
+      "rating_date": "2024-11-21T00:00:00",
+      "longitude": "-1.7968331",
+      "latitude": "51.0695625"
+    },
+    {
+      "id": 731445,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Bristol",
+      "local_authority": "Bristol",
+      "postcode": "BS8 4BZ",
+      "address": "34 Princess Victoria Street, Clifton, Bristol",
+      "hygiene_rating": "5",
+      "rating_date": "2024-11-14T00:00:00",
+      "longitude": "-2.621447",
+      "latitude": "51.454376"
+    },
+    {
+      "id": 202194,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Dacorum",
+      "local_authority": "Dacorum",
+      "postcode": "HP4 1AH",
+      "address": "296-298 High Street, Berkhamsted, Hertfordshire",
+      "hygiene_rating": "5",
+      "rating_date": "2024-12-13T00:00:00",
+      "longitude": "-0.568399",
+      "latitude": "51.761844"
+    },
+    {
+      "id": 207365,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Brighton",
+      "local_authority": "Brighton and Hove",
+      "postcode": "BN1 1HH",
+      "address": "11 Market Street, Brighton",
+      "hygiene_rating": "5",
+      "rating_date": "2024-12-18T00:00:00",
+      "longitude": "-0.139774",
+      "latitude": "50.821471"
+    },
+    {
+      "id": 241731,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Warwick",
+      "local_authority": "Warwick",
+      "postcode": "CV34 4AP",
+      "address": "1-3 High Street, Warwick",
+      "hygiene_rating": "5",
+      "rating_date": "2025-01-16T00:00:00",
+      "longitude": "-1.588192",
+      "latitude": "52.281139"
+    },
+    {
+      "id": 661460,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Horsham",
+      "local_authority": "Horsham",
+      "postcode": "RH12 1HH",
+      "address": "Giggling Squid, 1B East Street, Horsham",
+      "hygiene_rating": "5",
+      "rating_date": "2024-12-02T00:00:00",
+      "longitude": "-0.3275121",
+      "latitude": "51.0619511"
+    },
+    {
+      "id": 915725,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Norwich",
+      "local_authority": "Norwich City",
+      "postcode": "NR3 1RF",
+      "address": "24 Tombland, Norwich",
+      "hygiene_rating": "5",
+      "rating_date": "2025-10-25T00:00:00",
+      "longitude": "1.299285",
+      "latitude": "52.631114"
+    },
+    {
+      "id": 1856080,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "York",
+      "local_authority": "York",
+      "postcode": "YO1 8AA",
+      "address": "18 Lendal, York",
+      "hygiene_rating": "5",
+      "rating_date": "2025-08-28T00:00:00",
+      "longitude": "-1.0854921",
+      "latitude": "53.9602074"
+    },
+    {
+      "id": 1181202,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Oxford",
+      "local_authority": "Oxford City",
+      "postcode": "OX2 6AE",
+      "address": "55 Walton Street, Oxford, Oxfordshire",
+      "hygiene_rating": "5",
+      "rating_date": "2025-07-24T00:00:00",
+      "longitude": "-1.266551",
+      "latitude": "51.760216"
+    },
+    {
+      "id": 1658010,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Bracknell Forest",
+      "local_authority": "Bracknell Forest",
+      "postcode": "RG12 1DP",
+      "address": "62 High Street, Bracknell, Bracknell Forest",
+      "hygiene_rating": "5",
+      "rating_date": "2025-08-18T00:00:00",
+      "longitude": "-0.7512417",
+      "latitude": "51.4167637"
+    },
+    {
+      "id": 1869637,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "York",
+      "local_authority": "North Yorkshire",
+      "postcode": "HG1 1JZ",
+      "address": "Units 1 And 2 John Street, Harrogate",
+      "hygiene_rating": "5",
+      "rating_date": "2025-01-14T00:00:00",
+      "longitude": "-1.541058",
+      "latitude": "53.9920172"
+    },
+    {
+      "id": 1804340,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Leeds",
+      "local_authority": "Leeds",
+      "postcode": "LS1 5QB",
+      "address": "26 - 27 Park Row, Leeds",
+      "hygiene_rating": "5",
+      "rating_date": "2025-06-23T00:00:00",
+      "longitude": "-1.5472211",
+      "latitude": "53.7988556"
+    },
+    {
+      "id": 331875,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Tunbridge Wells",
+      "local_authority": "Tunbridge Wells",
+      "postcode": "TN1 2UY",
+      "address": "57 - 59 Calverley Road, Royal Tunbridge Wells, Kent",
+      "hygiene_rating": "5",
+      "rating_date": "2025-06-17T00:00:00",
+      "longitude": "0.267779",
+      "latitude": "51.133294"
+    },
+    {
+      "id": 930755,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Warwick",
+      "local_authority": "Warwick",
+      "postcode": "CV32 4QE",
+      "address": "7 Satchwell Court, Royal Priors",
+      "hygiene_rating": "5",
+      "rating_date": "2025-07-22T00:00:00",
+      "longitude": "-1.53434",
+      "latitude": "52.290738"
+    },
+    {
+      "id": 980256,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Brentwood",
+      "local_authority": "Brentwood",
+      "postcode": "CM14 4RG",
+      "address": "23 High Street, Brentwood, Essex",
+      "hygiene_rating": "5",
+      "rating_date": "2025-06-09T00:00:00",
+      "longitude": "0.304717004299164",
+      "latitude": "51.6213264465332"
+    },
+    {
+      "id": 997546,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Bath",
+      "local_authority": "Bath and North East Somerset",
+      "postcode": "BA1 1EY",
+      "address": "Bluecoat House, Sawclose, Bath, Bath And North East Somerset",
+      "hygiene_rating": "5",
+      "rating_date": "2025-06-23T00:00:00",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "id": 206970,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Brighton",
+      "local_authority": "Brighton and Hove",
+      "postcode": "BN3 2AE",
+      "address": "129 Church Road, Hove, Brighton & Hove",
+      "hygiene_rating": "5",
+      "rating_date": "2025-06-03T00:00:00",
+      "longitude": "-0.173032",
+      "latitude": "50.828211"
+    },
+    {
+      "id": 1069260,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Cheltenham",
+      "local_authority": "Cheltenham",
+      "postcode": "GL50 1SX",
+      "address": "6 Montpellier Street, Cheltenham, Gloucestershire",
+      "hygiene_rating": "5",
+      "rating_date": "2025-06-10T00:00:00",
+      "longitude": "-2.082872",
+      "latitude": "51.894963"
+    },
+    {
       "id": 836528,
       "name": "Giggling Squid",
       "type": "restaurant",
@@ -15204,6 +15178,32 @@
       "rating_date": "2026-08-20T00:00:00",
       "longitude": "-0.573568",
       "latitude": "51.23489"
+    },
+    {
+      "id": 1381200,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Birmingham",
+      "local_authority": "Birmingham",
+      "postcode": "B17 9QE",
+      "address": "183 High Street, Harborne, Birmingham",
+      "hygiene_rating": "5",
+      "rating_date": "2022-03-08T00:00:00",
+      "longitude": "-1.94977",
+      "latitude": "52.458717"
+    },
+    {
+      "id": 1432464,
+      "name": "Giggling Squid",
+      "type": "restaurant",
+      "city": "Welwyn Hatfield",
+      "local_authority": "Welwyn Hatfield",
+      "postcode": "AL8 6BQ",
+      "address": "4-6 Howardsgate, Welwyn Garden City, Hertfordshire",
+      "hygiene_rating": "5",
+      "rating_date": "2023-12-01T00:00:00",
+      "longitude": "-0.207794",
+      "latitude": "51.801464"
     },
     {
       "id": 1385557,
@@ -15269,6 +15269,19 @@
       "rating_date": "2026-09-21T00:00:00",
       "longitude": "-0.1539321",
       "latitude": "51.4711993"
+    },
+    {
+      "id": 2006319,
+      "name": "Giggling Squid",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Hammersmith and Fulham",
+      "postcode": "W10 6AU",
+      "address": "Unit 8, Mitre Bridge Industrial Park, Mitre Way, London",
+      "hygiene_rating": "5",
+      "rating_date": "2026-09-30T00:00:00",
+      "longitude": "-0.2313306",
+      "latitude": "51.5243312"
     },
     {
       "id": 1988721,
@@ -15479,17 +15492,17 @@
       "latitude": "53.798868"
     },
     {
-      "id": 83700,
-      "name": "Sukhothai",
+      "id": 1221101,
+      "name": "SUKHOTHAI",
       "type": "restaurant",
-      "city": "Gravesham",
-      "local_authority": "Gravesham",
-      "postcode": "DA12 1AD",
-      "address": "6 Windmill Street, Gravesend, Kent",
+      "city": "Wirral",
+      "local_authority": "Wirral",
+      "postcode": "CH48 0RB",
+      "address": "119 - 121 Banks Road, West Kirby, Wirral",
       "hygiene_rating": "5",
-      "rating_date": "2025-12-02T00:00:00",
-      "longitude": "0.369611",
-      "latitude": "51.441666"
+      "rating_date": "2026-02-13T00:00:00",
+      "longitude": "-3.1823687",
+      "latitude": "53.3675489"
     },
     {
       "id": 1994758,
@@ -15505,17 +15518,17 @@
       "latitude": "51.702382"
     },
     {
-      "id": 1221101,
-      "name": "SUKHOTHAI",
+      "id": 83700,
+      "name": "Sukhothai",
       "type": "restaurant",
-      "city": "Wirral",
-      "local_authority": "Wirral",
-      "postcode": "CH48 0RB",
-      "address": "119 - 121 Banks Road, West Kirby, Wirral",
+      "city": "Gravesham",
+      "local_authority": "Gravesham",
+      "postcode": "DA12 1AD",
+      "address": "6 Windmill Street, Gravesend, Kent",
       "hygiene_rating": "5",
-      "rating_date": "2026-02-13T00:00:00",
-      "longitude": "-3.1823687",
-      "latitude": "53.3675489"
+      "rating_date": "2025-12-02T00:00:00",
+      "longitude": "0.369611",
+      "latitude": "51.441666"
     },
     {
       "id": 1868547,
@@ -15531,19 +15544,6 @@
       "latitude": "53.9945585"
     },
     {
-      "id": 321058,
-      "name": "Sukhothai Restaurant",
-      "type": "restaurant",
-      "city": "Leeds",
-      "local_authority": "Leeds",
-      "postcode": "LS7 4PE",
-      "address": "8 Regent Street, Chapeltown, Leeds",
-      "hygiene_rating": "5",
-      "rating_date": "2025-08-03T00:00:00",
-      "longitude": "-1.537462",
-      "latitude": "53.829991"
-    },
-    {
       "id": 902906,
       "name": "Sukhothai Restaurant",
       "type": "restaurant",
@@ -15555,6 +15555,19 @@
       "rating_date": "2025-10-30T00:00:00",
       "longitude": "0.220597",
       "latitude": "51.562239"
+    },
+    {
+      "id": 321058,
+      "name": "Sukhothai Restaurant",
+      "type": "restaurant",
+      "city": "Leeds",
+      "local_authority": "Leeds",
+      "postcode": "LS7 4PE",
+      "address": "8 Regent Street, Chapeltown, Leeds",
+      "hygiene_rating": "5",
+      "rating_date": "2025-08-03T00:00:00",
+      "longitude": "-1.537462",
+      "latitude": "53.829991"
     },
     {
       "id": 342713,
@@ -15778,17 +15791,30 @@
       "latitude": "55.822897"
     },
     {
-      "id": 1803464,
+      "id": 414088,
       "name": "Banana Tree",
       "type": "restaurant",
       "city": "London",
-      "local_authority": "Camden",
-      "postcode": "NW6 1XN",
-      "address": "237-239 West End Lane, London",
+      "local_authority": "Westminster",
+      "postcode": "W9 1PG",
+      "address": "166-166A RANDOLPH AVENUE, LONDON",
       "hygiene_rating": "5",
-      "rating_date": "2025-02-17T00:00:00",
-      "longitude": "-0.191699996590614",
-      "latitude": "51.5498313903809"
+      "rating_date": "2026-04-30T00:00:00",
+      "longitude": "-0.185662",
+      "latitude": "51.5297667"
+    },
+    {
+      "id": 1703689,
+      "name": "Banana Tree",
+      "type": "restaurant",
+      "city": "Portsmouth",
+      "local_authority": "Portsmouth",
+      "postcode": "PO1 3FA",
+      "address": "R24, The Canalside, Gunwharf Quays, Portsmouth",
+      "hygiene_rating": "5",
+      "rating_date": "2026-05-06T00:00:00",
+      "longitude": "-1.1052588",
+      "latitude": "50.7947685"
     },
     {
       "id": 663888,
@@ -15817,30 +15843,17 @@
       "latitude": "51.4606509"
     },
     {
-      "id": 414088,
+      "id": 1803464,
       "name": "Banana Tree",
       "type": "restaurant",
       "city": "London",
-      "local_authority": "Westminster",
-      "postcode": "W9 1PG",
-      "address": "166-166A RANDOLPH AVENUE, LONDON",
+      "local_authority": "Camden",
+      "postcode": "NW6 1XN",
+      "address": "237-239 West End Lane, London",
       "hygiene_rating": "5",
-      "rating_date": "2026-04-30T00:00:00",
-      "longitude": "-0.185662",
-      "latitude": "51.5297667"
-    },
-    {
-      "id": 1703689,
-      "name": "Banana Tree",
-      "type": "restaurant",
-      "city": "Portsmouth",
-      "local_authority": "Portsmouth",
-      "postcode": "PO1 3FA",
-      "address": "R24, The Canalside, Gunwharf Quays, Portsmouth",
-      "hygiene_rating": "5",
-      "rating_date": "2026-05-06T00:00:00",
-      "longitude": "-1.1052588",
-      "latitude": "50.7947685"
+      "rating_date": "2025-02-17T00:00:00",
+      "longitude": "-0.191699996590614",
+      "latitude": "51.5498313903809"
     },
     {
       "id": 272315,
@@ -16350,19 +16363,6 @@
       "latitude": "50.859798"
     },
     {
-      "id": 1437298,
-      "name": "Lion Thai Restaurant @ The Red Lion",
-      "type": "pub",
-      "city": "Reigate and Banstead",
-      "local_authority": "Reigate and Banstead",
-      "postcode": "RH1 1DP",
-      "address": "48 Linkfield Lane, Redhill, Surrey",
-      "hygiene_rating": "5",
-      "rating_date": "2024-08-22T00:00:00",
-      "longitude": "-0.17791",
-      "latitude": "51.241116"
-    },
-    {
       "id": 1837731,
       "name": "Mu Ban Thai Foods At The Village",
       "type": "pub",
@@ -16387,6 +16387,19 @@
       "rating_date": "2026-03-24T00:00:00",
       "longitude": "-2.189738",
       "latitude": "52.998516"
+    },
+    {
+      "id": 1437298,
+      "name": "Lion Thai Restaurant @ The Red Lion",
+      "type": "pub",
+      "city": "Reigate and Banstead",
+      "local_authority": "Reigate and Banstead",
+      "postcode": "RH1 1DP",
+      "address": "48 Linkfield Lane, Redhill, Surrey",
+      "hygiene_rating": "1",
+      "rating_date": "2026-09-17T00:00:00",
+      "longitude": "-0.17791",
+      "latitude": "51.241116"
     },
     {
       "id": 1829347,
@@ -16449,7 +16462,7 @@
       "postcode": "NR12 8UG",
       "address": "Church Road, Hoveton, Norfolk",
       "hygiene_rating": "4",
-      "rating_date": "2025-03-05T00:00:00",
+      "rating_date": "2026-09-30T00:00:00",
       "longitude": "1.4128032",
       "latitude": "52.7119956"
     },

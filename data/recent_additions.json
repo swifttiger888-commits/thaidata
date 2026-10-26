@@ -1,6 +1,62 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-26",
   "restaurants": [
+    {
+      "fsa_id": "2006319",
+      "name": "Giggling Squid",
+      "city": "London",
+      "type": "takeaway",
+      "discovered_on": "2026-10-26"
+    },
+    {
+      "fsa_id": "868040",
+      "name": "THANTAWAN THAI TAKEAWAY",
+      "city": "Edinburgh",
+      "type": "takeaway",
+      "discovered_on": "2026-10-26"
+    },
+    {
+      "fsa_id": "1998500",
+      "name": "My Thai At The Old Steps",
+      "city": "Leeds",
+      "type": "restaurant",
+      "discovered_on": "2026-10-26"
+    },
+    {
+      "fsa_id": "1949629",
+      "name": "Auntie Suki Thai Cafe",
+      "city": "Worthing",
+      "type": "restaurant",
+      "discovered_on": "2026-10-26"
+    },
+    {
+      "fsa_id": "1981929",
+      "name": "Noi's Thai Tapas",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-10-26"
+    },
+    {
+      "fsa_id": "2004507",
+      "name": "Sukanda's Thai Kitchen",
+      "city": "West Northamptonshire",
+      "type": "restaurant",
+      "discovered_on": "2026-10-26"
+    },
+    {
+      "fsa_id": "2004840",
+      "name": "Nid's Thai Kitchen",
+      "city": "West Northamptonshire",
+      "type": "restaurant",
+      "discovered_on": "2026-10-26"
+    },
+    {
+      "fsa_id": "1999060",
+      "name": "Thai Kitchen",
+      "city": "London",
+      "type": "restaurant",
+      "discovered_on": "2026-10-26"
+    },
     {
       "fsa_id": "1367117",
       "name": "SAI 8 Limited",
@@ -294,62 +350,6 @@
       "city": "Norwich",
       "type": "takeaway",
       "discovered_on": "2026-08-31"
-    },
-    {
-      "fsa_id": "1909079",
-      "name": "BKK Thai Takeaway",
-      "city": "Cheshire East",
-      "type": "takeaway",
-      "discovered_on": "2026-08-31"
-    },
-    {
-      "fsa_id": "1932296",
-      "name": "Thai Kitchen",
-      "city": "Oldham",
-      "type": "takeaway",
-      "discovered_on": "2026-08-31"
-    },
-    {
-      "fsa_id": "1958854",
-      "name": "Mais Thai Takeaway",
-      "city": "Sunderland",
-      "type": "takeaway",
-      "discovered_on": "2026-08-24"
-    },
-    {
-      "fsa_id": "1918142",
-      "name": "Pad thai corner",
-      "city": "London",
-      "type": "takeaway",
-      "discovered_on": "2026-08-24"
-    },
-    {
-      "fsa_id": "1895640",
-      "name": "The Fuchka Man, Halal Thai & Chinese, Morog Polau",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-08-24"
-    },
-    {
-      "fsa_id": "1931734",
-      "name": "Brother Thai",
-      "city": "Bristol",
-      "type": "restaurant",
-      "discovered_on": "2026-08-24"
-    },
-    {
-      "fsa_id": "1881809",
-      "name": "Aizah Thai & Cafe, Spicy Wok",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-08-17"
-    },
-    {
-      "fsa_id": "78170",
-      "name": "Mum Likes Thai Food",
-      "city": "London",
-      "type": "restaurant",
-      "discovered_on": "2026-08-17"
     }
   ]
 }

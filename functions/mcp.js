@@ -58,16 +58,16 @@ async function getRestaurants() {
 const EMBEDDED_DATA = {
   name: "ThaiData UK",
   cities: [
-    { name: "London", population: 8970000, total_thai_businesses: 274, restaurants: 224, takeaways: 50, per_100k: 3.1, avg_hygiene_rating: 4.2, scheme: "FHRS" },
-    { name: "Leeds", population: 812000, total_thai_businesses: 26, restaurants: 22, takeaways: 4, per_100k: 3.2, avg_hygiene_rating: 4.7, scheme: "FHRS" },
+    { name: "London", population: 8970000, total_thai_businesses: 277, restaurants: 226, takeaways: 51, per_100k: 3.1, avg_hygiene_rating: 4.2, scheme: "FHRS" },
+    { name: "Leeds", population: 812000, total_thai_businesses: 27, restaurants: 23, takeaways: 4, per_100k: 3.3, avg_hygiene_rating: 4.7, scheme: "FHRS" },
     { name: "Manchester", population: 568000, total_thai_businesses: 18, restaurants: 16, takeaways: 2, per_100k: 3.2, avg_hygiene_rating: 4.5, scheme: "FHRS" },
-    { name: "Edinburgh", population: 548000, total_thai_businesses: 19, restaurants: 12, takeaways: 7, per_100k: 3.5, scheme: "FHIS", fhis_pass: 15, fhis_improvement: 4, fhis_exempt: 0 },
+    { name: "Edinburgh", population: 548000, total_thai_businesses: 19, restaurants: 11, takeaways: 8, per_100k: 3.5, scheme: "FHIS", fhis_pass: 16, fhis_improvement: 3, fhis_exempt: 0 },
     { name: "Bristol", population: 483000, total_thai_businesses: 13, restaurants: 12, takeaways: 1, per_100k: 2.7, avg_hygiene_rating: 4.8, scheme: "FHRS" },
-    { name: "Birmingham", population: 1166000, total_thai_businesses: 8, restaurants: 6, takeaways: 2, per_100k: 0.7, avg_hygiene_rating: 4.4, scheme: "FHRS" },
+    { name: "Birmingham", population: 1166000, total_thai_businesses: 8, restaurants: 6, takeaways: 2, per_100k: 0.7, avg_hygiene_rating: 4.2, scheme: "FHRS" },
     { name: "Glasgow", population: 635000, total_thai_businesses: 6, restaurants: 5, takeaways: 1, per_100k: 0.9, scheme: "FHIS", fhis_pass: 6, fhis_improvement: 0, fhis_exempt: 0 }
   ],
   statistics: {
-    total_uk_thai_businesses: 1244,
+    total_uk_thai_businesses: 1245,
     national_living_wage_april_2026: 12.71,
     average_delivery_commission_uber_eats_pct: 30,
     average_delivery_commission_deliveroo_pct: 32,
