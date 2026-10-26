@@ -446,7 +446,10 @@ def build_all_schema(
     item_list = build_restaurant_list(
         city, stats["sorted_restaurants"], max_items=10, base_url=BASE_URL,
     )
-    schemas.append(item_list)
+    # Pub-only cities have no restaurant/takeaway listings; an empty
+    # itemListElement fails schema validation, so omit the block entirely.
+    if item_list.get("itemListElement"):
+        schemas.append(item_list)
 
     # 4. FAQPage
     faq = build_faq_page(
@@ -1282,6 +1285,29 @@ def process_city(
         html = inject_auto_zones(html, "market-snapshot", build_market_snapshot_html(city_name, stats))
         if stats["chains"]:
             html = inject_auto_zones(html, "chain-presence", build_chain_presence_html(city_name, stats["chains"], stats["count"]))
+        elif ("<!-- SHELL:location-v1 -->" in html
+              and "<!-- AUTO:chain-presence -->" not in html):
+            # Legacy shell-signed pages must keep all five AUTO zones for
+            # finish_location_shell(). Cities without chains never get the
+            # zone injected, which crashed the shell finaliser. Insert an
+            # empty zone in corridor order (schema, market-snapshot,
+            # chain-presence, postcode-areas, faq).
+            empty_zone = (
+                "<!-- AUTO:chain-presence -->\n"
+                "<!-- END:AUTO:chain-presence -->"
+            )
+            if "<!-- AUTO:postcode-areas -->" in html:
+                html = html.replace(
+                    "<!-- AUTO:postcode-areas -->",
+                    empty_zone + "\n<!-- AUTO:postcode-areas -->",
+                    1,
+                )
+            else:
+                html = html.replace(
+                    "<!-- END:AUTO:market-snapshot -->",
+                    "<!-- END:AUTO:market-snapshot -->\n" + empty_zone,
+                    1,
+                )
         if stats["postcode_areas"]:
             html = inject_auto_zones(html, "postcode-areas", build_postcode_areas_html(stats["postcode_areas"], city_name))
         html = inject_auto_zones(html, "faq", build_faq_html(schemas))
@@ -1307,6 +1333,59 @@ def process_city(
 
     # Content–schema matching
     visible_text = strip_html_body(html)
+
+    # Legacy shell pages can carry the chain-presence zone after the FAQ
+    # zone, which violates corridor order (schema, market-snapshot,
+    # chain-presence, postcode-areas, faq) and fails shell finalisation.
+    # Relocate it in front of the postcode-areas zone.
+    if ("<!-- SHELL:location-v1 -->" in html
+            and "<!-- AUTO:chain-presence -->" in html
+            and "<!-- AUTO:postcode-areas -->" in html):
+        chain_start = html.index("<!-- AUTO:chain-presence -->")
+        postcode_start = html.index("<!-- AUTO:postcode-areas -->")
+        if chain_start > postcode_start:
+            block_match = re.search(
+                r"<!--\s*AUTO:chain-presence\s*-->.*?"
+                r"<!--\s*END:AUTO:chain-presence\s*-->",
+                html,
+                re.DOTALL,
+            )
+            if not block_match:
+                result["action"] = "quarantined"
+                result["errors"].append(
+                    "chain-presence zone markers present but block not parseable"
+                )
+                return result
+            block = block_match.group(0)
+            html = html.replace(block, "", 1)
+            html = html.replace(
+                "<!-- AUTO:postcode-areas -->",
+                block + "\n<!-- AUTO:postcode-areas -->",
+                1,
+            )
+
+    # Legacy shell-signed pages predate the SHELL:browse region, which
+    # finish_location_shell() requires. Insert an empty region in template
+    # order (summary, localities, browse) so the finaliser can move the
+    # browse block into it.
+    if ("<!-- SHELL:location-v1 -->" in html
+            and "<!-- SHELL:browse -->" not in html):
+        empty_browse = (
+            "    <!-- SHELL:browse -->\n"
+            "    <!-- END:SHELL:browse -->"
+        )
+        if "<!-- END:SHELL:localities -->" in html:
+            html = html.replace(
+                "<!-- END:SHELL:localities -->",
+                "<!-- END:SHELL:localities -->\n\n" + empty_browse,
+                1,
+            )
+        else:
+            html = html.replace(
+                "<!-- END:SHELL:summary -->",
+                "<!-- END:SHELL:summary -->\n\n" + empty_browse,
+                1,
+            )
     for s in schemas:
         match_errors = validate_content_schema_match(visible_text, s, raw_html=html)
         if match_errors:

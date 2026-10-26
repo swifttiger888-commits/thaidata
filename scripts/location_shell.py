@@ -14,6 +14,8 @@ _TOKENS = re.compile(r"\{(city_name|slug|meta_description)\}")
 _SIGNATURE = "<!-- SHELL:location-v1 -->"
 _BROWSE_START = "<!-- BEGIN Browse Restaurants -->"
 _BROWSE_END = "<!-- END Browse Restaurants -->"
+_PUBS_START = "<!-- BEGIN Thai Pubs -->"
+_PUBS_END = "<!-- END Thai Pubs -->"
 
 
 def _template(filename, values):
@@ -85,6 +87,18 @@ def _browse_block(source):
         return ""
     left = source.index(_BROWSE_START)
     right = source.index(_BROWSE_END, left) + len(_BROWSE_END)
+    return source[left:right]
+
+
+def _pubs_block(source):
+    if source.count(_PUBS_START) != source.count(_PUBS_END):
+        raise ValueError("Unbalanced Thai Pubs markers")
+    if source.count(_PUBS_START) > 1:
+        raise ValueError("Duplicate Thai Pubs blocks")
+    if _PUBS_START not in source:
+        return ""
+    left = source.index(_PUBS_START)
+    right = source.index(_PUBS_END, left) + len(_PUBS_END)
     return source[left:right]
 
 
@@ -183,6 +197,7 @@ def finish_location_shell(source):
 
     before = auto_zone_bytes(source.encode("utf-8"))
     browse = _browse_block(source)
+    pubs = _pubs_block(source)
 
     if browse:
         # Browse is outside the five protected zones.
@@ -199,7 +214,14 @@ def finish_location_shell(source):
             flags=re.DOTALL,
         )
 
-    source = _replace_shell_region(source, "browse", browse)
+    if pubs:
+        source = source.replace(pubs, "", 1)
+
+    source = _replace_shell_region(
+        source,
+        "browse",
+        browse + ("\n" + pubs if pubs else ""),
+    )
 
     # Only confirmed county/district pages get the town-and-village card.
     is_county = (
