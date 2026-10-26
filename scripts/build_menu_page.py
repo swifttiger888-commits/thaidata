@@ -394,9 +394,8 @@ def build(data, dst=None):
 <title>{_menu_title_override(data.get("fsa_id")) or f'{esc(rname)}{(" " + esc(menu_label)) if menu_label else " Menu"} — Full Prices &amp; Dishes | ThaiData UK'}</title>
 <meta name="description" content="The full {esc(rname)} menu in {esc(city)} — {total} dishes with current prices, taken from the restaurant's own menu. First published online by ThaiData UK.">
 <link rel="canonical" href="https://thaidata.uk/r/{slug_city}/{slug_name}/menu/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{json.dumps(menu_schema, ensure_ascii=False, separators=(",",":"))}</script>
 <script type="application/ld+json">{json.dumps(rest_schema, ensure_ascii=False, separators=(",",":"))}</script>
 <style>
@@ -569,6 +568,13 @@ em {{ font-style: normal; font-weight: 700; }}
   </div>
 </main>
 
+<!-- TOOL-LINKS v1 -->
+<div style="max-width:1100px;margin:28px auto 30px;padding:0 24px;">
+  <p style="font-size:.85rem;color:var(--ink-mute);margin:0;">
+    <a href="/tools" style="color:var(--brand);font-weight:600;text-decoration:none;">Free calculators and benchmarks for Thai restaurant owners &rarr;</a>
+  </p>
+</div>
+<!-- /TOOL-LINKS -->
 <footer><div class="wrap">
   <p>Source: <a href="{esc(data.get('source','#'))}" rel="nofollow noopener" target="_blank">{esc(data.get('source_label','restaurant menu'))}</a> · read {checked}</p>
   <p>Guide recipes show how a dish is typically made — not this restaurant's own recipe. Thai names have no single English spelling, so the same dish may appear under different spellings here and elsewhere. Treat ingredients as a guideline, not a guarantee.</p>

@@ -60,3 +60,14 @@ def test_listing_template_carries_the_block():
     template = (REPO / 'templates' / 'restaurant.html').read_text()
     assert OPEN in template
     assert 'href="/tools"' in template
+
+
+def test_menu_template_carries_the_block():
+    """Menu pages are rebuilt from scripts/build_menu_page.py, which had no block:
+    rebuilding the 166 menu pages on 2026-10-26 stripped every injected block and
+    re-added Google Fonts. The template, not just the output, must carry both."""
+    template = (REPO / 'scripts' / 'build_menu_page.py').read_text()
+    assert OPEN in template
+    assert 'href="/tools"' in template
+    assert 'fonts.googleapis.com' not in template
+    assert 'href="/css/fonts.css"' in template
