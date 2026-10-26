@@ -11475,19 +11475,6 @@
       "latitude": "53.2597705"
     },
     {
-      "id": 937149,
-      "name": "Thai Express",
-      "type": "takeaway",
-      "city": "London",
-      "local_authority": "Croydon",
-      "postcode": "CR0 1LD",
-      "address": "Unit 32 - 33, Boxpark Croydon, 99 George Street, Croydon",
-      "hygiene_rating": "5",
-      "rating_date": "2025-03-18T00:00:00",
-      "longitude": "-0.0951249971985817",
-      "latitude": "51.3746376037598"
-    },
-    {
       "id": 1075836,
       "name": "Thai Express",
       "type": "takeaway",
@@ -11499,6 +11486,19 @@
       "rating_date": "2026-07-28T00:00:00",
       "longitude": null,
       "latitude": null
+    },
+    {
+      "id": 937149,
+      "name": "Thai Express",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Croydon",
+      "postcode": "CR0 1LD",
+      "address": "Unit 32 - 33, Boxpark Croydon, 99 George Street, Croydon",
+      "hygiene_rating": "5",
+      "rating_date": "2025-03-18T00:00:00",
+      "longitude": "-0.0951249971985817",
+      "latitude": "51.3746376037598"
     },
     {
       "id": 1984469,
@@ -11514,19 +11514,6 @@
       "latitude": "51.520483"
     },
     {
-      "id": 1932296,
-      "name": "Thai Kitchen",
-      "type": "takeaway",
-      "city": "Oldham",
-      "local_authority": "Oldham",
-      "postcode": "OL1 1AS",
-      "address": "Unit M22 The Market, Parliament Square, Oldham",
-      "hygiene_rating": "5",
-      "rating_date": "2026-08-11T00:00:00",
-      "longitude": null,
-      "latitude": null
-    },
-    {
       "id": 1934297,
       "name": "Thai Kitchen",
       "type": "takeaway",
@@ -11536,6 +11523,19 @@
       "address": "",
       "hygiene_rating": "5",
       "rating_date": "2026-05-15T00:00:00",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "id": 1932296,
+      "name": "Thai Kitchen",
+      "type": "takeaway",
+      "city": "Oldham",
+      "local_authority": "Oldham",
+      "postcode": "OL1 1AS",
+      "address": "Unit M22 The Market, Parliament Square, Oldham",
+      "hygiene_rating": "5",
+      "rating_date": "2026-08-11T00:00:00",
       "longitude": null,
       "latitude": null
     },
@@ -11553,19 +11553,6 @@
       "latitude": "51.5223358"
     },
     {
-      "id": 191815,
-      "name": "Thai Pan",
-      "type": "takeaway",
-      "city": "Arun",
-      "local_authority": "Arun",
-      "postcode": "PO21 5AA",
-      "address": "96 Chichester Road, Bognor Regis, West Sussex",
-      "hygiene_rating": "5",
-      "rating_date": "2025-09-22T00:00:00",
-      "longitude": "-0.6799063",
-      "latitude": "50.7944859"
-    },
-    {
       "id": 349242,
       "name": "Thai Pan",
       "type": "takeaway",
@@ -11577,6 +11564,19 @@
       "rating_date": "2025-11-26T00:00:00",
       "longitude": null,
       "latitude": null
+    },
+    {
+      "id": 191815,
+      "name": "Thai Pan",
+      "type": "takeaway",
+      "city": "Arun",
+      "local_authority": "Arun",
+      "postcode": "PO21 5AA",
+      "address": "96 Chichester Road, Bognor Regis, West Sussex",
+      "hygiene_rating": "5",
+      "rating_date": "2025-09-22T00:00:00",
+      "longitude": "-0.6799063",
+      "latitude": "50.7944859"
     },
     {
       "id": 1697753,
@@ -13152,19 +13152,6 @@
       "latitude": "51.4980677"
     },
     {
-      "id": 740234,
-      "name": "Thai Street Food",
-      "type": "takeaway",
-      "city": "London",
-      "local_authority": "Camden",
-      "postcode": "NW1 8AH",
-      "address": "7 A B The Stables Market, Chalk Farm Road",
-      "hygiene_rating": "3",
-      "rating_date": "2024-01-17T00:00:00",
-      "longitude": "-0.147371",
-      "latitude": "51.541999"
-    },
-    {
       "id": 1857598,
       "name": "Thai street food",
       "type": "takeaway",
@@ -13176,6 +13163,19 @@
       "rating_date": "2025-10-13T00:00:00",
       "longitude": null,
       "latitude": null
+    },
+    {
+      "id": 740234,
+      "name": "Thai Street Food",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Camden",
+      "postcode": "NW1 8AH",
+      "address": "7 A B The Stables Market, Chalk Farm Road",
+      "hygiene_rating": "3",
+      "rating_date": "2024-01-17T00:00:00",
+      "longitude": "-0.147371",
+      "latitude": "51.541999"
     },
     {
       "id": 252182,
@@ -13958,19 +13958,6 @@
       "latitude": "51.4996376037598"
     },
     {
-      "id": 1411670,
-      "name": "IThai",
-      "type": "takeaway",
-      "city": "London",
-      "local_authority": "Tower Hamlets",
-      "postcode": "E1 6EW",
-      "address": "The Kitchens - Old Spitalfield Market, Horner Square, London",
-      "hygiene_rating": "5",
-      "rating_date": "2025-05-21T00:00:00",
-      "longitude": null,
-      "latitude": null
-    },
-    {
       "id": 1717478,
       "name": "IThai",
       "type": "takeaway",
@@ -13980,6 +13967,19 @@
       "address": "The Wharf Kitchen  Unit 2 Jubilee Place, 45 Bank Street, London",
       "hygiene_rating": "5",
       "rating_date": "2026-04-27T00:00:00",
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "id": 1411670,
+      "name": "IThai",
+      "type": "takeaway",
+      "city": "London",
+      "local_authority": "Tower Hamlets",
+      "postcode": "E1 6EW",
+      "address": "The Kitchens - Old Spitalfield Market, Horner Square, London",
+      "hygiene_rating": "5",
+      "rating_date": "2025-05-21T00:00:00",
       "longitude": null,
       "latitude": null
     },
@@ -15323,19 +15323,6 @@
       "latitude": "51.5024885"
     },
     {
-      "id": 425017,
-      "name": "Busaba Eathai",
-      "type": "restaurant",
-      "city": "London",
-      "local_authority": "Camden",
-      "postcode": "WC1E 7DF",
-      "address": "22 Store Street, London",
-      "hygiene_rating": "5",
-      "rating_date": "2023-03-14T00:00:00",
-      "longitude": "-0.1325333",
-      "latitude": "51.5195627"
-    },
-    {
       "id": 346455,
       "name": "Busaba Eathai",
       "type": "restaurant",
@@ -15347,6 +15334,19 @@
       "rating_date": "2026-03-06T00:00:00",
       "longitude": "-0.223254",
       "latitude": "51.507212"
+    },
+    {
+      "id": 425017,
+      "name": "Busaba Eathai",
+      "type": "restaurant",
+      "city": "London",
+      "local_authority": "Camden",
+      "postcode": "WC1E 7DF",
+      "address": "22 Store Street, London",
+      "hygiene_rating": "5",
+      "rating_date": "2023-03-14T00:00:00",
+      "longitude": "-0.1325333",
+      "latitude": "51.5195627"
     },
     {
       "id": 1988739,
@@ -15726,19 +15726,6 @@
       "latitude": "54.95765"
     },
     {
-      "id": 836583,
-      "name": "Thaikhun",
-      "type": "restaurant",
-      "city": "Oxford",
-      "local_authority": "Oxford City",
-      "postcode": "OX1 2BJ",
-      "address": "Unit A, Threeways House, George Street, Oxford",
-      "hygiene_rating": "4",
-      "rating_date": "2025-11-19T00:00:00",
-      "longitude": "-1.261062",
-      "latitude": "51.753851"
-    },
-    {
       "id": 437504,
       "name": "Thaikhun",
       "type": "restaurant",
@@ -15750,6 +15737,19 @@
       "rating_date": "2025-03-12T00:00:00",
       "longitude": "-1.412476",
       "latitude": "53.413049"
+    },
+    {
+      "id": 836583,
+      "name": "Thaikhun",
+      "type": "restaurant",
+      "city": "Oxford",
+      "local_authority": "Oxford City",
+      "postcode": "OX1 2BJ",
+      "address": "Unit A, Threeways House, George Street, Oxford",
+      "hygiene_rating": "4",
+      "rating_date": "2025-11-19T00:00:00",
+      "longitude": "-1.261062",
+      "latitude": "51.753851"
     },
     {
       "id": 1817391,
@@ -15791,30 +15791,17 @@
       "latitude": "55.822897"
     },
     {
-      "id": 414088,
+      "id": 1803464,
       "name": "Banana Tree",
       "type": "restaurant",
       "city": "London",
-      "local_authority": "Westminster",
-      "postcode": "W9 1PG",
-      "address": "166-166A RANDOLPH AVENUE, LONDON",
+      "local_authority": "Camden",
+      "postcode": "NW6 1XN",
+      "address": "237-239 West End Lane, London",
       "hygiene_rating": "5",
-      "rating_date": "2026-04-30T00:00:00",
-      "longitude": "-0.185662",
-      "latitude": "51.5297667"
-    },
-    {
-      "id": 1703689,
-      "name": "Banana Tree",
-      "type": "restaurant",
-      "city": "Portsmouth",
-      "local_authority": "Portsmouth",
-      "postcode": "PO1 3FA",
-      "address": "R24, The Canalside, Gunwharf Quays, Portsmouth",
-      "hygiene_rating": "5",
-      "rating_date": "2026-05-06T00:00:00",
-      "longitude": "-1.1052588",
-      "latitude": "50.7947685"
+      "rating_date": "2025-02-17T00:00:00",
+      "longitude": "-0.191699996590614",
+      "latitude": "51.5498313903809"
     },
     {
       "id": 663888,
@@ -15843,17 +15830,30 @@
       "latitude": "51.4606509"
     },
     {
-      "id": 1803464,
+      "id": 414088,
       "name": "Banana Tree",
       "type": "restaurant",
       "city": "London",
-      "local_authority": "Camden",
-      "postcode": "NW6 1XN",
-      "address": "237-239 West End Lane, London",
+      "local_authority": "Westminster",
+      "postcode": "W9 1PG",
+      "address": "166-166A RANDOLPH AVENUE, LONDON",
       "hygiene_rating": "5",
-      "rating_date": "2025-02-17T00:00:00",
-      "longitude": "-0.191699996590614",
-      "latitude": "51.5498313903809"
+      "rating_date": "2026-04-30T00:00:00",
+      "longitude": "-0.185662",
+      "latitude": "51.5297667"
+    },
+    {
+      "id": 1703689,
+      "name": "Banana Tree",
+      "type": "restaurant",
+      "city": "Portsmouth",
+      "local_authority": "Portsmouth",
+      "postcode": "PO1 3FA",
+      "address": "R24, The Canalside, Gunwharf Quays, Portsmouth",
+      "hygiene_rating": "5",
+      "rating_date": "2026-05-06T00:00:00",
+      "longitude": "-1.1052588",
+      "latitude": "50.7947685"
     },
     {
       "id": 272315,
@@ -16051,17 +16051,17 @@
       "latitude": "51.4945387"
     },
     {
-      "id": 307649,
+      "id": 1893532,
       "name": "Mango Tree",
       "type": "restaurant",
-      "city": "Westmorland and Furness",
-      "local_authority": "Westmorland and Furness",
-      "postcode": "CA17 4QT",
-      "address": "Market Square, Kirkby Stephen",
+      "city": "Cardiff",
+      "local_authority": "Cardiff",
+      "postcode": "CF14 1DD",
+      "address": "65 Merthyr Road, Whitchurch, Cardiff",
       "hygiene_rating": "5",
-      "rating_date": "2025-06-17T00:00:00",
-      "longitude": "-2.348319",
-      "latitude": "54.473365"
+      "rating_date": "2025-11-13T00:00:00",
+      "longitude": "-3.2178754",
+      "latitude": "51.5118053"
     },
     {
       "id": 1593442,
@@ -16077,17 +16077,17 @@
       "latitude": "52.572017"
     },
     {
-      "id": 1893532,
+      "id": 307649,
       "name": "Mango Tree",
       "type": "restaurant",
-      "city": "Cardiff",
-      "local_authority": "Cardiff",
-      "postcode": "CF14 1DD",
-      "address": "65 Merthyr Road, Whitchurch, Cardiff",
+      "city": "Westmorland and Furness",
+      "local_authority": "Westmorland and Furness",
+      "postcode": "CA17 4QT",
+      "address": "Market Square, Kirkby Stephen",
       "hygiene_rating": "5",
-      "rating_date": "2025-11-13T00:00:00",
-      "longitude": "-3.2178754",
-      "latitude": "51.5118053"
+      "rating_date": "2025-06-17T00:00:00",
+      "longitude": "-2.348319",
+      "latitude": "54.473365"
     },
     {
       "id": 1806274,
