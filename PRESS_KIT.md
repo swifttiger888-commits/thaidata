@@ -1,12 +1,12 @@
 # ThaiData UK — Press & Outreach Material
 
 ## The Stat
-**1,266 FSA-listed Thai venues (1,244 restaurants and takeaways + 22 pub kitchens) across 255 UK areas.**
+**1,267 FSA-listed Thai venues (1,245 restaurants and takeaways + 22 pub kitchens) across 255 UK areas.**
 The most authoritative count of UK Thai food businesses, sourced directly from the Food Standards Agency's official hygiene register.
 
 ## One-Line Angles (send these to journalists/bloggers)
 
-1. **London has 276 Thai venues — more than the next 10 UK cities combined (165).**
+1. **London has 279 Thai venues — more than the next 10 UK cities combined (165).**
 2. **Birmingham — UK's 2nd largest city — has just 17 Thai restaurants. Leeds has 34. Why is the Midlands so underserved?**
 3. **Swansea is the UK's most Thai-dense city (5.7 per 100k). London is 10th.**
 4. **Glasgow has 8 Thai restaurants for 635,000 people. Edinburgh has 24. The Scottish Thai divide.**

@@ -5,16 +5,16 @@
 
 ### EMAIL 1: Hospitality Trade Press (The Caterer, Restaurant Online, The Mise, UKHospitality)
 
-**Subject:** 1,266 Thai venues in the UK — new data report just published
+**Subject:** 1,267 Thai venues in the UK — new data report just published
 
 Hi [Name],
 
 I've just published a data-driven report on the state of Thai food across the UK — thought it might be of interest given the sector's growth and the pressures from the 2026 NLW increase.
 
 Key findings:
-- 1,266 FSA-listed Thai venues (1,244 restaurants and takeaways + 22 pub kitchens) across 255 UK areas
-- London has 276 (21.8% of UK total) — but Birmingham has just 8 venues for 1.17m people (0.7/100k), the lowest density of any major English city
-- Average hygiene rating ★4.4/5 — 62.3% of rated venues hold the top 5-star grade
+- 1,267 FSA-listed Thai venues (1,245 restaurants and takeaways + 22 pub kitchens) across 255 UK areas
+- London has 279 (21.8% of UK total) — but Birmingham has just 8 venues for 1.17m people (0.7/100k), the lowest density of any major English city
+- Average hygiene rating ★4.4/5 — 62.0% of rated venues hold the top 5-star grade
 - Delivery platforms take 14-30% commission; the average Thai dish is 22% more expensive on apps vs dine-in
 - Menu price analysis: what a Pad Thai costs across 5 UK cities in 2026
 - The NLW rise from £12.21 to £12.71/hr adds £6,240/yr per six full-time staff before employer NI and pension
@@ -67,7 +67,7 @@ Hi [Name],
 
 [City] has [X] Thai food businesses — [ranking] in the UK by volume and [#]/100k residents for density. The average hygiene rating is ★[X]/5.
 
-I've just published a comprehensive report analyzing all 1,266 Thai venues across the UK, including a city-by-city breakdown. [City] specific highlights:
+I've just published a comprehensive report analyzing all 1,267 Thai venues across the UK, including a city-by-city breakdown. [City] specific highlights:
 
 - [1-2 specific stats for the city]
 - How [City] compares to London, Manchester, etc.
@@ -118,8 +118,8 @@ Submit thaidata.uk to these free UK business directories for backlinks:
 ### SOCIAL MEDIA POSTS (for when Twitter/X account is live)
 
 **Post 1 (data stat):**
-🚨 NEW: 1,266 Thai venues across 255 UK areas — the definitive 2026 report just dropped.
-London has 276. Birmingham is the most underserved major city (8 venues, 0.7/100k).
+🚨 NEW: 1,267 Thai venues across 255 UK areas — the definitive 2026 report just dropped.
+London has 279. Birmingham is the most underserved major city (8 venues, 0.7/100k).
 Free, no signup: thaidata.uk/state-of-uk-thai-food-2026
 
 **Post 2 (hygiene angle):**
