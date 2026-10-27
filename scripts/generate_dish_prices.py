@@ -19,6 +19,14 @@ sys.path.insert(0, str(REPO))
 
 OUTPUT = REPO / "dish-prices.html"
 
+
+def _area_count() -> int:
+    """Distinct area count across all venues in the FSA dataset (restaurants,
+    takeaways and pub kitchens), matching the city-breakdown page figure."""
+    with open(REPO / "data" / "restaurants.json") as f:
+        data = json.load(f)
+    return len({r.get("city") for r in data.get("restaurants", []) if r.get("city")})
+
 # ── Pricing data (from Menu Price Survey, June 2026) ─────────────────────────
 
 # National average prices by dish category
@@ -178,7 +186,7 @@ HTML = f"""<!DOCTYPE html>
         .logo {{ display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.4rem; color: var(--ink); text-decoration: none; }}
         .logo-icon {{ height: 36px; width: auto; }}
         .nav-links {{ display: flex; gap: 20px; align-items: center; }}
-        .nav-links a {{ color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }}
+        .nav-links a {{ color: var(--ink2); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }}
         .nav-links a:hover {{ color: var(--c2); }}
         .hamburger {{ display: none; background: none; border: none; color: var(--ink); font-size: 1.5rem; cursor: pointer; padding: 8px; }}
         .hamburger:hover {{ color: var(--c2); }}
@@ -263,7 +271,7 @@ HTML = f"""<!DOCTYPE html>
         </div>
 
         <div class="intro">
-            <p>This page tracks <strong>real menu prices</strong> for popular Thai dishes across UK cities. Prices are collected manually from restaurant websites, Google Business Profiles, and delivery platforms (Deliveroo, Uber Eats, Just Eat). Each dish shows both the dine-in price and the delivery menu price, so you can see exactly how much the platform markup adds.</p>
+            <p>This page tracks <strong>real menu prices</strong> for popular Thai dishes across UK cities. Prices are collected manually from restaurant websites, Google Business Profiles, and delivery platforms (Deliveroo, Uber Eats, Just Eat) — mid-2026 data, 12 dishes, 5 cities. City figures are averages over the menus we could read for that dish, so sample sizes vary and small samples move more; treat them as market ranges, not official prices. Each dish shows both the dine-in price and the delivery menu price, so you can see how much the platform markup adds.</p>
             <p><strong>Data source:</strong> ThaiData Menu Price Survey, June 2026. Prices are averages across multiple restaurants in each city and may not reflect every restaurant's menu. Delivery prices exclude service charges and delivery fees.</p>
         </div>
 
@@ -294,7 +302,7 @@ HTML = f"""<!DOCTYPE html>
             <div class="link-grid">
                 <a href="/thai-restaurants-city-breakdown-uk" class="link-card">
                     <h3>City Breakdown</h3>
-                    <p>All 254 UK cities with Thai restaurants</p>
+                    <p>All {_area_count()} UK cities with Thai restaurants</p>
                 </a>
                 <a href="/r/" class="link-card">
                     <h3>Restaurant Directory</h3>

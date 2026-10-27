@@ -110,6 +110,16 @@ def main() -> None:
                'Step 4/6: Regenerate city browse cards'):
         print("⚠️  City card regeneration failed (non-fatal)")
 
+    # Data-driven hub pages: pure functions of data/restaurants.json. They are
+    # not touched by any earlier step, so without this they drift after every
+    # refresh (Oct 2026: /r/, city breakdown, chains and pubs all lagged the
+    # dataset). Regenerate them here so they track the data automatically.
+    for hub in ('generate_r_hub.py', 'generate_city_hub.py',
+                'generate_chains_hub.py', 'generate_pubs_page.py'):
+        if not run([sys.executable, f'{SCRIPTS}/{hub}'],
+                   f'Hubs: Regenerate {hub}'):
+            print(f"⚠️  {hub} failed (non-fatal)")
+
     if not run([sys.executable, f'{SCRIPTS}/generate_sitemaps.py'],
                'Step 5/6: Regenerate sitemaps'):
         print("⚠️  Sitemap generation failed (non-fatal)")
@@ -176,7 +186,7 @@ def main() -> None:
         print(f"  ⚠️ Menu verification failed ({exc}) — excluding menu paths")
 
     # Stage everything that changed
-    add_paths = ['data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py', 'functions/mcp.js', 'names.json', 'functions/api/listing_urls.js']
+    add_paths = ['data/', 'api/', 'r/', 'cities/', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-r-restaurants.xml', 'scripts/generate_sitemaps.py', 'scripts/fsa_pipeline.py', 'functions/mcp.js', 'names.json', 'functions/api/listing_urls.js', 'chains/', 'pubs/index.html', 'thai-restaurants-city-breakdown-uk.html']
     if not menus_ok:
         add_paths += [':(exclude)data/menus', ':(exclude)r/*/*/menu/**']
     subprocess.run(['git', 'add', *add_paths], capture_output=True)
