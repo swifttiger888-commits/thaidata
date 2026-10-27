@@ -95,6 +95,17 @@ def load_events():
         return json.load(f)["events"]
 
 
+def _fmt_date(datestr):
+    """'2026-11-15' -> '15 November 2026' (None-safe)."""
+    if not datestr:
+        return None
+    try:
+        d = datetime.fromisoformat(datestr).date()
+        return f"{d.day} {d.strftime('%B %Y')}"
+    except (ValueError, TypeError):
+        return datestr
+
+
 def is_past(e, today=None):
     """True if the event's final day (end_date, else start_date) is before today."""
     if today is None:
@@ -584,11 +595,16 @@ def gen_songkran_page(events):
     venue_cards = ""
     for e in songkran_events:
         loc_addr = e["address"] or e["venue_name"]
+        d = _fmt_date(e.get("start_date")) or "Date to be confirmed"
+        src = (f'<div class="ev-src"><a href="{e["source_url"]}" target="_blank" rel="noopener nofollow">Event details ↗</a></div>'
+               if e.get("source_url") else "")
         venue_cards += f'''            <div class="event-card">
                 <div class="ev-city"><div class="city-name">{e["city"] or ""}</div><div class="city-venue">{e["venue_name"]}</div></div>
                 <div class="ev-details">
                     <div class="ev-name">{e["event_name"]}</div>
+                    <div class="ev-date">📅 {d}</div>
                     <div class="ev-desc">{e["description"]}</div>
+                    {src}
                 </div>
             </div>
 '''
@@ -659,6 +675,9 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
         .event-card .ev-city {{ flex-shrink: 0; width: 110px; }}
         .event-card .ev-city .city-name {{ font-weight: 700; color: var(--c2); font-size: 0.95rem; }}
         .event-card .ev-city .city-venue {{ color: var(--ink4); font-size: 0.78rem; margin-top: 2px; }}
+        .event-card .ev-date {{ font-weight: 600; color: var(--c2); font-size: 0.85rem; margin-top: 4px; }}
+        .event-card .ev-src {{ margin-top: 8px; font-size: 0.8rem; }}
+        .event-card .ev-src a {{ color: var(--ink3); text-decoration: underline; text-underline-offset: 2px; }}
         .event-card .ev-details {{ flex: 1; }}
         .event-card .ev-name {{ font-weight: 700; margin-bottom: 4px; }}
         .event-card .ev-desc {{ color: var(--ink4); font-size: 0.85rem; }}
@@ -788,7 +807,9 @@ def gen_loy_krathong_page(events):
                 <div class="ev-city"><div class="city-name">{city_label}</div><div class="city-venue">{e["venue_name"]}</div></div>
                 <div class="ev-details">
                     <div class="ev-name">{e["event_name"]}</div>
+                    <div class="ev-date">📅 {_fmt_date(e.get("start_date")) or "Date to be confirmed"}</div>
                     <div class="ev-desc">{e["description"]}</div>
+                    {f'<div class="ev-src"><a href="{e["source_url"]}" target="_blank" rel="noopener nofollow">Event details ↗</a></div>' if e.get("source_url") else ""}
                 </div>
             </div>
 '''
@@ -798,7 +819,7 @@ def gen_loy_krathong_page(events):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loy Krathong 2026 UK — Events, Dates &amp; Thai Food | ThaiData</title>
-    <meta name="description" content="UK Loy Krathong celebrations in 2026. Float your krathong at temple lakes, enjoy lantern displays and Thai food. Events in London, Manchester, Birmingham.">
+    <meta name="description" content="UK Loy Krathong celebrations in 2026. Float your krathong at temple lakes, enjoy lantern displays and Thai food. Events at Thai temples in London, Bristol and Staffordshire.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thaidata.uk/loy-krathong-uk">
 
@@ -859,6 +880,9 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
         .event-card .ev-city {{ flex-shrink: 0; width: 110px; }}
         .event-card .ev-city .city-name {{ font-weight: 700; color: var(--gold); font-size: 0.95rem; }}
         .event-card .ev-city .city-venue {{ color: var(--ink4); font-size: 0.78rem; margin-top: 2px; }}
+        .event-card .ev-date {{ font-weight: 600; color: var(--c2); font-size: 0.85rem; margin-top: 4px; }}
+        .event-card .ev-src {{ margin-top: 8px; font-size: 0.8rem; }}
+        .event-card .ev-src a {{ color: var(--ink3); text-decoration: underline; text-underline-offset: 2px; }}
         .event-card .ev-details {{ flex: 1; }}
         .event-card .ev-name {{ font-weight: 700; margin-bottom: 4px; }}
         .event-card .ev-desc {{ color: var(--ink4); font-size: 0.85rem; }}
@@ -917,7 +941,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
     <div class="section">
         <div class="wrap">
             <h2>Where to <em>Celebrate</em> in 2026</h2>
-            <p>The full moon of the 12th Thai lunar month falls on <strong style="color: var(--ink);">Tuesday 24 November 2026</strong>, but UK temples set their own celebration dates — Wat Buddhapadipa holds its Loy Krathong on <strong style="color: var(--ink);">Saturday 14 November 2026</strong>, and Wat Mahathat combines it with Kathina on 1 November. Always use the venue's published date below.</p>
+            <p>The full moon of the 12th Thai lunar month falls on <strong style="color: var(--ink);">Tuesday 24 November 2026</strong>, but UK temples set their own celebration dates — Wat Buddhapadipa holds its Loy Krathong on <strong style="color: var(--ink);">Sunday 15 November 2026</strong>, and Wat Mahathat combines it with Kathina on 1 November. Always use the venue's published date below.</p>
 {venue_cards}
         </div>
     </div>

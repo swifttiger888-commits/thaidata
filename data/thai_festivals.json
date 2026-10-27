@@ -515,9 +515,9 @@
       "city": "London",
       "region": "London",
       "year": 2026,
-      "start_date": "2026-11-14",
-      "end_date": "2026-11-14",
-      "date_description": "14 November 2026",
+      "start_date": "2026-11-15",
+      "end_date": "2026-11-15",
+      "date_description": "15 November 2026",
       "ticket_info": "Free entry. Krathongs 5-10 pounds on site.",
       "description": "The UK's largest Loy Krathong celebration. Float handmade krathongs on the temple lake, traditional dance performances, lantern displays, Thai food stalls, and a magical evening atmosphere.",
       "tags": [
@@ -528,9 +528,9 @@
       "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.95,
-      "notes": "Verified 2026-10-19 against Wat Buddhapadipa's events calendar (buddhapadipa.com) confirming the Loy Krathong Festival on 14 November 2026.",
+      "notes": "Verified 2026-10-27 against Wat Buddhapadipa's own events calendar on buddhapadipa.com (UPCOMING EVENTS: \"15 Nov 2026 — Loy Krathong Festival\", alongside the Royal Kathina Ceremony the same day). The earlier stored date of 14 November was wrong.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-10-19"
+      "updated_at": "2026-10-27"
     },
     {
       "event_id": "loy-krathong-wat-phra-singh-2026",
@@ -556,9 +556,9 @@
       "source_type": "venue",
       "status": "tbc",
       "confidence": 0.4,
-      "notes": "Verified 2026-10-19 against Wat Phra Singh UK's newsletter (watphrasinghuk.org): Kathina announced for 15 November 2026, no Loy Krathong date published yet.",
+      "notes": "Re-verified 2026-10-27 against Wat Phra Singh UK newsletter (watphrasinghuk.org, Sept 2026): Kathina confirmed for 15 November 2026; no Loy Krathong date published yet.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-10-19"
+      "updated_at": "2026-10-27"
     },
     {
       "event_id": "loy-krathong-wat-mahathat-2026",
@@ -573,7 +573,7 @@
       "year": 2026,
       "start_date": "2026-11-01",
       "end_date": "2026-11-01",
-      "date_description": "1",
+      "date_description": "1 November 2026",
       "ticket_info": "Free entry",
       "description": "Midlands Loy Krathong. The temple's grounds provide a beautiful setting for the candlelit floating ceremony.",
       "tags": [
@@ -584,9 +584,9 @@
       "source_type": "social_media",
       "status": "confirmed",
       "confidence": 0.95,
-      "notes": "Verified 2026-10-05 against Wat Mahathat Kings Bromley's official Facebook page (facebook.com/watkingsbromley) confirming combined Kathina ceremony and Loy Krathong Festival 2026 on Sunday 1 November 2026, 09:00–17:00.\nVerified 2026-10-23 against the temple Facebook announcement confirming 1 Nov 2026.",
+      "notes": "Verified 2026-10-05 against Wat Mahathat Kings Bromley's official Facebook page (facebook.com/watkingsbromley) confirming combined Kathina ceremony and Loy Krathong Festival 2026 on Sunday 1 November 2026, 09:00–17:00.\nVerified 2026-10-23 against the temple Facebook announcement confirming 1 Nov 2026.\nRe-checked 2026-10-27: Facebook post not re-fetchable (bot block); date rests on the 2026-10-23 verification.",
       "created_at": "2026-06-27",
-      "updated_at": "2026-10-23"
+      "updated_at": "2026-10-27"
     },
     {
       "event_id": "kings-birthday-2026",
@@ -820,21 +820,21 @@
       "region": "South West",
       "start_date": "2026-11-08",
       "end_date": "2026-11-08",
-      "date_description": "8",
+      "date_description": "8 November 2026",
       "ticket_info": "Free entry. Free parking all day at Ashton Way car park.",
       "description": "Wat Phra Srisanphet UK (Bristol) holds its Kathina robe-offering ceremony (10:00-15:00) at Fear Hall, Keynsham, followed by a Loy Krathong festival with cultural performances from 17:00. Proceeds support the temple.",
       "source_url": "https://www.srisanphetuk.org/news-and-events/",
       "source_type": "venue",
       "status": "confirmed",
       "confidence": 0.9,
-      "notes": "Verified 2026-10-23 against Wat Phra Srisanphet UK events calendar confirming 8 Nov 2026 at Fear Hall, Keynsham BS31 1DQ.",
+      "notes": "Verified 2026-10-27 against Wat Phra Srisanphet UK's events calendar (srisanphetuk.org/news-and-events): \"08 Nov 2026 Kathina Robe Offering Loykrathong Fest\" at Fear Hall, Keynsham BS31 1DQ — Kathina 10:00-15:00, Loy Krathong festival from 17:00.",
       "tags": [
         "temple",
         "free_entry"
       ],
       "year": 2026,
       "created_at": "2026-10-23",
-      "updated_at": "2026-10-23"
+      "updated_at": "2026-10-27"
     },
     {
       "event_id": "songkran-wat-buddharam-2027",
@@ -856,33 +856,6 @@
       "status": "tbc",
       "confidence": 0.3,
       "notes": "Venue added 2026-10-23 (research); 2027 Songkran date unannounced.",
-      "tags": [
-        "temple"
-      ],
-      "year": 2027,
-      "created_at": "2026-10-23",
-      "updated_at": "2026-10-23"
-    },
-    {
-      "event_id": "loy-krathong-wat-buddharam-2027",
-      "festival_id": "loy-krathong-wat-buddharam",
-      "festival_type": "loy_krathong",
-      "event_name": "Loy Krathong",
-      "organiser": "Wat Buddharam",
-      "venue_name": "Wat Buddharam",
-      "address": "45 Cliff Road, Leeds LS6 2ET",
-      "city": "Leeds",
-      "region": "Yorkshire",
-      "start_date": null,
-      "end_date": null,
-      "date_description": "Date TBC",
-      "ticket_info": null,
-      "description": null,
-      "source_url": "http://www.watbuddharamleeds.com/",
-      "source_type": "venue",
-      "status": "tbc",
-      "confidence": 0.3,
-      "notes": "Venue added 2026-10-23 (research); 2027 Loy Krathong date unannounced.",
       "tags": [
         "temple"
       ],
