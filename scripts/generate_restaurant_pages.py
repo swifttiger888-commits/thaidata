@@ -12,7 +12,6 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(REPO, 'r')
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import site_fonts  # noqa: E402  — self-hosted webfont swap (SELF_HOST_FONTS=1)
 import site_icons  # noqa: E402  — inline SVG icons instead of Font Awesome
 
 # ── Meta description: A/B test concluded (Sep 2026) ──────────────
@@ -24,15 +23,11 @@ import site_icons  # noqa: E402  — inline SVG icons instead of Font Awesome
 # page tree so regeneration can never overwrite it and poison the
 # DYNAMIC placeholders. NEVER write to this file from generate_page.)
 with open(os.path.join(REPO, 'templates', 'restaurant.html')) as f:
-    # Self-hosted webfonts stay OFF this template: a same-CDN A/B (Oct 2026, 6 runs
-    # each) had the self-hosted build at perf median 58 vs 70 on Google Fonts, with
-    # simulated LCP 2.4-5.7s vs 1.8-2.4s. The listing template's third parties (maps
-    # embed, Font Awesome, Clarity) make the in-critical-path font expensive. Revisit
-    # once Font Awesome is gone. SELF_HOST_FONTS_LISTINGS=1 re-enables it.
-    if os.environ.get('SELF_HOST_FONTS_LISTINGS', '0').strip() in ('1', 'true', 'yes', 'on'):
-        TEMPLATE = site_fonts.inject(f.read())
-    else:
-        TEMPLATE = f.read()
+    # The template itself carries the self-hosted /css/fonts.css + Archivo
+    # preload; site_fonts.py's flag-gated inject() was removed here because the
+    # template no longer contains Google Fonts lines for it to replace — setting
+    # the old flag crashed the generator with "no Google Fonts <link> found".
+    TEMPLATE = f.read()
 
 def slugify(s: str) -> str:
     s = unicodedata.normalize('NFC', s.lower().strip())
