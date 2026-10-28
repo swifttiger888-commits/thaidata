@@ -89,3 +89,59 @@ def test_report_js_has_no_template_placeholders_left():
         assert "{REPORT_BODY}" not in html
         assert "{ANALYTICS_HEAD}" not in html
         assert "{CONSENT_BANNER}" not in html
+
+
+# ── Data integrity ───────────────────────────────────────────────────────────
+# Two menu JSONs were publishing against restaurant records that do not exist:
+#   pearl-thai-restaurant-swansea  fsa_id 1747915 = "Chaiyaphum limited" (Swansea,
+#                                  rating 1), sourced from thai-spice-kitchen.com —
+#                                  three different restaurants in one file, and no
+#                                  "Pearl Thai" anywhere in the FSA register.
+#   jasmine-thai-kitchen-bucks     fsa_id 1790672 does not exist; the real record is
+#                                  1996667 (Jasmine Thai Kitchen, Chesham, rating 5).
+# Both built or nearly built a page attributing one restaurant's menu and prices to
+# another business. These guards catch the class, not the instances.
+
+def _restaurants_by_id():
+    d = json.load(open(REPO / "data" / "restaurants.json", encoding="utf-8"))
+    rows = d["restaurants"] if isinstance(d, dict) else d
+    return {str(r.get("fsa_id") or r.get("id")): r for r in rows}
+
+
+def _tokens(s):
+    return {t for t in re.split(r"[^a-z0-9]+", (s or "").lower()) if len(t) > 2}
+
+
+def test_every_menu_json_points_at_a_real_restaurant():
+    by_id = _restaurants_by_id()
+    orphans = []
+    for f in sorted((REPO / "data" / "menus").glob("*.json")):
+        m = json.load(open(f, encoding="utf-8"))
+        fid = str(m.get("fsa_id"))
+        if fid not in by_id:
+            orphans.append((f.name, fid))
+    assert not orphans, orphans
+
+
+def test_every_menu_json_names_the_restaurant_it_points_at():
+    by_id = _restaurants_by_id()
+    mismatched = []
+    for f in sorted((REPO / "data" / "menus").glob("*.json")):
+        m = json.load(open(f, encoding="utf-8"))
+        rec = by_id.get(str(m.get("fsa_id")))
+        if not rec:
+            continue
+        if not (_tokens(m.get("restaurant")) & _tokens(rec.get("name"))):
+            mismatched.append((f.name, m.get("restaurant"), rec.get("name")))
+    assert not mismatched, mismatched
+
+
+def test_no_menu_page_publishes_an_unknown_fsa_id():
+    by_id = _restaurants_by_id()
+    bad = []
+    for p in MENU_PAGES:
+        html = p.read_text(encoding="utf-8", errors="ignore")
+        m = re.search(r'data-fsa="(\d+)"', html)
+        if m and m.group(1) not in by_id:
+            bad.append((str(p.relative_to(REPO)), m.group(1)))
+    assert not bad, bad
