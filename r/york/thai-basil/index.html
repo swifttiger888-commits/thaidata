@@ -3,6 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GA4 — consent-mode v2. Denied by default; the tag loads on first real
+         interaction (or after 8s) and privacy-banner.js upgrades consent on accept.
+         Identical pattern to index.html. Without this block the page's gtag() calls
+         (correction_open / correction_submit) were dead: gtag was never defined here,
+         so every `typeof gtag === 'function'` guard silently no-opped and the whole
+         listing family was invisible in GA4. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
+      gtag('js', new Date());
+      gtag('config', 'G-B6RYQZX5QX');
+      (function () {
+        var loaded = false;
+        function loadGtag() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX';
+          document.head.appendChild(s);
+        }
+        ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
+          window.addEventListener(ev, loadGtag, { once: true, passive: true });
+        });
+        setTimeout(loadGtag, 8000);
+      })();
+    </script>
         <title>Thai Basil York · 1 Cavendish Street, Skipton · FSA 5/5 | ThaiData UK</title>
     <meta name="description" content="FSA inspection data for Thai Basil, York. 5/5 hygiene rating. See hygiene, structural, and management breakdown scores. 1 Cavendish Street, Skipton. Updated July 2026.">
         <meta name="robots" content="index, follow">
@@ -2582,6 +2610,50 @@ a.cs-attr,
             });
         });
     </script>
+
+    <!-- Visitor-intent events (consent-gated, same contract as index.html).
+         Until this block existed the only tracked event on a listing page was the
+         correction form, so we could not tell whether a listing sent anyone anywhere.
+         outbound_click = a link leaving thaidata.uk (restaurant's own site, FSA,
+         delivery platform); phone_tap = a tel: link. Both carry the FSA id so the
+         event can be joined back to restaurants.json. -->
+    <script>
+    (function () {
+        function send(name, params) {
+            try {
+                if (localStorage.getItem('thaidata_consent') !== 'granted') return;
+                if (typeof gtag === 'function') gtag('event', name, params || {});
+            } catch (e) { /* analytics must never break the page */ }
+        }
+        var fsaId = (document.querySelector('meta[name="thaidata:fsa-id"]') || {}).content || '';
+        var name = (typeof RESTAURANT_NAME !== 'undefined') ? RESTAURANT_NAME : '';
+        document.addEventListener('click', function (e) {
+            var a = e.target && e.target.closest ? e.target.closest('a') : null;
+            if (!a) return;
+            var href = a.getAttribute('href') || '';
+            if (href.indexOf('tel:') === 0) {
+                send('phone_tap', { fsa_id: fsaId, restaurant_name: name });
+                return;
+            }
+            if (!/^https?:\/\//i.test(href)) return;
+            var host = '';
+            try { host = new URL(href, location.href).hostname.replace(/^www\./, ''); } catch (err) { return; }
+            if (host === location.hostname.replace(/^www\./, '')) return;
+            send('outbound_click', {
+                fsa_id: fsaId,
+                restaurant_name: name,
+                link_domain: host,
+                link_url: href.slice(0, 200)
+            });
+        }, true);
+    })();
+    </script>
+
+    <!-- Cookie banner — was missing from this page family entirely, so listing pages
+         collected nothing under consent-mode and had no way for a visitor to accept.
+         Absolute path: this template renders at /r/<city>/<slug>/, where a relative
+         "privacy-banner.js" would 404. -->
+    <script src="/privacy-banner.js" defer></script>
 
 </body>
 </html>

@@ -254,6 +254,13 @@ def title_overrides() -> dict[str, Any]:
 
     Placeholders supported in override strings: {tail} (address + updated date),
     {scheme_rating} (e.g. "FSA 5/5").
+
+    RULE: never promise a field the page cannot render. Unclaimed listings carry no
+    phone, website or opening hours (Google Places enrichment was removed for ToS
+    reasons), so a title advertising "Opening Times" is a false promise that earns
+    impressions but no clicks. "Menu" is safe — the menu page is generated from
+    data/menus/. Two Talay Thai overrides shipped "Opening Times" and one of them
+    (Porthleven) became the site's biggest impression loser: 551 impressions, 0 clicks.
     """
     global _TITLE_OVERRIDES
     if _TITLE_OVERRIDES is None:

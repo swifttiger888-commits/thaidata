@@ -299,6 +299,10 @@ body {
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
     let searchTimer;
+    // Set when the visitor arrives via /claim/?restaurant=…&fsa_id=… — consumed once
+    // by the first result set so the landing handoff skips the "now click your own
+    // restaurant in this list" step. Cleared after use, so normal searching is unaffected.
+    let autoPick = null;
 
     searchInput.addEventListener('input', () => {
         clearTimeout(searchTimer);
@@ -321,8 +325,29 @@ body {
                 .then(data => {
                     const results = Array.isArray(data) ? data : (data.results || []);
                     if (results.length === 0) {
+                        autoPick = null;
                         searchResults.innerHTML = '<div style="padding:16px;color:#6B605B;">No match for that name. If your restaurant is missing, it may not be on the FSA register yet &mdash; <a href="/contact" style="color:var(--c2);">tell us</a> and we&rsquo;ll check.</div>';
                         return;
+                    }
+                    // Landing handoff: pick the exact venue the visitor came from.
+                    // fsa_id is an exact match; the single-result fallback only fires
+                    // when there is literally nothing else to choose between.
+                    if (autoPick) {
+                        const want = autoPick;
+                        autoPick = null;
+                        let hit = want.fsaId ? results.find(r => String(r.id) === String(want.fsaId)) : null;
+                        if (!hit && results.length === 1) hit = results[0];
+                        if (hit) {
+                            if (typeof gtag === 'function') {
+                                gtag('event', 'claim_autoselect', {
+                                    restaurant_name: hit.name,
+                                    fsa_id: hit.id ? String(hit.id) : '',
+                                    matched_by: want.fsaId ? 'fsa_id' : 'single_result',
+                                });
+                            }
+                            selectRestaurant(hit);
+                            return;
+                        }
                     }
                     searchResults.innerHTML = results.map(r => `
                         <div class="result-item" onclick="selectRestaurant(${JSON.stringify(r).replace(/"/g, '&quot;')})">
@@ -357,6 +382,7 @@ body {
         const params = new URLSearchParams(window.location.search);
         const name = (params.get('restaurant') || '').trim();
         if (name.length < 3) return;
+        autoPick = { fsaId: (params.get('fsa_id') || '').trim() || null };
         searchInput.value = name;
         searchInput.dispatchEvent(new Event('input', { bubbles: true }));
         searchInput.focus();
