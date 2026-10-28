@@ -38,9 +38,9 @@ from scripts.schema.city_entity import build_city_entity
 from scripts.schema.validator import validate_schema, validate_content_schema_match, strip_html_body
 
 if __package__:
-    from .location_shell import new_location_shell, finish_location_shell
+    from .location_shell import new_location_shell, finish_location_shell, ensure_analytics
 else:
-    from location_shell import new_location_shell, finish_location_shell
+    from location_shell import new_location_shell, finish_location_shell, ensure_analytics
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -1154,7 +1154,7 @@ def process_city(
             if dry_run:
                 result["action"] = "would-empty-state"
             else:
-                html_path.write_text(build_empty_state_page(city_name, slug))
+                html_path.write_text(ensure_analytics(build_empty_state_page(city_name, slug)))
                 result["action"] = "empty-state"
         return result
 
@@ -1397,6 +1397,10 @@ def process_city(
 
     # Finalise the shell (no-op on pages without the SHELL:location-v1 signature)
     html = finish_location_shell(html)
+
+    # Existing pages are reused verbatim, so the analytics/consent block is added
+    # here rather than only in the templates. Idempotent.
+    html = ensure_analytics(html)
 
     # Write
     with open(html_path, "w") as f:

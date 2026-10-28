@@ -12,6 +12,20 @@ _ZONE_NAMES = (
 )
 _TOKENS = re.compile(r"\{(city_name|slug|meta_description)\}")
 _SIGNATURE = "<!-- SHELL:location-v1 -->"
+
+# ── Analytics + consent ──────────────────────────────────────────────────────
+# City pages were the largest unmeasured family on the site (278 pages, zero GA4,
+# zero consent mechanism) and include the worst-performing high-impression URLs —
+# /cities/leeds earned 140 impressions and 0 clicks in 28 days with no way to see
+# what visitors did. The snippet lives in site_analytics so every generator shares
+# one measurement id.
+from site_analytics import (  # noqa: E402
+    ANALYTICS_HEAD,
+    CONSENT_BANNER,
+    GA_ID,
+    ensure_analytics,
+)
+
 _BROWSE_START = "<!-- BEGIN Browse Restaurants -->"
 _BROWSE_END = "<!-- END Browse Restaurants -->"
 _PUBS_START = "<!-- BEGIN Thai Pubs -->"

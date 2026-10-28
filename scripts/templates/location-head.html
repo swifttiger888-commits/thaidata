@@ -2,6 +2,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Consent-mode GA4. Same contract as index.html, templates/restaurant.html,
+       the festival pages and the menu pages: storage denied by default, tag loaded
+       on first real interaction or after 8s, /privacy-banner.js upgrades consent on
+       accept. This file is processed by location_shell._template(), which only
+       substitutes {city_name}, {slug} and {meta_description} — literal braces in
+       this JS are safe and must not be escaped. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
+    gtag('js', new Date());
+    gtag('config', 'G-B6RYQZX5QX');
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX';
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
+        window.addEventListener(ev, loadGtag, { once: true, passive: true });
+      });
+      setTimeout(loadGtag, 8000);
+    })();
+  </script>
+
+
   <!-- Generator substitution: city_name, HTML-escaped. -->
   <title>Thai Restaurants in {city_name} | ThaiData</title>
   <!-- Generator substitution: meta_description, attribute-escaped. -->

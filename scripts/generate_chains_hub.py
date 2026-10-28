@@ -13,6 +13,11 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 import site_icons  # noqa: E402  (same-dir module, replaces Font Awesome)
+from site_analytics import (  # noqa: E402  (same-dir module)
+    ANALYTICS_HEAD,
+    CONSENT_BANNER,
+    ensure_analytics,
+)
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
@@ -140,6 +145,7 @@ HTML = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{ANALYTICS_HEAD}
     <title>UK Thai Restaurant Chains — Complete Directory 2026 | ThaiData</title>
     <meta name="description" content="Complete directory of {total_chains} UK Thai restaurant chains verified from FSA data. {major[0]['count']} locations for {major[0]['label']}, plus {major[1]['label']}, {major[2]['label']} and more. City presence, hygiene ratings, and location maps.">
     <meta name="robots" content="index, follow">
@@ -323,7 +329,7 @@ HTML = f"""<!DOCTYPE html>
     </footer>
 
     <script>function toggleMenu(){{document.querySelector('.nav-links').classList.toggle('open');}}</script>
-</body>
+{CONSENT_BANNER}</body>
 </html>
 """
 

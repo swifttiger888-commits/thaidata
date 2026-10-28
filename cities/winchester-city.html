@@ -5,6 +5,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
+    gtag('js', new Date());
+    gtag('config', 'G-B6RYQZX5QX');
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX';
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
+        window.addEventListener(ev, loadGtag, { once: true, passive: true });
+      });
+      setTimeout(loadGtag, 8000);
+    })();
+  </script>
+
     <title>Thai Restaurants in Winchester City Market Data | ThaiData</title>
     <meta name="description" content="2 Thai restaurants & takeaways in Winchester City. Per-capita density (—/100k), hygiene ratings (★★★★★), dine-in vs takeaway split, and market.">
     <meta name="robots" content="index, follow">
@@ -529,5 +552,6 @@ nav.nav { display: block; position: sticky; top: 0; z-index: 100; padding: 0; he
 </div>
 <!-- END:AUTO:faq -->
 <script>if (typeof toggleMenu !== 'function') { function toggleMenu() { var l = document.getElementById('navLinks'); if (l) l.classList.toggle('open'); } }</script>
+  <script src="/privacy-banner.js" defer></script>
 </body>
 </html>

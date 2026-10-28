@@ -3,6 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
+    gtag('js', new Date());
+    gtag('config', 'G-B6RYQZX5QX');
+    (function () {
+      var loaded = false;
+      function loadGtag() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX';
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
+        window.addEventListener(ev, loadGtag, { once: true, passive: true });
+      });
+      setTimeout(loadGtag, 8000);
+    })();
+  </script>
+
 <title>Thai Rice (Thai Rice Group) — UK Thai Restaurant Chain Profile | ThaiData</title>
 <meta name="description" content="| Field | Detail |">
 <link rel="canonical" href="https://thaidata.uk/chains/thai-rice/">
@@ -86,5 +109,6 @@ footer { text-align: center; padding: 40px; color: var(--muted); font-size: 0.85
   <a href="/chains/" class="back-link">← All Chain Profiles</a>
 </div>
 <footer>© 2026 ThaiData UK. Data sourced from FSA, company websites, and public records.</footer>
+  <script src="/privacy-banner.js" defer></script>
 </body>
 </html>
