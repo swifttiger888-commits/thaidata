@@ -19,6 +19,13 @@ _SIGNATURE = "<!-- SHELL:location-v1 -->"
 # /cities/leeds earned 140 impressions and 0 clicks in 28 days with no way to see
 # what visitors did. The snippet lives in site_analytics so every generator shares
 # one measurement id.
+import sys as _sys
+from pathlib import Path as _Path
+
+_HERE = str(_Path(__file__).resolve().parent)
+if _HERE not in _sys.path:
+    _sys.path.insert(0, _HERE)
+
 from site_analytics import (  # noqa: E402
     ANALYTICS_HEAD,
     CONSENT_BANNER,

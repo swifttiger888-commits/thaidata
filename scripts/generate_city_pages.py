@@ -725,8 +725,15 @@ def update_hero_stats(
                 html,
             )
         else:
+            # The replacement used to re-match its own output: the pattern stopped at
+            # the first period, so "…Thai businesses." was replaced with "…Thai
+            # businesses. Population data not available for ratio.", and every
+            # regeneration appended the phrase again. Real pages carried it 21 times
+            # ("… for ratio. Population data not available for ratio. …") across 139
+            # pages. Consuming the whole tail up to the next tag makes it idempotent:
+            # re-running replaces the phrase instead of stacking another copy.
             html = re.sub(
-                r"vs London:</strong> [^<]*? has [\d.]+% of London's [\d,]+ Thai businesses[^.]*\.",
+                r"vs London:</strong> [^<]*? has [\d.]+% of London's [\d,]+ Thai businesses[^<]*",
                 f"vs London:</strong> {biz}. Population data not available for ratio.",
                 html,
             )

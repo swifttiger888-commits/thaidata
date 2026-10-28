@@ -656,3 +656,36 @@ class TestCityPageInvariants:
         ]
         assert not offenders, f"old snapshot card remains in: {offenders[:10]}"
 
+
+
+# ── Repeated-sentence guard ──────────────────────────────────────────────────
+# The "no population data" sentence was appended to its own output on every
+# regeneration, because the substitution pattern stopped at the first period and so
+# re-matched the sentence it had just written. Real pages ended up carrying the
+# phrase 21 times in one line ("…for ratio. Population data not available for
+# ratio. …") — 2,190 occurrences across 139 pages.
+
+PHRASE = "Population data not available for ratio."
+
+
+def _city_pages():
+    return sorted((REPO / "cities").glob("*.html"))
+
+
+def test_no_city_page_repeats_the_missing_population_sentence():
+    offenders = []
+    for p in _city_pages():
+        html = p.read_text(encoding="utf-8", errors="ignore")
+        # The sentence legitimately appears twice: once in the Market Position card
+        # and once in the How-X-Compares card. More than that is the bug.
+        n = html.count(PHRASE)
+        if n > 2:
+            offenders.append((p.name, n))
+    assert not offenders, offenders[:10]
+
+
+def test_the_missing_population_sentence_never_appears_twice_in_a_row():
+    doubled = PHRASE + " " + PHRASE
+    offenders = [p.name for p in _city_pages()
+                 if doubled in p.read_text(encoding="utf-8", errors="ignore")]
+    assert not offenders, offenders[:10]
