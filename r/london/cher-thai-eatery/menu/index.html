@@ -7,6 +7,28 @@
      the homepage with HTTP 200 for any unmatched path). Do not remove. -->
 <meta name="thaidata-page" content="menu">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied' });
+  gtag('js', new Date());
+  gtag('config', 'G-B6RYQZX5QX');
+  (function () {
+    var loaded = false;
+    function loadGtag() {
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B6RYQZX5QX';
+      document.head.appendChild(s);
+    }
+    ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {
+      window.addEventListener(ev, loadGtag, { once: true, passive: true });
+    });
+    setTimeout(loadGtag, 8000);
+  })();
+</script>
 <title>Cher Thai Eatery Menu — Full Prices &amp; Dishes | ThaiData UK</title>
 <meta name="description" content="The full Cher Thai Eatery menu in London — 11 dishes with current prices, taken from the restaurant's own menu. First published online by ThaiData UK.">
 <link rel="canonical" href="https://thaidata.uk/r/london/cher-thai-eatery/menu/">
@@ -213,5 +235,85 @@ em { font-style: normal; font-weight: 700; }
   window.addEventListener('load', setNavHeight);
 })();
 </script>
+<section class="report" id="report" aria-labelledby="report-h" data-name="Cher Thai Eatery" data-city="London" data-fsa="1229769">
+  <h2 id="report-h">Something wrong with this menu?</h2>
+  <p class="report-lede">Prices change and menus get replaced. Tell us what's wrong and we'll fix the page. No account needed.</p>
+  <button type="button" class="report-toggle" id="report-toggle" aria-expanded="false" aria-controls="report-form">Report an error</button>
+  <form id="report-form" class="report-form" hidden novalidate>
+    <label for="report-details">What's wrong?</label>
+    <textarea id="report-details" name="details" rows="3" required minlength="10" maxlength="2000" placeholder="e.g. Pad Thai is £9.95, not £8.95 — and the coconut rice entry is the wrong dish."></textarea>
+    <label for="report-email">Your email <span>(optional — only if you want a reply)</span></label>
+    <input id="report-email" name="reporter_email" type="email" maxlength="254" autocomplete="email">
+    <!-- honeypot: real people never see or fill this -->
+    <input name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="report-hp">
+    <button type="submit" class="report-submit">Send correction</button>
+    <p class="report-status" id="report-status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+<style>
+  .report{margin:40px 0 8px;padding:20px;border:1px solid var(--ink1,#e5e7eb);border-radius:14px;background:var(--paper,#fff);}
+  .report h2{margin:0 0 6px;font-size:1.05rem;font-weight:700;color:var(--ink2,#1f2937);}
+  .report-lede{margin:0 0 14px;font-size:.9rem;color:var(--ink4,#6b7280);line-height:1.5;}
+  .report-toggle,.report-submit{font:inherit;font-weight:600;font-size:.9rem;padding:10px 18px;border-radius:999px;cursor:pointer;min-height:44px;}
+  .report-toggle{background:transparent;color:var(--accent,#A3132B);border:1.5px solid var(--accent,#A3132B);}
+  .report-submit{background:var(--accent,#A3132B);color:#fff;border:1.5px solid var(--accent,#A3132B);}
+  .report-toggle:hover,.report-submit:hover{opacity:.88;}
+  .report-form{display:grid;gap:8px;margin-top:16px;max-width:560px;}
+  .report-form[hidden]{display:none;}
+  .report-form label{font-size:.82rem;font-weight:600;color:var(--ink3,#374151);}
+  .report-form label span{font-weight:400;color:var(--ink4,#6b7280);}
+  .report-form textarea,.report-form input{font:inherit;font-size:.9rem;padding:10px 12px;border:1px solid var(--ink1,#e5e7eb);border-radius:10px;background:#fff;color:var(--ink2,#1f2937);width:100%;box-sizing:border-box;}
+  .report-form textarea:focus,.report-form input:focus{outline:2px solid var(--accent,#A3132B);outline-offset:1px;}
+  .report-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+  .report-status{margin:2px 0 0;font-size:.85rem;min-height:1.2em;color:var(--ink4,#6b7280);}
+  .report-status.ok{color:#047857;font-weight:600;}
+  .report-status.err{color:#B91C1C;font-weight:600;}
+</style>
+<script>
+(function () {
+  var sec = document.getElementById('report');
+  if (!sec) return;
+  var btn = document.getElementById('report-toggle');
+  var form = document.getElementById('report-form');
+  var status = document.getElementById('report-status');
+  var name = sec.getAttribute('data-name') || '';
+  var city = sec.getAttribute('data-city') || '';
+  var fsa = sec.getAttribute('data-fsa') || '';
+  function say(msg, cls) { status.textContent = msg; status.className = 'report-status ' + (cls || ''); }
+  btn.addEventListener('click', function () {
+    var open = form.hasAttribute('hidden');
+    if (open) { form.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); btn.textContent = 'Hide form'; document.getElementById('report-details').focus(); }
+    else { form.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); btn.textContent = 'Report an error'; }
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var details = document.getElementById('report-details').value.trim();
+    var email = document.getElementById('report-email').value.trim();
+    if (details.length < 10) { say('Please give us a little more detail (10 characters or more).', 'err'); return; }
+    var submit = form.querySelector('.report-submit');
+    submit.disabled = true;
+    say('Sending…');
+    fetch('/api/correction', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        restaurant_name: name, city: city, fsa_id: fsa || null,
+        category: 'menu', details: details, reporter_email: email || null,
+        page_url: location.pathname, website: ''
+      })
+    }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok, body: b }; }); })
+      .then(function (res) {
+        if (!res.ok) { throw new Error((res.body && res.body.error) || 'Send failed'); }
+        form.reset();
+        say('Thank you — we have it and will fix the page.', 'ok');
+        if (typeof gtag === 'function') gtag('event', 'menu_correction_submit', { fsa_id: fsa || 'unknown' });
+      })
+      .catch(function (err) { say('Sorry, that did not send (' + err.message + '). Please try again.', 'err'); })
+      .then(function () { submit.disabled = false; });
+  });
+})();
+</script>
+</section>
+<script src="/privacy-banner.js" defer></script>
 </body>
 </html>
