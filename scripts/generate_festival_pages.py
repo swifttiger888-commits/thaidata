@@ -13,8 +13,8 @@ DATA_FILE = REPO / "data" / "thai_festivals.json"
 
 # ── Helpers ──────────────────────────────────────────────────────────────
 
-MONTH_ABBR = {4: "Apr", 5: "May", 6: "Jun", 7: "Jul",
-              8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
+MONTH_ABBR = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun",
+              7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
 
 MONTH_ANCHOR = {
     "january": ("January — New Year & Fight Nights", 1),
@@ -172,14 +172,47 @@ def tag_html(tags, ticket_info):
     return "".join(result)
 
 
+def day_badge(e):
+    """Return (label, css_modifier) for the calendar badge.
+
+    The badge is an 80px column whose numeral is 2.4rem, so it can only hold a
+    day number or a short same-month range. ``date_description`` is free text
+    ("1 November 2026", "15 November 2026", "TBC", "12-13*") and used to be
+    dropped straight into that slot, where it spilled across the card body and
+    printed over the description and tags.
+
+    Derive the badge from the ISO dates instead. The month block already carries
+    the month, so a full date loses nothing, and the page legend explains the
+    "*" estimate marker — preserve that one character rather than the whole
+    string. Cross-month ranges do not occur in the dataset; if one ever does,
+    the start day is shown and the range does not lie.
+    """
+    star = "*" if "*" in (e.get("date_description") or "") else ""
+    start_iso, end_iso = e.get("start_date"), e.get("end_date")
+    if not start_iso:
+        return "TBC", "day--tbc"
+    try:
+        start = datetime.strptime(start_iso, "%Y-%m-%d").date()
+    except ValueError:
+        return "TBC", "day--tbc"
+    if end_iso and end_iso != start_iso:
+        try:
+            end = datetime.strptime(end_iso, "%Y-%m-%d").date()
+        except ValueError:
+            end = None
+        if end and end.month == start.month and end.day != start.day:
+            return f"{start.day}\u2013{end.day}{star}", "day--range"
+    return f"{start.day}{star}", "day--single"
+
+
 def event_card_html(e):
     """Render a single event-card div."""
     if e["start_date"]:
         m = datetime.strptime(e["start_date"], "%Y-%m-%d").month
-        month_label = MONTH_ABBR.get(m, "???")
+        month_label = MONTH_ABBR.get(m, "")
     else:
         month_label = ""
-    day_label = e["date_description"] or ""
+    day_label, day_cls = day_badge(e)
     loc = e["address"] or e["venue_name"] or ""
     tags = tag_html(e["tags"], e["ticket_info"])
     past = is_past(e)
@@ -194,7 +227,7 @@ def event_card_html(e):
     else:
         title_html = e["event_name"]
     return f'''            <div class="event-card{past_cls}">
-                <div class="event-date"><div class="month">{month_label}</div><div class="day">{day_label}</div></div>
+                <div class="event-date"><div class="month">{month_label}</div><div class="day {day_cls}">{day_label}</div></div>
                 <div class="event-info">
                     <div class="ev-title">{title_html}{ended}</div>
                     <div class="ev-location"><i class="fas fa-map-marker-alt"></i>{loc}</div>
@@ -402,9 +435,15 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
         /* Event Cards */
         .event-card {{ background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; padding: 24px 28px; margin: 14px 0; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; position: relative; }}
         .event-card:hover {{ border-color: var(--c2); }}
-        .event-date {{ flex-shrink: 0; width: 80px; text-align: center; }}
+        .event-date {{ flex-shrink: 0; width: 88px; text-align: center; }}
         .event-date .month {{ font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--c2); letter-spacing: 0.1em; }}
-        .event-date .day {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.4rem; line-height: 1; color: var(--ink); font-weight: 800;}}
+        .event-date .day {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 2.4rem; line-height: 1; color: var(--ink); font-weight: 800; white-space: nowrap; }}
+        /* A same-month range ("6–9*") is 4–5 glyphs and cannot sit at 2.4rem inside an
+           88px column, so it steps down. Sizing by explicit class rather than by content
+           length keeps the badge inside its column and off the card body at every width.
+           Free text must never go back in this slot — see day_badge(). */
+        .event-date .day--range {{ font-size: 1.4rem; letter-spacing: -0.01em; }}
+        .event-date .day--tbc {{ font-size: 1.05rem; letter-spacing: 0.04em; font-weight: 700; }}
         .event-info {{ flex: 1; }}
         .event-info .ev-title {{ font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }}
         .event-info .ev-title .ev-title-link {{ color: inherit; text-decoration: none; border-bottom: 1px dotted var(--gold); }}
