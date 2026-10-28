@@ -137,3 +137,35 @@ def test_generated_pages_have_no_placeholder_or_overflowing_badges():
             else:
                 assert re.fullmatch(r"\d{1,2}(\u2013\d{1,2})?\*?", text), (page.name, text)
     assert seen > 20, seen
+
+
+# ── Analytics + consent ──────────────────────────────────────────────────────
+# These three pages carried neither the GA4 tag nor the cookie banner, so the two
+# biggest traffic drivers (festival hub + Loy Krathong: 74 of 319 clicks in 28 days)
+# were invisible in GA4 and collected nothing under a consent mechanism. The banner
+# must ship in the same change as the tag — analytics without a way to consent is
+# the failure mode, not the fix.
+
+FESTIVAL_PAGES = ["thai-festivals-uk.html", "songkran-uk.html", "loy-krathong-uk.html"]
+
+
+def test_generator_carries_the_analytics_and_banner_constants():
+    assert "G-B6RYQZX5QX" in gen.ANALYTICS_HEAD
+    assert "consent" in gen.ANALYTICS_HEAD
+    assert "/privacy-banner.js" in gen.CONSENT_BANNER
+
+
+def test_every_festival_page_has_ga4_and_the_consent_banner():
+    for name in FESTIVAL_PAGES:
+        page = REPO / name
+        assert page.exists(), name
+        html = page.read_text(encoding="utf-8")
+        assert "G-B6RYQZX5QX" in html, name
+        assert 'gtag(\'consent\', \'default\'' in html, name
+        assert "/privacy-banner.js" in html, name
+
+
+def test_consent_banner_sits_before_the_closing_body():
+    for name in FESTIVAL_PAGES:
+        html = (REPO / name).read_text(encoding="utf-8")
+        assert html.index("/privacy-banner.js") < html.index("</body>"), name

@@ -11,6 +11,45 @@ import site_icons  # noqa: E402  (same-dir module, replaces Font Awesome)
 REPO = Path(__file__).resolve().parent.parent
 DATA_FILE = REPO / "data" / "thai_festivals.json"
 
+# ── Analytics + consent ──────────────────────────────────────────────────
+# Same contract as index.html and templates/restaurant.html: consent-mode v2 with
+# storage denied by default, the tag loaded on first real interaction (or after 8s),
+# and privacy-banner.js upgrading consent when a visitor accepts.
+#
+# These three pages carried NEITHER until now, which left the site's two biggest
+# traffic drivers (festival hub + Loy Krathong: 74 of 319 clicks in 28 days) invisible
+# in GA4 and collected nothing under a consent mechanism. Keep them in sync with the
+# listing template — if the GA id or the consent default changes, change it in both.
+#
+# ANALYTICS_HEAD is an f-string only for {_GA_ID}; every JS brace in it is doubled.
+# CONSENT_BANNER is interpolated before </body> so the banner ships in the same change
+# as the tag — analytics must never land without a way to consent.
+_GA_ID = "G-B6RYQZX5QX"
+ANALYTICS_HEAD = f"""    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('consent', 'default', {{ analytics_storage: 'denied', ad_storage: 'denied' }});
+      gtag('js', new Date());
+      gtag('config', '{_GA_ID}');
+      (function () {{
+        var loaded = false;
+        function loadGtag() {{
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id={_GA_ID}';
+          document.head.appendChild(s);
+        }}
+        ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) {{
+          window.addEventListener(ev, loadGtag, {{ once: true, passive: true }});
+        }});
+        setTimeout(loadGtag, 8000);
+      }})();
+    </script>
+"""
+CONSENT_BANNER = '    <script src="/privacy-banner.js" defer></script>\n'
+
 # ── Helpers ──────────────────────────────────────────────────────────────
 
 MONTH_ABBR = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun",
@@ -363,6 +402,7 @@ def gen_calendar_page(events):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{ANALYTICS_HEAD}
     <title>Thai Festivals UK 2026–27: Calendar & Events | ThaiData</title>
     <meta name="description" content="The only complete UK Thai events calendar. Songkran, Loy Krathong, food festivals, Muay Thai, temple celebrations — every Thai cultural event across the UK, all in.">
     <meta name="robots" content="index, follow">
@@ -620,7 +660,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
             <p>&copy; 2026 ThaiData UK. Event dates marked * are estimates — always confirm with the venue. We update this calendar regularly.</p>
         </div>
     </footer>
-</body>
+{CONSENT_BANNER}</body>
 </html>'''
 
 
@@ -652,6 +692,7 @@ def gen_songkran_page(events):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{ANALYTICS_HEAD}
     <title>Songkran 2026 UK — Thai New Year Events &amp; Dates | ThaiData</title>
     <meta name="description" content="Every UK Songkran celebration in 2026. Temple water ceremonies, food festivals, restaurant specials. London, Manchester, Birmingham, Swansea — find.">
     <meta name="robots" content="index, follow">
@@ -823,7 +864,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
             <p>&copy; 2026 ThaiData UK. Dates marked * are based on lunar calendar — confirm with venues before travelling.</p>
         </div>
     </footer>
-</body>
+{CONSENT_BANNER}</body>
 </html>'''
 
 
@@ -857,6 +898,7 @@ def gen_loy_krathong_page(events):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{ANALYTICS_HEAD}
     <title>Loy Krathong 2026 UK — Events, Dates &amp; Thai Food | ThaiData</title>
     <meta name="description" content="UK Loy Krathong celebrations in 2026. Float your krathong at temple lakes, enjoy lantern displays and Thai food. Events at Thai temples in London, Bristol and Staffordshire.">
     <meta name="robots" content="index, follow">
@@ -1045,7 +1087,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
             <p>&copy; 2026 ThaiData UK. Loy Krathong date is estimated from the lunar calendar. Confirm with venues before travelling.</p>
         </div>
     </footer>
-</body>
+{CONSENT_BANNER}</body>
 </html>'''
 
 
