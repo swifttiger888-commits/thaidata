@@ -29,6 +29,11 @@ with open(os.path.join(REPO, 'templates', 'restaurant.html')) as f:
     # the old flag crashed the generator with "no Google Fonts <link> found".
     TEMPLATE = f.read()
 
+def _alnum(s: str) -> str:
+    """Lowercase, letters and digits only — for loose name/address comparison."""
+    return re.sub(r'[^a-z0-9]', '', (s or '').lower())
+
+
 def slugify(s: str) -> str:
     s = unicodedata.normalize('NFC', s.lower().strip())
     s = re.sub(r'[^\w\s-]', '', s)
@@ -579,14 +584,38 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
         f'        <span class="hero-photo" aria-hidden="true" style="--hero-image: url(\'/hero/food-{_hero_n}.jpg\');"></span>',
         html)
 
-    # ---- Contact strip (mobile-first: phone/website/hours anchor in first fold) ----
-    # Claimed listings get contact data from Quick Facts (middleware strips this).
+    # ---- Contact strip (mobile-first: the first action a visitor can take) ----
+    # Claimed listings get real contact data from Quick Facts; the middleware replaces
+    # this block. UNCLAIMED listings have no phone, website or hours — Google Places
+    # enrichment was removed for ToS reasons — so before this the hero offered a visitor
+    # nothing at all: the only link was "Claim it free", which is aimed at the owner.
+    # A Maps directions link built from the FSA address we already hold is not Places
+    # content, needs no API key, and gives ~1,200 otherwise dead-end pages a real action.
     if not is_closed:
         strip_items = []
+        # 73 FSA addresses repeat the business name in their first segment
+        # ("Talay Thai Ltd, Mount Pleasant Road, …"), which doubles the query for no
+        # benefit — the name is already the first element. Drop that segment.
+        addr = (r.get('address') or '').strip()
+        head, _, tail = addr.partition(',')
+        a_head, a_name = _alnum(head), _alnum(name)
+        if tail and a_name and a_head.startswith(a_name) and len(a_head) <= len(a_name) + 12:
+            addr = tail.strip()
+        dest = ', '.join(p for p in (name, addr, r.get('postcode'), 'UK') if p)
+        if dest:
+            strip_items.append(
+                f'<a class="cs-item" href="https://www.google.com/maps/search/?api=1&amp;query={quote(dest, safe="")}" '
+                f'target="_blank" rel="noopener" '
+                f'style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:600;white-space:nowrap;">'
+                f'<svg class="ic" aria-hidden="true" style="margin-right:5px;"><use href="#i-solid--location-dot"></use></svg>Directions</a>'
+            )
         if has_menu_page:
             strip_items.append(
-                f'<a class="cs-item" href="/r/{city_slug}/{rest_slug}/menu/" style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:600;white-space:nowrap;"><i class="fas fa-utensils" style="margin-right:5px;"></i>Full menu</a>'
+                f'<a class="cs-item" href="/r/{city_slug}/{rest_slug}/menu/" '
+                f'style="color:rgba(255,255,255,0.95);text-decoration:none;font-size:0.9rem;font-weight:600;white-space:nowrap;">'
+                f'<svg class="ic" aria-hidden="true" style="margin-right:5px;"><use href="#i-solid--utensils"></use></svg>Full menu</a>'
             )
+        if strip_items:
             sep = '<span class="cs-sep" style="color:rgba(255,255,255,0.4);">·</span>'
             strip = ('<div class="contact-strip" id="contact-strip" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;">'
                      + sep.join(strip_items) + '</div>')
