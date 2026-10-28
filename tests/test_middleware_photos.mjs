@@ -181,17 +181,21 @@ const SAMPLE_HTML_RATED = `<!DOCTYPE html><html><head><title>Test</title>
   console.log('PASS 11: malformed ratingValue skipped');
 }
 
-// 12. Contact strip removed on claimed page with data
+// 12. Contact strip kept on claimed page — it carries the only above-the-fold
+// visitor action (Directions). It holds no contact data, so it cannot duplicate
+// Quick Facts. It used to be stripped here, which left claimed pages with no
+// visitor action in the hero.
 {
   const htmlWithStrip = SAMPLE_HTML.replace('<p>FSA 5/5 Hygiene Rating</p>',
-    '<div class="contact-strip" id="contact-strip" style="margin-top:10px;"><a class="cs-item" href="tel:0113 245 9245">0113 245 9245</a></div><p>FSA 5/5 Hygiene Rating</p>');
+    '<div class="contact-strip" id="contact-strip" style="margin-top:10px;"><a class="cs-item" href="https://www.google.com/maps/search/?api=1&amp;query=Test%20Thai">Directions</a></div><p>FSA 5/5 Hygiene Rating</p>');
   const env = makeEnv({ description: 'owner data here' });
   env.ASSETS = { async fetch() { return new Response(htmlWithStrip, { status: 200 }); } };
   const res = await mod.onRequest({ request: req('/r/leeds/test-thai/'), env, next: () => { throw new Error('no'); } });
   const body = await res.text();
-  assert.ok(!body.includes('contact-strip'), 'strip removed on claimed page');
+  assert.ok(body.includes('contact-strip'), 'directions strip survives on claimed page');
+  assert.ok(body.includes('maps/search'), 'directions link survives');
   assert.ok(body.includes('Quick Facts'), 'facts still injected');
-  console.log('PASS 12: contact strip suppressed on claimed page');
+  console.log('PASS 12: directions strip kept on claimed page');
 }
 
 // 13. Contact strip kept on unclaimed page

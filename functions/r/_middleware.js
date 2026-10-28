@@ -462,11 +462,11 @@ async function injectClaimedEnrichment(html, env) {
   }
 
   if (injection) {
-    // Claimed pages with data: Quick Facts already carries contact info,
-    // so drop the static hero contact strip to avoid duplication.
-    if (facts.length > 0) {
-      html = html.replace(/<div class="contact-strip" id="contact-strip"[^>]*>[\s\S]*?<\/div>/, '');
-    }
+    // Claimed pages keep the generated hero contact strip. It no longer carries any
+    // contact data — the generator emits only "Directions" (and "Full menu" where a
+    // menu page exists), because Places enrichment was removed for ToS reasons — so
+    // there is nothing to duplicate against Quick Facts, and stripping it used to
+    // remove the only visitor action above the fold on a claimed page.
     // Inject before Trust Sidebar anchor
     if (html.includes('<!-- Trust Sidebar -->')) {
       html = html.replace('<!-- Trust Sidebar -->', injection + '            <!-- Trust Sidebar -->');

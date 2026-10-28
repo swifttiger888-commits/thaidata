@@ -138,6 +138,10 @@ def test_directions_link_is_a_safe_external_link():
     assert 'target="_blank"' in strip and 'rel="noopener"' in strip
 
 
-def test_middleware_still_strips_the_strip_on_claimed_pages():
+def test_middleware_no_longer_strips_the_directions_chip():
+    # The strip used to be deleted on claimed pages to avoid duplicating Quick Facts,
+    # but it carries only Directions/menu now — no contact data — so removing it took
+    # away the only above-the-fold visitor action.
     mw = (REPO / 'functions' / 'r' / '_middleware.js').read_text(encoding='utf-8')
-    assert 'contact-strip' in mw
+    assert "getElementById('contact-strip')" not in mw
+    assert not re.search(r'contact-strip"\s*id="contact-strip"', mw)
