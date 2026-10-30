@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "uk.thaidata/mcp",
+  "title": "ThaiData UK",
+  "description": "UK Thai restaurant data from FSA inspections: hygiene ratings, city stats, postcode search.",
+  "version": "2.0.0",
+  "repository": {
+    "url": "https://github.com/swifttiger888-commits/thaidata",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://thaidata.uk/mcp"
+    }
+  ]
+}
