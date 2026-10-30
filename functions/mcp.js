@@ -12,6 +12,7 @@
 // ── Data loader (fetches from same origin, Cloudflare-internal, near-zero latency) ─
 let citiesCache = null;
 let restaurantsCache = null;
+let overviewCache = null;
 let cacheTime = 0;
 const CACHE_TTL = 300000; // 5 minutes
 
@@ -49,6 +50,25 @@ async function getRestaurants() {
     return restaurantsCache;
   } catch (e) {
     return { restaurants: [] };
+  }
+}
+
+/**
+ * Fetches the hand-maintained overview statistics from api/v1/data.json.
+ * Returns null when unavailable so callers can omit fields they cannot
+ * source instead of emitting "undefined".
+ * @returns {Promise<object|null>} Overview object or null
+ */
+async function getOverview() {
+  const now = Date.now();
+  if (overviewCache && (now - cacheTime) < CACHE_TTL) return overviewCache;
+  try {
+    const res = await fetch('https://thaidata.uk/api/v1/data.json');
+    overviewCache = await res.json();
+    cacheTime = now;
+    return overviewCache;
+  } catch (e) {
+    return null;
   }
 }
 
@@ -118,9 +138,6 @@ const TOOLS = [
         city: { type: "string", description: "UK city name to search in" },
         type: { type: "string", enum: ["restaurant", "takeaway", "all"], description: "Filter by business type", default: "all" },
         min_rating: { type: "number", description: "Minimum hygiene rating (1-5). E.g. 4 returns only 4+ star rated." },
-        max_hygiene_score: { type: "number", description: "Filter by FSA Hygiene score (0-25, lower=better). 0=perfect food handling." },
-        max_structural_score: { type: "number", description: "Filter by FSA Structural score (0-25, lower=better). 0=perfect premises." },
-        max_management_score: { type: "number", description: "Filter by FSA Management score (0-25, lower=better). 0=perfect systems/records." },
         limit: { type: "number", description: "Maximum results to return (default: 10, max: 50)", default: 10 }
       },
       required: ["city"]
@@ -135,9 +152,6 @@ const TOOLS = [
         postcode: { type: "string", description: "UK postcode to search near (e.g. 'LS1 4AG', 'SW1A 1AA', 'M1 1AE')" },
         radius: { type: "number", description: "Search radius in miles (default: 3, max: 25)", default: 3 },
         min_rating: { type: "number", description: "Minimum hygiene rating 1-5 (optional)" },
-        max_hygiene_score: { type: "number", description: "FSA Hygiene score filter (0-25, 0=perfect)" },
-        max_structural_score: { type: "number", description: "FSA Structural score filter (0-25, 0=perfect)" },
-        max_management_score: { type: "number", description: "FSA Management score filter (0-25, 0=perfect)" },
         type: { type: "string", enum: ["restaurant", "takeaway", "all"], description: "Filter by type", default: "all" },
         limit: { type: "number", description: "Max results (default: 10, max: 25)", default: 10 }
       },
@@ -274,9 +288,6 @@ async function getCityStats(params) {
  * @param {string} params.city - UK city name to search in
  * @param {string} [params.type] - Business type filter (restaurant, takeaway, all)
  * @param {number} [params.min_rating] - Minimum hygiene rating (1-5)
- * @param {number} [params.max_hygiene_score] - Maximum FSA hygiene score (0-25, lower is better)
- * @param {number} [params.max_structural_score] - Maximum FSA structural score (0-25)
- * @param {number} [params.max_management_score] - Maximum FSA management confidence score (0-25)
  * @param {number} [params.limit] - Maximum results to return (default: 10, max: 50)
  * @returns {Promise<object>} Search results with matching restaurants and summary
  */
@@ -309,29 +320,6 @@ async function searchRestaurants(params) {
     });
   }
   
-  // Filter by FSA detail scores (lower is better, 0 = perfect)
-  if (params.max_hygiene_score !== undefined) {
-    const max = parseInt(params.max_hygiene_score);
-    results = results.filter(r => {
-      const s = parseInt(r.hygiene_score);
-      return !isNaN(s) && s <= max;
-    });
-  }
-  if (params.max_structural_score !== undefined) {
-    const max = parseInt(params.max_structural_score);
-    results = results.filter(r => {
-      const s = parseInt(r.structural_score);
-      return !isNaN(s) && s <= max;
-    });
-  }
-  if (params.max_management_score !== undefined) {
-    const max = parseInt(params.max_management_score);
-    results = results.filter(r => {
-      const s = parseInt(r.management_score);
-      return !isNaN(s) && s <= max;
-    });
-  }
-  
   // Sort by rating (highest first), then name
   results.sort((a, b) => {
     const ra = parseInt(a.hygiene_rating) || 0;
@@ -359,11 +347,6 @@ async function searchRestaurants(params) {
       city: r.city,
       postcode: r.postcode,
       hygiene_rating: r.hygiene_rating + '/5',
-      detail_scores: {
-        hygiene_food_handling: r.hygiene_score != null ? r.hygiene_score + '/25 (lower=better)' : 'N/A',
-        structural_cleanliness: r.structural_score != null ? r.structural_score + '/25 (lower=better)' : 'N/A',
-        management_confidence: r.management_score != null ? r.management_score + '/25 (lower=better)' : 'N/A'
-      },
       last_inspected: r.rating_date,
       address: r.address
     })),
@@ -405,9 +388,6 @@ function haversineMiles(lat1, lng1, lat2, lng2) {
  * @param {number} [params.radius] - Search radius in miles (default: 3, max: 25)
  * @param {string} [params.type] - Business type filter (restaurant, takeaway, all)
  * @param {number} [params.min_rating] - Minimum hygiene rating (1-5)
- * @param {number} [params.max_hygiene_score] - Maximum FSA hygiene score (0-25)
- * @param {number} [params.max_structural_score] - Maximum FSA structural score (0-25)
- * @param {number} [params.max_management_score] - Maximum FSA management score (0-25)
  * @param {number} [params.limit] - Maximum results (default: 10, max: 25)
  * @returns {Promise<object>} Nearby restaurants with distance and scores
  */
@@ -457,29 +437,6 @@ async function findNearby(params) {
     });
   }
   
-  // Filter by FSA detail scores
-  if (params.max_hygiene_score !== undefined) {
-    const max = parseInt(params.max_hygiene_score);
-    results = results.filter(r => {
-      const s = parseInt(r.hygiene_score);
-      return !isNaN(s) && s <= max;
-    });
-  }
-  if (params.max_structural_score !== undefined) {
-    const max = parseInt(params.max_structural_score);
-    results = results.filter(r => {
-      const s = parseInt(r.structural_score);
-      return !isNaN(s) && s <= max;
-    });
-  }
-  if (params.max_management_score !== undefined) {
-    const max = parseInt(params.max_management_score);
-    results = results.filter(r => {
-      const s = parseInt(r.management_score);
-      return !isNaN(s) && s <= max;
-    });
-  }
-  
   // Step 6: Sort by distance, then rating
   results.sort((a, b) => {
     if (a.distance_miles !== b.distance_miles) return a.distance_miles - b.distance_miles;
@@ -506,11 +463,6 @@ async function findNearby(params) {
       type: r.type,
       distance: r.distance_miles + ' mi',
       hygiene_rating: r.hygiene_rating + '/5',
-      detail_scores: {
-        hygiene_food_handling: r.hygiene_score != null ? r.hygiene_score + '/25 (lower=better)' : 'N/A',
-        structural_cleanliness: r.structural_score != null ? r.structural_score + '/25 (lower=better)' : 'N/A',
-        management_confidence: r.management_score != null ? r.management_score + '/25 (lower=better)' : 'N/A'
-      },
       postcode: r.postcode,
       city: r.city,
       address: r.address,
@@ -536,18 +488,28 @@ async function getUKOverview() {
     ? (scoredCities.reduce((s, c) => s + c.avg_hygiene_rating, 0) / scoredCities.length).toFixed(1)
     : 'N/A';
   
-  return {
+  const overview = await getOverview();
+  const stats = (overview && overview.statistics) || {};
+
+  const result = {
     total_businesses: total,
     full_service_restaurants: dineIn,
     quick_service_takeaways: takeaway,
     average_hygiene: avgHygiene,
     hygiene_average_basis: 'England, Wales and NI (FHRS) only — Scotland rates under FHIS (Pass/Improvement Required)',
-    estimated_market_size: EMBEDDED_DATA.statistics.estimated_uk_market_size_gbp,
-    growth_2022_2025: EMBEDDED_DATA.statistics.growth_rate_2022_2025_pct + '%',
     cities_tracked: cities.length,
-    data_updated: data.updated || "June 2026",
-    national_living_wage: '£' + EMBEDDED_DATA.statistics.national_living_wage_april_2026 + '/hr'
+    data_updated: data.updated || "unknown"
   };
+  // Editorial figures are only included when a real value exists in api/v1/data.json.
+  if (typeof stats.estimated_uk_market_size_gbp === 'string' && stats.estimated_uk_market_size_gbp.trim()) {
+    result.estimated_market_size = stats.estimated_uk_market_size_gbp;
+  }
+  if (typeof stats.growth_rate_2022_2025_pct === 'number' && isFinite(stats.growth_rate_2022_2025_pct)) {
+    result.growth_2022_2025 = stats.growth_rate_2022_2025_pct + '%';
+  }
+  const nlw = stats.national_living_wage_april_2026 || EMBEDDED_DATA.statistics.national_living_wage_april_2026;
+  if (nlw) result.national_living_wage = '£' + nlw + '/hr';
+  return result;
 }
 
 /**
