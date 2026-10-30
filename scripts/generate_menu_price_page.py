@@ -80,7 +80,7 @@ for city_name, stats in sorted(city_stats.items(), key=lambda x: x[1]['avg_sprea
                             <td class="city-name">{html.escape(city_name)}</td>
                             <td class="city-count">£{stats['avg_dine_in']:.2f}</td>
                             <td class="city-count">£{stats['avg_delivery']:.2f}</td>
-                            <td class="city-rating" style="color:{'#EF4444' if stats['avg_spread'] > 15 else '#F59E0B' if stats['avg_spread'] > 10 else 'var(--c2)'};">+{stats['avg_spread']}%</td>
+                            <td class="city-rating" style="color:{'#B91C1C' if stats['avg_spread'] > 15 else '#B45309' if stats['avg_spread'] > 10 else 'var(--c2)'};">+{stats['avg_spread']}%</td>
                             <td class="city-pc">{stats['data_points']} dishes</td>
                         </tr>''')
 city_rows_html = '\n'.join(city_rows) if city_rows else '<tr><td colspan="5" style="color:var(--ink4);text-align:center;padding:40px;">Data being collected — check back soon</td></tr>'
@@ -93,7 +93,7 @@ for dish_key, stats in sorted(dish_averages.items(), key=lambda x: x[1]['avg_spr
                             <td class="city-name">{html.escape(name)}</td>
                             <td class="city-count">£{stats['avg_dine_in']:.2f}</td>
                             <td class="city-count">£{stats['avg_delivery']:.2f}</td>
-                            <td class="city-rating" style="color:{'#EF4444' if stats['avg_spread'] > 15 else '#F59E0B' if stats['avg_spread'] > 10 else 'var(--c2)'};">+{stats['avg_spread']}%</td>
+                            <td class="city-rating" style="color:{'#B91C1C' if stats['avg_spread'] > 15 else '#B45309' if stats['avg_spread'] > 10 else 'var(--c2)'};">+{stats['avg_spread']}%</td>
                             <td class="city-pc">{stats['data_points']} prices</td>
                         </tr>''')
 dish_rows_html = '\n'.join(dish_rows) if dish_rows else '<tr><td colspan="5" style="color:var(--ink4);text-align:center;padding:40px;">Data being collected — check back soon</td></tr>'
@@ -139,7 +139,7 @@ HTML = f'''<!DOCTYPE html>
         .section-desc {{ color: var(--ink4); margin-bottom: 24px; font-size: 0.95rem; }}
 
         .big-stat {{ text-align: center; margin: 30px 0; }}
-        .big-stat .number {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 4rem; color: '#EF4444' if avg_uk_spread > 15 else '#F59E0B' if avg_uk_spread > 10 else 'var(--c2)'; line-height: 1; font-weight: 800;}}
+        .big-stat .number {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 4rem; color: '#B91C1C' if avg_uk_spread > 15 else '#B45309' if avg_uk_spread > 10 else 'var(--c2)'; line-height: 1; font-weight: 800;}}
         .big-stat .label {{ color: var(--ink4); font-size: 0.9rem; margin-top: 8px; }}
 
         .highlight-box {{ background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }}
@@ -183,7 +183,7 @@ HTML = f'''<!DOCTYPE html>
         </div>
 
         <div class="big-stat">
-            <div class="number" style="color:{'#EF4444' if avg_uk_spread > 15 else '#F59E0B' if avg_uk_spread > 10 else 'var(--c2)'};">+{avg_uk_spread}%</div>
+            <div class="number" style="color:{'#B91C1C' if avg_uk_spread > 15 else '#B45309' if avg_uk_spread > 10 else 'var(--c2)'};">+{avg_uk_spread}%</div>
             <div class="label">Average delivery price markup across all dishes surveyed</div>
         </div>
 

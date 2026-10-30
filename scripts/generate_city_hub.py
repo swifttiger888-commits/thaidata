@@ -215,7 +215,7 @@ HTML = f"""<!DOCTYPE html>
         .city-count {{ font-family:'Archivo','Inter',system-ui,sans-serif; font-size: 1.1rem; color: var(--c2); text-align: center; font-weight: 800;}}
         .city-rating {{ font-size: 0.85rem; color: var(--c2); text-align: center; }}
         .city-type {{ font-size: 0.8rem; color: var(--ink3); text-align: center; }}
-        .city-five {{ font-size: 0.85rem; color: #FBBF24; text-align: center; }}
+        .city-five {{ font-size: 0.85rem; color: #A16207; text-align: center; }}
         .city-row.london {{ background: rgba(16,185,129,0.08); border-left: 3px solid var(--c2); border-radius: 0 8px 8px 0; }}
 
         /* Highlight boxes */
