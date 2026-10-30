@@ -494,13 +494,13 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
         .event-info .ev-desc {{ color: var(--ink4); font-size: 0.85rem; line-height: 1.6; }}
         .event-tags {{ display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }}
         .ev-tag {{ font-size: 0.68rem; padding: 4px 10px; border-radius: 20px; font-weight: 600; letter-spacing: 0.03em; }}
-        .tag-temple {{ background: rgba(139,92,246,0.15); color: #A78BFA; }}
-        .tag-food {{ background: rgba(245,158,11,0.15); color: var(--gold); }}
+        .tag-temple {{ background: rgba(139,92,246,0.15); color: #6D28D9; }}
+        .tag-food {{ background: rgba(245,158,11,0.15); color: #92400E; }}
         .tag-embassy {{ background: rgba(16,185,129,0.15); color: var(--c2); }}
-        .tag-free {{ background: rgba(34,197,94,0.15); color: #22C55E; }}
-        .tag-paid {{ background: rgba(236,72,153,0.15); color: var(--pink); }}
-        .tag-muay {{ background: rgba(59,130,246,0.15); color: #60A5FA; }}
-        .tag-culture {{ background: rgba(16,185,129,0.15); color: #34D399; }}
+        .tag-free {{ background: rgba(34,197,94,0.15); color: #166534; }}
+        .tag-paid {{ background: rgba(236,72,153,0.15); color: #BE185D; }}
+        .tag-muay {{ background: rgba(59,130,246,0.15); color: #1D4ED8; }}
+        .tag-culture {{ background: rgba(16,185,129,0.15); color: #047857; }}
 
         /* Past events */
         .event-card.event-past {{ opacity: 0.55; }}
