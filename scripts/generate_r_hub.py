@@ -271,6 +271,7 @@ HTML = f"""<!DOCTYPE html>
         .cta {{ text-align: center; padding: 30px 0 40px; }}
         .cta a {{ display: inline-block; background: var(--c2); color: white; padding: 14px 28px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }}
         .cta a:hover {{ background: var(--c1); }}
+        .cta a.sec {{ background: transparent; color: var(--ink); border: 1px solid var(--line); }}
         .cta .sec {{ background: transparent; border: 1px solid var(--line); margin-left: 10px; }}
         .cta .sec:hover {{ border-color: var(--c2); }}
 
