@@ -118,7 +118,7 @@ HTML = f'''<!DOCTYPE html>
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
     <style>
-        :root {{ --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; }}
+        :root {{ --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #5B534C; --ink4: #6B625E; --line: #E7DFD5; --bg: #FBF7F0; }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }}
         .grain {{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url("/assets/noise.svg"); opacity: 0.03; pointer-events: none; z-index: 999; }}
@@ -145,7 +145,7 @@ HTML = f'''<!DOCTYPE html>
         .highlight-box {{ background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.2); border-radius: 16px; padding: 28px 32px; margin: 24px 0; }}
         .highlight-box h3 {{ color: var(--c2); font-size: 1rem; margin-bottom: 14px; }}
         .highlight-box ul {{ list-style: none; padding: 0; }}
-        .highlight-box li {{ padding: 8px 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.05); }}
+        .highlight-box li {{ padding: 8px 0; color: var(--ink2); font-size: 0.95rem; border-bottom: 1px solid var(--line); }}
         .highlight-box li:last-child {{ border-bottom: none; }}
 
         .table-wrap {{ background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin: 20px 0; }}
@@ -172,7 +172,7 @@ HTML = f'''<!DOCTYPE html>
     <div class="grain"></div>
     <nav><div class="nav-bar">
         <a href="index.html" class="logo"><i class="fas fa-pepper-hot logo-icon"></i>ThaiData.uk</a>
-        <a href="guides.html" style="color:rgba(255,255,255,0.6);font-size:0.9rem;text-decoration:none;">← Guides</a>
+        <a href="guides.html" style="color:var(--ink2);font-size:0.9rem;text-decoration:none;">← Guides</a>
     </div></nav>
 
     <div class="wrap">

@@ -432,7 +432,7 @@ def gen_calendar_page(events):
     <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
     <style>
         :root {{
-            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B; --pink: #EC4899;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #5B534C; --ink4: #6B625E; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B; --pink: #EC4899;
         }}
 :focus-visible {{
             outline: 2px solid #10B981;
@@ -545,7 +545,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
             <a href="index.html" class="logo">
                 <img src="/thaidata-lockup.b89c5cf2.png" alt="ThaiData UK" class="logo-icon" width="162" height="40">
             </a>
-            <a href="guides.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; Guides</a>
+            <a href="guides.html" style="color:var(--ink2); font-size:0.9rem; text-decoration:none;">&larr; Guides</a>
         </div>
     </nav>
 
@@ -710,7 +710,7 @@ def gen_songkran_page(events):
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
     <style>
         :root {{
-            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #5B534C; --ink4: #6B625E; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B;
         }}
 :focus-visible {{
             outline: 2px solid #10B981;
@@ -788,7 +788,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
     <nav>
         <div class="nav-bar">
             <a href="index.html" class="logo"><img src="/thaidata-lockup.b89c5cf2.png" alt="ThaiData UK" class="logo-icon" width="162" height="40"></a>
-            <a href="thai-festivals-uk.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; All Festivals</a>
+            <a href="thai-festivals-uk.html" style="color:var(--ink2); font-size:0.9rem; text-decoration:none;">&larr; All Festivals</a>
         </div>
     </nav>
 
@@ -916,7 +916,7 @@ def gen_loy_krathong_page(events):
 <link rel="preload" href="/assets/fonts/archivo-latin-v1.woff2" as="font" type="font/woff2" crossorigin>
     <style>
         :root {{
-            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #7A6F6A; --ink4: #9C918C; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B;
+            --c1: #A3132B; --c2: #A3132B; --dark: #FFFFFF; --ink: #1A1614; --ink2: #4A403C; --ink3: #5B534C; --ink4: #6B625E; --line: #E7DFD5; --bg: #FBF7F0; --gold: #F59E0B;
         }}
 :focus-visible {{
             outline: 2px solid #10B981;
@@ -994,7 +994,7 @@ body {{ font-family: 'Inter', system-ui, sans-serif; color: var(--ink); backgrou
     <nav>
         <div class="nav-bar">
             <a href="index.html" class="logo"><img src="/thaidata-lockup.b89c5cf2.png" alt="ThaiData UK" class="logo-icon" width="162" height="40"></a>
-            <a href="thai-festivals-uk.html" style="color:rgba(255,255,255,0.6); font-size:0.9rem; text-decoration:none;">&larr; All Festivals</a>
+            <a href="thai-festivals-uk.html" style="color:var(--ink2); font-size:0.9rem; text-decoration:none;">&larr; All Festivals</a>
         </div>
     </nav>
 
