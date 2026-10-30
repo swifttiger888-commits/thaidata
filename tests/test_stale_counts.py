@@ -74,6 +74,11 @@ def _live_files():
             continue
         yield p
     yield ROOT / "llms.txt"
+    # JSON API surfaces are public too. The Oct 2026 unsourced-stat removal
+    # missed api/v1/data.json, which leaked £2.1B and 20.3% back out through
+    # /api/v1/data.json and the MCP endpoint.
+    yield ROOT / "api" / "v1" / "data.json"
+    yield ROOT / "api" / "v1" / "cities.json"
 
 
 def test_no_stale_counts_on_live_surfaces():
