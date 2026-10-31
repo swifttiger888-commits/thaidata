@@ -77,3 +77,28 @@ def test_dynamic_blocks_use_record_data(record):
     type_badge = block_text(html, 'badge-type')
     expected = {'restaurant': 'Restaurant', 'takeaway': 'Takeaway', 'pub': 'Pub Kitchen'}[record['type']]
     assert type_badge == expected
+
+
+def test_review_search_links_are_venue_specific():
+    """Outbound review links must query each venue, never the template default."""
+    from urllib.parse import quote_plus
+
+    rec = NON_LEEDS
+    assert rec
+    html = render(rec)
+    assert 'id="reviews"' in html, 'reviews block missing'
+
+    # The template's example venue must never survive into a generated page.
+    assert 'My+Thai+Leeds' not in html
+
+    expected = quote_plus(rec['name'])
+    google = re.search(r'href="(https://www\.google\.com/search\?q=[^"]+)"', html)
+    trip = re.search(r'href="(https://www\.tripadvisor\.co\.uk/Search\?q=[^"]+)"', html)
+    assert google and trip, 'review links missing'
+    assert expected in google.group(1)
+    assert expected in trip.group(1)
+    if rec.get('postcode'):
+        assert quote_plus(rec['postcode']) in google.group(1), 'query must include the postcode'
+    for m in (google, trip):
+        tag = html[m.start():m.start() + 250]
+        assert 'nofollow' in tag and 'noopener' in tag, 'outbound links must be noopener nofollow'

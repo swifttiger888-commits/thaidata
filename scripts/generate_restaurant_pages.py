@@ -6,7 +6,7 @@ using the Kimi-designed template v2 (cream bg, green hero, 2-col layout).
 import json, os, re, sys, unicodedata, shutil, zlib
 from datetime import datetime
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, quote_plus
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(REPO, 'r')
@@ -624,6 +624,35 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
             html = re.sub(r'<!-- DYNAMIC: contact_strip -->.*?</div>', '', html, flags=re.DOTALL)
     else:
         html = re.sub(r'<!-- DYNAMIC: contact_strip -->.*?</div>', '', html, flags=re.DOTALL)
+
+    # ---- Reviews elsewhere (outbound search links) ----
+    # We deliberately do not host reviews (moderation load + UK defamation exposure), but a
+    # visitor who wants them is better served by a search than by nothing. Labels are
+    # verb-framed because we have NOT verified that a Google/TripAdvisor profile exists for
+    # this venue — these are searches, not confirmed listings.
+    review_addr = (r.get('address') or '').strip()
+    r_head, _, r_tail = review_addr.partition(',')
+    a_head, a_name = _alnum(r_head), _alnum(name)
+    if r_tail and a_name and a_head.startswith(a_name) and len(a_head) <= len(a_name) + 12:
+        review_addr = r_tail.strip()
+    # Name + street + postcode beats name + council area: "Talay Thai Cornwall" would
+    # surface both Cornwall venues, "Talay Thai, Mount Pleasant Road, PL13 …" is unambiguous.
+    review_q = quote_plus(', '.join(p for p in (name, review_addr, r.get('postcode')) if p))
+    review_block = (
+        '<div class="card" id="reviews">\n'
+        '                <h2 class="card-title">Reviews <em>elsewhere</em></h2>\n'
+        '                <p style="color:var(--ink-secondary);font-size:0.85rem;margin:8px 0 0;line-height:1.5;">'
+        "We don't host reviews. These links open a search so you can read the latest reviews "
+        'for this venue before you book.</p>\n'
+        '                <p style="margin-top:12px;font-size:0.9rem;display:flex;flex-wrap:wrap;gap:6px 14px;">\n'
+        f'                    <a href="https://www.google.com/search?q={review_q}+reviews" target="_blank" rel="noopener nofollow" '
+        'style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search Google reviews</a>\n'
+        f'                    <a href="https://www.tripadvisor.co.uk/Search?q={review_q}" target="_blank" rel="noopener nofollow" '
+        'style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search TripAdvisor</a>\n'
+        '                </p>\n'
+        '            </div>'
+    )
+    html = re.sub(r'<!-- DYNAMIC: review_links -->.*?</div>', review_block, html, flags=re.DOTALL)
 
     # ---- Intro paragraph ----
     intro_text = build_intro(r)
