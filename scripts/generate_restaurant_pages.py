@@ -640,13 +640,13 @@ def generate_page(r: dict[str, Any], closed_ids: set[str] = None, city_open: dic
     review_q = quote_plus(', '.join(p for p in (name, review_addr, r.get('postcode')) if p))
     review_block = (
         '<div class="card" id="reviews">\n'
-        '                <h2 class="card-title">Reviews <em>elsewhere</em></h2>\n'
+        '                <h2 class="card-title">Reviews elsewhere</h2>\n'
         '                <p style="color:var(--ink-secondary);font-size:0.85rem;margin:8px 0 0;line-height:1.5;">'
-        "We don't host reviews. These links open a search so you can read the latest reviews "
-        'for this venue before you book.</p>\n'
+        "We don't host reviews. These searches may help you find reviews "
+        'of this venue.</p>\n'
         '                <p style="margin-top:12px;font-size:0.9rem;display:flex;flex-wrap:wrap;gap:6px 14px;">\n'
         f'                    <a href="https://www.google.com/search?q={review_q}+reviews" target="_blank" rel="noopener nofollow" '
-        'style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search Google reviews</a>\n'
+        'style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search Google for reviews</a>\n'
         f'                    <a href="https://www.tripadvisor.co.uk/Search?q={review_q}" target="_blank" rel="noopener nofollow" '
         'style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search TripAdvisor</a>\n'
         '                </p>\n'

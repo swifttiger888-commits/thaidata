@@ -1500,6 +1500,11 @@ a.cs-attr,
             color: var(--ink);
         }
         .report-card textarea { resize: vertical; }
+        @media (max-width: 480px) {
+            #reviews p { flex-direction: column; gap: 8px; }
+            #reviews p a { min-height: 32px; display: inline-flex; align-items: center; }
+        }
+
         .report-card .btn {
             display: inline-flex;
             align-items: center;
@@ -1963,10 +1968,10 @@ a.cs-attr,
             
             <!-- === REVIEWS ELSEWHERE === -->
             <div class="card" id="reviews">
-                <h2 class="card-title">Reviews <em>elsewhere</em></h2>
-                <p style="color:var(--ink-secondary);font-size:0.85rem;margin:8px 0 0;line-height:1.5;">We don't host reviews. These links open a search so you can read the latest reviews for this venue before you book.</p>
+                <h2 class="card-title">Reviews elsewhere</h2>
+                <p style="color:var(--ink-secondary);font-size:0.85rem;margin:8px 0 0;line-height:1.5;">We don't host reviews. These searches may help you find reviews of this venue.</p>
                 <p style="margin-top:12px;font-size:0.9rem;display:flex;flex-wrap:wrap;gap:6px 14px;">
-                    <a href="https://www.google.com/search?q=Koh+Lanta+Thai+restaurant%2C+42+Station+Way%2C+Buckhurst+Hill%2C+Essex%2C+IG9+6LN+reviews" target="_blank" rel="noopener nofollow" style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search Google reviews</a>
+                    <a href="https://www.google.com/search?q=Koh+Lanta+Thai+restaurant%2C+42+Station+Way%2C+Buckhurst+Hill%2C+Essex%2C+IG9+6LN+reviews" target="_blank" rel="noopener nofollow" style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search Google for reviews</a>
                     <a href="https://www.tripadvisor.co.uk/Search?q=Koh+Lanta+Thai+restaurant%2C+42+Station+Way%2C+Buckhurst+Hill%2C+Essex%2C+IG9+6LN" target="_blank" rel="noopener nofollow" style="color:var(--green-dark);text-decoration:underline;text-underline-offset:2px;">Search TripAdvisor</a>
                 </p>
             </div>
