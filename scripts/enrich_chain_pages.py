@@ -35,7 +35,10 @@ CHAIN_DIR = os.path.join(REPO, 'chains')
 
 START = '<!-- CHAIN-LOCATIONS:START -->'
 CSS_MARK = '/* chain-locations */'
-CHAIN_CSS = '''/* chain-locations */
+CSS_START = '/* chain-locations-start */'
+CSS_END = '/* chain-locations-end */'
+CHAIN_CSS = '''/* chain-locations-start */
+/* chain-locations */
 .chain-answer { font-size: 1.02rem; line-height: 1.6; margin: 10px 0 18px; max-width: 70ch; }
 .chain-answer a { color: var(--c1); text-decoration: underline; text-underline-offset: 3px; }
 .chain-locations { list-style: none; padding: 0; margin: 12px 0 0; }
@@ -47,6 +50,8 @@ CHAIN_CSS = '''/* chain-locations */
 .chain-loc-meta { display: block; color: var(--muted); font-size: .85rem; margin-top: 2px; }
 .chain-halal { margin: 16px 0 0; font-size: .92rem; line-height: 1.55; }
 @media (max-width: 600px) { .chain-locations li.chain-locations-city ul li { padding: 10px 0; } }
+.chain-sources p { overflow-wrap: anywhere; }
+/* chain-locations-end */
 '''
 END = '<!-- CHAIN-LOCATIONS:END -->'
 
@@ -220,9 +225,17 @@ def process(path, chain, restaurants, checked, check_only):
                   f'<td><strong>UK Locations</strong></td><td>{count} FSA-registered ({checked})',
                   html, count=1)
 
-    # 6. styles for the new blocks (idempotent)
-    if CSS_MARK not in html and '</style>' in html:
+    # 6. styles for the new blocks (idempotent: replaced between delimiters)
+    if CSS_START in html and CSS_END in html:
+        html = re.sub(re.escape(CSS_START) + r'.*?' + re.escape(CSS_END), CHAIN_CSS.strip(), html, flags=re.S)
+    elif CSS_MARK in html and '</style>' in html:
+        # first-pass markup used a single marker ending at </style>
+        html = re.sub(r'/\* chain-locations \*/.*?(?=</style>)', CHAIN_CSS + '\n', html, flags=re.S)
+    elif '</style>' in html:
         html = html.replace('</style>', CHAIN_CSS + '</style>', 1)
+
+    # 6b. the "Field | Detail" header row is pure noise on a 2-column table
+    html = re.sub(r'<tr><td>Field</td><td>Detail</td></tr>\s*', '', html, count=1)
 
     # 7. computed hygiene row (replaces hand-written "5/5" claims that contradict the rows)
     html = re.sub(r'<td><strong>Avg Hygiene Rating</strong></td><td>[^<]*</td>',
@@ -231,6 +244,13 @@ def process(path, chain, restaurants, checked, check_only):
     html = re.sub(r'<td><strong>Hygiene Ratings?</strong></td><td>[^<]*</td>',
                   lambda m: f'<td><strong>Hygiene Ratings</strong></td><td>{hygiene_summary(venues)}</td>',
                   html, count=1)
+
+    # 7. source rows: linkify raw URLs (they overflowed the mobile viewport)
+    def linkify(m):
+        url, note = m.group(1), m.group(2)
+        return (f'<p class="chain-sources">- <a href="{url}" target="_blank" rel="noopener nofollow">{url}</a>'
+                f'{note}</p>')
+    html = re.sub(r'<p>- (https?://[^\s<]+)([^<]*)</p>', linkify, html)
 
     # 8. location list
     block = location_block(chain, venues, checked)
