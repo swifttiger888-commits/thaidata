@@ -191,18 +191,23 @@ def process(path, chain, restaurants, checked, check_only):
 
     # 4. H1 (these pages never had one) + a direct answer and jump link above the
     #    field table, so the count is the first thing a searcher reads.
-    answer = (
-        f'\n  <h1>{chain["label"]}: {count} UK Location{"s" if count != 1 else ""} Listed</h1>\n'
-        f'  <p class="chain-answer">{chain["label"]} is a UK Thai restaurant '
-        f'{("chain" if chain["kind"] == "chain" else "name used by independent restaurants")}. '
+    new_h1 = f'<h1>{chain["label"]}: {count} UK Location{"s" if count != 1 else ""} Listed</h1>'
+    answer_p = (
+        f'<p class="chain-answer">{chain["label"]} is a UK Thai restaurant '
+        f'{"chain" if chain["kind"] == "chain" else "name used by independent restaurants"}. '
         f'Our directory lists {count} FSA-registered location{"s" if count != 1 else ""} '
         f'(checked {checked}); the company may operate more, and this is not a complete estate total. '
         f'<a href="#locations">Jump to locations</a>.</p>'
     )
-    if '<h1' not in html:
+    if '<h1' in html:
+        # rewrite in place: an earlier insert-only pass left stale wording behind
+        html = re.sub(r'<h1>[^<]*</h1>', new_h1, html, count=1)
+        if 'class="chain-answer"' not in html:
+            html = html.replace(new_h1, new_h1 + '\n  ' + answer_p, 1)
+    else:
         anchor = 'class="back-link">← All Chain Profiles</a>'
         if anchor in html:
-            html = html.replace(anchor, anchor + answer, 1)
+            html = html.replace(anchor, anchor + '\n  ' + new_h1 + '\n  ' + answer_p, 1)
 
     # 5. sync the field-table "UK Locations" row to the live FSA count. Company-reported
     # figures ("~41 as of June 2026") are replaced here because this table is ours; the
