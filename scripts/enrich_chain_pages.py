@@ -34,6 +34,20 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHAIN_DIR = os.path.join(REPO, 'chains')
 
 START = '<!-- CHAIN-LOCATIONS:START -->'
+CSS_MARK = '/* chain-locations */'
+CHAIN_CSS = '''/* chain-locations */
+.chain-answer { font-size: 1.02rem; line-height: 1.6; margin: 10px 0 18px; max-width: 70ch; }
+.chain-answer a { color: var(--c1); text-decoration: underline; text-underline-offset: 3px; }
+.chain-locations { list-style: none; padding: 0; margin: 12px 0 0; }
+.chain-locations li.chain-locations-city { margin: 18px 0 0; }
+.chain-locations li.chain-locations-city h3 { font-size: 1rem; margin: 0 0 4px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.chain-locations li.chain-locations-city ul { list-style: none; padding: 0; margin: 0; }
+.chain-locations li.chain-locations-city ul li { min-height: 44px; padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; }
+.chain-locations a { color: var(--c1); text-decoration: underline; text-underline-offset: 3px; }
+.chain-loc-meta { display: block; color: var(--muted); font-size: .85rem; margin-top: 2px; }
+.chain-halal { margin: 16px 0 0; font-size: .92rem; line-height: 1.55; }
+@media (max-width: 600px) { .chain-locations li.chain-locations-city ul li { padding: 10px 0; } }
+'''
 END = '<!-- CHAIN-LOCATIONS:END -->'
 
 
@@ -70,10 +84,33 @@ def venues_for(chain, restaurants):
     return [r for r in restaurants if any(norm_name(r['name']).startswith(k) for k in keys)]
 
 
+
+def hygiene_summary(venues) -> str:
+    """Computed, labelled average — never a bare "5/5" when the rows show 4s."""
+    from collections import Counter
+    nums, other = [], Counter()
+    for r in venues:
+        v = str(r.get('hygiene_rating') or '').strip()
+        if v.isdigit():
+            nums.append(int(v))
+        elif v:
+            other[v] += 1
+    parts = []
+    if nums:
+        parts.append(f'{sum(nums) / len(nums):.1f}/5 average ({len(nums)} rated)')
+    for k, n in sorted(other.items()):
+        if k.lower() == 'pass':
+            parts.append(f'{n} pass (Scotland)')
+        else:
+            parts.append(f'{n} {k}')
+    return '; '.join(parts) or 'not rated'
+
+
 def title_for(chain, count: int) -> str:
+    plural = 's' if count != 1 else ''
     if chain['kind'] == 'chain':
-        return f"{chain['label']}: {count} UK Chain Locations | ThaiData"
-    return f"{chain['label']} Restaurants — {count} UK Locations | ThaiData"
+        return f"{chain['label']}: {count} UK Location{plural} Listed | ThaiData"
+    return f"{chain['label']} Restaurants: {count} UK Location{plural} | ThaiData"
 
 
 def desc_for(chain, count: int, city_count: int, checked: str) -> str:
@@ -90,11 +127,21 @@ def location_block(chain, venues, checked: str, limit: int = 50) -> str:
     truncated = count > limit
     if truncated:
         shown = shown[:40]
+    from itertools import groupby
     rows = []
-    for r in shown:
-        url = f"/r/{slugify(r['city'])}/{slugify(r['name'])}/"
-        city = r['city']
-        rows.append(f'<li><a href="{url}">{r["name"]}</a> — {city} &middot; FSA {rating_label(r.get("hygiene_rating"))}</li>')
+    for city, group in groupby(shown, key=lambda r: r['city']):
+        rows.append(f'<li class="chain-locations-city"><h3>{city}</h3><ul>')
+        for r in group:
+            url = f"/r/{slugify(r['city'])}/{slugify(r['name'])}/"
+            street, _, _ = (r.get('address') or '').partition(',')
+            base = norm_name(r['name'])
+            if norm_name(street).startswith(base[:12]) or base.startswith(norm_name(street)[:12]):
+                street = ''
+            label = r['name'] + (f' — {street.strip()}' if street.strip() else '')
+            rows.append(
+                f'<li><a href="{url}">{label}</a>'
+                f'<span class="chain-loc-meta">{city} &middot; FSA {rating_label(r.get("hygiene_rating"))}</span></li>')
+        rows.append('</ul></li>')
     more = ''
     if truncated:
         more = (f'<li class="chain-locations-more"><a href="/r/">See all {count} locations in the '
@@ -142,12 +189,20 @@ def process(path, chain, restaurants, checked, check_only):
     html = re.sub(r'<meta property="og:description" content="[^"]*"',
                   f'<meta property="og:description" content="{desc}"', html, count=1)
 
-    # 4. H1 (these pages never had one)
+    # 4. H1 (these pages never had one) + a direct answer and jump link above the
+    #    field table, so the count is the first thing a searcher reads.
+    answer = (
+        f'\n  <h1>{chain["label"]}: {count} UK Location{"s" if count != 1 else ""} Listed</h1>\n'
+        f'  <p class="chain-answer">{chain["label"]} is a UK Thai restaurant '
+        f'{("chain" if chain["kind"] == "chain" else "name used by independent restaurants")}. '
+        f'Our directory lists {count} FSA-registered location{"s" if count != 1 else ""} '
+        f'(checked {checked}); the company may operate more, and this is not a complete estate total. '
+        f'<a href="#locations">Jump to locations</a>.</p>'
+    )
     if '<h1' not in html:
-        h1 = f'\n  <h1>{chain["label"]}: {count} UK Locations</h1>'
         anchor = 'class="back-link">← All Chain Profiles</a>'
         if anchor in html:
-            html = html.replace(anchor, anchor + h1, 1)
+            html = html.replace(anchor, anchor + answer, 1)
 
     # 5. sync the field-table "UK Locations" row to the live FSA count. Company-reported
     # figures ("~41 as of June 2026") are replaced here because this table is ours; the
@@ -160,7 +215,19 @@ def process(path, chain, restaurants, checked, check_only):
                   f'<td><strong>UK Locations</strong></td><td>{count} FSA-registered ({checked})',
                   html, count=1)
 
-    # 6. location list
+    # 6. styles for the new blocks (idempotent)
+    if CSS_MARK not in html and '</style>' in html:
+        html = html.replace('</style>', CHAIN_CSS + '</style>', 1)
+
+    # 7. computed hygiene row (replaces hand-written "5/5" claims that contradict the rows)
+    html = re.sub(r'<td><strong>Avg Hygiene Rating</strong></td><td>[^<]*</td>',
+                  lambda m: f'<td><strong>Avg Hygiene Rating</strong></td><td>{hygiene_summary(venues)}</td>',
+                  html, count=1)
+    html = re.sub(r'<td><strong>Hygiene Ratings?</strong></td><td>[^<]*</td>',
+                  lambda m: f'<td><strong>Hygiene Ratings</strong></td><td>{hygiene_summary(venues)}</td>',
+                  html, count=1)
+
+    # 8. location list
     block = location_block(chain, venues, checked)
     if START in html and END in html:
         html = re.sub(re.escape(START) + r'.*?' + re.escape(END), block, html, flags=re.S)
