@@ -27,3 +27,7 @@
 /cities/stratford-upon-avon  /cities/stratford-on-avon  301
 /cities/taunton  /cities/somerset  301
 /cities/lake-district  /cities/westmorland-and-furness  301
+
+# Rosa's Thai Cafe chain page consolidated into the brand-correct slug (301)
+/chains/rosas-thai-cafe  /chains/rosas-thai  301
+/chains/rosas-thai-cafe/  /chains/rosas-thai  301

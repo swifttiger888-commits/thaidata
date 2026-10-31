@@ -1,0 +1,483 @@
+{
+ "chains": [
+  {
+   "slug": "giggling-squid",
+   "label": "Giggling Squid",
+   "kind": "chain",
+   "match": [
+    "giggling squid"
+   ],
+   "official": "https://www.gigglingsquid.com/",
+   "count": 48,
+   "cities": [
+    "Basildon",
+    "Bath",
+    "Birmingham",
+    "Bracknell Forest",
+    "Brentwood",
+    "Brighton",
+    "Bristol",
+    "Buckinghamshire",
+    "Cambridge",
+    "Cardiff",
+    "Chelmsford",
+    "Cheltenham",
+    "Chichester",
+    "Dacorum",
+    "Elmbridge",
+    "Guildford",
+    "Horsham",
+    "Hull",
+    "Kingston-Upon-Thames",
+    "Leeds",
+    "Leicester",
+    "London",
+    "Maidstone",
+    "Norwich",
+    "Oxford",
+    "Rushcliffe",
+    "Sevenoaks",
+    "Shropshire",
+    "St Albans City",
+    "Tunbridge Wells",
+    "Warwick",
+    "Waverley",
+    "Welwyn Hatfield",
+    "Wiltshire",
+    "Winchester City",
+    "Windsor and Maidenhead",
+    "Wokingham",
+    "York"
+   ]
+  },
+  {
+   "slug": "rosas-thai",
+   "label": "Rosa's Thai",
+   "kind": "chain",
+   "match": [
+    "rosas thai"
+   ],
+   "official": "https://rosasthai.com/",
+   "former": "Rosa's Thai Cafe",
+   "count": 39,
+   "cities": [
+    "Bath",
+    "Birmingham",
+    "Bristol",
+    "Cheltenham",
+    "Dartford",
+    "Edinburgh",
+    "Exeter",
+    "Glasgow",
+    "Guildford",
+    "Kingston-Upon-Thames",
+    "Leeds",
+    "Liverpool",
+    "London",
+    "Manchester",
+    "Norwich",
+    "Oxford",
+    "Reading",
+    "Richmond-Upon-Thames",
+    "York"
+   ]
+  },
+  {
+   "slug": "banana-tree",
+   "label": "Banana Tree",
+   "kind": "chain",
+   "match": [
+    "banana tree"
+   ],
+   "official": "https://bananatree.co.uk/",
+   "count": 21,
+   "cities": [
+    "Bath",
+    "Birmingham",
+    "Cardiff",
+    "Chelmsford",
+    "London",
+    "Mid Sussex",
+    "Milton Keynes",
+    "Oxford",
+    "Oxfordshire",
+    "Portsmouth",
+    "Salford",
+    "Stevenage",
+    "Windsor and Maidenhead"
+   ]
+  },
+  {
+   "slug": "thai-express",
+   "label": "Thai Express",
+   "kind": "chain",
+   "match": [
+    "thai express"
+   ],
+   "official": null,
+   "halal_note": true,
+   "count": 5,
+   "cities": [
+    "Birmingham",
+    "Blaby",
+    "Guildford",
+    "London"
+   ]
+  },
+  {
+   "slug": "thai-square",
+   "label": "Thai Square",
+   "kind": "chain",
+   "match": [
+    "thai square"
+   ],
+   "official": "https://www.thaisquare.co.uk/",
+   "halal_note": true,
+   "count": 11,
+   "cities": [
+    "London",
+    "St Albans City",
+    "Windsor and Maidenhead"
+   ]
+  },
+  {
+   "slug": "thaikhun",
+   "label": "Thaikhun",
+   "kind": "chain",
+   "match": [
+    "thaikhun"
+   ],
+   "official": "https://thaikhun.co.uk/",
+   "count": 9,
+   "cities": [
+    "Aberdeen",
+    "Bath",
+    "Gateshead",
+    "Glasgow",
+    "Manchester",
+    "Oxford",
+    "Sheffield",
+    "Southampton",
+    "Trafford"
+   ]
+  },
+  {
+   "slug": "busaba-eathai",
+   "label": "Busaba",
+   "kind": "chain",
+   "match": [
+    "busaba"
+   ],
+   "official": "https://www.busaba.com/",
+   "former": "Busaba Eathai",
+   "count": 6,
+   "cities": [
+    "London"
+   ]
+  },
+  {
+   "slug": "sukhothai",
+   "label": "Sukhothai",
+   "kind": "chain",
+   "match": [
+    "sukhothai"
+   ],
+   "official": null,
+   "count": 8,
+   "cities": [
+    "Bournemouth",
+    "Buckinghamshire",
+    "Gravesham",
+    "Leeds",
+    "London",
+    "Wirral",
+    "York"
+   ]
+  },
+  {
+   "slug": "camile-thai",
+   "label": "Camile Thai",
+   "kind": "chain",
+   "match": [
+    "camile"
+   ],
+   "official": "https://camile.ie/",
+   "count": 6,
+   "cities": [
+    "Belfast",
+    "Bournemouth",
+    "Epsom and Ewell",
+    "London",
+    "Winchester City"
+   ]
+  },
+  {
+   "slug": "patara",
+   "label": "Patara",
+   "kind": "chain",
+   "match": [
+    "patara"
+   ],
+   "official": "https://www.patara.com/",
+   "count": 4,
+   "cities": [
+    "London"
+   ]
+  },
+  {
+   "slug": "chaophraya",
+   "label": "Chaophraya",
+   "kind": "chain",
+   "match": [
+    "chaophraya"
+   ],
+   "official": "https://www.chaophraya.co.uk/",
+   "count": 5,
+   "cities": [
+    "Aberdeen",
+    "Birmingham",
+    "Edinburgh",
+    "Glasgow",
+    "Newcastle"
+   ]
+  },
+  {
+   "slug": "mango-tree",
+   "label": "Mango Tree",
+   "kind": "chain",
+   "match": [
+    "mango tree"
+   ],
+   "official": null,
+   "count": 6,
+   "cities": [
+    "Cardiff",
+    "Hinckley and Bosworth",
+    "Maidstone",
+    "Preston",
+    "Sandwell",
+    "Westmorland and Furness"
+   ]
+  },
+  {
+   "slug": "zaap-thai",
+   "label": "Zaap Thai",
+   "kind": "chain",
+   "match": [
+    "zaap"
+   ],
+   "official": "https://www.zaapthai.co.uk/",
+   "count": 8,
+   "cities": [
+    "Durham",
+    "Leeds",
+    "Manchester",
+    "Newcastle",
+    "Nottingham",
+    "Sheffield",
+    "York"
+   ]
+  },
+  {
+   "slug": "baan-thai",
+   "label": "Baan Thai",
+   "kind": "name_pattern",
+   "match": [
+    "baan thai"
+   ],
+   "count": 5,
+   "cities": [
+    "Antrim and Newtownabbey",
+    "Hartlepool",
+    "Isle of Wight",
+    "Somerset",
+    "Staffordshire"
+   ]
+  },
+  {
+   "slug": "rama-thai",
+   "label": "Rama Thai",
+   "kind": "name_pattern",
+   "match": [
+    "rama thai"
+   ],
+   "count": 6,
+   "cities": [
+    "Dundee",
+    "London",
+    "Rugby"
+   ]
+  },
+  {
+   "slug": "taste-of-thai",
+   "label": "Taste of Thai",
+   "kind": "name_pattern",
+   "match": [
+    "taste of thai"
+   ],
+   "count": 6,
+   "cities": [
+    "Barnsley",
+    "Bradford",
+    "Devon",
+    "Gloucester",
+    "Leicester",
+    "North Norfolk"
+   ]
+  },
+  {
+   "slug": "thai-edge",
+   "label": "Thai Edge",
+   "kind": "name_pattern",
+   "match": [
+    "thai edge"
+   ],
+   "count": 1,
+   "cities": [
+    "Leeds"
+   ]
+  },
+  {
+   "slug": "thai-elephant",
+   "label": "Thai Elephant",
+   "kind": "name_pattern",
+   "match": [
+    "thai elephant"
+   ],
+   "count": 5,
+   "cities": [
+    "London",
+    "Richmond-Upon-Thames",
+    "Vale of Glamorgan",
+    "Warwick",
+    "Wokingham"
+   ]
+  },
+  {
+   "slug": "thai-garden",
+   "label": "Thai Garden",
+   "kind": "name_pattern",
+   "match": [
+    "thai garden"
+   ],
+   "count": 4,
+   "cities": [
+    "Bristol",
+    "Herefordshire",
+    "London",
+    "North Northamptonshire"
+   ]
+  },
+  {
+   "slug": "thai-house",
+   "label": "Thai House",
+   "kind": "name_pattern",
+   "match": [
+    "thai house"
+   ],
+   "count": 8,
+   "cities": [
+    "Basildon",
+    "Belfast",
+    "London",
+    "Newcastle",
+    "Plymouth"
+   ]
+  },
+  {
+   "slug": "thai-kitchen",
+   "label": "Thai Kitchen",
+   "kind": "name_pattern",
+   "match": [
+    "thai kitchen"
+   ],
+   "count": 18,
+   "cities": [
+    "Blaby",
+    "Bolton",
+    "Cheshire West and Chester",
+    "Dorset",
+    "Herefordshire",
+    "London",
+    "Manchester",
+    "Oldham",
+    "Redcar and Cleveland",
+    "Somerset",
+    "Swansea",
+    "Telford",
+    "Warwick",
+    "Westmorland and Furness",
+    "York"
+   ]
+  },
+  {
+   "slug": "thai-orchid",
+   "label": "Thai Orchid",
+   "kind": "name_pattern",
+   "match": [
+    "thai orchid"
+   ],
+   "count": 18,
+   "cities": [
+    "Canterbury",
+    "Cherwell",
+    "Dumfries and Galloway",
+    "Exeter",
+    "Glasgow",
+    "Hull",
+    "London",
+    "Maidstone",
+    "Mid Suffolk",
+    "Preston",
+    "Rother",
+    "Tunbridge Wells",
+    "Westmorland and Furness",
+    "Wiltshire",
+    "Windsor and Maidenhead",
+    "York"
+   ]
+  },
+  {
+   "slug": "thai-rice",
+   "label": "Thai Rice",
+   "kind": "name_pattern",
+   "match": [
+    "thai rice"
+   ],
+   "count": 6,
+   "cities": [
+    "Central Bedfordshire",
+    "London",
+    "Maidstone",
+    "Sefton"
+   ]
+  },
+  {
+   "slug": "thai-street-cafe",
+   "label": "Thai Street Cafe",
+   "kind": "name_pattern",
+   "match": [
+    "thai street cafe"
+   ],
+   "count": 4,
+   "cities": [
+    "East Suffolk",
+    "North Kesteven",
+    "Southampton",
+    "West Suffolk"
+   ]
+  },
+  {
+   "slug": "thai-terrace",
+   "label": "Thai Terrace",
+   "kind": "name_pattern",
+   "match": [
+    "thai terrace"
+   ],
+   "count": 1,
+   "cities": [
+    "London"
+   ]
+  }
+ ]
+}

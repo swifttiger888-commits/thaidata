@@ -50,10 +50,10 @@ CHAIN_DEFS: list[dict[str, Any]] = [
     {"keywords": ["thai express"], "label": "Thai Express", "slug": "thai-express"},
     {"keywords": ["thai square"], "label": "Thai Square", "slug": "thai-square"},
     {"keywords": ["thaikhun"], "label": "Thaikhun", "slug": "thaikhun"},
-    {"keywords": ["busaba"], "label": "Busaba", "slug": "busaba"},
+    {"keywords": ["busaba"], "label": "Busaba", "slug": "busaba-eathai"},
     {"keywords": ["sukhothai"], "label": "Sukhothai", "slug": "sukhothai"},
     {"keywords": ["camile thai"], "label": "Camile Thai", "slug": "camile-thai"},
-    {"keywords": ["patara"], "label": "Patara", "slug": "patara-fine-thai-cuisine"},
+    {"keywords": ["patara"], "label": "Patara", "slug": "patara"},
     {"keywords": ["chaophraya"], "label": "Chaophraya", "slug": "chaophraya"},
     {"keywords": ["mango tree"], "label": "Mango Tree", "slug": "mango-tree"},
 ]
@@ -133,7 +133,7 @@ def chain_card(cd: dict[str, Any], featured: bool = False) -> str:
             {cities_text}
         </div>
         <div class="chain-links">
-            <a href="{cd["slug"]}.html" class="chain-profile-link">Full profile</a>
+            <a href="/chains/{cd["slug"]}" class="chain-profile-link">Full profile</a>
             {sample_link}
         </div>
     </div>
